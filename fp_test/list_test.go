@@ -314,3 +314,22 @@ func TestGroupBy(t *testing.T) {
     Shape { "triangle", 10, "magenta" },
   } ,t)
 }
+
+func TestMap(t *testing.T) {
+  mult100 := func(e Any) Any {
+    return e.(int) * 100
+  }
+
+  decorator := func(e Any) Any {
+    return fmt.Sprintf("(%v)", e)
+  }
+
+  l := Nil.ConsArr([]Any{3,2,1})
+  res := l.Map(mult100).Map(decorator)
+
+  AssertEqualArrays(res.ToArray(), []Any{
+    "(100)",
+    "(200)",
+    "(300)",
+  }, t)
+}
