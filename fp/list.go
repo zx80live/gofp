@@ -109,7 +109,6 @@ func (l List) GroupBy(f func(Element) Any) map[Any]List {
 
   l.Foreach(func(e Any) {
     key := f(e)
-    fmt.Println("_key=", key)
     var group List
 
     if value, found := m[key]; found {

@@ -255,3 +255,62 @@ func TestFind(t *testing.T) {
 
 }
 
+func TestGroupBy(t *testing.T) {
+  // grouping list of numbers by identity
+  identity := func(e Any) Any { return e }
+  l := Nil.ConsArr([]Any{5,4,4,3,5,2,1,3,5})
+  res1 := l.GroupBy(identity)
+
+  AssertEqualArrays(res1[1].ToArray(), []Any{1}, t)
+  AssertEqualArrays(res1[2].ToArray(), []Any{2}, t)
+  AssertEqualArrays(res1[3].ToArray(), []Any{3,3}, t)
+  AssertEqualArrays(res1[4].ToArray(), []Any{4,4}, t)
+  AssertEqualArrays(res1[5].ToArray(), []Any{5,5,5}, t)
+
+  // grouping list of structs by extractor
+  type Shape struct {
+    name string
+    area int
+    color string
+  }
+ 
+  l = Nil.ConsArr([]Any {
+    Shape { "circle", 100, "green" },
+    Shape { "square", 101, "white" },
+    Shape { "circle", 200, "yellow" },
+    Shape { "triangle", 200, "pink" },
+    Shape { "square", 10, "blue" },
+    Shape { "triangle", 10, "magenta" },
+  })
+
+  byName := l.GroupBy(func(e Any) Any { return e.(Shape).name })
+  AssertEqualArrays(byName["circle"].ToArray(), []Any{
+    Shape { "circle", 100, "green" },
+    Shape { "circle", 200, "yellow" },
+  } ,t)
+  AssertEqualArrays(byName["square"].ToArray(), []Any{
+    Shape { "square", 101, "white" },
+    Shape { "square", 10, "blue" },
+  } ,t)
+  AssertEqualArrays(byName["triangle"].ToArray(), []Any{
+    Shape { "triangle", 200, "pink" },
+    Shape { "triangle", 10, "magenta" },
+  } ,t)
+
+
+  byArea := l.GroupBy(func(e Any) Any { return e.(Shape).area })
+  AssertEqualArrays(byArea[200].ToArray(), []Any{
+    Shape { "circle", 200, "yellow" },
+    Shape { "triangle", 200, "pink" },
+  } ,t)
+  AssertEqualArrays(byArea[100].ToArray(), []Any{
+    Shape { "circle", 100, "green" },
+  } ,t)
+  AssertEqualArrays(byArea[101].ToArray(), []Any{
+    Shape { "square", 101, "white" },
+  } ,t)
+  AssertEqualArrays(byArea[10].ToArray(), []Any{
+    Shape { "square", 10, "blue" },
+    Shape { "triangle", 10, "magenta" },
+  } ,t)
+}
