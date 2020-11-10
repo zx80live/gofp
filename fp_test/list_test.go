@@ -333,3 +333,13 @@ func TestMap(t *testing.T) {
     "(300)",
   }, t)
 }
+
+func TestFilter(t *testing.T) {
+  even := func(e Any) bool { return e.(int) % 2 == 0  }
+  pos := func(e Any) bool { return e.(int) >= 0 }
+
+  l := Nil.ConsArr([]Any{10,9,8,7,-6,5,4,3,-2,1})
+
+  res := l.Filter(even).Filter(pos)
+  AssertEqualArrays(res.ToArray(), []Any{4, 8, 10}, t)
+}
