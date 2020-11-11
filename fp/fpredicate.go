@@ -3,5 +3,43 @@
 
 package fp
 
-
-type PredicateBool func(e bool) booltype PredicateRune func(e rune) booltype PredicateByte func(e byte) booltype PredicateInt func(e int) booltype PredicateInt8 func(e int8) booltype PredicateInt16 func(e int16) booltype PredicateInt32 func(e int32) booltype PredicateInt64 func(e int64) booltype PredicateUint func(e uint) booltype PredicateUint8 func(e uint8) booltype PredicateUint16 func(e uint16) booltype PredicateUint32 func(e uint32) booltype PredicateUint64 func(e uint64) booltype PredicateUintptr func(e uintptr) booltype PredicateFloat32 func(e float32) booltype PredicateFloat64 func(e float64) booltype PredicateComplex64 func(e complex64) booltype PredicateComplex128 func(e complex128) booltype PredicateString func(e string) booltype PredicateInterface func(e interface{}) booltype PredicateBoolArr func(e []bool) booltype PredicateRuneArr func(e []rune) booltype PredicateByteArr func(e []byte) booltype PredicateIntArr func(e []int) booltype PredicateInt8Arr func(e []int8) booltype PredicateInt16Arr func(e []int16) booltype PredicateInt32Arr func(e []int32) booltype PredicateInt64Arr func(e []int64) booltype PredicateUintArr func(e []uint) booltype PredicateUint8Arr func(e []uint8) booltype PredicateUint16Arr func(e []uint16) booltype PredicateUint32Arr func(e []uint32) booltype PredicateUint64Arr func(e []uint64) booltype PredicateUintptrArr func(e []uintptr) booltype PredicateFloat32Arr func(e []float32) booltype PredicateFloat64Arr func(e []float64) booltype PredicateComplex64Arr func(e []complex64) booltype PredicateComplex128Arr func(e []complex128) booltype PredicateStringArr func(e []string) booltype PredicateInterfaceArr func(e []interface{}) bool
+type PredicateBool func(e bool) bool
+type PredicateRune func(e rune) bool
+type PredicateByte func(e byte) bool
+type PredicateInt func(e int) bool
+type PredicateInt8 func(e int8) bool
+type PredicateInt16 func(e int16) bool
+type PredicateInt32 func(e int32) bool
+type PredicateInt64 func(e int64) bool
+type PredicateUint func(e uint) bool
+type PredicateUint8 func(e uint8) bool
+type PredicateUint16 func(e uint16) bool
+type PredicateUint32 func(e uint32) bool
+type PredicateUint64 func(e uint64) bool
+type PredicateUintptr func(e uintptr) bool
+type PredicateFloat32 func(e float32) bool
+type PredicateFloat64 func(e float64) bool
+type PredicateComplex64 func(e complex64) bool
+type PredicateComplex128 func(e complex128) bool
+type PredicateString func(e string) bool
+type PredicateInterface func(e interface{}) bool
+type PredicateBoolArr func(e []bool) bool
+type PredicateRuneArr func(e []rune) bool
+type PredicateByteArr func(e []byte) bool
+type PredicateIntArr func(e []int) bool
+type PredicateInt8Arr func(e []int8) bool
+type PredicateInt16Arr func(e []int16) bool
+type PredicateInt32Arr func(e []int32) bool
+type PredicateInt64Arr func(e []int64) bool
+type PredicateUintArr func(e []uint) bool
+type PredicateUint8Arr func(e []uint8) bool
+type PredicateUint16Arr func(e []uint16) bool
+type PredicateUint32Arr func(e []uint32) bool
+type PredicateUint64Arr func(e []uint64) bool
+type PredicateUintptrArr func(e []uintptr) bool
+type PredicateFloat32Arr func(e []float32) bool
+type PredicateFloat64Arr func(e []float64) bool
+type PredicateComplex64Arr func(e []complex64) bool
+type PredicateComplex128Arr func(e []complex128) bool
+type PredicateStringArr func(e []string) bool
+type PredicateInterfaceArr func(e []interface{}) bool
