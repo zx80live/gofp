@@ -6,360 +6,320 @@ package fp
 func (l ListBool) Cons(e bool) ListBool {
 	tail := l.Copy()
 	xs := ListBool{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorBool,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListRune) Cons(e rune) ListRune {
 	tail := l.Copy()
 	xs := ListRune{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorRune,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListByte) Cons(e byte) ListByte {
 	tail := l.Copy()
 	xs := ListByte{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorByte,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt) Cons(e int) ListInt {
 	tail := l.Copy()
 	xs := ListInt{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt8) Cons(e int8) ListInt8 {
 	tail := l.Copy()
 	xs := ListInt8{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt8,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt16) Cons(e int16) ListInt16 {
 	tail := l.Copy()
 	xs := ListInt16{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt16,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt32) Cons(e int32) ListInt32 {
 	tail := l.Copy()
 	xs := ListInt32{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt32,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt64) Cons(e int64) ListInt64 {
 	tail := l.Copy()
 	xs := ListInt64{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt64,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint) Cons(e uint) ListUint {
 	tail := l.Copy()
 	xs := ListUint{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint8) Cons(e uint8) ListUint8 {
 	tail := l.Copy()
 	xs := ListUint8{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint8,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint16) Cons(e uint16) ListUint16 {
 	tail := l.Copy()
 	xs := ListUint16{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint16,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint32) Cons(e uint32) ListUint32 {
 	tail := l.Copy()
 	xs := ListUint32{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint32,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint64) Cons(e uint64) ListUint64 {
 	tail := l.Copy()
 	xs := ListUint64{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint64,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUintptr) Cons(e uintptr) ListUintptr {
 	tail := l.Copy()
 	xs := ListUintptr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUintptr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListFloat32) Cons(e float32) ListFloat32 {
 	tail := l.Copy()
 	xs := ListFloat32{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorFloat32,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListFloat64) Cons(e float64) ListFloat64 {
 	tail := l.Copy()
 	xs := ListFloat64{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorFloat64,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListComplex64) Cons(e complex64) ListComplex64 {
 	tail := l.Copy()
 	xs := ListComplex64{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorComplex64,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListComplex128) Cons(e complex128) ListComplex128 {
 	tail := l.Copy()
 	xs := ListComplex128{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorComplex128,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListString) Cons(e string) ListString {
 	tail := l.Copy()
 	xs := ListString{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorString,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInterface) Cons(e interface{}) ListInterface {
 	tail := l.Copy()
 	xs := ListInterface{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInterface,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListBoolArr) Cons(e []bool) ListBoolArr {
 	tail := l.Copy()
 	xs := ListBoolArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorBoolArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListRuneArr) Cons(e []rune) ListRuneArr {
 	tail := l.Copy()
 	xs := ListRuneArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorRuneArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListByteArr) Cons(e []byte) ListByteArr {
 	tail := l.Copy()
 	xs := ListByteArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorByteArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListIntArr) Cons(e []int) ListIntArr {
 	tail := l.Copy()
 	xs := ListIntArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorIntArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt8Arr) Cons(e []int8) ListInt8Arr {
 	tail := l.Copy()
 	xs := ListInt8Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt8Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt16Arr) Cons(e []int16) ListInt16Arr {
 	tail := l.Copy()
 	xs := ListInt16Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt16Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt32Arr) Cons(e []int32) ListInt32Arr {
 	tail := l.Copy()
 	xs := ListInt32Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt32Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInt64Arr) Cons(e []int64) ListInt64Arr {
 	tail := l.Copy()
 	xs := ListInt64Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInt64Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUintArr) Cons(e []uint) ListUintArr {
 	tail := l.Copy()
 	xs := ListUintArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUintArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint8Arr) Cons(e []uint8) ListUint8Arr {
 	tail := l.Copy()
 	xs := ListUint8Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint8Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint16Arr) Cons(e []uint16) ListUint16Arr {
 	tail := l.Copy()
 	xs := ListUint16Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint16Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint32Arr) Cons(e []uint32) ListUint32Arr {
 	tail := l.Copy()
 	xs := ListUint32Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint32Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUint64Arr) Cons(e []uint64) ListUint64Arr {
 	tail := l.Copy()
 	xs := ListUint64Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUint64Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListUintptrArr) Cons(e []uintptr) ListUintptrArr {
 	tail := l.Copy()
 	xs := ListUintptrArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorUintptrArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListFloat32Arr) Cons(e []float32) ListFloat32Arr {
 	tail := l.Copy()
 	xs := ListFloat32Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorFloat32Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListFloat64Arr) Cons(e []float64) ListFloat64Arr {
 	tail := l.Copy()
 	xs := ListFloat64Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorFloat64Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListComplex64Arr) Cons(e []complex64) ListComplex64Arr {
 	tail := l.Copy()
 	xs := ListComplex64Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorComplex64Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListComplex128Arr) Cons(e []complex128) ListComplex128Arr {
 	tail := l.Copy()
 	xs := ListComplex128Arr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorComplex128Arr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListStringArr) Cons(e []string) ListStringArr {
 	tail := l.Copy()
 	xs := ListStringArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorStringArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }
 func (l ListInterfaceArr) Cons(e []interface{}) ListInterfaceArr {
 	tail := l.Copy()
 	xs := ListInterfaceArr{
-		head:    &e,
-		tail:    &tail,
-		functor: EmptyFunctorInterfaceArr,
+		head: &e,
+		tail: &tail,
 	}
 	return xs
 }

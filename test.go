@@ -8,6 +8,8 @@ import (
 func main() {
 	fmt.Println("Hello")
 
-	l := MakeListInt(1, 2, 3, 4, 5)
-	fmt.Println(l.Head())
+	l := MakeListInt(1, 2, 3, 4, 5).Cons(10).Cons(20).Cons(30)
+	l.Foreach(func(e int) {
+		fmt.Println(">", e)
+	})
 }

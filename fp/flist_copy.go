@@ -9,9 +9,8 @@ func (l ListBool) Copy() ListBool {
 	} else {
 		tail := l.tail.Copy()
 		return ListBool{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorBool,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -21,9 +20,8 @@ func (l ListRune) Copy() ListRune {
 	} else {
 		tail := l.tail.Copy()
 		return ListRune{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorRune,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -33,9 +31,8 @@ func (l ListByte) Copy() ListByte {
 	} else {
 		tail := l.tail.Copy()
 		return ListByte{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorByte,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -45,9 +42,8 @@ func (l ListInt) Copy() ListInt {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -57,9 +53,8 @@ func (l ListInt8) Copy() ListInt8 {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt8{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt8,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -69,9 +64,8 @@ func (l ListInt16) Copy() ListInt16 {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt16{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt16,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -81,9 +75,8 @@ func (l ListInt32) Copy() ListInt32 {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt32{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt32,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -93,9 +86,8 @@ func (l ListInt64) Copy() ListInt64 {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt64{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt64,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -105,9 +97,8 @@ func (l ListUint) Copy() ListUint {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -117,9 +108,8 @@ func (l ListUint8) Copy() ListUint8 {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint8{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint8,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -129,9 +119,8 @@ func (l ListUint16) Copy() ListUint16 {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint16{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint16,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -141,9 +130,8 @@ func (l ListUint32) Copy() ListUint32 {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint32{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint32,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -153,9 +141,8 @@ func (l ListUint64) Copy() ListUint64 {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint64{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint64,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -165,9 +152,8 @@ func (l ListUintptr) Copy() ListUintptr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUintptr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUintptr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -177,9 +163,8 @@ func (l ListFloat32) Copy() ListFloat32 {
 	} else {
 		tail := l.tail.Copy()
 		return ListFloat32{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorFloat32,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -189,9 +174,8 @@ func (l ListFloat64) Copy() ListFloat64 {
 	} else {
 		tail := l.tail.Copy()
 		return ListFloat64{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorFloat64,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -201,9 +185,8 @@ func (l ListComplex64) Copy() ListComplex64 {
 	} else {
 		tail := l.tail.Copy()
 		return ListComplex64{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorComplex64,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -213,9 +196,8 @@ func (l ListComplex128) Copy() ListComplex128 {
 	} else {
 		tail := l.tail.Copy()
 		return ListComplex128{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorComplex128,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -225,9 +207,8 @@ func (l ListString) Copy() ListString {
 	} else {
 		tail := l.tail.Copy()
 		return ListString{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorString,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -237,9 +218,8 @@ func (l ListInterface) Copy() ListInterface {
 	} else {
 		tail := l.tail.Copy()
 		return ListInterface{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInterface,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -249,9 +229,8 @@ func (l ListBoolArr) Copy() ListBoolArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListBoolArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorBoolArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -261,9 +240,8 @@ func (l ListRuneArr) Copy() ListRuneArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListRuneArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorRuneArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -273,9 +251,8 @@ func (l ListByteArr) Copy() ListByteArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListByteArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorByteArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -285,9 +262,8 @@ func (l ListIntArr) Copy() ListIntArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListIntArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorIntArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -297,9 +273,8 @@ func (l ListInt8Arr) Copy() ListInt8Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt8Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt8Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -309,9 +284,8 @@ func (l ListInt16Arr) Copy() ListInt16Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt16Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt16Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -321,9 +295,8 @@ func (l ListInt32Arr) Copy() ListInt32Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt32Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt32Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -333,9 +306,8 @@ func (l ListInt64Arr) Copy() ListInt64Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListInt64Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInt64Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -345,9 +317,8 @@ func (l ListUintArr) Copy() ListUintArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUintArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUintArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -357,9 +328,8 @@ func (l ListUint8Arr) Copy() ListUint8Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint8Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint8Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -369,9 +339,8 @@ func (l ListUint16Arr) Copy() ListUint16Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint16Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint16Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -381,9 +350,8 @@ func (l ListUint32Arr) Copy() ListUint32Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint32Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint32Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -393,9 +361,8 @@ func (l ListUint64Arr) Copy() ListUint64Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUint64Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUint64Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -405,9 +372,8 @@ func (l ListUintptrArr) Copy() ListUintptrArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListUintptrArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorUintptrArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -417,9 +383,8 @@ func (l ListFloat32Arr) Copy() ListFloat32Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListFloat32Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorFloat32Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -429,9 +394,8 @@ func (l ListFloat64Arr) Copy() ListFloat64Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListFloat64Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorFloat64Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -441,9 +405,8 @@ func (l ListComplex64Arr) Copy() ListComplex64Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListComplex64Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorComplex64Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -453,9 +416,8 @@ func (l ListComplex128Arr) Copy() ListComplex128Arr {
 	} else {
 		tail := l.tail.Copy()
 		return ListComplex128Arr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorComplex128Arr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -465,9 +427,8 @@ func (l ListStringArr) Copy() ListStringArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListStringArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorStringArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
@@ -477,9 +438,8 @@ func (l ListInterfaceArr) Copy() ListInterfaceArr {
 	} else {
 		tail := l.tail.Copy()
 		return ListInterfaceArr{
-			head:    l.head,
-			tail:    &tail,
-			functor: EmptyFunctorInterfaceArr,
+			head: l.head,
+			tail: &tail,
 		}
 	}
 }
