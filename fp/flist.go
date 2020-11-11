@@ -3,6 +3,8 @@
 
 package fp
 
+import "reflect"
+
 type ListBool struct {
 	head    bool
 	tail    *ListBool
@@ -242,3 +244,125 @@ type ListInterfaceArr struct {
 	tail    *ListInterfaceArr
 	functor FunctorInterfaceArrInterfaceArr
 }
+
+var NilBool ListBool = ListBool{nil, nil, EmptyFunctorBool}
+var NilRune ListRune = ListRune{nil, nil, EmptyFunctorRune}
+var NilByte ListByte = ListByte{nil, nil, EmptyFunctorByte}
+var NilInt ListInt = ListInt{nil, nil, EmptyFunctorInt}
+var NilInt8 ListInt8 = ListInt8{nil, nil, EmptyFunctorInt8}
+var NilInt16 ListInt16 = ListInt16{nil, nil, EmptyFunctorInt16}
+var NilInt32 ListInt32 = ListInt32{nil, nil, EmptyFunctorInt32}
+var NilInt64 ListInt64 = ListInt64{nil, nil, EmptyFunctorInt64}
+var NilUint ListUint = ListUint{nil, nil, EmptyFunctorUint}
+var NilUint8 ListUint8 = ListUint8{nil, nil, EmptyFunctorUint8}
+var NilUint16 ListUint16 = ListUint16{nil, nil, EmptyFunctorUint16}
+var NilUint32 ListUint32 = ListUint32{nil, nil, EmptyFunctorUint32}
+var NilUint64 ListUint64 = ListUint64{nil, nil, EmptyFunctorUint64}
+var NilUintptr ListUintptr = ListUintptr{nil, nil, EmptyFunctorUintptr}
+var NilFloat32 ListFloat32 = ListFloat32{nil, nil, EmptyFunctorFloat32}
+var NilFloat64 ListFloat64 = ListFloat64{nil, nil, EmptyFunctorFloat64}
+var NilComplex64 ListComplex64 = ListComplex64{nil, nil, EmptyFunctorComplex64}
+var NilComplex128 ListComplex128 = ListComplex128{nil, nil, EmptyFunctorComplex128}
+var NilString ListString = ListString{nil, nil, EmptyFunctorString}
+var NilInterface ListInterface = ListInterface{nil, nil, EmptyFunctorInterface}
+var NilBoolArr ListBoolArr = ListBoolArr{nil, nil, EmptyFunctorBoolArr}
+var NilRuneArr ListRuneArr = ListRuneArr{nil, nil, EmptyFunctorRuneArr}
+var NilByteArr ListByteArr = ListByteArr{nil, nil, EmptyFunctorByteArr}
+var NilIntArr ListIntArr = ListIntArr{nil, nil, EmptyFunctorIntArr}
+var NilInt8Arr ListInt8Arr = ListInt8Arr{nil, nil, EmptyFunctorInt8Arr}
+var NilInt16Arr ListInt16Arr = ListInt16Arr{nil, nil, EmptyFunctorInt16Arr}
+var NilInt32Arr ListInt32Arr = ListInt32Arr{nil, nil, EmptyFunctorInt32Arr}
+var NilInt64Arr ListInt64Arr = ListInt64Arr{nil, nil, EmptyFunctorInt64Arr}
+var NilUintArr ListUintArr = ListUintArr{nil, nil, EmptyFunctorUintArr}
+var NilUint8Arr ListUint8Arr = ListUint8Arr{nil, nil, EmptyFunctorUint8Arr}
+var NilUint16Arr ListUint16Arr = ListUint16Arr{nil, nil, EmptyFunctorUint16Arr}
+var NilUint32Arr ListUint32Arr = ListUint32Arr{nil, nil, EmptyFunctorUint32Arr}
+var NilUint64Arr ListUint64Arr = ListUint64Arr{nil, nil, EmptyFunctorUint64Arr}
+var NilUintptrArr ListUintptrArr = ListUintptrArr{nil, nil, EmptyFunctorUintptrArr}
+var NilFloat32Arr ListFloat32Arr = ListFloat32Arr{nil, nil, EmptyFunctorFloat32Arr}
+var NilFloat64Arr ListFloat64Arr = ListFloat64Arr{nil, nil, EmptyFunctorFloat64Arr}
+var NilComplex64Arr ListComplex64Arr = ListComplex64Arr{nil, nil, EmptyFunctorComplex64Arr}
+var NilComplex128Arr ListComplex128Arr = ListComplex128Arr{nil, nil, EmptyFunctorComplex128Arr}
+var NilStringArr ListStringArr = ListStringArr{nil, nil, EmptyFunctorStringArr}
+var NilInterfaceArr ListInterfaceArr = ListInterfaceArr{nil, nil, EmptyFunctorInterfaceArr}
+
+func (l ListBool) IsEmpty() bool             { return reflect.DeepEqual(l, NilBool) }
+func (l ListBool) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l ListRune) IsEmpty() bool             { return reflect.DeepEqual(l, NilRune) }
+func (l ListRune) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l ListByte) IsEmpty() bool             { return reflect.DeepEqual(l, NilByte) }
+func (l ListByte) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l ListInt) IsEmpty() bool              { return reflect.DeepEqual(l, NilInt) }
+func (l ListInt) IsNotEmpty() bool           { return !l.IsEmpty() }
+func (l ListInt8) IsEmpty() bool             { return reflect.DeepEqual(l, NilInt8) }
+func (l ListInt8) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l ListInt16) IsEmpty() bool            { return reflect.DeepEqual(l, NilInt16) }
+func (l ListInt16) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l ListInt32) IsEmpty() bool            { return reflect.DeepEqual(l, NilInt32) }
+func (l ListInt32) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l ListInt64) IsEmpty() bool            { return reflect.DeepEqual(l, NilInt64) }
+func (l ListInt64) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l ListUint) IsEmpty() bool             { return reflect.DeepEqual(l, NilUint) }
+func (l ListUint) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l ListUint8) IsEmpty() bool            { return reflect.DeepEqual(l, NilUint8) }
+func (l ListUint8) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l ListUint16) IsEmpty() bool           { return reflect.DeepEqual(l, NilUint16) }
+func (l ListUint16) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l ListUint32) IsEmpty() bool           { return reflect.DeepEqual(l, NilUint32) }
+func (l ListUint32) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l ListUint64) IsEmpty() bool           { return reflect.DeepEqual(l, NilUint64) }
+func (l ListUint64) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l ListUintptr) IsEmpty() bool          { return reflect.DeepEqual(l, NilUintptr) }
+func (l ListUintptr) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListFloat32) IsEmpty() bool          { return reflect.DeepEqual(l, NilFloat32) }
+func (l ListFloat32) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListFloat64) IsEmpty() bool          { return reflect.DeepEqual(l, NilFloat64) }
+func (l ListFloat64) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListComplex64) IsEmpty() bool        { return reflect.DeepEqual(l, NilComplex64) }
+func (l ListComplex64) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListComplex128) IsEmpty() bool       { return reflect.DeepEqual(l, NilComplex128) }
+func (l ListComplex128) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l ListString) IsEmpty() bool           { return reflect.DeepEqual(l, NilString) }
+func (l ListString) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l ListInterface) IsEmpty() bool        { return reflect.DeepEqual(l, NilInterface) }
+func (l ListInterface) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListBoolArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilBoolArr) }
+func (l ListBoolArr) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListRuneArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilRuneArr) }
+func (l ListRuneArr) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListByteArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilByteArr) }
+func (l ListByteArr) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListIntArr) IsEmpty() bool           { return reflect.DeepEqual(l, NilIntArr) }
+func (l ListIntArr) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l ListInt8Arr) IsEmpty() bool          { return reflect.DeepEqual(l, NilInt8Arr) }
+func (l ListInt8Arr) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListInt16Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilInt16Arr) }
+func (l ListInt16Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l ListInt32Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilInt32Arr) }
+func (l ListInt32Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l ListInt64Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilInt64Arr) }
+func (l ListInt64Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l ListUintArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilUintArr) }
+func (l ListUintArr) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ListUint8Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilUint8Arr) }
+func (l ListUint8Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l ListUint16Arr) IsEmpty() bool        { return reflect.DeepEqual(l, NilUint16Arr) }
+func (l ListUint16Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListUint32Arr) IsEmpty() bool        { return reflect.DeepEqual(l, NilUint32Arr) }
+func (l ListUint32Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListUint64Arr) IsEmpty() bool        { return reflect.DeepEqual(l, NilUint64Arr) }
+func (l ListUint64Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListUintptrArr) IsEmpty() bool       { return reflect.DeepEqual(l, NilUintptrArr) }
+func (l ListUintptrArr) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l ListFloat32Arr) IsEmpty() bool       { return reflect.DeepEqual(l, NilFloat32Arr) }
+func (l ListFloat32Arr) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l ListFloat64Arr) IsEmpty() bool       { return reflect.DeepEqual(l, NilFloat64Arr) }
+func (l ListFloat64Arr) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l ListComplex64Arr) IsEmpty() bool     { return reflect.DeepEqual(l, NilComplex64Arr) }
+func (l ListComplex64Arr) IsNotEmpty() bool  { return !l.IsEmpty() }
+func (l ListComplex128Arr) IsEmpty() bool    { return reflect.DeepEqual(l, NilComplex128Arr) }
+func (l ListComplex128Arr) IsNotEmpty() bool { return !l.IsEmpty() }
+func (l ListStringArr) IsEmpty() bool        { return reflect.DeepEqual(l, NilStringArr) }
+func (l ListStringArr) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListInterfaceArr) IsEmpty() bool     { return reflect.DeepEqual(l, NilInterfaceArr) }
+func (l ListInterfaceArr) IsNotEmpty() bool  { return !l.IsEmpty() }

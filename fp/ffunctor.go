@@ -1604,43 +1604,43 @@ type FunctorInterfaceArrComplex128Arr func(e []interface{}) []complex128
 type FunctorInterfaceArrStringArr func(e []interface{}) []string
 type FunctorInterfaceArrInterfaceArr func(e []interface{}) []interface{}
 
-func EmptyFunctorBoolBool(e bool) bool                                   { return e }
-func EmptyFunctorRuneRune(e rune) rune                                   { return e }
-func EmptyFunctorByteByte(e byte) byte                                   { return e }
-func EmptyFunctorIntInt(e int) int                                       { return e }
-func EmptyFunctorInt8Int8(e int8) int8                                   { return e }
-func EmptyFunctorInt16Int16(e int16) int16                               { return e }
-func EmptyFunctorInt32Int32(e int32) int32                               { return e }
-func EmptyFunctorInt64Int64(e int64) int64                               { return e }
-func EmptyFunctorUintUint(e uint) uint                                   { return e }
-func EmptyFunctorUint8Uint8(e uint8) uint8                               { return e }
-func EmptyFunctorUint16Uint16(e uint16) uint16                           { return e }
-func EmptyFunctorUint32Uint32(e uint32) uint32                           { return e }
-func EmptyFunctorUint64Uint64(e uint64) uint64                           { return e }
-func EmptyFunctorUintptrUintptr(e uintptr) uintptr                       { return e }
-func EmptyFunctorFloat32Float32(e float32) float32                       { return e }
-func EmptyFunctorFloat64Float64(e float64) float64                       { return e }
-func EmptyFunctorComplex64Complex64(e complex64) complex64               { return e }
-func EmptyFunctorComplex128Complex128(e complex128) complex128           { return e }
-func EmptyFunctorStringString(e string) string                           { return e }
-func EmptyFunctorInterfaceInterface(e interface{}) interface{}           { return e }
-func EmptyFunctorBoolArrBoolArr(e []bool) []bool                         { return e }
-func EmptyFunctorRuneArrRuneArr(e []rune) []rune                         { return e }
-func EmptyFunctorByteArrByteArr(e []byte) []byte                         { return e }
-func EmptyFunctorIntArrIntArr(e []int) []int                             { return e }
-func EmptyFunctorInt8ArrInt8Arr(e []int8) []int8                         { return e }
-func EmptyFunctorInt16ArrInt16Arr(e []int16) []int16                     { return e }
-func EmptyFunctorInt32ArrInt32Arr(e []int32) []int32                     { return e }
-func EmptyFunctorInt64ArrInt64Arr(e []int64) []int64                     { return e }
-func EmptyFunctorUintArrUintArr(e []uint) []uint                         { return e }
-func EmptyFunctorUint8ArrUint8Arr(e []uint8) []uint8                     { return e }
-func EmptyFunctorUint16ArrUint16Arr(e []uint16) []uint16                 { return e }
-func EmptyFunctorUint32ArrUint32Arr(e []uint32) []uint32                 { return e }
-func EmptyFunctorUint64ArrUint64Arr(e []uint64) []uint64                 { return e }
-func EmptyFunctorUintptrArrUintptrArr(e []uintptr) []uintptr             { return e }
-func EmptyFunctorFloat32ArrFloat32Arr(e []float32) []float32             { return e }
-func EmptyFunctorFloat64ArrFloat64Arr(e []float64) []float64             { return e }
-func EmptyFunctorComplex64ArrComplex64Arr(e []complex64) []complex64     { return e }
-func EmptyFunctorComplex128ArrComplex128Arr(e []complex128) []complex128 { return e }
-func EmptyFunctorStringArrStringArr(e []string) []string                 { return e }
-func EmptyFunctorInterfaceArrInterfaceArr(e []interface{}) []interface{} { return e }
+var EmptyFunctorBool FunctorBoolBool = func(e bool) bool { return e }
+var EmptyFunctorRune FunctorRuneRune = func(e rune) rune { return e }
+var EmptyFunctorByte FunctorByteByte = func(e byte) byte { return e }
+var EmptyFunctorInt FunctorIntInt = func(e int) int { return e }
+var EmptyFunctorInt8 FunctorInt8Int8 = func(e int8) int8 { return e }
+var EmptyFunctorInt16 FunctorInt16Int16 = func(e int16) int16 { return e }
+var EmptyFunctorInt32 FunctorInt32Int32 = func(e int32) int32 { return e }
+var EmptyFunctorInt64 FunctorInt64Int64 = func(e int64) int64 { return e }
+var EmptyFunctorUint FunctorUintUint = func(e uint) uint { return e }
+var EmptyFunctorUint8 FunctorUint8Uint8 = func(e uint8) uint8 { return e }
+var EmptyFunctorUint16 FunctorUint16Uint16 = func(e uint16) uint16 { return e }
+var EmptyFunctorUint32 FunctorUint32Uint32 = func(e uint32) uint32 { return e }
+var EmptyFunctorUint64 FunctorUint64Uint64 = func(e uint64) uint64 { return e }
+var EmptyFunctorUintptr FunctorUintptrUintptr = func(e uintptr) uintptr { return e }
+var EmptyFunctorFloat32 FunctorFloat32Float32 = func(e float32) float32 { return e }
+var EmptyFunctorFloat64 FunctorFloat64Float64 = func(e float64) float64 { return e }
+var EmptyFunctorComplex64 FunctorComplex64Complex64 = func(e complex64) complex64 { return e }
+var EmptyFunctorComplex128 FunctorComplex128Complex128 = func(e complex128) complex128 { return e }
+var EmptyFunctorString FunctorStringString = func(e string) string { return e }
+var EmptyFunctorInterface FunctorInterfaceInterface = func(e interface{}) interface{} { return e }
+var EmptyFunctorBoolArr FunctorBoolArrBoolArr = func(e []bool) []bool { return e }
+var EmptyFunctorRuneArr FunctorRuneArrRuneArr = func(e []rune) []rune { return e }
+var EmptyFunctorByteArr FunctorByteArrByteArr = func(e []byte) []byte { return e }
+var EmptyFunctorIntArr FunctorIntArrIntArr = func(e []int) []int { return e }
+var EmptyFunctorInt8Arr FunctorInt8ArrInt8Arr = func(e []int8) []int8 { return e }
+var EmptyFunctorInt16Arr FunctorInt16ArrInt16Arr = func(e []int16) []int16 { return e }
+var EmptyFunctorInt32Arr FunctorInt32ArrInt32Arr = func(e []int32) []int32 { return e }
+var EmptyFunctorInt64Arr FunctorInt64ArrInt64Arr = func(e []int64) []int64 { return e }
+var EmptyFunctorUintArr FunctorUintArrUintArr = func(e []uint) []uint { return e }
+var EmptyFunctorUint8Arr FunctorUint8ArrUint8Arr = func(e []uint8) []uint8 { return e }
+var EmptyFunctorUint16Arr FunctorUint16ArrUint16Arr = func(e []uint16) []uint16 { return e }
+var EmptyFunctorUint32Arr FunctorUint32ArrUint32Arr = func(e []uint32) []uint32 { return e }
+var EmptyFunctorUint64Arr FunctorUint64ArrUint64Arr = func(e []uint64) []uint64 { return e }
+var EmptyFunctorUintptrArr FunctorUintptrArrUintptrArr = func(e []uintptr) []uintptr { return e }
+var EmptyFunctorFloat32Arr FunctorFloat32ArrFloat32Arr = func(e []float32) []float32 { return e }
+var EmptyFunctorFloat64Arr FunctorFloat64ArrFloat64Arr = func(e []float64) []float64 { return e }
+var EmptyFunctorComplex64Arr FunctorComplex64ArrComplex64Arr = func(e []complex64) []complex64 { return e }
+var EmptyFunctorComplex128Arr FunctorComplex128ArrComplex128Arr = func(e []complex128) []complex128 { return e }
+var EmptyFunctorStringArr FunctorStringArrStringArr = func(e []string) []string { return e }
+var EmptyFunctorInterfaceArr FunctorInterfaceArrInterfaceArr = func(e []interface{}) []interface{} { return e }
