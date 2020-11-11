@@ -3,244 +3,242 @@
 
 package fp
 
-import "reflect"
-
 type ListBool struct {
-	head    bool
+	head    *bool
 	tail    *ListBool
 	functor FunctorBoolBool
 }
 
 type ListRune struct {
-	head    rune
+	head    *rune
 	tail    *ListRune
 	functor FunctorRuneRune
 }
 
 type ListByte struct {
-	head    byte
+	head    *byte
 	tail    *ListByte
 	functor FunctorByteByte
 }
 
 type ListInt struct {
-	head    int
+	head    *int
 	tail    *ListInt
 	functor FunctorIntInt
 }
 
 type ListInt8 struct {
-	head    int8
+	head    *int8
 	tail    *ListInt8
 	functor FunctorInt8Int8
 }
 
 type ListInt16 struct {
-	head    int16
+	head    *int16
 	tail    *ListInt16
 	functor FunctorInt16Int16
 }
 
 type ListInt32 struct {
-	head    int32
+	head    *int32
 	tail    *ListInt32
 	functor FunctorInt32Int32
 }
 
 type ListInt64 struct {
-	head    int64
+	head    *int64
 	tail    *ListInt64
 	functor FunctorInt64Int64
 }
 
 type ListUint struct {
-	head    uint
+	head    *uint
 	tail    *ListUint
 	functor FunctorUintUint
 }
 
 type ListUint8 struct {
-	head    uint8
+	head    *uint8
 	tail    *ListUint8
 	functor FunctorUint8Uint8
 }
 
 type ListUint16 struct {
-	head    uint16
+	head    *uint16
 	tail    *ListUint16
 	functor FunctorUint16Uint16
 }
 
 type ListUint32 struct {
-	head    uint32
+	head    *uint32
 	tail    *ListUint32
 	functor FunctorUint32Uint32
 }
 
 type ListUint64 struct {
-	head    uint64
+	head    *uint64
 	tail    *ListUint64
 	functor FunctorUint64Uint64
 }
 
 type ListUintptr struct {
-	head    uintptr
+	head    *uintptr
 	tail    *ListUintptr
 	functor FunctorUintptrUintptr
 }
 
 type ListFloat32 struct {
-	head    float32
+	head    *float32
 	tail    *ListFloat32
 	functor FunctorFloat32Float32
 }
 
 type ListFloat64 struct {
-	head    float64
+	head    *float64
 	tail    *ListFloat64
 	functor FunctorFloat64Float64
 }
 
 type ListComplex64 struct {
-	head    complex64
+	head    *complex64
 	tail    *ListComplex64
 	functor FunctorComplex64Complex64
 }
 
 type ListComplex128 struct {
-	head    complex128
+	head    *complex128
 	tail    *ListComplex128
 	functor FunctorComplex128Complex128
 }
 
 type ListString struct {
-	head    string
+	head    *string
 	tail    *ListString
 	functor FunctorStringString
 }
 
 type ListInterface struct {
-	head    interface{}
+	head    *interface{}
 	tail    *ListInterface
 	functor FunctorInterfaceInterface
 }
 
 type ListBoolArr struct {
-	head    []bool
+	head    *[]bool
 	tail    *ListBoolArr
 	functor FunctorBoolArrBoolArr
 }
 
 type ListRuneArr struct {
-	head    []rune
+	head    *[]rune
 	tail    *ListRuneArr
 	functor FunctorRuneArrRuneArr
 }
 
 type ListByteArr struct {
-	head    []byte
+	head    *[]byte
 	tail    *ListByteArr
 	functor FunctorByteArrByteArr
 }
 
 type ListIntArr struct {
-	head    []int
+	head    *[]int
 	tail    *ListIntArr
 	functor FunctorIntArrIntArr
 }
 
 type ListInt8Arr struct {
-	head    []int8
+	head    *[]int8
 	tail    *ListInt8Arr
 	functor FunctorInt8ArrInt8Arr
 }
 
 type ListInt16Arr struct {
-	head    []int16
+	head    *[]int16
 	tail    *ListInt16Arr
 	functor FunctorInt16ArrInt16Arr
 }
 
 type ListInt32Arr struct {
-	head    []int32
+	head    *[]int32
 	tail    *ListInt32Arr
 	functor FunctorInt32ArrInt32Arr
 }
 
 type ListInt64Arr struct {
-	head    []int64
+	head    *[]int64
 	tail    *ListInt64Arr
 	functor FunctorInt64ArrInt64Arr
 }
 
 type ListUintArr struct {
-	head    []uint
+	head    *[]uint
 	tail    *ListUintArr
 	functor FunctorUintArrUintArr
 }
 
 type ListUint8Arr struct {
-	head    []uint8
+	head    *[]uint8
 	tail    *ListUint8Arr
 	functor FunctorUint8ArrUint8Arr
 }
 
 type ListUint16Arr struct {
-	head    []uint16
+	head    *[]uint16
 	tail    *ListUint16Arr
 	functor FunctorUint16ArrUint16Arr
 }
 
 type ListUint32Arr struct {
-	head    []uint32
+	head    *[]uint32
 	tail    *ListUint32Arr
 	functor FunctorUint32ArrUint32Arr
 }
 
 type ListUint64Arr struct {
-	head    []uint64
+	head    *[]uint64
 	tail    *ListUint64Arr
 	functor FunctorUint64ArrUint64Arr
 }
 
 type ListUintptrArr struct {
-	head    []uintptr
+	head    *[]uintptr
 	tail    *ListUintptrArr
 	functor FunctorUintptrArrUintptrArr
 }
 
 type ListFloat32Arr struct {
-	head    []float32
+	head    *[]float32
 	tail    *ListFloat32Arr
 	functor FunctorFloat32ArrFloat32Arr
 }
 
 type ListFloat64Arr struct {
-	head    []float64
+	head    *[]float64
 	tail    *ListFloat64Arr
 	functor FunctorFloat64ArrFloat64Arr
 }
 
 type ListComplex64Arr struct {
-	head    []complex64
+	head    *[]complex64
 	tail    *ListComplex64Arr
 	functor FunctorComplex64ArrComplex64Arr
 }
 
 type ListComplex128Arr struct {
-	head    []complex128
+	head    *[]complex128
 	tail    *ListComplex128Arr
 	functor FunctorComplex128ArrComplex128Arr
 }
 
 type ListStringArr struct {
-	head    []string
+	head    *[]string
 	tail    *ListStringArr
 	functor FunctorStringArrStringArr
 }
 
 type ListInterfaceArr struct {
-	head    []interface{}
+	head    *[]interface{}
 	tail    *ListInterfaceArr
 	functor FunctorInterfaceArrInterfaceArr
 }
@@ -285,84 +283,3 @@ var NilComplex64Arr ListComplex64Arr = ListComplex64Arr{nil, nil, EmptyFunctorCo
 var NilComplex128Arr ListComplex128Arr = ListComplex128Arr{nil, nil, EmptyFunctorComplex128Arr}
 var NilStringArr ListStringArr = ListStringArr{nil, nil, EmptyFunctorStringArr}
 var NilInterfaceArr ListInterfaceArr = ListInterfaceArr{nil, nil, EmptyFunctorInterfaceArr}
-
-func (l ListBool) IsEmpty() bool             { return reflect.DeepEqual(l, NilBool) }
-func (l ListBool) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListRune) IsEmpty() bool             { return reflect.DeepEqual(l, NilRune) }
-func (l ListRune) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListByte) IsEmpty() bool             { return reflect.DeepEqual(l, NilByte) }
-func (l ListByte) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListInt) IsEmpty() bool              { return reflect.DeepEqual(l, NilInt) }
-func (l ListInt) IsNotEmpty() bool           { return !l.IsEmpty() }
-func (l ListInt8) IsEmpty() bool             { return reflect.DeepEqual(l, NilInt8) }
-func (l ListInt8) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListInt16) IsEmpty() bool            { return reflect.DeepEqual(l, NilInt16) }
-func (l ListInt16) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListInt32) IsEmpty() bool            { return reflect.DeepEqual(l, NilInt32) }
-func (l ListInt32) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListInt64) IsEmpty() bool            { return reflect.DeepEqual(l, NilInt64) }
-func (l ListInt64) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListUint) IsEmpty() bool             { return reflect.DeepEqual(l, NilUint) }
-func (l ListUint) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListUint8) IsEmpty() bool            { return reflect.DeepEqual(l, NilUint8) }
-func (l ListUint8) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListUint16) IsEmpty() bool           { return reflect.DeepEqual(l, NilUint16) }
-func (l ListUint16) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListUint32) IsEmpty() bool           { return reflect.DeepEqual(l, NilUint32) }
-func (l ListUint32) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListUint64) IsEmpty() bool           { return reflect.DeepEqual(l, NilUint64) }
-func (l ListUint64) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListUintptr) IsEmpty() bool          { return reflect.DeepEqual(l, NilUintptr) }
-func (l ListUintptr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListFloat32) IsEmpty() bool          { return reflect.DeepEqual(l, NilFloat32) }
-func (l ListFloat32) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListFloat64) IsEmpty() bool          { return reflect.DeepEqual(l, NilFloat64) }
-func (l ListFloat64) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListComplex64) IsEmpty() bool        { return reflect.DeepEqual(l, NilComplex64) }
-func (l ListComplex64) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListComplex128) IsEmpty() bool       { return reflect.DeepEqual(l, NilComplex128) }
-func (l ListComplex128) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListString) IsEmpty() bool           { return reflect.DeepEqual(l, NilString) }
-func (l ListString) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListInterface) IsEmpty() bool        { return reflect.DeepEqual(l, NilInterface) }
-func (l ListInterface) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListBoolArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilBoolArr) }
-func (l ListBoolArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListRuneArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilRuneArr) }
-func (l ListRuneArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListByteArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilByteArr) }
-func (l ListByteArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListIntArr) IsEmpty() bool           { return reflect.DeepEqual(l, NilIntArr) }
-func (l ListIntArr) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListInt8Arr) IsEmpty() bool          { return reflect.DeepEqual(l, NilInt8Arr) }
-func (l ListInt8Arr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListInt16Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilInt16Arr) }
-func (l ListInt16Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListInt32Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilInt32Arr) }
-func (l ListInt32Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListInt64Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilInt64Arr) }
-func (l ListInt64Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListUintArr) IsEmpty() bool          { return reflect.DeepEqual(l, NilUintArr) }
-func (l ListUintArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListUint8Arr) IsEmpty() bool         { return reflect.DeepEqual(l, NilUint8Arr) }
-func (l ListUint8Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListUint16Arr) IsEmpty() bool        { return reflect.DeepEqual(l, NilUint16Arr) }
-func (l ListUint16Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListUint32Arr) IsEmpty() bool        { return reflect.DeepEqual(l, NilUint32Arr) }
-func (l ListUint32Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListUint64Arr) IsEmpty() bool        { return reflect.DeepEqual(l, NilUint64Arr) }
-func (l ListUint64Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListUintptrArr) IsEmpty() bool       { return reflect.DeepEqual(l, NilUintptrArr) }
-func (l ListUintptrArr) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListFloat32Arr) IsEmpty() bool       { return reflect.DeepEqual(l, NilFloat32Arr) }
-func (l ListFloat32Arr) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListFloat64Arr) IsEmpty() bool       { return reflect.DeepEqual(l, NilFloat64Arr) }
-func (l ListFloat64Arr) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListComplex64Arr) IsEmpty() bool     { return reflect.DeepEqual(l, NilComplex64Arr) }
-func (l ListComplex64Arr) IsNotEmpty() bool  { return !l.IsEmpty() }
-func (l ListComplex128Arr) IsEmpty() bool    { return reflect.DeepEqual(l, NilComplex128Arr) }
-func (l ListComplex128Arr) IsNotEmpty() bool { return !l.IsEmpty() }
-func (l ListStringArr) IsEmpty() bool        { return reflect.DeepEqual(l, NilStringArr) }
-func (l ListStringArr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListInterfaceArr) IsEmpty() bool     { return reflect.DeepEqual(l, NilInterfaceArr) }
-func (l ListInterfaceArr) IsNotEmpty() bool  { return !l.IsEmpty() }
