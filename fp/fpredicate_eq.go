@@ -6,159 +6,120 @@ package fp
 func EqPredicateBool(e bool) PredicateBool {
 	return func(o bool) bool { return EqualBool(e, o) }
 }
-
 func EqPredicateRune(e rune) PredicateRune {
 	return func(o rune) bool { return EqualRune(e, o) }
 }
-
 func EqPredicateByte(e byte) PredicateByte {
 	return func(o byte) bool { return EqualByte(e, o) }
 }
-
 func EqPredicateInt(e int) PredicateInt {
 	return func(o int) bool { return EqualInt(e, o) }
 }
-
 func EqPredicateInt8(e int8) PredicateInt8 {
 	return func(o int8) bool { return EqualInt8(e, o) }
 }
-
 func EqPredicateInt16(e int16) PredicateInt16 {
 	return func(o int16) bool { return EqualInt16(e, o) }
 }
-
 func EqPredicateInt32(e int32) PredicateInt32 {
 	return func(o int32) bool { return EqualInt32(e, o) }
 }
-
 func EqPredicateInt64(e int64) PredicateInt64 {
 	return func(o int64) bool { return EqualInt64(e, o) }
 }
-
 func EqPredicateUint(e uint) PredicateUint {
 	return func(o uint) bool { return EqualUint(e, o) }
 }
-
 func EqPredicateUint8(e uint8) PredicateUint8 {
 	return func(o uint8) bool { return EqualUint8(e, o) }
 }
-
 func EqPredicateUint16(e uint16) PredicateUint16 {
 	return func(o uint16) bool { return EqualUint16(e, o) }
 }
-
 func EqPredicateUint32(e uint32) PredicateUint32 {
 	return func(o uint32) bool { return EqualUint32(e, o) }
 }
-
 func EqPredicateUint64(e uint64) PredicateUint64 {
 	return func(o uint64) bool { return EqualUint64(e, o) }
 }
-
 func EqPredicateUintptr(e uintptr) PredicateUintptr {
 	return func(o uintptr) bool { return EqualUintptr(e, o) }
 }
-
 func EqPredicateFloat32(e float32) PredicateFloat32 {
 	return func(o float32) bool { return EqualFloat32(e, o) }
 }
-
 func EqPredicateFloat64(e float64) PredicateFloat64 {
 	return func(o float64) bool { return EqualFloat64(e, o) }
 }
-
 func EqPredicateComplex64(e complex64) PredicateComplex64 {
 	return func(o complex64) bool { return EqualComplex64(e, o) }
 }
-
 func EqPredicateComplex128(e complex128) PredicateComplex128 {
 	return func(o complex128) bool { return EqualComplex128(e, o) }
 }
-
 func EqPredicateString(e string) PredicateString {
 	return func(o string) bool { return EqualString(e, o) }
 }
-
 func EqPredicateInterface(e interface{}) PredicateInterface {
 	return func(o interface{}) bool { return EqualInterface(e, o) }
 }
-
 func EqPredicateBoolArr(e []bool) PredicateBoolArr {
 	return func(o []bool) bool { return EqualBoolArr(e, o) }
 }
-
 func EqPredicateRuneArr(e []rune) PredicateRuneArr {
 	return func(o []rune) bool { return EqualRuneArr(e, o) }
 }
-
 func EqPredicateByteArr(e []byte) PredicateByteArr {
 	return func(o []byte) bool { return EqualByteArr(e, o) }
 }
-
 func EqPredicateIntArr(e []int) PredicateIntArr {
 	return func(o []int) bool { return EqualIntArr(e, o) }
 }
-
 func EqPredicateInt8Arr(e []int8) PredicateInt8Arr {
 	return func(o []int8) bool { return EqualInt8Arr(e, o) }
 }
-
 func EqPredicateInt16Arr(e []int16) PredicateInt16Arr {
 	return func(o []int16) bool { return EqualInt16Arr(e, o) }
 }
-
 func EqPredicateInt32Arr(e []int32) PredicateInt32Arr {
 	return func(o []int32) bool { return EqualInt32Arr(e, o) }
 }
-
 func EqPredicateInt64Arr(e []int64) PredicateInt64Arr {
 	return func(o []int64) bool { return EqualInt64Arr(e, o) }
 }
-
 func EqPredicateUintArr(e []uint) PredicateUintArr {
 	return func(o []uint) bool { return EqualUintArr(e, o) }
 }
-
 func EqPredicateUint8Arr(e []uint8) PredicateUint8Arr {
 	return func(o []uint8) bool { return EqualUint8Arr(e, o) }
 }
-
 func EqPredicateUint16Arr(e []uint16) PredicateUint16Arr {
 	return func(o []uint16) bool { return EqualUint16Arr(e, o) }
 }
-
 func EqPredicateUint32Arr(e []uint32) PredicateUint32Arr {
 	return func(o []uint32) bool { return EqualUint32Arr(e, o) }
 }
-
 func EqPredicateUint64Arr(e []uint64) PredicateUint64Arr {
 	return func(o []uint64) bool { return EqualUint64Arr(e, o) }
 }
-
 func EqPredicateUintptrArr(e []uintptr) PredicateUintptrArr {
 	return func(o []uintptr) bool { return EqualUintptrArr(e, o) }
 }
-
 func EqPredicateFloat32Arr(e []float32) PredicateFloat32Arr {
 	return func(o []float32) bool { return EqualFloat32Arr(e, o) }
 }
-
 func EqPredicateFloat64Arr(e []float64) PredicateFloat64Arr {
 	return func(o []float64) bool { return EqualFloat64Arr(e, o) }
 }
-
 func EqPredicateComplex64Arr(e []complex64) PredicateComplex64Arr {
 	return func(o []complex64) bool { return EqualComplex64Arr(e, o) }
 }
-
 func EqPredicateComplex128Arr(e []complex128) PredicateComplex128Arr {
 	return func(o []complex128) bool { return EqualComplex128Arr(e, o) }
 }
-
 func EqPredicateStringArr(e []string) PredicateStringArr {
 	return func(o []string) bool { return EqualStringArr(e, o) }
 }
-
 func EqPredicateInterfaceArr(e []interface{}) PredicateInterfaceArr {
 	return func(o []interface{}) bool { return EqualInterfaceArr(e, o) }
 }

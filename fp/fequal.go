@@ -23,7 +23,6 @@ func EqualComplex64(a, b complex64) bool   { return a == b }
 func EqualComplex128(a, b complex128) bool { return a == b }
 func EqualString(a, b string) bool         { return a == b }
 func EqualInterface(a, b interface{}) bool { return a == b }
-
 func EqualBoolArr(a, b []bool) bool {
 	if len(a) != len(b) {
 		return false

@@ -4,44 +4,4 @@
 package fp
 
 import "fmt"
-
-func ToStringBool(e bool) string                  { return fmt.Sprintf("%v", e) }
-func ToStringRune(e rune) string                  { return fmt.Sprintf("%v", e) }
-func ToStringByte(e byte) string                  { return fmt.Sprintf("%v", e) }
-func ToStringInt(e int) string                    { return fmt.Sprintf("%v", e) }
-func ToStringInt8(e int8) string                  { return fmt.Sprintf("%v", e) }
-func ToStringInt16(e int16) string                { return fmt.Sprintf("%v", e) }
-func ToStringInt32(e int32) string                { return fmt.Sprintf("%v", e) }
-func ToStringInt64(e int64) string                { return fmt.Sprintf("%v", e) }
-func ToStringUint(e uint) string                  { return fmt.Sprintf("%v", e) }
-func ToStringUint8(e uint8) string                { return fmt.Sprintf("%v", e) }
-func ToStringUint16(e uint16) string              { return fmt.Sprintf("%v", e) }
-func ToStringUint32(e uint32) string              { return fmt.Sprintf("%v", e) }
-func ToStringUint64(e uint64) string              { return fmt.Sprintf("%v", e) }
-func ToStringUintptr(e uintptr) string            { return fmt.Sprintf("%v", e) }
-func ToStringFloat32(e float32) string            { return fmt.Sprintf("%v", e) }
-func ToStringFloat64(e float64) string            { return fmt.Sprintf("%v", e) }
-func ToStringComplex64(e complex64) string        { return fmt.Sprintf("%v", e) }
-func ToStringComplex128(e complex128) string      { return fmt.Sprintf("%v", e) }
-func ToStringString(e string) string              { return fmt.Sprintf("%v", e) }
-func ToStringInterface(e interface{}) string      { return fmt.Sprintf("%v", e) }
-func ToStringBoolArr(e []bool) string             { return MkStringBoolArr(e, "[", ",", "]") }
-func ToStringRuneArr(e []rune) string             { return MkStringRuneArr(e, "[", ",", "]") }
-func ToStringByteArr(e []byte) string             { return MkStringByteArr(e, "[", ",", "]") }
-func ToStringIntArr(e []int) string               { return MkStringIntArr(e, "[", ",", "]") }
-func ToStringInt8Arr(e []int8) string             { return MkStringInt8Arr(e, "[", ",", "]") }
-func ToStringInt16Arr(e []int16) string           { return MkStringInt16Arr(e, "[", ",", "]") }
-func ToStringInt32Arr(e []int32) string           { return MkStringInt32Arr(e, "[", ",", "]") }
-func ToStringInt64Arr(e []int64) string           { return MkStringInt64Arr(e, "[", ",", "]") }
-func ToStringUintArr(e []uint) string             { return MkStringUintArr(e, "[", ",", "]") }
-func ToStringUint8Arr(e []uint8) string           { return MkStringUint8Arr(e, "[", ",", "]") }
-func ToStringUint16Arr(e []uint16) string         { return MkStringUint16Arr(e, "[", ",", "]") }
-func ToStringUint32Arr(e []uint32) string         { return MkStringUint32Arr(e, "[", ",", "]") }
-func ToStringUint64Arr(e []uint64) string         { return MkStringUint64Arr(e, "[", ",", "]") }
-func ToStringUintptrArr(e []uintptr) string       { return MkStringUintptrArr(e, "[", ",", "]") }
-func ToStringFloat32Arr(e []float32) string       { return MkStringFloat32Arr(e, "[", ",", "]") }
-func ToStringFloat64Arr(e []float64) string       { return MkStringFloat64Arr(e, "[", ",", "]") }
-func ToStringComplex64Arr(e []complex64) string   { return MkStringComplex64Arr(e, "[", ",", "]") }
-func ToStringComplex128Arr(e []complex128) string { return MkStringComplex128Arr(e, "[", ",", "]") }
-func ToStringStringArr(e []string) string         { return MkStringStringArr(e, "[", ",", "]") }
-func ToStringInterfaceArr(e []interface{}) string { return MkStringInterfaceArr(e, "[", ",", "]") }
+func ToStringBool(e bool) string { return fmt.Sprintf("%v", e)}func ToStringRune(e rune) string { return fmt.Sprintf("%v", e)}func ToStringByte(e byte) string { return fmt.Sprintf("%v", e)}func ToStringInt(e int) string { return fmt.Sprintf("%v", e)}func ToStringInt8(e int8) string { return fmt.Sprintf("%v", e)}func ToStringInt16(e int16) string { return fmt.Sprintf("%v", e)}func ToStringInt32(e int32) string { return fmt.Sprintf("%v", e)}func ToStringInt64(e int64) string { return fmt.Sprintf("%v", e)}func ToStringUint(e uint) string { return fmt.Sprintf("%v", e)}func ToStringUint8(e uint8) string { return fmt.Sprintf("%v", e)}func ToStringUint16(e uint16) string { return fmt.Sprintf("%v", e)}func ToStringUint32(e uint32) string { return fmt.Sprintf("%v", e)}func ToStringUint64(e uint64) string { return fmt.Sprintf("%v", e)}func ToStringUintptr(e uintptr) string { return fmt.Sprintf("%v", e)}func ToStringFloat32(e float32) string { return fmt.Sprintf("%v", e)}func ToStringFloat64(e float64) string { return fmt.Sprintf("%v", e)}func ToStringComplex64(e complex64) string { return fmt.Sprintf("%v", e)}func ToStringComplex128(e complex128) string { return fmt.Sprintf("%v", e)}func ToStringString(e string) string { return fmt.Sprintf("%v", e)}func ToStringInterface(e interface{}) string { return fmt.Sprintf("%v", e)}func ToStringBoolArr(e []bool) string { return MkStringBoolArr(e, "[", ",", "]")}func ToStringRuneArr(e []rune) string { return MkStringRuneArr(e, "[", ",", "]")}func ToStringByteArr(e []byte) string { return MkStringByteArr(e, "[", ",", "]")}func ToStringIntArr(e []int) string { return MkStringIntArr(e, "[", ",", "]")}func ToStringInt8Arr(e []int8) string { return MkStringInt8Arr(e, "[", ",", "]")}func ToStringInt16Arr(e []int16) string { return MkStringInt16Arr(e, "[", ",", "]")}func ToStringInt32Arr(e []int32) string { return MkStringInt32Arr(e, "[", ",", "]")}func ToStringInt64Arr(e []int64) string { return MkStringInt64Arr(e, "[", ",", "]")}func ToStringUintArr(e []uint) string { return MkStringUintArr(e, "[", ",", "]")}func ToStringUint8Arr(e []uint8) string { return MkStringUint8Arr(e, "[", ",", "]")}func ToStringUint16Arr(e []uint16) string { return MkStringUint16Arr(e, "[", ",", "]")}func ToStringUint32Arr(e []uint32) string { return MkStringUint32Arr(e, "[", ",", "]")}func ToStringUint64Arr(e []uint64) string { return MkStringUint64Arr(e, "[", ",", "]")}func ToStringUintptrArr(e []uintptr) string { return MkStringUintptrArr(e, "[", ",", "]")}func ToStringFloat32Arr(e []float32) string { return MkStringFloat32Arr(e, "[", ",", "]")}func ToStringFloat64Arr(e []float64) string { return MkStringFloat64Arr(e, "[", ",", "]")}func ToStringComplex64Arr(e []complex64) string { return MkStringComplex64Arr(e, "[", ",", "]")}func ToStringComplex128Arr(e []complex128) string { return MkStringComplex128Arr(e, "[", ",", "]")}func ToStringStringArr(e []string) string { return MkStringStringArr(e, "[", ",", "]")}func ToStringInterfaceArr(e []interface{}) string { return MkStringInterfaceArr(e, "[", ",", "]")}

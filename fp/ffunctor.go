@@ -1603,3 +1603,44 @@ type FunctorInterfaceArrComplex64Arr func(e []interface{}) []complex64
 type FunctorInterfaceArrComplex128Arr func(e []interface{}) []complex128
 type FunctorInterfaceArrStringArr func(e []interface{}) []string
 type FunctorInterfaceArrInterfaceArr func(e []interface{}) []interface{}
+
+func EmptyFunctorBoolBool(e bool) bool                                   { return e }
+func EmptyFunctorRuneRune(e rune) rune                                   { return e }
+func EmptyFunctorByteByte(e byte) byte                                   { return e }
+func EmptyFunctorIntInt(e int) int                                       { return e }
+func EmptyFunctorInt8Int8(e int8) int8                                   { return e }
+func EmptyFunctorInt16Int16(e int16) int16                               { return e }
+func EmptyFunctorInt32Int32(e int32) int32                               { return e }
+func EmptyFunctorInt64Int64(e int64) int64                               { return e }
+func EmptyFunctorUintUint(e uint) uint                                   { return e }
+func EmptyFunctorUint8Uint8(e uint8) uint8                               { return e }
+func EmptyFunctorUint16Uint16(e uint16) uint16                           { return e }
+func EmptyFunctorUint32Uint32(e uint32) uint32                           { return e }
+func EmptyFunctorUint64Uint64(e uint64) uint64                           { return e }
+func EmptyFunctorUintptrUintptr(e uintptr) uintptr                       { return e }
+func EmptyFunctorFloat32Float32(e float32) float32                       { return e }
+func EmptyFunctorFloat64Float64(e float64) float64                       { return e }
+func EmptyFunctorComplex64Complex64(e complex64) complex64               { return e }
+func EmptyFunctorComplex128Complex128(e complex128) complex128           { return e }
+func EmptyFunctorStringString(e string) string                           { return e }
+func EmptyFunctorInterfaceInterface(e interface{}) interface{}           { return e }
+func EmptyFunctorBoolArrBoolArr(e []bool) []bool                         { return e }
+func EmptyFunctorRuneArrRuneArr(e []rune) []rune                         { return e }
+func EmptyFunctorByteArrByteArr(e []byte) []byte                         { return e }
+func EmptyFunctorIntArrIntArr(e []int) []int                             { return e }
+func EmptyFunctorInt8ArrInt8Arr(e []int8) []int8                         { return e }
+func EmptyFunctorInt16ArrInt16Arr(e []int16) []int16                     { return e }
+func EmptyFunctorInt32ArrInt32Arr(e []int32) []int32                     { return e }
+func EmptyFunctorInt64ArrInt64Arr(e []int64) []int64                     { return e }
+func EmptyFunctorUintArrUintArr(e []uint) []uint                         { return e }
+func EmptyFunctorUint8ArrUint8Arr(e []uint8) []uint8                     { return e }
+func EmptyFunctorUint16ArrUint16Arr(e []uint16) []uint16                 { return e }
+func EmptyFunctorUint32ArrUint32Arr(e []uint32) []uint32                 { return e }
+func EmptyFunctorUint64ArrUint64Arr(e []uint64) []uint64                 { return e }
+func EmptyFunctorUintptrArrUintptrArr(e []uintptr) []uintptr             { return e }
+func EmptyFunctorFloat32ArrFloat32Arr(e []float32) []float32             { return e }
+func EmptyFunctorFloat64ArrFloat64Arr(e []float64) []float64             { return e }
+func EmptyFunctorComplex64ArrComplex64Arr(e []complex64) []complex64     { return e }
+func EmptyFunctorComplex128ArrComplex128Arr(e []complex128) []complex128 { return e }
+func EmptyFunctorStringArrStringArr(e []string) []string                 { return e }
+func EmptyFunctorInterfaceArrInterfaceArr(e []interface{}) []interface{} { return e }
