@@ -18,4 +18,9 @@ func main() {
 		Foreach(func(e string) {
 			fmt.Println(">", e)
 		})
+
+	var i1 OptionInt = Int(1)
+	var i2 OptionInt = NoneInt
+	fmt.Println(i1.ToString())
+	fmt.Println(i2.ToString())
 }
