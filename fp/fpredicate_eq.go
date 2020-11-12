@@ -60,8 +60,8 @@ func EqPredicateComplex128(e complex128) PredicateComplex128 {
 func EqPredicateString(e string) PredicateString {
 	return func(o string) bool { return EqualString(e, o) }
 }
-func EqPredicateInterface(e interface{}) PredicateInterface {
-	return func(o interface{}) bool { return EqualInterface(e, o) }
+func EqPredicateAny(e Any) PredicateAny {
+	return func(o Any) bool { return EqualAny(e, o) }
 }
 func EqPredicateBoolArr(e []bool) PredicateBoolArr {
 	return func(o []bool) bool { return EqualBoolArr(e, o) }
@@ -120,6 +120,6 @@ func EqPredicateComplex128Arr(e []complex128) PredicateComplex128Arr {
 func EqPredicateStringArr(e []string) PredicateStringArr {
 	return func(o []string) bool { return EqualStringArr(e, o) }
 }
-func EqPredicateInterfaceArr(e []interface{}) PredicateInterfaceArr {
-	return func(o []interface{}) bool { return EqualInterfaceArr(e, o) }
+func EqPredicateAnyArr(e []Any) PredicateAnyArr {
+	return func(o []Any) bool { return EqualAnyArr(e, o) }
 }

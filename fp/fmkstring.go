@@ -233,7 +233,7 @@ func MkStringStringArr(arr []string, left, delim, right string) string {
 	return fmt.Sprintf("%v%v%v", left, content, right)
 }
 
-func MkStringInterfaceArr(arr []interface{}, left, delim, right string) string {
+func MkStringAnyArr(arr []Any, left, delim, right string) string {
 	content := ""
 	for _, e := range arr {
 		content = fmt.Sprintf("%v%v,", content, e)

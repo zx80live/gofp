@@ -174,8 +174,8 @@ func (l ListBool) MapString(f FunctorBoolString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListBool) MapInterface(f FunctorBoolInterface) ListInterface {
-	acc := NilInterface
+func (l ListBool) MapAny(f FunctorBoolAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -354,8 +354,8 @@ func (l ListBool) MapStringArr(f FunctorBoolStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListBool) MapInterfaceArr(f FunctorBoolInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListBool) MapAnyArr(f FunctorBoolAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -534,8 +534,8 @@ func (l ListRune) MapString(f FunctorRuneString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListRune) MapInterface(f FunctorRuneInterface) ListInterface {
-	acc := NilInterface
+func (l ListRune) MapAny(f FunctorRuneAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -714,8 +714,8 @@ func (l ListRune) MapStringArr(f FunctorRuneStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListRune) MapInterfaceArr(f FunctorRuneInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListRune) MapAnyArr(f FunctorRuneAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -894,8 +894,8 @@ func (l ListByte) MapString(f FunctorByteString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListByte) MapInterface(f FunctorByteInterface) ListInterface {
-	acc := NilInterface
+func (l ListByte) MapAny(f FunctorByteAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1074,8 +1074,8 @@ func (l ListByte) MapStringArr(f FunctorByteStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListByte) MapInterfaceArr(f FunctorByteInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListByte) MapAnyArr(f FunctorByteAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1254,8 +1254,8 @@ func (l ListInt) MapString(f FunctorIntString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt) MapInterface(f FunctorIntInterface) ListInterface {
-	acc := NilInterface
+func (l ListInt) MapAny(f FunctorIntAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1434,8 +1434,8 @@ func (l ListInt) MapStringArr(f FunctorIntStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt) MapInterfaceArr(f FunctorIntInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt) MapAnyArr(f FunctorIntAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1614,8 +1614,8 @@ func (l ListInt8) MapString(f FunctorInt8String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt8) MapInterface(f FunctorInt8Interface) ListInterface {
-	acc := NilInterface
+func (l ListInt8) MapAny(f FunctorInt8Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1794,8 +1794,8 @@ func (l ListInt8) MapStringArr(f FunctorInt8StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt8) MapInterfaceArr(f FunctorInt8InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt8) MapAnyArr(f FunctorInt8AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1974,8 +1974,8 @@ func (l ListInt16) MapString(f FunctorInt16String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt16) MapInterface(f FunctorInt16Interface) ListInterface {
-	acc := NilInterface
+func (l ListInt16) MapAny(f FunctorInt16Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2154,8 +2154,8 @@ func (l ListInt16) MapStringArr(f FunctorInt16StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt16) MapInterfaceArr(f FunctorInt16InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt16) MapAnyArr(f FunctorInt16AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2334,8 +2334,8 @@ func (l ListInt32) MapString(f FunctorInt32String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt32) MapInterface(f FunctorInt32Interface) ListInterface {
-	acc := NilInterface
+func (l ListInt32) MapAny(f FunctorInt32Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2514,8 +2514,8 @@ func (l ListInt32) MapStringArr(f FunctorInt32StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt32) MapInterfaceArr(f FunctorInt32InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt32) MapAnyArr(f FunctorInt32AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2694,8 +2694,8 @@ func (l ListInt64) MapString(f FunctorInt64String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt64) MapInterface(f FunctorInt64Interface) ListInterface {
-	acc := NilInterface
+func (l ListInt64) MapAny(f FunctorInt64Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2874,8 +2874,8 @@ func (l ListInt64) MapStringArr(f FunctorInt64StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt64) MapInterfaceArr(f FunctorInt64InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt64) MapAnyArr(f FunctorInt64AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3054,8 +3054,8 @@ func (l ListUint) MapString(f FunctorUintString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint) MapInterface(f FunctorUintInterface) ListInterface {
-	acc := NilInterface
+func (l ListUint) MapAny(f FunctorUintAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3234,8 +3234,8 @@ func (l ListUint) MapStringArr(f FunctorUintStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint) MapInterfaceArr(f FunctorUintInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint) MapAnyArr(f FunctorUintAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3414,8 +3414,8 @@ func (l ListUint8) MapString(f FunctorUint8String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint8) MapInterface(f FunctorUint8Interface) ListInterface {
-	acc := NilInterface
+func (l ListUint8) MapAny(f FunctorUint8Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3594,8 +3594,8 @@ func (l ListUint8) MapStringArr(f FunctorUint8StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint8) MapInterfaceArr(f FunctorUint8InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint8) MapAnyArr(f FunctorUint8AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3774,8 +3774,8 @@ func (l ListUint16) MapString(f FunctorUint16String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint16) MapInterface(f FunctorUint16Interface) ListInterface {
-	acc := NilInterface
+func (l ListUint16) MapAny(f FunctorUint16Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3954,8 +3954,8 @@ func (l ListUint16) MapStringArr(f FunctorUint16StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint16) MapInterfaceArr(f FunctorUint16InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint16) MapAnyArr(f FunctorUint16AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4134,8 +4134,8 @@ func (l ListUint32) MapString(f FunctorUint32String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint32) MapInterface(f FunctorUint32Interface) ListInterface {
-	acc := NilInterface
+func (l ListUint32) MapAny(f FunctorUint32Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4314,8 +4314,8 @@ func (l ListUint32) MapStringArr(f FunctorUint32StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint32) MapInterfaceArr(f FunctorUint32InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint32) MapAnyArr(f FunctorUint32AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4494,8 +4494,8 @@ func (l ListUint64) MapString(f FunctorUint64String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint64) MapInterface(f FunctorUint64Interface) ListInterface {
-	acc := NilInterface
+func (l ListUint64) MapAny(f FunctorUint64Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4674,8 +4674,8 @@ func (l ListUint64) MapStringArr(f FunctorUint64StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint64) MapInterfaceArr(f FunctorUint64InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint64) MapAnyArr(f FunctorUint64AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4854,8 +4854,8 @@ func (l ListUintptr) MapString(f FunctorUintptrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUintptr) MapInterface(f FunctorUintptrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUintptr) MapAny(f FunctorUintptrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5034,8 +5034,8 @@ func (l ListUintptr) MapStringArr(f FunctorUintptrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUintptr) MapInterfaceArr(f FunctorUintptrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUintptr) MapAnyArr(f FunctorUintptrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5214,8 +5214,8 @@ func (l ListFloat32) MapString(f FunctorFloat32String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat32) MapInterface(f FunctorFloat32Interface) ListInterface {
-	acc := NilInterface
+func (l ListFloat32) MapAny(f FunctorFloat32Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5394,8 +5394,8 @@ func (l ListFloat32) MapStringArr(f FunctorFloat32StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat32) MapInterfaceArr(f FunctorFloat32InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListFloat32) MapAnyArr(f FunctorFloat32AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5574,8 +5574,8 @@ func (l ListFloat64) MapString(f FunctorFloat64String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat64) MapInterface(f FunctorFloat64Interface) ListInterface {
-	acc := NilInterface
+func (l ListFloat64) MapAny(f FunctorFloat64Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5754,8 +5754,8 @@ func (l ListFloat64) MapStringArr(f FunctorFloat64StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat64) MapInterfaceArr(f FunctorFloat64InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListFloat64) MapAnyArr(f FunctorFloat64AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5934,8 +5934,8 @@ func (l ListComplex64) MapString(f FunctorComplex64String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex64) MapInterface(f FunctorComplex64Interface) ListInterface {
-	acc := NilInterface
+func (l ListComplex64) MapAny(f FunctorComplex64Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6114,8 +6114,8 @@ func (l ListComplex64) MapStringArr(f FunctorComplex64StringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex64) MapInterfaceArr(f FunctorComplex64InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListComplex64) MapAnyArr(f FunctorComplex64AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6294,8 +6294,8 @@ func (l ListComplex128) MapString(f FunctorComplex128String) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex128) MapInterface(f FunctorComplex128Interface) ListInterface {
-	acc := NilInterface
+func (l ListComplex128) MapAny(f FunctorComplex128Any) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6474,8 +6474,8 @@ func (l ListComplex128) MapStringArr(f FunctorComplex128StringArr) ListStringArr
 	}
 	return acc.Reverse()
 }
-func (l ListComplex128) MapInterfaceArr(f FunctorComplex128InterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListComplex128) MapAnyArr(f FunctorComplex128AnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6654,8 +6654,8 @@ func (l ListString) MapString(f FunctorStringString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListString) MapInterface(f FunctorStringInterface) ListInterface {
-	acc := NilInterface
+func (l ListString) MapAny(f FunctorStringAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6834,8 +6834,8 @@ func (l ListString) MapStringArr(f FunctorStringStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListString) MapInterfaceArr(f FunctorStringInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListString) MapAnyArr(f FunctorStringAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6843,7 +6843,7 @@ func (l ListString) MapInterfaceArr(f FunctorStringInterfaceArr) ListInterfaceAr
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapBool(f FunctorInterfaceBool) ListBool {
+func (l ListAny) MapBool(f FunctorAnyBool) ListBool {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6852,7 +6852,7 @@ func (l ListInterface) MapBool(f FunctorInterfaceBool) ListBool {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapRune(f FunctorInterfaceRune) ListRune {
+func (l ListAny) MapRune(f FunctorAnyRune) ListRune {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6861,7 +6861,7 @@ func (l ListInterface) MapRune(f FunctorInterfaceRune) ListRune {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapByte(f FunctorInterfaceByte) ListByte {
+func (l ListAny) MapByte(f FunctorAnyByte) ListByte {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6870,7 +6870,7 @@ func (l ListInterface) MapByte(f FunctorInterfaceByte) ListByte {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt(f FunctorInterfaceInt) ListInt {
+func (l ListAny) MapInt(f FunctorAnyInt) ListInt {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6879,7 +6879,7 @@ func (l ListInterface) MapInt(f FunctorInterfaceInt) ListInt {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt8(f FunctorInterfaceInt8) ListInt8 {
+func (l ListAny) MapInt8(f FunctorAnyInt8) ListInt8 {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6888,7 +6888,7 @@ func (l ListInterface) MapInt8(f FunctorInterfaceInt8) ListInt8 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt16(f FunctorInterfaceInt16) ListInt16 {
+func (l ListAny) MapInt16(f FunctorAnyInt16) ListInt16 {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6897,7 +6897,7 @@ func (l ListInterface) MapInt16(f FunctorInterfaceInt16) ListInt16 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt32(f FunctorInterfaceInt32) ListInt32 {
+func (l ListAny) MapInt32(f FunctorAnyInt32) ListInt32 {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6906,7 +6906,7 @@ func (l ListInterface) MapInt32(f FunctorInterfaceInt32) ListInt32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt64(f FunctorInterfaceInt64) ListInt64 {
+func (l ListAny) MapInt64(f FunctorAnyInt64) ListInt64 {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6915,7 +6915,7 @@ func (l ListInterface) MapInt64(f FunctorInterfaceInt64) ListInt64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint(f FunctorInterfaceUint) ListUint {
+func (l ListAny) MapUint(f FunctorAnyUint) ListUint {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6924,7 +6924,7 @@ func (l ListInterface) MapUint(f FunctorInterfaceUint) ListUint {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint8(f FunctorInterfaceUint8) ListUint8 {
+func (l ListAny) MapUint8(f FunctorAnyUint8) ListUint8 {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6933,7 +6933,7 @@ func (l ListInterface) MapUint8(f FunctorInterfaceUint8) ListUint8 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint16(f FunctorInterfaceUint16) ListUint16 {
+func (l ListAny) MapUint16(f FunctorAnyUint16) ListUint16 {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6942,7 +6942,7 @@ func (l ListInterface) MapUint16(f FunctorInterfaceUint16) ListUint16 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint32(f FunctorInterfaceUint32) ListUint32 {
+func (l ListAny) MapUint32(f FunctorAnyUint32) ListUint32 {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6951,7 +6951,7 @@ func (l ListInterface) MapUint32(f FunctorInterfaceUint32) ListUint32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint64(f FunctorInterfaceUint64) ListUint64 {
+func (l ListAny) MapUint64(f FunctorAnyUint64) ListUint64 {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6960,7 +6960,7 @@ func (l ListInterface) MapUint64(f FunctorInterfaceUint64) ListUint64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUintptr(f FunctorInterfaceUintptr) ListUintptr {
+func (l ListAny) MapUintptr(f FunctorAnyUintptr) ListUintptr {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6969,7 +6969,7 @@ func (l ListInterface) MapUintptr(f FunctorInterfaceUintptr) ListUintptr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapFloat32(f FunctorInterfaceFloat32) ListFloat32 {
+func (l ListAny) MapFloat32(f FunctorAnyFloat32) ListFloat32 {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6978,7 +6978,7 @@ func (l ListInterface) MapFloat32(f FunctorInterfaceFloat32) ListFloat32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapFloat64(f FunctorInterfaceFloat64) ListFloat64 {
+func (l ListAny) MapFloat64(f FunctorAnyFloat64) ListFloat64 {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6987,7 +6987,7 @@ func (l ListInterface) MapFloat64(f FunctorInterfaceFloat64) ListFloat64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapComplex64(f FunctorInterfaceComplex64) ListComplex64 {
+func (l ListAny) MapComplex64(f FunctorAnyComplex64) ListComplex64 {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6996,7 +6996,7 @@ func (l ListInterface) MapComplex64(f FunctorInterfaceComplex64) ListComplex64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapComplex128(f FunctorInterfaceComplex128) ListComplex128 {
+func (l ListAny) MapComplex128(f FunctorAnyComplex128) ListComplex128 {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7005,7 +7005,7 @@ func (l ListInterface) MapComplex128(f FunctorInterfaceComplex128) ListComplex12
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapString(f FunctorInterfaceString) ListString {
+func (l ListAny) MapString(f FunctorAnyString) ListString {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7014,8 +7014,8 @@ func (l ListInterface) MapString(f FunctorInterfaceString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInterface(f FunctorInterfaceInterface) ListInterface {
-	acc := NilInterface
+func (l ListAny) MapAny(f FunctorAnyAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7023,7 +7023,7 @@ func (l ListInterface) MapInterface(f FunctorInterfaceInterface) ListInterface {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapBoolArr(f FunctorInterfaceBoolArr) ListBoolArr {
+func (l ListAny) MapBoolArr(f FunctorAnyBoolArr) ListBoolArr {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7032,7 +7032,7 @@ func (l ListInterface) MapBoolArr(f FunctorInterfaceBoolArr) ListBoolArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapRuneArr(f FunctorInterfaceRuneArr) ListRuneArr {
+func (l ListAny) MapRuneArr(f FunctorAnyRuneArr) ListRuneArr {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7041,7 +7041,7 @@ func (l ListInterface) MapRuneArr(f FunctorInterfaceRuneArr) ListRuneArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapByteArr(f FunctorInterfaceByteArr) ListByteArr {
+func (l ListAny) MapByteArr(f FunctorAnyByteArr) ListByteArr {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7050,7 +7050,7 @@ func (l ListInterface) MapByteArr(f FunctorInterfaceByteArr) ListByteArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapIntArr(f FunctorInterfaceIntArr) ListIntArr {
+func (l ListAny) MapIntArr(f FunctorAnyIntArr) ListIntArr {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7059,7 +7059,7 @@ func (l ListInterface) MapIntArr(f FunctorInterfaceIntArr) ListIntArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt8Arr(f FunctorInterfaceInt8Arr) ListInt8Arr {
+func (l ListAny) MapInt8Arr(f FunctorAnyInt8Arr) ListInt8Arr {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7068,7 +7068,7 @@ func (l ListInterface) MapInt8Arr(f FunctorInterfaceInt8Arr) ListInt8Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt16Arr(f FunctorInterfaceInt16Arr) ListInt16Arr {
+func (l ListAny) MapInt16Arr(f FunctorAnyInt16Arr) ListInt16Arr {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7077,7 +7077,7 @@ func (l ListInterface) MapInt16Arr(f FunctorInterfaceInt16Arr) ListInt16Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt32Arr(f FunctorInterfaceInt32Arr) ListInt32Arr {
+func (l ListAny) MapInt32Arr(f FunctorAnyInt32Arr) ListInt32Arr {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7086,7 +7086,7 @@ func (l ListInterface) MapInt32Arr(f FunctorInterfaceInt32Arr) ListInt32Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInt64Arr(f FunctorInterfaceInt64Arr) ListInt64Arr {
+func (l ListAny) MapInt64Arr(f FunctorAnyInt64Arr) ListInt64Arr {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7095,7 +7095,7 @@ func (l ListInterface) MapInt64Arr(f FunctorInterfaceInt64Arr) ListInt64Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUintArr(f FunctorInterfaceUintArr) ListUintArr {
+func (l ListAny) MapUintArr(f FunctorAnyUintArr) ListUintArr {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7104,7 +7104,7 @@ func (l ListInterface) MapUintArr(f FunctorInterfaceUintArr) ListUintArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint8Arr(f FunctorInterfaceUint8Arr) ListUint8Arr {
+func (l ListAny) MapUint8Arr(f FunctorAnyUint8Arr) ListUint8Arr {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7113,7 +7113,7 @@ func (l ListInterface) MapUint8Arr(f FunctorInterfaceUint8Arr) ListUint8Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint16Arr(f FunctorInterfaceUint16Arr) ListUint16Arr {
+func (l ListAny) MapUint16Arr(f FunctorAnyUint16Arr) ListUint16Arr {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7122,7 +7122,7 @@ func (l ListInterface) MapUint16Arr(f FunctorInterfaceUint16Arr) ListUint16Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint32Arr(f FunctorInterfaceUint32Arr) ListUint32Arr {
+func (l ListAny) MapUint32Arr(f FunctorAnyUint32Arr) ListUint32Arr {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7131,7 +7131,7 @@ func (l ListInterface) MapUint32Arr(f FunctorInterfaceUint32Arr) ListUint32Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUint64Arr(f FunctorInterfaceUint64Arr) ListUint64Arr {
+func (l ListAny) MapUint64Arr(f FunctorAnyUint64Arr) ListUint64Arr {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7140,7 +7140,7 @@ func (l ListInterface) MapUint64Arr(f FunctorInterfaceUint64Arr) ListUint64Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapUintptrArr(f FunctorInterfaceUintptrArr) ListUintptrArr {
+func (l ListAny) MapUintptrArr(f FunctorAnyUintptrArr) ListUintptrArr {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7149,7 +7149,7 @@ func (l ListInterface) MapUintptrArr(f FunctorInterfaceUintptrArr) ListUintptrAr
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapFloat32Arr(f FunctorInterfaceFloat32Arr) ListFloat32Arr {
+func (l ListAny) MapFloat32Arr(f FunctorAnyFloat32Arr) ListFloat32Arr {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7158,7 +7158,7 @@ func (l ListInterface) MapFloat32Arr(f FunctorInterfaceFloat32Arr) ListFloat32Ar
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapFloat64Arr(f FunctorInterfaceFloat64Arr) ListFloat64Arr {
+func (l ListAny) MapFloat64Arr(f FunctorAnyFloat64Arr) ListFloat64Arr {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7167,7 +7167,7 @@ func (l ListInterface) MapFloat64Arr(f FunctorInterfaceFloat64Arr) ListFloat64Ar
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapComplex64Arr(f FunctorInterfaceComplex64Arr) ListComplex64Arr {
+func (l ListAny) MapComplex64Arr(f FunctorAnyComplex64Arr) ListComplex64Arr {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7176,7 +7176,7 @@ func (l ListInterface) MapComplex64Arr(f FunctorInterfaceComplex64Arr) ListCompl
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapComplex128Arr(f FunctorInterfaceComplex128Arr) ListComplex128Arr {
+func (l ListAny) MapComplex128Arr(f FunctorAnyComplex128Arr) ListComplex128Arr {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7185,7 +7185,7 @@ func (l ListInterface) MapComplex128Arr(f FunctorInterfaceComplex128Arr) ListCom
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapStringArr(f FunctorInterfaceStringArr) ListStringArr {
+func (l ListAny) MapStringArr(f FunctorAnyStringArr) ListStringArr {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7194,8 +7194,8 @@ func (l ListInterface) MapStringArr(f FunctorInterfaceStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) MapInterfaceArr(f FunctorInterfaceInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListAny) MapAnyArr(f FunctorAnyAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7374,8 +7374,8 @@ func (l ListBoolArr) MapString(f FunctorBoolArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListBoolArr) MapInterface(f FunctorBoolArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListBoolArr) MapAny(f FunctorBoolArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7554,8 +7554,8 @@ func (l ListBoolArr) MapStringArr(f FunctorBoolArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListBoolArr) MapInterfaceArr(f FunctorBoolArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListBoolArr) MapAnyArr(f FunctorBoolArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7734,8 +7734,8 @@ func (l ListRuneArr) MapString(f FunctorRuneArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListRuneArr) MapInterface(f FunctorRuneArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListRuneArr) MapAny(f FunctorRuneArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7914,8 +7914,8 @@ func (l ListRuneArr) MapStringArr(f FunctorRuneArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListRuneArr) MapInterfaceArr(f FunctorRuneArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListRuneArr) MapAnyArr(f FunctorRuneArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8094,8 +8094,8 @@ func (l ListByteArr) MapString(f FunctorByteArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListByteArr) MapInterface(f FunctorByteArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListByteArr) MapAny(f FunctorByteArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8274,8 +8274,8 @@ func (l ListByteArr) MapStringArr(f FunctorByteArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListByteArr) MapInterfaceArr(f FunctorByteArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListByteArr) MapAnyArr(f FunctorByteArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8454,8 +8454,8 @@ func (l ListIntArr) MapString(f FunctorIntArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListIntArr) MapInterface(f FunctorIntArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListIntArr) MapAny(f FunctorIntArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8634,8 +8634,8 @@ func (l ListIntArr) MapStringArr(f FunctorIntArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListIntArr) MapInterfaceArr(f FunctorIntArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListIntArr) MapAnyArr(f FunctorIntArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8814,8 +8814,8 @@ func (l ListInt8Arr) MapString(f FunctorInt8ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt8Arr) MapInterface(f FunctorInt8ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListInt8Arr) MapAny(f FunctorInt8ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8994,8 +8994,8 @@ func (l ListInt8Arr) MapStringArr(f FunctorInt8ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt8Arr) MapInterfaceArr(f FunctorInt8ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt8Arr) MapAnyArr(f FunctorInt8ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9174,8 +9174,8 @@ func (l ListInt16Arr) MapString(f FunctorInt16ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt16Arr) MapInterface(f FunctorInt16ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListInt16Arr) MapAny(f FunctorInt16ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9354,8 +9354,8 @@ func (l ListInt16Arr) MapStringArr(f FunctorInt16ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt16Arr) MapInterfaceArr(f FunctorInt16ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt16Arr) MapAnyArr(f FunctorInt16ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9534,8 +9534,8 @@ func (l ListInt32Arr) MapString(f FunctorInt32ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt32Arr) MapInterface(f FunctorInt32ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListInt32Arr) MapAny(f FunctorInt32ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9714,8 +9714,8 @@ func (l ListInt32Arr) MapStringArr(f FunctorInt32ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt32Arr) MapInterfaceArr(f FunctorInt32ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt32Arr) MapAnyArr(f FunctorInt32ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9894,8 +9894,8 @@ func (l ListInt64Arr) MapString(f FunctorInt64ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInt64Arr) MapInterface(f FunctorInt64ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListInt64Arr) MapAny(f FunctorInt64ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10074,8 +10074,8 @@ func (l ListInt64Arr) MapStringArr(f FunctorInt64ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt64Arr) MapInterfaceArr(f FunctorInt64ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListInt64Arr) MapAnyArr(f FunctorInt64ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10254,8 +10254,8 @@ func (l ListUintArr) MapString(f FunctorUintArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUintArr) MapInterface(f FunctorUintArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUintArr) MapAny(f FunctorUintArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10434,8 +10434,8 @@ func (l ListUintArr) MapStringArr(f FunctorUintArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUintArr) MapInterfaceArr(f FunctorUintArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUintArr) MapAnyArr(f FunctorUintArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10614,8 +10614,8 @@ func (l ListUint8Arr) MapString(f FunctorUint8ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint8Arr) MapInterface(f FunctorUint8ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUint8Arr) MapAny(f FunctorUint8ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10794,8 +10794,8 @@ func (l ListUint8Arr) MapStringArr(f FunctorUint8ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint8Arr) MapInterfaceArr(f FunctorUint8ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint8Arr) MapAnyArr(f FunctorUint8ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10974,8 +10974,8 @@ func (l ListUint16Arr) MapString(f FunctorUint16ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint16Arr) MapInterface(f FunctorUint16ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUint16Arr) MapAny(f FunctorUint16ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11154,8 +11154,8 @@ func (l ListUint16Arr) MapStringArr(f FunctorUint16ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint16Arr) MapInterfaceArr(f FunctorUint16ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint16Arr) MapAnyArr(f FunctorUint16ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11334,8 +11334,8 @@ func (l ListUint32Arr) MapString(f FunctorUint32ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint32Arr) MapInterface(f FunctorUint32ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUint32Arr) MapAny(f FunctorUint32ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11514,8 +11514,8 @@ func (l ListUint32Arr) MapStringArr(f FunctorUint32ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint32Arr) MapInterfaceArr(f FunctorUint32ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint32Arr) MapAnyArr(f FunctorUint32ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11694,8 +11694,8 @@ func (l ListUint64Arr) MapString(f FunctorUint64ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUint64Arr) MapInterface(f FunctorUint64ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUint64Arr) MapAny(f FunctorUint64ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11874,8 +11874,8 @@ func (l ListUint64Arr) MapStringArr(f FunctorUint64ArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint64Arr) MapInterfaceArr(f FunctorUint64ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUint64Arr) MapAnyArr(f FunctorUint64ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -12054,8 +12054,8 @@ func (l ListUintptrArr) MapString(f FunctorUintptrArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListUintptrArr) MapInterface(f FunctorUintptrArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListUintptrArr) MapAny(f FunctorUintptrArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -12234,8 +12234,8 @@ func (l ListUintptrArr) MapStringArr(f FunctorUintptrArrStringArr) ListStringArr
 	}
 	return acc.Reverse()
 }
-func (l ListUintptrArr) MapInterfaceArr(f FunctorUintptrArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListUintptrArr) MapAnyArr(f FunctorUintptrArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -12414,8 +12414,8 @@ func (l ListFloat32Arr) MapString(f FunctorFloat32ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat32Arr) MapInterface(f FunctorFloat32ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListFloat32Arr) MapAny(f FunctorFloat32ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -12594,8 +12594,8 @@ func (l ListFloat32Arr) MapStringArr(f FunctorFloat32ArrStringArr) ListStringArr
 	}
 	return acc.Reverse()
 }
-func (l ListFloat32Arr) MapInterfaceArr(f FunctorFloat32ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListFloat32Arr) MapAnyArr(f FunctorFloat32ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -12774,8 +12774,8 @@ func (l ListFloat64Arr) MapString(f FunctorFloat64ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat64Arr) MapInterface(f FunctorFloat64ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListFloat64Arr) MapAny(f FunctorFloat64ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -12954,8 +12954,8 @@ func (l ListFloat64Arr) MapStringArr(f FunctorFloat64ArrStringArr) ListStringArr
 	}
 	return acc.Reverse()
 }
-func (l ListFloat64Arr) MapInterfaceArr(f FunctorFloat64ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListFloat64Arr) MapAnyArr(f FunctorFloat64ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -13134,8 +13134,8 @@ func (l ListComplex64Arr) MapString(f FunctorComplex64ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex64Arr) MapInterface(f FunctorComplex64ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListComplex64Arr) MapAny(f FunctorComplex64ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -13314,8 +13314,8 @@ func (l ListComplex64Arr) MapStringArr(f FunctorComplex64ArrStringArr) ListStrin
 	}
 	return acc.Reverse()
 }
-func (l ListComplex64Arr) MapInterfaceArr(f FunctorComplex64ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListComplex64Arr) MapAnyArr(f FunctorComplex64ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -13494,8 +13494,8 @@ func (l ListComplex128Arr) MapString(f FunctorComplex128ArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex128Arr) MapInterface(f FunctorComplex128ArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListComplex128Arr) MapAny(f FunctorComplex128ArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -13674,8 +13674,8 @@ func (l ListComplex128Arr) MapStringArr(f FunctorComplex128ArrStringArr) ListStr
 	}
 	return acc.Reverse()
 }
-func (l ListComplex128Arr) MapInterfaceArr(f FunctorComplex128ArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListComplex128Arr) MapAnyArr(f FunctorComplex128ArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -13854,8 +13854,8 @@ func (l ListStringArr) MapString(f FunctorStringArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListStringArr) MapInterface(f FunctorStringArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListStringArr) MapAny(f FunctorStringArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -14034,8 +14034,8 @@ func (l ListStringArr) MapStringArr(f FunctorStringArrStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListStringArr) MapInterfaceArr(f FunctorStringArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListStringArr) MapAnyArr(f FunctorStringArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -14043,7 +14043,7 @@ func (l ListStringArr) MapInterfaceArr(f FunctorStringArrInterfaceArr) ListInter
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapBool(f FunctorInterfaceArrBool) ListBool {
+func (l ListAnyArr) MapBool(f FunctorAnyArrBool) ListBool {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14052,7 +14052,7 @@ func (l ListInterfaceArr) MapBool(f FunctorInterfaceArrBool) ListBool {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapRune(f FunctorInterfaceArrRune) ListRune {
+func (l ListAnyArr) MapRune(f FunctorAnyArrRune) ListRune {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14061,7 +14061,7 @@ func (l ListInterfaceArr) MapRune(f FunctorInterfaceArrRune) ListRune {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapByte(f FunctorInterfaceArrByte) ListByte {
+func (l ListAnyArr) MapByte(f FunctorAnyArrByte) ListByte {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14070,7 +14070,7 @@ func (l ListInterfaceArr) MapByte(f FunctorInterfaceArrByte) ListByte {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt(f FunctorInterfaceArrInt) ListInt {
+func (l ListAnyArr) MapInt(f FunctorAnyArrInt) ListInt {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14079,7 +14079,7 @@ func (l ListInterfaceArr) MapInt(f FunctorInterfaceArrInt) ListInt {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt8(f FunctorInterfaceArrInt8) ListInt8 {
+func (l ListAnyArr) MapInt8(f FunctorAnyArrInt8) ListInt8 {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14088,7 +14088,7 @@ func (l ListInterfaceArr) MapInt8(f FunctorInterfaceArrInt8) ListInt8 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt16(f FunctorInterfaceArrInt16) ListInt16 {
+func (l ListAnyArr) MapInt16(f FunctorAnyArrInt16) ListInt16 {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14097,7 +14097,7 @@ func (l ListInterfaceArr) MapInt16(f FunctorInterfaceArrInt16) ListInt16 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt32(f FunctorInterfaceArrInt32) ListInt32 {
+func (l ListAnyArr) MapInt32(f FunctorAnyArrInt32) ListInt32 {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14106,7 +14106,7 @@ func (l ListInterfaceArr) MapInt32(f FunctorInterfaceArrInt32) ListInt32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt64(f FunctorInterfaceArrInt64) ListInt64 {
+func (l ListAnyArr) MapInt64(f FunctorAnyArrInt64) ListInt64 {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14115,7 +14115,7 @@ func (l ListInterfaceArr) MapInt64(f FunctorInterfaceArrInt64) ListInt64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint(f FunctorInterfaceArrUint) ListUint {
+func (l ListAnyArr) MapUint(f FunctorAnyArrUint) ListUint {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14124,7 +14124,7 @@ func (l ListInterfaceArr) MapUint(f FunctorInterfaceArrUint) ListUint {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint8(f FunctorInterfaceArrUint8) ListUint8 {
+func (l ListAnyArr) MapUint8(f FunctorAnyArrUint8) ListUint8 {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14133,7 +14133,7 @@ func (l ListInterfaceArr) MapUint8(f FunctorInterfaceArrUint8) ListUint8 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint16(f FunctorInterfaceArrUint16) ListUint16 {
+func (l ListAnyArr) MapUint16(f FunctorAnyArrUint16) ListUint16 {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14142,7 +14142,7 @@ func (l ListInterfaceArr) MapUint16(f FunctorInterfaceArrUint16) ListUint16 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint32(f FunctorInterfaceArrUint32) ListUint32 {
+func (l ListAnyArr) MapUint32(f FunctorAnyArrUint32) ListUint32 {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14151,7 +14151,7 @@ func (l ListInterfaceArr) MapUint32(f FunctorInterfaceArrUint32) ListUint32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint64(f FunctorInterfaceArrUint64) ListUint64 {
+func (l ListAnyArr) MapUint64(f FunctorAnyArrUint64) ListUint64 {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14160,7 +14160,7 @@ func (l ListInterfaceArr) MapUint64(f FunctorInterfaceArrUint64) ListUint64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUintptr(f FunctorInterfaceArrUintptr) ListUintptr {
+func (l ListAnyArr) MapUintptr(f FunctorAnyArrUintptr) ListUintptr {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14169,7 +14169,7 @@ func (l ListInterfaceArr) MapUintptr(f FunctorInterfaceArrUintptr) ListUintptr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapFloat32(f FunctorInterfaceArrFloat32) ListFloat32 {
+func (l ListAnyArr) MapFloat32(f FunctorAnyArrFloat32) ListFloat32 {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14178,7 +14178,7 @@ func (l ListInterfaceArr) MapFloat32(f FunctorInterfaceArrFloat32) ListFloat32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapFloat64(f FunctorInterfaceArrFloat64) ListFloat64 {
+func (l ListAnyArr) MapFloat64(f FunctorAnyArrFloat64) ListFloat64 {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14187,7 +14187,7 @@ func (l ListInterfaceArr) MapFloat64(f FunctorInterfaceArrFloat64) ListFloat64 {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapComplex64(f FunctorInterfaceArrComplex64) ListComplex64 {
+func (l ListAnyArr) MapComplex64(f FunctorAnyArrComplex64) ListComplex64 {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14196,7 +14196,7 @@ func (l ListInterfaceArr) MapComplex64(f FunctorInterfaceArrComplex64) ListCompl
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapComplex128(f FunctorInterfaceArrComplex128) ListComplex128 {
+func (l ListAnyArr) MapComplex128(f FunctorAnyArrComplex128) ListComplex128 {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14205,7 +14205,7 @@ func (l ListInterfaceArr) MapComplex128(f FunctorInterfaceArrComplex128) ListCom
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapString(f FunctorInterfaceArrString) ListString {
+func (l ListAnyArr) MapString(f FunctorAnyArrString) ListString {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14214,8 +14214,8 @@ func (l ListInterfaceArr) MapString(f FunctorInterfaceArrString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInterface(f FunctorInterfaceArrInterface) ListInterface {
-	acc := NilInterface
+func (l ListAnyArr) MapAny(f FunctorAnyArrAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -14223,7 +14223,7 @@ func (l ListInterfaceArr) MapInterface(f FunctorInterfaceArrInterface) ListInter
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapBoolArr(f FunctorInterfaceArrBoolArr) ListBoolArr {
+func (l ListAnyArr) MapBoolArr(f FunctorAnyArrBoolArr) ListBoolArr {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14232,7 +14232,7 @@ func (l ListInterfaceArr) MapBoolArr(f FunctorInterfaceArrBoolArr) ListBoolArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapRuneArr(f FunctorInterfaceArrRuneArr) ListRuneArr {
+func (l ListAnyArr) MapRuneArr(f FunctorAnyArrRuneArr) ListRuneArr {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14241,7 +14241,7 @@ func (l ListInterfaceArr) MapRuneArr(f FunctorInterfaceArrRuneArr) ListRuneArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapByteArr(f FunctorInterfaceArrByteArr) ListByteArr {
+func (l ListAnyArr) MapByteArr(f FunctorAnyArrByteArr) ListByteArr {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14250,7 +14250,7 @@ func (l ListInterfaceArr) MapByteArr(f FunctorInterfaceArrByteArr) ListByteArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapIntArr(f FunctorInterfaceArrIntArr) ListIntArr {
+func (l ListAnyArr) MapIntArr(f FunctorAnyArrIntArr) ListIntArr {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14259,7 +14259,7 @@ func (l ListInterfaceArr) MapIntArr(f FunctorInterfaceArrIntArr) ListIntArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt8Arr(f FunctorInterfaceArrInt8Arr) ListInt8Arr {
+func (l ListAnyArr) MapInt8Arr(f FunctorAnyArrInt8Arr) ListInt8Arr {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14268,7 +14268,7 @@ func (l ListInterfaceArr) MapInt8Arr(f FunctorInterfaceArrInt8Arr) ListInt8Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt16Arr(f FunctorInterfaceArrInt16Arr) ListInt16Arr {
+func (l ListAnyArr) MapInt16Arr(f FunctorAnyArrInt16Arr) ListInt16Arr {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14277,7 +14277,7 @@ func (l ListInterfaceArr) MapInt16Arr(f FunctorInterfaceArrInt16Arr) ListInt16Ar
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt32Arr(f FunctorInterfaceArrInt32Arr) ListInt32Arr {
+func (l ListAnyArr) MapInt32Arr(f FunctorAnyArrInt32Arr) ListInt32Arr {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14286,7 +14286,7 @@ func (l ListInterfaceArr) MapInt32Arr(f FunctorInterfaceArrInt32Arr) ListInt32Ar
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInt64Arr(f FunctorInterfaceArrInt64Arr) ListInt64Arr {
+func (l ListAnyArr) MapInt64Arr(f FunctorAnyArrInt64Arr) ListInt64Arr {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14295,7 +14295,7 @@ func (l ListInterfaceArr) MapInt64Arr(f FunctorInterfaceArrInt64Arr) ListInt64Ar
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUintArr(f FunctorInterfaceArrUintArr) ListUintArr {
+func (l ListAnyArr) MapUintArr(f FunctorAnyArrUintArr) ListUintArr {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14304,7 +14304,7 @@ func (l ListInterfaceArr) MapUintArr(f FunctorInterfaceArrUintArr) ListUintArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint8Arr(f FunctorInterfaceArrUint8Arr) ListUint8Arr {
+func (l ListAnyArr) MapUint8Arr(f FunctorAnyArrUint8Arr) ListUint8Arr {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14313,7 +14313,7 @@ func (l ListInterfaceArr) MapUint8Arr(f FunctorInterfaceArrUint8Arr) ListUint8Ar
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint16Arr(f FunctorInterfaceArrUint16Arr) ListUint16Arr {
+func (l ListAnyArr) MapUint16Arr(f FunctorAnyArrUint16Arr) ListUint16Arr {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14322,7 +14322,7 @@ func (l ListInterfaceArr) MapUint16Arr(f FunctorInterfaceArrUint16Arr) ListUint1
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint32Arr(f FunctorInterfaceArrUint32Arr) ListUint32Arr {
+func (l ListAnyArr) MapUint32Arr(f FunctorAnyArrUint32Arr) ListUint32Arr {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14331,7 +14331,7 @@ func (l ListInterfaceArr) MapUint32Arr(f FunctorInterfaceArrUint32Arr) ListUint3
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUint64Arr(f FunctorInterfaceArrUint64Arr) ListUint64Arr {
+func (l ListAnyArr) MapUint64Arr(f FunctorAnyArrUint64Arr) ListUint64Arr {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14340,7 +14340,7 @@ func (l ListInterfaceArr) MapUint64Arr(f FunctorInterfaceArrUint64Arr) ListUint6
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapUintptrArr(f FunctorInterfaceArrUintptrArr) ListUintptrArr {
+func (l ListAnyArr) MapUintptrArr(f FunctorAnyArrUintptrArr) ListUintptrArr {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14349,7 +14349,7 @@ func (l ListInterfaceArr) MapUintptrArr(f FunctorInterfaceArrUintptrArr) ListUin
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapFloat32Arr(f FunctorInterfaceArrFloat32Arr) ListFloat32Arr {
+func (l ListAnyArr) MapFloat32Arr(f FunctorAnyArrFloat32Arr) ListFloat32Arr {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14358,7 +14358,7 @@ func (l ListInterfaceArr) MapFloat32Arr(f FunctorInterfaceArrFloat32Arr) ListFlo
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapFloat64Arr(f FunctorInterfaceArrFloat64Arr) ListFloat64Arr {
+func (l ListAnyArr) MapFloat64Arr(f FunctorAnyArrFloat64Arr) ListFloat64Arr {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14367,7 +14367,7 @@ func (l ListInterfaceArr) MapFloat64Arr(f FunctorInterfaceArrFloat64Arr) ListFlo
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapComplex64Arr(f FunctorInterfaceArrComplex64Arr) ListComplex64Arr {
+func (l ListAnyArr) MapComplex64Arr(f FunctorAnyArrComplex64Arr) ListComplex64Arr {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14376,7 +14376,7 @@ func (l ListInterfaceArr) MapComplex64Arr(f FunctorInterfaceArrComplex64Arr) Lis
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapComplex128Arr(f FunctorInterfaceArrComplex128Arr) ListComplex128Arr {
+func (l ListAnyArr) MapComplex128Arr(f FunctorAnyArrComplex128Arr) ListComplex128Arr {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14385,7 +14385,7 @@ func (l ListInterfaceArr) MapComplex128Arr(f FunctorInterfaceArrComplex128Arr) L
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapStringArr(f FunctorInterfaceArrStringArr) ListStringArr {
+func (l ListAnyArr) MapStringArr(f FunctorAnyArrStringArr) ListStringArr {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14394,8 +14394,8 @@ func (l ListInterfaceArr) MapStringArr(f FunctorInterfaceArrStringArr) ListStrin
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) MapInterfaceArr(f FunctorInterfaceArrInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListAnyArr) MapAnyArr(f FunctorAnyArrAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		acc = acc.Cons(f(*xs.head))

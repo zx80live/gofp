@@ -136,8 +136,8 @@ func MakeListString(elements ...string) ListString {
 	}
 	return l
 }
-func MakeListInterface(elements ...interface{}) ListInterface {
-	l := NilInterface
+func MakeListAny(elements ...Any) ListAny {
+	l := NilAny
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
@@ -276,8 +276,8 @@ func MakeListStringArr(elements ...[]string) ListStringArr {
 	}
 	return l
 }
-func MakeListInterfaceArr(elements ...[]interface{}) ListInterfaceArr {
-	l := NilInterfaceArr
+func MakeListAnyArr(elements ...[]Any) ListAnyArr {
+	l := NilAnyArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}

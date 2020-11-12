@@ -212,8 +212,8 @@ func (l ListString) Filter(p PredicateString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListInterface) Filter(p PredicateInterface) ListInterface {
-	acc := NilInterface
+func (l ListAny) Filter(p PredicateAny) ListAny {
+	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
 		if p(*xs.head) {
@@ -432,8 +432,8 @@ func (l ListStringArr) Filter(p PredicateStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInterfaceArr) Filter(p PredicateInterfaceArr) ListInterfaceArr {
-	acc := NilInterfaceArr
+func (l ListAnyArr) Filter(p PredicateAnyArr) ListAnyArr {
+	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
 		if p(*xs.head) {

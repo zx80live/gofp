@@ -212,12 +212,12 @@ func (l ListString) Copy() ListString {
 		}
 	}
 }
-func (l ListInterface) Copy() ListInterface {
+func (l ListAny) Copy() ListAny {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInterface{
+		return ListAny{
 			head: l.head,
 			tail: &tail,
 		}
@@ -432,12 +432,12 @@ func (l ListStringArr) Copy() ListStringArr {
 		}
 	}
 }
-func (l ListInterfaceArr) Copy() ListInterfaceArr {
+func (l ListAnyArr) Copy() ListAnyArr {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInterfaceArr{
+		return ListAnyArr{
 			head: l.head,
 			tail: &tail,
 		}

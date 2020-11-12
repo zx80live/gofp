@@ -98,9 +98,9 @@ type ListString struct {
 	tail *ListString
 }
 
-type ListInterface struct {
-	head *interface{}
-	tail *ListInterface
+type ListAny struct {
+	head *Any
+	tail *ListAny
 }
 
 type ListBoolArr struct {
@@ -198,9 +198,9 @@ type ListStringArr struct {
 	tail *ListStringArr
 }
 
-type ListInterfaceArr struct {
-	head *[]interface{}
-	tail *ListInterfaceArr
+type ListAnyArr struct {
+	head *[]Any
+	tail *ListAnyArr
 }
 
 var NilBool ListBool = ListBool{nil, nil}
@@ -222,7 +222,7 @@ var NilFloat64 ListFloat64 = ListFloat64{nil, nil}
 var NilComplex64 ListComplex64 = ListComplex64{nil, nil}
 var NilComplex128 ListComplex128 = ListComplex128{nil, nil}
 var NilString ListString = ListString{nil, nil}
-var NilInterface ListInterface = ListInterface{nil, nil}
+var NilAny ListAny = ListAny{nil, nil}
 var NilBoolArr ListBoolArr = ListBoolArr{nil, nil}
 var NilRuneArr ListRuneArr = ListRuneArr{nil, nil}
 var NilByteArr ListByteArr = ListByteArr{nil, nil}
@@ -242,4 +242,4 @@ var NilFloat64Arr ListFloat64Arr = ListFloat64Arr{nil, nil}
 var NilComplex64Arr ListComplex64Arr = ListComplex64Arr{nil, nil}
 var NilComplex128Arr ListComplex128Arr = ListComplex128Arr{nil, nil}
 var NilStringArr ListStringArr = ListStringArr{nil, nil}
-var NilInterfaceArr ListInterfaceArr = ListInterfaceArr{nil, nil}
+var NilAnyArr ListAnyArr = ListAnyArr{nil, nil}

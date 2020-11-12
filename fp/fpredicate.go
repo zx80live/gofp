@@ -22,7 +22,7 @@ type PredicateFloat64 func(e float64) bool
 type PredicateComplex64 func(e complex64) bool
 type PredicateComplex128 func(e complex128) bool
 type PredicateString func(e string) bool
-type PredicateInterface func(e interface{}) bool
+type PredicateAny func(e Any) bool
 type PredicateBoolArr func(e []bool) bool
 type PredicateRuneArr func(e []rune) bool
 type PredicateByteArr func(e []byte) bool
@@ -42,4 +42,4 @@ type PredicateFloat64Arr func(e []float64) bool
 type PredicateComplex64Arr func(e []complex64) bool
 type PredicateComplex128Arr func(e []complex128) bool
 type PredicateStringArr func(e []string) bool
-type PredicateInterfaceArr func(e []interface{}) bool
+type PredicateAnyArr func(e []Any) bool

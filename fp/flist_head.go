@@ -22,7 +22,7 @@ func (l ListFloat64) Head() float64            { return *l.head }
 func (l ListComplex64) Head() complex64        { return *l.head }
 func (l ListComplex128) Head() complex128      { return *l.head }
 func (l ListString) Head() string              { return *l.head }
-func (l ListInterface) Head() interface{}      { return *l.head }
+func (l ListAny) Head() Any                    { return *l.head }
 func (l ListBoolArr) Head() []bool             { return *l.head }
 func (l ListRuneArr) Head() []rune             { return *l.head }
 func (l ListByteArr) Head() []byte             { return *l.head }
@@ -42,4 +42,4 @@ func (l ListFloat64Arr) Head() []float64       { return *l.head }
 func (l ListComplex64Arr) Head() []complex64   { return *l.head }
 func (l ListComplex128Arr) Head() []complex128 { return *l.head }
 func (l ListStringArr) Head() []string         { return *l.head }
-func (l ListInterfaceArr) Head() []interface{} { return *l.head }
+func (l ListAnyArr) Head() []Any               { return *l.head }

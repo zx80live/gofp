@@ -22,7 +22,7 @@ func (l ListFloat64) Tail() ListFloat64             { return l.tail.Copy() }
 func (l ListComplex64) Tail() ListComplex64         { return l.tail.Copy() }
 func (l ListComplex128) Tail() ListComplex128       { return l.tail.Copy() }
 func (l ListString) Tail() ListString               { return l.tail.Copy() }
-func (l ListInterface) Tail() ListInterface         { return l.tail.Copy() }
+func (l ListAny) Tail() ListAny                     { return l.tail.Copy() }
 func (l ListBoolArr) Tail() ListBoolArr             { return l.tail.Copy() }
 func (l ListRuneArr) Tail() ListRuneArr             { return l.tail.Copy() }
 func (l ListByteArr) Tail() ListByteArr             { return l.tail.Copy() }
@@ -42,4 +42,4 @@ func (l ListFloat64Arr) Tail() ListFloat64Arr       { return l.tail.Copy() }
 func (l ListComplex64Arr) Tail() ListComplex64Arr   { return l.tail.Copy() }
 func (l ListComplex128Arr) Tail() ListComplex128Arr { return l.tail.Copy() }
 func (l ListStringArr) Tail() ListStringArr         { return l.tail.Copy() }
-func (l ListInterfaceArr) Tail() ListInterfaceArr   { return l.tail.Copy() }
+func (l ListAnyArr) Tail() ListAnyArr               { return l.tail.Copy() }

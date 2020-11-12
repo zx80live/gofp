@@ -3,10 +3,6 @@
 
 package fp
 
-type Tuple1 struct {
-	E1 Any
-}
-
 type Tuple2 struct {
 	E1 Any
 	E2 Any

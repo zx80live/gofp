@@ -155,9 +155,9 @@ func (l ListString) Reverse() ListString {
 	return xs
 }
 
-func (l ListInterface) Reverse() ListInterface {
-	xs := NilInterface
-	l.Foreach(func(e interface{}) {
+func (l ListAny) Reverse() ListAny {
+	xs := NilAny
+	l.Foreach(func(e Any) {
 		xs = xs.Cons(e)
 	})
 	return xs
@@ -315,9 +315,9 @@ func (l ListStringArr) Reverse() ListStringArr {
 	return xs
 }
 
-func (l ListInterfaceArr) Reverse() ListInterfaceArr {
-	xs := NilInterfaceArr
-	l.Foreach(func(e []interface{}) {
+func (l ListAnyArr) Reverse() ListAnyArr {
+	xs := NilAnyArr
+	l.Foreach(func(e []Any) {
 		xs = xs.Cons(e)
 	})
 	return xs

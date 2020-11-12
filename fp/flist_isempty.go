@@ -41,8 +41,8 @@ func (l ListComplex128) IsEmpty() bool       { return l.head == nil && l.tail ==
 func (l ListComplex128) IsNotEmpty() bool    { return !l.IsEmpty() }
 func (l ListString) IsEmpty() bool           { return l.head == nil && l.tail == nil }
 func (l ListString) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListInterface) IsEmpty() bool        { return l.head == nil && l.tail == nil }
-func (l ListInterface) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l ListAny) IsEmpty() bool              { return l.head == nil && l.tail == nil }
+func (l ListAny) IsNotEmpty() bool           { return !l.IsEmpty() }
 func (l ListBoolArr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
 func (l ListBoolArr) IsNotEmpty() bool       { return !l.IsEmpty() }
 func (l ListRuneArr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
@@ -81,5 +81,5 @@ func (l ListComplex128Arr) IsEmpty() bool    { return l.head == nil && l.tail ==
 func (l ListComplex128Arr) IsNotEmpty() bool { return !l.IsEmpty() }
 func (l ListStringArr) IsEmpty() bool        { return l.head == nil && l.tail == nil }
 func (l ListStringArr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListInterfaceArr) IsEmpty() bool     { return l.head == nil && l.tail == nil }
-func (l ListInterfaceArr) IsNotEmpty() bool  { return !l.IsEmpty() }
+func (l ListAnyArr) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l ListAnyArr) IsNotEmpty() bool        { return !l.IsEmpty() }

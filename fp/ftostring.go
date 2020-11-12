@@ -24,7 +24,7 @@ func ToStringFloat64(e float64) string            { return fmt.Sprintf("%v", e) 
 func ToStringComplex64(e complex64) string        { return fmt.Sprintf("%v", e) }
 func ToStringComplex128(e complex128) string      { return fmt.Sprintf("%v", e) }
 func ToStringString(e string) string              { return fmt.Sprintf("%v", e) }
-func ToStringInterface(e interface{}) string      { return fmt.Sprintf("%v", e) }
+func ToStringAny(e Any) string                    { return fmt.Sprintf("%v", e) }
 func ToStringBoolArr(e []bool) string             { return MkStringBoolArr(e, "[", ",", "]") }
 func ToStringRuneArr(e []rune) string             { return MkStringRuneArr(e, "[", ",", "]") }
 func ToStringByteArr(e []byte) string             { return MkStringByteArr(e, "[", ",", "]") }
@@ -44,4 +44,4 @@ func ToStringFloat64Arr(e []float64) string       { return MkStringFloat64Arr(e,
 func ToStringComplex64Arr(e []complex64) string   { return MkStringComplex64Arr(e, "[", ",", "]") }
 func ToStringComplex128Arr(e []complex128) string { return MkStringComplex128Arr(e, "[", ",", "]") }
 func ToStringStringArr(e []string) string         { return MkStringStringArr(e, "[", ",", "]") }
-func ToStringInterfaceArr(e []interface{}) string { return MkStringInterfaceArr(e, "[", ",", "]") }
+func ToStringAnyArr(e []Any) string               { return MkStringAnyArr(e, "[", ",", "]") }

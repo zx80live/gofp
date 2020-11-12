@@ -22,7 +22,7 @@ type FunctorBoolFloat64 func(e bool) float64
 type FunctorBoolComplex64 func(e bool) complex64
 type FunctorBoolComplex128 func(e bool) complex128
 type FunctorBoolString func(e bool) string
-type FunctorBoolInterface func(e bool) interface{}
+type FunctorBoolAny func(e bool) Any
 type FunctorBoolBoolArr func(e bool) []bool
 type FunctorBoolRuneArr func(e bool) []rune
 type FunctorBoolByteArr func(e bool) []byte
@@ -42,7 +42,7 @@ type FunctorBoolFloat64Arr func(e bool) []float64
 type FunctorBoolComplex64Arr func(e bool) []complex64
 type FunctorBoolComplex128Arr func(e bool) []complex128
 type FunctorBoolStringArr func(e bool) []string
-type FunctorBoolInterfaceArr func(e bool) []interface{}
+type FunctorBoolAnyArr func(e bool) []Any
 type FunctorRuneBool func(e rune) bool
 type FunctorRuneRune func(e rune) rune
 type FunctorRuneByte func(e rune) byte
@@ -62,7 +62,7 @@ type FunctorRuneFloat64 func(e rune) float64
 type FunctorRuneComplex64 func(e rune) complex64
 type FunctorRuneComplex128 func(e rune) complex128
 type FunctorRuneString func(e rune) string
-type FunctorRuneInterface func(e rune) interface{}
+type FunctorRuneAny func(e rune) Any
 type FunctorRuneBoolArr func(e rune) []bool
 type FunctorRuneRuneArr func(e rune) []rune
 type FunctorRuneByteArr func(e rune) []byte
@@ -82,7 +82,7 @@ type FunctorRuneFloat64Arr func(e rune) []float64
 type FunctorRuneComplex64Arr func(e rune) []complex64
 type FunctorRuneComplex128Arr func(e rune) []complex128
 type FunctorRuneStringArr func(e rune) []string
-type FunctorRuneInterfaceArr func(e rune) []interface{}
+type FunctorRuneAnyArr func(e rune) []Any
 type FunctorByteBool func(e byte) bool
 type FunctorByteRune func(e byte) rune
 type FunctorByteByte func(e byte) byte
@@ -102,7 +102,7 @@ type FunctorByteFloat64 func(e byte) float64
 type FunctorByteComplex64 func(e byte) complex64
 type FunctorByteComplex128 func(e byte) complex128
 type FunctorByteString func(e byte) string
-type FunctorByteInterface func(e byte) interface{}
+type FunctorByteAny func(e byte) Any
 type FunctorByteBoolArr func(e byte) []bool
 type FunctorByteRuneArr func(e byte) []rune
 type FunctorByteByteArr func(e byte) []byte
@@ -122,7 +122,7 @@ type FunctorByteFloat64Arr func(e byte) []float64
 type FunctorByteComplex64Arr func(e byte) []complex64
 type FunctorByteComplex128Arr func(e byte) []complex128
 type FunctorByteStringArr func(e byte) []string
-type FunctorByteInterfaceArr func(e byte) []interface{}
+type FunctorByteAnyArr func(e byte) []Any
 type FunctorIntBool func(e int) bool
 type FunctorIntRune func(e int) rune
 type FunctorIntByte func(e int) byte
@@ -142,7 +142,7 @@ type FunctorIntFloat64 func(e int) float64
 type FunctorIntComplex64 func(e int) complex64
 type FunctorIntComplex128 func(e int) complex128
 type FunctorIntString func(e int) string
-type FunctorIntInterface func(e int) interface{}
+type FunctorIntAny func(e int) Any
 type FunctorIntBoolArr func(e int) []bool
 type FunctorIntRuneArr func(e int) []rune
 type FunctorIntByteArr func(e int) []byte
@@ -162,7 +162,7 @@ type FunctorIntFloat64Arr func(e int) []float64
 type FunctorIntComplex64Arr func(e int) []complex64
 type FunctorIntComplex128Arr func(e int) []complex128
 type FunctorIntStringArr func(e int) []string
-type FunctorIntInterfaceArr func(e int) []interface{}
+type FunctorIntAnyArr func(e int) []Any
 type FunctorInt8Bool func(e int8) bool
 type FunctorInt8Rune func(e int8) rune
 type FunctorInt8Byte func(e int8) byte
@@ -182,7 +182,7 @@ type FunctorInt8Float64 func(e int8) float64
 type FunctorInt8Complex64 func(e int8) complex64
 type FunctorInt8Complex128 func(e int8) complex128
 type FunctorInt8String func(e int8) string
-type FunctorInt8Interface func(e int8) interface{}
+type FunctorInt8Any func(e int8) Any
 type FunctorInt8BoolArr func(e int8) []bool
 type FunctorInt8RuneArr func(e int8) []rune
 type FunctorInt8ByteArr func(e int8) []byte
@@ -202,7 +202,7 @@ type FunctorInt8Float64Arr func(e int8) []float64
 type FunctorInt8Complex64Arr func(e int8) []complex64
 type FunctorInt8Complex128Arr func(e int8) []complex128
 type FunctorInt8StringArr func(e int8) []string
-type FunctorInt8InterfaceArr func(e int8) []interface{}
+type FunctorInt8AnyArr func(e int8) []Any
 type FunctorInt16Bool func(e int16) bool
 type FunctorInt16Rune func(e int16) rune
 type FunctorInt16Byte func(e int16) byte
@@ -222,7 +222,7 @@ type FunctorInt16Float64 func(e int16) float64
 type FunctorInt16Complex64 func(e int16) complex64
 type FunctorInt16Complex128 func(e int16) complex128
 type FunctorInt16String func(e int16) string
-type FunctorInt16Interface func(e int16) interface{}
+type FunctorInt16Any func(e int16) Any
 type FunctorInt16BoolArr func(e int16) []bool
 type FunctorInt16RuneArr func(e int16) []rune
 type FunctorInt16ByteArr func(e int16) []byte
@@ -242,7 +242,7 @@ type FunctorInt16Float64Arr func(e int16) []float64
 type FunctorInt16Complex64Arr func(e int16) []complex64
 type FunctorInt16Complex128Arr func(e int16) []complex128
 type FunctorInt16StringArr func(e int16) []string
-type FunctorInt16InterfaceArr func(e int16) []interface{}
+type FunctorInt16AnyArr func(e int16) []Any
 type FunctorInt32Bool func(e int32) bool
 type FunctorInt32Rune func(e int32) rune
 type FunctorInt32Byte func(e int32) byte
@@ -262,7 +262,7 @@ type FunctorInt32Float64 func(e int32) float64
 type FunctorInt32Complex64 func(e int32) complex64
 type FunctorInt32Complex128 func(e int32) complex128
 type FunctorInt32String func(e int32) string
-type FunctorInt32Interface func(e int32) interface{}
+type FunctorInt32Any func(e int32) Any
 type FunctorInt32BoolArr func(e int32) []bool
 type FunctorInt32RuneArr func(e int32) []rune
 type FunctorInt32ByteArr func(e int32) []byte
@@ -282,7 +282,7 @@ type FunctorInt32Float64Arr func(e int32) []float64
 type FunctorInt32Complex64Arr func(e int32) []complex64
 type FunctorInt32Complex128Arr func(e int32) []complex128
 type FunctorInt32StringArr func(e int32) []string
-type FunctorInt32InterfaceArr func(e int32) []interface{}
+type FunctorInt32AnyArr func(e int32) []Any
 type FunctorInt64Bool func(e int64) bool
 type FunctorInt64Rune func(e int64) rune
 type FunctorInt64Byte func(e int64) byte
@@ -302,7 +302,7 @@ type FunctorInt64Float64 func(e int64) float64
 type FunctorInt64Complex64 func(e int64) complex64
 type FunctorInt64Complex128 func(e int64) complex128
 type FunctorInt64String func(e int64) string
-type FunctorInt64Interface func(e int64) interface{}
+type FunctorInt64Any func(e int64) Any
 type FunctorInt64BoolArr func(e int64) []bool
 type FunctorInt64RuneArr func(e int64) []rune
 type FunctorInt64ByteArr func(e int64) []byte
@@ -322,7 +322,7 @@ type FunctorInt64Float64Arr func(e int64) []float64
 type FunctorInt64Complex64Arr func(e int64) []complex64
 type FunctorInt64Complex128Arr func(e int64) []complex128
 type FunctorInt64StringArr func(e int64) []string
-type FunctorInt64InterfaceArr func(e int64) []interface{}
+type FunctorInt64AnyArr func(e int64) []Any
 type FunctorUintBool func(e uint) bool
 type FunctorUintRune func(e uint) rune
 type FunctorUintByte func(e uint) byte
@@ -342,7 +342,7 @@ type FunctorUintFloat64 func(e uint) float64
 type FunctorUintComplex64 func(e uint) complex64
 type FunctorUintComplex128 func(e uint) complex128
 type FunctorUintString func(e uint) string
-type FunctorUintInterface func(e uint) interface{}
+type FunctorUintAny func(e uint) Any
 type FunctorUintBoolArr func(e uint) []bool
 type FunctorUintRuneArr func(e uint) []rune
 type FunctorUintByteArr func(e uint) []byte
@@ -362,7 +362,7 @@ type FunctorUintFloat64Arr func(e uint) []float64
 type FunctorUintComplex64Arr func(e uint) []complex64
 type FunctorUintComplex128Arr func(e uint) []complex128
 type FunctorUintStringArr func(e uint) []string
-type FunctorUintInterfaceArr func(e uint) []interface{}
+type FunctorUintAnyArr func(e uint) []Any
 type FunctorUint8Bool func(e uint8) bool
 type FunctorUint8Rune func(e uint8) rune
 type FunctorUint8Byte func(e uint8) byte
@@ -382,7 +382,7 @@ type FunctorUint8Float64 func(e uint8) float64
 type FunctorUint8Complex64 func(e uint8) complex64
 type FunctorUint8Complex128 func(e uint8) complex128
 type FunctorUint8String func(e uint8) string
-type FunctorUint8Interface func(e uint8) interface{}
+type FunctorUint8Any func(e uint8) Any
 type FunctorUint8BoolArr func(e uint8) []bool
 type FunctorUint8RuneArr func(e uint8) []rune
 type FunctorUint8ByteArr func(e uint8) []byte
@@ -402,7 +402,7 @@ type FunctorUint8Float64Arr func(e uint8) []float64
 type FunctorUint8Complex64Arr func(e uint8) []complex64
 type FunctorUint8Complex128Arr func(e uint8) []complex128
 type FunctorUint8StringArr func(e uint8) []string
-type FunctorUint8InterfaceArr func(e uint8) []interface{}
+type FunctorUint8AnyArr func(e uint8) []Any
 type FunctorUint16Bool func(e uint16) bool
 type FunctorUint16Rune func(e uint16) rune
 type FunctorUint16Byte func(e uint16) byte
@@ -422,7 +422,7 @@ type FunctorUint16Float64 func(e uint16) float64
 type FunctorUint16Complex64 func(e uint16) complex64
 type FunctorUint16Complex128 func(e uint16) complex128
 type FunctorUint16String func(e uint16) string
-type FunctorUint16Interface func(e uint16) interface{}
+type FunctorUint16Any func(e uint16) Any
 type FunctorUint16BoolArr func(e uint16) []bool
 type FunctorUint16RuneArr func(e uint16) []rune
 type FunctorUint16ByteArr func(e uint16) []byte
@@ -442,7 +442,7 @@ type FunctorUint16Float64Arr func(e uint16) []float64
 type FunctorUint16Complex64Arr func(e uint16) []complex64
 type FunctorUint16Complex128Arr func(e uint16) []complex128
 type FunctorUint16StringArr func(e uint16) []string
-type FunctorUint16InterfaceArr func(e uint16) []interface{}
+type FunctorUint16AnyArr func(e uint16) []Any
 type FunctorUint32Bool func(e uint32) bool
 type FunctorUint32Rune func(e uint32) rune
 type FunctorUint32Byte func(e uint32) byte
@@ -462,7 +462,7 @@ type FunctorUint32Float64 func(e uint32) float64
 type FunctorUint32Complex64 func(e uint32) complex64
 type FunctorUint32Complex128 func(e uint32) complex128
 type FunctorUint32String func(e uint32) string
-type FunctorUint32Interface func(e uint32) interface{}
+type FunctorUint32Any func(e uint32) Any
 type FunctorUint32BoolArr func(e uint32) []bool
 type FunctorUint32RuneArr func(e uint32) []rune
 type FunctorUint32ByteArr func(e uint32) []byte
@@ -482,7 +482,7 @@ type FunctorUint32Float64Arr func(e uint32) []float64
 type FunctorUint32Complex64Arr func(e uint32) []complex64
 type FunctorUint32Complex128Arr func(e uint32) []complex128
 type FunctorUint32StringArr func(e uint32) []string
-type FunctorUint32InterfaceArr func(e uint32) []interface{}
+type FunctorUint32AnyArr func(e uint32) []Any
 type FunctorUint64Bool func(e uint64) bool
 type FunctorUint64Rune func(e uint64) rune
 type FunctorUint64Byte func(e uint64) byte
@@ -502,7 +502,7 @@ type FunctorUint64Float64 func(e uint64) float64
 type FunctorUint64Complex64 func(e uint64) complex64
 type FunctorUint64Complex128 func(e uint64) complex128
 type FunctorUint64String func(e uint64) string
-type FunctorUint64Interface func(e uint64) interface{}
+type FunctorUint64Any func(e uint64) Any
 type FunctorUint64BoolArr func(e uint64) []bool
 type FunctorUint64RuneArr func(e uint64) []rune
 type FunctorUint64ByteArr func(e uint64) []byte
@@ -522,7 +522,7 @@ type FunctorUint64Float64Arr func(e uint64) []float64
 type FunctorUint64Complex64Arr func(e uint64) []complex64
 type FunctorUint64Complex128Arr func(e uint64) []complex128
 type FunctorUint64StringArr func(e uint64) []string
-type FunctorUint64InterfaceArr func(e uint64) []interface{}
+type FunctorUint64AnyArr func(e uint64) []Any
 type FunctorUintptrBool func(e uintptr) bool
 type FunctorUintptrRune func(e uintptr) rune
 type FunctorUintptrByte func(e uintptr) byte
@@ -542,7 +542,7 @@ type FunctorUintptrFloat64 func(e uintptr) float64
 type FunctorUintptrComplex64 func(e uintptr) complex64
 type FunctorUintptrComplex128 func(e uintptr) complex128
 type FunctorUintptrString func(e uintptr) string
-type FunctorUintptrInterface func(e uintptr) interface{}
+type FunctorUintptrAny func(e uintptr) Any
 type FunctorUintptrBoolArr func(e uintptr) []bool
 type FunctorUintptrRuneArr func(e uintptr) []rune
 type FunctorUintptrByteArr func(e uintptr) []byte
@@ -562,7 +562,7 @@ type FunctorUintptrFloat64Arr func(e uintptr) []float64
 type FunctorUintptrComplex64Arr func(e uintptr) []complex64
 type FunctorUintptrComplex128Arr func(e uintptr) []complex128
 type FunctorUintptrStringArr func(e uintptr) []string
-type FunctorUintptrInterfaceArr func(e uintptr) []interface{}
+type FunctorUintptrAnyArr func(e uintptr) []Any
 type FunctorFloat32Bool func(e float32) bool
 type FunctorFloat32Rune func(e float32) rune
 type FunctorFloat32Byte func(e float32) byte
@@ -582,7 +582,7 @@ type FunctorFloat32Float64 func(e float32) float64
 type FunctorFloat32Complex64 func(e float32) complex64
 type FunctorFloat32Complex128 func(e float32) complex128
 type FunctorFloat32String func(e float32) string
-type FunctorFloat32Interface func(e float32) interface{}
+type FunctorFloat32Any func(e float32) Any
 type FunctorFloat32BoolArr func(e float32) []bool
 type FunctorFloat32RuneArr func(e float32) []rune
 type FunctorFloat32ByteArr func(e float32) []byte
@@ -602,7 +602,7 @@ type FunctorFloat32Float64Arr func(e float32) []float64
 type FunctorFloat32Complex64Arr func(e float32) []complex64
 type FunctorFloat32Complex128Arr func(e float32) []complex128
 type FunctorFloat32StringArr func(e float32) []string
-type FunctorFloat32InterfaceArr func(e float32) []interface{}
+type FunctorFloat32AnyArr func(e float32) []Any
 type FunctorFloat64Bool func(e float64) bool
 type FunctorFloat64Rune func(e float64) rune
 type FunctorFloat64Byte func(e float64) byte
@@ -622,7 +622,7 @@ type FunctorFloat64Float64 func(e float64) float64
 type FunctorFloat64Complex64 func(e float64) complex64
 type FunctorFloat64Complex128 func(e float64) complex128
 type FunctorFloat64String func(e float64) string
-type FunctorFloat64Interface func(e float64) interface{}
+type FunctorFloat64Any func(e float64) Any
 type FunctorFloat64BoolArr func(e float64) []bool
 type FunctorFloat64RuneArr func(e float64) []rune
 type FunctorFloat64ByteArr func(e float64) []byte
@@ -642,7 +642,7 @@ type FunctorFloat64Float64Arr func(e float64) []float64
 type FunctorFloat64Complex64Arr func(e float64) []complex64
 type FunctorFloat64Complex128Arr func(e float64) []complex128
 type FunctorFloat64StringArr func(e float64) []string
-type FunctorFloat64InterfaceArr func(e float64) []interface{}
+type FunctorFloat64AnyArr func(e float64) []Any
 type FunctorComplex64Bool func(e complex64) bool
 type FunctorComplex64Rune func(e complex64) rune
 type FunctorComplex64Byte func(e complex64) byte
@@ -662,7 +662,7 @@ type FunctorComplex64Float64 func(e complex64) float64
 type FunctorComplex64Complex64 func(e complex64) complex64
 type FunctorComplex64Complex128 func(e complex64) complex128
 type FunctorComplex64String func(e complex64) string
-type FunctorComplex64Interface func(e complex64) interface{}
+type FunctorComplex64Any func(e complex64) Any
 type FunctorComplex64BoolArr func(e complex64) []bool
 type FunctorComplex64RuneArr func(e complex64) []rune
 type FunctorComplex64ByteArr func(e complex64) []byte
@@ -682,7 +682,7 @@ type FunctorComplex64Float64Arr func(e complex64) []float64
 type FunctorComplex64Complex64Arr func(e complex64) []complex64
 type FunctorComplex64Complex128Arr func(e complex64) []complex128
 type FunctorComplex64StringArr func(e complex64) []string
-type FunctorComplex64InterfaceArr func(e complex64) []interface{}
+type FunctorComplex64AnyArr func(e complex64) []Any
 type FunctorComplex128Bool func(e complex128) bool
 type FunctorComplex128Rune func(e complex128) rune
 type FunctorComplex128Byte func(e complex128) byte
@@ -702,7 +702,7 @@ type FunctorComplex128Float64 func(e complex128) float64
 type FunctorComplex128Complex64 func(e complex128) complex64
 type FunctorComplex128Complex128 func(e complex128) complex128
 type FunctorComplex128String func(e complex128) string
-type FunctorComplex128Interface func(e complex128) interface{}
+type FunctorComplex128Any func(e complex128) Any
 type FunctorComplex128BoolArr func(e complex128) []bool
 type FunctorComplex128RuneArr func(e complex128) []rune
 type FunctorComplex128ByteArr func(e complex128) []byte
@@ -722,7 +722,7 @@ type FunctorComplex128Float64Arr func(e complex128) []float64
 type FunctorComplex128Complex64Arr func(e complex128) []complex64
 type FunctorComplex128Complex128Arr func(e complex128) []complex128
 type FunctorComplex128StringArr func(e complex128) []string
-type FunctorComplex128InterfaceArr func(e complex128) []interface{}
+type FunctorComplex128AnyArr func(e complex128) []Any
 type FunctorStringBool func(e string) bool
 type FunctorStringRune func(e string) rune
 type FunctorStringByte func(e string) byte
@@ -742,7 +742,7 @@ type FunctorStringFloat64 func(e string) float64
 type FunctorStringComplex64 func(e string) complex64
 type FunctorStringComplex128 func(e string) complex128
 type FunctorStringString func(e string) string
-type FunctorStringInterface func(e string) interface{}
+type FunctorStringAny func(e string) Any
 type FunctorStringBoolArr func(e string) []bool
 type FunctorStringRuneArr func(e string) []rune
 type FunctorStringByteArr func(e string) []byte
@@ -762,47 +762,47 @@ type FunctorStringFloat64Arr func(e string) []float64
 type FunctorStringComplex64Arr func(e string) []complex64
 type FunctorStringComplex128Arr func(e string) []complex128
 type FunctorStringStringArr func(e string) []string
-type FunctorStringInterfaceArr func(e string) []interface{}
-type FunctorInterfaceBool func(e interface{}) bool
-type FunctorInterfaceRune func(e interface{}) rune
-type FunctorInterfaceByte func(e interface{}) byte
-type FunctorInterfaceInt func(e interface{}) int
-type FunctorInterfaceInt8 func(e interface{}) int8
-type FunctorInterfaceInt16 func(e interface{}) int16
-type FunctorInterfaceInt32 func(e interface{}) int32
-type FunctorInterfaceInt64 func(e interface{}) int64
-type FunctorInterfaceUint func(e interface{}) uint
-type FunctorInterfaceUint8 func(e interface{}) uint8
-type FunctorInterfaceUint16 func(e interface{}) uint16
-type FunctorInterfaceUint32 func(e interface{}) uint32
-type FunctorInterfaceUint64 func(e interface{}) uint64
-type FunctorInterfaceUintptr func(e interface{}) uintptr
-type FunctorInterfaceFloat32 func(e interface{}) float32
-type FunctorInterfaceFloat64 func(e interface{}) float64
-type FunctorInterfaceComplex64 func(e interface{}) complex64
-type FunctorInterfaceComplex128 func(e interface{}) complex128
-type FunctorInterfaceString func(e interface{}) string
-type FunctorInterfaceInterface func(e interface{}) interface{}
-type FunctorInterfaceBoolArr func(e interface{}) []bool
-type FunctorInterfaceRuneArr func(e interface{}) []rune
-type FunctorInterfaceByteArr func(e interface{}) []byte
-type FunctorInterfaceIntArr func(e interface{}) []int
-type FunctorInterfaceInt8Arr func(e interface{}) []int8
-type FunctorInterfaceInt16Arr func(e interface{}) []int16
-type FunctorInterfaceInt32Arr func(e interface{}) []int32
-type FunctorInterfaceInt64Arr func(e interface{}) []int64
-type FunctorInterfaceUintArr func(e interface{}) []uint
-type FunctorInterfaceUint8Arr func(e interface{}) []uint8
-type FunctorInterfaceUint16Arr func(e interface{}) []uint16
-type FunctorInterfaceUint32Arr func(e interface{}) []uint32
-type FunctorInterfaceUint64Arr func(e interface{}) []uint64
-type FunctorInterfaceUintptrArr func(e interface{}) []uintptr
-type FunctorInterfaceFloat32Arr func(e interface{}) []float32
-type FunctorInterfaceFloat64Arr func(e interface{}) []float64
-type FunctorInterfaceComplex64Arr func(e interface{}) []complex64
-type FunctorInterfaceComplex128Arr func(e interface{}) []complex128
-type FunctorInterfaceStringArr func(e interface{}) []string
-type FunctorInterfaceInterfaceArr func(e interface{}) []interface{}
+type FunctorStringAnyArr func(e string) []Any
+type FunctorAnyBool func(e Any) bool
+type FunctorAnyRune func(e Any) rune
+type FunctorAnyByte func(e Any) byte
+type FunctorAnyInt func(e Any) int
+type FunctorAnyInt8 func(e Any) int8
+type FunctorAnyInt16 func(e Any) int16
+type FunctorAnyInt32 func(e Any) int32
+type FunctorAnyInt64 func(e Any) int64
+type FunctorAnyUint func(e Any) uint
+type FunctorAnyUint8 func(e Any) uint8
+type FunctorAnyUint16 func(e Any) uint16
+type FunctorAnyUint32 func(e Any) uint32
+type FunctorAnyUint64 func(e Any) uint64
+type FunctorAnyUintptr func(e Any) uintptr
+type FunctorAnyFloat32 func(e Any) float32
+type FunctorAnyFloat64 func(e Any) float64
+type FunctorAnyComplex64 func(e Any) complex64
+type FunctorAnyComplex128 func(e Any) complex128
+type FunctorAnyString func(e Any) string
+type FunctorAnyAny func(e Any) Any
+type FunctorAnyBoolArr func(e Any) []bool
+type FunctorAnyRuneArr func(e Any) []rune
+type FunctorAnyByteArr func(e Any) []byte
+type FunctorAnyIntArr func(e Any) []int
+type FunctorAnyInt8Arr func(e Any) []int8
+type FunctorAnyInt16Arr func(e Any) []int16
+type FunctorAnyInt32Arr func(e Any) []int32
+type FunctorAnyInt64Arr func(e Any) []int64
+type FunctorAnyUintArr func(e Any) []uint
+type FunctorAnyUint8Arr func(e Any) []uint8
+type FunctorAnyUint16Arr func(e Any) []uint16
+type FunctorAnyUint32Arr func(e Any) []uint32
+type FunctorAnyUint64Arr func(e Any) []uint64
+type FunctorAnyUintptrArr func(e Any) []uintptr
+type FunctorAnyFloat32Arr func(e Any) []float32
+type FunctorAnyFloat64Arr func(e Any) []float64
+type FunctorAnyComplex64Arr func(e Any) []complex64
+type FunctorAnyComplex128Arr func(e Any) []complex128
+type FunctorAnyStringArr func(e Any) []string
+type FunctorAnyAnyArr func(e Any) []Any
 type FunctorBoolArrBool func(e []bool) bool
 type FunctorBoolArrRune func(e []bool) rune
 type FunctorBoolArrByte func(e []bool) byte
@@ -822,7 +822,7 @@ type FunctorBoolArrFloat64 func(e []bool) float64
 type FunctorBoolArrComplex64 func(e []bool) complex64
 type FunctorBoolArrComplex128 func(e []bool) complex128
 type FunctorBoolArrString func(e []bool) string
-type FunctorBoolArrInterface func(e []bool) interface{}
+type FunctorBoolArrAny func(e []bool) Any
 type FunctorBoolArrBoolArr func(e []bool) []bool
 type FunctorBoolArrRuneArr func(e []bool) []rune
 type FunctorBoolArrByteArr func(e []bool) []byte
@@ -842,7 +842,7 @@ type FunctorBoolArrFloat64Arr func(e []bool) []float64
 type FunctorBoolArrComplex64Arr func(e []bool) []complex64
 type FunctorBoolArrComplex128Arr func(e []bool) []complex128
 type FunctorBoolArrStringArr func(e []bool) []string
-type FunctorBoolArrInterfaceArr func(e []bool) []interface{}
+type FunctorBoolArrAnyArr func(e []bool) []Any
 type FunctorRuneArrBool func(e []rune) bool
 type FunctorRuneArrRune func(e []rune) rune
 type FunctorRuneArrByte func(e []rune) byte
@@ -862,7 +862,7 @@ type FunctorRuneArrFloat64 func(e []rune) float64
 type FunctorRuneArrComplex64 func(e []rune) complex64
 type FunctorRuneArrComplex128 func(e []rune) complex128
 type FunctorRuneArrString func(e []rune) string
-type FunctorRuneArrInterface func(e []rune) interface{}
+type FunctorRuneArrAny func(e []rune) Any
 type FunctorRuneArrBoolArr func(e []rune) []bool
 type FunctorRuneArrRuneArr func(e []rune) []rune
 type FunctorRuneArrByteArr func(e []rune) []byte
@@ -882,7 +882,7 @@ type FunctorRuneArrFloat64Arr func(e []rune) []float64
 type FunctorRuneArrComplex64Arr func(e []rune) []complex64
 type FunctorRuneArrComplex128Arr func(e []rune) []complex128
 type FunctorRuneArrStringArr func(e []rune) []string
-type FunctorRuneArrInterfaceArr func(e []rune) []interface{}
+type FunctorRuneArrAnyArr func(e []rune) []Any
 type FunctorByteArrBool func(e []byte) bool
 type FunctorByteArrRune func(e []byte) rune
 type FunctorByteArrByte func(e []byte) byte
@@ -902,7 +902,7 @@ type FunctorByteArrFloat64 func(e []byte) float64
 type FunctorByteArrComplex64 func(e []byte) complex64
 type FunctorByteArrComplex128 func(e []byte) complex128
 type FunctorByteArrString func(e []byte) string
-type FunctorByteArrInterface func(e []byte) interface{}
+type FunctorByteArrAny func(e []byte) Any
 type FunctorByteArrBoolArr func(e []byte) []bool
 type FunctorByteArrRuneArr func(e []byte) []rune
 type FunctorByteArrByteArr func(e []byte) []byte
@@ -922,7 +922,7 @@ type FunctorByteArrFloat64Arr func(e []byte) []float64
 type FunctorByteArrComplex64Arr func(e []byte) []complex64
 type FunctorByteArrComplex128Arr func(e []byte) []complex128
 type FunctorByteArrStringArr func(e []byte) []string
-type FunctorByteArrInterfaceArr func(e []byte) []interface{}
+type FunctorByteArrAnyArr func(e []byte) []Any
 type FunctorIntArrBool func(e []int) bool
 type FunctorIntArrRune func(e []int) rune
 type FunctorIntArrByte func(e []int) byte
@@ -942,7 +942,7 @@ type FunctorIntArrFloat64 func(e []int) float64
 type FunctorIntArrComplex64 func(e []int) complex64
 type FunctorIntArrComplex128 func(e []int) complex128
 type FunctorIntArrString func(e []int) string
-type FunctorIntArrInterface func(e []int) interface{}
+type FunctorIntArrAny func(e []int) Any
 type FunctorIntArrBoolArr func(e []int) []bool
 type FunctorIntArrRuneArr func(e []int) []rune
 type FunctorIntArrByteArr func(e []int) []byte
@@ -962,7 +962,7 @@ type FunctorIntArrFloat64Arr func(e []int) []float64
 type FunctorIntArrComplex64Arr func(e []int) []complex64
 type FunctorIntArrComplex128Arr func(e []int) []complex128
 type FunctorIntArrStringArr func(e []int) []string
-type FunctorIntArrInterfaceArr func(e []int) []interface{}
+type FunctorIntArrAnyArr func(e []int) []Any
 type FunctorInt8ArrBool func(e []int8) bool
 type FunctorInt8ArrRune func(e []int8) rune
 type FunctorInt8ArrByte func(e []int8) byte
@@ -982,7 +982,7 @@ type FunctorInt8ArrFloat64 func(e []int8) float64
 type FunctorInt8ArrComplex64 func(e []int8) complex64
 type FunctorInt8ArrComplex128 func(e []int8) complex128
 type FunctorInt8ArrString func(e []int8) string
-type FunctorInt8ArrInterface func(e []int8) interface{}
+type FunctorInt8ArrAny func(e []int8) Any
 type FunctorInt8ArrBoolArr func(e []int8) []bool
 type FunctorInt8ArrRuneArr func(e []int8) []rune
 type FunctorInt8ArrByteArr func(e []int8) []byte
@@ -1002,7 +1002,7 @@ type FunctorInt8ArrFloat64Arr func(e []int8) []float64
 type FunctorInt8ArrComplex64Arr func(e []int8) []complex64
 type FunctorInt8ArrComplex128Arr func(e []int8) []complex128
 type FunctorInt8ArrStringArr func(e []int8) []string
-type FunctorInt8ArrInterfaceArr func(e []int8) []interface{}
+type FunctorInt8ArrAnyArr func(e []int8) []Any
 type FunctorInt16ArrBool func(e []int16) bool
 type FunctorInt16ArrRune func(e []int16) rune
 type FunctorInt16ArrByte func(e []int16) byte
@@ -1022,7 +1022,7 @@ type FunctorInt16ArrFloat64 func(e []int16) float64
 type FunctorInt16ArrComplex64 func(e []int16) complex64
 type FunctorInt16ArrComplex128 func(e []int16) complex128
 type FunctorInt16ArrString func(e []int16) string
-type FunctorInt16ArrInterface func(e []int16) interface{}
+type FunctorInt16ArrAny func(e []int16) Any
 type FunctorInt16ArrBoolArr func(e []int16) []bool
 type FunctorInt16ArrRuneArr func(e []int16) []rune
 type FunctorInt16ArrByteArr func(e []int16) []byte
@@ -1042,7 +1042,7 @@ type FunctorInt16ArrFloat64Arr func(e []int16) []float64
 type FunctorInt16ArrComplex64Arr func(e []int16) []complex64
 type FunctorInt16ArrComplex128Arr func(e []int16) []complex128
 type FunctorInt16ArrStringArr func(e []int16) []string
-type FunctorInt16ArrInterfaceArr func(e []int16) []interface{}
+type FunctorInt16ArrAnyArr func(e []int16) []Any
 type FunctorInt32ArrBool func(e []int32) bool
 type FunctorInt32ArrRune func(e []int32) rune
 type FunctorInt32ArrByte func(e []int32) byte
@@ -1062,7 +1062,7 @@ type FunctorInt32ArrFloat64 func(e []int32) float64
 type FunctorInt32ArrComplex64 func(e []int32) complex64
 type FunctorInt32ArrComplex128 func(e []int32) complex128
 type FunctorInt32ArrString func(e []int32) string
-type FunctorInt32ArrInterface func(e []int32) interface{}
+type FunctorInt32ArrAny func(e []int32) Any
 type FunctorInt32ArrBoolArr func(e []int32) []bool
 type FunctorInt32ArrRuneArr func(e []int32) []rune
 type FunctorInt32ArrByteArr func(e []int32) []byte
@@ -1082,7 +1082,7 @@ type FunctorInt32ArrFloat64Arr func(e []int32) []float64
 type FunctorInt32ArrComplex64Arr func(e []int32) []complex64
 type FunctorInt32ArrComplex128Arr func(e []int32) []complex128
 type FunctorInt32ArrStringArr func(e []int32) []string
-type FunctorInt32ArrInterfaceArr func(e []int32) []interface{}
+type FunctorInt32ArrAnyArr func(e []int32) []Any
 type FunctorInt64ArrBool func(e []int64) bool
 type FunctorInt64ArrRune func(e []int64) rune
 type FunctorInt64ArrByte func(e []int64) byte
@@ -1102,7 +1102,7 @@ type FunctorInt64ArrFloat64 func(e []int64) float64
 type FunctorInt64ArrComplex64 func(e []int64) complex64
 type FunctorInt64ArrComplex128 func(e []int64) complex128
 type FunctorInt64ArrString func(e []int64) string
-type FunctorInt64ArrInterface func(e []int64) interface{}
+type FunctorInt64ArrAny func(e []int64) Any
 type FunctorInt64ArrBoolArr func(e []int64) []bool
 type FunctorInt64ArrRuneArr func(e []int64) []rune
 type FunctorInt64ArrByteArr func(e []int64) []byte
@@ -1122,7 +1122,7 @@ type FunctorInt64ArrFloat64Arr func(e []int64) []float64
 type FunctorInt64ArrComplex64Arr func(e []int64) []complex64
 type FunctorInt64ArrComplex128Arr func(e []int64) []complex128
 type FunctorInt64ArrStringArr func(e []int64) []string
-type FunctorInt64ArrInterfaceArr func(e []int64) []interface{}
+type FunctorInt64ArrAnyArr func(e []int64) []Any
 type FunctorUintArrBool func(e []uint) bool
 type FunctorUintArrRune func(e []uint) rune
 type FunctorUintArrByte func(e []uint) byte
@@ -1142,7 +1142,7 @@ type FunctorUintArrFloat64 func(e []uint) float64
 type FunctorUintArrComplex64 func(e []uint) complex64
 type FunctorUintArrComplex128 func(e []uint) complex128
 type FunctorUintArrString func(e []uint) string
-type FunctorUintArrInterface func(e []uint) interface{}
+type FunctorUintArrAny func(e []uint) Any
 type FunctorUintArrBoolArr func(e []uint) []bool
 type FunctorUintArrRuneArr func(e []uint) []rune
 type FunctorUintArrByteArr func(e []uint) []byte
@@ -1162,7 +1162,7 @@ type FunctorUintArrFloat64Arr func(e []uint) []float64
 type FunctorUintArrComplex64Arr func(e []uint) []complex64
 type FunctorUintArrComplex128Arr func(e []uint) []complex128
 type FunctorUintArrStringArr func(e []uint) []string
-type FunctorUintArrInterfaceArr func(e []uint) []interface{}
+type FunctorUintArrAnyArr func(e []uint) []Any
 type FunctorUint8ArrBool func(e []uint8) bool
 type FunctorUint8ArrRune func(e []uint8) rune
 type FunctorUint8ArrByte func(e []uint8) byte
@@ -1182,7 +1182,7 @@ type FunctorUint8ArrFloat64 func(e []uint8) float64
 type FunctorUint8ArrComplex64 func(e []uint8) complex64
 type FunctorUint8ArrComplex128 func(e []uint8) complex128
 type FunctorUint8ArrString func(e []uint8) string
-type FunctorUint8ArrInterface func(e []uint8) interface{}
+type FunctorUint8ArrAny func(e []uint8) Any
 type FunctorUint8ArrBoolArr func(e []uint8) []bool
 type FunctorUint8ArrRuneArr func(e []uint8) []rune
 type FunctorUint8ArrByteArr func(e []uint8) []byte
@@ -1202,7 +1202,7 @@ type FunctorUint8ArrFloat64Arr func(e []uint8) []float64
 type FunctorUint8ArrComplex64Arr func(e []uint8) []complex64
 type FunctorUint8ArrComplex128Arr func(e []uint8) []complex128
 type FunctorUint8ArrStringArr func(e []uint8) []string
-type FunctorUint8ArrInterfaceArr func(e []uint8) []interface{}
+type FunctorUint8ArrAnyArr func(e []uint8) []Any
 type FunctorUint16ArrBool func(e []uint16) bool
 type FunctorUint16ArrRune func(e []uint16) rune
 type FunctorUint16ArrByte func(e []uint16) byte
@@ -1222,7 +1222,7 @@ type FunctorUint16ArrFloat64 func(e []uint16) float64
 type FunctorUint16ArrComplex64 func(e []uint16) complex64
 type FunctorUint16ArrComplex128 func(e []uint16) complex128
 type FunctorUint16ArrString func(e []uint16) string
-type FunctorUint16ArrInterface func(e []uint16) interface{}
+type FunctorUint16ArrAny func(e []uint16) Any
 type FunctorUint16ArrBoolArr func(e []uint16) []bool
 type FunctorUint16ArrRuneArr func(e []uint16) []rune
 type FunctorUint16ArrByteArr func(e []uint16) []byte
@@ -1242,7 +1242,7 @@ type FunctorUint16ArrFloat64Arr func(e []uint16) []float64
 type FunctorUint16ArrComplex64Arr func(e []uint16) []complex64
 type FunctorUint16ArrComplex128Arr func(e []uint16) []complex128
 type FunctorUint16ArrStringArr func(e []uint16) []string
-type FunctorUint16ArrInterfaceArr func(e []uint16) []interface{}
+type FunctorUint16ArrAnyArr func(e []uint16) []Any
 type FunctorUint32ArrBool func(e []uint32) bool
 type FunctorUint32ArrRune func(e []uint32) rune
 type FunctorUint32ArrByte func(e []uint32) byte
@@ -1262,7 +1262,7 @@ type FunctorUint32ArrFloat64 func(e []uint32) float64
 type FunctorUint32ArrComplex64 func(e []uint32) complex64
 type FunctorUint32ArrComplex128 func(e []uint32) complex128
 type FunctorUint32ArrString func(e []uint32) string
-type FunctorUint32ArrInterface func(e []uint32) interface{}
+type FunctorUint32ArrAny func(e []uint32) Any
 type FunctorUint32ArrBoolArr func(e []uint32) []bool
 type FunctorUint32ArrRuneArr func(e []uint32) []rune
 type FunctorUint32ArrByteArr func(e []uint32) []byte
@@ -1282,7 +1282,7 @@ type FunctorUint32ArrFloat64Arr func(e []uint32) []float64
 type FunctorUint32ArrComplex64Arr func(e []uint32) []complex64
 type FunctorUint32ArrComplex128Arr func(e []uint32) []complex128
 type FunctorUint32ArrStringArr func(e []uint32) []string
-type FunctorUint32ArrInterfaceArr func(e []uint32) []interface{}
+type FunctorUint32ArrAnyArr func(e []uint32) []Any
 type FunctorUint64ArrBool func(e []uint64) bool
 type FunctorUint64ArrRune func(e []uint64) rune
 type FunctorUint64ArrByte func(e []uint64) byte
@@ -1302,7 +1302,7 @@ type FunctorUint64ArrFloat64 func(e []uint64) float64
 type FunctorUint64ArrComplex64 func(e []uint64) complex64
 type FunctorUint64ArrComplex128 func(e []uint64) complex128
 type FunctorUint64ArrString func(e []uint64) string
-type FunctorUint64ArrInterface func(e []uint64) interface{}
+type FunctorUint64ArrAny func(e []uint64) Any
 type FunctorUint64ArrBoolArr func(e []uint64) []bool
 type FunctorUint64ArrRuneArr func(e []uint64) []rune
 type FunctorUint64ArrByteArr func(e []uint64) []byte
@@ -1322,7 +1322,7 @@ type FunctorUint64ArrFloat64Arr func(e []uint64) []float64
 type FunctorUint64ArrComplex64Arr func(e []uint64) []complex64
 type FunctorUint64ArrComplex128Arr func(e []uint64) []complex128
 type FunctorUint64ArrStringArr func(e []uint64) []string
-type FunctorUint64ArrInterfaceArr func(e []uint64) []interface{}
+type FunctorUint64ArrAnyArr func(e []uint64) []Any
 type FunctorUintptrArrBool func(e []uintptr) bool
 type FunctorUintptrArrRune func(e []uintptr) rune
 type FunctorUintptrArrByte func(e []uintptr) byte
@@ -1342,7 +1342,7 @@ type FunctorUintptrArrFloat64 func(e []uintptr) float64
 type FunctorUintptrArrComplex64 func(e []uintptr) complex64
 type FunctorUintptrArrComplex128 func(e []uintptr) complex128
 type FunctorUintptrArrString func(e []uintptr) string
-type FunctorUintptrArrInterface func(e []uintptr) interface{}
+type FunctorUintptrArrAny func(e []uintptr) Any
 type FunctorUintptrArrBoolArr func(e []uintptr) []bool
 type FunctorUintptrArrRuneArr func(e []uintptr) []rune
 type FunctorUintptrArrByteArr func(e []uintptr) []byte
@@ -1362,7 +1362,7 @@ type FunctorUintptrArrFloat64Arr func(e []uintptr) []float64
 type FunctorUintptrArrComplex64Arr func(e []uintptr) []complex64
 type FunctorUintptrArrComplex128Arr func(e []uintptr) []complex128
 type FunctorUintptrArrStringArr func(e []uintptr) []string
-type FunctorUintptrArrInterfaceArr func(e []uintptr) []interface{}
+type FunctorUintptrArrAnyArr func(e []uintptr) []Any
 type FunctorFloat32ArrBool func(e []float32) bool
 type FunctorFloat32ArrRune func(e []float32) rune
 type FunctorFloat32ArrByte func(e []float32) byte
@@ -1382,7 +1382,7 @@ type FunctorFloat32ArrFloat64 func(e []float32) float64
 type FunctorFloat32ArrComplex64 func(e []float32) complex64
 type FunctorFloat32ArrComplex128 func(e []float32) complex128
 type FunctorFloat32ArrString func(e []float32) string
-type FunctorFloat32ArrInterface func(e []float32) interface{}
+type FunctorFloat32ArrAny func(e []float32) Any
 type FunctorFloat32ArrBoolArr func(e []float32) []bool
 type FunctorFloat32ArrRuneArr func(e []float32) []rune
 type FunctorFloat32ArrByteArr func(e []float32) []byte
@@ -1402,7 +1402,7 @@ type FunctorFloat32ArrFloat64Arr func(e []float32) []float64
 type FunctorFloat32ArrComplex64Arr func(e []float32) []complex64
 type FunctorFloat32ArrComplex128Arr func(e []float32) []complex128
 type FunctorFloat32ArrStringArr func(e []float32) []string
-type FunctorFloat32ArrInterfaceArr func(e []float32) []interface{}
+type FunctorFloat32ArrAnyArr func(e []float32) []Any
 type FunctorFloat64ArrBool func(e []float64) bool
 type FunctorFloat64ArrRune func(e []float64) rune
 type FunctorFloat64ArrByte func(e []float64) byte
@@ -1422,7 +1422,7 @@ type FunctorFloat64ArrFloat64 func(e []float64) float64
 type FunctorFloat64ArrComplex64 func(e []float64) complex64
 type FunctorFloat64ArrComplex128 func(e []float64) complex128
 type FunctorFloat64ArrString func(e []float64) string
-type FunctorFloat64ArrInterface func(e []float64) interface{}
+type FunctorFloat64ArrAny func(e []float64) Any
 type FunctorFloat64ArrBoolArr func(e []float64) []bool
 type FunctorFloat64ArrRuneArr func(e []float64) []rune
 type FunctorFloat64ArrByteArr func(e []float64) []byte
@@ -1442,7 +1442,7 @@ type FunctorFloat64ArrFloat64Arr func(e []float64) []float64
 type FunctorFloat64ArrComplex64Arr func(e []float64) []complex64
 type FunctorFloat64ArrComplex128Arr func(e []float64) []complex128
 type FunctorFloat64ArrStringArr func(e []float64) []string
-type FunctorFloat64ArrInterfaceArr func(e []float64) []interface{}
+type FunctorFloat64ArrAnyArr func(e []float64) []Any
 type FunctorComplex64ArrBool func(e []complex64) bool
 type FunctorComplex64ArrRune func(e []complex64) rune
 type FunctorComplex64ArrByte func(e []complex64) byte
@@ -1462,7 +1462,7 @@ type FunctorComplex64ArrFloat64 func(e []complex64) float64
 type FunctorComplex64ArrComplex64 func(e []complex64) complex64
 type FunctorComplex64ArrComplex128 func(e []complex64) complex128
 type FunctorComplex64ArrString func(e []complex64) string
-type FunctorComplex64ArrInterface func(e []complex64) interface{}
+type FunctorComplex64ArrAny func(e []complex64) Any
 type FunctorComplex64ArrBoolArr func(e []complex64) []bool
 type FunctorComplex64ArrRuneArr func(e []complex64) []rune
 type FunctorComplex64ArrByteArr func(e []complex64) []byte
@@ -1482,7 +1482,7 @@ type FunctorComplex64ArrFloat64Arr func(e []complex64) []float64
 type FunctorComplex64ArrComplex64Arr func(e []complex64) []complex64
 type FunctorComplex64ArrComplex128Arr func(e []complex64) []complex128
 type FunctorComplex64ArrStringArr func(e []complex64) []string
-type FunctorComplex64ArrInterfaceArr func(e []complex64) []interface{}
+type FunctorComplex64ArrAnyArr func(e []complex64) []Any
 type FunctorComplex128ArrBool func(e []complex128) bool
 type FunctorComplex128ArrRune func(e []complex128) rune
 type FunctorComplex128ArrByte func(e []complex128) byte
@@ -1502,7 +1502,7 @@ type FunctorComplex128ArrFloat64 func(e []complex128) float64
 type FunctorComplex128ArrComplex64 func(e []complex128) complex64
 type FunctorComplex128ArrComplex128 func(e []complex128) complex128
 type FunctorComplex128ArrString func(e []complex128) string
-type FunctorComplex128ArrInterface func(e []complex128) interface{}
+type FunctorComplex128ArrAny func(e []complex128) Any
 type FunctorComplex128ArrBoolArr func(e []complex128) []bool
 type FunctorComplex128ArrRuneArr func(e []complex128) []rune
 type FunctorComplex128ArrByteArr func(e []complex128) []byte
@@ -1522,7 +1522,7 @@ type FunctorComplex128ArrFloat64Arr func(e []complex128) []float64
 type FunctorComplex128ArrComplex64Arr func(e []complex128) []complex64
 type FunctorComplex128ArrComplex128Arr func(e []complex128) []complex128
 type FunctorComplex128ArrStringArr func(e []complex128) []string
-type FunctorComplex128ArrInterfaceArr func(e []complex128) []interface{}
+type FunctorComplex128ArrAnyArr func(e []complex128) []Any
 type FunctorStringArrBool func(e []string) bool
 type FunctorStringArrRune func(e []string) rune
 type FunctorStringArrByte func(e []string) byte
@@ -1542,7 +1542,7 @@ type FunctorStringArrFloat64 func(e []string) float64
 type FunctorStringArrComplex64 func(e []string) complex64
 type FunctorStringArrComplex128 func(e []string) complex128
 type FunctorStringArrString func(e []string) string
-type FunctorStringArrInterface func(e []string) interface{}
+type FunctorStringArrAny func(e []string) Any
 type FunctorStringArrBoolArr func(e []string) []bool
 type FunctorStringArrRuneArr func(e []string) []rune
 type FunctorStringArrByteArr func(e []string) []byte
@@ -1562,47 +1562,47 @@ type FunctorStringArrFloat64Arr func(e []string) []float64
 type FunctorStringArrComplex64Arr func(e []string) []complex64
 type FunctorStringArrComplex128Arr func(e []string) []complex128
 type FunctorStringArrStringArr func(e []string) []string
-type FunctorStringArrInterfaceArr func(e []string) []interface{}
-type FunctorInterfaceArrBool func(e []interface{}) bool
-type FunctorInterfaceArrRune func(e []interface{}) rune
-type FunctorInterfaceArrByte func(e []interface{}) byte
-type FunctorInterfaceArrInt func(e []interface{}) int
-type FunctorInterfaceArrInt8 func(e []interface{}) int8
-type FunctorInterfaceArrInt16 func(e []interface{}) int16
-type FunctorInterfaceArrInt32 func(e []interface{}) int32
-type FunctorInterfaceArrInt64 func(e []interface{}) int64
-type FunctorInterfaceArrUint func(e []interface{}) uint
-type FunctorInterfaceArrUint8 func(e []interface{}) uint8
-type FunctorInterfaceArrUint16 func(e []interface{}) uint16
-type FunctorInterfaceArrUint32 func(e []interface{}) uint32
-type FunctorInterfaceArrUint64 func(e []interface{}) uint64
-type FunctorInterfaceArrUintptr func(e []interface{}) uintptr
-type FunctorInterfaceArrFloat32 func(e []interface{}) float32
-type FunctorInterfaceArrFloat64 func(e []interface{}) float64
-type FunctorInterfaceArrComplex64 func(e []interface{}) complex64
-type FunctorInterfaceArrComplex128 func(e []interface{}) complex128
-type FunctorInterfaceArrString func(e []interface{}) string
-type FunctorInterfaceArrInterface func(e []interface{}) interface{}
-type FunctorInterfaceArrBoolArr func(e []interface{}) []bool
-type FunctorInterfaceArrRuneArr func(e []interface{}) []rune
-type FunctorInterfaceArrByteArr func(e []interface{}) []byte
-type FunctorInterfaceArrIntArr func(e []interface{}) []int
-type FunctorInterfaceArrInt8Arr func(e []interface{}) []int8
-type FunctorInterfaceArrInt16Arr func(e []interface{}) []int16
-type FunctorInterfaceArrInt32Arr func(e []interface{}) []int32
-type FunctorInterfaceArrInt64Arr func(e []interface{}) []int64
-type FunctorInterfaceArrUintArr func(e []interface{}) []uint
-type FunctorInterfaceArrUint8Arr func(e []interface{}) []uint8
-type FunctorInterfaceArrUint16Arr func(e []interface{}) []uint16
-type FunctorInterfaceArrUint32Arr func(e []interface{}) []uint32
-type FunctorInterfaceArrUint64Arr func(e []interface{}) []uint64
-type FunctorInterfaceArrUintptrArr func(e []interface{}) []uintptr
-type FunctorInterfaceArrFloat32Arr func(e []interface{}) []float32
-type FunctorInterfaceArrFloat64Arr func(e []interface{}) []float64
-type FunctorInterfaceArrComplex64Arr func(e []interface{}) []complex64
-type FunctorInterfaceArrComplex128Arr func(e []interface{}) []complex128
-type FunctorInterfaceArrStringArr func(e []interface{}) []string
-type FunctorInterfaceArrInterfaceArr func(e []interface{}) []interface{}
+type FunctorStringArrAnyArr func(e []string) []Any
+type FunctorAnyArrBool func(e []Any) bool
+type FunctorAnyArrRune func(e []Any) rune
+type FunctorAnyArrByte func(e []Any) byte
+type FunctorAnyArrInt func(e []Any) int
+type FunctorAnyArrInt8 func(e []Any) int8
+type FunctorAnyArrInt16 func(e []Any) int16
+type FunctorAnyArrInt32 func(e []Any) int32
+type FunctorAnyArrInt64 func(e []Any) int64
+type FunctorAnyArrUint func(e []Any) uint
+type FunctorAnyArrUint8 func(e []Any) uint8
+type FunctorAnyArrUint16 func(e []Any) uint16
+type FunctorAnyArrUint32 func(e []Any) uint32
+type FunctorAnyArrUint64 func(e []Any) uint64
+type FunctorAnyArrUintptr func(e []Any) uintptr
+type FunctorAnyArrFloat32 func(e []Any) float32
+type FunctorAnyArrFloat64 func(e []Any) float64
+type FunctorAnyArrComplex64 func(e []Any) complex64
+type FunctorAnyArrComplex128 func(e []Any) complex128
+type FunctorAnyArrString func(e []Any) string
+type FunctorAnyArrAny func(e []Any) Any
+type FunctorAnyArrBoolArr func(e []Any) []bool
+type FunctorAnyArrRuneArr func(e []Any) []rune
+type FunctorAnyArrByteArr func(e []Any) []byte
+type FunctorAnyArrIntArr func(e []Any) []int
+type FunctorAnyArrInt8Arr func(e []Any) []int8
+type FunctorAnyArrInt16Arr func(e []Any) []int16
+type FunctorAnyArrInt32Arr func(e []Any) []int32
+type FunctorAnyArrInt64Arr func(e []Any) []int64
+type FunctorAnyArrUintArr func(e []Any) []uint
+type FunctorAnyArrUint8Arr func(e []Any) []uint8
+type FunctorAnyArrUint16Arr func(e []Any) []uint16
+type FunctorAnyArrUint32Arr func(e []Any) []uint32
+type FunctorAnyArrUint64Arr func(e []Any) []uint64
+type FunctorAnyArrUintptrArr func(e []Any) []uintptr
+type FunctorAnyArrFloat32Arr func(e []Any) []float32
+type FunctorAnyArrFloat64Arr func(e []Any) []float64
+type FunctorAnyArrComplex64Arr func(e []Any) []complex64
+type FunctorAnyArrComplex128Arr func(e []Any) []complex128
+type FunctorAnyArrStringArr func(e []Any) []string
+type FunctorAnyArrAnyArr func(e []Any) []Any
 
 var EmptyFunctorBool FunctorBoolBool = func(e bool) bool { return e }
 var EmptyFunctorRune FunctorRuneRune = func(e rune) rune { return e }
@@ -1623,7 +1623,7 @@ var EmptyFunctorFloat64 FunctorFloat64Float64 = func(e float64) float64 { return
 var EmptyFunctorComplex64 FunctorComplex64Complex64 = func(e complex64) complex64 { return e }
 var EmptyFunctorComplex128 FunctorComplex128Complex128 = func(e complex128) complex128 { return e }
 var EmptyFunctorString FunctorStringString = func(e string) string { return e }
-var EmptyFunctorInterface FunctorInterfaceInterface = func(e interface{}) interface{} { return e }
+var EmptyFunctorAny FunctorAnyAny = func(e Any) Any { return e }
 var EmptyFunctorBoolArr FunctorBoolArrBoolArr = func(e []bool) []bool { return e }
 var EmptyFunctorRuneArr FunctorRuneArrRuneArr = func(e []rune) []rune { return e }
 var EmptyFunctorByteArr FunctorByteArrByteArr = func(e []byte) []byte { return e }
@@ -1643,4 +1643,4 @@ var EmptyFunctorFloat64Arr FunctorFloat64ArrFloat64Arr = func(e []float64) []flo
 var EmptyFunctorComplex64Arr FunctorComplex64ArrComplex64Arr = func(e []complex64) []complex64 { return e }
 var EmptyFunctorComplex128Arr FunctorComplex128ArrComplex128Arr = func(e []complex128) []complex128 { return e }
 var EmptyFunctorStringArr FunctorStringArrStringArr = func(e []string) []string { return e }
-var EmptyFunctorInterfaceArr FunctorInterfaceArrInterfaceArr = func(e []interface{}) []interface{} { return e }
+var EmptyFunctorAnyArr FunctorAnyArrAnyArr = func(e []Any) []Any { return e }

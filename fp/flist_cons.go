@@ -155,9 +155,9 @@ func (l ListString) Cons(e string) ListString {
 	}
 	return xs
 }
-func (l ListInterface) Cons(e interface{}) ListInterface {
+func (l ListAny) Cons(e Any) ListAny {
 	tail := l.Copy()
-	xs := ListInterface{
+	xs := ListAny{
 		head: &e,
 		tail: &tail,
 	}
@@ -315,9 +315,9 @@ func (l ListStringArr) Cons(e []string) ListStringArr {
 	}
 	return xs
 }
-func (l ListInterfaceArr) Cons(e []interface{}) ListInterfaceArr {
+func (l ListAnyArr) Cons(e []Any) ListAnyArr {
 	tail := l.Copy()
-	xs := ListInterfaceArr{
+	xs := ListAnyArr{
 		head: &e,
 		tail: &tail,
 	}

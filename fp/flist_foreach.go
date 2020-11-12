@@ -117,7 +117,7 @@ func (l ListString) Foreach(f func(string)) {
 		l.tail.Foreach(f)
 	}
 }
-func (l ListInterface) Foreach(f func(interface{})) {
+func (l ListAny) Foreach(f func(Any)) {
 	if l.IsNotEmpty() {
 		f(*l.head)
 		l.tail.Foreach(f)
@@ -237,7 +237,7 @@ func (l ListStringArr) Foreach(f func([]string)) {
 		l.tail.Foreach(f)
 	}
 }
-func (l ListInterfaceArr) Foreach(f func([]interface{})) {
+func (l ListAnyArr) Foreach(f func([]Any)) {
 	if l.IsNotEmpty() {
 		f(*l.head)
 		l.tail.Foreach(f)
