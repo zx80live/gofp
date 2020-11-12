@@ -21,6 +21,6 @@ func main() {
 
 	var i1 OptionInt = Int(1)
 	var i2 OptionInt = NoneInt
-	fmt.Println(i1.ToString(), i1.IsDefined(), i1.IsEmpty())
-	fmt.Println(i2.ToString(), i2.IsDefined(), i2.IsEmpty())
+	fmt.Println(i1.ToString(), i1.IsDefined(), i1.IsEmpty(), i1.Filter(even).ToString(), i1.Filter(pos).ToString())
+	fmt.Println(i2.ToString(), i2.IsDefined(), i2.IsEmpty(), i2.Filter(even).ToString(), i2.Filter(pos).ToString())
 }
