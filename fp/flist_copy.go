@@ -3,441 +3,441 @@
 
 package fp
 
-func (l ListBool) Copy() ListBool {
+func (l BoolList) Copy() BoolList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListBool{
+		return BoolList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListRune) Copy() ListRune {
+func (l RuneList) Copy() RuneList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListRune{
+		return RuneList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListByte) Copy() ListByte {
+func (l ByteList) Copy() ByteList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListByte{
+		return ByteList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt) Copy() ListInt {
+func (l IntList) Copy() IntList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt{
+		return IntList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt8) Copy() ListInt8 {
+func (l Int8List) Copy() Int8List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt8{
+		return Int8List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt16) Copy() ListInt16 {
+func (l Int16List) Copy() Int16List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt16{
+		return Int16List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt32) Copy() ListInt32 {
+func (l Int32List) Copy() Int32List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt32{
+		return Int32List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt64) Copy() ListInt64 {
+func (l Int64List) Copy() Int64List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt64{
+		return Int64List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint) Copy() ListUint {
+func (l UintList) Copy() UintList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint{
+		return UintList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint8) Copy() ListUint8 {
+func (l Uint8List) Copy() Uint8List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint8{
+		return Uint8List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint16) Copy() ListUint16 {
+func (l Uint16List) Copy() Uint16List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint16{
+		return Uint16List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint32) Copy() ListUint32 {
+func (l Uint32List) Copy() Uint32List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint32{
+		return Uint32List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint64) Copy() ListUint64 {
+func (l Uint64List) Copy() Uint64List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint64{
+		return Uint64List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUintptr) Copy() ListUintptr {
+func (l UintptrList) Copy() UintptrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUintptr{
+		return UintptrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListFloat32) Copy() ListFloat32 {
+func (l Float32List) Copy() Float32List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListFloat32{
+		return Float32List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListFloat64) Copy() ListFloat64 {
+func (l Float64List) Copy() Float64List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListFloat64{
+		return Float64List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListComplex64) Copy() ListComplex64 {
+func (l Complex64List) Copy() Complex64List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListComplex64{
+		return Complex64List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListComplex128) Copy() ListComplex128 {
+func (l Complex128List) Copy() Complex128List {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListComplex128{
+		return Complex128List{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListString) Copy() ListString {
+func (l StringList) Copy() StringList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListString{
+		return StringList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListAny) Copy() ListAny {
+func (l AnyList) Copy() AnyList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListAny{
+		return AnyList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListBoolArr) Copy() ListBoolArr {
+func (l BoolArrList) Copy() BoolArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListBoolArr{
+		return BoolArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListRuneArr) Copy() ListRuneArr {
+func (l RuneArrList) Copy() RuneArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListRuneArr{
+		return RuneArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListByteArr) Copy() ListByteArr {
+func (l ByteArrList) Copy() ByteArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListByteArr{
+		return ByteArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListIntArr) Copy() ListIntArr {
+func (l IntArrList) Copy() IntArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListIntArr{
+		return IntArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt8Arr) Copy() ListInt8Arr {
+func (l Int8ArrList) Copy() Int8ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt8Arr{
+		return Int8ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt16Arr) Copy() ListInt16Arr {
+func (l Int16ArrList) Copy() Int16ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt16Arr{
+		return Int16ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt32Arr) Copy() ListInt32Arr {
+func (l Int32ArrList) Copy() Int32ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt32Arr{
+		return Int32ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListInt64Arr) Copy() ListInt64Arr {
+func (l Int64ArrList) Copy() Int64ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListInt64Arr{
+		return Int64ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUintArr) Copy() ListUintArr {
+func (l UintArrList) Copy() UintArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUintArr{
+		return UintArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint8Arr) Copy() ListUint8Arr {
+func (l Uint8ArrList) Copy() Uint8ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint8Arr{
+		return Uint8ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint16Arr) Copy() ListUint16Arr {
+func (l Uint16ArrList) Copy() Uint16ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint16Arr{
+		return Uint16ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint32Arr) Copy() ListUint32Arr {
+func (l Uint32ArrList) Copy() Uint32ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint32Arr{
+		return Uint32ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUint64Arr) Copy() ListUint64Arr {
+func (l Uint64ArrList) Copy() Uint64ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUint64Arr{
+		return Uint64ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListUintptrArr) Copy() ListUintptrArr {
+func (l UintptrArrList) Copy() UintptrArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListUintptrArr{
+		return UintptrArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListFloat32Arr) Copy() ListFloat32Arr {
+func (l Float32ArrList) Copy() Float32ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListFloat32Arr{
+		return Float32ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListFloat64Arr) Copy() ListFloat64Arr {
+func (l Float64ArrList) Copy() Float64ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListFloat64Arr{
+		return Float64ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListComplex64Arr) Copy() ListComplex64Arr {
+func (l Complex64ArrList) Copy() Complex64ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListComplex64Arr{
+		return Complex64ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListComplex128Arr) Copy() ListComplex128Arr {
+func (l Complex128ArrList) Copy() Complex128ArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListComplex128Arr{
+		return Complex128ArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListStringArr) Copy() ListStringArr {
+func (l StringArrList) Copy() StringArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListStringArr{
+		return StringArrList{
 			head: l.head,
 			tail: &tail,
 		}
 	}
 }
-func (l ListAnyArr) Copy() ListAnyArr {
+func (l AnyArrList) Copy() AnyArrList {
 	if l.IsEmpty() {
 		return l
 	} else {
 		tail := l.tail.Copy()
-		return ListAnyArr{
+		return AnyArrList{
 			head: l.head,
 			tail: &tail,
 		}

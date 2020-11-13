@@ -8,9 +8,9 @@ import (
 func main() {
 	fmt.Println("Hello")
 
-	l := MakeListInt(1, 2, 3, 4, 5, 6, -7, 8, 9, -10)
-	var even PredicateInt = func(e int) bool { return e%2 == 0 }
-	var pos PredicateInt = func(e int) bool { return e > 0 }
+	l := MakeIntList(1, 2, 3, 4, 5, 6, -7, 8, 9, -10)
+	var even IntPredicate = func(e int) bool { return e%2 == 0 }
+	var pos IntPredicate = func(e int) bool { return e > 0 }
 
 	l.
 		Filter(even.And(pos)).

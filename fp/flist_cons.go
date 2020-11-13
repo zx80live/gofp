@@ -3,321 +3,321 @@
 
 package fp
 
-func (l ListBool) Cons(e bool) ListBool {
+func (l BoolList) Cons(e bool) BoolList {
 	tail := l.Copy()
-	xs := ListBool{
+	xs := BoolList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListRune) Cons(e rune) ListRune {
+func (l RuneList) Cons(e rune) RuneList {
 	tail := l.Copy()
-	xs := ListRune{
+	xs := RuneList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListByte) Cons(e byte) ListByte {
+func (l ByteList) Cons(e byte) ByteList {
 	tail := l.Copy()
-	xs := ListByte{
+	xs := ByteList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt) Cons(e int) ListInt {
+func (l IntList) Cons(e int) IntList {
 	tail := l.Copy()
-	xs := ListInt{
+	xs := IntList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt8) Cons(e int8) ListInt8 {
+func (l Int8List) Cons(e int8) Int8List {
 	tail := l.Copy()
-	xs := ListInt8{
+	xs := Int8List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt16) Cons(e int16) ListInt16 {
+func (l Int16List) Cons(e int16) Int16List {
 	tail := l.Copy()
-	xs := ListInt16{
+	xs := Int16List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt32) Cons(e int32) ListInt32 {
+func (l Int32List) Cons(e int32) Int32List {
 	tail := l.Copy()
-	xs := ListInt32{
+	xs := Int32List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt64) Cons(e int64) ListInt64 {
+func (l Int64List) Cons(e int64) Int64List {
 	tail := l.Copy()
-	xs := ListInt64{
+	xs := Int64List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint) Cons(e uint) ListUint {
+func (l UintList) Cons(e uint) UintList {
 	tail := l.Copy()
-	xs := ListUint{
+	xs := UintList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint8) Cons(e uint8) ListUint8 {
+func (l Uint8List) Cons(e uint8) Uint8List {
 	tail := l.Copy()
-	xs := ListUint8{
+	xs := Uint8List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint16) Cons(e uint16) ListUint16 {
+func (l Uint16List) Cons(e uint16) Uint16List {
 	tail := l.Copy()
-	xs := ListUint16{
+	xs := Uint16List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint32) Cons(e uint32) ListUint32 {
+func (l Uint32List) Cons(e uint32) Uint32List {
 	tail := l.Copy()
-	xs := ListUint32{
+	xs := Uint32List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint64) Cons(e uint64) ListUint64 {
+func (l Uint64List) Cons(e uint64) Uint64List {
 	tail := l.Copy()
-	xs := ListUint64{
+	xs := Uint64List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUintptr) Cons(e uintptr) ListUintptr {
+func (l UintptrList) Cons(e uintptr) UintptrList {
 	tail := l.Copy()
-	xs := ListUintptr{
+	xs := UintptrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListFloat32) Cons(e float32) ListFloat32 {
+func (l Float32List) Cons(e float32) Float32List {
 	tail := l.Copy()
-	xs := ListFloat32{
+	xs := Float32List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListFloat64) Cons(e float64) ListFloat64 {
+func (l Float64List) Cons(e float64) Float64List {
 	tail := l.Copy()
-	xs := ListFloat64{
+	xs := Float64List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListComplex64) Cons(e complex64) ListComplex64 {
+func (l Complex64List) Cons(e complex64) Complex64List {
 	tail := l.Copy()
-	xs := ListComplex64{
+	xs := Complex64List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListComplex128) Cons(e complex128) ListComplex128 {
+func (l Complex128List) Cons(e complex128) Complex128List {
 	tail := l.Copy()
-	xs := ListComplex128{
+	xs := Complex128List{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListString) Cons(e string) ListString {
+func (l StringList) Cons(e string) StringList {
 	tail := l.Copy()
-	xs := ListString{
+	xs := StringList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListAny) Cons(e Any) ListAny {
+func (l AnyList) Cons(e Any) AnyList {
 	tail := l.Copy()
-	xs := ListAny{
+	xs := AnyList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListBoolArr) Cons(e []bool) ListBoolArr {
+func (l BoolArrList) Cons(e []bool) BoolArrList {
 	tail := l.Copy()
-	xs := ListBoolArr{
+	xs := BoolArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListRuneArr) Cons(e []rune) ListRuneArr {
+func (l RuneArrList) Cons(e []rune) RuneArrList {
 	tail := l.Copy()
-	xs := ListRuneArr{
+	xs := RuneArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListByteArr) Cons(e []byte) ListByteArr {
+func (l ByteArrList) Cons(e []byte) ByteArrList {
 	tail := l.Copy()
-	xs := ListByteArr{
+	xs := ByteArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListIntArr) Cons(e []int) ListIntArr {
+func (l IntArrList) Cons(e []int) IntArrList {
 	tail := l.Copy()
-	xs := ListIntArr{
+	xs := IntArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt8Arr) Cons(e []int8) ListInt8Arr {
+func (l Int8ArrList) Cons(e []int8) Int8ArrList {
 	tail := l.Copy()
-	xs := ListInt8Arr{
+	xs := Int8ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt16Arr) Cons(e []int16) ListInt16Arr {
+func (l Int16ArrList) Cons(e []int16) Int16ArrList {
 	tail := l.Copy()
-	xs := ListInt16Arr{
+	xs := Int16ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt32Arr) Cons(e []int32) ListInt32Arr {
+func (l Int32ArrList) Cons(e []int32) Int32ArrList {
 	tail := l.Copy()
-	xs := ListInt32Arr{
+	xs := Int32ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListInt64Arr) Cons(e []int64) ListInt64Arr {
+func (l Int64ArrList) Cons(e []int64) Int64ArrList {
 	tail := l.Copy()
-	xs := ListInt64Arr{
+	xs := Int64ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUintArr) Cons(e []uint) ListUintArr {
+func (l UintArrList) Cons(e []uint) UintArrList {
 	tail := l.Copy()
-	xs := ListUintArr{
+	xs := UintArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint8Arr) Cons(e []uint8) ListUint8Arr {
+func (l Uint8ArrList) Cons(e []uint8) Uint8ArrList {
 	tail := l.Copy()
-	xs := ListUint8Arr{
+	xs := Uint8ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint16Arr) Cons(e []uint16) ListUint16Arr {
+func (l Uint16ArrList) Cons(e []uint16) Uint16ArrList {
 	tail := l.Copy()
-	xs := ListUint16Arr{
+	xs := Uint16ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint32Arr) Cons(e []uint32) ListUint32Arr {
+func (l Uint32ArrList) Cons(e []uint32) Uint32ArrList {
 	tail := l.Copy()
-	xs := ListUint32Arr{
+	xs := Uint32ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUint64Arr) Cons(e []uint64) ListUint64Arr {
+func (l Uint64ArrList) Cons(e []uint64) Uint64ArrList {
 	tail := l.Copy()
-	xs := ListUint64Arr{
+	xs := Uint64ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListUintptrArr) Cons(e []uintptr) ListUintptrArr {
+func (l UintptrArrList) Cons(e []uintptr) UintptrArrList {
 	tail := l.Copy()
-	xs := ListUintptrArr{
+	xs := UintptrArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListFloat32Arr) Cons(e []float32) ListFloat32Arr {
+func (l Float32ArrList) Cons(e []float32) Float32ArrList {
 	tail := l.Copy()
-	xs := ListFloat32Arr{
+	xs := Float32ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListFloat64Arr) Cons(e []float64) ListFloat64Arr {
+func (l Float64ArrList) Cons(e []float64) Float64ArrList {
 	tail := l.Copy()
-	xs := ListFloat64Arr{
+	xs := Float64ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListComplex64Arr) Cons(e []complex64) ListComplex64Arr {
+func (l Complex64ArrList) Cons(e []complex64) Complex64ArrList {
 	tail := l.Copy()
-	xs := ListComplex64Arr{
+	xs := Complex64ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListComplex128Arr) Cons(e []complex128) ListComplex128Arr {
+func (l Complex128ArrList) Cons(e []complex128) Complex128ArrList {
 	tail := l.Copy()
-	xs := ListComplex128Arr{
+	xs := Complex128ArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListStringArr) Cons(e []string) ListStringArr {
+func (l StringArrList) Cons(e []string) StringArrList {
 	tail := l.Copy()
-	xs := ListStringArr{
+	xs := StringArrList{
 		head: &e,
 		tail: &tail,
 	}
 	return xs
 }
-func (l ListAnyArr) Cons(e []Any) ListAnyArr {
+func (l AnyArrList) Cons(e []Any) AnyArrList {
 	tail := l.Copy()
-	xs := ListAnyArr{
+	xs := AnyArrList{
 		head: &e,
 		tail: &tail,
 	}

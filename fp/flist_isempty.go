@@ -3,83 +3,83 @@
 
 package fp
 
-func (l ListBool) IsEmpty() bool             { return l.head == nil && l.tail == nil }
-func (l ListBool) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListRune) IsEmpty() bool             { return l.head == nil && l.tail == nil }
-func (l ListRune) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListByte) IsEmpty() bool             { return l.head == nil && l.tail == nil }
-func (l ListByte) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListInt) IsEmpty() bool              { return l.head == nil && l.tail == nil }
-func (l ListInt) IsNotEmpty() bool           { return !l.IsEmpty() }
-func (l ListInt8) IsEmpty() bool             { return l.head == nil && l.tail == nil }
-func (l ListInt8) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListInt16) IsEmpty() bool            { return l.head == nil && l.tail == nil }
-func (l ListInt16) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListInt32) IsEmpty() bool            { return l.head == nil && l.tail == nil }
-func (l ListInt32) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListInt64) IsEmpty() bool            { return l.head == nil && l.tail == nil }
-func (l ListInt64) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListUint) IsEmpty() bool             { return l.head == nil && l.tail == nil }
-func (l ListUint) IsNotEmpty() bool          { return !l.IsEmpty() }
-func (l ListUint8) IsEmpty() bool            { return l.head == nil && l.tail == nil }
-func (l ListUint8) IsNotEmpty() bool         { return !l.IsEmpty() }
-func (l ListUint16) IsEmpty() bool           { return l.head == nil && l.tail == nil }
-func (l ListUint16) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListUint32) IsEmpty() bool           { return l.head == nil && l.tail == nil }
-func (l ListUint32) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListUint64) IsEmpty() bool           { return l.head == nil && l.tail == nil }
-func (l ListUint64) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListUintptr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListUintptr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListFloat32) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListFloat32) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListFloat64) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListFloat64) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListComplex64) IsEmpty() bool        { return l.head == nil && l.tail == nil }
-func (l ListComplex64) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListComplex128) IsEmpty() bool       { return l.head == nil && l.tail == nil }
-func (l ListComplex128) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListString) IsEmpty() bool           { return l.head == nil && l.tail == nil }
-func (l ListString) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListAny) IsEmpty() bool              { return l.head == nil && l.tail == nil }
-func (l ListAny) IsNotEmpty() bool           { return !l.IsEmpty() }
-func (l ListBoolArr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListBoolArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListRuneArr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListRuneArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListByteArr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListByteArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListIntArr) IsEmpty() bool           { return l.head == nil && l.tail == nil }
-func (l ListIntArr) IsNotEmpty() bool        { return !l.IsEmpty() }
-func (l ListInt8Arr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListInt8Arr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListInt16Arr) IsEmpty() bool         { return l.head == nil && l.tail == nil }
-func (l ListInt16Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListInt32Arr) IsEmpty() bool         { return l.head == nil && l.tail == nil }
-func (l ListInt32Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListInt64Arr) IsEmpty() bool         { return l.head == nil && l.tail == nil }
-func (l ListInt64Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListUintArr) IsEmpty() bool          { return l.head == nil && l.tail == nil }
-func (l ListUintArr) IsNotEmpty() bool       { return !l.IsEmpty() }
-func (l ListUint8Arr) IsEmpty() bool         { return l.head == nil && l.tail == nil }
-func (l ListUint8Arr) IsNotEmpty() bool      { return !l.IsEmpty() }
-func (l ListUint16Arr) IsEmpty() bool        { return l.head == nil && l.tail == nil }
-func (l ListUint16Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListUint32Arr) IsEmpty() bool        { return l.head == nil && l.tail == nil }
-func (l ListUint32Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListUint64Arr) IsEmpty() bool        { return l.head == nil && l.tail == nil }
-func (l ListUint64Arr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListUintptrArr) IsEmpty() bool       { return l.head == nil && l.tail == nil }
-func (l ListUintptrArr) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListFloat32Arr) IsEmpty() bool       { return l.head == nil && l.tail == nil }
-func (l ListFloat32Arr) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListFloat64Arr) IsEmpty() bool       { return l.head == nil && l.tail == nil }
-func (l ListFloat64Arr) IsNotEmpty() bool    { return !l.IsEmpty() }
-func (l ListComplex64Arr) IsEmpty() bool     { return l.head == nil && l.tail == nil }
-func (l ListComplex64Arr) IsNotEmpty() bool  { return !l.IsEmpty() }
-func (l ListComplex128Arr) IsEmpty() bool    { return l.head == nil && l.tail == nil }
-func (l ListComplex128Arr) IsNotEmpty() bool { return !l.IsEmpty() }
-func (l ListStringArr) IsEmpty() bool        { return l.head == nil && l.tail == nil }
-func (l ListStringArr) IsNotEmpty() bool     { return !l.IsEmpty() }
-func (l ListAnyArr) IsEmpty() bool           { return l.head == nil && l.tail == nil }
-func (l ListAnyArr) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l BoolList) IsEmpty() bool             { return l.head == nil && l.tail == nil }
+func (l BoolList) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l RuneList) IsEmpty() bool             { return l.head == nil && l.tail == nil }
+func (l RuneList) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l ByteList) IsEmpty() bool             { return l.head == nil && l.tail == nil }
+func (l ByteList) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l IntList) IsEmpty() bool              { return l.head == nil && l.tail == nil }
+func (l IntList) IsNotEmpty() bool           { return !l.IsEmpty() }
+func (l Int8List) IsEmpty() bool             { return l.head == nil && l.tail == nil }
+func (l Int8List) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l Int16List) IsEmpty() bool            { return l.head == nil && l.tail == nil }
+func (l Int16List) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l Int32List) IsEmpty() bool            { return l.head == nil && l.tail == nil }
+func (l Int32List) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l Int64List) IsEmpty() bool            { return l.head == nil && l.tail == nil }
+func (l Int64List) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l UintList) IsEmpty() bool             { return l.head == nil && l.tail == nil }
+func (l UintList) IsNotEmpty() bool          { return !l.IsEmpty() }
+func (l Uint8List) IsEmpty() bool            { return l.head == nil && l.tail == nil }
+func (l Uint8List) IsNotEmpty() bool         { return !l.IsEmpty() }
+func (l Uint16List) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l Uint16List) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l Uint32List) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l Uint32List) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l Uint64List) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l Uint64List) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l UintptrList) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l UintptrList) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l Float32List) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l Float32List) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l Float64List) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l Float64List) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l Complex64List) IsEmpty() bool        { return l.head == nil && l.tail == nil }
+func (l Complex64List) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l Complex128List) IsEmpty() bool       { return l.head == nil && l.tail == nil }
+func (l Complex128List) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l StringList) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l StringList) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l AnyList) IsEmpty() bool              { return l.head == nil && l.tail == nil }
+func (l AnyList) IsNotEmpty() bool           { return !l.IsEmpty() }
+func (l BoolArrList) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l BoolArrList) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l RuneArrList) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l RuneArrList) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l ByteArrList) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l ByteArrList) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l IntArrList) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l IntArrList) IsNotEmpty() bool        { return !l.IsEmpty() }
+func (l Int8ArrList) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l Int8ArrList) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l Int16ArrList) IsEmpty() bool         { return l.head == nil && l.tail == nil }
+func (l Int16ArrList) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l Int32ArrList) IsEmpty() bool         { return l.head == nil && l.tail == nil }
+func (l Int32ArrList) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l Int64ArrList) IsEmpty() bool         { return l.head == nil && l.tail == nil }
+func (l Int64ArrList) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l UintArrList) IsEmpty() bool          { return l.head == nil && l.tail == nil }
+func (l UintArrList) IsNotEmpty() bool       { return !l.IsEmpty() }
+func (l Uint8ArrList) IsEmpty() bool         { return l.head == nil && l.tail == nil }
+func (l Uint8ArrList) IsNotEmpty() bool      { return !l.IsEmpty() }
+func (l Uint16ArrList) IsEmpty() bool        { return l.head == nil && l.tail == nil }
+func (l Uint16ArrList) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l Uint32ArrList) IsEmpty() bool        { return l.head == nil && l.tail == nil }
+func (l Uint32ArrList) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l Uint64ArrList) IsEmpty() bool        { return l.head == nil && l.tail == nil }
+func (l Uint64ArrList) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l UintptrArrList) IsEmpty() bool       { return l.head == nil && l.tail == nil }
+func (l UintptrArrList) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l Float32ArrList) IsEmpty() bool       { return l.head == nil && l.tail == nil }
+func (l Float32ArrList) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l Float64ArrList) IsEmpty() bool       { return l.head == nil && l.tail == nil }
+func (l Float64ArrList) IsNotEmpty() bool    { return !l.IsEmpty() }
+func (l Complex64ArrList) IsEmpty() bool     { return l.head == nil && l.tail == nil }
+func (l Complex64ArrList) IsNotEmpty() bool  { return !l.IsEmpty() }
+func (l Complex128ArrList) IsEmpty() bool    { return l.head == nil && l.tail == nil }
+func (l Complex128ArrList) IsNotEmpty() bool { return !l.IsEmpty() }
+func (l StringArrList) IsEmpty() bool        { return l.head == nil && l.tail == nil }
+func (l StringArrList) IsNotEmpty() bool     { return !l.IsEmpty() }
+func (l AnyArrList) IsEmpty() bool           { return l.head == nil && l.tail == nil }
+func (l AnyArrList) IsNotEmpty() bool        { return !l.IsEmpty() }

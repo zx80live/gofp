@@ -3,243 +3,243 @@
 
 package fp
 
-type ListBool struct {
+type BoolList struct {
 	head *bool
-	tail *ListBool
+	tail *BoolList
 }
 
-type ListRune struct {
+type RuneList struct {
 	head *rune
-	tail *ListRune
+	tail *RuneList
 }
 
-type ListByte struct {
+type ByteList struct {
 	head *byte
-	tail *ListByte
+	tail *ByteList
 }
 
-type ListInt struct {
+type IntList struct {
 	head *int
-	tail *ListInt
+	tail *IntList
 }
 
-type ListInt8 struct {
+type Int8List struct {
 	head *int8
-	tail *ListInt8
+	tail *Int8List
 }
 
-type ListInt16 struct {
+type Int16List struct {
 	head *int16
-	tail *ListInt16
+	tail *Int16List
 }
 
-type ListInt32 struct {
+type Int32List struct {
 	head *int32
-	tail *ListInt32
+	tail *Int32List
 }
 
-type ListInt64 struct {
+type Int64List struct {
 	head *int64
-	tail *ListInt64
+	tail *Int64List
 }
 
-type ListUint struct {
+type UintList struct {
 	head *uint
-	tail *ListUint
+	tail *UintList
 }
 
-type ListUint8 struct {
+type Uint8List struct {
 	head *uint8
-	tail *ListUint8
+	tail *Uint8List
 }
 
-type ListUint16 struct {
+type Uint16List struct {
 	head *uint16
-	tail *ListUint16
+	tail *Uint16List
 }
 
-type ListUint32 struct {
+type Uint32List struct {
 	head *uint32
-	tail *ListUint32
+	tail *Uint32List
 }
 
-type ListUint64 struct {
+type Uint64List struct {
 	head *uint64
-	tail *ListUint64
+	tail *Uint64List
 }
 
-type ListUintptr struct {
+type UintptrList struct {
 	head *uintptr
-	tail *ListUintptr
+	tail *UintptrList
 }
 
-type ListFloat32 struct {
+type Float32List struct {
 	head *float32
-	tail *ListFloat32
+	tail *Float32List
 }
 
-type ListFloat64 struct {
+type Float64List struct {
 	head *float64
-	tail *ListFloat64
+	tail *Float64List
 }
 
-type ListComplex64 struct {
+type Complex64List struct {
 	head *complex64
-	tail *ListComplex64
+	tail *Complex64List
 }
 
-type ListComplex128 struct {
+type Complex128List struct {
 	head *complex128
-	tail *ListComplex128
+	tail *Complex128List
 }
 
-type ListString struct {
+type StringList struct {
 	head *string
-	tail *ListString
+	tail *StringList
 }
 
-type ListAny struct {
+type AnyList struct {
 	head *Any
-	tail *ListAny
+	tail *AnyList
 }
 
-type ListBoolArr struct {
+type BoolArrList struct {
 	head *[]bool
-	tail *ListBoolArr
+	tail *BoolArrList
 }
 
-type ListRuneArr struct {
+type RuneArrList struct {
 	head *[]rune
-	tail *ListRuneArr
+	tail *RuneArrList
 }
 
-type ListByteArr struct {
+type ByteArrList struct {
 	head *[]byte
-	tail *ListByteArr
+	tail *ByteArrList
 }
 
-type ListIntArr struct {
+type IntArrList struct {
 	head *[]int
-	tail *ListIntArr
+	tail *IntArrList
 }
 
-type ListInt8Arr struct {
+type Int8ArrList struct {
 	head *[]int8
-	tail *ListInt8Arr
+	tail *Int8ArrList
 }
 
-type ListInt16Arr struct {
+type Int16ArrList struct {
 	head *[]int16
-	tail *ListInt16Arr
+	tail *Int16ArrList
 }
 
-type ListInt32Arr struct {
+type Int32ArrList struct {
 	head *[]int32
-	tail *ListInt32Arr
+	tail *Int32ArrList
 }
 
-type ListInt64Arr struct {
+type Int64ArrList struct {
 	head *[]int64
-	tail *ListInt64Arr
+	tail *Int64ArrList
 }
 
-type ListUintArr struct {
+type UintArrList struct {
 	head *[]uint
-	tail *ListUintArr
+	tail *UintArrList
 }
 
-type ListUint8Arr struct {
+type Uint8ArrList struct {
 	head *[]uint8
-	tail *ListUint8Arr
+	tail *Uint8ArrList
 }
 
-type ListUint16Arr struct {
+type Uint16ArrList struct {
 	head *[]uint16
-	tail *ListUint16Arr
+	tail *Uint16ArrList
 }
 
-type ListUint32Arr struct {
+type Uint32ArrList struct {
 	head *[]uint32
-	tail *ListUint32Arr
+	tail *Uint32ArrList
 }
 
-type ListUint64Arr struct {
+type Uint64ArrList struct {
 	head *[]uint64
-	tail *ListUint64Arr
+	tail *Uint64ArrList
 }
 
-type ListUintptrArr struct {
+type UintptrArrList struct {
 	head *[]uintptr
-	tail *ListUintptrArr
+	tail *UintptrArrList
 }
 
-type ListFloat32Arr struct {
+type Float32ArrList struct {
 	head *[]float32
-	tail *ListFloat32Arr
+	tail *Float32ArrList
 }
 
-type ListFloat64Arr struct {
+type Float64ArrList struct {
 	head *[]float64
-	tail *ListFloat64Arr
+	tail *Float64ArrList
 }
 
-type ListComplex64Arr struct {
+type Complex64ArrList struct {
 	head *[]complex64
-	tail *ListComplex64Arr
+	tail *Complex64ArrList
 }
 
-type ListComplex128Arr struct {
+type Complex128ArrList struct {
 	head *[]complex128
-	tail *ListComplex128Arr
+	tail *Complex128ArrList
 }
 
-type ListStringArr struct {
+type StringArrList struct {
 	head *[]string
-	tail *ListStringArr
+	tail *StringArrList
 }
 
-type ListAnyArr struct {
+type AnyArrList struct {
 	head *[]Any
-	tail *ListAnyArr
+	tail *AnyArrList
 }
 
-var NilBool ListBool = ListBool{nil, nil}
-var NilRune ListRune = ListRune{nil, nil}
-var NilByte ListByte = ListByte{nil, nil}
-var NilInt ListInt = ListInt{nil, nil}
-var NilInt8 ListInt8 = ListInt8{nil, nil}
-var NilInt16 ListInt16 = ListInt16{nil, nil}
-var NilInt32 ListInt32 = ListInt32{nil, nil}
-var NilInt64 ListInt64 = ListInt64{nil, nil}
-var NilUint ListUint = ListUint{nil, nil}
-var NilUint8 ListUint8 = ListUint8{nil, nil}
-var NilUint16 ListUint16 = ListUint16{nil, nil}
-var NilUint32 ListUint32 = ListUint32{nil, nil}
-var NilUint64 ListUint64 = ListUint64{nil, nil}
-var NilUintptr ListUintptr = ListUintptr{nil, nil}
-var NilFloat32 ListFloat32 = ListFloat32{nil, nil}
-var NilFloat64 ListFloat64 = ListFloat64{nil, nil}
-var NilComplex64 ListComplex64 = ListComplex64{nil, nil}
-var NilComplex128 ListComplex128 = ListComplex128{nil, nil}
-var NilString ListString = ListString{nil, nil}
-var NilAny ListAny = ListAny{nil, nil}
-var NilBoolArr ListBoolArr = ListBoolArr{nil, nil}
-var NilRuneArr ListRuneArr = ListRuneArr{nil, nil}
-var NilByteArr ListByteArr = ListByteArr{nil, nil}
-var NilIntArr ListIntArr = ListIntArr{nil, nil}
-var NilInt8Arr ListInt8Arr = ListInt8Arr{nil, nil}
-var NilInt16Arr ListInt16Arr = ListInt16Arr{nil, nil}
-var NilInt32Arr ListInt32Arr = ListInt32Arr{nil, nil}
-var NilInt64Arr ListInt64Arr = ListInt64Arr{nil, nil}
-var NilUintArr ListUintArr = ListUintArr{nil, nil}
-var NilUint8Arr ListUint8Arr = ListUint8Arr{nil, nil}
-var NilUint16Arr ListUint16Arr = ListUint16Arr{nil, nil}
-var NilUint32Arr ListUint32Arr = ListUint32Arr{nil, nil}
-var NilUint64Arr ListUint64Arr = ListUint64Arr{nil, nil}
-var NilUintptrArr ListUintptrArr = ListUintptrArr{nil, nil}
-var NilFloat32Arr ListFloat32Arr = ListFloat32Arr{nil, nil}
-var NilFloat64Arr ListFloat64Arr = ListFloat64Arr{nil, nil}
-var NilComplex64Arr ListComplex64Arr = ListComplex64Arr{nil, nil}
-var NilComplex128Arr ListComplex128Arr = ListComplex128Arr{nil, nil}
-var NilStringArr ListStringArr = ListStringArr{nil, nil}
-var NilAnyArr ListAnyArr = ListAnyArr{nil, nil}
+var NilBool BoolList = BoolList{nil, nil}
+var NilRune RuneList = RuneList{nil, nil}
+var NilByte ByteList = ByteList{nil, nil}
+var NilInt IntList = IntList{nil, nil}
+var NilInt8 Int8List = Int8List{nil, nil}
+var NilInt16 Int16List = Int16List{nil, nil}
+var NilInt32 Int32List = Int32List{nil, nil}
+var NilInt64 Int64List = Int64List{nil, nil}
+var NilUint UintList = UintList{nil, nil}
+var NilUint8 Uint8List = Uint8List{nil, nil}
+var NilUint16 Uint16List = Uint16List{nil, nil}
+var NilUint32 Uint32List = Uint32List{nil, nil}
+var NilUint64 Uint64List = Uint64List{nil, nil}
+var NilUintptr UintptrList = UintptrList{nil, nil}
+var NilFloat32 Float32List = Float32List{nil, nil}
+var NilFloat64 Float64List = Float64List{nil, nil}
+var NilComplex64 Complex64List = Complex64List{nil, nil}
+var NilComplex128 Complex128List = Complex128List{nil, nil}
+var NilString StringList = StringList{nil, nil}
+var NilAny AnyList = AnyList{nil, nil}
+var NilBoolArr BoolArrList = BoolArrList{nil, nil}
+var NilRuneArr RuneArrList = RuneArrList{nil, nil}
+var NilByteArr ByteArrList = ByteArrList{nil, nil}
+var NilIntArr IntArrList = IntArrList{nil, nil}
+var NilInt8Arr Int8ArrList = Int8ArrList{nil, nil}
+var NilInt16Arr Int16ArrList = Int16ArrList{nil, nil}
+var NilInt32Arr Int32ArrList = Int32ArrList{nil, nil}
+var NilInt64Arr Int64ArrList = Int64ArrList{nil, nil}
+var NilUintArr UintArrList = UintArrList{nil, nil}
+var NilUint8Arr Uint8ArrList = Uint8ArrList{nil, nil}
+var NilUint16Arr Uint16ArrList = Uint16ArrList{nil, nil}
+var NilUint32Arr Uint32ArrList = Uint32ArrList{nil, nil}
+var NilUint64Arr Uint64ArrList = Uint64ArrList{nil, nil}
+var NilUintptrArr UintptrArrList = UintptrArrList{nil, nil}
+var NilFloat32Arr Float32ArrList = Float32ArrList{nil, nil}
+var NilFloat64Arr Float64ArrList = Float64ArrList{nil, nil}
+var NilComplex64Arr Complex64ArrList = Complex64ArrList{nil, nil}
+var NilComplex128Arr Complex128ArrList = Complex128ArrList{nil, nil}
+var NilStringArr StringArrList = StringArrList{nil, nil}
+var NilAnyArr AnyArrList = AnyArrList{nil, nil}

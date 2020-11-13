@@ -3,574 +3,574 @@
 
 package fp
 
-func (p1 PredicateBool) And(p2 PredicateBool) PredicateBool {
+func (p1 BoolPredicate) And(p2 BoolPredicate) BoolPredicate {
 	return func(e bool) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateRune) And(p2 PredicateRune) PredicateRune {
+func (p1 RunePredicate) And(p2 RunePredicate) RunePredicate {
 	return func(e rune) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateByte) And(p2 PredicateByte) PredicateByte {
+func (p1 BytePredicate) And(p2 BytePredicate) BytePredicate {
 	return func(e byte) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt) And(p2 PredicateInt) PredicateInt {
+func (p1 IntPredicate) And(p2 IntPredicate) IntPredicate {
 	return func(e int) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt8) And(p2 PredicateInt8) PredicateInt8 {
+func (p1 Int8Predicate) And(p2 Int8Predicate) Int8Predicate {
 	return func(e int8) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt16) And(p2 PredicateInt16) PredicateInt16 {
+func (p1 Int16Predicate) And(p2 Int16Predicate) Int16Predicate {
 	return func(e int16) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt32) And(p2 PredicateInt32) PredicateInt32 {
+func (p1 Int32Predicate) And(p2 Int32Predicate) Int32Predicate {
 	return func(e int32) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt64) And(p2 PredicateInt64) PredicateInt64 {
+func (p1 Int64Predicate) And(p2 Int64Predicate) Int64Predicate {
 	return func(e int64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint) And(p2 PredicateUint) PredicateUint {
+func (p1 UintPredicate) And(p2 UintPredicate) UintPredicate {
 	return func(e uint) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint8) And(p2 PredicateUint8) PredicateUint8 {
+func (p1 Uint8Predicate) And(p2 Uint8Predicate) Uint8Predicate {
 	return func(e uint8) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint16) And(p2 PredicateUint16) PredicateUint16 {
+func (p1 Uint16Predicate) And(p2 Uint16Predicate) Uint16Predicate {
 	return func(e uint16) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint32) And(p2 PredicateUint32) PredicateUint32 {
+func (p1 Uint32Predicate) And(p2 Uint32Predicate) Uint32Predicate {
 	return func(e uint32) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint64) And(p2 PredicateUint64) PredicateUint64 {
+func (p1 Uint64Predicate) And(p2 Uint64Predicate) Uint64Predicate {
 	return func(e uint64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUintptr) And(p2 PredicateUintptr) PredicateUintptr {
+func (p1 UintptrPredicate) And(p2 UintptrPredicate) UintptrPredicate {
 	return func(e uintptr) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateFloat32) And(p2 PredicateFloat32) PredicateFloat32 {
+func (p1 Float32Predicate) And(p2 Float32Predicate) Float32Predicate {
 	return func(e float32) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateFloat64) And(p2 PredicateFloat64) PredicateFloat64 {
+func (p1 Float64Predicate) And(p2 Float64Predicate) Float64Predicate {
 	return func(e float64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateComplex64) And(p2 PredicateComplex64) PredicateComplex64 {
+func (p1 Complex64Predicate) And(p2 Complex64Predicate) Complex64Predicate {
 	return func(e complex64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateComplex128) And(p2 PredicateComplex128) PredicateComplex128 {
+func (p1 Complex128Predicate) And(p2 Complex128Predicate) Complex128Predicate {
 	return func(e complex128) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateString) And(p2 PredicateString) PredicateString {
+func (p1 StringPredicate) And(p2 StringPredicate) StringPredicate {
 	return func(e string) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateAny) And(p2 PredicateAny) PredicateAny {
+func (p1 AnyPredicate) And(p2 AnyPredicate) AnyPredicate {
 	return func(e Any) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateBoolArr) And(p2 PredicateBoolArr) PredicateBoolArr {
+func (p1 BoolArrPredicate) And(p2 BoolArrPredicate) BoolArrPredicate {
 	return func(e []bool) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateRuneArr) And(p2 PredicateRuneArr) PredicateRuneArr {
+func (p1 RuneArrPredicate) And(p2 RuneArrPredicate) RuneArrPredicate {
 	return func(e []rune) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateByteArr) And(p2 PredicateByteArr) PredicateByteArr {
+func (p1 ByteArrPredicate) And(p2 ByteArrPredicate) ByteArrPredicate {
 	return func(e []byte) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateIntArr) And(p2 PredicateIntArr) PredicateIntArr {
+func (p1 IntArrPredicate) And(p2 IntArrPredicate) IntArrPredicate {
 	return func(e []int) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt8Arr) And(p2 PredicateInt8Arr) PredicateInt8Arr {
+func (p1 Int8ArrPredicate) And(p2 Int8ArrPredicate) Int8ArrPredicate {
 	return func(e []int8) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt16Arr) And(p2 PredicateInt16Arr) PredicateInt16Arr {
+func (p1 Int16ArrPredicate) And(p2 Int16ArrPredicate) Int16ArrPredicate {
 	return func(e []int16) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt32Arr) And(p2 PredicateInt32Arr) PredicateInt32Arr {
+func (p1 Int32ArrPredicate) And(p2 Int32ArrPredicate) Int32ArrPredicate {
 	return func(e []int32) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateInt64Arr) And(p2 PredicateInt64Arr) PredicateInt64Arr {
+func (p1 Int64ArrPredicate) And(p2 Int64ArrPredicate) Int64ArrPredicate {
 	return func(e []int64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUintArr) And(p2 PredicateUintArr) PredicateUintArr {
+func (p1 UintArrPredicate) And(p2 UintArrPredicate) UintArrPredicate {
 	return func(e []uint) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint8Arr) And(p2 PredicateUint8Arr) PredicateUint8Arr {
+func (p1 Uint8ArrPredicate) And(p2 Uint8ArrPredicate) Uint8ArrPredicate {
 	return func(e []uint8) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint16Arr) And(p2 PredicateUint16Arr) PredicateUint16Arr {
+func (p1 Uint16ArrPredicate) And(p2 Uint16ArrPredicate) Uint16ArrPredicate {
 	return func(e []uint16) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint32Arr) And(p2 PredicateUint32Arr) PredicateUint32Arr {
+func (p1 Uint32ArrPredicate) And(p2 Uint32ArrPredicate) Uint32ArrPredicate {
 	return func(e []uint32) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUint64Arr) And(p2 PredicateUint64Arr) PredicateUint64Arr {
+func (p1 Uint64ArrPredicate) And(p2 Uint64ArrPredicate) Uint64ArrPredicate {
 	return func(e []uint64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateUintptrArr) And(p2 PredicateUintptrArr) PredicateUintptrArr {
+func (p1 UintptrArrPredicate) And(p2 UintptrArrPredicate) UintptrArrPredicate {
 	return func(e []uintptr) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateFloat32Arr) And(p2 PredicateFloat32Arr) PredicateFloat32Arr {
+func (p1 Float32ArrPredicate) And(p2 Float32ArrPredicate) Float32ArrPredicate {
 	return func(e []float32) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateFloat64Arr) And(p2 PredicateFloat64Arr) PredicateFloat64Arr {
+func (p1 Float64ArrPredicate) And(p2 Float64ArrPredicate) Float64ArrPredicate {
 	return func(e []float64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateComplex64Arr) And(p2 PredicateComplex64Arr) PredicateComplex64Arr {
+func (p1 Complex64ArrPredicate) And(p2 Complex64ArrPredicate) Complex64ArrPredicate {
 	return func(e []complex64) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateComplex128Arr) And(p2 PredicateComplex128Arr) PredicateComplex128Arr {
+func (p1 Complex128ArrPredicate) And(p2 Complex128ArrPredicate) Complex128ArrPredicate {
 	return func(e []complex128) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateStringArr) And(p2 PredicateStringArr) PredicateStringArr {
+func (p1 StringArrPredicate) And(p2 StringArrPredicate) StringArrPredicate {
 	return func(e []string) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateAnyArr) And(p2 PredicateAnyArr) PredicateAnyArr {
+func (p1 AnyArrPredicate) And(p2 AnyArrPredicate) AnyArrPredicate {
 	return func(e []Any) bool { return p1(e) && p2(e) }
 }
 
-func (p1 PredicateBool) Or(p2 PredicateBool) PredicateBool {
+func (p1 BoolPredicate) Or(p2 BoolPredicate) BoolPredicate {
 	return func(e bool) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateRune) Or(p2 PredicateRune) PredicateRune {
+func (p1 RunePredicate) Or(p2 RunePredicate) RunePredicate {
 	return func(e rune) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateByte) Or(p2 PredicateByte) PredicateByte {
+func (p1 BytePredicate) Or(p2 BytePredicate) BytePredicate {
 	return func(e byte) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt) Or(p2 PredicateInt) PredicateInt {
+func (p1 IntPredicate) Or(p2 IntPredicate) IntPredicate {
 	return func(e int) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt8) Or(p2 PredicateInt8) PredicateInt8 {
+func (p1 Int8Predicate) Or(p2 Int8Predicate) Int8Predicate {
 	return func(e int8) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt16) Or(p2 PredicateInt16) PredicateInt16 {
+func (p1 Int16Predicate) Or(p2 Int16Predicate) Int16Predicate {
 	return func(e int16) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt32) Or(p2 PredicateInt32) PredicateInt32 {
+func (p1 Int32Predicate) Or(p2 Int32Predicate) Int32Predicate {
 	return func(e int32) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt64) Or(p2 PredicateInt64) PredicateInt64 {
+func (p1 Int64Predicate) Or(p2 Int64Predicate) Int64Predicate {
 	return func(e int64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint) Or(p2 PredicateUint) PredicateUint {
+func (p1 UintPredicate) Or(p2 UintPredicate) UintPredicate {
 	return func(e uint) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint8) Or(p2 PredicateUint8) PredicateUint8 {
+func (p1 Uint8Predicate) Or(p2 Uint8Predicate) Uint8Predicate {
 	return func(e uint8) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint16) Or(p2 PredicateUint16) PredicateUint16 {
+func (p1 Uint16Predicate) Or(p2 Uint16Predicate) Uint16Predicate {
 	return func(e uint16) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint32) Or(p2 PredicateUint32) PredicateUint32 {
+func (p1 Uint32Predicate) Or(p2 Uint32Predicate) Uint32Predicate {
 	return func(e uint32) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint64) Or(p2 PredicateUint64) PredicateUint64 {
+func (p1 Uint64Predicate) Or(p2 Uint64Predicate) Uint64Predicate {
 	return func(e uint64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUintptr) Or(p2 PredicateUintptr) PredicateUintptr {
+func (p1 UintptrPredicate) Or(p2 UintptrPredicate) UintptrPredicate {
 	return func(e uintptr) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateFloat32) Or(p2 PredicateFloat32) PredicateFloat32 {
+func (p1 Float32Predicate) Or(p2 Float32Predicate) Float32Predicate {
 	return func(e float32) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateFloat64) Or(p2 PredicateFloat64) PredicateFloat64 {
+func (p1 Float64Predicate) Or(p2 Float64Predicate) Float64Predicate {
 	return func(e float64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateComplex64) Or(p2 PredicateComplex64) PredicateComplex64 {
+func (p1 Complex64Predicate) Or(p2 Complex64Predicate) Complex64Predicate {
 	return func(e complex64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateComplex128) Or(p2 PredicateComplex128) PredicateComplex128 {
+func (p1 Complex128Predicate) Or(p2 Complex128Predicate) Complex128Predicate {
 	return func(e complex128) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateString) Or(p2 PredicateString) PredicateString {
+func (p1 StringPredicate) Or(p2 StringPredicate) StringPredicate {
 	return func(e string) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateAny) Or(p2 PredicateAny) PredicateAny {
+func (p1 AnyPredicate) Or(p2 AnyPredicate) AnyPredicate {
 	return func(e Any) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateBoolArr) Or(p2 PredicateBoolArr) PredicateBoolArr {
+func (p1 BoolArrPredicate) Or(p2 BoolArrPredicate) BoolArrPredicate {
 	return func(e []bool) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateRuneArr) Or(p2 PredicateRuneArr) PredicateRuneArr {
+func (p1 RuneArrPredicate) Or(p2 RuneArrPredicate) RuneArrPredicate {
 	return func(e []rune) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateByteArr) Or(p2 PredicateByteArr) PredicateByteArr {
+func (p1 ByteArrPredicate) Or(p2 ByteArrPredicate) ByteArrPredicate {
 	return func(e []byte) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateIntArr) Or(p2 PredicateIntArr) PredicateIntArr {
+func (p1 IntArrPredicate) Or(p2 IntArrPredicate) IntArrPredicate {
 	return func(e []int) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt8Arr) Or(p2 PredicateInt8Arr) PredicateInt8Arr {
+func (p1 Int8ArrPredicate) Or(p2 Int8ArrPredicate) Int8ArrPredicate {
 	return func(e []int8) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt16Arr) Or(p2 PredicateInt16Arr) PredicateInt16Arr {
+func (p1 Int16ArrPredicate) Or(p2 Int16ArrPredicate) Int16ArrPredicate {
 	return func(e []int16) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt32Arr) Or(p2 PredicateInt32Arr) PredicateInt32Arr {
+func (p1 Int32ArrPredicate) Or(p2 Int32ArrPredicate) Int32ArrPredicate {
 	return func(e []int32) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateInt64Arr) Or(p2 PredicateInt64Arr) PredicateInt64Arr {
+func (p1 Int64ArrPredicate) Or(p2 Int64ArrPredicate) Int64ArrPredicate {
 	return func(e []int64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUintArr) Or(p2 PredicateUintArr) PredicateUintArr {
+func (p1 UintArrPredicate) Or(p2 UintArrPredicate) UintArrPredicate {
 	return func(e []uint) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint8Arr) Or(p2 PredicateUint8Arr) PredicateUint8Arr {
+func (p1 Uint8ArrPredicate) Or(p2 Uint8ArrPredicate) Uint8ArrPredicate {
 	return func(e []uint8) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint16Arr) Or(p2 PredicateUint16Arr) PredicateUint16Arr {
+func (p1 Uint16ArrPredicate) Or(p2 Uint16ArrPredicate) Uint16ArrPredicate {
 	return func(e []uint16) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint32Arr) Or(p2 PredicateUint32Arr) PredicateUint32Arr {
+func (p1 Uint32ArrPredicate) Or(p2 Uint32ArrPredicate) Uint32ArrPredicate {
 	return func(e []uint32) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUint64Arr) Or(p2 PredicateUint64Arr) PredicateUint64Arr {
+func (p1 Uint64ArrPredicate) Or(p2 Uint64ArrPredicate) Uint64ArrPredicate {
 	return func(e []uint64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateUintptrArr) Or(p2 PredicateUintptrArr) PredicateUintptrArr {
+func (p1 UintptrArrPredicate) Or(p2 UintptrArrPredicate) UintptrArrPredicate {
 	return func(e []uintptr) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateFloat32Arr) Or(p2 PredicateFloat32Arr) PredicateFloat32Arr {
+func (p1 Float32ArrPredicate) Or(p2 Float32ArrPredicate) Float32ArrPredicate {
 	return func(e []float32) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateFloat64Arr) Or(p2 PredicateFloat64Arr) PredicateFloat64Arr {
+func (p1 Float64ArrPredicate) Or(p2 Float64ArrPredicate) Float64ArrPredicate {
 	return func(e []float64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateComplex64Arr) Or(p2 PredicateComplex64Arr) PredicateComplex64Arr {
+func (p1 Complex64ArrPredicate) Or(p2 Complex64ArrPredicate) Complex64ArrPredicate {
 	return func(e []complex64) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateComplex128Arr) Or(p2 PredicateComplex128Arr) PredicateComplex128Arr {
+func (p1 Complex128ArrPredicate) Or(p2 Complex128ArrPredicate) Complex128ArrPredicate {
 	return func(e []complex128) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateStringArr) Or(p2 PredicateStringArr) PredicateStringArr {
+func (p1 StringArrPredicate) Or(p2 StringArrPredicate) StringArrPredicate {
 	return func(e []string) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateAnyArr) Or(p2 PredicateAnyArr) PredicateAnyArr {
+func (p1 AnyArrPredicate) Or(p2 AnyArrPredicate) AnyArrPredicate {
 	return func(e []Any) bool { return p1(e) || p2(e) }
 }
 
-func (p1 PredicateBool) Xor(p2 PredicateBool) PredicateBool {
+func (p1 BoolPredicate) Xor(p2 BoolPredicate) BoolPredicate {
 	return func(e bool) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateRune) Xor(p2 PredicateRune) PredicateRune {
+func (p1 RunePredicate) Xor(p2 RunePredicate) RunePredicate {
 	return func(e rune) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateByte) Xor(p2 PredicateByte) PredicateByte {
+func (p1 BytePredicate) Xor(p2 BytePredicate) BytePredicate {
 	return func(e byte) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt) Xor(p2 PredicateInt) PredicateInt {
+func (p1 IntPredicate) Xor(p2 IntPredicate) IntPredicate {
 	return func(e int) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt8) Xor(p2 PredicateInt8) PredicateInt8 {
+func (p1 Int8Predicate) Xor(p2 Int8Predicate) Int8Predicate {
 	return func(e int8) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt16) Xor(p2 PredicateInt16) PredicateInt16 {
+func (p1 Int16Predicate) Xor(p2 Int16Predicate) Int16Predicate {
 	return func(e int16) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt32) Xor(p2 PredicateInt32) PredicateInt32 {
+func (p1 Int32Predicate) Xor(p2 Int32Predicate) Int32Predicate {
 	return func(e int32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt64) Xor(p2 PredicateInt64) PredicateInt64 {
+func (p1 Int64Predicate) Xor(p2 Int64Predicate) Int64Predicate {
 	return func(e int64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint) Xor(p2 PredicateUint) PredicateUint {
+func (p1 UintPredicate) Xor(p2 UintPredicate) UintPredicate {
 	return func(e uint) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint8) Xor(p2 PredicateUint8) PredicateUint8 {
+func (p1 Uint8Predicate) Xor(p2 Uint8Predicate) Uint8Predicate {
 	return func(e uint8) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint16) Xor(p2 PredicateUint16) PredicateUint16 {
+func (p1 Uint16Predicate) Xor(p2 Uint16Predicate) Uint16Predicate {
 	return func(e uint16) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint32) Xor(p2 PredicateUint32) PredicateUint32 {
+func (p1 Uint32Predicate) Xor(p2 Uint32Predicate) Uint32Predicate {
 	return func(e uint32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint64) Xor(p2 PredicateUint64) PredicateUint64 {
+func (p1 Uint64Predicate) Xor(p2 Uint64Predicate) Uint64Predicate {
 	return func(e uint64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUintptr) Xor(p2 PredicateUintptr) PredicateUintptr {
+func (p1 UintptrPredicate) Xor(p2 UintptrPredicate) UintptrPredicate {
 	return func(e uintptr) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateFloat32) Xor(p2 PredicateFloat32) PredicateFloat32 {
+func (p1 Float32Predicate) Xor(p2 Float32Predicate) Float32Predicate {
 	return func(e float32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateFloat64) Xor(p2 PredicateFloat64) PredicateFloat64 {
+func (p1 Float64Predicate) Xor(p2 Float64Predicate) Float64Predicate {
 	return func(e float64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateComplex64) Xor(p2 PredicateComplex64) PredicateComplex64 {
+func (p1 Complex64Predicate) Xor(p2 Complex64Predicate) Complex64Predicate {
 	return func(e complex64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateComplex128) Xor(p2 PredicateComplex128) PredicateComplex128 {
+func (p1 Complex128Predicate) Xor(p2 Complex128Predicate) Complex128Predicate {
 	return func(e complex128) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateString) Xor(p2 PredicateString) PredicateString {
+func (p1 StringPredicate) Xor(p2 StringPredicate) StringPredicate {
 	return func(e string) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateAny) Xor(p2 PredicateAny) PredicateAny {
+func (p1 AnyPredicate) Xor(p2 AnyPredicate) AnyPredicate {
 	return func(e Any) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateBoolArr) Xor(p2 PredicateBoolArr) PredicateBoolArr {
+func (p1 BoolArrPredicate) Xor(p2 BoolArrPredicate) BoolArrPredicate {
 	return func(e []bool) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateRuneArr) Xor(p2 PredicateRuneArr) PredicateRuneArr {
+func (p1 RuneArrPredicate) Xor(p2 RuneArrPredicate) RuneArrPredicate {
 	return func(e []rune) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateByteArr) Xor(p2 PredicateByteArr) PredicateByteArr {
+func (p1 ByteArrPredicate) Xor(p2 ByteArrPredicate) ByteArrPredicate {
 	return func(e []byte) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateIntArr) Xor(p2 PredicateIntArr) PredicateIntArr {
+func (p1 IntArrPredicate) Xor(p2 IntArrPredicate) IntArrPredicate {
 	return func(e []int) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt8Arr) Xor(p2 PredicateInt8Arr) PredicateInt8Arr {
+func (p1 Int8ArrPredicate) Xor(p2 Int8ArrPredicate) Int8ArrPredicate {
 	return func(e []int8) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt16Arr) Xor(p2 PredicateInt16Arr) PredicateInt16Arr {
+func (p1 Int16ArrPredicate) Xor(p2 Int16ArrPredicate) Int16ArrPredicate {
 	return func(e []int16) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt32Arr) Xor(p2 PredicateInt32Arr) PredicateInt32Arr {
+func (p1 Int32ArrPredicate) Xor(p2 Int32ArrPredicate) Int32ArrPredicate {
 	return func(e []int32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateInt64Arr) Xor(p2 PredicateInt64Arr) PredicateInt64Arr {
+func (p1 Int64ArrPredicate) Xor(p2 Int64ArrPredicate) Int64ArrPredicate {
 	return func(e []int64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUintArr) Xor(p2 PredicateUintArr) PredicateUintArr {
+func (p1 UintArrPredicate) Xor(p2 UintArrPredicate) UintArrPredicate {
 	return func(e []uint) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint8Arr) Xor(p2 PredicateUint8Arr) PredicateUint8Arr {
+func (p1 Uint8ArrPredicate) Xor(p2 Uint8ArrPredicate) Uint8ArrPredicate {
 	return func(e []uint8) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint16Arr) Xor(p2 PredicateUint16Arr) PredicateUint16Arr {
+func (p1 Uint16ArrPredicate) Xor(p2 Uint16ArrPredicate) Uint16ArrPredicate {
 	return func(e []uint16) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint32Arr) Xor(p2 PredicateUint32Arr) PredicateUint32Arr {
+func (p1 Uint32ArrPredicate) Xor(p2 Uint32ArrPredicate) Uint32ArrPredicate {
 	return func(e []uint32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUint64Arr) Xor(p2 PredicateUint64Arr) PredicateUint64Arr {
+func (p1 Uint64ArrPredicate) Xor(p2 Uint64ArrPredicate) Uint64ArrPredicate {
 	return func(e []uint64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateUintptrArr) Xor(p2 PredicateUintptrArr) PredicateUintptrArr {
+func (p1 UintptrArrPredicate) Xor(p2 UintptrArrPredicate) UintptrArrPredicate {
 	return func(e []uintptr) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateFloat32Arr) Xor(p2 PredicateFloat32Arr) PredicateFloat32Arr {
+func (p1 Float32ArrPredicate) Xor(p2 Float32ArrPredicate) Float32ArrPredicate {
 	return func(e []float32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateFloat64Arr) Xor(p2 PredicateFloat64Arr) PredicateFloat64Arr {
+func (p1 Float64ArrPredicate) Xor(p2 Float64ArrPredicate) Float64ArrPredicate {
 	return func(e []float64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateComplex64Arr) Xor(p2 PredicateComplex64Arr) PredicateComplex64Arr {
+func (p1 Complex64ArrPredicate) Xor(p2 Complex64ArrPredicate) Complex64ArrPredicate {
 	return func(e []complex64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateComplex128Arr) Xor(p2 PredicateComplex128Arr) PredicateComplex128Arr {
+func (p1 Complex128ArrPredicate) Xor(p2 Complex128ArrPredicate) Complex128ArrPredicate {
 	return func(e []complex128) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateStringArr) Xor(p2 PredicateStringArr) PredicateStringArr {
+func (p1 StringArrPredicate) Xor(p2 StringArrPredicate) StringArrPredicate {
 	return func(e []string) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p1 PredicateAnyArr) Xor(p2 PredicateAnyArr) PredicateAnyArr {
+func (p1 AnyArrPredicate) Xor(p2 AnyArrPredicate) AnyArrPredicate {
 	return func(e []Any) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 
-func (p PredicateBool) Neg() PredicateBool { return func(e bool) bool { return !p(e) } }
+func (p BoolPredicate) Neg() BoolPredicate { return func(e bool) bool { return !p(e) } }
 
-func (p PredicateRune) Neg() PredicateRune { return func(e rune) bool { return !p(e) } }
+func (p RunePredicate) Neg() RunePredicate { return func(e rune) bool { return !p(e) } }
 
-func (p PredicateByte) Neg() PredicateByte { return func(e byte) bool { return !p(e) } }
+func (p BytePredicate) Neg() BytePredicate { return func(e byte) bool { return !p(e) } }
 
-func (p PredicateInt) Neg() PredicateInt { return func(e int) bool { return !p(e) } }
+func (p IntPredicate) Neg() IntPredicate { return func(e int) bool { return !p(e) } }
 
-func (p PredicateInt8) Neg() PredicateInt8 { return func(e int8) bool { return !p(e) } }
+func (p Int8Predicate) Neg() Int8Predicate { return func(e int8) bool { return !p(e) } }
 
-func (p PredicateInt16) Neg() PredicateInt16 { return func(e int16) bool { return !p(e) } }
+func (p Int16Predicate) Neg() Int16Predicate { return func(e int16) bool { return !p(e) } }
 
-func (p PredicateInt32) Neg() PredicateInt32 { return func(e int32) bool { return !p(e) } }
+func (p Int32Predicate) Neg() Int32Predicate { return func(e int32) bool { return !p(e) } }
 
-func (p PredicateInt64) Neg() PredicateInt64 { return func(e int64) bool { return !p(e) } }
+func (p Int64Predicate) Neg() Int64Predicate { return func(e int64) bool { return !p(e) } }
 
-func (p PredicateUint) Neg() PredicateUint { return func(e uint) bool { return !p(e) } }
+func (p UintPredicate) Neg() UintPredicate { return func(e uint) bool { return !p(e) } }
 
-func (p PredicateUint8) Neg() PredicateUint8 { return func(e uint8) bool { return !p(e) } }
+func (p Uint8Predicate) Neg() Uint8Predicate { return func(e uint8) bool { return !p(e) } }
 
-func (p PredicateUint16) Neg() PredicateUint16 { return func(e uint16) bool { return !p(e) } }
+func (p Uint16Predicate) Neg() Uint16Predicate { return func(e uint16) bool { return !p(e) } }
 
-func (p PredicateUint32) Neg() PredicateUint32 { return func(e uint32) bool { return !p(e) } }
+func (p Uint32Predicate) Neg() Uint32Predicate { return func(e uint32) bool { return !p(e) } }
 
-func (p PredicateUint64) Neg() PredicateUint64 { return func(e uint64) bool { return !p(e) } }
+func (p Uint64Predicate) Neg() Uint64Predicate { return func(e uint64) bool { return !p(e) } }
 
-func (p PredicateUintptr) Neg() PredicateUintptr { return func(e uintptr) bool { return !p(e) } }
+func (p UintptrPredicate) Neg() UintptrPredicate { return func(e uintptr) bool { return !p(e) } }
 
-func (p PredicateFloat32) Neg() PredicateFloat32 { return func(e float32) bool { return !p(e) } }
+func (p Float32Predicate) Neg() Float32Predicate { return func(e float32) bool { return !p(e) } }
 
-func (p PredicateFloat64) Neg() PredicateFloat64 { return func(e float64) bool { return !p(e) } }
+func (p Float64Predicate) Neg() Float64Predicate { return func(e float64) bool { return !p(e) } }
 
-func (p PredicateComplex64) Neg() PredicateComplex64 { return func(e complex64) bool { return !p(e) } }
+func (p Complex64Predicate) Neg() Complex64Predicate { return func(e complex64) bool { return !p(e) } }
 
-func (p PredicateComplex128) Neg() PredicateComplex128 {
+func (p Complex128Predicate) Neg() Complex128Predicate {
 	return func(e complex128) bool { return !p(e) }
 }
 
-func (p PredicateString) Neg() PredicateString { return func(e string) bool { return !p(e) } }
+func (p StringPredicate) Neg() StringPredicate { return func(e string) bool { return !p(e) } }
 
-func (p PredicateAny) Neg() PredicateAny { return func(e Any) bool { return !p(e) } }
+func (p AnyPredicate) Neg() AnyPredicate { return func(e Any) bool { return !p(e) } }
 
-func (p PredicateBoolArr) Neg() PredicateBoolArr { return func(e []bool) bool { return !p(e) } }
+func (p BoolArrPredicate) Neg() BoolArrPredicate { return func(e []bool) bool { return !p(e) } }
 
-func (p PredicateRuneArr) Neg() PredicateRuneArr { return func(e []rune) bool { return !p(e) } }
+func (p RuneArrPredicate) Neg() RuneArrPredicate { return func(e []rune) bool { return !p(e) } }
 
-func (p PredicateByteArr) Neg() PredicateByteArr { return func(e []byte) bool { return !p(e) } }
+func (p ByteArrPredicate) Neg() ByteArrPredicate { return func(e []byte) bool { return !p(e) } }
 
-func (p PredicateIntArr) Neg() PredicateIntArr { return func(e []int) bool { return !p(e) } }
+func (p IntArrPredicate) Neg() IntArrPredicate { return func(e []int) bool { return !p(e) } }
 
-func (p PredicateInt8Arr) Neg() PredicateInt8Arr { return func(e []int8) bool { return !p(e) } }
+func (p Int8ArrPredicate) Neg() Int8ArrPredicate { return func(e []int8) bool { return !p(e) } }
 
-func (p PredicateInt16Arr) Neg() PredicateInt16Arr { return func(e []int16) bool { return !p(e) } }
+func (p Int16ArrPredicate) Neg() Int16ArrPredicate { return func(e []int16) bool { return !p(e) } }
 
-func (p PredicateInt32Arr) Neg() PredicateInt32Arr { return func(e []int32) bool { return !p(e) } }
+func (p Int32ArrPredicate) Neg() Int32ArrPredicate { return func(e []int32) bool { return !p(e) } }
 
-func (p PredicateInt64Arr) Neg() PredicateInt64Arr { return func(e []int64) bool { return !p(e) } }
+func (p Int64ArrPredicate) Neg() Int64ArrPredicate { return func(e []int64) bool { return !p(e) } }
 
-func (p PredicateUintArr) Neg() PredicateUintArr { return func(e []uint) bool { return !p(e) } }
+func (p UintArrPredicate) Neg() UintArrPredicate { return func(e []uint) bool { return !p(e) } }
 
-func (p PredicateUint8Arr) Neg() PredicateUint8Arr { return func(e []uint8) bool { return !p(e) } }
+func (p Uint8ArrPredicate) Neg() Uint8ArrPredicate { return func(e []uint8) bool { return !p(e) } }
 
-func (p PredicateUint16Arr) Neg() PredicateUint16Arr { return func(e []uint16) bool { return !p(e) } }
+func (p Uint16ArrPredicate) Neg() Uint16ArrPredicate { return func(e []uint16) bool { return !p(e) } }
 
-func (p PredicateUint32Arr) Neg() PredicateUint32Arr { return func(e []uint32) bool { return !p(e) } }
+func (p Uint32ArrPredicate) Neg() Uint32ArrPredicate { return func(e []uint32) bool { return !p(e) } }
 
-func (p PredicateUint64Arr) Neg() PredicateUint64Arr { return func(e []uint64) bool { return !p(e) } }
+func (p Uint64ArrPredicate) Neg() Uint64ArrPredicate { return func(e []uint64) bool { return !p(e) } }
 
-func (p PredicateUintptrArr) Neg() PredicateUintptrArr {
+func (p UintptrArrPredicate) Neg() UintptrArrPredicate {
 	return func(e []uintptr) bool { return !p(e) }
 }
 
-func (p PredicateFloat32Arr) Neg() PredicateFloat32Arr {
+func (p Float32ArrPredicate) Neg() Float32ArrPredicate {
 	return func(e []float32) bool { return !p(e) }
 }
 
-func (p PredicateFloat64Arr) Neg() PredicateFloat64Arr {
+func (p Float64ArrPredicate) Neg() Float64ArrPredicate {
 	return func(e []float64) bool { return !p(e) }
 }
 
-func (p PredicateComplex64Arr) Neg() PredicateComplex64Arr {
+func (p Complex64ArrPredicate) Neg() Complex64ArrPredicate {
 	return func(e []complex64) bool { return !p(e) }
 }
 
-func (p PredicateComplex128Arr) Neg() PredicateComplex128Arr {
+func (p Complex128ArrPredicate) Neg() Complex128ArrPredicate {
 	return func(e []complex128) bool { return !p(e) }
 }
 
-func (p PredicateStringArr) Neg() PredicateStringArr { return func(e []string) bool { return !p(e) } }
+func (p StringArrPredicate) Neg() StringArrPredicate { return func(e []string) bool { return !p(e) } }
 
-func (p PredicateAnyArr) Neg() PredicateAnyArr { return func(e []Any) bool { return !p(e) } }
+func (p AnyArrPredicate) Neg() AnyArrPredicate { return func(e []Any) bool { return !p(e) } }

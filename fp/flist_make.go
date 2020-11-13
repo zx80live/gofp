@@ -3,280 +3,280 @@
 
 package fp
 
-func MakeListBool(elements ...bool) ListBool {
+func MakeBoolList(elements ...bool) BoolList {
 	l := NilBool
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListRune(elements ...rune) ListRune {
+func MakeRuneList(elements ...rune) RuneList {
 	l := NilRune
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListByte(elements ...byte) ListByte {
+func MakeByteList(elements ...byte) ByteList {
 	l := NilByte
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt(elements ...int) ListInt {
+func MakeIntList(elements ...int) IntList {
 	l := NilInt
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt8(elements ...int8) ListInt8 {
+func MakeInt8List(elements ...int8) Int8List {
 	l := NilInt8
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt16(elements ...int16) ListInt16 {
+func MakeInt16List(elements ...int16) Int16List {
 	l := NilInt16
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt32(elements ...int32) ListInt32 {
+func MakeInt32List(elements ...int32) Int32List {
 	l := NilInt32
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt64(elements ...int64) ListInt64 {
+func MakeInt64List(elements ...int64) Int64List {
 	l := NilInt64
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint(elements ...uint) ListUint {
+func MakeUintList(elements ...uint) UintList {
 	l := NilUint
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint8(elements ...uint8) ListUint8 {
+func MakeUint8List(elements ...uint8) Uint8List {
 	l := NilUint8
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint16(elements ...uint16) ListUint16 {
+func MakeUint16List(elements ...uint16) Uint16List {
 	l := NilUint16
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint32(elements ...uint32) ListUint32 {
+func MakeUint32List(elements ...uint32) Uint32List {
 	l := NilUint32
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint64(elements ...uint64) ListUint64 {
+func MakeUint64List(elements ...uint64) Uint64List {
 	l := NilUint64
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUintptr(elements ...uintptr) ListUintptr {
+func MakeUintptrList(elements ...uintptr) UintptrList {
 	l := NilUintptr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListFloat32(elements ...float32) ListFloat32 {
+func MakeFloat32List(elements ...float32) Float32List {
 	l := NilFloat32
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListFloat64(elements ...float64) ListFloat64 {
+func MakeFloat64List(elements ...float64) Float64List {
 	l := NilFloat64
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListComplex64(elements ...complex64) ListComplex64 {
+func MakeComplex64List(elements ...complex64) Complex64List {
 	l := NilComplex64
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListComplex128(elements ...complex128) ListComplex128 {
+func MakeComplex128List(elements ...complex128) Complex128List {
 	l := NilComplex128
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListString(elements ...string) ListString {
+func MakeStringList(elements ...string) StringList {
 	l := NilString
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListAny(elements ...Any) ListAny {
+func MakeAnyList(elements ...Any) AnyList {
 	l := NilAny
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListBoolArr(elements ...[]bool) ListBoolArr {
+func MakeBoolArrList(elements ...[]bool) BoolArrList {
 	l := NilBoolArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListRuneArr(elements ...[]rune) ListRuneArr {
+func MakeRuneArrList(elements ...[]rune) RuneArrList {
 	l := NilRuneArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListByteArr(elements ...[]byte) ListByteArr {
+func MakeByteArrList(elements ...[]byte) ByteArrList {
 	l := NilByteArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListIntArr(elements ...[]int) ListIntArr {
+func MakeIntArrList(elements ...[]int) IntArrList {
 	l := NilIntArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt8Arr(elements ...[]int8) ListInt8Arr {
+func MakeInt8ArrList(elements ...[]int8) Int8ArrList {
 	l := NilInt8Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt16Arr(elements ...[]int16) ListInt16Arr {
+func MakeInt16ArrList(elements ...[]int16) Int16ArrList {
 	l := NilInt16Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt32Arr(elements ...[]int32) ListInt32Arr {
+func MakeInt32ArrList(elements ...[]int32) Int32ArrList {
 	l := NilInt32Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListInt64Arr(elements ...[]int64) ListInt64Arr {
+func MakeInt64ArrList(elements ...[]int64) Int64ArrList {
 	l := NilInt64Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUintArr(elements ...[]uint) ListUintArr {
+func MakeUintArrList(elements ...[]uint) UintArrList {
 	l := NilUintArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint8Arr(elements ...[]uint8) ListUint8Arr {
+func MakeUint8ArrList(elements ...[]uint8) Uint8ArrList {
 	l := NilUint8Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint16Arr(elements ...[]uint16) ListUint16Arr {
+func MakeUint16ArrList(elements ...[]uint16) Uint16ArrList {
 	l := NilUint16Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint32Arr(elements ...[]uint32) ListUint32Arr {
+func MakeUint32ArrList(elements ...[]uint32) Uint32ArrList {
 	l := NilUint32Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUint64Arr(elements ...[]uint64) ListUint64Arr {
+func MakeUint64ArrList(elements ...[]uint64) Uint64ArrList {
 	l := NilUint64Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListUintptrArr(elements ...[]uintptr) ListUintptrArr {
+func MakeUintptrArrList(elements ...[]uintptr) UintptrArrList {
 	l := NilUintptrArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListFloat32Arr(elements ...[]float32) ListFloat32Arr {
+func MakeFloat32ArrList(elements ...[]float32) Float32ArrList {
 	l := NilFloat32Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListFloat64Arr(elements ...[]float64) ListFloat64Arr {
+func MakeFloat64ArrList(elements ...[]float64) Float64ArrList {
 	l := NilFloat64Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListComplex64Arr(elements ...[]complex64) ListComplex64Arr {
+func MakeComplex64ArrList(elements ...[]complex64) Complex64ArrList {
 	l := NilComplex64Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListComplex128Arr(elements ...[]complex128) ListComplex128Arr {
+func MakeComplex128ArrList(elements ...[]complex128) Complex128ArrList {
 	l := NilComplex128Arr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListStringArr(elements ...[]string) ListStringArr {
+func MakeStringArrList(elements ...[]string) StringArrList {
 	l := NilStringArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])
 	}
 	return l
 }
-func MakeListAnyArr(elements ...[]Any) ListAnyArr {
+func MakeAnyArrList(elements ...[]Any) AnyArrList {
 	l := NilAnyArr
 	for i := len(elements) - 1; i >= 0; i-- {
 		l = l.Cons(elements[i])

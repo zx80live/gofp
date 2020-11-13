@@ -3,7 +3,7 @@
 
 package fp
 
-func (l ListBool) Reverse() ListBool {
+func (l BoolList) Reverse() BoolList {
 	xs := NilBool
 	l.Foreach(func(e bool) {
 		xs = xs.Cons(e)
@@ -11,7 +11,7 @@ func (l ListBool) Reverse() ListBool {
 	return xs
 }
 
-func (l ListRune) Reverse() ListRune {
+func (l RuneList) Reverse() RuneList {
 	xs := NilRune
 	l.Foreach(func(e rune) {
 		xs = xs.Cons(e)
@@ -19,7 +19,7 @@ func (l ListRune) Reverse() ListRune {
 	return xs
 }
 
-func (l ListByte) Reverse() ListByte {
+func (l ByteList) Reverse() ByteList {
 	xs := NilByte
 	l.Foreach(func(e byte) {
 		xs = xs.Cons(e)
@@ -27,7 +27,7 @@ func (l ListByte) Reverse() ListByte {
 	return xs
 }
 
-func (l ListInt) Reverse() ListInt {
+func (l IntList) Reverse() IntList {
 	xs := NilInt
 	l.Foreach(func(e int) {
 		xs = xs.Cons(e)
@@ -35,7 +35,7 @@ func (l ListInt) Reverse() ListInt {
 	return xs
 }
 
-func (l ListInt8) Reverse() ListInt8 {
+func (l Int8List) Reverse() Int8List {
 	xs := NilInt8
 	l.Foreach(func(e int8) {
 		xs = xs.Cons(e)
@@ -43,7 +43,7 @@ func (l ListInt8) Reverse() ListInt8 {
 	return xs
 }
 
-func (l ListInt16) Reverse() ListInt16 {
+func (l Int16List) Reverse() Int16List {
 	xs := NilInt16
 	l.Foreach(func(e int16) {
 		xs = xs.Cons(e)
@@ -51,7 +51,7 @@ func (l ListInt16) Reverse() ListInt16 {
 	return xs
 }
 
-func (l ListInt32) Reverse() ListInt32 {
+func (l Int32List) Reverse() Int32List {
 	xs := NilInt32
 	l.Foreach(func(e int32) {
 		xs = xs.Cons(e)
@@ -59,7 +59,7 @@ func (l ListInt32) Reverse() ListInt32 {
 	return xs
 }
 
-func (l ListInt64) Reverse() ListInt64 {
+func (l Int64List) Reverse() Int64List {
 	xs := NilInt64
 	l.Foreach(func(e int64) {
 		xs = xs.Cons(e)
@@ -67,7 +67,7 @@ func (l ListInt64) Reverse() ListInt64 {
 	return xs
 }
 
-func (l ListUint) Reverse() ListUint {
+func (l UintList) Reverse() UintList {
 	xs := NilUint
 	l.Foreach(func(e uint) {
 		xs = xs.Cons(e)
@@ -75,7 +75,7 @@ func (l ListUint) Reverse() ListUint {
 	return xs
 }
 
-func (l ListUint8) Reverse() ListUint8 {
+func (l Uint8List) Reverse() Uint8List {
 	xs := NilUint8
 	l.Foreach(func(e uint8) {
 		xs = xs.Cons(e)
@@ -83,7 +83,7 @@ func (l ListUint8) Reverse() ListUint8 {
 	return xs
 }
 
-func (l ListUint16) Reverse() ListUint16 {
+func (l Uint16List) Reverse() Uint16List {
 	xs := NilUint16
 	l.Foreach(func(e uint16) {
 		xs = xs.Cons(e)
@@ -91,7 +91,7 @@ func (l ListUint16) Reverse() ListUint16 {
 	return xs
 }
 
-func (l ListUint32) Reverse() ListUint32 {
+func (l Uint32List) Reverse() Uint32List {
 	xs := NilUint32
 	l.Foreach(func(e uint32) {
 		xs = xs.Cons(e)
@@ -99,7 +99,7 @@ func (l ListUint32) Reverse() ListUint32 {
 	return xs
 }
 
-func (l ListUint64) Reverse() ListUint64 {
+func (l Uint64List) Reverse() Uint64List {
 	xs := NilUint64
 	l.Foreach(func(e uint64) {
 		xs = xs.Cons(e)
@@ -107,7 +107,7 @@ func (l ListUint64) Reverse() ListUint64 {
 	return xs
 }
 
-func (l ListUintptr) Reverse() ListUintptr {
+func (l UintptrList) Reverse() UintptrList {
 	xs := NilUintptr
 	l.Foreach(func(e uintptr) {
 		xs = xs.Cons(e)
@@ -115,7 +115,7 @@ func (l ListUintptr) Reverse() ListUintptr {
 	return xs
 }
 
-func (l ListFloat32) Reverse() ListFloat32 {
+func (l Float32List) Reverse() Float32List {
 	xs := NilFloat32
 	l.Foreach(func(e float32) {
 		xs = xs.Cons(e)
@@ -123,7 +123,7 @@ func (l ListFloat32) Reverse() ListFloat32 {
 	return xs
 }
 
-func (l ListFloat64) Reverse() ListFloat64 {
+func (l Float64List) Reverse() Float64List {
 	xs := NilFloat64
 	l.Foreach(func(e float64) {
 		xs = xs.Cons(e)
@@ -131,7 +131,7 @@ func (l ListFloat64) Reverse() ListFloat64 {
 	return xs
 }
 
-func (l ListComplex64) Reverse() ListComplex64 {
+func (l Complex64List) Reverse() Complex64List {
 	xs := NilComplex64
 	l.Foreach(func(e complex64) {
 		xs = xs.Cons(e)
@@ -139,7 +139,7 @@ func (l ListComplex64) Reverse() ListComplex64 {
 	return xs
 }
 
-func (l ListComplex128) Reverse() ListComplex128 {
+func (l Complex128List) Reverse() Complex128List {
 	xs := NilComplex128
 	l.Foreach(func(e complex128) {
 		xs = xs.Cons(e)
@@ -147,7 +147,7 @@ func (l ListComplex128) Reverse() ListComplex128 {
 	return xs
 }
 
-func (l ListString) Reverse() ListString {
+func (l StringList) Reverse() StringList {
 	xs := NilString
 	l.Foreach(func(e string) {
 		xs = xs.Cons(e)
@@ -155,7 +155,7 @@ func (l ListString) Reverse() ListString {
 	return xs
 }
 
-func (l ListAny) Reverse() ListAny {
+func (l AnyList) Reverse() AnyList {
 	xs := NilAny
 	l.Foreach(func(e Any) {
 		xs = xs.Cons(e)
@@ -163,7 +163,7 @@ func (l ListAny) Reverse() ListAny {
 	return xs
 }
 
-func (l ListBoolArr) Reverse() ListBoolArr {
+func (l BoolArrList) Reverse() BoolArrList {
 	xs := NilBoolArr
 	l.Foreach(func(e []bool) {
 		xs = xs.Cons(e)
@@ -171,7 +171,7 @@ func (l ListBoolArr) Reverse() ListBoolArr {
 	return xs
 }
 
-func (l ListRuneArr) Reverse() ListRuneArr {
+func (l RuneArrList) Reverse() RuneArrList {
 	xs := NilRuneArr
 	l.Foreach(func(e []rune) {
 		xs = xs.Cons(e)
@@ -179,7 +179,7 @@ func (l ListRuneArr) Reverse() ListRuneArr {
 	return xs
 }
 
-func (l ListByteArr) Reverse() ListByteArr {
+func (l ByteArrList) Reverse() ByteArrList {
 	xs := NilByteArr
 	l.Foreach(func(e []byte) {
 		xs = xs.Cons(e)
@@ -187,7 +187,7 @@ func (l ListByteArr) Reverse() ListByteArr {
 	return xs
 }
 
-func (l ListIntArr) Reverse() ListIntArr {
+func (l IntArrList) Reverse() IntArrList {
 	xs := NilIntArr
 	l.Foreach(func(e []int) {
 		xs = xs.Cons(e)
@@ -195,7 +195,7 @@ func (l ListIntArr) Reverse() ListIntArr {
 	return xs
 }
 
-func (l ListInt8Arr) Reverse() ListInt8Arr {
+func (l Int8ArrList) Reverse() Int8ArrList {
 	xs := NilInt8Arr
 	l.Foreach(func(e []int8) {
 		xs = xs.Cons(e)
@@ -203,7 +203,7 @@ func (l ListInt8Arr) Reverse() ListInt8Arr {
 	return xs
 }
 
-func (l ListInt16Arr) Reverse() ListInt16Arr {
+func (l Int16ArrList) Reverse() Int16ArrList {
 	xs := NilInt16Arr
 	l.Foreach(func(e []int16) {
 		xs = xs.Cons(e)
@@ -211,7 +211,7 @@ func (l ListInt16Arr) Reverse() ListInt16Arr {
 	return xs
 }
 
-func (l ListInt32Arr) Reverse() ListInt32Arr {
+func (l Int32ArrList) Reverse() Int32ArrList {
 	xs := NilInt32Arr
 	l.Foreach(func(e []int32) {
 		xs = xs.Cons(e)
@@ -219,7 +219,7 @@ func (l ListInt32Arr) Reverse() ListInt32Arr {
 	return xs
 }
 
-func (l ListInt64Arr) Reverse() ListInt64Arr {
+func (l Int64ArrList) Reverse() Int64ArrList {
 	xs := NilInt64Arr
 	l.Foreach(func(e []int64) {
 		xs = xs.Cons(e)
@@ -227,7 +227,7 @@ func (l ListInt64Arr) Reverse() ListInt64Arr {
 	return xs
 }
 
-func (l ListUintArr) Reverse() ListUintArr {
+func (l UintArrList) Reverse() UintArrList {
 	xs := NilUintArr
 	l.Foreach(func(e []uint) {
 		xs = xs.Cons(e)
@@ -235,7 +235,7 @@ func (l ListUintArr) Reverse() ListUintArr {
 	return xs
 }
 
-func (l ListUint8Arr) Reverse() ListUint8Arr {
+func (l Uint8ArrList) Reverse() Uint8ArrList {
 	xs := NilUint8Arr
 	l.Foreach(func(e []uint8) {
 		xs = xs.Cons(e)
@@ -243,7 +243,7 @@ func (l ListUint8Arr) Reverse() ListUint8Arr {
 	return xs
 }
 
-func (l ListUint16Arr) Reverse() ListUint16Arr {
+func (l Uint16ArrList) Reverse() Uint16ArrList {
 	xs := NilUint16Arr
 	l.Foreach(func(e []uint16) {
 		xs = xs.Cons(e)
@@ -251,7 +251,7 @@ func (l ListUint16Arr) Reverse() ListUint16Arr {
 	return xs
 }
 
-func (l ListUint32Arr) Reverse() ListUint32Arr {
+func (l Uint32ArrList) Reverse() Uint32ArrList {
 	xs := NilUint32Arr
 	l.Foreach(func(e []uint32) {
 		xs = xs.Cons(e)
@@ -259,7 +259,7 @@ func (l ListUint32Arr) Reverse() ListUint32Arr {
 	return xs
 }
 
-func (l ListUint64Arr) Reverse() ListUint64Arr {
+func (l Uint64ArrList) Reverse() Uint64ArrList {
 	xs := NilUint64Arr
 	l.Foreach(func(e []uint64) {
 		xs = xs.Cons(e)
@@ -267,7 +267,7 @@ func (l ListUint64Arr) Reverse() ListUint64Arr {
 	return xs
 }
 
-func (l ListUintptrArr) Reverse() ListUintptrArr {
+func (l UintptrArrList) Reverse() UintptrArrList {
 	xs := NilUintptrArr
 	l.Foreach(func(e []uintptr) {
 		xs = xs.Cons(e)
@@ -275,7 +275,7 @@ func (l ListUintptrArr) Reverse() ListUintptrArr {
 	return xs
 }
 
-func (l ListFloat32Arr) Reverse() ListFloat32Arr {
+func (l Float32ArrList) Reverse() Float32ArrList {
 	xs := NilFloat32Arr
 	l.Foreach(func(e []float32) {
 		xs = xs.Cons(e)
@@ -283,7 +283,7 @@ func (l ListFloat32Arr) Reverse() ListFloat32Arr {
 	return xs
 }
 
-func (l ListFloat64Arr) Reverse() ListFloat64Arr {
+func (l Float64ArrList) Reverse() Float64ArrList {
 	xs := NilFloat64Arr
 	l.Foreach(func(e []float64) {
 		xs = xs.Cons(e)
@@ -291,7 +291,7 @@ func (l ListFloat64Arr) Reverse() ListFloat64Arr {
 	return xs
 }
 
-func (l ListComplex64Arr) Reverse() ListComplex64Arr {
+func (l Complex64ArrList) Reverse() Complex64ArrList {
 	xs := NilComplex64Arr
 	l.Foreach(func(e []complex64) {
 		xs = xs.Cons(e)
@@ -299,7 +299,7 @@ func (l ListComplex64Arr) Reverse() ListComplex64Arr {
 	return xs
 }
 
-func (l ListComplex128Arr) Reverse() ListComplex128Arr {
+func (l Complex128ArrList) Reverse() Complex128ArrList {
 	xs := NilComplex128Arr
 	l.Foreach(func(e []complex128) {
 		xs = xs.Cons(e)
@@ -307,7 +307,7 @@ func (l ListComplex128Arr) Reverse() ListComplex128Arr {
 	return xs
 }
 
-func (l ListStringArr) Reverse() ListStringArr {
+func (l StringArrList) Reverse() StringArrList {
 	xs := NilStringArr
 	l.Foreach(func(e []string) {
 		xs = xs.Cons(e)
@@ -315,7 +315,7 @@ func (l ListStringArr) Reverse() ListStringArr {
 	return xs
 }
 
-func (l ListAnyArr) Reverse() ListAnyArr {
+func (l AnyArrList) Reverse() AnyArrList {
 	xs := NilAnyArr
 	l.Foreach(func(e []Any) {
 		xs = xs.Cons(e)

@@ -3,7 +3,7 @@
 
 package fp
 
-func (o OptionBool) Filter(p PredicateBool) OptionBool {
+func (o OptionBool) Filter(p BoolPredicate) OptionBool {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -11,7 +11,7 @@ func (o OptionBool) Filter(p PredicateBool) OptionBool {
 	}
 }
 
-func (o OptionRune) Filter(p PredicateRune) OptionRune {
+func (o OptionRune) Filter(p RunePredicate) OptionRune {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -19,7 +19,7 @@ func (o OptionRune) Filter(p PredicateRune) OptionRune {
 	}
 }
 
-func (o OptionByte) Filter(p PredicateByte) OptionByte {
+func (o OptionByte) Filter(p BytePredicate) OptionByte {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -27,7 +27,7 @@ func (o OptionByte) Filter(p PredicateByte) OptionByte {
 	}
 }
 
-func (o OptionInt) Filter(p PredicateInt) OptionInt {
+func (o OptionInt) Filter(p IntPredicate) OptionInt {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -35,7 +35,7 @@ func (o OptionInt) Filter(p PredicateInt) OptionInt {
 	}
 }
 
-func (o OptionInt8) Filter(p PredicateInt8) OptionInt8 {
+func (o OptionInt8) Filter(p Int8Predicate) OptionInt8 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -43,7 +43,7 @@ func (o OptionInt8) Filter(p PredicateInt8) OptionInt8 {
 	}
 }
 
-func (o OptionInt16) Filter(p PredicateInt16) OptionInt16 {
+func (o OptionInt16) Filter(p Int16Predicate) OptionInt16 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -51,7 +51,7 @@ func (o OptionInt16) Filter(p PredicateInt16) OptionInt16 {
 	}
 }
 
-func (o OptionInt32) Filter(p PredicateInt32) OptionInt32 {
+func (o OptionInt32) Filter(p Int32Predicate) OptionInt32 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -59,7 +59,7 @@ func (o OptionInt32) Filter(p PredicateInt32) OptionInt32 {
 	}
 }
 
-func (o OptionInt64) Filter(p PredicateInt64) OptionInt64 {
+func (o OptionInt64) Filter(p Int64Predicate) OptionInt64 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -67,7 +67,7 @@ func (o OptionInt64) Filter(p PredicateInt64) OptionInt64 {
 	}
 }
 
-func (o OptionUint) Filter(p PredicateUint) OptionUint {
+func (o OptionUint) Filter(p UintPredicate) OptionUint {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -75,7 +75,7 @@ func (o OptionUint) Filter(p PredicateUint) OptionUint {
 	}
 }
 
-func (o OptionUint8) Filter(p PredicateUint8) OptionUint8 {
+func (o OptionUint8) Filter(p Uint8Predicate) OptionUint8 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -83,7 +83,7 @@ func (o OptionUint8) Filter(p PredicateUint8) OptionUint8 {
 	}
 }
 
-func (o OptionUint16) Filter(p PredicateUint16) OptionUint16 {
+func (o OptionUint16) Filter(p Uint16Predicate) OptionUint16 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -91,7 +91,7 @@ func (o OptionUint16) Filter(p PredicateUint16) OptionUint16 {
 	}
 }
 
-func (o OptionUint32) Filter(p PredicateUint32) OptionUint32 {
+func (o OptionUint32) Filter(p Uint32Predicate) OptionUint32 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -99,7 +99,7 @@ func (o OptionUint32) Filter(p PredicateUint32) OptionUint32 {
 	}
 }
 
-func (o OptionUint64) Filter(p PredicateUint64) OptionUint64 {
+func (o OptionUint64) Filter(p Uint64Predicate) OptionUint64 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -107,7 +107,7 @@ func (o OptionUint64) Filter(p PredicateUint64) OptionUint64 {
 	}
 }
 
-func (o OptionUintptr) Filter(p PredicateUintptr) OptionUintptr {
+func (o OptionUintptr) Filter(p UintptrPredicate) OptionUintptr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -115,7 +115,7 @@ func (o OptionUintptr) Filter(p PredicateUintptr) OptionUintptr {
 	}
 }
 
-func (o OptionFloat32) Filter(p PredicateFloat32) OptionFloat32 {
+func (o OptionFloat32) Filter(p Float32Predicate) OptionFloat32 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -123,7 +123,7 @@ func (o OptionFloat32) Filter(p PredicateFloat32) OptionFloat32 {
 	}
 }
 
-func (o OptionFloat64) Filter(p PredicateFloat64) OptionFloat64 {
+func (o OptionFloat64) Filter(p Float64Predicate) OptionFloat64 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -131,7 +131,7 @@ func (o OptionFloat64) Filter(p PredicateFloat64) OptionFloat64 {
 	}
 }
 
-func (o OptionComplex64) Filter(p PredicateComplex64) OptionComplex64 {
+func (o OptionComplex64) Filter(p Complex64Predicate) OptionComplex64 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -139,7 +139,7 @@ func (o OptionComplex64) Filter(p PredicateComplex64) OptionComplex64 {
 	}
 }
 
-func (o OptionComplex128) Filter(p PredicateComplex128) OptionComplex128 {
+func (o OptionComplex128) Filter(p Complex128Predicate) OptionComplex128 {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -147,7 +147,7 @@ func (o OptionComplex128) Filter(p PredicateComplex128) OptionComplex128 {
 	}
 }
 
-func (o OptionString) Filter(p PredicateString) OptionString {
+func (o OptionString) Filter(p StringPredicate) OptionString {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -155,7 +155,7 @@ func (o OptionString) Filter(p PredicateString) OptionString {
 	}
 }
 
-func (o OptionAny) Filter(p PredicateAny) OptionAny {
+func (o OptionAny) Filter(p AnyPredicate) OptionAny {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -163,7 +163,7 @@ func (o OptionAny) Filter(p PredicateAny) OptionAny {
 	}
 }
 
-func (o OptionBoolArr) Filter(p PredicateBoolArr) OptionBoolArr {
+func (o OptionBoolArr) Filter(p BoolArrPredicate) OptionBoolArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -171,7 +171,7 @@ func (o OptionBoolArr) Filter(p PredicateBoolArr) OptionBoolArr {
 	}
 }
 
-func (o OptionRuneArr) Filter(p PredicateRuneArr) OptionRuneArr {
+func (o OptionRuneArr) Filter(p RuneArrPredicate) OptionRuneArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -179,7 +179,7 @@ func (o OptionRuneArr) Filter(p PredicateRuneArr) OptionRuneArr {
 	}
 }
 
-func (o OptionByteArr) Filter(p PredicateByteArr) OptionByteArr {
+func (o OptionByteArr) Filter(p ByteArrPredicate) OptionByteArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -187,7 +187,7 @@ func (o OptionByteArr) Filter(p PredicateByteArr) OptionByteArr {
 	}
 }
 
-func (o OptionIntArr) Filter(p PredicateIntArr) OptionIntArr {
+func (o OptionIntArr) Filter(p IntArrPredicate) OptionIntArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -195,7 +195,7 @@ func (o OptionIntArr) Filter(p PredicateIntArr) OptionIntArr {
 	}
 }
 
-func (o OptionInt8Arr) Filter(p PredicateInt8Arr) OptionInt8Arr {
+func (o OptionInt8Arr) Filter(p Int8ArrPredicate) OptionInt8Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -203,7 +203,7 @@ func (o OptionInt8Arr) Filter(p PredicateInt8Arr) OptionInt8Arr {
 	}
 }
 
-func (o OptionInt16Arr) Filter(p PredicateInt16Arr) OptionInt16Arr {
+func (o OptionInt16Arr) Filter(p Int16ArrPredicate) OptionInt16Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -211,7 +211,7 @@ func (o OptionInt16Arr) Filter(p PredicateInt16Arr) OptionInt16Arr {
 	}
 }
 
-func (o OptionInt32Arr) Filter(p PredicateInt32Arr) OptionInt32Arr {
+func (o OptionInt32Arr) Filter(p Int32ArrPredicate) OptionInt32Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -219,7 +219,7 @@ func (o OptionInt32Arr) Filter(p PredicateInt32Arr) OptionInt32Arr {
 	}
 }
 
-func (o OptionInt64Arr) Filter(p PredicateInt64Arr) OptionInt64Arr {
+func (o OptionInt64Arr) Filter(p Int64ArrPredicate) OptionInt64Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -227,7 +227,7 @@ func (o OptionInt64Arr) Filter(p PredicateInt64Arr) OptionInt64Arr {
 	}
 }
 
-func (o OptionUintArr) Filter(p PredicateUintArr) OptionUintArr {
+func (o OptionUintArr) Filter(p UintArrPredicate) OptionUintArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -235,7 +235,7 @@ func (o OptionUintArr) Filter(p PredicateUintArr) OptionUintArr {
 	}
 }
 
-func (o OptionUint8Arr) Filter(p PredicateUint8Arr) OptionUint8Arr {
+func (o OptionUint8Arr) Filter(p Uint8ArrPredicate) OptionUint8Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -243,7 +243,7 @@ func (o OptionUint8Arr) Filter(p PredicateUint8Arr) OptionUint8Arr {
 	}
 }
 
-func (o OptionUint16Arr) Filter(p PredicateUint16Arr) OptionUint16Arr {
+func (o OptionUint16Arr) Filter(p Uint16ArrPredicate) OptionUint16Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -251,7 +251,7 @@ func (o OptionUint16Arr) Filter(p PredicateUint16Arr) OptionUint16Arr {
 	}
 }
 
-func (o OptionUint32Arr) Filter(p PredicateUint32Arr) OptionUint32Arr {
+func (o OptionUint32Arr) Filter(p Uint32ArrPredicate) OptionUint32Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -259,7 +259,7 @@ func (o OptionUint32Arr) Filter(p PredicateUint32Arr) OptionUint32Arr {
 	}
 }
 
-func (o OptionUint64Arr) Filter(p PredicateUint64Arr) OptionUint64Arr {
+func (o OptionUint64Arr) Filter(p Uint64ArrPredicate) OptionUint64Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -267,7 +267,7 @@ func (o OptionUint64Arr) Filter(p PredicateUint64Arr) OptionUint64Arr {
 	}
 }
 
-func (o OptionUintptrArr) Filter(p PredicateUintptrArr) OptionUintptrArr {
+func (o OptionUintptrArr) Filter(p UintptrArrPredicate) OptionUintptrArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -275,7 +275,7 @@ func (o OptionUintptrArr) Filter(p PredicateUintptrArr) OptionUintptrArr {
 	}
 }
 
-func (o OptionFloat32Arr) Filter(p PredicateFloat32Arr) OptionFloat32Arr {
+func (o OptionFloat32Arr) Filter(p Float32ArrPredicate) OptionFloat32Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -283,7 +283,7 @@ func (o OptionFloat32Arr) Filter(p PredicateFloat32Arr) OptionFloat32Arr {
 	}
 }
 
-func (o OptionFloat64Arr) Filter(p PredicateFloat64Arr) OptionFloat64Arr {
+func (o OptionFloat64Arr) Filter(p Float64ArrPredicate) OptionFloat64Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -291,7 +291,7 @@ func (o OptionFloat64Arr) Filter(p PredicateFloat64Arr) OptionFloat64Arr {
 	}
 }
 
-func (o OptionComplex64Arr) Filter(p PredicateComplex64Arr) OptionComplex64Arr {
+func (o OptionComplex64Arr) Filter(p Complex64ArrPredicate) OptionComplex64Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -299,7 +299,7 @@ func (o OptionComplex64Arr) Filter(p PredicateComplex64Arr) OptionComplex64Arr {
 	}
 }
 
-func (o OptionComplex128Arr) Filter(p PredicateComplex128Arr) OptionComplex128Arr {
+func (o OptionComplex128Arr) Filter(p Complex128ArrPredicate) OptionComplex128Arr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -307,7 +307,7 @@ func (o OptionComplex128Arr) Filter(p PredicateComplex128Arr) OptionComplex128Ar
 	}
 }
 
-func (o OptionStringArr) Filter(p PredicateStringArr) OptionStringArr {
+func (o OptionStringArr) Filter(p StringArrPredicate) OptionStringArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {
@@ -315,7 +315,7 @@ func (o OptionStringArr) Filter(p PredicateStringArr) OptionStringArr {
 	}
 }
 
-func (o OptionAnyArr) Filter(p PredicateAnyArr) OptionAnyArr {
+func (o OptionAnyArr) Filter(p AnyArrPredicate) OptionAnyArr {
 	if o.IsDefined() && p(*o.value) {
 		return o
 	} else {

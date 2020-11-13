@@ -3,3996 +3,3996 @@
 
 package fp
 
-func (f1 FunctorBoolBool) MapBool(f2 FunctorBoolBool) FunctorBoolBool {
+func (f1 BoolBoolFunctor) MapBool(f2 BoolBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapRune(f2 FunctorBoolRune) FunctorBoolRune {
+func (f1 BoolBoolFunctor) MapRune(f2 BoolRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapByte(f2 FunctorBoolByte) FunctorBoolByte {
+func (f1 BoolBoolFunctor) MapByte(f2 BoolByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapInt(f2 FunctorBoolInt) FunctorBoolInt {
+func (f1 BoolBoolFunctor) MapInt(f2 BoolIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapInt64(f2 FunctorBoolInt64) FunctorBoolInt64 {
+func (f1 BoolBoolFunctor) MapInt64(f2 BoolInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapUint(f2 FunctorBoolUint) FunctorBoolUint {
+func (f1 BoolBoolFunctor) MapUint(f2 BoolUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapUint64(f2 FunctorBoolUint64) FunctorBoolUint64 {
+func (f1 BoolBoolFunctor) MapUint64(f2 BoolUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapFloat32(f2 FunctorBoolFloat32) FunctorBoolFloat32 {
+func (f1 BoolBoolFunctor) MapFloat32(f2 BoolFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapFloat64(f2 FunctorBoolFloat64) FunctorBoolFloat64 {
+func (f1 BoolBoolFunctor) MapFloat64(f2 BoolFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapString(f2 FunctorBoolString) FunctorBoolString {
+func (f1 BoolBoolFunctor) MapString(f2 BoolStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolBool) MapAny(f2 FunctorBoolAny) FunctorBoolAny {
+func (f1 BoolBoolFunctor) MapAny(f2 BoolAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapBool(f2 FunctorRuneBool) FunctorBoolBool {
+func (f1 BoolRuneFunctor) MapBool(f2 RuneBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapRune(f2 FunctorRuneRune) FunctorBoolRune {
+func (f1 BoolRuneFunctor) MapRune(f2 RuneRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapByte(f2 FunctorRuneByte) FunctorBoolByte {
+func (f1 BoolRuneFunctor) MapByte(f2 RuneByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapInt(f2 FunctorRuneInt) FunctorBoolInt {
+func (f1 BoolRuneFunctor) MapInt(f2 RuneIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapInt64(f2 FunctorRuneInt64) FunctorBoolInt64 {
+func (f1 BoolRuneFunctor) MapInt64(f2 RuneInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapUint(f2 FunctorRuneUint) FunctorBoolUint {
+func (f1 BoolRuneFunctor) MapUint(f2 RuneUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapUint64(f2 FunctorRuneUint64) FunctorBoolUint64 {
+func (f1 BoolRuneFunctor) MapUint64(f2 RuneUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapFloat32(f2 FunctorRuneFloat32) FunctorBoolFloat32 {
+func (f1 BoolRuneFunctor) MapFloat32(f2 RuneFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapFloat64(f2 FunctorRuneFloat64) FunctorBoolFloat64 {
+func (f1 BoolRuneFunctor) MapFloat64(f2 RuneFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapString(f2 FunctorRuneString) FunctorBoolString {
+func (f1 BoolRuneFunctor) MapString(f2 RuneStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolRune) MapAny(f2 FunctorRuneAny) FunctorBoolAny {
+func (f1 BoolRuneFunctor) MapAny(f2 RuneAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapBool(f2 FunctorByteBool) FunctorBoolBool {
+func (f1 BoolByteFunctor) MapBool(f2 ByteBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapRune(f2 FunctorByteRune) FunctorBoolRune {
+func (f1 BoolByteFunctor) MapRune(f2 ByteRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapByte(f2 FunctorByteByte) FunctorBoolByte {
+func (f1 BoolByteFunctor) MapByte(f2 ByteByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapInt(f2 FunctorByteInt) FunctorBoolInt {
+func (f1 BoolByteFunctor) MapInt(f2 ByteIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapInt64(f2 FunctorByteInt64) FunctorBoolInt64 {
+func (f1 BoolByteFunctor) MapInt64(f2 ByteInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapUint(f2 FunctorByteUint) FunctorBoolUint {
+func (f1 BoolByteFunctor) MapUint(f2 ByteUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapUint64(f2 FunctorByteUint64) FunctorBoolUint64 {
+func (f1 BoolByteFunctor) MapUint64(f2 ByteUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapFloat32(f2 FunctorByteFloat32) FunctorBoolFloat32 {
+func (f1 BoolByteFunctor) MapFloat32(f2 ByteFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapFloat64(f2 FunctorByteFloat64) FunctorBoolFloat64 {
+func (f1 BoolByteFunctor) MapFloat64(f2 ByteFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapString(f2 FunctorByteString) FunctorBoolString {
+func (f1 BoolByteFunctor) MapString(f2 ByteStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolByte) MapAny(f2 FunctorByteAny) FunctorBoolAny {
+func (f1 BoolByteFunctor) MapAny(f2 ByteAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapBool(f2 FunctorIntBool) FunctorBoolBool {
+func (f1 BoolIntFunctor) MapBool(f2 IntBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapRune(f2 FunctorIntRune) FunctorBoolRune {
+func (f1 BoolIntFunctor) MapRune(f2 IntRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapByte(f2 FunctorIntByte) FunctorBoolByte {
+func (f1 BoolIntFunctor) MapByte(f2 IntByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapInt(f2 FunctorIntInt) FunctorBoolInt {
+func (f1 BoolIntFunctor) MapInt(f2 IntIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapInt64(f2 FunctorIntInt64) FunctorBoolInt64 {
+func (f1 BoolIntFunctor) MapInt64(f2 IntInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapUint(f2 FunctorIntUint) FunctorBoolUint {
+func (f1 BoolIntFunctor) MapUint(f2 IntUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapUint64(f2 FunctorIntUint64) FunctorBoolUint64 {
+func (f1 BoolIntFunctor) MapUint64(f2 IntUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapFloat32(f2 FunctorIntFloat32) FunctorBoolFloat32 {
+func (f1 BoolIntFunctor) MapFloat32(f2 IntFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapFloat64(f2 FunctorIntFloat64) FunctorBoolFloat64 {
+func (f1 BoolIntFunctor) MapFloat64(f2 IntFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapString(f2 FunctorIntString) FunctorBoolString {
+func (f1 BoolIntFunctor) MapString(f2 IntStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt) MapAny(f2 FunctorIntAny) FunctorBoolAny {
+func (f1 BoolIntFunctor) MapAny(f2 IntAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapBool(f2 FunctorInt64Bool) FunctorBoolBool {
+func (f1 BoolInt64Functor) MapBool(f2 Int64BoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapRune(f2 FunctorInt64Rune) FunctorBoolRune {
+func (f1 BoolInt64Functor) MapRune(f2 Int64RuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapByte(f2 FunctorInt64Byte) FunctorBoolByte {
+func (f1 BoolInt64Functor) MapByte(f2 Int64ByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapInt(f2 FunctorInt64Int) FunctorBoolInt {
+func (f1 BoolInt64Functor) MapInt(f2 Int64IntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapInt64(f2 FunctorInt64Int64) FunctorBoolInt64 {
+func (f1 BoolInt64Functor) MapInt64(f2 Int64Int64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapUint(f2 FunctorInt64Uint) FunctorBoolUint {
+func (f1 BoolInt64Functor) MapUint(f2 Int64UintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapUint64(f2 FunctorInt64Uint64) FunctorBoolUint64 {
+func (f1 BoolInt64Functor) MapUint64(f2 Int64Uint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapFloat32(f2 FunctorInt64Float32) FunctorBoolFloat32 {
+func (f1 BoolInt64Functor) MapFloat32(f2 Int64Float32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapFloat64(f2 FunctorInt64Float64) FunctorBoolFloat64 {
+func (f1 BoolInt64Functor) MapFloat64(f2 Int64Float64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapString(f2 FunctorInt64String) FunctorBoolString {
+func (f1 BoolInt64Functor) MapString(f2 Int64StringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolInt64) MapAny(f2 FunctorInt64Any) FunctorBoolAny {
+func (f1 BoolInt64Functor) MapAny(f2 Int64AnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapBool(f2 FunctorUintBool) FunctorBoolBool {
+func (f1 BoolUintFunctor) MapBool(f2 UintBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapRune(f2 FunctorUintRune) FunctorBoolRune {
+func (f1 BoolUintFunctor) MapRune(f2 UintRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapByte(f2 FunctorUintByte) FunctorBoolByte {
+func (f1 BoolUintFunctor) MapByte(f2 UintByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapInt(f2 FunctorUintInt) FunctorBoolInt {
+func (f1 BoolUintFunctor) MapInt(f2 UintIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapInt64(f2 FunctorUintInt64) FunctorBoolInt64 {
+func (f1 BoolUintFunctor) MapInt64(f2 UintInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapUint(f2 FunctorUintUint) FunctorBoolUint {
+func (f1 BoolUintFunctor) MapUint(f2 UintUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapUint64(f2 FunctorUintUint64) FunctorBoolUint64 {
+func (f1 BoolUintFunctor) MapUint64(f2 UintUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapFloat32(f2 FunctorUintFloat32) FunctorBoolFloat32 {
+func (f1 BoolUintFunctor) MapFloat32(f2 UintFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapFloat64(f2 FunctorUintFloat64) FunctorBoolFloat64 {
+func (f1 BoolUintFunctor) MapFloat64(f2 UintFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapString(f2 FunctorUintString) FunctorBoolString {
+func (f1 BoolUintFunctor) MapString(f2 UintStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint) MapAny(f2 FunctorUintAny) FunctorBoolAny {
+func (f1 BoolUintFunctor) MapAny(f2 UintAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapBool(f2 FunctorUint64Bool) FunctorBoolBool {
+func (f1 BoolUint64Functor) MapBool(f2 Uint64BoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapRune(f2 FunctorUint64Rune) FunctorBoolRune {
+func (f1 BoolUint64Functor) MapRune(f2 Uint64RuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapByte(f2 FunctorUint64Byte) FunctorBoolByte {
+func (f1 BoolUint64Functor) MapByte(f2 Uint64ByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapInt(f2 FunctorUint64Int) FunctorBoolInt {
+func (f1 BoolUint64Functor) MapInt(f2 Uint64IntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapInt64(f2 FunctorUint64Int64) FunctorBoolInt64 {
+func (f1 BoolUint64Functor) MapInt64(f2 Uint64Int64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapUint(f2 FunctorUint64Uint) FunctorBoolUint {
+func (f1 BoolUint64Functor) MapUint(f2 Uint64UintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapUint64(f2 FunctorUint64Uint64) FunctorBoolUint64 {
+func (f1 BoolUint64Functor) MapUint64(f2 Uint64Uint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapFloat32(f2 FunctorUint64Float32) FunctorBoolFloat32 {
+func (f1 BoolUint64Functor) MapFloat32(f2 Uint64Float32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapFloat64(f2 FunctorUint64Float64) FunctorBoolFloat64 {
+func (f1 BoolUint64Functor) MapFloat64(f2 Uint64Float64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapString(f2 FunctorUint64String) FunctorBoolString {
+func (f1 BoolUint64Functor) MapString(f2 Uint64StringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolUint64) MapAny(f2 FunctorUint64Any) FunctorBoolAny {
+func (f1 BoolUint64Functor) MapAny(f2 Uint64AnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapBool(f2 FunctorFloat32Bool) FunctorBoolBool {
+func (f1 BoolFloat32Functor) MapBool(f2 Float32BoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapRune(f2 FunctorFloat32Rune) FunctorBoolRune {
+func (f1 BoolFloat32Functor) MapRune(f2 Float32RuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapByte(f2 FunctorFloat32Byte) FunctorBoolByte {
+func (f1 BoolFloat32Functor) MapByte(f2 Float32ByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapInt(f2 FunctorFloat32Int) FunctorBoolInt {
+func (f1 BoolFloat32Functor) MapInt(f2 Float32IntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorBoolInt64 {
+func (f1 BoolFloat32Functor) MapInt64(f2 Float32Int64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapUint(f2 FunctorFloat32Uint) FunctorBoolUint {
+func (f1 BoolFloat32Functor) MapUint(f2 Float32UintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorBoolUint64 {
+func (f1 BoolFloat32Functor) MapUint64(f2 Float32Uint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorBoolFloat32 {
+func (f1 BoolFloat32Functor) MapFloat32(f2 Float32Float32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorBoolFloat64 {
+func (f1 BoolFloat32Functor) MapFloat64(f2 Float32Float64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapString(f2 FunctorFloat32String) FunctorBoolString {
+func (f1 BoolFloat32Functor) MapString(f2 Float32StringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat32) MapAny(f2 FunctorFloat32Any) FunctorBoolAny {
+func (f1 BoolFloat32Functor) MapAny(f2 Float32AnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapBool(f2 FunctorFloat64Bool) FunctorBoolBool {
+func (f1 BoolFloat64Functor) MapBool(f2 Float64BoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapRune(f2 FunctorFloat64Rune) FunctorBoolRune {
+func (f1 BoolFloat64Functor) MapRune(f2 Float64RuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapByte(f2 FunctorFloat64Byte) FunctorBoolByte {
+func (f1 BoolFloat64Functor) MapByte(f2 Float64ByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapInt(f2 FunctorFloat64Int) FunctorBoolInt {
+func (f1 BoolFloat64Functor) MapInt(f2 Float64IntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorBoolInt64 {
+func (f1 BoolFloat64Functor) MapInt64(f2 Float64Int64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapUint(f2 FunctorFloat64Uint) FunctorBoolUint {
+func (f1 BoolFloat64Functor) MapUint(f2 Float64UintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorBoolUint64 {
+func (f1 BoolFloat64Functor) MapUint64(f2 Float64Uint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorBoolFloat32 {
+func (f1 BoolFloat64Functor) MapFloat32(f2 Float64Float32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorBoolFloat64 {
+func (f1 BoolFloat64Functor) MapFloat64(f2 Float64Float64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapString(f2 FunctorFloat64String) FunctorBoolString {
+func (f1 BoolFloat64Functor) MapString(f2 Float64StringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolFloat64) MapAny(f2 FunctorFloat64Any) FunctorBoolAny {
+func (f1 BoolFloat64Functor) MapAny(f2 Float64AnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapBool(f2 FunctorStringBool) FunctorBoolBool {
+func (f1 BoolStringFunctor) MapBool(f2 StringBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapRune(f2 FunctorStringRune) FunctorBoolRune {
+func (f1 BoolStringFunctor) MapRune(f2 StringRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapByte(f2 FunctorStringByte) FunctorBoolByte {
+func (f1 BoolStringFunctor) MapByte(f2 StringByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapInt(f2 FunctorStringInt) FunctorBoolInt {
+func (f1 BoolStringFunctor) MapInt(f2 StringIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapInt64(f2 FunctorStringInt64) FunctorBoolInt64 {
+func (f1 BoolStringFunctor) MapInt64(f2 StringInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapUint(f2 FunctorStringUint) FunctorBoolUint {
+func (f1 BoolStringFunctor) MapUint(f2 StringUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapUint64(f2 FunctorStringUint64) FunctorBoolUint64 {
+func (f1 BoolStringFunctor) MapUint64(f2 StringUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapFloat32(f2 FunctorStringFloat32) FunctorBoolFloat32 {
+func (f1 BoolStringFunctor) MapFloat32(f2 StringFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapFloat64(f2 FunctorStringFloat64) FunctorBoolFloat64 {
+func (f1 BoolStringFunctor) MapFloat64(f2 StringFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapString(f2 FunctorStringString) FunctorBoolString {
+func (f1 BoolStringFunctor) MapString(f2 StringStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolString) MapAny(f2 FunctorStringAny) FunctorBoolAny {
+func (f1 BoolStringFunctor) MapAny(f2 StringAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapBool(f2 FunctorAnyBool) FunctorBoolBool {
+func (f1 BoolAnyFunctor) MapBool(f2 AnyBoolFunctor) BoolBoolFunctor {
 	return func(e bool) bool { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapRune(f2 FunctorAnyRune) FunctorBoolRune {
+func (f1 BoolAnyFunctor) MapRune(f2 AnyRuneFunctor) BoolRuneFunctor {
 	return func(e bool) rune { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapByte(f2 FunctorAnyByte) FunctorBoolByte {
+func (f1 BoolAnyFunctor) MapByte(f2 AnyByteFunctor) BoolByteFunctor {
 	return func(e bool) byte { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapInt(f2 FunctorAnyInt) FunctorBoolInt {
+func (f1 BoolAnyFunctor) MapInt(f2 AnyIntFunctor) BoolIntFunctor {
 	return func(e bool) int { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapInt64(f2 FunctorAnyInt64) FunctorBoolInt64 {
+func (f1 BoolAnyFunctor) MapInt64(f2 AnyInt64Functor) BoolInt64Functor {
 	return func(e bool) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapUint(f2 FunctorAnyUint) FunctorBoolUint {
+func (f1 BoolAnyFunctor) MapUint(f2 AnyUintFunctor) BoolUintFunctor {
 	return func(e bool) uint { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapUint64(f2 FunctorAnyUint64) FunctorBoolUint64 {
+func (f1 BoolAnyFunctor) MapUint64(f2 AnyUint64Functor) BoolUint64Functor {
 	return func(e bool) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapFloat32(f2 FunctorAnyFloat32) FunctorBoolFloat32 {
+func (f1 BoolAnyFunctor) MapFloat32(f2 AnyFloat32Functor) BoolFloat32Functor {
 	return func(e bool) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapFloat64(f2 FunctorAnyFloat64) FunctorBoolFloat64 {
+func (f1 BoolAnyFunctor) MapFloat64(f2 AnyFloat64Functor) BoolFloat64Functor {
 	return func(e bool) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapString(f2 FunctorAnyString) FunctorBoolString {
+func (f1 BoolAnyFunctor) MapString(f2 AnyStringFunctor) BoolStringFunctor {
 	return func(e bool) string { return f2(f1(e)) }
 }
-func (f1 FunctorBoolAny) MapAny(f2 FunctorAnyAny) FunctorBoolAny {
+func (f1 BoolAnyFunctor) MapAny(f2 AnyAnyFunctor) BoolAnyFunctor {
 	return func(e bool) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapBool(f2 FunctorBoolBool) FunctorRuneBool {
+func (f1 RuneBoolFunctor) MapBool(f2 BoolBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapRune(f2 FunctorBoolRune) FunctorRuneRune {
+func (f1 RuneBoolFunctor) MapRune(f2 BoolRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapByte(f2 FunctorBoolByte) FunctorRuneByte {
+func (f1 RuneBoolFunctor) MapByte(f2 BoolByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapInt(f2 FunctorBoolInt) FunctorRuneInt {
+func (f1 RuneBoolFunctor) MapInt(f2 BoolIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapInt64(f2 FunctorBoolInt64) FunctorRuneInt64 {
+func (f1 RuneBoolFunctor) MapInt64(f2 BoolInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapUint(f2 FunctorBoolUint) FunctorRuneUint {
+func (f1 RuneBoolFunctor) MapUint(f2 BoolUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapUint64(f2 FunctorBoolUint64) FunctorRuneUint64 {
+func (f1 RuneBoolFunctor) MapUint64(f2 BoolUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapFloat32(f2 FunctorBoolFloat32) FunctorRuneFloat32 {
+func (f1 RuneBoolFunctor) MapFloat32(f2 BoolFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapFloat64(f2 FunctorBoolFloat64) FunctorRuneFloat64 {
+func (f1 RuneBoolFunctor) MapFloat64(f2 BoolFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapString(f2 FunctorBoolString) FunctorRuneString {
+func (f1 RuneBoolFunctor) MapString(f2 BoolStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneBool) MapAny(f2 FunctorBoolAny) FunctorRuneAny {
+func (f1 RuneBoolFunctor) MapAny(f2 BoolAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapBool(f2 FunctorRuneBool) FunctorRuneBool {
+func (f1 RuneRuneFunctor) MapBool(f2 RuneBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapRune(f2 FunctorRuneRune) FunctorRuneRune {
+func (f1 RuneRuneFunctor) MapRune(f2 RuneRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapByte(f2 FunctorRuneByte) FunctorRuneByte {
+func (f1 RuneRuneFunctor) MapByte(f2 RuneByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapInt(f2 FunctorRuneInt) FunctorRuneInt {
+func (f1 RuneRuneFunctor) MapInt(f2 RuneIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapInt64(f2 FunctorRuneInt64) FunctorRuneInt64 {
+func (f1 RuneRuneFunctor) MapInt64(f2 RuneInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapUint(f2 FunctorRuneUint) FunctorRuneUint {
+func (f1 RuneRuneFunctor) MapUint(f2 RuneUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapUint64(f2 FunctorRuneUint64) FunctorRuneUint64 {
+func (f1 RuneRuneFunctor) MapUint64(f2 RuneUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapFloat32(f2 FunctorRuneFloat32) FunctorRuneFloat32 {
+func (f1 RuneRuneFunctor) MapFloat32(f2 RuneFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapFloat64(f2 FunctorRuneFloat64) FunctorRuneFloat64 {
+func (f1 RuneRuneFunctor) MapFloat64(f2 RuneFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapString(f2 FunctorRuneString) FunctorRuneString {
+func (f1 RuneRuneFunctor) MapString(f2 RuneStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneRune) MapAny(f2 FunctorRuneAny) FunctorRuneAny {
+func (f1 RuneRuneFunctor) MapAny(f2 RuneAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapBool(f2 FunctorByteBool) FunctorRuneBool {
+func (f1 RuneByteFunctor) MapBool(f2 ByteBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapRune(f2 FunctorByteRune) FunctorRuneRune {
+func (f1 RuneByteFunctor) MapRune(f2 ByteRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapByte(f2 FunctorByteByte) FunctorRuneByte {
+func (f1 RuneByteFunctor) MapByte(f2 ByteByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapInt(f2 FunctorByteInt) FunctorRuneInt {
+func (f1 RuneByteFunctor) MapInt(f2 ByteIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapInt64(f2 FunctorByteInt64) FunctorRuneInt64 {
+func (f1 RuneByteFunctor) MapInt64(f2 ByteInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapUint(f2 FunctorByteUint) FunctorRuneUint {
+func (f1 RuneByteFunctor) MapUint(f2 ByteUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapUint64(f2 FunctorByteUint64) FunctorRuneUint64 {
+func (f1 RuneByteFunctor) MapUint64(f2 ByteUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapFloat32(f2 FunctorByteFloat32) FunctorRuneFloat32 {
+func (f1 RuneByteFunctor) MapFloat32(f2 ByteFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapFloat64(f2 FunctorByteFloat64) FunctorRuneFloat64 {
+func (f1 RuneByteFunctor) MapFloat64(f2 ByteFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapString(f2 FunctorByteString) FunctorRuneString {
+func (f1 RuneByteFunctor) MapString(f2 ByteStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneByte) MapAny(f2 FunctorByteAny) FunctorRuneAny {
+func (f1 RuneByteFunctor) MapAny(f2 ByteAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapBool(f2 FunctorIntBool) FunctorRuneBool {
+func (f1 RuneIntFunctor) MapBool(f2 IntBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapRune(f2 FunctorIntRune) FunctorRuneRune {
+func (f1 RuneIntFunctor) MapRune(f2 IntRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapByte(f2 FunctorIntByte) FunctorRuneByte {
+func (f1 RuneIntFunctor) MapByte(f2 IntByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapInt(f2 FunctorIntInt) FunctorRuneInt {
+func (f1 RuneIntFunctor) MapInt(f2 IntIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapInt64(f2 FunctorIntInt64) FunctorRuneInt64 {
+func (f1 RuneIntFunctor) MapInt64(f2 IntInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapUint(f2 FunctorIntUint) FunctorRuneUint {
+func (f1 RuneIntFunctor) MapUint(f2 IntUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapUint64(f2 FunctorIntUint64) FunctorRuneUint64 {
+func (f1 RuneIntFunctor) MapUint64(f2 IntUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapFloat32(f2 FunctorIntFloat32) FunctorRuneFloat32 {
+func (f1 RuneIntFunctor) MapFloat32(f2 IntFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapFloat64(f2 FunctorIntFloat64) FunctorRuneFloat64 {
+func (f1 RuneIntFunctor) MapFloat64(f2 IntFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapString(f2 FunctorIntString) FunctorRuneString {
+func (f1 RuneIntFunctor) MapString(f2 IntStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt) MapAny(f2 FunctorIntAny) FunctorRuneAny {
+func (f1 RuneIntFunctor) MapAny(f2 IntAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapBool(f2 FunctorInt64Bool) FunctorRuneBool {
+func (f1 RuneInt64Functor) MapBool(f2 Int64BoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapRune(f2 FunctorInt64Rune) FunctorRuneRune {
+func (f1 RuneInt64Functor) MapRune(f2 Int64RuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapByte(f2 FunctorInt64Byte) FunctorRuneByte {
+func (f1 RuneInt64Functor) MapByte(f2 Int64ByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapInt(f2 FunctorInt64Int) FunctorRuneInt {
+func (f1 RuneInt64Functor) MapInt(f2 Int64IntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapInt64(f2 FunctorInt64Int64) FunctorRuneInt64 {
+func (f1 RuneInt64Functor) MapInt64(f2 Int64Int64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapUint(f2 FunctorInt64Uint) FunctorRuneUint {
+func (f1 RuneInt64Functor) MapUint(f2 Int64UintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapUint64(f2 FunctorInt64Uint64) FunctorRuneUint64 {
+func (f1 RuneInt64Functor) MapUint64(f2 Int64Uint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapFloat32(f2 FunctorInt64Float32) FunctorRuneFloat32 {
+func (f1 RuneInt64Functor) MapFloat32(f2 Int64Float32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapFloat64(f2 FunctorInt64Float64) FunctorRuneFloat64 {
+func (f1 RuneInt64Functor) MapFloat64(f2 Int64Float64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapString(f2 FunctorInt64String) FunctorRuneString {
+func (f1 RuneInt64Functor) MapString(f2 Int64StringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneInt64) MapAny(f2 FunctorInt64Any) FunctorRuneAny {
+func (f1 RuneInt64Functor) MapAny(f2 Int64AnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapBool(f2 FunctorUintBool) FunctorRuneBool {
+func (f1 RuneUintFunctor) MapBool(f2 UintBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapRune(f2 FunctorUintRune) FunctorRuneRune {
+func (f1 RuneUintFunctor) MapRune(f2 UintRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapByte(f2 FunctorUintByte) FunctorRuneByte {
+func (f1 RuneUintFunctor) MapByte(f2 UintByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapInt(f2 FunctorUintInt) FunctorRuneInt {
+func (f1 RuneUintFunctor) MapInt(f2 UintIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapInt64(f2 FunctorUintInt64) FunctorRuneInt64 {
+func (f1 RuneUintFunctor) MapInt64(f2 UintInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapUint(f2 FunctorUintUint) FunctorRuneUint {
+func (f1 RuneUintFunctor) MapUint(f2 UintUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapUint64(f2 FunctorUintUint64) FunctorRuneUint64 {
+func (f1 RuneUintFunctor) MapUint64(f2 UintUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapFloat32(f2 FunctorUintFloat32) FunctorRuneFloat32 {
+func (f1 RuneUintFunctor) MapFloat32(f2 UintFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapFloat64(f2 FunctorUintFloat64) FunctorRuneFloat64 {
+func (f1 RuneUintFunctor) MapFloat64(f2 UintFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapString(f2 FunctorUintString) FunctorRuneString {
+func (f1 RuneUintFunctor) MapString(f2 UintStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint) MapAny(f2 FunctorUintAny) FunctorRuneAny {
+func (f1 RuneUintFunctor) MapAny(f2 UintAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapBool(f2 FunctorUint64Bool) FunctorRuneBool {
+func (f1 RuneUint64Functor) MapBool(f2 Uint64BoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapRune(f2 FunctorUint64Rune) FunctorRuneRune {
+func (f1 RuneUint64Functor) MapRune(f2 Uint64RuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapByte(f2 FunctorUint64Byte) FunctorRuneByte {
+func (f1 RuneUint64Functor) MapByte(f2 Uint64ByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapInt(f2 FunctorUint64Int) FunctorRuneInt {
+func (f1 RuneUint64Functor) MapInt(f2 Uint64IntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapInt64(f2 FunctorUint64Int64) FunctorRuneInt64 {
+func (f1 RuneUint64Functor) MapInt64(f2 Uint64Int64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapUint(f2 FunctorUint64Uint) FunctorRuneUint {
+func (f1 RuneUint64Functor) MapUint(f2 Uint64UintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapUint64(f2 FunctorUint64Uint64) FunctorRuneUint64 {
+func (f1 RuneUint64Functor) MapUint64(f2 Uint64Uint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapFloat32(f2 FunctorUint64Float32) FunctorRuneFloat32 {
+func (f1 RuneUint64Functor) MapFloat32(f2 Uint64Float32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapFloat64(f2 FunctorUint64Float64) FunctorRuneFloat64 {
+func (f1 RuneUint64Functor) MapFloat64(f2 Uint64Float64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapString(f2 FunctorUint64String) FunctorRuneString {
+func (f1 RuneUint64Functor) MapString(f2 Uint64StringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneUint64) MapAny(f2 FunctorUint64Any) FunctorRuneAny {
+func (f1 RuneUint64Functor) MapAny(f2 Uint64AnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapBool(f2 FunctorFloat32Bool) FunctorRuneBool {
+func (f1 RuneFloat32Functor) MapBool(f2 Float32BoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapRune(f2 FunctorFloat32Rune) FunctorRuneRune {
+func (f1 RuneFloat32Functor) MapRune(f2 Float32RuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapByte(f2 FunctorFloat32Byte) FunctorRuneByte {
+func (f1 RuneFloat32Functor) MapByte(f2 Float32ByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapInt(f2 FunctorFloat32Int) FunctorRuneInt {
+func (f1 RuneFloat32Functor) MapInt(f2 Float32IntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorRuneInt64 {
+func (f1 RuneFloat32Functor) MapInt64(f2 Float32Int64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapUint(f2 FunctorFloat32Uint) FunctorRuneUint {
+func (f1 RuneFloat32Functor) MapUint(f2 Float32UintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorRuneUint64 {
+func (f1 RuneFloat32Functor) MapUint64(f2 Float32Uint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorRuneFloat32 {
+func (f1 RuneFloat32Functor) MapFloat32(f2 Float32Float32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorRuneFloat64 {
+func (f1 RuneFloat32Functor) MapFloat64(f2 Float32Float64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapString(f2 FunctorFloat32String) FunctorRuneString {
+func (f1 RuneFloat32Functor) MapString(f2 Float32StringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat32) MapAny(f2 FunctorFloat32Any) FunctorRuneAny {
+func (f1 RuneFloat32Functor) MapAny(f2 Float32AnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapBool(f2 FunctorFloat64Bool) FunctorRuneBool {
+func (f1 RuneFloat64Functor) MapBool(f2 Float64BoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapRune(f2 FunctorFloat64Rune) FunctorRuneRune {
+func (f1 RuneFloat64Functor) MapRune(f2 Float64RuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapByte(f2 FunctorFloat64Byte) FunctorRuneByte {
+func (f1 RuneFloat64Functor) MapByte(f2 Float64ByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapInt(f2 FunctorFloat64Int) FunctorRuneInt {
+func (f1 RuneFloat64Functor) MapInt(f2 Float64IntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorRuneInt64 {
+func (f1 RuneFloat64Functor) MapInt64(f2 Float64Int64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapUint(f2 FunctorFloat64Uint) FunctorRuneUint {
+func (f1 RuneFloat64Functor) MapUint(f2 Float64UintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorRuneUint64 {
+func (f1 RuneFloat64Functor) MapUint64(f2 Float64Uint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorRuneFloat32 {
+func (f1 RuneFloat64Functor) MapFloat32(f2 Float64Float32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorRuneFloat64 {
+func (f1 RuneFloat64Functor) MapFloat64(f2 Float64Float64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapString(f2 FunctorFloat64String) FunctorRuneString {
+func (f1 RuneFloat64Functor) MapString(f2 Float64StringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneFloat64) MapAny(f2 FunctorFloat64Any) FunctorRuneAny {
+func (f1 RuneFloat64Functor) MapAny(f2 Float64AnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapBool(f2 FunctorStringBool) FunctorRuneBool {
+func (f1 RuneStringFunctor) MapBool(f2 StringBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapRune(f2 FunctorStringRune) FunctorRuneRune {
+func (f1 RuneStringFunctor) MapRune(f2 StringRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapByte(f2 FunctorStringByte) FunctorRuneByte {
+func (f1 RuneStringFunctor) MapByte(f2 StringByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapInt(f2 FunctorStringInt) FunctorRuneInt {
+func (f1 RuneStringFunctor) MapInt(f2 StringIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapInt64(f2 FunctorStringInt64) FunctorRuneInt64 {
+func (f1 RuneStringFunctor) MapInt64(f2 StringInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapUint(f2 FunctorStringUint) FunctorRuneUint {
+func (f1 RuneStringFunctor) MapUint(f2 StringUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapUint64(f2 FunctorStringUint64) FunctorRuneUint64 {
+func (f1 RuneStringFunctor) MapUint64(f2 StringUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapFloat32(f2 FunctorStringFloat32) FunctorRuneFloat32 {
+func (f1 RuneStringFunctor) MapFloat32(f2 StringFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapFloat64(f2 FunctorStringFloat64) FunctorRuneFloat64 {
+func (f1 RuneStringFunctor) MapFloat64(f2 StringFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapString(f2 FunctorStringString) FunctorRuneString {
+func (f1 RuneStringFunctor) MapString(f2 StringStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneString) MapAny(f2 FunctorStringAny) FunctorRuneAny {
+func (f1 RuneStringFunctor) MapAny(f2 StringAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapBool(f2 FunctorAnyBool) FunctorRuneBool {
+func (f1 RuneAnyFunctor) MapBool(f2 AnyBoolFunctor) RuneBoolFunctor {
 	return func(e rune) bool { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapRune(f2 FunctorAnyRune) FunctorRuneRune {
+func (f1 RuneAnyFunctor) MapRune(f2 AnyRuneFunctor) RuneRuneFunctor {
 	return func(e rune) rune { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapByte(f2 FunctorAnyByte) FunctorRuneByte {
+func (f1 RuneAnyFunctor) MapByte(f2 AnyByteFunctor) RuneByteFunctor {
 	return func(e rune) byte { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapInt(f2 FunctorAnyInt) FunctorRuneInt {
+func (f1 RuneAnyFunctor) MapInt(f2 AnyIntFunctor) RuneIntFunctor {
 	return func(e rune) int { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapInt64(f2 FunctorAnyInt64) FunctorRuneInt64 {
+func (f1 RuneAnyFunctor) MapInt64(f2 AnyInt64Functor) RuneInt64Functor {
 	return func(e rune) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapUint(f2 FunctorAnyUint) FunctorRuneUint {
+func (f1 RuneAnyFunctor) MapUint(f2 AnyUintFunctor) RuneUintFunctor {
 	return func(e rune) uint { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapUint64(f2 FunctorAnyUint64) FunctorRuneUint64 {
+func (f1 RuneAnyFunctor) MapUint64(f2 AnyUint64Functor) RuneUint64Functor {
 	return func(e rune) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapFloat32(f2 FunctorAnyFloat32) FunctorRuneFloat32 {
+func (f1 RuneAnyFunctor) MapFloat32(f2 AnyFloat32Functor) RuneFloat32Functor {
 	return func(e rune) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapFloat64(f2 FunctorAnyFloat64) FunctorRuneFloat64 {
+func (f1 RuneAnyFunctor) MapFloat64(f2 AnyFloat64Functor) RuneFloat64Functor {
 	return func(e rune) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapString(f2 FunctorAnyString) FunctorRuneString {
+func (f1 RuneAnyFunctor) MapString(f2 AnyStringFunctor) RuneStringFunctor {
 	return func(e rune) string { return f2(f1(e)) }
 }
-func (f1 FunctorRuneAny) MapAny(f2 FunctorAnyAny) FunctorRuneAny {
+func (f1 RuneAnyFunctor) MapAny(f2 AnyAnyFunctor) RuneAnyFunctor {
 	return func(e rune) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapBool(f2 FunctorBoolBool) FunctorByteBool {
+func (f1 ByteBoolFunctor) MapBool(f2 BoolBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapRune(f2 FunctorBoolRune) FunctorByteRune {
+func (f1 ByteBoolFunctor) MapRune(f2 BoolRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapByte(f2 FunctorBoolByte) FunctorByteByte {
+func (f1 ByteBoolFunctor) MapByte(f2 BoolByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapInt(f2 FunctorBoolInt) FunctorByteInt {
+func (f1 ByteBoolFunctor) MapInt(f2 BoolIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapInt64(f2 FunctorBoolInt64) FunctorByteInt64 {
+func (f1 ByteBoolFunctor) MapInt64(f2 BoolInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapUint(f2 FunctorBoolUint) FunctorByteUint {
+func (f1 ByteBoolFunctor) MapUint(f2 BoolUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapUint64(f2 FunctorBoolUint64) FunctorByteUint64 {
+func (f1 ByteBoolFunctor) MapUint64(f2 BoolUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapFloat32(f2 FunctorBoolFloat32) FunctorByteFloat32 {
+func (f1 ByteBoolFunctor) MapFloat32(f2 BoolFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapFloat64(f2 FunctorBoolFloat64) FunctorByteFloat64 {
+func (f1 ByteBoolFunctor) MapFloat64(f2 BoolFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapString(f2 FunctorBoolString) FunctorByteString {
+func (f1 ByteBoolFunctor) MapString(f2 BoolStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteBool) MapAny(f2 FunctorBoolAny) FunctorByteAny {
+func (f1 ByteBoolFunctor) MapAny(f2 BoolAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapBool(f2 FunctorRuneBool) FunctorByteBool {
+func (f1 ByteRuneFunctor) MapBool(f2 RuneBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapRune(f2 FunctorRuneRune) FunctorByteRune {
+func (f1 ByteRuneFunctor) MapRune(f2 RuneRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapByte(f2 FunctorRuneByte) FunctorByteByte {
+func (f1 ByteRuneFunctor) MapByte(f2 RuneByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapInt(f2 FunctorRuneInt) FunctorByteInt {
+func (f1 ByteRuneFunctor) MapInt(f2 RuneIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapInt64(f2 FunctorRuneInt64) FunctorByteInt64 {
+func (f1 ByteRuneFunctor) MapInt64(f2 RuneInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapUint(f2 FunctorRuneUint) FunctorByteUint {
+func (f1 ByteRuneFunctor) MapUint(f2 RuneUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapUint64(f2 FunctorRuneUint64) FunctorByteUint64 {
+func (f1 ByteRuneFunctor) MapUint64(f2 RuneUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapFloat32(f2 FunctorRuneFloat32) FunctorByteFloat32 {
+func (f1 ByteRuneFunctor) MapFloat32(f2 RuneFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapFloat64(f2 FunctorRuneFloat64) FunctorByteFloat64 {
+func (f1 ByteRuneFunctor) MapFloat64(f2 RuneFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapString(f2 FunctorRuneString) FunctorByteString {
+func (f1 ByteRuneFunctor) MapString(f2 RuneStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteRune) MapAny(f2 FunctorRuneAny) FunctorByteAny {
+func (f1 ByteRuneFunctor) MapAny(f2 RuneAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapBool(f2 FunctorByteBool) FunctorByteBool {
+func (f1 ByteByteFunctor) MapBool(f2 ByteBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapRune(f2 FunctorByteRune) FunctorByteRune {
+func (f1 ByteByteFunctor) MapRune(f2 ByteRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapByte(f2 FunctorByteByte) FunctorByteByte {
+func (f1 ByteByteFunctor) MapByte(f2 ByteByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapInt(f2 FunctorByteInt) FunctorByteInt {
+func (f1 ByteByteFunctor) MapInt(f2 ByteIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapInt64(f2 FunctorByteInt64) FunctorByteInt64 {
+func (f1 ByteByteFunctor) MapInt64(f2 ByteInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapUint(f2 FunctorByteUint) FunctorByteUint {
+func (f1 ByteByteFunctor) MapUint(f2 ByteUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapUint64(f2 FunctorByteUint64) FunctorByteUint64 {
+func (f1 ByteByteFunctor) MapUint64(f2 ByteUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapFloat32(f2 FunctorByteFloat32) FunctorByteFloat32 {
+func (f1 ByteByteFunctor) MapFloat32(f2 ByteFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapFloat64(f2 FunctorByteFloat64) FunctorByteFloat64 {
+func (f1 ByteByteFunctor) MapFloat64(f2 ByteFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapString(f2 FunctorByteString) FunctorByteString {
+func (f1 ByteByteFunctor) MapString(f2 ByteStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteByte) MapAny(f2 FunctorByteAny) FunctorByteAny {
+func (f1 ByteByteFunctor) MapAny(f2 ByteAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapBool(f2 FunctorIntBool) FunctorByteBool {
+func (f1 ByteIntFunctor) MapBool(f2 IntBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapRune(f2 FunctorIntRune) FunctorByteRune {
+func (f1 ByteIntFunctor) MapRune(f2 IntRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapByte(f2 FunctorIntByte) FunctorByteByte {
+func (f1 ByteIntFunctor) MapByte(f2 IntByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapInt(f2 FunctorIntInt) FunctorByteInt {
+func (f1 ByteIntFunctor) MapInt(f2 IntIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapInt64(f2 FunctorIntInt64) FunctorByteInt64 {
+func (f1 ByteIntFunctor) MapInt64(f2 IntInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapUint(f2 FunctorIntUint) FunctorByteUint {
+func (f1 ByteIntFunctor) MapUint(f2 IntUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapUint64(f2 FunctorIntUint64) FunctorByteUint64 {
+func (f1 ByteIntFunctor) MapUint64(f2 IntUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapFloat32(f2 FunctorIntFloat32) FunctorByteFloat32 {
+func (f1 ByteIntFunctor) MapFloat32(f2 IntFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapFloat64(f2 FunctorIntFloat64) FunctorByteFloat64 {
+func (f1 ByteIntFunctor) MapFloat64(f2 IntFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapString(f2 FunctorIntString) FunctorByteString {
+func (f1 ByteIntFunctor) MapString(f2 IntStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt) MapAny(f2 FunctorIntAny) FunctorByteAny {
+func (f1 ByteIntFunctor) MapAny(f2 IntAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapBool(f2 FunctorInt64Bool) FunctorByteBool {
+func (f1 ByteInt64Functor) MapBool(f2 Int64BoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapRune(f2 FunctorInt64Rune) FunctorByteRune {
+func (f1 ByteInt64Functor) MapRune(f2 Int64RuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapByte(f2 FunctorInt64Byte) FunctorByteByte {
+func (f1 ByteInt64Functor) MapByte(f2 Int64ByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapInt(f2 FunctorInt64Int) FunctorByteInt {
+func (f1 ByteInt64Functor) MapInt(f2 Int64IntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapInt64(f2 FunctorInt64Int64) FunctorByteInt64 {
+func (f1 ByteInt64Functor) MapInt64(f2 Int64Int64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapUint(f2 FunctorInt64Uint) FunctorByteUint {
+func (f1 ByteInt64Functor) MapUint(f2 Int64UintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapUint64(f2 FunctorInt64Uint64) FunctorByteUint64 {
+func (f1 ByteInt64Functor) MapUint64(f2 Int64Uint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapFloat32(f2 FunctorInt64Float32) FunctorByteFloat32 {
+func (f1 ByteInt64Functor) MapFloat32(f2 Int64Float32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapFloat64(f2 FunctorInt64Float64) FunctorByteFloat64 {
+func (f1 ByteInt64Functor) MapFloat64(f2 Int64Float64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapString(f2 FunctorInt64String) FunctorByteString {
+func (f1 ByteInt64Functor) MapString(f2 Int64StringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteInt64) MapAny(f2 FunctorInt64Any) FunctorByteAny {
+func (f1 ByteInt64Functor) MapAny(f2 Int64AnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapBool(f2 FunctorUintBool) FunctorByteBool {
+func (f1 ByteUintFunctor) MapBool(f2 UintBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapRune(f2 FunctorUintRune) FunctorByteRune {
+func (f1 ByteUintFunctor) MapRune(f2 UintRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapByte(f2 FunctorUintByte) FunctorByteByte {
+func (f1 ByteUintFunctor) MapByte(f2 UintByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapInt(f2 FunctorUintInt) FunctorByteInt {
+func (f1 ByteUintFunctor) MapInt(f2 UintIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapInt64(f2 FunctorUintInt64) FunctorByteInt64 {
+func (f1 ByteUintFunctor) MapInt64(f2 UintInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapUint(f2 FunctorUintUint) FunctorByteUint {
+func (f1 ByteUintFunctor) MapUint(f2 UintUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapUint64(f2 FunctorUintUint64) FunctorByteUint64 {
+func (f1 ByteUintFunctor) MapUint64(f2 UintUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapFloat32(f2 FunctorUintFloat32) FunctorByteFloat32 {
+func (f1 ByteUintFunctor) MapFloat32(f2 UintFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapFloat64(f2 FunctorUintFloat64) FunctorByteFloat64 {
+func (f1 ByteUintFunctor) MapFloat64(f2 UintFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapString(f2 FunctorUintString) FunctorByteString {
+func (f1 ByteUintFunctor) MapString(f2 UintStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint) MapAny(f2 FunctorUintAny) FunctorByteAny {
+func (f1 ByteUintFunctor) MapAny(f2 UintAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapBool(f2 FunctorUint64Bool) FunctorByteBool {
+func (f1 ByteUint64Functor) MapBool(f2 Uint64BoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapRune(f2 FunctorUint64Rune) FunctorByteRune {
+func (f1 ByteUint64Functor) MapRune(f2 Uint64RuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapByte(f2 FunctorUint64Byte) FunctorByteByte {
+func (f1 ByteUint64Functor) MapByte(f2 Uint64ByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapInt(f2 FunctorUint64Int) FunctorByteInt {
+func (f1 ByteUint64Functor) MapInt(f2 Uint64IntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapInt64(f2 FunctorUint64Int64) FunctorByteInt64 {
+func (f1 ByteUint64Functor) MapInt64(f2 Uint64Int64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapUint(f2 FunctorUint64Uint) FunctorByteUint {
+func (f1 ByteUint64Functor) MapUint(f2 Uint64UintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapUint64(f2 FunctorUint64Uint64) FunctorByteUint64 {
+func (f1 ByteUint64Functor) MapUint64(f2 Uint64Uint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapFloat32(f2 FunctorUint64Float32) FunctorByteFloat32 {
+func (f1 ByteUint64Functor) MapFloat32(f2 Uint64Float32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapFloat64(f2 FunctorUint64Float64) FunctorByteFloat64 {
+func (f1 ByteUint64Functor) MapFloat64(f2 Uint64Float64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapString(f2 FunctorUint64String) FunctorByteString {
+func (f1 ByteUint64Functor) MapString(f2 Uint64StringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteUint64) MapAny(f2 FunctorUint64Any) FunctorByteAny {
+func (f1 ByteUint64Functor) MapAny(f2 Uint64AnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapBool(f2 FunctorFloat32Bool) FunctorByteBool {
+func (f1 ByteFloat32Functor) MapBool(f2 Float32BoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapRune(f2 FunctorFloat32Rune) FunctorByteRune {
+func (f1 ByteFloat32Functor) MapRune(f2 Float32RuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapByte(f2 FunctorFloat32Byte) FunctorByteByte {
+func (f1 ByteFloat32Functor) MapByte(f2 Float32ByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapInt(f2 FunctorFloat32Int) FunctorByteInt {
+func (f1 ByteFloat32Functor) MapInt(f2 Float32IntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorByteInt64 {
+func (f1 ByteFloat32Functor) MapInt64(f2 Float32Int64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapUint(f2 FunctorFloat32Uint) FunctorByteUint {
+func (f1 ByteFloat32Functor) MapUint(f2 Float32UintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorByteUint64 {
+func (f1 ByteFloat32Functor) MapUint64(f2 Float32Uint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorByteFloat32 {
+func (f1 ByteFloat32Functor) MapFloat32(f2 Float32Float32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorByteFloat64 {
+func (f1 ByteFloat32Functor) MapFloat64(f2 Float32Float64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapString(f2 FunctorFloat32String) FunctorByteString {
+func (f1 ByteFloat32Functor) MapString(f2 Float32StringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat32) MapAny(f2 FunctorFloat32Any) FunctorByteAny {
+func (f1 ByteFloat32Functor) MapAny(f2 Float32AnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapBool(f2 FunctorFloat64Bool) FunctorByteBool {
+func (f1 ByteFloat64Functor) MapBool(f2 Float64BoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapRune(f2 FunctorFloat64Rune) FunctorByteRune {
+func (f1 ByteFloat64Functor) MapRune(f2 Float64RuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapByte(f2 FunctorFloat64Byte) FunctorByteByte {
+func (f1 ByteFloat64Functor) MapByte(f2 Float64ByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapInt(f2 FunctorFloat64Int) FunctorByteInt {
+func (f1 ByteFloat64Functor) MapInt(f2 Float64IntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorByteInt64 {
+func (f1 ByteFloat64Functor) MapInt64(f2 Float64Int64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapUint(f2 FunctorFloat64Uint) FunctorByteUint {
+func (f1 ByteFloat64Functor) MapUint(f2 Float64UintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorByteUint64 {
+func (f1 ByteFloat64Functor) MapUint64(f2 Float64Uint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorByteFloat32 {
+func (f1 ByteFloat64Functor) MapFloat32(f2 Float64Float32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorByteFloat64 {
+func (f1 ByteFloat64Functor) MapFloat64(f2 Float64Float64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapString(f2 FunctorFloat64String) FunctorByteString {
+func (f1 ByteFloat64Functor) MapString(f2 Float64StringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteFloat64) MapAny(f2 FunctorFloat64Any) FunctorByteAny {
+func (f1 ByteFloat64Functor) MapAny(f2 Float64AnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapBool(f2 FunctorStringBool) FunctorByteBool {
+func (f1 ByteStringFunctor) MapBool(f2 StringBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapRune(f2 FunctorStringRune) FunctorByteRune {
+func (f1 ByteStringFunctor) MapRune(f2 StringRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapByte(f2 FunctorStringByte) FunctorByteByte {
+func (f1 ByteStringFunctor) MapByte(f2 StringByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapInt(f2 FunctorStringInt) FunctorByteInt {
+func (f1 ByteStringFunctor) MapInt(f2 StringIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapInt64(f2 FunctorStringInt64) FunctorByteInt64 {
+func (f1 ByteStringFunctor) MapInt64(f2 StringInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapUint(f2 FunctorStringUint) FunctorByteUint {
+func (f1 ByteStringFunctor) MapUint(f2 StringUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapUint64(f2 FunctorStringUint64) FunctorByteUint64 {
+func (f1 ByteStringFunctor) MapUint64(f2 StringUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapFloat32(f2 FunctorStringFloat32) FunctorByteFloat32 {
+func (f1 ByteStringFunctor) MapFloat32(f2 StringFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapFloat64(f2 FunctorStringFloat64) FunctorByteFloat64 {
+func (f1 ByteStringFunctor) MapFloat64(f2 StringFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapString(f2 FunctorStringString) FunctorByteString {
+func (f1 ByteStringFunctor) MapString(f2 StringStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteString) MapAny(f2 FunctorStringAny) FunctorByteAny {
+func (f1 ByteStringFunctor) MapAny(f2 StringAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapBool(f2 FunctorAnyBool) FunctorByteBool {
+func (f1 ByteAnyFunctor) MapBool(f2 AnyBoolFunctor) ByteBoolFunctor {
 	return func(e byte) bool { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapRune(f2 FunctorAnyRune) FunctorByteRune {
+func (f1 ByteAnyFunctor) MapRune(f2 AnyRuneFunctor) ByteRuneFunctor {
 	return func(e byte) rune { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapByte(f2 FunctorAnyByte) FunctorByteByte {
+func (f1 ByteAnyFunctor) MapByte(f2 AnyByteFunctor) ByteByteFunctor {
 	return func(e byte) byte { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapInt(f2 FunctorAnyInt) FunctorByteInt {
+func (f1 ByteAnyFunctor) MapInt(f2 AnyIntFunctor) ByteIntFunctor {
 	return func(e byte) int { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapInt64(f2 FunctorAnyInt64) FunctorByteInt64 {
+func (f1 ByteAnyFunctor) MapInt64(f2 AnyInt64Functor) ByteInt64Functor {
 	return func(e byte) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapUint(f2 FunctorAnyUint) FunctorByteUint {
+func (f1 ByteAnyFunctor) MapUint(f2 AnyUintFunctor) ByteUintFunctor {
 	return func(e byte) uint { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapUint64(f2 FunctorAnyUint64) FunctorByteUint64 {
+func (f1 ByteAnyFunctor) MapUint64(f2 AnyUint64Functor) ByteUint64Functor {
 	return func(e byte) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapFloat32(f2 FunctorAnyFloat32) FunctorByteFloat32 {
+func (f1 ByteAnyFunctor) MapFloat32(f2 AnyFloat32Functor) ByteFloat32Functor {
 	return func(e byte) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapFloat64(f2 FunctorAnyFloat64) FunctorByteFloat64 {
+func (f1 ByteAnyFunctor) MapFloat64(f2 AnyFloat64Functor) ByteFloat64Functor {
 	return func(e byte) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapString(f2 FunctorAnyString) FunctorByteString {
+func (f1 ByteAnyFunctor) MapString(f2 AnyStringFunctor) ByteStringFunctor {
 	return func(e byte) string { return f2(f1(e)) }
 }
-func (f1 FunctorByteAny) MapAny(f2 FunctorAnyAny) FunctorByteAny {
+func (f1 ByteAnyFunctor) MapAny(f2 AnyAnyFunctor) ByteAnyFunctor {
 	return func(e byte) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapBool(f2 FunctorBoolBool) FunctorIntBool {
+func (f1 IntBoolFunctor) MapBool(f2 BoolBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapRune(f2 FunctorBoolRune) FunctorIntRune {
+func (f1 IntBoolFunctor) MapRune(f2 BoolRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapByte(f2 FunctorBoolByte) FunctorIntByte {
+func (f1 IntBoolFunctor) MapByte(f2 BoolByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapInt(f2 FunctorBoolInt) FunctorIntInt {
+func (f1 IntBoolFunctor) MapInt(f2 BoolIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapInt64(f2 FunctorBoolInt64) FunctorIntInt64 {
+func (f1 IntBoolFunctor) MapInt64(f2 BoolInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapUint(f2 FunctorBoolUint) FunctorIntUint {
+func (f1 IntBoolFunctor) MapUint(f2 BoolUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapUint64(f2 FunctorBoolUint64) FunctorIntUint64 {
+func (f1 IntBoolFunctor) MapUint64(f2 BoolUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapFloat32(f2 FunctorBoolFloat32) FunctorIntFloat32 {
+func (f1 IntBoolFunctor) MapFloat32(f2 BoolFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapFloat64(f2 FunctorBoolFloat64) FunctorIntFloat64 {
+func (f1 IntBoolFunctor) MapFloat64(f2 BoolFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapString(f2 FunctorBoolString) FunctorIntString {
+func (f1 IntBoolFunctor) MapString(f2 BoolStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntBool) MapAny(f2 FunctorBoolAny) FunctorIntAny {
+func (f1 IntBoolFunctor) MapAny(f2 BoolAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapBool(f2 FunctorRuneBool) FunctorIntBool {
+func (f1 IntRuneFunctor) MapBool(f2 RuneBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapRune(f2 FunctorRuneRune) FunctorIntRune {
+func (f1 IntRuneFunctor) MapRune(f2 RuneRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapByte(f2 FunctorRuneByte) FunctorIntByte {
+func (f1 IntRuneFunctor) MapByte(f2 RuneByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapInt(f2 FunctorRuneInt) FunctorIntInt {
+func (f1 IntRuneFunctor) MapInt(f2 RuneIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapInt64(f2 FunctorRuneInt64) FunctorIntInt64 {
+func (f1 IntRuneFunctor) MapInt64(f2 RuneInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapUint(f2 FunctorRuneUint) FunctorIntUint {
+func (f1 IntRuneFunctor) MapUint(f2 RuneUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapUint64(f2 FunctorRuneUint64) FunctorIntUint64 {
+func (f1 IntRuneFunctor) MapUint64(f2 RuneUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapFloat32(f2 FunctorRuneFloat32) FunctorIntFloat32 {
+func (f1 IntRuneFunctor) MapFloat32(f2 RuneFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapFloat64(f2 FunctorRuneFloat64) FunctorIntFloat64 {
+func (f1 IntRuneFunctor) MapFloat64(f2 RuneFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapString(f2 FunctorRuneString) FunctorIntString {
+func (f1 IntRuneFunctor) MapString(f2 RuneStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntRune) MapAny(f2 FunctorRuneAny) FunctorIntAny {
+func (f1 IntRuneFunctor) MapAny(f2 RuneAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapBool(f2 FunctorByteBool) FunctorIntBool {
+func (f1 IntByteFunctor) MapBool(f2 ByteBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapRune(f2 FunctorByteRune) FunctorIntRune {
+func (f1 IntByteFunctor) MapRune(f2 ByteRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapByte(f2 FunctorByteByte) FunctorIntByte {
+func (f1 IntByteFunctor) MapByte(f2 ByteByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapInt(f2 FunctorByteInt) FunctorIntInt {
+func (f1 IntByteFunctor) MapInt(f2 ByteIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapInt64(f2 FunctorByteInt64) FunctorIntInt64 {
+func (f1 IntByteFunctor) MapInt64(f2 ByteInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapUint(f2 FunctorByteUint) FunctorIntUint {
+func (f1 IntByteFunctor) MapUint(f2 ByteUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapUint64(f2 FunctorByteUint64) FunctorIntUint64 {
+func (f1 IntByteFunctor) MapUint64(f2 ByteUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapFloat32(f2 FunctorByteFloat32) FunctorIntFloat32 {
+func (f1 IntByteFunctor) MapFloat32(f2 ByteFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapFloat64(f2 FunctorByteFloat64) FunctorIntFloat64 {
+func (f1 IntByteFunctor) MapFloat64(f2 ByteFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapString(f2 FunctorByteString) FunctorIntString {
+func (f1 IntByteFunctor) MapString(f2 ByteStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntByte) MapAny(f2 FunctorByteAny) FunctorIntAny {
+func (f1 IntByteFunctor) MapAny(f2 ByteAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapBool(f2 FunctorIntBool) FunctorIntBool {
+func (f1 IntIntFunctor) MapBool(f2 IntBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapRune(f2 FunctorIntRune) FunctorIntRune {
+func (f1 IntIntFunctor) MapRune(f2 IntRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapByte(f2 FunctorIntByte) FunctorIntByte {
+func (f1 IntIntFunctor) MapByte(f2 IntByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapInt(f2 FunctorIntInt) FunctorIntInt {
+func (f1 IntIntFunctor) MapInt(f2 IntIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapInt64(f2 FunctorIntInt64) FunctorIntInt64 {
+func (f1 IntIntFunctor) MapInt64(f2 IntInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapUint(f2 FunctorIntUint) FunctorIntUint {
+func (f1 IntIntFunctor) MapUint(f2 IntUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapUint64(f2 FunctorIntUint64) FunctorIntUint64 {
+func (f1 IntIntFunctor) MapUint64(f2 IntUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapFloat32(f2 FunctorIntFloat32) FunctorIntFloat32 {
+func (f1 IntIntFunctor) MapFloat32(f2 IntFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapFloat64(f2 FunctorIntFloat64) FunctorIntFloat64 {
+func (f1 IntIntFunctor) MapFloat64(f2 IntFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapString(f2 FunctorIntString) FunctorIntString {
+func (f1 IntIntFunctor) MapString(f2 IntStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt) MapAny(f2 FunctorIntAny) FunctorIntAny {
+func (f1 IntIntFunctor) MapAny(f2 IntAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapBool(f2 FunctorInt64Bool) FunctorIntBool {
+func (f1 IntInt64Functor) MapBool(f2 Int64BoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapRune(f2 FunctorInt64Rune) FunctorIntRune {
+func (f1 IntInt64Functor) MapRune(f2 Int64RuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapByte(f2 FunctorInt64Byte) FunctorIntByte {
+func (f1 IntInt64Functor) MapByte(f2 Int64ByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapInt(f2 FunctorInt64Int) FunctorIntInt {
+func (f1 IntInt64Functor) MapInt(f2 Int64IntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapInt64(f2 FunctorInt64Int64) FunctorIntInt64 {
+func (f1 IntInt64Functor) MapInt64(f2 Int64Int64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapUint(f2 FunctorInt64Uint) FunctorIntUint {
+func (f1 IntInt64Functor) MapUint(f2 Int64UintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapUint64(f2 FunctorInt64Uint64) FunctorIntUint64 {
+func (f1 IntInt64Functor) MapUint64(f2 Int64Uint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapFloat32(f2 FunctorInt64Float32) FunctorIntFloat32 {
+func (f1 IntInt64Functor) MapFloat32(f2 Int64Float32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapFloat64(f2 FunctorInt64Float64) FunctorIntFloat64 {
+func (f1 IntInt64Functor) MapFloat64(f2 Int64Float64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapString(f2 FunctorInt64String) FunctorIntString {
+func (f1 IntInt64Functor) MapString(f2 Int64StringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntInt64) MapAny(f2 FunctorInt64Any) FunctorIntAny {
+func (f1 IntInt64Functor) MapAny(f2 Int64AnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapBool(f2 FunctorUintBool) FunctorIntBool {
+func (f1 IntUintFunctor) MapBool(f2 UintBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapRune(f2 FunctorUintRune) FunctorIntRune {
+func (f1 IntUintFunctor) MapRune(f2 UintRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapByte(f2 FunctorUintByte) FunctorIntByte {
+func (f1 IntUintFunctor) MapByte(f2 UintByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapInt(f2 FunctorUintInt) FunctorIntInt {
+func (f1 IntUintFunctor) MapInt(f2 UintIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapInt64(f2 FunctorUintInt64) FunctorIntInt64 {
+func (f1 IntUintFunctor) MapInt64(f2 UintInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapUint(f2 FunctorUintUint) FunctorIntUint {
+func (f1 IntUintFunctor) MapUint(f2 UintUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapUint64(f2 FunctorUintUint64) FunctorIntUint64 {
+func (f1 IntUintFunctor) MapUint64(f2 UintUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapFloat32(f2 FunctorUintFloat32) FunctorIntFloat32 {
+func (f1 IntUintFunctor) MapFloat32(f2 UintFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapFloat64(f2 FunctorUintFloat64) FunctorIntFloat64 {
+func (f1 IntUintFunctor) MapFloat64(f2 UintFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapString(f2 FunctorUintString) FunctorIntString {
+func (f1 IntUintFunctor) MapString(f2 UintStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint) MapAny(f2 FunctorUintAny) FunctorIntAny {
+func (f1 IntUintFunctor) MapAny(f2 UintAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapBool(f2 FunctorUint64Bool) FunctorIntBool {
+func (f1 IntUint64Functor) MapBool(f2 Uint64BoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapRune(f2 FunctorUint64Rune) FunctorIntRune {
+func (f1 IntUint64Functor) MapRune(f2 Uint64RuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapByte(f2 FunctorUint64Byte) FunctorIntByte {
+func (f1 IntUint64Functor) MapByte(f2 Uint64ByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapInt(f2 FunctorUint64Int) FunctorIntInt {
+func (f1 IntUint64Functor) MapInt(f2 Uint64IntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapInt64(f2 FunctorUint64Int64) FunctorIntInt64 {
+func (f1 IntUint64Functor) MapInt64(f2 Uint64Int64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapUint(f2 FunctorUint64Uint) FunctorIntUint {
+func (f1 IntUint64Functor) MapUint(f2 Uint64UintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapUint64(f2 FunctorUint64Uint64) FunctorIntUint64 {
+func (f1 IntUint64Functor) MapUint64(f2 Uint64Uint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapFloat32(f2 FunctorUint64Float32) FunctorIntFloat32 {
+func (f1 IntUint64Functor) MapFloat32(f2 Uint64Float32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapFloat64(f2 FunctorUint64Float64) FunctorIntFloat64 {
+func (f1 IntUint64Functor) MapFloat64(f2 Uint64Float64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapString(f2 FunctorUint64String) FunctorIntString {
+func (f1 IntUint64Functor) MapString(f2 Uint64StringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntUint64) MapAny(f2 FunctorUint64Any) FunctorIntAny {
+func (f1 IntUint64Functor) MapAny(f2 Uint64AnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapBool(f2 FunctorFloat32Bool) FunctorIntBool {
+func (f1 IntFloat32Functor) MapBool(f2 Float32BoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapRune(f2 FunctorFloat32Rune) FunctorIntRune {
+func (f1 IntFloat32Functor) MapRune(f2 Float32RuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapByte(f2 FunctorFloat32Byte) FunctorIntByte {
+func (f1 IntFloat32Functor) MapByte(f2 Float32ByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapInt(f2 FunctorFloat32Int) FunctorIntInt {
+func (f1 IntFloat32Functor) MapInt(f2 Float32IntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorIntInt64 {
+func (f1 IntFloat32Functor) MapInt64(f2 Float32Int64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapUint(f2 FunctorFloat32Uint) FunctorIntUint {
+func (f1 IntFloat32Functor) MapUint(f2 Float32UintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorIntUint64 {
+func (f1 IntFloat32Functor) MapUint64(f2 Float32Uint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorIntFloat32 {
+func (f1 IntFloat32Functor) MapFloat32(f2 Float32Float32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorIntFloat64 {
+func (f1 IntFloat32Functor) MapFloat64(f2 Float32Float64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapString(f2 FunctorFloat32String) FunctorIntString {
+func (f1 IntFloat32Functor) MapString(f2 Float32StringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat32) MapAny(f2 FunctorFloat32Any) FunctorIntAny {
+func (f1 IntFloat32Functor) MapAny(f2 Float32AnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapBool(f2 FunctorFloat64Bool) FunctorIntBool {
+func (f1 IntFloat64Functor) MapBool(f2 Float64BoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapRune(f2 FunctorFloat64Rune) FunctorIntRune {
+func (f1 IntFloat64Functor) MapRune(f2 Float64RuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapByte(f2 FunctorFloat64Byte) FunctorIntByte {
+func (f1 IntFloat64Functor) MapByte(f2 Float64ByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapInt(f2 FunctorFloat64Int) FunctorIntInt {
+func (f1 IntFloat64Functor) MapInt(f2 Float64IntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorIntInt64 {
+func (f1 IntFloat64Functor) MapInt64(f2 Float64Int64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapUint(f2 FunctorFloat64Uint) FunctorIntUint {
+func (f1 IntFloat64Functor) MapUint(f2 Float64UintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorIntUint64 {
+func (f1 IntFloat64Functor) MapUint64(f2 Float64Uint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorIntFloat32 {
+func (f1 IntFloat64Functor) MapFloat32(f2 Float64Float32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorIntFloat64 {
+func (f1 IntFloat64Functor) MapFloat64(f2 Float64Float64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapString(f2 FunctorFloat64String) FunctorIntString {
+func (f1 IntFloat64Functor) MapString(f2 Float64StringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntFloat64) MapAny(f2 FunctorFloat64Any) FunctorIntAny {
+func (f1 IntFloat64Functor) MapAny(f2 Float64AnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapBool(f2 FunctorStringBool) FunctorIntBool {
+func (f1 IntStringFunctor) MapBool(f2 StringBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapRune(f2 FunctorStringRune) FunctorIntRune {
+func (f1 IntStringFunctor) MapRune(f2 StringRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapByte(f2 FunctorStringByte) FunctorIntByte {
+func (f1 IntStringFunctor) MapByte(f2 StringByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapInt(f2 FunctorStringInt) FunctorIntInt {
+func (f1 IntStringFunctor) MapInt(f2 StringIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapInt64(f2 FunctorStringInt64) FunctorIntInt64 {
+func (f1 IntStringFunctor) MapInt64(f2 StringInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapUint(f2 FunctorStringUint) FunctorIntUint {
+func (f1 IntStringFunctor) MapUint(f2 StringUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapUint64(f2 FunctorStringUint64) FunctorIntUint64 {
+func (f1 IntStringFunctor) MapUint64(f2 StringUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapFloat32(f2 FunctorStringFloat32) FunctorIntFloat32 {
+func (f1 IntStringFunctor) MapFloat32(f2 StringFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapFloat64(f2 FunctorStringFloat64) FunctorIntFloat64 {
+func (f1 IntStringFunctor) MapFloat64(f2 StringFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapString(f2 FunctorStringString) FunctorIntString {
+func (f1 IntStringFunctor) MapString(f2 StringStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntString) MapAny(f2 FunctorStringAny) FunctorIntAny {
+func (f1 IntStringFunctor) MapAny(f2 StringAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapBool(f2 FunctorAnyBool) FunctorIntBool {
+func (f1 IntAnyFunctor) MapBool(f2 AnyBoolFunctor) IntBoolFunctor {
 	return func(e int) bool { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapRune(f2 FunctorAnyRune) FunctorIntRune {
+func (f1 IntAnyFunctor) MapRune(f2 AnyRuneFunctor) IntRuneFunctor {
 	return func(e int) rune { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapByte(f2 FunctorAnyByte) FunctorIntByte {
+func (f1 IntAnyFunctor) MapByte(f2 AnyByteFunctor) IntByteFunctor {
 	return func(e int) byte { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapInt(f2 FunctorAnyInt) FunctorIntInt {
+func (f1 IntAnyFunctor) MapInt(f2 AnyIntFunctor) IntIntFunctor {
 	return func(e int) int { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapInt64(f2 FunctorAnyInt64) FunctorIntInt64 {
+func (f1 IntAnyFunctor) MapInt64(f2 AnyInt64Functor) IntInt64Functor {
 	return func(e int) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapUint(f2 FunctorAnyUint) FunctorIntUint {
+func (f1 IntAnyFunctor) MapUint(f2 AnyUintFunctor) IntUintFunctor {
 	return func(e int) uint { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapUint64(f2 FunctorAnyUint64) FunctorIntUint64 {
+func (f1 IntAnyFunctor) MapUint64(f2 AnyUint64Functor) IntUint64Functor {
 	return func(e int) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapFloat32(f2 FunctorAnyFloat32) FunctorIntFloat32 {
+func (f1 IntAnyFunctor) MapFloat32(f2 AnyFloat32Functor) IntFloat32Functor {
 	return func(e int) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapFloat64(f2 FunctorAnyFloat64) FunctorIntFloat64 {
+func (f1 IntAnyFunctor) MapFloat64(f2 AnyFloat64Functor) IntFloat64Functor {
 	return func(e int) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapString(f2 FunctorAnyString) FunctorIntString {
+func (f1 IntAnyFunctor) MapString(f2 AnyStringFunctor) IntStringFunctor {
 	return func(e int) string { return f2(f1(e)) }
 }
-func (f1 FunctorIntAny) MapAny(f2 FunctorAnyAny) FunctorIntAny {
+func (f1 IntAnyFunctor) MapAny(f2 AnyAnyFunctor) IntAnyFunctor {
 	return func(e int) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapBool(f2 FunctorBoolBool) FunctorInt64Bool {
+func (f1 Int64BoolFunctor) MapBool(f2 BoolBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapRune(f2 FunctorBoolRune) FunctorInt64Rune {
+func (f1 Int64BoolFunctor) MapRune(f2 BoolRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapByte(f2 FunctorBoolByte) FunctorInt64Byte {
+func (f1 Int64BoolFunctor) MapByte(f2 BoolByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapInt(f2 FunctorBoolInt) FunctorInt64Int {
+func (f1 Int64BoolFunctor) MapInt(f2 BoolIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapInt64(f2 FunctorBoolInt64) FunctorInt64Int64 {
+func (f1 Int64BoolFunctor) MapInt64(f2 BoolInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapUint(f2 FunctorBoolUint) FunctorInt64Uint {
+func (f1 Int64BoolFunctor) MapUint(f2 BoolUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapUint64(f2 FunctorBoolUint64) FunctorInt64Uint64 {
+func (f1 Int64BoolFunctor) MapUint64(f2 BoolUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapFloat32(f2 FunctorBoolFloat32) FunctorInt64Float32 {
+func (f1 Int64BoolFunctor) MapFloat32(f2 BoolFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapFloat64(f2 FunctorBoolFloat64) FunctorInt64Float64 {
+func (f1 Int64BoolFunctor) MapFloat64(f2 BoolFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapString(f2 FunctorBoolString) FunctorInt64String {
+func (f1 Int64BoolFunctor) MapString(f2 BoolStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Bool) MapAny(f2 FunctorBoolAny) FunctorInt64Any {
+func (f1 Int64BoolFunctor) MapAny(f2 BoolAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapBool(f2 FunctorRuneBool) FunctorInt64Bool {
+func (f1 Int64RuneFunctor) MapBool(f2 RuneBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapRune(f2 FunctorRuneRune) FunctorInt64Rune {
+func (f1 Int64RuneFunctor) MapRune(f2 RuneRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapByte(f2 FunctorRuneByte) FunctorInt64Byte {
+func (f1 Int64RuneFunctor) MapByte(f2 RuneByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapInt(f2 FunctorRuneInt) FunctorInt64Int {
+func (f1 Int64RuneFunctor) MapInt(f2 RuneIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapInt64(f2 FunctorRuneInt64) FunctorInt64Int64 {
+func (f1 Int64RuneFunctor) MapInt64(f2 RuneInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapUint(f2 FunctorRuneUint) FunctorInt64Uint {
+func (f1 Int64RuneFunctor) MapUint(f2 RuneUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapUint64(f2 FunctorRuneUint64) FunctorInt64Uint64 {
+func (f1 Int64RuneFunctor) MapUint64(f2 RuneUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapFloat32(f2 FunctorRuneFloat32) FunctorInt64Float32 {
+func (f1 Int64RuneFunctor) MapFloat32(f2 RuneFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapFloat64(f2 FunctorRuneFloat64) FunctorInt64Float64 {
+func (f1 Int64RuneFunctor) MapFloat64(f2 RuneFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapString(f2 FunctorRuneString) FunctorInt64String {
+func (f1 Int64RuneFunctor) MapString(f2 RuneStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Rune) MapAny(f2 FunctorRuneAny) FunctorInt64Any {
+func (f1 Int64RuneFunctor) MapAny(f2 RuneAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapBool(f2 FunctorByteBool) FunctorInt64Bool {
+func (f1 Int64ByteFunctor) MapBool(f2 ByteBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapRune(f2 FunctorByteRune) FunctorInt64Rune {
+func (f1 Int64ByteFunctor) MapRune(f2 ByteRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapByte(f2 FunctorByteByte) FunctorInt64Byte {
+func (f1 Int64ByteFunctor) MapByte(f2 ByteByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapInt(f2 FunctorByteInt) FunctorInt64Int {
+func (f1 Int64ByteFunctor) MapInt(f2 ByteIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapInt64(f2 FunctorByteInt64) FunctorInt64Int64 {
+func (f1 Int64ByteFunctor) MapInt64(f2 ByteInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapUint(f2 FunctorByteUint) FunctorInt64Uint {
+func (f1 Int64ByteFunctor) MapUint(f2 ByteUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapUint64(f2 FunctorByteUint64) FunctorInt64Uint64 {
+func (f1 Int64ByteFunctor) MapUint64(f2 ByteUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapFloat32(f2 FunctorByteFloat32) FunctorInt64Float32 {
+func (f1 Int64ByteFunctor) MapFloat32(f2 ByteFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapFloat64(f2 FunctorByteFloat64) FunctorInt64Float64 {
+func (f1 Int64ByteFunctor) MapFloat64(f2 ByteFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapString(f2 FunctorByteString) FunctorInt64String {
+func (f1 Int64ByteFunctor) MapString(f2 ByteStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Byte) MapAny(f2 FunctorByteAny) FunctorInt64Any {
+func (f1 Int64ByteFunctor) MapAny(f2 ByteAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapBool(f2 FunctorIntBool) FunctorInt64Bool {
+func (f1 Int64IntFunctor) MapBool(f2 IntBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapRune(f2 FunctorIntRune) FunctorInt64Rune {
+func (f1 Int64IntFunctor) MapRune(f2 IntRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapByte(f2 FunctorIntByte) FunctorInt64Byte {
+func (f1 Int64IntFunctor) MapByte(f2 IntByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapInt(f2 FunctorIntInt) FunctorInt64Int {
+func (f1 Int64IntFunctor) MapInt(f2 IntIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapInt64(f2 FunctorIntInt64) FunctorInt64Int64 {
+func (f1 Int64IntFunctor) MapInt64(f2 IntInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapUint(f2 FunctorIntUint) FunctorInt64Uint {
+func (f1 Int64IntFunctor) MapUint(f2 IntUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapUint64(f2 FunctorIntUint64) FunctorInt64Uint64 {
+func (f1 Int64IntFunctor) MapUint64(f2 IntUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapFloat32(f2 FunctorIntFloat32) FunctorInt64Float32 {
+func (f1 Int64IntFunctor) MapFloat32(f2 IntFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapFloat64(f2 FunctorIntFloat64) FunctorInt64Float64 {
+func (f1 Int64IntFunctor) MapFloat64(f2 IntFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapString(f2 FunctorIntString) FunctorInt64String {
+func (f1 Int64IntFunctor) MapString(f2 IntStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int) MapAny(f2 FunctorIntAny) FunctorInt64Any {
+func (f1 Int64IntFunctor) MapAny(f2 IntAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapBool(f2 FunctorInt64Bool) FunctorInt64Bool {
+func (f1 Int64Int64Functor) MapBool(f2 Int64BoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapRune(f2 FunctorInt64Rune) FunctorInt64Rune {
+func (f1 Int64Int64Functor) MapRune(f2 Int64RuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapByte(f2 FunctorInt64Byte) FunctorInt64Byte {
+func (f1 Int64Int64Functor) MapByte(f2 Int64ByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapInt(f2 FunctorInt64Int) FunctorInt64Int {
+func (f1 Int64Int64Functor) MapInt(f2 Int64IntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapInt64(f2 FunctorInt64Int64) FunctorInt64Int64 {
+func (f1 Int64Int64Functor) MapInt64(f2 Int64Int64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapUint(f2 FunctorInt64Uint) FunctorInt64Uint {
+func (f1 Int64Int64Functor) MapUint(f2 Int64UintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapUint64(f2 FunctorInt64Uint64) FunctorInt64Uint64 {
+func (f1 Int64Int64Functor) MapUint64(f2 Int64Uint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapFloat32(f2 FunctorInt64Float32) FunctorInt64Float32 {
+func (f1 Int64Int64Functor) MapFloat32(f2 Int64Float32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapFloat64(f2 FunctorInt64Float64) FunctorInt64Float64 {
+func (f1 Int64Int64Functor) MapFloat64(f2 Int64Float64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapString(f2 FunctorInt64String) FunctorInt64String {
+func (f1 Int64Int64Functor) MapString(f2 Int64StringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Int64) MapAny(f2 FunctorInt64Any) FunctorInt64Any {
+func (f1 Int64Int64Functor) MapAny(f2 Int64AnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapBool(f2 FunctorUintBool) FunctorInt64Bool {
+func (f1 Int64UintFunctor) MapBool(f2 UintBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapRune(f2 FunctorUintRune) FunctorInt64Rune {
+func (f1 Int64UintFunctor) MapRune(f2 UintRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapByte(f2 FunctorUintByte) FunctorInt64Byte {
+func (f1 Int64UintFunctor) MapByte(f2 UintByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapInt(f2 FunctorUintInt) FunctorInt64Int {
+func (f1 Int64UintFunctor) MapInt(f2 UintIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapInt64(f2 FunctorUintInt64) FunctorInt64Int64 {
+func (f1 Int64UintFunctor) MapInt64(f2 UintInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapUint(f2 FunctorUintUint) FunctorInt64Uint {
+func (f1 Int64UintFunctor) MapUint(f2 UintUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapUint64(f2 FunctorUintUint64) FunctorInt64Uint64 {
+func (f1 Int64UintFunctor) MapUint64(f2 UintUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapFloat32(f2 FunctorUintFloat32) FunctorInt64Float32 {
+func (f1 Int64UintFunctor) MapFloat32(f2 UintFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapFloat64(f2 FunctorUintFloat64) FunctorInt64Float64 {
+func (f1 Int64UintFunctor) MapFloat64(f2 UintFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapString(f2 FunctorUintString) FunctorInt64String {
+func (f1 Int64UintFunctor) MapString(f2 UintStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint) MapAny(f2 FunctorUintAny) FunctorInt64Any {
+func (f1 Int64UintFunctor) MapAny(f2 UintAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapBool(f2 FunctorUint64Bool) FunctorInt64Bool {
+func (f1 Int64Uint64Functor) MapBool(f2 Uint64BoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapRune(f2 FunctorUint64Rune) FunctorInt64Rune {
+func (f1 Int64Uint64Functor) MapRune(f2 Uint64RuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapByte(f2 FunctorUint64Byte) FunctorInt64Byte {
+func (f1 Int64Uint64Functor) MapByte(f2 Uint64ByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapInt(f2 FunctorUint64Int) FunctorInt64Int {
+func (f1 Int64Uint64Functor) MapInt(f2 Uint64IntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapInt64(f2 FunctorUint64Int64) FunctorInt64Int64 {
+func (f1 Int64Uint64Functor) MapInt64(f2 Uint64Int64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapUint(f2 FunctorUint64Uint) FunctorInt64Uint {
+func (f1 Int64Uint64Functor) MapUint(f2 Uint64UintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapUint64(f2 FunctorUint64Uint64) FunctorInt64Uint64 {
+func (f1 Int64Uint64Functor) MapUint64(f2 Uint64Uint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapFloat32(f2 FunctorUint64Float32) FunctorInt64Float32 {
+func (f1 Int64Uint64Functor) MapFloat32(f2 Uint64Float32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapFloat64(f2 FunctorUint64Float64) FunctorInt64Float64 {
+func (f1 Int64Uint64Functor) MapFloat64(f2 Uint64Float64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapString(f2 FunctorUint64String) FunctorInt64String {
+func (f1 Int64Uint64Functor) MapString(f2 Uint64StringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Uint64) MapAny(f2 FunctorUint64Any) FunctorInt64Any {
+func (f1 Int64Uint64Functor) MapAny(f2 Uint64AnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapBool(f2 FunctorFloat32Bool) FunctorInt64Bool {
+func (f1 Int64Float32Functor) MapBool(f2 Float32BoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapRune(f2 FunctorFloat32Rune) FunctorInt64Rune {
+func (f1 Int64Float32Functor) MapRune(f2 Float32RuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapByte(f2 FunctorFloat32Byte) FunctorInt64Byte {
+func (f1 Int64Float32Functor) MapByte(f2 Float32ByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapInt(f2 FunctorFloat32Int) FunctorInt64Int {
+func (f1 Int64Float32Functor) MapInt(f2 Float32IntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapInt64(f2 FunctorFloat32Int64) FunctorInt64Int64 {
+func (f1 Int64Float32Functor) MapInt64(f2 Float32Int64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapUint(f2 FunctorFloat32Uint) FunctorInt64Uint {
+func (f1 Int64Float32Functor) MapUint(f2 Float32UintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapUint64(f2 FunctorFloat32Uint64) FunctorInt64Uint64 {
+func (f1 Int64Float32Functor) MapUint64(f2 Float32Uint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapFloat32(f2 FunctorFloat32Float32) FunctorInt64Float32 {
+func (f1 Int64Float32Functor) MapFloat32(f2 Float32Float32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapFloat64(f2 FunctorFloat32Float64) FunctorInt64Float64 {
+func (f1 Int64Float32Functor) MapFloat64(f2 Float32Float64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapString(f2 FunctorFloat32String) FunctorInt64String {
+func (f1 Int64Float32Functor) MapString(f2 Float32StringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float32) MapAny(f2 FunctorFloat32Any) FunctorInt64Any {
+func (f1 Int64Float32Functor) MapAny(f2 Float32AnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapBool(f2 FunctorFloat64Bool) FunctorInt64Bool {
+func (f1 Int64Float64Functor) MapBool(f2 Float64BoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapRune(f2 FunctorFloat64Rune) FunctorInt64Rune {
+func (f1 Int64Float64Functor) MapRune(f2 Float64RuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapByte(f2 FunctorFloat64Byte) FunctorInt64Byte {
+func (f1 Int64Float64Functor) MapByte(f2 Float64ByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapInt(f2 FunctorFloat64Int) FunctorInt64Int {
+func (f1 Int64Float64Functor) MapInt(f2 Float64IntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapInt64(f2 FunctorFloat64Int64) FunctorInt64Int64 {
+func (f1 Int64Float64Functor) MapInt64(f2 Float64Int64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapUint(f2 FunctorFloat64Uint) FunctorInt64Uint {
+func (f1 Int64Float64Functor) MapUint(f2 Float64UintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapUint64(f2 FunctorFloat64Uint64) FunctorInt64Uint64 {
+func (f1 Int64Float64Functor) MapUint64(f2 Float64Uint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapFloat32(f2 FunctorFloat64Float32) FunctorInt64Float32 {
+func (f1 Int64Float64Functor) MapFloat32(f2 Float64Float32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapFloat64(f2 FunctorFloat64Float64) FunctorInt64Float64 {
+func (f1 Int64Float64Functor) MapFloat64(f2 Float64Float64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapString(f2 FunctorFloat64String) FunctorInt64String {
+func (f1 Int64Float64Functor) MapString(f2 Float64StringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Float64) MapAny(f2 FunctorFloat64Any) FunctorInt64Any {
+func (f1 Int64Float64Functor) MapAny(f2 Float64AnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapBool(f2 FunctorStringBool) FunctorInt64Bool {
+func (f1 Int64StringFunctor) MapBool(f2 StringBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapRune(f2 FunctorStringRune) FunctorInt64Rune {
+func (f1 Int64StringFunctor) MapRune(f2 StringRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapByte(f2 FunctorStringByte) FunctorInt64Byte {
+func (f1 Int64StringFunctor) MapByte(f2 StringByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapInt(f2 FunctorStringInt) FunctorInt64Int {
+func (f1 Int64StringFunctor) MapInt(f2 StringIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapInt64(f2 FunctorStringInt64) FunctorInt64Int64 {
+func (f1 Int64StringFunctor) MapInt64(f2 StringInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapUint(f2 FunctorStringUint) FunctorInt64Uint {
+func (f1 Int64StringFunctor) MapUint(f2 StringUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapUint64(f2 FunctorStringUint64) FunctorInt64Uint64 {
+func (f1 Int64StringFunctor) MapUint64(f2 StringUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapFloat32(f2 FunctorStringFloat32) FunctorInt64Float32 {
+func (f1 Int64StringFunctor) MapFloat32(f2 StringFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapFloat64(f2 FunctorStringFloat64) FunctorInt64Float64 {
+func (f1 Int64StringFunctor) MapFloat64(f2 StringFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapString(f2 FunctorStringString) FunctorInt64String {
+func (f1 Int64StringFunctor) MapString(f2 StringStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64String) MapAny(f2 FunctorStringAny) FunctorInt64Any {
+func (f1 Int64StringFunctor) MapAny(f2 StringAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapBool(f2 FunctorAnyBool) FunctorInt64Bool {
+func (f1 Int64AnyFunctor) MapBool(f2 AnyBoolFunctor) Int64BoolFunctor {
 	return func(e int64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapRune(f2 FunctorAnyRune) FunctorInt64Rune {
+func (f1 Int64AnyFunctor) MapRune(f2 AnyRuneFunctor) Int64RuneFunctor {
 	return func(e int64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapByte(f2 FunctorAnyByte) FunctorInt64Byte {
+func (f1 Int64AnyFunctor) MapByte(f2 AnyByteFunctor) Int64ByteFunctor {
 	return func(e int64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapInt(f2 FunctorAnyInt) FunctorInt64Int {
+func (f1 Int64AnyFunctor) MapInt(f2 AnyIntFunctor) Int64IntFunctor {
 	return func(e int64) int { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapInt64(f2 FunctorAnyInt64) FunctorInt64Int64 {
+func (f1 Int64AnyFunctor) MapInt64(f2 AnyInt64Functor) Int64Int64Functor {
 	return func(e int64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapUint(f2 FunctorAnyUint) FunctorInt64Uint {
+func (f1 Int64AnyFunctor) MapUint(f2 AnyUintFunctor) Int64UintFunctor {
 	return func(e int64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapUint64(f2 FunctorAnyUint64) FunctorInt64Uint64 {
+func (f1 Int64AnyFunctor) MapUint64(f2 AnyUint64Functor) Int64Uint64Functor {
 	return func(e int64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapFloat32(f2 FunctorAnyFloat32) FunctorInt64Float32 {
+func (f1 Int64AnyFunctor) MapFloat32(f2 AnyFloat32Functor) Int64Float32Functor {
 	return func(e int64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapFloat64(f2 FunctorAnyFloat64) FunctorInt64Float64 {
+func (f1 Int64AnyFunctor) MapFloat64(f2 AnyFloat64Functor) Int64Float64Functor {
 	return func(e int64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapString(f2 FunctorAnyString) FunctorInt64String {
+func (f1 Int64AnyFunctor) MapString(f2 AnyStringFunctor) Int64StringFunctor {
 	return func(e int64) string { return f2(f1(e)) }
 }
-func (f1 FunctorInt64Any) MapAny(f2 FunctorAnyAny) FunctorInt64Any {
+func (f1 Int64AnyFunctor) MapAny(f2 AnyAnyFunctor) Int64AnyFunctor {
 	return func(e int64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapBool(f2 FunctorBoolBool) FunctorUintBool {
+func (f1 UintBoolFunctor) MapBool(f2 BoolBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapRune(f2 FunctorBoolRune) FunctorUintRune {
+func (f1 UintBoolFunctor) MapRune(f2 BoolRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapByte(f2 FunctorBoolByte) FunctorUintByte {
+func (f1 UintBoolFunctor) MapByte(f2 BoolByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapInt(f2 FunctorBoolInt) FunctorUintInt {
+func (f1 UintBoolFunctor) MapInt(f2 BoolIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapInt64(f2 FunctorBoolInt64) FunctorUintInt64 {
+func (f1 UintBoolFunctor) MapInt64(f2 BoolInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapUint(f2 FunctorBoolUint) FunctorUintUint {
+func (f1 UintBoolFunctor) MapUint(f2 BoolUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapUint64(f2 FunctorBoolUint64) FunctorUintUint64 {
+func (f1 UintBoolFunctor) MapUint64(f2 BoolUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapFloat32(f2 FunctorBoolFloat32) FunctorUintFloat32 {
+func (f1 UintBoolFunctor) MapFloat32(f2 BoolFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapFloat64(f2 FunctorBoolFloat64) FunctorUintFloat64 {
+func (f1 UintBoolFunctor) MapFloat64(f2 BoolFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapString(f2 FunctorBoolString) FunctorUintString {
+func (f1 UintBoolFunctor) MapString(f2 BoolStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintBool) MapAny(f2 FunctorBoolAny) FunctorUintAny {
+func (f1 UintBoolFunctor) MapAny(f2 BoolAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapBool(f2 FunctorRuneBool) FunctorUintBool {
+func (f1 UintRuneFunctor) MapBool(f2 RuneBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapRune(f2 FunctorRuneRune) FunctorUintRune {
+func (f1 UintRuneFunctor) MapRune(f2 RuneRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapByte(f2 FunctorRuneByte) FunctorUintByte {
+func (f1 UintRuneFunctor) MapByte(f2 RuneByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapInt(f2 FunctorRuneInt) FunctorUintInt {
+func (f1 UintRuneFunctor) MapInt(f2 RuneIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapInt64(f2 FunctorRuneInt64) FunctorUintInt64 {
+func (f1 UintRuneFunctor) MapInt64(f2 RuneInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapUint(f2 FunctorRuneUint) FunctorUintUint {
+func (f1 UintRuneFunctor) MapUint(f2 RuneUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapUint64(f2 FunctorRuneUint64) FunctorUintUint64 {
+func (f1 UintRuneFunctor) MapUint64(f2 RuneUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapFloat32(f2 FunctorRuneFloat32) FunctorUintFloat32 {
+func (f1 UintRuneFunctor) MapFloat32(f2 RuneFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapFloat64(f2 FunctorRuneFloat64) FunctorUintFloat64 {
+func (f1 UintRuneFunctor) MapFloat64(f2 RuneFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapString(f2 FunctorRuneString) FunctorUintString {
+func (f1 UintRuneFunctor) MapString(f2 RuneStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintRune) MapAny(f2 FunctorRuneAny) FunctorUintAny {
+func (f1 UintRuneFunctor) MapAny(f2 RuneAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapBool(f2 FunctorByteBool) FunctorUintBool {
+func (f1 UintByteFunctor) MapBool(f2 ByteBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapRune(f2 FunctorByteRune) FunctorUintRune {
+func (f1 UintByteFunctor) MapRune(f2 ByteRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapByte(f2 FunctorByteByte) FunctorUintByte {
+func (f1 UintByteFunctor) MapByte(f2 ByteByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapInt(f2 FunctorByteInt) FunctorUintInt {
+func (f1 UintByteFunctor) MapInt(f2 ByteIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapInt64(f2 FunctorByteInt64) FunctorUintInt64 {
+func (f1 UintByteFunctor) MapInt64(f2 ByteInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapUint(f2 FunctorByteUint) FunctorUintUint {
+func (f1 UintByteFunctor) MapUint(f2 ByteUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapUint64(f2 FunctorByteUint64) FunctorUintUint64 {
+func (f1 UintByteFunctor) MapUint64(f2 ByteUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapFloat32(f2 FunctorByteFloat32) FunctorUintFloat32 {
+func (f1 UintByteFunctor) MapFloat32(f2 ByteFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapFloat64(f2 FunctorByteFloat64) FunctorUintFloat64 {
+func (f1 UintByteFunctor) MapFloat64(f2 ByteFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapString(f2 FunctorByteString) FunctorUintString {
+func (f1 UintByteFunctor) MapString(f2 ByteStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintByte) MapAny(f2 FunctorByteAny) FunctorUintAny {
+func (f1 UintByteFunctor) MapAny(f2 ByteAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapBool(f2 FunctorIntBool) FunctorUintBool {
+func (f1 UintIntFunctor) MapBool(f2 IntBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapRune(f2 FunctorIntRune) FunctorUintRune {
+func (f1 UintIntFunctor) MapRune(f2 IntRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapByte(f2 FunctorIntByte) FunctorUintByte {
+func (f1 UintIntFunctor) MapByte(f2 IntByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapInt(f2 FunctorIntInt) FunctorUintInt {
+func (f1 UintIntFunctor) MapInt(f2 IntIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapInt64(f2 FunctorIntInt64) FunctorUintInt64 {
+func (f1 UintIntFunctor) MapInt64(f2 IntInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapUint(f2 FunctorIntUint) FunctorUintUint {
+func (f1 UintIntFunctor) MapUint(f2 IntUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapUint64(f2 FunctorIntUint64) FunctorUintUint64 {
+func (f1 UintIntFunctor) MapUint64(f2 IntUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapFloat32(f2 FunctorIntFloat32) FunctorUintFloat32 {
+func (f1 UintIntFunctor) MapFloat32(f2 IntFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapFloat64(f2 FunctorIntFloat64) FunctorUintFloat64 {
+func (f1 UintIntFunctor) MapFloat64(f2 IntFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapString(f2 FunctorIntString) FunctorUintString {
+func (f1 UintIntFunctor) MapString(f2 IntStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt) MapAny(f2 FunctorIntAny) FunctorUintAny {
+func (f1 UintIntFunctor) MapAny(f2 IntAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapBool(f2 FunctorInt64Bool) FunctorUintBool {
+func (f1 UintInt64Functor) MapBool(f2 Int64BoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapRune(f2 FunctorInt64Rune) FunctorUintRune {
+func (f1 UintInt64Functor) MapRune(f2 Int64RuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapByte(f2 FunctorInt64Byte) FunctorUintByte {
+func (f1 UintInt64Functor) MapByte(f2 Int64ByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapInt(f2 FunctorInt64Int) FunctorUintInt {
+func (f1 UintInt64Functor) MapInt(f2 Int64IntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapInt64(f2 FunctorInt64Int64) FunctorUintInt64 {
+func (f1 UintInt64Functor) MapInt64(f2 Int64Int64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapUint(f2 FunctorInt64Uint) FunctorUintUint {
+func (f1 UintInt64Functor) MapUint(f2 Int64UintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapUint64(f2 FunctorInt64Uint64) FunctorUintUint64 {
+func (f1 UintInt64Functor) MapUint64(f2 Int64Uint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapFloat32(f2 FunctorInt64Float32) FunctorUintFloat32 {
+func (f1 UintInt64Functor) MapFloat32(f2 Int64Float32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapFloat64(f2 FunctorInt64Float64) FunctorUintFloat64 {
+func (f1 UintInt64Functor) MapFloat64(f2 Int64Float64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapString(f2 FunctorInt64String) FunctorUintString {
+func (f1 UintInt64Functor) MapString(f2 Int64StringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintInt64) MapAny(f2 FunctorInt64Any) FunctorUintAny {
+func (f1 UintInt64Functor) MapAny(f2 Int64AnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapBool(f2 FunctorUintBool) FunctorUintBool {
+func (f1 UintUintFunctor) MapBool(f2 UintBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapRune(f2 FunctorUintRune) FunctorUintRune {
+func (f1 UintUintFunctor) MapRune(f2 UintRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapByte(f2 FunctorUintByte) FunctorUintByte {
+func (f1 UintUintFunctor) MapByte(f2 UintByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapInt(f2 FunctorUintInt) FunctorUintInt {
+func (f1 UintUintFunctor) MapInt(f2 UintIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapInt64(f2 FunctorUintInt64) FunctorUintInt64 {
+func (f1 UintUintFunctor) MapInt64(f2 UintInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapUint(f2 FunctorUintUint) FunctorUintUint {
+func (f1 UintUintFunctor) MapUint(f2 UintUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapUint64(f2 FunctorUintUint64) FunctorUintUint64 {
+func (f1 UintUintFunctor) MapUint64(f2 UintUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapFloat32(f2 FunctorUintFloat32) FunctorUintFloat32 {
+func (f1 UintUintFunctor) MapFloat32(f2 UintFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapFloat64(f2 FunctorUintFloat64) FunctorUintFloat64 {
+func (f1 UintUintFunctor) MapFloat64(f2 UintFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapString(f2 FunctorUintString) FunctorUintString {
+func (f1 UintUintFunctor) MapString(f2 UintStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint) MapAny(f2 FunctorUintAny) FunctorUintAny {
+func (f1 UintUintFunctor) MapAny(f2 UintAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapBool(f2 FunctorUint64Bool) FunctorUintBool {
+func (f1 UintUint64Functor) MapBool(f2 Uint64BoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapRune(f2 FunctorUint64Rune) FunctorUintRune {
+func (f1 UintUint64Functor) MapRune(f2 Uint64RuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapByte(f2 FunctorUint64Byte) FunctorUintByte {
+func (f1 UintUint64Functor) MapByte(f2 Uint64ByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapInt(f2 FunctorUint64Int) FunctorUintInt {
+func (f1 UintUint64Functor) MapInt(f2 Uint64IntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapInt64(f2 FunctorUint64Int64) FunctorUintInt64 {
+func (f1 UintUint64Functor) MapInt64(f2 Uint64Int64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapUint(f2 FunctorUint64Uint) FunctorUintUint {
+func (f1 UintUint64Functor) MapUint(f2 Uint64UintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapUint64(f2 FunctorUint64Uint64) FunctorUintUint64 {
+func (f1 UintUint64Functor) MapUint64(f2 Uint64Uint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapFloat32(f2 FunctorUint64Float32) FunctorUintFloat32 {
+func (f1 UintUint64Functor) MapFloat32(f2 Uint64Float32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapFloat64(f2 FunctorUint64Float64) FunctorUintFloat64 {
+func (f1 UintUint64Functor) MapFloat64(f2 Uint64Float64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapString(f2 FunctorUint64String) FunctorUintString {
+func (f1 UintUint64Functor) MapString(f2 Uint64StringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintUint64) MapAny(f2 FunctorUint64Any) FunctorUintAny {
+func (f1 UintUint64Functor) MapAny(f2 Uint64AnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapBool(f2 FunctorFloat32Bool) FunctorUintBool {
+func (f1 UintFloat32Functor) MapBool(f2 Float32BoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapRune(f2 FunctorFloat32Rune) FunctorUintRune {
+func (f1 UintFloat32Functor) MapRune(f2 Float32RuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapByte(f2 FunctorFloat32Byte) FunctorUintByte {
+func (f1 UintFloat32Functor) MapByte(f2 Float32ByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapInt(f2 FunctorFloat32Int) FunctorUintInt {
+func (f1 UintFloat32Functor) MapInt(f2 Float32IntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorUintInt64 {
+func (f1 UintFloat32Functor) MapInt64(f2 Float32Int64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapUint(f2 FunctorFloat32Uint) FunctorUintUint {
+func (f1 UintFloat32Functor) MapUint(f2 Float32UintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorUintUint64 {
+func (f1 UintFloat32Functor) MapUint64(f2 Float32Uint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorUintFloat32 {
+func (f1 UintFloat32Functor) MapFloat32(f2 Float32Float32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorUintFloat64 {
+func (f1 UintFloat32Functor) MapFloat64(f2 Float32Float64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapString(f2 FunctorFloat32String) FunctorUintString {
+func (f1 UintFloat32Functor) MapString(f2 Float32StringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat32) MapAny(f2 FunctorFloat32Any) FunctorUintAny {
+func (f1 UintFloat32Functor) MapAny(f2 Float32AnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapBool(f2 FunctorFloat64Bool) FunctorUintBool {
+func (f1 UintFloat64Functor) MapBool(f2 Float64BoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapRune(f2 FunctorFloat64Rune) FunctorUintRune {
+func (f1 UintFloat64Functor) MapRune(f2 Float64RuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapByte(f2 FunctorFloat64Byte) FunctorUintByte {
+func (f1 UintFloat64Functor) MapByte(f2 Float64ByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapInt(f2 FunctorFloat64Int) FunctorUintInt {
+func (f1 UintFloat64Functor) MapInt(f2 Float64IntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorUintInt64 {
+func (f1 UintFloat64Functor) MapInt64(f2 Float64Int64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapUint(f2 FunctorFloat64Uint) FunctorUintUint {
+func (f1 UintFloat64Functor) MapUint(f2 Float64UintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorUintUint64 {
+func (f1 UintFloat64Functor) MapUint64(f2 Float64Uint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorUintFloat32 {
+func (f1 UintFloat64Functor) MapFloat32(f2 Float64Float32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorUintFloat64 {
+func (f1 UintFloat64Functor) MapFloat64(f2 Float64Float64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapString(f2 FunctorFloat64String) FunctorUintString {
+func (f1 UintFloat64Functor) MapString(f2 Float64StringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintFloat64) MapAny(f2 FunctorFloat64Any) FunctorUintAny {
+func (f1 UintFloat64Functor) MapAny(f2 Float64AnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapBool(f2 FunctorStringBool) FunctorUintBool {
+func (f1 UintStringFunctor) MapBool(f2 StringBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapRune(f2 FunctorStringRune) FunctorUintRune {
+func (f1 UintStringFunctor) MapRune(f2 StringRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapByte(f2 FunctorStringByte) FunctorUintByte {
+func (f1 UintStringFunctor) MapByte(f2 StringByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapInt(f2 FunctorStringInt) FunctorUintInt {
+func (f1 UintStringFunctor) MapInt(f2 StringIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapInt64(f2 FunctorStringInt64) FunctorUintInt64 {
+func (f1 UintStringFunctor) MapInt64(f2 StringInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapUint(f2 FunctorStringUint) FunctorUintUint {
+func (f1 UintStringFunctor) MapUint(f2 StringUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapUint64(f2 FunctorStringUint64) FunctorUintUint64 {
+func (f1 UintStringFunctor) MapUint64(f2 StringUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapFloat32(f2 FunctorStringFloat32) FunctorUintFloat32 {
+func (f1 UintStringFunctor) MapFloat32(f2 StringFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapFloat64(f2 FunctorStringFloat64) FunctorUintFloat64 {
+func (f1 UintStringFunctor) MapFloat64(f2 StringFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapString(f2 FunctorStringString) FunctorUintString {
+func (f1 UintStringFunctor) MapString(f2 StringStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintString) MapAny(f2 FunctorStringAny) FunctorUintAny {
+func (f1 UintStringFunctor) MapAny(f2 StringAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapBool(f2 FunctorAnyBool) FunctorUintBool {
+func (f1 UintAnyFunctor) MapBool(f2 AnyBoolFunctor) UintBoolFunctor {
 	return func(e uint) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapRune(f2 FunctorAnyRune) FunctorUintRune {
+func (f1 UintAnyFunctor) MapRune(f2 AnyRuneFunctor) UintRuneFunctor {
 	return func(e uint) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapByte(f2 FunctorAnyByte) FunctorUintByte {
+func (f1 UintAnyFunctor) MapByte(f2 AnyByteFunctor) UintByteFunctor {
 	return func(e uint) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapInt(f2 FunctorAnyInt) FunctorUintInt {
+func (f1 UintAnyFunctor) MapInt(f2 AnyIntFunctor) UintIntFunctor {
 	return func(e uint) int { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapInt64(f2 FunctorAnyInt64) FunctorUintInt64 {
+func (f1 UintAnyFunctor) MapInt64(f2 AnyInt64Functor) UintInt64Functor {
 	return func(e uint) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapUint(f2 FunctorAnyUint) FunctorUintUint {
+func (f1 UintAnyFunctor) MapUint(f2 AnyUintFunctor) UintUintFunctor {
 	return func(e uint) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapUint64(f2 FunctorAnyUint64) FunctorUintUint64 {
+func (f1 UintAnyFunctor) MapUint64(f2 AnyUint64Functor) UintUint64Functor {
 	return func(e uint) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapFloat32(f2 FunctorAnyFloat32) FunctorUintFloat32 {
+func (f1 UintAnyFunctor) MapFloat32(f2 AnyFloat32Functor) UintFloat32Functor {
 	return func(e uint) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapFloat64(f2 FunctorAnyFloat64) FunctorUintFloat64 {
+func (f1 UintAnyFunctor) MapFloat64(f2 AnyFloat64Functor) UintFloat64Functor {
 	return func(e uint) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapString(f2 FunctorAnyString) FunctorUintString {
+func (f1 UintAnyFunctor) MapString(f2 AnyStringFunctor) UintStringFunctor {
 	return func(e uint) string { return f2(f1(e)) }
 }
-func (f1 FunctorUintAny) MapAny(f2 FunctorAnyAny) FunctorUintAny {
+func (f1 UintAnyFunctor) MapAny(f2 AnyAnyFunctor) UintAnyFunctor {
 	return func(e uint) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapBool(f2 FunctorBoolBool) FunctorUint64Bool {
+func (f1 Uint64BoolFunctor) MapBool(f2 BoolBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapRune(f2 FunctorBoolRune) FunctorUint64Rune {
+func (f1 Uint64BoolFunctor) MapRune(f2 BoolRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapByte(f2 FunctorBoolByte) FunctorUint64Byte {
+func (f1 Uint64BoolFunctor) MapByte(f2 BoolByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapInt(f2 FunctorBoolInt) FunctorUint64Int {
+func (f1 Uint64BoolFunctor) MapInt(f2 BoolIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapInt64(f2 FunctorBoolInt64) FunctorUint64Int64 {
+func (f1 Uint64BoolFunctor) MapInt64(f2 BoolInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapUint(f2 FunctorBoolUint) FunctorUint64Uint {
+func (f1 Uint64BoolFunctor) MapUint(f2 BoolUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapUint64(f2 FunctorBoolUint64) FunctorUint64Uint64 {
+func (f1 Uint64BoolFunctor) MapUint64(f2 BoolUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapFloat32(f2 FunctorBoolFloat32) FunctorUint64Float32 {
+func (f1 Uint64BoolFunctor) MapFloat32(f2 BoolFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapFloat64(f2 FunctorBoolFloat64) FunctorUint64Float64 {
+func (f1 Uint64BoolFunctor) MapFloat64(f2 BoolFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapString(f2 FunctorBoolString) FunctorUint64String {
+func (f1 Uint64BoolFunctor) MapString(f2 BoolStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Bool) MapAny(f2 FunctorBoolAny) FunctorUint64Any {
+func (f1 Uint64BoolFunctor) MapAny(f2 BoolAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapBool(f2 FunctorRuneBool) FunctorUint64Bool {
+func (f1 Uint64RuneFunctor) MapBool(f2 RuneBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapRune(f2 FunctorRuneRune) FunctorUint64Rune {
+func (f1 Uint64RuneFunctor) MapRune(f2 RuneRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapByte(f2 FunctorRuneByte) FunctorUint64Byte {
+func (f1 Uint64RuneFunctor) MapByte(f2 RuneByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapInt(f2 FunctorRuneInt) FunctorUint64Int {
+func (f1 Uint64RuneFunctor) MapInt(f2 RuneIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapInt64(f2 FunctorRuneInt64) FunctorUint64Int64 {
+func (f1 Uint64RuneFunctor) MapInt64(f2 RuneInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapUint(f2 FunctorRuneUint) FunctorUint64Uint {
+func (f1 Uint64RuneFunctor) MapUint(f2 RuneUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapUint64(f2 FunctorRuneUint64) FunctorUint64Uint64 {
+func (f1 Uint64RuneFunctor) MapUint64(f2 RuneUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapFloat32(f2 FunctorRuneFloat32) FunctorUint64Float32 {
+func (f1 Uint64RuneFunctor) MapFloat32(f2 RuneFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapFloat64(f2 FunctorRuneFloat64) FunctorUint64Float64 {
+func (f1 Uint64RuneFunctor) MapFloat64(f2 RuneFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapString(f2 FunctorRuneString) FunctorUint64String {
+func (f1 Uint64RuneFunctor) MapString(f2 RuneStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Rune) MapAny(f2 FunctorRuneAny) FunctorUint64Any {
+func (f1 Uint64RuneFunctor) MapAny(f2 RuneAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapBool(f2 FunctorByteBool) FunctorUint64Bool {
+func (f1 Uint64ByteFunctor) MapBool(f2 ByteBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapRune(f2 FunctorByteRune) FunctorUint64Rune {
+func (f1 Uint64ByteFunctor) MapRune(f2 ByteRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapByte(f2 FunctorByteByte) FunctorUint64Byte {
+func (f1 Uint64ByteFunctor) MapByte(f2 ByteByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapInt(f2 FunctorByteInt) FunctorUint64Int {
+func (f1 Uint64ByteFunctor) MapInt(f2 ByteIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapInt64(f2 FunctorByteInt64) FunctorUint64Int64 {
+func (f1 Uint64ByteFunctor) MapInt64(f2 ByteInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapUint(f2 FunctorByteUint) FunctorUint64Uint {
+func (f1 Uint64ByteFunctor) MapUint(f2 ByteUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapUint64(f2 FunctorByteUint64) FunctorUint64Uint64 {
+func (f1 Uint64ByteFunctor) MapUint64(f2 ByteUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapFloat32(f2 FunctorByteFloat32) FunctorUint64Float32 {
+func (f1 Uint64ByteFunctor) MapFloat32(f2 ByteFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapFloat64(f2 FunctorByteFloat64) FunctorUint64Float64 {
+func (f1 Uint64ByteFunctor) MapFloat64(f2 ByteFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapString(f2 FunctorByteString) FunctorUint64String {
+func (f1 Uint64ByteFunctor) MapString(f2 ByteStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Byte) MapAny(f2 FunctorByteAny) FunctorUint64Any {
+func (f1 Uint64ByteFunctor) MapAny(f2 ByteAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapBool(f2 FunctorIntBool) FunctorUint64Bool {
+func (f1 Uint64IntFunctor) MapBool(f2 IntBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapRune(f2 FunctorIntRune) FunctorUint64Rune {
+func (f1 Uint64IntFunctor) MapRune(f2 IntRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapByte(f2 FunctorIntByte) FunctorUint64Byte {
+func (f1 Uint64IntFunctor) MapByte(f2 IntByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapInt(f2 FunctorIntInt) FunctorUint64Int {
+func (f1 Uint64IntFunctor) MapInt(f2 IntIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapInt64(f2 FunctorIntInt64) FunctorUint64Int64 {
+func (f1 Uint64IntFunctor) MapInt64(f2 IntInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapUint(f2 FunctorIntUint) FunctorUint64Uint {
+func (f1 Uint64IntFunctor) MapUint(f2 IntUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapUint64(f2 FunctorIntUint64) FunctorUint64Uint64 {
+func (f1 Uint64IntFunctor) MapUint64(f2 IntUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapFloat32(f2 FunctorIntFloat32) FunctorUint64Float32 {
+func (f1 Uint64IntFunctor) MapFloat32(f2 IntFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapFloat64(f2 FunctorIntFloat64) FunctorUint64Float64 {
+func (f1 Uint64IntFunctor) MapFloat64(f2 IntFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapString(f2 FunctorIntString) FunctorUint64String {
+func (f1 Uint64IntFunctor) MapString(f2 IntStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int) MapAny(f2 FunctorIntAny) FunctorUint64Any {
+func (f1 Uint64IntFunctor) MapAny(f2 IntAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapBool(f2 FunctorInt64Bool) FunctorUint64Bool {
+func (f1 Uint64Int64Functor) MapBool(f2 Int64BoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapRune(f2 FunctorInt64Rune) FunctorUint64Rune {
+func (f1 Uint64Int64Functor) MapRune(f2 Int64RuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapByte(f2 FunctorInt64Byte) FunctorUint64Byte {
+func (f1 Uint64Int64Functor) MapByte(f2 Int64ByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapInt(f2 FunctorInt64Int) FunctorUint64Int {
+func (f1 Uint64Int64Functor) MapInt(f2 Int64IntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapInt64(f2 FunctorInt64Int64) FunctorUint64Int64 {
+func (f1 Uint64Int64Functor) MapInt64(f2 Int64Int64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapUint(f2 FunctorInt64Uint) FunctorUint64Uint {
+func (f1 Uint64Int64Functor) MapUint(f2 Int64UintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapUint64(f2 FunctorInt64Uint64) FunctorUint64Uint64 {
+func (f1 Uint64Int64Functor) MapUint64(f2 Int64Uint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapFloat32(f2 FunctorInt64Float32) FunctorUint64Float32 {
+func (f1 Uint64Int64Functor) MapFloat32(f2 Int64Float32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapFloat64(f2 FunctorInt64Float64) FunctorUint64Float64 {
+func (f1 Uint64Int64Functor) MapFloat64(f2 Int64Float64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapString(f2 FunctorInt64String) FunctorUint64String {
+func (f1 Uint64Int64Functor) MapString(f2 Int64StringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Int64) MapAny(f2 FunctorInt64Any) FunctorUint64Any {
+func (f1 Uint64Int64Functor) MapAny(f2 Int64AnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapBool(f2 FunctorUintBool) FunctorUint64Bool {
+func (f1 Uint64UintFunctor) MapBool(f2 UintBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapRune(f2 FunctorUintRune) FunctorUint64Rune {
+func (f1 Uint64UintFunctor) MapRune(f2 UintRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapByte(f2 FunctorUintByte) FunctorUint64Byte {
+func (f1 Uint64UintFunctor) MapByte(f2 UintByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapInt(f2 FunctorUintInt) FunctorUint64Int {
+func (f1 Uint64UintFunctor) MapInt(f2 UintIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapInt64(f2 FunctorUintInt64) FunctorUint64Int64 {
+func (f1 Uint64UintFunctor) MapInt64(f2 UintInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapUint(f2 FunctorUintUint) FunctorUint64Uint {
+func (f1 Uint64UintFunctor) MapUint(f2 UintUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapUint64(f2 FunctorUintUint64) FunctorUint64Uint64 {
+func (f1 Uint64UintFunctor) MapUint64(f2 UintUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapFloat32(f2 FunctorUintFloat32) FunctorUint64Float32 {
+func (f1 Uint64UintFunctor) MapFloat32(f2 UintFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapFloat64(f2 FunctorUintFloat64) FunctorUint64Float64 {
+func (f1 Uint64UintFunctor) MapFloat64(f2 UintFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapString(f2 FunctorUintString) FunctorUint64String {
+func (f1 Uint64UintFunctor) MapString(f2 UintStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint) MapAny(f2 FunctorUintAny) FunctorUint64Any {
+func (f1 Uint64UintFunctor) MapAny(f2 UintAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapBool(f2 FunctorUint64Bool) FunctorUint64Bool {
+func (f1 Uint64Uint64Functor) MapBool(f2 Uint64BoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapRune(f2 FunctorUint64Rune) FunctorUint64Rune {
+func (f1 Uint64Uint64Functor) MapRune(f2 Uint64RuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapByte(f2 FunctorUint64Byte) FunctorUint64Byte {
+func (f1 Uint64Uint64Functor) MapByte(f2 Uint64ByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapInt(f2 FunctorUint64Int) FunctorUint64Int {
+func (f1 Uint64Uint64Functor) MapInt(f2 Uint64IntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapInt64(f2 FunctorUint64Int64) FunctorUint64Int64 {
+func (f1 Uint64Uint64Functor) MapInt64(f2 Uint64Int64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapUint(f2 FunctorUint64Uint) FunctorUint64Uint {
+func (f1 Uint64Uint64Functor) MapUint(f2 Uint64UintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapUint64(f2 FunctorUint64Uint64) FunctorUint64Uint64 {
+func (f1 Uint64Uint64Functor) MapUint64(f2 Uint64Uint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapFloat32(f2 FunctorUint64Float32) FunctorUint64Float32 {
+func (f1 Uint64Uint64Functor) MapFloat32(f2 Uint64Float32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapFloat64(f2 FunctorUint64Float64) FunctorUint64Float64 {
+func (f1 Uint64Uint64Functor) MapFloat64(f2 Uint64Float64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapString(f2 FunctorUint64String) FunctorUint64String {
+func (f1 Uint64Uint64Functor) MapString(f2 Uint64StringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Uint64) MapAny(f2 FunctorUint64Any) FunctorUint64Any {
+func (f1 Uint64Uint64Functor) MapAny(f2 Uint64AnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapBool(f2 FunctorFloat32Bool) FunctorUint64Bool {
+func (f1 Uint64Float32Functor) MapBool(f2 Float32BoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapRune(f2 FunctorFloat32Rune) FunctorUint64Rune {
+func (f1 Uint64Float32Functor) MapRune(f2 Float32RuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapByte(f2 FunctorFloat32Byte) FunctorUint64Byte {
+func (f1 Uint64Float32Functor) MapByte(f2 Float32ByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapInt(f2 FunctorFloat32Int) FunctorUint64Int {
+func (f1 Uint64Float32Functor) MapInt(f2 Float32IntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapInt64(f2 FunctorFloat32Int64) FunctorUint64Int64 {
+func (f1 Uint64Float32Functor) MapInt64(f2 Float32Int64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapUint(f2 FunctorFloat32Uint) FunctorUint64Uint {
+func (f1 Uint64Float32Functor) MapUint(f2 Float32UintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapUint64(f2 FunctorFloat32Uint64) FunctorUint64Uint64 {
+func (f1 Uint64Float32Functor) MapUint64(f2 Float32Uint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapFloat32(f2 FunctorFloat32Float32) FunctorUint64Float32 {
+func (f1 Uint64Float32Functor) MapFloat32(f2 Float32Float32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapFloat64(f2 FunctorFloat32Float64) FunctorUint64Float64 {
+func (f1 Uint64Float32Functor) MapFloat64(f2 Float32Float64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapString(f2 FunctorFloat32String) FunctorUint64String {
+func (f1 Uint64Float32Functor) MapString(f2 Float32StringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float32) MapAny(f2 FunctorFloat32Any) FunctorUint64Any {
+func (f1 Uint64Float32Functor) MapAny(f2 Float32AnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapBool(f2 FunctorFloat64Bool) FunctorUint64Bool {
+func (f1 Uint64Float64Functor) MapBool(f2 Float64BoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapRune(f2 FunctorFloat64Rune) FunctorUint64Rune {
+func (f1 Uint64Float64Functor) MapRune(f2 Float64RuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapByte(f2 FunctorFloat64Byte) FunctorUint64Byte {
+func (f1 Uint64Float64Functor) MapByte(f2 Float64ByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapInt(f2 FunctorFloat64Int) FunctorUint64Int {
+func (f1 Uint64Float64Functor) MapInt(f2 Float64IntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapInt64(f2 FunctorFloat64Int64) FunctorUint64Int64 {
+func (f1 Uint64Float64Functor) MapInt64(f2 Float64Int64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapUint(f2 FunctorFloat64Uint) FunctorUint64Uint {
+func (f1 Uint64Float64Functor) MapUint(f2 Float64UintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapUint64(f2 FunctorFloat64Uint64) FunctorUint64Uint64 {
+func (f1 Uint64Float64Functor) MapUint64(f2 Float64Uint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapFloat32(f2 FunctorFloat64Float32) FunctorUint64Float32 {
+func (f1 Uint64Float64Functor) MapFloat32(f2 Float64Float32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapFloat64(f2 FunctorFloat64Float64) FunctorUint64Float64 {
+func (f1 Uint64Float64Functor) MapFloat64(f2 Float64Float64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapString(f2 FunctorFloat64String) FunctorUint64String {
+func (f1 Uint64Float64Functor) MapString(f2 Float64StringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Float64) MapAny(f2 FunctorFloat64Any) FunctorUint64Any {
+func (f1 Uint64Float64Functor) MapAny(f2 Float64AnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapBool(f2 FunctorStringBool) FunctorUint64Bool {
+func (f1 Uint64StringFunctor) MapBool(f2 StringBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapRune(f2 FunctorStringRune) FunctorUint64Rune {
+func (f1 Uint64StringFunctor) MapRune(f2 StringRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapByte(f2 FunctorStringByte) FunctorUint64Byte {
+func (f1 Uint64StringFunctor) MapByte(f2 StringByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapInt(f2 FunctorStringInt) FunctorUint64Int {
+func (f1 Uint64StringFunctor) MapInt(f2 StringIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapInt64(f2 FunctorStringInt64) FunctorUint64Int64 {
+func (f1 Uint64StringFunctor) MapInt64(f2 StringInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapUint(f2 FunctorStringUint) FunctorUint64Uint {
+func (f1 Uint64StringFunctor) MapUint(f2 StringUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapUint64(f2 FunctorStringUint64) FunctorUint64Uint64 {
+func (f1 Uint64StringFunctor) MapUint64(f2 StringUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapFloat32(f2 FunctorStringFloat32) FunctorUint64Float32 {
+func (f1 Uint64StringFunctor) MapFloat32(f2 StringFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapFloat64(f2 FunctorStringFloat64) FunctorUint64Float64 {
+func (f1 Uint64StringFunctor) MapFloat64(f2 StringFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapString(f2 FunctorStringString) FunctorUint64String {
+func (f1 Uint64StringFunctor) MapString(f2 StringStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64String) MapAny(f2 FunctorStringAny) FunctorUint64Any {
+func (f1 Uint64StringFunctor) MapAny(f2 StringAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapBool(f2 FunctorAnyBool) FunctorUint64Bool {
+func (f1 Uint64AnyFunctor) MapBool(f2 AnyBoolFunctor) Uint64BoolFunctor {
 	return func(e uint64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapRune(f2 FunctorAnyRune) FunctorUint64Rune {
+func (f1 Uint64AnyFunctor) MapRune(f2 AnyRuneFunctor) Uint64RuneFunctor {
 	return func(e uint64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapByte(f2 FunctorAnyByte) FunctorUint64Byte {
+func (f1 Uint64AnyFunctor) MapByte(f2 AnyByteFunctor) Uint64ByteFunctor {
 	return func(e uint64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapInt(f2 FunctorAnyInt) FunctorUint64Int {
+func (f1 Uint64AnyFunctor) MapInt(f2 AnyIntFunctor) Uint64IntFunctor {
 	return func(e uint64) int { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapInt64(f2 FunctorAnyInt64) FunctorUint64Int64 {
+func (f1 Uint64AnyFunctor) MapInt64(f2 AnyInt64Functor) Uint64Int64Functor {
 	return func(e uint64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapUint(f2 FunctorAnyUint) FunctorUint64Uint {
+func (f1 Uint64AnyFunctor) MapUint(f2 AnyUintFunctor) Uint64UintFunctor {
 	return func(e uint64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapUint64(f2 FunctorAnyUint64) FunctorUint64Uint64 {
+func (f1 Uint64AnyFunctor) MapUint64(f2 AnyUint64Functor) Uint64Uint64Functor {
 	return func(e uint64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapFloat32(f2 FunctorAnyFloat32) FunctorUint64Float32 {
+func (f1 Uint64AnyFunctor) MapFloat32(f2 AnyFloat32Functor) Uint64Float32Functor {
 	return func(e uint64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapFloat64(f2 FunctorAnyFloat64) FunctorUint64Float64 {
+func (f1 Uint64AnyFunctor) MapFloat64(f2 AnyFloat64Functor) Uint64Float64Functor {
 	return func(e uint64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapString(f2 FunctorAnyString) FunctorUint64String {
+func (f1 Uint64AnyFunctor) MapString(f2 AnyStringFunctor) Uint64StringFunctor {
 	return func(e uint64) string { return f2(f1(e)) }
 }
-func (f1 FunctorUint64Any) MapAny(f2 FunctorAnyAny) FunctorUint64Any {
+func (f1 Uint64AnyFunctor) MapAny(f2 AnyAnyFunctor) Uint64AnyFunctor {
 	return func(e uint64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapBool(f2 FunctorBoolBool) FunctorFloat32Bool {
+func (f1 Float32BoolFunctor) MapBool(f2 BoolBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapRune(f2 FunctorBoolRune) FunctorFloat32Rune {
+func (f1 Float32BoolFunctor) MapRune(f2 BoolRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapByte(f2 FunctorBoolByte) FunctorFloat32Byte {
+func (f1 Float32BoolFunctor) MapByte(f2 BoolByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapInt(f2 FunctorBoolInt) FunctorFloat32Int {
+func (f1 Float32BoolFunctor) MapInt(f2 BoolIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapInt64(f2 FunctorBoolInt64) FunctorFloat32Int64 {
+func (f1 Float32BoolFunctor) MapInt64(f2 BoolInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapUint(f2 FunctorBoolUint) FunctorFloat32Uint {
+func (f1 Float32BoolFunctor) MapUint(f2 BoolUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapUint64(f2 FunctorBoolUint64) FunctorFloat32Uint64 {
+func (f1 Float32BoolFunctor) MapUint64(f2 BoolUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapFloat32(f2 FunctorBoolFloat32) FunctorFloat32Float32 {
+func (f1 Float32BoolFunctor) MapFloat32(f2 BoolFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapFloat64(f2 FunctorBoolFloat64) FunctorFloat32Float64 {
+func (f1 Float32BoolFunctor) MapFloat64(f2 BoolFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapString(f2 FunctorBoolString) FunctorFloat32String {
+func (f1 Float32BoolFunctor) MapString(f2 BoolStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Bool) MapAny(f2 FunctorBoolAny) FunctorFloat32Any {
+func (f1 Float32BoolFunctor) MapAny(f2 BoolAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapBool(f2 FunctorRuneBool) FunctorFloat32Bool {
+func (f1 Float32RuneFunctor) MapBool(f2 RuneBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapRune(f2 FunctorRuneRune) FunctorFloat32Rune {
+func (f1 Float32RuneFunctor) MapRune(f2 RuneRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapByte(f2 FunctorRuneByte) FunctorFloat32Byte {
+func (f1 Float32RuneFunctor) MapByte(f2 RuneByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapInt(f2 FunctorRuneInt) FunctorFloat32Int {
+func (f1 Float32RuneFunctor) MapInt(f2 RuneIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapInt64(f2 FunctorRuneInt64) FunctorFloat32Int64 {
+func (f1 Float32RuneFunctor) MapInt64(f2 RuneInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapUint(f2 FunctorRuneUint) FunctorFloat32Uint {
+func (f1 Float32RuneFunctor) MapUint(f2 RuneUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapUint64(f2 FunctorRuneUint64) FunctorFloat32Uint64 {
+func (f1 Float32RuneFunctor) MapUint64(f2 RuneUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapFloat32(f2 FunctorRuneFloat32) FunctorFloat32Float32 {
+func (f1 Float32RuneFunctor) MapFloat32(f2 RuneFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapFloat64(f2 FunctorRuneFloat64) FunctorFloat32Float64 {
+func (f1 Float32RuneFunctor) MapFloat64(f2 RuneFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapString(f2 FunctorRuneString) FunctorFloat32String {
+func (f1 Float32RuneFunctor) MapString(f2 RuneStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Rune) MapAny(f2 FunctorRuneAny) FunctorFloat32Any {
+func (f1 Float32RuneFunctor) MapAny(f2 RuneAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapBool(f2 FunctorByteBool) FunctorFloat32Bool {
+func (f1 Float32ByteFunctor) MapBool(f2 ByteBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapRune(f2 FunctorByteRune) FunctorFloat32Rune {
+func (f1 Float32ByteFunctor) MapRune(f2 ByteRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapByte(f2 FunctorByteByte) FunctorFloat32Byte {
+func (f1 Float32ByteFunctor) MapByte(f2 ByteByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapInt(f2 FunctorByteInt) FunctorFloat32Int {
+func (f1 Float32ByteFunctor) MapInt(f2 ByteIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapInt64(f2 FunctorByteInt64) FunctorFloat32Int64 {
+func (f1 Float32ByteFunctor) MapInt64(f2 ByteInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapUint(f2 FunctorByteUint) FunctorFloat32Uint {
+func (f1 Float32ByteFunctor) MapUint(f2 ByteUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapUint64(f2 FunctorByteUint64) FunctorFloat32Uint64 {
+func (f1 Float32ByteFunctor) MapUint64(f2 ByteUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapFloat32(f2 FunctorByteFloat32) FunctorFloat32Float32 {
+func (f1 Float32ByteFunctor) MapFloat32(f2 ByteFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapFloat64(f2 FunctorByteFloat64) FunctorFloat32Float64 {
+func (f1 Float32ByteFunctor) MapFloat64(f2 ByteFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapString(f2 FunctorByteString) FunctorFloat32String {
+func (f1 Float32ByteFunctor) MapString(f2 ByteStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Byte) MapAny(f2 FunctorByteAny) FunctorFloat32Any {
+func (f1 Float32ByteFunctor) MapAny(f2 ByteAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapBool(f2 FunctorIntBool) FunctorFloat32Bool {
+func (f1 Float32IntFunctor) MapBool(f2 IntBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapRune(f2 FunctorIntRune) FunctorFloat32Rune {
+func (f1 Float32IntFunctor) MapRune(f2 IntRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapByte(f2 FunctorIntByte) FunctorFloat32Byte {
+func (f1 Float32IntFunctor) MapByte(f2 IntByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapInt(f2 FunctorIntInt) FunctorFloat32Int {
+func (f1 Float32IntFunctor) MapInt(f2 IntIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapInt64(f2 FunctorIntInt64) FunctorFloat32Int64 {
+func (f1 Float32IntFunctor) MapInt64(f2 IntInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapUint(f2 FunctorIntUint) FunctorFloat32Uint {
+func (f1 Float32IntFunctor) MapUint(f2 IntUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapUint64(f2 FunctorIntUint64) FunctorFloat32Uint64 {
+func (f1 Float32IntFunctor) MapUint64(f2 IntUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapFloat32(f2 FunctorIntFloat32) FunctorFloat32Float32 {
+func (f1 Float32IntFunctor) MapFloat32(f2 IntFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapFloat64(f2 FunctorIntFloat64) FunctorFloat32Float64 {
+func (f1 Float32IntFunctor) MapFloat64(f2 IntFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapString(f2 FunctorIntString) FunctorFloat32String {
+func (f1 Float32IntFunctor) MapString(f2 IntStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int) MapAny(f2 FunctorIntAny) FunctorFloat32Any {
+func (f1 Float32IntFunctor) MapAny(f2 IntAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapBool(f2 FunctorInt64Bool) FunctorFloat32Bool {
+func (f1 Float32Int64Functor) MapBool(f2 Int64BoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapRune(f2 FunctorInt64Rune) FunctorFloat32Rune {
+func (f1 Float32Int64Functor) MapRune(f2 Int64RuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapByte(f2 FunctorInt64Byte) FunctorFloat32Byte {
+func (f1 Float32Int64Functor) MapByte(f2 Int64ByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapInt(f2 FunctorInt64Int) FunctorFloat32Int {
+func (f1 Float32Int64Functor) MapInt(f2 Int64IntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapInt64(f2 FunctorInt64Int64) FunctorFloat32Int64 {
+func (f1 Float32Int64Functor) MapInt64(f2 Int64Int64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapUint(f2 FunctorInt64Uint) FunctorFloat32Uint {
+func (f1 Float32Int64Functor) MapUint(f2 Int64UintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapUint64(f2 FunctorInt64Uint64) FunctorFloat32Uint64 {
+func (f1 Float32Int64Functor) MapUint64(f2 Int64Uint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapFloat32(f2 FunctorInt64Float32) FunctorFloat32Float32 {
+func (f1 Float32Int64Functor) MapFloat32(f2 Int64Float32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapFloat64(f2 FunctorInt64Float64) FunctorFloat32Float64 {
+func (f1 Float32Int64Functor) MapFloat64(f2 Int64Float64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapString(f2 FunctorInt64String) FunctorFloat32String {
+func (f1 Float32Int64Functor) MapString(f2 Int64StringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Int64) MapAny(f2 FunctorInt64Any) FunctorFloat32Any {
+func (f1 Float32Int64Functor) MapAny(f2 Int64AnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapBool(f2 FunctorUintBool) FunctorFloat32Bool {
+func (f1 Float32UintFunctor) MapBool(f2 UintBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapRune(f2 FunctorUintRune) FunctorFloat32Rune {
+func (f1 Float32UintFunctor) MapRune(f2 UintRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapByte(f2 FunctorUintByte) FunctorFloat32Byte {
+func (f1 Float32UintFunctor) MapByte(f2 UintByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapInt(f2 FunctorUintInt) FunctorFloat32Int {
+func (f1 Float32UintFunctor) MapInt(f2 UintIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapInt64(f2 FunctorUintInt64) FunctorFloat32Int64 {
+func (f1 Float32UintFunctor) MapInt64(f2 UintInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapUint(f2 FunctorUintUint) FunctorFloat32Uint {
+func (f1 Float32UintFunctor) MapUint(f2 UintUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapUint64(f2 FunctorUintUint64) FunctorFloat32Uint64 {
+func (f1 Float32UintFunctor) MapUint64(f2 UintUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapFloat32(f2 FunctorUintFloat32) FunctorFloat32Float32 {
+func (f1 Float32UintFunctor) MapFloat32(f2 UintFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapFloat64(f2 FunctorUintFloat64) FunctorFloat32Float64 {
+func (f1 Float32UintFunctor) MapFloat64(f2 UintFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapString(f2 FunctorUintString) FunctorFloat32String {
+func (f1 Float32UintFunctor) MapString(f2 UintStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint) MapAny(f2 FunctorUintAny) FunctorFloat32Any {
+func (f1 Float32UintFunctor) MapAny(f2 UintAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapBool(f2 FunctorUint64Bool) FunctorFloat32Bool {
+func (f1 Float32Uint64Functor) MapBool(f2 Uint64BoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapRune(f2 FunctorUint64Rune) FunctorFloat32Rune {
+func (f1 Float32Uint64Functor) MapRune(f2 Uint64RuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapByte(f2 FunctorUint64Byte) FunctorFloat32Byte {
+func (f1 Float32Uint64Functor) MapByte(f2 Uint64ByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapInt(f2 FunctorUint64Int) FunctorFloat32Int {
+func (f1 Float32Uint64Functor) MapInt(f2 Uint64IntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapInt64(f2 FunctorUint64Int64) FunctorFloat32Int64 {
+func (f1 Float32Uint64Functor) MapInt64(f2 Uint64Int64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapUint(f2 FunctorUint64Uint) FunctorFloat32Uint {
+func (f1 Float32Uint64Functor) MapUint(f2 Uint64UintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapUint64(f2 FunctorUint64Uint64) FunctorFloat32Uint64 {
+func (f1 Float32Uint64Functor) MapUint64(f2 Uint64Uint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapFloat32(f2 FunctorUint64Float32) FunctorFloat32Float32 {
+func (f1 Float32Uint64Functor) MapFloat32(f2 Uint64Float32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapFloat64(f2 FunctorUint64Float64) FunctorFloat32Float64 {
+func (f1 Float32Uint64Functor) MapFloat64(f2 Uint64Float64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapString(f2 FunctorUint64String) FunctorFloat32String {
+func (f1 Float32Uint64Functor) MapString(f2 Uint64StringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Uint64) MapAny(f2 FunctorUint64Any) FunctorFloat32Any {
+func (f1 Float32Uint64Functor) MapAny(f2 Uint64AnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapBool(f2 FunctorFloat32Bool) FunctorFloat32Bool {
+func (f1 Float32Float32Functor) MapBool(f2 Float32BoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapRune(f2 FunctorFloat32Rune) FunctorFloat32Rune {
+func (f1 Float32Float32Functor) MapRune(f2 Float32RuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapByte(f2 FunctorFloat32Byte) FunctorFloat32Byte {
+func (f1 Float32Float32Functor) MapByte(f2 Float32ByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapInt(f2 FunctorFloat32Int) FunctorFloat32Int {
+func (f1 Float32Float32Functor) MapInt(f2 Float32IntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapInt64(f2 FunctorFloat32Int64) FunctorFloat32Int64 {
+func (f1 Float32Float32Functor) MapInt64(f2 Float32Int64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapUint(f2 FunctorFloat32Uint) FunctorFloat32Uint {
+func (f1 Float32Float32Functor) MapUint(f2 Float32UintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapUint64(f2 FunctorFloat32Uint64) FunctorFloat32Uint64 {
+func (f1 Float32Float32Functor) MapUint64(f2 Float32Uint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapFloat32(f2 FunctorFloat32Float32) FunctorFloat32Float32 {
+func (f1 Float32Float32Functor) MapFloat32(f2 Float32Float32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapFloat64(f2 FunctorFloat32Float64) FunctorFloat32Float64 {
+func (f1 Float32Float32Functor) MapFloat64(f2 Float32Float64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapString(f2 FunctorFloat32String) FunctorFloat32String {
+func (f1 Float32Float32Functor) MapString(f2 Float32StringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float32) MapAny(f2 FunctorFloat32Any) FunctorFloat32Any {
+func (f1 Float32Float32Functor) MapAny(f2 Float32AnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapBool(f2 FunctorFloat64Bool) FunctorFloat32Bool {
+func (f1 Float32Float64Functor) MapBool(f2 Float64BoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapRune(f2 FunctorFloat64Rune) FunctorFloat32Rune {
+func (f1 Float32Float64Functor) MapRune(f2 Float64RuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapByte(f2 FunctorFloat64Byte) FunctorFloat32Byte {
+func (f1 Float32Float64Functor) MapByte(f2 Float64ByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapInt(f2 FunctorFloat64Int) FunctorFloat32Int {
+func (f1 Float32Float64Functor) MapInt(f2 Float64IntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapInt64(f2 FunctorFloat64Int64) FunctorFloat32Int64 {
+func (f1 Float32Float64Functor) MapInt64(f2 Float64Int64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapUint(f2 FunctorFloat64Uint) FunctorFloat32Uint {
+func (f1 Float32Float64Functor) MapUint(f2 Float64UintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapUint64(f2 FunctorFloat64Uint64) FunctorFloat32Uint64 {
+func (f1 Float32Float64Functor) MapUint64(f2 Float64Uint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapFloat32(f2 FunctorFloat64Float32) FunctorFloat32Float32 {
+func (f1 Float32Float64Functor) MapFloat32(f2 Float64Float32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapFloat64(f2 FunctorFloat64Float64) FunctorFloat32Float64 {
+func (f1 Float32Float64Functor) MapFloat64(f2 Float64Float64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapString(f2 FunctorFloat64String) FunctorFloat32String {
+func (f1 Float32Float64Functor) MapString(f2 Float64StringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Float64) MapAny(f2 FunctorFloat64Any) FunctorFloat32Any {
+func (f1 Float32Float64Functor) MapAny(f2 Float64AnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapBool(f2 FunctorStringBool) FunctorFloat32Bool {
+func (f1 Float32StringFunctor) MapBool(f2 StringBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapRune(f2 FunctorStringRune) FunctorFloat32Rune {
+func (f1 Float32StringFunctor) MapRune(f2 StringRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapByte(f2 FunctorStringByte) FunctorFloat32Byte {
+func (f1 Float32StringFunctor) MapByte(f2 StringByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapInt(f2 FunctorStringInt) FunctorFloat32Int {
+func (f1 Float32StringFunctor) MapInt(f2 StringIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapInt64(f2 FunctorStringInt64) FunctorFloat32Int64 {
+func (f1 Float32StringFunctor) MapInt64(f2 StringInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapUint(f2 FunctorStringUint) FunctorFloat32Uint {
+func (f1 Float32StringFunctor) MapUint(f2 StringUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapUint64(f2 FunctorStringUint64) FunctorFloat32Uint64 {
+func (f1 Float32StringFunctor) MapUint64(f2 StringUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapFloat32(f2 FunctorStringFloat32) FunctorFloat32Float32 {
+func (f1 Float32StringFunctor) MapFloat32(f2 StringFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapFloat64(f2 FunctorStringFloat64) FunctorFloat32Float64 {
+func (f1 Float32StringFunctor) MapFloat64(f2 StringFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapString(f2 FunctorStringString) FunctorFloat32String {
+func (f1 Float32StringFunctor) MapString(f2 StringStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32String) MapAny(f2 FunctorStringAny) FunctorFloat32Any {
+func (f1 Float32StringFunctor) MapAny(f2 StringAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapBool(f2 FunctorAnyBool) FunctorFloat32Bool {
+func (f1 Float32AnyFunctor) MapBool(f2 AnyBoolFunctor) Float32BoolFunctor {
 	return func(e float32) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapRune(f2 FunctorAnyRune) FunctorFloat32Rune {
+func (f1 Float32AnyFunctor) MapRune(f2 AnyRuneFunctor) Float32RuneFunctor {
 	return func(e float32) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapByte(f2 FunctorAnyByte) FunctorFloat32Byte {
+func (f1 Float32AnyFunctor) MapByte(f2 AnyByteFunctor) Float32ByteFunctor {
 	return func(e float32) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapInt(f2 FunctorAnyInt) FunctorFloat32Int {
+func (f1 Float32AnyFunctor) MapInt(f2 AnyIntFunctor) Float32IntFunctor {
 	return func(e float32) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapInt64(f2 FunctorAnyInt64) FunctorFloat32Int64 {
+func (f1 Float32AnyFunctor) MapInt64(f2 AnyInt64Functor) Float32Int64Functor {
 	return func(e float32) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapUint(f2 FunctorAnyUint) FunctorFloat32Uint {
+func (f1 Float32AnyFunctor) MapUint(f2 AnyUintFunctor) Float32UintFunctor {
 	return func(e float32) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapUint64(f2 FunctorAnyUint64) FunctorFloat32Uint64 {
+func (f1 Float32AnyFunctor) MapUint64(f2 AnyUint64Functor) Float32Uint64Functor {
 	return func(e float32) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapFloat32(f2 FunctorAnyFloat32) FunctorFloat32Float32 {
+func (f1 Float32AnyFunctor) MapFloat32(f2 AnyFloat32Functor) Float32Float32Functor {
 	return func(e float32) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapFloat64(f2 FunctorAnyFloat64) FunctorFloat32Float64 {
+func (f1 Float32AnyFunctor) MapFloat64(f2 AnyFloat64Functor) Float32Float64Functor {
 	return func(e float32) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapString(f2 FunctorAnyString) FunctorFloat32String {
+func (f1 Float32AnyFunctor) MapString(f2 AnyStringFunctor) Float32StringFunctor {
 	return func(e float32) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat32Any) MapAny(f2 FunctorAnyAny) FunctorFloat32Any {
+func (f1 Float32AnyFunctor) MapAny(f2 AnyAnyFunctor) Float32AnyFunctor {
 	return func(e float32) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapBool(f2 FunctorBoolBool) FunctorFloat64Bool {
+func (f1 Float64BoolFunctor) MapBool(f2 BoolBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapRune(f2 FunctorBoolRune) FunctorFloat64Rune {
+func (f1 Float64BoolFunctor) MapRune(f2 BoolRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapByte(f2 FunctorBoolByte) FunctorFloat64Byte {
+func (f1 Float64BoolFunctor) MapByte(f2 BoolByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapInt(f2 FunctorBoolInt) FunctorFloat64Int {
+func (f1 Float64BoolFunctor) MapInt(f2 BoolIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapInt64(f2 FunctorBoolInt64) FunctorFloat64Int64 {
+func (f1 Float64BoolFunctor) MapInt64(f2 BoolInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapUint(f2 FunctorBoolUint) FunctorFloat64Uint {
+func (f1 Float64BoolFunctor) MapUint(f2 BoolUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapUint64(f2 FunctorBoolUint64) FunctorFloat64Uint64 {
+func (f1 Float64BoolFunctor) MapUint64(f2 BoolUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapFloat32(f2 FunctorBoolFloat32) FunctorFloat64Float32 {
+func (f1 Float64BoolFunctor) MapFloat32(f2 BoolFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapFloat64(f2 FunctorBoolFloat64) FunctorFloat64Float64 {
+func (f1 Float64BoolFunctor) MapFloat64(f2 BoolFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapString(f2 FunctorBoolString) FunctorFloat64String {
+func (f1 Float64BoolFunctor) MapString(f2 BoolStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Bool) MapAny(f2 FunctorBoolAny) FunctorFloat64Any {
+func (f1 Float64BoolFunctor) MapAny(f2 BoolAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapBool(f2 FunctorRuneBool) FunctorFloat64Bool {
+func (f1 Float64RuneFunctor) MapBool(f2 RuneBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapRune(f2 FunctorRuneRune) FunctorFloat64Rune {
+func (f1 Float64RuneFunctor) MapRune(f2 RuneRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapByte(f2 FunctorRuneByte) FunctorFloat64Byte {
+func (f1 Float64RuneFunctor) MapByte(f2 RuneByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapInt(f2 FunctorRuneInt) FunctorFloat64Int {
+func (f1 Float64RuneFunctor) MapInt(f2 RuneIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapInt64(f2 FunctorRuneInt64) FunctorFloat64Int64 {
+func (f1 Float64RuneFunctor) MapInt64(f2 RuneInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapUint(f2 FunctorRuneUint) FunctorFloat64Uint {
+func (f1 Float64RuneFunctor) MapUint(f2 RuneUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapUint64(f2 FunctorRuneUint64) FunctorFloat64Uint64 {
+func (f1 Float64RuneFunctor) MapUint64(f2 RuneUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapFloat32(f2 FunctorRuneFloat32) FunctorFloat64Float32 {
+func (f1 Float64RuneFunctor) MapFloat32(f2 RuneFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapFloat64(f2 FunctorRuneFloat64) FunctorFloat64Float64 {
+func (f1 Float64RuneFunctor) MapFloat64(f2 RuneFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapString(f2 FunctorRuneString) FunctorFloat64String {
+func (f1 Float64RuneFunctor) MapString(f2 RuneStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Rune) MapAny(f2 FunctorRuneAny) FunctorFloat64Any {
+func (f1 Float64RuneFunctor) MapAny(f2 RuneAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapBool(f2 FunctorByteBool) FunctorFloat64Bool {
+func (f1 Float64ByteFunctor) MapBool(f2 ByteBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapRune(f2 FunctorByteRune) FunctorFloat64Rune {
+func (f1 Float64ByteFunctor) MapRune(f2 ByteRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapByte(f2 FunctorByteByte) FunctorFloat64Byte {
+func (f1 Float64ByteFunctor) MapByte(f2 ByteByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapInt(f2 FunctorByteInt) FunctorFloat64Int {
+func (f1 Float64ByteFunctor) MapInt(f2 ByteIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapInt64(f2 FunctorByteInt64) FunctorFloat64Int64 {
+func (f1 Float64ByteFunctor) MapInt64(f2 ByteInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapUint(f2 FunctorByteUint) FunctorFloat64Uint {
+func (f1 Float64ByteFunctor) MapUint(f2 ByteUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapUint64(f2 FunctorByteUint64) FunctorFloat64Uint64 {
+func (f1 Float64ByteFunctor) MapUint64(f2 ByteUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapFloat32(f2 FunctorByteFloat32) FunctorFloat64Float32 {
+func (f1 Float64ByteFunctor) MapFloat32(f2 ByteFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapFloat64(f2 FunctorByteFloat64) FunctorFloat64Float64 {
+func (f1 Float64ByteFunctor) MapFloat64(f2 ByteFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapString(f2 FunctorByteString) FunctorFloat64String {
+func (f1 Float64ByteFunctor) MapString(f2 ByteStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Byte) MapAny(f2 FunctorByteAny) FunctorFloat64Any {
+func (f1 Float64ByteFunctor) MapAny(f2 ByteAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapBool(f2 FunctorIntBool) FunctorFloat64Bool {
+func (f1 Float64IntFunctor) MapBool(f2 IntBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapRune(f2 FunctorIntRune) FunctorFloat64Rune {
+func (f1 Float64IntFunctor) MapRune(f2 IntRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapByte(f2 FunctorIntByte) FunctorFloat64Byte {
+func (f1 Float64IntFunctor) MapByte(f2 IntByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapInt(f2 FunctorIntInt) FunctorFloat64Int {
+func (f1 Float64IntFunctor) MapInt(f2 IntIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapInt64(f2 FunctorIntInt64) FunctorFloat64Int64 {
+func (f1 Float64IntFunctor) MapInt64(f2 IntInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapUint(f2 FunctorIntUint) FunctorFloat64Uint {
+func (f1 Float64IntFunctor) MapUint(f2 IntUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapUint64(f2 FunctorIntUint64) FunctorFloat64Uint64 {
+func (f1 Float64IntFunctor) MapUint64(f2 IntUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapFloat32(f2 FunctorIntFloat32) FunctorFloat64Float32 {
+func (f1 Float64IntFunctor) MapFloat32(f2 IntFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapFloat64(f2 FunctorIntFloat64) FunctorFloat64Float64 {
+func (f1 Float64IntFunctor) MapFloat64(f2 IntFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapString(f2 FunctorIntString) FunctorFloat64String {
+func (f1 Float64IntFunctor) MapString(f2 IntStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int) MapAny(f2 FunctorIntAny) FunctorFloat64Any {
+func (f1 Float64IntFunctor) MapAny(f2 IntAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapBool(f2 FunctorInt64Bool) FunctorFloat64Bool {
+func (f1 Float64Int64Functor) MapBool(f2 Int64BoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapRune(f2 FunctorInt64Rune) FunctorFloat64Rune {
+func (f1 Float64Int64Functor) MapRune(f2 Int64RuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapByte(f2 FunctorInt64Byte) FunctorFloat64Byte {
+func (f1 Float64Int64Functor) MapByte(f2 Int64ByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapInt(f2 FunctorInt64Int) FunctorFloat64Int {
+func (f1 Float64Int64Functor) MapInt(f2 Int64IntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapInt64(f2 FunctorInt64Int64) FunctorFloat64Int64 {
+func (f1 Float64Int64Functor) MapInt64(f2 Int64Int64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapUint(f2 FunctorInt64Uint) FunctorFloat64Uint {
+func (f1 Float64Int64Functor) MapUint(f2 Int64UintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapUint64(f2 FunctorInt64Uint64) FunctorFloat64Uint64 {
+func (f1 Float64Int64Functor) MapUint64(f2 Int64Uint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapFloat32(f2 FunctorInt64Float32) FunctorFloat64Float32 {
+func (f1 Float64Int64Functor) MapFloat32(f2 Int64Float32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapFloat64(f2 FunctorInt64Float64) FunctorFloat64Float64 {
+func (f1 Float64Int64Functor) MapFloat64(f2 Int64Float64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapString(f2 FunctorInt64String) FunctorFloat64String {
+func (f1 Float64Int64Functor) MapString(f2 Int64StringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Int64) MapAny(f2 FunctorInt64Any) FunctorFloat64Any {
+func (f1 Float64Int64Functor) MapAny(f2 Int64AnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapBool(f2 FunctorUintBool) FunctorFloat64Bool {
+func (f1 Float64UintFunctor) MapBool(f2 UintBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapRune(f2 FunctorUintRune) FunctorFloat64Rune {
+func (f1 Float64UintFunctor) MapRune(f2 UintRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapByte(f2 FunctorUintByte) FunctorFloat64Byte {
+func (f1 Float64UintFunctor) MapByte(f2 UintByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapInt(f2 FunctorUintInt) FunctorFloat64Int {
+func (f1 Float64UintFunctor) MapInt(f2 UintIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapInt64(f2 FunctorUintInt64) FunctorFloat64Int64 {
+func (f1 Float64UintFunctor) MapInt64(f2 UintInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapUint(f2 FunctorUintUint) FunctorFloat64Uint {
+func (f1 Float64UintFunctor) MapUint(f2 UintUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapUint64(f2 FunctorUintUint64) FunctorFloat64Uint64 {
+func (f1 Float64UintFunctor) MapUint64(f2 UintUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapFloat32(f2 FunctorUintFloat32) FunctorFloat64Float32 {
+func (f1 Float64UintFunctor) MapFloat32(f2 UintFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapFloat64(f2 FunctorUintFloat64) FunctorFloat64Float64 {
+func (f1 Float64UintFunctor) MapFloat64(f2 UintFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapString(f2 FunctorUintString) FunctorFloat64String {
+func (f1 Float64UintFunctor) MapString(f2 UintStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint) MapAny(f2 FunctorUintAny) FunctorFloat64Any {
+func (f1 Float64UintFunctor) MapAny(f2 UintAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapBool(f2 FunctorUint64Bool) FunctorFloat64Bool {
+func (f1 Float64Uint64Functor) MapBool(f2 Uint64BoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapRune(f2 FunctorUint64Rune) FunctorFloat64Rune {
+func (f1 Float64Uint64Functor) MapRune(f2 Uint64RuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapByte(f2 FunctorUint64Byte) FunctorFloat64Byte {
+func (f1 Float64Uint64Functor) MapByte(f2 Uint64ByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapInt(f2 FunctorUint64Int) FunctorFloat64Int {
+func (f1 Float64Uint64Functor) MapInt(f2 Uint64IntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapInt64(f2 FunctorUint64Int64) FunctorFloat64Int64 {
+func (f1 Float64Uint64Functor) MapInt64(f2 Uint64Int64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapUint(f2 FunctorUint64Uint) FunctorFloat64Uint {
+func (f1 Float64Uint64Functor) MapUint(f2 Uint64UintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapUint64(f2 FunctorUint64Uint64) FunctorFloat64Uint64 {
+func (f1 Float64Uint64Functor) MapUint64(f2 Uint64Uint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapFloat32(f2 FunctorUint64Float32) FunctorFloat64Float32 {
+func (f1 Float64Uint64Functor) MapFloat32(f2 Uint64Float32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapFloat64(f2 FunctorUint64Float64) FunctorFloat64Float64 {
+func (f1 Float64Uint64Functor) MapFloat64(f2 Uint64Float64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapString(f2 FunctorUint64String) FunctorFloat64String {
+func (f1 Float64Uint64Functor) MapString(f2 Uint64StringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Uint64) MapAny(f2 FunctorUint64Any) FunctorFloat64Any {
+func (f1 Float64Uint64Functor) MapAny(f2 Uint64AnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapBool(f2 FunctorFloat32Bool) FunctorFloat64Bool {
+func (f1 Float64Float32Functor) MapBool(f2 Float32BoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapRune(f2 FunctorFloat32Rune) FunctorFloat64Rune {
+func (f1 Float64Float32Functor) MapRune(f2 Float32RuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapByte(f2 FunctorFloat32Byte) FunctorFloat64Byte {
+func (f1 Float64Float32Functor) MapByte(f2 Float32ByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapInt(f2 FunctorFloat32Int) FunctorFloat64Int {
+func (f1 Float64Float32Functor) MapInt(f2 Float32IntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapInt64(f2 FunctorFloat32Int64) FunctorFloat64Int64 {
+func (f1 Float64Float32Functor) MapInt64(f2 Float32Int64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapUint(f2 FunctorFloat32Uint) FunctorFloat64Uint {
+func (f1 Float64Float32Functor) MapUint(f2 Float32UintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapUint64(f2 FunctorFloat32Uint64) FunctorFloat64Uint64 {
+func (f1 Float64Float32Functor) MapUint64(f2 Float32Uint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapFloat32(f2 FunctorFloat32Float32) FunctorFloat64Float32 {
+func (f1 Float64Float32Functor) MapFloat32(f2 Float32Float32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapFloat64(f2 FunctorFloat32Float64) FunctorFloat64Float64 {
+func (f1 Float64Float32Functor) MapFloat64(f2 Float32Float64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapString(f2 FunctorFloat32String) FunctorFloat64String {
+func (f1 Float64Float32Functor) MapString(f2 Float32StringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float32) MapAny(f2 FunctorFloat32Any) FunctorFloat64Any {
+func (f1 Float64Float32Functor) MapAny(f2 Float32AnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapBool(f2 FunctorFloat64Bool) FunctorFloat64Bool {
+func (f1 Float64Float64Functor) MapBool(f2 Float64BoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapRune(f2 FunctorFloat64Rune) FunctorFloat64Rune {
+func (f1 Float64Float64Functor) MapRune(f2 Float64RuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapByte(f2 FunctorFloat64Byte) FunctorFloat64Byte {
+func (f1 Float64Float64Functor) MapByte(f2 Float64ByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapInt(f2 FunctorFloat64Int) FunctorFloat64Int {
+func (f1 Float64Float64Functor) MapInt(f2 Float64IntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapInt64(f2 FunctorFloat64Int64) FunctorFloat64Int64 {
+func (f1 Float64Float64Functor) MapInt64(f2 Float64Int64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapUint(f2 FunctorFloat64Uint) FunctorFloat64Uint {
+func (f1 Float64Float64Functor) MapUint(f2 Float64UintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapUint64(f2 FunctorFloat64Uint64) FunctorFloat64Uint64 {
+func (f1 Float64Float64Functor) MapUint64(f2 Float64Uint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapFloat32(f2 FunctorFloat64Float32) FunctorFloat64Float32 {
+func (f1 Float64Float64Functor) MapFloat32(f2 Float64Float32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapFloat64(f2 FunctorFloat64Float64) FunctorFloat64Float64 {
+func (f1 Float64Float64Functor) MapFloat64(f2 Float64Float64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapString(f2 FunctorFloat64String) FunctorFloat64String {
+func (f1 Float64Float64Functor) MapString(f2 Float64StringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Float64) MapAny(f2 FunctorFloat64Any) FunctorFloat64Any {
+func (f1 Float64Float64Functor) MapAny(f2 Float64AnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapBool(f2 FunctorStringBool) FunctorFloat64Bool {
+func (f1 Float64StringFunctor) MapBool(f2 StringBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapRune(f2 FunctorStringRune) FunctorFloat64Rune {
+func (f1 Float64StringFunctor) MapRune(f2 StringRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapByte(f2 FunctorStringByte) FunctorFloat64Byte {
+func (f1 Float64StringFunctor) MapByte(f2 StringByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapInt(f2 FunctorStringInt) FunctorFloat64Int {
+func (f1 Float64StringFunctor) MapInt(f2 StringIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapInt64(f2 FunctorStringInt64) FunctorFloat64Int64 {
+func (f1 Float64StringFunctor) MapInt64(f2 StringInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapUint(f2 FunctorStringUint) FunctorFloat64Uint {
+func (f1 Float64StringFunctor) MapUint(f2 StringUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapUint64(f2 FunctorStringUint64) FunctorFloat64Uint64 {
+func (f1 Float64StringFunctor) MapUint64(f2 StringUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapFloat32(f2 FunctorStringFloat32) FunctorFloat64Float32 {
+func (f1 Float64StringFunctor) MapFloat32(f2 StringFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapFloat64(f2 FunctorStringFloat64) FunctorFloat64Float64 {
+func (f1 Float64StringFunctor) MapFloat64(f2 StringFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapString(f2 FunctorStringString) FunctorFloat64String {
+func (f1 Float64StringFunctor) MapString(f2 StringStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64String) MapAny(f2 FunctorStringAny) FunctorFloat64Any {
+func (f1 Float64StringFunctor) MapAny(f2 StringAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapBool(f2 FunctorAnyBool) FunctorFloat64Bool {
+func (f1 Float64AnyFunctor) MapBool(f2 AnyBoolFunctor) Float64BoolFunctor {
 	return func(e float64) bool { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapRune(f2 FunctorAnyRune) FunctorFloat64Rune {
+func (f1 Float64AnyFunctor) MapRune(f2 AnyRuneFunctor) Float64RuneFunctor {
 	return func(e float64) rune { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapByte(f2 FunctorAnyByte) FunctorFloat64Byte {
+func (f1 Float64AnyFunctor) MapByte(f2 AnyByteFunctor) Float64ByteFunctor {
 	return func(e float64) byte { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapInt(f2 FunctorAnyInt) FunctorFloat64Int {
+func (f1 Float64AnyFunctor) MapInt(f2 AnyIntFunctor) Float64IntFunctor {
 	return func(e float64) int { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapInt64(f2 FunctorAnyInt64) FunctorFloat64Int64 {
+func (f1 Float64AnyFunctor) MapInt64(f2 AnyInt64Functor) Float64Int64Functor {
 	return func(e float64) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapUint(f2 FunctorAnyUint) FunctorFloat64Uint {
+func (f1 Float64AnyFunctor) MapUint(f2 AnyUintFunctor) Float64UintFunctor {
 	return func(e float64) uint { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapUint64(f2 FunctorAnyUint64) FunctorFloat64Uint64 {
+func (f1 Float64AnyFunctor) MapUint64(f2 AnyUint64Functor) Float64Uint64Functor {
 	return func(e float64) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapFloat32(f2 FunctorAnyFloat32) FunctorFloat64Float32 {
+func (f1 Float64AnyFunctor) MapFloat32(f2 AnyFloat32Functor) Float64Float32Functor {
 	return func(e float64) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapFloat64(f2 FunctorAnyFloat64) FunctorFloat64Float64 {
+func (f1 Float64AnyFunctor) MapFloat64(f2 AnyFloat64Functor) Float64Float64Functor {
 	return func(e float64) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapString(f2 FunctorAnyString) FunctorFloat64String {
+func (f1 Float64AnyFunctor) MapString(f2 AnyStringFunctor) Float64StringFunctor {
 	return func(e float64) string { return f2(f1(e)) }
 }
-func (f1 FunctorFloat64Any) MapAny(f2 FunctorAnyAny) FunctorFloat64Any {
+func (f1 Float64AnyFunctor) MapAny(f2 AnyAnyFunctor) Float64AnyFunctor {
 	return func(e float64) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapBool(f2 FunctorBoolBool) FunctorStringBool {
+func (f1 StringBoolFunctor) MapBool(f2 BoolBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapRune(f2 FunctorBoolRune) FunctorStringRune {
+func (f1 StringBoolFunctor) MapRune(f2 BoolRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapByte(f2 FunctorBoolByte) FunctorStringByte {
+func (f1 StringBoolFunctor) MapByte(f2 BoolByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapInt(f2 FunctorBoolInt) FunctorStringInt {
+func (f1 StringBoolFunctor) MapInt(f2 BoolIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapInt64(f2 FunctorBoolInt64) FunctorStringInt64 {
+func (f1 StringBoolFunctor) MapInt64(f2 BoolInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapUint(f2 FunctorBoolUint) FunctorStringUint {
+func (f1 StringBoolFunctor) MapUint(f2 BoolUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapUint64(f2 FunctorBoolUint64) FunctorStringUint64 {
+func (f1 StringBoolFunctor) MapUint64(f2 BoolUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapFloat32(f2 FunctorBoolFloat32) FunctorStringFloat32 {
+func (f1 StringBoolFunctor) MapFloat32(f2 BoolFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapFloat64(f2 FunctorBoolFloat64) FunctorStringFloat64 {
+func (f1 StringBoolFunctor) MapFloat64(f2 BoolFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapString(f2 FunctorBoolString) FunctorStringString {
+func (f1 StringBoolFunctor) MapString(f2 BoolStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringBool) MapAny(f2 FunctorBoolAny) FunctorStringAny {
+func (f1 StringBoolFunctor) MapAny(f2 BoolAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapBool(f2 FunctorRuneBool) FunctorStringBool {
+func (f1 StringRuneFunctor) MapBool(f2 RuneBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapRune(f2 FunctorRuneRune) FunctorStringRune {
+func (f1 StringRuneFunctor) MapRune(f2 RuneRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapByte(f2 FunctorRuneByte) FunctorStringByte {
+func (f1 StringRuneFunctor) MapByte(f2 RuneByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapInt(f2 FunctorRuneInt) FunctorStringInt {
+func (f1 StringRuneFunctor) MapInt(f2 RuneIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapInt64(f2 FunctorRuneInt64) FunctorStringInt64 {
+func (f1 StringRuneFunctor) MapInt64(f2 RuneInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapUint(f2 FunctorRuneUint) FunctorStringUint {
+func (f1 StringRuneFunctor) MapUint(f2 RuneUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapUint64(f2 FunctorRuneUint64) FunctorStringUint64 {
+func (f1 StringRuneFunctor) MapUint64(f2 RuneUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapFloat32(f2 FunctorRuneFloat32) FunctorStringFloat32 {
+func (f1 StringRuneFunctor) MapFloat32(f2 RuneFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapFloat64(f2 FunctorRuneFloat64) FunctorStringFloat64 {
+func (f1 StringRuneFunctor) MapFloat64(f2 RuneFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapString(f2 FunctorRuneString) FunctorStringString {
+func (f1 StringRuneFunctor) MapString(f2 RuneStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringRune) MapAny(f2 FunctorRuneAny) FunctorStringAny {
+func (f1 StringRuneFunctor) MapAny(f2 RuneAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapBool(f2 FunctorByteBool) FunctorStringBool {
+func (f1 StringByteFunctor) MapBool(f2 ByteBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapRune(f2 FunctorByteRune) FunctorStringRune {
+func (f1 StringByteFunctor) MapRune(f2 ByteRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapByte(f2 FunctorByteByte) FunctorStringByte {
+func (f1 StringByteFunctor) MapByte(f2 ByteByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapInt(f2 FunctorByteInt) FunctorStringInt {
+func (f1 StringByteFunctor) MapInt(f2 ByteIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapInt64(f2 FunctorByteInt64) FunctorStringInt64 {
+func (f1 StringByteFunctor) MapInt64(f2 ByteInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapUint(f2 FunctorByteUint) FunctorStringUint {
+func (f1 StringByteFunctor) MapUint(f2 ByteUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapUint64(f2 FunctorByteUint64) FunctorStringUint64 {
+func (f1 StringByteFunctor) MapUint64(f2 ByteUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapFloat32(f2 FunctorByteFloat32) FunctorStringFloat32 {
+func (f1 StringByteFunctor) MapFloat32(f2 ByteFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapFloat64(f2 FunctorByteFloat64) FunctorStringFloat64 {
+func (f1 StringByteFunctor) MapFloat64(f2 ByteFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapString(f2 FunctorByteString) FunctorStringString {
+func (f1 StringByteFunctor) MapString(f2 ByteStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringByte) MapAny(f2 FunctorByteAny) FunctorStringAny {
+func (f1 StringByteFunctor) MapAny(f2 ByteAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapBool(f2 FunctorIntBool) FunctorStringBool {
+func (f1 StringIntFunctor) MapBool(f2 IntBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapRune(f2 FunctorIntRune) FunctorStringRune {
+func (f1 StringIntFunctor) MapRune(f2 IntRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapByte(f2 FunctorIntByte) FunctorStringByte {
+func (f1 StringIntFunctor) MapByte(f2 IntByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapInt(f2 FunctorIntInt) FunctorStringInt {
+func (f1 StringIntFunctor) MapInt(f2 IntIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapInt64(f2 FunctorIntInt64) FunctorStringInt64 {
+func (f1 StringIntFunctor) MapInt64(f2 IntInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapUint(f2 FunctorIntUint) FunctorStringUint {
+func (f1 StringIntFunctor) MapUint(f2 IntUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapUint64(f2 FunctorIntUint64) FunctorStringUint64 {
+func (f1 StringIntFunctor) MapUint64(f2 IntUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapFloat32(f2 FunctorIntFloat32) FunctorStringFloat32 {
+func (f1 StringIntFunctor) MapFloat32(f2 IntFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapFloat64(f2 FunctorIntFloat64) FunctorStringFloat64 {
+func (f1 StringIntFunctor) MapFloat64(f2 IntFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapString(f2 FunctorIntString) FunctorStringString {
+func (f1 StringIntFunctor) MapString(f2 IntStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt) MapAny(f2 FunctorIntAny) FunctorStringAny {
+func (f1 StringIntFunctor) MapAny(f2 IntAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapBool(f2 FunctorInt64Bool) FunctorStringBool {
+func (f1 StringInt64Functor) MapBool(f2 Int64BoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapRune(f2 FunctorInt64Rune) FunctorStringRune {
+func (f1 StringInt64Functor) MapRune(f2 Int64RuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapByte(f2 FunctorInt64Byte) FunctorStringByte {
+func (f1 StringInt64Functor) MapByte(f2 Int64ByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapInt(f2 FunctorInt64Int) FunctorStringInt {
+func (f1 StringInt64Functor) MapInt(f2 Int64IntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapInt64(f2 FunctorInt64Int64) FunctorStringInt64 {
+func (f1 StringInt64Functor) MapInt64(f2 Int64Int64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapUint(f2 FunctorInt64Uint) FunctorStringUint {
+func (f1 StringInt64Functor) MapUint(f2 Int64UintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapUint64(f2 FunctorInt64Uint64) FunctorStringUint64 {
+func (f1 StringInt64Functor) MapUint64(f2 Int64Uint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapFloat32(f2 FunctorInt64Float32) FunctorStringFloat32 {
+func (f1 StringInt64Functor) MapFloat32(f2 Int64Float32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapFloat64(f2 FunctorInt64Float64) FunctorStringFloat64 {
+func (f1 StringInt64Functor) MapFloat64(f2 Int64Float64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapString(f2 FunctorInt64String) FunctorStringString {
+func (f1 StringInt64Functor) MapString(f2 Int64StringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringInt64) MapAny(f2 FunctorInt64Any) FunctorStringAny {
+func (f1 StringInt64Functor) MapAny(f2 Int64AnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapBool(f2 FunctorUintBool) FunctorStringBool {
+func (f1 StringUintFunctor) MapBool(f2 UintBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapRune(f2 FunctorUintRune) FunctorStringRune {
+func (f1 StringUintFunctor) MapRune(f2 UintRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapByte(f2 FunctorUintByte) FunctorStringByte {
+func (f1 StringUintFunctor) MapByte(f2 UintByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapInt(f2 FunctorUintInt) FunctorStringInt {
+func (f1 StringUintFunctor) MapInt(f2 UintIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapInt64(f2 FunctorUintInt64) FunctorStringInt64 {
+func (f1 StringUintFunctor) MapInt64(f2 UintInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapUint(f2 FunctorUintUint) FunctorStringUint {
+func (f1 StringUintFunctor) MapUint(f2 UintUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapUint64(f2 FunctorUintUint64) FunctorStringUint64 {
+func (f1 StringUintFunctor) MapUint64(f2 UintUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapFloat32(f2 FunctorUintFloat32) FunctorStringFloat32 {
+func (f1 StringUintFunctor) MapFloat32(f2 UintFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapFloat64(f2 FunctorUintFloat64) FunctorStringFloat64 {
+func (f1 StringUintFunctor) MapFloat64(f2 UintFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapString(f2 FunctorUintString) FunctorStringString {
+func (f1 StringUintFunctor) MapString(f2 UintStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint) MapAny(f2 FunctorUintAny) FunctorStringAny {
+func (f1 StringUintFunctor) MapAny(f2 UintAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapBool(f2 FunctorUint64Bool) FunctorStringBool {
+func (f1 StringUint64Functor) MapBool(f2 Uint64BoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapRune(f2 FunctorUint64Rune) FunctorStringRune {
+func (f1 StringUint64Functor) MapRune(f2 Uint64RuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapByte(f2 FunctorUint64Byte) FunctorStringByte {
+func (f1 StringUint64Functor) MapByte(f2 Uint64ByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapInt(f2 FunctorUint64Int) FunctorStringInt {
+func (f1 StringUint64Functor) MapInt(f2 Uint64IntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapInt64(f2 FunctorUint64Int64) FunctorStringInt64 {
+func (f1 StringUint64Functor) MapInt64(f2 Uint64Int64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapUint(f2 FunctorUint64Uint) FunctorStringUint {
+func (f1 StringUint64Functor) MapUint(f2 Uint64UintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapUint64(f2 FunctorUint64Uint64) FunctorStringUint64 {
+func (f1 StringUint64Functor) MapUint64(f2 Uint64Uint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapFloat32(f2 FunctorUint64Float32) FunctorStringFloat32 {
+func (f1 StringUint64Functor) MapFloat32(f2 Uint64Float32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapFloat64(f2 FunctorUint64Float64) FunctorStringFloat64 {
+func (f1 StringUint64Functor) MapFloat64(f2 Uint64Float64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapString(f2 FunctorUint64String) FunctorStringString {
+func (f1 StringUint64Functor) MapString(f2 Uint64StringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringUint64) MapAny(f2 FunctorUint64Any) FunctorStringAny {
+func (f1 StringUint64Functor) MapAny(f2 Uint64AnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapBool(f2 FunctorFloat32Bool) FunctorStringBool {
+func (f1 StringFloat32Functor) MapBool(f2 Float32BoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapRune(f2 FunctorFloat32Rune) FunctorStringRune {
+func (f1 StringFloat32Functor) MapRune(f2 Float32RuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapByte(f2 FunctorFloat32Byte) FunctorStringByte {
+func (f1 StringFloat32Functor) MapByte(f2 Float32ByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapInt(f2 FunctorFloat32Int) FunctorStringInt {
+func (f1 StringFloat32Functor) MapInt(f2 Float32IntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorStringInt64 {
+func (f1 StringFloat32Functor) MapInt64(f2 Float32Int64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapUint(f2 FunctorFloat32Uint) FunctorStringUint {
+func (f1 StringFloat32Functor) MapUint(f2 Float32UintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorStringUint64 {
+func (f1 StringFloat32Functor) MapUint64(f2 Float32Uint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorStringFloat32 {
+func (f1 StringFloat32Functor) MapFloat32(f2 Float32Float32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorStringFloat64 {
+func (f1 StringFloat32Functor) MapFloat64(f2 Float32Float64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapString(f2 FunctorFloat32String) FunctorStringString {
+func (f1 StringFloat32Functor) MapString(f2 Float32StringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat32) MapAny(f2 FunctorFloat32Any) FunctorStringAny {
+func (f1 StringFloat32Functor) MapAny(f2 Float32AnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapBool(f2 FunctorFloat64Bool) FunctorStringBool {
+func (f1 StringFloat64Functor) MapBool(f2 Float64BoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapRune(f2 FunctorFloat64Rune) FunctorStringRune {
+func (f1 StringFloat64Functor) MapRune(f2 Float64RuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapByte(f2 FunctorFloat64Byte) FunctorStringByte {
+func (f1 StringFloat64Functor) MapByte(f2 Float64ByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapInt(f2 FunctorFloat64Int) FunctorStringInt {
+func (f1 StringFloat64Functor) MapInt(f2 Float64IntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorStringInt64 {
+func (f1 StringFloat64Functor) MapInt64(f2 Float64Int64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapUint(f2 FunctorFloat64Uint) FunctorStringUint {
+func (f1 StringFloat64Functor) MapUint(f2 Float64UintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorStringUint64 {
+func (f1 StringFloat64Functor) MapUint64(f2 Float64Uint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorStringFloat32 {
+func (f1 StringFloat64Functor) MapFloat32(f2 Float64Float32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorStringFloat64 {
+func (f1 StringFloat64Functor) MapFloat64(f2 Float64Float64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapString(f2 FunctorFloat64String) FunctorStringString {
+func (f1 StringFloat64Functor) MapString(f2 Float64StringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringFloat64) MapAny(f2 FunctorFloat64Any) FunctorStringAny {
+func (f1 StringFloat64Functor) MapAny(f2 Float64AnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapBool(f2 FunctorStringBool) FunctorStringBool {
+func (f1 StringStringFunctor) MapBool(f2 StringBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapRune(f2 FunctorStringRune) FunctorStringRune {
+func (f1 StringStringFunctor) MapRune(f2 StringRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapByte(f2 FunctorStringByte) FunctorStringByte {
+func (f1 StringStringFunctor) MapByte(f2 StringByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapInt(f2 FunctorStringInt) FunctorStringInt {
+func (f1 StringStringFunctor) MapInt(f2 StringIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapInt64(f2 FunctorStringInt64) FunctorStringInt64 {
+func (f1 StringStringFunctor) MapInt64(f2 StringInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapUint(f2 FunctorStringUint) FunctorStringUint {
+func (f1 StringStringFunctor) MapUint(f2 StringUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapUint64(f2 FunctorStringUint64) FunctorStringUint64 {
+func (f1 StringStringFunctor) MapUint64(f2 StringUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapFloat32(f2 FunctorStringFloat32) FunctorStringFloat32 {
+func (f1 StringStringFunctor) MapFloat32(f2 StringFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapFloat64(f2 FunctorStringFloat64) FunctorStringFloat64 {
+func (f1 StringStringFunctor) MapFloat64(f2 StringFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapString(f2 FunctorStringString) FunctorStringString {
+func (f1 StringStringFunctor) MapString(f2 StringStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringString) MapAny(f2 FunctorStringAny) FunctorStringAny {
+func (f1 StringStringFunctor) MapAny(f2 StringAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapBool(f2 FunctorAnyBool) FunctorStringBool {
+func (f1 StringAnyFunctor) MapBool(f2 AnyBoolFunctor) StringBoolFunctor {
 	return func(e string) bool { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapRune(f2 FunctorAnyRune) FunctorStringRune {
+func (f1 StringAnyFunctor) MapRune(f2 AnyRuneFunctor) StringRuneFunctor {
 	return func(e string) rune { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapByte(f2 FunctorAnyByte) FunctorStringByte {
+func (f1 StringAnyFunctor) MapByte(f2 AnyByteFunctor) StringByteFunctor {
 	return func(e string) byte { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapInt(f2 FunctorAnyInt) FunctorStringInt {
+func (f1 StringAnyFunctor) MapInt(f2 AnyIntFunctor) StringIntFunctor {
 	return func(e string) int { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapInt64(f2 FunctorAnyInt64) FunctorStringInt64 {
+func (f1 StringAnyFunctor) MapInt64(f2 AnyInt64Functor) StringInt64Functor {
 	return func(e string) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapUint(f2 FunctorAnyUint) FunctorStringUint {
+func (f1 StringAnyFunctor) MapUint(f2 AnyUintFunctor) StringUintFunctor {
 	return func(e string) uint { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapUint64(f2 FunctorAnyUint64) FunctorStringUint64 {
+func (f1 StringAnyFunctor) MapUint64(f2 AnyUint64Functor) StringUint64Functor {
 	return func(e string) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapFloat32(f2 FunctorAnyFloat32) FunctorStringFloat32 {
+func (f1 StringAnyFunctor) MapFloat32(f2 AnyFloat32Functor) StringFloat32Functor {
 	return func(e string) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapFloat64(f2 FunctorAnyFloat64) FunctorStringFloat64 {
+func (f1 StringAnyFunctor) MapFloat64(f2 AnyFloat64Functor) StringFloat64Functor {
 	return func(e string) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapString(f2 FunctorAnyString) FunctorStringString {
+func (f1 StringAnyFunctor) MapString(f2 AnyStringFunctor) StringStringFunctor {
 	return func(e string) string { return f2(f1(e)) }
 }
-func (f1 FunctorStringAny) MapAny(f2 FunctorAnyAny) FunctorStringAny {
+func (f1 StringAnyFunctor) MapAny(f2 AnyAnyFunctor) StringAnyFunctor {
 	return func(e string) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapBool(f2 FunctorBoolBool) FunctorAnyBool {
+func (f1 AnyBoolFunctor) MapBool(f2 BoolBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapRune(f2 FunctorBoolRune) FunctorAnyRune {
+func (f1 AnyBoolFunctor) MapRune(f2 BoolRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapByte(f2 FunctorBoolByte) FunctorAnyByte {
+func (f1 AnyBoolFunctor) MapByte(f2 BoolByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapInt(f2 FunctorBoolInt) FunctorAnyInt {
+func (f1 AnyBoolFunctor) MapInt(f2 BoolIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapInt64(f2 FunctorBoolInt64) FunctorAnyInt64 {
+func (f1 AnyBoolFunctor) MapInt64(f2 BoolInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapUint(f2 FunctorBoolUint) FunctorAnyUint {
+func (f1 AnyBoolFunctor) MapUint(f2 BoolUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapUint64(f2 FunctorBoolUint64) FunctorAnyUint64 {
+func (f1 AnyBoolFunctor) MapUint64(f2 BoolUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapFloat32(f2 FunctorBoolFloat32) FunctorAnyFloat32 {
+func (f1 AnyBoolFunctor) MapFloat32(f2 BoolFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapFloat64(f2 FunctorBoolFloat64) FunctorAnyFloat64 {
+func (f1 AnyBoolFunctor) MapFloat64(f2 BoolFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapString(f2 FunctorBoolString) FunctorAnyString {
+func (f1 AnyBoolFunctor) MapString(f2 BoolStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyBool) MapAny(f2 FunctorBoolAny) FunctorAnyAny {
+func (f1 AnyBoolFunctor) MapAny(f2 BoolAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapBool(f2 FunctorRuneBool) FunctorAnyBool {
+func (f1 AnyRuneFunctor) MapBool(f2 RuneBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapRune(f2 FunctorRuneRune) FunctorAnyRune {
+func (f1 AnyRuneFunctor) MapRune(f2 RuneRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapByte(f2 FunctorRuneByte) FunctorAnyByte {
+func (f1 AnyRuneFunctor) MapByte(f2 RuneByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapInt(f2 FunctorRuneInt) FunctorAnyInt {
+func (f1 AnyRuneFunctor) MapInt(f2 RuneIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapInt64(f2 FunctorRuneInt64) FunctorAnyInt64 {
+func (f1 AnyRuneFunctor) MapInt64(f2 RuneInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapUint(f2 FunctorRuneUint) FunctorAnyUint {
+func (f1 AnyRuneFunctor) MapUint(f2 RuneUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapUint64(f2 FunctorRuneUint64) FunctorAnyUint64 {
+func (f1 AnyRuneFunctor) MapUint64(f2 RuneUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapFloat32(f2 FunctorRuneFloat32) FunctorAnyFloat32 {
+func (f1 AnyRuneFunctor) MapFloat32(f2 RuneFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapFloat64(f2 FunctorRuneFloat64) FunctorAnyFloat64 {
+func (f1 AnyRuneFunctor) MapFloat64(f2 RuneFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapString(f2 FunctorRuneString) FunctorAnyString {
+func (f1 AnyRuneFunctor) MapString(f2 RuneStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyRune) MapAny(f2 FunctorRuneAny) FunctorAnyAny {
+func (f1 AnyRuneFunctor) MapAny(f2 RuneAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapBool(f2 FunctorByteBool) FunctorAnyBool {
+func (f1 AnyByteFunctor) MapBool(f2 ByteBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapRune(f2 FunctorByteRune) FunctorAnyRune {
+func (f1 AnyByteFunctor) MapRune(f2 ByteRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapByte(f2 FunctorByteByte) FunctorAnyByte {
+func (f1 AnyByteFunctor) MapByte(f2 ByteByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapInt(f2 FunctorByteInt) FunctorAnyInt {
+func (f1 AnyByteFunctor) MapInt(f2 ByteIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapInt64(f2 FunctorByteInt64) FunctorAnyInt64 {
+func (f1 AnyByteFunctor) MapInt64(f2 ByteInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapUint(f2 FunctorByteUint) FunctorAnyUint {
+func (f1 AnyByteFunctor) MapUint(f2 ByteUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapUint64(f2 FunctorByteUint64) FunctorAnyUint64 {
+func (f1 AnyByteFunctor) MapUint64(f2 ByteUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapFloat32(f2 FunctorByteFloat32) FunctorAnyFloat32 {
+func (f1 AnyByteFunctor) MapFloat32(f2 ByteFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapFloat64(f2 FunctorByteFloat64) FunctorAnyFloat64 {
+func (f1 AnyByteFunctor) MapFloat64(f2 ByteFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapString(f2 FunctorByteString) FunctorAnyString {
+func (f1 AnyByteFunctor) MapString(f2 ByteStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyByte) MapAny(f2 FunctorByteAny) FunctorAnyAny {
+func (f1 AnyByteFunctor) MapAny(f2 ByteAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapBool(f2 FunctorIntBool) FunctorAnyBool {
+func (f1 AnyIntFunctor) MapBool(f2 IntBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapRune(f2 FunctorIntRune) FunctorAnyRune {
+func (f1 AnyIntFunctor) MapRune(f2 IntRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapByte(f2 FunctorIntByte) FunctorAnyByte {
+func (f1 AnyIntFunctor) MapByte(f2 IntByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapInt(f2 FunctorIntInt) FunctorAnyInt {
+func (f1 AnyIntFunctor) MapInt(f2 IntIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapInt64(f2 FunctorIntInt64) FunctorAnyInt64 {
+func (f1 AnyIntFunctor) MapInt64(f2 IntInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapUint(f2 FunctorIntUint) FunctorAnyUint {
+func (f1 AnyIntFunctor) MapUint(f2 IntUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapUint64(f2 FunctorIntUint64) FunctorAnyUint64 {
+func (f1 AnyIntFunctor) MapUint64(f2 IntUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapFloat32(f2 FunctorIntFloat32) FunctorAnyFloat32 {
+func (f1 AnyIntFunctor) MapFloat32(f2 IntFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapFloat64(f2 FunctorIntFloat64) FunctorAnyFloat64 {
+func (f1 AnyIntFunctor) MapFloat64(f2 IntFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapString(f2 FunctorIntString) FunctorAnyString {
+func (f1 AnyIntFunctor) MapString(f2 IntStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt) MapAny(f2 FunctorIntAny) FunctorAnyAny {
+func (f1 AnyIntFunctor) MapAny(f2 IntAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapBool(f2 FunctorInt64Bool) FunctorAnyBool {
+func (f1 AnyInt64Functor) MapBool(f2 Int64BoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapRune(f2 FunctorInt64Rune) FunctorAnyRune {
+func (f1 AnyInt64Functor) MapRune(f2 Int64RuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapByte(f2 FunctorInt64Byte) FunctorAnyByte {
+func (f1 AnyInt64Functor) MapByte(f2 Int64ByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapInt(f2 FunctorInt64Int) FunctorAnyInt {
+func (f1 AnyInt64Functor) MapInt(f2 Int64IntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapInt64(f2 FunctorInt64Int64) FunctorAnyInt64 {
+func (f1 AnyInt64Functor) MapInt64(f2 Int64Int64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapUint(f2 FunctorInt64Uint) FunctorAnyUint {
+func (f1 AnyInt64Functor) MapUint(f2 Int64UintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapUint64(f2 FunctorInt64Uint64) FunctorAnyUint64 {
+func (f1 AnyInt64Functor) MapUint64(f2 Int64Uint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapFloat32(f2 FunctorInt64Float32) FunctorAnyFloat32 {
+func (f1 AnyInt64Functor) MapFloat32(f2 Int64Float32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapFloat64(f2 FunctorInt64Float64) FunctorAnyFloat64 {
+func (f1 AnyInt64Functor) MapFloat64(f2 Int64Float64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapString(f2 FunctorInt64String) FunctorAnyString {
+func (f1 AnyInt64Functor) MapString(f2 Int64StringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyInt64) MapAny(f2 FunctorInt64Any) FunctorAnyAny {
+func (f1 AnyInt64Functor) MapAny(f2 Int64AnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapBool(f2 FunctorUintBool) FunctorAnyBool {
+func (f1 AnyUintFunctor) MapBool(f2 UintBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapRune(f2 FunctorUintRune) FunctorAnyRune {
+func (f1 AnyUintFunctor) MapRune(f2 UintRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapByte(f2 FunctorUintByte) FunctorAnyByte {
+func (f1 AnyUintFunctor) MapByte(f2 UintByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapInt(f2 FunctorUintInt) FunctorAnyInt {
+func (f1 AnyUintFunctor) MapInt(f2 UintIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapInt64(f2 FunctorUintInt64) FunctorAnyInt64 {
+func (f1 AnyUintFunctor) MapInt64(f2 UintInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapUint(f2 FunctorUintUint) FunctorAnyUint {
+func (f1 AnyUintFunctor) MapUint(f2 UintUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapUint64(f2 FunctorUintUint64) FunctorAnyUint64 {
+func (f1 AnyUintFunctor) MapUint64(f2 UintUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapFloat32(f2 FunctorUintFloat32) FunctorAnyFloat32 {
+func (f1 AnyUintFunctor) MapFloat32(f2 UintFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapFloat64(f2 FunctorUintFloat64) FunctorAnyFloat64 {
+func (f1 AnyUintFunctor) MapFloat64(f2 UintFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapString(f2 FunctorUintString) FunctorAnyString {
+func (f1 AnyUintFunctor) MapString(f2 UintStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint) MapAny(f2 FunctorUintAny) FunctorAnyAny {
+func (f1 AnyUintFunctor) MapAny(f2 UintAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapBool(f2 FunctorUint64Bool) FunctorAnyBool {
+func (f1 AnyUint64Functor) MapBool(f2 Uint64BoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapRune(f2 FunctorUint64Rune) FunctorAnyRune {
+func (f1 AnyUint64Functor) MapRune(f2 Uint64RuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapByte(f2 FunctorUint64Byte) FunctorAnyByte {
+func (f1 AnyUint64Functor) MapByte(f2 Uint64ByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapInt(f2 FunctorUint64Int) FunctorAnyInt {
+func (f1 AnyUint64Functor) MapInt(f2 Uint64IntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapInt64(f2 FunctorUint64Int64) FunctorAnyInt64 {
+func (f1 AnyUint64Functor) MapInt64(f2 Uint64Int64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapUint(f2 FunctorUint64Uint) FunctorAnyUint {
+func (f1 AnyUint64Functor) MapUint(f2 Uint64UintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapUint64(f2 FunctorUint64Uint64) FunctorAnyUint64 {
+func (f1 AnyUint64Functor) MapUint64(f2 Uint64Uint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapFloat32(f2 FunctorUint64Float32) FunctorAnyFloat32 {
+func (f1 AnyUint64Functor) MapFloat32(f2 Uint64Float32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapFloat64(f2 FunctorUint64Float64) FunctorAnyFloat64 {
+func (f1 AnyUint64Functor) MapFloat64(f2 Uint64Float64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapString(f2 FunctorUint64String) FunctorAnyString {
+func (f1 AnyUint64Functor) MapString(f2 Uint64StringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyUint64) MapAny(f2 FunctorUint64Any) FunctorAnyAny {
+func (f1 AnyUint64Functor) MapAny(f2 Uint64AnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapBool(f2 FunctorFloat32Bool) FunctorAnyBool {
+func (f1 AnyFloat32Functor) MapBool(f2 Float32BoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapRune(f2 FunctorFloat32Rune) FunctorAnyRune {
+func (f1 AnyFloat32Functor) MapRune(f2 Float32RuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapByte(f2 FunctorFloat32Byte) FunctorAnyByte {
+func (f1 AnyFloat32Functor) MapByte(f2 Float32ByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapInt(f2 FunctorFloat32Int) FunctorAnyInt {
+func (f1 AnyFloat32Functor) MapInt(f2 Float32IntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapInt64(f2 FunctorFloat32Int64) FunctorAnyInt64 {
+func (f1 AnyFloat32Functor) MapInt64(f2 Float32Int64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapUint(f2 FunctorFloat32Uint) FunctorAnyUint {
+func (f1 AnyFloat32Functor) MapUint(f2 Float32UintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapUint64(f2 FunctorFloat32Uint64) FunctorAnyUint64 {
+func (f1 AnyFloat32Functor) MapUint64(f2 Float32Uint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapFloat32(f2 FunctorFloat32Float32) FunctorAnyFloat32 {
+func (f1 AnyFloat32Functor) MapFloat32(f2 Float32Float32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapFloat64(f2 FunctorFloat32Float64) FunctorAnyFloat64 {
+func (f1 AnyFloat32Functor) MapFloat64(f2 Float32Float64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapString(f2 FunctorFloat32String) FunctorAnyString {
+func (f1 AnyFloat32Functor) MapString(f2 Float32StringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat32) MapAny(f2 FunctorFloat32Any) FunctorAnyAny {
+func (f1 AnyFloat32Functor) MapAny(f2 Float32AnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapBool(f2 FunctorFloat64Bool) FunctorAnyBool {
+func (f1 AnyFloat64Functor) MapBool(f2 Float64BoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapRune(f2 FunctorFloat64Rune) FunctorAnyRune {
+func (f1 AnyFloat64Functor) MapRune(f2 Float64RuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapByte(f2 FunctorFloat64Byte) FunctorAnyByte {
+func (f1 AnyFloat64Functor) MapByte(f2 Float64ByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapInt(f2 FunctorFloat64Int) FunctorAnyInt {
+func (f1 AnyFloat64Functor) MapInt(f2 Float64IntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapInt64(f2 FunctorFloat64Int64) FunctorAnyInt64 {
+func (f1 AnyFloat64Functor) MapInt64(f2 Float64Int64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapUint(f2 FunctorFloat64Uint) FunctorAnyUint {
+func (f1 AnyFloat64Functor) MapUint(f2 Float64UintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapUint64(f2 FunctorFloat64Uint64) FunctorAnyUint64 {
+func (f1 AnyFloat64Functor) MapUint64(f2 Float64Uint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapFloat32(f2 FunctorFloat64Float32) FunctorAnyFloat32 {
+func (f1 AnyFloat64Functor) MapFloat32(f2 Float64Float32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapFloat64(f2 FunctorFloat64Float64) FunctorAnyFloat64 {
+func (f1 AnyFloat64Functor) MapFloat64(f2 Float64Float64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapString(f2 FunctorFloat64String) FunctorAnyString {
+func (f1 AnyFloat64Functor) MapString(f2 Float64StringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyFloat64) MapAny(f2 FunctorFloat64Any) FunctorAnyAny {
+func (f1 AnyFloat64Functor) MapAny(f2 Float64AnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapBool(f2 FunctorStringBool) FunctorAnyBool {
+func (f1 AnyStringFunctor) MapBool(f2 StringBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapRune(f2 FunctorStringRune) FunctorAnyRune {
+func (f1 AnyStringFunctor) MapRune(f2 StringRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapByte(f2 FunctorStringByte) FunctorAnyByte {
+func (f1 AnyStringFunctor) MapByte(f2 StringByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapInt(f2 FunctorStringInt) FunctorAnyInt {
+func (f1 AnyStringFunctor) MapInt(f2 StringIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapInt64(f2 FunctorStringInt64) FunctorAnyInt64 {
+func (f1 AnyStringFunctor) MapInt64(f2 StringInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapUint(f2 FunctorStringUint) FunctorAnyUint {
+func (f1 AnyStringFunctor) MapUint(f2 StringUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapUint64(f2 FunctorStringUint64) FunctorAnyUint64 {
+func (f1 AnyStringFunctor) MapUint64(f2 StringUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapFloat32(f2 FunctorStringFloat32) FunctorAnyFloat32 {
+func (f1 AnyStringFunctor) MapFloat32(f2 StringFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapFloat64(f2 FunctorStringFloat64) FunctorAnyFloat64 {
+func (f1 AnyStringFunctor) MapFloat64(f2 StringFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapString(f2 FunctorStringString) FunctorAnyString {
+func (f1 AnyStringFunctor) MapString(f2 StringStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyString) MapAny(f2 FunctorStringAny) FunctorAnyAny {
+func (f1 AnyStringFunctor) MapAny(f2 StringAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapBool(f2 FunctorAnyBool) FunctorAnyBool {
+func (f1 AnyAnyFunctor) MapBool(f2 AnyBoolFunctor) AnyBoolFunctor {
 	return func(e Any) bool { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapRune(f2 FunctorAnyRune) FunctorAnyRune {
+func (f1 AnyAnyFunctor) MapRune(f2 AnyRuneFunctor) AnyRuneFunctor {
 	return func(e Any) rune { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapByte(f2 FunctorAnyByte) FunctorAnyByte {
+func (f1 AnyAnyFunctor) MapByte(f2 AnyByteFunctor) AnyByteFunctor {
 	return func(e Any) byte { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapInt(f2 FunctorAnyInt) FunctorAnyInt {
+func (f1 AnyAnyFunctor) MapInt(f2 AnyIntFunctor) AnyIntFunctor {
 	return func(e Any) int { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapInt64(f2 FunctorAnyInt64) FunctorAnyInt64 {
+func (f1 AnyAnyFunctor) MapInt64(f2 AnyInt64Functor) AnyInt64Functor {
 	return func(e Any) int64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapUint(f2 FunctorAnyUint) FunctorAnyUint {
+func (f1 AnyAnyFunctor) MapUint(f2 AnyUintFunctor) AnyUintFunctor {
 	return func(e Any) uint { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapUint64(f2 FunctorAnyUint64) FunctorAnyUint64 {
+func (f1 AnyAnyFunctor) MapUint64(f2 AnyUint64Functor) AnyUint64Functor {
 	return func(e Any) uint64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapFloat32(f2 FunctorAnyFloat32) FunctorAnyFloat32 {
+func (f1 AnyAnyFunctor) MapFloat32(f2 AnyFloat32Functor) AnyFloat32Functor {
 	return func(e Any) float32 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapFloat64(f2 FunctorAnyFloat64) FunctorAnyFloat64 {
+func (f1 AnyAnyFunctor) MapFloat64(f2 AnyFloat64Functor) AnyFloat64Functor {
 	return func(e Any) float64 { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapString(f2 FunctorAnyString) FunctorAnyString {
+func (f1 AnyAnyFunctor) MapString(f2 AnyStringFunctor) AnyStringFunctor {
 	return func(e Any) string { return f2(f1(e)) }
 }
-func (f1 FunctorAnyAny) MapAny(f2 FunctorAnyAny) FunctorAnyAny {
+func (f1 AnyAnyFunctor) MapAny(f2 AnyAnyFunctor) AnyAnyFunctor {
 	return func(e Any) Any { return f2(f1(e)) }
 }

@@ -3,7 +3,7 @@
 
 package fp
 
-func (l ListBool) Filter(p PredicateBool) ListBool {
+func (l BoolList) Filter(p BoolPredicate) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14,7 +14,7 @@ func (l ListBool) Filter(p PredicateBool) ListBool {
 	}
 	return acc.Reverse()
 }
-func (l ListRune) Filter(p PredicateRune) ListRune {
+func (l RuneList) Filter(p RunePredicate) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -25,7 +25,7 @@ func (l ListRune) Filter(p PredicateRune) ListRune {
 	}
 	return acc.Reverse()
 }
-func (l ListByte) Filter(p PredicateByte) ListByte {
+func (l ByteList) Filter(p BytePredicate) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -36,7 +36,7 @@ func (l ListByte) Filter(p PredicateByte) ListByte {
 	}
 	return acc.Reverse()
 }
-func (l ListInt) Filter(p PredicateInt) ListInt {
+func (l IntList) Filter(p IntPredicate) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -47,7 +47,7 @@ func (l ListInt) Filter(p PredicateInt) ListInt {
 	}
 	return acc.Reverse()
 }
-func (l ListInt8) Filter(p PredicateInt8) ListInt8 {
+func (l Int8List) Filter(p Int8Predicate) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -58,7 +58,7 @@ func (l ListInt8) Filter(p PredicateInt8) ListInt8 {
 	}
 	return acc.Reverse()
 }
-func (l ListInt16) Filter(p PredicateInt16) ListInt16 {
+func (l Int16List) Filter(p Int16Predicate) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -69,7 +69,7 @@ func (l ListInt16) Filter(p PredicateInt16) ListInt16 {
 	}
 	return acc.Reverse()
 }
-func (l ListInt32) Filter(p PredicateInt32) ListInt32 {
+func (l Int32List) Filter(p Int32Predicate) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -80,7 +80,7 @@ func (l ListInt32) Filter(p PredicateInt32) ListInt32 {
 	}
 	return acc.Reverse()
 }
-func (l ListInt64) Filter(p PredicateInt64) ListInt64 {
+func (l Int64List) Filter(p Int64Predicate) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -91,7 +91,7 @@ func (l ListInt64) Filter(p PredicateInt64) ListInt64 {
 	}
 	return acc.Reverse()
 }
-func (l ListUint) Filter(p PredicateUint) ListUint {
+func (l UintList) Filter(p UintPredicate) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -102,7 +102,7 @@ func (l ListUint) Filter(p PredicateUint) ListUint {
 	}
 	return acc.Reverse()
 }
-func (l ListUint8) Filter(p PredicateUint8) ListUint8 {
+func (l Uint8List) Filter(p Uint8Predicate) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -113,7 +113,7 @@ func (l ListUint8) Filter(p PredicateUint8) ListUint8 {
 	}
 	return acc.Reverse()
 }
-func (l ListUint16) Filter(p PredicateUint16) ListUint16 {
+func (l Uint16List) Filter(p Uint16Predicate) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -124,7 +124,7 @@ func (l ListUint16) Filter(p PredicateUint16) ListUint16 {
 	}
 	return acc.Reverse()
 }
-func (l ListUint32) Filter(p PredicateUint32) ListUint32 {
+func (l Uint32List) Filter(p Uint32Predicate) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -135,7 +135,7 @@ func (l ListUint32) Filter(p PredicateUint32) ListUint32 {
 	}
 	return acc.Reverse()
 }
-func (l ListUint64) Filter(p PredicateUint64) ListUint64 {
+func (l Uint64List) Filter(p Uint64Predicate) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -146,7 +146,7 @@ func (l ListUint64) Filter(p PredicateUint64) ListUint64 {
 	}
 	return acc.Reverse()
 }
-func (l ListUintptr) Filter(p PredicateUintptr) ListUintptr {
+func (l UintptrList) Filter(p UintptrPredicate) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -157,7 +157,7 @@ func (l ListUintptr) Filter(p PredicateUintptr) ListUintptr {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat32) Filter(p PredicateFloat32) ListFloat32 {
+func (l Float32List) Filter(p Float32Predicate) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -168,7 +168,7 @@ func (l ListFloat32) Filter(p PredicateFloat32) ListFloat32 {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat64) Filter(p PredicateFloat64) ListFloat64 {
+func (l Float64List) Filter(p Float64Predicate) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -179,7 +179,7 @@ func (l ListFloat64) Filter(p PredicateFloat64) ListFloat64 {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex64) Filter(p PredicateComplex64) ListComplex64 {
+func (l Complex64List) Filter(p Complex64Predicate) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -190,7 +190,7 @@ func (l ListComplex64) Filter(p PredicateComplex64) ListComplex64 {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex128) Filter(p PredicateComplex128) ListComplex128 {
+func (l Complex128List) Filter(p Complex128Predicate) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -201,7 +201,7 @@ func (l ListComplex128) Filter(p PredicateComplex128) ListComplex128 {
 	}
 	return acc.Reverse()
 }
-func (l ListString) Filter(p PredicateString) ListString {
+func (l StringList) Filter(p StringPredicate) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -212,7 +212,7 @@ func (l ListString) Filter(p PredicateString) ListString {
 	}
 	return acc.Reverse()
 }
-func (l ListAny) Filter(p PredicateAny) ListAny {
+func (l AnyList) Filter(p AnyPredicate) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -223,7 +223,7 @@ func (l ListAny) Filter(p PredicateAny) ListAny {
 	}
 	return acc.Reverse()
 }
-func (l ListBoolArr) Filter(p PredicateBoolArr) ListBoolArr {
+func (l BoolArrList) Filter(p BoolArrPredicate) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -234,7 +234,7 @@ func (l ListBoolArr) Filter(p PredicateBoolArr) ListBoolArr {
 	}
 	return acc.Reverse()
 }
-func (l ListRuneArr) Filter(p PredicateRuneArr) ListRuneArr {
+func (l RuneArrList) Filter(p RuneArrPredicate) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -245,7 +245,7 @@ func (l ListRuneArr) Filter(p PredicateRuneArr) ListRuneArr {
 	}
 	return acc.Reverse()
 }
-func (l ListByteArr) Filter(p PredicateByteArr) ListByteArr {
+func (l ByteArrList) Filter(p ByteArrPredicate) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -256,7 +256,7 @@ func (l ListByteArr) Filter(p PredicateByteArr) ListByteArr {
 	}
 	return acc.Reverse()
 }
-func (l ListIntArr) Filter(p PredicateIntArr) ListIntArr {
+func (l IntArrList) Filter(p IntArrPredicate) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -267,7 +267,7 @@ func (l ListIntArr) Filter(p PredicateIntArr) ListIntArr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt8Arr) Filter(p PredicateInt8Arr) ListInt8Arr {
+func (l Int8ArrList) Filter(p Int8ArrPredicate) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -278,7 +278,7 @@ func (l ListInt8Arr) Filter(p PredicateInt8Arr) ListInt8Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt16Arr) Filter(p PredicateInt16Arr) ListInt16Arr {
+func (l Int16ArrList) Filter(p Int16ArrPredicate) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -289,7 +289,7 @@ func (l ListInt16Arr) Filter(p PredicateInt16Arr) ListInt16Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt32Arr) Filter(p PredicateInt32Arr) ListInt32Arr {
+func (l Int32ArrList) Filter(p Int32ArrPredicate) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -300,7 +300,7 @@ func (l ListInt32Arr) Filter(p PredicateInt32Arr) ListInt32Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListInt64Arr) Filter(p PredicateInt64Arr) ListInt64Arr {
+func (l Int64ArrList) Filter(p Int64ArrPredicate) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -311,7 +311,7 @@ func (l ListInt64Arr) Filter(p PredicateInt64Arr) ListInt64Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListUintArr) Filter(p PredicateUintArr) ListUintArr {
+func (l UintArrList) Filter(p UintArrPredicate) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -322,7 +322,7 @@ func (l ListUintArr) Filter(p PredicateUintArr) ListUintArr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint8Arr) Filter(p PredicateUint8Arr) ListUint8Arr {
+func (l Uint8ArrList) Filter(p Uint8ArrPredicate) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -333,7 +333,7 @@ func (l ListUint8Arr) Filter(p PredicateUint8Arr) ListUint8Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint16Arr) Filter(p PredicateUint16Arr) ListUint16Arr {
+func (l Uint16ArrList) Filter(p Uint16ArrPredicate) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -344,7 +344,7 @@ func (l ListUint16Arr) Filter(p PredicateUint16Arr) ListUint16Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint32Arr) Filter(p PredicateUint32Arr) ListUint32Arr {
+func (l Uint32ArrList) Filter(p Uint32ArrPredicate) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -355,7 +355,7 @@ func (l ListUint32Arr) Filter(p PredicateUint32Arr) ListUint32Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListUint64Arr) Filter(p PredicateUint64Arr) ListUint64Arr {
+func (l Uint64ArrList) Filter(p Uint64ArrPredicate) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -366,7 +366,7 @@ func (l ListUint64Arr) Filter(p PredicateUint64Arr) ListUint64Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListUintptrArr) Filter(p PredicateUintptrArr) ListUintptrArr {
+func (l UintptrArrList) Filter(p UintptrArrPredicate) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -377,7 +377,7 @@ func (l ListUintptrArr) Filter(p PredicateUintptrArr) ListUintptrArr {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat32Arr) Filter(p PredicateFloat32Arr) ListFloat32Arr {
+func (l Float32ArrList) Filter(p Float32ArrPredicate) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -388,7 +388,7 @@ func (l ListFloat32Arr) Filter(p PredicateFloat32Arr) ListFloat32Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListFloat64Arr) Filter(p PredicateFloat64Arr) ListFloat64Arr {
+func (l Float64ArrList) Filter(p Float64ArrPredicate) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -399,7 +399,7 @@ func (l ListFloat64Arr) Filter(p PredicateFloat64Arr) ListFloat64Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex64Arr) Filter(p PredicateComplex64Arr) ListComplex64Arr {
+func (l Complex64ArrList) Filter(p Complex64ArrPredicate) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -410,7 +410,7 @@ func (l ListComplex64Arr) Filter(p PredicateComplex64Arr) ListComplex64Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListComplex128Arr) Filter(p PredicateComplex128Arr) ListComplex128Arr {
+func (l Complex128ArrList) Filter(p Complex128ArrPredicate) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -421,7 +421,7 @@ func (l ListComplex128Arr) Filter(p PredicateComplex128Arr) ListComplex128Arr {
 	}
 	return acc.Reverse()
 }
-func (l ListStringArr) Filter(p PredicateStringArr) ListStringArr {
+func (l StringArrList) Filter(p StringArrPredicate) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -432,7 +432,7 @@ func (l ListStringArr) Filter(p PredicateStringArr) ListStringArr {
 	}
 	return acc.Reverse()
 }
-func (l ListAnyArr) Filter(p PredicateAnyArr) ListAnyArr {
+func (l AnyArrList) Filter(p AnyArrPredicate) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
