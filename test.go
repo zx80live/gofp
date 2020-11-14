@@ -43,6 +43,6 @@ func main() {
 	fmt.Println(MkStringIntArr([]int{1, 2, 3, 4, 5}, "~~", "|", "~~"))
 	nestedList := MakeIntArrList([]int{1, 2, 3}, []int{4, 5, 6}, []int{7})
 	fmt.Println(MkStringIntArrList(nestedList, "[", ",", "]"))
-	fmt.Println(ToStringIntArrList(nestedList))
+	fmt.Println(nestedList.ToString())
 
 }

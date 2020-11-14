@@ -13,7 +13,6 @@ func (l BoolList) ToArray() []bool {
 	})
 	return arr
 }
-
 func (l RuneList) ToArray() []rune {
 	len := l.Size()
 	arr := make([]rune, len)
@@ -24,7 +23,6 @@ func (l RuneList) ToArray() []rune {
 	})
 	return arr
 }
-
 func (l ByteList) ToArray() []byte {
 	len := l.Size()
 	arr := make([]byte, len)
@@ -35,7 +33,6 @@ func (l ByteList) ToArray() []byte {
 	})
 	return arr
 }
-
 func (l IntList) ToArray() []int {
 	len := l.Size()
 	arr := make([]int, len)
@@ -46,7 +43,6 @@ func (l IntList) ToArray() []int {
 	})
 	return arr
 }
-
 func (l Int8List) ToArray() []int8 {
 	len := l.Size()
 	arr := make([]int8, len)
@@ -57,7 +53,6 @@ func (l Int8List) ToArray() []int8 {
 	})
 	return arr
 }
-
 func (l Int16List) ToArray() []int16 {
 	len := l.Size()
 	arr := make([]int16, len)
@@ -68,7 +63,6 @@ func (l Int16List) ToArray() []int16 {
 	})
 	return arr
 }
-
 func (l Int32List) ToArray() []int32 {
 	len := l.Size()
 	arr := make([]int32, len)
@@ -79,7 +73,6 @@ func (l Int32List) ToArray() []int32 {
 	})
 	return arr
 }
-
 func (l Int64List) ToArray() []int64 {
 	len := l.Size()
 	arr := make([]int64, len)
@@ -90,7 +83,6 @@ func (l Int64List) ToArray() []int64 {
 	})
 	return arr
 }
-
 func (l UintList) ToArray() []uint {
 	len := l.Size()
 	arr := make([]uint, len)
@@ -101,7 +93,6 @@ func (l UintList) ToArray() []uint {
 	})
 	return arr
 }
-
 func (l Uint8List) ToArray() []uint8 {
 	len := l.Size()
 	arr := make([]uint8, len)
@@ -112,7 +103,6 @@ func (l Uint8List) ToArray() []uint8 {
 	})
 	return arr
 }
-
 func (l Uint16List) ToArray() []uint16 {
 	len := l.Size()
 	arr := make([]uint16, len)
@@ -123,7 +113,6 @@ func (l Uint16List) ToArray() []uint16 {
 	})
 	return arr
 }
-
 func (l Uint32List) ToArray() []uint32 {
 	len := l.Size()
 	arr := make([]uint32, len)
@@ -134,7 +123,6 @@ func (l Uint32List) ToArray() []uint32 {
 	})
 	return arr
 }
-
 func (l Uint64List) ToArray() []uint64 {
 	len := l.Size()
 	arr := make([]uint64, len)
@@ -145,7 +133,6 @@ func (l Uint64List) ToArray() []uint64 {
 	})
 	return arr
 }
-
 func (l UintptrList) ToArray() []uintptr {
 	len := l.Size()
 	arr := make([]uintptr, len)
@@ -156,7 +143,6 @@ func (l UintptrList) ToArray() []uintptr {
 	})
 	return arr
 }
-
 func (l Float32List) ToArray() []float32 {
 	len := l.Size()
 	arr := make([]float32, len)
@@ -167,7 +153,6 @@ func (l Float32List) ToArray() []float32 {
 	})
 	return arr
 }
-
 func (l Float64List) ToArray() []float64 {
 	len := l.Size()
 	arr := make([]float64, len)
@@ -178,7 +163,6 @@ func (l Float64List) ToArray() []float64 {
 	})
 	return arr
 }
-
 func (l Complex64List) ToArray() []complex64 {
 	len := l.Size()
 	arr := make([]complex64, len)
@@ -189,7 +173,6 @@ func (l Complex64List) ToArray() []complex64 {
 	})
 	return arr
 }
-
 func (l Complex128List) ToArray() []complex128 {
 	len := l.Size()
 	arr := make([]complex128, len)
@@ -200,7 +183,6 @@ func (l Complex128List) ToArray() []complex128 {
 	})
 	return arr
 }
-
 func (l StringList) ToArray() []string {
 	len := l.Size()
 	arr := make([]string, len)
@@ -211,7 +193,6 @@ func (l StringList) ToArray() []string {
 	})
 	return arr
 }
-
 func (l AnyList) ToArray() []Any {
 	len := l.Size()
 	arr := make([]Any, len)
@@ -222,7 +203,6 @@ func (l AnyList) ToArray() []Any {
 	})
 	return arr
 }
-
 func (l BoolArrList) ToArray() [][]bool {
 	len := l.Size()
 	arr := make([][]bool, len)
@@ -233,7 +213,6 @@ func (l BoolArrList) ToArray() [][]bool {
 	})
 	return arr
 }
-
 func (l RuneArrList) ToArray() [][]rune {
 	len := l.Size()
 	arr := make([][]rune, len)
@@ -244,7 +223,6 @@ func (l RuneArrList) ToArray() [][]rune {
 	})
 	return arr
 }
-
 func (l ByteArrList) ToArray() [][]byte {
 	len := l.Size()
 	arr := make([][]byte, len)
@@ -255,7 +233,6 @@ func (l ByteArrList) ToArray() [][]byte {
 	})
 	return arr
 }
-
 func (l IntArrList) ToArray() [][]int {
 	len := l.Size()
 	arr := make([][]int, len)
@@ -266,7 +243,6 @@ func (l IntArrList) ToArray() [][]int {
 	})
 	return arr
 }
-
 func (l Int8ArrList) ToArray() [][]int8 {
 	len := l.Size()
 	arr := make([][]int8, len)
@@ -277,7 +253,6 @@ func (l Int8ArrList) ToArray() [][]int8 {
 	})
 	return arr
 }
-
 func (l Int16ArrList) ToArray() [][]int16 {
 	len := l.Size()
 	arr := make([][]int16, len)
@@ -288,7 +263,6 @@ func (l Int16ArrList) ToArray() [][]int16 {
 	})
 	return arr
 }
-
 func (l Int32ArrList) ToArray() [][]int32 {
 	len := l.Size()
 	arr := make([][]int32, len)
@@ -299,7 +273,6 @@ func (l Int32ArrList) ToArray() [][]int32 {
 	})
 	return arr
 }
-
 func (l Int64ArrList) ToArray() [][]int64 {
 	len := l.Size()
 	arr := make([][]int64, len)
@@ -310,7 +283,6 @@ func (l Int64ArrList) ToArray() [][]int64 {
 	})
 	return arr
 }
-
 func (l UintArrList) ToArray() [][]uint {
 	len := l.Size()
 	arr := make([][]uint, len)
@@ -321,7 +293,6 @@ func (l UintArrList) ToArray() [][]uint {
 	})
 	return arr
 }
-
 func (l Uint8ArrList) ToArray() [][]uint8 {
 	len := l.Size()
 	arr := make([][]uint8, len)
@@ -332,7 +303,6 @@ func (l Uint8ArrList) ToArray() [][]uint8 {
 	})
 	return arr
 }
-
 func (l Uint16ArrList) ToArray() [][]uint16 {
 	len := l.Size()
 	arr := make([][]uint16, len)
@@ -343,7 +313,6 @@ func (l Uint16ArrList) ToArray() [][]uint16 {
 	})
 	return arr
 }
-
 func (l Uint32ArrList) ToArray() [][]uint32 {
 	len := l.Size()
 	arr := make([][]uint32, len)
@@ -354,7 +323,6 @@ func (l Uint32ArrList) ToArray() [][]uint32 {
 	})
 	return arr
 }
-
 func (l Uint64ArrList) ToArray() [][]uint64 {
 	len := l.Size()
 	arr := make([][]uint64, len)
@@ -365,7 +333,6 @@ func (l Uint64ArrList) ToArray() [][]uint64 {
 	})
 	return arr
 }
-
 func (l UintptrArrList) ToArray() [][]uintptr {
 	len := l.Size()
 	arr := make([][]uintptr, len)
@@ -376,7 +343,6 @@ func (l UintptrArrList) ToArray() [][]uintptr {
 	})
 	return arr
 }
-
 func (l Float32ArrList) ToArray() [][]float32 {
 	len := l.Size()
 	arr := make([][]float32, len)
@@ -387,7 +353,6 @@ func (l Float32ArrList) ToArray() [][]float32 {
 	})
 	return arr
 }
-
 func (l Float64ArrList) ToArray() [][]float64 {
 	len := l.Size()
 	arr := make([][]float64, len)
@@ -398,7 +363,6 @@ func (l Float64ArrList) ToArray() [][]float64 {
 	})
 	return arr
 }
-
 func (l Complex64ArrList) ToArray() [][]complex64 {
 	len := l.Size()
 	arr := make([][]complex64, len)
@@ -409,7 +373,6 @@ func (l Complex64ArrList) ToArray() [][]complex64 {
 	})
 	return arr
 }
-
 func (l Complex128ArrList) ToArray() [][]complex128 {
 	len := l.Size()
 	arr := make([][]complex128, len)
@@ -420,7 +383,6 @@ func (l Complex128ArrList) ToArray() [][]complex128 {
 	})
 	return arr
 }
-
 func (l StringArrList) ToArray() [][]string {
 	len := l.Size()
 	arr := make([][]string, len)
@@ -431,7 +393,6 @@ func (l StringArrList) ToArray() [][]string {
 	})
 	return arr
 }
-
 func (l AnyArrList) ToArray() [][]Any {
 	len := l.Size()
 	arr := make([][]Any, len)
