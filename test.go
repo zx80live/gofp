@@ -24,5 +24,5 @@ func main() {
 	fmt.Println(i1.ToString(), i1.IsDefined(), i1.IsEmpty(), i1.Filter(even).ToString(), i1.Filter(pos).ToString(), i1.MapInt(func(e int) int { return e + 100 }).ToString())
 	fmt.Println(i2.ToString(), i2.IsDefined(), i2.IsEmpty(), i2.Filter(even).ToString(), i2.Filter(pos).ToString(), i1.MapInt(func(e int) int { return e + 100 }).ToString())
 
-	fmt.Println(EqualOptionIntArr(IntArr([]int{1, 2, 3}), IntArr([]int{1, 2, 3})))
+	fmt.Println(NoneInt.Equals(NoneInt))
 }
