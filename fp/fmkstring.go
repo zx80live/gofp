@@ -484,3 +484,124 @@ func MkStringAnyArrArr(arr [][]Any, left, sep, right string) string {
 	}
 	return fmt.Sprintf("%v%v%v", left, content, right)
 }
+
+func MkStringBoolList(l BoolList, left, sep, right string) string {
+	return MkStringBoolArr(l.ToArray(), left, sep, right)
+}
+func MkStringRuneList(l RuneList, left, sep, right string) string {
+	return MkStringRuneArr(l.ToArray(), left, sep, right)
+}
+func MkStringByteList(l ByteList, left, sep, right string) string {
+	return MkStringByteArr(l.ToArray(), left, sep, right)
+}
+func MkStringIntList(l IntList, left, sep, right string) string {
+	return MkStringIntArr(l.ToArray(), left, sep, right)
+}
+func MkStringInt8List(l Int8List, left, sep, right string) string {
+	return MkStringInt8Arr(l.ToArray(), left, sep, right)
+}
+func MkStringInt16List(l Int16List, left, sep, right string) string {
+	return MkStringInt16Arr(l.ToArray(), left, sep, right)
+}
+func MkStringInt32List(l Int32List, left, sep, right string) string {
+	return MkStringInt32Arr(l.ToArray(), left, sep, right)
+}
+func MkStringInt64List(l Int64List, left, sep, right string) string {
+	return MkStringInt64Arr(l.ToArray(), left, sep, right)
+}
+func MkStringUintList(l UintList, left, sep, right string) string {
+	return MkStringUintArr(l.ToArray(), left, sep, right)
+}
+func MkStringUint8List(l Uint8List, left, sep, right string) string {
+	return MkStringUint8Arr(l.ToArray(), left, sep, right)
+}
+func MkStringUint16List(l Uint16List, left, sep, right string) string {
+	return MkStringUint16Arr(l.ToArray(), left, sep, right)
+}
+func MkStringUint32List(l Uint32List, left, sep, right string) string {
+	return MkStringUint32Arr(l.ToArray(), left, sep, right)
+}
+func MkStringUint64List(l Uint64List, left, sep, right string) string {
+	return MkStringUint64Arr(l.ToArray(), left, sep, right)
+}
+func MkStringUintptrList(l UintptrList, left, sep, right string) string {
+	return MkStringUintptrArr(l.ToArray(), left, sep, right)
+}
+func MkStringFloat32List(l Float32List, left, sep, right string) string {
+	return MkStringFloat32Arr(l.ToArray(), left, sep, right)
+}
+func MkStringFloat64List(l Float64List, left, sep, right string) string {
+	return MkStringFloat64Arr(l.ToArray(), left, sep, right)
+}
+func MkStringComplex64List(l Complex64List, left, sep, right string) string {
+	return MkStringComplex64Arr(l.ToArray(), left, sep, right)
+}
+func MkStringComplex128List(l Complex128List, left, sep, right string) string {
+	return MkStringComplex128Arr(l.ToArray(), left, sep, right)
+}
+func MkStringStringList(l StringList, left, sep, right string) string {
+	return MkStringStringArr(l.ToArray(), left, sep, right)
+}
+func MkStringAnyList(l AnyList, left, sep, right string) string {
+	return MkStringAnyArr(l.ToArray(), left, sep, right)
+}
+func MkStringBoolArrList(l BoolArrList, left, sep, right string) string {
+	return MkStringBoolArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringRuneArrList(l RuneArrList, left, sep, right string) string {
+	return MkStringRuneArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringByteArrList(l ByteArrList, left, sep, right string) string {
+	return MkStringByteArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringIntArrList(l IntArrList, left, sep, right string) string {
+	return MkStringIntArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringInt8ArrList(l Int8ArrList, left, sep, right string) string {
+	return MkStringInt8ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringInt16ArrList(l Int16ArrList, left, sep, right string) string {
+	return MkStringInt16ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringInt32ArrList(l Int32ArrList, left, sep, right string) string {
+	return MkStringInt32ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringInt64ArrList(l Int64ArrList, left, sep, right string) string {
+	return MkStringInt64ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringUintArrList(l UintArrList, left, sep, right string) string {
+	return MkStringUintArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringUint8ArrList(l Uint8ArrList, left, sep, right string) string {
+	return MkStringUint8ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringUint16ArrList(l Uint16ArrList, left, sep, right string) string {
+	return MkStringUint16ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringUint32ArrList(l Uint32ArrList, left, sep, right string) string {
+	return MkStringUint32ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringUint64ArrList(l Uint64ArrList, left, sep, right string) string {
+	return MkStringUint64ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringUintptrArrList(l UintptrArrList, left, sep, right string) string {
+	return MkStringUintptrArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringFloat32ArrList(l Float32ArrList, left, sep, right string) string {
+	return MkStringFloat32ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringFloat64ArrList(l Float64ArrList, left, sep, right string) string {
+	return MkStringFloat64ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringComplex64ArrList(l Complex64ArrList, left, sep, right string) string {
+	return MkStringComplex64ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringComplex128ArrList(l Complex128ArrList, left, sep, right string) string {
+	return MkStringComplex128ArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringStringArrList(l StringArrList, left, sep, right string) string {
+	return MkStringStringArrArr(l.ToArray(), left, sep, right)
+}
+func MkStringAnyArrList(l AnyArrList, left, sep, right string) string {
+	return MkStringAnyArrArr(l.ToArray(), left, sep, right)
+}
