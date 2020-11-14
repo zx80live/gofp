@@ -3,11200 +3,11200 @@
 
 package fp
 
-func (o OptionBool) MapBool(f BoolBoolFunctor) OptionBool {
+func (o OptionBool) MapBool(f BoolBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionBool) MapRune(f BoolRuneFunctor) OptionRune {
+func (o OptionBool) MapRune(f BoolRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionBool) MapByte(f BoolByteFunctor) OptionByte {
+func (o OptionBool) MapByte(f BoolByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionBool) MapInt(f BoolIntFunctor) OptionInt {
+func (o OptionBool) MapInt(f BoolIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionBool) MapInt8(f BoolInt8Functor) OptionInt8 {
+func (o OptionBool) MapInt8(f BoolInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionBool) MapInt16(f BoolInt16Functor) OptionInt16 {
+func (o OptionBool) MapInt16(f BoolInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionBool) MapInt32(f BoolInt32Functor) OptionInt32 {
+func (o OptionBool) MapInt32(f BoolInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionBool) MapInt64(f BoolInt64Functor) OptionInt64 {
+func (o OptionBool) MapInt64(f BoolInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionBool) MapUint(f BoolUintFunctor) OptionUint {
+func (o OptionBool) MapUint(f BoolUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionBool) MapUint8(f BoolUint8Functor) OptionUint8 {
+func (o OptionBool) MapUint8(f BoolUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionBool) MapUint16(f BoolUint16Functor) OptionUint16 {
+func (o OptionBool) MapUint16(f BoolUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionBool) MapUint32(f BoolUint32Functor) OptionUint32 {
+func (o OptionBool) MapUint32(f BoolUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionBool) MapUint64(f BoolUint64Functor) OptionUint64 {
+func (o OptionBool) MapUint64(f BoolUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionBool) MapUintptr(f BoolUintptrFunctor) OptionUintptr {
+func (o OptionBool) MapUintptr(f BoolUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionBool) MapFloat32(f BoolFloat32Functor) OptionFloat32 {
+func (o OptionBool) MapFloat32(f BoolFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionBool) MapFloat64(f BoolFloat64Functor) OptionFloat64 {
+func (o OptionBool) MapFloat64(f BoolFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionBool) MapComplex64(f BoolComplex64Functor) OptionComplex64 {
+func (o OptionBool) MapComplex64(f BoolComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionBool) MapComplex128(f BoolComplex128Functor) OptionComplex128 {
+func (o OptionBool) MapComplex128(f BoolComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionBool) MapString(f BoolStringFunctor) OptionString {
+func (o OptionBool) MapString(f BoolStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionBool) MapAny(f BoolAnyFunctor) OptionAny {
+func (o OptionBool) MapAny(f BoolAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionBool) MapBoolArr(f BoolBoolArrFunctor) OptionBoolArr {
+func (o OptionBool) MapBoolArr(f BoolBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionBool) MapRuneArr(f BoolRuneArrFunctor) OptionRuneArr {
+func (o OptionBool) MapRuneArr(f BoolRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionBool) MapByteArr(f BoolByteArrFunctor) OptionByteArr {
+func (o OptionBool) MapByteArr(f BoolByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionBool) MapIntArr(f BoolIntArrFunctor) OptionIntArr {
+func (o OptionBool) MapIntArr(f BoolIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionBool) MapInt8Arr(f BoolInt8ArrFunctor) OptionInt8Arr {
+func (o OptionBool) MapInt8Arr(f BoolInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionBool) MapInt16Arr(f BoolInt16ArrFunctor) OptionInt16Arr {
+func (o OptionBool) MapInt16Arr(f BoolInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionBool) MapInt32Arr(f BoolInt32ArrFunctor) OptionInt32Arr {
+func (o OptionBool) MapInt32Arr(f BoolInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionBool) MapInt64Arr(f BoolInt64ArrFunctor) OptionInt64Arr {
+func (o OptionBool) MapInt64Arr(f BoolInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionBool) MapUintArr(f BoolUintArrFunctor) OptionUintArr {
+func (o OptionBool) MapUintArr(f BoolUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionBool) MapUint8Arr(f BoolUint8ArrFunctor) OptionUint8Arr {
+func (o OptionBool) MapUint8Arr(f BoolUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionBool) MapUint16Arr(f BoolUint16ArrFunctor) OptionUint16Arr {
+func (o OptionBool) MapUint16Arr(f BoolUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionBool) MapUint32Arr(f BoolUint32ArrFunctor) OptionUint32Arr {
+func (o OptionBool) MapUint32Arr(f BoolUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionBool) MapUint64Arr(f BoolUint64ArrFunctor) OptionUint64Arr {
+func (o OptionBool) MapUint64Arr(f BoolUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionBool) MapUintptrArr(f BoolUintptrArrFunctor) OptionUintptrArr {
+func (o OptionBool) MapUintptrArr(f BoolUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionBool) MapFloat32Arr(f BoolFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionBool) MapFloat32Arr(f BoolFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionBool) MapFloat64Arr(f BoolFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionBool) MapFloat64Arr(f BoolFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionBool) MapComplex64Arr(f BoolComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionBool) MapComplex64Arr(f BoolComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionBool) MapComplex128Arr(f BoolComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionBool) MapComplex128Arr(f BoolComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionBool) MapStringArr(f BoolStringArrFunctor) OptionStringArr {
+func (o OptionBool) MapStringArr(f BoolStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionBool) MapAnyArr(f BoolAnyArrFunctor) OptionAnyArr {
+func (o OptionBool) MapAnyArr(f BoolAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionRune) MapBool(f RuneBoolFunctor) OptionBool {
+func (o OptionRune) MapBool(f RuneBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionRune) MapRune(f RuneRuneFunctor) OptionRune {
+func (o OptionRune) MapRune(f RuneRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionRune) MapByte(f RuneByteFunctor) OptionByte {
+func (o OptionRune) MapByte(f RuneByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionRune) MapInt(f RuneIntFunctor) OptionInt {
+func (o OptionRune) MapInt(f RuneIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionRune) MapInt8(f RuneInt8Functor) OptionInt8 {
+func (o OptionRune) MapInt8(f RuneInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionRune) MapInt16(f RuneInt16Functor) OptionInt16 {
+func (o OptionRune) MapInt16(f RuneInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionRune) MapInt32(f RuneInt32Functor) OptionInt32 {
+func (o OptionRune) MapInt32(f RuneInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionRune) MapInt64(f RuneInt64Functor) OptionInt64 {
+func (o OptionRune) MapInt64(f RuneInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionRune) MapUint(f RuneUintFunctor) OptionUint {
+func (o OptionRune) MapUint(f RuneUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionRune) MapUint8(f RuneUint8Functor) OptionUint8 {
+func (o OptionRune) MapUint8(f RuneUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionRune) MapUint16(f RuneUint16Functor) OptionUint16 {
+func (o OptionRune) MapUint16(f RuneUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionRune) MapUint32(f RuneUint32Functor) OptionUint32 {
+func (o OptionRune) MapUint32(f RuneUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionRune) MapUint64(f RuneUint64Functor) OptionUint64 {
+func (o OptionRune) MapUint64(f RuneUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionRune) MapUintptr(f RuneUintptrFunctor) OptionUintptr {
+func (o OptionRune) MapUintptr(f RuneUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionRune) MapFloat32(f RuneFloat32Functor) OptionFloat32 {
+func (o OptionRune) MapFloat32(f RuneFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionRune) MapFloat64(f RuneFloat64Functor) OptionFloat64 {
+func (o OptionRune) MapFloat64(f RuneFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionRune) MapComplex64(f RuneComplex64Functor) OptionComplex64 {
+func (o OptionRune) MapComplex64(f RuneComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionRune) MapComplex128(f RuneComplex128Functor) OptionComplex128 {
+func (o OptionRune) MapComplex128(f RuneComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionRune) MapString(f RuneStringFunctor) OptionString {
+func (o OptionRune) MapString(f RuneStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionRune) MapAny(f RuneAnyFunctor) OptionAny {
+func (o OptionRune) MapAny(f RuneAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionRune) MapBoolArr(f RuneBoolArrFunctor) OptionBoolArr {
+func (o OptionRune) MapBoolArr(f RuneBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionRune) MapRuneArr(f RuneRuneArrFunctor) OptionRuneArr {
+func (o OptionRune) MapRuneArr(f RuneRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionRune) MapByteArr(f RuneByteArrFunctor) OptionByteArr {
+func (o OptionRune) MapByteArr(f RuneByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionRune) MapIntArr(f RuneIntArrFunctor) OptionIntArr {
+func (o OptionRune) MapIntArr(f RuneIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionRune) MapInt8Arr(f RuneInt8ArrFunctor) OptionInt8Arr {
+func (o OptionRune) MapInt8Arr(f RuneInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionRune) MapInt16Arr(f RuneInt16ArrFunctor) OptionInt16Arr {
+func (o OptionRune) MapInt16Arr(f RuneInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionRune) MapInt32Arr(f RuneInt32ArrFunctor) OptionInt32Arr {
+func (o OptionRune) MapInt32Arr(f RuneInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionRune) MapInt64Arr(f RuneInt64ArrFunctor) OptionInt64Arr {
+func (o OptionRune) MapInt64Arr(f RuneInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionRune) MapUintArr(f RuneUintArrFunctor) OptionUintArr {
+func (o OptionRune) MapUintArr(f RuneUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionRune) MapUint8Arr(f RuneUint8ArrFunctor) OptionUint8Arr {
+func (o OptionRune) MapUint8Arr(f RuneUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionRune) MapUint16Arr(f RuneUint16ArrFunctor) OptionUint16Arr {
+func (o OptionRune) MapUint16Arr(f RuneUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionRune) MapUint32Arr(f RuneUint32ArrFunctor) OptionUint32Arr {
+func (o OptionRune) MapUint32Arr(f RuneUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionRune) MapUint64Arr(f RuneUint64ArrFunctor) OptionUint64Arr {
+func (o OptionRune) MapUint64Arr(f RuneUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionRune) MapUintptrArr(f RuneUintptrArrFunctor) OptionUintptrArr {
+func (o OptionRune) MapUintptrArr(f RuneUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionRune) MapFloat32Arr(f RuneFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionRune) MapFloat32Arr(f RuneFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionRune) MapFloat64Arr(f RuneFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionRune) MapFloat64Arr(f RuneFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionRune) MapComplex64Arr(f RuneComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionRune) MapComplex64Arr(f RuneComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionRune) MapComplex128Arr(f RuneComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionRune) MapComplex128Arr(f RuneComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionRune) MapStringArr(f RuneStringArrFunctor) OptionStringArr {
+func (o OptionRune) MapStringArr(f RuneStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionRune) MapAnyArr(f RuneAnyArrFunctor) OptionAnyArr {
+func (o OptionRune) MapAnyArr(f RuneAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionByte) MapBool(f ByteBoolFunctor) OptionBool {
+func (o OptionByte) MapBool(f ByteBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionByte) MapRune(f ByteRuneFunctor) OptionRune {
+func (o OptionByte) MapRune(f ByteRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionByte) MapByte(f ByteByteFunctor) OptionByte {
+func (o OptionByte) MapByte(f ByteByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionByte) MapInt(f ByteIntFunctor) OptionInt {
+func (o OptionByte) MapInt(f ByteIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionByte) MapInt8(f ByteInt8Functor) OptionInt8 {
+func (o OptionByte) MapInt8(f ByteInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionByte) MapInt16(f ByteInt16Functor) OptionInt16 {
+func (o OptionByte) MapInt16(f ByteInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionByte) MapInt32(f ByteInt32Functor) OptionInt32 {
+func (o OptionByte) MapInt32(f ByteInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionByte) MapInt64(f ByteInt64Functor) OptionInt64 {
+func (o OptionByte) MapInt64(f ByteInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionByte) MapUint(f ByteUintFunctor) OptionUint {
+func (o OptionByte) MapUint(f ByteUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionByte) MapUint8(f ByteUint8Functor) OptionUint8 {
+func (o OptionByte) MapUint8(f ByteUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionByte) MapUint16(f ByteUint16Functor) OptionUint16 {
+func (o OptionByte) MapUint16(f ByteUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionByte) MapUint32(f ByteUint32Functor) OptionUint32 {
+func (o OptionByte) MapUint32(f ByteUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionByte) MapUint64(f ByteUint64Functor) OptionUint64 {
+func (o OptionByte) MapUint64(f ByteUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionByte) MapUintptr(f ByteUintptrFunctor) OptionUintptr {
+func (o OptionByte) MapUintptr(f ByteUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionByte) MapFloat32(f ByteFloat32Functor) OptionFloat32 {
+func (o OptionByte) MapFloat32(f ByteFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionByte) MapFloat64(f ByteFloat64Functor) OptionFloat64 {
+func (o OptionByte) MapFloat64(f ByteFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionByte) MapComplex64(f ByteComplex64Functor) OptionComplex64 {
+func (o OptionByte) MapComplex64(f ByteComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionByte) MapComplex128(f ByteComplex128Functor) OptionComplex128 {
+func (o OptionByte) MapComplex128(f ByteComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionByte) MapString(f ByteStringFunctor) OptionString {
+func (o OptionByte) MapString(f ByteStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionByte) MapAny(f ByteAnyFunctor) OptionAny {
+func (o OptionByte) MapAny(f ByteAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionByte) MapBoolArr(f ByteBoolArrFunctor) OptionBoolArr {
+func (o OptionByte) MapBoolArr(f ByteBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionByte) MapRuneArr(f ByteRuneArrFunctor) OptionRuneArr {
+func (o OptionByte) MapRuneArr(f ByteRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionByte) MapByteArr(f ByteByteArrFunctor) OptionByteArr {
+func (o OptionByte) MapByteArr(f ByteByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionByte) MapIntArr(f ByteIntArrFunctor) OptionIntArr {
+func (o OptionByte) MapIntArr(f ByteIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionByte) MapInt8Arr(f ByteInt8ArrFunctor) OptionInt8Arr {
+func (o OptionByte) MapInt8Arr(f ByteInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionByte) MapInt16Arr(f ByteInt16ArrFunctor) OptionInt16Arr {
+func (o OptionByte) MapInt16Arr(f ByteInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionByte) MapInt32Arr(f ByteInt32ArrFunctor) OptionInt32Arr {
+func (o OptionByte) MapInt32Arr(f ByteInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionByte) MapInt64Arr(f ByteInt64ArrFunctor) OptionInt64Arr {
+func (o OptionByte) MapInt64Arr(f ByteInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionByte) MapUintArr(f ByteUintArrFunctor) OptionUintArr {
+func (o OptionByte) MapUintArr(f ByteUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionByte) MapUint8Arr(f ByteUint8ArrFunctor) OptionUint8Arr {
+func (o OptionByte) MapUint8Arr(f ByteUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionByte) MapUint16Arr(f ByteUint16ArrFunctor) OptionUint16Arr {
+func (o OptionByte) MapUint16Arr(f ByteUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionByte) MapUint32Arr(f ByteUint32ArrFunctor) OptionUint32Arr {
+func (o OptionByte) MapUint32Arr(f ByteUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionByte) MapUint64Arr(f ByteUint64ArrFunctor) OptionUint64Arr {
+func (o OptionByte) MapUint64Arr(f ByteUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionByte) MapUintptrArr(f ByteUintptrArrFunctor) OptionUintptrArr {
+func (o OptionByte) MapUintptrArr(f ByteUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionByte) MapFloat32Arr(f ByteFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionByte) MapFloat32Arr(f ByteFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionByte) MapFloat64Arr(f ByteFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionByte) MapFloat64Arr(f ByteFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionByte) MapComplex64Arr(f ByteComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionByte) MapComplex64Arr(f ByteComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionByte) MapComplex128Arr(f ByteComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionByte) MapComplex128Arr(f ByteComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionByte) MapStringArr(f ByteStringArrFunctor) OptionStringArr {
+func (o OptionByte) MapStringArr(f ByteStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionByte) MapAnyArr(f ByteAnyArrFunctor) OptionAnyArr {
+func (o OptionByte) MapAnyArr(f ByteAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt) MapBool(f IntBoolFunctor) OptionBool {
+func (o OptionInt) MapBool(f IntBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt) MapRune(f IntRuneFunctor) OptionRune {
+func (o OptionInt) MapRune(f IntRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt) MapByte(f IntByteFunctor) OptionByte {
+func (o OptionInt) MapByte(f IntByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt) MapInt(f IntIntFunctor) OptionInt {
+func (o OptionInt) MapInt(f IntIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt) MapInt8(f IntInt8Functor) OptionInt8 {
+func (o OptionInt) MapInt8(f IntInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt) MapInt16(f IntInt16Functor) OptionInt16 {
+func (o OptionInt) MapInt16(f IntInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt) MapInt32(f IntInt32Functor) OptionInt32 {
+func (o OptionInt) MapInt32(f IntInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt) MapInt64(f IntInt64Functor) OptionInt64 {
+func (o OptionInt) MapInt64(f IntInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt) MapUint(f IntUintFunctor) OptionUint {
+func (o OptionInt) MapUint(f IntUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt) MapUint8(f IntUint8Functor) OptionUint8 {
+func (o OptionInt) MapUint8(f IntUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt) MapUint16(f IntUint16Functor) OptionUint16 {
+func (o OptionInt) MapUint16(f IntUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt) MapUint32(f IntUint32Functor) OptionUint32 {
+func (o OptionInt) MapUint32(f IntUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt) MapUint64(f IntUint64Functor) OptionUint64 {
+func (o OptionInt) MapUint64(f IntUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt) MapUintptr(f IntUintptrFunctor) OptionUintptr {
+func (o OptionInt) MapUintptr(f IntUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt) MapFloat32(f IntFloat32Functor) OptionFloat32 {
+func (o OptionInt) MapFloat32(f IntFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt) MapFloat64(f IntFloat64Functor) OptionFloat64 {
+func (o OptionInt) MapFloat64(f IntFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt) MapComplex64(f IntComplex64Functor) OptionComplex64 {
+func (o OptionInt) MapComplex64(f IntComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt) MapComplex128(f IntComplex128Functor) OptionComplex128 {
+func (o OptionInt) MapComplex128(f IntComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt) MapString(f IntStringFunctor) OptionString {
+func (o OptionInt) MapString(f IntStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt) MapAny(f IntAnyFunctor) OptionAny {
+func (o OptionInt) MapAny(f IntAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt) MapBoolArr(f IntBoolArrFunctor) OptionBoolArr {
+func (o OptionInt) MapBoolArr(f IntBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt) MapRuneArr(f IntRuneArrFunctor) OptionRuneArr {
+func (o OptionInt) MapRuneArr(f IntRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt) MapByteArr(f IntByteArrFunctor) OptionByteArr {
+func (o OptionInt) MapByteArr(f IntByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt) MapIntArr(f IntIntArrFunctor) OptionIntArr {
+func (o OptionInt) MapIntArr(f IntIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt) MapInt8Arr(f IntInt8ArrFunctor) OptionInt8Arr {
+func (o OptionInt) MapInt8Arr(f IntInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt) MapInt16Arr(f IntInt16ArrFunctor) OptionInt16Arr {
+func (o OptionInt) MapInt16Arr(f IntInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt) MapInt32Arr(f IntInt32ArrFunctor) OptionInt32Arr {
+func (o OptionInt) MapInt32Arr(f IntInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt) MapInt64Arr(f IntInt64ArrFunctor) OptionInt64Arr {
+func (o OptionInt) MapInt64Arr(f IntInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt) MapUintArr(f IntUintArrFunctor) OptionUintArr {
+func (o OptionInt) MapUintArr(f IntUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt) MapUint8Arr(f IntUint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt) MapUint8Arr(f IntUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt) MapUint16Arr(f IntUint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt) MapUint16Arr(f IntUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt) MapUint32Arr(f IntUint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt) MapUint32Arr(f IntUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt) MapUint64Arr(f IntUint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt) MapUint64Arr(f IntUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt) MapUintptrArr(f IntUintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt) MapUintptrArr(f IntUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt) MapFloat32Arr(f IntFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt) MapFloat32Arr(f IntFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt) MapFloat64Arr(f IntFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt) MapFloat64Arr(f IntFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt) MapComplex64Arr(f IntComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt) MapComplex64Arr(f IntComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt) MapComplex128Arr(f IntComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt) MapComplex128Arr(f IntComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt) MapStringArr(f IntStringArrFunctor) OptionStringArr {
+func (o OptionInt) MapStringArr(f IntStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt) MapAnyArr(f IntAnyArrFunctor) OptionAnyArr {
+func (o OptionInt) MapAnyArr(f IntAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt8) MapBool(f Int8BoolFunctor) OptionBool {
+func (o OptionInt8) MapBool(f Int8BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt8) MapRune(f Int8RuneFunctor) OptionRune {
+func (o OptionInt8) MapRune(f Int8RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt8) MapByte(f Int8ByteFunctor) OptionByte {
+func (o OptionInt8) MapByte(f Int8ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt8) MapInt(f Int8IntFunctor) OptionInt {
+func (o OptionInt8) MapInt(f Int8IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt8) MapInt8(f Int8Int8Functor) OptionInt8 {
+func (o OptionInt8) MapInt8(f Int8Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt8) MapInt16(f Int8Int16Functor) OptionInt16 {
+func (o OptionInt8) MapInt16(f Int8Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt8) MapInt32(f Int8Int32Functor) OptionInt32 {
+func (o OptionInt8) MapInt32(f Int8Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt8) MapInt64(f Int8Int64Functor) OptionInt64 {
+func (o OptionInt8) MapInt64(f Int8Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt8) MapUint(f Int8UintFunctor) OptionUint {
+func (o OptionInt8) MapUint(f Int8UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt8) MapUint8(f Int8Uint8Functor) OptionUint8 {
+func (o OptionInt8) MapUint8(f Int8Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt8) MapUint16(f Int8Uint16Functor) OptionUint16 {
+func (o OptionInt8) MapUint16(f Int8Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt8) MapUint32(f Int8Uint32Functor) OptionUint32 {
+func (o OptionInt8) MapUint32(f Int8Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt8) MapUint64(f Int8Uint64Functor) OptionUint64 {
+func (o OptionInt8) MapUint64(f Int8Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt8) MapUintptr(f Int8UintptrFunctor) OptionUintptr {
+func (o OptionInt8) MapUintptr(f Int8UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt8) MapFloat32(f Int8Float32Functor) OptionFloat32 {
+func (o OptionInt8) MapFloat32(f Int8Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt8) MapFloat64(f Int8Float64Functor) OptionFloat64 {
+func (o OptionInt8) MapFloat64(f Int8Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt8) MapComplex64(f Int8Complex64Functor) OptionComplex64 {
+func (o OptionInt8) MapComplex64(f Int8Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt8) MapComplex128(f Int8Complex128Functor) OptionComplex128 {
+func (o OptionInt8) MapComplex128(f Int8Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt8) MapString(f Int8StringFunctor) OptionString {
+func (o OptionInt8) MapString(f Int8StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt8) MapAny(f Int8AnyFunctor) OptionAny {
+func (o OptionInt8) MapAny(f Int8AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt8) MapBoolArr(f Int8BoolArrFunctor) OptionBoolArr {
+func (o OptionInt8) MapBoolArr(f Int8BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt8) MapRuneArr(f Int8RuneArrFunctor) OptionRuneArr {
+func (o OptionInt8) MapRuneArr(f Int8RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt8) MapByteArr(f Int8ByteArrFunctor) OptionByteArr {
+func (o OptionInt8) MapByteArr(f Int8ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt8) MapIntArr(f Int8IntArrFunctor) OptionIntArr {
+func (o OptionInt8) MapIntArr(f Int8IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt8) MapInt8Arr(f Int8Int8ArrFunctor) OptionInt8Arr {
+func (o OptionInt8) MapInt8Arr(f Int8Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt8) MapInt16Arr(f Int8Int16ArrFunctor) OptionInt16Arr {
+func (o OptionInt8) MapInt16Arr(f Int8Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt8) MapInt32Arr(f Int8Int32ArrFunctor) OptionInt32Arr {
+func (o OptionInt8) MapInt32Arr(f Int8Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt8) MapInt64Arr(f Int8Int64ArrFunctor) OptionInt64Arr {
+func (o OptionInt8) MapInt64Arr(f Int8Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt8) MapUintArr(f Int8UintArrFunctor) OptionUintArr {
+func (o OptionInt8) MapUintArr(f Int8UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt8) MapUint8Arr(f Int8Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt8) MapUint8Arr(f Int8Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt8) MapUint16Arr(f Int8Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt8) MapUint16Arr(f Int8Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt8) MapUint32Arr(f Int8Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt8) MapUint32Arr(f Int8Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt8) MapUint64Arr(f Int8Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt8) MapUint64Arr(f Int8Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt8) MapUintptrArr(f Int8UintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt8) MapUintptrArr(f Int8UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt8) MapFloat32Arr(f Int8Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt8) MapFloat32Arr(f Int8Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt8) MapFloat64Arr(f Int8Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt8) MapFloat64Arr(f Int8Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt8) MapComplex64Arr(f Int8Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt8) MapComplex64Arr(f Int8Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt8) MapComplex128Arr(f Int8Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt8) MapComplex128Arr(f Int8Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt8) MapStringArr(f Int8StringArrFunctor) OptionStringArr {
+func (o OptionInt8) MapStringArr(f Int8StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt8) MapAnyArr(f Int8AnyArrFunctor) OptionAnyArr {
+func (o OptionInt8) MapAnyArr(f Int8AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt16) MapBool(f Int16BoolFunctor) OptionBool {
+func (o OptionInt16) MapBool(f Int16BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt16) MapRune(f Int16RuneFunctor) OptionRune {
+func (o OptionInt16) MapRune(f Int16RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt16) MapByte(f Int16ByteFunctor) OptionByte {
+func (o OptionInt16) MapByte(f Int16ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt16) MapInt(f Int16IntFunctor) OptionInt {
+func (o OptionInt16) MapInt(f Int16IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt16) MapInt8(f Int16Int8Functor) OptionInt8 {
+func (o OptionInt16) MapInt8(f Int16Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt16) MapInt16(f Int16Int16Functor) OptionInt16 {
+func (o OptionInt16) MapInt16(f Int16Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt16) MapInt32(f Int16Int32Functor) OptionInt32 {
+func (o OptionInt16) MapInt32(f Int16Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt16) MapInt64(f Int16Int64Functor) OptionInt64 {
+func (o OptionInt16) MapInt64(f Int16Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt16) MapUint(f Int16UintFunctor) OptionUint {
+func (o OptionInt16) MapUint(f Int16UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt16) MapUint8(f Int16Uint8Functor) OptionUint8 {
+func (o OptionInt16) MapUint8(f Int16Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt16) MapUint16(f Int16Uint16Functor) OptionUint16 {
+func (o OptionInt16) MapUint16(f Int16Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt16) MapUint32(f Int16Uint32Functor) OptionUint32 {
+func (o OptionInt16) MapUint32(f Int16Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt16) MapUint64(f Int16Uint64Functor) OptionUint64 {
+func (o OptionInt16) MapUint64(f Int16Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt16) MapUintptr(f Int16UintptrFunctor) OptionUintptr {
+func (o OptionInt16) MapUintptr(f Int16UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt16) MapFloat32(f Int16Float32Functor) OptionFloat32 {
+func (o OptionInt16) MapFloat32(f Int16Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt16) MapFloat64(f Int16Float64Functor) OptionFloat64 {
+func (o OptionInt16) MapFloat64(f Int16Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt16) MapComplex64(f Int16Complex64Functor) OptionComplex64 {
+func (o OptionInt16) MapComplex64(f Int16Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt16) MapComplex128(f Int16Complex128Functor) OptionComplex128 {
+func (o OptionInt16) MapComplex128(f Int16Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt16) MapString(f Int16StringFunctor) OptionString {
+func (o OptionInt16) MapString(f Int16StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt16) MapAny(f Int16AnyFunctor) OptionAny {
+func (o OptionInt16) MapAny(f Int16AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt16) MapBoolArr(f Int16BoolArrFunctor) OptionBoolArr {
+func (o OptionInt16) MapBoolArr(f Int16BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt16) MapRuneArr(f Int16RuneArrFunctor) OptionRuneArr {
+func (o OptionInt16) MapRuneArr(f Int16RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt16) MapByteArr(f Int16ByteArrFunctor) OptionByteArr {
+func (o OptionInt16) MapByteArr(f Int16ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt16) MapIntArr(f Int16IntArrFunctor) OptionIntArr {
+func (o OptionInt16) MapIntArr(f Int16IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt16) MapInt8Arr(f Int16Int8ArrFunctor) OptionInt8Arr {
+func (o OptionInt16) MapInt8Arr(f Int16Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt16) MapInt16Arr(f Int16Int16ArrFunctor) OptionInt16Arr {
+func (o OptionInt16) MapInt16Arr(f Int16Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt16) MapInt32Arr(f Int16Int32ArrFunctor) OptionInt32Arr {
+func (o OptionInt16) MapInt32Arr(f Int16Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt16) MapInt64Arr(f Int16Int64ArrFunctor) OptionInt64Arr {
+func (o OptionInt16) MapInt64Arr(f Int16Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt16) MapUintArr(f Int16UintArrFunctor) OptionUintArr {
+func (o OptionInt16) MapUintArr(f Int16UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt16) MapUint8Arr(f Int16Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt16) MapUint8Arr(f Int16Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt16) MapUint16Arr(f Int16Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt16) MapUint16Arr(f Int16Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt16) MapUint32Arr(f Int16Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt16) MapUint32Arr(f Int16Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt16) MapUint64Arr(f Int16Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt16) MapUint64Arr(f Int16Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt16) MapUintptrArr(f Int16UintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt16) MapUintptrArr(f Int16UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt16) MapFloat32Arr(f Int16Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt16) MapFloat32Arr(f Int16Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt16) MapFloat64Arr(f Int16Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt16) MapFloat64Arr(f Int16Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt16) MapComplex64Arr(f Int16Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt16) MapComplex64Arr(f Int16Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt16) MapComplex128Arr(f Int16Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt16) MapComplex128Arr(f Int16Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt16) MapStringArr(f Int16StringArrFunctor) OptionStringArr {
+func (o OptionInt16) MapStringArr(f Int16StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt16) MapAnyArr(f Int16AnyArrFunctor) OptionAnyArr {
+func (o OptionInt16) MapAnyArr(f Int16AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt32) MapBool(f Int32BoolFunctor) OptionBool {
+func (o OptionInt32) MapBool(f Int32BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt32) MapRune(f Int32RuneFunctor) OptionRune {
+func (o OptionInt32) MapRune(f Int32RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt32) MapByte(f Int32ByteFunctor) OptionByte {
+func (o OptionInt32) MapByte(f Int32ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt32) MapInt(f Int32IntFunctor) OptionInt {
+func (o OptionInt32) MapInt(f Int32IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt32) MapInt8(f Int32Int8Functor) OptionInt8 {
+func (o OptionInt32) MapInt8(f Int32Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt32) MapInt16(f Int32Int16Functor) OptionInt16 {
+func (o OptionInt32) MapInt16(f Int32Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt32) MapInt32(f Int32Int32Functor) OptionInt32 {
+func (o OptionInt32) MapInt32(f Int32Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt32) MapInt64(f Int32Int64Functor) OptionInt64 {
+func (o OptionInt32) MapInt64(f Int32Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt32) MapUint(f Int32UintFunctor) OptionUint {
+func (o OptionInt32) MapUint(f Int32UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt32) MapUint8(f Int32Uint8Functor) OptionUint8 {
+func (o OptionInt32) MapUint8(f Int32Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt32) MapUint16(f Int32Uint16Functor) OptionUint16 {
+func (o OptionInt32) MapUint16(f Int32Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt32) MapUint32(f Int32Uint32Functor) OptionUint32 {
+func (o OptionInt32) MapUint32(f Int32Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt32) MapUint64(f Int32Uint64Functor) OptionUint64 {
+func (o OptionInt32) MapUint64(f Int32Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt32) MapUintptr(f Int32UintptrFunctor) OptionUintptr {
+func (o OptionInt32) MapUintptr(f Int32UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt32) MapFloat32(f Int32Float32Functor) OptionFloat32 {
+func (o OptionInt32) MapFloat32(f Int32Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt32) MapFloat64(f Int32Float64Functor) OptionFloat64 {
+func (o OptionInt32) MapFloat64(f Int32Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt32) MapComplex64(f Int32Complex64Functor) OptionComplex64 {
+func (o OptionInt32) MapComplex64(f Int32Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt32) MapComplex128(f Int32Complex128Functor) OptionComplex128 {
+func (o OptionInt32) MapComplex128(f Int32Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt32) MapString(f Int32StringFunctor) OptionString {
+func (o OptionInt32) MapString(f Int32StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt32) MapAny(f Int32AnyFunctor) OptionAny {
+func (o OptionInt32) MapAny(f Int32AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt32) MapBoolArr(f Int32BoolArrFunctor) OptionBoolArr {
+func (o OptionInt32) MapBoolArr(f Int32BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt32) MapRuneArr(f Int32RuneArrFunctor) OptionRuneArr {
+func (o OptionInt32) MapRuneArr(f Int32RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt32) MapByteArr(f Int32ByteArrFunctor) OptionByteArr {
+func (o OptionInt32) MapByteArr(f Int32ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt32) MapIntArr(f Int32IntArrFunctor) OptionIntArr {
+func (o OptionInt32) MapIntArr(f Int32IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt32) MapInt8Arr(f Int32Int8ArrFunctor) OptionInt8Arr {
+func (o OptionInt32) MapInt8Arr(f Int32Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt32) MapInt16Arr(f Int32Int16ArrFunctor) OptionInt16Arr {
+func (o OptionInt32) MapInt16Arr(f Int32Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt32) MapInt32Arr(f Int32Int32ArrFunctor) OptionInt32Arr {
+func (o OptionInt32) MapInt32Arr(f Int32Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt32) MapInt64Arr(f Int32Int64ArrFunctor) OptionInt64Arr {
+func (o OptionInt32) MapInt64Arr(f Int32Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt32) MapUintArr(f Int32UintArrFunctor) OptionUintArr {
+func (o OptionInt32) MapUintArr(f Int32UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt32) MapUint8Arr(f Int32Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt32) MapUint8Arr(f Int32Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt32) MapUint16Arr(f Int32Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt32) MapUint16Arr(f Int32Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt32) MapUint32Arr(f Int32Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt32) MapUint32Arr(f Int32Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt32) MapUint64Arr(f Int32Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt32) MapUint64Arr(f Int32Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt32) MapUintptrArr(f Int32UintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt32) MapUintptrArr(f Int32UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt32) MapFloat32Arr(f Int32Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt32) MapFloat32Arr(f Int32Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt32) MapFloat64Arr(f Int32Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt32) MapFloat64Arr(f Int32Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt32) MapComplex64Arr(f Int32Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt32) MapComplex64Arr(f Int32Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt32) MapComplex128Arr(f Int32Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt32) MapComplex128Arr(f Int32Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt32) MapStringArr(f Int32StringArrFunctor) OptionStringArr {
+func (o OptionInt32) MapStringArr(f Int32StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt32) MapAnyArr(f Int32AnyArrFunctor) OptionAnyArr {
+func (o OptionInt32) MapAnyArr(f Int32AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt64) MapBool(f Int64BoolFunctor) OptionBool {
+func (o OptionInt64) MapBool(f Int64BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt64) MapRune(f Int64RuneFunctor) OptionRune {
+func (o OptionInt64) MapRune(f Int64RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt64) MapByte(f Int64ByteFunctor) OptionByte {
+func (o OptionInt64) MapByte(f Int64ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt64) MapInt(f Int64IntFunctor) OptionInt {
+func (o OptionInt64) MapInt(f Int64IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt64) MapInt8(f Int64Int8Functor) OptionInt8 {
+func (o OptionInt64) MapInt8(f Int64Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt64) MapInt16(f Int64Int16Functor) OptionInt16 {
+func (o OptionInt64) MapInt16(f Int64Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt64) MapInt32(f Int64Int32Functor) OptionInt32 {
+func (o OptionInt64) MapInt32(f Int64Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt64) MapInt64(f Int64Int64Functor) OptionInt64 {
+func (o OptionInt64) MapInt64(f Int64Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt64) MapUint(f Int64UintFunctor) OptionUint {
+func (o OptionInt64) MapUint(f Int64UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt64) MapUint8(f Int64Uint8Functor) OptionUint8 {
+func (o OptionInt64) MapUint8(f Int64Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt64) MapUint16(f Int64Uint16Functor) OptionUint16 {
+func (o OptionInt64) MapUint16(f Int64Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt64) MapUint32(f Int64Uint32Functor) OptionUint32 {
+func (o OptionInt64) MapUint32(f Int64Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt64) MapUint64(f Int64Uint64Functor) OptionUint64 {
+func (o OptionInt64) MapUint64(f Int64Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt64) MapUintptr(f Int64UintptrFunctor) OptionUintptr {
+func (o OptionInt64) MapUintptr(f Int64UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt64) MapFloat32(f Int64Float32Functor) OptionFloat32 {
+func (o OptionInt64) MapFloat32(f Int64Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt64) MapFloat64(f Int64Float64Functor) OptionFloat64 {
+func (o OptionInt64) MapFloat64(f Int64Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt64) MapComplex64(f Int64Complex64Functor) OptionComplex64 {
+func (o OptionInt64) MapComplex64(f Int64Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt64) MapComplex128(f Int64Complex128Functor) OptionComplex128 {
+func (o OptionInt64) MapComplex128(f Int64Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt64) MapString(f Int64StringFunctor) OptionString {
+func (o OptionInt64) MapString(f Int64StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt64) MapAny(f Int64AnyFunctor) OptionAny {
+func (o OptionInt64) MapAny(f Int64AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt64) MapBoolArr(f Int64BoolArrFunctor) OptionBoolArr {
+func (o OptionInt64) MapBoolArr(f Int64BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt64) MapRuneArr(f Int64RuneArrFunctor) OptionRuneArr {
+func (o OptionInt64) MapRuneArr(f Int64RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt64) MapByteArr(f Int64ByteArrFunctor) OptionByteArr {
+func (o OptionInt64) MapByteArr(f Int64ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt64) MapIntArr(f Int64IntArrFunctor) OptionIntArr {
+func (o OptionInt64) MapIntArr(f Int64IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt64) MapInt8Arr(f Int64Int8ArrFunctor) OptionInt8Arr {
+func (o OptionInt64) MapInt8Arr(f Int64Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt64) MapInt16Arr(f Int64Int16ArrFunctor) OptionInt16Arr {
+func (o OptionInt64) MapInt16Arr(f Int64Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt64) MapInt32Arr(f Int64Int32ArrFunctor) OptionInt32Arr {
+func (o OptionInt64) MapInt32Arr(f Int64Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt64) MapInt64Arr(f Int64Int64ArrFunctor) OptionInt64Arr {
+func (o OptionInt64) MapInt64Arr(f Int64Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt64) MapUintArr(f Int64UintArrFunctor) OptionUintArr {
+func (o OptionInt64) MapUintArr(f Int64UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt64) MapUint8Arr(f Int64Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt64) MapUint8Arr(f Int64Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt64) MapUint16Arr(f Int64Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt64) MapUint16Arr(f Int64Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt64) MapUint32Arr(f Int64Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt64) MapUint32Arr(f Int64Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt64) MapUint64Arr(f Int64Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt64) MapUint64Arr(f Int64Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt64) MapUintptrArr(f Int64UintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt64) MapUintptrArr(f Int64UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt64) MapFloat32Arr(f Int64Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt64) MapFloat32Arr(f Int64Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt64) MapFloat64Arr(f Int64Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt64) MapFloat64Arr(f Int64Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt64) MapComplex64Arr(f Int64Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt64) MapComplex64Arr(f Int64Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt64) MapComplex128Arr(f Int64Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt64) MapComplex128Arr(f Int64Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt64) MapStringArr(f Int64StringArrFunctor) OptionStringArr {
+func (o OptionInt64) MapStringArr(f Int64StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt64) MapAnyArr(f Int64AnyArrFunctor) OptionAnyArr {
+func (o OptionInt64) MapAnyArr(f Int64AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint) MapBool(f UintBoolFunctor) OptionBool {
+func (o OptionUint) MapBool(f UintBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint) MapRune(f UintRuneFunctor) OptionRune {
+func (o OptionUint) MapRune(f UintRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint) MapByte(f UintByteFunctor) OptionByte {
+func (o OptionUint) MapByte(f UintByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint) MapInt(f UintIntFunctor) OptionInt {
+func (o OptionUint) MapInt(f UintIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint) MapInt8(f UintInt8Functor) OptionInt8 {
+func (o OptionUint) MapInt8(f UintInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint) MapInt16(f UintInt16Functor) OptionInt16 {
+func (o OptionUint) MapInt16(f UintInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint) MapInt32(f UintInt32Functor) OptionInt32 {
+func (o OptionUint) MapInt32(f UintInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint) MapInt64(f UintInt64Functor) OptionInt64 {
+func (o OptionUint) MapInt64(f UintInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint) MapUint(f UintUintFunctor) OptionUint {
+func (o OptionUint) MapUint(f UintUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint) MapUint8(f UintUint8Functor) OptionUint8 {
+func (o OptionUint) MapUint8(f UintUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint) MapUint16(f UintUint16Functor) OptionUint16 {
+func (o OptionUint) MapUint16(f UintUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint) MapUint32(f UintUint32Functor) OptionUint32 {
+func (o OptionUint) MapUint32(f UintUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint) MapUint64(f UintUint64Functor) OptionUint64 {
+func (o OptionUint) MapUint64(f UintUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint) MapUintptr(f UintUintptrFunctor) OptionUintptr {
+func (o OptionUint) MapUintptr(f UintUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint) MapFloat32(f UintFloat32Functor) OptionFloat32 {
+func (o OptionUint) MapFloat32(f UintFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint) MapFloat64(f UintFloat64Functor) OptionFloat64 {
+func (o OptionUint) MapFloat64(f UintFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint) MapComplex64(f UintComplex64Functor) OptionComplex64 {
+func (o OptionUint) MapComplex64(f UintComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint) MapComplex128(f UintComplex128Functor) OptionComplex128 {
+func (o OptionUint) MapComplex128(f UintComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint) MapString(f UintStringFunctor) OptionString {
+func (o OptionUint) MapString(f UintStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint) MapAny(f UintAnyFunctor) OptionAny {
+func (o OptionUint) MapAny(f UintAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint) MapBoolArr(f UintBoolArrFunctor) OptionBoolArr {
+func (o OptionUint) MapBoolArr(f UintBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint) MapRuneArr(f UintRuneArrFunctor) OptionRuneArr {
+func (o OptionUint) MapRuneArr(f UintRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint) MapByteArr(f UintByteArrFunctor) OptionByteArr {
+func (o OptionUint) MapByteArr(f UintByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint) MapIntArr(f UintIntArrFunctor) OptionIntArr {
+func (o OptionUint) MapIntArr(f UintIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint) MapInt8Arr(f UintInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUint) MapInt8Arr(f UintInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint) MapInt16Arr(f UintInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUint) MapInt16Arr(f UintInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint) MapInt32Arr(f UintInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUint) MapInt32Arr(f UintInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint) MapInt64Arr(f UintInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUint) MapInt64Arr(f UintInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint) MapUintArr(f UintUintArrFunctor) OptionUintArr {
+func (o OptionUint) MapUintArr(f UintUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint) MapUint8Arr(f UintUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint) MapUint8Arr(f UintUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint) MapUint16Arr(f UintUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint) MapUint16Arr(f UintUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint) MapUint32Arr(f UintUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint) MapUint32Arr(f UintUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint) MapUint64Arr(f UintUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint) MapUint64Arr(f UintUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint) MapUintptrArr(f UintUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint) MapUintptrArr(f UintUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint) MapFloat32Arr(f UintFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint) MapFloat32Arr(f UintFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint) MapFloat64Arr(f UintFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint) MapFloat64Arr(f UintFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint) MapComplex64Arr(f UintComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint) MapComplex64Arr(f UintComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint) MapComplex128Arr(f UintComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint) MapComplex128Arr(f UintComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint) MapStringArr(f UintStringArrFunctor) OptionStringArr {
+func (o OptionUint) MapStringArr(f UintStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint) MapAnyArr(f UintAnyArrFunctor) OptionAnyArr {
+func (o OptionUint) MapAnyArr(f UintAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint8) MapBool(f Uint8BoolFunctor) OptionBool {
+func (o OptionUint8) MapBool(f Uint8BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint8) MapRune(f Uint8RuneFunctor) OptionRune {
+func (o OptionUint8) MapRune(f Uint8RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint8) MapByte(f Uint8ByteFunctor) OptionByte {
+func (o OptionUint8) MapByte(f Uint8ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint8) MapInt(f Uint8IntFunctor) OptionInt {
+func (o OptionUint8) MapInt(f Uint8IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint8) MapInt8(f Uint8Int8Functor) OptionInt8 {
+func (o OptionUint8) MapInt8(f Uint8Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint8) MapInt16(f Uint8Int16Functor) OptionInt16 {
+func (o OptionUint8) MapInt16(f Uint8Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint8) MapInt32(f Uint8Int32Functor) OptionInt32 {
+func (o OptionUint8) MapInt32(f Uint8Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint8) MapInt64(f Uint8Int64Functor) OptionInt64 {
+func (o OptionUint8) MapInt64(f Uint8Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint8) MapUint(f Uint8UintFunctor) OptionUint {
+func (o OptionUint8) MapUint(f Uint8UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint8) MapUint8(f Uint8Uint8Functor) OptionUint8 {
+func (o OptionUint8) MapUint8(f Uint8Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint8) MapUint16(f Uint8Uint16Functor) OptionUint16 {
+func (o OptionUint8) MapUint16(f Uint8Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint8) MapUint32(f Uint8Uint32Functor) OptionUint32 {
+func (o OptionUint8) MapUint32(f Uint8Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint8) MapUint64(f Uint8Uint64Functor) OptionUint64 {
+func (o OptionUint8) MapUint64(f Uint8Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint8) MapUintptr(f Uint8UintptrFunctor) OptionUintptr {
+func (o OptionUint8) MapUintptr(f Uint8UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint8) MapFloat32(f Uint8Float32Functor) OptionFloat32 {
+func (o OptionUint8) MapFloat32(f Uint8Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint8) MapFloat64(f Uint8Float64Functor) OptionFloat64 {
+func (o OptionUint8) MapFloat64(f Uint8Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint8) MapComplex64(f Uint8Complex64Functor) OptionComplex64 {
+func (o OptionUint8) MapComplex64(f Uint8Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint8) MapComplex128(f Uint8Complex128Functor) OptionComplex128 {
+func (o OptionUint8) MapComplex128(f Uint8Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint8) MapString(f Uint8StringFunctor) OptionString {
+func (o OptionUint8) MapString(f Uint8StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint8) MapAny(f Uint8AnyFunctor) OptionAny {
+func (o OptionUint8) MapAny(f Uint8AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint8) MapBoolArr(f Uint8BoolArrFunctor) OptionBoolArr {
+func (o OptionUint8) MapBoolArr(f Uint8BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint8) MapRuneArr(f Uint8RuneArrFunctor) OptionRuneArr {
+func (o OptionUint8) MapRuneArr(f Uint8RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint8) MapByteArr(f Uint8ByteArrFunctor) OptionByteArr {
+func (o OptionUint8) MapByteArr(f Uint8ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint8) MapIntArr(f Uint8IntArrFunctor) OptionIntArr {
+func (o OptionUint8) MapIntArr(f Uint8IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint8) MapInt8Arr(f Uint8Int8ArrFunctor) OptionInt8Arr {
+func (o OptionUint8) MapInt8Arr(f Uint8Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint8) MapInt16Arr(f Uint8Int16ArrFunctor) OptionInt16Arr {
+func (o OptionUint8) MapInt16Arr(f Uint8Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint8) MapInt32Arr(f Uint8Int32ArrFunctor) OptionInt32Arr {
+func (o OptionUint8) MapInt32Arr(f Uint8Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint8) MapInt64Arr(f Uint8Int64ArrFunctor) OptionInt64Arr {
+func (o OptionUint8) MapInt64Arr(f Uint8Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint8) MapUintArr(f Uint8UintArrFunctor) OptionUintArr {
+func (o OptionUint8) MapUintArr(f Uint8UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint8) MapUint8Arr(f Uint8Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint8) MapUint8Arr(f Uint8Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint8) MapUint16Arr(f Uint8Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint8) MapUint16Arr(f Uint8Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint8) MapUint32Arr(f Uint8Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint8) MapUint32Arr(f Uint8Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint8) MapUint64Arr(f Uint8Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint8) MapUint64Arr(f Uint8Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint8) MapUintptrArr(f Uint8UintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint8) MapUintptrArr(f Uint8UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint8) MapFloat32Arr(f Uint8Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint8) MapFloat32Arr(f Uint8Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint8) MapFloat64Arr(f Uint8Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint8) MapFloat64Arr(f Uint8Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint8) MapComplex64Arr(f Uint8Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint8) MapComplex64Arr(f Uint8Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint8) MapComplex128Arr(f Uint8Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint8) MapComplex128Arr(f Uint8Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint8) MapStringArr(f Uint8StringArrFunctor) OptionStringArr {
+func (o OptionUint8) MapStringArr(f Uint8StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint8) MapAnyArr(f Uint8AnyArrFunctor) OptionAnyArr {
+func (o OptionUint8) MapAnyArr(f Uint8AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint16) MapBool(f Uint16BoolFunctor) OptionBool {
+func (o OptionUint16) MapBool(f Uint16BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint16) MapRune(f Uint16RuneFunctor) OptionRune {
+func (o OptionUint16) MapRune(f Uint16RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint16) MapByte(f Uint16ByteFunctor) OptionByte {
+func (o OptionUint16) MapByte(f Uint16ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint16) MapInt(f Uint16IntFunctor) OptionInt {
+func (o OptionUint16) MapInt(f Uint16IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint16) MapInt8(f Uint16Int8Functor) OptionInt8 {
+func (o OptionUint16) MapInt8(f Uint16Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint16) MapInt16(f Uint16Int16Functor) OptionInt16 {
+func (o OptionUint16) MapInt16(f Uint16Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint16) MapInt32(f Uint16Int32Functor) OptionInt32 {
+func (o OptionUint16) MapInt32(f Uint16Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint16) MapInt64(f Uint16Int64Functor) OptionInt64 {
+func (o OptionUint16) MapInt64(f Uint16Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint16) MapUint(f Uint16UintFunctor) OptionUint {
+func (o OptionUint16) MapUint(f Uint16UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint16) MapUint8(f Uint16Uint8Functor) OptionUint8 {
+func (o OptionUint16) MapUint8(f Uint16Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint16) MapUint16(f Uint16Uint16Functor) OptionUint16 {
+func (o OptionUint16) MapUint16(f Uint16Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint16) MapUint32(f Uint16Uint32Functor) OptionUint32 {
+func (o OptionUint16) MapUint32(f Uint16Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint16) MapUint64(f Uint16Uint64Functor) OptionUint64 {
+func (o OptionUint16) MapUint64(f Uint16Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint16) MapUintptr(f Uint16UintptrFunctor) OptionUintptr {
+func (o OptionUint16) MapUintptr(f Uint16UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint16) MapFloat32(f Uint16Float32Functor) OptionFloat32 {
+func (o OptionUint16) MapFloat32(f Uint16Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint16) MapFloat64(f Uint16Float64Functor) OptionFloat64 {
+func (o OptionUint16) MapFloat64(f Uint16Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint16) MapComplex64(f Uint16Complex64Functor) OptionComplex64 {
+func (o OptionUint16) MapComplex64(f Uint16Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint16) MapComplex128(f Uint16Complex128Functor) OptionComplex128 {
+func (o OptionUint16) MapComplex128(f Uint16Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint16) MapString(f Uint16StringFunctor) OptionString {
+func (o OptionUint16) MapString(f Uint16StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint16) MapAny(f Uint16AnyFunctor) OptionAny {
+func (o OptionUint16) MapAny(f Uint16AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint16) MapBoolArr(f Uint16BoolArrFunctor) OptionBoolArr {
+func (o OptionUint16) MapBoolArr(f Uint16BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint16) MapRuneArr(f Uint16RuneArrFunctor) OptionRuneArr {
+func (o OptionUint16) MapRuneArr(f Uint16RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint16) MapByteArr(f Uint16ByteArrFunctor) OptionByteArr {
+func (o OptionUint16) MapByteArr(f Uint16ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint16) MapIntArr(f Uint16IntArrFunctor) OptionIntArr {
+func (o OptionUint16) MapIntArr(f Uint16IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint16) MapInt8Arr(f Uint16Int8ArrFunctor) OptionInt8Arr {
+func (o OptionUint16) MapInt8Arr(f Uint16Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint16) MapInt16Arr(f Uint16Int16ArrFunctor) OptionInt16Arr {
+func (o OptionUint16) MapInt16Arr(f Uint16Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint16) MapInt32Arr(f Uint16Int32ArrFunctor) OptionInt32Arr {
+func (o OptionUint16) MapInt32Arr(f Uint16Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint16) MapInt64Arr(f Uint16Int64ArrFunctor) OptionInt64Arr {
+func (o OptionUint16) MapInt64Arr(f Uint16Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint16) MapUintArr(f Uint16UintArrFunctor) OptionUintArr {
+func (o OptionUint16) MapUintArr(f Uint16UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint16) MapUint8Arr(f Uint16Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint16) MapUint8Arr(f Uint16Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint16) MapUint16Arr(f Uint16Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint16) MapUint16Arr(f Uint16Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint16) MapUint32Arr(f Uint16Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint16) MapUint32Arr(f Uint16Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint16) MapUint64Arr(f Uint16Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint16) MapUint64Arr(f Uint16Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint16) MapUintptrArr(f Uint16UintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint16) MapUintptrArr(f Uint16UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint16) MapFloat32Arr(f Uint16Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint16) MapFloat32Arr(f Uint16Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint16) MapFloat64Arr(f Uint16Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint16) MapFloat64Arr(f Uint16Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint16) MapComplex64Arr(f Uint16Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint16) MapComplex64Arr(f Uint16Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint16) MapComplex128Arr(f Uint16Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint16) MapComplex128Arr(f Uint16Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint16) MapStringArr(f Uint16StringArrFunctor) OptionStringArr {
+func (o OptionUint16) MapStringArr(f Uint16StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint16) MapAnyArr(f Uint16AnyArrFunctor) OptionAnyArr {
+func (o OptionUint16) MapAnyArr(f Uint16AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint32) MapBool(f Uint32BoolFunctor) OptionBool {
+func (o OptionUint32) MapBool(f Uint32BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint32) MapRune(f Uint32RuneFunctor) OptionRune {
+func (o OptionUint32) MapRune(f Uint32RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint32) MapByte(f Uint32ByteFunctor) OptionByte {
+func (o OptionUint32) MapByte(f Uint32ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint32) MapInt(f Uint32IntFunctor) OptionInt {
+func (o OptionUint32) MapInt(f Uint32IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint32) MapInt8(f Uint32Int8Functor) OptionInt8 {
+func (o OptionUint32) MapInt8(f Uint32Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint32) MapInt16(f Uint32Int16Functor) OptionInt16 {
+func (o OptionUint32) MapInt16(f Uint32Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint32) MapInt32(f Uint32Int32Functor) OptionInt32 {
+func (o OptionUint32) MapInt32(f Uint32Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint32) MapInt64(f Uint32Int64Functor) OptionInt64 {
+func (o OptionUint32) MapInt64(f Uint32Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint32) MapUint(f Uint32UintFunctor) OptionUint {
+func (o OptionUint32) MapUint(f Uint32UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint32) MapUint8(f Uint32Uint8Functor) OptionUint8 {
+func (o OptionUint32) MapUint8(f Uint32Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint32) MapUint16(f Uint32Uint16Functor) OptionUint16 {
+func (o OptionUint32) MapUint16(f Uint32Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint32) MapUint32(f Uint32Uint32Functor) OptionUint32 {
+func (o OptionUint32) MapUint32(f Uint32Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint32) MapUint64(f Uint32Uint64Functor) OptionUint64 {
+func (o OptionUint32) MapUint64(f Uint32Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint32) MapUintptr(f Uint32UintptrFunctor) OptionUintptr {
+func (o OptionUint32) MapUintptr(f Uint32UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint32) MapFloat32(f Uint32Float32Functor) OptionFloat32 {
+func (o OptionUint32) MapFloat32(f Uint32Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint32) MapFloat64(f Uint32Float64Functor) OptionFloat64 {
+func (o OptionUint32) MapFloat64(f Uint32Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint32) MapComplex64(f Uint32Complex64Functor) OptionComplex64 {
+func (o OptionUint32) MapComplex64(f Uint32Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint32) MapComplex128(f Uint32Complex128Functor) OptionComplex128 {
+func (o OptionUint32) MapComplex128(f Uint32Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint32) MapString(f Uint32StringFunctor) OptionString {
+func (o OptionUint32) MapString(f Uint32StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint32) MapAny(f Uint32AnyFunctor) OptionAny {
+func (o OptionUint32) MapAny(f Uint32AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint32) MapBoolArr(f Uint32BoolArrFunctor) OptionBoolArr {
+func (o OptionUint32) MapBoolArr(f Uint32BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint32) MapRuneArr(f Uint32RuneArrFunctor) OptionRuneArr {
+func (o OptionUint32) MapRuneArr(f Uint32RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint32) MapByteArr(f Uint32ByteArrFunctor) OptionByteArr {
+func (o OptionUint32) MapByteArr(f Uint32ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint32) MapIntArr(f Uint32IntArrFunctor) OptionIntArr {
+func (o OptionUint32) MapIntArr(f Uint32IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint32) MapInt8Arr(f Uint32Int8ArrFunctor) OptionInt8Arr {
+func (o OptionUint32) MapInt8Arr(f Uint32Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint32) MapInt16Arr(f Uint32Int16ArrFunctor) OptionInt16Arr {
+func (o OptionUint32) MapInt16Arr(f Uint32Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint32) MapInt32Arr(f Uint32Int32ArrFunctor) OptionInt32Arr {
+func (o OptionUint32) MapInt32Arr(f Uint32Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint32) MapInt64Arr(f Uint32Int64ArrFunctor) OptionInt64Arr {
+func (o OptionUint32) MapInt64Arr(f Uint32Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint32) MapUintArr(f Uint32UintArrFunctor) OptionUintArr {
+func (o OptionUint32) MapUintArr(f Uint32UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint32) MapUint8Arr(f Uint32Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint32) MapUint8Arr(f Uint32Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint32) MapUint16Arr(f Uint32Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint32) MapUint16Arr(f Uint32Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint32) MapUint32Arr(f Uint32Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint32) MapUint32Arr(f Uint32Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint32) MapUint64Arr(f Uint32Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint32) MapUint64Arr(f Uint32Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint32) MapUintptrArr(f Uint32UintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint32) MapUintptrArr(f Uint32UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint32) MapFloat32Arr(f Uint32Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint32) MapFloat32Arr(f Uint32Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint32) MapFloat64Arr(f Uint32Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint32) MapFloat64Arr(f Uint32Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint32) MapComplex64Arr(f Uint32Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint32) MapComplex64Arr(f Uint32Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint32) MapComplex128Arr(f Uint32Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint32) MapComplex128Arr(f Uint32Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint32) MapStringArr(f Uint32StringArrFunctor) OptionStringArr {
+func (o OptionUint32) MapStringArr(f Uint32StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint32) MapAnyArr(f Uint32AnyArrFunctor) OptionAnyArr {
+func (o OptionUint32) MapAnyArr(f Uint32AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint64) MapBool(f Uint64BoolFunctor) OptionBool {
+func (o OptionUint64) MapBool(f Uint64BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint64) MapRune(f Uint64RuneFunctor) OptionRune {
+func (o OptionUint64) MapRune(f Uint64RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint64) MapByte(f Uint64ByteFunctor) OptionByte {
+func (o OptionUint64) MapByte(f Uint64ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint64) MapInt(f Uint64IntFunctor) OptionInt {
+func (o OptionUint64) MapInt(f Uint64IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint64) MapInt8(f Uint64Int8Functor) OptionInt8 {
+func (o OptionUint64) MapInt8(f Uint64Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint64) MapInt16(f Uint64Int16Functor) OptionInt16 {
+func (o OptionUint64) MapInt16(f Uint64Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint64) MapInt32(f Uint64Int32Functor) OptionInt32 {
+func (o OptionUint64) MapInt32(f Uint64Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint64) MapInt64(f Uint64Int64Functor) OptionInt64 {
+func (o OptionUint64) MapInt64(f Uint64Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint64) MapUint(f Uint64UintFunctor) OptionUint {
+func (o OptionUint64) MapUint(f Uint64UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint64) MapUint8(f Uint64Uint8Functor) OptionUint8 {
+func (o OptionUint64) MapUint8(f Uint64Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint64) MapUint16(f Uint64Uint16Functor) OptionUint16 {
+func (o OptionUint64) MapUint16(f Uint64Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint64) MapUint32(f Uint64Uint32Functor) OptionUint32 {
+func (o OptionUint64) MapUint32(f Uint64Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint64) MapUint64(f Uint64Uint64Functor) OptionUint64 {
+func (o OptionUint64) MapUint64(f Uint64Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint64) MapUintptr(f Uint64UintptrFunctor) OptionUintptr {
+func (o OptionUint64) MapUintptr(f Uint64UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint64) MapFloat32(f Uint64Float32Functor) OptionFloat32 {
+func (o OptionUint64) MapFloat32(f Uint64Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint64) MapFloat64(f Uint64Float64Functor) OptionFloat64 {
+func (o OptionUint64) MapFloat64(f Uint64Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint64) MapComplex64(f Uint64Complex64Functor) OptionComplex64 {
+func (o OptionUint64) MapComplex64(f Uint64Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint64) MapComplex128(f Uint64Complex128Functor) OptionComplex128 {
+func (o OptionUint64) MapComplex128(f Uint64Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint64) MapString(f Uint64StringFunctor) OptionString {
+func (o OptionUint64) MapString(f Uint64StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint64) MapAny(f Uint64AnyFunctor) OptionAny {
+func (o OptionUint64) MapAny(f Uint64AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint64) MapBoolArr(f Uint64BoolArrFunctor) OptionBoolArr {
+func (o OptionUint64) MapBoolArr(f Uint64BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint64) MapRuneArr(f Uint64RuneArrFunctor) OptionRuneArr {
+func (o OptionUint64) MapRuneArr(f Uint64RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint64) MapByteArr(f Uint64ByteArrFunctor) OptionByteArr {
+func (o OptionUint64) MapByteArr(f Uint64ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint64) MapIntArr(f Uint64IntArrFunctor) OptionIntArr {
+func (o OptionUint64) MapIntArr(f Uint64IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint64) MapInt8Arr(f Uint64Int8ArrFunctor) OptionInt8Arr {
+func (o OptionUint64) MapInt8Arr(f Uint64Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint64) MapInt16Arr(f Uint64Int16ArrFunctor) OptionInt16Arr {
+func (o OptionUint64) MapInt16Arr(f Uint64Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint64) MapInt32Arr(f Uint64Int32ArrFunctor) OptionInt32Arr {
+func (o OptionUint64) MapInt32Arr(f Uint64Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint64) MapInt64Arr(f Uint64Int64ArrFunctor) OptionInt64Arr {
+func (o OptionUint64) MapInt64Arr(f Uint64Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint64) MapUintArr(f Uint64UintArrFunctor) OptionUintArr {
+func (o OptionUint64) MapUintArr(f Uint64UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint64) MapUint8Arr(f Uint64Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint64) MapUint8Arr(f Uint64Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint64) MapUint16Arr(f Uint64Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint64) MapUint16Arr(f Uint64Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint64) MapUint32Arr(f Uint64Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint64) MapUint32Arr(f Uint64Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint64) MapUint64Arr(f Uint64Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint64) MapUint64Arr(f Uint64Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint64) MapUintptrArr(f Uint64UintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint64) MapUintptrArr(f Uint64UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint64) MapFloat32Arr(f Uint64Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint64) MapFloat32Arr(f Uint64Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint64) MapFloat64Arr(f Uint64Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint64) MapFloat64Arr(f Uint64Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint64) MapComplex64Arr(f Uint64Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint64) MapComplex64Arr(f Uint64Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint64) MapComplex128Arr(f Uint64Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint64) MapComplex128Arr(f Uint64Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint64) MapStringArr(f Uint64StringArrFunctor) OptionStringArr {
+func (o OptionUint64) MapStringArr(f Uint64StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint64) MapAnyArr(f Uint64AnyArrFunctor) OptionAnyArr {
+func (o OptionUint64) MapAnyArr(f Uint64AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUintptr) MapBool(f UintptrBoolFunctor) OptionBool {
+func (o OptionUintptr) MapBool(f UintptrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUintptr) MapRune(f UintptrRuneFunctor) OptionRune {
+func (o OptionUintptr) MapRune(f UintptrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUintptr) MapByte(f UintptrByteFunctor) OptionByte {
+func (o OptionUintptr) MapByte(f UintptrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUintptr) MapInt(f UintptrIntFunctor) OptionInt {
+func (o OptionUintptr) MapInt(f UintptrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUintptr) MapInt8(f UintptrInt8Functor) OptionInt8 {
+func (o OptionUintptr) MapInt8(f UintptrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUintptr) MapInt16(f UintptrInt16Functor) OptionInt16 {
+func (o OptionUintptr) MapInt16(f UintptrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUintptr) MapInt32(f UintptrInt32Functor) OptionInt32 {
+func (o OptionUintptr) MapInt32(f UintptrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUintptr) MapInt64(f UintptrInt64Functor) OptionInt64 {
+func (o OptionUintptr) MapInt64(f UintptrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUintptr) MapUint(f UintptrUintFunctor) OptionUint {
+func (o OptionUintptr) MapUint(f UintptrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUintptr) MapUint8(f UintptrUint8Functor) OptionUint8 {
+func (o OptionUintptr) MapUint8(f UintptrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUintptr) MapUint16(f UintptrUint16Functor) OptionUint16 {
+func (o OptionUintptr) MapUint16(f UintptrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUintptr) MapUint32(f UintptrUint32Functor) OptionUint32 {
+func (o OptionUintptr) MapUint32(f UintptrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUintptr) MapUint64(f UintptrUint64Functor) OptionUint64 {
+func (o OptionUintptr) MapUint64(f UintptrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUintptr) MapUintptr(f UintptrUintptrFunctor) OptionUintptr {
+func (o OptionUintptr) MapUintptr(f UintptrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUintptr) MapFloat32(f UintptrFloat32Functor) OptionFloat32 {
+func (o OptionUintptr) MapFloat32(f UintptrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUintptr) MapFloat64(f UintptrFloat64Functor) OptionFloat64 {
+func (o OptionUintptr) MapFloat64(f UintptrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUintptr) MapComplex64(f UintptrComplex64Functor) OptionComplex64 {
+func (o OptionUintptr) MapComplex64(f UintptrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUintptr) MapComplex128(f UintptrComplex128Functor) OptionComplex128 {
+func (o OptionUintptr) MapComplex128(f UintptrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUintptr) MapString(f UintptrStringFunctor) OptionString {
+func (o OptionUintptr) MapString(f UintptrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUintptr) MapAny(f UintptrAnyFunctor) OptionAny {
+func (o OptionUintptr) MapAny(f UintptrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUintptr) MapBoolArr(f UintptrBoolArrFunctor) OptionBoolArr {
+func (o OptionUintptr) MapBoolArr(f UintptrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUintptr) MapRuneArr(f UintptrRuneArrFunctor) OptionRuneArr {
+func (o OptionUintptr) MapRuneArr(f UintptrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUintptr) MapByteArr(f UintptrByteArrFunctor) OptionByteArr {
+func (o OptionUintptr) MapByteArr(f UintptrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUintptr) MapIntArr(f UintptrIntArrFunctor) OptionIntArr {
+func (o OptionUintptr) MapIntArr(f UintptrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUintptr) MapInt8Arr(f UintptrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUintptr) MapInt8Arr(f UintptrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUintptr) MapInt16Arr(f UintptrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUintptr) MapInt16Arr(f UintptrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUintptr) MapInt32Arr(f UintptrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUintptr) MapInt32Arr(f UintptrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUintptr) MapInt64Arr(f UintptrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUintptr) MapInt64Arr(f UintptrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUintptr) MapUintArr(f UintptrUintArrFunctor) OptionUintArr {
+func (o OptionUintptr) MapUintArr(f UintptrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUintptr) MapUint8Arr(f UintptrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUintptr) MapUint8Arr(f UintptrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUintptr) MapUint16Arr(f UintptrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUintptr) MapUint16Arr(f UintptrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUintptr) MapUint32Arr(f UintptrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUintptr) MapUint32Arr(f UintptrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUintptr) MapUint64Arr(f UintptrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUintptr) MapUint64Arr(f UintptrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUintptr) MapUintptrArr(f UintptrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUintptr) MapUintptrArr(f UintptrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUintptr) MapFloat32Arr(f UintptrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUintptr) MapFloat32Arr(f UintptrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUintptr) MapFloat64Arr(f UintptrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUintptr) MapFloat64Arr(f UintptrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUintptr) MapComplex64Arr(f UintptrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUintptr) MapComplex64Arr(f UintptrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUintptr) MapComplex128Arr(f UintptrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUintptr) MapComplex128Arr(f UintptrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUintptr) MapStringArr(f UintptrStringArrFunctor) OptionStringArr {
+func (o OptionUintptr) MapStringArr(f UintptrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUintptr) MapAnyArr(f UintptrAnyArrFunctor) OptionAnyArr {
+func (o OptionUintptr) MapAnyArr(f UintptrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionFloat32) MapBool(f Float32BoolFunctor) OptionBool {
+func (o OptionFloat32) MapBool(f Float32BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionFloat32) MapRune(f Float32RuneFunctor) OptionRune {
+func (o OptionFloat32) MapRune(f Float32RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionFloat32) MapByte(f Float32ByteFunctor) OptionByte {
+func (o OptionFloat32) MapByte(f Float32ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionFloat32) MapInt(f Float32IntFunctor) OptionInt {
+func (o OptionFloat32) MapInt(f Float32IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionFloat32) MapInt8(f Float32Int8Functor) OptionInt8 {
+func (o OptionFloat32) MapInt8(f Float32Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionFloat32) MapInt16(f Float32Int16Functor) OptionInt16 {
+func (o OptionFloat32) MapInt16(f Float32Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionFloat32) MapInt32(f Float32Int32Functor) OptionInt32 {
+func (o OptionFloat32) MapInt32(f Float32Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionFloat32) MapInt64(f Float32Int64Functor) OptionInt64 {
+func (o OptionFloat32) MapInt64(f Float32Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionFloat32) MapUint(f Float32UintFunctor) OptionUint {
+func (o OptionFloat32) MapUint(f Float32UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionFloat32) MapUint8(f Float32Uint8Functor) OptionUint8 {
+func (o OptionFloat32) MapUint8(f Float32Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionFloat32) MapUint16(f Float32Uint16Functor) OptionUint16 {
+func (o OptionFloat32) MapUint16(f Float32Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionFloat32) MapUint32(f Float32Uint32Functor) OptionUint32 {
+func (o OptionFloat32) MapUint32(f Float32Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionFloat32) MapUint64(f Float32Uint64Functor) OptionUint64 {
+func (o OptionFloat32) MapUint64(f Float32Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionFloat32) MapUintptr(f Float32UintptrFunctor) OptionUintptr {
+func (o OptionFloat32) MapUintptr(f Float32UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionFloat32) MapFloat32(f Float32Float32Functor) OptionFloat32 {
+func (o OptionFloat32) MapFloat32(f Float32Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionFloat32) MapFloat64(f Float32Float64Functor) OptionFloat64 {
+func (o OptionFloat32) MapFloat64(f Float32Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionFloat32) MapComplex64(f Float32Complex64Functor) OptionComplex64 {
+func (o OptionFloat32) MapComplex64(f Float32Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionFloat32) MapComplex128(f Float32Complex128Functor) OptionComplex128 {
+func (o OptionFloat32) MapComplex128(f Float32Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionFloat32) MapString(f Float32StringFunctor) OptionString {
+func (o OptionFloat32) MapString(f Float32StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionFloat32) MapAny(f Float32AnyFunctor) OptionAny {
+func (o OptionFloat32) MapAny(f Float32AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionFloat32) MapBoolArr(f Float32BoolArrFunctor) OptionBoolArr {
+func (o OptionFloat32) MapBoolArr(f Float32BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionFloat32) MapRuneArr(f Float32RuneArrFunctor) OptionRuneArr {
+func (o OptionFloat32) MapRuneArr(f Float32RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionFloat32) MapByteArr(f Float32ByteArrFunctor) OptionByteArr {
+func (o OptionFloat32) MapByteArr(f Float32ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionFloat32) MapIntArr(f Float32IntArrFunctor) OptionIntArr {
+func (o OptionFloat32) MapIntArr(f Float32IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionFloat32) MapInt8Arr(f Float32Int8ArrFunctor) OptionInt8Arr {
+func (o OptionFloat32) MapInt8Arr(f Float32Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionFloat32) MapInt16Arr(f Float32Int16ArrFunctor) OptionInt16Arr {
+func (o OptionFloat32) MapInt16Arr(f Float32Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionFloat32) MapInt32Arr(f Float32Int32ArrFunctor) OptionInt32Arr {
+func (o OptionFloat32) MapInt32Arr(f Float32Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionFloat32) MapInt64Arr(f Float32Int64ArrFunctor) OptionInt64Arr {
+func (o OptionFloat32) MapInt64Arr(f Float32Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionFloat32) MapUintArr(f Float32UintArrFunctor) OptionUintArr {
+func (o OptionFloat32) MapUintArr(f Float32UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionFloat32) MapUint8Arr(f Float32Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionFloat32) MapUint8Arr(f Float32Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionFloat32) MapUint16Arr(f Float32Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionFloat32) MapUint16Arr(f Float32Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionFloat32) MapUint32Arr(f Float32Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionFloat32) MapUint32Arr(f Float32Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionFloat32) MapUint64Arr(f Float32Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionFloat32) MapUint64Arr(f Float32Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionFloat32) MapUintptrArr(f Float32UintptrArrFunctor) OptionUintptrArr {
+func (o OptionFloat32) MapUintptrArr(f Float32UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionFloat32) MapFloat32Arr(f Float32Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionFloat32) MapFloat32Arr(f Float32Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionFloat32) MapFloat64Arr(f Float32Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionFloat32) MapFloat64Arr(f Float32Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionFloat32) MapComplex64Arr(f Float32Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionFloat32) MapComplex64Arr(f Float32Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionFloat32) MapComplex128Arr(f Float32Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionFloat32) MapComplex128Arr(f Float32Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionFloat32) MapStringArr(f Float32StringArrFunctor) OptionStringArr {
+func (o OptionFloat32) MapStringArr(f Float32StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionFloat32) MapAnyArr(f Float32AnyArrFunctor) OptionAnyArr {
+func (o OptionFloat32) MapAnyArr(f Float32AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionFloat64) MapBool(f Float64BoolFunctor) OptionBool {
+func (o OptionFloat64) MapBool(f Float64BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionFloat64) MapRune(f Float64RuneFunctor) OptionRune {
+func (o OptionFloat64) MapRune(f Float64RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionFloat64) MapByte(f Float64ByteFunctor) OptionByte {
+func (o OptionFloat64) MapByte(f Float64ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionFloat64) MapInt(f Float64IntFunctor) OptionInt {
+func (o OptionFloat64) MapInt(f Float64IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionFloat64) MapInt8(f Float64Int8Functor) OptionInt8 {
+func (o OptionFloat64) MapInt8(f Float64Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionFloat64) MapInt16(f Float64Int16Functor) OptionInt16 {
+func (o OptionFloat64) MapInt16(f Float64Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionFloat64) MapInt32(f Float64Int32Functor) OptionInt32 {
+func (o OptionFloat64) MapInt32(f Float64Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionFloat64) MapInt64(f Float64Int64Functor) OptionInt64 {
+func (o OptionFloat64) MapInt64(f Float64Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionFloat64) MapUint(f Float64UintFunctor) OptionUint {
+func (o OptionFloat64) MapUint(f Float64UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionFloat64) MapUint8(f Float64Uint8Functor) OptionUint8 {
+func (o OptionFloat64) MapUint8(f Float64Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionFloat64) MapUint16(f Float64Uint16Functor) OptionUint16 {
+func (o OptionFloat64) MapUint16(f Float64Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionFloat64) MapUint32(f Float64Uint32Functor) OptionUint32 {
+func (o OptionFloat64) MapUint32(f Float64Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionFloat64) MapUint64(f Float64Uint64Functor) OptionUint64 {
+func (o OptionFloat64) MapUint64(f Float64Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionFloat64) MapUintptr(f Float64UintptrFunctor) OptionUintptr {
+func (o OptionFloat64) MapUintptr(f Float64UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionFloat64) MapFloat32(f Float64Float32Functor) OptionFloat32 {
+func (o OptionFloat64) MapFloat32(f Float64Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionFloat64) MapFloat64(f Float64Float64Functor) OptionFloat64 {
+func (o OptionFloat64) MapFloat64(f Float64Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionFloat64) MapComplex64(f Float64Complex64Functor) OptionComplex64 {
+func (o OptionFloat64) MapComplex64(f Float64Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionFloat64) MapComplex128(f Float64Complex128Functor) OptionComplex128 {
+func (o OptionFloat64) MapComplex128(f Float64Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionFloat64) MapString(f Float64StringFunctor) OptionString {
+func (o OptionFloat64) MapString(f Float64StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionFloat64) MapAny(f Float64AnyFunctor) OptionAny {
+func (o OptionFloat64) MapAny(f Float64AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionFloat64) MapBoolArr(f Float64BoolArrFunctor) OptionBoolArr {
+func (o OptionFloat64) MapBoolArr(f Float64BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionFloat64) MapRuneArr(f Float64RuneArrFunctor) OptionRuneArr {
+func (o OptionFloat64) MapRuneArr(f Float64RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionFloat64) MapByteArr(f Float64ByteArrFunctor) OptionByteArr {
+func (o OptionFloat64) MapByteArr(f Float64ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionFloat64) MapIntArr(f Float64IntArrFunctor) OptionIntArr {
+func (o OptionFloat64) MapIntArr(f Float64IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionFloat64) MapInt8Arr(f Float64Int8ArrFunctor) OptionInt8Arr {
+func (o OptionFloat64) MapInt8Arr(f Float64Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionFloat64) MapInt16Arr(f Float64Int16ArrFunctor) OptionInt16Arr {
+func (o OptionFloat64) MapInt16Arr(f Float64Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionFloat64) MapInt32Arr(f Float64Int32ArrFunctor) OptionInt32Arr {
+func (o OptionFloat64) MapInt32Arr(f Float64Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionFloat64) MapInt64Arr(f Float64Int64ArrFunctor) OptionInt64Arr {
+func (o OptionFloat64) MapInt64Arr(f Float64Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionFloat64) MapUintArr(f Float64UintArrFunctor) OptionUintArr {
+func (o OptionFloat64) MapUintArr(f Float64UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionFloat64) MapUint8Arr(f Float64Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionFloat64) MapUint8Arr(f Float64Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionFloat64) MapUint16Arr(f Float64Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionFloat64) MapUint16Arr(f Float64Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionFloat64) MapUint32Arr(f Float64Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionFloat64) MapUint32Arr(f Float64Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionFloat64) MapUint64Arr(f Float64Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionFloat64) MapUint64Arr(f Float64Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionFloat64) MapUintptrArr(f Float64UintptrArrFunctor) OptionUintptrArr {
+func (o OptionFloat64) MapUintptrArr(f Float64UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionFloat64) MapFloat32Arr(f Float64Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionFloat64) MapFloat32Arr(f Float64Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionFloat64) MapFloat64Arr(f Float64Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionFloat64) MapFloat64Arr(f Float64Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionFloat64) MapComplex64Arr(f Float64Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionFloat64) MapComplex64Arr(f Float64Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionFloat64) MapComplex128Arr(f Float64Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionFloat64) MapComplex128Arr(f Float64Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionFloat64) MapStringArr(f Float64StringArrFunctor) OptionStringArr {
+func (o OptionFloat64) MapStringArr(f Float64StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionFloat64) MapAnyArr(f Float64AnyArrFunctor) OptionAnyArr {
+func (o OptionFloat64) MapAnyArr(f Float64AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionComplex64) MapBool(f Complex64BoolFunctor) OptionBool {
+func (o OptionComplex64) MapBool(f Complex64BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionComplex64) MapRune(f Complex64RuneFunctor) OptionRune {
+func (o OptionComplex64) MapRune(f Complex64RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionComplex64) MapByte(f Complex64ByteFunctor) OptionByte {
+func (o OptionComplex64) MapByte(f Complex64ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionComplex64) MapInt(f Complex64IntFunctor) OptionInt {
+func (o OptionComplex64) MapInt(f Complex64IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionComplex64) MapInt8(f Complex64Int8Functor) OptionInt8 {
+func (o OptionComplex64) MapInt8(f Complex64Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionComplex64) MapInt16(f Complex64Int16Functor) OptionInt16 {
+func (o OptionComplex64) MapInt16(f Complex64Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionComplex64) MapInt32(f Complex64Int32Functor) OptionInt32 {
+func (o OptionComplex64) MapInt32(f Complex64Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionComplex64) MapInt64(f Complex64Int64Functor) OptionInt64 {
+func (o OptionComplex64) MapInt64(f Complex64Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionComplex64) MapUint(f Complex64UintFunctor) OptionUint {
+func (o OptionComplex64) MapUint(f Complex64UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionComplex64) MapUint8(f Complex64Uint8Functor) OptionUint8 {
+func (o OptionComplex64) MapUint8(f Complex64Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionComplex64) MapUint16(f Complex64Uint16Functor) OptionUint16 {
+func (o OptionComplex64) MapUint16(f Complex64Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionComplex64) MapUint32(f Complex64Uint32Functor) OptionUint32 {
+func (o OptionComplex64) MapUint32(f Complex64Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionComplex64) MapUint64(f Complex64Uint64Functor) OptionUint64 {
+func (o OptionComplex64) MapUint64(f Complex64Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionComplex64) MapUintptr(f Complex64UintptrFunctor) OptionUintptr {
+func (o OptionComplex64) MapUintptr(f Complex64UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionComplex64) MapFloat32(f Complex64Float32Functor) OptionFloat32 {
+func (o OptionComplex64) MapFloat32(f Complex64Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionComplex64) MapFloat64(f Complex64Float64Functor) OptionFloat64 {
+func (o OptionComplex64) MapFloat64(f Complex64Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionComplex64) MapComplex64(f Complex64Complex64Functor) OptionComplex64 {
+func (o OptionComplex64) MapComplex64(f Complex64Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionComplex64) MapComplex128(f Complex64Complex128Functor) OptionComplex128 {
+func (o OptionComplex64) MapComplex128(f Complex64Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionComplex64) MapString(f Complex64StringFunctor) OptionString {
+func (o OptionComplex64) MapString(f Complex64StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionComplex64) MapAny(f Complex64AnyFunctor) OptionAny {
+func (o OptionComplex64) MapAny(f Complex64AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionComplex64) MapBoolArr(f Complex64BoolArrFunctor) OptionBoolArr {
+func (o OptionComplex64) MapBoolArr(f Complex64BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionComplex64) MapRuneArr(f Complex64RuneArrFunctor) OptionRuneArr {
+func (o OptionComplex64) MapRuneArr(f Complex64RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionComplex64) MapByteArr(f Complex64ByteArrFunctor) OptionByteArr {
+func (o OptionComplex64) MapByteArr(f Complex64ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionComplex64) MapIntArr(f Complex64IntArrFunctor) OptionIntArr {
+func (o OptionComplex64) MapIntArr(f Complex64IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionComplex64) MapInt8Arr(f Complex64Int8ArrFunctor) OptionInt8Arr {
+func (o OptionComplex64) MapInt8Arr(f Complex64Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionComplex64) MapInt16Arr(f Complex64Int16ArrFunctor) OptionInt16Arr {
+func (o OptionComplex64) MapInt16Arr(f Complex64Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionComplex64) MapInt32Arr(f Complex64Int32ArrFunctor) OptionInt32Arr {
+func (o OptionComplex64) MapInt32Arr(f Complex64Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionComplex64) MapInt64Arr(f Complex64Int64ArrFunctor) OptionInt64Arr {
+func (o OptionComplex64) MapInt64Arr(f Complex64Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionComplex64) MapUintArr(f Complex64UintArrFunctor) OptionUintArr {
+func (o OptionComplex64) MapUintArr(f Complex64UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionComplex64) MapUint8Arr(f Complex64Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionComplex64) MapUint8Arr(f Complex64Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionComplex64) MapUint16Arr(f Complex64Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionComplex64) MapUint16Arr(f Complex64Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionComplex64) MapUint32Arr(f Complex64Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionComplex64) MapUint32Arr(f Complex64Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionComplex64) MapUint64Arr(f Complex64Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionComplex64) MapUint64Arr(f Complex64Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionComplex64) MapUintptrArr(f Complex64UintptrArrFunctor) OptionUintptrArr {
+func (o OptionComplex64) MapUintptrArr(f Complex64UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionComplex64) MapFloat32Arr(f Complex64Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionComplex64) MapFloat32Arr(f Complex64Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionComplex64) MapFloat64Arr(f Complex64Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionComplex64) MapFloat64Arr(f Complex64Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionComplex64) MapComplex64Arr(f Complex64Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionComplex64) MapComplex64Arr(f Complex64Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionComplex64) MapComplex128Arr(f Complex64Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionComplex64) MapComplex128Arr(f Complex64Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionComplex64) MapStringArr(f Complex64StringArrFunctor) OptionStringArr {
+func (o OptionComplex64) MapStringArr(f Complex64StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionComplex64) MapAnyArr(f Complex64AnyArrFunctor) OptionAnyArr {
+func (o OptionComplex64) MapAnyArr(f Complex64AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionComplex128) MapBool(f Complex128BoolFunctor) OptionBool {
+func (o OptionComplex128) MapBool(f Complex128BoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionComplex128) MapRune(f Complex128RuneFunctor) OptionRune {
+func (o OptionComplex128) MapRune(f Complex128RuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionComplex128) MapByte(f Complex128ByteFunctor) OptionByte {
+func (o OptionComplex128) MapByte(f Complex128ByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionComplex128) MapInt(f Complex128IntFunctor) OptionInt {
+func (o OptionComplex128) MapInt(f Complex128IntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionComplex128) MapInt8(f Complex128Int8Functor) OptionInt8 {
+func (o OptionComplex128) MapInt8(f Complex128Int8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionComplex128) MapInt16(f Complex128Int16Functor) OptionInt16 {
+func (o OptionComplex128) MapInt16(f Complex128Int16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionComplex128) MapInt32(f Complex128Int32Functor) OptionInt32 {
+func (o OptionComplex128) MapInt32(f Complex128Int32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionComplex128) MapInt64(f Complex128Int64Functor) OptionInt64 {
+func (o OptionComplex128) MapInt64(f Complex128Int64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionComplex128) MapUint(f Complex128UintFunctor) OptionUint {
+func (o OptionComplex128) MapUint(f Complex128UintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionComplex128) MapUint8(f Complex128Uint8Functor) OptionUint8 {
+func (o OptionComplex128) MapUint8(f Complex128Uint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionComplex128) MapUint16(f Complex128Uint16Functor) OptionUint16 {
+func (o OptionComplex128) MapUint16(f Complex128Uint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionComplex128) MapUint32(f Complex128Uint32Functor) OptionUint32 {
+func (o OptionComplex128) MapUint32(f Complex128Uint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionComplex128) MapUint64(f Complex128Uint64Functor) OptionUint64 {
+func (o OptionComplex128) MapUint64(f Complex128Uint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionComplex128) MapUintptr(f Complex128UintptrFunctor) OptionUintptr {
+func (o OptionComplex128) MapUintptr(f Complex128UintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionComplex128) MapFloat32(f Complex128Float32Functor) OptionFloat32 {
+func (o OptionComplex128) MapFloat32(f Complex128Float32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionComplex128) MapFloat64(f Complex128Float64Functor) OptionFloat64 {
+func (o OptionComplex128) MapFloat64(f Complex128Float64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionComplex128) MapComplex64(f Complex128Complex64Functor) OptionComplex64 {
+func (o OptionComplex128) MapComplex64(f Complex128Complex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionComplex128) MapComplex128(f Complex128Complex128Functor) OptionComplex128 {
+func (o OptionComplex128) MapComplex128(f Complex128Complex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionComplex128) MapString(f Complex128StringFunctor) OptionString {
+func (o OptionComplex128) MapString(f Complex128StringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionComplex128) MapAny(f Complex128AnyFunctor) OptionAny {
+func (o OptionComplex128) MapAny(f Complex128AnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionComplex128) MapBoolArr(f Complex128BoolArrFunctor) OptionBoolArr {
+func (o OptionComplex128) MapBoolArr(f Complex128BoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionComplex128) MapRuneArr(f Complex128RuneArrFunctor) OptionRuneArr {
+func (o OptionComplex128) MapRuneArr(f Complex128RuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionComplex128) MapByteArr(f Complex128ByteArrFunctor) OptionByteArr {
+func (o OptionComplex128) MapByteArr(f Complex128ByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionComplex128) MapIntArr(f Complex128IntArrFunctor) OptionIntArr {
+func (o OptionComplex128) MapIntArr(f Complex128IntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionComplex128) MapInt8Arr(f Complex128Int8ArrFunctor) OptionInt8Arr {
+func (o OptionComplex128) MapInt8Arr(f Complex128Int8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionComplex128) MapInt16Arr(f Complex128Int16ArrFunctor) OptionInt16Arr {
+func (o OptionComplex128) MapInt16Arr(f Complex128Int16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionComplex128) MapInt32Arr(f Complex128Int32ArrFunctor) OptionInt32Arr {
+func (o OptionComplex128) MapInt32Arr(f Complex128Int32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionComplex128) MapInt64Arr(f Complex128Int64ArrFunctor) OptionInt64Arr {
+func (o OptionComplex128) MapInt64Arr(f Complex128Int64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionComplex128) MapUintArr(f Complex128UintArrFunctor) OptionUintArr {
+func (o OptionComplex128) MapUintArr(f Complex128UintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionComplex128) MapUint8Arr(f Complex128Uint8ArrFunctor) OptionUint8Arr {
+func (o OptionComplex128) MapUint8Arr(f Complex128Uint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionComplex128) MapUint16Arr(f Complex128Uint16ArrFunctor) OptionUint16Arr {
+func (o OptionComplex128) MapUint16Arr(f Complex128Uint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionComplex128) MapUint32Arr(f Complex128Uint32ArrFunctor) OptionUint32Arr {
+func (o OptionComplex128) MapUint32Arr(f Complex128Uint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionComplex128) MapUint64Arr(f Complex128Uint64ArrFunctor) OptionUint64Arr {
+func (o OptionComplex128) MapUint64Arr(f Complex128Uint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionComplex128) MapUintptrArr(f Complex128UintptrArrFunctor) OptionUintptrArr {
+func (o OptionComplex128) MapUintptrArr(f Complex128UintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionComplex128) MapFloat32Arr(f Complex128Float32ArrFunctor) OptionFloat32Arr {
+func (o OptionComplex128) MapFloat32Arr(f Complex128Float32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionComplex128) MapFloat64Arr(f Complex128Float64ArrFunctor) OptionFloat64Arr {
+func (o OptionComplex128) MapFloat64Arr(f Complex128Float64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionComplex128) MapComplex64Arr(f Complex128Complex64ArrFunctor) OptionComplex64Arr {
+func (o OptionComplex128) MapComplex64Arr(f Complex128Complex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionComplex128) MapComplex128Arr(f Complex128Complex128ArrFunctor) OptionComplex128Arr {
+func (o OptionComplex128) MapComplex128Arr(f Complex128Complex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionComplex128) MapStringArr(f Complex128StringArrFunctor) OptionStringArr {
+func (o OptionComplex128) MapStringArr(f Complex128StringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionComplex128) MapAnyArr(f Complex128AnyArrFunctor) OptionAnyArr {
+func (o OptionComplex128) MapAnyArr(f Complex128AnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionString) MapBool(f StringBoolFunctor) OptionBool {
+func (o OptionString) MapBool(f StringBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionString) MapRune(f StringRuneFunctor) OptionRune {
+func (o OptionString) MapRune(f StringRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionString) MapByte(f StringByteFunctor) OptionByte {
+func (o OptionString) MapByte(f StringByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionString) MapInt(f StringIntFunctor) OptionInt {
+func (o OptionString) MapInt(f StringIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionString) MapInt8(f StringInt8Functor) OptionInt8 {
+func (o OptionString) MapInt8(f StringInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionString) MapInt16(f StringInt16Functor) OptionInt16 {
+func (o OptionString) MapInt16(f StringInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionString) MapInt32(f StringInt32Functor) OptionInt32 {
+func (o OptionString) MapInt32(f StringInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionString) MapInt64(f StringInt64Functor) OptionInt64 {
+func (o OptionString) MapInt64(f StringInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionString) MapUint(f StringUintFunctor) OptionUint {
+func (o OptionString) MapUint(f StringUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionString) MapUint8(f StringUint8Functor) OptionUint8 {
+func (o OptionString) MapUint8(f StringUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionString) MapUint16(f StringUint16Functor) OptionUint16 {
+func (o OptionString) MapUint16(f StringUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionString) MapUint32(f StringUint32Functor) OptionUint32 {
+func (o OptionString) MapUint32(f StringUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionString) MapUint64(f StringUint64Functor) OptionUint64 {
+func (o OptionString) MapUint64(f StringUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionString) MapUintptr(f StringUintptrFunctor) OptionUintptr {
+func (o OptionString) MapUintptr(f StringUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionString) MapFloat32(f StringFloat32Functor) OptionFloat32 {
+func (o OptionString) MapFloat32(f StringFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionString) MapFloat64(f StringFloat64Functor) OptionFloat64 {
+func (o OptionString) MapFloat64(f StringFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionString) MapComplex64(f StringComplex64Functor) OptionComplex64 {
+func (o OptionString) MapComplex64(f StringComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionString) MapComplex128(f StringComplex128Functor) OptionComplex128 {
+func (o OptionString) MapComplex128(f StringComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionString) MapString(f StringStringFunctor) OptionString {
+func (o OptionString) MapString(f StringStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionString) MapAny(f StringAnyFunctor) OptionAny {
+func (o OptionString) MapAny(f StringAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionString) MapBoolArr(f StringBoolArrFunctor) OptionBoolArr {
+func (o OptionString) MapBoolArr(f StringBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionString) MapRuneArr(f StringRuneArrFunctor) OptionRuneArr {
+func (o OptionString) MapRuneArr(f StringRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionString) MapByteArr(f StringByteArrFunctor) OptionByteArr {
+func (o OptionString) MapByteArr(f StringByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionString) MapIntArr(f StringIntArrFunctor) OptionIntArr {
+func (o OptionString) MapIntArr(f StringIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionString) MapInt8Arr(f StringInt8ArrFunctor) OptionInt8Arr {
+func (o OptionString) MapInt8Arr(f StringInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionString) MapInt16Arr(f StringInt16ArrFunctor) OptionInt16Arr {
+func (o OptionString) MapInt16Arr(f StringInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionString) MapInt32Arr(f StringInt32ArrFunctor) OptionInt32Arr {
+func (o OptionString) MapInt32Arr(f StringInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionString) MapInt64Arr(f StringInt64ArrFunctor) OptionInt64Arr {
+func (o OptionString) MapInt64Arr(f StringInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionString) MapUintArr(f StringUintArrFunctor) OptionUintArr {
+func (o OptionString) MapUintArr(f StringUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionString) MapUint8Arr(f StringUint8ArrFunctor) OptionUint8Arr {
+func (o OptionString) MapUint8Arr(f StringUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionString) MapUint16Arr(f StringUint16ArrFunctor) OptionUint16Arr {
+func (o OptionString) MapUint16Arr(f StringUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionString) MapUint32Arr(f StringUint32ArrFunctor) OptionUint32Arr {
+func (o OptionString) MapUint32Arr(f StringUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionString) MapUint64Arr(f StringUint64ArrFunctor) OptionUint64Arr {
+func (o OptionString) MapUint64Arr(f StringUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionString) MapUintptrArr(f StringUintptrArrFunctor) OptionUintptrArr {
+func (o OptionString) MapUintptrArr(f StringUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionString) MapFloat32Arr(f StringFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionString) MapFloat32Arr(f StringFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionString) MapFloat64Arr(f StringFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionString) MapFloat64Arr(f StringFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionString) MapComplex64Arr(f StringComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionString) MapComplex64Arr(f StringComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionString) MapComplex128Arr(f StringComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionString) MapComplex128Arr(f StringComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionString) MapStringArr(f StringStringArrFunctor) OptionStringArr {
+func (o OptionString) MapStringArr(f StringStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionString) MapAnyArr(f StringAnyArrFunctor) OptionAnyArr {
+func (o OptionString) MapAnyArr(f StringAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionAny) MapBool(f AnyBoolFunctor) OptionBool {
+func (o OptionAny) MapBool(f AnyBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionAny) MapRune(f AnyRuneFunctor) OptionRune {
+func (o OptionAny) MapRune(f AnyRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionAny) MapByte(f AnyByteFunctor) OptionByte {
+func (o OptionAny) MapByte(f AnyByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionAny) MapInt(f AnyIntFunctor) OptionInt {
+func (o OptionAny) MapInt(f AnyIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionAny) MapInt8(f AnyInt8Functor) OptionInt8 {
+func (o OptionAny) MapInt8(f AnyInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionAny) MapInt16(f AnyInt16Functor) OptionInt16 {
+func (o OptionAny) MapInt16(f AnyInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionAny) MapInt32(f AnyInt32Functor) OptionInt32 {
+func (o OptionAny) MapInt32(f AnyInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionAny) MapInt64(f AnyInt64Functor) OptionInt64 {
+func (o OptionAny) MapInt64(f AnyInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionAny) MapUint(f AnyUintFunctor) OptionUint {
+func (o OptionAny) MapUint(f AnyUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionAny) MapUint8(f AnyUint8Functor) OptionUint8 {
+func (o OptionAny) MapUint8(f AnyUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionAny) MapUint16(f AnyUint16Functor) OptionUint16 {
+func (o OptionAny) MapUint16(f AnyUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionAny) MapUint32(f AnyUint32Functor) OptionUint32 {
+func (o OptionAny) MapUint32(f AnyUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionAny) MapUint64(f AnyUint64Functor) OptionUint64 {
+func (o OptionAny) MapUint64(f AnyUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionAny) MapUintptr(f AnyUintptrFunctor) OptionUintptr {
+func (o OptionAny) MapUintptr(f AnyUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionAny) MapFloat32(f AnyFloat32Functor) OptionFloat32 {
+func (o OptionAny) MapFloat32(f AnyFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionAny) MapFloat64(f AnyFloat64Functor) OptionFloat64 {
+func (o OptionAny) MapFloat64(f AnyFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionAny) MapComplex64(f AnyComplex64Functor) OptionComplex64 {
+func (o OptionAny) MapComplex64(f AnyComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionAny) MapComplex128(f AnyComplex128Functor) OptionComplex128 {
+func (o OptionAny) MapComplex128(f AnyComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionAny) MapString(f AnyStringFunctor) OptionString {
+func (o OptionAny) MapString(f AnyStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionAny) MapAny(f AnyAnyFunctor) OptionAny {
+func (o OptionAny) MapAny(f AnyAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionAny) MapBoolArr(f AnyBoolArrFunctor) OptionBoolArr {
+func (o OptionAny) MapBoolArr(f AnyBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionAny) MapRuneArr(f AnyRuneArrFunctor) OptionRuneArr {
+func (o OptionAny) MapRuneArr(f AnyRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionAny) MapByteArr(f AnyByteArrFunctor) OptionByteArr {
+func (o OptionAny) MapByteArr(f AnyByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionAny) MapIntArr(f AnyIntArrFunctor) OptionIntArr {
+func (o OptionAny) MapIntArr(f AnyIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionAny) MapInt8Arr(f AnyInt8ArrFunctor) OptionInt8Arr {
+func (o OptionAny) MapInt8Arr(f AnyInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionAny) MapInt16Arr(f AnyInt16ArrFunctor) OptionInt16Arr {
+func (o OptionAny) MapInt16Arr(f AnyInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionAny) MapInt32Arr(f AnyInt32ArrFunctor) OptionInt32Arr {
+func (o OptionAny) MapInt32Arr(f AnyInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionAny) MapInt64Arr(f AnyInt64ArrFunctor) OptionInt64Arr {
+func (o OptionAny) MapInt64Arr(f AnyInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionAny) MapUintArr(f AnyUintArrFunctor) OptionUintArr {
+func (o OptionAny) MapUintArr(f AnyUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionAny) MapUint8Arr(f AnyUint8ArrFunctor) OptionUint8Arr {
+func (o OptionAny) MapUint8Arr(f AnyUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionAny) MapUint16Arr(f AnyUint16ArrFunctor) OptionUint16Arr {
+func (o OptionAny) MapUint16Arr(f AnyUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionAny) MapUint32Arr(f AnyUint32ArrFunctor) OptionUint32Arr {
+func (o OptionAny) MapUint32Arr(f AnyUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionAny) MapUint64Arr(f AnyUint64ArrFunctor) OptionUint64Arr {
+func (o OptionAny) MapUint64Arr(f AnyUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionAny) MapUintptrArr(f AnyUintptrArrFunctor) OptionUintptrArr {
+func (o OptionAny) MapUintptrArr(f AnyUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionAny) MapFloat32Arr(f AnyFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionAny) MapFloat32Arr(f AnyFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionAny) MapFloat64Arr(f AnyFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionAny) MapFloat64Arr(f AnyFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionAny) MapComplex64Arr(f AnyComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionAny) MapComplex64Arr(f AnyComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionAny) MapComplex128Arr(f AnyComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionAny) MapComplex128Arr(f AnyComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionAny) MapStringArr(f AnyStringArrFunctor) OptionStringArr {
+func (o OptionAny) MapStringArr(f AnyStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionAny) MapAnyArr(f AnyAnyArrFunctor) OptionAnyArr {
+func (o OptionAny) MapAnyArr(f AnyAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionBoolArr) MapBool(f BoolArrBoolFunctor) OptionBool {
+func (o OptionBoolArr) MapBool(f BoolArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionBoolArr) MapRune(f BoolArrRuneFunctor) OptionRune {
+func (o OptionBoolArr) MapRune(f BoolArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionBoolArr) MapByte(f BoolArrByteFunctor) OptionByte {
+func (o OptionBoolArr) MapByte(f BoolArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionBoolArr) MapInt(f BoolArrIntFunctor) OptionInt {
+func (o OptionBoolArr) MapInt(f BoolArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionBoolArr) MapInt8(f BoolArrInt8Functor) OptionInt8 {
+func (o OptionBoolArr) MapInt8(f BoolArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionBoolArr) MapInt16(f BoolArrInt16Functor) OptionInt16 {
+func (o OptionBoolArr) MapInt16(f BoolArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionBoolArr) MapInt32(f BoolArrInt32Functor) OptionInt32 {
+func (o OptionBoolArr) MapInt32(f BoolArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionBoolArr) MapInt64(f BoolArrInt64Functor) OptionInt64 {
+func (o OptionBoolArr) MapInt64(f BoolArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionBoolArr) MapUint(f BoolArrUintFunctor) OptionUint {
+func (o OptionBoolArr) MapUint(f BoolArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionBoolArr) MapUint8(f BoolArrUint8Functor) OptionUint8 {
+func (o OptionBoolArr) MapUint8(f BoolArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionBoolArr) MapUint16(f BoolArrUint16Functor) OptionUint16 {
+func (o OptionBoolArr) MapUint16(f BoolArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionBoolArr) MapUint32(f BoolArrUint32Functor) OptionUint32 {
+func (o OptionBoolArr) MapUint32(f BoolArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionBoolArr) MapUint64(f BoolArrUint64Functor) OptionUint64 {
+func (o OptionBoolArr) MapUint64(f BoolArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionBoolArr) MapUintptr(f BoolArrUintptrFunctor) OptionUintptr {
+func (o OptionBoolArr) MapUintptr(f BoolArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionBoolArr) MapFloat32(f BoolArrFloat32Functor) OptionFloat32 {
+func (o OptionBoolArr) MapFloat32(f BoolArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionBoolArr) MapFloat64(f BoolArrFloat64Functor) OptionFloat64 {
+func (o OptionBoolArr) MapFloat64(f BoolArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionBoolArr) MapComplex64(f BoolArrComplex64Functor) OptionComplex64 {
+func (o OptionBoolArr) MapComplex64(f BoolArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionBoolArr) MapComplex128(f BoolArrComplex128Functor) OptionComplex128 {
+func (o OptionBoolArr) MapComplex128(f BoolArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionBoolArr) MapString(f BoolArrStringFunctor) OptionString {
+func (o OptionBoolArr) MapString(f BoolArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionBoolArr) MapAny(f BoolArrAnyFunctor) OptionAny {
+func (o OptionBoolArr) MapAny(f BoolArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionBoolArr) MapBoolArr(f BoolArrBoolArrFunctor) OptionBoolArr {
+func (o OptionBoolArr) MapBoolArr(f BoolArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionBoolArr) MapRuneArr(f BoolArrRuneArrFunctor) OptionRuneArr {
+func (o OptionBoolArr) MapRuneArr(f BoolArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionBoolArr) MapByteArr(f BoolArrByteArrFunctor) OptionByteArr {
+func (o OptionBoolArr) MapByteArr(f BoolArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionBoolArr) MapIntArr(f BoolArrIntArrFunctor) OptionIntArr {
+func (o OptionBoolArr) MapIntArr(f BoolArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionBoolArr) MapInt8Arr(f BoolArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionBoolArr) MapInt8Arr(f BoolArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionBoolArr) MapInt16Arr(f BoolArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionBoolArr) MapInt16Arr(f BoolArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionBoolArr) MapInt32Arr(f BoolArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionBoolArr) MapInt32Arr(f BoolArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionBoolArr) MapInt64Arr(f BoolArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionBoolArr) MapInt64Arr(f BoolArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionBoolArr) MapUintArr(f BoolArrUintArrFunctor) OptionUintArr {
+func (o OptionBoolArr) MapUintArr(f BoolArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionBoolArr) MapUint8Arr(f BoolArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionBoolArr) MapUint8Arr(f BoolArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionBoolArr) MapUint16Arr(f BoolArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionBoolArr) MapUint16Arr(f BoolArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionBoolArr) MapUint32Arr(f BoolArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionBoolArr) MapUint32Arr(f BoolArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionBoolArr) MapUint64Arr(f BoolArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionBoolArr) MapUint64Arr(f BoolArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionBoolArr) MapUintptrArr(f BoolArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionBoolArr) MapUintptrArr(f BoolArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionBoolArr) MapFloat32Arr(f BoolArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionBoolArr) MapFloat32Arr(f BoolArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionBoolArr) MapFloat64Arr(f BoolArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionBoolArr) MapFloat64Arr(f BoolArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionBoolArr) MapComplex64Arr(f BoolArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionBoolArr) MapComplex64Arr(f BoolArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionBoolArr) MapComplex128Arr(f BoolArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionBoolArr) MapComplex128Arr(f BoolArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionBoolArr) MapStringArr(f BoolArrStringArrFunctor) OptionStringArr {
+func (o OptionBoolArr) MapStringArr(f BoolArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionBoolArr) MapAnyArr(f BoolArrAnyArrFunctor) OptionAnyArr {
+func (o OptionBoolArr) MapAnyArr(f BoolArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionRuneArr) MapBool(f RuneArrBoolFunctor) OptionBool {
+func (o OptionRuneArr) MapBool(f RuneArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionRuneArr) MapRune(f RuneArrRuneFunctor) OptionRune {
+func (o OptionRuneArr) MapRune(f RuneArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionRuneArr) MapByte(f RuneArrByteFunctor) OptionByte {
+func (o OptionRuneArr) MapByte(f RuneArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionRuneArr) MapInt(f RuneArrIntFunctor) OptionInt {
+func (o OptionRuneArr) MapInt(f RuneArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionRuneArr) MapInt8(f RuneArrInt8Functor) OptionInt8 {
+func (o OptionRuneArr) MapInt8(f RuneArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionRuneArr) MapInt16(f RuneArrInt16Functor) OptionInt16 {
+func (o OptionRuneArr) MapInt16(f RuneArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionRuneArr) MapInt32(f RuneArrInt32Functor) OptionInt32 {
+func (o OptionRuneArr) MapInt32(f RuneArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionRuneArr) MapInt64(f RuneArrInt64Functor) OptionInt64 {
+func (o OptionRuneArr) MapInt64(f RuneArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionRuneArr) MapUint(f RuneArrUintFunctor) OptionUint {
+func (o OptionRuneArr) MapUint(f RuneArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionRuneArr) MapUint8(f RuneArrUint8Functor) OptionUint8 {
+func (o OptionRuneArr) MapUint8(f RuneArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionRuneArr) MapUint16(f RuneArrUint16Functor) OptionUint16 {
+func (o OptionRuneArr) MapUint16(f RuneArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionRuneArr) MapUint32(f RuneArrUint32Functor) OptionUint32 {
+func (o OptionRuneArr) MapUint32(f RuneArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionRuneArr) MapUint64(f RuneArrUint64Functor) OptionUint64 {
+func (o OptionRuneArr) MapUint64(f RuneArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionRuneArr) MapUintptr(f RuneArrUintptrFunctor) OptionUintptr {
+func (o OptionRuneArr) MapUintptr(f RuneArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionRuneArr) MapFloat32(f RuneArrFloat32Functor) OptionFloat32 {
+func (o OptionRuneArr) MapFloat32(f RuneArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionRuneArr) MapFloat64(f RuneArrFloat64Functor) OptionFloat64 {
+func (o OptionRuneArr) MapFloat64(f RuneArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionRuneArr) MapComplex64(f RuneArrComplex64Functor) OptionComplex64 {
+func (o OptionRuneArr) MapComplex64(f RuneArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionRuneArr) MapComplex128(f RuneArrComplex128Functor) OptionComplex128 {
+func (o OptionRuneArr) MapComplex128(f RuneArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionRuneArr) MapString(f RuneArrStringFunctor) OptionString {
+func (o OptionRuneArr) MapString(f RuneArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionRuneArr) MapAny(f RuneArrAnyFunctor) OptionAny {
+func (o OptionRuneArr) MapAny(f RuneArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionRuneArr) MapBoolArr(f RuneArrBoolArrFunctor) OptionBoolArr {
+func (o OptionRuneArr) MapBoolArr(f RuneArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionRuneArr) MapRuneArr(f RuneArrRuneArrFunctor) OptionRuneArr {
+func (o OptionRuneArr) MapRuneArr(f RuneArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionRuneArr) MapByteArr(f RuneArrByteArrFunctor) OptionByteArr {
+func (o OptionRuneArr) MapByteArr(f RuneArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionRuneArr) MapIntArr(f RuneArrIntArrFunctor) OptionIntArr {
+func (o OptionRuneArr) MapIntArr(f RuneArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionRuneArr) MapInt8Arr(f RuneArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionRuneArr) MapInt8Arr(f RuneArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionRuneArr) MapInt16Arr(f RuneArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionRuneArr) MapInt16Arr(f RuneArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionRuneArr) MapInt32Arr(f RuneArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionRuneArr) MapInt32Arr(f RuneArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionRuneArr) MapInt64Arr(f RuneArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionRuneArr) MapInt64Arr(f RuneArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionRuneArr) MapUintArr(f RuneArrUintArrFunctor) OptionUintArr {
+func (o OptionRuneArr) MapUintArr(f RuneArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionRuneArr) MapUint8Arr(f RuneArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionRuneArr) MapUint8Arr(f RuneArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionRuneArr) MapUint16Arr(f RuneArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionRuneArr) MapUint16Arr(f RuneArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionRuneArr) MapUint32Arr(f RuneArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionRuneArr) MapUint32Arr(f RuneArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionRuneArr) MapUint64Arr(f RuneArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionRuneArr) MapUint64Arr(f RuneArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionRuneArr) MapUintptrArr(f RuneArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionRuneArr) MapUintptrArr(f RuneArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionRuneArr) MapFloat32Arr(f RuneArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionRuneArr) MapFloat32Arr(f RuneArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionRuneArr) MapFloat64Arr(f RuneArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionRuneArr) MapFloat64Arr(f RuneArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionRuneArr) MapComplex64Arr(f RuneArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionRuneArr) MapComplex64Arr(f RuneArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionRuneArr) MapComplex128Arr(f RuneArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionRuneArr) MapComplex128Arr(f RuneArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionRuneArr) MapStringArr(f RuneArrStringArrFunctor) OptionStringArr {
+func (o OptionRuneArr) MapStringArr(f RuneArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionRuneArr) MapAnyArr(f RuneArrAnyArrFunctor) OptionAnyArr {
+func (o OptionRuneArr) MapAnyArr(f RuneArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionByteArr) MapBool(f ByteArrBoolFunctor) OptionBool {
+func (o OptionByteArr) MapBool(f ByteArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionByteArr) MapRune(f ByteArrRuneFunctor) OptionRune {
+func (o OptionByteArr) MapRune(f ByteArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionByteArr) MapByte(f ByteArrByteFunctor) OptionByte {
+func (o OptionByteArr) MapByte(f ByteArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionByteArr) MapInt(f ByteArrIntFunctor) OptionInt {
+func (o OptionByteArr) MapInt(f ByteArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionByteArr) MapInt8(f ByteArrInt8Functor) OptionInt8 {
+func (o OptionByteArr) MapInt8(f ByteArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionByteArr) MapInt16(f ByteArrInt16Functor) OptionInt16 {
+func (o OptionByteArr) MapInt16(f ByteArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionByteArr) MapInt32(f ByteArrInt32Functor) OptionInt32 {
+func (o OptionByteArr) MapInt32(f ByteArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionByteArr) MapInt64(f ByteArrInt64Functor) OptionInt64 {
+func (o OptionByteArr) MapInt64(f ByteArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionByteArr) MapUint(f ByteArrUintFunctor) OptionUint {
+func (o OptionByteArr) MapUint(f ByteArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionByteArr) MapUint8(f ByteArrUint8Functor) OptionUint8 {
+func (o OptionByteArr) MapUint8(f ByteArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionByteArr) MapUint16(f ByteArrUint16Functor) OptionUint16 {
+func (o OptionByteArr) MapUint16(f ByteArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionByteArr) MapUint32(f ByteArrUint32Functor) OptionUint32 {
+func (o OptionByteArr) MapUint32(f ByteArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionByteArr) MapUint64(f ByteArrUint64Functor) OptionUint64 {
+func (o OptionByteArr) MapUint64(f ByteArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionByteArr) MapUintptr(f ByteArrUintptrFunctor) OptionUintptr {
+func (o OptionByteArr) MapUintptr(f ByteArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionByteArr) MapFloat32(f ByteArrFloat32Functor) OptionFloat32 {
+func (o OptionByteArr) MapFloat32(f ByteArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionByteArr) MapFloat64(f ByteArrFloat64Functor) OptionFloat64 {
+func (o OptionByteArr) MapFloat64(f ByteArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionByteArr) MapComplex64(f ByteArrComplex64Functor) OptionComplex64 {
+func (o OptionByteArr) MapComplex64(f ByteArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionByteArr) MapComplex128(f ByteArrComplex128Functor) OptionComplex128 {
+func (o OptionByteArr) MapComplex128(f ByteArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionByteArr) MapString(f ByteArrStringFunctor) OptionString {
+func (o OptionByteArr) MapString(f ByteArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionByteArr) MapAny(f ByteArrAnyFunctor) OptionAny {
+func (o OptionByteArr) MapAny(f ByteArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionByteArr) MapBoolArr(f ByteArrBoolArrFunctor) OptionBoolArr {
+func (o OptionByteArr) MapBoolArr(f ByteArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionByteArr) MapRuneArr(f ByteArrRuneArrFunctor) OptionRuneArr {
+func (o OptionByteArr) MapRuneArr(f ByteArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionByteArr) MapByteArr(f ByteArrByteArrFunctor) OptionByteArr {
+func (o OptionByteArr) MapByteArr(f ByteArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionByteArr) MapIntArr(f ByteArrIntArrFunctor) OptionIntArr {
+func (o OptionByteArr) MapIntArr(f ByteArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionByteArr) MapInt8Arr(f ByteArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionByteArr) MapInt8Arr(f ByteArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionByteArr) MapInt16Arr(f ByteArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionByteArr) MapInt16Arr(f ByteArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionByteArr) MapInt32Arr(f ByteArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionByteArr) MapInt32Arr(f ByteArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionByteArr) MapInt64Arr(f ByteArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionByteArr) MapInt64Arr(f ByteArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionByteArr) MapUintArr(f ByteArrUintArrFunctor) OptionUintArr {
+func (o OptionByteArr) MapUintArr(f ByteArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionByteArr) MapUint8Arr(f ByteArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionByteArr) MapUint8Arr(f ByteArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionByteArr) MapUint16Arr(f ByteArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionByteArr) MapUint16Arr(f ByteArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionByteArr) MapUint32Arr(f ByteArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionByteArr) MapUint32Arr(f ByteArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionByteArr) MapUint64Arr(f ByteArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionByteArr) MapUint64Arr(f ByteArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionByteArr) MapUintptrArr(f ByteArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionByteArr) MapUintptrArr(f ByteArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionByteArr) MapFloat32Arr(f ByteArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionByteArr) MapFloat32Arr(f ByteArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionByteArr) MapFloat64Arr(f ByteArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionByteArr) MapFloat64Arr(f ByteArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionByteArr) MapComplex64Arr(f ByteArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionByteArr) MapComplex64Arr(f ByteArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionByteArr) MapComplex128Arr(f ByteArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionByteArr) MapComplex128Arr(f ByteArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionByteArr) MapStringArr(f ByteArrStringArrFunctor) OptionStringArr {
+func (o OptionByteArr) MapStringArr(f ByteArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionByteArr) MapAnyArr(f ByteArrAnyArrFunctor) OptionAnyArr {
+func (o OptionByteArr) MapAnyArr(f ByteArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionIntArr) MapBool(f IntArrBoolFunctor) OptionBool {
+func (o OptionIntArr) MapBool(f IntArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionIntArr) MapRune(f IntArrRuneFunctor) OptionRune {
+func (o OptionIntArr) MapRune(f IntArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionIntArr) MapByte(f IntArrByteFunctor) OptionByte {
+func (o OptionIntArr) MapByte(f IntArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionIntArr) MapInt(f IntArrIntFunctor) OptionInt {
+func (o OptionIntArr) MapInt(f IntArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionIntArr) MapInt8(f IntArrInt8Functor) OptionInt8 {
+func (o OptionIntArr) MapInt8(f IntArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionIntArr) MapInt16(f IntArrInt16Functor) OptionInt16 {
+func (o OptionIntArr) MapInt16(f IntArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionIntArr) MapInt32(f IntArrInt32Functor) OptionInt32 {
+func (o OptionIntArr) MapInt32(f IntArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionIntArr) MapInt64(f IntArrInt64Functor) OptionInt64 {
+func (o OptionIntArr) MapInt64(f IntArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionIntArr) MapUint(f IntArrUintFunctor) OptionUint {
+func (o OptionIntArr) MapUint(f IntArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionIntArr) MapUint8(f IntArrUint8Functor) OptionUint8 {
+func (o OptionIntArr) MapUint8(f IntArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionIntArr) MapUint16(f IntArrUint16Functor) OptionUint16 {
+func (o OptionIntArr) MapUint16(f IntArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionIntArr) MapUint32(f IntArrUint32Functor) OptionUint32 {
+func (o OptionIntArr) MapUint32(f IntArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionIntArr) MapUint64(f IntArrUint64Functor) OptionUint64 {
+func (o OptionIntArr) MapUint64(f IntArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionIntArr) MapUintptr(f IntArrUintptrFunctor) OptionUintptr {
+func (o OptionIntArr) MapUintptr(f IntArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionIntArr) MapFloat32(f IntArrFloat32Functor) OptionFloat32 {
+func (o OptionIntArr) MapFloat32(f IntArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionIntArr) MapFloat64(f IntArrFloat64Functor) OptionFloat64 {
+func (o OptionIntArr) MapFloat64(f IntArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionIntArr) MapComplex64(f IntArrComplex64Functor) OptionComplex64 {
+func (o OptionIntArr) MapComplex64(f IntArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionIntArr) MapComplex128(f IntArrComplex128Functor) OptionComplex128 {
+func (o OptionIntArr) MapComplex128(f IntArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionIntArr) MapString(f IntArrStringFunctor) OptionString {
+func (o OptionIntArr) MapString(f IntArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionIntArr) MapAny(f IntArrAnyFunctor) OptionAny {
+func (o OptionIntArr) MapAny(f IntArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionIntArr) MapBoolArr(f IntArrBoolArrFunctor) OptionBoolArr {
+func (o OptionIntArr) MapBoolArr(f IntArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionIntArr) MapRuneArr(f IntArrRuneArrFunctor) OptionRuneArr {
+func (o OptionIntArr) MapRuneArr(f IntArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionIntArr) MapByteArr(f IntArrByteArrFunctor) OptionByteArr {
+func (o OptionIntArr) MapByteArr(f IntArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionIntArr) MapIntArr(f IntArrIntArrFunctor) OptionIntArr {
+func (o OptionIntArr) MapIntArr(f IntArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionIntArr) MapInt8Arr(f IntArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionIntArr) MapInt8Arr(f IntArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionIntArr) MapInt16Arr(f IntArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionIntArr) MapInt16Arr(f IntArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionIntArr) MapInt32Arr(f IntArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionIntArr) MapInt32Arr(f IntArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionIntArr) MapInt64Arr(f IntArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionIntArr) MapInt64Arr(f IntArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionIntArr) MapUintArr(f IntArrUintArrFunctor) OptionUintArr {
+func (o OptionIntArr) MapUintArr(f IntArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionIntArr) MapUint8Arr(f IntArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionIntArr) MapUint8Arr(f IntArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionIntArr) MapUint16Arr(f IntArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionIntArr) MapUint16Arr(f IntArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionIntArr) MapUint32Arr(f IntArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionIntArr) MapUint32Arr(f IntArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionIntArr) MapUint64Arr(f IntArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionIntArr) MapUint64Arr(f IntArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionIntArr) MapUintptrArr(f IntArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionIntArr) MapUintptrArr(f IntArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionIntArr) MapFloat32Arr(f IntArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionIntArr) MapFloat32Arr(f IntArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionIntArr) MapFloat64Arr(f IntArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionIntArr) MapFloat64Arr(f IntArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionIntArr) MapComplex64Arr(f IntArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionIntArr) MapComplex64Arr(f IntArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionIntArr) MapComplex128Arr(f IntArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionIntArr) MapComplex128Arr(f IntArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionIntArr) MapStringArr(f IntArrStringArrFunctor) OptionStringArr {
+func (o OptionIntArr) MapStringArr(f IntArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionIntArr) MapAnyArr(f IntArrAnyArrFunctor) OptionAnyArr {
+func (o OptionIntArr) MapAnyArr(f IntArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt8Arr) MapBool(f Int8ArrBoolFunctor) OptionBool {
+func (o OptionInt8Arr) MapBool(f Int8ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt8Arr) MapRune(f Int8ArrRuneFunctor) OptionRune {
+func (o OptionInt8Arr) MapRune(f Int8ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt8Arr) MapByte(f Int8ArrByteFunctor) OptionByte {
+func (o OptionInt8Arr) MapByte(f Int8ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt8Arr) MapInt(f Int8ArrIntFunctor) OptionInt {
+func (o OptionInt8Arr) MapInt(f Int8ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt8Arr) MapInt8(f Int8ArrInt8Functor) OptionInt8 {
+func (o OptionInt8Arr) MapInt8(f Int8ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt8Arr) MapInt16(f Int8ArrInt16Functor) OptionInt16 {
+func (o OptionInt8Arr) MapInt16(f Int8ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt8Arr) MapInt32(f Int8ArrInt32Functor) OptionInt32 {
+func (o OptionInt8Arr) MapInt32(f Int8ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt8Arr) MapInt64(f Int8ArrInt64Functor) OptionInt64 {
+func (o OptionInt8Arr) MapInt64(f Int8ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt8Arr) MapUint(f Int8ArrUintFunctor) OptionUint {
+func (o OptionInt8Arr) MapUint(f Int8ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt8Arr) MapUint8(f Int8ArrUint8Functor) OptionUint8 {
+func (o OptionInt8Arr) MapUint8(f Int8ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt8Arr) MapUint16(f Int8ArrUint16Functor) OptionUint16 {
+func (o OptionInt8Arr) MapUint16(f Int8ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt8Arr) MapUint32(f Int8ArrUint32Functor) OptionUint32 {
+func (o OptionInt8Arr) MapUint32(f Int8ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt8Arr) MapUint64(f Int8ArrUint64Functor) OptionUint64 {
+func (o OptionInt8Arr) MapUint64(f Int8ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt8Arr) MapUintptr(f Int8ArrUintptrFunctor) OptionUintptr {
+func (o OptionInt8Arr) MapUintptr(f Int8ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt8Arr) MapFloat32(f Int8ArrFloat32Functor) OptionFloat32 {
+func (o OptionInt8Arr) MapFloat32(f Int8ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt8Arr) MapFloat64(f Int8ArrFloat64Functor) OptionFloat64 {
+func (o OptionInt8Arr) MapFloat64(f Int8ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt8Arr) MapComplex64(f Int8ArrComplex64Functor) OptionComplex64 {
+func (o OptionInt8Arr) MapComplex64(f Int8ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt8Arr) MapComplex128(f Int8ArrComplex128Functor) OptionComplex128 {
+func (o OptionInt8Arr) MapComplex128(f Int8ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt8Arr) MapString(f Int8ArrStringFunctor) OptionString {
+func (o OptionInt8Arr) MapString(f Int8ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt8Arr) MapAny(f Int8ArrAnyFunctor) OptionAny {
+func (o OptionInt8Arr) MapAny(f Int8ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt8Arr) MapBoolArr(f Int8ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionInt8Arr) MapBoolArr(f Int8ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt8Arr) MapRuneArr(f Int8ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionInt8Arr) MapRuneArr(f Int8ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt8Arr) MapByteArr(f Int8ArrByteArrFunctor) OptionByteArr {
+func (o OptionInt8Arr) MapByteArr(f Int8ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt8Arr) MapIntArr(f Int8ArrIntArrFunctor) OptionIntArr {
+func (o OptionInt8Arr) MapIntArr(f Int8ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt8Arr) MapInt8Arr(f Int8ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionInt8Arr) MapInt8Arr(f Int8ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt8Arr) MapInt16Arr(f Int8ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionInt8Arr) MapInt16Arr(f Int8ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt8Arr) MapInt32Arr(f Int8ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionInt8Arr) MapInt32Arr(f Int8ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt8Arr) MapInt64Arr(f Int8ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionInt8Arr) MapInt64Arr(f Int8ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt8Arr) MapUintArr(f Int8ArrUintArrFunctor) OptionUintArr {
+func (o OptionInt8Arr) MapUintArr(f Int8ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt8Arr) MapUint8Arr(f Int8ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt8Arr) MapUint8Arr(f Int8ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt8Arr) MapUint16Arr(f Int8ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt8Arr) MapUint16Arr(f Int8ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt8Arr) MapUint32Arr(f Int8ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt8Arr) MapUint32Arr(f Int8ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt8Arr) MapUint64Arr(f Int8ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt8Arr) MapUint64Arr(f Int8ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt8Arr) MapUintptrArr(f Int8ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt8Arr) MapUintptrArr(f Int8ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt8Arr) MapFloat32Arr(f Int8ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt8Arr) MapFloat32Arr(f Int8ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt8Arr) MapFloat64Arr(f Int8ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt8Arr) MapFloat64Arr(f Int8ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt8Arr) MapComplex64Arr(f Int8ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt8Arr) MapComplex64Arr(f Int8ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt8Arr) MapComplex128Arr(f Int8ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt8Arr) MapComplex128Arr(f Int8ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt8Arr) MapStringArr(f Int8ArrStringArrFunctor) OptionStringArr {
+func (o OptionInt8Arr) MapStringArr(f Int8ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt8Arr) MapAnyArr(f Int8ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionInt8Arr) MapAnyArr(f Int8ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt16Arr) MapBool(f Int16ArrBoolFunctor) OptionBool {
+func (o OptionInt16Arr) MapBool(f Int16ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt16Arr) MapRune(f Int16ArrRuneFunctor) OptionRune {
+func (o OptionInt16Arr) MapRune(f Int16ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt16Arr) MapByte(f Int16ArrByteFunctor) OptionByte {
+func (o OptionInt16Arr) MapByte(f Int16ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt16Arr) MapInt(f Int16ArrIntFunctor) OptionInt {
+func (o OptionInt16Arr) MapInt(f Int16ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt16Arr) MapInt8(f Int16ArrInt8Functor) OptionInt8 {
+func (o OptionInt16Arr) MapInt8(f Int16ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt16Arr) MapInt16(f Int16ArrInt16Functor) OptionInt16 {
+func (o OptionInt16Arr) MapInt16(f Int16ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt16Arr) MapInt32(f Int16ArrInt32Functor) OptionInt32 {
+func (o OptionInt16Arr) MapInt32(f Int16ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt16Arr) MapInt64(f Int16ArrInt64Functor) OptionInt64 {
+func (o OptionInt16Arr) MapInt64(f Int16ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt16Arr) MapUint(f Int16ArrUintFunctor) OptionUint {
+func (o OptionInt16Arr) MapUint(f Int16ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt16Arr) MapUint8(f Int16ArrUint8Functor) OptionUint8 {
+func (o OptionInt16Arr) MapUint8(f Int16ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt16Arr) MapUint16(f Int16ArrUint16Functor) OptionUint16 {
+func (o OptionInt16Arr) MapUint16(f Int16ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt16Arr) MapUint32(f Int16ArrUint32Functor) OptionUint32 {
+func (o OptionInt16Arr) MapUint32(f Int16ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt16Arr) MapUint64(f Int16ArrUint64Functor) OptionUint64 {
+func (o OptionInt16Arr) MapUint64(f Int16ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt16Arr) MapUintptr(f Int16ArrUintptrFunctor) OptionUintptr {
+func (o OptionInt16Arr) MapUintptr(f Int16ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt16Arr) MapFloat32(f Int16ArrFloat32Functor) OptionFloat32 {
+func (o OptionInt16Arr) MapFloat32(f Int16ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt16Arr) MapFloat64(f Int16ArrFloat64Functor) OptionFloat64 {
+func (o OptionInt16Arr) MapFloat64(f Int16ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt16Arr) MapComplex64(f Int16ArrComplex64Functor) OptionComplex64 {
+func (o OptionInt16Arr) MapComplex64(f Int16ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt16Arr) MapComplex128(f Int16ArrComplex128Functor) OptionComplex128 {
+func (o OptionInt16Arr) MapComplex128(f Int16ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt16Arr) MapString(f Int16ArrStringFunctor) OptionString {
+func (o OptionInt16Arr) MapString(f Int16ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt16Arr) MapAny(f Int16ArrAnyFunctor) OptionAny {
+func (o OptionInt16Arr) MapAny(f Int16ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt16Arr) MapBoolArr(f Int16ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionInt16Arr) MapBoolArr(f Int16ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt16Arr) MapRuneArr(f Int16ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionInt16Arr) MapRuneArr(f Int16ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt16Arr) MapByteArr(f Int16ArrByteArrFunctor) OptionByteArr {
+func (o OptionInt16Arr) MapByteArr(f Int16ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt16Arr) MapIntArr(f Int16ArrIntArrFunctor) OptionIntArr {
+func (o OptionInt16Arr) MapIntArr(f Int16ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt16Arr) MapInt8Arr(f Int16ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionInt16Arr) MapInt8Arr(f Int16ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt16Arr) MapInt16Arr(f Int16ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionInt16Arr) MapInt16Arr(f Int16ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt16Arr) MapInt32Arr(f Int16ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionInt16Arr) MapInt32Arr(f Int16ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt16Arr) MapInt64Arr(f Int16ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionInt16Arr) MapInt64Arr(f Int16ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt16Arr) MapUintArr(f Int16ArrUintArrFunctor) OptionUintArr {
+func (o OptionInt16Arr) MapUintArr(f Int16ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt16Arr) MapUint8Arr(f Int16ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt16Arr) MapUint8Arr(f Int16ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt16Arr) MapUint16Arr(f Int16ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt16Arr) MapUint16Arr(f Int16ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt16Arr) MapUint32Arr(f Int16ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt16Arr) MapUint32Arr(f Int16ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt16Arr) MapUint64Arr(f Int16ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt16Arr) MapUint64Arr(f Int16ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt16Arr) MapUintptrArr(f Int16ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt16Arr) MapUintptrArr(f Int16ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt16Arr) MapFloat32Arr(f Int16ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt16Arr) MapFloat32Arr(f Int16ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt16Arr) MapFloat64Arr(f Int16ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt16Arr) MapFloat64Arr(f Int16ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt16Arr) MapComplex64Arr(f Int16ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt16Arr) MapComplex64Arr(f Int16ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt16Arr) MapComplex128Arr(f Int16ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt16Arr) MapComplex128Arr(f Int16ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt16Arr) MapStringArr(f Int16ArrStringArrFunctor) OptionStringArr {
+func (o OptionInt16Arr) MapStringArr(f Int16ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt16Arr) MapAnyArr(f Int16ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionInt16Arr) MapAnyArr(f Int16ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt32Arr) MapBool(f Int32ArrBoolFunctor) OptionBool {
+func (o OptionInt32Arr) MapBool(f Int32ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt32Arr) MapRune(f Int32ArrRuneFunctor) OptionRune {
+func (o OptionInt32Arr) MapRune(f Int32ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt32Arr) MapByte(f Int32ArrByteFunctor) OptionByte {
+func (o OptionInt32Arr) MapByte(f Int32ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt32Arr) MapInt(f Int32ArrIntFunctor) OptionInt {
+func (o OptionInt32Arr) MapInt(f Int32ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt32Arr) MapInt8(f Int32ArrInt8Functor) OptionInt8 {
+func (o OptionInt32Arr) MapInt8(f Int32ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt32Arr) MapInt16(f Int32ArrInt16Functor) OptionInt16 {
+func (o OptionInt32Arr) MapInt16(f Int32ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt32Arr) MapInt32(f Int32ArrInt32Functor) OptionInt32 {
+func (o OptionInt32Arr) MapInt32(f Int32ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt32Arr) MapInt64(f Int32ArrInt64Functor) OptionInt64 {
+func (o OptionInt32Arr) MapInt64(f Int32ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt32Arr) MapUint(f Int32ArrUintFunctor) OptionUint {
+func (o OptionInt32Arr) MapUint(f Int32ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt32Arr) MapUint8(f Int32ArrUint8Functor) OptionUint8 {
+func (o OptionInt32Arr) MapUint8(f Int32ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt32Arr) MapUint16(f Int32ArrUint16Functor) OptionUint16 {
+func (o OptionInt32Arr) MapUint16(f Int32ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt32Arr) MapUint32(f Int32ArrUint32Functor) OptionUint32 {
+func (o OptionInt32Arr) MapUint32(f Int32ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt32Arr) MapUint64(f Int32ArrUint64Functor) OptionUint64 {
+func (o OptionInt32Arr) MapUint64(f Int32ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt32Arr) MapUintptr(f Int32ArrUintptrFunctor) OptionUintptr {
+func (o OptionInt32Arr) MapUintptr(f Int32ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt32Arr) MapFloat32(f Int32ArrFloat32Functor) OptionFloat32 {
+func (o OptionInt32Arr) MapFloat32(f Int32ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt32Arr) MapFloat64(f Int32ArrFloat64Functor) OptionFloat64 {
+func (o OptionInt32Arr) MapFloat64(f Int32ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt32Arr) MapComplex64(f Int32ArrComplex64Functor) OptionComplex64 {
+func (o OptionInt32Arr) MapComplex64(f Int32ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt32Arr) MapComplex128(f Int32ArrComplex128Functor) OptionComplex128 {
+func (o OptionInt32Arr) MapComplex128(f Int32ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt32Arr) MapString(f Int32ArrStringFunctor) OptionString {
+func (o OptionInt32Arr) MapString(f Int32ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt32Arr) MapAny(f Int32ArrAnyFunctor) OptionAny {
+func (o OptionInt32Arr) MapAny(f Int32ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt32Arr) MapBoolArr(f Int32ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionInt32Arr) MapBoolArr(f Int32ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt32Arr) MapRuneArr(f Int32ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionInt32Arr) MapRuneArr(f Int32ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt32Arr) MapByteArr(f Int32ArrByteArrFunctor) OptionByteArr {
+func (o OptionInt32Arr) MapByteArr(f Int32ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt32Arr) MapIntArr(f Int32ArrIntArrFunctor) OptionIntArr {
+func (o OptionInt32Arr) MapIntArr(f Int32ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt32Arr) MapInt8Arr(f Int32ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionInt32Arr) MapInt8Arr(f Int32ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt32Arr) MapInt16Arr(f Int32ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionInt32Arr) MapInt16Arr(f Int32ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt32Arr) MapInt32Arr(f Int32ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionInt32Arr) MapInt32Arr(f Int32ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt32Arr) MapInt64Arr(f Int32ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionInt32Arr) MapInt64Arr(f Int32ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt32Arr) MapUintArr(f Int32ArrUintArrFunctor) OptionUintArr {
+func (o OptionInt32Arr) MapUintArr(f Int32ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt32Arr) MapUint8Arr(f Int32ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt32Arr) MapUint8Arr(f Int32ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt32Arr) MapUint16Arr(f Int32ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt32Arr) MapUint16Arr(f Int32ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt32Arr) MapUint32Arr(f Int32ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt32Arr) MapUint32Arr(f Int32ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt32Arr) MapUint64Arr(f Int32ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt32Arr) MapUint64Arr(f Int32ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt32Arr) MapUintptrArr(f Int32ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt32Arr) MapUintptrArr(f Int32ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt32Arr) MapFloat32Arr(f Int32ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt32Arr) MapFloat32Arr(f Int32ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt32Arr) MapFloat64Arr(f Int32ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt32Arr) MapFloat64Arr(f Int32ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt32Arr) MapComplex64Arr(f Int32ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt32Arr) MapComplex64Arr(f Int32ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt32Arr) MapComplex128Arr(f Int32ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt32Arr) MapComplex128Arr(f Int32ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt32Arr) MapStringArr(f Int32ArrStringArrFunctor) OptionStringArr {
+func (o OptionInt32Arr) MapStringArr(f Int32ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt32Arr) MapAnyArr(f Int32ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionInt32Arr) MapAnyArr(f Int32ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionInt64Arr) MapBool(f Int64ArrBoolFunctor) OptionBool {
+func (o OptionInt64Arr) MapBool(f Int64ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionInt64Arr) MapRune(f Int64ArrRuneFunctor) OptionRune {
+func (o OptionInt64Arr) MapRune(f Int64ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionInt64Arr) MapByte(f Int64ArrByteFunctor) OptionByte {
+func (o OptionInt64Arr) MapByte(f Int64ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionInt64Arr) MapInt(f Int64ArrIntFunctor) OptionInt {
+func (o OptionInt64Arr) MapInt(f Int64ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionInt64Arr) MapInt8(f Int64ArrInt8Functor) OptionInt8 {
+func (o OptionInt64Arr) MapInt8(f Int64ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionInt64Arr) MapInt16(f Int64ArrInt16Functor) OptionInt16 {
+func (o OptionInt64Arr) MapInt16(f Int64ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionInt64Arr) MapInt32(f Int64ArrInt32Functor) OptionInt32 {
+func (o OptionInt64Arr) MapInt32(f Int64ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionInt64Arr) MapInt64(f Int64ArrInt64Functor) OptionInt64 {
+func (o OptionInt64Arr) MapInt64(f Int64ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionInt64Arr) MapUint(f Int64ArrUintFunctor) OptionUint {
+func (o OptionInt64Arr) MapUint(f Int64ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionInt64Arr) MapUint8(f Int64ArrUint8Functor) OptionUint8 {
+func (o OptionInt64Arr) MapUint8(f Int64ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionInt64Arr) MapUint16(f Int64ArrUint16Functor) OptionUint16 {
+func (o OptionInt64Arr) MapUint16(f Int64ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionInt64Arr) MapUint32(f Int64ArrUint32Functor) OptionUint32 {
+func (o OptionInt64Arr) MapUint32(f Int64ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionInt64Arr) MapUint64(f Int64ArrUint64Functor) OptionUint64 {
+func (o OptionInt64Arr) MapUint64(f Int64ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionInt64Arr) MapUintptr(f Int64ArrUintptrFunctor) OptionUintptr {
+func (o OptionInt64Arr) MapUintptr(f Int64ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionInt64Arr) MapFloat32(f Int64ArrFloat32Functor) OptionFloat32 {
+func (o OptionInt64Arr) MapFloat32(f Int64ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionInt64Arr) MapFloat64(f Int64ArrFloat64Functor) OptionFloat64 {
+func (o OptionInt64Arr) MapFloat64(f Int64ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionInt64Arr) MapComplex64(f Int64ArrComplex64Functor) OptionComplex64 {
+func (o OptionInt64Arr) MapComplex64(f Int64ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionInt64Arr) MapComplex128(f Int64ArrComplex128Functor) OptionComplex128 {
+func (o OptionInt64Arr) MapComplex128(f Int64ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionInt64Arr) MapString(f Int64ArrStringFunctor) OptionString {
+func (o OptionInt64Arr) MapString(f Int64ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionInt64Arr) MapAny(f Int64ArrAnyFunctor) OptionAny {
+func (o OptionInt64Arr) MapAny(f Int64ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionInt64Arr) MapBoolArr(f Int64ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionInt64Arr) MapBoolArr(f Int64ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionInt64Arr) MapRuneArr(f Int64ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionInt64Arr) MapRuneArr(f Int64ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionInt64Arr) MapByteArr(f Int64ArrByteArrFunctor) OptionByteArr {
+func (o OptionInt64Arr) MapByteArr(f Int64ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionInt64Arr) MapIntArr(f Int64ArrIntArrFunctor) OptionIntArr {
+func (o OptionInt64Arr) MapIntArr(f Int64ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionInt64Arr) MapInt8Arr(f Int64ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionInt64Arr) MapInt8Arr(f Int64ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionInt64Arr) MapInt16Arr(f Int64ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionInt64Arr) MapInt16Arr(f Int64ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionInt64Arr) MapInt32Arr(f Int64ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionInt64Arr) MapInt32Arr(f Int64ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionInt64Arr) MapInt64Arr(f Int64ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionInt64Arr) MapInt64Arr(f Int64ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionInt64Arr) MapUintArr(f Int64ArrUintArrFunctor) OptionUintArr {
+func (o OptionInt64Arr) MapUintArr(f Int64ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionInt64Arr) MapUint8Arr(f Int64ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionInt64Arr) MapUint8Arr(f Int64ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionInt64Arr) MapUint16Arr(f Int64ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionInt64Arr) MapUint16Arr(f Int64ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionInt64Arr) MapUint32Arr(f Int64ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionInt64Arr) MapUint32Arr(f Int64ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionInt64Arr) MapUint64Arr(f Int64ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionInt64Arr) MapUint64Arr(f Int64ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionInt64Arr) MapUintptrArr(f Int64ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionInt64Arr) MapUintptrArr(f Int64ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionInt64Arr) MapFloat32Arr(f Int64ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionInt64Arr) MapFloat32Arr(f Int64ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionInt64Arr) MapFloat64Arr(f Int64ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionInt64Arr) MapFloat64Arr(f Int64ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionInt64Arr) MapComplex64Arr(f Int64ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionInt64Arr) MapComplex64Arr(f Int64ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionInt64Arr) MapComplex128Arr(f Int64ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionInt64Arr) MapComplex128Arr(f Int64ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionInt64Arr) MapStringArr(f Int64ArrStringArrFunctor) OptionStringArr {
+func (o OptionInt64Arr) MapStringArr(f Int64ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionInt64Arr) MapAnyArr(f Int64ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionInt64Arr) MapAnyArr(f Int64ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUintArr) MapBool(f UintArrBoolFunctor) OptionBool {
+func (o OptionUintArr) MapBool(f UintArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUintArr) MapRune(f UintArrRuneFunctor) OptionRune {
+func (o OptionUintArr) MapRune(f UintArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUintArr) MapByte(f UintArrByteFunctor) OptionByte {
+func (o OptionUintArr) MapByte(f UintArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUintArr) MapInt(f UintArrIntFunctor) OptionInt {
+func (o OptionUintArr) MapInt(f UintArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUintArr) MapInt8(f UintArrInt8Functor) OptionInt8 {
+func (o OptionUintArr) MapInt8(f UintArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUintArr) MapInt16(f UintArrInt16Functor) OptionInt16 {
+func (o OptionUintArr) MapInt16(f UintArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUintArr) MapInt32(f UintArrInt32Functor) OptionInt32 {
+func (o OptionUintArr) MapInt32(f UintArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUintArr) MapInt64(f UintArrInt64Functor) OptionInt64 {
+func (o OptionUintArr) MapInt64(f UintArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUintArr) MapUint(f UintArrUintFunctor) OptionUint {
+func (o OptionUintArr) MapUint(f UintArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUintArr) MapUint8(f UintArrUint8Functor) OptionUint8 {
+func (o OptionUintArr) MapUint8(f UintArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUintArr) MapUint16(f UintArrUint16Functor) OptionUint16 {
+func (o OptionUintArr) MapUint16(f UintArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUintArr) MapUint32(f UintArrUint32Functor) OptionUint32 {
+func (o OptionUintArr) MapUint32(f UintArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUintArr) MapUint64(f UintArrUint64Functor) OptionUint64 {
+func (o OptionUintArr) MapUint64(f UintArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUintArr) MapUintptr(f UintArrUintptrFunctor) OptionUintptr {
+func (o OptionUintArr) MapUintptr(f UintArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUintArr) MapFloat32(f UintArrFloat32Functor) OptionFloat32 {
+func (o OptionUintArr) MapFloat32(f UintArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUintArr) MapFloat64(f UintArrFloat64Functor) OptionFloat64 {
+func (o OptionUintArr) MapFloat64(f UintArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUintArr) MapComplex64(f UintArrComplex64Functor) OptionComplex64 {
+func (o OptionUintArr) MapComplex64(f UintArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUintArr) MapComplex128(f UintArrComplex128Functor) OptionComplex128 {
+func (o OptionUintArr) MapComplex128(f UintArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUintArr) MapString(f UintArrStringFunctor) OptionString {
+func (o OptionUintArr) MapString(f UintArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUintArr) MapAny(f UintArrAnyFunctor) OptionAny {
+func (o OptionUintArr) MapAny(f UintArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUintArr) MapBoolArr(f UintArrBoolArrFunctor) OptionBoolArr {
+func (o OptionUintArr) MapBoolArr(f UintArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUintArr) MapRuneArr(f UintArrRuneArrFunctor) OptionRuneArr {
+func (o OptionUintArr) MapRuneArr(f UintArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUintArr) MapByteArr(f UintArrByteArrFunctor) OptionByteArr {
+func (o OptionUintArr) MapByteArr(f UintArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUintArr) MapIntArr(f UintArrIntArrFunctor) OptionIntArr {
+func (o OptionUintArr) MapIntArr(f UintArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUintArr) MapInt8Arr(f UintArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUintArr) MapInt8Arr(f UintArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUintArr) MapInt16Arr(f UintArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUintArr) MapInt16Arr(f UintArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUintArr) MapInt32Arr(f UintArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUintArr) MapInt32Arr(f UintArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUintArr) MapInt64Arr(f UintArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUintArr) MapInt64Arr(f UintArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUintArr) MapUintArr(f UintArrUintArrFunctor) OptionUintArr {
+func (o OptionUintArr) MapUintArr(f UintArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUintArr) MapUint8Arr(f UintArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUintArr) MapUint8Arr(f UintArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUintArr) MapUint16Arr(f UintArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUintArr) MapUint16Arr(f UintArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUintArr) MapUint32Arr(f UintArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUintArr) MapUint32Arr(f UintArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUintArr) MapUint64Arr(f UintArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUintArr) MapUint64Arr(f UintArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUintArr) MapUintptrArr(f UintArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUintArr) MapUintptrArr(f UintArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUintArr) MapFloat32Arr(f UintArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUintArr) MapFloat32Arr(f UintArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUintArr) MapFloat64Arr(f UintArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUintArr) MapFloat64Arr(f UintArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUintArr) MapComplex64Arr(f UintArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUintArr) MapComplex64Arr(f UintArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUintArr) MapComplex128Arr(f UintArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUintArr) MapComplex128Arr(f UintArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUintArr) MapStringArr(f UintArrStringArrFunctor) OptionStringArr {
+func (o OptionUintArr) MapStringArr(f UintArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUintArr) MapAnyArr(f UintArrAnyArrFunctor) OptionAnyArr {
+func (o OptionUintArr) MapAnyArr(f UintArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint8Arr) MapBool(f Uint8ArrBoolFunctor) OptionBool {
+func (o OptionUint8Arr) MapBool(f Uint8ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint8Arr) MapRune(f Uint8ArrRuneFunctor) OptionRune {
+func (o OptionUint8Arr) MapRune(f Uint8ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint8Arr) MapByte(f Uint8ArrByteFunctor) OptionByte {
+func (o OptionUint8Arr) MapByte(f Uint8ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint8Arr) MapInt(f Uint8ArrIntFunctor) OptionInt {
+func (o OptionUint8Arr) MapInt(f Uint8ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint8Arr) MapInt8(f Uint8ArrInt8Functor) OptionInt8 {
+func (o OptionUint8Arr) MapInt8(f Uint8ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint8Arr) MapInt16(f Uint8ArrInt16Functor) OptionInt16 {
+func (o OptionUint8Arr) MapInt16(f Uint8ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint8Arr) MapInt32(f Uint8ArrInt32Functor) OptionInt32 {
+func (o OptionUint8Arr) MapInt32(f Uint8ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint8Arr) MapInt64(f Uint8ArrInt64Functor) OptionInt64 {
+func (o OptionUint8Arr) MapInt64(f Uint8ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint8Arr) MapUint(f Uint8ArrUintFunctor) OptionUint {
+func (o OptionUint8Arr) MapUint(f Uint8ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint8Arr) MapUint8(f Uint8ArrUint8Functor) OptionUint8 {
+func (o OptionUint8Arr) MapUint8(f Uint8ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint8Arr) MapUint16(f Uint8ArrUint16Functor) OptionUint16 {
+func (o OptionUint8Arr) MapUint16(f Uint8ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint8Arr) MapUint32(f Uint8ArrUint32Functor) OptionUint32 {
+func (o OptionUint8Arr) MapUint32(f Uint8ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint8Arr) MapUint64(f Uint8ArrUint64Functor) OptionUint64 {
+func (o OptionUint8Arr) MapUint64(f Uint8ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint8Arr) MapUintptr(f Uint8ArrUintptrFunctor) OptionUintptr {
+func (o OptionUint8Arr) MapUintptr(f Uint8ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint8Arr) MapFloat32(f Uint8ArrFloat32Functor) OptionFloat32 {
+func (o OptionUint8Arr) MapFloat32(f Uint8ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint8Arr) MapFloat64(f Uint8ArrFloat64Functor) OptionFloat64 {
+func (o OptionUint8Arr) MapFloat64(f Uint8ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint8Arr) MapComplex64(f Uint8ArrComplex64Functor) OptionComplex64 {
+func (o OptionUint8Arr) MapComplex64(f Uint8ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint8Arr) MapComplex128(f Uint8ArrComplex128Functor) OptionComplex128 {
+func (o OptionUint8Arr) MapComplex128(f Uint8ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint8Arr) MapString(f Uint8ArrStringFunctor) OptionString {
+func (o OptionUint8Arr) MapString(f Uint8ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint8Arr) MapAny(f Uint8ArrAnyFunctor) OptionAny {
+func (o OptionUint8Arr) MapAny(f Uint8ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint8Arr) MapBoolArr(f Uint8ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionUint8Arr) MapBoolArr(f Uint8ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint8Arr) MapRuneArr(f Uint8ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionUint8Arr) MapRuneArr(f Uint8ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint8Arr) MapByteArr(f Uint8ArrByteArrFunctor) OptionByteArr {
+func (o OptionUint8Arr) MapByteArr(f Uint8ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint8Arr) MapIntArr(f Uint8ArrIntArrFunctor) OptionIntArr {
+func (o OptionUint8Arr) MapIntArr(f Uint8ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint8Arr) MapInt8Arr(f Uint8ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUint8Arr) MapInt8Arr(f Uint8ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint8Arr) MapInt16Arr(f Uint8ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUint8Arr) MapInt16Arr(f Uint8ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint8Arr) MapInt32Arr(f Uint8ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUint8Arr) MapInt32Arr(f Uint8ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint8Arr) MapInt64Arr(f Uint8ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUint8Arr) MapInt64Arr(f Uint8ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint8Arr) MapUintArr(f Uint8ArrUintArrFunctor) OptionUintArr {
+func (o OptionUint8Arr) MapUintArr(f Uint8ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint8Arr) MapUint8Arr(f Uint8ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint8Arr) MapUint8Arr(f Uint8ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint8Arr) MapUint16Arr(f Uint8ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint8Arr) MapUint16Arr(f Uint8ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint8Arr) MapUint32Arr(f Uint8ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint8Arr) MapUint32Arr(f Uint8ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint8Arr) MapUint64Arr(f Uint8ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint8Arr) MapUint64Arr(f Uint8ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint8Arr) MapUintptrArr(f Uint8ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint8Arr) MapUintptrArr(f Uint8ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint8Arr) MapFloat32Arr(f Uint8ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint8Arr) MapFloat32Arr(f Uint8ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint8Arr) MapFloat64Arr(f Uint8ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint8Arr) MapFloat64Arr(f Uint8ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint8Arr) MapComplex64Arr(f Uint8ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint8Arr) MapComplex64Arr(f Uint8ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint8Arr) MapComplex128Arr(f Uint8ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint8Arr) MapComplex128Arr(f Uint8ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint8Arr) MapStringArr(f Uint8ArrStringArrFunctor) OptionStringArr {
+func (o OptionUint8Arr) MapStringArr(f Uint8ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint8Arr) MapAnyArr(f Uint8ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionUint8Arr) MapAnyArr(f Uint8ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint16Arr) MapBool(f Uint16ArrBoolFunctor) OptionBool {
+func (o OptionUint16Arr) MapBool(f Uint16ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint16Arr) MapRune(f Uint16ArrRuneFunctor) OptionRune {
+func (o OptionUint16Arr) MapRune(f Uint16ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint16Arr) MapByte(f Uint16ArrByteFunctor) OptionByte {
+func (o OptionUint16Arr) MapByte(f Uint16ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint16Arr) MapInt(f Uint16ArrIntFunctor) OptionInt {
+func (o OptionUint16Arr) MapInt(f Uint16ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint16Arr) MapInt8(f Uint16ArrInt8Functor) OptionInt8 {
+func (o OptionUint16Arr) MapInt8(f Uint16ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint16Arr) MapInt16(f Uint16ArrInt16Functor) OptionInt16 {
+func (o OptionUint16Arr) MapInt16(f Uint16ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint16Arr) MapInt32(f Uint16ArrInt32Functor) OptionInt32 {
+func (o OptionUint16Arr) MapInt32(f Uint16ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint16Arr) MapInt64(f Uint16ArrInt64Functor) OptionInt64 {
+func (o OptionUint16Arr) MapInt64(f Uint16ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint16Arr) MapUint(f Uint16ArrUintFunctor) OptionUint {
+func (o OptionUint16Arr) MapUint(f Uint16ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint16Arr) MapUint8(f Uint16ArrUint8Functor) OptionUint8 {
+func (o OptionUint16Arr) MapUint8(f Uint16ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint16Arr) MapUint16(f Uint16ArrUint16Functor) OptionUint16 {
+func (o OptionUint16Arr) MapUint16(f Uint16ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint16Arr) MapUint32(f Uint16ArrUint32Functor) OptionUint32 {
+func (o OptionUint16Arr) MapUint32(f Uint16ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint16Arr) MapUint64(f Uint16ArrUint64Functor) OptionUint64 {
+func (o OptionUint16Arr) MapUint64(f Uint16ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint16Arr) MapUintptr(f Uint16ArrUintptrFunctor) OptionUintptr {
+func (o OptionUint16Arr) MapUintptr(f Uint16ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint16Arr) MapFloat32(f Uint16ArrFloat32Functor) OptionFloat32 {
+func (o OptionUint16Arr) MapFloat32(f Uint16ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint16Arr) MapFloat64(f Uint16ArrFloat64Functor) OptionFloat64 {
+func (o OptionUint16Arr) MapFloat64(f Uint16ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint16Arr) MapComplex64(f Uint16ArrComplex64Functor) OptionComplex64 {
+func (o OptionUint16Arr) MapComplex64(f Uint16ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint16Arr) MapComplex128(f Uint16ArrComplex128Functor) OptionComplex128 {
+func (o OptionUint16Arr) MapComplex128(f Uint16ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint16Arr) MapString(f Uint16ArrStringFunctor) OptionString {
+func (o OptionUint16Arr) MapString(f Uint16ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint16Arr) MapAny(f Uint16ArrAnyFunctor) OptionAny {
+func (o OptionUint16Arr) MapAny(f Uint16ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint16Arr) MapBoolArr(f Uint16ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionUint16Arr) MapBoolArr(f Uint16ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint16Arr) MapRuneArr(f Uint16ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionUint16Arr) MapRuneArr(f Uint16ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint16Arr) MapByteArr(f Uint16ArrByteArrFunctor) OptionByteArr {
+func (o OptionUint16Arr) MapByteArr(f Uint16ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint16Arr) MapIntArr(f Uint16ArrIntArrFunctor) OptionIntArr {
+func (o OptionUint16Arr) MapIntArr(f Uint16ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint16Arr) MapInt8Arr(f Uint16ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUint16Arr) MapInt8Arr(f Uint16ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint16Arr) MapInt16Arr(f Uint16ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUint16Arr) MapInt16Arr(f Uint16ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint16Arr) MapInt32Arr(f Uint16ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUint16Arr) MapInt32Arr(f Uint16ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint16Arr) MapInt64Arr(f Uint16ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUint16Arr) MapInt64Arr(f Uint16ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint16Arr) MapUintArr(f Uint16ArrUintArrFunctor) OptionUintArr {
+func (o OptionUint16Arr) MapUintArr(f Uint16ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint16Arr) MapUint8Arr(f Uint16ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint16Arr) MapUint8Arr(f Uint16ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint16Arr) MapUint16Arr(f Uint16ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint16Arr) MapUint16Arr(f Uint16ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint16Arr) MapUint32Arr(f Uint16ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint16Arr) MapUint32Arr(f Uint16ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint16Arr) MapUint64Arr(f Uint16ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint16Arr) MapUint64Arr(f Uint16ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint16Arr) MapUintptrArr(f Uint16ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint16Arr) MapUintptrArr(f Uint16ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint16Arr) MapFloat32Arr(f Uint16ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint16Arr) MapFloat32Arr(f Uint16ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint16Arr) MapFloat64Arr(f Uint16ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint16Arr) MapFloat64Arr(f Uint16ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint16Arr) MapComplex64Arr(f Uint16ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint16Arr) MapComplex64Arr(f Uint16ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint16Arr) MapComplex128Arr(f Uint16ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint16Arr) MapComplex128Arr(f Uint16ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint16Arr) MapStringArr(f Uint16ArrStringArrFunctor) OptionStringArr {
+func (o OptionUint16Arr) MapStringArr(f Uint16ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint16Arr) MapAnyArr(f Uint16ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionUint16Arr) MapAnyArr(f Uint16ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint32Arr) MapBool(f Uint32ArrBoolFunctor) OptionBool {
+func (o OptionUint32Arr) MapBool(f Uint32ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint32Arr) MapRune(f Uint32ArrRuneFunctor) OptionRune {
+func (o OptionUint32Arr) MapRune(f Uint32ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint32Arr) MapByte(f Uint32ArrByteFunctor) OptionByte {
+func (o OptionUint32Arr) MapByte(f Uint32ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint32Arr) MapInt(f Uint32ArrIntFunctor) OptionInt {
+func (o OptionUint32Arr) MapInt(f Uint32ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint32Arr) MapInt8(f Uint32ArrInt8Functor) OptionInt8 {
+func (o OptionUint32Arr) MapInt8(f Uint32ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint32Arr) MapInt16(f Uint32ArrInt16Functor) OptionInt16 {
+func (o OptionUint32Arr) MapInt16(f Uint32ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint32Arr) MapInt32(f Uint32ArrInt32Functor) OptionInt32 {
+func (o OptionUint32Arr) MapInt32(f Uint32ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint32Arr) MapInt64(f Uint32ArrInt64Functor) OptionInt64 {
+func (o OptionUint32Arr) MapInt64(f Uint32ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint32Arr) MapUint(f Uint32ArrUintFunctor) OptionUint {
+func (o OptionUint32Arr) MapUint(f Uint32ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint32Arr) MapUint8(f Uint32ArrUint8Functor) OptionUint8 {
+func (o OptionUint32Arr) MapUint8(f Uint32ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint32Arr) MapUint16(f Uint32ArrUint16Functor) OptionUint16 {
+func (o OptionUint32Arr) MapUint16(f Uint32ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint32Arr) MapUint32(f Uint32ArrUint32Functor) OptionUint32 {
+func (o OptionUint32Arr) MapUint32(f Uint32ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint32Arr) MapUint64(f Uint32ArrUint64Functor) OptionUint64 {
+func (o OptionUint32Arr) MapUint64(f Uint32ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint32Arr) MapUintptr(f Uint32ArrUintptrFunctor) OptionUintptr {
+func (o OptionUint32Arr) MapUintptr(f Uint32ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint32Arr) MapFloat32(f Uint32ArrFloat32Functor) OptionFloat32 {
+func (o OptionUint32Arr) MapFloat32(f Uint32ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint32Arr) MapFloat64(f Uint32ArrFloat64Functor) OptionFloat64 {
+func (o OptionUint32Arr) MapFloat64(f Uint32ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint32Arr) MapComplex64(f Uint32ArrComplex64Functor) OptionComplex64 {
+func (o OptionUint32Arr) MapComplex64(f Uint32ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint32Arr) MapComplex128(f Uint32ArrComplex128Functor) OptionComplex128 {
+func (o OptionUint32Arr) MapComplex128(f Uint32ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint32Arr) MapString(f Uint32ArrStringFunctor) OptionString {
+func (o OptionUint32Arr) MapString(f Uint32ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint32Arr) MapAny(f Uint32ArrAnyFunctor) OptionAny {
+func (o OptionUint32Arr) MapAny(f Uint32ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint32Arr) MapBoolArr(f Uint32ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionUint32Arr) MapBoolArr(f Uint32ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint32Arr) MapRuneArr(f Uint32ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionUint32Arr) MapRuneArr(f Uint32ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint32Arr) MapByteArr(f Uint32ArrByteArrFunctor) OptionByteArr {
+func (o OptionUint32Arr) MapByteArr(f Uint32ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint32Arr) MapIntArr(f Uint32ArrIntArrFunctor) OptionIntArr {
+func (o OptionUint32Arr) MapIntArr(f Uint32ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint32Arr) MapInt8Arr(f Uint32ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUint32Arr) MapInt8Arr(f Uint32ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint32Arr) MapInt16Arr(f Uint32ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUint32Arr) MapInt16Arr(f Uint32ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint32Arr) MapInt32Arr(f Uint32ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUint32Arr) MapInt32Arr(f Uint32ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint32Arr) MapInt64Arr(f Uint32ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUint32Arr) MapInt64Arr(f Uint32ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint32Arr) MapUintArr(f Uint32ArrUintArrFunctor) OptionUintArr {
+func (o OptionUint32Arr) MapUintArr(f Uint32ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint32Arr) MapUint8Arr(f Uint32ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint32Arr) MapUint8Arr(f Uint32ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint32Arr) MapUint16Arr(f Uint32ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint32Arr) MapUint16Arr(f Uint32ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint32Arr) MapUint32Arr(f Uint32ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint32Arr) MapUint32Arr(f Uint32ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint32Arr) MapUint64Arr(f Uint32ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint32Arr) MapUint64Arr(f Uint32ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint32Arr) MapUintptrArr(f Uint32ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint32Arr) MapUintptrArr(f Uint32ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint32Arr) MapFloat32Arr(f Uint32ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint32Arr) MapFloat32Arr(f Uint32ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint32Arr) MapFloat64Arr(f Uint32ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint32Arr) MapFloat64Arr(f Uint32ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint32Arr) MapComplex64Arr(f Uint32ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint32Arr) MapComplex64Arr(f Uint32ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint32Arr) MapComplex128Arr(f Uint32ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint32Arr) MapComplex128Arr(f Uint32ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint32Arr) MapStringArr(f Uint32ArrStringArrFunctor) OptionStringArr {
+func (o OptionUint32Arr) MapStringArr(f Uint32ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint32Arr) MapAnyArr(f Uint32ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionUint32Arr) MapAnyArr(f Uint32ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUint64Arr) MapBool(f Uint64ArrBoolFunctor) OptionBool {
+func (o OptionUint64Arr) MapBool(f Uint64ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUint64Arr) MapRune(f Uint64ArrRuneFunctor) OptionRune {
+func (o OptionUint64Arr) MapRune(f Uint64ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUint64Arr) MapByte(f Uint64ArrByteFunctor) OptionByte {
+func (o OptionUint64Arr) MapByte(f Uint64ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUint64Arr) MapInt(f Uint64ArrIntFunctor) OptionInt {
+func (o OptionUint64Arr) MapInt(f Uint64ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUint64Arr) MapInt8(f Uint64ArrInt8Functor) OptionInt8 {
+func (o OptionUint64Arr) MapInt8(f Uint64ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUint64Arr) MapInt16(f Uint64ArrInt16Functor) OptionInt16 {
+func (o OptionUint64Arr) MapInt16(f Uint64ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUint64Arr) MapInt32(f Uint64ArrInt32Functor) OptionInt32 {
+func (o OptionUint64Arr) MapInt32(f Uint64ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUint64Arr) MapInt64(f Uint64ArrInt64Functor) OptionInt64 {
+func (o OptionUint64Arr) MapInt64(f Uint64ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUint64Arr) MapUint(f Uint64ArrUintFunctor) OptionUint {
+func (o OptionUint64Arr) MapUint(f Uint64ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUint64Arr) MapUint8(f Uint64ArrUint8Functor) OptionUint8 {
+func (o OptionUint64Arr) MapUint8(f Uint64ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUint64Arr) MapUint16(f Uint64ArrUint16Functor) OptionUint16 {
+func (o OptionUint64Arr) MapUint16(f Uint64ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUint64Arr) MapUint32(f Uint64ArrUint32Functor) OptionUint32 {
+func (o OptionUint64Arr) MapUint32(f Uint64ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUint64Arr) MapUint64(f Uint64ArrUint64Functor) OptionUint64 {
+func (o OptionUint64Arr) MapUint64(f Uint64ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUint64Arr) MapUintptr(f Uint64ArrUintptrFunctor) OptionUintptr {
+func (o OptionUint64Arr) MapUintptr(f Uint64ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUint64Arr) MapFloat32(f Uint64ArrFloat32Functor) OptionFloat32 {
+func (o OptionUint64Arr) MapFloat32(f Uint64ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUint64Arr) MapFloat64(f Uint64ArrFloat64Functor) OptionFloat64 {
+func (o OptionUint64Arr) MapFloat64(f Uint64ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUint64Arr) MapComplex64(f Uint64ArrComplex64Functor) OptionComplex64 {
+func (o OptionUint64Arr) MapComplex64(f Uint64ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUint64Arr) MapComplex128(f Uint64ArrComplex128Functor) OptionComplex128 {
+func (o OptionUint64Arr) MapComplex128(f Uint64ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUint64Arr) MapString(f Uint64ArrStringFunctor) OptionString {
+func (o OptionUint64Arr) MapString(f Uint64ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUint64Arr) MapAny(f Uint64ArrAnyFunctor) OptionAny {
+func (o OptionUint64Arr) MapAny(f Uint64ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUint64Arr) MapBoolArr(f Uint64ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionUint64Arr) MapBoolArr(f Uint64ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUint64Arr) MapRuneArr(f Uint64ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionUint64Arr) MapRuneArr(f Uint64ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUint64Arr) MapByteArr(f Uint64ArrByteArrFunctor) OptionByteArr {
+func (o OptionUint64Arr) MapByteArr(f Uint64ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUint64Arr) MapIntArr(f Uint64ArrIntArrFunctor) OptionIntArr {
+func (o OptionUint64Arr) MapIntArr(f Uint64ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUint64Arr) MapInt8Arr(f Uint64ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUint64Arr) MapInt8Arr(f Uint64ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUint64Arr) MapInt16Arr(f Uint64ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUint64Arr) MapInt16Arr(f Uint64ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUint64Arr) MapInt32Arr(f Uint64ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUint64Arr) MapInt32Arr(f Uint64ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUint64Arr) MapInt64Arr(f Uint64ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUint64Arr) MapInt64Arr(f Uint64ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUint64Arr) MapUintArr(f Uint64ArrUintArrFunctor) OptionUintArr {
+func (o OptionUint64Arr) MapUintArr(f Uint64ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUint64Arr) MapUint8Arr(f Uint64ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUint64Arr) MapUint8Arr(f Uint64ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUint64Arr) MapUint16Arr(f Uint64ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUint64Arr) MapUint16Arr(f Uint64ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUint64Arr) MapUint32Arr(f Uint64ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUint64Arr) MapUint32Arr(f Uint64ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUint64Arr) MapUint64Arr(f Uint64ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUint64Arr) MapUint64Arr(f Uint64ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUint64Arr) MapUintptrArr(f Uint64ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUint64Arr) MapUintptrArr(f Uint64ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUint64Arr) MapFloat32Arr(f Uint64ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUint64Arr) MapFloat32Arr(f Uint64ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUint64Arr) MapFloat64Arr(f Uint64ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUint64Arr) MapFloat64Arr(f Uint64ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUint64Arr) MapComplex64Arr(f Uint64ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUint64Arr) MapComplex64Arr(f Uint64ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUint64Arr) MapComplex128Arr(f Uint64ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUint64Arr) MapComplex128Arr(f Uint64ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUint64Arr) MapStringArr(f Uint64ArrStringArrFunctor) OptionStringArr {
+func (o OptionUint64Arr) MapStringArr(f Uint64ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUint64Arr) MapAnyArr(f Uint64ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionUint64Arr) MapAnyArr(f Uint64ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionUintptrArr) MapBool(f UintptrArrBoolFunctor) OptionBool {
+func (o OptionUintptrArr) MapBool(f UintptrArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionUintptrArr) MapRune(f UintptrArrRuneFunctor) OptionRune {
+func (o OptionUintptrArr) MapRune(f UintptrArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionUintptrArr) MapByte(f UintptrArrByteFunctor) OptionByte {
+func (o OptionUintptrArr) MapByte(f UintptrArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionUintptrArr) MapInt(f UintptrArrIntFunctor) OptionInt {
+func (o OptionUintptrArr) MapInt(f UintptrArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionUintptrArr) MapInt8(f UintptrArrInt8Functor) OptionInt8 {
+func (o OptionUintptrArr) MapInt8(f UintptrArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionUintptrArr) MapInt16(f UintptrArrInt16Functor) OptionInt16 {
+func (o OptionUintptrArr) MapInt16(f UintptrArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionUintptrArr) MapInt32(f UintptrArrInt32Functor) OptionInt32 {
+func (o OptionUintptrArr) MapInt32(f UintptrArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionUintptrArr) MapInt64(f UintptrArrInt64Functor) OptionInt64 {
+func (o OptionUintptrArr) MapInt64(f UintptrArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionUintptrArr) MapUint(f UintptrArrUintFunctor) OptionUint {
+func (o OptionUintptrArr) MapUint(f UintptrArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionUintptrArr) MapUint8(f UintptrArrUint8Functor) OptionUint8 {
+func (o OptionUintptrArr) MapUint8(f UintptrArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionUintptrArr) MapUint16(f UintptrArrUint16Functor) OptionUint16 {
+func (o OptionUintptrArr) MapUint16(f UintptrArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionUintptrArr) MapUint32(f UintptrArrUint32Functor) OptionUint32 {
+func (o OptionUintptrArr) MapUint32(f UintptrArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionUintptrArr) MapUint64(f UintptrArrUint64Functor) OptionUint64 {
+func (o OptionUintptrArr) MapUint64(f UintptrArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionUintptrArr) MapUintptr(f UintptrArrUintptrFunctor) OptionUintptr {
+func (o OptionUintptrArr) MapUintptr(f UintptrArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionUintptrArr) MapFloat32(f UintptrArrFloat32Functor) OptionFloat32 {
+func (o OptionUintptrArr) MapFloat32(f UintptrArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionUintptrArr) MapFloat64(f UintptrArrFloat64Functor) OptionFloat64 {
+func (o OptionUintptrArr) MapFloat64(f UintptrArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionUintptrArr) MapComplex64(f UintptrArrComplex64Functor) OptionComplex64 {
+func (o OptionUintptrArr) MapComplex64(f UintptrArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionUintptrArr) MapComplex128(f UintptrArrComplex128Functor) OptionComplex128 {
+func (o OptionUintptrArr) MapComplex128(f UintptrArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionUintptrArr) MapString(f UintptrArrStringFunctor) OptionString {
+func (o OptionUintptrArr) MapString(f UintptrArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionUintptrArr) MapAny(f UintptrArrAnyFunctor) OptionAny {
+func (o OptionUintptrArr) MapAny(f UintptrArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionUintptrArr) MapBoolArr(f UintptrArrBoolArrFunctor) OptionBoolArr {
+func (o OptionUintptrArr) MapBoolArr(f UintptrArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionUintptrArr) MapRuneArr(f UintptrArrRuneArrFunctor) OptionRuneArr {
+func (o OptionUintptrArr) MapRuneArr(f UintptrArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionUintptrArr) MapByteArr(f UintptrArrByteArrFunctor) OptionByteArr {
+func (o OptionUintptrArr) MapByteArr(f UintptrArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionUintptrArr) MapIntArr(f UintptrArrIntArrFunctor) OptionIntArr {
+func (o OptionUintptrArr) MapIntArr(f UintptrArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionUintptrArr) MapInt8Arr(f UintptrArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionUintptrArr) MapInt8Arr(f UintptrArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionUintptrArr) MapInt16Arr(f UintptrArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionUintptrArr) MapInt16Arr(f UintptrArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionUintptrArr) MapInt32Arr(f UintptrArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionUintptrArr) MapInt32Arr(f UintptrArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionUintptrArr) MapInt64Arr(f UintptrArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionUintptrArr) MapInt64Arr(f UintptrArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionUintptrArr) MapUintArr(f UintptrArrUintArrFunctor) OptionUintArr {
+func (o OptionUintptrArr) MapUintArr(f UintptrArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionUintptrArr) MapUint8Arr(f UintptrArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionUintptrArr) MapUint8Arr(f UintptrArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionUintptrArr) MapUint16Arr(f UintptrArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionUintptrArr) MapUint16Arr(f UintptrArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionUintptrArr) MapUint32Arr(f UintptrArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionUintptrArr) MapUint32Arr(f UintptrArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionUintptrArr) MapUint64Arr(f UintptrArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionUintptrArr) MapUint64Arr(f UintptrArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionUintptrArr) MapUintptrArr(f UintptrArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionUintptrArr) MapUintptrArr(f UintptrArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionUintptrArr) MapFloat32Arr(f UintptrArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionUintptrArr) MapFloat32Arr(f UintptrArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionUintptrArr) MapFloat64Arr(f UintptrArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionUintptrArr) MapFloat64Arr(f UintptrArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionUintptrArr) MapComplex64Arr(f UintptrArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionUintptrArr) MapComplex64Arr(f UintptrArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionUintptrArr) MapComplex128Arr(f UintptrArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionUintptrArr) MapComplex128Arr(f UintptrArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionUintptrArr) MapStringArr(f UintptrArrStringArrFunctor) OptionStringArr {
+func (o OptionUintptrArr) MapStringArr(f UintptrArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionUintptrArr) MapAnyArr(f UintptrArrAnyArrFunctor) OptionAnyArr {
+func (o OptionUintptrArr) MapAnyArr(f UintptrArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionFloat32Arr) MapBool(f Float32ArrBoolFunctor) OptionBool {
+func (o OptionFloat32Arr) MapBool(f Float32ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionFloat32Arr) MapRune(f Float32ArrRuneFunctor) OptionRune {
+func (o OptionFloat32Arr) MapRune(f Float32ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionFloat32Arr) MapByte(f Float32ArrByteFunctor) OptionByte {
+func (o OptionFloat32Arr) MapByte(f Float32ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionFloat32Arr) MapInt(f Float32ArrIntFunctor) OptionInt {
+func (o OptionFloat32Arr) MapInt(f Float32ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionFloat32Arr) MapInt8(f Float32ArrInt8Functor) OptionInt8 {
+func (o OptionFloat32Arr) MapInt8(f Float32ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionFloat32Arr) MapInt16(f Float32ArrInt16Functor) OptionInt16 {
+func (o OptionFloat32Arr) MapInt16(f Float32ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionFloat32Arr) MapInt32(f Float32ArrInt32Functor) OptionInt32 {
+func (o OptionFloat32Arr) MapInt32(f Float32ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionFloat32Arr) MapInt64(f Float32ArrInt64Functor) OptionInt64 {
+func (o OptionFloat32Arr) MapInt64(f Float32ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionFloat32Arr) MapUint(f Float32ArrUintFunctor) OptionUint {
+func (o OptionFloat32Arr) MapUint(f Float32ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionFloat32Arr) MapUint8(f Float32ArrUint8Functor) OptionUint8 {
+func (o OptionFloat32Arr) MapUint8(f Float32ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionFloat32Arr) MapUint16(f Float32ArrUint16Functor) OptionUint16 {
+func (o OptionFloat32Arr) MapUint16(f Float32ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionFloat32Arr) MapUint32(f Float32ArrUint32Functor) OptionUint32 {
+func (o OptionFloat32Arr) MapUint32(f Float32ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionFloat32Arr) MapUint64(f Float32ArrUint64Functor) OptionUint64 {
+func (o OptionFloat32Arr) MapUint64(f Float32ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionFloat32Arr) MapUintptr(f Float32ArrUintptrFunctor) OptionUintptr {
+func (o OptionFloat32Arr) MapUintptr(f Float32ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionFloat32Arr) MapFloat32(f Float32ArrFloat32Functor) OptionFloat32 {
+func (o OptionFloat32Arr) MapFloat32(f Float32ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionFloat32Arr) MapFloat64(f Float32ArrFloat64Functor) OptionFloat64 {
+func (o OptionFloat32Arr) MapFloat64(f Float32ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionFloat32Arr) MapComplex64(f Float32ArrComplex64Functor) OptionComplex64 {
+func (o OptionFloat32Arr) MapComplex64(f Float32ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionFloat32Arr) MapComplex128(f Float32ArrComplex128Functor) OptionComplex128 {
+func (o OptionFloat32Arr) MapComplex128(f Float32ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionFloat32Arr) MapString(f Float32ArrStringFunctor) OptionString {
+func (o OptionFloat32Arr) MapString(f Float32ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionFloat32Arr) MapAny(f Float32ArrAnyFunctor) OptionAny {
+func (o OptionFloat32Arr) MapAny(f Float32ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionFloat32Arr) MapBoolArr(f Float32ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionFloat32Arr) MapBoolArr(f Float32ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionFloat32Arr) MapRuneArr(f Float32ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionFloat32Arr) MapRuneArr(f Float32ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionFloat32Arr) MapByteArr(f Float32ArrByteArrFunctor) OptionByteArr {
+func (o OptionFloat32Arr) MapByteArr(f Float32ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionFloat32Arr) MapIntArr(f Float32ArrIntArrFunctor) OptionIntArr {
+func (o OptionFloat32Arr) MapIntArr(f Float32ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionFloat32Arr) MapInt8Arr(f Float32ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionFloat32Arr) MapInt8Arr(f Float32ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionFloat32Arr) MapInt16Arr(f Float32ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionFloat32Arr) MapInt16Arr(f Float32ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionFloat32Arr) MapInt32Arr(f Float32ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionFloat32Arr) MapInt32Arr(f Float32ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionFloat32Arr) MapInt64Arr(f Float32ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionFloat32Arr) MapInt64Arr(f Float32ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionFloat32Arr) MapUintArr(f Float32ArrUintArrFunctor) OptionUintArr {
+func (o OptionFloat32Arr) MapUintArr(f Float32ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionFloat32Arr) MapUint8Arr(f Float32ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionFloat32Arr) MapUint8Arr(f Float32ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionFloat32Arr) MapUint16Arr(f Float32ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionFloat32Arr) MapUint16Arr(f Float32ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionFloat32Arr) MapUint32Arr(f Float32ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionFloat32Arr) MapUint32Arr(f Float32ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionFloat32Arr) MapUint64Arr(f Float32ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionFloat32Arr) MapUint64Arr(f Float32ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionFloat32Arr) MapUintptrArr(f Float32ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionFloat32Arr) MapUintptrArr(f Float32ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionFloat32Arr) MapFloat32Arr(f Float32ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionFloat32Arr) MapFloat32Arr(f Float32ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionFloat32Arr) MapFloat64Arr(f Float32ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionFloat32Arr) MapFloat64Arr(f Float32ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionFloat32Arr) MapComplex64Arr(f Float32ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionFloat32Arr) MapComplex64Arr(f Float32ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionFloat32Arr) MapComplex128Arr(f Float32ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionFloat32Arr) MapComplex128Arr(f Float32ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionFloat32Arr) MapStringArr(f Float32ArrStringArrFunctor) OptionStringArr {
+func (o OptionFloat32Arr) MapStringArr(f Float32ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionFloat32Arr) MapAnyArr(f Float32ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionFloat32Arr) MapAnyArr(f Float32ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionFloat64Arr) MapBool(f Float64ArrBoolFunctor) OptionBool {
+func (o OptionFloat64Arr) MapBool(f Float64ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionFloat64Arr) MapRune(f Float64ArrRuneFunctor) OptionRune {
+func (o OptionFloat64Arr) MapRune(f Float64ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionFloat64Arr) MapByte(f Float64ArrByteFunctor) OptionByte {
+func (o OptionFloat64Arr) MapByte(f Float64ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionFloat64Arr) MapInt(f Float64ArrIntFunctor) OptionInt {
+func (o OptionFloat64Arr) MapInt(f Float64ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionFloat64Arr) MapInt8(f Float64ArrInt8Functor) OptionInt8 {
+func (o OptionFloat64Arr) MapInt8(f Float64ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionFloat64Arr) MapInt16(f Float64ArrInt16Functor) OptionInt16 {
+func (o OptionFloat64Arr) MapInt16(f Float64ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionFloat64Arr) MapInt32(f Float64ArrInt32Functor) OptionInt32 {
+func (o OptionFloat64Arr) MapInt32(f Float64ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionFloat64Arr) MapInt64(f Float64ArrInt64Functor) OptionInt64 {
+func (o OptionFloat64Arr) MapInt64(f Float64ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionFloat64Arr) MapUint(f Float64ArrUintFunctor) OptionUint {
+func (o OptionFloat64Arr) MapUint(f Float64ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionFloat64Arr) MapUint8(f Float64ArrUint8Functor) OptionUint8 {
+func (o OptionFloat64Arr) MapUint8(f Float64ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionFloat64Arr) MapUint16(f Float64ArrUint16Functor) OptionUint16 {
+func (o OptionFloat64Arr) MapUint16(f Float64ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionFloat64Arr) MapUint32(f Float64ArrUint32Functor) OptionUint32 {
+func (o OptionFloat64Arr) MapUint32(f Float64ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionFloat64Arr) MapUint64(f Float64ArrUint64Functor) OptionUint64 {
+func (o OptionFloat64Arr) MapUint64(f Float64ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionFloat64Arr) MapUintptr(f Float64ArrUintptrFunctor) OptionUintptr {
+func (o OptionFloat64Arr) MapUintptr(f Float64ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionFloat64Arr) MapFloat32(f Float64ArrFloat32Functor) OptionFloat32 {
+func (o OptionFloat64Arr) MapFloat32(f Float64ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionFloat64Arr) MapFloat64(f Float64ArrFloat64Functor) OptionFloat64 {
+func (o OptionFloat64Arr) MapFloat64(f Float64ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionFloat64Arr) MapComplex64(f Float64ArrComplex64Functor) OptionComplex64 {
+func (o OptionFloat64Arr) MapComplex64(f Float64ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionFloat64Arr) MapComplex128(f Float64ArrComplex128Functor) OptionComplex128 {
+func (o OptionFloat64Arr) MapComplex128(f Float64ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionFloat64Arr) MapString(f Float64ArrStringFunctor) OptionString {
+func (o OptionFloat64Arr) MapString(f Float64ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionFloat64Arr) MapAny(f Float64ArrAnyFunctor) OptionAny {
+func (o OptionFloat64Arr) MapAny(f Float64ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionFloat64Arr) MapBoolArr(f Float64ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionFloat64Arr) MapBoolArr(f Float64ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionFloat64Arr) MapRuneArr(f Float64ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionFloat64Arr) MapRuneArr(f Float64ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionFloat64Arr) MapByteArr(f Float64ArrByteArrFunctor) OptionByteArr {
+func (o OptionFloat64Arr) MapByteArr(f Float64ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionFloat64Arr) MapIntArr(f Float64ArrIntArrFunctor) OptionIntArr {
+func (o OptionFloat64Arr) MapIntArr(f Float64ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionFloat64Arr) MapInt8Arr(f Float64ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionFloat64Arr) MapInt8Arr(f Float64ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionFloat64Arr) MapInt16Arr(f Float64ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionFloat64Arr) MapInt16Arr(f Float64ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionFloat64Arr) MapInt32Arr(f Float64ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionFloat64Arr) MapInt32Arr(f Float64ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionFloat64Arr) MapInt64Arr(f Float64ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionFloat64Arr) MapInt64Arr(f Float64ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionFloat64Arr) MapUintArr(f Float64ArrUintArrFunctor) OptionUintArr {
+func (o OptionFloat64Arr) MapUintArr(f Float64ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionFloat64Arr) MapUint8Arr(f Float64ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionFloat64Arr) MapUint8Arr(f Float64ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionFloat64Arr) MapUint16Arr(f Float64ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionFloat64Arr) MapUint16Arr(f Float64ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionFloat64Arr) MapUint32Arr(f Float64ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionFloat64Arr) MapUint32Arr(f Float64ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionFloat64Arr) MapUint64Arr(f Float64ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionFloat64Arr) MapUint64Arr(f Float64ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionFloat64Arr) MapUintptrArr(f Float64ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionFloat64Arr) MapUintptrArr(f Float64ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionFloat64Arr) MapFloat32Arr(f Float64ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionFloat64Arr) MapFloat32Arr(f Float64ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionFloat64Arr) MapFloat64Arr(f Float64ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionFloat64Arr) MapFloat64Arr(f Float64ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionFloat64Arr) MapComplex64Arr(f Float64ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionFloat64Arr) MapComplex64Arr(f Float64ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionFloat64Arr) MapComplex128Arr(f Float64ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionFloat64Arr) MapComplex128Arr(f Float64ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionFloat64Arr) MapStringArr(f Float64ArrStringArrFunctor) OptionStringArr {
+func (o OptionFloat64Arr) MapStringArr(f Float64ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionFloat64Arr) MapAnyArr(f Float64ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionFloat64Arr) MapAnyArr(f Float64ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionComplex64Arr) MapBool(f Complex64ArrBoolFunctor) OptionBool {
+func (o OptionComplex64Arr) MapBool(f Complex64ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionComplex64Arr) MapRune(f Complex64ArrRuneFunctor) OptionRune {
+func (o OptionComplex64Arr) MapRune(f Complex64ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionComplex64Arr) MapByte(f Complex64ArrByteFunctor) OptionByte {
+func (o OptionComplex64Arr) MapByte(f Complex64ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionComplex64Arr) MapInt(f Complex64ArrIntFunctor) OptionInt {
+func (o OptionComplex64Arr) MapInt(f Complex64ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionComplex64Arr) MapInt8(f Complex64ArrInt8Functor) OptionInt8 {
+func (o OptionComplex64Arr) MapInt8(f Complex64ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionComplex64Arr) MapInt16(f Complex64ArrInt16Functor) OptionInt16 {
+func (o OptionComplex64Arr) MapInt16(f Complex64ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionComplex64Arr) MapInt32(f Complex64ArrInt32Functor) OptionInt32 {
+func (o OptionComplex64Arr) MapInt32(f Complex64ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionComplex64Arr) MapInt64(f Complex64ArrInt64Functor) OptionInt64 {
+func (o OptionComplex64Arr) MapInt64(f Complex64ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionComplex64Arr) MapUint(f Complex64ArrUintFunctor) OptionUint {
+func (o OptionComplex64Arr) MapUint(f Complex64ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionComplex64Arr) MapUint8(f Complex64ArrUint8Functor) OptionUint8 {
+func (o OptionComplex64Arr) MapUint8(f Complex64ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionComplex64Arr) MapUint16(f Complex64ArrUint16Functor) OptionUint16 {
+func (o OptionComplex64Arr) MapUint16(f Complex64ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionComplex64Arr) MapUint32(f Complex64ArrUint32Functor) OptionUint32 {
+func (o OptionComplex64Arr) MapUint32(f Complex64ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionComplex64Arr) MapUint64(f Complex64ArrUint64Functor) OptionUint64 {
+func (o OptionComplex64Arr) MapUint64(f Complex64ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionComplex64Arr) MapUintptr(f Complex64ArrUintptrFunctor) OptionUintptr {
+func (o OptionComplex64Arr) MapUintptr(f Complex64ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionComplex64Arr) MapFloat32(f Complex64ArrFloat32Functor) OptionFloat32 {
+func (o OptionComplex64Arr) MapFloat32(f Complex64ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionComplex64Arr) MapFloat64(f Complex64ArrFloat64Functor) OptionFloat64 {
+func (o OptionComplex64Arr) MapFloat64(f Complex64ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionComplex64Arr) MapComplex64(f Complex64ArrComplex64Functor) OptionComplex64 {
+func (o OptionComplex64Arr) MapComplex64(f Complex64ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionComplex64Arr) MapComplex128(f Complex64ArrComplex128Functor) OptionComplex128 {
+func (o OptionComplex64Arr) MapComplex128(f Complex64ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionComplex64Arr) MapString(f Complex64ArrStringFunctor) OptionString {
+func (o OptionComplex64Arr) MapString(f Complex64ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionComplex64Arr) MapAny(f Complex64ArrAnyFunctor) OptionAny {
+func (o OptionComplex64Arr) MapAny(f Complex64ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionComplex64Arr) MapBoolArr(f Complex64ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionComplex64Arr) MapBoolArr(f Complex64ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionComplex64Arr) MapRuneArr(f Complex64ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionComplex64Arr) MapRuneArr(f Complex64ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionComplex64Arr) MapByteArr(f Complex64ArrByteArrFunctor) OptionByteArr {
+func (o OptionComplex64Arr) MapByteArr(f Complex64ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionComplex64Arr) MapIntArr(f Complex64ArrIntArrFunctor) OptionIntArr {
+func (o OptionComplex64Arr) MapIntArr(f Complex64ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionComplex64Arr) MapInt8Arr(f Complex64ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionComplex64Arr) MapInt8Arr(f Complex64ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionComplex64Arr) MapInt16Arr(f Complex64ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionComplex64Arr) MapInt16Arr(f Complex64ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionComplex64Arr) MapInt32Arr(f Complex64ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionComplex64Arr) MapInt32Arr(f Complex64ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionComplex64Arr) MapInt64Arr(f Complex64ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionComplex64Arr) MapInt64Arr(f Complex64ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionComplex64Arr) MapUintArr(f Complex64ArrUintArrFunctor) OptionUintArr {
+func (o OptionComplex64Arr) MapUintArr(f Complex64ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionComplex64Arr) MapUint8Arr(f Complex64ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionComplex64Arr) MapUint8Arr(f Complex64ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionComplex64Arr) MapUint16Arr(f Complex64ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionComplex64Arr) MapUint16Arr(f Complex64ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionComplex64Arr) MapUint32Arr(f Complex64ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionComplex64Arr) MapUint32Arr(f Complex64ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionComplex64Arr) MapUint64Arr(f Complex64ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionComplex64Arr) MapUint64Arr(f Complex64ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionComplex64Arr) MapUintptrArr(f Complex64ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionComplex64Arr) MapUintptrArr(f Complex64ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionComplex64Arr) MapFloat32Arr(f Complex64ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionComplex64Arr) MapFloat32Arr(f Complex64ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionComplex64Arr) MapFloat64Arr(f Complex64ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionComplex64Arr) MapFloat64Arr(f Complex64ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionComplex64Arr) MapComplex64Arr(f Complex64ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionComplex64Arr) MapComplex64Arr(f Complex64ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionComplex64Arr) MapComplex128Arr(f Complex64ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionComplex64Arr) MapComplex128Arr(f Complex64ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionComplex64Arr) MapStringArr(f Complex64ArrStringArrFunctor) OptionStringArr {
+func (o OptionComplex64Arr) MapStringArr(f Complex64ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionComplex64Arr) MapAnyArr(f Complex64ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionComplex64Arr) MapAnyArr(f Complex64ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionComplex128Arr) MapBool(f Complex128ArrBoolFunctor) OptionBool {
+func (o OptionComplex128Arr) MapBool(f Complex128ArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionComplex128Arr) MapRune(f Complex128ArrRuneFunctor) OptionRune {
+func (o OptionComplex128Arr) MapRune(f Complex128ArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionComplex128Arr) MapByte(f Complex128ArrByteFunctor) OptionByte {
+func (o OptionComplex128Arr) MapByte(f Complex128ArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionComplex128Arr) MapInt(f Complex128ArrIntFunctor) OptionInt {
+func (o OptionComplex128Arr) MapInt(f Complex128ArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionComplex128Arr) MapInt8(f Complex128ArrInt8Functor) OptionInt8 {
+func (o OptionComplex128Arr) MapInt8(f Complex128ArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionComplex128Arr) MapInt16(f Complex128ArrInt16Functor) OptionInt16 {
+func (o OptionComplex128Arr) MapInt16(f Complex128ArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionComplex128Arr) MapInt32(f Complex128ArrInt32Functor) OptionInt32 {
+func (o OptionComplex128Arr) MapInt32(f Complex128ArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionComplex128Arr) MapInt64(f Complex128ArrInt64Functor) OptionInt64 {
+func (o OptionComplex128Arr) MapInt64(f Complex128ArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionComplex128Arr) MapUint(f Complex128ArrUintFunctor) OptionUint {
+func (o OptionComplex128Arr) MapUint(f Complex128ArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionComplex128Arr) MapUint8(f Complex128ArrUint8Functor) OptionUint8 {
+func (o OptionComplex128Arr) MapUint8(f Complex128ArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionComplex128Arr) MapUint16(f Complex128ArrUint16Functor) OptionUint16 {
+func (o OptionComplex128Arr) MapUint16(f Complex128ArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionComplex128Arr) MapUint32(f Complex128ArrUint32Functor) OptionUint32 {
+func (o OptionComplex128Arr) MapUint32(f Complex128ArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionComplex128Arr) MapUint64(f Complex128ArrUint64Functor) OptionUint64 {
+func (o OptionComplex128Arr) MapUint64(f Complex128ArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionComplex128Arr) MapUintptr(f Complex128ArrUintptrFunctor) OptionUintptr {
+func (o OptionComplex128Arr) MapUintptr(f Complex128ArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionComplex128Arr) MapFloat32(f Complex128ArrFloat32Functor) OptionFloat32 {
+func (o OptionComplex128Arr) MapFloat32(f Complex128ArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionComplex128Arr) MapFloat64(f Complex128ArrFloat64Functor) OptionFloat64 {
+func (o OptionComplex128Arr) MapFloat64(f Complex128ArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionComplex128Arr) MapComplex64(f Complex128ArrComplex64Functor) OptionComplex64 {
+func (o OptionComplex128Arr) MapComplex64(f Complex128ArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionComplex128Arr) MapComplex128(f Complex128ArrComplex128Functor) OptionComplex128 {
+func (o OptionComplex128Arr) MapComplex128(f Complex128ArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionComplex128Arr) MapString(f Complex128ArrStringFunctor) OptionString {
+func (o OptionComplex128Arr) MapString(f Complex128ArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionComplex128Arr) MapAny(f Complex128ArrAnyFunctor) OptionAny {
+func (o OptionComplex128Arr) MapAny(f Complex128ArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionComplex128Arr) MapBoolArr(f Complex128ArrBoolArrFunctor) OptionBoolArr {
+func (o OptionComplex128Arr) MapBoolArr(f Complex128ArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionComplex128Arr) MapRuneArr(f Complex128ArrRuneArrFunctor) OptionRuneArr {
+func (o OptionComplex128Arr) MapRuneArr(f Complex128ArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionComplex128Arr) MapByteArr(f Complex128ArrByteArrFunctor) OptionByteArr {
+func (o OptionComplex128Arr) MapByteArr(f Complex128ArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionComplex128Arr) MapIntArr(f Complex128ArrIntArrFunctor) OptionIntArr {
+func (o OptionComplex128Arr) MapIntArr(f Complex128ArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionComplex128Arr) MapInt8Arr(f Complex128ArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionComplex128Arr) MapInt8Arr(f Complex128ArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionComplex128Arr) MapInt16Arr(f Complex128ArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionComplex128Arr) MapInt16Arr(f Complex128ArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionComplex128Arr) MapInt32Arr(f Complex128ArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionComplex128Arr) MapInt32Arr(f Complex128ArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionComplex128Arr) MapInt64Arr(f Complex128ArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionComplex128Arr) MapInt64Arr(f Complex128ArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionComplex128Arr) MapUintArr(f Complex128ArrUintArrFunctor) OptionUintArr {
+func (o OptionComplex128Arr) MapUintArr(f Complex128ArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionComplex128Arr) MapUint8Arr(f Complex128ArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionComplex128Arr) MapUint8Arr(f Complex128ArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionComplex128Arr) MapUint16Arr(f Complex128ArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionComplex128Arr) MapUint16Arr(f Complex128ArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionComplex128Arr) MapUint32Arr(f Complex128ArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionComplex128Arr) MapUint32Arr(f Complex128ArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionComplex128Arr) MapUint64Arr(f Complex128ArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionComplex128Arr) MapUint64Arr(f Complex128ArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionComplex128Arr) MapUintptrArr(f Complex128ArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionComplex128Arr) MapUintptrArr(f Complex128ArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionComplex128Arr) MapFloat32Arr(f Complex128ArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionComplex128Arr) MapFloat32Arr(f Complex128ArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionComplex128Arr) MapFloat64Arr(f Complex128ArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionComplex128Arr) MapFloat64Arr(f Complex128ArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionComplex128Arr) MapComplex64Arr(f Complex128ArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionComplex128Arr) MapComplex64Arr(f Complex128ArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionComplex128Arr) MapComplex128Arr(f Complex128ArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionComplex128Arr) MapComplex128Arr(f Complex128ArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionComplex128Arr) MapStringArr(f Complex128ArrStringArrFunctor) OptionStringArr {
+func (o OptionComplex128Arr) MapStringArr(f Complex128ArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionComplex128Arr) MapAnyArr(f Complex128ArrAnyArrFunctor) OptionAnyArr {
+func (o OptionComplex128Arr) MapAnyArr(f Complex128ArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionStringArr) MapBool(f StringArrBoolFunctor) OptionBool {
+func (o OptionStringArr) MapBool(f StringArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionStringArr) MapRune(f StringArrRuneFunctor) OptionRune {
+func (o OptionStringArr) MapRune(f StringArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionStringArr) MapByte(f StringArrByteFunctor) OptionByte {
+func (o OptionStringArr) MapByte(f StringArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionStringArr) MapInt(f StringArrIntFunctor) OptionInt {
+func (o OptionStringArr) MapInt(f StringArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionStringArr) MapInt8(f StringArrInt8Functor) OptionInt8 {
+func (o OptionStringArr) MapInt8(f StringArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionStringArr) MapInt16(f StringArrInt16Functor) OptionInt16 {
+func (o OptionStringArr) MapInt16(f StringArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionStringArr) MapInt32(f StringArrInt32Functor) OptionInt32 {
+func (o OptionStringArr) MapInt32(f StringArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionStringArr) MapInt64(f StringArrInt64Functor) OptionInt64 {
+func (o OptionStringArr) MapInt64(f StringArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionStringArr) MapUint(f StringArrUintFunctor) OptionUint {
+func (o OptionStringArr) MapUint(f StringArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionStringArr) MapUint8(f StringArrUint8Functor) OptionUint8 {
+func (o OptionStringArr) MapUint8(f StringArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionStringArr) MapUint16(f StringArrUint16Functor) OptionUint16 {
+func (o OptionStringArr) MapUint16(f StringArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionStringArr) MapUint32(f StringArrUint32Functor) OptionUint32 {
+func (o OptionStringArr) MapUint32(f StringArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionStringArr) MapUint64(f StringArrUint64Functor) OptionUint64 {
+func (o OptionStringArr) MapUint64(f StringArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionStringArr) MapUintptr(f StringArrUintptrFunctor) OptionUintptr {
+func (o OptionStringArr) MapUintptr(f StringArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionStringArr) MapFloat32(f StringArrFloat32Functor) OptionFloat32 {
+func (o OptionStringArr) MapFloat32(f StringArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionStringArr) MapFloat64(f StringArrFloat64Functor) OptionFloat64 {
+func (o OptionStringArr) MapFloat64(f StringArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionStringArr) MapComplex64(f StringArrComplex64Functor) OptionComplex64 {
+func (o OptionStringArr) MapComplex64(f StringArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionStringArr) MapComplex128(f StringArrComplex128Functor) OptionComplex128 {
+func (o OptionStringArr) MapComplex128(f StringArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionStringArr) MapString(f StringArrStringFunctor) OptionString {
+func (o OptionStringArr) MapString(f StringArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionStringArr) MapAny(f StringArrAnyFunctor) OptionAny {
+func (o OptionStringArr) MapAny(f StringArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionStringArr) MapBoolArr(f StringArrBoolArrFunctor) OptionBoolArr {
+func (o OptionStringArr) MapBoolArr(f StringArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionStringArr) MapRuneArr(f StringArrRuneArrFunctor) OptionRuneArr {
+func (o OptionStringArr) MapRuneArr(f StringArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionStringArr) MapByteArr(f StringArrByteArrFunctor) OptionByteArr {
+func (o OptionStringArr) MapByteArr(f StringArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionStringArr) MapIntArr(f StringArrIntArrFunctor) OptionIntArr {
+func (o OptionStringArr) MapIntArr(f StringArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionStringArr) MapInt8Arr(f StringArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionStringArr) MapInt8Arr(f StringArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionStringArr) MapInt16Arr(f StringArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionStringArr) MapInt16Arr(f StringArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionStringArr) MapInt32Arr(f StringArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionStringArr) MapInt32Arr(f StringArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionStringArr) MapInt64Arr(f StringArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionStringArr) MapInt64Arr(f StringArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionStringArr) MapUintArr(f StringArrUintArrFunctor) OptionUintArr {
+func (o OptionStringArr) MapUintArr(f StringArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionStringArr) MapUint8Arr(f StringArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionStringArr) MapUint8Arr(f StringArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionStringArr) MapUint16Arr(f StringArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionStringArr) MapUint16Arr(f StringArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionStringArr) MapUint32Arr(f StringArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionStringArr) MapUint32Arr(f StringArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionStringArr) MapUint64Arr(f StringArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionStringArr) MapUint64Arr(f StringArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionStringArr) MapUintptrArr(f StringArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionStringArr) MapUintptrArr(f StringArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionStringArr) MapFloat32Arr(f StringArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionStringArr) MapFloat32Arr(f StringArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionStringArr) MapFloat64Arr(f StringArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionStringArr) MapFloat64Arr(f StringArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionStringArr) MapComplex64Arr(f StringArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionStringArr) MapComplex64Arr(f StringArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionStringArr) MapComplex128Arr(f StringArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionStringArr) MapComplex128Arr(f StringArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionStringArr) MapStringArr(f StringArrStringArrFunctor) OptionStringArr {
+func (o OptionStringArr) MapStringArr(f StringArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionStringArr) MapAnyArr(f StringArrAnyArrFunctor) OptionAnyArr {
+func (o OptionStringArr) MapAnyArr(f StringArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {
 		return NoneAnyArr
 	}
 }
-func (o OptionAnyArr) MapBool(f AnyArrBoolFunctor) OptionBool {
+func (o OptionAnyArr) MapBool(f AnyArrBoolTransformer) OptionBool {
 	if o.IsDefined() {
 		return Bool(f(*o.value))
 	} else {
 		return NoneBool
 	}
 }
-func (o OptionAnyArr) MapRune(f AnyArrRuneFunctor) OptionRune {
+func (o OptionAnyArr) MapRune(f AnyArrRuneTransformer) OptionRune {
 	if o.IsDefined() {
 		return Rune(f(*o.value))
 	} else {
 		return NoneRune
 	}
 }
-func (o OptionAnyArr) MapByte(f AnyArrByteFunctor) OptionByte {
+func (o OptionAnyArr) MapByte(f AnyArrByteTransformer) OptionByte {
 	if o.IsDefined() {
 		return Byte(f(*o.value))
 	} else {
 		return NoneByte
 	}
 }
-func (o OptionAnyArr) MapInt(f AnyArrIntFunctor) OptionInt {
+func (o OptionAnyArr) MapInt(f AnyArrIntTransformer) OptionInt {
 	if o.IsDefined() {
 		return Int(f(*o.value))
 	} else {
 		return NoneInt
 	}
 }
-func (o OptionAnyArr) MapInt8(f AnyArrInt8Functor) OptionInt8 {
+func (o OptionAnyArr) MapInt8(f AnyArrInt8Transformer) OptionInt8 {
 	if o.IsDefined() {
 		return Int8(f(*o.value))
 	} else {
 		return NoneInt8
 	}
 }
-func (o OptionAnyArr) MapInt16(f AnyArrInt16Functor) OptionInt16 {
+func (o OptionAnyArr) MapInt16(f AnyArrInt16Transformer) OptionInt16 {
 	if o.IsDefined() {
 		return Int16(f(*o.value))
 	} else {
 		return NoneInt16
 	}
 }
-func (o OptionAnyArr) MapInt32(f AnyArrInt32Functor) OptionInt32 {
+func (o OptionAnyArr) MapInt32(f AnyArrInt32Transformer) OptionInt32 {
 	if o.IsDefined() {
 		return Int32(f(*o.value))
 	} else {
 		return NoneInt32
 	}
 }
-func (o OptionAnyArr) MapInt64(f AnyArrInt64Functor) OptionInt64 {
+func (o OptionAnyArr) MapInt64(f AnyArrInt64Transformer) OptionInt64 {
 	if o.IsDefined() {
 		return Int64(f(*o.value))
 	} else {
 		return NoneInt64
 	}
 }
-func (o OptionAnyArr) MapUint(f AnyArrUintFunctor) OptionUint {
+func (o OptionAnyArr) MapUint(f AnyArrUintTransformer) OptionUint {
 	if o.IsDefined() {
 		return Uint(f(*o.value))
 	} else {
 		return NoneUint
 	}
 }
-func (o OptionAnyArr) MapUint8(f AnyArrUint8Functor) OptionUint8 {
+func (o OptionAnyArr) MapUint8(f AnyArrUint8Transformer) OptionUint8 {
 	if o.IsDefined() {
 		return Uint8(f(*o.value))
 	} else {
 		return NoneUint8
 	}
 }
-func (o OptionAnyArr) MapUint16(f AnyArrUint16Functor) OptionUint16 {
+func (o OptionAnyArr) MapUint16(f AnyArrUint16Transformer) OptionUint16 {
 	if o.IsDefined() {
 		return Uint16(f(*o.value))
 	} else {
 		return NoneUint16
 	}
 }
-func (o OptionAnyArr) MapUint32(f AnyArrUint32Functor) OptionUint32 {
+func (o OptionAnyArr) MapUint32(f AnyArrUint32Transformer) OptionUint32 {
 	if o.IsDefined() {
 		return Uint32(f(*o.value))
 	} else {
 		return NoneUint32
 	}
 }
-func (o OptionAnyArr) MapUint64(f AnyArrUint64Functor) OptionUint64 {
+func (o OptionAnyArr) MapUint64(f AnyArrUint64Transformer) OptionUint64 {
 	if o.IsDefined() {
 		return Uint64(f(*o.value))
 	} else {
 		return NoneUint64
 	}
 }
-func (o OptionAnyArr) MapUintptr(f AnyArrUintptrFunctor) OptionUintptr {
+func (o OptionAnyArr) MapUintptr(f AnyArrUintptrTransformer) OptionUintptr {
 	if o.IsDefined() {
 		return Uintptr(f(*o.value))
 	} else {
 		return NoneUintptr
 	}
 }
-func (o OptionAnyArr) MapFloat32(f AnyArrFloat32Functor) OptionFloat32 {
+func (o OptionAnyArr) MapFloat32(f AnyArrFloat32Transformer) OptionFloat32 {
 	if o.IsDefined() {
 		return Float32(f(*o.value))
 	} else {
 		return NoneFloat32
 	}
 }
-func (o OptionAnyArr) MapFloat64(f AnyArrFloat64Functor) OptionFloat64 {
+func (o OptionAnyArr) MapFloat64(f AnyArrFloat64Transformer) OptionFloat64 {
 	if o.IsDefined() {
 		return Float64(f(*o.value))
 	} else {
 		return NoneFloat64
 	}
 }
-func (o OptionAnyArr) MapComplex64(f AnyArrComplex64Functor) OptionComplex64 {
+func (o OptionAnyArr) MapComplex64(f AnyArrComplex64Transformer) OptionComplex64 {
 	if o.IsDefined() {
 		return Complex64(f(*o.value))
 	} else {
 		return NoneComplex64
 	}
 }
-func (o OptionAnyArr) MapComplex128(f AnyArrComplex128Functor) OptionComplex128 {
+func (o OptionAnyArr) MapComplex128(f AnyArrComplex128Transformer) OptionComplex128 {
 	if o.IsDefined() {
 		return Complex128(f(*o.value))
 	} else {
 		return NoneComplex128
 	}
 }
-func (o OptionAnyArr) MapString(f AnyArrStringFunctor) OptionString {
+func (o OptionAnyArr) MapString(f AnyArrStringTransformer) OptionString {
 	if o.IsDefined() {
 		return String(f(*o.value))
 	} else {
 		return NoneString
 	}
 }
-func (o OptionAnyArr) MapAny(f AnyArrAnyFunctor) OptionAny {
+func (o OptionAnyArr) MapAny(f AnyArrAnyTransformer) OptionAny {
 	if o.IsDefined() {
 		return AnyOpt(f(*o.value))
 	} else {
 		return NoneAny
 	}
 }
-func (o OptionAnyArr) MapBoolArr(f AnyArrBoolArrFunctor) OptionBoolArr {
+func (o OptionAnyArr) MapBoolArr(f AnyArrBoolArrTransformer) OptionBoolArr {
 	if o.IsDefined() {
 		return BoolArr(f(*o.value))
 	} else {
 		return NoneBoolArr
 	}
 }
-func (o OptionAnyArr) MapRuneArr(f AnyArrRuneArrFunctor) OptionRuneArr {
+func (o OptionAnyArr) MapRuneArr(f AnyArrRuneArrTransformer) OptionRuneArr {
 	if o.IsDefined() {
 		return RuneArr(f(*o.value))
 	} else {
 		return NoneRuneArr
 	}
 }
-func (o OptionAnyArr) MapByteArr(f AnyArrByteArrFunctor) OptionByteArr {
+func (o OptionAnyArr) MapByteArr(f AnyArrByteArrTransformer) OptionByteArr {
 	if o.IsDefined() {
 		return ByteArr(f(*o.value))
 	} else {
 		return NoneByteArr
 	}
 }
-func (o OptionAnyArr) MapIntArr(f AnyArrIntArrFunctor) OptionIntArr {
+func (o OptionAnyArr) MapIntArr(f AnyArrIntArrTransformer) OptionIntArr {
 	if o.IsDefined() {
 		return IntArr(f(*o.value))
 	} else {
 		return NoneIntArr
 	}
 }
-func (o OptionAnyArr) MapInt8Arr(f AnyArrInt8ArrFunctor) OptionInt8Arr {
+func (o OptionAnyArr) MapInt8Arr(f AnyArrInt8ArrTransformer) OptionInt8Arr {
 	if o.IsDefined() {
 		return Int8Arr(f(*o.value))
 	} else {
 		return NoneInt8Arr
 	}
 }
-func (o OptionAnyArr) MapInt16Arr(f AnyArrInt16ArrFunctor) OptionInt16Arr {
+func (o OptionAnyArr) MapInt16Arr(f AnyArrInt16ArrTransformer) OptionInt16Arr {
 	if o.IsDefined() {
 		return Int16Arr(f(*o.value))
 	} else {
 		return NoneInt16Arr
 	}
 }
-func (o OptionAnyArr) MapInt32Arr(f AnyArrInt32ArrFunctor) OptionInt32Arr {
+func (o OptionAnyArr) MapInt32Arr(f AnyArrInt32ArrTransformer) OptionInt32Arr {
 	if o.IsDefined() {
 		return Int32Arr(f(*o.value))
 	} else {
 		return NoneInt32Arr
 	}
 }
-func (o OptionAnyArr) MapInt64Arr(f AnyArrInt64ArrFunctor) OptionInt64Arr {
+func (o OptionAnyArr) MapInt64Arr(f AnyArrInt64ArrTransformer) OptionInt64Arr {
 	if o.IsDefined() {
 		return Int64Arr(f(*o.value))
 	} else {
 		return NoneInt64Arr
 	}
 }
-func (o OptionAnyArr) MapUintArr(f AnyArrUintArrFunctor) OptionUintArr {
+func (o OptionAnyArr) MapUintArr(f AnyArrUintArrTransformer) OptionUintArr {
 	if o.IsDefined() {
 		return UintArr(f(*o.value))
 	} else {
 		return NoneUintArr
 	}
 }
-func (o OptionAnyArr) MapUint8Arr(f AnyArrUint8ArrFunctor) OptionUint8Arr {
+func (o OptionAnyArr) MapUint8Arr(f AnyArrUint8ArrTransformer) OptionUint8Arr {
 	if o.IsDefined() {
 		return Uint8Arr(f(*o.value))
 	} else {
 		return NoneUint8Arr
 	}
 }
-func (o OptionAnyArr) MapUint16Arr(f AnyArrUint16ArrFunctor) OptionUint16Arr {
+func (o OptionAnyArr) MapUint16Arr(f AnyArrUint16ArrTransformer) OptionUint16Arr {
 	if o.IsDefined() {
 		return Uint16Arr(f(*o.value))
 	} else {
 		return NoneUint16Arr
 	}
 }
-func (o OptionAnyArr) MapUint32Arr(f AnyArrUint32ArrFunctor) OptionUint32Arr {
+func (o OptionAnyArr) MapUint32Arr(f AnyArrUint32ArrTransformer) OptionUint32Arr {
 	if o.IsDefined() {
 		return Uint32Arr(f(*o.value))
 	} else {
 		return NoneUint32Arr
 	}
 }
-func (o OptionAnyArr) MapUint64Arr(f AnyArrUint64ArrFunctor) OptionUint64Arr {
+func (o OptionAnyArr) MapUint64Arr(f AnyArrUint64ArrTransformer) OptionUint64Arr {
 	if o.IsDefined() {
 		return Uint64Arr(f(*o.value))
 	} else {
 		return NoneUint64Arr
 	}
 }
-func (o OptionAnyArr) MapUintptrArr(f AnyArrUintptrArrFunctor) OptionUintptrArr {
+func (o OptionAnyArr) MapUintptrArr(f AnyArrUintptrArrTransformer) OptionUintptrArr {
 	if o.IsDefined() {
 		return UintptrArr(f(*o.value))
 	} else {
 		return NoneUintptrArr
 	}
 }
-func (o OptionAnyArr) MapFloat32Arr(f AnyArrFloat32ArrFunctor) OptionFloat32Arr {
+func (o OptionAnyArr) MapFloat32Arr(f AnyArrFloat32ArrTransformer) OptionFloat32Arr {
 	if o.IsDefined() {
 		return Float32Arr(f(*o.value))
 	} else {
 		return NoneFloat32Arr
 	}
 }
-func (o OptionAnyArr) MapFloat64Arr(f AnyArrFloat64ArrFunctor) OptionFloat64Arr {
+func (o OptionAnyArr) MapFloat64Arr(f AnyArrFloat64ArrTransformer) OptionFloat64Arr {
 	if o.IsDefined() {
 		return Float64Arr(f(*o.value))
 	} else {
 		return NoneFloat64Arr
 	}
 }
-func (o OptionAnyArr) MapComplex64Arr(f AnyArrComplex64ArrFunctor) OptionComplex64Arr {
+func (o OptionAnyArr) MapComplex64Arr(f AnyArrComplex64ArrTransformer) OptionComplex64Arr {
 	if o.IsDefined() {
 		return Complex64Arr(f(*o.value))
 	} else {
 		return NoneComplex64Arr
 	}
 }
-func (o OptionAnyArr) MapComplex128Arr(f AnyArrComplex128ArrFunctor) OptionComplex128Arr {
+func (o OptionAnyArr) MapComplex128Arr(f AnyArrComplex128ArrTransformer) OptionComplex128Arr {
 	if o.IsDefined() {
 		return Complex128Arr(f(*o.value))
 	} else {
 		return NoneComplex128Arr
 	}
 }
-func (o OptionAnyArr) MapStringArr(f AnyArrStringArrFunctor) OptionStringArr {
+func (o OptionAnyArr) MapStringArr(f AnyArrStringArrTransformer) OptionStringArr {
 	if o.IsDefined() {
 		return StringArr(f(*o.value))
 	} else {
 		return NoneStringArr
 	}
 }
-func (o OptionAnyArr) MapAnyArr(f AnyArrAnyArrFunctor) OptionAnyArr {
+func (o OptionAnyArr) MapAnyArr(f AnyArrAnyArrTransformer) OptionAnyArr {
 	if o.IsDefined() {
 		return AnyArr(f(*o.value))
 	} else {

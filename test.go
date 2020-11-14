@@ -34,4 +34,6 @@ func main() {
 	fmt.Println(MakeIntList(1, 2, 3).Equals(MakeIntList(1, 2, 3)))
 	fmt.Println(MakeIntList(1, 2, 3, 4).Equals(MakeIntList(1, 2, 3)))
 	fmt.Println(MakeIntList().Equals(MakeIntList()))
+
+	MakeIntList(1, 2, 3).MapInt(func(e int) int { return e * 100 }).Foreach(func(e int) { fmt.Println(">", e) })
 }

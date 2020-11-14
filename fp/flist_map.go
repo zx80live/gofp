@@ -3,7 +3,7 @@
 
 package fp
 
-func (l BoolList) MapBool(f BoolBoolFunctor) BoolList {
+func (l BoolList) MapBool(f BoolBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12,7 +12,7 @@ func (l BoolList) MapBool(f BoolBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapRune(f BoolRuneFunctor) RuneList {
+func (l BoolList) MapRune(f BoolRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -21,7 +21,7 @@ func (l BoolList) MapRune(f BoolRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapByte(f BoolByteFunctor) ByteList {
+func (l BoolList) MapByte(f BoolByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -30,7 +30,7 @@ func (l BoolList) MapByte(f BoolByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt(f BoolIntFunctor) IntList {
+func (l BoolList) MapInt(f BoolIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -39,7 +39,7 @@ func (l BoolList) MapInt(f BoolIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt8(f BoolInt8Functor) Int8List {
+func (l BoolList) MapInt8(f BoolInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -48,7 +48,7 @@ func (l BoolList) MapInt8(f BoolInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt16(f BoolInt16Functor) Int16List {
+func (l BoolList) MapInt16(f BoolInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -57,7 +57,7 @@ func (l BoolList) MapInt16(f BoolInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt32(f BoolInt32Functor) Int32List {
+func (l BoolList) MapInt32(f BoolInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -66,7 +66,7 @@ func (l BoolList) MapInt32(f BoolInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt64(f BoolInt64Functor) Int64List {
+func (l BoolList) MapInt64(f BoolInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -75,7 +75,7 @@ func (l BoolList) MapInt64(f BoolInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint(f BoolUintFunctor) UintList {
+func (l BoolList) MapUint(f BoolUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -84,7 +84,7 @@ func (l BoolList) MapUint(f BoolUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint8(f BoolUint8Functor) Uint8List {
+func (l BoolList) MapUint8(f BoolUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -93,7 +93,7 @@ func (l BoolList) MapUint8(f BoolUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint16(f BoolUint16Functor) Uint16List {
+func (l BoolList) MapUint16(f BoolUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -102,7 +102,7 @@ func (l BoolList) MapUint16(f BoolUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint32(f BoolUint32Functor) Uint32List {
+func (l BoolList) MapUint32(f BoolUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -111,7 +111,7 @@ func (l BoolList) MapUint32(f BoolUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint64(f BoolUint64Functor) Uint64List {
+func (l BoolList) MapUint64(f BoolUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -120,7 +120,7 @@ func (l BoolList) MapUint64(f BoolUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUintptr(f BoolUintptrFunctor) UintptrList {
+func (l BoolList) MapUintptr(f BoolUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -129,7 +129,7 @@ func (l BoolList) MapUintptr(f BoolUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapFloat32(f BoolFloat32Functor) Float32List {
+func (l BoolList) MapFloat32(f BoolFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -138,7 +138,7 @@ func (l BoolList) MapFloat32(f BoolFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapFloat64(f BoolFloat64Functor) Float64List {
+func (l BoolList) MapFloat64(f BoolFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -147,7 +147,7 @@ func (l BoolList) MapFloat64(f BoolFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapComplex64(f BoolComplex64Functor) Complex64List {
+func (l BoolList) MapComplex64(f BoolComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -156,7 +156,7 @@ func (l BoolList) MapComplex64(f BoolComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapComplex128(f BoolComplex128Functor) Complex128List {
+func (l BoolList) MapComplex128(f BoolComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -165,7 +165,7 @@ func (l BoolList) MapComplex128(f BoolComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapString(f BoolStringFunctor) StringList {
+func (l BoolList) MapString(f BoolStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -174,7 +174,7 @@ func (l BoolList) MapString(f BoolStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapAny(f BoolAnyFunctor) AnyList {
+func (l BoolList) MapAny(f BoolAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -183,7 +183,7 @@ func (l BoolList) MapAny(f BoolAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapBoolArr(f BoolBoolArrFunctor) BoolArrList {
+func (l BoolList) MapBoolArr(f BoolBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -192,7 +192,7 @@ func (l BoolList) MapBoolArr(f BoolBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapRuneArr(f BoolRuneArrFunctor) RuneArrList {
+func (l BoolList) MapRuneArr(f BoolRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -201,7 +201,7 @@ func (l BoolList) MapRuneArr(f BoolRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapByteArr(f BoolByteArrFunctor) ByteArrList {
+func (l BoolList) MapByteArr(f BoolByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -210,7 +210,7 @@ func (l BoolList) MapByteArr(f BoolByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapIntArr(f BoolIntArrFunctor) IntArrList {
+func (l BoolList) MapIntArr(f BoolIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -219,7 +219,7 @@ func (l BoolList) MapIntArr(f BoolIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt8Arr(f BoolInt8ArrFunctor) Int8ArrList {
+func (l BoolList) MapInt8Arr(f BoolInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -228,7 +228,7 @@ func (l BoolList) MapInt8Arr(f BoolInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt16Arr(f BoolInt16ArrFunctor) Int16ArrList {
+func (l BoolList) MapInt16Arr(f BoolInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -237,7 +237,7 @@ func (l BoolList) MapInt16Arr(f BoolInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt32Arr(f BoolInt32ArrFunctor) Int32ArrList {
+func (l BoolList) MapInt32Arr(f BoolInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -246,7 +246,7 @@ func (l BoolList) MapInt32Arr(f BoolInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapInt64Arr(f BoolInt64ArrFunctor) Int64ArrList {
+func (l BoolList) MapInt64Arr(f BoolInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -255,7 +255,7 @@ func (l BoolList) MapInt64Arr(f BoolInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUintArr(f BoolUintArrFunctor) UintArrList {
+func (l BoolList) MapUintArr(f BoolUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -264,7 +264,7 @@ func (l BoolList) MapUintArr(f BoolUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint8Arr(f BoolUint8ArrFunctor) Uint8ArrList {
+func (l BoolList) MapUint8Arr(f BoolUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -273,7 +273,7 @@ func (l BoolList) MapUint8Arr(f BoolUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint16Arr(f BoolUint16ArrFunctor) Uint16ArrList {
+func (l BoolList) MapUint16Arr(f BoolUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -282,7 +282,7 @@ func (l BoolList) MapUint16Arr(f BoolUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint32Arr(f BoolUint32ArrFunctor) Uint32ArrList {
+func (l BoolList) MapUint32Arr(f BoolUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -291,7 +291,7 @@ func (l BoolList) MapUint32Arr(f BoolUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUint64Arr(f BoolUint64ArrFunctor) Uint64ArrList {
+func (l BoolList) MapUint64Arr(f BoolUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -300,7 +300,7 @@ func (l BoolList) MapUint64Arr(f BoolUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapUintptrArr(f BoolUintptrArrFunctor) UintptrArrList {
+func (l BoolList) MapUintptrArr(f BoolUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -309,7 +309,7 @@ func (l BoolList) MapUintptrArr(f BoolUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapFloat32Arr(f BoolFloat32ArrFunctor) Float32ArrList {
+func (l BoolList) MapFloat32Arr(f BoolFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -318,7 +318,7 @@ func (l BoolList) MapFloat32Arr(f BoolFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapFloat64Arr(f BoolFloat64ArrFunctor) Float64ArrList {
+func (l BoolList) MapFloat64Arr(f BoolFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -327,7 +327,7 @@ func (l BoolList) MapFloat64Arr(f BoolFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapComplex64Arr(f BoolComplex64ArrFunctor) Complex64ArrList {
+func (l BoolList) MapComplex64Arr(f BoolComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -336,7 +336,7 @@ func (l BoolList) MapComplex64Arr(f BoolComplex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapComplex128Arr(f BoolComplex128ArrFunctor) Complex128ArrList {
+func (l BoolList) MapComplex128Arr(f BoolComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -345,7 +345,7 @@ func (l BoolList) MapComplex128Arr(f BoolComplex128ArrFunctor) Complex128ArrList
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapStringArr(f BoolStringArrFunctor) StringArrList {
+func (l BoolList) MapStringArr(f BoolStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -354,7 +354,7 @@ func (l BoolList) MapStringArr(f BoolStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolList) MapAnyArr(f BoolAnyArrFunctor) AnyArrList {
+func (l BoolList) MapAnyArr(f BoolAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -363,7 +363,7 @@ func (l BoolList) MapAnyArr(f BoolAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapBool(f RuneBoolFunctor) BoolList {
+func (l RuneList) MapBool(f RuneBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -372,7 +372,7 @@ func (l RuneList) MapBool(f RuneBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapRune(f RuneRuneFunctor) RuneList {
+func (l RuneList) MapRune(f RuneRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -381,7 +381,7 @@ func (l RuneList) MapRune(f RuneRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapByte(f RuneByteFunctor) ByteList {
+func (l RuneList) MapByte(f RuneByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -390,7 +390,7 @@ func (l RuneList) MapByte(f RuneByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt(f RuneIntFunctor) IntList {
+func (l RuneList) MapInt(f RuneIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -399,7 +399,7 @@ func (l RuneList) MapInt(f RuneIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt8(f RuneInt8Functor) Int8List {
+func (l RuneList) MapInt8(f RuneInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -408,7 +408,7 @@ func (l RuneList) MapInt8(f RuneInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt16(f RuneInt16Functor) Int16List {
+func (l RuneList) MapInt16(f RuneInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -417,7 +417,7 @@ func (l RuneList) MapInt16(f RuneInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt32(f RuneInt32Functor) Int32List {
+func (l RuneList) MapInt32(f RuneInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -426,7 +426,7 @@ func (l RuneList) MapInt32(f RuneInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt64(f RuneInt64Functor) Int64List {
+func (l RuneList) MapInt64(f RuneInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -435,7 +435,7 @@ func (l RuneList) MapInt64(f RuneInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint(f RuneUintFunctor) UintList {
+func (l RuneList) MapUint(f RuneUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -444,7 +444,7 @@ func (l RuneList) MapUint(f RuneUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint8(f RuneUint8Functor) Uint8List {
+func (l RuneList) MapUint8(f RuneUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -453,7 +453,7 @@ func (l RuneList) MapUint8(f RuneUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint16(f RuneUint16Functor) Uint16List {
+func (l RuneList) MapUint16(f RuneUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -462,7 +462,7 @@ func (l RuneList) MapUint16(f RuneUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint32(f RuneUint32Functor) Uint32List {
+func (l RuneList) MapUint32(f RuneUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -471,7 +471,7 @@ func (l RuneList) MapUint32(f RuneUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint64(f RuneUint64Functor) Uint64List {
+func (l RuneList) MapUint64(f RuneUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -480,7 +480,7 @@ func (l RuneList) MapUint64(f RuneUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUintptr(f RuneUintptrFunctor) UintptrList {
+func (l RuneList) MapUintptr(f RuneUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -489,7 +489,7 @@ func (l RuneList) MapUintptr(f RuneUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapFloat32(f RuneFloat32Functor) Float32List {
+func (l RuneList) MapFloat32(f RuneFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -498,7 +498,7 @@ func (l RuneList) MapFloat32(f RuneFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapFloat64(f RuneFloat64Functor) Float64List {
+func (l RuneList) MapFloat64(f RuneFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -507,7 +507,7 @@ func (l RuneList) MapFloat64(f RuneFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapComplex64(f RuneComplex64Functor) Complex64List {
+func (l RuneList) MapComplex64(f RuneComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -516,7 +516,7 @@ func (l RuneList) MapComplex64(f RuneComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapComplex128(f RuneComplex128Functor) Complex128List {
+func (l RuneList) MapComplex128(f RuneComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -525,7 +525,7 @@ func (l RuneList) MapComplex128(f RuneComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapString(f RuneStringFunctor) StringList {
+func (l RuneList) MapString(f RuneStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -534,7 +534,7 @@ func (l RuneList) MapString(f RuneStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapAny(f RuneAnyFunctor) AnyList {
+func (l RuneList) MapAny(f RuneAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -543,7 +543,7 @@ func (l RuneList) MapAny(f RuneAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapBoolArr(f RuneBoolArrFunctor) BoolArrList {
+func (l RuneList) MapBoolArr(f RuneBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -552,7 +552,7 @@ func (l RuneList) MapBoolArr(f RuneBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapRuneArr(f RuneRuneArrFunctor) RuneArrList {
+func (l RuneList) MapRuneArr(f RuneRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -561,7 +561,7 @@ func (l RuneList) MapRuneArr(f RuneRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapByteArr(f RuneByteArrFunctor) ByteArrList {
+func (l RuneList) MapByteArr(f RuneByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -570,7 +570,7 @@ func (l RuneList) MapByteArr(f RuneByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapIntArr(f RuneIntArrFunctor) IntArrList {
+func (l RuneList) MapIntArr(f RuneIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -579,7 +579,7 @@ func (l RuneList) MapIntArr(f RuneIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt8Arr(f RuneInt8ArrFunctor) Int8ArrList {
+func (l RuneList) MapInt8Arr(f RuneInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -588,7 +588,7 @@ func (l RuneList) MapInt8Arr(f RuneInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt16Arr(f RuneInt16ArrFunctor) Int16ArrList {
+func (l RuneList) MapInt16Arr(f RuneInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -597,7 +597,7 @@ func (l RuneList) MapInt16Arr(f RuneInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt32Arr(f RuneInt32ArrFunctor) Int32ArrList {
+func (l RuneList) MapInt32Arr(f RuneInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -606,7 +606,7 @@ func (l RuneList) MapInt32Arr(f RuneInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapInt64Arr(f RuneInt64ArrFunctor) Int64ArrList {
+func (l RuneList) MapInt64Arr(f RuneInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -615,7 +615,7 @@ func (l RuneList) MapInt64Arr(f RuneInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUintArr(f RuneUintArrFunctor) UintArrList {
+func (l RuneList) MapUintArr(f RuneUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -624,7 +624,7 @@ func (l RuneList) MapUintArr(f RuneUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint8Arr(f RuneUint8ArrFunctor) Uint8ArrList {
+func (l RuneList) MapUint8Arr(f RuneUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -633,7 +633,7 @@ func (l RuneList) MapUint8Arr(f RuneUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint16Arr(f RuneUint16ArrFunctor) Uint16ArrList {
+func (l RuneList) MapUint16Arr(f RuneUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -642,7 +642,7 @@ func (l RuneList) MapUint16Arr(f RuneUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint32Arr(f RuneUint32ArrFunctor) Uint32ArrList {
+func (l RuneList) MapUint32Arr(f RuneUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -651,7 +651,7 @@ func (l RuneList) MapUint32Arr(f RuneUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUint64Arr(f RuneUint64ArrFunctor) Uint64ArrList {
+func (l RuneList) MapUint64Arr(f RuneUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -660,7 +660,7 @@ func (l RuneList) MapUint64Arr(f RuneUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapUintptrArr(f RuneUintptrArrFunctor) UintptrArrList {
+func (l RuneList) MapUintptrArr(f RuneUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -669,7 +669,7 @@ func (l RuneList) MapUintptrArr(f RuneUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapFloat32Arr(f RuneFloat32ArrFunctor) Float32ArrList {
+func (l RuneList) MapFloat32Arr(f RuneFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -678,7 +678,7 @@ func (l RuneList) MapFloat32Arr(f RuneFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapFloat64Arr(f RuneFloat64ArrFunctor) Float64ArrList {
+func (l RuneList) MapFloat64Arr(f RuneFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -687,7 +687,7 @@ func (l RuneList) MapFloat64Arr(f RuneFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapComplex64Arr(f RuneComplex64ArrFunctor) Complex64ArrList {
+func (l RuneList) MapComplex64Arr(f RuneComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -696,7 +696,7 @@ func (l RuneList) MapComplex64Arr(f RuneComplex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapComplex128Arr(f RuneComplex128ArrFunctor) Complex128ArrList {
+func (l RuneList) MapComplex128Arr(f RuneComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -705,7 +705,7 @@ func (l RuneList) MapComplex128Arr(f RuneComplex128ArrFunctor) Complex128ArrList
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapStringArr(f RuneStringArrFunctor) StringArrList {
+func (l RuneList) MapStringArr(f RuneStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -714,7 +714,7 @@ func (l RuneList) MapStringArr(f RuneStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneList) MapAnyArr(f RuneAnyArrFunctor) AnyArrList {
+func (l RuneList) MapAnyArr(f RuneAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -723,7 +723,7 @@ func (l RuneList) MapAnyArr(f RuneAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapBool(f ByteBoolFunctor) BoolList {
+func (l ByteList) MapBool(f ByteBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -732,7 +732,7 @@ func (l ByteList) MapBool(f ByteBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapRune(f ByteRuneFunctor) RuneList {
+func (l ByteList) MapRune(f ByteRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -741,7 +741,7 @@ func (l ByteList) MapRune(f ByteRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapByte(f ByteByteFunctor) ByteList {
+func (l ByteList) MapByte(f ByteByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -750,7 +750,7 @@ func (l ByteList) MapByte(f ByteByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt(f ByteIntFunctor) IntList {
+func (l ByteList) MapInt(f ByteIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -759,7 +759,7 @@ func (l ByteList) MapInt(f ByteIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt8(f ByteInt8Functor) Int8List {
+func (l ByteList) MapInt8(f ByteInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -768,7 +768,7 @@ func (l ByteList) MapInt8(f ByteInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt16(f ByteInt16Functor) Int16List {
+func (l ByteList) MapInt16(f ByteInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -777,7 +777,7 @@ func (l ByteList) MapInt16(f ByteInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt32(f ByteInt32Functor) Int32List {
+func (l ByteList) MapInt32(f ByteInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -786,7 +786,7 @@ func (l ByteList) MapInt32(f ByteInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt64(f ByteInt64Functor) Int64List {
+func (l ByteList) MapInt64(f ByteInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -795,7 +795,7 @@ func (l ByteList) MapInt64(f ByteInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint(f ByteUintFunctor) UintList {
+func (l ByteList) MapUint(f ByteUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -804,7 +804,7 @@ func (l ByteList) MapUint(f ByteUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint8(f ByteUint8Functor) Uint8List {
+func (l ByteList) MapUint8(f ByteUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -813,7 +813,7 @@ func (l ByteList) MapUint8(f ByteUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint16(f ByteUint16Functor) Uint16List {
+func (l ByteList) MapUint16(f ByteUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -822,7 +822,7 @@ func (l ByteList) MapUint16(f ByteUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint32(f ByteUint32Functor) Uint32List {
+func (l ByteList) MapUint32(f ByteUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -831,7 +831,7 @@ func (l ByteList) MapUint32(f ByteUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint64(f ByteUint64Functor) Uint64List {
+func (l ByteList) MapUint64(f ByteUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -840,7 +840,7 @@ func (l ByteList) MapUint64(f ByteUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUintptr(f ByteUintptrFunctor) UintptrList {
+func (l ByteList) MapUintptr(f ByteUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -849,7 +849,7 @@ func (l ByteList) MapUintptr(f ByteUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapFloat32(f ByteFloat32Functor) Float32List {
+func (l ByteList) MapFloat32(f ByteFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -858,7 +858,7 @@ func (l ByteList) MapFloat32(f ByteFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapFloat64(f ByteFloat64Functor) Float64List {
+func (l ByteList) MapFloat64(f ByteFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -867,7 +867,7 @@ func (l ByteList) MapFloat64(f ByteFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapComplex64(f ByteComplex64Functor) Complex64List {
+func (l ByteList) MapComplex64(f ByteComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -876,7 +876,7 @@ func (l ByteList) MapComplex64(f ByteComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapComplex128(f ByteComplex128Functor) Complex128List {
+func (l ByteList) MapComplex128(f ByteComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -885,7 +885,7 @@ func (l ByteList) MapComplex128(f ByteComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapString(f ByteStringFunctor) StringList {
+func (l ByteList) MapString(f ByteStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -894,7 +894,7 @@ func (l ByteList) MapString(f ByteStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapAny(f ByteAnyFunctor) AnyList {
+func (l ByteList) MapAny(f ByteAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -903,7 +903,7 @@ func (l ByteList) MapAny(f ByteAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapBoolArr(f ByteBoolArrFunctor) BoolArrList {
+func (l ByteList) MapBoolArr(f ByteBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -912,7 +912,7 @@ func (l ByteList) MapBoolArr(f ByteBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapRuneArr(f ByteRuneArrFunctor) RuneArrList {
+func (l ByteList) MapRuneArr(f ByteRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -921,7 +921,7 @@ func (l ByteList) MapRuneArr(f ByteRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapByteArr(f ByteByteArrFunctor) ByteArrList {
+func (l ByteList) MapByteArr(f ByteByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -930,7 +930,7 @@ func (l ByteList) MapByteArr(f ByteByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapIntArr(f ByteIntArrFunctor) IntArrList {
+func (l ByteList) MapIntArr(f ByteIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -939,7 +939,7 @@ func (l ByteList) MapIntArr(f ByteIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt8Arr(f ByteInt8ArrFunctor) Int8ArrList {
+func (l ByteList) MapInt8Arr(f ByteInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -948,7 +948,7 @@ func (l ByteList) MapInt8Arr(f ByteInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt16Arr(f ByteInt16ArrFunctor) Int16ArrList {
+func (l ByteList) MapInt16Arr(f ByteInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -957,7 +957,7 @@ func (l ByteList) MapInt16Arr(f ByteInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt32Arr(f ByteInt32ArrFunctor) Int32ArrList {
+func (l ByteList) MapInt32Arr(f ByteInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -966,7 +966,7 @@ func (l ByteList) MapInt32Arr(f ByteInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapInt64Arr(f ByteInt64ArrFunctor) Int64ArrList {
+func (l ByteList) MapInt64Arr(f ByteInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -975,7 +975,7 @@ func (l ByteList) MapInt64Arr(f ByteInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUintArr(f ByteUintArrFunctor) UintArrList {
+func (l ByteList) MapUintArr(f ByteUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -984,7 +984,7 @@ func (l ByteList) MapUintArr(f ByteUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint8Arr(f ByteUint8ArrFunctor) Uint8ArrList {
+func (l ByteList) MapUint8Arr(f ByteUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -993,7 +993,7 @@ func (l ByteList) MapUint8Arr(f ByteUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint16Arr(f ByteUint16ArrFunctor) Uint16ArrList {
+func (l ByteList) MapUint16Arr(f ByteUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1002,7 +1002,7 @@ func (l ByteList) MapUint16Arr(f ByteUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint32Arr(f ByteUint32ArrFunctor) Uint32ArrList {
+func (l ByteList) MapUint32Arr(f ByteUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1011,7 +1011,7 @@ func (l ByteList) MapUint32Arr(f ByteUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUint64Arr(f ByteUint64ArrFunctor) Uint64ArrList {
+func (l ByteList) MapUint64Arr(f ByteUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1020,7 +1020,7 @@ func (l ByteList) MapUint64Arr(f ByteUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapUintptrArr(f ByteUintptrArrFunctor) UintptrArrList {
+func (l ByteList) MapUintptrArr(f ByteUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1029,7 +1029,7 @@ func (l ByteList) MapUintptrArr(f ByteUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapFloat32Arr(f ByteFloat32ArrFunctor) Float32ArrList {
+func (l ByteList) MapFloat32Arr(f ByteFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1038,7 +1038,7 @@ func (l ByteList) MapFloat32Arr(f ByteFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapFloat64Arr(f ByteFloat64ArrFunctor) Float64ArrList {
+func (l ByteList) MapFloat64Arr(f ByteFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1047,7 +1047,7 @@ func (l ByteList) MapFloat64Arr(f ByteFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapComplex64Arr(f ByteComplex64ArrFunctor) Complex64ArrList {
+func (l ByteList) MapComplex64Arr(f ByteComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1056,7 +1056,7 @@ func (l ByteList) MapComplex64Arr(f ByteComplex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapComplex128Arr(f ByteComplex128ArrFunctor) Complex128ArrList {
+func (l ByteList) MapComplex128Arr(f ByteComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1065,7 +1065,7 @@ func (l ByteList) MapComplex128Arr(f ByteComplex128ArrFunctor) Complex128ArrList
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapStringArr(f ByteStringArrFunctor) StringArrList {
+func (l ByteList) MapStringArr(f ByteStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1074,7 +1074,7 @@ func (l ByteList) MapStringArr(f ByteStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteList) MapAnyArr(f ByteAnyArrFunctor) AnyArrList {
+func (l ByteList) MapAnyArr(f ByteAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1083,7 +1083,7 @@ func (l ByteList) MapAnyArr(f ByteAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapBool(f IntBoolFunctor) BoolList {
+func (l IntList) MapBool(f IntBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1092,7 +1092,7 @@ func (l IntList) MapBool(f IntBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapRune(f IntRuneFunctor) RuneList {
+func (l IntList) MapRune(f IntRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1101,7 +1101,7 @@ func (l IntList) MapRune(f IntRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapByte(f IntByteFunctor) ByteList {
+func (l IntList) MapByte(f IntByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1110,7 +1110,7 @@ func (l IntList) MapByte(f IntByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt(f IntIntFunctor) IntList {
+func (l IntList) MapInt(f IntIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1119,7 +1119,7 @@ func (l IntList) MapInt(f IntIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt8(f IntInt8Functor) Int8List {
+func (l IntList) MapInt8(f IntInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1128,7 +1128,7 @@ func (l IntList) MapInt8(f IntInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt16(f IntInt16Functor) Int16List {
+func (l IntList) MapInt16(f IntInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1137,7 +1137,7 @@ func (l IntList) MapInt16(f IntInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt32(f IntInt32Functor) Int32List {
+func (l IntList) MapInt32(f IntInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1146,7 +1146,7 @@ func (l IntList) MapInt32(f IntInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt64(f IntInt64Functor) Int64List {
+func (l IntList) MapInt64(f IntInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1155,7 +1155,7 @@ func (l IntList) MapInt64(f IntInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint(f IntUintFunctor) UintList {
+func (l IntList) MapUint(f IntUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1164,7 +1164,7 @@ func (l IntList) MapUint(f IntUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint8(f IntUint8Functor) Uint8List {
+func (l IntList) MapUint8(f IntUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1173,7 +1173,7 @@ func (l IntList) MapUint8(f IntUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint16(f IntUint16Functor) Uint16List {
+func (l IntList) MapUint16(f IntUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1182,7 +1182,7 @@ func (l IntList) MapUint16(f IntUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint32(f IntUint32Functor) Uint32List {
+func (l IntList) MapUint32(f IntUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1191,7 +1191,7 @@ func (l IntList) MapUint32(f IntUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint64(f IntUint64Functor) Uint64List {
+func (l IntList) MapUint64(f IntUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1200,7 +1200,7 @@ func (l IntList) MapUint64(f IntUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUintptr(f IntUintptrFunctor) UintptrList {
+func (l IntList) MapUintptr(f IntUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1209,7 +1209,7 @@ func (l IntList) MapUintptr(f IntUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapFloat32(f IntFloat32Functor) Float32List {
+func (l IntList) MapFloat32(f IntFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1218,7 +1218,7 @@ func (l IntList) MapFloat32(f IntFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapFloat64(f IntFloat64Functor) Float64List {
+func (l IntList) MapFloat64(f IntFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1227,7 +1227,7 @@ func (l IntList) MapFloat64(f IntFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapComplex64(f IntComplex64Functor) Complex64List {
+func (l IntList) MapComplex64(f IntComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1236,7 +1236,7 @@ func (l IntList) MapComplex64(f IntComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapComplex128(f IntComplex128Functor) Complex128List {
+func (l IntList) MapComplex128(f IntComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1245,7 +1245,7 @@ func (l IntList) MapComplex128(f IntComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapString(f IntStringFunctor) StringList {
+func (l IntList) MapString(f IntStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1254,7 +1254,7 @@ func (l IntList) MapString(f IntStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapAny(f IntAnyFunctor) AnyList {
+func (l IntList) MapAny(f IntAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1263,7 +1263,7 @@ func (l IntList) MapAny(f IntAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapBoolArr(f IntBoolArrFunctor) BoolArrList {
+func (l IntList) MapBoolArr(f IntBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1272,7 +1272,7 @@ func (l IntList) MapBoolArr(f IntBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapRuneArr(f IntRuneArrFunctor) RuneArrList {
+func (l IntList) MapRuneArr(f IntRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1281,7 +1281,7 @@ func (l IntList) MapRuneArr(f IntRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapByteArr(f IntByteArrFunctor) ByteArrList {
+func (l IntList) MapByteArr(f IntByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1290,7 +1290,7 @@ func (l IntList) MapByteArr(f IntByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapIntArr(f IntIntArrFunctor) IntArrList {
+func (l IntList) MapIntArr(f IntIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1299,7 +1299,7 @@ func (l IntList) MapIntArr(f IntIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt8Arr(f IntInt8ArrFunctor) Int8ArrList {
+func (l IntList) MapInt8Arr(f IntInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1308,7 +1308,7 @@ func (l IntList) MapInt8Arr(f IntInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt16Arr(f IntInt16ArrFunctor) Int16ArrList {
+func (l IntList) MapInt16Arr(f IntInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1317,7 +1317,7 @@ func (l IntList) MapInt16Arr(f IntInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt32Arr(f IntInt32ArrFunctor) Int32ArrList {
+func (l IntList) MapInt32Arr(f IntInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1326,7 +1326,7 @@ func (l IntList) MapInt32Arr(f IntInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapInt64Arr(f IntInt64ArrFunctor) Int64ArrList {
+func (l IntList) MapInt64Arr(f IntInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1335,7 +1335,7 @@ func (l IntList) MapInt64Arr(f IntInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUintArr(f IntUintArrFunctor) UintArrList {
+func (l IntList) MapUintArr(f IntUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1344,7 +1344,7 @@ func (l IntList) MapUintArr(f IntUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint8Arr(f IntUint8ArrFunctor) Uint8ArrList {
+func (l IntList) MapUint8Arr(f IntUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1353,7 +1353,7 @@ func (l IntList) MapUint8Arr(f IntUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint16Arr(f IntUint16ArrFunctor) Uint16ArrList {
+func (l IntList) MapUint16Arr(f IntUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1362,7 +1362,7 @@ func (l IntList) MapUint16Arr(f IntUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint32Arr(f IntUint32ArrFunctor) Uint32ArrList {
+func (l IntList) MapUint32Arr(f IntUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1371,7 +1371,7 @@ func (l IntList) MapUint32Arr(f IntUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUint64Arr(f IntUint64ArrFunctor) Uint64ArrList {
+func (l IntList) MapUint64Arr(f IntUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1380,7 +1380,7 @@ func (l IntList) MapUint64Arr(f IntUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapUintptrArr(f IntUintptrArrFunctor) UintptrArrList {
+func (l IntList) MapUintptrArr(f IntUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1389,7 +1389,7 @@ func (l IntList) MapUintptrArr(f IntUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapFloat32Arr(f IntFloat32ArrFunctor) Float32ArrList {
+func (l IntList) MapFloat32Arr(f IntFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1398,7 +1398,7 @@ func (l IntList) MapFloat32Arr(f IntFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapFloat64Arr(f IntFloat64ArrFunctor) Float64ArrList {
+func (l IntList) MapFloat64Arr(f IntFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1407,7 +1407,7 @@ func (l IntList) MapFloat64Arr(f IntFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapComplex64Arr(f IntComplex64ArrFunctor) Complex64ArrList {
+func (l IntList) MapComplex64Arr(f IntComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1416,7 +1416,7 @@ func (l IntList) MapComplex64Arr(f IntComplex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapComplex128Arr(f IntComplex128ArrFunctor) Complex128ArrList {
+func (l IntList) MapComplex128Arr(f IntComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1425,7 +1425,7 @@ func (l IntList) MapComplex128Arr(f IntComplex128ArrFunctor) Complex128ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapStringArr(f IntStringArrFunctor) StringArrList {
+func (l IntList) MapStringArr(f IntStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1434,7 +1434,7 @@ func (l IntList) MapStringArr(f IntStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntList) MapAnyArr(f IntAnyArrFunctor) AnyArrList {
+func (l IntList) MapAnyArr(f IntAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1443,7 +1443,7 @@ func (l IntList) MapAnyArr(f IntAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapBool(f Int8BoolFunctor) BoolList {
+func (l Int8List) MapBool(f Int8BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1452,7 +1452,7 @@ func (l Int8List) MapBool(f Int8BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapRune(f Int8RuneFunctor) RuneList {
+func (l Int8List) MapRune(f Int8RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1461,7 +1461,7 @@ func (l Int8List) MapRune(f Int8RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapByte(f Int8ByteFunctor) ByteList {
+func (l Int8List) MapByte(f Int8ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1470,7 +1470,7 @@ func (l Int8List) MapByte(f Int8ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt(f Int8IntFunctor) IntList {
+func (l Int8List) MapInt(f Int8IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1479,7 +1479,7 @@ func (l Int8List) MapInt(f Int8IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt8(f Int8Int8Functor) Int8List {
+func (l Int8List) MapInt8(f Int8Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1488,7 +1488,7 @@ func (l Int8List) MapInt8(f Int8Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt16(f Int8Int16Functor) Int16List {
+func (l Int8List) MapInt16(f Int8Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1497,7 +1497,7 @@ func (l Int8List) MapInt16(f Int8Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt32(f Int8Int32Functor) Int32List {
+func (l Int8List) MapInt32(f Int8Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1506,7 +1506,7 @@ func (l Int8List) MapInt32(f Int8Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt64(f Int8Int64Functor) Int64List {
+func (l Int8List) MapInt64(f Int8Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1515,7 +1515,7 @@ func (l Int8List) MapInt64(f Int8Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint(f Int8UintFunctor) UintList {
+func (l Int8List) MapUint(f Int8UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1524,7 +1524,7 @@ func (l Int8List) MapUint(f Int8UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint8(f Int8Uint8Functor) Uint8List {
+func (l Int8List) MapUint8(f Int8Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1533,7 +1533,7 @@ func (l Int8List) MapUint8(f Int8Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint16(f Int8Uint16Functor) Uint16List {
+func (l Int8List) MapUint16(f Int8Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1542,7 +1542,7 @@ func (l Int8List) MapUint16(f Int8Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint32(f Int8Uint32Functor) Uint32List {
+func (l Int8List) MapUint32(f Int8Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1551,7 +1551,7 @@ func (l Int8List) MapUint32(f Int8Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint64(f Int8Uint64Functor) Uint64List {
+func (l Int8List) MapUint64(f Int8Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1560,7 +1560,7 @@ func (l Int8List) MapUint64(f Int8Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUintptr(f Int8UintptrFunctor) UintptrList {
+func (l Int8List) MapUintptr(f Int8UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1569,7 +1569,7 @@ func (l Int8List) MapUintptr(f Int8UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapFloat32(f Int8Float32Functor) Float32List {
+func (l Int8List) MapFloat32(f Int8Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1578,7 +1578,7 @@ func (l Int8List) MapFloat32(f Int8Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapFloat64(f Int8Float64Functor) Float64List {
+func (l Int8List) MapFloat64(f Int8Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1587,7 +1587,7 @@ func (l Int8List) MapFloat64(f Int8Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapComplex64(f Int8Complex64Functor) Complex64List {
+func (l Int8List) MapComplex64(f Int8Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1596,7 +1596,7 @@ func (l Int8List) MapComplex64(f Int8Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapComplex128(f Int8Complex128Functor) Complex128List {
+func (l Int8List) MapComplex128(f Int8Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1605,7 +1605,7 @@ func (l Int8List) MapComplex128(f Int8Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapString(f Int8StringFunctor) StringList {
+func (l Int8List) MapString(f Int8StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1614,7 +1614,7 @@ func (l Int8List) MapString(f Int8StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapAny(f Int8AnyFunctor) AnyList {
+func (l Int8List) MapAny(f Int8AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1623,7 +1623,7 @@ func (l Int8List) MapAny(f Int8AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapBoolArr(f Int8BoolArrFunctor) BoolArrList {
+func (l Int8List) MapBoolArr(f Int8BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1632,7 +1632,7 @@ func (l Int8List) MapBoolArr(f Int8BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapRuneArr(f Int8RuneArrFunctor) RuneArrList {
+func (l Int8List) MapRuneArr(f Int8RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1641,7 +1641,7 @@ func (l Int8List) MapRuneArr(f Int8RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapByteArr(f Int8ByteArrFunctor) ByteArrList {
+func (l Int8List) MapByteArr(f Int8ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1650,7 +1650,7 @@ func (l Int8List) MapByteArr(f Int8ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapIntArr(f Int8IntArrFunctor) IntArrList {
+func (l Int8List) MapIntArr(f Int8IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1659,7 +1659,7 @@ func (l Int8List) MapIntArr(f Int8IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt8Arr(f Int8Int8ArrFunctor) Int8ArrList {
+func (l Int8List) MapInt8Arr(f Int8Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1668,7 +1668,7 @@ func (l Int8List) MapInt8Arr(f Int8Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt16Arr(f Int8Int16ArrFunctor) Int16ArrList {
+func (l Int8List) MapInt16Arr(f Int8Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1677,7 +1677,7 @@ func (l Int8List) MapInt16Arr(f Int8Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt32Arr(f Int8Int32ArrFunctor) Int32ArrList {
+func (l Int8List) MapInt32Arr(f Int8Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1686,7 +1686,7 @@ func (l Int8List) MapInt32Arr(f Int8Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapInt64Arr(f Int8Int64ArrFunctor) Int64ArrList {
+func (l Int8List) MapInt64Arr(f Int8Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1695,7 +1695,7 @@ func (l Int8List) MapInt64Arr(f Int8Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUintArr(f Int8UintArrFunctor) UintArrList {
+func (l Int8List) MapUintArr(f Int8UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1704,7 +1704,7 @@ func (l Int8List) MapUintArr(f Int8UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint8Arr(f Int8Uint8ArrFunctor) Uint8ArrList {
+func (l Int8List) MapUint8Arr(f Int8Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1713,7 +1713,7 @@ func (l Int8List) MapUint8Arr(f Int8Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint16Arr(f Int8Uint16ArrFunctor) Uint16ArrList {
+func (l Int8List) MapUint16Arr(f Int8Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1722,7 +1722,7 @@ func (l Int8List) MapUint16Arr(f Int8Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint32Arr(f Int8Uint32ArrFunctor) Uint32ArrList {
+func (l Int8List) MapUint32Arr(f Int8Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1731,7 +1731,7 @@ func (l Int8List) MapUint32Arr(f Int8Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUint64Arr(f Int8Uint64ArrFunctor) Uint64ArrList {
+func (l Int8List) MapUint64Arr(f Int8Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1740,7 +1740,7 @@ func (l Int8List) MapUint64Arr(f Int8Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapUintptrArr(f Int8UintptrArrFunctor) UintptrArrList {
+func (l Int8List) MapUintptrArr(f Int8UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1749,7 +1749,7 @@ func (l Int8List) MapUintptrArr(f Int8UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapFloat32Arr(f Int8Float32ArrFunctor) Float32ArrList {
+func (l Int8List) MapFloat32Arr(f Int8Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1758,7 +1758,7 @@ func (l Int8List) MapFloat32Arr(f Int8Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapFloat64Arr(f Int8Float64ArrFunctor) Float64ArrList {
+func (l Int8List) MapFloat64Arr(f Int8Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1767,7 +1767,7 @@ func (l Int8List) MapFloat64Arr(f Int8Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapComplex64Arr(f Int8Complex64ArrFunctor) Complex64ArrList {
+func (l Int8List) MapComplex64Arr(f Int8Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1776,7 +1776,7 @@ func (l Int8List) MapComplex64Arr(f Int8Complex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapComplex128Arr(f Int8Complex128ArrFunctor) Complex128ArrList {
+func (l Int8List) MapComplex128Arr(f Int8Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1785,7 +1785,7 @@ func (l Int8List) MapComplex128Arr(f Int8Complex128ArrFunctor) Complex128ArrList
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapStringArr(f Int8StringArrFunctor) StringArrList {
+func (l Int8List) MapStringArr(f Int8StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1794,7 +1794,7 @@ func (l Int8List) MapStringArr(f Int8StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8List) MapAnyArr(f Int8AnyArrFunctor) AnyArrList {
+func (l Int8List) MapAnyArr(f Int8AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1803,7 +1803,7 @@ func (l Int8List) MapAnyArr(f Int8AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapBool(f Int16BoolFunctor) BoolList {
+func (l Int16List) MapBool(f Int16BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1812,7 +1812,7 @@ func (l Int16List) MapBool(f Int16BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapRune(f Int16RuneFunctor) RuneList {
+func (l Int16List) MapRune(f Int16RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1821,7 +1821,7 @@ func (l Int16List) MapRune(f Int16RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapByte(f Int16ByteFunctor) ByteList {
+func (l Int16List) MapByte(f Int16ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1830,7 +1830,7 @@ func (l Int16List) MapByte(f Int16ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt(f Int16IntFunctor) IntList {
+func (l Int16List) MapInt(f Int16IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1839,7 +1839,7 @@ func (l Int16List) MapInt(f Int16IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt8(f Int16Int8Functor) Int8List {
+func (l Int16List) MapInt8(f Int16Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1848,7 +1848,7 @@ func (l Int16List) MapInt8(f Int16Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt16(f Int16Int16Functor) Int16List {
+func (l Int16List) MapInt16(f Int16Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1857,7 +1857,7 @@ func (l Int16List) MapInt16(f Int16Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt32(f Int16Int32Functor) Int32List {
+func (l Int16List) MapInt32(f Int16Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1866,7 +1866,7 @@ func (l Int16List) MapInt32(f Int16Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt64(f Int16Int64Functor) Int64List {
+func (l Int16List) MapInt64(f Int16Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1875,7 +1875,7 @@ func (l Int16List) MapInt64(f Int16Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint(f Int16UintFunctor) UintList {
+func (l Int16List) MapUint(f Int16UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1884,7 +1884,7 @@ func (l Int16List) MapUint(f Int16UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint8(f Int16Uint8Functor) Uint8List {
+func (l Int16List) MapUint8(f Int16Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1893,7 +1893,7 @@ func (l Int16List) MapUint8(f Int16Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint16(f Int16Uint16Functor) Uint16List {
+func (l Int16List) MapUint16(f Int16Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1902,7 +1902,7 @@ func (l Int16List) MapUint16(f Int16Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint32(f Int16Uint32Functor) Uint32List {
+func (l Int16List) MapUint32(f Int16Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1911,7 +1911,7 @@ func (l Int16List) MapUint32(f Int16Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint64(f Int16Uint64Functor) Uint64List {
+func (l Int16List) MapUint64(f Int16Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1920,7 +1920,7 @@ func (l Int16List) MapUint64(f Int16Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUintptr(f Int16UintptrFunctor) UintptrList {
+func (l Int16List) MapUintptr(f Int16UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1929,7 +1929,7 @@ func (l Int16List) MapUintptr(f Int16UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapFloat32(f Int16Float32Functor) Float32List {
+func (l Int16List) MapFloat32(f Int16Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1938,7 +1938,7 @@ func (l Int16List) MapFloat32(f Int16Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapFloat64(f Int16Float64Functor) Float64List {
+func (l Int16List) MapFloat64(f Int16Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1947,7 +1947,7 @@ func (l Int16List) MapFloat64(f Int16Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapComplex64(f Int16Complex64Functor) Complex64List {
+func (l Int16List) MapComplex64(f Int16Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1956,7 +1956,7 @@ func (l Int16List) MapComplex64(f Int16Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapComplex128(f Int16Complex128Functor) Complex128List {
+func (l Int16List) MapComplex128(f Int16Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1965,7 +1965,7 @@ func (l Int16List) MapComplex128(f Int16Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapString(f Int16StringFunctor) StringList {
+func (l Int16List) MapString(f Int16StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1974,7 +1974,7 @@ func (l Int16List) MapString(f Int16StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapAny(f Int16AnyFunctor) AnyList {
+func (l Int16List) MapAny(f Int16AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1983,7 +1983,7 @@ func (l Int16List) MapAny(f Int16AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapBoolArr(f Int16BoolArrFunctor) BoolArrList {
+func (l Int16List) MapBoolArr(f Int16BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -1992,7 +1992,7 @@ func (l Int16List) MapBoolArr(f Int16BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapRuneArr(f Int16RuneArrFunctor) RuneArrList {
+func (l Int16List) MapRuneArr(f Int16RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2001,7 +2001,7 @@ func (l Int16List) MapRuneArr(f Int16RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapByteArr(f Int16ByteArrFunctor) ByteArrList {
+func (l Int16List) MapByteArr(f Int16ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2010,7 +2010,7 @@ func (l Int16List) MapByteArr(f Int16ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapIntArr(f Int16IntArrFunctor) IntArrList {
+func (l Int16List) MapIntArr(f Int16IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2019,7 +2019,7 @@ func (l Int16List) MapIntArr(f Int16IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt8Arr(f Int16Int8ArrFunctor) Int8ArrList {
+func (l Int16List) MapInt8Arr(f Int16Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2028,7 +2028,7 @@ func (l Int16List) MapInt8Arr(f Int16Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt16Arr(f Int16Int16ArrFunctor) Int16ArrList {
+func (l Int16List) MapInt16Arr(f Int16Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2037,7 +2037,7 @@ func (l Int16List) MapInt16Arr(f Int16Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt32Arr(f Int16Int32ArrFunctor) Int32ArrList {
+func (l Int16List) MapInt32Arr(f Int16Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2046,7 +2046,7 @@ func (l Int16List) MapInt32Arr(f Int16Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapInt64Arr(f Int16Int64ArrFunctor) Int64ArrList {
+func (l Int16List) MapInt64Arr(f Int16Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2055,7 +2055,7 @@ func (l Int16List) MapInt64Arr(f Int16Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUintArr(f Int16UintArrFunctor) UintArrList {
+func (l Int16List) MapUintArr(f Int16UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2064,7 +2064,7 @@ func (l Int16List) MapUintArr(f Int16UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint8Arr(f Int16Uint8ArrFunctor) Uint8ArrList {
+func (l Int16List) MapUint8Arr(f Int16Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2073,7 +2073,7 @@ func (l Int16List) MapUint8Arr(f Int16Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint16Arr(f Int16Uint16ArrFunctor) Uint16ArrList {
+func (l Int16List) MapUint16Arr(f Int16Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2082,7 +2082,7 @@ func (l Int16List) MapUint16Arr(f Int16Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint32Arr(f Int16Uint32ArrFunctor) Uint32ArrList {
+func (l Int16List) MapUint32Arr(f Int16Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2091,7 +2091,7 @@ func (l Int16List) MapUint32Arr(f Int16Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUint64Arr(f Int16Uint64ArrFunctor) Uint64ArrList {
+func (l Int16List) MapUint64Arr(f Int16Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2100,7 +2100,7 @@ func (l Int16List) MapUint64Arr(f Int16Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapUintptrArr(f Int16UintptrArrFunctor) UintptrArrList {
+func (l Int16List) MapUintptrArr(f Int16UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2109,7 +2109,7 @@ func (l Int16List) MapUintptrArr(f Int16UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapFloat32Arr(f Int16Float32ArrFunctor) Float32ArrList {
+func (l Int16List) MapFloat32Arr(f Int16Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2118,7 +2118,7 @@ func (l Int16List) MapFloat32Arr(f Int16Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapFloat64Arr(f Int16Float64ArrFunctor) Float64ArrList {
+func (l Int16List) MapFloat64Arr(f Int16Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2127,7 +2127,7 @@ func (l Int16List) MapFloat64Arr(f Int16Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapComplex64Arr(f Int16Complex64ArrFunctor) Complex64ArrList {
+func (l Int16List) MapComplex64Arr(f Int16Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2136,7 +2136,7 @@ func (l Int16List) MapComplex64Arr(f Int16Complex64ArrFunctor) Complex64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapComplex128Arr(f Int16Complex128ArrFunctor) Complex128ArrList {
+func (l Int16List) MapComplex128Arr(f Int16Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2145,7 +2145,7 @@ func (l Int16List) MapComplex128Arr(f Int16Complex128ArrFunctor) Complex128ArrLi
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapStringArr(f Int16StringArrFunctor) StringArrList {
+func (l Int16List) MapStringArr(f Int16StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2154,7 +2154,7 @@ func (l Int16List) MapStringArr(f Int16StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16List) MapAnyArr(f Int16AnyArrFunctor) AnyArrList {
+func (l Int16List) MapAnyArr(f Int16AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2163,7 +2163,7 @@ func (l Int16List) MapAnyArr(f Int16AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapBool(f Int32BoolFunctor) BoolList {
+func (l Int32List) MapBool(f Int32BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2172,7 +2172,7 @@ func (l Int32List) MapBool(f Int32BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapRune(f Int32RuneFunctor) RuneList {
+func (l Int32List) MapRune(f Int32RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2181,7 +2181,7 @@ func (l Int32List) MapRune(f Int32RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapByte(f Int32ByteFunctor) ByteList {
+func (l Int32List) MapByte(f Int32ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2190,7 +2190,7 @@ func (l Int32List) MapByte(f Int32ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt(f Int32IntFunctor) IntList {
+func (l Int32List) MapInt(f Int32IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2199,7 +2199,7 @@ func (l Int32List) MapInt(f Int32IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt8(f Int32Int8Functor) Int8List {
+func (l Int32List) MapInt8(f Int32Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2208,7 +2208,7 @@ func (l Int32List) MapInt8(f Int32Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt16(f Int32Int16Functor) Int16List {
+func (l Int32List) MapInt16(f Int32Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2217,7 +2217,7 @@ func (l Int32List) MapInt16(f Int32Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt32(f Int32Int32Functor) Int32List {
+func (l Int32List) MapInt32(f Int32Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2226,7 +2226,7 @@ func (l Int32List) MapInt32(f Int32Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt64(f Int32Int64Functor) Int64List {
+func (l Int32List) MapInt64(f Int32Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2235,7 +2235,7 @@ func (l Int32List) MapInt64(f Int32Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint(f Int32UintFunctor) UintList {
+func (l Int32List) MapUint(f Int32UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2244,7 +2244,7 @@ func (l Int32List) MapUint(f Int32UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint8(f Int32Uint8Functor) Uint8List {
+func (l Int32List) MapUint8(f Int32Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2253,7 +2253,7 @@ func (l Int32List) MapUint8(f Int32Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint16(f Int32Uint16Functor) Uint16List {
+func (l Int32List) MapUint16(f Int32Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2262,7 +2262,7 @@ func (l Int32List) MapUint16(f Int32Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint32(f Int32Uint32Functor) Uint32List {
+func (l Int32List) MapUint32(f Int32Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2271,7 +2271,7 @@ func (l Int32List) MapUint32(f Int32Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint64(f Int32Uint64Functor) Uint64List {
+func (l Int32List) MapUint64(f Int32Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2280,7 +2280,7 @@ func (l Int32List) MapUint64(f Int32Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUintptr(f Int32UintptrFunctor) UintptrList {
+func (l Int32List) MapUintptr(f Int32UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2289,7 +2289,7 @@ func (l Int32List) MapUintptr(f Int32UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapFloat32(f Int32Float32Functor) Float32List {
+func (l Int32List) MapFloat32(f Int32Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2298,7 +2298,7 @@ func (l Int32List) MapFloat32(f Int32Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapFloat64(f Int32Float64Functor) Float64List {
+func (l Int32List) MapFloat64(f Int32Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2307,7 +2307,7 @@ func (l Int32List) MapFloat64(f Int32Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapComplex64(f Int32Complex64Functor) Complex64List {
+func (l Int32List) MapComplex64(f Int32Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2316,7 +2316,7 @@ func (l Int32List) MapComplex64(f Int32Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapComplex128(f Int32Complex128Functor) Complex128List {
+func (l Int32List) MapComplex128(f Int32Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2325,7 +2325,7 @@ func (l Int32List) MapComplex128(f Int32Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapString(f Int32StringFunctor) StringList {
+func (l Int32List) MapString(f Int32StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2334,7 +2334,7 @@ func (l Int32List) MapString(f Int32StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapAny(f Int32AnyFunctor) AnyList {
+func (l Int32List) MapAny(f Int32AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2343,7 +2343,7 @@ func (l Int32List) MapAny(f Int32AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapBoolArr(f Int32BoolArrFunctor) BoolArrList {
+func (l Int32List) MapBoolArr(f Int32BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2352,7 +2352,7 @@ func (l Int32List) MapBoolArr(f Int32BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapRuneArr(f Int32RuneArrFunctor) RuneArrList {
+func (l Int32List) MapRuneArr(f Int32RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2361,7 +2361,7 @@ func (l Int32List) MapRuneArr(f Int32RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapByteArr(f Int32ByteArrFunctor) ByteArrList {
+func (l Int32List) MapByteArr(f Int32ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2370,7 +2370,7 @@ func (l Int32List) MapByteArr(f Int32ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapIntArr(f Int32IntArrFunctor) IntArrList {
+func (l Int32List) MapIntArr(f Int32IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2379,7 +2379,7 @@ func (l Int32List) MapIntArr(f Int32IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt8Arr(f Int32Int8ArrFunctor) Int8ArrList {
+func (l Int32List) MapInt8Arr(f Int32Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2388,7 +2388,7 @@ func (l Int32List) MapInt8Arr(f Int32Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt16Arr(f Int32Int16ArrFunctor) Int16ArrList {
+func (l Int32List) MapInt16Arr(f Int32Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2397,7 +2397,7 @@ func (l Int32List) MapInt16Arr(f Int32Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt32Arr(f Int32Int32ArrFunctor) Int32ArrList {
+func (l Int32List) MapInt32Arr(f Int32Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2406,7 +2406,7 @@ func (l Int32List) MapInt32Arr(f Int32Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapInt64Arr(f Int32Int64ArrFunctor) Int64ArrList {
+func (l Int32List) MapInt64Arr(f Int32Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2415,7 +2415,7 @@ func (l Int32List) MapInt64Arr(f Int32Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUintArr(f Int32UintArrFunctor) UintArrList {
+func (l Int32List) MapUintArr(f Int32UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2424,7 +2424,7 @@ func (l Int32List) MapUintArr(f Int32UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint8Arr(f Int32Uint8ArrFunctor) Uint8ArrList {
+func (l Int32List) MapUint8Arr(f Int32Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2433,7 +2433,7 @@ func (l Int32List) MapUint8Arr(f Int32Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint16Arr(f Int32Uint16ArrFunctor) Uint16ArrList {
+func (l Int32List) MapUint16Arr(f Int32Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2442,7 +2442,7 @@ func (l Int32List) MapUint16Arr(f Int32Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint32Arr(f Int32Uint32ArrFunctor) Uint32ArrList {
+func (l Int32List) MapUint32Arr(f Int32Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2451,7 +2451,7 @@ func (l Int32List) MapUint32Arr(f Int32Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUint64Arr(f Int32Uint64ArrFunctor) Uint64ArrList {
+func (l Int32List) MapUint64Arr(f Int32Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2460,7 +2460,7 @@ func (l Int32List) MapUint64Arr(f Int32Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapUintptrArr(f Int32UintptrArrFunctor) UintptrArrList {
+func (l Int32List) MapUintptrArr(f Int32UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2469,7 +2469,7 @@ func (l Int32List) MapUintptrArr(f Int32UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapFloat32Arr(f Int32Float32ArrFunctor) Float32ArrList {
+func (l Int32List) MapFloat32Arr(f Int32Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2478,7 +2478,7 @@ func (l Int32List) MapFloat32Arr(f Int32Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapFloat64Arr(f Int32Float64ArrFunctor) Float64ArrList {
+func (l Int32List) MapFloat64Arr(f Int32Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2487,7 +2487,7 @@ func (l Int32List) MapFloat64Arr(f Int32Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapComplex64Arr(f Int32Complex64ArrFunctor) Complex64ArrList {
+func (l Int32List) MapComplex64Arr(f Int32Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2496,7 +2496,7 @@ func (l Int32List) MapComplex64Arr(f Int32Complex64ArrFunctor) Complex64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapComplex128Arr(f Int32Complex128ArrFunctor) Complex128ArrList {
+func (l Int32List) MapComplex128Arr(f Int32Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2505,7 +2505,7 @@ func (l Int32List) MapComplex128Arr(f Int32Complex128ArrFunctor) Complex128ArrLi
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapStringArr(f Int32StringArrFunctor) StringArrList {
+func (l Int32List) MapStringArr(f Int32StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2514,7 +2514,7 @@ func (l Int32List) MapStringArr(f Int32StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32List) MapAnyArr(f Int32AnyArrFunctor) AnyArrList {
+func (l Int32List) MapAnyArr(f Int32AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2523,7 +2523,7 @@ func (l Int32List) MapAnyArr(f Int32AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapBool(f Int64BoolFunctor) BoolList {
+func (l Int64List) MapBool(f Int64BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2532,7 +2532,7 @@ func (l Int64List) MapBool(f Int64BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapRune(f Int64RuneFunctor) RuneList {
+func (l Int64List) MapRune(f Int64RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2541,7 +2541,7 @@ func (l Int64List) MapRune(f Int64RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapByte(f Int64ByteFunctor) ByteList {
+func (l Int64List) MapByte(f Int64ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2550,7 +2550,7 @@ func (l Int64List) MapByte(f Int64ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt(f Int64IntFunctor) IntList {
+func (l Int64List) MapInt(f Int64IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2559,7 +2559,7 @@ func (l Int64List) MapInt(f Int64IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt8(f Int64Int8Functor) Int8List {
+func (l Int64List) MapInt8(f Int64Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2568,7 +2568,7 @@ func (l Int64List) MapInt8(f Int64Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt16(f Int64Int16Functor) Int16List {
+func (l Int64List) MapInt16(f Int64Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2577,7 +2577,7 @@ func (l Int64List) MapInt16(f Int64Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt32(f Int64Int32Functor) Int32List {
+func (l Int64List) MapInt32(f Int64Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2586,7 +2586,7 @@ func (l Int64List) MapInt32(f Int64Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt64(f Int64Int64Functor) Int64List {
+func (l Int64List) MapInt64(f Int64Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2595,7 +2595,7 @@ func (l Int64List) MapInt64(f Int64Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint(f Int64UintFunctor) UintList {
+func (l Int64List) MapUint(f Int64UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2604,7 +2604,7 @@ func (l Int64List) MapUint(f Int64UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint8(f Int64Uint8Functor) Uint8List {
+func (l Int64List) MapUint8(f Int64Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2613,7 +2613,7 @@ func (l Int64List) MapUint8(f Int64Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint16(f Int64Uint16Functor) Uint16List {
+func (l Int64List) MapUint16(f Int64Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2622,7 +2622,7 @@ func (l Int64List) MapUint16(f Int64Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint32(f Int64Uint32Functor) Uint32List {
+func (l Int64List) MapUint32(f Int64Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2631,7 +2631,7 @@ func (l Int64List) MapUint32(f Int64Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint64(f Int64Uint64Functor) Uint64List {
+func (l Int64List) MapUint64(f Int64Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2640,7 +2640,7 @@ func (l Int64List) MapUint64(f Int64Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUintptr(f Int64UintptrFunctor) UintptrList {
+func (l Int64List) MapUintptr(f Int64UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2649,7 +2649,7 @@ func (l Int64List) MapUintptr(f Int64UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapFloat32(f Int64Float32Functor) Float32List {
+func (l Int64List) MapFloat32(f Int64Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2658,7 +2658,7 @@ func (l Int64List) MapFloat32(f Int64Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapFloat64(f Int64Float64Functor) Float64List {
+func (l Int64List) MapFloat64(f Int64Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2667,7 +2667,7 @@ func (l Int64List) MapFloat64(f Int64Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapComplex64(f Int64Complex64Functor) Complex64List {
+func (l Int64List) MapComplex64(f Int64Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2676,7 +2676,7 @@ func (l Int64List) MapComplex64(f Int64Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapComplex128(f Int64Complex128Functor) Complex128List {
+func (l Int64List) MapComplex128(f Int64Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2685,7 +2685,7 @@ func (l Int64List) MapComplex128(f Int64Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapString(f Int64StringFunctor) StringList {
+func (l Int64List) MapString(f Int64StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2694,7 +2694,7 @@ func (l Int64List) MapString(f Int64StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapAny(f Int64AnyFunctor) AnyList {
+func (l Int64List) MapAny(f Int64AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2703,7 +2703,7 @@ func (l Int64List) MapAny(f Int64AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapBoolArr(f Int64BoolArrFunctor) BoolArrList {
+func (l Int64List) MapBoolArr(f Int64BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2712,7 +2712,7 @@ func (l Int64List) MapBoolArr(f Int64BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapRuneArr(f Int64RuneArrFunctor) RuneArrList {
+func (l Int64List) MapRuneArr(f Int64RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2721,7 +2721,7 @@ func (l Int64List) MapRuneArr(f Int64RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapByteArr(f Int64ByteArrFunctor) ByteArrList {
+func (l Int64List) MapByteArr(f Int64ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2730,7 +2730,7 @@ func (l Int64List) MapByteArr(f Int64ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapIntArr(f Int64IntArrFunctor) IntArrList {
+func (l Int64List) MapIntArr(f Int64IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2739,7 +2739,7 @@ func (l Int64List) MapIntArr(f Int64IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt8Arr(f Int64Int8ArrFunctor) Int8ArrList {
+func (l Int64List) MapInt8Arr(f Int64Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2748,7 +2748,7 @@ func (l Int64List) MapInt8Arr(f Int64Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt16Arr(f Int64Int16ArrFunctor) Int16ArrList {
+func (l Int64List) MapInt16Arr(f Int64Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2757,7 +2757,7 @@ func (l Int64List) MapInt16Arr(f Int64Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt32Arr(f Int64Int32ArrFunctor) Int32ArrList {
+func (l Int64List) MapInt32Arr(f Int64Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2766,7 +2766,7 @@ func (l Int64List) MapInt32Arr(f Int64Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapInt64Arr(f Int64Int64ArrFunctor) Int64ArrList {
+func (l Int64List) MapInt64Arr(f Int64Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2775,7 +2775,7 @@ func (l Int64List) MapInt64Arr(f Int64Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUintArr(f Int64UintArrFunctor) UintArrList {
+func (l Int64List) MapUintArr(f Int64UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2784,7 +2784,7 @@ func (l Int64List) MapUintArr(f Int64UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint8Arr(f Int64Uint8ArrFunctor) Uint8ArrList {
+func (l Int64List) MapUint8Arr(f Int64Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2793,7 +2793,7 @@ func (l Int64List) MapUint8Arr(f Int64Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint16Arr(f Int64Uint16ArrFunctor) Uint16ArrList {
+func (l Int64List) MapUint16Arr(f Int64Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2802,7 +2802,7 @@ func (l Int64List) MapUint16Arr(f Int64Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint32Arr(f Int64Uint32ArrFunctor) Uint32ArrList {
+func (l Int64List) MapUint32Arr(f Int64Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2811,7 +2811,7 @@ func (l Int64List) MapUint32Arr(f Int64Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUint64Arr(f Int64Uint64ArrFunctor) Uint64ArrList {
+func (l Int64List) MapUint64Arr(f Int64Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2820,7 +2820,7 @@ func (l Int64List) MapUint64Arr(f Int64Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapUintptrArr(f Int64UintptrArrFunctor) UintptrArrList {
+func (l Int64List) MapUintptrArr(f Int64UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2829,7 +2829,7 @@ func (l Int64List) MapUintptrArr(f Int64UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapFloat32Arr(f Int64Float32ArrFunctor) Float32ArrList {
+func (l Int64List) MapFloat32Arr(f Int64Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2838,7 +2838,7 @@ func (l Int64List) MapFloat32Arr(f Int64Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapFloat64Arr(f Int64Float64ArrFunctor) Float64ArrList {
+func (l Int64List) MapFloat64Arr(f Int64Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2847,7 +2847,7 @@ func (l Int64List) MapFloat64Arr(f Int64Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapComplex64Arr(f Int64Complex64ArrFunctor) Complex64ArrList {
+func (l Int64List) MapComplex64Arr(f Int64Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2856,7 +2856,7 @@ func (l Int64List) MapComplex64Arr(f Int64Complex64ArrFunctor) Complex64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapComplex128Arr(f Int64Complex128ArrFunctor) Complex128ArrList {
+func (l Int64List) MapComplex128Arr(f Int64Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2865,7 +2865,7 @@ func (l Int64List) MapComplex128Arr(f Int64Complex128ArrFunctor) Complex128ArrLi
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapStringArr(f Int64StringArrFunctor) StringArrList {
+func (l Int64List) MapStringArr(f Int64StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2874,7 +2874,7 @@ func (l Int64List) MapStringArr(f Int64StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64List) MapAnyArr(f Int64AnyArrFunctor) AnyArrList {
+func (l Int64List) MapAnyArr(f Int64AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2883,7 +2883,7 @@ func (l Int64List) MapAnyArr(f Int64AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapBool(f UintBoolFunctor) BoolList {
+func (l UintList) MapBool(f UintBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2892,7 +2892,7 @@ func (l UintList) MapBool(f UintBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapRune(f UintRuneFunctor) RuneList {
+func (l UintList) MapRune(f UintRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2901,7 +2901,7 @@ func (l UintList) MapRune(f UintRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapByte(f UintByteFunctor) ByteList {
+func (l UintList) MapByte(f UintByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2910,7 +2910,7 @@ func (l UintList) MapByte(f UintByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt(f UintIntFunctor) IntList {
+func (l UintList) MapInt(f UintIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2919,7 +2919,7 @@ func (l UintList) MapInt(f UintIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt8(f UintInt8Functor) Int8List {
+func (l UintList) MapInt8(f UintInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2928,7 +2928,7 @@ func (l UintList) MapInt8(f UintInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt16(f UintInt16Functor) Int16List {
+func (l UintList) MapInt16(f UintInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2937,7 +2937,7 @@ func (l UintList) MapInt16(f UintInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt32(f UintInt32Functor) Int32List {
+func (l UintList) MapInt32(f UintInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2946,7 +2946,7 @@ func (l UintList) MapInt32(f UintInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt64(f UintInt64Functor) Int64List {
+func (l UintList) MapInt64(f UintInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2955,7 +2955,7 @@ func (l UintList) MapInt64(f UintInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint(f UintUintFunctor) UintList {
+func (l UintList) MapUint(f UintUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2964,7 +2964,7 @@ func (l UintList) MapUint(f UintUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint8(f UintUint8Functor) Uint8List {
+func (l UintList) MapUint8(f UintUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2973,7 +2973,7 @@ func (l UintList) MapUint8(f UintUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint16(f UintUint16Functor) Uint16List {
+func (l UintList) MapUint16(f UintUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2982,7 +2982,7 @@ func (l UintList) MapUint16(f UintUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint32(f UintUint32Functor) Uint32List {
+func (l UintList) MapUint32(f UintUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -2991,7 +2991,7 @@ func (l UintList) MapUint32(f UintUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint64(f UintUint64Functor) Uint64List {
+func (l UintList) MapUint64(f UintUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3000,7 +3000,7 @@ func (l UintList) MapUint64(f UintUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUintptr(f UintUintptrFunctor) UintptrList {
+func (l UintList) MapUintptr(f UintUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3009,7 +3009,7 @@ func (l UintList) MapUintptr(f UintUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapFloat32(f UintFloat32Functor) Float32List {
+func (l UintList) MapFloat32(f UintFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3018,7 +3018,7 @@ func (l UintList) MapFloat32(f UintFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapFloat64(f UintFloat64Functor) Float64List {
+func (l UintList) MapFloat64(f UintFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3027,7 +3027,7 @@ func (l UintList) MapFloat64(f UintFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapComplex64(f UintComplex64Functor) Complex64List {
+func (l UintList) MapComplex64(f UintComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3036,7 +3036,7 @@ func (l UintList) MapComplex64(f UintComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapComplex128(f UintComplex128Functor) Complex128List {
+func (l UintList) MapComplex128(f UintComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3045,7 +3045,7 @@ func (l UintList) MapComplex128(f UintComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapString(f UintStringFunctor) StringList {
+func (l UintList) MapString(f UintStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3054,7 +3054,7 @@ func (l UintList) MapString(f UintStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapAny(f UintAnyFunctor) AnyList {
+func (l UintList) MapAny(f UintAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3063,7 +3063,7 @@ func (l UintList) MapAny(f UintAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapBoolArr(f UintBoolArrFunctor) BoolArrList {
+func (l UintList) MapBoolArr(f UintBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3072,7 +3072,7 @@ func (l UintList) MapBoolArr(f UintBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapRuneArr(f UintRuneArrFunctor) RuneArrList {
+func (l UintList) MapRuneArr(f UintRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3081,7 +3081,7 @@ func (l UintList) MapRuneArr(f UintRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapByteArr(f UintByteArrFunctor) ByteArrList {
+func (l UintList) MapByteArr(f UintByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3090,7 +3090,7 @@ func (l UintList) MapByteArr(f UintByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapIntArr(f UintIntArrFunctor) IntArrList {
+func (l UintList) MapIntArr(f UintIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3099,7 +3099,7 @@ func (l UintList) MapIntArr(f UintIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt8Arr(f UintInt8ArrFunctor) Int8ArrList {
+func (l UintList) MapInt8Arr(f UintInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3108,7 +3108,7 @@ func (l UintList) MapInt8Arr(f UintInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt16Arr(f UintInt16ArrFunctor) Int16ArrList {
+func (l UintList) MapInt16Arr(f UintInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3117,7 +3117,7 @@ func (l UintList) MapInt16Arr(f UintInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt32Arr(f UintInt32ArrFunctor) Int32ArrList {
+func (l UintList) MapInt32Arr(f UintInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3126,7 +3126,7 @@ func (l UintList) MapInt32Arr(f UintInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapInt64Arr(f UintInt64ArrFunctor) Int64ArrList {
+func (l UintList) MapInt64Arr(f UintInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3135,7 +3135,7 @@ func (l UintList) MapInt64Arr(f UintInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUintArr(f UintUintArrFunctor) UintArrList {
+func (l UintList) MapUintArr(f UintUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3144,7 +3144,7 @@ func (l UintList) MapUintArr(f UintUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint8Arr(f UintUint8ArrFunctor) Uint8ArrList {
+func (l UintList) MapUint8Arr(f UintUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3153,7 +3153,7 @@ func (l UintList) MapUint8Arr(f UintUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint16Arr(f UintUint16ArrFunctor) Uint16ArrList {
+func (l UintList) MapUint16Arr(f UintUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3162,7 +3162,7 @@ func (l UintList) MapUint16Arr(f UintUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint32Arr(f UintUint32ArrFunctor) Uint32ArrList {
+func (l UintList) MapUint32Arr(f UintUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3171,7 +3171,7 @@ func (l UintList) MapUint32Arr(f UintUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUint64Arr(f UintUint64ArrFunctor) Uint64ArrList {
+func (l UintList) MapUint64Arr(f UintUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3180,7 +3180,7 @@ func (l UintList) MapUint64Arr(f UintUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapUintptrArr(f UintUintptrArrFunctor) UintptrArrList {
+func (l UintList) MapUintptrArr(f UintUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3189,7 +3189,7 @@ func (l UintList) MapUintptrArr(f UintUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapFloat32Arr(f UintFloat32ArrFunctor) Float32ArrList {
+func (l UintList) MapFloat32Arr(f UintFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3198,7 +3198,7 @@ func (l UintList) MapFloat32Arr(f UintFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapFloat64Arr(f UintFloat64ArrFunctor) Float64ArrList {
+func (l UintList) MapFloat64Arr(f UintFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3207,7 +3207,7 @@ func (l UintList) MapFloat64Arr(f UintFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapComplex64Arr(f UintComplex64ArrFunctor) Complex64ArrList {
+func (l UintList) MapComplex64Arr(f UintComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3216,7 +3216,7 @@ func (l UintList) MapComplex64Arr(f UintComplex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapComplex128Arr(f UintComplex128ArrFunctor) Complex128ArrList {
+func (l UintList) MapComplex128Arr(f UintComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3225,7 +3225,7 @@ func (l UintList) MapComplex128Arr(f UintComplex128ArrFunctor) Complex128ArrList
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapStringArr(f UintStringArrFunctor) StringArrList {
+func (l UintList) MapStringArr(f UintStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3234,7 +3234,7 @@ func (l UintList) MapStringArr(f UintStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintList) MapAnyArr(f UintAnyArrFunctor) AnyArrList {
+func (l UintList) MapAnyArr(f UintAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3243,7 +3243,7 @@ func (l UintList) MapAnyArr(f UintAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapBool(f Uint8BoolFunctor) BoolList {
+func (l Uint8List) MapBool(f Uint8BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3252,7 +3252,7 @@ func (l Uint8List) MapBool(f Uint8BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapRune(f Uint8RuneFunctor) RuneList {
+func (l Uint8List) MapRune(f Uint8RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3261,7 +3261,7 @@ func (l Uint8List) MapRune(f Uint8RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapByte(f Uint8ByteFunctor) ByteList {
+func (l Uint8List) MapByte(f Uint8ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3270,7 +3270,7 @@ func (l Uint8List) MapByte(f Uint8ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt(f Uint8IntFunctor) IntList {
+func (l Uint8List) MapInt(f Uint8IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3279,7 +3279,7 @@ func (l Uint8List) MapInt(f Uint8IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt8(f Uint8Int8Functor) Int8List {
+func (l Uint8List) MapInt8(f Uint8Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3288,7 +3288,7 @@ func (l Uint8List) MapInt8(f Uint8Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt16(f Uint8Int16Functor) Int16List {
+func (l Uint8List) MapInt16(f Uint8Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3297,7 +3297,7 @@ func (l Uint8List) MapInt16(f Uint8Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt32(f Uint8Int32Functor) Int32List {
+func (l Uint8List) MapInt32(f Uint8Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3306,7 +3306,7 @@ func (l Uint8List) MapInt32(f Uint8Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt64(f Uint8Int64Functor) Int64List {
+func (l Uint8List) MapInt64(f Uint8Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3315,7 +3315,7 @@ func (l Uint8List) MapInt64(f Uint8Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint(f Uint8UintFunctor) UintList {
+func (l Uint8List) MapUint(f Uint8UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3324,7 +3324,7 @@ func (l Uint8List) MapUint(f Uint8UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint8(f Uint8Uint8Functor) Uint8List {
+func (l Uint8List) MapUint8(f Uint8Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3333,7 +3333,7 @@ func (l Uint8List) MapUint8(f Uint8Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint16(f Uint8Uint16Functor) Uint16List {
+func (l Uint8List) MapUint16(f Uint8Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3342,7 +3342,7 @@ func (l Uint8List) MapUint16(f Uint8Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint32(f Uint8Uint32Functor) Uint32List {
+func (l Uint8List) MapUint32(f Uint8Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3351,7 +3351,7 @@ func (l Uint8List) MapUint32(f Uint8Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint64(f Uint8Uint64Functor) Uint64List {
+func (l Uint8List) MapUint64(f Uint8Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3360,7 +3360,7 @@ func (l Uint8List) MapUint64(f Uint8Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUintptr(f Uint8UintptrFunctor) UintptrList {
+func (l Uint8List) MapUintptr(f Uint8UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3369,7 +3369,7 @@ func (l Uint8List) MapUintptr(f Uint8UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapFloat32(f Uint8Float32Functor) Float32List {
+func (l Uint8List) MapFloat32(f Uint8Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3378,7 +3378,7 @@ func (l Uint8List) MapFloat32(f Uint8Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapFloat64(f Uint8Float64Functor) Float64List {
+func (l Uint8List) MapFloat64(f Uint8Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3387,7 +3387,7 @@ func (l Uint8List) MapFloat64(f Uint8Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapComplex64(f Uint8Complex64Functor) Complex64List {
+func (l Uint8List) MapComplex64(f Uint8Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3396,7 +3396,7 @@ func (l Uint8List) MapComplex64(f Uint8Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapComplex128(f Uint8Complex128Functor) Complex128List {
+func (l Uint8List) MapComplex128(f Uint8Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3405,7 +3405,7 @@ func (l Uint8List) MapComplex128(f Uint8Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapString(f Uint8StringFunctor) StringList {
+func (l Uint8List) MapString(f Uint8StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3414,7 +3414,7 @@ func (l Uint8List) MapString(f Uint8StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapAny(f Uint8AnyFunctor) AnyList {
+func (l Uint8List) MapAny(f Uint8AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3423,7 +3423,7 @@ func (l Uint8List) MapAny(f Uint8AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapBoolArr(f Uint8BoolArrFunctor) BoolArrList {
+func (l Uint8List) MapBoolArr(f Uint8BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3432,7 +3432,7 @@ func (l Uint8List) MapBoolArr(f Uint8BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapRuneArr(f Uint8RuneArrFunctor) RuneArrList {
+func (l Uint8List) MapRuneArr(f Uint8RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3441,7 +3441,7 @@ func (l Uint8List) MapRuneArr(f Uint8RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapByteArr(f Uint8ByteArrFunctor) ByteArrList {
+func (l Uint8List) MapByteArr(f Uint8ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3450,7 +3450,7 @@ func (l Uint8List) MapByteArr(f Uint8ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapIntArr(f Uint8IntArrFunctor) IntArrList {
+func (l Uint8List) MapIntArr(f Uint8IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3459,7 +3459,7 @@ func (l Uint8List) MapIntArr(f Uint8IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt8Arr(f Uint8Int8ArrFunctor) Int8ArrList {
+func (l Uint8List) MapInt8Arr(f Uint8Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3468,7 +3468,7 @@ func (l Uint8List) MapInt8Arr(f Uint8Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt16Arr(f Uint8Int16ArrFunctor) Int16ArrList {
+func (l Uint8List) MapInt16Arr(f Uint8Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3477,7 +3477,7 @@ func (l Uint8List) MapInt16Arr(f Uint8Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt32Arr(f Uint8Int32ArrFunctor) Int32ArrList {
+func (l Uint8List) MapInt32Arr(f Uint8Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3486,7 +3486,7 @@ func (l Uint8List) MapInt32Arr(f Uint8Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapInt64Arr(f Uint8Int64ArrFunctor) Int64ArrList {
+func (l Uint8List) MapInt64Arr(f Uint8Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3495,7 +3495,7 @@ func (l Uint8List) MapInt64Arr(f Uint8Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUintArr(f Uint8UintArrFunctor) UintArrList {
+func (l Uint8List) MapUintArr(f Uint8UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3504,7 +3504,7 @@ func (l Uint8List) MapUintArr(f Uint8UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint8Arr(f Uint8Uint8ArrFunctor) Uint8ArrList {
+func (l Uint8List) MapUint8Arr(f Uint8Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3513,7 +3513,7 @@ func (l Uint8List) MapUint8Arr(f Uint8Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint16Arr(f Uint8Uint16ArrFunctor) Uint16ArrList {
+func (l Uint8List) MapUint16Arr(f Uint8Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3522,7 +3522,7 @@ func (l Uint8List) MapUint16Arr(f Uint8Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint32Arr(f Uint8Uint32ArrFunctor) Uint32ArrList {
+func (l Uint8List) MapUint32Arr(f Uint8Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3531,7 +3531,7 @@ func (l Uint8List) MapUint32Arr(f Uint8Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUint64Arr(f Uint8Uint64ArrFunctor) Uint64ArrList {
+func (l Uint8List) MapUint64Arr(f Uint8Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3540,7 +3540,7 @@ func (l Uint8List) MapUint64Arr(f Uint8Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapUintptrArr(f Uint8UintptrArrFunctor) UintptrArrList {
+func (l Uint8List) MapUintptrArr(f Uint8UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3549,7 +3549,7 @@ func (l Uint8List) MapUintptrArr(f Uint8UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapFloat32Arr(f Uint8Float32ArrFunctor) Float32ArrList {
+func (l Uint8List) MapFloat32Arr(f Uint8Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3558,7 +3558,7 @@ func (l Uint8List) MapFloat32Arr(f Uint8Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapFloat64Arr(f Uint8Float64ArrFunctor) Float64ArrList {
+func (l Uint8List) MapFloat64Arr(f Uint8Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3567,7 +3567,7 @@ func (l Uint8List) MapFloat64Arr(f Uint8Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapComplex64Arr(f Uint8Complex64ArrFunctor) Complex64ArrList {
+func (l Uint8List) MapComplex64Arr(f Uint8Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3576,7 +3576,7 @@ func (l Uint8List) MapComplex64Arr(f Uint8Complex64ArrFunctor) Complex64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapComplex128Arr(f Uint8Complex128ArrFunctor) Complex128ArrList {
+func (l Uint8List) MapComplex128Arr(f Uint8Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3585,7 +3585,7 @@ func (l Uint8List) MapComplex128Arr(f Uint8Complex128ArrFunctor) Complex128ArrLi
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapStringArr(f Uint8StringArrFunctor) StringArrList {
+func (l Uint8List) MapStringArr(f Uint8StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3594,7 +3594,7 @@ func (l Uint8List) MapStringArr(f Uint8StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8List) MapAnyArr(f Uint8AnyArrFunctor) AnyArrList {
+func (l Uint8List) MapAnyArr(f Uint8AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3603,7 +3603,7 @@ func (l Uint8List) MapAnyArr(f Uint8AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapBool(f Uint16BoolFunctor) BoolList {
+func (l Uint16List) MapBool(f Uint16BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3612,7 +3612,7 @@ func (l Uint16List) MapBool(f Uint16BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapRune(f Uint16RuneFunctor) RuneList {
+func (l Uint16List) MapRune(f Uint16RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3621,7 +3621,7 @@ func (l Uint16List) MapRune(f Uint16RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapByte(f Uint16ByteFunctor) ByteList {
+func (l Uint16List) MapByte(f Uint16ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3630,7 +3630,7 @@ func (l Uint16List) MapByte(f Uint16ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt(f Uint16IntFunctor) IntList {
+func (l Uint16List) MapInt(f Uint16IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3639,7 +3639,7 @@ func (l Uint16List) MapInt(f Uint16IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt8(f Uint16Int8Functor) Int8List {
+func (l Uint16List) MapInt8(f Uint16Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3648,7 +3648,7 @@ func (l Uint16List) MapInt8(f Uint16Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt16(f Uint16Int16Functor) Int16List {
+func (l Uint16List) MapInt16(f Uint16Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3657,7 +3657,7 @@ func (l Uint16List) MapInt16(f Uint16Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt32(f Uint16Int32Functor) Int32List {
+func (l Uint16List) MapInt32(f Uint16Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3666,7 +3666,7 @@ func (l Uint16List) MapInt32(f Uint16Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt64(f Uint16Int64Functor) Int64List {
+func (l Uint16List) MapInt64(f Uint16Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3675,7 +3675,7 @@ func (l Uint16List) MapInt64(f Uint16Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint(f Uint16UintFunctor) UintList {
+func (l Uint16List) MapUint(f Uint16UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3684,7 +3684,7 @@ func (l Uint16List) MapUint(f Uint16UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint8(f Uint16Uint8Functor) Uint8List {
+func (l Uint16List) MapUint8(f Uint16Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3693,7 +3693,7 @@ func (l Uint16List) MapUint8(f Uint16Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint16(f Uint16Uint16Functor) Uint16List {
+func (l Uint16List) MapUint16(f Uint16Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3702,7 +3702,7 @@ func (l Uint16List) MapUint16(f Uint16Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint32(f Uint16Uint32Functor) Uint32List {
+func (l Uint16List) MapUint32(f Uint16Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3711,7 +3711,7 @@ func (l Uint16List) MapUint32(f Uint16Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint64(f Uint16Uint64Functor) Uint64List {
+func (l Uint16List) MapUint64(f Uint16Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3720,7 +3720,7 @@ func (l Uint16List) MapUint64(f Uint16Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUintptr(f Uint16UintptrFunctor) UintptrList {
+func (l Uint16List) MapUintptr(f Uint16UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3729,7 +3729,7 @@ func (l Uint16List) MapUintptr(f Uint16UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapFloat32(f Uint16Float32Functor) Float32List {
+func (l Uint16List) MapFloat32(f Uint16Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3738,7 +3738,7 @@ func (l Uint16List) MapFloat32(f Uint16Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapFloat64(f Uint16Float64Functor) Float64List {
+func (l Uint16List) MapFloat64(f Uint16Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3747,7 +3747,7 @@ func (l Uint16List) MapFloat64(f Uint16Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapComplex64(f Uint16Complex64Functor) Complex64List {
+func (l Uint16List) MapComplex64(f Uint16Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3756,7 +3756,7 @@ func (l Uint16List) MapComplex64(f Uint16Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapComplex128(f Uint16Complex128Functor) Complex128List {
+func (l Uint16List) MapComplex128(f Uint16Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3765,7 +3765,7 @@ func (l Uint16List) MapComplex128(f Uint16Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapString(f Uint16StringFunctor) StringList {
+func (l Uint16List) MapString(f Uint16StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3774,7 +3774,7 @@ func (l Uint16List) MapString(f Uint16StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapAny(f Uint16AnyFunctor) AnyList {
+func (l Uint16List) MapAny(f Uint16AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3783,7 +3783,7 @@ func (l Uint16List) MapAny(f Uint16AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapBoolArr(f Uint16BoolArrFunctor) BoolArrList {
+func (l Uint16List) MapBoolArr(f Uint16BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3792,7 +3792,7 @@ func (l Uint16List) MapBoolArr(f Uint16BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapRuneArr(f Uint16RuneArrFunctor) RuneArrList {
+func (l Uint16List) MapRuneArr(f Uint16RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3801,7 +3801,7 @@ func (l Uint16List) MapRuneArr(f Uint16RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapByteArr(f Uint16ByteArrFunctor) ByteArrList {
+func (l Uint16List) MapByteArr(f Uint16ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3810,7 +3810,7 @@ func (l Uint16List) MapByteArr(f Uint16ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapIntArr(f Uint16IntArrFunctor) IntArrList {
+func (l Uint16List) MapIntArr(f Uint16IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3819,7 +3819,7 @@ func (l Uint16List) MapIntArr(f Uint16IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt8Arr(f Uint16Int8ArrFunctor) Int8ArrList {
+func (l Uint16List) MapInt8Arr(f Uint16Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3828,7 +3828,7 @@ func (l Uint16List) MapInt8Arr(f Uint16Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt16Arr(f Uint16Int16ArrFunctor) Int16ArrList {
+func (l Uint16List) MapInt16Arr(f Uint16Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3837,7 +3837,7 @@ func (l Uint16List) MapInt16Arr(f Uint16Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt32Arr(f Uint16Int32ArrFunctor) Int32ArrList {
+func (l Uint16List) MapInt32Arr(f Uint16Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3846,7 +3846,7 @@ func (l Uint16List) MapInt32Arr(f Uint16Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapInt64Arr(f Uint16Int64ArrFunctor) Int64ArrList {
+func (l Uint16List) MapInt64Arr(f Uint16Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3855,7 +3855,7 @@ func (l Uint16List) MapInt64Arr(f Uint16Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUintArr(f Uint16UintArrFunctor) UintArrList {
+func (l Uint16List) MapUintArr(f Uint16UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3864,7 +3864,7 @@ func (l Uint16List) MapUintArr(f Uint16UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint8Arr(f Uint16Uint8ArrFunctor) Uint8ArrList {
+func (l Uint16List) MapUint8Arr(f Uint16Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3873,7 +3873,7 @@ func (l Uint16List) MapUint8Arr(f Uint16Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint16Arr(f Uint16Uint16ArrFunctor) Uint16ArrList {
+func (l Uint16List) MapUint16Arr(f Uint16Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3882,7 +3882,7 @@ func (l Uint16List) MapUint16Arr(f Uint16Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint32Arr(f Uint16Uint32ArrFunctor) Uint32ArrList {
+func (l Uint16List) MapUint32Arr(f Uint16Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3891,7 +3891,7 @@ func (l Uint16List) MapUint32Arr(f Uint16Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUint64Arr(f Uint16Uint64ArrFunctor) Uint64ArrList {
+func (l Uint16List) MapUint64Arr(f Uint16Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3900,7 +3900,7 @@ func (l Uint16List) MapUint64Arr(f Uint16Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapUintptrArr(f Uint16UintptrArrFunctor) UintptrArrList {
+func (l Uint16List) MapUintptrArr(f Uint16UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3909,7 +3909,7 @@ func (l Uint16List) MapUintptrArr(f Uint16UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapFloat32Arr(f Uint16Float32ArrFunctor) Float32ArrList {
+func (l Uint16List) MapFloat32Arr(f Uint16Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3918,7 +3918,7 @@ func (l Uint16List) MapFloat32Arr(f Uint16Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapFloat64Arr(f Uint16Float64ArrFunctor) Float64ArrList {
+func (l Uint16List) MapFloat64Arr(f Uint16Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3927,7 +3927,7 @@ func (l Uint16List) MapFloat64Arr(f Uint16Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapComplex64Arr(f Uint16Complex64ArrFunctor) Complex64ArrList {
+func (l Uint16List) MapComplex64Arr(f Uint16Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3936,7 +3936,7 @@ func (l Uint16List) MapComplex64Arr(f Uint16Complex64ArrFunctor) Complex64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapComplex128Arr(f Uint16Complex128ArrFunctor) Complex128ArrList {
+func (l Uint16List) MapComplex128Arr(f Uint16Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3945,7 +3945,7 @@ func (l Uint16List) MapComplex128Arr(f Uint16Complex128ArrFunctor) Complex128Arr
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapStringArr(f Uint16StringArrFunctor) StringArrList {
+func (l Uint16List) MapStringArr(f Uint16StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3954,7 +3954,7 @@ func (l Uint16List) MapStringArr(f Uint16StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16List) MapAnyArr(f Uint16AnyArrFunctor) AnyArrList {
+func (l Uint16List) MapAnyArr(f Uint16AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3963,7 +3963,7 @@ func (l Uint16List) MapAnyArr(f Uint16AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapBool(f Uint32BoolFunctor) BoolList {
+func (l Uint32List) MapBool(f Uint32BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3972,7 +3972,7 @@ func (l Uint32List) MapBool(f Uint32BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapRune(f Uint32RuneFunctor) RuneList {
+func (l Uint32List) MapRune(f Uint32RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3981,7 +3981,7 @@ func (l Uint32List) MapRune(f Uint32RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapByte(f Uint32ByteFunctor) ByteList {
+func (l Uint32List) MapByte(f Uint32ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3990,7 +3990,7 @@ func (l Uint32List) MapByte(f Uint32ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt(f Uint32IntFunctor) IntList {
+func (l Uint32List) MapInt(f Uint32IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -3999,7 +3999,7 @@ func (l Uint32List) MapInt(f Uint32IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt8(f Uint32Int8Functor) Int8List {
+func (l Uint32List) MapInt8(f Uint32Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4008,7 +4008,7 @@ func (l Uint32List) MapInt8(f Uint32Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt16(f Uint32Int16Functor) Int16List {
+func (l Uint32List) MapInt16(f Uint32Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4017,7 +4017,7 @@ func (l Uint32List) MapInt16(f Uint32Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt32(f Uint32Int32Functor) Int32List {
+func (l Uint32List) MapInt32(f Uint32Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4026,7 +4026,7 @@ func (l Uint32List) MapInt32(f Uint32Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt64(f Uint32Int64Functor) Int64List {
+func (l Uint32List) MapInt64(f Uint32Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4035,7 +4035,7 @@ func (l Uint32List) MapInt64(f Uint32Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint(f Uint32UintFunctor) UintList {
+func (l Uint32List) MapUint(f Uint32UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4044,7 +4044,7 @@ func (l Uint32List) MapUint(f Uint32UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint8(f Uint32Uint8Functor) Uint8List {
+func (l Uint32List) MapUint8(f Uint32Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4053,7 +4053,7 @@ func (l Uint32List) MapUint8(f Uint32Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint16(f Uint32Uint16Functor) Uint16List {
+func (l Uint32List) MapUint16(f Uint32Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4062,7 +4062,7 @@ func (l Uint32List) MapUint16(f Uint32Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint32(f Uint32Uint32Functor) Uint32List {
+func (l Uint32List) MapUint32(f Uint32Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4071,7 +4071,7 @@ func (l Uint32List) MapUint32(f Uint32Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint64(f Uint32Uint64Functor) Uint64List {
+func (l Uint32List) MapUint64(f Uint32Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4080,7 +4080,7 @@ func (l Uint32List) MapUint64(f Uint32Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUintptr(f Uint32UintptrFunctor) UintptrList {
+func (l Uint32List) MapUintptr(f Uint32UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4089,7 +4089,7 @@ func (l Uint32List) MapUintptr(f Uint32UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapFloat32(f Uint32Float32Functor) Float32List {
+func (l Uint32List) MapFloat32(f Uint32Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4098,7 +4098,7 @@ func (l Uint32List) MapFloat32(f Uint32Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapFloat64(f Uint32Float64Functor) Float64List {
+func (l Uint32List) MapFloat64(f Uint32Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4107,7 +4107,7 @@ func (l Uint32List) MapFloat64(f Uint32Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapComplex64(f Uint32Complex64Functor) Complex64List {
+func (l Uint32List) MapComplex64(f Uint32Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4116,7 +4116,7 @@ func (l Uint32List) MapComplex64(f Uint32Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapComplex128(f Uint32Complex128Functor) Complex128List {
+func (l Uint32List) MapComplex128(f Uint32Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4125,7 +4125,7 @@ func (l Uint32List) MapComplex128(f Uint32Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapString(f Uint32StringFunctor) StringList {
+func (l Uint32List) MapString(f Uint32StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4134,7 +4134,7 @@ func (l Uint32List) MapString(f Uint32StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapAny(f Uint32AnyFunctor) AnyList {
+func (l Uint32List) MapAny(f Uint32AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4143,7 +4143,7 @@ func (l Uint32List) MapAny(f Uint32AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapBoolArr(f Uint32BoolArrFunctor) BoolArrList {
+func (l Uint32List) MapBoolArr(f Uint32BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4152,7 +4152,7 @@ func (l Uint32List) MapBoolArr(f Uint32BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapRuneArr(f Uint32RuneArrFunctor) RuneArrList {
+func (l Uint32List) MapRuneArr(f Uint32RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4161,7 +4161,7 @@ func (l Uint32List) MapRuneArr(f Uint32RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapByteArr(f Uint32ByteArrFunctor) ByteArrList {
+func (l Uint32List) MapByteArr(f Uint32ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4170,7 +4170,7 @@ func (l Uint32List) MapByteArr(f Uint32ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapIntArr(f Uint32IntArrFunctor) IntArrList {
+func (l Uint32List) MapIntArr(f Uint32IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4179,7 +4179,7 @@ func (l Uint32List) MapIntArr(f Uint32IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt8Arr(f Uint32Int8ArrFunctor) Int8ArrList {
+func (l Uint32List) MapInt8Arr(f Uint32Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4188,7 +4188,7 @@ func (l Uint32List) MapInt8Arr(f Uint32Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt16Arr(f Uint32Int16ArrFunctor) Int16ArrList {
+func (l Uint32List) MapInt16Arr(f Uint32Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4197,7 +4197,7 @@ func (l Uint32List) MapInt16Arr(f Uint32Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt32Arr(f Uint32Int32ArrFunctor) Int32ArrList {
+func (l Uint32List) MapInt32Arr(f Uint32Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4206,7 +4206,7 @@ func (l Uint32List) MapInt32Arr(f Uint32Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapInt64Arr(f Uint32Int64ArrFunctor) Int64ArrList {
+func (l Uint32List) MapInt64Arr(f Uint32Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4215,7 +4215,7 @@ func (l Uint32List) MapInt64Arr(f Uint32Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUintArr(f Uint32UintArrFunctor) UintArrList {
+func (l Uint32List) MapUintArr(f Uint32UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4224,7 +4224,7 @@ func (l Uint32List) MapUintArr(f Uint32UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint8Arr(f Uint32Uint8ArrFunctor) Uint8ArrList {
+func (l Uint32List) MapUint8Arr(f Uint32Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4233,7 +4233,7 @@ func (l Uint32List) MapUint8Arr(f Uint32Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint16Arr(f Uint32Uint16ArrFunctor) Uint16ArrList {
+func (l Uint32List) MapUint16Arr(f Uint32Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4242,7 +4242,7 @@ func (l Uint32List) MapUint16Arr(f Uint32Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint32Arr(f Uint32Uint32ArrFunctor) Uint32ArrList {
+func (l Uint32List) MapUint32Arr(f Uint32Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4251,7 +4251,7 @@ func (l Uint32List) MapUint32Arr(f Uint32Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUint64Arr(f Uint32Uint64ArrFunctor) Uint64ArrList {
+func (l Uint32List) MapUint64Arr(f Uint32Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4260,7 +4260,7 @@ func (l Uint32List) MapUint64Arr(f Uint32Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapUintptrArr(f Uint32UintptrArrFunctor) UintptrArrList {
+func (l Uint32List) MapUintptrArr(f Uint32UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4269,7 +4269,7 @@ func (l Uint32List) MapUintptrArr(f Uint32UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapFloat32Arr(f Uint32Float32ArrFunctor) Float32ArrList {
+func (l Uint32List) MapFloat32Arr(f Uint32Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4278,7 +4278,7 @@ func (l Uint32List) MapFloat32Arr(f Uint32Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapFloat64Arr(f Uint32Float64ArrFunctor) Float64ArrList {
+func (l Uint32List) MapFloat64Arr(f Uint32Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4287,7 +4287,7 @@ func (l Uint32List) MapFloat64Arr(f Uint32Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapComplex64Arr(f Uint32Complex64ArrFunctor) Complex64ArrList {
+func (l Uint32List) MapComplex64Arr(f Uint32Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4296,7 +4296,7 @@ func (l Uint32List) MapComplex64Arr(f Uint32Complex64ArrFunctor) Complex64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapComplex128Arr(f Uint32Complex128ArrFunctor) Complex128ArrList {
+func (l Uint32List) MapComplex128Arr(f Uint32Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4305,7 +4305,7 @@ func (l Uint32List) MapComplex128Arr(f Uint32Complex128ArrFunctor) Complex128Arr
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapStringArr(f Uint32StringArrFunctor) StringArrList {
+func (l Uint32List) MapStringArr(f Uint32StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4314,7 +4314,7 @@ func (l Uint32List) MapStringArr(f Uint32StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32List) MapAnyArr(f Uint32AnyArrFunctor) AnyArrList {
+func (l Uint32List) MapAnyArr(f Uint32AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4323,7 +4323,7 @@ func (l Uint32List) MapAnyArr(f Uint32AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapBool(f Uint64BoolFunctor) BoolList {
+func (l Uint64List) MapBool(f Uint64BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4332,7 +4332,7 @@ func (l Uint64List) MapBool(f Uint64BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapRune(f Uint64RuneFunctor) RuneList {
+func (l Uint64List) MapRune(f Uint64RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4341,7 +4341,7 @@ func (l Uint64List) MapRune(f Uint64RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapByte(f Uint64ByteFunctor) ByteList {
+func (l Uint64List) MapByte(f Uint64ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4350,7 +4350,7 @@ func (l Uint64List) MapByte(f Uint64ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt(f Uint64IntFunctor) IntList {
+func (l Uint64List) MapInt(f Uint64IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4359,7 +4359,7 @@ func (l Uint64List) MapInt(f Uint64IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt8(f Uint64Int8Functor) Int8List {
+func (l Uint64List) MapInt8(f Uint64Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4368,7 +4368,7 @@ func (l Uint64List) MapInt8(f Uint64Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt16(f Uint64Int16Functor) Int16List {
+func (l Uint64List) MapInt16(f Uint64Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4377,7 +4377,7 @@ func (l Uint64List) MapInt16(f Uint64Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt32(f Uint64Int32Functor) Int32List {
+func (l Uint64List) MapInt32(f Uint64Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4386,7 +4386,7 @@ func (l Uint64List) MapInt32(f Uint64Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt64(f Uint64Int64Functor) Int64List {
+func (l Uint64List) MapInt64(f Uint64Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4395,7 +4395,7 @@ func (l Uint64List) MapInt64(f Uint64Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint(f Uint64UintFunctor) UintList {
+func (l Uint64List) MapUint(f Uint64UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4404,7 +4404,7 @@ func (l Uint64List) MapUint(f Uint64UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint8(f Uint64Uint8Functor) Uint8List {
+func (l Uint64List) MapUint8(f Uint64Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4413,7 +4413,7 @@ func (l Uint64List) MapUint8(f Uint64Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint16(f Uint64Uint16Functor) Uint16List {
+func (l Uint64List) MapUint16(f Uint64Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4422,7 +4422,7 @@ func (l Uint64List) MapUint16(f Uint64Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint32(f Uint64Uint32Functor) Uint32List {
+func (l Uint64List) MapUint32(f Uint64Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4431,7 +4431,7 @@ func (l Uint64List) MapUint32(f Uint64Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint64(f Uint64Uint64Functor) Uint64List {
+func (l Uint64List) MapUint64(f Uint64Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4440,7 +4440,7 @@ func (l Uint64List) MapUint64(f Uint64Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUintptr(f Uint64UintptrFunctor) UintptrList {
+func (l Uint64List) MapUintptr(f Uint64UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4449,7 +4449,7 @@ func (l Uint64List) MapUintptr(f Uint64UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapFloat32(f Uint64Float32Functor) Float32List {
+func (l Uint64List) MapFloat32(f Uint64Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4458,7 +4458,7 @@ func (l Uint64List) MapFloat32(f Uint64Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapFloat64(f Uint64Float64Functor) Float64List {
+func (l Uint64List) MapFloat64(f Uint64Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4467,7 +4467,7 @@ func (l Uint64List) MapFloat64(f Uint64Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapComplex64(f Uint64Complex64Functor) Complex64List {
+func (l Uint64List) MapComplex64(f Uint64Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4476,7 +4476,7 @@ func (l Uint64List) MapComplex64(f Uint64Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapComplex128(f Uint64Complex128Functor) Complex128List {
+func (l Uint64List) MapComplex128(f Uint64Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4485,7 +4485,7 @@ func (l Uint64List) MapComplex128(f Uint64Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapString(f Uint64StringFunctor) StringList {
+func (l Uint64List) MapString(f Uint64StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4494,7 +4494,7 @@ func (l Uint64List) MapString(f Uint64StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapAny(f Uint64AnyFunctor) AnyList {
+func (l Uint64List) MapAny(f Uint64AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4503,7 +4503,7 @@ func (l Uint64List) MapAny(f Uint64AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapBoolArr(f Uint64BoolArrFunctor) BoolArrList {
+func (l Uint64List) MapBoolArr(f Uint64BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4512,7 +4512,7 @@ func (l Uint64List) MapBoolArr(f Uint64BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapRuneArr(f Uint64RuneArrFunctor) RuneArrList {
+func (l Uint64List) MapRuneArr(f Uint64RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4521,7 +4521,7 @@ func (l Uint64List) MapRuneArr(f Uint64RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapByteArr(f Uint64ByteArrFunctor) ByteArrList {
+func (l Uint64List) MapByteArr(f Uint64ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4530,7 +4530,7 @@ func (l Uint64List) MapByteArr(f Uint64ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapIntArr(f Uint64IntArrFunctor) IntArrList {
+func (l Uint64List) MapIntArr(f Uint64IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4539,7 +4539,7 @@ func (l Uint64List) MapIntArr(f Uint64IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt8Arr(f Uint64Int8ArrFunctor) Int8ArrList {
+func (l Uint64List) MapInt8Arr(f Uint64Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4548,7 +4548,7 @@ func (l Uint64List) MapInt8Arr(f Uint64Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt16Arr(f Uint64Int16ArrFunctor) Int16ArrList {
+func (l Uint64List) MapInt16Arr(f Uint64Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4557,7 +4557,7 @@ func (l Uint64List) MapInt16Arr(f Uint64Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt32Arr(f Uint64Int32ArrFunctor) Int32ArrList {
+func (l Uint64List) MapInt32Arr(f Uint64Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4566,7 +4566,7 @@ func (l Uint64List) MapInt32Arr(f Uint64Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapInt64Arr(f Uint64Int64ArrFunctor) Int64ArrList {
+func (l Uint64List) MapInt64Arr(f Uint64Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4575,7 +4575,7 @@ func (l Uint64List) MapInt64Arr(f Uint64Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUintArr(f Uint64UintArrFunctor) UintArrList {
+func (l Uint64List) MapUintArr(f Uint64UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4584,7 +4584,7 @@ func (l Uint64List) MapUintArr(f Uint64UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint8Arr(f Uint64Uint8ArrFunctor) Uint8ArrList {
+func (l Uint64List) MapUint8Arr(f Uint64Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4593,7 +4593,7 @@ func (l Uint64List) MapUint8Arr(f Uint64Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint16Arr(f Uint64Uint16ArrFunctor) Uint16ArrList {
+func (l Uint64List) MapUint16Arr(f Uint64Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4602,7 +4602,7 @@ func (l Uint64List) MapUint16Arr(f Uint64Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint32Arr(f Uint64Uint32ArrFunctor) Uint32ArrList {
+func (l Uint64List) MapUint32Arr(f Uint64Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4611,7 +4611,7 @@ func (l Uint64List) MapUint32Arr(f Uint64Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUint64Arr(f Uint64Uint64ArrFunctor) Uint64ArrList {
+func (l Uint64List) MapUint64Arr(f Uint64Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4620,7 +4620,7 @@ func (l Uint64List) MapUint64Arr(f Uint64Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapUintptrArr(f Uint64UintptrArrFunctor) UintptrArrList {
+func (l Uint64List) MapUintptrArr(f Uint64UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4629,7 +4629,7 @@ func (l Uint64List) MapUintptrArr(f Uint64UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapFloat32Arr(f Uint64Float32ArrFunctor) Float32ArrList {
+func (l Uint64List) MapFloat32Arr(f Uint64Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4638,7 +4638,7 @@ func (l Uint64List) MapFloat32Arr(f Uint64Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapFloat64Arr(f Uint64Float64ArrFunctor) Float64ArrList {
+func (l Uint64List) MapFloat64Arr(f Uint64Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4647,7 +4647,7 @@ func (l Uint64List) MapFloat64Arr(f Uint64Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapComplex64Arr(f Uint64Complex64ArrFunctor) Complex64ArrList {
+func (l Uint64List) MapComplex64Arr(f Uint64Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4656,7 +4656,7 @@ func (l Uint64List) MapComplex64Arr(f Uint64Complex64ArrFunctor) Complex64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapComplex128Arr(f Uint64Complex128ArrFunctor) Complex128ArrList {
+func (l Uint64List) MapComplex128Arr(f Uint64Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4665,7 +4665,7 @@ func (l Uint64List) MapComplex128Arr(f Uint64Complex128ArrFunctor) Complex128Arr
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapStringArr(f Uint64StringArrFunctor) StringArrList {
+func (l Uint64List) MapStringArr(f Uint64StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4674,7 +4674,7 @@ func (l Uint64List) MapStringArr(f Uint64StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64List) MapAnyArr(f Uint64AnyArrFunctor) AnyArrList {
+func (l Uint64List) MapAnyArr(f Uint64AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4683,7 +4683,7 @@ func (l Uint64List) MapAnyArr(f Uint64AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapBool(f UintptrBoolFunctor) BoolList {
+func (l UintptrList) MapBool(f UintptrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4692,7 +4692,7 @@ func (l UintptrList) MapBool(f UintptrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapRune(f UintptrRuneFunctor) RuneList {
+func (l UintptrList) MapRune(f UintptrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4701,7 +4701,7 @@ func (l UintptrList) MapRune(f UintptrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapByte(f UintptrByteFunctor) ByteList {
+func (l UintptrList) MapByte(f UintptrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4710,7 +4710,7 @@ func (l UintptrList) MapByte(f UintptrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt(f UintptrIntFunctor) IntList {
+func (l UintptrList) MapInt(f UintptrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4719,7 +4719,7 @@ func (l UintptrList) MapInt(f UintptrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt8(f UintptrInt8Functor) Int8List {
+func (l UintptrList) MapInt8(f UintptrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4728,7 +4728,7 @@ func (l UintptrList) MapInt8(f UintptrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt16(f UintptrInt16Functor) Int16List {
+func (l UintptrList) MapInt16(f UintptrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4737,7 +4737,7 @@ func (l UintptrList) MapInt16(f UintptrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt32(f UintptrInt32Functor) Int32List {
+func (l UintptrList) MapInt32(f UintptrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4746,7 +4746,7 @@ func (l UintptrList) MapInt32(f UintptrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt64(f UintptrInt64Functor) Int64List {
+func (l UintptrList) MapInt64(f UintptrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4755,7 +4755,7 @@ func (l UintptrList) MapInt64(f UintptrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint(f UintptrUintFunctor) UintList {
+func (l UintptrList) MapUint(f UintptrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4764,7 +4764,7 @@ func (l UintptrList) MapUint(f UintptrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint8(f UintptrUint8Functor) Uint8List {
+func (l UintptrList) MapUint8(f UintptrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4773,7 +4773,7 @@ func (l UintptrList) MapUint8(f UintptrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint16(f UintptrUint16Functor) Uint16List {
+func (l UintptrList) MapUint16(f UintptrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4782,7 +4782,7 @@ func (l UintptrList) MapUint16(f UintptrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint32(f UintptrUint32Functor) Uint32List {
+func (l UintptrList) MapUint32(f UintptrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4791,7 +4791,7 @@ func (l UintptrList) MapUint32(f UintptrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint64(f UintptrUint64Functor) Uint64List {
+func (l UintptrList) MapUint64(f UintptrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4800,7 +4800,7 @@ func (l UintptrList) MapUint64(f UintptrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUintptr(f UintptrUintptrFunctor) UintptrList {
+func (l UintptrList) MapUintptr(f UintptrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4809,7 +4809,7 @@ func (l UintptrList) MapUintptr(f UintptrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapFloat32(f UintptrFloat32Functor) Float32List {
+func (l UintptrList) MapFloat32(f UintptrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4818,7 +4818,7 @@ func (l UintptrList) MapFloat32(f UintptrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapFloat64(f UintptrFloat64Functor) Float64List {
+func (l UintptrList) MapFloat64(f UintptrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4827,7 +4827,7 @@ func (l UintptrList) MapFloat64(f UintptrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapComplex64(f UintptrComplex64Functor) Complex64List {
+func (l UintptrList) MapComplex64(f UintptrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4836,7 +4836,7 @@ func (l UintptrList) MapComplex64(f UintptrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapComplex128(f UintptrComplex128Functor) Complex128List {
+func (l UintptrList) MapComplex128(f UintptrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4845,7 +4845,7 @@ func (l UintptrList) MapComplex128(f UintptrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapString(f UintptrStringFunctor) StringList {
+func (l UintptrList) MapString(f UintptrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4854,7 +4854,7 @@ func (l UintptrList) MapString(f UintptrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapAny(f UintptrAnyFunctor) AnyList {
+func (l UintptrList) MapAny(f UintptrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4863,7 +4863,7 @@ func (l UintptrList) MapAny(f UintptrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapBoolArr(f UintptrBoolArrFunctor) BoolArrList {
+func (l UintptrList) MapBoolArr(f UintptrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4872,7 +4872,7 @@ func (l UintptrList) MapBoolArr(f UintptrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapRuneArr(f UintptrRuneArrFunctor) RuneArrList {
+func (l UintptrList) MapRuneArr(f UintptrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4881,7 +4881,7 @@ func (l UintptrList) MapRuneArr(f UintptrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapByteArr(f UintptrByteArrFunctor) ByteArrList {
+func (l UintptrList) MapByteArr(f UintptrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4890,7 +4890,7 @@ func (l UintptrList) MapByteArr(f UintptrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapIntArr(f UintptrIntArrFunctor) IntArrList {
+func (l UintptrList) MapIntArr(f UintptrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4899,7 +4899,7 @@ func (l UintptrList) MapIntArr(f UintptrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt8Arr(f UintptrInt8ArrFunctor) Int8ArrList {
+func (l UintptrList) MapInt8Arr(f UintptrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4908,7 +4908,7 @@ func (l UintptrList) MapInt8Arr(f UintptrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt16Arr(f UintptrInt16ArrFunctor) Int16ArrList {
+func (l UintptrList) MapInt16Arr(f UintptrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4917,7 +4917,7 @@ func (l UintptrList) MapInt16Arr(f UintptrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt32Arr(f UintptrInt32ArrFunctor) Int32ArrList {
+func (l UintptrList) MapInt32Arr(f UintptrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4926,7 +4926,7 @@ func (l UintptrList) MapInt32Arr(f UintptrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapInt64Arr(f UintptrInt64ArrFunctor) Int64ArrList {
+func (l UintptrList) MapInt64Arr(f UintptrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4935,7 +4935,7 @@ func (l UintptrList) MapInt64Arr(f UintptrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUintArr(f UintptrUintArrFunctor) UintArrList {
+func (l UintptrList) MapUintArr(f UintptrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4944,7 +4944,7 @@ func (l UintptrList) MapUintArr(f UintptrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint8Arr(f UintptrUint8ArrFunctor) Uint8ArrList {
+func (l UintptrList) MapUint8Arr(f UintptrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4953,7 +4953,7 @@ func (l UintptrList) MapUint8Arr(f UintptrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint16Arr(f UintptrUint16ArrFunctor) Uint16ArrList {
+func (l UintptrList) MapUint16Arr(f UintptrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4962,7 +4962,7 @@ func (l UintptrList) MapUint16Arr(f UintptrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint32Arr(f UintptrUint32ArrFunctor) Uint32ArrList {
+func (l UintptrList) MapUint32Arr(f UintptrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4971,7 +4971,7 @@ func (l UintptrList) MapUint32Arr(f UintptrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUint64Arr(f UintptrUint64ArrFunctor) Uint64ArrList {
+func (l UintptrList) MapUint64Arr(f UintptrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4980,7 +4980,7 @@ func (l UintptrList) MapUint64Arr(f UintptrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapUintptrArr(f UintptrUintptrArrFunctor) UintptrArrList {
+func (l UintptrList) MapUintptrArr(f UintptrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4989,7 +4989,7 @@ func (l UintptrList) MapUintptrArr(f UintptrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapFloat32Arr(f UintptrFloat32ArrFunctor) Float32ArrList {
+func (l UintptrList) MapFloat32Arr(f UintptrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -4998,7 +4998,7 @@ func (l UintptrList) MapFloat32Arr(f UintptrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapFloat64Arr(f UintptrFloat64ArrFunctor) Float64ArrList {
+func (l UintptrList) MapFloat64Arr(f UintptrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5007,7 +5007,7 @@ func (l UintptrList) MapFloat64Arr(f UintptrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapComplex64Arr(f UintptrComplex64ArrFunctor) Complex64ArrList {
+func (l UintptrList) MapComplex64Arr(f UintptrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5016,7 +5016,7 @@ func (l UintptrList) MapComplex64Arr(f UintptrComplex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapComplex128Arr(f UintptrComplex128ArrFunctor) Complex128ArrList {
+func (l UintptrList) MapComplex128Arr(f UintptrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5025,7 +5025,7 @@ func (l UintptrList) MapComplex128Arr(f UintptrComplex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapStringArr(f UintptrStringArrFunctor) StringArrList {
+func (l UintptrList) MapStringArr(f UintptrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5034,7 +5034,7 @@ func (l UintptrList) MapStringArr(f UintptrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrList) MapAnyArr(f UintptrAnyArrFunctor) AnyArrList {
+func (l UintptrList) MapAnyArr(f UintptrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5043,7 +5043,7 @@ func (l UintptrList) MapAnyArr(f UintptrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapBool(f Float32BoolFunctor) BoolList {
+func (l Float32List) MapBool(f Float32BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5052,7 +5052,7 @@ func (l Float32List) MapBool(f Float32BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapRune(f Float32RuneFunctor) RuneList {
+func (l Float32List) MapRune(f Float32RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5061,7 +5061,7 @@ func (l Float32List) MapRune(f Float32RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapByte(f Float32ByteFunctor) ByteList {
+func (l Float32List) MapByte(f Float32ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5070,7 +5070,7 @@ func (l Float32List) MapByte(f Float32ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt(f Float32IntFunctor) IntList {
+func (l Float32List) MapInt(f Float32IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5079,7 +5079,7 @@ func (l Float32List) MapInt(f Float32IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt8(f Float32Int8Functor) Int8List {
+func (l Float32List) MapInt8(f Float32Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5088,7 +5088,7 @@ func (l Float32List) MapInt8(f Float32Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt16(f Float32Int16Functor) Int16List {
+func (l Float32List) MapInt16(f Float32Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5097,7 +5097,7 @@ func (l Float32List) MapInt16(f Float32Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt32(f Float32Int32Functor) Int32List {
+func (l Float32List) MapInt32(f Float32Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5106,7 +5106,7 @@ func (l Float32List) MapInt32(f Float32Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt64(f Float32Int64Functor) Int64List {
+func (l Float32List) MapInt64(f Float32Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5115,7 +5115,7 @@ func (l Float32List) MapInt64(f Float32Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint(f Float32UintFunctor) UintList {
+func (l Float32List) MapUint(f Float32UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5124,7 +5124,7 @@ func (l Float32List) MapUint(f Float32UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint8(f Float32Uint8Functor) Uint8List {
+func (l Float32List) MapUint8(f Float32Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5133,7 +5133,7 @@ func (l Float32List) MapUint8(f Float32Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint16(f Float32Uint16Functor) Uint16List {
+func (l Float32List) MapUint16(f Float32Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5142,7 +5142,7 @@ func (l Float32List) MapUint16(f Float32Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint32(f Float32Uint32Functor) Uint32List {
+func (l Float32List) MapUint32(f Float32Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5151,7 +5151,7 @@ func (l Float32List) MapUint32(f Float32Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint64(f Float32Uint64Functor) Uint64List {
+func (l Float32List) MapUint64(f Float32Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5160,7 +5160,7 @@ func (l Float32List) MapUint64(f Float32Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUintptr(f Float32UintptrFunctor) UintptrList {
+func (l Float32List) MapUintptr(f Float32UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5169,7 +5169,7 @@ func (l Float32List) MapUintptr(f Float32UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapFloat32(f Float32Float32Functor) Float32List {
+func (l Float32List) MapFloat32(f Float32Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5178,7 +5178,7 @@ func (l Float32List) MapFloat32(f Float32Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapFloat64(f Float32Float64Functor) Float64List {
+func (l Float32List) MapFloat64(f Float32Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5187,7 +5187,7 @@ func (l Float32List) MapFloat64(f Float32Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapComplex64(f Float32Complex64Functor) Complex64List {
+func (l Float32List) MapComplex64(f Float32Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5196,7 +5196,7 @@ func (l Float32List) MapComplex64(f Float32Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapComplex128(f Float32Complex128Functor) Complex128List {
+func (l Float32List) MapComplex128(f Float32Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5205,7 +5205,7 @@ func (l Float32List) MapComplex128(f Float32Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapString(f Float32StringFunctor) StringList {
+func (l Float32List) MapString(f Float32StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5214,7 +5214,7 @@ func (l Float32List) MapString(f Float32StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapAny(f Float32AnyFunctor) AnyList {
+func (l Float32List) MapAny(f Float32AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5223,7 +5223,7 @@ func (l Float32List) MapAny(f Float32AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapBoolArr(f Float32BoolArrFunctor) BoolArrList {
+func (l Float32List) MapBoolArr(f Float32BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5232,7 +5232,7 @@ func (l Float32List) MapBoolArr(f Float32BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapRuneArr(f Float32RuneArrFunctor) RuneArrList {
+func (l Float32List) MapRuneArr(f Float32RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5241,7 +5241,7 @@ func (l Float32List) MapRuneArr(f Float32RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapByteArr(f Float32ByteArrFunctor) ByteArrList {
+func (l Float32List) MapByteArr(f Float32ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5250,7 +5250,7 @@ func (l Float32List) MapByteArr(f Float32ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapIntArr(f Float32IntArrFunctor) IntArrList {
+func (l Float32List) MapIntArr(f Float32IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5259,7 +5259,7 @@ func (l Float32List) MapIntArr(f Float32IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt8Arr(f Float32Int8ArrFunctor) Int8ArrList {
+func (l Float32List) MapInt8Arr(f Float32Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5268,7 +5268,7 @@ func (l Float32List) MapInt8Arr(f Float32Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt16Arr(f Float32Int16ArrFunctor) Int16ArrList {
+func (l Float32List) MapInt16Arr(f Float32Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5277,7 +5277,7 @@ func (l Float32List) MapInt16Arr(f Float32Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt32Arr(f Float32Int32ArrFunctor) Int32ArrList {
+func (l Float32List) MapInt32Arr(f Float32Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5286,7 +5286,7 @@ func (l Float32List) MapInt32Arr(f Float32Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapInt64Arr(f Float32Int64ArrFunctor) Int64ArrList {
+func (l Float32List) MapInt64Arr(f Float32Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5295,7 +5295,7 @@ func (l Float32List) MapInt64Arr(f Float32Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUintArr(f Float32UintArrFunctor) UintArrList {
+func (l Float32List) MapUintArr(f Float32UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5304,7 +5304,7 @@ func (l Float32List) MapUintArr(f Float32UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint8Arr(f Float32Uint8ArrFunctor) Uint8ArrList {
+func (l Float32List) MapUint8Arr(f Float32Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5313,7 +5313,7 @@ func (l Float32List) MapUint8Arr(f Float32Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint16Arr(f Float32Uint16ArrFunctor) Uint16ArrList {
+func (l Float32List) MapUint16Arr(f Float32Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5322,7 +5322,7 @@ func (l Float32List) MapUint16Arr(f Float32Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint32Arr(f Float32Uint32ArrFunctor) Uint32ArrList {
+func (l Float32List) MapUint32Arr(f Float32Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5331,7 +5331,7 @@ func (l Float32List) MapUint32Arr(f Float32Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUint64Arr(f Float32Uint64ArrFunctor) Uint64ArrList {
+func (l Float32List) MapUint64Arr(f Float32Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5340,7 +5340,7 @@ func (l Float32List) MapUint64Arr(f Float32Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapUintptrArr(f Float32UintptrArrFunctor) UintptrArrList {
+func (l Float32List) MapUintptrArr(f Float32UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5349,7 +5349,7 @@ func (l Float32List) MapUintptrArr(f Float32UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapFloat32Arr(f Float32Float32ArrFunctor) Float32ArrList {
+func (l Float32List) MapFloat32Arr(f Float32Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5358,7 +5358,7 @@ func (l Float32List) MapFloat32Arr(f Float32Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapFloat64Arr(f Float32Float64ArrFunctor) Float64ArrList {
+func (l Float32List) MapFloat64Arr(f Float32Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5367,7 +5367,7 @@ func (l Float32List) MapFloat64Arr(f Float32Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapComplex64Arr(f Float32Complex64ArrFunctor) Complex64ArrList {
+func (l Float32List) MapComplex64Arr(f Float32Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5376,7 +5376,7 @@ func (l Float32List) MapComplex64Arr(f Float32Complex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapComplex128Arr(f Float32Complex128ArrFunctor) Complex128ArrList {
+func (l Float32List) MapComplex128Arr(f Float32Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5385,7 +5385,7 @@ func (l Float32List) MapComplex128Arr(f Float32Complex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapStringArr(f Float32StringArrFunctor) StringArrList {
+func (l Float32List) MapStringArr(f Float32StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5394,7 +5394,7 @@ func (l Float32List) MapStringArr(f Float32StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32List) MapAnyArr(f Float32AnyArrFunctor) AnyArrList {
+func (l Float32List) MapAnyArr(f Float32AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5403,7 +5403,7 @@ func (l Float32List) MapAnyArr(f Float32AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapBool(f Float64BoolFunctor) BoolList {
+func (l Float64List) MapBool(f Float64BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5412,7 +5412,7 @@ func (l Float64List) MapBool(f Float64BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapRune(f Float64RuneFunctor) RuneList {
+func (l Float64List) MapRune(f Float64RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5421,7 +5421,7 @@ func (l Float64List) MapRune(f Float64RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapByte(f Float64ByteFunctor) ByteList {
+func (l Float64List) MapByte(f Float64ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5430,7 +5430,7 @@ func (l Float64List) MapByte(f Float64ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt(f Float64IntFunctor) IntList {
+func (l Float64List) MapInt(f Float64IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5439,7 +5439,7 @@ func (l Float64List) MapInt(f Float64IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt8(f Float64Int8Functor) Int8List {
+func (l Float64List) MapInt8(f Float64Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5448,7 +5448,7 @@ func (l Float64List) MapInt8(f Float64Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt16(f Float64Int16Functor) Int16List {
+func (l Float64List) MapInt16(f Float64Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5457,7 +5457,7 @@ func (l Float64List) MapInt16(f Float64Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt32(f Float64Int32Functor) Int32List {
+func (l Float64List) MapInt32(f Float64Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5466,7 +5466,7 @@ func (l Float64List) MapInt32(f Float64Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt64(f Float64Int64Functor) Int64List {
+func (l Float64List) MapInt64(f Float64Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5475,7 +5475,7 @@ func (l Float64List) MapInt64(f Float64Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint(f Float64UintFunctor) UintList {
+func (l Float64List) MapUint(f Float64UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5484,7 +5484,7 @@ func (l Float64List) MapUint(f Float64UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint8(f Float64Uint8Functor) Uint8List {
+func (l Float64List) MapUint8(f Float64Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5493,7 +5493,7 @@ func (l Float64List) MapUint8(f Float64Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint16(f Float64Uint16Functor) Uint16List {
+func (l Float64List) MapUint16(f Float64Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5502,7 +5502,7 @@ func (l Float64List) MapUint16(f Float64Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint32(f Float64Uint32Functor) Uint32List {
+func (l Float64List) MapUint32(f Float64Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5511,7 +5511,7 @@ func (l Float64List) MapUint32(f Float64Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint64(f Float64Uint64Functor) Uint64List {
+func (l Float64List) MapUint64(f Float64Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5520,7 +5520,7 @@ func (l Float64List) MapUint64(f Float64Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUintptr(f Float64UintptrFunctor) UintptrList {
+func (l Float64List) MapUintptr(f Float64UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5529,7 +5529,7 @@ func (l Float64List) MapUintptr(f Float64UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapFloat32(f Float64Float32Functor) Float32List {
+func (l Float64List) MapFloat32(f Float64Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5538,7 +5538,7 @@ func (l Float64List) MapFloat32(f Float64Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapFloat64(f Float64Float64Functor) Float64List {
+func (l Float64List) MapFloat64(f Float64Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5547,7 +5547,7 @@ func (l Float64List) MapFloat64(f Float64Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapComplex64(f Float64Complex64Functor) Complex64List {
+func (l Float64List) MapComplex64(f Float64Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5556,7 +5556,7 @@ func (l Float64List) MapComplex64(f Float64Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapComplex128(f Float64Complex128Functor) Complex128List {
+func (l Float64List) MapComplex128(f Float64Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5565,7 +5565,7 @@ func (l Float64List) MapComplex128(f Float64Complex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapString(f Float64StringFunctor) StringList {
+func (l Float64List) MapString(f Float64StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5574,7 +5574,7 @@ func (l Float64List) MapString(f Float64StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapAny(f Float64AnyFunctor) AnyList {
+func (l Float64List) MapAny(f Float64AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5583,7 +5583,7 @@ func (l Float64List) MapAny(f Float64AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapBoolArr(f Float64BoolArrFunctor) BoolArrList {
+func (l Float64List) MapBoolArr(f Float64BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5592,7 +5592,7 @@ func (l Float64List) MapBoolArr(f Float64BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapRuneArr(f Float64RuneArrFunctor) RuneArrList {
+func (l Float64List) MapRuneArr(f Float64RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5601,7 +5601,7 @@ func (l Float64List) MapRuneArr(f Float64RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapByteArr(f Float64ByteArrFunctor) ByteArrList {
+func (l Float64List) MapByteArr(f Float64ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5610,7 +5610,7 @@ func (l Float64List) MapByteArr(f Float64ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapIntArr(f Float64IntArrFunctor) IntArrList {
+func (l Float64List) MapIntArr(f Float64IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5619,7 +5619,7 @@ func (l Float64List) MapIntArr(f Float64IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt8Arr(f Float64Int8ArrFunctor) Int8ArrList {
+func (l Float64List) MapInt8Arr(f Float64Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5628,7 +5628,7 @@ func (l Float64List) MapInt8Arr(f Float64Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt16Arr(f Float64Int16ArrFunctor) Int16ArrList {
+func (l Float64List) MapInt16Arr(f Float64Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5637,7 +5637,7 @@ func (l Float64List) MapInt16Arr(f Float64Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt32Arr(f Float64Int32ArrFunctor) Int32ArrList {
+func (l Float64List) MapInt32Arr(f Float64Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5646,7 +5646,7 @@ func (l Float64List) MapInt32Arr(f Float64Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapInt64Arr(f Float64Int64ArrFunctor) Int64ArrList {
+func (l Float64List) MapInt64Arr(f Float64Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5655,7 +5655,7 @@ func (l Float64List) MapInt64Arr(f Float64Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUintArr(f Float64UintArrFunctor) UintArrList {
+func (l Float64List) MapUintArr(f Float64UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5664,7 +5664,7 @@ func (l Float64List) MapUintArr(f Float64UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint8Arr(f Float64Uint8ArrFunctor) Uint8ArrList {
+func (l Float64List) MapUint8Arr(f Float64Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5673,7 +5673,7 @@ func (l Float64List) MapUint8Arr(f Float64Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint16Arr(f Float64Uint16ArrFunctor) Uint16ArrList {
+func (l Float64List) MapUint16Arr(f Float64Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5682,7 +5682,7 @@ func (l Float64List) MapUint16Arr(f Float64Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint32Arr(f Float64Uint32ArrFunctor) Uint32ArrList {
+func (l Float64List) MapUint32Arr(f Float64Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5691,7 +5691,7 @@ func (l Float64List) MapUint32Arr(f Float64Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUint64Arr(f Float64Uint64ArrFunctor) Uint64ArrList {
+func (l Float64List) MapUint64Arr(f Float64Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5700,7 +5700,7 @@ func (l Float64List) MapUint64Arr(f Float64Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapUintptrArr(f Float64UintptrArrFunctor) UintptrArrList {
+func (l Float64List) MapUintptrArr(f Float64UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5709,7 +5709,7 @@ func (l Float64List) MapUintptrArr(f Float64UintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapFloat32Arr(f Float64Float32ArrFunctor) Float32ArrList {
+func (l Float64List) MapFloat32Arr(f Float64Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5718,7 +5718,7 @@ func (l Float64List) MapFloat32Arr(f Float64Float32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapFloat64Arr(f Float64Float64ArrFunctor) Float64ArrList {
+func (l Float64List) MapFloat64Arr(f Float64Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5727,7 +5727,7 @@ func (l Float64List) MapFloat64Arr(f Float64Float64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapComplex64Arr(f Float64Complex64ArrFunctor) Complex64ArrList {
+func (l Float64List) MapComplex64Arr(f Float64Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5736,7 +5736,7 @@ func (l Float64List) MapComplex64Arr(f Float64Complex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapComplex128Arr(f Float64Complex128ArrFunctor) Complex128ArrList {
+func (l Float64List) MapComplex128Arr(f Float64Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5745,7 +5745,7 @@ func (l Float64List) MapComplex128Arr(f Float64Complex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapStringArr(f Float64StringArrFunctor) StringArrList {
+func (l Float64List) MapStringArr(f Float64StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5754,7 +5754,7 @@ func (l Float64List) MapStringArr(f Float64StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64List) MapAnyArr(f Float64AnyArrFunctor) AnyArrList {
+func (l Float64List) MapAnyArr(f Float64AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5763,7 +5763,7 @@ func (l Float64List) MapAnyArr(f Float64AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapBool(f Complex64BoolFunctor) BoolList {
+func (l Complex64List) MapBool(f Complex64BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5772,7 +5772,7 @@ func (l Complex64List) MapBool(f Complex64BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapRune(f Complex64RuneFunctor) RuneList {
+func (l Complex64List) MapRune(f Complex64RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5781,7 +5781,7 @@ func (l Complex64List) MapRune(f Complex64RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapByte(f Complex64ByteFunctor) ByteList {
+func (l Complex64List) MapByte(f Complex64ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5790,7 +5790,7 @@ func (l Complex64List) MapByte(f Complex64ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt(f Complex64IntFunctor) IntList {
+func (l Complex64List) MapInt(f Complex64IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5799,7 +5799,7 @@ func (l Complex64List) MapInt(f Complex64IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt8(f Complex64Int8Functor) Int8List {
+func (l Complex64List) MapInt8(f Complex64Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5808,7 +5808,7 @@ func (l Complex64List) MapInt8(f Complex64Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt16(f Complex64Int16Functor) Int16List {
+func (l Complex64List) MapInt16(f Complex64Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5817,7 +5817,7 @@ func (l Complex64List) MapInt16(f Complex64Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt32(f Complex64Int32Functor) Int32List {
+func (l Complex64List) MapInt32(f Complex64Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5826,7 +5826,7 @@ func (l Complex64List) MapInt32(f Complex64Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt64(f Complex64Int64Functor) Int64List {
+func (l Complex64List) MapInt64(f Complex64Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5835,7 +5835,7 @@ func (l Complex64List) MapInt64(f Complex64Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint(f Complex64UintFunctor) UintList {
+func (l Complex64List) MapUint(f Complex64UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5844,7 +5844,7 @@ func (l Complex64List) MapUint(f Complex64UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint8(f Complex64Uint8Functor) Uint8List {
+func (l Complex64List) MapUint8(f Complex64Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5853,7 +5853,7 @@ func (l Complex64List) MapUint8(f Complex64Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint16(f Complex64Uint16Functor) Uint16List {
+func (l Complex64List) MapUint16(f Complex64Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5862,7 +5862,7 @@ func (l Complex64List) MapUint16(f Complex64Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint32(f Complex64Uint32Functor) Uint32List {
+func (l Complex64List) MapUint32(f Complex64Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5871,7 +5871,7 @@ func (l Complex64List) MapUint32(f Complex64Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint64(f Complex64Uint64Functor) Uint64List {
+func (l Complex64List) MapUint64(f Complex64Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5880,7 +5880,7 @@ func (l Complex64List) MapUint64(f Complex64Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUintptr(f Complex64UintptrFunctor) UintptrList {
+func (l Complex64List) MapUintptr(f Complex64UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5889,7 +5889,7 @@ func (l Complex64List) MapUintptr(f Complex64UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapFloat32(f Complex64Float32Functor) Float32List {
+func (l Complex64List) MapFloat32(f Complex64Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5898,7 +5898,7 @@ func (l Complex64List) MapFloat32(f Complex64Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapFloat64(f Complex64Float64Functor) Float64List {
+func (l Complex64List) MapFloat64(f Complex64Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5907,7 +5907,7 @@ func (l Complex64List) MapFloat64(f Complex64Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapComplex64(f Complex64Complex64Functor) Complex64List {
+func (l Complex64List) MapComplex64(f Complex64Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5916,7 +5916,7 @@ func (l Complex64List) MapComplex64(f Complex64Complex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapComplex128(f Complex64Complex128Functor) Complex128List {
+func (l Complex64List) MapComplex128(f Complex64Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5925,7 +5925,7 @@ func (l Complex64List) MapComplex128(f Complex64Complex128Functor) Complex128Lis
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapString(f Complex64StringFunctor) StringList {
+func (l Complex64List) MapString(f Complex64StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5934,7 +5934,7 @@ func (l Complex64List) MapString(f Complex64StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapAny(f Complex64AnyFunctor) AnyList {
+func (l Complex64List) MapAny(f Complex64AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5943,7 +5943,7 @@ func (l Complex64List) MapAny(f Complex64AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapBoolArr(f Complex64BoolArrFunctor) BoolArrList {
+func (l Complex64List) MapBoolArr(f Complex64BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5952,7 +5952,7 @@ func (l Complex64List) MapBoolArr(f Complex64BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapRuneArr(f Complex64RuneArrFunctor) RuneArrList {
+func (l Complex64List) MapRuneArr(f Complex64RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5961,7 +5961,7 @@ func (l Complex64List) MapRuneArr(f Complex64RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapByteArr(f Complex64ByteArrFunctor) ByteArrList {
+func (l Complex64List) MapByteArr(f Complex64ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5970,7 +5970,7 @@ func (l Complex64List) MapByteArr(f Complex64ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapIntArr(f Complex64IntArrFunctor) IntArrList {
+func (l Complex64List) MapIntArr(f Complex64IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5979,7 +5979,7 @@ func (l Complex64List) MapIntArr(f Complex64IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt8Arr(f Complex64Int8ArrFunctor) Int8ArrList {
+func (l Complex64List) MapInt8Arr(f Complex64Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5988,7 +5988,7 @@ func (l Complex64List) MapInt8Arr(f Complex64Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt16Arr(f Complex64Int16ArrFunctor) Int16ArrList {
+func (l Complex64List) MapInt16Arr(f Complex64Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -5997,7 +5997,7 @@ func (l Complex64List) MapInt16Arr(f Complex64Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt32Arr(f Complex64Int32ArrFunctor) Int32ArrList {
+func (l Complex64List) MapInt32Arr(f Complex64Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6006,7 +6006,7 @@ func (l Complex64List) MapInt32Arr(f Complex64Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapInt64Arr(f Complex64Int64ArrFunctor) Int64ArrList {
+func (l Complex64List) MapInt64Arr(f Complex64Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6015,7 +6015,7 @@ func (l Complex64List) MapInt64Arr(f Complex64Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUintArr(f Complex64UintArrFunctor) UintArrList {
+func (l Complex64List) MapUintArr(f Complex64UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6024,7 +6024,7 @@ func (l Complex64List) MapUintArr(f Complex64UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint8Arr(f Complex64Uint8ArrFunctor) Uint8ArrList {
+func (l Complex64List) MapUint8Arr(f Complex64Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6033,7 +6033,7 @@ func (l Complex64List) MapUint8Arr(f Complex64Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint16Arr(f Complex64Uint16ArrFunctor) Uint16ArrList {
+func (l Complex64List) MapUint16Arr(f Complex64Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6042,7 +6042,7 @@ func (l Complex64List) MapUint16Arr(f Complex64Uint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint32Arr(f Complex64Uint32ArrFunctor) Uint32ArrList {
+func (l Complex64List) MapUint32Arr(f Complex64Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6051,7 +6051,7 @@ func (l Complex64List) MapUint32Arr(f Complex64Uint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUint64Arr(f Complex64Uint64ArrFunctor) Uint64ArrList {
+func (l Complex64List) MapUint64Arr(f Complex64Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6060,7 +6060,7 @@ func (l Complex64List) MapUint64Arr(f Complex64Uint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapUintptrArr(f Complex64UintptrArrFunctor) UintptrArrList {
+func (l Complex64List) MapUintptrArr(f Complex64UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6069,7 +6069,7 @@ func (l Complex64List) MapUintptrArr(f Complex64UintptrArrFunctor) UintptrArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapFloat32Arr(f Complex64Float32ArrFunctor) Float32ArrList {
+func (l Complex64List) MapFloat32Arr(f Complex64Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6078,7 +6078,7 @@ func (l Complex64List) MapFloat32Arr(f Complex64Float32ArrFunctor) Float32ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapFloat64Arr(f Complex64Float64ArrFunctor) Float64ArrList {
+func (l Complex64List) MapFloat64Arr(f Complex64Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6087,7 +6087,7 @@ func (l Complex64List) MapFloat64Arr(f Complex64Float64ArrFunctor) Float64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapComplex64Arr(f Complex64Complex64ArrFunctor) Complex64ArrList {
+func (l Complex64List) MapComplex64Arr(f Complex64Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6096,7 +6096,7 @@ func (l Complex64List) MapComplex64Arr(f Complex64Complex64ArrFunctor) Complex64
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapComplex128Arr(f Complex64Complex128ArrFunctor) Complex128ArrList {
+func (l Complex64List) MapComplex128Arr(f Complex64Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6105,7 +6105,7 @@ func (l Complex64List) MapComplex128Arr(f Complex64Complex128ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapStringArr(f Complex64StringArrFunctor) StringArrList {
+func (l Complex64List) MapStringArr(f Complex64StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6114,7 +6114,7 @@ func (l Complex64List) MapStringArr(f Complex64StringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64List) MapAnyArr(f Complex64AnyArrFunctor) AnyArrList {
+func (l Complex64List) MapAnyArr(f Complex64AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6123,7 +6123,7 @@ func (l Complex64List) MapAnyArr(f Complex64AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapBool(f Complex128BoolFunctor) BoolList {
+func (l Complex128List) MapBool(f Complex128BoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6132,7 +6132,7 @@ func (l Complex128List) MapBool(f Complex128BoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapRune(f Complex128RuneFunctor) RuneList {
+func (l Complex128List) MapRune(f Complex128RuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6141,7 +6141,7 @@ func (l Complex128List) MapRune(f Complex128RuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapByte(f Complex128ByteFunctor) ByteList {
+func (l Complex128List) MapByte(f Complex128ByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6150,7 +6150,7 @@ func (l Complex128List) MapByte(f Complex128ByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt(f Complex128IntFunctor) IntList {
+func (l Complex128List) MapInt(f Complex128IntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6159,7 +6159,7 @@ func (l Complex128List) MapInt(f Complex128IntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt8(f Complex128Int8Functor) Int8List {
+func (l Complex128List) MapInt8(f Complex128Int8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6168,7 +6168,7 @@ func (l Complex128List) MapInt8(f Complex128Int8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt16(f Complex128Int16Functor) Int16List {
+func (l Complex128List) MapInt16(f Complex128Int16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6177,7 +6177,7 @@ func (l Complex128List) MapInt16(f Complex128Int16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt32(f Complex128Int32Functor) Int32List {
+func (l Complex128List) MapInt32(f Complex128Int32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6186,7 +6186,7 @@ func (l Complex128List) MapInt32(f Complex128Int32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt64(f Complex128Int64Functor) Int64List {
+func (l Complex128List) MapInt64(f Complex128Int64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6195,7 +6195,7 @@ func (l Complex128List) MapInt64(f Complex128Int64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint(f Complex128UintFunctor) UintList {
+func (l Complex128List) MapUint(f Complex128UintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6204,7 +6204,7 @@ func (l Complex128List) MapUint(f Complex128UintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint8(f Complex128Uint8Functor) Uint8List {
+func (l Complex128List) MapUint8(f Complex128Uint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6213,7 +6213,7 @@ func (l Complex128List) MapUint8(f Complex128Uint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint16(f Complex128Uint16Functor) Uint16List {
+func (l Complex128List) MapUint16(f Complex128Uint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6222,7 +6222,7 @@ func (l Complex128List) MapUint16(f Complex128Uint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint32(f Complex128Uint32Functor) Uint32List {
+func (l Complex128List) MapUint32(f Complex128Uint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6231,7 +6231,7 @@ func (l Complex128List) MapUint32(f Complex128Uint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint64(f Complex128Uint64Functor) Uint64List {
+func (l Complex128List) MapUint64(f Complex128Uint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6240,7 +6240,7 @@ func (l Complex128List) MapUint64(f Complex128Uint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUintptr(f Complex128UintptrFunctor) UintptrList {
+func (l Complex128List) MapUintptr(f Complex128UintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6249,7 +6249,7 @@ func (l Complex128List) MapUintptr(f Complex128UintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapFloat32(f Complex128Float32Functor) Float32List {
+func (l Complex128List) MapFloat32(f Complex128Float32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6258,7 +6258,7 @@ func (l Complex128List) MapFloat32(f Complex128Float32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapFloat64(f Complex128Float64Functor) Float64List {
+func (l Complex128List) MapFloat64(f Complex128Float64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6267,7 +6267,7 @@ func (l Complex128List) MapFloat64(f Complex128Float64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapComplex64(f Complex128Complex64Functor) Complex64List {
+func (l Complex128List) MapComplex64(f Complex128Complex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6276,7 +6276,7 @@ func (l Complex128List) MapComplex64(f Complex128Complex64Functor) Complex64List
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapComplex128(f Complex128Complex128Functor) Complex128List {
+func (l Complex128List) MapComplex128(f Complex128Complex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6285,7 +6285,7 @@ func (l Complex128List) MapComplex128(f Complex128Complex128Functor) Complex128L
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapString(f Complex128StringFunctor) StringList {
+func (l Complex128List) MapString(f Complex128StringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6294,7 +6294,7 @@ func (l Complex128List) MapString(f Complex128StringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapAny(f Complex128AnyFunctor) AnyList {
+func (l Complex128List) MapAny(f Complex128AnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6303,7 +6303,7 @@ func (l Complex128List) MapAny(f Complex128AnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapBoolArr(f Complex128BoolArrFunctor) BoolArrList {
+func (l Complex128List) MapBoolArr(f Complex128BoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6312,7 +6312,7 @@ func (l Complex128List) MapBoolArr(f Complex128BoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapRuneArr(f Complex128RuneArrFunctor) RuneArrList {
+func (l Complex128List) MapRuneArr(f Complex128RuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6321,7 +6321,7 @@ func (l Complex128List) MapRuneArr(f Complex128RuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapByteArr(f Complex128ByteArrFunctor) ByteArrList {
+func (l Complex128List) MapByteArr(f Complex128ByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6330,7 +6330,7 @@ func (l Complex128List) MapByteArr(f Complex128ByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapIntArr(f Complex128IntArrFunctor) IntArrList {
+func (l Complex128List) MapIntArr(f Complex128IntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6339,7 +6339,7 @@ func (l Complex128List) MapIntArr(f Complex128IntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt8Arr(f Complex128Int8ArrFunctor) Int8ArrList {
+func (l Complex128List) MapInt8Arr(f Complex128Int8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6348,7 +6348,7 @@ func (l Complex128List) MapInt8Arr(f Complex128Int8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt16Arr(f Complex128Int16ArrFunctor) Int16ArrList {
+func (l Complex128List) MapInt16Arr(f Complex128Int16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6357,7 +6357,7 @@ func (l Complex128List) MapInt16Arr(f Complex128Int16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt32Arr(f Complex128Int32ArrFunctor) Int32ArrList {
+func (l Complex128List) MapInt32Arr(f Complex128Int32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6366,7 +6366,7 @@ func (l Complex128List) MapInt32Arr(f Complex128Int32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapInt64Arr(f Complex128Int64ArrFunctor) Int64ArrList {
+func (l Complex128List) MapInt64Arr(f Complex128Int64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6375,7 +6375,7 @@ func (l Complex128List) MapInt64Arr(f Complex128Int64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUintArr(f Complex128UintArrFunctor) UintArrList {
+func (l Complex128List) MapUintArr(f Complex128UintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6384,7 +6384,7 @@ func (l Complex128List) MapUintArr(f Complex128UintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint8Arr(f Complex128Uint8ArrFunctor) Uint8ArrList {
+func (l Complex128List) MapUint8Arr(f Complex128Uint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6393,7 +6393,7 @@ func (l Complex128List) MapUint8Arr(f Complex128Uint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint16Arr(f Complex128Uint16ArrFunctor) Uint16ArrList {
+func (l Complex128List) MapUint16Arr(f Complex128Uint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6402,7 +6402,7 @@ func (l Complex128List) MapUint16Arr(f Complex128Uint16ArrFunctor) Uint16ArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint32Arr(f Complex128Uint32ArrFunctor) Uint32ArrList {
+func (l Complex128List) MapUint32Arr(f Complex128Uint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6411,7 +6411,7 @@ func (l Complex128List) MapUint32Arr(f Complex128Uint32ArrFunctor) Uint32ArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUint64Arr(f Complex128Uint64ArrFunctor) Uint64ArrList {
+func (l Complex128List) MapUint64Arr(f Complex128Uint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6420,7 +6420,7 @@ func (l Complex128List) MapUint64Arr(f Complex128Uint64ArrFunctor) Uint64ArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapUintptrArr(f Complex128UintptrArrFunctor) UintptrArrList {
+func (l Complex128List) MapUintptrArr(f Complex128UintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6429,7 +6429,7 @@ func (l Complex128List) MapUintptrArr(f Complex128UintptrArrFunctor) UintptrArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapFloat32Arr(f Complex128Float32ArrFunctor) Float32ArrList {
+func (l Complex128List) MapFloat32Arr(f Complex128Float32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6438,7 +6438,7 @@ func (l Complex128List) MapFloat32Arr(f Complex128Float32ArrFunctor) Float32ArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapFloat64Arr(f Complex128Float64ArrFunctor) Float64ArrList {
+func (l Complex128List) MapFloat64Arr(f Complex128Float64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6447,7 +6447,7 @@ func (l Complex128List) MapFloat64Arr(f Complex128Float64ArrFunctor) Float64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapComplex64Arr(f Complex128Complex64ArrFunctor) Complex64ArrList {
+func (l Complex128List) MapComplex64Arr(f Complex128Complex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6456,7 +6456,7 @@ func (l Complex128List) MapComplex64Arr(f Complex128Complex64ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapComplex128Arr(f Complex128Complex128ArrFunctor) Complex128ArrList {
+func (l Complex128List) MapComplex128Arr(f Complex128Complex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6465,7 +6465,7 @@ func (l Complex128List) MapComplex128Arr(f Complex128Complex128ArrFunctor) Compl
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapStringArr(f Complex128StringArrFunctor) StringArrList {
+func (l Complex128List) MapStringArr(f Complex128StringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6474,7 +6474,7 @@ func (l Complex128List) MapStringArr(f Complex128StringArrFunctor) StringArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128List) MapAnyArr(f Complex128AnyArrFunctor) AnyArrList {
+func (l Complex128List) MapAnyArr(f Complex128AnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6483,7 +6483,7 @@ func (l Complex128List) MapAnyArr(f Complex128AnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapBool(f StringBoolFunctor) BoolList {
+func (l StringList) MapBool(f StringBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6492,7 +6492,7 @@ func (l StringList) MapBool(f StringBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapRune(f StringRuneFunctor) RuneList {
+func (l StringList) MapRune(f StringRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6501,7 +6501,7 @@ func (l StringList) MapRune(f StringRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapByte(f StringByteFunctor) ByteList {
+func (l StringList) MapByte(f StringByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6510,7 +6510,7 @@ func (l StringList) MapByte(f StringByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt(f StringIntFunctor) IntList {
+func (l StringList) MapInt(f StringIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6519,7 +6519,7 @@ func (l StringList) MapInt(f StringIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt8(f StringInt8Functor) Int8List {
+func (l StringList) MapInt8(f StringInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6528,7 +6528,7 @@ func (l StringList) MapInt8(f StringInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt16(f StringInt16Functor) Int16List {
+func (l StringList) MapInt16(f StringInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6537,7 +6537,7 @@ func (l StringList) MapInt16(f StringInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt32(f StringInt32Functor) Int32List {
+func (l StringList) MapInt32(f StringInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6546,7 +6546,7 @@ func (l StringList) MapInt32(f StringInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt64(f StringInt64Functor) Int64List {
+func (l StringList) MapInt64(f StringInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6555,7 +6555,7 @@ func (l StringList) MapInt64(f StringInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint(f StringUintFunctor) UintList {
+func (l StringList) MapUint(f StringUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6564,7 +6564,7 @@ func (l StringList) MapUint(f StringUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint8(f StringUint8Functor) Uint8List {
+func (l StringList) MapUint8(f StringUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6573,7 +6573,7 @@ func (l StringList) MapUint8(f StringUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint16(f StringUint16Functor) Uint16List {
+func (l StringList) MapUint16(f StringUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6582,7 +6582,7 @@ func (l StringList) MapUint16(f StringUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint32(f StringUint32Functor) Uint32List {
+func (l StringList) MapUint32(f StringUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6591,7 +6591,7 @@ func (l StringList) MapUint32(f StringUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint64(f StringUint64Functor) Uint64List {
+func (l StringList) MapUint64(f StringUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6600,7 +6600,7 @@ func (l StringList) MapUint64(f StringUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUintptr(f StringUintptrFunctor) UintptrList {
+func (l StringList) MapUintptr(f StringUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6609,7 +6609,7 @@ func (l StringList) MapUintptr(f StringUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapFloat32(f StringFloat32Functor) Float32List {
+func (l StringList) MapFloat32(f StringFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6618,7 +6618,7 @@ func (l StringList) MapFloat32(f StringFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapFloat64(f StringFloat64Functor) Float64List {
+func (l StringList) MapFloat64(f StringFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6627,7 +6627,7 @@ func (l StringList) MapFloat64(f StringFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapComplex64(f StringComplex64Functor) Complex64List {
+func (l StringList) MapComplex64(f StringComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6636,7 +6636,7 @@ func (l StringList) MapComplex64(f StringComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapComplex128(f StringComplex128Functor) Complex128List {
+func (l StringList) MapComplex128(f StringComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6645,7 +6645,7 @@ func (l StringList) MapComplex128(f StringComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapString(f StringStringFunctor) StringList {
+func (l StringList) MapString(f StringStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6654,7 +6654,7 @@ func (l StringList) MapString(f StringStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapAny(f StringAnyFunctor) AnyList {
+func (l StringList) MapAny(f StringAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6663,7 +6663,7 @@ func (l StringList) MapAny(f StringAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapBoolArr(f StringBoolArrFunctor) BoolArrList {
+func (l StringList) MapBoolArr(f StringBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6672,7 +6672,7 @@ func (l StringList) MapBoolArr(f StringBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapRuneArr(f StringRuneArrFunctor) RuneArrList {
+func (l StringList) MapRuneArr(f StringRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6681,7 +6681,7 @@ func (l StringList) MapRuneArr(f StringRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapByteArr(f StringByteArrFunctor) ByteArrList {
+func (l StringList) MapByteArr(f StringByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6690,7 +6690,7 @@ func (l StringList) MapByteArr(f StringByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapIntArr(f StringIntArrFunctor) IntArrList {
+func (l StringList) MapIntArr(f StringIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6699,7 +6699,7 @@ func (l StringList) MapIntArr(f StringIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt8Arr(f StringInt8ArrFunctor) Int8ArrList {
+func (l StringList) MapInt8Arr(f StringInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6708,7 +6708,7 @@ func (l StringList) MapInt8Arr(f StringInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt16Arr(f StringInt16ArrFunctor) Int16ArrList {
+func (l StringList) MapInt16Arr(f StringInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6717,7 +6717,7 @@ func (l StringList) MapInt16Arr(f StringInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt32Arr(f StringInt32ArrFunctor) Int32ArrList {
+func (l StringList) MapInt32Arr(f StringInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6726,7 +6726,7 @@ func (l StringList) MapInt32Arr(f StringInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapInt64Arr(f StringInt64ArrFunctor) Int64ArrList {
+func (l StringList) MapInt64Arr(f StringInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6735,7 +6735,7 @@ func (l StringList) MapInt64Arr(f StringInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUintArr(f StringUintArrFunctor) UintArrList {
+func (l StringList) MapUintArr(f StringUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6744,7 +6744,7 @@ func (l StringList) MapUintArr(f StringUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint8Arr(f StringUint8ArrFunctor) Uint8ArrList {
+func (l StringList) MapUint8Arr(f StringUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6753,7 +6753,7 @@ func (l StringList) MapUint8Arr(f StringUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint16Arr(f StringUint16ArrFunctor) Uint16ArrList {
+func (l StringList) MapUint16Arr(f StringUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6762,7 +6762,7 @@ func (l StringList) MapUint16Arr(f StringUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint32Arr(f StringUint32ArrFunctor) Uint32ArrList {
+func (l StringList) MapUint32Arr(f StringUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6771,7 +6771,7 @@ func (l StringList) MapUint32Arr(f StringUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUint64Arr(f StringUint64ArrFunctor) Uint64ArrList {
+func (l StringList) MapUint64Arr(f StringUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6780,7 +6780,7 @@ func (l StringList) MapUint64Arr(f StringUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapUintptrArr(f StringUintptrArrFunctor) UintptrArrList {
+func (l StringList) MapUintptrArr(f StringUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6789,7 +6789,7 @@ func (l StringList) MapUintptrArr(f StringUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapFloat32Arr(f StringFloat32ArrFunctor) Float32ArrList {
+func (l StringList) MapFloat32Arr(f StringFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6798,7 +6798,7 @@ func (l StringList) MapFloat32Arr(f StringFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapFloat64Arr(f StringFloat64ArrFunctor) Float64ArrList {
+func (l StringList) MapFloat64Arr(f StringFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6807,7 +6807,7 @@ func (l StringList) MapFloat64Arr(f StringFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapComplex64Arr(f StringComplex64ArrFunctor) Complex64ArrList {
+func (l StringList) MapComplex64Arr(f StringComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6816,7 +6816,7 @@ func (l StringList) MapComplex64Arr(f StringComplex64ArrFunctor) Complex64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapComplex128Arr(f StringComplex128ArrFunctor) Complex128ArrList {
+func (l StringList) MapComplex128Arr(f StringComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6825,7 +6825,7 @@ func (l StringList) MapComplex128Arr(f StringComplex128ArrFunctor) Complex128Arr
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapStringArr(f StringStringArrFunctor) StringArrList {
+func (l StringList) MapStringArr(f StringStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6834,7 +6834,7 @@ func (l StringList) MapStringArr(f StringStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringList) MapAnyArr(f StringAnyArrFunctor) AnyArrList {
+func (l StringList) MapAnyArr(f StringAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6843,7 +6843,7 @@ func (l StringList) MapAnyArr(f StringAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapBool(f AnyBoolFunctor) BoolList {
+func (l AnyList) MapBool(f AnyBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6852,7 +6852,7 @@ func (l AnyList) MapBool(f AnyBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapRune(f AnyRuneFunctor) RuneList {
+func (l AnyList) MapRune(f AnyRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6861,7 +6861,7 @@ func (l AnyList) MapRune(f AnyRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapByte(f AnyByteFunctor) ByteList {
+func (l AnyList) MapByte(f AnyByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6870,7 +6870,7 @@ func (l AnyList) MapByte(f AnyByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt(f AnyIntFunctor) IntList {
+func (l AnyList) MapInt(f AnyIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6879,7 +6879,7 @@ func (l AnyList) MapInt(f AnyIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt8(f AnyInt8Functor) Int8List {
+func (l AnyList) MapInt8(f AnyInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6888,7 +6888,7 @@ func (l AnyList) MapInt8(f AnyInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt16(f AnyInt16Functor) Int16List {
+func (l AnyList) MapInt16(f AnyInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6897,7 +6897,7 @@ func (l AnyList) MapInt16(f AnyInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt32(f AnyInt32Functor) Int32List {
+func (l AnyList) MapInt32(f AnyInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6906,7 +6906,7 @@ func (l AnyList) MapInt32(f AnyInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt64(f AnyInt64Functor) Int64List {
+func (l AnyList) MapInt64(f AnyInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6915,7 +6915,7 @@ func (l AnyList) MapInt64(f AnyInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint(f AnyUintFunctor) UintList {
+func (l AnyList) MapUint(f AnyUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6924,7 +6924,7 @@ func (l AnyList) MapUint(f AnyUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint8(f AnyUint8Functor) Uint8List {
+func (l AnyList) MapUint8(f AnyUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6933,7 +6933,7 @@ func (l AnyList) MapUint8(f AnyUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint16(f AnyUint16Functor) Uint16List {
+func (l AnyList) MapUint16(f AnyUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6942,7 +6942,7 @@ func (l AnyList) MapUint16(f AnyUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint32(f AnyUint32Functor) Uint32List {
+func (l AnyList) MapUint32(f AnyUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6951,7 +6951,7 @@ func (l AnyList) MapUint32(f AnyUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint64(f AnyUint64Functor) Uint64List {
+func (l AnyList) MapUint64(f AnyUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6960,7 +6960,7 @@ func (l AnyList) MapUint64(f AnyUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUintptr(f AnyUintptrFunctor) UintptrList {
+func (l AnyList) MapUintptr(f AnyUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6969,7 +6969,7 @@ func (l AnyList) MapUintptr(f AnyUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapFloat32(f AnyFloat32Functor) Float32List {
+func (l AnyList) MapFloat32(f AnyFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6978,7 +6978,7 @@ func (l AnyList) MapFloat32(f AnyFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapFloat64(f AnyFloat64Functor) Float64List {
+func (l AnyList) MapFloat64(f AnyFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6987,7 +6987,7 @@ func (l AnyList) MapFloat64(f AnyFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapComplex64(f AnyComplex64Functor) Complex64List {
+func (l AnyList) MapComplex64(f AnyComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -6996,7 +6996,7 @@ func (l AnyList) MapComplex64(f AnyComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapComplex128(f AnyComplex128Functor) Complex128List {
+func (l AnyList) MapComplex128(f AnyComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7005,7 +7005,7 @@ func (l AnyList) MapComplex128(f AnyComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapString(f AnyStringFunctor) StringList {
+func (l AnyList) MapString(f AnyStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7014,7 +7014,7 @@ func (l AnyList) MapString(f AnyStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapAny(f AnyAnyFunctor) AnyList {
+func (l AnyList) MapAny(f AnyAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7023,7 +7023,7 @@ func (l AnyList) MapAny(f AnyAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapBoolArr(f AnyBoolArrFunctor) BoolArrList {
+func (l AnyList) MapBoolArr(f AnyBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7032,7 +7032,7 @@ func (l AnyList) MapBoolArr(f AnyBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapRuneArr(f AnyRuneArrFunctor) RuneArrList {
+func (l AnyList) MapRuneArr(f AnyRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7041,7 +7041,7 @@ func (l AnyList) MapRuneArr(f AnyRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapByteArr(f AnyByteArrFunctor) ByteArrList {
+func (l AnyList) MapByteArr(f AnyByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7050,7 +7050,7 @@ func (l AnyList) MapByteArr(f AnyByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapIntArr(f AnyIntArrFunctor) IntArrList {
+func (l AnyList) MapIntArr(f AnyIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7059,7 +7059,7 @@ func (l AnyList) MapIntArr(f AnyIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt8Arr(f AnyInt8ArrFunctor) Int8ArrList {
+func (l AnyList) MapInt8Arr(f AnyInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7068,7 +7068,7 @@ func (l AnyList) MapInt8Arr(f AnyInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt16Arr(f AnyInt16ArrFunctor) Int16ArrList {
+func (l AnyList) MapInt16Arr(f AnyInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7077,7 +7077,7 @@ func (l AnyList) MapInt16Arr(f AnyInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt32Arr(f AnyInt32ArrFunctor) Int32ArrList {
+func (l AnyList) MapInt32Arr(f AnyInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7086,7 +7086,7 @@ func (l AnyList) MapInt32Arr(f AnyInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapInt64Arr(f AnyInt64ArrFunctor) Int64ArrList {
+func (l AnyList) MapInt64Arr(f AnyInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7095,7 +7095,7 @@ func (l AnyList) MapInt64Arr(f AnyInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUintArr(f AnyUintArrFunctor) UintArrList {
+func (l AnyList) MapUintArr(f AnyUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7104,7 +7104,7 @@ func (l AnyList) MapUintArr(f AnyUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint8Arr(f AnyUint8ArrFunctor) Uint8ArrList {
+func (l AnyList) MapUint8Arr(f AnyUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7113,7 +7113,7 @@ func (l AnyList) MapUint8Arr(f AnyUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint16Arr(f AnyUint16ArrFunctor) Uint16ArrList {
+func (l AnyList) MapUint16Arr(f AnyUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7122,7 +7122,7 @@ func (l AnyList) MapUint16Arr(f AnyUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint32Arr(f AnyUint32ArrFunctor) Uint32ArrList {
+func (l AnyList) MapUint32Arr(f AnyUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7131,7 +7131,7 @@ func (l AnyList) MapUint32Arr(f AnyUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUint64Arr(f AnyUint64ArrFunctor) Uint64ArrList {
+func (l AnyList) MapUint64Arr(f AnyUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7140,7 +7140,7 @@ func (l AnyList) MapUint64Arr(f AnyUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapUintptrArr(f AnyUintptrArrFunctor) UintptrArrList {
+func (l AnyList) MapUintptrArr(f AnyUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7149,7 +7149,7 @@ func (l AnyList) MapUintptrArr(f AnyUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapFloat32Arr(f AnyFloat32ArrFunctor) Float32ArrList {
+func (l AnyList) MapFloat32Arr(f AnyFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7158,7 +7158,7 @@ func (l AnyList) MapFloat32Arr(f AnyFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapFloat64Arr(f AnyFloat64ArrFunctor) Float64ArrList {
+func (l AnyList) MapFloat64Arr(f AnyFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7167,7 +7167,7 @@ func (l AnyList) MapFloat64Arr(f AnyFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapComplex64Arr(f AnyComplex64ArrFunctor) Complex64ArrList {
+func (l AnyList) MapComplex64Arr(f AnyComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7176,7 +7176,7 @@ func (l AnyList) MapComplex64Arr(f AnyComplex64ArrFunctor) Complex64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapComplex128Arr(f AnyComplex128ArrFunctor) Complex128ArrList {
+func (l AnyList) MapComplex128Arr(f AnyComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7185,7 +7185,7 @@ func (l AnyList) MapComplex128Arr(f AnyComplex128ArrFunctor) Complex128ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapStringArr(f AnyStringArrFunctor) StringArrList {
+func (l AnyList) MapStringArr(f AnyStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7194,7 +7194,7 @@ func (l AnyList) MapStringArr(f AnyStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyList) MapAnyArr(f AnyAnyArrFunctor) AnyArrList {
+func (l AnyList) MapAnyArr(f AnyAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7203,7 +7203,7 @@ func (l AnyList) MapAnyArr(f AnyAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapBool(f BoolArrBoolFunctor) BoolList {
+func (l BoolArrList) MapBool(f BoolArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7212,7 +7212,7 @@ func (l BoolArrList) MapBool(f BoolArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapRune(f BoolArrRuneFunctor) RuneList {
+func (l BoolArrList) MapRune(f BoolArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7221,7 +7221,7 @@ func (l BoolArrList) MapRune(f BoolArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapByte(f BoolArrByteFunctor) ByteList {
+func (l BoolArrList) MapByte(f BoolArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7230,7 +7230,7 @@ func (l BoolArrList) MapByte(f BoolArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt(f BoolArrIntFunctor) IntList {
+func (l BoolArrList) MapInt(f BoolArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7239,7 +7239,7 @@ func (l BoolArrList) MapInt(f BoolArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt8(f BoolArrInt8Functor) Int8List {
+func (l BoolArrList) MapInt8(f BoolArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7248,7 +7248,7 @@ func (l BoolArrList) MapInt8(f BoolArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt16(f BoolArrInt16Functor) Int16List {
+func (l BoolArrList) MapInt16(f BoolArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7257,7 +7257,7 @@ func (l BoolArrList) MapInt16(f BoolArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt32(f BoolArrInt32Functor) Int32List {
+func (l BoolArrList) MapInt32(f BoolArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7266,7 +7266,7 @@ func (l BoolArrList) MapInt32(f BoolArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt64(f BoolArrInt64Functor) Int64List {
+func (l BoolArrList) MapInt64(f BoolArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7275,7 +7275,7 @@ func (l BoolArrList) MapInt64(f BoolArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint(f BoolArrUintFunctor) UintList {
+func (l BoolArrList) MapUint(f BoolArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7284,7 +7284,7 @@ func (l BoolArrList) MapUint(f BoolArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint8(f BoolArrUint8Functor) Uint8List {
+func (l BoolArrList) MapUint8(f BoolArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7293,7 +7293,7 @@ func (l BoolArrList) MapUint8(f BoolArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint16(f BoolArrUint16Functor) Uint16List {
+func (l BoolArrList) MapUint16(f BoolArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7302,7 +7302,7 @@ func (l BoolArrList) MapUint16(f BoolArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint32(f BoolArrUint32Functor) Uint32List {
+func (l BoolArrList) MapUint32(f BoolArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7311,7 +7311,7 @@ func (l BoolArrList) MapUint32(f BoolArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint64(f BoolArrUint64Functor) Uint64List {
+func (l BoolArrList) MapUint64(f BoolArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7320,7 +7320,7 @@ func (l BoolArrList) MapUint64(f BoolArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUintptr(f BoolArrUintptrFunctor) UintptrList {
+func (l BoolArrList) MapUintptr(f BoolArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7329,7 +7329,7 @@ func (l BoolArrList) MapUintptr(f BoolArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapFloat32(f BoolArrFloat32Functor) Float32List {
+func (l BoolArrList) MapFloat32(f BoolArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7338,7 +7338,7 @@ func (l BoolArrList) MapFloat32(f BoolArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapFloat64(f BoolArrFloat64Functor) Float64List {
+func (l BoolArrList) MapFloat64(f BoolArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7347,7 +7347,7 @@ func (l BoolArrList) MapFloat64(f BoolArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapComplex64(f BoolArrComplex64Functor) Complex64List {
+func (l BoolArrList) MapComplex64(f BoolArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7356,7 +7356,7 @@ func (l BoolArrList) MapComplex64(f BoolArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapComplex128(f BoolArrComplex128Functor) Complex128List {
+func (l BoolArrList) MapComplex128(f BoolArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7365,7 +7365,7 @@ func (l BoolArrList) MapComplex128(f BoolArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapString(f BoolArrStringFunctor) StringList {
+func (l BoolArrList) MapString(f BoolArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7374,7 +7374,7 @@ func (l BoolArrList) MapString(f BoolArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapAny(f BoolArrAnyFunctor) AnyList {
+func (l BoolArrList) MapAny(f BoolArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7383,7 +7383,7 @@ func (l BoolArrList) MapAny(f BoolArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapBoolArr(f BoolArrBoolArrFunctor) BoolArrList {
+func (l BoolArrList) MapBoolArr(f BoolArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7392,7 +7392,7 @@ func (l BoolArrList) MapBoolArr(f BoolArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapRuneArr(f BoolArrRuneArrFunctor) RuneArrList {
+func (l BoolArrList) MapRuneArr(f BoolArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7401,7 +7401,7 @@ func (l BoolArrList) MapRuneArr(f BoolArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapByteArr(f BoolArrByteArrFunctor) ByteArrList {
+func (l BoolArrList) MapByteArr(f BoolArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7410,7 +7410,7 @@ func (l BoolArrList) MapByteArr(f BoolArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapIntArr(f BoolArrIntArrFunctor) IntArrList {
+func (l BoolArrList) MapIntArr(f BoolArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7419,7 +7419,7 @@ func (l BoolArrList) MapIntArr(f BoolArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt8Arr(f BoolArrInt8ArrFunctor) Int8ArrList {
+func (l BoolArrList) MapInt8Arr(f BoolArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7428,7 +7428,7 @@ func (l BoolArrList) MapInt8Arr(f BoolArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt16Arr(f BoolArrInt16ArrFunctor) Int16ArrList {
+func (l BoolArrList) MapInt16Arr(f BoolArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7437,7 +7437,7 @@ func (l BoolArrList) MapInt16Arr(f BoolArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt32Arr(f BoolArrInt32ArrFunctor) Int32ArrList {
+func (l BoolArrList) MapInt32Arr(f BoolArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7446,7 +7446,7 @@ func (l BoolArrList) MapInt32Arr(f BoolArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapInt64Arr(f BoolArrInt64ArrFunctor) Int64ArrList {
+func (l BoolArrList) MapInt64Arr(f BoolArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7455,7 +7455,7 @@ func (l BoolArrList) MapInt64Arr(f BoolArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUintArr(f BoolArrUintArrFunctor) UintArrList {
+func (l BoolArrList) MapUintArr(f BoolArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7464,7 +7464,7 @@ func (l BoolArrList) MapUintArr(f BoolArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint8Arr(f BoolArrUint8ArrFunctor) Uint8ArrList {
+func (l BoolArrList) MapUint8Arr(f BoolArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7473,7 +7473,7 @@ func (l BoolArrList) MapUint8Arr(f BoolArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint16Arr(f BoolArrUint16ArrFunctor) Uint16ArrList {
+func (l BoolArrList) MapUint16Arr(f BoolArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7482,7 +7482,7 @@ func (l BoolArrList) MapUint16Arr(f BoolArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint32Arr(f BoolArrUint32ArrFunctor) Uint32ArrList {
+func (l BoolArrList) MapUint32Arr(f BoolArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7491,7 +7491,7 @@ func (l BoolArrList) MapUint32Arr(f BoolArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUint64Arr(f BoolArrUint64ArrFunctor) Uint64ArrList {
+func (l BoolArrList) MapUint64Arr(f BoolArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7500,7 +7500,7 @@ func (l BoolArrList) MapUint64Arr(f BoolArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapUintptrArr(f BoolArrUintptrArrFunctor) UintptrArrList {
+func (l BoolArrList) MapUintptrArr(f BoolArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7509,7 +7509,7 @@ func (l BoolArrList) MapUintptrArr(f BoolArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapFloat32Arr(f BoolArrFloat32ArrFunctor) Float32ArrList {
+func (l BoolArrList) MapFloat32Arr(f BoolArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7518,7 +7518,7 @@ func (l BoolArrList) MapFloat32Arr(f BoolArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapFloat64Arr(f BoolArrFloat64ArrFunctor) Float64ArrList {
+func (l BoolArrList) MapFloat64Arr(f BoolArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7527,7 +7527,7 @@ func (l BoolArrList) MapFloat64Arr(f BoolArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapComplex64Arr(f BoolArrComplex64ArrFunctor) Complex64ArrList {
+func (l BoolArrList) MapComplex64Arr(f BoolArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7536,7 +7536,7 @@ func (l BoolArrList) MapComplex64Arr(f BoolArrComplex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapComplex128Arr(f BoolArrComplex128ArrFunctor) Complex128ArrList {
+func (l BoolArrList) MapComplex128Arr(f BoolArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7545,7 +7545,7 @@ func (l BoolArrList) MapComplex128Arr(f BoolArrComplex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapStringArr(f BoolArrStringArrFunctor) StringArrList {
+func (l BoolArrList) MapStringArr(f BoolArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7554,7 +7554,7 @@ func (l BoolArrList) MapStringArr(f BoolArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l BoolArrList) MapAnyArr(f BoolArrAnyArrFunctor) AnyArrList {
+func (l BoolArrList) MapAnyArr(f BoolArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7563,7 +7563,7 @@ func (l BoolArrList) MapAnyArr(f BoolArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapBool(f RuneArrBoolFunctor) BoolList {
+func (l RuneArrList) MapBool(f RuneArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7572,7 +7572,7 @@ func (l RuneArrList) MapBool(f RuneArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapRune(f RuneArrRuneFunctor) RuneList {
+func (l RuneArrList) MapRune(f RuneArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7581,7 +7581,7 @@ func (l RuneArrList) MapRune(f RuneArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapByte(f RuneArrByteFunctor) ByteList {
+func (l RuneArrList) MapByte(f RuneArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7590,7 +7590,7 @@ func (l RuneArrList) MapByte(f RuneArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt(f RuneArrIntFunctor) IntList {
+func (l RuneArrList) MapInt(f RuneArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7599,7 +7599,7 @@ func (l RuneArrList) MapInt(f RuneArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt8(f RuneArrInt8Functor) Int8List {
+func (l RuneArrList) MapInt8(f RuneArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7608,7 +7608,7 @@ func (l RuneArrList) MapInt8(f RuneArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt16(f RuneArrInt16Functor) Int16List {
+func (l RuneArrList) MapInt16(f RuneArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7617,7 +7617,7 @@ func (l RuneArrList) MapInt16(f RuneArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt32(f RuneArrInt32Functor) Int32List {
+func (l RuneArrList) MapInt32(f RuneArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7626,7 +7626,7 @@ func (l RuneArrList) MapInt32(f RuneArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt64(f RuneArrInt64Functor) Int64List {
+func (l RuneArrList) MapInt64(f RuneArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7635,7 +7635,7 @@ func (l RuneArrList) MapInt64(f RuneArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint(f RuneArrUintFunctor) UintList {
+func (l RuneArrList) MapUint(f RuneArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7644,7 +7644,7 @@ func (l RuneArrList) MapUint(f RuneArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint8(f RuneArrUint8Functor) Uint8List {
+func (l RuneArrList) MapUint8(f RuneArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7653,7 +7653,7 @@ func (l RuneArrList) MapUint8(f RuneArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint16(f RuneArrUint16Functor) Uint16List {
+func (l RuneArrList) MapUint16(f RuneArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7662,7 +7662,7 @@ func (l RuneArrList) MapUint16(f RuneArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint32(f RuneArrUint32Functor) Uint32List {
+func (l RuneArrList) MapUint32(f RuneArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7671,7 +7671,7 @@ func (l RuneArrList) MapUint32(f RuneArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint64(f RuneArrUint64Functor) Uint64List {
+func (l RuneArrList) MapUint64(f RuneArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7680,7 +7680,7 @@ func (l RuneArrList) MapUint64(f RuneArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUintptr(f RuneArrUintptrFunctor) UintptrList {
+func (l RuneArrList) MapUintptr(f RuneArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7689,7 +7689,7 @@ func (l RuneArrList) MapUintptr(f RuneArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapFloat32(f RuneArrFloat32Functor) Float32List {
+func (l RuneArrList) MapFloat32(f RuneArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7698,7 +7698,7 @@ func (l RuneArrList) MapFloat32(f RuneArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapFloat64(f RuneArrFloat64Functor) Float64List {
+func (l RuneArrList) MapFloat64(f RuneArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7707,7 +7707,7 @@ func (l RuneArrList) MapFloat64(f RuneArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapComplex64(f RuneArrComplex64Functor) Complex64List {
+func (l RuneArrList) MapComplex64(f RuneArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7716,7 +7716,7 @@ func (l RuneArrList) MapComplex64(f RuneArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapComplex128(f RuneArrComplex128Functor) Complex128List {
+func (l RuneArrList) MapComplex128(f RuneArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7725,7 +7725,7 @@ func (l RuneArrList) MapComplex128(f RuneArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapString(f RuneArrStringFunctor) StringList {
+func (l RuneArrList) MapString(f RuneArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7734,7 +7734,7 @@ func (l RuneArrList) MapString(f RuneArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapAny(f RuneArrAnyFunctor) AnyList {
+func (l RuneArrList) MapAny(f RuneArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7743,7 +7743,7 @@ func (l RuneArrList) MapAny(f RuneArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapBoolArr(f RuneArrBoolArrFunctor) BoolArrList {
+func (l RuneArrList) MapBoolArr(f RuneArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7752,7 +7752,7 @@ func (l RuneArrList) MapBoolArr(f RuneArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapRuneArr(f RuneArrRuneArrFunctor) RuneArrList {
+func (l RuneArrList) MapRuneArr(f RuneArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7761,7 +7761,7 @@ func (l RuneArrList) MapRuneArr(f RuneArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapByteArr(f RuneArrByteArrFunctor) ByteArrList {
+func (l RuneArrList) MapByteArr(f RuneArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7770,7 +7770,7 @@ func (l RuneArrList) MapByteArr(f RuneArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapIntArr(f RuneArrIntArrFunctor) IntArrList {
+func (l RuneArrList) MapIntArr(f RuneArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7779,7 +7779,7 @@ func (l RuneArrList) MapIntArr(f RuneArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt8Arr(f RuneArrInt8ArrFunctor) Int8ArrList {
+func (l RuneArrList) MapInt8Arr(f RuneArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7788,7 +7788,7 @@ func (l RuneArrList) MapInt8Arr(f RuneArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt16Arr(f RuneArrInt16ArrFunctor) Int16ArrList {
+func (l RuneArrList) MapInt16Arr(f RuneArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7797,7 +7797,7 @@ func (l RuneArrList) MapInt16Arr(f RuneArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt32Arr(f RuneArrInt32ArrFunctor) Int32ArrList {
+func (l RuneArrList) MapInt32Arr(f RuneArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7806,7 +7806,7 @@ func (l RuneArrList) MapInt32Arr(f RuneArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapInt64Arr(f RuneArrInt64ArrFunctor) Int64ArrList {
+func (l RuneArrList) MapInt64Arr(f RuneArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7815,7 +7815,7 @@ func (l RuneArrList) MapInt64Arr(f RuneArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUintArr(f RuneArrUintArrFunctor) UintArrList {
+func (l RuneArrList) MapUintArr(f RuneArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7824,7 +7824,7 @@ func (l RuneArrList) MapUintArr(f RuneArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint8Arr(f RuneArrUint8ArrFunctor) Uint8ArrList {
+func (l RuneArrList) MapUint8Arr(f RuneArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7833,7 +7833,7 @@ func (l RuneArrList) MapUint8Arr(f RuneArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint16Arr(f RuneArrUint16ArrFunctor) Uint16ArrList {
+func (l RuneArrList) MapUint16Arr(f RuneArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7842,7 +7842,7 @@ func (l RuneArrList) MapUint16Arr(f RuneArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint32Arr(f RuneArrUint32ArrFunctor) Uint32ArrList {
+func (l RuneArrList) MapUint32Arr(f RuneArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7851,7 +7851,7 @@ func (l RuneArrList) MapUint32Arr(f RuneArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUint64Arr(f RuneArrUint64ArrFunctor) Uint64ArrList {
+func (l RuneArrList) MapUint64Arr(f RuneArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7860,7 +7860,7 @@ func (l RuneArrList) MapUint64Arr(f RuneArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapUintptrArr(f RuneArrUintptrArrFunctor) UintptrArrList {
+func (l RuneArrList) MapUintptrArr(f RuneArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7869,7 +7869,7 @@ func (l RuneArrList) MapUintptrArr(f RuneArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapFloat32Arr(f RuneArrFloat32ArrFunctor) Float32ArrList {
+func (l RuneArrList) MapFloat32Arr(f RuneArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7878,7 +7878,7 @@ func (l RuneArrList) MapFloat32Arr(f RuneArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapFloat64Arr(f RuneArrFloat64ArrFunctor) Float64ArrList {
+func (l RuneArrList) MapFloat64Arr(f RuneArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7887,7 +7887,7 @@ func (l RuneArrList) MapFloat64Arr(f RuneArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapComplex64Arr(f RuneArrComplex64ArrFunctor) Complex64ArrList {
+func (l RuneArrList) MapComplex64Arr(f RuneArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7896,7 +7896,7 @@ func (l RuneArrList) MapComplex64Arr(f RuneArrComplex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapComplex128Arr(f RuneArrComplex128ArrFunctor) Complex128ArrList {
+func (l RuneArrList) MapComplex128Arr(f RuneArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7905,7 +7905,7 @@ func (l RuneArrList) MapComplex128Arr(f RuneArrComplex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapStringArr(f RuneArrStringArrFunctor) StringArrList {
+func (l RuneArrList) MapStringArr(f RuneArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7914,7 +7914,7 @@ func (l RuneArrList) MapStringArr(f RuneArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l RuneArrList) MapAnyArr(f RuneArrAnyArrFunctor) AnyArrList {
+func (l RuneArrList) MapAnyArr(f RuneArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7923,7 +7923,7 @@ func (l RuneArrList) MapAnyArr(f RuneArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapBool(f ByteArrBoolFunctor) BoolList {
+func (l ByteArrList) MapBool(f ByteArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7932,7 +7932,7 @@ func (l ByteArrList) MapBool(f ByteArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapRune(f ByteArrRuneFunctor) RuneList {
+func (l ByteArrList) MapRune(f ByteArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7941,7 +7941,7 @@ func (l ByteArrList) MapRune(f ByteArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapByte(f ByteArrByteFunctor) ByteList {
+func (l ByteArrList) MapByte(f ByteArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7950,7 +7950,7 @@ func (l ByteArrList) MapByte(f ByteArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt(f ByteArrIntFunctor) IntList {
+func (l ByteArrList) MapInt(f ByteArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7959,7 +7959,7 @@ func (l ByteArrList) MapInt(f ByteArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt8(f ByteArrInt8Functor) Int8List {
+func (l ByteArrList) MapInt8(f ByteArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7968,7 +7968,7 @@ func (l ByteArrList) MapInt8(f ByteArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt16(f ByteArrInt16Functor) Int16List {
+func (l ByteArrList) MapInt16(f ByteArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7977,7 +7977,7 @@ func (l ByteArrList) MapInt16(f ByteArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt32(f ByteArrInt32Functor) Int32List {
+func (l ByteArrList) MapInt32(f ByteArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7986,7 +7986,7 @@ func (l ByteArrList) MapInt32(f ByteArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt64(f ByteArrInt64Functor) Int64List {
+func (l ByteArrList) MapInt64(f ByteArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -7995,7 +7995,7 @@ func (l ByteArrList) MapInt64(f ByteArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint(f ByteArrUintFunctor) UintList {
+func (l ByteArrList) MapUint(f ByteArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8004,7 +8004,7 @@ func (l ByteArrList) MapUint(f ByteArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint8(f ByteArrUint8Functor) Uint8List {
+func (l ByteArrList) MapUint8(f ByteArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8013,7 +8013,7 @@ func (l ByteArrList) MapUint8(f ByteArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint16(f ByteArrUint16Functor) Uint16List {
+func (l ByteArrList) MapUint16(f ByteArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8022,7 +8022,7 @@ func (l ByteArrList) MapUint16(f ByteArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint32(f ByteArrUint32Functor) Uint32List {
+func (l ByteArrList) MapUint32(f ByteArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8031,7 +8031,7 @@ func (l ByteArrList) MapUint32(f ByteArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint64(f ByteArrUint64Functor) Uint64List {
+func (l ByteArrList) MapUint64(f ByteArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8040,7 +8040,7 @@ func (l ByteArrList) MapUint64(f ByteArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUintptr(f ByteArrUintptrFunctor) UintptrList {
+func (l ByteArrList) MapUintptr(f ByteArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8049,7 +8049,7 @@ func (l ByteArrList) MapUintptr(f ByteArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapFloat32(f ByteArrFloat32Functor) Float32List {
+func (l ByteArrList) MapFloat32(f ByteArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8058,7 +8058,7 @@ func (l ByteArrList) MapFloat32(f ByteArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapFloat64(f ByteArrFloat64Functor) Float64List {
+func (l ByteArrList) MapFloat64(f ByteArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8067,7 +8067,7 @@ func (l ByteArrList) MapFloat64(f ByteArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapComplex64(f ByteArrComplex64Functor) Complex64List {
+func (l ByteArrList) MapComplex64(f ByteArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8076,7 +8076,7 @@ func (l ByteArrList) MapComplex64(f ByteArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapComplex128(f ByteArrComplex128Functor) Complex128List {
+func (l ByteArrList) MapComplex128(f ByteArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8085,7 +8085,7 @@ func (l ByteArrList) MapComplex128(f ByteArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapString(f ByteArrStringFunctor) StringList {
+func (l ByteArrList) MapString(f ByteArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8094,7 +8094,7 @@ func (l ByteArrList) MapString(f ByteArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapAny(f ByteArrAnyFunctor) AnyList {
+func (l ByteArrList) MapAny(f ByteArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8103,7 +8103,7 @@ func (l ByteArrList) MapAny(f ByteArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapBoolArr(f ByteArrBoolArrFunctor) BoolArrList {
+func (l ByteArrList) MapBoolArr(f ByteArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8112,7 +8112,7 @@ func (l ByteArrList) MapBoolArr(f ByteArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapRuneArr(f ByteArrRuneArrFunctor) RuneArrList {
+func (l ByteArrList) MapRuneArr(f ByteArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8121,7 +8121,7 @@ func (l ByteArrList) MapRuneArr(f ByteArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapByteArr(f ByteArrByteArrFunctor) ByteArrList {
+func (l ByteArrList) MapByteArr(f ByteArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8130,7 +8130,7 @@ func (l ByteArrList) MapByteArr(f ByteArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapIntArr(f ByteArrIntArrFunctor) IntArrList {
+func (l ByteArrList) MapIntArr(f ByteArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8139,7 +8139,7 @@ func (l ByteArrList) MapIntArr(f ByteArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt8Arr(f ByteArrInt8ArrFunctor) Int8ArrList {
+func (l ByteArrList) MapInt8Arr(f ByteArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8148,7 +8148,7 @@ func (l ByteArrList) MapInt8Arr(f ByteArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt16Arr(f ByteArrInt16ArrFunctor) Int16ArrList {
+func (l ByteArrList) MapInt16Arr(f ByteArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8157,7 +8157,7 @@ func (l ByteArrList) MapInt16Arr(f ByteArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt32Arr(f ByteArrInt32ArrFunctor) Int32ArrList {
+func (l ByteArrList) MapInt32Arr(f ByteArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8166,7 +8166,7 @@ func (l ByteArrList) MapInt32Arr(f ByteArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapInt64Arr(f ByteArrInt64ArrFunctor) Int64ArrList {
+func (l ByteArrList) MapInt64Arr(f ByteArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8175,7 +8175,7 @@ func (l ByteArrList) MapInt64Arr(f ByteArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUintArr(f ByteArrUintArrFunctor) UintArrList {
+func (l ByteArrList) MapUintArr(f ByteArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8184,7 +8184,7 @@ func (l ByteArrList) MapUintArr(f ByteArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint8Arr(f ByteArrUint8ArrFunctor) Uint8ArrList {
+func (l ByteArrList) MapUint8Arr(f ByteArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8193,7 +8193,7 @@ func (l ByteArrList) MapUint8Arr(f ByteArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint16Arr(f ByteArrUint16ArrFunctor) Uint16ArrList {
+func (l ByteArrList) MapUint16Arr(f ByteArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8202,7 +8202,7 @@ func (l ByteArrList) MapUint16Arr(f ByteArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint32Arr(f ByteArrUint32ArrFunctor) Uint32ArrList {
+func (l ByteArrList) MapUint32Arr(f ByteArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8211,7 +8211,7 @@ func (l ByteArrList) MapUint32Arr(f ByteArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUint64Arr(f ByteArrUint64ArrFunctor) Uint64ArrList {
+func (l ByteArrList) MapUint64Arr(f ByteArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8220,7 +8220,7 @@ func (l ByteArrList) MapUint64Arr(f ByteArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapUintptrArr(f ByteArrUintptrArrFunctor) UintptrArrList {
+func (l ByteArrList) MapUintptrArr(f ByteArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8229,7 +8229,7 @@ func (l ByteArrList) MapUintptrArr(f ByteArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapFloat32Arr(f ByteArrFloat32ArrFunctor) Float32ArrList {
+func (l ByteArrList) MapFloat32Arr(f ByteArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8238,7 +8238,7 @@ func (l ByteArrList) MapFloat32Arr(f ByteArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapFloat64Arr(f ByteArrFloat64ArrFunctor) Float64ArrList {
+func (l ByteArrList) MapFloat64Arr(f ByteArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8247,7 +8247,7 @@ func (l ByteArrList) MapFloat64Arr(f ByteArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapComplex64Arr(f ByteArrComplex64ArrFunctor) Complex64ArrList {
+func (l ByteArrList) MapComplex64Arr(f ByteArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8256,7 +8256,7 @@ func (l ByteArrList) MapComplex64Arr(f ByteArrComplex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapComplex128Arr(f ByteArrComplex128ArrFunctor) Complex128ArrList {
+func (l ByteArrList) MapComplex128Arr(f ByteArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8265,7 +8265,7 @@ func (l ByteArrList) MapComplex128Arr(f ByteArrComplex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapStringArr(f ByteArrStringArrFunctor) StringArrList {
+func (l ByteArrList) MapStringArr(f ByteArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8274,7 +8274,7 @@ func (l ByteArrList) MapStringArr(f ByteArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l ByteArrList) MapAnyArr(f ByteArrAnyArrFunctor) AnyArrList {
+func (l ByteArrList) MapAnyArr(f ByteArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8283,7 +8283,7 @@ func (l ByteArrList) MapAnyArr(f ByteArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapBool(f IntArrBoolFunctor) BoolList {
+func (l IntArrList) MapBool(f IntArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8292,7 +8292,7 @@ func (l IntArrList) MapBool(f IntArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapRune(f IntArrRuneFunctor) RuneList {
+func (l IntArrList) MapRune(f IntArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8301,7 +8301,7 @@ func (l IntArrList) MapRune(f IntArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapByte(f IntArrByteFunctor) ByteList {
+func (l IntArrList) MapByte(f IntArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8310,7 +8310,7 @@ func (l IntArrList) MapByte(f IntArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt(f IntArrIntFunctor) IntList {
+func (l IntArrList) MapInt(f IntArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8319,7 +8319,7 @@ func (l IntArrList) MapInt(f IntArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt8(f IntArrInt8Functor) Int8List {
+func (l IntArrList) MapInt8(f IntArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8328,7 +8328,7 @@ func (l IntArrList) MapInt8(f IntArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt16(f IntArrInt16Functor) Int16List {
+func (l IntArrList) MapInt16(f IntArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8337,7 +8337,7 @@ func (l IntArrList) MapInt16(f IntArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt32(f IntArrInt32Functor) Int32List {
+func (l IntArrList) MapInt32(f IntArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8346,7 +8346,7 @@ func (l IntArrList) MapInt32(f IntArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt64(f IntArrInt64Functor) Int64List {
+func (l IntArrList) MapInt64(f IntArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8355,7 +8355,7 @@ func (l IntArrList) MapInt64(f IntArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint(f IntArrUintFunctor) UintList {
+func (l IntArrList) MapUint(f IntArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8364,7 +8364,7 @@ func (l IntArrList) MapUint(f IntArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint8(f IntArrUint8Functor) Uint8List {
+func (l IntArrList) MapUint8(f IntArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8373,7 +8373,7 @@ func (l IntArrList) MapUint8(f IntArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint16(f IntArrUint16Functor) Uint16List {
+func (l IntArrList) MapUint16(f IntArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8382,7 +8382,7 @@ func (l IntArrList) MapUint16(f IntArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint32(f IntArrUint32Functor) Uint32List {
+func (l IntArrList) MapUint32(f IntArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8391,7 +8391,7 @@ func (l IntArrList) MapUint32(f IntArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint64(f IntArrUint64Functor) Uint64List {
+func (l IntArrList) MapUint64(f IntArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8400,7 +8400,7 @@ func (l IntArrList) MapUint64(f IntArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUintptr(f IntArrUintptrFunctor) UintptrList {
+func (l IntArrList) MapUintptr(f IntArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8409,7 +8409,7 @@ func (l IntArrList) MapUintptr(f IntArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapFloat32(f IntArrFloat32Functor) Float32List {
+func (l IntArrList) MapFloat32(f IntArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8418,7 +8418,7 @@ func (l IntArrList) MapFloat32(f IntArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapFloat64(f IntArrFloat64Functor) Float64List {
+func (l IntArrList) MapFloat64(f IntArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8427,7 +8427,7 @@ func (l IntArrList) MapFloat64(f IntArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapComplex64(f IntArrComplex64Functor) Complex64List {
+func (l IntArrList) MapComplex64(f IntArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8436,7 +8436,7 @@ func (l IntArrList) MapComplex64(f IntArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapComplex128(f IntArrComplex128Functor) Complex128List {
+func (l IntArrList) MapComplex128(f IntArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8445,7 +8445,7 @@ func (l IntArrList) MapComplex128(f IntArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapString(f IntArrStringFunctor) StringList {
+func (l IntArrList) MapString(f IntArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8454,7 +8454,7 @@ func (l IntArrList) MapString(f IntArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapAny(f IntArrAnyFunctor) AnyList {
+func (l IntArrList) MapAny(f IntArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8463,7 +8463,7 @@ func (l IntArrList) MapAny(f IntArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapBoolArr(f IntArrBoolArrFunctor) BoolArrList {
+func (l IntArrList) MapBoolArr(f IntArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8472,7 +8472,7 @@ func (l IntArrList) MapBoolArr(f IntArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapRuneArr(f IntArrRuneArrFunctor) RuneArrList {
+func (l IntArrList) MapRuneArr(f IntArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8481,7 +8481,7 @@ func (l IntArrList) MapRuneArr(f IntArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapByteArr(f IntArrByteArrFunctor) ByteArrList {
+func (l IntArrList) MapByteArr(f IntArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8490,7 +8490,7 @@ func (l IntArrList) MapByteArr(f IntArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapIntArr(f IntArrIntArrFunctor) IntArrList {
+func (l IntArrList) MapIntArr(f IntArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8499,7 +8499,7 @@ func (l IntArrList) MapIntArr(f IntArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt8Arr(f IntArrInt8ArrFunctor) Int8ArrList {
+func (l IntArrList) MapInt8Arr(f IntArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8508,7 +8508,7 @@ func (l IntArrList) MapInt8Arr(f IntArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt16Arr(f IntArrInt16ArrFunctor) Int16ArrList {
+func (l IntArrList) MapInt16Arr(f IntArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8517,7 +8517,7 @@ func (l IntArrList) MapInt16Arr(f IntArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt32Arr(f IntArrInt32ArrFunctor) Int32ArrList {
+func (l IntArrList) MapInt32Arr(f IntArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8526,7 +8526,7 @@ func (l IntArrList) MapInt32Arr(f IntArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapInt64Arr(f IntArrInt64ArrFunctor) Int64ArrList {
+func (l IntArrList) MapInt64Arr(f IntArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8535,7 +8535,7 @@ func (l IntArrList) MapInt64Arr(f IntArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUintArr(f IntArrUintArrFunctor) UintArrList {
+func (l IntArrList) MapUintArr(f IntArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8544,7 +8544,7 @@ func (l IntArrList) MapUintArr(f IntArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint8Arr(f IntArrUint8ArrFunctor) Uint8ArrList {
+func (l IntArrList) MapUint8Arr(f IntArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8553,7 +8553,7 @@ func (l IntArrList) MapUint8Arr(f IntArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint16Arr(f IntArrUint16ArrFunctor) Uint16ArrList {
+func (l IntArrList) MapUint16Arr(f IntArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8562,7 +8562,7 @@ func (l IntArrList) MapUint16Arr(f IntArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint32Arr(f IntArrUint32ArrFunctor) Uint32ArrList {
+func (l IntArrList) MapUint32Arr(f IntArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8571,7 +8571,7 @@ func (l IntArrList) MapUint32Arr(f IntArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUint64Arr(f IntArrUint64ArrFunctor) Uint64ArrList {
+func (l IntArrList) MapUint64Arr(f IntArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8580,7 +8580,7 @@ func (l IntArrList) MapUint64Arr(f IntArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapUintptrArr(f IntArrUintptrArrFunctor) UintptrArrList {
+func (l IntArrList) MapUintptrArr(f IntArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8589,7 +8589,7 @@ func (l IntArrList) MapUintptrArr(f IntArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapFloat32Arr(f IntArrFloat32ArrFunctor) Float32ArrList {
+func (l IntArrList) MapFloat32Arr(f IntArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8598,7 +8598,7 @@ func (l IntArrList) MapFloat32Arr(f IntArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapFloat64Arr(f IntArrFloat64ArrFunctor) Float64ArrList {
+func (l IntArrList) MapFloat64Arr(f IntArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8607,7 +8607,7 @@ func (l IntArrList) MapFloat64Arr(f IntArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapComplex64Arr(f IntArrComplex64ArrFunctor) Complex64ArrList {
+func (l IntArrList) MapComplex64Arr(f IntArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8616,7 +8616,7 @@ func (l IntArrList) MapComplex64Arr(f IntArrComplex64ArrFunctor) Complex64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapComplex128Arr(f IntArrComplex128ArrFunctor) Complex128ArrList {
+func (l IntArrList) MapComplex128Arr(f IntArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8625,7 +8625,7 @@ func (l IntArrList) MapComplex128Arr(f IntArrComplex128ArrFunctor) Complex128Arr
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapStringArr(f IntArrStringArrFunctor) StringArrList {
+func (l IntArrList) MapStringArr(f IntArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8634,7 +8634,7 @@ func (l IntArrList) MapStringArr(f IntArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l IntArrList) MapAnyArr(f IntArrAnyArrFunctor) AnyArrList {
+func (l IntArrList) MapAnyArr(f IntArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8643,7 +8643,7 @@ func (l IntArrList) MapAnyArr(f IntArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapBool(f Int8ArrBoolFunctor) BoolList {
+func (l Int8ArrList) MapBool(f Int8ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8652,7 +8652,7 @@ func (l Int8ArrList) MapBool(f Int8ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapRune(f Int8ArrRuneFunctor) RuneList {
+func (l Int8ArrList) MapRune(f Int8ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8661,7 +8661,7 @@ func (l Int8ArrList) MapRune(f Int8ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapByte(f Int8ArrByteFunctor) ByteList {
+func (l Int8ArrList) MapByte(f Int8ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8670,7 +8670,7 @@ func (l Int8ArrList) MapByte(f Int8ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt(f Int8ArrIntFunctor) IntList {
+func (l Int8ArrList) MapInt(f Int8ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8679,7 +8679,7 @@ func (l Int8ArrList) MapInt(f Int8ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt8(f Int8ArrInt8Functor) Int8List {
+func (l Int8ArrList) MapInt8(f Int8ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8688,7 +8688,7 @@ func (l Int8ArrList) MapInt8(f Int8ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt16(f Int8ArrInt16Functor) Int16List {
+func (l Int8ArrList) MapInt16(f Int8ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8697,7 +8697,7 @@ func (l Int8ArrList) MapInt16(f Int8ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt32(f Int8ArrInt32Functor) Int32List {
+func (l Int8ArrList) MapInt32(f Int8ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8706,7 +8706,7 @@ func (l Int8ArrList) MapInt32(f Int8ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt64(f Int8ArrInt64Functor) Int64List {
+func (l Int8ArrList) MapInt64(f Int8ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8715,7 +8715,7 @@ func (l Int8ArrList) MapInt64(f Int8ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint(f Int8ArrUintFunctor) UintList {
+func (l Int8ArrList) MapUint(f Int8ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8724,7 +8724,7 @@ func (l Int8ArrList) MapUint(f Int8ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint8(f Int8ArrUint8Functor) Uint8List {
+func (l Int8ArrList) MapUint8(f Int8ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8733,7 +8733,7 @@ func (l Int8ArrList) MapUint8(f Int8ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint16(f Int8ArrUint16Functor) Uint16List {
+func (l Int8ArrList) MapUint16(f Int8ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8742,7 +8742,7 @@ func (l Int8ArrList) MapUint16(f Int8ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint32(f Int8ArrUint32Functor) Uint32List {
+func (l Int8ArrList) MapUint32(f Int8ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8751,7 +8751,7 @@ func (l Int8ArrList) MapUint32(f Int8ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint64(f Int8ArrUint64Functor) Uint64List {
+func (l Int8ArrList) MapUint64(f Int8ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8760,7 +8760,7 @@ func (l Int8ArrList) MapUint64(f Int8ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUintptr(f Int8ArrUintptrFunctor) UintptrList {
+func (l Int8ArrList) MapUintptr(f Int8ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8769,7 +8769,7 @@ func (l Int8ArrList) MapUintptr(f Int8ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapFloat32(f Int8ArrFloat32Functor) Float32List {
+func (l Int8ArrList) MapFloat32(f Int8ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8778,7 +8778,7 @@ func (l Int8ArrList) MapFloat32(f Int8ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapFloat64(f Int8ArrFloat64Functor) Float64List {
+func (l Int8ArrList) MapFloat64(f Int8ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8787,7 +8787,7 @@ func (l Int8ArrList) MapFloat64(f Int8ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapComplex64(f Int8ArrComplex64Functor) Complex64List {
+func (l Int8ArrList) MapComplex64(f Int8ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8796,7 +8796,7 @@ func (l Int8ArrList) MapComplex64(f Int8ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapComplex128(f Int8ArrComplex128Functor) Complex128List {
+func (l Int8ArrList) MapComplex128(f Int8ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8805,7 +8805,7 @@ func (l Int8ArrList) MapComplex128(f Int8ArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapString(f Int8ArrStringFunctor) StringList {
+func (l Int8ArrList) MapString(f Int8ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8814,7 +8814,7 @@ func (l Int8ArrList) MapString(f Int8ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapAny(f Int8ArrAnyFunctor) AnyList {
+func (l Int8ArrList) MapAny(f Int8ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8823,7 +8823,7 @@ func (l Int8ArrList) MapAny(f Int8ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapBoolArr(f Int8ArrBoolArrFunctor) BoolArrList {
+func (l Int8ArrList) MapBoolArr(f Int8ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8832,7 +8832,7 @@ func (l Int8ArrList) MapBoolArr(f Int8ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapRuneArr(f Int8ArrRuneArrFunctor) RuneArrList {
+func (l Int8ArrList) MapRuneArr(f Int8ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8841,7 +8841,7 @@ func (l Int8ArrList) MapRuneArr(f Int8ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapByteArr(f Int8ArrByteArrFunctor) ByteArrList {
+func (l Int8ArrList) MapByteArr(f Int8ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8850,7 +8850,7 @@ func (l Int8ArrList) MapByteArr(f Int8ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapIntArr(f Int8ArrIntArrFunctor) IntArrList {
+func (l Int8ArrList) MapIntArr(f Int8ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8859,7 +8859,7 @@ func (l Int8ArrList) MapIntArr(f Int8ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt8Arr(f Int8ArrInt8ArrFunctor) Int8ArrList {
+func (l Int8ArrList) MapInt8Arr(f Int8ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8868,7 +8868,7 @@ func (l Int8ArrList) MapInt8Arr(f Int8ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt16Arr(f Int8ArrInt16ArrFunctor) Int16ArrList {
+func (l Int8ArrList) MapInt16Arr(f Int8ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8877,7 +8877,7 @@ func (l Int8ArrList) MapInt16Arr(f Int8ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt32Arr(f Int8ArrInt32ArrFunctor) Int32ArrList {
+func (l Int8ArrList) MapInt32Arr(f Int8ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8886,7 +8886,7 @@ func (l Int8ArrList) MapInt32Arr(f Int8ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapInt64Arr(f Int8ArrInt64ArrFunctor) Int64ArrList {
+func (l Int8ArrList) MapInt64Arr(f Int8ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8895,7 +8895,7 @@ func (l Int8ArrList) MapInt64Arr(f Int8ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUintArr(f Int8ArrUintArrFunctor) UintArrList {
+func (l Int8ArrList) MapUintArr(f Int8ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8904,7 +8904,7 @@ func (l Int8ArrList) MapUintArr(f Int8ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint8Arr(f Int8ArrUint8ArrFunctor) Uint8ArrList {
+func (l Int8ArrList) MapUint8Arr(f Int8ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8913,7 +8913,7 @@ func (l Int8ArrList) MapUint8Arr(f Int8ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint16Arr(f Int8ArrUint16ArrFunctor) Uint16ArrList {
+func (l Int8ArrList) MapUint16Arr(f Int8ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8922,7 +8922,7 @@ func (l Int8ArrList) MapUint16Arr(f Int8ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint32Arr(f Int8ArrUint32ArrFunctor) Uint32ArrList {
+func (l Int8ArrList) MapUint32Arr(f Int8ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8931,7 +8931,7 @@ func (l Int8ArrList) MapUint32Arr(f Int8ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUint64Arr(f Int8ArrUint64ArrFunctor) Uint64ArrList {
+func (l Int8ArrList) MapUint64Arr(f Int8ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8940,7 +8940,7 @@ func (l Int8ArrList) MapUint64Arr(f Int8ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapUintptrArr(f Int8ArrUintptrArrFunctor) UintptrArrList {
+func (l Int8ArrList) MapUintptrArr(f Int8ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8949,7 +8949,7 @@ func (l Int8ArrList) MapUintptrArr(f Int8ArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapFloat32Arr(f Int8ArrFloat32ArrFunctor) Float32ArrList {
+func (l Int8ArrList) MapFloat32Arr(f Int8ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8958,7 +8958,7 @@ func (l Int8ArrList) MapFloat32Arr(f Int8ArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapFloat64Arr(f Int8ArrFloat64ArrFunctor) Float64ArrList {
+func (l Int8ArrList) MapFloat64Arr(f Int8ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8967,7 +8967,7 @@ func (l Int8ArrList) MapFloat64Arr(f Int8ArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapComplex64Arr(f Int8ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Int8ArrList) MapComplex64Arr(f Int8ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8976,7 +8976,7 @@ func (l Int8ArrList) MapComplex64Arr(f Int8ArrComplex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapComplex128Arr(f Int8ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Int8ArrList) MapComplex128Arr(f Int8ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8985,7 +8985,7 @@ func (l Int8ArrList) MapComplex128Arr(f Int8ArrComplex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapStringArr(f Int8ArrStringArrFunctor) StringArrList {
+func (l Int8ArrList) MapStringArr(f Int8ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -8994,7 +8994,7 @@ func (l Int8ArrList) MapStringArr(f Int8ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int8ArrList) MapAnyArr(f Int8ArrAnyArrFunctor) AnyArrList {
+func (l Int8ArrList) MapAnyArr(f Int8ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9003,7 +9003,7 @@ func (l Int8ArrList) MapAnyArr(f Int8ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapBool(f Int16ArrBoolFunctor) BoolList {
+func (l Int16ArrList) MapBool(f Int16ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9012,7 +9012,7 @@ func (l Int16ArrList) MapBool(f Int16ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapRune(f Int16ArrRuneFunctor) RuneList {
+func (l Int16ArrList) MapRune(f Int16ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9021,7 +9021,7 @@ func (l Int16ArrList) MapRune(f Int16ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapByte(f Int16ArrByteFunctor) ByteList {
+func (l Int16ArrList) MapByte(f Int16ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9030,7 +9030,7 @@ func (l Int16ArrList) MapByte(f Int16ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt(f Int16ArrIntFunctor) IntList {
+func (l Int16ArrList) MapInt(f Int16ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9039,7 +9039,7 @@ func (l Int16ArrList) MapInt(f Int16ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt8(f Int16ArrInt8Functor) Int8List {
+func (l Int16ArrList) MapInt8(f Int16ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9048,7 +9048,7 @@ func (l Int16ArrList) MapInt8(f Int16ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt16(f Int16ArrInt16Functor) Int16List {
+func (l Int16ArrList) MapInt16(f Int16ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9057,7 +9057,7 @@ func (l Int16ArrList) MapInt16(f Int16ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt32(f Int16ArrInt32Functor) Int32List {
+func (l Int16ArrList) MapInt32(f Int16ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9066,7 +9066,7 @@ func (l Int16ArrList) MapInt32(f Int16ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt64(f Int16ArrInt64Functor) Int64List {
+func (l Int16ArrList) MapInt64(f Int16ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9075,7 +9075,7 @@ func (l Int16ArrList) MapInt64(f Int16ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint(f Int16ArrUintFunctor) UintList {
+func (l Int16ArrList) MapUint(f Int16ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9084,7 +9084,7 @@ func (l Int16ArrList) MapUint(f Int16ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint8(f Int16ArrUint8Functor) Uint8List {
+func (l Int16ArrList) MapUint8(f Int16ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9093,7 +9093,7 @@ func (l Int16ArrList) MapUint8(f Int16ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint16(f Int16ArrUint16Functor) Uint16List {
+func (l Int16ArrList) MapUint16(f Int16ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9102,7 +9102,7 @@ func (l Int16ArrList) MapUint16(f Int16ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint32(f Int16ArrUint32Functor) Uint32List {
+func (l Int16ArrList) MapUint32(f Int16ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9111,7 +9111,7 @@ func (l Int16ArrList) MapUint32(f Int16ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint64(f Int16ArrUint64Functor) Uint64List {
+func (l Int16ArrList) MapUint64(f Int16ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9120,7 +9120,7 @@ func (l Int16ArrList) MapUint64(f Int16ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUintptr(f Int16ArrUintptrFunctor) UintptrList {
+func (l Int16ArrList) MapUintptr(f Int16ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9129,7 +9129,7 @@ func (l Int16ArrList) MapUintptr(f Int16ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapFloat32(f Int16ArrFloat32Functor) Float32List {
+func (l Int16ArrList) MapFloat32(f Int16ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9138,7 +9138,7 @@ func (l Int16ArrList) MapFloat32(f Int16ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapFloat64(f Int16ArrFloat64Functor) Float64List {
+func (l Int16ArrList) MapFloat64(f Int16ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9147,7 +9147,7 @@ func (l Int16ArrList) MapFloat64(f Int16ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapComplex64(f Int16ArrComplex64Functor) Complex64List {
+func (l Int16ArrList) MapComplex64(f Int16ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9156,7 +9156,7 @@ func (l Int16ArrList) MapComplex64(f Int16ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapComplex128(f Int16ArrComplex128Functor) Complex128List {
+func (l Int16ArrList) MapComplex128(f Int16ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9165,7 +9165,7 @@ func (l Int16ArrList) MapComplex128(f Int16ArrComplex128Functor) Complex128List 
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapString(f Int16ArrStringFunctor) StringList {
+func (l Int16ArrList) MapString(f Int16ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9174,7 +9174,7 @@ func (l Int16ArrList) MapString(f Int16ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapAny(f Int16ArrAnyFunctor) AnyList {
+func (l Int16ArrList) MapAny(f Int16ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9183,7 +9183,7 @@ func (l Int16ArrList) MapAny(f Int16ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapBoolArr(f Int16ArrBoolArrFunctor) BoolArrList {
+func (l Int16ArrList) MapBoolArr(f Int16ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9192,7 +9192,7 @@ func (l Int16ArrList) MapBoolArr(f Int16ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapRuneArr(f Int16ArrRuneArrFunctor) RuneArrList {
+func (l Int16ArrList) MapRuneArr(f Int16ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9201,7 +9201,7 @@ func (l Int16ArrList) MapRuneArr(f Int16ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapByteArr(f Int16ArrByteArrFunctor) ByteArrList {
+func (l Int16ArrList) MapByteArr(f Int16ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9210,7 +9210,7 @@ func (l Int16ArrList) MapByteArr(f Int16ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapIntArr(f Int16ArrIntArrFunctor) IntArrList {
+func (l Int16ArrList) MapIntArr(f Int16ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9219,7 +9219,7 @@ func (l Int16ArrList) MapIntArr(f Int16ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt8Arr(f Int16ArrInt8ArrFunctor) Int8ArrList {
+func (l Int16ArrList) MapInt8Arr(f Int16ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9228,7 +9228,7 @@ func (l Int16ArrList) MapInt8Arr(f Int16ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt16Arr(f Int16ArrInt16ArrFunctor) Int16ArrList {
+func (l Int16ArrList) MapInt16Arr(f Int16ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9237,7 +9237,7 @@ func (l Int16ArrList) MapInt16Arr(f Int16ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt32Arr(f Int16ArrInt32ArrFunctor) Int32ArrList {
+func (l Int16ArrList) MapInt32Arr(f Int16ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9246,7 +9246,7 @@ func (l Int16ArrList) MapInt32Arr(f Int16ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapInt64Arr(f Int16ArrInt64ArrFunctor) Int64ArrList {
+func (l Int16ArrList) MapInt64Arr(f Int16ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9255,7 +9255,7 @@ func (l Int16ArrList) MapInt64Arr(f Int16ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUintArr(f Int16ArrUintArrFunctor) UintArrList {
+func (l Int16ArrList) MapUintArr(f Int16ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9264,7 +9264,7 @@ func (l Int16ArrList) MapUintArr(f Int16ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint8Arr(f Int16ArrUint8ArrFunctor) Uint8ArrList {
+func (l Int16ArrList) MapUint8Arr(f Int16ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9273,7 +9273,7 @@ func (l Int16ArrList) MapUint8Arr(f Int16ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint16Arr(f Int16ArrUint16ArrFunctor) Uint16ArrList {
+func (l Int16ArrList) MapUint16Arr(f Int16ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9282,7 +9282,7 @@ func (l Int16ArrList) MapUint16Arr(f Int16ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint32Arr(f Int16ArrUint32ArrFunctor) Uint32ArrList {
+func (l Int16ArrList) MapUint32Arr(f Int16ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9291,7 +9291,7 @@ func (l Int16ArrList) MapUint32Arr(f Int16ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUint64Arr(f Int16ArrUint64ArrFunctor) Uint64ArrList {
+func (l Int16ArrList) MapUint64Arr(f Int16ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9300,7 +9300,7 @@ func (l Int16ArrList) MapUint64Arr(f Int16ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapUintptrArr(f Int16ArrUintptrArrFunctor) UintptrArrList {
+func (l Int16ArrList) MapUintptrArr(f Int16ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9309,7 +9309,7 @@ func (l Int16ArrList) MapUintptrArr(f Int16ArrUintptrArrFunctor) UintptrArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapFloat32Arr(f Int16ArrFloat32ArrFunctor) Float32ArrList {
+func (l Int16ArrList) MapFloat32Arr(f Int16ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9318,7 +9318,7 @@ func (l Int16ArrList) MapFloat32Arr(f Int16ArrFloat32ArrFunctor) Float32ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapFloat64Arr(f Int16ArrFloat64ArrFunctor) Float64ArrList {
+func (l Int16ArrList) MapFloat64Arr(f Int16ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9327,7 +9327,7 @@ func (l Int16ArrList) MapFloat64Arr(f Int16ArrFloat64ArrFunctor) Float64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapComplex64Arr(f Int16ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Int16ArrList) MapComplex64Arr(f Int16ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9336,7 +9336,7 @@ func (l Int16ArrList) MapComplex64Arr(f Int16ArrComplex64ArrFunctor) Complex64Ar
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapComplex128Arr(f Int16ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Int16ArrList) MapComplex128Arr(f Int16ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9345,7 +9345,7 @@ func (l Int16ArrList) MapComplex128Arr(f Int16ArrComplex128ArrFunctor) Complex12
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapStringArr(f Int16ArrStringArrFunctor) StringArrList {
+func (l Int16ArrList) MapStringArr(f Int16ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9354,7 +9354,7 @@ func (l Int16ArrList) MapStringArr(f Int16ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int16ArrList) MapAnyArr(f Int16ArrAnyArrFunctor) AnyArrList {
+func (l Int16ArrList) MapAnyArr(f Int16ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9363,7 +9363,7 @@ func (l Int16ArrList) MapAnyArr(f Int16ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapBool(f Int32ArrBoolFunctor) BoolList {
+func (l Int32ArrList) MapBool(f Int32ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9372,7 +9372,7 @@ func (l Int32ArrList) MapBool(f Int32ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapRune(f Int32ArrRuneFunctor) RuneList {
+func (l Int32ArrList) MapRune(f Int32ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9381,7 +9381,7 @@ func (l Int32ArrList) MapRune(f Int32ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapByte(f Int32ArrByteFunctor) ByteList {
+func (l Int32ArrList) MapByte(f Int32ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9390,7 +9390,7 @@ func (l Int32ArrList) MapByte(f Int32ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt(f Int32ArrIntFunctor) IntList {
+func (l Int32ArrList) MapInt(f Int32ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9399,7 +9399,7 @@ func (l Int32ArrList) MapInt(f Int32ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt8(f Int32ArrInt8Functor) Int8List {
+func (l Int32ArrList) MapInt8(f Int32ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9408,7 +9408,7 @@ func (l Int32ArrList) MapInt8(f Int32ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt16(f Int32ArrInt16Functor) Int16List {
+func (l Int32ArrList) MapInt16(f Int32ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9417,7 +9417,7 @@ func (l Int32ArrList) MapInt16(f Int32ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt32(f Int32ArrInt32Functor) Int32List {
+func (l Int32ArrList) MapInt32(f Int32ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9426,7 +9426,7 @@ func (l Int32ArrList) MapInt32(f Int32ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt64(f Int32ArrInt64Functor) Int64List {
+func (l Int32ArrList) MapInt64(f Int32ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9435,7 +9435,7 @@ func (l Int32ArrList) MapInt64(f Int32ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint(f Int32ArrUintFunctor) UintList {
+func (l Int32ArrList) MapUint(f Int32ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9444,7 +9444,7 @@ func (l Int32ArrList) MapUint(f Int32ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint8(f Int32ArrUint8Functor) Uint8List {
+func (l Int32ArrList) MapUint8(f Int32ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9453,7 +9453,7 @@ func (l Int32ArrList) MapUint8(f Int32ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint16(f Int32ArrUint16Functor) Uint16List {
+func (l Int32ArrList) MapUint16(f Int32ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9462,7 +9462,7 @@ func (l Int32ArrList) MapUint16(f Int32ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint32(f Int32ArrUint32Functor) Uint32List {
+func (l Int32ArrList) MapUint32(f Int32ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9471,7 +9471,7 @@ func (l Int32ArrList) MapUint32(f Int32ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint64(f Int32ArrUint64Functor) Uint64List {
+func (l Int32ArrList) MapUint64(f Int32ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9480,7 +9480,7 @@ func (l Int32ArrList) MapUint64(f Int32ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUintptr(f Int32ArrUintptrFunctor) UintptrList {
+func (l Int32ArrList) MapUintptr(f Int32ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9489,7 +9489,7 @@ func (l Int32ArrList) MapUintptr(f Int32ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapFloat32(f Int32ArrFloat32Functor) Float32List {
+func (l Int32ArrList) MapFloat32(f Int32ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9498,7 +9498,7 @@ func (l Int32ArrList) MapFloat32(f Int32ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapFloat64(f Int32ArrFloat64Functor) Float64List {
+func (l Int32ArrList) MapFloat64(f Int32ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9507,7 +9507,7 @@ func (l Int32ArrList) MapFloat64(f Int32ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapComplex64(f Int32ArrComplex64Functor) Complex64List {
+func (l Int32ArrList) MapComplex64(f Int32ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9516,7 +9516,7 @@ func (l Int32ArrList) MapComplex64(f Int32ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapComplex128(f Int32ArrComplex128Functor) Complex128List {
+func (l Int32ArrList) MapComplex128(f Int32ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9525,7 +9525,7 @@ func (l Int32ArrList) MapComplex128(f Int32ArrComplex128Functor) Complex128List 
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapString(f Int32ArrStringFunctor) StringList {
+func (l Int32ArrList) MapString(f Int32ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9534,7 +9534,7 @@ func (l Int32ArrList) MapString(f Int32ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapAny(f Int32ArrAnyFunctor) AnyList {
+func (l Int32ArrList) MapAny(f Int32ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9543,7 +9543,7 @@ func (l Int32ArrList) MapAny(f Int32ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapBoolArr(f Int32ArrBoolArrFunctor) BoolArrList {
+func (l Int32ArrList) MapBoolArr(f Int32ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9552,7 +9552,7 @@ func (l Int32ArrList) MapBoolArr(f Int32ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapRuneArr(f Int32ArrRuneArrFunctor) RuneArrList {
+func (l Int32ArrList) MapRuneArr(f Int32ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9561,7 +9561,7 @@ func (l Int32ArrList) MapRuneArr(f Int32ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapByteArr(f Int32ArrByteArrFunctor) ByteArrList {
+func (l Int32ArrList) MapByteArr(f Int32ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9570,7 +9570,7 @@ func (l Int32ArrList) MapByteArr(f Int32ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapIntArr(f Int32ArrIntArrFunctor) IntArrList {
+func (l Int32ArrList) MapIntArr(f Int32ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9579,7 +9579,7 @@ func (l Int32ArrList) MapIntArr(f Int32ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt8Arr(f Int32ArrInt8ArrFunctor) Int8ArrList {
+func (l Int32ArrList) MapInt8Arr(f Int32ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9588,7 +9588,7 @@ func (l Int32ArrList) MapInt8Arr(f Int32ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt16Arr(f Int32ArrInt16ArrFunctor) Int16ArrList {
+func (l Int32ArrList) MapInt16Arr(f Int32ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9597,7 +9597,7 @@ func (l Int32ArrList) MapInt16Arr(f Int32ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt32Arr(f Int32ArrInt32ArrFunctor) Int32ArrList {
+func (l Int32ArrList) MapInt32Arr(f Int32ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9606,7 +9606,7 @@ func (l Int32ArrList) MapInt32Arr(f Int32ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapInt64Arr(f Int32ArrInt64ArrFunctor) Int64ArrList {
+func (l Int32ArrList) MapInt64Arr(f Int32ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9615,7 +9615,7 @@ func (l Int32ArrList) MapInt64Arr(f Int32ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUintArr(f Int32ArrUintArrFunctor) UintArrList {
+func (l Int32ArrList) MapUintArr(f Int32ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9624,7 +9624,7 @@ func (l Int32ArrList) MapUintArr(f Int32ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint8Arr(f Int32ArrUint8ArrFunctor) Uint8ArrList {
+func (l Int32ArrList) MapUint8Arr(f Int32ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9633,7 +9633,7 @@ func (l Int32ArrList) MapUint8Arr(f Int32ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint16Arr(f Int32ArrUint16ArrFunctor) Uint16ArrList {
+func (l Int32ArrList) MapUint16Arr(f Int32ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9642,7 +9642,7 @@ func (l Int32ArrList) MapUint16Arr(f Int32ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint32Arr(f Int32ArrUint32ArrFunctor) Uint32ArrList {
+func (l Int32ArrList) MapUint32Arr(f Int32ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9651,7 +9651,7 @@ func (l Int32ArrList) MapUint32Arr(f Int32ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUint64Arr(f Int32ArrUint64ArrFunctor) Uint64ArrList {
+func (l Int32ArrList) MapUint64Arr(f Int32ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9660,7 +9660,7 @@ func (l Int32ArrList) MapUint64Arr(f Int32ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapUintptrArr(f Int32ArrUintptrArrFunctor) UintptrArrList {
+func (l Int32ArrList) MapUintptrArr(f Int32ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9669,7 +9669,7 @@ func (l Int32ArrList) MapUintptrArr(f Int32ArrUintptrArrFunctor) UintptrArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapFloat32Arr(f Int32ArrFloat32ArrFunctor) Float32ArrList {
+func (l Int32ArrList) MapFloat32Arr(f Int32ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9678,7 +9678,7 @@ func (l Int32ArrList) MapFloat32Arr(f Int32ArrFloat32ArrFunctor) Float32ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapFloat64Arr(f Int32ArrFloat64ArrFunctor) Float64ArrList {
+func (l Int32ArrList) MapFloat64Arr(f Int32ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9687,7 +9687,7 @@ func (l Int32ArrList) MapFloat64Arr(f Int32ArrFloat64ArrFunctor) Float64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapComplex64Arr(f Int32ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Int32ArrList) MapComplex64Arr(f Int32ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9696,7 +9696,7 @@ func (l Int32ArrList) MapComplex64Arr(f Int32ArrComplex64ArrFunctor) Complex64Ar
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapComplex128Arr(f Int32ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Int32ArrList) MapComplex128Arr(f Int32ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9705,7 +9705,7 @@ func (l Int32ArrList) MapComplex128Arr(f Int32ArrComplex128ArrFunctor) Complex12
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapStringArr(f Int32ArrStringArrFunctor) StringArrList {
+func (l Int32ArrList) MapStringArr(f Int32ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9714,7 +9714,7 @@ func (l Int32ArrList) MapStringArr(f Int32ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int32ArrList) MapAnyArr(f Int32ArrAnyArrFunctor) AnyArrList {
+func (l Int32ArrList) MapAnyArr(f Int32ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9723,7 +9723,7 @@ func (l Int32ArrList) MapAnyArr(f Int32ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapBool(f Int64ArrBoolFunctor) BoolList {
+func (l Int64ArrList) MapBool(f Int64ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9732,7 +9732,7 @@ func (l Int64ArrList) MapBool(f Int64ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapRune(f Int64ArrRuneFunctor) RuneList {
+func (l Int64ArrList) MapRune(f Int64ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9741,7 +9741,7 @@ func (l Int64ArrList) MapRune(f Int64ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapByte(f Int64ArrByteFunctor) ByteList {
+func (l Int64ArrList) MapByte(f Int64ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9750,7 +9750,7 @@ func (l Int64ArrList) MapByte(f Int64ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt(f Int64ArrIntFunctor) IntList {
+func (l Int64ArrList) MapInt(f Int64ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9759,7 +9759,7 @@ func (l Int64ArrList) MapInt(f Int64ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt8(f Int64ArrInt8Functor) Int8List {
+func (l Int64ArrList) MapInt8(f Int64ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9768,7 +9768,7 @@ func (l Int64ArrList) MapInt8(f Int64ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt16(f Int64ArrInt16Functor) Int16List {
+func (l Int64ArrList) MapInt16(f Int64ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9777,7 +9777,7 @@ func (l Int64ArrList) MapInt16(f Int64ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt32(f Int64ArrInt32Functor) Int32List {
+func (l Int64ArrList) MapInt32(f Int64ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9786,7 +9786,7 @@ func (l Int64ArrList) MapInt32(f Int64ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt64(f Int64ArrInt64Functor) Int64List {
+func (l Int64ArrList) MapInt64(f Int64ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9795,7 +9795,7 @@ func (l Int64ArrList) MapInt64(f Int64ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint(f Int64ArrUintFunctor) UintList {
+func (l Int64ArrList) MapUint(f Int64ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9804,7 +9804,7 @@ func (l Int64ArrList) MapUint(f Int64ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint8(f Int64ArrUint8Functor) Uint8List {
+func (l Int64ArrList) MapUint8(f Int64ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9813,7 +9813,7 @@ func (l Int64ArrList) MapUint8(f Int64ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint16(f Int64ArrUint16Functor) Uint16List {
+func (l Int64ArrList) MapUint16(f Int64ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9822,7 +9822,7 @@ func (l Int64ArrList) MapUint16(f Int64ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint32(f Int64ArrUint32Functor) Uint32List {
+func (l Int64ArrList) MapUint32(f Int64ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9831,7 +9831,7 @@ func (l Int64ArrList) MapUint32(f Int64ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint64(f Int64ArrUint64Functor) Uint64List {
+func (l Int64ArrList) MapUint64(f Int64ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9840,7 +9840,7 @@ func (l Int64ArrList) MapUint64(f Int64ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUintptr(f Int64ArrUintptrFunctor) UintptrList {
+func (l Int64ArrList) MapUintptr(f Int64ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9849,7 +9849,7 @@ func (l Int64ArrList) MapUintptr(f Int64ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapFloat32(f Int64ArrFloat32Functor) Float32List {
+func (l Int64ArrList) MapFloat32(f Int64ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9858,7 +9858,7 @@ func (l Int64ArrList) MapFloat32(f Int64ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapFloat64(f Int64ArrFloat64Functor) Float64List {
+func (l Int64ArrList) MapFloat64(f Int64ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9867,7 +9867,7 @@ func (l Int64ArrList) MapFloat64(f Int64ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapComplex64(f Int64ArrComplex64Functor) Complex64List {
+func (l Int64ArrList) MapComplex64(f Int64ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9876,7 +9876,7 @@ func (l Int64ArrList) MapComplex64(f Int64ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapComplex128(f Int64ArrComplex128Functor) Complex128List {
+func (l Int64ArrList) MapComplex128(f Int64ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9885,7 +9885,7 @@ func (l Int64ArrList) MapComplex128(f Int64ArrComplex128Functor) Complex128List 
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapString(f Int64ArrStringFunctor) StringList {
+func (l Int64ArrList) MapString(f Int64ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9894,7 +9894,7 @@ func (l Int64ArrList) MapString(f Int64ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapAny(f Int64ArrAnyFunctor) AnyList {
+func (l Int64ArrList) MapAny(f Int64ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9903,7 +9903,7 @@ func (l Int64ArrList) MapAny(f Int64ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapBoolArr(f Int64ArrBoolArrFunctor) BoolArrList {
+func (l Int64ArrList) MapBoolArr(f Int64ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9912,7 +9912,7 @@ func (l Int64ArrList) MapBoolArr(f Int64ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapRuneArr(f Int64ArrRuneArrFunctor) RuneArrList {
+func (l Int64ArrList) MapRuneArr(f Int64ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9921,7 +9921,7 @@ func (l Int64ArrList) MapRuneArr(f Int64ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapByteArr(f Int64ArrByteArrFunctor) ByteArrList {
+func (l Int64ArrList) MapByteArr(f Int64ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9930,7 +9930,7 @@ func (l Int64ArrList) MapByteArr(f Int64ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapIntArr(f Int64ArrIntArrFunctor) IntArrList {
+func (l Int64ArrList) MapIntArr(f Int64ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9939,7 +9939,7 @@ func (l Int64ArrList) MapIntArr(f Int64ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt8Arr(f Int64ArrInt8ArrFunctor) Int8ArrList {
+func (l Int64ArrList) MapInt8Arr(f Int64ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9948,7 +9948,7 @@ func (l Int64ArrList) MapInt8Arr(f Int64ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt16Arr(f Int64ArrInt16ArrFunctor) Int16ArrList {
+func (l Int64ArrList) MapInt16Arr(f Int64ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9957,7 +9957,7 @@ func (l Int64ArrList) MapInt16Arr(f Int64ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt32Arr(f Int64ArrInt32ArrFunctor) Int32ArrList {
+func (l Int64ArrList) MapInt32Arr(f Int64ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9966,7 +9966,7 @@ func (l Int64ArrList) MapInt32Arr(f Int64ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapInt64Arr(f Int64ArrInt64ArrFunctor) Int64ArrList {
+func (l Int64ArrList) MapInt64Arr(f Int64ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9975,7 +9975,7 @@ func (l Int64ArrList) MapInt64Arr(f Int64ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUintArr(f Int64ArrUintArrFunctor) UintArrList {
+func (l Int64ArrList) MapUintArr(f Int64ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9984,7 +9984,7 @@ func (l Int64ArrList) MapUintArr(f Int64ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint8Arr(f Int64ArrUint8ArrFunctor) Uint8ArrList {
+func (l Int64ArrList) MapUint8Arr(f Int64ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -9993,7 +9993,7 @@ func (l Int64ArrList) MapUint8Arr(f Int64ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint16Arr(f Int64ArrUint16ArrFunctor) Uint16ArrList {
+func (l Int64ArrList) MapUint16Arr(f Int64ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10002,7 +10002,7 @@ func (l Int64ArrList) MapUint16Arr(f Int64ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint32Arr(f Int64ArrUint32ArrFunctor) Uint32ArrList {
+func (l Int64ArrList) MapUint32Arr(f Int64ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10011,7 +10011,7 @@ func (l Int64ArrList) MapUint32Arr(f Int64ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUint64Arr(f Int64ArrUint64ArrFunctor) Uint64ArrList {
+func (l Int64ArrList) MapUint64Arr(f Int64ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10020,7 +10020,7 @@ func (l Int64ArrList) MapUint64Arr(f Int64ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapUintptrArr(f Int64ArrUintptrArrFunctor) UintptrArrList {
+func (l Int64ArrList) MapUintptrArr(f Int64ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10029,7 +10029,7 @@ func (l Int64ArrList) MapUintptrArr(f Int64ArrUintptrArrFunctor) UintptrArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapFloat32Arr(f Int64ArrFloat32ArrFunctor) Float32ArrList {
+func (l Int64ArrList) MapFloat32Arr(f Int64ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10038,7 +10038,7 @@ func (l Int64ArrList) MapFloat32Arr(f Int64ArrFloat32ArrFunctor) Float32ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapFloat64Arr(f Int64ArrFloat64ArrFunctor) Float64ArrList {
+func (l Int64ArrList) MapFloat64Arr(f Int64ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10047,7 +10047,7 @@ func (l Int64ArrList) MapFloat64Arr(f Int64ArrFloat64ArrFunctor) Float64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapComplex64Arr(f Int64ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Int64ArrList) MapComplex64Arr(f Int64ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10056,7 +10056,7 @@ func (l Int64ArrList) MapComplex64Arr(f Int64ArrComplex64ArrFunctor) Complex64Ar
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapComplex128Arr(f Int64ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Int64ArrList) MapComplex128Arr(f Int64ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10065,7 +10065,7 @@ func (l Int64ArrList) MapComplex128Arr(f Int64ArrComplex128ArrFunctor) Complex12
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapStringArr(f Int64ArrStringArrFunctor) StringArrList {
+func (l Int64ArrList) MapStringArr(f Int64ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10074,7 +10074,7 @@ func (l Int64ArrList) MapStringArr(f Int64ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Int64ArrList) MapAnyArr(f Int64ArrAnyArrFunctor) AnyArrList {
+func (l Int64ArrList) MapAnyArr(f Int64ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10083,7 +10083,7 @@ func (l Int64ArrList) MapAnyArr(f Int64ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapBool(f UintArrBoolFunctor) BoolList {
+func (l UintArrList) MapBool(f UintArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10092,7 +10092,7 @@ func (l UintArrList) MapBool(f UintArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapRune(f UintArrRuneFunctor) RuneList {
+func (l UintArrList) MapRune(f UintArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10101,7 +10101,7 @@ func (l UintArrList) MapRune(f UintArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapByte(f UintArrByteFunctor) ByteList {
+func (l UintArrList) MapByte(f UintArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10110,7 +10110,7 @@ func (l UintArrList) MapByte(f UintArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt(f UintArrIntFunctor) IntList {
+func (l UintArrList) MapInt(f UintArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10119,7 +10119,7 @@ func (l UintArrList) MapInt(f UintArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt8(f UintArrInt8Functor) Int8List {
+func (l UintArrList) MapInt8(f UintArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10128,7 +10128,7 @@ func (l UintArrList) MapInt8(f UintArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt16(f UintArrInt16Functor) Int16List {
+func (l UintArrList) MapInt16(f UintArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10137,7 +10137,7 @@ func (l UintArrList) MapInt16(f UintArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt32(f UintArrInt32Functor) Int32List {
+func (l UintArrList) MapInt32(f UintArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10146,7 +10146,7 @@ func (l UintArrList) MapInt32(f UintArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt64(f UintArrInt64Functor) Int64List {
+func (l UintArrList) MapInt64(f UintArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10155,7 +10155,7 @@ func (l UintArrList) MapInt64(f UintArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint(f UintArrUintFunctor) UintList {
+func (l UintArrList) MapUint(f UintArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10164,7 +10164,7 @@ func (l UintArrList) MapUint(f UintArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint8(f UintArrUint8Functor) Uint8List {
+func (l UintArrList) MapUint8(f UintArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10173,7 +10173,7 @@ func (l UintArrList) MapUint8(f UintArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint16(f UintArrUint16Functor) Uint16List {
+func (l UintArrList) MapUint16(f UintArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10182,7 +10182,7 @@ func (l UintArrList) MapUint16(f UintArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint32(f UintArrUint32Functor) Uint32List {
+func (l UintArrList) MapUint32(f UintArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10191,7 +10191,7 @@ func (l UintArrList) MapUint32(f UintArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint64(f UintArrUint64Functor) Uint64List {
+func (l UintArrList) MapUint64(f UintArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10200,7 +10200,7 @@ func (l UintArrList) MapUint64(f UintArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUintptr(f UintArrUintptrFunctor) UintptrList {
+func (l UintArrList) MapUintptr(f UintArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10209,7 +10209,7 @@ func (l UintArrList) MapUintptr(f UintArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapFloat32(f UintArrFloat32Functor) Float32List {
+func (l UintArrList) MapFloat32(f UintArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10218,7 +10218,7 @@ func (l UintArrList) MapFloat32(f UintArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapFloat64(f UintArrFloat64Functor) Float64List {
+func (l UintArrList) MapFloat64(f UintArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10227,7 +10227,7 @@ func (l UintArrList) MapFloat64(f UintArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapComplex64(f UintArrComplex64Functor) Complex64List {
+func (l UintArrList) MapComplex64(f UintArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10236,7 +10236,7 @@ func (l UintArrList) MapComplex64(f UintArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapComplex128(f UintArrComplex128Functor) Complex128List {
+func (l UintArrList) MapComplex128(f UintArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10245,7 +10245,7 @@ func (l UintArrList) MapComplex128(f UintArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapString(f UintArrStringFunctor) StringList {
+func (l UintArrList) MapString(f UintArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10254,7 +10254,7 @@ func (l UintArrList) MapString(f UintArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapAny(f UintArrAnyFunctor) AnyList {
+func (l UintArrList) MapAny(f UintArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10263,7 +10263,7 @@ func (l UintArrList) MapAny(f UintArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapBoolArr(f UintArrBoolArrFunctor) BoolArrList {
+func (l UintArrList) MapBoolArr(f UintArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10272,7 +10272,7 @@ func (l UintArrList) MapBoolArr(f UintArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapRuneArr(f UintArrRuneArrFunctor) RuneArrList {
+func (l UintArrList) MapRuneArr(f UintArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10281,7 +10281,7 @@ func (l UintArrList) MapRuneArr(f UintArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapByteArr(f UintArrByteArrFunctor) ByteArrList {
+func (l UintArrList) MapByteArr(f UintArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10290,7 +10290,7 @@ func (l UintArrList) MapByteArr(f UintArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapIntArr(f UintArrIntArrFunctor) IntArrList {
+func (l UintArrList) MapIntArr(f UintArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10299,7 +10299,7 @@ func (l UintArrList) MapIntArr(f UintArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt8Arr(f UintArrInt8ArrFunctor) Int8ArrList {
+func (l UintArrList) MapInt8Arr(f UintArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10308,7 +10308,7 @@ func (l UintArrList) MapInt8Arr(f UintArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt16Arr(f UintArrInt16ArrFunctor) Int16ArrList {
+func (l UintArrList) MapInt16Arr(f UintArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10317,7 +10317,7 @@ func (l UintArrList) MapInt16Arr(f UintArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt32Arr(f UintArrInt32ArrFunctor) Int32ArrList {
+func (l UintArrList) MapInt32Arr(f UintArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10326,7 +10326,7 @@ func (l UintArrList) MapInt32Arr(f UintArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapInt64Arr(f UintArrInt64ArrFunctor) Int64ArrList {
+func (l UintArrList) MapInt64Arr(f UintArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10335,7 +10335,7 @@ func (l UintArrList) MapInt64Arr(f UintArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUintArr(f UintArrUintArrFunctor) UintArrList {
+func (l UintArrList) MapUintArr(f UintArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10344,7 +10344,7 @@ func (l UintArrList) MapUintArr(f UintArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint8Arr(f UintArrUint8ArrFunctor) Uint8ArrList {
+func (l UintArrList) MapUint8Arr(f UintArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10353,7 +10353,7 @@ func (l UintArrList) MapUint8Arr(f UintArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint16Arr(f UintArrUint16ArrFunctor) Uint16ArrList {
+func (l UintArrList) MapUint16Arr(f UintArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10362,7 +10362,7 @@ func (l UintArrList) MapUint16Arr(f UintArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint32Arr(f UintArrUint32ArrFunctor) Uint32ArrList {
+func (l UintArrList) MapUint32Arr(f UintArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10371,7 +10371,7 @@ func (l UintArrList) MapUint32Arr(f UintArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUint64Arr(f UintArrUint64ArrFunctor) Uint64ArrList {
+func (l UintArrList) MapUint64Arr(f UintArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10380,7 +10380,7 @@ func (l UintArrList) MapUint64Arr(f UintArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapUintptrArr(f UintArrUintptrArrFunctor) UintptrArrList {
+func (l UintArrList) MapUintptrArr(f UintArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10389,7 +10389,7 @@ func (l UintArrList) MapUintptrArr(f UintArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapFloat32Arr(f UintArrFloat32ArrFunctor) Float32ArrList {
+func (l UintArrList) MapFloat32Arr(f UintArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10398,7 +10398,7 @@ func (l UintArrList) MapFloat32Arr(f UintArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapFloat64Arr(f UintArrFloat64ArrFunctor) Float64ArrList {
+func (l UintArrList) MapFloat64Arr(f UintArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10407,7 +10407,7 @@ func (l UintArrList) MapFloat64Arr(f UintArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapComplex64Arr(f UintArrComplex64ArrFunctor) Complex64ArrList {
+func (l UintArrList) MapComplex64Arr(f UintArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10416,7 +10416,7 @@ func (l UintArrList) MapComplex64Arr(f UintArrComplex64ArrFunctor) Complex64ArrL
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapComplex128Arr(f UintArrComplex128ArrFunctor) Complex128ArrList {
+func (l UintArrList) MapComplex128Arr(f UintArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10425,7 +10425,7 @@ func (l UintArrList) MapComplex128Arr(f UintArrComplex128ArrFunctor) Complex128A
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapStringArr(f UintArrStringArrFunctor) StringArrList {
+func (l UintArrList) MapStringArr(f UintArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10434,7 +10434,7 @@ func (l UintArrList) MapStringArr(f UintArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintArrList) MapAnyArr(f UintArrAnyArrFunctor) AnyArrList {
+func (l UintArrList) MapAnyArr(f UintArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10443,7 +10443,7 @@ func (l UintArrList) MapAnyArr(f UintArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapBool(f Uint8ArrBoolFunctor) BoolList {
+func (l Uint8ArrList) MapBool(f Uint8ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10452,7 +10452,7 @@ func (l Uint8ArrList) MapBool(f Uint8ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapRune(f Uint8ArrRuneFunctor) RuneList {
+func (l Uint8ArrList) MapRune(f Uint8ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10461,7 +10461,7 @@ func (l Uint8ArrList) MapRune(f Uint8ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapByte(f Uint8ArrByteFunctor) ByteList {
+func (l Uint8ArrList) MapByte(f Uint8ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10470,7 +10470,7 @@ func (l Uint8ArrList) MapByte(f Uint8ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt(f Uint8ArrIntFunctor) IntList {
+func (l Uint8ArrList) MapInt(f Uint8ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10479,7 +10479,7 @@ func (l Uint8ArrList) MapInt(f Uint8ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt8(f Uint8ArrInt8Functor) Int8List {
+func (l Uint8ArrList) MapInt8(f Uint8ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10488,7 +10488,7 @@ func (l Uint8ArrList) MapInt8(f Uint8ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt16(f Uint8ArrInt16Functor) Int16List {
+func (l Uint8ArrList) MapInt16(f Uint8ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10497,7 +10497,7 @@ func (l Uint8ArrList) MapInt16(f Uint8ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt32(f Uint8ArrInt32Functor) Int32List {
+func (l Uint8ArrList) MapInt32(f Uint8ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10506,7 +10506,7 @@ func (l Uint8ArrList) MapInt32(f Uint8ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt64(f Uint8ArrInt64Functor) Int64List {
+func (l Uint8ArrList) MapInt64(f Uint8ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10515,7 +10515,7 @@ func (l Uint8ArrList) MapInt64(f Uint8ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint(f Uint8ArrUintFunctor) UintList {
+func (l Uint8ArrList) MapUint(f Uint8ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10524,7 +10524,7 @@ func (l Uint8ArrList) MapUint(f Uint8ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint8(f Uint8ArrUint8Functor) Uint8List {
+func (l Uint8ArrList) MapUint8(f Uint8ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10533,7 +10533,7 @@ func (l Uint8ArrList) MapUint8(f Uint8ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint16(f Uint8ArrUint16Functor) Uint16List {
+func (l Uint8ArrList) MapUint16(f Uint8ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10542,7 +10542,7 @@ func (l Uint8ArrList) MapUint16(f Uint8ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint32(f Uint8ArrUint32Functor) Uint32List {
+func (l Uint8ArrList) MapUint32(f Uint8ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10551,7 +10551,7 @@ func (l Uint8ArrList) MapUint32(f Uint8ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint64(f Uint8ArrUint64Functor) Uint64List {
+func (l Uint8ArrList) MapUint64(f Uint8ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10560,7 +10560,7 @@ func (l Uint8ArrList) MapUint64(f Uint8ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUintptr(f Uint8ArrUintptrFunctor) UintptrList {
+func (l Uint8ArrList) MapUintptr(f Uint8ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10569,7 +10569,7 @@ func (l Uint8ArrList) MapUintptr(f Uint8ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapFloat32(f Uint8ArrFloat32Functor) Float32List {
+func (l Uint8ArrList) MapFloat32(f Uint8ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10578,7 +10578,7 @@ func (l Uint8ArrList) MapFloat32(f Uint8ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapFloat64(f Uint8ArrFloat64Functor) Float64List {
+func (l Uint8ArrList) MapFloat64(f Uint8ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10587,7 +10587,7 @@ func (l Uint8ArrList) MapFloat64(f Uint8ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapComplex64(f Uint8ArrComplex64Functor) Complex64List {
+func (l Uint8ArrList) MapComplex64(f Uint8ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10596,7 +10596,7 @@ func (l Uint8ArrList) MapComplex64(f Uint8ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapComplex128(f Uint8ArrComplex128Functor) Complex128List {
+func (l Uint8ArrList) MapComplex128(f Uint8ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10605,7 +10605,7 @@ func (l Uint8ArrList) MapComplex128(f Uint8ArrComplex128Functor) Complex128List 
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapString(f Uint8ArrStringFunctor) StringList {
+func (l Uint8ArrList) MapString(f Uint8ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10614,7 +10614,7 @@ func (l Uint8ArrList) MapString(f Uint8ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapAny(f Uint8ArrAnyFunctor) AnyList {
+func (l Uint8ArrList) MapAny(f Uint8ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10623,7 +10623,7 @@ func (l Uint8ArrList) MapAny(f Uint8ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapBoolArr(f Uint8ArrBoolArrFunctor) BoolArrList {
+func (l Uint8ArrList) MapBoolArr(f Uint8ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10632,7 +10632,7 @@ func (l Uint8ArrList) MapBoolArr(f Uint8ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapRuneArr(f Uint8ArrRuneArrFunctor) RuneArrList {
+func (l Uint8ArrList) MapRuneArr(f Uint8ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10641,7 +10641,7 @@ func (l Uint8ArrList) MapRuneArr(f Uint8ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapByteArr(f Uint8ArrByteArrFunctor) ByteArrList {
+func (l Uint8ArrList) MapByteArr(f Uint8ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10650,7 +10650,7 @@ func (l Uint8ArrList) MapByteArr(f Uint8ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapIntArr(f Uint8ArrIntArrFunctor) IntArrList {
+func (l Uint8ArrList) MapIntArr(f Uint8ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10659,7 +10659,7 @@ func (l Uint8ArrList) MapIntArr(f Uint8ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt8Arr(f Uint8ArrInt8ArrFunctor) Int8ArrList {
+func (l Uint8ArrList) MapInt8Arr(f Uint8ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10668,7 +10668,7 @@ func (l Uint8ArrList) MapInt8Arr(f Uint8ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt16Arr(f Uint8ArrInt16ArrFunctor) Int16ArrList {
+func (l Uint8ArrList) MapInt16Arr(f Uint8ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10677,7 +10677,7 @@ func (l Uint8ArrList) MapInt16Arr(f Uint8ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt32Arr(f Uint8ArrInt32ArrFunctor) Int32ArrList {
+func (l Uint8ArrList) MapInt32Arr(f Uint8ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10686,7 +10686,7 @@ func (l Uint8ArrList) MapInt32Arr(f Uint8ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapInt64Arr(f Uint8ArrInt64ArrFunctor) Int64ArrList {
+func (l Uint8ArrList) MapInt64Arr(f Uint8ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10695,7 +10695,7 @@ func (l Uint8ArrList) MapInt64Arr(f Uint8ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUintArr(f Uint8ArrUintArrFunctor) UintArrList {
+func (l Uint8ArrList) MapUintArr(f Uint8ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10704,7 +10704,7 @@ func (l Uint8ArrList) MapUintArr(f Uint8ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint8Arr(f Uint8ArrUint8ArrFunctor) Uint8ArrList {
+func (l Uint8ArrList) MapUint8Arr(f Uint8ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10713,7 +10713,7 @@ func (l Uint8ArrList) MapUint8Arr(f Uint8ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint16Arr(f Uint8ArrUint16ArrFunctor) Uint16ArrList {
+func (l Uint8ArrList) MapUint16Arr(f Uint8ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10722,7 +10722,7 @@ func (l Uint8ArrList) MapUint16Arr(f Uint8ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint32Arr(f Uint8ArrUint32ArrFunctor) Uint32ArrList {
+func (l Uint8ArrList) MapUint32Arr(f Uint8ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10731,7 +10731,7 @@ func (l Uint8ArrList) MapUint32Arr(f Uint8ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUint64Arr(f Uint8ArrUint64ArrFunctor) Uint64ArrList {
+func (l Uint8ArrList) MapUint64Arr(f Uint8ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10740,7 +10740,7 @@ func (l Uint8ArrList) MapUint64Arr(f Uint8ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapUintptrArr(f Uint8ArrUintptrArrFunctor) UintptrArrList {
+func (l Uint8ArrList) MapUintptrArr(f Uint8ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10749,7 +10749,7 @@ func (l Uint8ArrList) MapUintptrArr(f Uint8ArrUintptrArrFunctor) UintptrArrList 
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapFloat32Arr(f Uint8ArrFloat32ArrFunctor) Float32ArrList {
+func (l Uint8ArrList) MapFloat32Arr(f Uint8ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10758,7 +10758,7 @@ func (l Uint8ArrList) MapFloat32Arr(f Uint8ArrFloat32ArrFunctor) Float32ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapFloat64Arr(f Uint8ArrFloat64ArrFunctor) Float64ArrList {
+func (l Uint8ArrList) MapFloat64Arr(f Uint8ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10767,7 +10767,7 @@ func (l Uint8ArrList) MapFloat64Arr(f Uint8ArrFloat64ArrFunctor) Float64ArrList 
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapComplex64Arr(f Uint8ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Uint8ArrList) MapComplex64Arr(f Uint8ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10776,7 +10776,7 @@ func (l Uint8ArrList) MapComplex64Arr(f Uint8ArrComplex64ArrFunctor) Complex64Ar
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapComplex128Arr(f Uint8ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Uint8ArrList) MapComplex128Arr(f Uint8ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10785,7 +10785,7 @@ func (l Uint8ArrList) MapComplex128Arr(f Uint8ArrComplex128ArrFunctor) Complex12
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapStringArr(f Uint8ArrStringArrFunctor) StringArrList {
+func (l Uint8ArrList) MapStringArr(f Uint8ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10794,7 +10794,7 @@ func (l Uint8ArrList) MapStringArr(f Uint8ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint8ArrList) MapAnyArr(f Uint8ArrAnyArrFunctor) AnyArrList {
+func (l Uint8ArrList) MapAnyArr(f Uint8ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10803,7 +10803,7 @@ func (l Uint8ArrList) MapAnyArr(f Uint8ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapBool(f Uint16ArrBoolFunctor) BoolList {
+func (l Uint16ArrList) MapBool(f Uint16ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10812,7 +10812,7 @@ func (l Uint16ArrList) MapBool(f Uint16ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapRune(f Uint16ArrRuneFunctor) RuneList {
+func (l Uint16ArrList) MapRune(f Uint16ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10821,7 +10821,7 @@ func (l Uint16ArrList) MapRune(f Uint16ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapByte(f Uint16ArrByteFunctor) ByteList {
+func (l Uint16ArrList) MapByte(f Uint16ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10830,7 +10830,7 @@ func (l Uint16ArrList) MapByte(f Uint16ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt(f Uint16ArrIntFunctor) IntList {
+func (l Uint16ArrList) MapInt(f Uint16ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10839,7 +10839,7 @@ func (l Uint16ArrList) MapInt(f Uint16ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt8(f Uint16ArrInt8Functor) Int8List {
+func (l Uint16ArrList) MapInt8(f Uint16ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10848,7 +10848,7 @@ func (l Uint16ArrList) MapInt8(f Uint16ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt16(f Uint16ArrInt16Functor) Int16List {
+func (l Uint16ArrList) MapInt16(f Uint16ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10857,7 +10857,7 @@ func (l Uint16ArrList) MapInt16(f Uint16ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt32(f Uint16ArrInt32Functor) Int32List {
+func (l Uint16ArrList) MapInt32(f Uint16ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10866,7 +10866,7 @@ func (l Uint16ArrList) MapInt32(f Uint16ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt64(f Uint16ArrInt64Functor) Int64List {
+func (l Uint16ArrList) MapInt64(f Uint16ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10875,7 +10875,7 @@ func (l Uint16ArrList) MapInt64(f Uint16ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint(f Uint16ArrUintFunctor) UintList {
+func (l Uint16ArrList) MapUint(f Uint16ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10884,7 +10884,7 @@ func (l Uint16ArrList) MapUint(f Uint16ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint8(f Uint16ArrUint8Functor) Uint8List {
+func (l Uint16ArrList) MapUint8(f Uint16ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10893,7 +10893,7 @@ func (l Uint16ArrList) MapUint8(f Uint16ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint16(f Uint16ArrUint16Functor) Uint16List {
+func (l Uint16ArrList) MapUint16(f Uint16ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10902,7 +10902,7 @@ func (l Uint16ArrList) MapUint16(f Uint16ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint32(f Uint16ArrUint32Functor) Uint32List {
+func (l Uint16ArrList) MapUint32(f Uint16ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10911,7 +10911,7 @@ func (l Uint16ArrList) MapUint32(f Uint16ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint64(f Uint16ArrUint64Functor) Uint64List {
+func (l Uint16ArrList) MapUint64(f Uint16ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10920,7 +10920,7 @@ func (l Uint16ArrList) MapUint64(f Uint16ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUintptr(f Uint16ArrUintptrFunctor) UintptrList {
+func (l Uint16ArrList) MapUintptr(f Uint16ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10929,7 +10929,7 @@ func (l Uint16ArrList) MapUintptr(f Uint16ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapFloat32(f Uint16ArrFloat32Functor) Float32List {
+func (l Uint16ArrList) MapFloat32(f Uint16ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10938,7 +10938,7 @@ func (l Uint16ArrList) MapFloat32(f Uint16ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapFloat64(f Uint16ArrFloat64Functor) Float64List {
+func (l Uint16ArrList) MapFloat64(f Uint16ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10947,7 +10947,7 @@ func (l Uint16ArrList) MapFloat64(f Uint16ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapComplex64(f Uint16ArrComplex64Functor) Complex64List {
+func (l Uint16ArrList) MapComplex64(f Uint16ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10956,7 +10956,7 @@ func (l Uint16ArrList) MapComplex64(f Uint16ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapComplex128(f Uint16ArrComplex128Functor) Complex128List {
+func (l Uint16ArrList) MapComplex128(f Uint16ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10965,7 +10965,7 @@ func (l Uint16ArrList) MapComplex128(f Uint16ArrComplex128Functor) Complex128Lis
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapString(f Uint16ArrStringFunctor) StringList {
+func (l Uint16ArrList) MapString(f Uint16ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10974,7 +10974,7 @@ func (l Uint16ArrList) MapString(f Uint16ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapAny(f Uint16ArrAnyFunctor) AnyList {
+func (l Uint16ArrList) MapAny(f Uint16ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10983,7 +10983,7 @@ func (l Uint16ArrList) MapAny(f Uint16ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapBoolArr(f Uint16ArrBoolArrFunctor) BoolArrList {
+func (l Uint16ArrList) MapBoolArr(f Uint16ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -10992,7 +10992,7 @@ func (l Uint16ArrList) MapBoolArr(f Uint16ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapRuneArr(f Uint16ArrRuneArrFunctor) RuneArrList {
+func (l Uint16ArrList) MapRuneArr(f Uint16ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11001,7 +11001,7 @@ func (l Uint16ArrList) MapRuneArr(f Uint16ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapByteArr(f Uint16ArrByteArrFunctor) ByteArrList {
+func (l Uint16ArrList) MapByteArr(f Uint16ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11010,7 +11010,7 @@ func (l Uint16ArrList) MapByteArr(f Uint16ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapIntArr(f Uint16ArrIntArrFunctor) IntArrList {
+func (l Uint16ArrList) MapIntArr(f Uint16ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11019,7 +11019,7 @@ func (l Uint16ArrList) MapIntArr(f Uint16ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt8Arr(f Uint16ArrInt8ArrFunctor) Int8ArrList {
+func (l Uint16ArrList) MapInt8Arr(f Uint16ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11028,7 +11028,7 @@ func (l Uint16ArrList) MapInt8Arr(f Uint16ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt16Arr(f Uint16ArrInt16ArrFunctor) Int16ArrList {
+func (l Uint16ArrList) MapInt16Arr(f Uint16ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11037,7 +11037,7 @@ func (l Uint16ArrList) MapInt16Arr(f Uint16ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt32Arr(f Uint16ArrInt32ArrFunctor) Int32ArrList {
+func (l Uint16ArrList) MapInt32Arr(f Uint16ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11046,7 +11046,7 @@ func (l Uint16ArrList) MapInt32Arr(f Uint16ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapInt64Arr(f Uint16ArrInt64ArrFunctor) Int64ArrList {
+func (l Uint16ArrList) MapInt64Arr(f Uint16ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11055,7 +11055,7 @@ func (l Uint16ArrList) MapInt64Arr(f Uint16ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUintArr(f Uint16ArrUintArrFunctor) UintArrList {
+func (l Uint16ArrList) MapUintArr(f Uint16ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11064,7 +11064,7 @@ func (l Uint16ArrList) MapUintArr(f Uint16ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint8Arr(f Uint16ArrUint8ArrFunctor) Uint8ArrList {
+func (l Uint16ArrList) MapUint8Arr(f Uint16ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11073,7 +11073,7 @@ func (l Uint16ArrList) MapUint8Arr(f Uint16ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint16Arr(f Uint16ArrUint16ArrFunctor) Uint16ArrList {
+func (l Uint16ArrList) MapUint16Arr(f Uint16ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11082,7 +11082,7 @@ func (l Uint16ArrList) MapUint16Arr(f Uint16ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint32Arr(f Uint16ArrUint32ArrFunctor) Uint32ArrList {
+func (l Uint16ArrList) MapUint32Arr(f Uint16ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11091,7 +11091,7 @@ func (l Uint16ArrList) MapUint32Arr(f Uint16ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUint64Arr(f Uint16ArrUint64ArrFunctor) Uint64ArrList {
+func (l Uint16ArrList) MapUint64Arr(f Uint16ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11100,7 +11100,7 @@ func (l Uint16ArrList) MapUint64Arr(f Uint16ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapUintptrArr(f Uint16ArrUintptrArrFunctor) UintptrArrList {
+func (l Uint16ArrList) MapUintptrArr(f Uint16ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11109,7 +11109,7 @@ func (l Uint16ArrList) MapUintptrArr(f Uint16ArrUintptrArrFunctor) UintptrArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapFloat32Arr(f Uint16ArrFloat32ArrFunctor) Float32ArrList {
+func (l Uint16ArrList) MapFloat32Arr(f Uint16ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11118,7 +11118,7 @@ func (l Uint16ArrList) MapFloat32Arr(f Uint16ArrFloat32ArrFunctor) Float32ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapFloat64Arr(f Uint16ArrFloat64ArrFunctor) Float64ArrList {
+func (l Uint16ArrList) MapFloat64Arr(f Uint16ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11127,7 +11127,7 @@ func (l Uint16ArrList) MapFloat64Arr(f Uint16ArrFloat64ArrFunctor) Float64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapComplex64Arr(f Uint16ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Uint16ArrList) MapComplex64Arr(f Uint16ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11136,7 +11136,7 @@ func (l Uint16ArrList) MapComplex64Arr(f Uint16ArrComplex64ArrFunctor) Complex64
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapComplex128Arr(f Uint16ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Uint16ArrList) MapComplex128Arr(f Uint16ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11145,7 +11145,7 @@ func (l Uint16ArrList) MapComplex128Arr(f Uint16ArrComplex128ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapStringArr(f Uint16ArrStringArrFunctor) StringArrList {
+func (l Uint16ArrList) MapStringArr(f Uint16ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11154,7 +11154,7 @@ func (l Uint16ArrList) MapStringArr(f Uint16ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint16ArrList) MapAnyArr(f Uint16ArrAnyArrFunctor) AnyArrList {
+func (l Uint16ArrList) MapAnyArr(f Uint16ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11163,7 +11163,7 @@ func (l Uint16ArrList) MapAnyArr(f Uint16ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapBool(f Uint32ArrBoolFunctor) BoolList {
+func (l Uint32ArrList) MapBool(f Uint32ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11172,7 +11172,7 @@ func (l Uint32ArrList) MapBool(f Uint32ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapRune(f Uint32ArrRuneFunctor) RuneList {
+func (l Uint32ArrList) MapRune(f Uint32ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11181,7 +11181,7 @@ func (l Uint32ArrList) MapRune(f Uint32ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapByte(f Uint32ArrByteFunctor) ByteList {
+func (l Uint32ArrList) MapByte(f Uint32ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11190,7 +11190,7 @@ func (l Uint32ArrList) MapByte(f Uint32ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt(f Uint32ArrIntFunctor) IntList {
+func (l Uint32ArrList) MapInt(f Uint32ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11199,7 +11199,7 @@ func (l Uint32ArrList) MapInt(f Uint32ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt8(f Uint32ArrInt8Functor) Int8List {
+func (l Uint32ArrList) MapInt8(f Uint32ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11208,7 +11208,7 @@ func (l Uint32ArrList) MapInt8(f Uint32ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt16(f Uint32ArrInt16Functor) Int16List {
+func (l Uint32ArrList) MapInt16(f Uint32ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11217,7 +11217,7 @@ func (l Uint32ArrList) MapInt16(f Uint32ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt32(f Uint32ArrInt32Functor) Int32List {
+func (l Uint32ArrList) MapInt32(f Uint32ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11226,7 +11226,7 @@ func (l Uint32ArrList) MapInt32(f Uint32ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt64(f Uint32ArrInt64Functor) Int64List {
+func (l Uint32ArrList) MapInt64(f Uint32ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11235,7 +11235,7 @@ func (l Uint32ArrList) MapInt64(f Uint32ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint(f Uint32ArrUintFunctor) UintList {
+func (l Uint32ArrList) MapUint(f Uint32ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11244,7 +11244,7 @@ func (l Uint32ArrList) MapUint(f Uint32ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint8(f Uint32ArrUint8Functor) Uint8List {
+func (l Uint32ArrList) MapUint8(f Uint32ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11253,7 +11253,7 @@ func (l Uint32ArrList) MapUint8(f Uint32ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint16(f Uint32ArrUint16Functor) Uint16List {
+func (l Uint32ArrList) MapUint16(f Uint32ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11262,7 +11262,7 @@ func (l Uint32ArrList) MapUint16(f Uint32ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint32(f Uint32ArrUint32Functor) Uint32List {
+func (l Uint32ArrList) MapUint32(f Uint32ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11271,7 +11271,7 @@ func (l Uint32ArrList) MapUint32(f Uint32ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint64(f Uint32ArrUint64Functor) Uint64List {
+func (l Uint32ArrList) MapUint64(f Uint32ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11280,7 +11280,7 @@ func (l Uint32ArrList) MapUint64(f Uint32ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUintptr(f Uint32ArrUintptrFunctor) UintptrList {
+func (l Uint32ArrList) MapUintptr(f Uint32ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11289,7 +11289,7 @@ func (l Uint32ArrList) MapUintptr(f Uint32ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapFloat32(f Uint32ArrFloat32Functor) Float32List {
+func (l Uint32ArrList) MapFloat32(f Uint32ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11298,7 +11298,7 @@ func (l Uint32ArrList) MapFloat32(f Uint32ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapFloat64(f Uint32ArrFloat64Functor) Float64List {
+func (l Uint32ArrList) MapFloat64(f Uint32ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11307,7 +11307,7 @@ func (l Uint32ArrList) MapFloat64(f Uint32ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapComplex64(f Uint32ArrComplex64Functor) Complex64List {
+func (l Uint32ArrList) MapComplex64(f Uint32ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11316,7 +11316,7 @@ func (l Uint32ArrList) MapComplex64(f Uint32ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapComplex128(f Uint32ArrComplex128Functor) Complex128List {
+func (l Uint32ArrList) MapComplex128(f Uint32ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11325,7 +11325,7 @@ func (l Uint32ArrList) MapComplex128(f Uint32ArrComplex128Functor) Complex128Lis
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapString(f Uint32ArrStringFunctor) StringList {
+func (l Uint32ArrList) MapString(f Uint32ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11334,7 +11334,7 @@ func (l Uint32ArrList) MapString(f Uint32ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapAny(f Uint32ArrAnyFunctor) AnyList {
+func (l Uint32ArrList) MapAny(f Uint32ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11343,7 +11343,7 @@ func (l Uint32ArrList) MapAny(f Uint32ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapBoolArr(f Uint32ArrBoolArrFunctor) BoolArrList {
+func (l Uint32ArrList) MapBoolArr(f Uint32ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11352,7 +11352,7 @@ func (l Uint32ArrList) MapBoolArr(f Uint32ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapRuneArr(f Uint32ArrRuneArrFunctor) RuneArrList {
+func (l Uint32ArrList) MapRuneArr(f Uint32ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11361,7 +11361,7 @@ func (l Uint32ArrList) MapRuneArr(f Uint32ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapByteArr(f Uint32ArrByteArrFunctor) ByteArrList {
+func (l Uint32ArrList) MapByteArr(f Uint32ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11370,7 +11370,7 @@ func (l Uint32ArrList) MapByteArr(f Uint32ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapIntArr(f Uint32ArrIntArrFunctor) IntArrList {
+func (l Uint32ArrList) MapIntArr(f Uint32ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11379,7 +11379,7 @@ func (l Uint32ArrList) MapIntArr(f Uint32ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt8Arr(f Uint32ArrInt8ArrFunctor) Int8ArrList {
+func (l Uint32ArrList) MapInt8Arr(f Uint32ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11388,7 +11388,7 @@ func (l Uint32ArrList) MapInt8Arr(f Uint32ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt16Arr(f Uint32ArrInt16ArrFunctor) Int16ArrList {
+func (l Uint32ArrList) MapInt16Arr(f Uint32ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11397,7 +11397,7 @@ func (l Uint32ArrList) MapInt16Arr(f Uint32ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt32Arr(f Uint32ArrInt32ArrFunctor) Int32ArrList {
+func (l Uint32ArrList) MapInt32Arr(f Uint32ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11406,7 +11406,7 @@ func (l Uint32ArrList) MapInt32Arr(f Uint32ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapInt64Arr(f Uint32ArrInt64ArrFunctor) Int64ArrList {
+func (l Uint32ArrList) MapInt64Arr(f Uint32ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11415,7 +11415,7 @@ func (l Uint32ArrList) MapInt64Arr(f Uint32ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUintArr(f Uint32ArrUintArrFunctor) UintArrList {
+func (l Uint32ArrList) MapUintArr(f Uint32ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11424,7 +11424,7 @@ func (l Uint32ArrList) MapUintArr(f Uint32ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint8Arr(f Uint32ArrUint8ArrFunctor) Uint8ArrList {
+func (l Uint32ArrList) MapUint8Arr(f Uint32ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11433,7 +11433,7 @@ func (l Uint32ArrList) MapUint8Arr(f Uint32ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint16Arr(f Uint32ArrUint16ArrFunctor) Uint16ArrList {
+func (l Uint32ArrList) MapUint16Arr(f Uint32ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11442,7 +11442,7 @@ func (l Uint32ArrList) MapUint16Arr(f Uint32ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint32Arr(f Uint32ArrUint32ArrFunctor) Uint32ArrList {
+func (l Uint32ArrList) MapUint32Arr(f Uint32ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11451,7 +11451,7 @@ func (l Uint32ArrList) MapUint32Arr(f Uint32ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUint64Arr(f Uint32ArrUint64ArrFunctor) Uint64ArrList {
+func (l Uint32ArrList) MapUint64Arr(f Uint32ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11460,7 +11460,7 @@ func (l Uint32ArrList) MapUint64Arr(f Uint32ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapUintptrArr(f Uint32ArrUintptrArrFunctor) UintptrArrList {
+func (l Uint32ArrList) MapUintptrArr(f Uint32ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11469,7 +11469,7 @@ func (l Uint32ArrList) MapUintptrArr(f Uint32ArrUintptrArrFunctor) UintptrArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapFloat32Arr(f Uint32ArrFloat32ArrFunctor) Float32ArrList {
+func (l Uint32ArrList) MapFloat32Arr(f Uint32ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11478,7 +11478,7 @@ func (l Uint32ArrList) MapFloat32Arr(f Uint32ArrFloat32ArrFunctor) Float32ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapFloat64Arr(f Uint32ArrFloat64ArrFunctor) Float64ArrList {
+func (l Uint32ArrList) MapFloat64Arr(f Uint32ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11487,7 +11487,7 @@ func (l Uint32ArrList) MapFloat64Arr(f Uint32ArrFloat64ArrFunctor) Float64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapComplex64Arr(f Uint32ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Uint32ArrList) MapComplex64Arr(f Uint32ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11496,7 +11496,7 @@ func (l Uint32ArrList) MapComplex64Arr(f Uint32ArrComplex64ArrFunctor) Complex64
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapComplex128Arr(f Uint32ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Uint32ArrList) MapComplex128Arr(f Uint32ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11505,7 +11505,7 @@ func (l Uint32ArrList) MapComplex128Arr(f Uint32ArrComplex128ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapStringArr(f Uint32ArrStringArrFunctor) StringArrList {
+func (l Uint32ArrList) MapStringArr(f Uint32ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11514,7 +11514,7 @@ func (l Uint32ArrList) MapStringArr(f Uint32ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint32ArrList) MapAnyArr(f Uint32ArrAnyArrFunctor) AnyArrList {
+func (l Uint32ArrList) MapAnyArr(f Uint32ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11523,7 +11523,7 @@ func (l Uint32ArrList) MapAnyArr(f Uint32ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapBool(f Uint64ArrBoolFunctor) BoolList {
+func (l Uint64ArrList) MapBool(f Uint64ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11532,7 +11532,7 @@ func (l Uint64ArrList) MapBool(f Uint64ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapRune(f Uint64ArrRuneFunctor) RuneList {
+func (l Uint64ArrList) MapRune(f Uint64ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11541,7 +11541,7 @@ func (l Uint64ArrList) MapRune(f Uint64ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapByte(f Uint64ArrByteFunctor) ByteList {
+func (l Uint64ArrList) MapByte(f Uint64ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11550,7 +11550,7 @@ func (l Uint64ArrList) MapByte(f Uint64ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt(f Uint64ArrIntFunctor) IntList {
+func (l Uint64ArrList) MapInt(f Uint64ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11559,7 +11559,7 @@ func (l Uint64ArrList) MapInt(f Uint64ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt8(f Uint64ArrInt8Functor) Int8List {
+func (l Uint64ArrList) MapInt8(f Uint64ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11568,7 +11568,7 @@ func (l Uint64ArrList) MapInt8(f Uint64ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt16(f Uint64ArrInt16Functor) Int16List {
+func (l Uint64ArrList) MapInt16(f Uint64ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11577,7 +11577,7 @@ func (l Uint64ArrList) MapInt16(f Uint64ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt32(f Uint64ArrInt32Functor) Int32List {
+func (l Uint64ArrList) MapInt32(f Uint64ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11586,7 +11586,7 @@ func (l Uint64ArrList) MapInt32(f Uint64ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt64(f Uint64ArrInt64Functor) Int64List {
+func (l Uint64ArrList) MapInt64(f Uint64ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11595,7 +11595,7 @@ func (l Uint64ArrList) MapInt64(f Uint64ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint(f Uint64ArrUintFunctor) UintList {
+func (l Uint64ArrList) MapUint(f Uint64ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11604,7 +11604,7 @@ func (l Uint64ArrList) MapUint(f Uint64ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint8(f Uint64ArrUint8Functor) Uint8List {
+func (l Uint64ArrList) MapUint8(f Uint64ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11613,7 +11613,7 @@ func (l Uint64ArrList) MapUint8(f Uint64ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint16(f Uint64ArrUint16Functor) Uint16List {
+func (l Uint64ArrList) MapUint16(f Uint64ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11622,7 +11622,7 @@ func (l Uint64ArrList) MapUint16(f Uint64ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint32(f Uint64ArrUint32Functor) Uint32List {
+func (l Uint64ArrList) MapUint32(f Uint64ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11631,7 +11631,7 @@ func (l Uint64ArrList) MapUint32(f Uint64ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint64(f Uint64ArrUint64Functor) Uint64List {
+func (l Uint64ArrList) MapUint64(f Uint64ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11640,7 +11640,7 @@ func (l Uint64ArrList) MapUint64(f Uint64ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUintptr(f Uint64ArrUintptrFunctor) UintptrList {
+func (l Uint64ArrList) MapUintptr(f Uint64ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11649,7 +11649,7 @@ func (l Uint64ArrList) MapUintptr(f Uint64ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapFloat32(f Uint64ArrFloat32Functor) Float32List {
+func (l Uint64ArrList) MapFloat32(f Uint64ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11658,7 +11658,7 @@ func (l Uint64ArrList) MapFloat32(f Uint64ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapFloat64(f Uint64ArrFloat64Functor) Float64List {
+func (l Uint64ArrList) MapFloat64(f Uint64ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11667,7 +11667,7 @@ func (l Uint64ArrList) MapFloat64(f Uint64ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapComplex64(f Uint64ArrComplex64Functor) Complex64List {
+func (l Uint64ArrList) MapComplex64(f Uint64ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11676,7 +11676,7 @@ func (l Uint64ArrList) MapComplex64(f Uint64ArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapComplex128(f Uint64ArrComplex128Functor) Complex128List {
+func (l Uint64ArrList) MapComplex128(f Uint64ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11685,7 +11685,7 @@ func (l Uint64ArrList) MapComplex128(f Uint64ArrComplex128Functor) Complex128Lis
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapString(f Uint64ArrStringFunctor) StringList {
+func (l Uint64ArrList) MapString(f Uint64ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11694,7 +11694,7 @@ func (l Uint64ArrList) MapString(f Uint64ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapAny(f Uint64ArrAnyFunctor) AnyList {
+func (l Uint64ArrList) MapAny(f Uint64ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11703,7 +11703,7 @@ func (l Uint64ArrList) MapAny(f Uint64ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapBoolArr(f Uint64ArrBoolArrFunctor) BoolArrList {
+func (l Uint64ArrList) MapBoolArr(f Uint64ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11712,7 +11712,7 @@ func (l Uint64ArrList) MapBoolArr(f Uint64ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapRuneArr(f Uint64ArrRuneArrFunctor) RuneArrList {
+func (l Uint64ArrList) MapRuneArr(f Uint64ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11721,7 +11721,7 @@ func (l Uint64ArrList) MapRuneArr(f Uint64ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapByteArr(f Uint64ArrByteArrFunctor) ByteArrList {
+func (l Uint64ArrList) MapByteArr(f Uint64ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11730,7 +11730,7 @@ func (l Uint64ArrList) MapByteArr(f Uint64ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapIntArr(f Uint64ArrIntArrFunctor) IntArrList {
+func (l Uint64ArrList) MapIntArr(f Uint64ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11739,7 +11739,7 @@ func (l Uint64ArrList) MapIntArr(f Uint64ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt8Arr(f Uint64ArrInt8ArrFunctor) Int8ArrList {
+func (l Uint64ArrList) MapInt8Arr(f Uint64ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11748,7 +11748,7 @@ func (l Uint64ArrList) MapInt8Arr(f Uint64ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt16Arr(f Uint64ArrInt16ArrFunctor) Int16ArrList {
+func (l Uint64ArrList) MapInt16Arr(f Uint64ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11757,7 +11757,7 @@ func (l Uint64ArrList) MapInt16Arr(f Uint64ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt32Arr(f Uint64ArrInt32ArrFunctor) Int32ArrList {
+func (l Uint64ArrList) MapInt32Arr(f Uint64ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11766,7 +11766,7 @@ func (l Uint64ArrList) MapInt32Arr(f Uint64ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapInt64Arr(f Uint64ArrInt64ArrFunctor) Int64ArrList {
+func (l Uint64ArrList) MapInt64Arr(f Uint64ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11775,7 +11775,7 @@ func (l Uint64ArrList) MapInt64Arr(f Uint64ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUintArr(f Uint64ArrUintArrFunctor) UintArrList {
+func (l Uint64ArrList) MapUintArr(f Uint64ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11784,7 +11784,7 @@ func (l Uint64ArrList) MapUintArr(f Uint64ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint8Arr(f Uint64ArrUint8ArrFunctor) Uint8ArrList {
+func (l Uint64ArrList) MapUint8Arr(f Uint64ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11793,7 +11793,7 @@ func (l Uint64ArrList) MapUint8Arr(f Uint64ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint16Arr(f Uint64ArrUint16ArrFunctor) Uint16ArrList {
+func (l Uint64ArrList) MapUint16Arr(f Uint64ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11802,7 +11802,7 @@ func (l Uint64ArrList) MapUint16Arr(f Uint64ArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint32Arr(f Uint64ArrUint32ArrFunctor) Uint32ArrList {
+func (l Uint64ArrList) MapUint32Arr(f Uint64ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11811,7 +11811,7 @@ func (l Uint64ArrList) MapUint32Arr(f Uint64ArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUint64Arr(f Uint64ArrUint64ArrFunctor) Uint64ArrList {
+func (l Uint64ArrList) MapUint64Arr(f Uint64ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11820,7 +11820,7 @@ func (l Uint64ArrList) MapUint64Arr(f Uint64ArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapUintptrArr(f Uint64ArrUintptrArrFunctor) UintptrArrList {
+func (l Uint64ArrList) MapUintptrArr(f Uint64ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11829,7 +11829,7 @@ func (l Uint64ArrList) MapUintptrArr(f Uint64ArrUintptrArrFunctor) UintptrArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapFloat32Arr(f Uint64ArrFloat32ArrFunctor) Float32ArrList {
+func (l Uint64ArrList) MapFloat32Arr(f Uint64ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11838,7 +11838,7 @@ func (l Uint64ArrList) MapFloat32Arr(f Uint64ArrFloat32ArrFunctor) Float32ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapFloat64Arr(f Uint64ArrFloat64ArrFunctor) Float64ArrList {
+func (l Uint64ArrList) MapFloat64Arr(f Uint64ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11847,7 +11847,7 @@ func (l Uint64ArrList) MapFloat64Arr(f Uint64ArrFloat64ArrFunctor) Float64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapComplex64Arr(f Uint64ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Uint64ArrList) MapComplex64Arr(f Uint64ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11856,7 +11856,7 @@ func (l Uint64ArrList) MapComplex64Arr(f Uint64ArrComplex64ArrFunctor) Complex64
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapComplex128Arr(f Uint64ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Uint64ArrList) MapComplex128Arr(f Uint64ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11865,7 +11865,7 @@ func (l Uint64ArrList) MapComplex128Arr(f Uint64ArrComplex128ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapStringArr(f Uint64ArrStringArrFunctor) StringArrList {
+func (l Uint64ArrList) MapStringArr(f Uint64ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11874,7 +11874,7 @@ func (l Uint64ArrList) MapStringArr(f Uint64ArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l Uint64ArrList) MapAnyArr(f Uint64ArrAnyArrFunctor) AnyArrList {
+func (l Uint64ArrList) MapAnyArr(f Uint64ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11883,7 +11883,7 @@ func (l Uint64ArrList) MapAnyArr(f Uint64ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapBool(f UintptrArrBoolFunctor) BoolList {
+func (l UintptrArrList) MapBool(f UintptrArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11892,7 +11892,7 @@ func (l UintptrArrList) MapBool(f UintptrArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapRune(f UintptrArrRuneFunctor) RuneList {
+func (l UintptrArrList) MapRune(f UintptrArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11901,7 +11901,7 @@ func (l UintptrArrList) MapRune(f UintptrArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapByte(f UintptrArrByteFunctor) ByteList {
+func (l UintptrArrList) MapByte(f UintptrArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11910,7 +11910,7 @@ func (l UintptrArrList) MapByte(f UintptrArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt(f UintptrArrIntFunctor) IntList {
+func (l UintptrArrList) MapInt(f UintptrArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11919,7 +11919,7 @@ func (l UintptrArrList) MapInt(f UintptrArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt8(f UintptrArrInt8Functor) Int8List {
+func (l UintptrArrList) MapInt8(f UintptrArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11928,7 +11928,7 @@ func (l UintptrArrList) MapInt8(f UintptrArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt16(f UintptrArrInt16Functor) Int16List {
+func (l UintptrArrList) MapInt16(f UintptrArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11937,7 +11937,7 @@ func (l UintptrArrList) MapInt16(f UintptrArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt32(f UintptrArrInt32Functor) Int32List {
+func (l UintptrArrList) MapInt32(f UintptrArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11946,7 +11946,7 @@ func (l UintptrArrList) MapInt32(f UintptrArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt64(f UintptrArrInt64Functor) Int64List {
+func (l UintptrArrList) MapInt64(f UintptrArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11955,7 +11955,7 @@ func (l UintptrArrList) MapInt64(f UintptrArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint(f UintptrArrUintFunctor) UintList {
+func (l UintptrArrList) MapUint(f UintptrArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11964,7 +11964,7 @@ func (l UintptrArrList) MapUint(f UintptrArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint8(f UintptrArrUint8Functor) Uint8List {
+func (l UintptrArrList) MapUint8(f UintptrArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11973,7 +11973,7 @@ func (l UintptrArrList) MapUint8(f UintptrArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint16(f UintptrArrUint16Functor) Uint16List {
+func (l UintptrArrList) MapUint16(f UintptrArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11982,7 +11982,7 @@ func (l UintptrArrList) MapUint16(f UintptrArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint32(f UintptrArrUint32Functor) Uint32List {
+func (l UintptrArrList) MapUint32(f UintptrArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -11991,7 +11991,7 @@ func (l UintptrArrList) MapUint32(f UintptrArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint64(f UintptrArrUint64Functor) Uint64List {
+func (l UintptrArrList) MapUint64(f UintptrArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12000,7 +12000,7 @@ func (l UintptrArrList) MapUint64(f UintptrArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUintptr(f UintptrArrUintptrFunctor) UintptrList {
+func (l UintptrArrList) MapUintptr(f UintptrArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12009,7 +12009,7 @@ func (l UintptrArrList) MapUintptr(f UintptrArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapFloat32(f UintptrArrFloat32Functor) Float32List {
+func (l UintptrArrList) MapFloat32(f UintptrArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12018,7 +12018,7 @@ func (l UintptrArrList) MapFloat32(f UintptrArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapFloat64(f UintptrArrFloat64Functor) Float64List {
+func (l UintptrArrList) MapFloat64(f UintptrArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12027,7 +12027,7 @@ func (l UintptrArrList) MapFloat64(f UintptrArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapComplex64(f UintptrArrComplex64Functor) Complex64List {
+func (l UintptrArrList) MapComplex64(f UintptrArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12036,7 +12036,7 @@ func (l UintptrArrList) MapComplex64(f UintptrArrComplex64Functor) Complex64List
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapComplex128(f UintptrArrComplex128Functor) Complex128List {
+func (l UintptrArrList) MapComplex128(f UintptrArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12045,7 +12045,7 @@ func (l UintptrArrList) MapComplex128(f UintptrArrComplex128Functor) Complex128L
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapString(f UintptrArrStringFunctor) StringList {
+func (l UintptrArrList) MapString(f UintptrArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12054,7 +12054,7 @@ func (l UintptrArrList) MapString(f UintptrArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapAny(f UintptrArrAnyFunctor) AnyList {
+func (l UintptrArrList) MapAny(f UintptrArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12063,7 +12063,7 @@ func (l UintptrArrList) MapAny(f UintptrArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapBoolArr(f UintptrArrBoolArrFunctor) BoolArrList {
+func (l UintptrArrList) MapBoolArr(f UintptrArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12072,7 +12072,7 @@ func (l UintptrArrList) MapBoolArr(f UintptrArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapRuneArr(f UintptrArrRuneArrFunctor) RuneArrList {
+func (l UintptrArrList) MapRuneArr(f UintptrArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12081,7 +12081,7 @@ func (l UintptrArrList) MapRuneArr(f UintptrArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapByteArr(f UintptrArrByteArrFunctor) ByteArrList {
+func (l UintptrArrList) MapByteArr(f UintptrArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12090,7 +12090,7 @@ func (l UintptrArrList) MapByteArr(f UintptrArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapIntArr(f UintptrArrIntArrFunctor) IntArrList {
+func (l UintptrArrList) MapIntArr(f UintptrArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12099,7 +12099,7 @@ func (l UintptrArrList) MapIntArr(f UintptrArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt8Arr(f UintptrArrInt8ArrFunctor) Int8ArrList {
+func (l UintptrArrList) MapInt8Arr(f UintptrArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12108,7 +12108,7 @@ func (l UintptrArrList) MapInt8Arr(f UintptrArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt16Arr(f UintptrArrInt16ArrFunctor) Int16ArrList {
+func (l UintptrArrList) MapInt16Arr(f UintptrArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12117,7 +12117,7 @@ func (l UintptrArrList) MapInt16Arr(f UintptrArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt32Arr(f UintptrArrInt32ArrFunctor) Int32ArrList {
+func (l UintptrArrList) MapInt32Arr(f UintptrArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12126,7 +12126,7 @@ func (l UintptrArrList) MapInt32Arr(f UintptrArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapInt64Arr(f UintptrArrInt64ArrFunctor) Int64ArrList {
+func (l UintptrArrList) MapInt64Arr(f UintptrArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12135,7 +12135,7 @@ func (l UintptrArrList) MapInt64Arr(f UintptrArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUintArr(f UintptrArrUintArrFunctor) UintArrList {
+func (l UintptrArrList) MapUintArr(f UintptrArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12144,7 +12144,7 @@ func (l UintptrArrList) MapUintArr(f UintptrArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint8Arr(f UintptrArrUint8ArrFunctor) Uint8ArrList {
+func (l UintptrArrList) MapUint8Arr(f UintptrArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12153,7 +12153,7 @@ func (l UintptrArrList) MapUint8Arr(f UintptrArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint16Arr(f UintptrArrUint16ArrFunctor) Uint16ArrList {
+func (l UintptrArrList) MapUint16Arr(f UintptrArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12162,7 +12162,7 @@ func (l UintptrArrList) MapUint16Arr(f UintptrArrUint16ArrFunctor) Uint16ArrList
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint32Arr(f UintptrArrUint32ArrFunctor) Uint32ArrList {
+func (l UintptrArrList) MapUint32Arr(f UintptrArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12171,7 +12171,7 @@ func (l UintptrArrList) MapUint32Arr(f UintptrArrUint32ArrFunctor) Uint32ArrList
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUint64Arr(f UintptrArrUint64ArrFunctor) Uint64ArrList {
+func (l UintptrArrList) MapUint64Arr(f UintptrArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12180,7 +12180,7 @@ func (l UintptrArrList) MapUint64Arr(f UintptrArrUint64ArrFunctor) Uint64ArrList
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapUintptrArr(f UintptrArrUintptrArrFunctor) UintptrArrList {
+func (l UintptrArrList) MapUintptrArr(f UintptrArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12189,7 +12189,7 @@ func (l UintptrArrList) MapUintptrArr(f UintptrArrUintptrArrFunctor) UintptrArrL
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapFloat32Arr(f UintptrArrFloat32ArrFunctor) Float32ArrList {
+func (l UintptrArrList) MapFloat32Arr(f UintptrArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12198,7 +12198,7 @@ func (l UintptrArrList) MapFloat32Arr(f UintptrArrFloat32ArrFunctor) Float32ArrL
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapFloat64Arr(f UintptrArrFloat64ArrFunctor) Float64ArrList {
+func (l UintptrArrList) MapFloat64Arr(f UintptrArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12207,7 +12207,7 @@ func (l UintptrArrList) MapFloat64Arr(f UintptrArrFloat64ArrFunctor) Float64ArrL
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapComplex64Arr(f UintptrArrComplex64ArrFunctor) Complex64ArrList {
+func (l UintptrArrList) MapComplex64Arr(f UintptrArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12216,7 +12216,7 @@ func (l UintptrArrList) MapComplex64Arr(f UintptrArrComplex64ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapComplex128Arr(f UintptrArrComplex128ArrFunctor) Complex128ArrList {
+func (l UintptrArrList) MapComplex128Arr(f UintptrArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12225,7 +12225,7 @@ func (l UintptrArrList) MapComplex128Arr(f UintptrArrComplex128ArrFunctor) Compl
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapStringArr(f UintptrArrStringArrFunctor) StringArrList {
+func (l UintptrArrList) MapStringArr(f UintptrArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12234,7 +12234,7 @@ func (l UintptrArrList) MapStringArr(f UintptrArrStringArrFunctor) StringArrList
 	}
 	return acc.Reverse()
 }
-func (l UintptrArrList) MapAnyArr(f UintptrArrAnyArrFunctor) AnyArrList {
+func (l UintptrArrList) MapAnyArr(f UintptrArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12243,7 +12243,7 @@ func (l UintptrArrList) MapAnyArr(f UintptrArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapBool(f Float32ArrBoolFunctor) BoolList {
+func (l Float32ArrList) MapBool(f Float32ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12252,7 +12252,7 @@ func (l Float32ArrList) MapBool(f Float32ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapRune(f Float32ArrRuneFunctor) RuneList {
+func (l Float32ArrList) MapRune(f Float32ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12261,7 +12261,7 @@ func (l Float32ArrList) MapRune(f Float32ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapByte(f Float32ArrByteFunctor) ByteList {
+func (l Float32ArrList) MapByte(f Float32ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12270,7 +12270,7 @@ func (l Float32ArrList) MapByte(f Float32ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt(f Float32ArrIntFunctor) IntList {
+func (l Float32ArrList) MapInt(f Float32ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12279,7 +12279,7 @@ func (l Float32ArrList) MapInt(f Float32ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt8(f Float32ArrInt8Functor) Int8List {
+func (l Float32ArrList) MapInt8(f Float32ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12288,7 +12288,7 @@ func (l Float32ArrList) MapInt8(f Float32ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt16(f Float32ArrInt16Functor) Int16List {
+func (l Float32ArrList) MapInt16(f Float32ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12297,7 +12297,7 @@ func (l Float32ArrList) MapInt16(f Float32ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt32(f Float32ArrInt32Functor) Int32List {
+func (l Float32ArrList) MapInt32(f Float32ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12306,7 +12306,7 @@ func (l Float32ArrList) MapInt32(f Float32ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt64(f Float32ArrInt64Functor) Int64List {
+func (l Float32ArrList) MapInt64(f Float32ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12315,7 +12315,7 @@ func (l Float32ArrList) MapInt64(f Float32ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint(f Float32ArrUintFunctor) UintList {
+func (l Float32ArrList) MapUint(f Float32ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12324,7 +12324,7 @@ func (l Float32ArrList) MapUint(f Float32ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint8(f Float32ArrUint8Functor) Uint8List {
+func (l Float32ArrList) MapUint8(f Float32ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12333,7 +12333,7 @@ func (l Float32ArrList) MapUint8(f Float32ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint16(f Float32ArrUint16Functor) Uint16List {
+func (l Float32ArrList) MapUint16(f Float32ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12342,7 +12342,7 @@ func (l Float32ArrList) MapUint16(f Float32ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint32(f Float32ArrUint32Functor) Uint32List {
+func (l Float32ArrList) MapUint32(f Float32ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12351,7 +12351,7 @@ func (l Float32ArrList) MapUint32(f Float32ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint64(f Float32ArrUint64Functor) Uint64List {
+func (l Float32ArrList) MapUint64(f Float32ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12360,7 +12360,7 @@ func (l Float32ArrList) MapUint64(f Float32ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUintptr(f Float32ArrUintptrFunctor) UintptrList {
+func (l Float32ArrList) MapUintptr(f Float32ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12369,7 +12369,7 @@ func (l Float32ArrList) MapUintptr(f Float32ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapFloat32(f Float32ArrFloat32Functor) Float32List {
+func (l Float32ArrList) MapFloat32(f Float32ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12378,7 +12378,7 @@ func (l Float32ArrList) MapFloat32(f Float32ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapFloat64(f Float32ArrFloat64Functor) Float64List {
+func (l Float32ArrList) MapFloat64(f Float32ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12387,7 +12387,7 @@ func (l Float32ArrList) MapFloat64(f Float32ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapComplex64(f Float32ArrComplex64Functor) Complex64List {
+func (l Float32ArrList) MapComplex64(f Float32ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12396,7 +12396,7 @@ func (l Float32ArrList) MapComplex64(f Float32ArrComplex64Functor) Complex64List
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapComplex128(f Float32ArrComplex128Functor) Complex128List {
+func (l Float32ArrList) MapComplex128(f Float32ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12405,7 +12405,7 @@ func (l Float32ArrList) MapComplex128(f Float32ArrComplex128Functor) Complex128L
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapString(f Float32ArrStringFunctor) StringList {
+func (l Float32ArrList) MapString(f Float32ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12414,7 +12414,7 @@ func (l Float32ArrList) MapString(f Float32ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapAny(f Float32ArrAnyFunctor) AnyList {
+func (l Float32ArrList) MapAny(f Float32ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12423,7 +12423,7 @@ func (l Float32ArrList) MapAny(f Float32ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapBoolArr(f Float32ArrBoolArrFunctor) BoolArrList {
+func (l Float32ArrList) MapBoolArr(f Float32ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12432,7 +12432,7 @@ func (l Float32ArrList) MapBoolArr(f Float32ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapRuneArr(f Float32ArrRuneArrFunctor) RuneArrList {
+func (l Float32ArrList) MapRuneArr(f Float32ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12441,7 +12441,7 @@ func (l Float32ArrList) MapRuneArr(f Float32ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapByteArr(f Float32ArrByteArrFunctor) ByteArrList {
+func (l Float32ArrList) MapByteArr(f Float32ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12450,7 +12450,7 @@ func (l Float32ArrList) MapByteArr(f Float32ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapIntArr(f Float32ArrIntArrFunctor) IntArrList {
+func (l Float32ArrList) MapIntArr(f Float32ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12459,7 +12459,7 @@ func (l Float32ArrList) MapIntArr(f Float32ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt8Arr(f Float32ArrInt8ArrFunctor) Int8ArrList {
+func (l Float32ArrList) MapInt8Arr(f Float32ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12468,7 +12468,7 @@ func (l Float32ArrList) MapInt8Arr(f Float32ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt16Arr(f Float32ArrInt16ArrFunctor) Int16ArrList {
+func (l Float32ArrList) MapInt16Arr(f Float32ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12477,7 +12477,7 @@ func (l Float32ArrList) MapInt16Arr(f Float32ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt32Arr(f Float32ArrInt32ArrFunctor) Int32ArrList {
+func (l Float32ArrList) MapInt32Arr(f Float32ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12486,7 +12486,7 @@ func (l Float32ArrList) MapInt32Arr(f Float32ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapInt64Arr(f Float32ArrInt64ArrFunctor) Int64ArrList {
+func (l Float32ArrList) MapInt64Arr(f Float32ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12495,7 +12495,7 @@ func (l Float32ArrList) MapInt64Arr(f Float32ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUintArr(f Float32ArrUintArrFunctor) UintArrList {
+func (l Float32ArrList) MapUintArr(f Float32ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12504,7 +12504,7 @@ func (l Float32ArrList) MapUintArr(f Float32ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint8Arr(f Float32ArrUint8ArrFunctor) Uint8ArrList {
+func (l Float32ArrList) MapUint8Arr(f Float32ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12513,7 +12513,7 @@ func (l Float32ArrList) MapUint8Arr(f Float32ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint16Arr(f Float32ArrUint16ArrFunctor) Uint16ArrList {
+func (l Float32ArrList) MapUint16Arr(f Float32ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12522,7 +12522,7 @@ func (l Float32ArrList) MapUint16Arr(f Float32ArrUint16ArrFunctor) Uint16ArrList
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint32Arr(f Float32ArrUint32ArrFunctor) Uint32ArrList {
+func (l Float32ArrList) MapUint32Arr(f Float32ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12531,7 +12531,7 @@ func (l Float32ArrList) MapUint32Arr(f Float32ArrUint32ArrFunctor) Uint32ArrList
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUint64Arr(f Float32ArrUint64ArrFunctor) Uint64ArrList {
+func (l Float32ArrList) MapUint64Arr(f Float32ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12540,7 +12540,7 @@ func (l Float32ArrList) MapUint64Arr(f Float32ArrUint64ArrFunctor) Uint64ArrList
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapUintptrArr(f Float32ArrUintptrArrFunctor) UintptrArrList {
+func (l Float32ArrList) MapUintptrArr(f Float32ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12549,7 +12549,7 @@ func (l Float32ArrList) MapUintptrArr(f Float32ArrUintptrArrFunctor) UintptrArrL
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapFloat32Arr(f Float32ArrFloat32ArrFunctor) Float32ArrList {
+func (l Float32ArrList) MapFloat32Arr(f Float32ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12558,7 +12558,7 @@ func (l Float32ArrList) MapFloat32Arr(f Float32ArrFloat32ArrFunctor) Float32ArrL
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapFloat64Arr(f Float32ArrFloat64ArrFunctor) Float64ArrList {
+func (l Float32ArrList) MapFloat64Arr(f Float32ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12567,7 +12567,7 @@ func (l Float32ArrList) MapFloat64Arr(f Float32ArrFloat64ArrFunctor) Float64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapComplex64Arr(f Float32ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Float32ArrList) MapComplex64Arr(f Float32ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12576,7 +12576,7 @@ func (l Float32ArrList) MapComplex64Arr(f Float32ArrComplex64ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapComplex128Arr(f Float32ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Float32ArrList) MapComplex128Arr(f Float32ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12585,7 +12585,7 @@ func (l Float32ArrList) MapComplex128Arr(f Float32ArrComplex128ArrFunctor) Compl
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapStringArr(f Float32ArrStringArrFunctor) StringArrList {
+func (l Float32ArrList) MapStringArr(f Float32ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12594,7 +12594,7 @@ func (l Float32ArrList) MapStringArr(f Float32ArrStringArrFunctor) StringArrList
 	}
 	return acc.Reverse()
 }
-func (l Float32ArrList) MapAnyArr(f Float32ArrAnyArrFunctor) AnyArrList {
+func (l Float32ArrList) MapAnyArr(f Float32ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12603,7 +12603,7 @@ func (l Float32ArrList) MapAnyArr(f Float32ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapBool(f Float64ArrBoolFunctor) BoolList {
+func (l Float64ArrList) MapBool(f Float64ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12612,7 +12612,7 @@ func (l Float64ArrList) MapBool(f Float64ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapRune(f Float64ArrRuneFunctor) RuneList {
+func (l Float64ArrList) MapRune(f Float64ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12621,7 +12621,7 @@ func (l Float64ArrList) MapRune(f Float64ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapByte(f Float64ArrByteFunctor) ByteList {
+func (l Float64ArrList) MapByte(f Float64ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12630,7 +12630,7 @@ func (l Float64ArrList) MapByte(f Float64ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt(f Float64ArrIntFunctor) IntList {
+func (l Float64ArrList) MapInt(f Float64ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12639,7 +12639,7 @@ func (l Float64ArrList) MapInt(f Float64ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt8(f Float64ArrInt8Functor) Int8List {
+func (l Float64ArrList) MapInt8(f Float64ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12648,7 +12648,7 @@ func (l Float64ArrList) MapInt8(f Float64ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt16(f Float64ArrInt16Functor) Int16List {
+func (l Float64ArrList) MapInt16(f Float64ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12657,7 +12657,7 @@ func (l Float64ArrList) MapInt16(f Float64ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt32(f Float64ArrInt32Functor) Int32List {
+func (l Float64ArrList) MapInt32(f Float64ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12666,7 +12666,7 @@ func (l Float64ArrList) MapInt32(f Float64ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt64(f Float64ArrInt64Functor) Int64List {
+func (l Float64ArrList) MapInt64(f Float64ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12675,7 +12675,7 @@ func (l Float64ArrList) MapInt64(f Float64ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint(f Float64ArrUintFunctor) UintList {
+func (l Float64ArrList) MapUint(f Float64ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12684,7 +12684,7 @@ func (l Float64ArrList) MapUint(f Float64ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint8(f Float64ArrUint8Functor) Uint8List {
+func (l Float64ArrList) MapUint8(f Float64ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12693,7 +12693,7 @@ func (l Float64ArrList) MapUint8(f Float64ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint16(f Float64ArrUint16Functor) Uint16List {
+func (l Float64ArrList) MapUint16(f Float64ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12702,7 +12702,7 @@ func (l Float64ArrList) MapUint16(f Float64ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint32(f Float64ArrUint32Functor) Uint32List {
+func (l Float64ArrList) MapUint32(f Float64ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12711,7 +12711,7 @@ func (l Float64ArrList) MapUint32(f Float64ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint64(f Float64ArrUint64Functor) Uint64List {
+func (l Float64ArrList) MapUint64(f Float64ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12720,7 +12720,7 @@ func (l Float64ArrList) MapUint64(f Float64ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUintptr(f Float64ArrUintptrFunctor) UintptrList {
+func (l Float64ArrList) MapUintptr(f Float64ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12729,7 +12729,7 @@ func (l Float64ArrList) MapUintptr(f Float64ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapFloat32(f Float64ArrFloat32Functor) Float32List {
+func (l Float64ArrList) MapFloat32(f Float64ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12738,7 +12738,7 @@ func (l Float64ArrList) MapFloat32(f Float64ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapFloat64(f Float64ArrFloat64Functor) Float64List {
+func (l Float64ArrList) MapFloat64(f Float64ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12747,7 +12747,7 @@ func (l Float64ArrList) MapFloat64(f Float64ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapComplex64(f Float64ArrComplex64Functor) Complex64List {
+func (l Float64ArrList) MapComplex64(f Float64ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12756,7 +12756,7 @@ func (l Float64ArrList) MapComplex64(f Float64ArrComplex64Functor) Complex64List
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapComplex128(f Float64ArrComplex128Functor) Complex128List {
+func (l Float64ArrList) MapComplex128(f Float64ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12765,7 +12765,7 @@ func (l Float64ArrList) MapComplex128(f Float64ArrComplex128Functor) Complex128L
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapString(f Float64ArrStringFunctor) StringList {
+func (l Float64ArrList) MapString(f Float64ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12774,7 +12774,7 @@ func (l Float64ArrList) MapString(f Float64ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapAny(f Float64ArrAnyFunctor) AnyList {
+func (l Float64ArrList) MapAny(f Float64ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12783,7 +12783,7 @@ func (l Float64ArrList) MapAny(f Float64ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapBoolArr(f Float64ArrBoolArrFunctor) BoolArrList {
+func (l Float64ArrList) MapBoolArr(f Float64ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12792,7 +12792,7 @@ func (l Float64ArrList) MapBoolArr(f Float64ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapRuneArr(f Float64ArrRuneArrFunctor) RuneArrList {
+func (l Float64ArrList) MapRuneArr(f Float64ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12801,7 +12801,7 @@ func (l Float64ArrList) MapRuneArr(f Float64ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapByteArr(f Float64ArrByteArrFunctor) ByteArrList {
+func (l Float64ArrList) MapByteArr(f Float64ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12810,7 +12810,7 @@ func (l Float64ArrList) MapByteArr(f Float64ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapIntArr(f Float64ArrIntArrFunctor) IntArrList {
+func (l Float64ArrList) MapIntArr(f Float64ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12819,7 +12819,7 @@ func (l Float64ArrList) MapIntArr(f Float64ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt8Arr(f Float64ArrInt8ArrFunctor) Int8ArrList {
+func (l Float64ArrList) MapInt8Arr(f Float64ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12828,7 +12828,7 @@ func (l Float64ArrList) MapInt8Arr(f Float64ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt16Arr(f Float64ArrInt16ArrFunctor) Int16ArrList {
+func (l Float64ArrList) MapInt16Arr(f Float64ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12837,7 +12837,7 @@ func (l Float64ArrList) MapInt16Arr(f Float64ArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt32Arr(f Float64ArrInt32ArrFunctor) Int32ArrList {
+func (l Float64ArrList) MapInt32Arr(f Float64ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12846,7 +12846,7 @@ func (l Float64ArrList) MapInt32Arr(f Float64ArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapInt64Arr(f Float64ArrInt64ArrFunctor) Int64ArrList {
+func (l Float64ArrList) MapInt64Arr(f Float64ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12855,7 +12855,7 @@ func (l Float64ArrList) MapInt64Arr(f Float64ArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUintArr(f Float64ArrUintArrFunctor) UintArrList {
+func (l Float64ArrList) MapUintArr(f Float64ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12864,7 +12864,7 @@ func (l Float64ArrList) MapUintArr(f Float64ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint8Arr(f Float64ArrUint8ArrFunctor) Uint8ArrList {
+func (l Float64ArrList) MapUint8Arr(f Float64ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12873,7 +12873,7 @@ func (l Float64ArrList) MapUint8Arr(f Float64ArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint16Arr(f Float64ArrUint16ArrFunctor) Uint16ArrList {
+func (l Float64ArrList) MapUint16Arr(f Float64ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12882,7 +12882,7 @@ func (l Float64ArrList) MapUint16Arr(f Float64ArrUint16ArrFunctor) Uint16ArrList
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint32Arr(f Float64ArrUint32ArrFunctor) Uint32ArrList {
+func (l Float64ArrList) MapUint32Arr(f Float64ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12891,7 +12891,7 @@ func (l Float64ArrList) MapUint32Arr(f Float64ArrUint32ArrFunctor) Uint32ArrList
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUint64Arr(f Float64ArrUint64ArrFunctor) Uint64ArrList {
+func (l Float64ArrList) MapUint64Arr(f Float64ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12900,7 +12900,7 @@ func (l Float64ArrList) MapUint64Arr(f Float64ArrUint64ArrFunctor) Uint64ArrList
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapUintptrArr(f Float64ArrUintptrArrFunctor) UintptrArrList {
+func (l Float64ArrList) MapUintptrArr(f Float64ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12909,7 +12909,7 @@ func (l Float64ArrList) MapUintptrArr(f Float64ArrUintptrArrFunctor) UintptrArrL
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapFloat32Arr(f Float64ArrFloat32ArrFunctor) Float32ArrList {
+func (l Float64ArrList) MapFloat32Arr(f Float64ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12918,7 +12918,7 @@ func (l Float64ArrList) MapFloat32Arr(f Float64ArrFloat32ArrFunctor) Float32ArrL
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapFloat64Arr(f Float64ArrFloat64ArrFunctor) Float64ArrList {
+func (l Float64ArrList) MapFloat64Arr(f Float64ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12927,7 +12927,7 @@ func (l Float64ArrList) MapFloat64Arr(f Float64ArrFloat64ArrFunctor) Float64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapComplex64Arr(f Float64ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Float64ArrList) MapComplex64Arr(f Float64ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12936,7 +12936,7 @@ func (l Float64ArrList) MapComplex64Arr(f Float64ArrComplex64ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapComplex128Arr(f Float64ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Float64ArrList) MapComplex128Arr(f Float64ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12945,7 +12945,7 @@ func (l Float64ArrList) MapComplex128Arr(f Float64ArrComplex128ArrFunctor) Compl
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapStringArr(f Float64ArrStringArrFunctor) StringArrList {
+func (l Float64ArrList) MapStringArr(f Float64ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12954,7 +12954,7 @@ func (l Float64ArrList) MapStringArr(f Float64ArrStringArrFunctor) StringArrList
 	}
 	return acc.Reverse()
 }
-func (l Float64ArrList) MapAnyArr(f Float64ArrAnyArrFunctor) AnyArrList {
+func (l Float64ArrList) MapAnyArr(f Float64ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12963,7 +12963,7 @@ func (l Float64ArrList) MapAnyArr(f Float64ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapBool(f Complex64ArrBoolFunctor) BoolList {
+func (l Complex64ArrList) MapBool(f Complex64ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12972,7 +12972,7 @@ func (l Complex64ArrList) MapBool(f Complex64ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapRune(f Complex64ArrRuneFunctor) RuneList {
+func (l Complex64ArrList) MapRune(f Complex64ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12981,7 +12981,7 @@ func (l Complex64ArrList) MapRune(f Complex64ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapByte(f Complex64ArrByteFunctor) ByteList {
+func (l Complex64ArrList) MapByte(f Complex64ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12990,7 +12990,7 @@ func (l Complex64ArrList) MapByte(f Complex64ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt(f Complex64ArrIntFunctor) IntList {
+func (l Complex64ArrList) MapInt(f Complex64ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -12999,7 +12999,7 @@ func (l Complex64ArrList) MapInt(f Complex64ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt8(f Complex64ArrInt8Functor) Int8List {
+func (l Complex64ArrList) MapInt8(f Complex64ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13008,7 +13008,7 @@ func (l Complex64ArrList) MapInt8(f Complex64ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt16(f Complex64ArrInt16Functor) Int16List {
+func (l Complex64ArrList) MapInt16(f Complex64ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13017,7 +13017,7 @@ func (l Complex64ArrList) MapInt16(f Complex64ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt32(f Complex64ArrInt32Functor) Int32List {
+func (l Complex64ArrList) MapInt32(f Complex64ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13026,7 +13026,7 @@ func (l Complex64ArrList) MapInt32(f Complex64ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt64(f Complex64ArrInt64Functor) Int64List {
+func (l Complex64ArrList) MapInt64(f Complex64ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13035,7 +13035,7 @@ func (l Complex64ArrList) MapInt64(f Complex64ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint(f Complex64ArrUintFunctor) UintList {
+func (l Complex64ArrList) MapUint(f Complex64ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13044,7 +13044,7 @@ func (l Complex64ArrList) MapUint(f Complex64ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint8(f Complex64ArrUint8Functor) Uint8List {
+func (l Complex64ArrList) MapUint8(f Complex64ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13053,7 +13053,7 @@ func (l Complex64ArrList) MapUint8(f Complex64ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint16(f Complex64ArrUint16Functor) Uint16List {
+func (l Complex64ArrList) MapUint16(f Complex64ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13062,7 +13062,7 @@ func (l Complex64ArrList) MapUint16(f Complex64ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint32(f Complex64ArrUint32Functor) Uint32List {
+func (l Complex64ArrList) MapUint32(f Complex64ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13071,7 +13071,7 @@ func (l Complex64ArrList) MapUint32(f Complex64ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint64(f Complex64ArrUint64Functor) Uint64List {
+func (l Complex64ArrList) MapUint64(f Complex64ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13080,7 +13080,7 @@ func (l Complex64ArrList) MapUint64(f Complex64ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUintptr(f Complex64ArrUintptrFunctor) UintptrList {
+func (l Complex64ArrList) MapUintptr(f Complex64ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13089,7 +13089,7 @@ func (l Complex64ArrList) MapUintptr(f Complex64ArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapFloat32(f Complex64ArrFloat32Functor) Float32List {
+func (l Complex64ArrList) MapFloat32(f Complex64ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13098,7 +13098,7 @@ func (l Complex64ArrList) MapFloat32(f Complex64ArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapFloat64(f Complex64ArrFloat64Functor) Float64List {
+func (l Complex64ArrList) MapFloat64(f Complex64ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13107,7 +13107,7 @@ func (l Complex64ArrList) MapFloat64(f Complex64ArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapComplex64(f Complex64ArrComplex64Functor) Complex64List {
+func (l Complex64ArrList) MapComplex64(f Complex64ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13116,7 +13116,7 @@ func (l Complex64ArrList) MapComplex64(f Complex64ArrComplex64Functor) Complex64
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapComplex128(f Complex64ArrComplex128Functor) Complex128List {
+func (l Complex64ArrList) MapComplex128(f Complex64ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13125,7 +13125,7 @@ func (l Complex64ArrList) MapComplex128(f Complex64ArrComplex128Functor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapString(f Complex64ArrStringFunctor) StringList {
+func (l Complex64ArrList) MapString(f Complex64ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13134,7 +13134,7 @@ func (l Complex64ArrList) MapString(f Complex64ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapAny(f Complex64ArrAnyFunctor) AnyList {
+func (l Complex64ArrList) MapAny(f Complex64ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13143,7 +13143,7 @@ func (l Complex64ArrList) MapAny(f Complex64ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapBoolArr(f Complex64ArrBoolArrFunctor) BoolArrList {
+func (l Complex64ArrList) MapBoolArr(f Complex64ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13152,7 +13152,7 @@ func (l Complex64ArrList) MapBoolArr(f Complex64ArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapRuneArr(f Complex64ArrRuneArrFunctor) RuneArrList {
+func (l Complex64ArrList) MapRuneArr(f Complex64ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13161,7 +13161,7 @@ func (l Complex64ArrList) MapRuneArr(f Complex64ArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapByteArr(f Complex64ArrByteArrFunctor) ByteArrList {
+func (l Complex64ArrList) MapByteArr(f Complex64ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13170,7 +13170,7 @@ func (l Complex64ArrList) MapByteArr(f Complex64ArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapIntArr(f Complex64ArrIntArrFunctor) IntArrList {
+func (l Complex64ArrList) MapIntArr(f Complex64ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13179,7 +13179,7 @@ func (l Complex64ArrList) MapIntArr(f Complex64ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt8Arr(f Complex64ArrInt8ArrFunctor) Int8ArrList {
+func (l Complex64ArrList) MapInt8Arr(f Complex64ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13188,7 +13188,7 @@ func (l Complex64ArrList) MapInt8Arr(f Complex64ArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt16Arr(f Complex64ArrInt16ArrFunctor) Int16ArrList {
+func (l Complex64ArrList) MapInt16Arr(f Complex64ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13197,7 +13197,7 @@ func (l Complex64ArrList) MapInt16Arr(f Complex64ArrInt16ArrFunctor) Int16ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt32Arr(f Complex64ArrInt32ArrFunctor) Int32ArrList {
+func (l Complex64ArrList) MapInt32Arr(f Complex64ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13206,7 +13206,7 @@ func (l Complex64ArrList) MapInt32Arr(f Complex64ArrInt32ArrFunctor) Int32ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapInt64Arr(f Complex64ArrInt64ArrFunctor) Int64ArrList {
+func (l Complex64ArrList) MapInt64Arr(f Complex64ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13215,7 +13215,7 @@ func (l Complex64ArrList) MapInt64Arr(f Complex64ArrInt64ArrFunctor) Int64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUintArr(f Complex64ArrUintArrFunctor) UintArrList {
+func (l Complex64ArrList) MapUintArr(f Complex64ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13224,7 +13224,7 @@ func (l Complex64ArrList) MapUintArr(f Complex64ArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint8Arr(f Complex64ArrUint8ArrFunctor) Uint8ArrList {
+func (l Complex64ArrList) MapUint8Arr(f Complex64ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13233,7 +13233,7 @@ func (l Complex64ArrList) MapUint8Arr(f Complex64ArrUint8ArrFunctor) Uint8ArrLis
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint16Arr(f Complex64ArrUint16ArrFunctor) Uint16ArrList {
+func (l Complex64ArrList) MapUint16Arr(f Complex64ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13242,7 +13242,7 @@ func (l Complex64ArrList) MapUint16Arr(f Complex64ArrUint16ArrFunctor) Uint16Arr
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint32Arr(f Complex64ArrUint32ArrFunctor) Uint32ArrList {
+func (l Complex64ArrList) MapUint32Arr(f Complex64ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13251,7 +13251,7 @@ func (l Complex64ArrList) MapUint32Arr(f Complex64ArrUint32ArrFunctor) Uint32Arr
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUint64Arr(f Complex64ArrUint64ArrFunctor) Uint64ArrList {
+func (l Complex64ArrList) MapUint64Arr(f Complex64ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13260,7 +13260,7 @@ func (l Complex64ArrList) MapUint64Arr(f Complex64ArrUint64ArrFunctor) Uint64Arr
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapUintptrArr(f Complex64ArrUintptrArrFunctor) UintptrArrList {
+func (l Complex64ArrList) MapUintptrArr(f Complex64ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13269,7 +13269,7 @@ func (l Complex64ArrList) MapUintptrArr(f Complex64ArrUintptrArrFunctor) Uintptr
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapFloat32Arr(f Complex64ArrFloat32ArrFunctor) Float32ArrList {
+func (l Complex64ArrList) MapFloat32Arr(f Complex64ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13278,7 +13278,7 @@ func (l Complex64ArrList) MapFloat32Arr(f Complex64ArrFloat32ArrFunctor) Float32
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapFloat64Arr(f Complex64ArrFloat64ArrFunctor) Float64ArrList {
+func (l Complex64ArrList) MapFloat64Arr(f Complex64ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13287,7 +13287,7 @@ func (l Complex64ArrList) MapFloat64Arr(f Complex64ArrFloat64ArrFunctor) Float64
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapComplex64Arr(f Complex64ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Complex64ArrList) MapComplex64Arr(f Complex64ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13296,7 +13296,7 @@ func (l Complex64ArrList) MapComplex64Arr(f Complex64ArrComplex64ArrFunctor) Com
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapComplex128Arr(f Complex64ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Complex64ArrList) MapComplex128Arr(f Complex64ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13305,7 +13305,7 @@ func (l Complex64ArrList) MapComplex128Arr(f Complex64ArrComplex128ArrFunctor) C
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapStringArr(f Complex64ArrStringArrFunctor) StringArrList {
+func (l Complex64ArrList) MapStringArr(f Complex64ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13314,7 +13314,7 @@ func (l Complex64ArrList) MapStringArr(f Complex64ArrStringArrFunctor) StringArr
 	}
 	return acc.Reverse()
 }
-func (l Complex64ArrList) MapAnyArr(f Complex64ArrAnyArrFunctor) AnyArrList {
+func (l Complex64ArrList) MapAnyArr(f Complex64ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13323,7 +13323,7 @@ func (l Complex64ArrList) MapAnyArr(f Complex64ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapBool(f Complex128ArrBoolFunctor) BoolList {
+func (l Complex128ArrList) MapBool(f Complex128ArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13332,7 +13332,7 @@ func (l Complex128ArrList) MapBool(f Complex128ArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapRune(f Complex128ArrRuneFunctor) RuneList {
+func (l Complex128ArrList) MapRune(f Complex128ArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13341,7 +13341,7 @@ func (l Complex128ArrList) MapRune(f Complex128ArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapByte(f Complex128ArrByteFunctor) ByteList {
+func (l Complex128ArrList) MapByte(f Complex128ArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13350,7 +13350,7 @@ func (l Complex128ArrList) MapByte(f Complex128ArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt(f Complex128ArrIntFunctor) IntList {
+func (l Complex128ArrList) MapInt(f Complex128ArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13359,7 +13359,7 @@ func (l Complex128ArrList) MapInt(f Complex128ArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt8(f Complex128ArrInt8Functor) Int8List {
+func (l Complex128ArrList) MapInt8(f Complex128ArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13368,7 +13368,7 @@ func (l Complex128ArrList) MapInt8(f Complex128ArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt16(f Complex128ArrInt16Functor) Int16List {
+func (l Complex128ArrList) MapInt16(f Complex128ArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13377,7 +13377,7 @@ func (l Complex128ArrList) MapInt16(f Complex128ArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt32(f Complex128ArrInt32Functor) Int32List {
+func (l Complex128ArrList) MapInt32(f Complex128ArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13386,7 +13386,7 @@ func (l Complex128ArrList) MapInt32(f Complex128ArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt64(f Complex128ArrInt64Functor) Int64List {
+func (l Complex128ArrList) MapInt64(f Complex128ArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13395,7 +13395,7 @@ func (l Complex128ArrList) MapInt64(f Complex128ArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint(f Complex128ArrUintFunctor) UintList {
+func (l Complex128ArrList) MapUint(f Complex128ArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13404,7 +13404,7 @@ func (l Complex128ArrList) MapUint(f Complex128ArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint8(f Complex128ArrUint8Functor) Uint8List {
+func (l Complex128ArrList) MapUint8(f Complex128ArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13413,7 +13413,7 @@ func (l Complex128ArrList) MapUint8(f Complex128ArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint16(f Complex128ArrUint16Functor) Uint16List {
+func (l Complex128ArrList) MapUint16(f Complex128ArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13422,7 +13422,7 @@ func (l Complex128ArrList) MapUint16(f Complex128ArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint32(f Complex128ArrUint32Functor) Uint32List {
+func (l Complex128ArrList) MapUint32(f Complex128ArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13431,7 +13431,7 @@ func (l Complex128ArrList) MapUint32(f Complex128ArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint64(f Complex128ArrUint64Functor) Uint64List {
+func (l Complex128ArrList) MapUint64(f Complex128ArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13440,7 +13440,7 @@ func (l Complex128ArrList) MapUint64(f Complex128ArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUintptr(f Complex128ArrUintptrFunctor) UintptrList {
+func (l Complex128ArrList) MapUintptr(f Complex128ArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13449,7 +13449,7 @@ func (l Complex128ArrList) MapUintptr(f Complex128ArrUintptrFunctor) UintptrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapFloat32(f Complex128ArrFloat32Functor) Float32List {
+func (l Complex128ArrList) MapFloat32(f Complex128ArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13458,7 +13458,7 @@ func (l Complex128ArrList) MapFloat32(f Complex128ArrFloat32Functor) Float32List
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapFloat64(f Complex128ArrFloat64Functor) Float64List {
+func (l Complex128ArrList) MapFloat64(f Complex128ArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13467,7 +13467,7 @@ func (l Complex128ArrList) MapFloat64(f Complex128ArrFloat64Functor) Float64List
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapComplex64(f Complex128ArrComplex64Functor) Complex64List {
+func (l Complex128ArrList) MapComplex64(f Complex128ArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13476,7 +13476,7 @@ func (l Complex128ArrList) MapComplex64(f Complex128ArrComplex64Functor) Complex
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapComplex128(f Complex128ArrComplex128Functor) Complex128List {
+func (l Complex128ArrList) MapComplex128(f Complex128ArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13485,7 +13485,7 @@ func (l Complex128ArrList) MapComplex128(f Complex128ArrComplex128Functor) Compl
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapString(f Complex128ArrStringFunctor) StringList {
+func (l Complex128ArrList) MapString(f Complex128ArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13494,7 +13494,7 @@ func (l Complex128ArrList) MapString(f Complex128ArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapAny(f Complex128ArrAnyFunctor) AnyList {
+func (l Complex128ArrList) MapAny(f Complex128ArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13503,7 +13503,7 @@ func (l Complex128ArrList) MapAny(f Complex128ArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapBoolArr(f Complex128ArrBoolArrFunctor) BoolArrList {
+func (l Complex128ArrList) MapBoolArr(f Complex128ArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13512,7 +13512,7 @@ func (l Complex128ArrList) MapBoolArr(f Complex128ArrBoolArrFunctor) BoolArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapRuneArr(f Complex128ArrRuneArrFunctor) RuneArrList {
+func (l Complex128ArrList) MapRuneArr(f Complex128ArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13521,7 +13521,7 @@ func (l Complex128ArrList) MapRuneArr(f Complex128ArrRuneArrFunctor) RuneArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapByteArr(f Complex128ArrByteArrFunctor) ByteArrList {
+func (l Complex128ArrList) MapByteArr(f Complex128ArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13530,7 +13530,7 @@ func (l Complex128ArrList) MapByteArr(f Complex128ArrByteArrFunctor) ByteArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapIntArr(f Complex128ArrIntArrFunctor) IntArrList {
+func (l Complex128ArrList) MapIntArr(f Complex128ArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13539,7 +13539,7 @@ func (l Complex128ArrList) MapIntArr(f Complex128ArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt8Arr(f Complex128ArrInt8ArrFunctor) Int8ArrList {
+func (l Complex128ArrList) MapInt8Arr(f Complex128ArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13548,7 +13548,7 @@ func (l Complex128ArrList) MapInt8Arr(f Complex128ArrInt8ArrFunctor) Int8ArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt16Arr(f Complex128ArrInt16ArrFunctor) Int16ArrList {
+func (l Complex128ArrList) MapInt16Arr(f Complex128ArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13557,7 +13557,7 @@ func (l Complex128ArrList) MapInt16Arr(f Complex128ArrInt16ArrFunctor) Int16ArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt32Arr(f Complex128ArrInt32ArrFunctor) Int32ArrList {
+func (l Complex128ArrList) MapInt32Arr(f Complex128ArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13566,7 +13566,7 @@ func (l Complex128ArrList) MapInt32Arr(f Complex128ArrInt32ArrFunctor) Int32ArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapInt64Arr(f Complex128ArrInt64ArrFunctor) Int64ArrList {
+func (l Complex128ArrList) MapInt64Arr(f Complex128ArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13575,7 +13575,7 @@ func (l Complex128ArrList) MapInt64Arr(f Complex128ArrInt64ArrFunctor) Int64ArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUintArr(f Complex128ArrUintArrFunctor) UintArrList {
+func (l Complex128ArrList) MapUintArr(f Complex128ArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13584,7 +13584,7 @@ func (l Complex128ArrList) MapUintArr(f Complex128ArrUintArrFunctor) UintArrList
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint8Arr(f Complex128ArrUint8ArrFunctor) Uint8ArrList {
+func (l Complex128ArrList) MapUint8Arr(f Complex128ArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13593,7 +13593,7 @@ func (l Complex128ArrList) MapUint8Arr(f Complex128ArrUint8ArrFunctor) Uint8ArrL
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint16Arr(f Complex128ArrUint16ArrFunctor) Uint16ArrList {
+func (l Complex128ArrList) MapUint16Arr(f Complex128ArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13602,7 +13602,7 @@ func (l Complex128ArrList) MapUint16Arr(f Complex128ArrUint16ArrFunctor) Uint16A
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint32Arr(f Complex128ArrUint32ArrFunctor) Uint32ArrList {
+func (l Complex128ArrList) MapUint32Arr(f Complex128ArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13611,7 +13611,7 @@ func (l Complex128ArrList) MapUint32Arr(f Complex128ArrUint32ArrFunctor) Uint32A
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUint64Arr(f Complex128ArrUint64ArrFunctor) Uint64ArrList {
+func (l Complex128ArrList) MapUint64Arr(f Complex128ArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13620,7 +13620,7 @@ func (l Complex128ArrList) MapUint64Arr(f Complex128ArrUint64ArrFunctor) Uint64A
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapUintptrArr(f Complex128ArrUintptrArrFunctor) UintptrArrList {
+func (l Complex128ArrList) MapUintptrArr(f Complex128ArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13629,7 +13629,7 @@ func (l Complex128ArrList) MapUintptrArr(f Complex128ArrUintptrArrFunctor) Uintp
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapFloat32Arr(f Complex128ArrFloat32ArrFunctor) Float32ArrList {
+func (l Complex128ArrList) MapFloat32Arr(f Complex128ArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13638,7 +13638,7 @@ func (l Complex128ArrList) MapFloat32Arr(f Complex128ArrFloat32ArrFunctor) Float
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapFloat64Arr(f Complex128ArrFloat64ArrFunctor) Float64ArrList {
+func (l Complex128ArrList) MapFloat64Arr(f Complex128ArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13647,7 +13647,7 @@ func (l Complex128ArrList) MapFloat64Arr(f Complex128ArrFloat64ArrFunctor) Float
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapComplex64Arr(f Complex128ArrComplex64ArrFunctor) Complex64ArrList {
+func (l Complex128ArrList) MapComplex64Arr(f Complex128ArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13656,7 +13656,7 @@ func (l Complex128ArrList) MapComplex64Arr(f Complex128ArrComplex64ArrFunctor) C
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapComplex128Arr(f Complex128ArrComplex128ArrFunctor) Complex128ArrList {
+func (l Complex128ArrList) MapComplex128Arr(f Complex128ArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13665,7 +13665,7 @@ func (l Complex128ArrList) MapComplex128Arr(f Complex128ArrComplex128ArrFunctor)
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapStringArr(f Complex128ArrStringArrFunctor) StringArrList {
+func (l Complex128ArrList) MapStringArr(f Complex128ArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13674,7 +13674,7 @@ func (l Complex128ArrList) MapStringArr(f Complex128ArrStringArrFunctor) StringA
 	}
 	return acc.Reverse()
 }
-func (l Complex128ArrList) MapAnyArr(f Complex128ArrAnyArrFunctor) AnyArrList {
+func (l Complex128ArrList) MapAnyArr(f Complex128ArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13683,7 +13683,7 @@ func (l Complex128ArrList) MapAnyArr(f Complex128ArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapBool(f StringArrBoolFunctor) BoolList {
+func (l StringArrList) MapBool(f StringArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13692,7 +13692,7 @@ func (l StringArrList) MapBool(f StringArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapRune(f StringArrRuneFunctor) RuneList {
+func (l StringArrList) MapRune(f StringArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13701,7 +13701,7 @@ func (l StringArrList) MapRune(f StringArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapByte(f StringArrByteFunctor) ByteList {
+func (l StringArrList) MapByte(f StringArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13710,7 +13710,7 @@ func (l StringArrList) MapByte(f StringArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt(f StringArrIntFunctor) IntList {
+func (l StringArrList) MapInt(f StringArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13719,7 +13719,7 @@ func (l StringArrList) MapInt(f StringArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt8(f StringArrInt8Functor) Int8List {
+func (l StringArrList) MapInt8(f StringArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13728,7 +13728,7 @@ func (l StringArrList) MapInt8(f StringArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt16(f StringArrInt16Functor) Int16List {
+func (l StringArrList) MapInt16(f StringArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13737,7 +13737,7 @@ func (l StringArrList) MapInt16(f StringArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt32(f StringArrInt32Functor) Int32List {
+func (l StringArrList) MapInt32(f StringArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13746,7 +13746,7 @@ func (l StringArrList) MapInt32(f StringArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt64(f StringArrInt64Functor) Int64List {
+func (l StringArrList) MapInt64(f StringArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13755,7 +13755,7 @@ func (l StringArrList) MapInt64(f StringArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint(f StringArrUintFunctor) UintList {
+func (l StringArrList) MapUint(f StringArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13764,7 +13764,7 @@ func (l StringArrList) MapUint(f StringArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint8(f StringArrUint8Functor) Uint8List {
+func (l StringArrList) MapUint8(f StringArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13773,7 +13773,7 @@ func (l StringArrList) MapUint8(f StringArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint16(f StringArrUint16Functor) Uint16List {
+func (l StringArrList) MapUint16(f StringArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13782,7 +13782,7 @@ func (l StringArrList) MapUint16(f StringArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint32(f StringArrUint32Functor) Uint32List {
+func (l StringArrList) MapUint32(f StringArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13791,7 +13791,7 @@ func (l StringArrList) MapUint32(f StringArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint64(f StringArrUint64Functor) Uint64List {
+func (l StringArrList) MapUint64(f StringArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13800,7 +13800,7 @@ func (l StringArrList) MapUint64(f StringArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUintptr(f StringArrUintptrFunctor) UintptrList {
+func (l StringArrList) MapUintptr(f StringArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13809,7 +13809,7 @@ func (l StringArrList) MapUintptr(f StringArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapFloat32(f StringArrFloat32Functor) Float32List {
+func (l StringArrList) MapFloat32(f StringArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13818,7 +13818,7 @@ func (l StringArrList) MapFloat32(f StringArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapFloat64(f StringArrFloat64Functor) Float64List {
+func (l StringArrList) MapFloat64(f StringArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13827,7 +13827,7 @@ func (l StringArrList) MapFloat64(f StringArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapComplex64(f StringArrComplex64Functor) Complex64List {
+func (l StringArrList) MapComplex64(f StringArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13836,7 +13836,7 @@ func (l StringArrList) MapComplex64(f StringArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapComplex128(f StringArrComplex128Functor) Complex128List {
+func (l StringArrList) MapComplex128(f StringArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13845,7 +13845,7 @@ func (l StringArrList) MapComplex128(f StringArrComplex128Functor) Complex128Lis
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapString(f StringArrStringFunctor) StringList {
+func (l StringArrList) MapString(f StringArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13854,7 +13854,7 @@ func (l StringArrList) MapString(f StringArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapAny(f StringArrAnyFunctor) AnyList {
+func (l StringArrList) MapAny(f StringArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13863,7 +13863,7 @@ func (l StringArrList) MapAny(f StringArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapBoolArr(f StringArrBoolArrFunctor) BoolArrList {
+func (l StringArrList) MapBoolArr(f StringArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13872,7 +13872,7 @@ func (l StringArrList) MapBoolArr(f StringArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapRuneArr(f StringArrRuneArrFunctor) RuneArrList {
+func (l StringArrList) MapRuneArr(f StringArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13881,7 +13881,7 @@ func (l StringArrList) MapRuneArr(f StringArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapByteArr(f StringArrByteArrFunctor) ByteArrList {
+func (l StringArrList) MapByteArr(f StringArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13890,7 +13890,7 @@ func (l StringArrList) MapByteArr(f StringArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapIntArr(f StringArrIntArrFunctor) IntArrList {
+func (l StringArrList) MapIntArr(f StringArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13899,7 +13899,7 @@ func (l StringArrList) MapIntArr(f StringArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt8Arr(f StringArrInt8ArrFunctor) Int8ArrList {
+func (l StringArrList) MapInt8Arr(f StringArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13908,7 +13908,7 @@ func (l StringArrList) MapInt8Arr(f StringArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt16Arr(f StringArrInt16ArrFunctor) Int16ArrList {
+func (l StringArrList) MapInt16Arr(f StringArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13917,7 +13917,7 @@ func (l StringArrList) MapInt16Arr(f StringArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt32Arr(f StringArrInt32ArrFunctor) Int32ArrList {
+func (l StringArrList) MapInt32Arr(f StringArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13926,7 +13926,7 @@ func (l StringArrList) MapInt32Arr(f StringArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapInt64Arr(f StringArrInt64ArrFunctor) Int64ArrList {
+func (l StringArrList) MapInt64Arr(f StringArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13935,7 +13935,7 @@ func (l StringArrList) MapInt64Arr(f StringArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUintArr(f StringArrUintArrFunctor) UintArrList {
+func (l StringArrList) MapUintArr(f StringArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13944,7 +13944,7 @@ func (l StringArrList) MapUintArr(f StringArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint8Arr(f StringArrUint8ArrFunctor) Uint8ArrList {
+func (l StringArrList) MapUint8Arr(f StringArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13953,7 +13953,7 @@ func (l StringArrList) MapUint8Arr(f StringArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint16Arr(f StringArrUint16ArrFunctor) Uint16ArrList {
+func (l StringArrList) MapUint16Arr(f StringArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13962,7 +13962,7 @@ func (l StringArrList) MapUint16Arr(f StringArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint32Arr(f StringArrUint32ArrFunctor) Uint32ArrList {
+func (l StringArrList) MapUint32Arr(f StringArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13971,7 +13971,7 @@ func (l StringArrList) MapUint32Arr(f StringArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUint64Arr(f StringArrUint64ArrFunctor) Uint64ArrList {
+func (l StringArrList) MapUint64Arr(f StringArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13980,7 +13980,7 @@ func (l StringArrList) MapUint64Arr(f StringArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapUintptrArr(f StringArrUintptrArrFunctor) UintptrArrList {
+func (l StringArrList) MapUintptrArr(f StringArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13989,7 +13989,7 @@ func (l StringArrList) MapUintptrArr(f StringArrUintptrArrFunctor) UintptrArrLis
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapFloat32Arr(f StringArrFloat32ArrFunctor) Float32ArrList {
+func (l StringArrList) MapFloat32Arr(f StringArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -13998,7 +13998,7 @@ func (l StringArrList) MapFloat32Arr(f StringArrFloat32ArrFunctor) Float32ArrLis
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapFloat64Arr(f StringArrFloat64ArrFunctor) Float64ArrList {
+func (l StringArrList) MapFloat64Arr(f StringArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14007,7 +14007,7 @@ func (l StringArrList) MapFloat64Arr(f StringArrFloat64ArrFunctor) Float64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapComplex64Arr(f StringArrComplex64ArrFunctor) Complex64ArrList {
+func (l StringArrList) MapComplex64Arr(f StringArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14016,7 +14016,7 @@ func (l StringArrList) MapComplex64Arr(f StringArrComplex64ArrFunctor) Complex64
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapComplex128Arr(f StringArrComplex128ArrFunctor) Complex128ArrList {
+func (l StringArrList) MapComplex128Arr(f StringArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14025,7 +14025,7 @@ func (l StringArrList) MapComplex128Arr(f StringArrComplex128ArrFunctor) Complex
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapStringArr(f StringArrStringArrFunctor) StringArrList {
+func (l StringArrList) MapStringArr(f StringArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14034,7 +14034,7 @@ func (l StringArrList) MapStringArr(f StringArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l StringArrList) MapAnyArr(f StringArrAnyArrFunctor) AnyArrList {
+func (l StringArrList) MapAnyArr(f StringArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14043,7 +14043,7 @@ func (l StringArrList) MapAnyArr(f StringArrAnyArrFunctor) AnyArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapBool(f AnyArrBoolFunctor) BoolList {
+func (l AnyArrList) MapBool(f AnyArrBoolTransformer) BoolList {
 	acc := NilBool
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14052,7 +14052,7 @@ func (l AnyArrList) MapBool(f AnyArrBoolFunctor) BoolList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapRune(f AnyArrRuneFunctor) RuneList {
+func (l AnyArrList) MapRune(f AnyArrRuneTransformer) RuneList {
 	acc := NilRune
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14061,7 +14061,7 @@ func (l AnyArrList) MapRune(f AnyArrRuneFunctor) RuneList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapByte(f AnyArrByteFunctor) ByteList {
+func (l AnyArrList) MapByte(f AnyArrByteTransformer) ByteList {
 	acc := NilByte
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14070,7 +14070,7 @@ func (l AnyArrList) MapByte(f AnyArrByteFunctor) ByteList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt(f AnyArrIntFunctor) IntList {
+func (l AnyArrList) MapInt(f AnyArrIntTransformer) IntList {
 	acc := NilInt
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14079,7 +14079,7 @@ func (l AnyArrList) MapInt(f AnyArrIntFunctor) IntList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt8(f AnyArrInt8Functor) Int8List {
+func (l AnyArrList) MapInt8(f AnyArrInt8Transformer) Int8List {
 	acc := NilInt8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14088,7 +14088,7 @@ func (l AnyArrList) MapInt8(f AnyArrInt8Functor) Int8List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt16(f AnyArrInt16Functor) Int16List {
+func (l AnyArrList) MapInt16(f AnyArrInt16Transformer) Int16List {
 	acc := NilInt16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14097,7 +14097,7 @@ func (l AnyArrList) MapInt16(f AnyArrInt16Functor) Int16List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt32(f AnyArrInt32Functor) Int32List {
+func (l AnyArrList) MapInt32(f AnyArrInt32Transformer) Int32List {
 	acc := NilInt32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14106,7 +14106,7 @@ func (l AnyArrList) MapInt32(f AnyArrInt32Functor) Int32List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt64(f AnyArrInt64Functor) Int64List {
+func (l AnyArrList) MapInt64(f AnyArrInt64Transformer) Int64List {
 	acc := NilInt64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14115,7 +14115,7 @@ func (l AnyArrList) MapInt64(f AnyArrInt64Functor) Int64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint(f AnyArrUintFunctor) UintList {
+func (l AnyArrList) MapUint(f AnyArrUintTransformer) UintList {
 	acc := NilUint
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14124,7 +14124,7 @@ func (l AnyArrList) MapUint(f AnyArrUintFunctor) UintList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint8(f AnyArrUint8Functor) Uint8List {
+func (l AnyArrList) MapUint8(f AnyArrUint8Transformer) Uint8List {
 	acc := NilUint8
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14133,7 +14133,7 @@ func (l AnyArrList) MapUint8(f AnyArrUint8Functor) Uint8List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint16(f AnyArrUint16Functor) Uint16List {
+func (l AnyArrList) MapUint16(f AnyArrUint16Transformer) Uint16List {
 	acc := NilUint16
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14142,7 +14142,7 @@ func (l AnyArrList) MapUint16(f AnyArrUint16Functor) Uint16List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint32(f AnyArrUint32Functor) Uint32List {
+func (l AnyArrList) MapUint32(f AnyArrUint32Transformer) Uint32List {
 	acc := NilUint32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14151,7 +14151,7 @@ func (l AnyArrList) MapUint32(f AnyArrUint32Functor) Uint32List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint64(f AnyArrUint64Functor) Uint64List {
+func (l AnyArrList) MapUint64(f AnyArrUint64Transformer) Uint64List {
 	acc := NilUint64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14160,7 +14160,7 @@ func (l AnyArrList) MapUint64(f AnyArrUint64Functor) Uint64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUintptr(f AnyArrUintptrFunctor) UintptrList {
+func (l AnyArrList) MapUintptr(f AnyArrUintptrTransformer) UintptrList {
 	acc := NilUintptr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14169,7 +14169,7 @@ func (l AnyArrList) MapUintptr(f AnyArrUintptrFunctor) UintptrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapFloat32(f AnyArrFloat32Functor) Float32List {
+func (l AnyArrList) MapFloat32(f AnyArrFloat32Transformer) Float32List {
 	acc := NilFloat32
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14178,7 +14178,7 @@ func (l AnyArrList) MapFloat32(f AnyArrFloat32Functor) Float32List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapFloat64(f AnyArrFloat64Functor) Float64List {
+func (l AnyArrList) MapFloat64(f AnyArrFloat64Transformer) Float64List {
 	acc := NilFloat64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14187,7 +14187,7 @@ func (l AnyArrList) MapFloat64(f AnyArrFloat64Functor) Float64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapComplex64(f AnyArrComplex64Functor) Complex64List {
+func (l AnyArrList) MapComplex64(f AnyArrComplex64Transformer) Complex64List {
 	acc := NilComplex64
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14196,7 +14196,7 @@ func (l AnyArrList) MapComplex64(f AnyArrComplex64Functor) Complex64List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapComplex128(f AnyArrComplex128Functor) Complex128List {
+func (l AnyArrList) MapComplex128(f AnyArrComplex128Transformer) Complex128List {
 	acc := NilComplex128
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14205,7 +14205,7 @@ func (l AnyArrList) MapComplex128(f AnyArrComplex128Functor) Complex128List {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapString(f AnyArrStringFunctor) StringList {
+func (l AnyArrList) MapString(f AnyArrStringTransformer) StringList {
 	acc := NilString
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14214,7 +14214,7 @@ func (l AnyArrList) MapString(f AnyArrStringFunctor) StringList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapAny(f AnyArrAnyFunctor) AnyList {
+func (l AnyArrList) MapAny(f AnyArrAnyTransformer) AnyList {
 	acc := NilAny
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14223,7 +14223,7 @@ func (l AnyArrList) MapAny(f AnyArrAnyFunctor) AnyList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapBoolArr(f AnyArrBoolArrFunctor) BoolArrList {
+func (l AnyArrList) MapBoolArr(f AnyArrBoolArrTransformer) BoolArrList {
 	acc := NilBoolArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14232,7 +14232,7 @@ func (l AnyArrList) MapBoolArr(f AnyArrBoolArrFunctor) BoolArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapRuneArr(f AnyArrRuneArrFunctor) RuneArrList {
+func (l AnyArrList) MapRuneArr(f AnyArrRuneArrTransformer) RuneArrList {
 	acc := NilRuneArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14241,7 +14241,7 @@ func (l AnyArrList) MapRuneArr(f AnyArrRuneArrFunctor) RuneArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapByteArr(f AnyArrByteArrFunctor) ByteArrList {
+func (l AnyArrList) MapByteArr(f AnyArrByteArrTransformer) ByteArrList {
 	acc := NilByteArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14250,7 +14250,7 @@ func (l AnyArrList) MapByteArr(f AnyArrByteArrFunctor) ByteArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapIntArr(f AnyArrIntArrFunctor) IntArrList {
+func (l AnyArrList) MapIntArr(f AnyArrIntArrTransformer) IntArrList {
 	acc := NilIntArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14259,7 +14259,7 @@ func (l AnyArrList) MapIntArr(f AnyArrIntArrFunctor) IntArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt8Arr(f AnyArrInt8ArrFunctor) Int8ArrList {
+func (l AnyArrList) MapInt8Arr(f AnyArrInt8ArrTransformer) Int8ArrList {
 	acc := NilInt8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14268,7 +14268,7 @@ func (l AnyArrList) MapInt8Arr(f AnyArrInt8ArrFunctor) Int8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt16Arr(f AnyArrInt16ArrFunctor) Int16ArrList {
+func (l AnyArrList) MapInt16Arr(f AnyArrInt16ArrTransformer) Int16ArrList {
 	acc := NilInt16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14277,7 +14277,7 @@ func (l AnyArrList) MapInt16Arr(f AnyArrInt16ArrFunctor) Int16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt32Arr(f AnyArrInt32ArrFunctor) Int32ArrList {
+func (l AnyArrList) MapInt32Arr(f AnyArrInt32ArrTransformer) Int32ArrList {
 	acc := NilInt32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14286,7 +14286,7 @@ func (l AnyArrList) MapInt32Arr(f AnyArrInt32ArrFunctor) Int32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapInt64Arr(f AnyArrInt64ArrFunctor) Int64ArrList {
+func (l AnyArrList) MapInt64Arr(f AnyArrInt64ArrTransformer) Int64ArrList {
 	acc := NilInt64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14295,7 +14295,7 @@ func (l AnyArrList) MapInt64Arr(f AnyArrInt64ArrFunctor) Int64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUintArr(f AnyArrUintArrFunctor) UintArrList {
+func (l AnyArrList) MapUintArr(f AnyArrUintArrTransformer) UintArrList {
 	acc := NilUintArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14304,7 +14304,7 @@ func (l AnyArrList) MapUintArr(f AnyArrUintArrFunctor) UintArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint8Arr(f AnyArrUint8ArrFunctor) Uint8ArrList {
+func (l AnyArrList) MapUint8Arr(f AnyArrUint8ArrTransformer) Uint8ArrList {
 	acc := NilUint8Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14313,7 +14313,7 @@ func (l AnyArrList) MapUint8Arr(f AnyArrUint8ArrFunctor) Uint8ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint16Arr(f AnyArrUint16ArrFunctor) Uint16ArrList {
+func (l AnyArrList) MapUint16Arr(f AnyArrUint16ArrTransformer) Uint16ArrList {
 	acc := NilUint16Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14322,7 +14322,7 @@ func (l AnyArrList) MapUint16Arr(f AnyArrUint16ArrFunctor) Uint16ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint32Arr(f AnyArrUint32ArrFunctor) Uint32ArrList {
+func (l AnyArrList) MapUint32Arr(f AnyArrUint32ArrTransformer) Uint32ArrList {
 	acc := NilUint32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14331,7 +14331,7 @@ func (l AnyArrList) MapUint32Arr(f AnyArrUint32ArrFunctor) Uint32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUint64Arr(f AnyArrUint64ArrFunctor) Uint64ArrList {
+func (l AnyArrList) MapUint64Arr(f AnyArrUint64ArrTransformer) Uint64ArrList {
 	acc := NilUint64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14340,7 +14340,7 @@ func (l AnyArrList) MapUint64Arr(f AnyArrUint64ArrFunctor) Uint64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapUintptrArr(f AnyArrUintptrArrFunctor) UintptrArrList {
+func (l AnyArrList) MapUintptrArr(f AnyArrUintptrArrTransformer) UintptrArrList {
 	acc := NilUintptrArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14349,7 +14349,7 @@ func (l AnyArrList) MapUintptrArr(f AnyArrUintptrArrFunctor) UintptrArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapFloat32Arr(f AnyArrFloat32ArrFunctor) Float32ArrList {
+func (l AnyArrList) MapFloat32Arr(f AnyArrFloat32ArrTransformer) Float32ArrList {
 	acc := NilFloat32Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14358,7 +14358,7 @@ func (l AnyArrList) MapFloat32Arr(f AnyArrFloat32ArrFunctor) Float32ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapFloat64Arr(f AnyArrFloat64ArrFunctor) Float64ArrList {
+func (l AnyArrList) MapFloat64Arr(f AnyArrFloat64ArrTransformer) Float64ArrList {
 	acc := NilFloat64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14367,7 +14367,7 @@ func (l AnyArrList) MapFloat64Arr(f AnyArrFloat64ArrFunctor) Float64ArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapComplex64Arr(f AnyArrComplex64ArrFunctor) Complex64ArrList {
+func (l AnyArrList) MapComplex64Arr(f AnyArrComplex64ArrTransformer) Complex64ArrList {
 	acc := NilComplex64Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14376,7 +14376,7 @@ func (l AnyArrList) MapComplex64Arr(f AnyArrComplex64ArrFunctor) Complex64ArrLis
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapComplex128Arr(f AnyArrComplex128ArrFunctor) Complex128ArrList {
+func (l AnyArrList) MapComplex128Arr(f AnyArrComplex128ArrTransformer) Complex128ArrList {
 	acc := NilComplex128Arr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14385,7 +14385,7 @@ func (l AnyArrList) MapComplex128Arr(f AnyArrComplex128ArrFunctor) Complex128Arr
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapStringArr(f AnyArrStringArrFunctor) StringArrList {
+func (l AnyArrList) MapStringArr(f AnyArrStringArrTransformer) StringArrList {
 	acc := NilStringArr
 	xs := &l
 	for xs.IsNotEmpty() {
@@ -14394,7 +14394,7 @@ func (l AnyArrList) MapStringArr(f AnyArrStringArrFunctor) StringArrList {
 	}
 	return acc.Reverse()
 }
-func (l AnyArrList) MapAnyArr(f AnyArrAnyArrFunctor) AnyArrList {
+func (l AnyArrList) MapAnyArr(f AnyArrAnyArrTransformer) AnyArrList {
 	acc := NilAnyArr
 	xs := &l
 	for xs.IsNotEmpty() {
