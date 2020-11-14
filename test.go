@@ -25,4 +25,9 @@ func main() {
 	fmt.Println(i2.ToString(), i2.IsDefined(), i2.IsEmpty(), i2.Filter(even).ToString(), i2.Filter(pos).ToString(), i1.MapInt(func(e int) int { return e + 100 }).ToString())
 
 	fmt.Println(NoneInt.Equals(NoneInt))
+
+	fmt.Println(MakeIntList(1, 2, 3, 4, 5).Size())
+	fmt.Println(MakeIntList(1, 2).Size())
+	fmt.Println(MakeIntList(1).Size())
+	fmt.Println(NilInt.Size())
 }
