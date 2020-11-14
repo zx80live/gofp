@@ -31,7 +31,7 @@ func main() {
 	fmt.Println(MakeIntList(1).Size())
 	fmt.Println(NilInt.Size())
 
-	fmt.Println(EqualIntList(MakeIntList(1, 2, 3), MakeIntList(1, 2, 3)))
-	fmt.Println(EqualIntList(MakeIntList(1, 2, 3, 4), MakeIntList(1, 2, 3)))
-	fmt.Println(EqualIntList(MakeIntList(), MakeIntList()))
+	fmt.Println(MakeIntList(1, 2, 3).Equals(MakeIntList(1, 2, 3)))
+	fmt.Println(MakeIntList(1, 2, 3, 4).Equals(MakeIntList(1, 2, 3)))
+	fmt.Println(MakeIntList().Equals(MakeIntList()))
 }
