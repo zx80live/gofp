@@ -822,3 +822,683 @@ func EqualOptionAnyArr(a, b OptionAnyArr) bool {
 		return true
 	}
 }
+
+func EqualBoolList(a, b BoolList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualBool(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualRuneList(a, b RuneList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualRune(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualByteList(a, b ByteList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualByte(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualIntList(a, b IntList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt8List(a, b Int8List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt8(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt16List(a, b Int16List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt16(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt32List(a, b Int32List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt32(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt64List(a, b Int64List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt64(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUintList(a, b UintList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint8List(a, b Uint8List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint8(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint16List(a, b Uint16List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint16(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint32List(a, b Uint32List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint32(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint64List(a, b Uint64List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint64(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUintptrList(a, b UintptrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUintptr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualFloat32List(a, b Float32List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualFloat32(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualFloat64List(a, b Float64List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualFloat64(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualComplex64List(a, b Complex64List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualComplex64(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualComplex128List(a, b Complex128List) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualComplex128(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualStringList(a, b StringList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualString(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualAnyList(a, b AnyList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualAny(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualBoolArrList(a, b BoolArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualBoolArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualRuneArrList(a, b RuneArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualRuneArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualByteArrList(a, b ByteArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualByteArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualIntArrList(a, b IntArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualIntArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt8ArrList(a, b Int8ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt8Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt16ArrList(a, b Int16ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt16Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt32ArrList(a, b Int32ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt32Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualInt64ArrList(a, b Int64ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualInt64Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUintArrList(a, b UintArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUintArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint8ArrList(a, b Uint8ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint8Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint16ArrList(a, b Uint16ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint16Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint32ArrList(a, b Uint32ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint32Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUint64ArrList(a, b Uint64ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUint64Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualUintptrArrList(a, b UintptrArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualUintptrArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualFloat32ArrList(a, b Float32ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualFloat32Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualFloat64ArrList(a, b Float64ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualFloat64Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualComplex64ArrList(a, b Complex64ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualComplex64Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualComplex128ArrList(a, b Complex128ArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualComplex128Arr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualStringArrList(a, b StringArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualStringArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+
+func EqualAnyArrList(a, b AnyArrList) bool {
+	if a.Size() != b.Size() {
+		return false
+	}
+
+	xs1 := a
+	xs2 := b
+	for xs1.IsNotEmpty() {
+		if !EqualAnyArr(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
