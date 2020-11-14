@@ -244,3 +244,243 @@ func MkStringAnyArr(arr []Any, left, sep, right string) string {
 	}
 	return fmt.Sprintf("%v%v%v", left, content, right)
 }
+
+func MkStringBoolArrArr(arr [][]bool, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringBoolArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringRuneArrArr(arr [][]rune, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringRuneArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringByteArrArr(arr [][]byte, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringByteArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringIntArrArr(arr [][]int, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringIntArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringInt8ArrArr(arr [][]int8, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringInt8Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringInt16ArrArr(arr [][]int16, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringInt16Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringInt32ArrArr(arr [][]int32, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringInt32Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringInt64ArrArr(arr [][]int64, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringInt64Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringUintArrArr(arr [][]uint, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringUintArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringUint8ArrArr(arr [][]uint8, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringUint8Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringUint16ArrArr(arr [][]uint16, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringUint16Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringUint32ArrArr(arr [][]uint32, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringUint32Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringUint64ArrArr(arr [][]uint64, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringUint64Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringUintptrArrArr(arr [][]uintptr, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringUintptrArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringFloat32ArrArr(arr [][]float32, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringFloat32Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringFloat64ArrArr(arr [][]float64, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringFloat64Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringComplex64ArrArr(arr [][]complex64, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringComplex64Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringComplex128ArrArr(arr [][]complex128, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringComplex128Arr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringStringArrArr(arr [][]string, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringStringArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
+
+func MkStringAnyArrArr(arr [][]Any, left, sep, right string) string {
+	content := ""
+	for _, e := range arr {
+		content = fmt.Sprintf("%v%v%v", content, MkStringAnyArr(e, left, sep, right), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return fmt.Sprintf("%v%v%v", left, content, right)
+}
