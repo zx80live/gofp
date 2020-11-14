@@ -364,3 +364,66 @@ func ToStringOptionAnyArr(e OptionAnyArr) string {
 		return "None"
 	}
 }
+
+func ToStringBoolList(l BoolList) string       { return MkStringBoolList(l, "List(", ",", ")") }
+func ToStringRuneList(l RuneList) string       { return MkStringRuneList(l, "List(", ",", ")") }
+func ToStringByteList(l ByteList) string       { return MkStringByteList(l, "List(", ",", ")") }
+func ToStringIntList(l IntList) string         { return MkStringIntList(l, "List(", ",", ")") }
+func ToStringInt8List(l Int8List) string       { return MkStringInt8List(l, "List(", ",", ")") }
+func ToStringInt16List(l Int16List) string     { return MkStringInt16List(l, "List(", ",", ")") }
+func ToStringInt32List(l Int32List) string     { return MkStringInt32List(l, "List(", ",", ")") }
+func ToStringInt64List(l Int64List) string     { return MkStringInt64List(l, "List(", ",", ")") }
+func ToStringUintList(l UintList) string       { return MkStringUintList(l, "List(", ",", ")") }
+func ToStringUint8List(l Uint8List) string     { return MkStringUint8List(l, "List(", ",", ")") }
+func ToStringUint16List(l Uint16List) string   { return MkStringUint16List(l, "List(", ",", ")") }
+func ToStringUint32List(l Uint32List) string   { return MkStringUint32List(l, "List(", ",", ")") }
+func ToStringUint64List(l Uint64List) string   { return MkStringUint64List(l, "List(", ",", ")") }
+func ToStringUintptrList(l UintptrList) string { return MkStringUintptrList(l, "List(", ",", ")") }
+func ToStringFloat32List(l Float32List) string { return MkStringFloat32List(l, "List(", ",", ")") }
+func ToStringFloat64List(l Float64List) string { return MkStringFloat64List(l, "List(", ",", ")") }
+func ToStringComplex64List(l Complex64List) string {
+	return MkStringComplex64List(l, "List(", ",", ")")
+}
+func ToStringComplex128List(l Complex128List) string {
+	return MkStringComplex128List(l, "List(", ",", ")")
+}
+func ToStringStringList(l StringList) string     { return MkStringStringList(l, "List(", ",", ")") }
+func ToStringAnyList(l AnyList) string           { return MkStringAnyList(l, "List(", ",", ")") }
+func ToStringBoolArrList(l BoolArrList) string   { return MkStringBoolArrList(l, "List(", ",", ")") }
+func ToStringRuneArrList(l RuneArrList) string   { return MkStringRuneArrList(l, "List(", ",", ")") }
+func ToStringByteArrList(l ByteArrList) string   { return MkStringByteArrList(l, "List(", ",", ")") }
+func ToStringIntArrList(l IntArrList) string     { return MkStringIntArrList(l, "List(", ",", ")") }
+func ToStringInt8ArrList(l Int8ArrList) string   { return MkStringInt8ArrList(l, "List(", ",", ")") }
+func ToStringInt16ArrList(l Int16ArrList) string { return MkStringInt16ArrList(l, "List(", ",", ")") }
+func ToStringInt32ArrList(l Int32ArrList) string { return MkStringInt32ArrList(l, "List(", ",", ")") }
+func ToStringInt64ArrList(l Int64ArrList) string { return MkStringInt64ArrList(l, "List(", ",", ")") }
+func ToStringUintArrList(l UintArrList) string   { return MkStringUintArrList(l, "List(", ",", ")") }
+func ToStringUint8ArrList(l Uint8ArrList) string { return MkStringUint8ArrList(l, "List(", ",", ")") }
+func ToStringUint16ArrList(l Uint16ArrList) string {
+	return MkStringUint16ArrList(l, "List(", ",", ")")
+}
+func ToStringUint32ArrList(l Uint32ArrList) string {
+	return MkStringUint32ArrList(l, "List(", ",", ")")
+}
+func ToStringUint64ArrList(l Uint64ArrList) string {
+	return MkStringUint64ArrList(l, "List(", ",", ")")
+}
+func ToStringUintptrArrList(l UintptrArrList) string {
+	return MkStringUintptrArrList(l, "List(", ",", ")")
+}
+func ToStringFloat32ArrList(l Float32ArrList) string {
+	return MkStringFloat32ArrList(l, "List(", ",", ")")
+}
+func ToStringFloat64ArrList(l Float64ArrList) string {
+	return MkStringFloat64ArrList(l, "List(", ",", ")")
+}
+func ToStringComplex64ArrList(l Complex64ArrList) string {
+	return MkStringComplex64ArrList(l, "List(", ",", ")")
+}
+func ToStringComplex128ArrList(l Complex128ArrList) string {
+	return MkStringComplex128ArrList(l, "List(", ",", ")")
+}
+func ToStringStringArrList(l StringArrList) string {
+	return MkStringStringArrList(l, "List(", ",", ")")
+}
+func ToStringAnyArrList(l AnyArrList) string { return MkStringAnyArrList(l, "List(", ",", ")") }
