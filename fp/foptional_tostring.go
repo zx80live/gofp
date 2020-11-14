@@ -3,324 +3,82 @@
 
 package fp
 
-import "fmt"
+func (o OptionBool) ToString() string { return ToStringOptionBool(o) }
 
-func (o OptionBool) ToString() string {
-	if o == NoneBool {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringBool(*o.value))
-	}
-}
+func (o OptionRune) ToString() string { return ToStringOptionRune(o) }
 
-func (o OptionRune) ToString() string {
-	if o == NoneRune {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringRune(*o.value))
-	}
-}
+func (o OptionByte) ToString() string { return ToStringOptionByte(o) }
 
-func (o OptionByte) ToString() string {
-	if o == NoneByte {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringByte(*o.value))
-	}
-}
+func (o OptionInt) ToString() string { return ToStringOptionInt(o) }
 
-func (o OptionInt) ToString() string {
-	if o == NoneInt {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt(*o.value))
-	}
-}
+func (o OptionInt8) ToString() string { return ToStringOptionInt8(o) }
 
-func (o OptionInt8) ToString() string {
-	if o == NoneInt8 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt8(*o.value))
-	}
-}
+func (o OptionInt16) ToString() string { return ToStringOptionInt16(o) }
 
-func (o OptionInt16) ToString() string {
-	if o == NoneInt16 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt16(*o.value))
-	}
-}
+func (o OptionInt32) ToString() string { return ToStringOptionInt32(o) }
 
-func (o OptionInt32) ToString() string {
-	if o == NoneInt32 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt32(*o.value))
-	}
-}
+func (o OptionInt64) ToString() string { return ToStringOptionInt64(o) }
 
-func (o OptionInt64) ToString() string {
-	if o == NoneInt64 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt64(*o.value))
-	}
-}
+func (o OptionUint) ToString() string { return ToStringOptionUint(o) }
 
-func (o OptionUint) ToString() string {
-	if o == NoneUint {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint(*o.value))
-	}
-}
+func (o OptionUint8) ToString() string { return ToStringOptionUint8(o) }
 
-func (o OptionUint8) ToString() string {
-	if o == NoneUint8 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint8(*o.value))
-	}
-}
+func (o OptionUint16) ToString() string { return ToStringOptionUint16(o) }
 
-func (o OptionUint16) ToString() string {
-	if o == NoneUint16 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint16(*o.value))
-	}
-}
+func (o OptionUint32) ToString() string { return ToStringOptionUint32(o) }
 
-func (o OptionUint32) ToString() string {
-	if o == NoneUint32 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint32(*o.value))
-	}
-}
+func (o OptionUint64) ToString() string { return ToStringOptionUint64(o) }
 
-func (o OptionUint64) ToString() string {
-	if o == NoneUint64 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint64(*o.value))
-	}
-}
+func (o OptionUintptr) ToString() string { return ToStringOptionUintptr(o) }
 
-func (o OptionUintptr) ToString() string {
-	if o == NoneUintptr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUintptr(*o.value))
-	}
-}
+func (o OptionFloat32) ToString() string { return ToStringOptionFloat32(o) }
 
-func (o OptionFloat32) ToString() string {
-	if o == NoneFloat32 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringFloat32(*o.value))
-	}
-}
+func (o OptionFloat64) ToString() string { return ToStringOptionFloat64(o) }
 
-func (o OptionFloat64) ToString() string {
-	if o == NoneFloat64 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringFloat64(*o.value))
-	}
-}
+func (o OptionComplex64) ToString() string { return ToStringOptionComplex64(o) }
 
-func (o OptionComplex64) ToString() string {
-	if o == NoneComplex64 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringComplex64(*o.value))
-	}
-}
+func (o OptionComplex128) ToString() string { return ToStringOptionComplex128(o) }
 
-func (o OptionComplex128) ToString() string {
-	if o == NoneComplex128 {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringComplex128(*o.value))
-	}
-}
+func (o OptionString) ToString() string { return ToStringOptionString(o) }
 
-func (o OptionString) ToString() string {
-	if o == NoneString {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringString(*o.value))
-	}
-}
+func (o OptionAny) ToString() string { return ToStringOptionAny(o) }
 
-func (o OptionAny) ToString() string {
-	if o == NoneAny {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringAny(*o.value))
-	}
-}
+func (o OptionBoolArr) ToString() string { return ToStringOptionBoolArr(o) }
 
-func (o OptionBoolArr) ToString() string {
-	if o == NoneBoolArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringBoolArr(*o.value))
-	}
-}
+func (o OptionRuneArr) ToString() string { return ToStringOptionRuneArr(o) }
 
-func (o OptionRuneArr) ToString() string {
-	if o == NoneRuneArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringRuneArr(*o.value))
-	}
-}
+func (o OptionByteArr) ToString() string { return ToStringOptionByteArr(o) }
 
-func (o OptionByteArr) ToString() string {
-	if o == NoneByteArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringByteArr(*o.value))
-	}
-}
+func (o OptionIntArr) ToString() string { return ToStringOptionIntArr(o) }
 
-func (o OptionIntArr) ToString() string {
-	if o == NoneIntArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringIntArr(*o.value))
-	}
-}
+func (o OptionInt8Arr) ToString() string { return ToStringOptionInt8Arr(o) }
 
-func (o OptionInt8Arr) ToString() string {
-	if o == NoneInt8Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt8Arr(*o.value))
-	}
-}
+func (o OptionInt16Arr) ToString() string { return ToStringOptionInt16Arr(o) }
 
-func (o OptionInt16Arr) ToString() string {
-	if o == NoneInt16Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt16Arr(*o.value))
-	}
-}
+func (o OptionInt32Arr) ToString() string { return ToStringOptionInt32Arr(o) }
 
-func (o OptionInt32Arr) ToString() string {
-	if o == NoneInt32Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt32Arr(*o.value))
-	}
-}
+func (o OptionInt64Arr) ToString() string { return ToStringOptionInt64Arr(o) }
 
-func (o OptionInt64Arr) ToString() string {
-	if o == NoneInt64Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringInt64Arr(*o.value))
-	}
-}
+func (o OptionUintArr) ToString() string { return ToStringOptionUintArr(o) }
 
-func (o OptionUintArr) ToString() string {
-	if o == NoneUintArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUintArr(*o.value))
-	}
-}
+func (o OptionUint8Arr) ToString() string { return ToStringOptionUint8Arr(o) }
 
-func (o OptionUint8Arr) ToString() string {
-	if o == NoneUint8Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint8Arr(*o.value))
-	}
-}
+func (o OptionUint16Arr) ToString() string { return ToStringOptionUint16Arr(o) }
 
-func (o OptionUint16Arr) ToString() string {
-	if o == NoneUint16Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint16Arr(*o.value))
-	}
-}
+func (o OptionUint32Arr) ToString() string { return ToStringOptionUint32Arr(o) }
 
-func (o OptionUint32Arr) ToString() string {
-	if o == NoneUint32Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint32Arr(*o.value))
-	}
-}
+func (o OptionUint64Arr) ToString() string { return ToStringOptionUint64Arr(o) }
 
-func (o OptionUint64Arr) ToString() string {
-	if o == NoneUint64Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUint64Arr(*o.value))
-	}
-}
+func (o OptionUintptrArr) ToString() string { return ToStringOptionUintptrArr(o) }
 
-func (o OptionUintptrArr) ToString() string {
-	if o == NoneUintptrArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringUintptrArr(*o.value))
-	}
-}
+func (o OptionFloat32Arr) ToString() string { return ToStringOptionFloat32Arr(o) }
 
-func (o OptionFloat32Arr) ToString() string {
-	if o == NoneFloat32Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringFloat32Arr(*o.value))
-	}
-}
+func (o OptionFloat64Arr) ToString() string { return ToStringOptionFloat64Arr(o) }
 
-func (o OptionFloat64Arr) ToString() string {
-	if o == NoneFloat64Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringFloat64Arr(*o.value))
-	}
-}
+func (o OptionComplex64Arr) ToString() string { return ToStringOptionComplex64Arr(o) }
 
-func (o OptionComplex64Arr) ToString() string {
-	if o == NoneComplex64Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringComplex64Arr(*o.value))
-	}
-}
+func (o OptionComplex128Arr) ToString() string { return ToStringOptionComplex128Arr(o) }
 
-func (o OptionComplex128Arr) ToString() string {
-	if o == NoneComplex128Arr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringComplex128Arr(*o.value))
-	}
-}
+func (o OptionStringArr) ToString() string { return ToStringOptionStringArr(o) }
 
-func (o OptionStringArr) ToString() string {
-	if o == NoneStringArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringStringArr(*o.value))
-	}
-}
-
-func (o OptionAnyArr) ToString() string {
-	if o == NoneAnyArr {
-		return "None"
-	} else {
-		return fmt.Sprintf("Some(%v)", ToStringAnyArr(*o.value))
-	}
-}
+func (o OptionAnyArr) ToString() string { return ToStringOptionAnyArr(o) }

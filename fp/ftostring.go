@@ -45,3 +45,322 @@ func ToStringComplex64Arr(e []complex64) string   { return MkStringComplex64Arr(
 func ToStringComplex128Arr(e []complex128) string { return MkStringComplex128Arr(e, "[", ",", "]") }
 func ToStringStringArr(e []string) string         { return MkStringStringArr(e, "[", ",", "]") }
 func ToStringAnyArr(e []Any) string               { return MkStringAnyArr(e, "[", ",", "]") }
+func ToStringOptionBool(e OptionBool) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringBool(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionRune(e OptionRune) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringRune(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionByte(e OptionByte) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringByte(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt(e OptionInt) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt8(e OptionInt8) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt8(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt16(e OptionInt16) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt16(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt32(e OptionInt32) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt32(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt64(e OptionInt64) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt64(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint(e OptionUint) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint8(e OptionUint8) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint8(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint16(e OptionUint16) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint16(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint32(e OptionUint32) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint32(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint64(e OptionUint64) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint64(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUintptr(e OptionUintptr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUintptr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionFloat32(e OptionFloat32) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringFloat32(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionFloat64(e OptionFloat64) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringFloat64(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionComplex64(e OptionComplex64) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringComplex64(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionComplex128(e OptionComplex128) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringComplex128(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionString(e OptionString) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringString(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionAny(e OptionAny) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringAny(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionBoolArr(e OptionBoolArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringBoolArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionRuneArr(e OptionRuneArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringRuneArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionByteArr(e OptionByteArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringByteArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionIntArr(e OptionIntArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringIntArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt8Arr(e OptionInt8Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt8Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt16Arr(e OptionInt16Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt16Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt32Arr(e OptionInt32Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt32Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionInt64Arr(e OptionInt64Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringInt64Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUintArr(e OptionUintArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUintArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint8Arr(e OptionUint8Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint8Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint16Arr(e OptionUint16Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint16Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint32Arr(e OptionUint32Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint32Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUint64Arr(e OptionUint64Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUint64Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionUintptrArr(e OptionUintptrArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringUintptrArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionFloat32Arr(e OptionFloat32Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringFloat32Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionFloat64Arr(e OptionFloat64Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringFloat64Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionComplex64Arr(e OptionComplex64Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringComplex64Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionComplex128Arr(e OptionComplex128Arr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringComplex128Arr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionStringArr(e OptionStringArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringStringArr(*e.value))
+	} else {
+		return "None"
+	}
+}
+
+func ToStringOptionAnyArr(e OptionAnyArr) string {
+	if e.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ToStringAnyArr(*e.value))
+	} else {
+		return "None"
+	}
+}
