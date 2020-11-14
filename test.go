@@ -37,5 +37,6 @@ func main() {
 
 	MakeIntList(1, 2, 3).MapInt(func(e int) int { return e * 100 }).Foreach(func(e int) { fmt.Println(">", e) })
 
-	fmt.Println(NoneInt.ToString())
+	arr := MakeIntList(1, 2, 3, 4, 5).ToArray()
+	fmt.Println(len(arr), arr[0], arr[1], arr[2], arr[3], arr[4])
 }
