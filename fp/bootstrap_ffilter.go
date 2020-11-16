@@ -3,6723 +3,5924 @@
 
 package fp
 
-func FilterBoolArr(l []bool, p BoolPredicate) []bool {
 
-	acc := make([]bool, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+func FilterBoolArr(l []bool, p BoolPredicate) []bool {
+  
+  acc := make([]bool, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterStringArr(l []string, p StringPredicate) []string {
-
-	acc := make([]string, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]string, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterIntArr(l []int, p IntPredicate) []int {
-
-	acc := make([]int, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]int, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt8Arr(l []int8, p Int8Predicate) []int8 {
-
-	acc := make([]int8, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]int8, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt16Arr(l []int16, p Int16Predicate) []int16 {
-
-	acc := make([]int16, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]int16, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt32Arr(l []int32, p Int32Predicate) []int32 {
-
-	acc := make([]int32, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]int32, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt64Arr(l []int64, p Int64Predicate) []int64 {
-
-	acc := make([]int64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]int64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUintArr(l []uint, p UintPredicate) []uint {
-
-	acc := make([]uint, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]uint, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint8Arr(l []uint8, p Uint8Predicate) []uint8 {
-
-	acc := make([]uint8, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]uint8, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint16Arr(l []uint16, p Uint16Predicate) []uint16 {
-
-	acc := make([]uint16, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]uint16, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint32Arr(l []uint32, p Uint32Predicate) []uint32 {
-
-	acc := make([]uint32, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]uint32, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint64Arr(l []uint64, p Uint64Predicate) []uint64 {
-
-	acc := make([]uint64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]uint64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUintptrArr(l []uintptr, p UintptrPredicate) []uintptr {
-
-	acc := make([]uintptr, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]uintptr, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterByteArr(l []byte, p BytePredicate) []byte {
-
-	acc := make([]byte, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]byte, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterRuneArr(l []rune, p RunePredicate) []rune {
-
-	acc := make([]rune, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]rune, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterFloat32Arr(l []float32, p Float32Predicate) []float32 {
-
-	acc := make([]float32, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]float32, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterFloat64Arr(l []float64, p Float64Predicate) []float64 {
-
-	acc := make([]float64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]float64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterComplex64Arr(l []complex64, p Complex64Predicate) []complex64 {
-
-	acc := make([]complex64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]complex64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterComplex128Arr(l []complex128, p Complex128Predicate) []complex128 {
-
-	acc := make([]complex128, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]complex128, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterAnyArr(l []Any, p AnyPredicate) []Any {
-
-	acc := make([]Any, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Any, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterBoolArrArr(l [][]bool, p BoolArrPredicate) [][]bool {
-
-	acc := make([][]bool, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]bool, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterStringArrArr(l [][]string, p StringArrPredicate) [][]string {
-
-	acc := make([][]string, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]string, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterIntArrArr(l [][]int, p IntArrPredicate) [][]int {
-
-	acc := make([][]int, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]int, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt8ArrArr(l [][]int8, p Int8ArrPredicate) [][]int8 {
-
-	acc := make([][]int8, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]int8, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt16ArrArr(l [][]int16, p Int16ArrPredicate) [][]int16 {
-
-	acc := make([][]int16, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]int16, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt32ArrArr(l [][]int32, p Int32ArrPredicate) [][]int32 {
-
-	acc := make([][]int32, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]int32, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt64ArrArr(l [][]int64, p Int64ArrPredicate) [][]int64 {
-
-	acc := make([][]int64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]int64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUintArrArr(l [][]uint, p UintArrPredicate) [][]uint {
-
-	acc := make([][]uint, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]uint, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint8ArrArr(l [][]uint8, p Uint8ArrPredicate) [][]uint8 {
-
-	acc := make([][]uint8, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]uint8, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint16ArrArr(l [][]uint16, p Uint16ArrPredicate) [][]uint16 {
-
-	acc := make([][]uint16, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]uint16, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint32ArrArr(l [][]uint32, p Uint32ArrPredicate) [][]uint32 {
-
-	acc := make([][]uint32, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]uint32, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint64ArrArr(l [][]uint64, p Uint64ArrPredicate) [][]uint64 {
-
-	acc := make([][]uint64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]uint64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUintptrArrArr(l [][]uintptr, p UintptrArrPredicate) [][]uintptr {
-
-	acc := make([][]uintptr, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]uintptr, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterByteArrArr(l [][]byte, p ByteArrPredicate) [][]byte {
-
-	acc := make([][]byte, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]byte, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterRuneArrArr(l [][]rune, p RuneArrPredicate) [][]rune {
-
-	acc := make([][]rune, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]rune, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterFloat32ArrArr(l [][]float32, p Float32ArrPredicate) [][]float32 {
-
-	acc := make([][]float32, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]float32, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterFloat64ArrArr(l [][]float64, p Float64ArrPredicate) [][]float64 {
-
-	acc := make([][]float64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]float64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterComplex64ArrArr(l [][]complex64, p Complex64ArrPredicate) [][]complex64 {
-
-	acc := make([][]complex64, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]complex64, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterComplex128ArrArr(l [][]complex128, p Complex128ArrPredicate) [][]complex128 {
-
-	acc := make([][]complex128, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]complex128, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterAnyArrArr(l [][]Any, p AnyArrPredicate) [][]Any {
-
-	acc := make([][]Any, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([][]Any, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterBoolOptionArr(l []BoolOption, p BoolOptionPredicate) []BoolOption {
-
-	acc := make([]BoolOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]BoolOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterStringOptionArr(l []StringOption, p StringOptionPredicate) []StringOption {
-
-	acc := make([]StringOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]StringOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterIntOptionArr(l []IntOption, p IntOptionPredicate) []IntOption {
-
-	acc := make([]IntOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]IntOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt8OptionArr(l []Int8Option, p Int8OptionPredicate) []Int8Option {
-
-	acc := make([]Int8Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Int8Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt16OptionArr(l []Int16Option, p Int16OptionPredicate) []Int16Option {
-
-	acc := make([]Int16Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Int16Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt32OptionArr(l []Int32Option, p Int32OptionPredicate) []Int32Option {
-
-	acc := make([]Int32Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Int32Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterInt64OptionArr(l []Int64Option, p Int64OptionPredicate) []Int64Option {
-
-	acc := make([]Int64Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Int64Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUintOptionArr(l []UintOption, p UintOptionPredicate) []UintOption {
-
-	acc := make([]UintOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]UintOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint8OptionArr(l []Uint8Option, p Uint8OptionPredicate) []Uint8Option {
-
-	acc := make([]Uint8Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Uint8Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint16OptionArr(l []Uint16Option, p Uint16OptionPredicate) []Uint16Option {
-
-	acc := make([]Uint16Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Uint16Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint32OptionArr(l []Uint32Option, p Uint32OptionPredicate) []Uint32Option {
-
-	acc := make([]Uint32Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Uint32Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUint64OptionArr(l []Uint64Option, p Uint64OptionPredicate) []Uint64Option {
-
-	acc := make([]Uint64Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Uint64Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterUintptrOptionArr(l []UintptrOption, p UintptrOptionPredicate) []UintptrOption {
-
-	acc := make([]UintptrOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]UintptrOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterByteOptionArr(l []ByteOption, p ByteOptionPredicate) []ByteOption {
-
-	acc := make([]ByteOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]ByteOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterRuneOptionArr(l []RuneOption, p RuneOptionPredicate) []RuneOption {
-
-	acc := make([]RuneOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]RuneOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterFloat32OptionArr(l []Float32Option, p Float32OptionPredicate) []Float32Option {
-
-	acc := make([]Float32Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Float32Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterFloat64OptionArr(l []Float64Option, p Float64OptionPredicate) []Float64Option {
-
-	acc := make([]Float64Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Float64Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterComplex64OptionArr(l []Complex64Option, p Complex64OptionPredicate) []Complex64Option {
-
-	acc := make([]Complex64Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Complex64Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterComplex128OptionArr(l []Complex128Option, p Complex128OptionPredicate) []Complex128Option {
-
-	acc := make([]Complex128Option, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]Complex128Option, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterAnyOptionArr(l []AnyOption, p AnyOptionPredicate) []AnyOption {
-
-	acc := make([]AnyOption, len(l))
-	i := 0
-	for _, e := range l {
-		if p(e) {
-			acc[i] = e
-			i++
-		}
-	}
-	return acc
+  
+  acc := make([]AnyOption, len(l))
+  i := 0
+  for _, e := range l {
+    if p(e) {
+      acc[i] = e
+      i ++
+    }
+  }
+  return acc
 }
 func FilterBoolOption(l BoolOption, p BoolPredicate) BoolOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Bool(*l.value)
-		} else {
-			return NoneBoolOption
-		}
-	} else {
-		return NoneBoolOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Bool(*l.value)
+    } else { return NoneBoolOption }
+  } else { return NoneBoolOption }
 }
 func FilterStringOption(l StringOption, p StringPredicate) StringOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return String(*l.value)
-		} else {
-			return NoneStringOption
-		}
-	} else {
-		return NoneStringOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return String(*l.value)
+    } else { return NoneStringOption }
+  } else { return NoneStringOption }
 }
 func FilterIntOption(l IntOption, p IntPredicate) IntOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int(*l.value)
-		} else {
-			return NoneIntOption
-		}
-	} else {
-		return NoneIntOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int(*l.value)
+    } else { return NoneIntOption }
+  } else { return NoneIntOption }
 }
 func FilterInt8Option(l Int8Option, p Int8Predicate) Int8Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8(*l.value)
-		} else {
-			return NoneInt8Option
-		}
-	} else {
-		return NoneInt8Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8(*l.value)
+    } else { return NoneInt8Option }
+  } else { return NoneInt8Option }
 }
 func FilterInt16Option(l Int16Option, p Int16Predicate) Int16Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16(*l.value)
-		} else {
-			return NoneInt16Option
-		}
-	} else {
-		return NoneInt16Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16(*l.value)
+    } else { return NoneInt16Option }
+  } else { return NoneInt16Option }
 }
 func FilterInt32Option(l Int32Option, p Int32Predicate) Int32Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32(*l.value)
-		} else {
-			return NoneInt32Option
-		}
-	} else {
-		return NoneInt32Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32(*l.value)
+    } else { return NoneInt32Option }
+  } else { return NoneInt32Option }
 }
 func FilterInt64Option(l Int64Option, p Int64Predicate) Int64Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64(*l.value)
-		} else {
-			return NoneInt64Option
-		}
-	} else {
-		return NoneInt64Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64(*l.value)
+    } else { return NoneInt64Option }
+  } else { return NoneInt64Option }
 }
 func FilterUintOption(l UintOption, p UintPredicate) UintOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint(*l.value)
-		} else {
-			return NoneUintOption
-		}
-	} else {
-		return NoneUintOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint(*l.value)
+    } else { return NoneUintOption }
+  } else { return NoneUintOption }
 }
 func FilterUint8Option(l Uint8Option, p Uint8Predicate) Uint8Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8(*l.value)
-		} else {
-			return NoneUint8Option
-		}
-	} else {
-		return NoneUint8Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8(*l.value)
+    } else { return NoneUint8Option }
+  } else { return NoneUint8Option }
 }
 func FilterUint16Option(l Uint16Option, p Uint16Predicate) Uint16Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16(*l.value)
-		} else {
-			return NoneUint16Option
-		}
-	} else {
-		return NoneUint16Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16(*l.value)
+    } else { return NoneUint16Option }
+  } else { return NoneUint16Option }
 }
 func FilterUint32Option(l Uint32Option, p Uint32Predicate) Uint32Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32(*l.value)
-		} else {
-			return NoneUint32Option
-		}
-	} else {
-		return NoneUint32Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32(*l.value)
+    } else { return NoneUint32Option }
+  } else { return NoneUint32Option }
 }
 func FilterUint64Option(l Uint64Option, p Uint64Predicate) Uint64Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64(*l.value)
-		} else {
-			return NoneUint64Option
-		}
-	} else {
-		return NoneUint64Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64(*l.value)
+    } else { return NoneUint64Option }
+  } else { return NoneUint64Option }
 }
 func FilterUintptrOption(l UintptrOption, p UintptrPredicate) UintptrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uintptr(*l.value)
-		} else {
-			return NoneUintptrOption
-		}
-	} else {
-		return NoneUintptrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uintptr(*l.value)
+    } else { return NoneUintptrOption }
+  } else { return NoneUintptrOption }
 }
 func FilterByteOption(l ByteOption, p BytePredicate) ByteOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Byte(*l.value)
-		} else {
-			return NoneByteOption
-		}
-	} else {
-		return NoneByteOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Byte(*l.value)
+    } else { return NoneByteOption }
+  } else { return NoneByteOption }
 }
 func FilterRuneOption(l RuneOption, p RunePredicate) RuneOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Rune(*l.value)
-		} else {
-			return NoneRuneOption
-		}
-	} else {
-		return NoneRuneOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Rune(*l.value)
+    } else { return NoneRuneOption }
+  } else { return NoneRuneOption }
 }
 func FilterFloat32Option(l Float32Option, p Float32Predicate) Float32Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32(*l.value)
-		} else {
-			return NoneFloat32Option
-		}
-	} else {
-		return NoneFloat32Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32(*l.value)
+    } else { return NoneFloat32Option }
+  } else { return NoneFloat32Option }
 }
 func FilterFloat64Option(l Float64Option, p Float64Predicate) Float64Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64(*l.value)
-		} else {
-			return NoneFloat64Option
-		}
-	} else {
-		return NoneFloat64Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64(*l.value)
+    } else { return NoneFloat64Option }
+  } else { return NoneFloat64Option }
 }
 func FilterComplex64Option(l Complex64Option, p Complex64Predicate) Complex64Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64(*l.value)
-		} else {
-			return NoneComplex64Option
-		}
-	} else {
-		return NoneComplex64Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64(*l.value)
+    } else { return NoneComplex64Option }
+  } else { return NoneComplex64Option }
 }
 func FilterComplex128Option(l Complex128Option, p Complex128Predicate) Complex128Option {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128(*l.value)
-		} else {
-			return NoneComplex128Option
-		}
-	} else {
-		return NoneComplex128Option
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128(*l.value)
+    } else { return NoneComplex128Option }
+  } else { return NoneComplex128Option }
 }
 func FilterAnyOption(l AnyOption, p AnyPredicate) AnyOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyOpt(*l.value)
-		} else {
-			return NoneAnyOption
-		}
-	} else {
-		return NoneAnyOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyOpt(*l.value)
+    } else { return NoneAnyOption }
+  } else { return NoneAnyOption }
 }
 func FilterBoolArrOption(l BoolArrOption, p BoolArrPredicate) BoolArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolArrOpt(*l.value)
-		} else {
-			return NoneBoolArrOption
-		}
-	} else {
-		return NoneBoolArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolArrOpt(*l.value)
+    } else { return NoneBoolArrOption }
+  } else { return NoneBoolArrOption }
 }
 func FilterStringArrOption(l StringArrOption, p StringArrPredicate) StringArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringArrOpt(*l.value)
-		} else {
-			return NoneStringArrOption
-		}
-	} else {
-		return NoneStringArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringArrOpt(*l.value)
+    } else { return NoneStringArrOption }
+  } else { return NoneStringArrOption }
 }
 func FilterIntArrOption(l IntArrOption, p IntArrPredicate) IntArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntArrOpt(*l.value)
-		} else {
-			return NoneIntArrOption
-		}
-	} else {
-		return NoneIntArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntArrOpt(*l.value)
+    } else { return NoneIntArrOption }
+  } else { return NoneIntArrOption }
 }
 func FilterInt8ArrOption(l Int8ArrOption, p Int8ArrPredicate) Int8ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8ArrOpt(*l.value)
-		} else {
-			return NoneInt8ArrOption
-		}
-	} else {
-		return NoneInt8ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8ArrOpt(*l.value)
+    } else { return NoneInt8ArrOption }
+  } else { return NoneInt8ArrOption }
 }
 func FilterInt16ArrOption(l Int16ArrOption, p Int16ArrPredicate) Int16ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16ArrOpt(*l.value)
-		} else {
-			return NoneInt16ArrOption
-		}
-	} else {
-		return NoneInt16ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16ArrOpt(*l.value)
+    } else { return NoneInt16ArrOption }
+  } else { return NoneInt16ArrOption }
 }
 func FilterInt32ArrOption(l Int32ArrOption, p Int32ArrPredicate) Int32ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32ArrOpt(*l.value)
-		} else {
-			return NoneInt32ArrOption
-		}
-	} else {
-		return NoneInt32ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32ArrOpt(*l.value)
+    } else { return NoneInt32ArrOption }
+  } else { return NoneInt32ArrOption }
 }
 func FilterInt64ArrOption(l Int64ArrOption, p Int64ArrPredicate) Int64ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64ArrOpt(*l.value)
-		} else {
-			return NoneInt64ArrOption
-		}
-	} else {
-		return NoneInt64ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64ArrOpt(*l.value)
+    } else { return NoneInt64ArrOption }
+  } else { return NoneInt64ArrOption }
 }
 func FilterUintArrOption(l UintArrOption, p UintArrPredicate) UintArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintArrOpt(*l.value)
-		} else {
-			return NoneUintArrOption
-		}
-	} else {
-		return NoneUintArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintArrOpt(*l.value)
+    } else { return NoneUintArrOption }
+  } else { return NoneUintArrOption }
 }
 func FilterUint8ArrOption(l Uint8ArrOption, p Uint8ArrPredicate) Uint8ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8ArrOpt(*l.value)
-		} else {
-			return NoneUint8ArrOption
-		}
-	} else {
-		return NoneUint8ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8ArrOpt(*l.value)
+    } else { return NoneUint8ArrOption }
+  } else { return NoneUint8ArrOption }
 }
 func FilterUint16ArrOption(l Uint16ArrOption, p Uint16ArrPredicate) Uint16ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16ArrOpt(*l.value)
-		} else {
-			return NoneUint16ArrOption
-		}
-	} else {
-		return NoneUint16ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16ArrOpt(*l.value)
+    } else { return NoneUint16ArrOption }
+  } else { return NoneUint16ArrOption }
 }
 func FilterUint32ArrOption(l Uint32ArrOption, p Uint32ArrPredicate) Uint32ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32ArrOpt(*l.value)
-		} else {
-			return NoneUint32ArrOption
-		}
-	} else {
-		return NoneUint32ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32ArrOpt(*l.value)
+    } else { return NoneUint32ArrOption }
+  } else { return NoneUint32ArrOption }
 }
 func FilterUint64ArrOption(l Uint64ArrOption, p Uint64ArrPredicate) Uint64ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64ArrOpt(*l.value)
-		} else {
-			return NoneUint64ArrOption
-		}
-	} else {
-		return NoneUint64ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64ArrOpt(*l.value)
+    } else { return NoneUint64ArrOption }
+  } else { return NoneUint64ArrOption }
 }
 func FilterUintptrArrOption(l UintptrArrOption, p UintptrArrPredicate) UintptrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrArrOpt(*l.value)
-		} else {
-			return NoneUintptrArrOption
-		}
-	} else {
-		return NoneUintptrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrArrOpt(*l.value)
+    } else { return NoneUintptrArrOption }
+  } else { return NoneUintptrArrOption }
 }
 func FilterByteArrOption(l ByteArrOption, p ByteArrPredicate) ByteArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteArrOpt(*l.value)
-		} else {
-			return NoneByteArrOption
-		}
-	} else {
-		return NoneByteArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteArrOpt(*l.value)
+    } else { return NoneByteArrOption }
+  } else { return NoneByteArrOption }
 }
 func FilterRuneArrOption(l RuneArrOption, p RuneArrPredicate) RuneArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneArrOpt(*l.value)
-		} else {
-			return NoneRuneArrOption
-		}
-	} else {
-		return NoneRuneArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneArrOpt(*l.value)
+    } else { return NoneRuneArrOption }
+  } else { return NoneRuneArrOption }
 }
 func FilterFloat32ArrOption(l Float32ArrOption, p Float32ArrPredicate) Float32ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32ArrOpt(*l.value)
-		} else {
-			return NoneFloat32ArrOption
-		}
-	} else {
-		return NoneFloat32ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32ArrOpt(*l.value)
+    } else { return NoneFloat32ArrOption }
+  } else { return NoneFloat32ArrOption }
 }
 func FilterFloat64ArrOption(l Float64ArrOption, p Float64ArrPredicate) Float64ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64ArrOpt(*l.value)
-		} else {
-			return NoneFloat64ArrOption
-		}
-	} else {
-		return NoneFloat64ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64ArrOpt(*l.value)
+    } else { return NoneFloat64ArrOption }
+  } else { return NoneFloat64ArrOption }
 }
 func FilterComplex64ArrOption(l Complex64ArrOption, p Complex64ArrPredicate) Complex64ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64ArrOpt(*l.value)
-		} else {
-			return NoneComplex64ArrOption
-		}
-	} else {
-		return NoneComplex64ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64ArrOpt(*l.value)
+    } else { return NoneComplex64ArrOption }
+  } else { return NoneComplex64ArrOption }
 }
 func FilterComplex128ArrOption(l Complex128ArrOption, p Complex128ArrPredicate) Complex128ArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128ArrOpt(*l.value)
-		} else {
-			return NoneComplex128ArrOption
-		}
-	} else {
-		return NoneComplex128ArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128ArrOpt(*l.value)
+    } else { return NoneComplex128ArrOption }
+  } else { return NoneComplex128ArrOption }
 }
 func FilterAnyArrOption(l AnyArrOption, p AnyArrPredicate) AnyArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyArrOpt(*l.value)
-		} else {
-			return NoneAnyArrOption
-		}
-	} else {
-		return NoneAnyArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyArrOpt(*l.value)
+    } else { return NoneAnyArrOption }
+  } else { return NoneAnyArrOption }
 }
 func FilterBoolArrArrOption(l BoolArrArrOption, p BoolArrArrPredicate) BoolArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolArrArrOpt(*l.value)
-		} else {
-			return NoneBoolArrArrOption
-		}
-	} else {
-		return NoneBoolArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolArrArrOpt(*l.value)
+    } else { return NoneBoolArrArrOption }
+  } else { return NoneBoolArrArrOption }
 }
 func FilterStringArrArrOption(l StringArrArrOption, p StringArrArrPredicate) StringArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringArrArrOpt(*l.value)
-		} else {
-			return NoneStringArrArrOption
-		}
-	} else {
-		return NoneStringArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringArrArrOpt(*l.value)
+    } else { return NoneStringArrArrOption }
+  } else { return NoneStringArrArrOption }
 }
 func FilterIntArrArrOption(l IntArrArrOption, p IntArrArrPredicate) IntArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntArrArrOpt(*l.value)
-		} else {
-			return NoneIntArrArrOption
-		}
-	} else {
-		return NoneIntArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntArrArrOpt(*l.value)
+    } else { return NoneIntArrArrOption }
+  } else { return NoneIntArrArrOption }
 }
 func FilterInt8ArrArrOption(l Int8ArrArrOption, p Int8ArrArrPredicate) Int8ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8ArrArrOpt(*l.value)
-		} else {
-			return NoneInt8ArrArrOption
-		}
-	} else {
-		return NoneInt8ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8ArrArrOpt(*l.value)
+    } else { return NoneInt8ArrArrOption }
+  } else { return NoneInt8ArrArrOption }
 }
 func FilterInt16ArrArrOption(l Int16ArrArrOption, p Int16ArrArrPredicate) Int16ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16ArrArrOpt(*l.value)
-		} else {
-			return NoneInt16ArrArrOption
-		}
-	} else {
-		return NoneInt16ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16ArrArrOpt(*l.value)
+    } else { return NoneInt16ArrArrOption }
+  } else { return NoneInt16ArrArrOption }
 }
 func FilterInt32ArrArrOption(l Int32ArrArrOption, p Int32ArrArrPredicate) Int32ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32ArrArrOpt(*l.value)
-		} else {
-			return NoneInt32ArrArrOption
-		}
-	} else {
-		return NoneInt32ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32ArrArrOpt(*l.value)
+    } else { return NoneInt32ArrArrOption }
+  } else { return NoneInt32ArrArrOption }
 }
 func FilterInt64ArrArrOption(l Int64ArrArrOption, p Int64ArrArrPredicate) Int64ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64ArrArrOpt(*l.value)
-		} else {
-			return NoneInt64ArrArrOption
-		}
-	} else {
-		return NoneInt64ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64ArrArrOpt(*l.value)
+    } else { return NoneInt64ArrArrOption }
+  } else { return NoneInt64ArrArrOption }
 }
 func FilterUintArrArrOption(l UintArrArrOption, p UintArrArrPredicate) UintArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintArrArrOpt(*l.value)
-		} else {
-			return NoneUintArrArrOption
-		}
-	} else {
-		return NoneUintArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintArrArrOpt(*l.value)
+    } else { return NoneUintArrArrOption }
+  } else { return NoneUintArrArrOption }
 }
 func FilterUint8ArrArrOption(l Uint8ArrArrOption, p Uint8ArrArrPredicate) Uint8ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8ArrArrOpt(*l.value)
-		} else {
-			return NoneUint8ArrArrOption
-		}
-	} else {
-		return NoneUint8ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8ArrArrOpt(*l.value)
+    } else { return NoneUint8ArrArrOption }
+  } else { return NoneUint8ArrArrOption }
 }
 func FilterUint16ArrArrOption(l Uint16ArrArrOption, p Uint16ArrArrPredicate) Uint16ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16ArrArrOpt(*l.value)
-		} else {
-			return NoneUint16ArrArrOption
-		}
-	} else {
-		return NoneUint16ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16ArrArrOpt(*l.value)
+    } else { return NoneUint16ArrArrOption }
+  } else { return NoneUint16ArrArrOption }
 }
 func FilterUint32ArrArrOption(l Uint32ArrArrOption, p Uint32ArrArrPredicate) Uint32ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32ArrArrOpt(*l.value)
-		} else {
-			return NoneUint32ArrArrOption
-		}
-	} else {
-		return NoneUint32ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32ArrArrOpt(*l.value)
+    } else { return NoneUint32ArrArrOption }
+  } else { return NoneUint32ArrArrOption }
 }
 func FilterUint64ArrArrOption(l Uint64ArrArrOption, p Uint64ArrArrPredicate) Uint64ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64ArrArrOpt(*l.value)
-		} else {
-			return NoneUint64ArrArrOption
-		}
-	} else {
-		return NoneUint64ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64ArrArrOpt(*l.value)
+    } else { return NoneUint64ArrArrOption }
+  } else { return NoneUint64ArrArrOption }
 }
 func FilterUintptrArrArrOption(l UintptrArrArrOption, p UintptrArrArrPredicate) UintptrArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrArrArrOpt(*l.value)
-		} else {
-			return NoneUintptrArrArrOption
-		}
-	} else {
-		return NoneUintptrArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrArrArrOpt(*l.value)
+    } else { return NoneUintptrArrArrOption }
+  } else { return NoneUintptrArrArrOption }
 }
 func FilterByteArrArrOption(l ByteArrArrOption, p ByteArrArrPredicate) ByteArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteArrArrOpt(*l.value)
-		} else {
-			return NoneByteArrArrOption
-		}
-	} else {
-		return NoneByteArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteArrArrOpt(*l.value)
+    } else { return NoneByteArrArrOption }
+  } else { return NoneByteArrArrOption }
 }
 func FilterRuneArrArrOption(l RuneArrArrOption, p RuneArrArrPredicate) RuneArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneArrArrOpt(*l.value)
-		} else {
-			return NoneRuneArrArrOption
-		}
-	} else {
-		return NoneRuneArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneArrArrOpt(*l.value)
+    } else { return NoneRuneArrArrOption }
+  } else { return NoneRuneArrArrOption }
 }
 func FilterFloat32ArrArrOption(l Float32ArrArrOption, p Float32ArrArrPredicate) Float32ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32ArrArrOpt(*l.value)
-		} else {
-			return NoneFloat32ArrArrOption
-		}
-	} else {
-		return NoneFloat32ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32ArrArrOpt(*l.value)
+    } else { return NoneFloat32ArrArrOption }
+  } else { return NoneFloat32ArrArrOption }
 }
 func FilterFloat64ArrArrOption(l Float64ArrArrOption, p Float64ArrArrPredicate) Float64ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64ArrArrOpt(*l.value)
-		} else {
-			return NoneFloat64ArrArrOption
-		}
-	} else {
-		return NoneFloat64ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64ArrArrOpt(*l.value)
+    } else { return NoneFloat64ArrArrOption }
+  } else { return NoneFloat64ArrArrOption }
 }
 func FilterComplex64ArrArrOption(l Complex64ArrArrOption, p Complex64ArrArrPredicate) Complex64ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64ArrArrOpt(*l.value)
-		} else {
-			return NoneComplex64ArrArrOption
-		}
-	} else {
-		return NoneComplex64ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64ArrArrOpt(*l.value)
+    } else { return NoneComplex64ArrArrOption }
+  } else { return NoneComplex64ArrArrOption }
 }
 func FilterComplex128ArrArrOption(l Complex128ArrArrOption, p Complex128ArrArrPredicate) Complex128ArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128ArrArrOpt(*l.value)
-		} else {
-			return NoneComplex128ArrArrOption
-		}
-	} else {
-		return NoneComplex128ArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128ArrArrOpt(*l.value)
+    } else { return NoneComplex128ArrArrOption }
+  } else { return NoneComplex128ArrArrOption }
 }
 func FilterAnyArrArrOption(l AnyArrArrOption, p AnyArrArrPredicate) AnyArrArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyArrArrOpt(*l.value)
-		} else {
-			return NoneAnyArrArrOption
-		}
-	} else {
-		return NoneAnyArrArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyArrArrOpt(*l.value)
+    } else { return NoneAnyArrArrOption }
+  } else { return NoneAnyArrArrOption }
 }
 func FilterBoolOptionArrOption(l BoolOptionArrOption, p BoolOptionArrPredicate) BoolOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolOptionArrOpt(*l.value)
-		} else {
-			return NoneBoolOptionArrOption
-		}
-	} else {
-		return NoneBoolOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolOptionArrOpt(*l.value)
+    } else { return NoneBoolOptionArrOption }
+  } else { return NoneBoolOptionArrOption }
 }
 func FilterStringOptionArrOption(l StringOptionArrOption, p StringOptionArrPredicate) StringOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringOptionArrOpt(*l.value)
-		} else {
-			return NoneStringOptionArrOption
-		}
-	} else {
-		return NoneStringOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringOptionArrOpt(*l.value)
+    } else { return NoneStringOptionArrOption }
+  } else { return NoneStringOptionArrOption }
 }
 func FilterIntOptionArrOption(l IntOptionArrOption, p IntOptionArrPredicate) IntOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntOptionArrOpt(*l.value)
-		} else {
-			return NoneIntOptionArrOption
-		}
-	} else {
-		return NoneIntOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntOptionArrOpt(*l.value)
+    } else { return NoneIntOptionArrOption }
+  } else { return NoneIntOptionArrOption }
 }
 func FilterInt8OptionArrOption(l Int8OptionArrOption, p Int8OptionArrPredicate) Int8OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8OptionArrOpt(*l.value)
-		} else {
-			return NoneInt8OptionArrOption
-		}
-	} else {
-		return NoneInt8OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8OptionArrOpt(*l.value)
+    } else { return NoneInt8OptionArrOption }
+  } else { return NoneInt8OptionArrOption }
 }
 func FilterInt16OptionArrOption(l Int16OptionArrOption, p Int16OptionArrPredicate) Int16OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16OptionArrOpt(*l.value)
-		} else {
-			return NoneInt16OptionArrOption
-		}
-	} else {
-		return NoneInt16OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16OptionArrOpt(*l.value)
+    } else { return NoneInt16OptionArrOption }
+  } else { return NoneInt16OptionArrOption }
 }
 func FilterInt32OptionArrOption(l Int32OptionArrOption, p Int32OptionArrPredicate) Int32OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32OptionArrOpt(*l.value)
-		} else {
-			return NoneInt32OptionArrOption
-		}
-	} else {
-		return NoneInt32OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32OptionArrOpt(*l.value)
+    } else { return NoneInt32OptionArrOption }
+  } else { return NoneInt32OptionArrOption }
 }
 func FilterInt64OptionArrOption(l Int64OptionArrOption, p Int64OptionArrPredicate) Int64OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64OptionArrOpt(*l.value)
-		} else {
-			return NoneInt64OptionArrOption
-		}
-	} else {
-		return NoneInt64OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64OptionArrOpt(*l.value)
+    } else { return NoneInt64OptionArrOption }
+  } else { return NoneInt64OptionArrOption }
 }
 func FilterUintOptionArrOption(l UintOptionArrOption, p UintOptionArrPredicate) UintOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintOptionArrOpt(*l.value)
-		} else {
-			return NoneUintOptionArrOption
-		}
-	} else {
-		return NoneUintOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintOptionArrOpt(*l.value)
+    } else { return NoneUintOptionArrOption }
+  } else { return NoneUintOptionArrOption }
 }
 func FilterUint8OptionArrOption(l Uint8OptionArrOption, p Uint8OptionArrPredicate) Uint8OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8OptionArrOpt(*l.value)
-		} else {
-			return NoneUint8OptionArrOption
-		}
-	} else {
-		return NoneUint8OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8OptionArrOpt(*l.value)
+    } else { return NoneUint8OptionArrOption }
+  } else { return NoneUint8OptionArrOption }
 }
 func FilterUint16OptionArrOption(l Uint16OptionArrOption, p Uint16OptionArrPredicate) Uint16OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16OptionArrOpt(*l.value)
-		} else {
-			return NoneUint16OptionArrOption
-		}
-	} else {
-		return NoneUint16OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16OptionArrOpt(*l.value)
+    } else { return NoneUint16OptionArrOption }
+  } else { return NoneUint16OptionArrOption }
 }
 func FilterUint32OptionArrOption(l Uint32OptionArrOption, p Uint32OptionArrPredicate) Uint32OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32OptionArrOpt(*l.value)
-		} else {
-			return NoneUint32OptionArrOption
-		}
-	} else {
-		return NoneUint32OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32OptionArrOpt(*l.value)
+    } else { return NoneUint32OptionArrOption }
+  } else { return NoneUint32OptionArrOption }
 }
 func FilterUint64OptionArrOption(l Uint64OptionArrOption, p Uint64OptionArrPredicate) Uint64OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64OptionArrOpt(*l.value)
-		} else {
-			return NoneUint64OptionArrOption
-		}
-	} else {
-		return NoneUint64OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64OptionArrOpt(*l.value)
+    } else { return NoneUint64OptionArrOption }
+  } else { return NoneUint64OptionArrOption }
 }
 func FilterUintptrOptionArrOption(l UintptrOptionArrOption, p UintptrOptionArrPredicate) UintptrOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrOptionArrOpt(*l.value)
-		} else {
-			return NoneUintptrOptionArrOption
-		}
-	} else {
-		return NoneUintptrOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrOptionArrOpt(*l.value)
+    } else { return NoneUintptrOptionArrOption }
+  } else { return NoneUintptrOptionArrOption }
 }
 func FilterByteOptionArrOption(l ByteOptionArrOption, p ByteOptionArrPredicate) ByteOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteOptionArrOpt(*l.value)
-		} else {
-			return NoneByteOptionArrOption
-		}
-	} else {
-		return NoneByteOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteOptionArrOpt(*l.value)
+    } else { return NoneByteOptionArrOption }
+  } else { return NoneByteOptionArrOption }
 }
 func FilterRuneOptionArrOption(l RuneOptionArrOption, p RuneOptionArrPredicate) RuneOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneOptionArrOpt(*l.value)
-		} else {
-			return NoneRuneOptionArrOption
-		}
-	} else {
-		return NoneRuneOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneOptionArrOpt(*l.value)
+    } else { return NoneRuneOptionArrOption }
+  } else { return NoneRuneOptionArrOption }
 }
 func FilterFloat32OptionArrOption(l Float32OptionArrOption, p Float32OptionArrPredicate) Float32OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32OptionArrOpt(*l.value)
-		} else {
-			return NoneFloat32OptionArrOption
-		}
-	} else {
-		return NoneFloat32OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32OptionArrOpt(*l.value)
+    } else { return NoneFloat32OptionArrOption }
+  } else { return NoneFloat32OptionArrOption }
 }
 func FilterFloat64OptionArrOption(l Float64OptionArrOption, p Float64OptionArrPredicate) Float64OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64OptionArrOpt(*l.value)
-		} else {
-			return NoneFloat64OptionArrOption
-		}
-	} else {
-		return NoneFloat64OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64OptionArrOpt(*l.value)
+    } else { return NoneFloat64OptionArrOption }
+  } else { return NoneFloat64OptionArrOption }
 }
 func FilterComplex64OptionArrOption(l Complex64OptionArrOption, p Complex64OptionArrPredicate) Complex64OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64OptionArrOpt(*l.value)
-		} else {
-			return NoneComplex64OptionArrOption
-		}
-	} else {
-		return NoneComplex64OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64OptionArrOpt(*l.value)
+    } else { return NoneComplex64OptionArrOption }
+  } else { return NoneComplex64OptionArrOption }
 }
 func FilterComplex128OptionArrOption(l Complex128OptionArrOption, p Complex128OptionArrPredicate) Complex128OptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128OptionArrOpt(*l.value)
-		} else {
-			return NoneComplex128OptionArrOption
-		}
-	} else {
-		return NoneComplex128OptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128OptionArrOpt(*l.value)
+    } else { return NoneComplex128OptionArrOption }
+  } else { return NoneComplex128OptionArrOption }
 }
 func FilterAnyOptionArrOption(l AnyOptionArrOption, p AnyOptionArrPredicate) AnyOptionArrOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyOptionArrOpt(*l.value)
-		} else {
-			return NoneAnyOptionArrOption
-		}
-	} else {
-		return NoneAnyOptionArrOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyOptionArrOpt(*l.value)
+    } else { return NoneAnyOptionArrOption }
+  } else { return NoneAnyOptionArrOption }
 }
 func FilterBoolListOption(l BoolListOption, p BoolListPredicate) BoolListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolListOpt(*l.value)
-		} else {
-			return NoneBoolListOption
-		}
-	} else {
-		return NoneBoolListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolListOpt(*l.value)
+    } else { return NoneBoolListOption }
+  } else { return NoneBoolListOption }
 }
 func FilterStringListOption(l StringListOption, p StringListPredicate) StringListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringListOpt(*l.value)
-		} else {
-			return NoneStringListOption
-		}
-	} else {
-		return NoneStringListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringListOpt(*l.value)
+    } else { return NoneStringListOption }
+  } else { return NoneStringListOption }
 }
 func FilterIntListOption(l IntListOption, p IntListPredicate) IntListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntListOpt(*l.value)
-		} else {
-			return NoneIntListOption
-		}
-	} else {
-		return NoneIntListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntListOpt(*l.value)
+    } else { return NoneIntListOption }
+  } else { return NoneIntListOption }
 }
 func FilterInt8ListOption(l Int8ListOption, p Int8ListPredicate) Int8ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8ListOpt(*l.value)
-		} else {
-			return NoneInt8ListOption
-		}
-	} else {
-		return NoneInt8ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8ListOpt(*l.value)
+    } else { return NoneInt8ListOption }
+  } else { return NoneInt8ListOption }
 }
 func FilterInt16ListOption(l Int16ListOption, p Int16ListPredicate) Int16ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16ListOpt(*l.value)
-		} else {
-			return NoneInt16ListOption
-		}
-	} else {
-		return NoneInt16ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16ListOpt(*l.value)
+    } else { return NoneInt16ListOption }
+  } else { return NoneInt16ListOption }
 }
 func FilterInt32ListOption(l Int32ListOption, p Int32ListPredicate) Int32ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32ListOpt(*l.value)
-		} else {
-			return NoneInt32ListOption
-		}
-	} else {
-		return NoneInt32ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32ListOpt(*l.value)
+    } else { return NoneInt32ListOption }
+  } else { return NoneInt32ListOption }
 }
 func FilterInt64ListOption(l Int64ListOption, p Int64ListPredicate) Int64ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64ListOpt(*l.value)
-		} else {
-			return NoneInt64ListOption
-		}
-	} else {
-		return NoneInt64ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64ListOpt(*l.value)
+    } else { return NoneInt64ListOption }
+  } else { return NoneInt64ListOption }
 }
 func FilterUintListOption(l UintListOption, p UintListPredicate) UintListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintListOpt(*l.value)
-		} else {
-			return NoneUintListOption
-		}
-	} else {
-		return NoneUintListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintListOpt(*l.value)
+    } else { return NoneUintListOption }
+  } else { return NoneUintListOption }
 }
 func FilterUint8ListOption(l Uint8ListOption, p Uint8ListPredicate) Uint8ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8ListOpt(*l.value)
-		} else {
-			return NoneUint8ListOption
-		}
-	} else {
-		return NoneUint8ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8ListOpt(*l.value)
+    } else { return NoneUint8ListOption }
+  } else { return NoneUint8ListOption }
 }
 func FilterUint16ListOption(l Uint16ListOption, p Uint16ListPredicate) Uint16ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16ListOpt(*l.value)
-		} else {
-			return NoneUint16ListOption
-		}
-	} else {
-		return NoneUint16ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16ListOpt(*l.value)
+    } else { return NoneUint16ListOption }
+  } else { return NoneUint16ListOption }
 }
 func FilterUint32ListOption(l Uint32ListOption, p Uint32ListPredicate) Uint32ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32ListOpt(*l.value)
-		} else {
-			return NoneUint32ListOption
-		}
-	} else {
-		return NoneUint32ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32ListOpt(*l.value)
+    } else { return NoneUint32ListOption }
+  } else { return NoneUint32ListOption }
 }
 func FilterUint64ListOption(l Uint64ListOption, p Uint64ListPredicate) Uint64ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64ListOpt(*l.value)
-		} else {
-			return NoneUint64ListOption
-		}
-	} else {
-		return NoneUint64ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64ListOpt(*l.value)
+    } else { return NoneUint64ListOption }
+  } else { return NoneUint64ListOption }
 }
 func FilterUintptrListOption(l UintptrListOption, p UintptrListPredicate) UintptrListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrListOpt(*l.value)
-		} else {
-			return NoneUintptrListOption
-		}
-	} else {
-		return NoneUintptrListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrListOpt(*l.value)
+    } else { return NoneUintptrListOption }
+  } else { return NoneUintptrListOption }
 }
 func FilterByteListOption(l ByteListOption, p ByteListPredicate) ByteListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteListOpt(*l.value)
-		} else {
-			return NoneByteListOption
-		}
-	} else {
-		return NoneByteListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteListOpt(*l.value)
+    } else { return NoneByteListOption }
+  } else { return NoneByteListOption }
 }
 func FilterRuneListOption(l RuneListOption, p RuneListPredicate) RuneListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneListOpt(*l.value)
-		} else {
-			return NoneRuneListOption
-		}
-	} else {
-		return NoneRuneListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneListOpt(*l.value)
+    } else { return NoneRuneListOption }
+  } else { return NoneRuneListOption }
 }
 func FilterFloat32ListOption(l Float32ListOption, p Float32ListPredicate) Float32ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32ListOpt(*l.value)
-		} else {
-			return NoneFloat32ListOption
-		}
-	} else {
-		return NoneFloat32ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32ListOpt(*l.value)
+    } else { return NoneFloat32ListOption }
+  } else { return NoneFloat32ListOption }
 }
 func FilterFloat64ListOption(l Float64ListOption, p Float64ListPredicate) Float64ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64ListOpt(*l.value)
-		} else {
-			return NoneFloat64ListOption
-		}
-	} else {
-		return NoneFloat64ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64ListOpt(*l.value)
+    } else { return NoneFloat64ListOption }
+  } else { return NoneFloat64ListOption }
 }
 func FilterComplex64ListOption(l Complex64ListOption, p Complex64ListPredicate) Complex64ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64ListOpt(*l.value)
-		} else {
-			return NoneComplex64ListOption
-		}
-	} else {
-		return NoneComplex64ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64ListOpt(*l.value)
+    } else { return NoneComplex64ListOption }
+  } else { return NoneComplex64ListOption }
 }
 func FilterComplex128ListOption(l Complex128ListOption, p Complex128ListPredicate) Complex128ListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128ListOpt(*l.value)
-		} else {
-			return NoneComplex128ListOption
-		}
-	} else {
-		return NoneComplex128ListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128ListOpt(*l.value)
+    } else { return NoneComplex128ListOption }
+  } else { return NoneComplex128ListOption }
 }
 func FilterAnyListOption(l AnyListOption, p AnyListPredicate) AnyListOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyListOpt(*l.value)
-		} else {
-			return NoneAnyListOption
-		}
-	} else {
-		return NoneAnyListOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyListOpt(*l.value)
+    } else { return NoneAnyListOption }
+  } else { return NoneAnyListOption }
 }
 func FilterBoolOptionOption(l BoolOptionOption, p BoolOptionPredicate) BoolOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolBool(*l.value)
-		} else {
-			return NoneBoolOptionOption
-		}
-	} else {
-		return NoneBoolOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolBool(*l.value)
+    } else { return NoneBoolOptionOption }
+  } else { return NoneBoolOptionOption }
 }
 func FilterStringOptionOption(l StringOptionOption, p StringOptionPredicate) StringOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringString(*l.value)
-		} else {
-			return NoneStringOptionOption
-		}
-	} else {
-		return NoneStringOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringString(*l.value)
+    } else { return NoneStringOptionOption }
+  } else { return NoneStringOptionOption }
 }
 func FilterIntOptionOption(l IntOptionOption, p IntOptionPredicate) IntOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntInt(*l.value)
-		} else {
-			return NoneIntOptionOption
-		}
-	} else {
-		return NoneIntOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntInt(*l.value)
+    } else { return NoneIntOptionOption }
+  } else { return NoneIntOptionOption }
 }
 func FilterInt8OptionOption(l Int8OptionOption, p Int8OptionPredicate) Int8OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8Int8(*l.value)
-		} else {
-			return NoneInt8OptionOption
-		}
-	} else {
-		return NoneInt8OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8Int8(*l.value)
+    } else { return NoneInt8OptionOption }
+  } else { return NoneInt8OptionOption }
 }
 func FilterInt16OptionOption(l Int16OptionOption, p Int16OptionPredicate) Int16OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16Int16(*l.value)
-		} else {
-			return NoneInt16OptionOption
-		}
-	} else {
-		return NoneInt16OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16Int16(*l.value)
+    } else { return NoneInt16OptionOption }
+  } else { return NoneInt16OptionOption }
 }
 func FilterInt32OptionOption(l Int32OptionOption, p Int32OptionPredicate) Int32OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32Int32(*l.value)
-		} else {
-			return NoneInt32OptionOption
-		}
-	} else {
-		return NoneInt32OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32Int32(*l.value)
+    } else { return NoneInt32OptionOption }
+  } else { return NoneInt32OptionOption }
 }
 func FilterInt64OptionOption(l Int64OptionOption, p Int64OptionPredicate) Int64OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64Int64(*l.value)
-		} else {
-			return NoneInt64OptionOption
-		}
-	} else {
-		return NoneInt64OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64Int64(*l.value)
+    } else { return NoneInt64OptionOption }
+  } else { return NoneInt64OptionOption }
 }
 func FilterUintOptionOption(l UintOptionOption, p UintOptionPredicate) UintOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintUint(*l.value)
-		} else {
-			return NoneUintOptionOption
-		}
-	} else {
-		return NoneUintOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintUint(*l.value)
+    } else { return NoneUintOptionOption }
+  } else { return NoneUintOptionOption }
 }
 func FilterUint8OptionOption(l Uint8OptionOption, p Uint8OptionPredicate) Uint8OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8Uint8(*l.value)
-		} else {
-			return NoneUint8OptionOption
-		}
-	} else {
-		return NoneUint8OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8Uint8(*l.value)
+    } else { return NoneUint8OptionOption }
+  } else { return NoneUint8OptionOption }
 }
 func FilterUint16OptionOption(l Uint16OptionOption, p Uint16OptionPredicate) Uint16OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16Uint16(*l.value)
-		} else {
-			return NoneUint16OptionOption
-		}
-	} else {
-		return NoneUint16OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16Uint16(*l.value)
+    } else { return NoneUint16OptionOption }
+  } else { return NoneUint16OptionOption }
 }
 func FilterUint32OptionOption(l Uint32OptionOption, p Uint32OptionPredicate) Uint32OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32Uint32(*l.value)
-		} else {
-			return NoneUint32OptionOption
-		}
-	} else {
-		return NoneUint32OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32Uint32(*l.value)
+    } else { return NoneUint32OptionOption }
+  } else { return NoneUint32OptionOption }
 }
 func FilterUint64OptionOption(l Uint64OptionOption, p Uint64OptionPredicate) Uint64OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64Uint64(*l.value)
-		} else {
-			return NoneUint64OptionOption
-		}
-	} else {
-		return NoneUint64OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64Uint64(*l.value)
+    } else { return NoneUint64OptionOption }
+  } else { return NoneUint64OptionOption }
 }
 func FilterUintptrOptionOption(l UintptrOptionOption, p UintptrOptionPredicate) UintptrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrUintptr(*l.value)
-		} else {
-			return NoneUintptrOptionOption
-		}
-	} else {
-		return NoneUintptrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrUintptr(*l.value)
+    } else { return NoneUintptrOptionOption }
+  } else { return NoneUintptrOptionOption }
 }
 func FilterByteOptionOption(l ByteOptionOption, p ByteOptionPredicate) ByteOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteByte(*l.value)
-		} else {
-			return NoneByteOptionOption
-		}
-	} else {
-		return NoneByteOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteByte(*l.value)
+    } else { return NoneByteOptionOption }
+  } else { return NoneByteOptionOption }
 }
 func FilterRuneOptionOption(l RuneOptionOption, p RuneOptionPredicate) RuneOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneRune(*l.value)
-		} else {
-			return NoneRuneOptionOption
-		}
-	} else {
-		return NoneRuneOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneRune(*l.value)
+    } else { return NoneRuneOptionOption }
+  } else { return NoneRuneOptionOption }
 }
 func FilterFloat32OptionOption(l Float32OptionOption, p Float32OptionPredicate) Float32OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32Float32(*l.value)
-		} else {
-			return NoneFloat32OptionOption
-		}
-	} else {
-		return NoneFloat32OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32Float32(*l.value)
+    } else { return NoneFloat32OptionOption }
+  } else { return NoneFloat32OptionOption }
 }
 func FilterFloat64OptionOption(l Float64OptionOption, p Float64OptionPredicate) Float64OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64Float64(*l.value)
-		} else {
-			return NoneFloat64OptionOption
-		}
-	} else {
-		return NoneFloat64OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64Float64(*l.value)
+    } else { return NoneFloat64OptionOption }
+  } else { return NoneFloat64OptionOption }
 }
 func FilterComplex64OptionOption(l Complex64OptionOption, p Complex64OptionPredicate) Complex64OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64Complex64(*l.value)
-		} else {
-			return NoneComplex64OptionOption
-		}
-	} else {
-		return NoneComplex64OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64Complex64(*l.value)
+    } else { return NoneComplex64OptionOption }
+  } else { return NoneComplex64OptionOption }
 }
 func FilterComplex128OptionOption(l Complex128OptionOption, p Complex128OptionPredicate) Complex128OptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128Complex128(*l.value)
-		} else {
-			return NoneComplex128OptionOption
-		}
-	} else {
-		return NoneComplex128OptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128Complex128(*l.value)
+    } else { return NoneComplex128OptionOption }
+  } else { return NoneComplex128OptionOption }
 }
 func FilterAnyOptionOption(l AnyOptionOption, p AnyOptionPredicate) AnyOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyOptAny(*l.value)
-		} else {
-			return NoneAnyOptionOption
-		}
-	} else {
-		return NoneAnyOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyOptAny(*l.value)
+    } else { return NoneAnyOptionOption }
+  } else { return NoneAnyOptionOption }
 }
 func FilterBoolArrOptionOption(l BoolArrOptionOption, p BoolArrOptionPredicate) BoolArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolArrOptBool(*l.value)
-		} else {
-			return NoneBoolArrOptionOption
-		}
-	} else {
-		return NoneBoolArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolArrOptBool(*l.value)
+    } else { return NoneBoolArrOptionOption }
+  } else { return NoneBoolArrOptionOption }
 }
 func FilterStringArrOptionOption(l StringArrOptionOption, p StringArrOptionPredicate) StringArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringArrOptString(*l.value)
-		} else {
-			return NoneStringArrOptionOption
-		}
-	} else {
-		return NoneStringArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringArrOptString(*l.value)
+    } else { return NoneStringArrOptionOption }
+  } else { return NoneStringArrOptionOption }
 }
 func FilterIntArrOptionOption(l IntArrOptionOption, p IntArrOptionPredicate) IntArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntArrOptInt(*l.value)
-		} else {
-			return NoneIntArrOptionOption
-		}
-	} else {
-		return NoneIntArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntArrOptInt(*l.value)
+    } else { return NoneIntArrOptionOption }
+  } else { return NoneIntArrOptionOption }
 }
 func FilterInt8ArrOptionOption(l Int8ArrOptionOption, p Int8ArrOptionPredicate) Int8ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8ArrOptInt8(*l.value)
-		} else {
-			return NoneInt8ArrOptionOption
-		}
-	} else {
-		return NoneInt8ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8ArrOptInt8(*l.value)
+    } else { return NoneInt8ArrOptionOption }
+  } else { return NoneInt8ArrOptionOption }
 }
 func FilterInt16ArrOptionOption(l Int16ArrOptionOption, p Int16ArrOptionPredicate) Int16ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16ArrOptInt16(*l.value)
-		} else {
-			return NoneInt16ArrOptionOption
-		}
-	} else {
-		return NoneInt16ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16ArrOptInt16(*l.value)
+    } else { return NoneInt16ArrOptionOption }
+  } else { return NoneInt16ArrOptionOption }
 }
 func FilterInt32ArrOptionOption(l Int32ArrOptionOption, p Int32ArrOptionPredicate) Int32ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32ArrOptInt32(*l.value)
-		} else {
-			return NoneInt32ArrOptionOption
-		}
-	} else {
-		return NoneInt32ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32ArrOptInt32(*l.value)
+    } else { return NoneInt32ArrOptionOption }
+  } else { return NoneInt32ArrOptionOption }
 }
 func FilterInt64ArrOptionOption(l Int64ArrOptionOption, p Int64ArrOptionPredicate) Int64ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64ArrOptInt64(*l.value)
-		} else {
-			return NoneInt64ArrOptionOption
-		}
-	} else {
-		return NoneInt64ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64ArrOptInt64(*l.value)
+    } else { return NoneInt64ArrOptionOption }
+  } else { return NoneInt64ArrOptionOption }
 }
 func FilterUintArrOptionOption(l UintArrOptionOption, p UintArrOptionPredicate) UintArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintArrOptUint(*l.value)
-		} else {
-			return NoneUintArrOptionOption
-		}
-	} else {
-		return NoneUintArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintArrOptUint(*l.value)
+    } else { return NoneUintArrOptionOption }
+  } else { return NoneUintArrOptionOption }
 }
 func FilterUint8ArrOptionOption(l Uint8ArrOptionOption, p Uint8ArrOptionPredicate) Uint8ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8ArrOptUint8(*l.value)
-		} else {
-			return NoneUint8ArrOptionOption
-		}
-	} else {
-		return NoneUint8ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8ArrOptUint8(*l.value)
+    } else { return NoneUint8ArrOptionOption }
+  } else { return NoneUint8ArrOptionOption }
 }
 func FilterUint16ArrOptionOption(l Uint16ArrOptionOption, p Uint16ArrOptionPredicate) Uint16ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16ArrOptUint16(*l.value)
-		} else {
-			return NoneUint16ArrOptionOption
-		}
-	} else {
-		return NoneUint16ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16ArrOptUint16(*l.value)
+    } else { return NoneUint16ArrOptionOption }
+  } else { return NoneUint16ArrOptionOption }
 }
 func FilterUint32ArrOptionOption(l Uint32ArrOptionOption, p Uint32ArrOptionPredicate) Uint32ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32ArrOptUint32(*l.value)
-		} else {
-			return NoneUint32ArrOptionOption
-		}
-	} else {
-		return NoneUint32ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32ArrOptUint32(*l.value)
+    } else { return NoneUint32ArrOptionOption }
+  } else { return NoneUint32ArrOptionOption }
 }
 func FilterUint64ArrOptionOption(l Uint64ArrOptionOption, p Uint64ArrOptionPredicate) Uint64ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64ArrOptUint64(*l.value)
-		} else {
-			return NoneUint64ArrOptionOption
-		}
-	} else {
-		return NoneUint64ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64ArrOptUint64(*l.value)
+    } else { return NoneUint64ArrOptionOption }
+  } else { return NoneUint64ArrOptionOption }
 }
 func FilterUintptrArrOptionOption(l UintptrArrOptionOption, p UintptrArrOptionPredicate) UintptrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrArrOptUintptr(*l.value)
-		} else {
-			return NoneUintptrArrOptionOption
-		}
-	} else {
-		return NoneUintptrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrArrOptUintptr(*l.value)
+    } else { return NoneUintptrArrOptionOption }
+  } else { return NoneUintptrArrOptionOption }
 }
 func FilterByteArrOptionOption(l ByteArrOptionOption, p ByteArrOptionPredicate) ByteArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteArrOptByte(*l.value)
-		} else {
-			return NoneByteArrOptionOption
-		}
-	} else {
-		return NoneByteArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteArrOptByte(*l.value)
+    } else { return NoneByteArrOptionOption }
+  } else { return NoneByteArrOptionOption }
 }
 func FilterRuneArrOptionOption(l RuneArrOptionOption, p RuneArrOptionPredicate) RuneArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneArrOptRune(*l.value)
-		} else {
-			return NoneRuneArrOptionOption
-		}
-	} else {
-		return NoneRuneArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneArrOptRune(*l.value)
+    } else { return NoneRuneArrOptionOption }
+  } else { return NoneRuneArrOptionOption }
 }
 func FilterFloat32ArrOptionOption(l Float32ArrOptionOption, p Float32ArrOptionPredicate) Float32ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32ArrOptFloat32(*l.value)
-		} else {
-			return NoneFloat32ArrOptionOption
-		}
-	} else {
-		return NoneFloat32ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32ArrOptFloat32(*l.value)
+    } else { return NoneFloat32ArrOptionOption }
+  } else { return NoneFloat32ArrOptionOption }
 }
 func FilterFloat64ArrOptionOption(l Float64ArrOptionOption, p Float64ArrOptionPredicate) Float64ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64ArrOptFloat64(*l.value)
-		} else {
-			return NoneFloat64ArrOptionOption
-		}
-	} else {
-		return NoneFloat64ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64ArrOptFloat64(*l.value)
+    } else { return NoneFloat64ArrOptionOption }
+  } else { return NoneFloat64ArrOptionOption }
 }
 func FilterComplex64ArrOptionOption(l Complex64ArrOptionOption, p Complex64ArrOptionPredicate) Complex64ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64ArrOptComplex64(*l.value)
-		} else {
-			return NoneComplex64ArrOptionOption
-		}
-	} else {
-		return NoneComplex64ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64ArrOptComplex64(*l.value)
+    } else { return NoneComplex64ArrOptionOption }
+  } else { return NoneComplex64ArrOptionOption }
 }
 func FilterComplex128ArrOptionOption(l Complex128ArrOptionOption, p Complex128ArrOptionPredicate) Complex128ArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128ArrOptComplex128(*l.value)
-		} else {
-			return NoneComplex128ArrOptionOption
-		}
-	} else {
-		return NoneComplex128ArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128ArrOptComplex128(*l.value)
+    } else { return NoneComplex128ArrOptionOption }
+  } else { return NoneComplex128ArrOptionOption }
 }
 func FilterAnyArrOptionOption(l AnyArrOptionOption, p AnyArrOptionPredicate) AnyArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyArrOptAny(*l.value)
-		} else {
-			return NoneAnyArrOptionOption
-		}
-	} else {
-		return NoneAnyArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyArrOptAny(*l.value)
+    } else { return NoneAnyArrOptionOption }
+  } else { return NoneAnyArrOptionOption }
 }
 func FilterBoolArrArrOptionOption(l BoolArrArrOptionOption, p BoolArrArrOptionPredicate) BoolArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolArrArrOptBool(*l.value)
-		} else {
-			return NoneBoolArrArrOptionOption
-		}
-	} else {
-		return NoneBoolArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolArrArrOptBool(*l.value)
+    } else { return NoneBoolArrArrOptionOption }
+  } else { return NoneBoolArrArrOptionOption }
 }
 func FilterStringArrArrOptionOption(l StringArrArrOptionOption, p StringArrArrOptionPredicate) StringArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringArrArrOptString(*l.value)
-		} else {
-			return NoneStringArrArrOptionOption
-		}
-	} else {
-		return NoneStringArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringArrArrOptString(*l.value)
+    } else { return NoneStringArrArrOptionOption }
+  } else { return NoneStringArrArrOptionOption }
 }
 func FilterIntArrArrOptionOption(l IntArrArrOptionOption, p IntArrArrOptionPredicate) IntArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntArrArrOptInt(*l.value)
-		} else {
-			return NoneIntArrArrOptionOption
-		}
-	} else {
-		return NoneIntArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntArrArrOptInt(*l.value)
+    } else { return NoneIntArrArrOptionOption }
+  } else { return NoneIntArrArrOptionOption }
 }
 func FilterInt8ArrArrOptionOption(l Int8ArrArrOptionOption, p Int8ArrArrOptionPredicate) Int8ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8ArrArrOptInt8(*l.value)
-		} else {
-			return NoneInt8ArrArrOptionOption
-		}
-	} else {
-		return NoneInt8ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8ArrArrOptInt8(*l.value)
+    } else { return NoneInt8ArrArrOptionOption }
+  } else { return NoneInt8ArrArrOptionOption }
 }
 func FilterInt16ArrArrOptionOption(l Int16ArrArrOptionOption, p Int16ArrArrOptionPredicate) Int16ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16ArrArrOptInt16(*l.value)
-		} else {
-			return NoneInt16ArrArrOptionOption
-		}
-	} else {
-		return NoneInt16ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16ArrArrOptInt16(*l.value)
+    } else { return NoneInt16ArrArrOptionOption }
+  } else { return NoneInt16ArrArrOptionOption }
 }
 func FilterInt32ArrArrOptionOption(l Int32ArrArrOptionOption, p Int32ArrArrOptionPredicate) Int32ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32ArrArrOptInt32(*l.value)
-		} else {
-			return NoneInt32ArrArrOptionOption
-		}
-	} else {
-		return NoneInt32ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32ArrArrOptInt32(*l.value)
+    } else { return NoneInt32ArrArrOptionOption }
+  } else { return NoneInt32ArrArrOptionOption }
 }
 func FilterInt64ArrArrOptionOption(l Int64ArrArrOptionOption, p Int64ArrArrOptionPredicate) Int64ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64ArrArrOptInt64(*l.value)
-		} else {
-			return NoneInt64ArrArrOptionOption
-		}
-	} else {
-		return NoneInt64ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64ArrArrOptInt64(*l.value)
+    } else { return NoneInt64ArrArrOptionOption }
+  } else { return NoneInt64ArrArrOptionOption }
 }
 func FilterUintArrArrOptionOption(l UintArrArrOptionOption, p UintArrArrOptionPredicate) UintArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintArrArrOptUint(*l.value)
-		} else {
-			return NoneUintArrArrOptionOption
-		}
-	} else {
-		return NoneUintArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintArrArrOptUint(*l.value)
+    } else { return NoneUintArrArrOptionOption }
+  } else { return NoneUintArrArrOptionOption }
 }
 func FilterUint8ArrArrOptionOption(l Uint8ArrArrOptionOption, p Uint8ArrArrOptionPredicate) Uint8ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8ArrArrOptUint8(*l.value)
-		} else {
-			return NoneUint8ArrArrOptionOption
-		}
-	} else {
-		return NoneUint8ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8ArrArrOptUint8(*l.value)
+    } else { return NoneUint8ArrArrOptionOption }
+  } else { return NoneUint8ArrArrOptionOption }
 }
 func FilterUint16ArrArrOptionOption(l Uint16ArrArrOptionOption, p Uint16ArrArrOptionPredicate) Uint16ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16ArrArrOptUint16(*l.value)
-		} else {
-			return NoneUint16ArrArrOptionOption
-		}
-	} else {
-		return NoneUint16ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16ArrArrOptUint16(*l.value)
+    } else { return NoneUint16ArrArrOptionOption }
+  } else { return NoneUint16ArrArrOptionOption }
 }
 func FilterUint32ArrArrOptionOption(l Uint32ArrArrOptionOption, p Uint32ArrArrOptionPredicate) Uint32ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32ArrArrOptUint32(*l.value)
-		} else {
-			return NoneUint32ArrArrOptionOption
-		}
-	} else {
-		return NoneUint32ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32ArrArrOptUint32(*l.value)
+    } else { return NoneUint32ArrArrOptionOption }
+  } else { return NoneUint32ArrArrOptionOption }
 }
 func FilterUint64ArrArrOptionOption(l Uint64ArrArrOptionOption, p Uint64ArrArrOptionPredicate) Uint64ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64ArrArrOptUint64(*l.value)
-		} else {
-			return NoneUint64ArrArrOptionOption
-		}
-	} else {
-		return NoneUint64ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64ArrArrOptUint64(*l.value)
+    } else { return NoneUint64ArrArrOptionOption }
+  } else { return NoneUint64ArrArrOptionOption }
 }
 func FilterUintptrArrArrOptionOption(l UintptrArrArrOptionOption, p UintptrArrArrOptionPredicate) UintptrArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrArrArrOptUintptr(*l.value)
-		} else {
-			return NoneUintptrArrArrOptionOption
-		}
-	} else {
-		return NoneUintptrArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrArrArrOptUintptr(*l.value)
+    } else { return NoneUintptrArrArrOptionOption }
+  } else { return NoneUintptrArrArrOptionOption }
 }
 func FilterByteArrArrOptionOption(l ByteArrArrOptionOption, p ByteArrArrOptionPredicate) ByteArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteArrArrOptByte(*l.value)
-		} else {
-			return NoneByteArrArrOptionOption
-		}
-	} else {
-		return NoneByteArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteArrArrOptByte(*l.value)
+    } else { return NoneByteArrArrOptionOption }
+  } else { return NoneByteArrArrOptionOption }
 }
 func FilterRuneArrArrOptionOption(l RuneArrArrOptionOption, p RuneArrArrOptionPredicate) RuneArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneArrArrOptRune(*l.value)
-		} else {
-			return NoneRuneArrArrOptionOption
-		}
-	} else {
-		return NoneRuneArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneArrArrOptRune(*l.value)
+    } else { return NoneRuneArrArrOptionOption }
+  } else { return NoneRuneArrArrOptionOption }
 }
 func FilterFloat32ArrArrOptionOption(l Float32ArrArrOptionOption, p Float32ArrArrOptionPredicate) Float32ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32ArrArrOptFloat32(*l.value)
-		} else {
-			return NoneFloat32ArrArrOptionOption
-		}
-	} else {
-		return NoneFloat32ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32ArrArrOptFloat32(*l.value)
+    } else { return NoneFloat32ArrArrOptionOption }
+  } else { return NoneFloat32ArrArrOptionOption }
 }
 func FilterFloat64ArrArrOptionOption(l Float64ArrArrOptionOption, p Float64ArrArrOptionPredicate) Float64ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64ArrArrOptFloat64(*l.value)
-		} else {
-			return NoneFloat64ArrArrOptionOption
-		}
-	} else {
-		return NoneFloat64ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64ArrArrOptFloat64(*l.value)
+    } else { return NoneFloat64ArrArrOptionOption }
+  } else { return NoneFloat64ArrArrOptionOption }
 }
 func FilterComplex64ArrArrOptionOption(l Complex64ArrArrOptionOption, p Complex64ArrArrOptionPredicate) Complex64ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64ArrArrOptComplex64(*l.value)
-		} else {
-			return NoneComplex64ArrArrOptionOption
-		}
-	} else {
-		return NoneComplex64ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64ArrArrOptComplex64(*l.value)
+    } else { return NoneComplex64ArrArrOptionOption }
+  } else { return NoneComplex64ArrArrOptionOption }
 }
 func FilterComplex128ArrArrOptionOption(l Complex128ArrArrOptionOption, p Complex128ArrArrOptionPredicate) Complex128ArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128ArrArrOptComplex128(*l.value)
-		} else {
-			return NoneComplex128ArrArrOptionOption
-		}
-	} else {
-		return NoneComplex128ArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128ArrArrOptComplex128(*l.value)
+    } else { return NoneComplex128ArrArrOptionOption }
+  } else { return NoneComplex128ArrArrOptionOption }
 }
 func FilterAnyArrArrOptionOption(l AnyArrArrOptionOption, p AnyArrArrOptionPredicate) AnyArrArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyArrArrOptAny(*l.value)
-		} else {
-			return NoneAnyArrArrOptionOption
-		}
-	} else {
-		return NoneAnyArrArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyArrArrOptAny(*l.value)
+    } else { return NoneAnyArrArrOptionOption }
+  } else { return NoneAnyArrArrOptionOption }
 }
 func FilterBoolOptionArrOptionOption(l BoolOptionArrOptionOption, p BoolOptionArrOptionPredicate) BoolOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolOptionArrOptBool(*l.value)
-		} else {
-			return NoneBoolOptionArrOptionOption
-		}
-	} else {
-		return NoneBoolOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolOptionArrOptBool(*l.value)
+    } else { return NoneBoolOptionArrOptionOption }
+  } else { return NoneBoolOptionArrOptionOption }
 }
 func FilterStringOptionArrOptionOption(l StringOptionArrOptionOption, p StringOptionArrOptionPredicate) StringOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringOptionArrOptString(*l.value)
-		} else {
-			return NoneStringOptionArrOptionOption
-		}
-	} else {
-		return NoneStringOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringOptionArrOptString(*l.value)
+    } else { return NoneStringOptionArrOptionOption }
+  } else { return NoneStringOptionArrOptionOption }
 }
 func FilterIntOptionArrOptionOption(l IntOptionArrOptionOption, p IntOptionArrOptionPredicate) IntOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntOptionArrOptInt(*l.value)
-		} else {
-			return NoneIntOptionArrOptionOption
-		}
-	} else {
-		return NoneIntOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntOptionArrOptInt(*l.value)
+    } else { return NoneIntOptionArrOptionOption }
+  } else { return NoneIntOptionArrOptionOption }
 }
 func FilterInt8OptionArrOptionOption(l Int8OptionArrOptionOption, p Int8OptionArrOptionPredicate) Int8OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8OptionArrOptInt8(*l.value)
-		} else {
-			return NoneInt8OptionArrOptionOption
-		}
-	} else {
-		return NoneInt8OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8OptionArrOptInt8(*l.value)
+    } else { return NoneInt8OptionArrOptionOption }
+  } else { return NoneInt8OptionArrOptionOption }
 }
 func FilterInt16OptionArrOptionOption(l Int16OptionArrOptionOption, p Int16OptionArrOptionPredicate) Int16OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16OptionArrOptInt16(*l.value)
-		} else {
-			return NoneInt16OptionArrOptionOption
-		}
-	} else {
-		return NoneInt16OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16OptionArrOptInt16(*l.value)
+    } else { return NoneInt16OptionArrOptionOption }
+  } else { return NoneInt16OptionArrOptionOption }
 }
 func FilterInt32OptionArrOptionOption(l Int32OptionArrOptionOption, p Int32OptionArrOptionPredicate) Int32OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32OptionArrOptInt32(*l.value)
-		} else {
-			return NoneInt32OptionArrOptionOption
-		}
-	} else {
-		return NoneInt32OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32OptionArrOptInt32(*l.value)
+    } else { return NoneInt32OptionArrOptionOption }
+  } else { return NoneInt32OptionArrOptionOption }
 }
 func FilterInt64OptionArrOptionOption(l Int64OptionArrOptionOption, p Int64OptionArrOptionPredicate) Int64OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64OptionArrOptInt64(*l.value)
-		} else {
-			return NoneInt64OptionArrOptionOption
-		}
-	} else {
-		return NoneInt64OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64OptionArrOptInt64(*l.value)
+    } else { return NoneInt64OptionArrOptionOption }
+  } else { return NoneInt64OptionArrOptionOption }
 }
 func FilterUintOptionArrOptionOption(l UintOptionArrOptionOption, p UintOptionArrOptionPredicate) UintOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintOptionArrOptUint(*l.value)
-		} else {
-			return NoneUintOptionArrOptionOption
-		}
-	} else {
-		return NoneUintOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintOptionArrOptUint(*l.value)
+    } else { return NoneUintOptionArrOptionOption }
+  } else { return NoneUintOptionArrOptionOption }
 }
 func FilterUint8OptionArrOptionOption(l Uint8OptionArrOptionOption, p Uint8OptionArrOptionPredicate) Uint8OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8OptionArrOptUint8(*l.value)
-		} else {
-			return NoneUint8OptionArrOptionOption
-		}
-	} else {
-		return NoneUint8OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8OptionArrOptUint8(*l.value)
+    } else { return NoneUint8OptionArrOptionOption }
+  } else { return NoneUint8OptionArrOptionOption }
 }
 func FilterUint16OptionArrOptionOption(l Uint16OptionArrOptionOption, p Uint16OptionArrOptionPredicate) Uint16OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16OptionArrOptUint16(*l.value)
-		} else {
-			return NoneUint16OptionArrOptionOption
-		}
-	} else {
-		return NoneUint16OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16OptionArrOptUint16(*l.value)
+    } else { return NoneUint16OptionArrOptionOption }
+  } else { return NoneUint16OptionArrOptionOption }
 }
 func FilterUint32OptionArrOptionOption(l Uint32OptionArrOptionOption, p Uint32OptionArrOptionPredicate) Uint32OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32OptionArrOptUint32(*l.value)
-		} else {
-			return NoneUint32OptionArrOptionOption
-		}
-	} else {
-		return NoneUint32OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32OptionArrOptUint32(*l.value)
+    } else { return NoneUint32OptionArrOptionOption }
+  } else { return NoneUint32OptionArrOptionOption }
 }
 func FilterUint64OptionArrOptionOption(l Uint64OptionArrOptionOption, p Uint64OptionArrOptionPredicate) Uint64OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64OptionArrOptUint64(*l.value)
-		} else {
-			return NoneUint64OptionArrOptionOption
-		}
-	} else {
-		return NoneUint64OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64OptionArrOptUint64(*l.value)
+    } else { return NoneUint64OptionArrOptionOption }
+  } else { return NoneUint64OptionArrOptionOption }
 }
 func FilterUintptrOptionArrOptionOption(l UintptrOptionArrOptionOption, p UintptrOptionArrOptionPredicate) UintptrOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrOptionArrOptUintptr(*l.value)
-		} else {
-			return NoneUintptrOptionArrOptionOption
-		}
-	} else {
-		return NoneUintptrOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrOptionArrOptUintptr(*l.value)
+    } else { return NoneUintptrOptionArrOptionOption }
+  } else { return NoneUintptrOptionArrOptionOption }
 }
 func FilterByteOptionArrOptionOption(l ByteOptionArrOptionOption, p ByteOptionArrOptionPredicate) ByteOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteOptionArrOptByte(*l.value)
-		} else {
-			return NoneByteOptionArrOptionOption
-		}
-	} else {
-		return NoneByteOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteOptionArrOptByte(*l.value)
+    } else { return NoneByteOptionArrOptionOption }
+  } else { return NoneByteOptionArrOptionOption }
 }
 func FilterRuneOptionArrOptionOption(l RuneOptionArrOptionOption, p RuneOptionArrOptionPredicate) RuneOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneOptionArrOptRune(*l.value)
-		} else {
-			return NoneRuneOptionArrOptionOption
-		}
-	} else {
-		return NoneRuneOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneOptionArrOptRune(*l.value)
+    } else { return NoneRuneOptionArrOptionOption }
+  } else { return NoneRuneOptionArrOptionOption }
 }
 func FilterFloat32OptionArrOptionOption(l Float32OptionArrOptionOption, p Float32OptionArrOptionPredicate) Float32OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32OptionArrOptFloat32(*l.value)
-		} else {
-			return NoneFloat32OptionArrOptionOption
-		}
-	} else {
-		return NoneFloat32OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32OptionArrOptFloat32(*l.value)
+    } else { return NoneFloat32OptionArrOptionOption }
+  } else { return NoneFloat32OptionArrOptionOption }
 }
 func FilterFloat64OptionArrOptionOption(l Float64OptionArrOptionOption, p Float64OptionArrOptionPredicate) Float64OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64OptionArrOptFloat64(*l.value)
-		} else {
-			return NoneFloat64OptionArrOptionOption
-		}
-	} else {
-		return NoneFloat64OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64OptionArrOptFloat64(*l.value)
+    } else { return NoneFloat64OptionArrOptionOption }
+  } else { return NoneFloat64OptionArrOptionOption }
 }
 func FilterComplex64OptionArrOptionOption(l Complex64OptionArrOptionOption, p Complex64OptionArrOptionPredicate) Complex64OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64OptionArrOptComplex64(*l.value)
-		} else {
-			return NoneComplex64OptionArrOptionOption
-		}
-	} else {
-		return NoneComplex64OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64OptionArrOptComplex64(*l.value)
+    } else { return NoneComplex64OptionArrOptionOption }
+  } else { return NoneComplex64OptionArrOptionOption }
 }
 func FilterComplex128OptionArrOptionOption(l Complex128OptionArrOptionOption, p Complex128OptionArrOptionPredicate) Complex128OptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128OptionArrOptComplex128(*l.value)
-		} else {
-			return NoneComplex128OptionArrOptionOption
-		}
-	} else {
-		return NoneComplex128OptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128OptionArrOptComplex128(*l.value)
+    } else { return NoneComplex128OptionArrOptionOption }
+  } else { return NoneComplex128OptionArrOptionOption }
 }
 func FilterAnyOptionArrOptionOption(l AnyOptionArrOptionOption, p AnyOptionArrOptionPredicate) AnyOptionArrOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyOptionArrOptAny(*l.value)
-		} else {
-			return NoneAnyOptionArrOptionOption
-		}
-	} else {
-		return NoneAnyOptionArrOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyOptionArrOptAny(*l.value)
+    } else { return NoneAnyOptionArrOptionOption }
+  } else { return NoneAnyOptionArrOptionOption }
 }
 func FilterBoolListOptionOption(l BoolListOptionOption, p BoolListOptionPredicate) BoolListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return BoolListOptBool(*l.value)
-		} else {
-			return NoneBoolListOptionOption
-		}
-	} else {
-		return NoneBoolListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return BoolListOptBool(*l.value)
+    } else { return NoneBoolListOptionOption }
+  } else { return NoneBoolListOptionOption }
 }
 func FilterStringListOptionOption(l StringListOptionOption, p StringListOptionPredicate) StringListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return StringListOptString(*l.value)
-		} else {
-			return NoneStringListOptionOption
-		}
-	} else {
-		return NoneStringListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return StringListOptString(*l.value)
+    } else { return NoneStringListOptionOption }
+  } else { return NoneStringListOptionOption }
 }
 func FilterIntListOptionOption(l IntListOptionOption, p IntListOptionPredicate) IntListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return IntListOptInt(*l.value)
-		} else {
-			return NoneIntListOptionOption
-		}
-	} else {
-		return NoneIntListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return IntListOptInt(*l.value)
+    } else { return NoneIntListOptionOption }
+  } else { return NoneIntListOptionOption }
 }
 func FilterInt8ListOptionOption(l Int8ListOptionOption, p Int8ListOptionPredicate) Int8ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int8ListOptInt8(*l.value)
-		} else {
-			return NoneInt8ListOptionOption
-		}
-	} else {
-		return NoneInt8ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int8ListOptInt8(*l.value)
+    } else { return NoneInt8ListOptionOption }
+  } else { return NoneInt8ListOptionOption }
 }
 func FilterInt16ListOptionOption(l Int16ListOptionOption, p Int16ListOptionPredicate) Int16ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int16ListOptInt16(*l.value)
-		} else {
-			return NoneInt16ListOptionOption
-		}
-	} else {
-		return NoneInt16ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int16ListOptInt16(*l.value)
+    } else { return NoneInt16ListOptionOption }
+  } else { return NoneInt16ListOptionOption }
 }
 func FilterInt32ListOptionOption(l Int32ListOptionOption, p Int32ListOptionPredicate) Int32ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int32ListOptInt32(*l.value)
-		} else {
-			return NoneInt32ListOptionOption
-		}
-	} else {
-		return NoneInt32ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int32ListOptInt32(*l.value)
+    } else { return NoneInt32ListOptionOption }
+  } else { return NoneInt32ListOptionOption }
 }
 func FilterInt64ListOptionOption(l Int64ListOptionOption, p Int64ListOptionPredicate) Int64ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Int64ListOptInt64(*l.value)
-		} else {
-			return NoneInt64ListOptionOption
-		}
-	} else {
-		return NoneInt64ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Int64ListOptInt64(*l.value)
+    } else { return NoneInt64ListOptionOption }
+  } else { return NoneInt64ListOptionOption }
 }
 func FilterUintListOptionOption(l UintListOptionOption, p UintListOptionPredicate) UintListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintListOptUint(*l.value)
-		} else {
-			return NoneUintListOptionOption
-		}
-	} else {
-		return NoneUintListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintListOptUint(*l.value)
+    } else { return NoneUintListOptionOption }
+  } else { return NoneUintListOptionOption }
 }
 func FilterUint8ListOptionOption(l Uint8ListOptionOption, p Uint8ListOptionPredicate) Uint8ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint8ListOptUint8(*l.value)
-		} else {
-			return NoneUint8ListOptionOption
-		}
-	} else {
-		return NoneUint8ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint8ListOptUint8(*l.value)
+    } else { return NoneUint8ListOptionOption }
+  } else { return NoneUint8ListOptionOption }
 }
 func FilterUint16ListOptionOption(l Uint16ListOptionOption, p Uint16ListOptionPredicate) Uint16ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint16ListOptUint16(*l.value)
-		} else {
-			return NoneUint16ListOptionOption
-		}
-	} else {
-		return NoneUint16ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint16ListOptUint16(*l.value)
+    } else { return NoneUint16ListOptionOption }
+  } else { return NoneUint16ListOptionOption }
 }
 func FilterUint32ListOptionOption(l Uint32ListOptionOption, p Uint32ListOptionPredicate) Uint32ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint32ListOptUint32(*l.value)
-		} else {
-			return NoneUint32ListOptionOption
-		}
-	} else {
-		return NoneUint32ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint32ListOptUint32(*l.value)
+    } else { return NoneUint32ListOptionOption }
+  } else { return NoneUint32ListOptionOption }
 }
 func FilterUint64ListOptionOption(l Uint64ListOptionOption, p Uint64ListOptionPredicate) Uint64ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Uint64ListOptUint64(*l.value)
-		} else {
-			return NoneUint64ListOptionOption
-		}
-	} else {
-		return NoneUint64ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Uint64ListOptUint64(*l.value)
+    } else { return NoneUint64ListOptionOption }
+  } else { return NoneUint64ListOptionOption }
 }
 func FilterUintptrListOptionOption(l UintptrListOptionOption, p UintptrListOptionPredicate) UintptrListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return UintptrListOptUintptr(*l.value)
-		} else {
-			return NoneUintptrListOptionOption
-		}
-	} else {
-		return NoneUintptrListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return UintptrListOptUintptr(*l.value)
+    } else { return NoneUintptrListOptionOption }
+  } else { return NoneUintptrListOptionOption }
 }
 func FilterByteListOptionOption(l ByteListOptionOption, p ByteListOptionPredicate) ByteListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return ByteListOptByte(*l.value)
-		} else {
-			return NoneByteListOptionOption
-		}
-	} else {
-		return NoneByteListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return ByteListOptByte(*l.value)
+    } else { return NoneByteListOptionOption }
+  } else { return NoneByteListOptionOption }
 }
 func FilterRuneListOptionOption(l RuneListOptionOption, p RuneListOptionPredicate) RuneListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return RuneListOptRune(*l.value)
-		} else {
-			return NoneRuneListOptionOption
-		}
-	} else {
-		return NoneRuneListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return RuneListOptRune(*l.value)
+    } else { return NoneRuneListOptionOption }
+  } else { return NoneRuneListOptionOption }
 }
 func FilterFloat32ListOptionOption(l Float32ListOptionOption, p Float32ListOptionPredicate) Float32ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float32ListOptFloat32(*l.value)
-		} else {
-			return NoneFloat32ListOptionOption
-		}
-	} else {
-		return NoneFloat32ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float32ListOptFloat32(*l.value)
+    } else { return NoneFloat32ListOptionOption }
+  } else { return NoneFloat32ListOptionOption }
 }
 func FilterFloat64ListOptionOption(l Float64ListOptionOption, p Float64ListOptionPredicate) Float64ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Float64ListOptFloat64(*l.value)
-		} else {
-			return NoneFloat64ListOptionOption
-		}
-	} else {
-		return NoneFloat64ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Float64ListOptFloat64(*l.value)
+    } else { return NoneFloat64ListOptionOption }
+  } else { return NoneFloat64ListOptionOption }
 }
 func FilterComplex64ListOptionOption(l Complex64ListOptionOption, p Complex64ListOptionPredicate) Complex64ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex64ListOptComplex64(*l.value)
-		} else {
-			return NoneComplex64ListOptionOption
-		}
-	} else {
-		return NoneComplex64ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex64ListOptComplex64(*l.value)
+    } else { return NoneComplex64ListOptionOption }
+  } else { return NoneComplex64ListOptionOption }
 }
 func FilterComplex128ListOptionOption(l Complex128ListOptionOption, p Complex128ListOptionPredicate) Complex128ListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return Complex128ListOptComplex128(*l.value)
-		} else {
-			return NoneComplex128ListOptionOption
-		}
-	} else {
-		return NoneComplex128ListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return Complex128ListOptComplex128(*l.value)
+    } else { return NoneComplex128ListOptionOption }
+  } else { return NoneComplex128ListOptionOption }
 }
 func FilterAnyListOptionOption(l AnyListOptionOption, p AnyListOptionPredicate) AnyListOptionOption {
-
-	if l.IsDefined() {
-		if p(*l.value) {
-			return AnyListOptAny(*l.value)
-		} else {
-			return NoneAnyListOptionOption
-		}
-	} else {
-		return NoneAnyListOptionOption
-	}
+  
+  if l.IsDefined() {
+    if p(*l.value) {
+      return AnyListOptAny(*l.value)
+    } else { return NoneAnyListOptionOption }
+  } else { return NoneAnyListOptionOption }
 }
 func FilterBoolList(l BoolList, p BoolPredicate) BoolList {
-
-	acc := NilBoolList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringList(l StringList, p StringPredicate) StringList {
-
-	acc := NilStringList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntList(l IntList, p IntPredicate) IntList {
-
-	acc := NilIntList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8List(l Int8List, p Int8Predicate) Int8List {
-
-	acc := NilInt8List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16List(l Int16List, p Int16Predicate) Int16List {
-
-	acc := NilInt16List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32List(l Int32List, p Int32Predicate) Int32List {
-
-	acc := NilInt32List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64List(l Int64List, p Int64Predicate) Int64List {
-
-	acc := NilInt64List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintList(l UintList, p UintPredicate) UintList {
-
-	acc := NilUintList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8List(l Uint8List, p Uint8Predicate) Uint8List {
-
-	acc := NilUint8List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16List(l Uint16List, p Uint16Predicate) Uint16List {
-
-	acc := NilUint16List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32List(l Uint32List, p Uint32Predicate) Uint32List {
-
-	acc := NilUint32List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64List(l Uint64List, p Uint64Predicate) Uint64List {
-
-	acc := NilUint64List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrList(l UintptrList, p UintptrPredicate) UintptrList {
-
-	acc := NilUintptrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteList(l ByteList, p BytePredicate) ByteList {
-
-	acc := NilByteList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneList(l RuneList, p RunePredicate) RuneList {
-
-	acc := NilRuneList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32List(l Float32List, p Float32Predicate) Float32List {
-
-	acc := NilFloat32List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64List(l Float64List, p Float64Predicate) Float64List {
-
-	acc := NilFloat64List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64List(l Complex64List, p Complex64Predicate) Complex64List {
-
-	acc := NilComplex64List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128List(l Complex128List, p Complex128Predicate) Complex128List {
-
-	acc := NilComplex128List
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128List
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyList(l AnyList, p AnyPredicate) AnyList {
-
-	acc := NilAnyList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolOptionList(l BoolOptionList, p BoolOptionPredicate) BoolOptionList {
-
-	acc := NilBoolOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringOptionList(l StringOptionList, p StringOptionPredicate) StringOptionList {
-
-	acc := NilStringOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntOptionList(l IntOptionList, p IntOptionPredicate) IntOptionList {
-
-	acc := NilIntOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8OptionList(l Int8OptionList, p Int8OptionPredicate) Int8OptionList {
-
-	acc := NilInt8OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16OptionList(l Int16OptionList, p Int16OptionPredicate) Int16OptionList {
-
-	acc := NilInt16OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32OptionList(l Int32OptionList, p Int32OptionPredicate) Int32OptionList {
-
-	acc := NilInt32OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64OptionList(l Int64OptionList, p Int64OptionPredicate) Int64OptionList {
-
-	acc := NilInt64OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintOptionList(l UintOptionList, p UintOptionPredicate) UintOptionList {
-
-	acc := NilUintOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8OptionList(l Uint8OptionList, p Uint8OptionPredicate) Uint8OptionList {
-
-	acc := NilUint8OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16OptionList(l Uint16OptionList, p Uint16OptionPredicate) Uint16OptionList {
-
-	acc := NilUint16OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32OptionList(l Uint32OptionList, p Uint32OptionPredicate) Uint32OptionList {
-
-	acc := NilUint32OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64OptionList(l Uint64OptionList, p Uint64OptionPredicate) Uint64OptionList {
-
-	acc := NilUint64OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrOptionList(l UintptrOptionList, p UintptrOptionPredicate) UintptrOptionList {
-
-	acc := NilUintptrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteOptionList(l ByteOptionList, p ByteOptionPredicate) ByteOptionList {
-
-	acc := NilByteOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneOptionList(l RuneOptionList, p RuneOptionPredicate) RuneOptionList {
-
-	acc := NilRuneOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32OptionList(l Float32OptionList, p Float32OptionPredicate) Float32OptionList {
-
-	acc := NilFloat32OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64OptionList(l Float64OptionList, p Float64OptionPredicate) Float64OptionList {
-
-	acc := NilFloat64OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64OptionList(l Complex64OptionList, p Complex64OptionPredicate) Complex64OptionList {
-
-	acc := NilComplex64OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128OptionList(l Complex128OptionList, p Complex128OptionPredicate) Complex128OptionList {
-
-	acc := NilComplex128OptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128OptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyOptionList(l AnyOptionList, p AnyOptionPredicate) AnyOptionList {
-
-	acc := NilAnyOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolArrOptionList(l BoolArrOptionList, p BoolArrOptionPredicate) BoolArrOptionList {
-
-	acc := NilBoolArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringArrOptionList(l StringArrOptionList, p StringArrOptionPredicate) StringArrOptionList {
-
-	acc := NilStringArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntArrOptionList(l IntArrOptionList, p IntArrOptionPredicate) IntArrOptionList {
-
-	acc := NilIntArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ArrOptionList(l Int8ArrOptionList, p Int8ArrOptionPredicate) Int8ArrOptionList {
-
-	acc := NilInt8ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ArrOptionList(l Int16ArrOptionList, p Int16ArrOptionPredicate) Int16ArrOptionList {
-
-	acc := NilInt16ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ArrOptionList(l Int32ArrOptionList, p Int32ArrOptionPredicate) Int32ArrOptionList {
-
-	acc := NilInt32ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ArrOptionList(l Int64ArrOptionList, p Int64ArrOptionPredicate) Int64ArrOptionList {
-
-	acc := NilInt64ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintArrOptionList(l UintArrOptionList, p UintArrOptionPredicate) UintArrOptionList {
-
-	acc := NilUintArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ArrOptionList(l Uint8ArrOptionList, p Uint8ArrOptionPredicate) Uint8ArrOptionList {
-
-	acc := NilUint8ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ArrOptionList(l Uint16ArrOptionList, p Uint16ArrOptionPredicate) Uint16ArrOptionList {
-
-	acc := NilUint16ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ArrOptionList(l Uint32ArrOptionList, p Uint32ArrOptionPredicate) Uint32ArrOptionList {
-
-	acc := NilUint32ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ArrOptionList(l Uint64ArrOptionList, p Uint64ArrOptionPredicate) Uint64ArrOptionList {
-
-	acc := NilUint64ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrArrOptionList(l UintptrArrOptionList, p UintptrArrOptionPredicate) UintptrArrOptionList {
-
-	acc := NilUintptrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteArrOptionList(l ByteArrOptionList, p ByteArrOptionPredicate) ByteArrOptionList {
-
-	acc := NilByteArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneArrOptionList(l RuneArrOptionList, p RuneArrOptionPredicate) RuneArrOptionList {
-
-	acc := NilRuneArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ArrOptionList(l Float32ArrOptionList, p Float32ArrOptionPredicate) Float32ArrOptionList {
-
-	acc := NilFloat32ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ArrOptionList(l Float64ArrOptionList, p Float64ArrOptionPredicate) Float64ArrOptionList {
-
-	acc := NilFloat64ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ArrOptionList(l Complex64ArrOptionList, p Complex64ArrOptionPredicate) Complex64ArrOptionList {
-
-	acc := NilComplex64ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ArrOptionList(l Complex128ArrOptionList, p Complex128ArrOptionPredicate) Complex128ArrOptionList {
-
-	acc := NilComplex128ArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyArrOptionList(l AnyArrOptionList, p AnyArrOptionPredicate) AnyArrOptionList {
-
-	acc := NilAnyArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolArrArrOptionList(l BoolArrArrOptionList, p BoolArrArrOptionPredicate) BoolArrArrOptionList {
-
-	acc := NilBoolArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringArrArrOptionList(l StringArrArrOptionList, p StringArrArrOptionPredicate) StringArrArrOptionList {
-
-	acc := NilStringArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntArrArrOptionList(l IntArrArrOptionList, p IntArrArrOptionPredicate) IntArrArrOptionList {
-
-	acc := NilIntArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ArrArrOptionList(l Int8ArrArrOptionList, p Int8ArrArrOptionPredicate) Int8ArrArrOptionList {
-
-	acc := NilInt8ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ArrArrOptionList(l Int16ArrArrOptionList, p Int16ArrArrOptionPredicate) Int16ArrArrOptionList {
-
-	acc := NilInt16ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ArrArrOptionList(l Int32ArrArrOptionList, p Int32ArrArrOptionPredicate) Int32ArrArrOptionList {
-
-	acc := NilInt32ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ArrArrOptionList(l Int64ArrArrOptionList, p Int64ArrArrOptionPredicate) Int64ArrArrOptionList {
-
-	acc := NilInt64ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintArrArrOptionList(l UintArrArrOptionList, p UintArrArrOptionPredicate) UintArrArrOptionList {
-
-	acc := NilUintArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ArrArrOptionList(l Uint8ArrArrOptionList, p Uint8ArrArrOptionPredicate) Uint8ArrArrOptionList {
-
-	acc := NilUint8ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ArrArrOptionList(l Uint16ArrArrOptionList, p Uint16ArrArrOptionPredicate) Uint16ArrArrOptionList {
-
-	acc := NilUint16ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ArrArrOptionList(l Uint32ArrArrOptionList, p Uint32ArrArrOptionPredicate) Uint32ArrArrOptionList {
-
-	acc := NilUint32ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ArrArrOptionList(l Uint64ArrArrOptionList, p Uint64ArrArrOptionPredicate) Uint64ArrArrOptionList {
-
-	acc := NilUint64ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrArrArrOptionList(l UintptrArrArrOptionList, p UintptrArrArrOptionPredicate) UintptrArrArrOptionList {
-
-	acc := NilUintptrArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteArrArrOptionList(l ByteArrArrOptionList, p ByteArrArrOptionPredicate) ByteArrArrOptionList {
-
-	acc := NilByteArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneArrArrOptionList(l RuneArrArrOptionList, p RuneArrArrOptionPredicate) RuneArrArrOptionList {
-
-	acc := NilRuneArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ArrArrOptionList(l Float32ArrArrOptionList, p Float32ArrArrOptionPredicate) Float32ArrArrOptionList {
-
-	acc := NilFloat32ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ArrArrOptionList(l Float64ArrArrOptionList, p Float64ArrArrOptionPredicate) Float64ArrArrOptionList {
-
-	acc := NilFloat64ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ArrArrOptionList(l Complex64ArrArrOptionList, p Complex64ArrArrOptionPredicate) Complex64ArrArrOptionList {
-
-	acc := NilComplex64ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ArrArrOptionList(l Complex128ArrArrOptionList, p Complex128ArrArrOptionPredicate) Complex128ArrArrOptionList {
-
-	acc := NilComplex128ArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyArrArrOptionList(l AnyArrArrOptionList, p AnyArrArrOptionPredicate) AnyArrArrOptionList {
-
-	acc := NilAnyArrArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyArrArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolOptionArrOptionList(l BoolOptionArrOptionList, p BoolOptionArrOptionPredicate) BoolOptionArrOptionList {
-
-	acc := NilBoolOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringOptionArrOptionList(l StringOptionArrOptionList, p StringOptionArrOptionPredicate) StringOptionArrOptionList {
-
-	acc := NilStringOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntOptionArrOptionList(l IntOptionArrOptionList, p IntOptionArrOptionPredicate) IntOptionArrOptionList {
-
-	acc := NilIntOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8OptionArrOptionList(l Int8OptionArrOptionList, p Int8OptionArrOptionPredicate) Int8OptionArrOptionList {
-
-	acc := NilInt8OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16OptionArrOptionList(l Int16OptionArrOptionList, p Int16OptionArrOptionPredicate) Int16OptionArrOptionList {
-
-	acc := NilInt16OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32OptionArrOptionList(l Int32OptionArrOptionList, p Int32OptionArrOptionPredicate) Int32OptionArrOptionList {
-
-	acc := NilInt32OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64OptionArrOptionList(l Int64OptionArrOptionList, p Int64OptionArrOptionPredicate) Int64OptionArrOptionList {
-
-	acc := NilInt64OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintOptionArrOptionList(l UintOptionArrOptionList, p UintOptionArrOptionPredicate) UintOptionArrOptionList {
-
-	acc := NilUintOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8OptionArrOptionList(l Uint8OptionArrOptionList, p Uint8OptionArrOptionPredicate) Uint8OptionArrOptionList {
-
-	acc := NilUint8OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16OptionArrOptionList(l Uint16OptionArrOptionList, p Uint16OptionArrOptionPredicate) Uint16OptionArrOptionList {
-
-	acc := NilUint16OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32OptionArrOptionList(l Uint32OptionArrOptionList, p Uint32OptionArrOptionPredicate) Uint32OptionArrOptionList {
-
-	acc := NilUint32OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64OptionArrOptionList(l Uint64OptionArrOptionList, p Uint64OptionArrOptionPredicate) Uint64OptionArrOptionList {
-
-	acc := NilUint64OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrOptionArrOptionList(l UintptrOptionArrOptionList, p UintptrOptionArrOptionPredicate) UintptrOptionArrOptionList {
-
-	acc := NilUintptrOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteOptionArrOptionList(l ByteOptionArrOptionList, p ByteOptionArrOptionPredicate) ByteOptionArrOptionList {
-
-	acc := NilByteOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneOptionArrOptionList(l RuneOptionArrOptionList, p RuneOptionArrOptionPredicate) RuneOptionArrOptionList {
-
-	acc := NilRuneOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32OptionArrOptionList(l Float32OptionArrOptionList, p Float32OptionArrOptionPredicate) Float32OptionArrOptionList {
-
-	acc := NilFloat32OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64OptionArrOptionList(l Float64OptionArrOptionList, p Float64OptionArrOptionPredicate) Float64OptionArrOptionList {
-
-	acc := NilFloat64OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64OptionArrOptionList(l Complex64OptionArrOptionList, p Complex64OptionArrOptionPredicate) Complex64OptionArrOptionList {
-
-	acc := NilComplex64OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128OptionArrOptionList(l Complex128OptionArrOptionList, p Complex128OptionArrOptionPredicate) Complex128OptionArrOptionList {
-
-	acc := NilComplex128OptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128OptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyOptionArrOptionList(l AnyOptionArrOptionList, p AnyOptionArrOptionPredicate) AnyOptionArrOptionList {
-
-	acc := NilAnyOptionArrOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyOptionArrOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolListOptionList(l BoolListOptionList, p BoolListOptionPredicate) BoolListOptionList {
-
-	acc := NilBoolListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringListOptionList(l StringListOptionList, p StringListOptionPredicate) StringListOptionList {
-
-	acc := NilStringListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntListOptionList(l IntListOptionList, p IntListOptionPredicate) IntListOptionList {
-
-	acc := NilIntListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ListOptionList(l Int8ListOptionList, p Int8ListOptionPredicate) Int8ListOptionList {
-
-	acc := NilInt8ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ListOptionList(l Int16ListOptionList, p Int16ListOptionPredicate) Int16ListOptionList {
-
-	acc := NilInt16ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ListOptionList(l Int32ListOptionList, p Int32ListOptionPredicate) Int32ListOptionList {
-
-	acc := NilInt32ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ListOptionList(l Int64ListOptionList, p Int64ListOptionPredicate) Int64ListOptionList {
-
-	acc := NilInt64ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintListOptionList(l UintListOptionList, p UintListOptionPredicate) UintListOptionList {
-
-	acc := NilUintListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ListOptionList(l Uint8ListOptionList, p Uint8ListOptionPredicate) Uint8ListOptionList {
-
-	acc := NilUint8ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ListOptionList(l Uint16ListOptionList, p Uint16ListOptionPredicate) Uint16ListOptionList {
-
-	acc := NilUint16ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ListOptionList(l Uint32ListOptionList, p Uint32ListOptionPredicate) Uint32ListOptionList {
-
-	acc := NilUint32ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ListOptionList(l Uint64ListOptionList, p Uint64ListOptionPredicate) Uint64ListOptionList {
-
-	acc := NilUint64ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrListOptionList(l UintptrListOptionList, p UintptrListOptionPredicate) UintptrListOptionList {
-
-	acc := NilUintptrListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteListOptionList(l ByteListOptionList, p ByteListOptionPredicate) ByteListOptionList {
-
-	acc := NilByteListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneListOptionList(l RuneListOptionList, p RuneListOptionPredicate) RuneListOptionList {
-
-	acc := NilRuneListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ListOptionList(l Float32ListOptionList, p Float32ListOptionPredicate) Float32ListOptionList {
-
-	acc := NilFloat32ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ListOptionList(l Float64ListOptionList, p Float64ListOptionPredicate) Float64ListOptionList {
-
-	acc := NilFloat64ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ListOptionList(l Complex64ListOptionList, p Complex64ListOptionPredicate) Complex64ListOptionList {
-
-	acc := NilComplex64ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ListOptionList(l Complex128ListOptionList, p Complex128ListOptionPredicate) Complex128ListOptionList {
-
-	acc := NilComplex128ListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyListOptionList(l AnyListOptionList, p AnyListOptionPredicate) AnyListOptionList {
-
-	acc := NilAnyListOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyListOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolOptionOptionList(l BoolOptionOptionList, p BoolOptionOptionPredicate) BoolOptionOptionList {
-
-	acc := NilBoolOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringOptionOptionList(l StringOptionOptionList, p StringOptionOptionPredicate) StringOptionOptionList {
-
-	acc := NilStringOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntOptionOptionList(l IntOptionOptionList, p IntOptionOptionPredicate) IntOptionOptionList {
-
-	acc := NilIntOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8OptionOptionList(l Int8OptionOptionList, p Int8OptionOptionPredicate) Int8OptionOptionList {
-
-	acc := NilInt8OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16OptionOptionList(l Int16OptionOptionList, p Int16OptionOptionPredicate) Int16OptionOptionList {
-
-	acc := NilInt16OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32OptionOptionList(l Int32OptionOptionList, p Int32OptionOptionPredicate) Int32OptionOptionList {
-
-	acc := NilInt32OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64OptionOptionList(l Int64OptionOptionList, p Int64OptionOptionPredicate) Int64OptionOptionList {
-
-	acc := NilInt64OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintOptionOptionList(l UintOptionOptionList, p UintOptionOptionPredicate) UintOptionOptionList {
-
-	acc := NilUintOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8OptionOptionList(l Uint8OptionOptionList, p Uint8OptionOptionPredicate) Uint8OptionOptionList {
-
-	acc := NilUint8OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16OptionOptionList(l Uint16OptionOptionList, p Uint16OptionOptionPredicate) Uint16OptionOptionList {
-
-	acc := NilUint16OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32OptionOptionList(l Uint32OptionOptionList, p Uint32OptionOptionPredicate) Uint32OptionOptionList {
-
-	acc := NilUint32OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64OptionOptionList(l Uint64OptionOptionList, p Uint64OptionOptionPredicate) Uint64OptionOptionList {
-
-	acc := NilUint64OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrOptionOptionList(l UintptrOptionOptionList, p UintptrOptionOptionPredicate) UintptrOptionOptionList {
-
-	acc := NilUintptrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteOptionOptionList(l ByteOptionOptionList, p ByteOptionOptionPredicate) ByteOptionOptionList {
-
-	acc := NilByteOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneOptionOptionList(l RuneOptionOptionList, p RuneOptionOptionPredicate) RuneOptionOptionList {
-
-	acc := NilRuneOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32OptionOptionList(l Float32OptionOptionList, p Float32OptionOptionPredicate) Float32OptionOptionList {
-
-	acc := NilFloat32OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64OptionOptionList(l Float64OptionOptionList, p Float64OptionOptionPredicate) Float64OptionOptionList {
-
-	acc := NilFloat64OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64OptionOptionList(l Complex64OptionOptionList, p Complex64OptionOptionPredicate) Complex64OptionOptionList {
-
-	acc := NilComplex64OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128OptionOptionList(l Complex128OptionOptionList, p Complex128OptionOptionPredicate) Complex128OptionOptionList {
-
-	acc := NilComplex128OptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128OptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyOptionOptionList(l AnyOptionOptionList, p AnyOptionOptionPredicate) AnyOptionOptionList {
-
-	acc := NilAnyOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolArrOptionOptionList(l BoolArrOptionOptionList, p BoolArrOptionOptionPredicate) BoolArrOptionOptionList {
-
-	acc := NilBoolArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringArrOptionOptionList(l StringArrOptionOptionList, p StringArrOptionOptionPredicate) StringArrOptionOptionList {
-
-	acc := NilStringArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntArrOptionOptionList(l IntArrOptionOptionList, p IntArrOptionOptionPredicate) IntArrOptionOptionList {
-
-	acc := NilIntArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ArrOptionOptionList(l Int8ArrOptionOptionList, p Int8ArrOptionOptionPredicate) Int8ArrOptionOptionList {
-
-	acc := NilInt8ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ArrOptionOptionList(l Int16ArrOptionOptionList, p Int16ArrOptionOptionPredicate) Int16ArrOptionOptionList {
-
-	acc := NilInt16ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ArrOptionOptionList(l Int32ArrOptionOptionList, p Int32ArrOptionOptionPredicate) Int32ArrOptionOptionList {
-
-	acc := NilInt32ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ArrOptionOptionList(l Int64ArrOptionOptionList, p Int64ArrOptionOptionPredicate) Int64ArrOptionOptionList {
-
-	acc := NilInt64ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintArrOptionOptionList(l UintArrOptionOptionList, p UintArrOptionOptionPredicate) UintArrOptionOptionList {
-
-	acc := NilUintArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ArrOptionOptionList(l Uint8ArrOptionOptionList, p Uint8ArrOptionOptionPredicate) Uint8ArrOptionOptionList {
-
-	acc := NilUint8ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ArrOptionOptionList(l Uint16ArrOptionOptionList, p Uint16ArrOptionOptionPredicate) Uint16ArrOptionOptionList {
-
-	acc := NilUint16ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ArrOptionOptionList(l Uint32ArrOptionOptionList, p Uint32ArrOptionOptionPredicate) Uint32ArrOptionOptionList {
-
-	acc := NilUint32ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ArrOptionOptionList(l Uint64ArrOptionOptionList, p Uint64ArrOptionOptionPredicate) Uint64ArrOptionOptionList {
-
-	acc := NilUint64ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrArrOptionOptionList(l UintptrArrOptionOptionList, p UintptrArrOptionOptionPredicate) UintptrArrOptionOptionList {
-
-	acc := NilUintptrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteArrOptionOptionList(l ByteArrOptionOptionList, p ByteArrOptionOptionPredicate) ByteArrOptionOptionList {
-
-	acc := NilByteArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneArrOptionOptionList(l RuneArrOptionOptionList, p RuneArrOptionOptionPredicate) RuneArrOptionOptionList {
-
-	acc := NilRuneArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ArrOptionOptionList(l Float32ArrOptionOptionList, p Float32ArrOptionOptionPredicate) Float32ArrOptionOptionList {
-
-	acc := NilFloat32ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ArrOptionOptionList(l Float64ArrOptionOptionList, p Float64ArrOptionOptionPredicate) Float64ArrOptionOptionList {
-
-	acc := NilFloat64ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ArrOptionOptionList(l Complex64ArrOptionOptionList, p Complex64ArrOptionOptionPredicate) Complex64ArrOptionOptionList {
-
-	acc := NilComplex64ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ArrOptionOptionList(l Complex128ArrOptionOptionList, p Complex128ArrOptionOptionPredicate) Complex128ArrOptionOptionList {
-
-	acc := NilComplex128ArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyArrOptionOptionList(l AnyArrOptionOptionList, p AnyArrOptionOptionPredicate) AnyArrOptionOptionList {
-
-	acc := NilAnyArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolArrArrOptionOptionList(l BoolArrArrOptionOptionList, p BoolArrArrOptionOptionPredicate) BoolArrArrOptionOptionList {
-
-	acc := NilBoolArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringArrArrOptionOptionList(l StringArrArrOptionOptionList, p StringArrArrOptionOptionPredicate) StringArrArrOptionOptionList {
-
-	acc := NilStringArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntArrArrOptionOptionList(l IntArrArrOptionOptionList, p IntArrArrOptionOptionPredicate) IntArrArrOptionOptionList {
-
-	acc := NilIntArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ArrArrOptionOptionList(l Int8ArrArrOptionOptionList, p Int8ArrArrOptionOptionPredicate) Int8ArrArrOptionOptionList {
-
-	acc := NilInt8ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ArrArrOptionOptionList(l Int16ArrArrOptionOptionList, p Int16ArrArrOptionOptionPredicate) Int16ArrArrOptionOptionList {
-
-	acc := NilInt16ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ArrArrOptionOptionList(l Int32ArrArrOptionOptionList, p Int32ArrArrOptionOptionPredicate) Int32ArrArrOptionOptionList {
-
-	acc := NilInt32ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ArrArrOptionOptionList(l Int64ArrArrOptionOptionList, p Int64ArrArrOptionOptionPredicate) Int64ArrArrOptionOptionList {
-
-	acc := NilInt64ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintArrArrOptionOptionList(l UintArrArrOptionOptionList, p UintArrArrOptionOptionPredicate) UintArrArrOptionOptionList {
-
-	acc := NilUintArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ArrArrOptionOptionList(l Uint8ArrArrOptionOptionList, p Uint8ArrArrOptionOptionPredicate) Uint8ArrArrOptionOptionList {
-
-	acc := NilUint8ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ArrArrOptionOptionList(l Uint16ArrArrOptionOptionList, p Uint16ArrArrOptionOptionPredicate) Uint16ArrArrOptionOptionList {
-
-	acc := NilUint16ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ArrArrOptionOptionList(l Uint32ArrArrOptionOptionList, p Uint32ArrArrOptionOptionPredicate) Uint32ArrArrOptionOptionList {
-
-	acc := NilUint32ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ArrArrOptionOptionList(l Uint64ArrArrOptionOptionList, p Uint64ArrArrOptionOptionPredicate) Uint64ArrArrOptionOptionList {
-
-	acc := NilUint64ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrArrArrOptionOptionList(l UintptrArrArrOptionOptionList, p UintptrArrArrOptionOptionPredicate) UintptrArrArrOptionOptionList {
-
-	acc := NilUintptrArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteArrArrOptionOptionList(l ByteArrArrOptionOptionList, p ByteArrArrOptionOptionPredicate) ByteArrArrOptionOptionList {
-
-	acc := NilByteArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneArrArrOptionOptionList(l RuneArrArrOptionOptionList, p RuneArrArrOptionOptionPredicate) RuneArrArrOptionOptionList {
-
-	acc := NilRuneArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ArrArrOptionOptionList(l Float32ArrArrOptionOptionList, p Float32ArrArrOptionOptionPredicate) Float32ArrArrOptionOptionList {
-
-	acc := NilFloat32ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ArrArrOptionOptionList(l Float64ArrArrOptionOptionList, p Float64ArrArrOptionOptionPredicate) Float64ArrArrOptionOptionList {
-
-	acc := NilFloat64ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ArrArrOptionOptionList(l Complex64ArrArrOptionOptionList, p Complex64ArrArrOptionOptionPredicate) Complex64ArrArrOptionOptionList {
-
-	acc := NilComplex64ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ArrArrOptionOptionList(l Complex128ArrArrOptionOptionList, p Complex128ArrArrOptionOptionPredicate) Complex128ArrArrOptionOptionList {
-
-	acc := NilComplex128ArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyArrArrOptionOptionList(l AnyArrArrOptionOptionList, p AnyArrArrOptionOptionPredicate) AnyArrArrOptionOptionList {
-
-	acc := NilAnyArrArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyArrArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolOptionArrOptionOptionList(l BoolOptionArrOptionOptionList, p BoolOptionArrOptionOptionPredicate) BoolOptionArrOptionOptionList {
-
-	acc := NilBoolOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringOptionArrOptionOptionList(l StringOptionArrOptionOptionList, p StringOptionArrOptionOptionPredicate) StringOptionArrOptionOptionList {
-
-	acc := NilStringOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntOptionArrOptionOptionList(l IntOptionArrOptionOptionList, p IntOptionArrOptionOptionPredicate) IntOptionArrOptionOptionList {
-
-	acc := NilIntOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8OptionArrOptionOptionList(l Int8OptionArrOptionOptionList, p Int8OptionArrOptionOptionPredicate) Int8OptionArrOptionOptionList {
-
-	acc := NilInt8OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16OptionArrOptionOptionList(l Int16OptionArrOptionOptionList, p Int16OptionArrOptionOptionPredicate) Int16OptionArrOptionOptionList {
-
-	acc := NilInt16OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32OptionArrOptionOptionList(l Int32OptionArrOptionOptionList, p Int32OptionArrOptionOptionPredicate) Int32OptionArrOptionOptionList {
-
-	acc := NilInt32OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64OptionArrOptionOptionList(l Int64OptionArrOptionOptionList, p Int64OptionArrOptionOptionPredicate) Int64OptionArrOptionOptionList {
-
-	acc := NilInt64OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintOptionArrOptionOptionList(l UintOptionArrOptionOptionList, p UintOptionArrOptionOptionPredicate) UintOptionArrOptionOptionList {
-
-	acc := NilUintOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8OptionArrOptionOptionList(l Uint8OptionArrOptionOptionList, p Uint8OptionArrOptionOptionPredicate) Uint8OptionArrOptionOptionList {
-
-	acc := NilUint8OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16OptionArrOptionOptionList(l Uint16OptionArrOptionOptionList, p Uint16OptionArrOptionOptionPredicate) Uint16OptionArrOptionOptionList {
-
-	acc := NilUint16OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32OptionArrOptionOptionList(l Uint32OptionArrOptionOptionList, p Uint32OptionArrOptionOptionPredicate) Uint32OptionArrOptionOptionList {
-
-	acc := NilUint32OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64OptionArrOptionOptionList(l Uint64OptionArrOptionOptionList, p Uint64OptionArrOptionOptionPredicate) Uint64OptionArrOptionOptionList {
-
-	acc := NilUint64OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrOptionArrOptionOptionList(l UintptrOptionArrOptionOptionList, p UintptrOptionArrOptionOptionPredicate) UintptrOptionArrOptionOptionList {
-
-	acc := NilUintptrOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteOptionArrOptionOptionList(l ByteOptionArrOptionOptionList, p ByteOptionArrOptionOptionPredicate) ByteOptionArrOptionOptionList {
-
-	acc := NilByteOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneOptionArrOptionOptionList(l RuneOptionArrOptionOptionList, p RuneOptionArrOptionOptionPredicate) RuneOptionArrOptionOptionList {
-
-	acc := NilRuneOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32OptionArrOptionOptionList(l Float32OptionArrOptionOptionList, p Float32OptionArrOptionOptionPredicate) Float32OptionArrOptionOptionList {
-
-	acc := NilFloat32OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64OptionArrOptionOptionList(l Float64OptionArrOptionOptionList, p Float64OptionArrOptionOptionPredicate) Float64OptionArrOptionOptionList {
-
-	acc := NilFloat64OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64OptionArrOptionOptionList(l Complex64OptionArrOptionOptionList, p Complex64OptionArrOptionOptionPredicate) Complex64OptionArrOptionOptionList {
-
-	acc := NilComplex64OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128OptionArrOptionOptionList(l Complex128OptionArrOptionOptionList, p Complex128OptionArrOptionOptionPredicate) Complex128OptionArrOptionOptionList {
-
-	acc := NilComplex128OptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128OptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyOptionArrOptionOptionList(l AnyOptionArrOptionOptionList, p AnyOptionArrOptionOptionPredicate) AnyOptionArrOptionOptionList {
-
-	acc := NilAnyOptionArrOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyOptionArrOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolListOptionOptionList(l BoolListOptionOptionList, p BoolListOptionOptionPredicate) BoolListOptionOptionList {
-
-	acc := NilBoolListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringListOptionOptionList(l StringListOptionOptionList, p StringListOptionOptionPredicate) StringListOptionOptionList {
-
-	acc := NilStringListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntListOptionOptionList(l IntListOptionOptionList, p IntListOptionOptionPredicate) IntListOptionOptionList {
-
-	acc := NilIntListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ListOptionOptionList(l Int8ListOptionOptionList, p Int8ListOptionOptionPredicate) Int8ListOptionOptionList {
-
-	acc := NilInt8ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ListOptionOptionList(l Int16ListOptionOptionList, p Int16ListOptionOptionPredicate) Int16ListOptionOptionList {
-
-	acc := NilInt16ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ListOptionOptionList(l Int32ListOptionOptionList, p Int32ListOptionOptionPredicate) Int32ListOptionOptionList {
-
-	acc := NilInt32ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ListOptionOptionList(l Int64ListOptionOptionList, p Int64ListOptionOptionPredicate) Int64ListOptionOptionList {
-
-	acc := NilInt64ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintListOptionOptionList(l UintListOptionOptionList, p UintListOptionOptionPredicate) UintListOptionOptionList {
-
-	acc := NilUintListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ListOptionOptionList(l Uint8ListOptionOptionList, p Uint8ListOptionOptionPredicate) Uint8ListOptionOptionList {
-
-	acc := NilUint8ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ListOptionOptionList(l Uint16ListOptionOptionList, p Uint16ListOptionOptionPredicate) Uint16ListOptionOptionList {
-
-	acc := NilUint16ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ListOptionOptionList(l Uint32ListOptionOptionList, p Uint32ListOptionOptionPredicate) Uint32ListOptionOptionList {
-
-	acc := NilUint32ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ListOptionOptionList(l Uint64ListOptionOptionList, p Uint64ListOptionOptionPredicate) Uint64ListOptionOptionList {
-
-	acc := NilUint64ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrListOptionOptionList(l UintptrListOptionOptionList, p UintptrListOptionOptionPredicate) UintptrListOptionOptionList {
-
-	acc := NilUintptrListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteListOptionOptionList(l ByteListOptionOptionList, p ByteListOptionOptionPredicate) ByteListOptionOptionList {
-
-	acc := NilByteListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneListOptionOptionList(l RuneListOptionOptionList, p RuneListOptionOptionPredicate) RuneListOptionOptionList {
-
-	acc := NilRuneListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ListOptionOptionList(l Float32ListOptionOptionList, p Float32ListOptionOptionPredicate) Float32ListOptionOptionList {
-
-	acc := NilFloat32ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ListOptionOptionList(l Float64ListOptionOptionList, p Float64ListOptionOptionPredicate) Float64ListOptionOptionList {
-
-	acc := NilFloat64ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ListOptionOptionList(l Complex64ListOptionOptionList, p Complex64ListOptionOptionPredicate) Complex64ListOptionOptionList {
-
-	acc := NilComplex64ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ListOptionOptionList(l Complex128ListOptionOptionList, p Complex128ListOptionOptionPredicate) Complex128ListOptionOptionList {
-
-	acc := NilComplex128ListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyListOptionOptionList(l AnyListOptionOptionList, p AnyListOptionOptionPredicate) AnyListOptionOptionList {
-
-	acc := NilAnyListOptionOptionList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyListOptionOptionList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolArrList(l BoolArrList, p BoolArrPredicate) BoolArrList {
-
-	acc := NilBoolArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringArrList(l StringArrList, p StringArrPredicate) StringArrList {
-
-	acc := NilStringArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntArrList(l IntArrList, p IntArrPredicate) IntArrList {
-
-	acc := NilIntArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ArrList(l Int8ArrList, p Int8ArrPredicate) Int8ArrList {
-
-	acc := NilInt8ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ArrList(l Int16ArrList, p Int16ArrPredicate) Int16ArrList {
-
-	acc := NilInt16ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ArrList(l Int32ArrList, p Int32ArrPredicate) Int32ArrList {
-
-	acc := NilInt32ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ArrList(l Int64ArrList, p Int64ArrPredicate) Int64ArrList {
-
-	acc := NilInt64ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintArrList(l UintArrList, p UintArrPredicate) UintArrList {
-
-	acc := NilUintArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ArrList(l Uint8ArrList, p Uint8ArrPredicate) Uint8ArrList {
-
-	acc := NilUint8ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ArrList(l Uint16ArrList, p Uint16ArrPredicate) Uint16ArrList {
-
-	acc := NilUint16ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ArrList(l Uint32ArrList, p Uint32ArrPredicate) Uint32ArrList {
-
-	acc := NilUint32ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ArrList(l Uint64ArrList, p Uint64ArrPredicate) Uint64ArrList {
-
-	acc := NilUint64ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrArrList(l UintptrArrList, p UintptrArrPredicate) UintptrArrList {
-
-	acc := NilUintptrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteArrList(l ByteArrList, p ByteArrPredicate) ByteArrList {
-
-	acc := NilByteArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneArrList(l RuneArrList, p RuneArrPredicate) RuneArrList {
-
-	acc := NilRuneArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ArrList(l Float32ArrList, p Float32ArrPredicate) Float32ArrList {
-
-	acc := NilFloat32ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ArrList(l Float64ArrList, p Float64ArrPredicate) Float64ArrList {
-
-	acc := NilFloat64ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ArrList(l Complex64ArrList, p Complex64ArrPredicate) Complex64ArrList {
-
-	acc := NilComplex64ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ArrList(l Complex128ArrList, p Complex128ArrPredicate) Complex128ArrList {
-
-	acc := NilComplex128ArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyArrList(l AnyArrList, p AnyArrPredicate) AnyArrList {
-
-	acc := NilAnyArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolArrArrList(l BoolArrArrList, p BoolArrArrPredicate) BoolArrArrList {
-
-	acc := NilBoolArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringArrArrList(l StringArrArrList, p StringArrArrPredicate) StringArrArrList {
-
-	acc := NilStringArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntArrArrList(l IntArrArrList, p IntArrArrPredicate) IntArrArrList {
-
-	acc := NilIntArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ArrArrList(l Int8ArrArrList, p Int8ArrArrPredicate) Int8ArrArrList {
-
-	acc := NilInt8ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ArrArrList(l Int16ArrArrList, p Int16ArrArrPredicate) Int16ArrArrList {
-
-	acc := NilInt16ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ArrArrList(l Int32ArrArrList, p Int32ArrArrPredicate) Int32ArrArrList {
-
-	acc := NilInt32ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ArrArrList(l Int64ArrArrList, p Int64ArrArrPredicate) Int64ArrArrList {
-
-	acc := NilInt64ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintArrArrList(l UintArrArrList, p UintArrArrPredicate) UintArrArrList {
-
-	acc := NilUintArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ArrArrList(l Uint8ArrArrList, p Uint8ArrArrPredicate) Uint8ArrArrList {
-
-	acc := NilUint8ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ArrArrList(l Uint16ArrArrList, p Uint16ArrArrPredicate) Uint16ArrArrList {
-
-	acc := NilUint16ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ArrArrList(l Uint32ArrArrList, p Uint32ArrArrPredicate) Uint32ArrArrList {
-
-	acc := NilUint32ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ArrArrList(l Uint64ArrArrList, p Uint64ArrArrPredicate) Uint64ArrArrList {
-
-	acc := NilUint64ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrArrArrList(l UintptrArrArrList, p UintptrArrArrPredicate) UintptrArrArrList {
-
-	acc := NilUintptrArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteArrArrList(l ByteArrArrList, p ByteArrArrPredicate) ByteArrArrList {
-
-	acc := NilByteArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneArrArrList(l RuneArrArrList, p RuneArrArrPredicate) RuneArrArrList {
-
-	acc := NilRuneArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ArrArrList(l Float32ArrArrList, p Float32ArrArrPredicate) Float32ArrArrList {
-
-	acc := NilFloat32ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ArrArrList(l Float64ArrArrList, p Float64ArrArrPredicate) Float64ArrArrList {
-
-	acc := NilFloat64ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ArrArrList(l Complex64ArrArrList, p Complex64ArrArrPredicate) Complex64ArrArrList {
-
-	acc := NilComplex64ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ArrArrList(l Complex128ArrArrList, p Complex128ArrArrPredicate) Complex128ArrArrList {
-
-	acc := NilComplex128ArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyArrArrList(l AnyArrArrList, p AnyArrArrPredicate) AnyArrArrList {
-
-	acc := NilAnyArrArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyArrArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolOptionArrList(l BoolOptionArrList, p BoolOptionArrPredicate) BoolOptionArrList {
-
-	acc := NilBoolOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringOptionArrList(l StringOptionArrList, p StringOptionArrPredicate) StringOptionArrList {
-
-	acc := NilStringOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntOptionArrList(l IntOptionArrList, p IntOptionArrPredicate) IntOptionArrList {
-
-	acc := NilIntOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8OptionArrList(l Int8OptionArrList, p Int8OptionArrPredicate) Int8OptionArrList {
-
-	acc := NilInt8OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16OptionArrList(l Int16OptionArrList, p Int16OptionArrPredicate) Int16OptionArrList {
-
-	acc := NilInt16OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32OptionArrList(l Int32OptionArrList, p Int32OptionArrPredicate) Int32OptionArrList {
-
-	acc := NilInt32OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64OptionArrList(l Int64OptionArrList, p Int64OptionArrPredicate) Int64OptionArrList {
-
-	acc := NilInt64OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintOptionArrList(l UintOptionArrList, p UintOptionArrPredicate) UintOptionArrList {
-
-	acc := NilUintOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8OptionArrList(l Uint8OptionArrList, p Uint8OptionArrPredicate) Uint8OptionArrList {
-
-	acc := NilUint8OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16OptionArrList(l Uint16OptionArrList, p Uint16OptionArrPredicate) Uint16OptionArrList {
-
-	acc := NilUint16OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32OptionArrList(l Uint32OptionArrList, p Uint32OptionArrPredicate) Uint32OptionArrList {
-
-	acc := NilUint32OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64OptionArrList(l Uint64OptionArrList, p Uint64OptionArrPredicate) Uint64OptionArrList {
-
-	acc := NilUint64OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrOptionArrList(l UintptrOptionArrList, p UintptrOptionArrPredicate) UintptrOptionArrList {
-
-	acc := NilUintptrOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteOptionArrList(l ByteOptionArrList, p ByteOptionArrPredicate) ByteOptionArrList {
-
-	acc := NilByteOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneOptionArrList(l RuneOptionArrList, p RuneOptionArrPredicate) RuneOptionArrList {
-
-	acc := NilRuneOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32OptionArrList(l Float32OptionArrList, p Float32OptionArrPredicate) Float32OptionArrList {
-
-	acc := NilFloat32OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64OptionArrList(l Float64OptionArrList, p Float64OptionArrPredicate) Float64OptionArrList {
-
-	acc := NilFloat64OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64OptionArrList(l Complex64OptionArrList, p Complex64OptionArrPredicate) Complex64OptionArrList {
-
-	acc := NilComplex64OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128OptionArrList(l Complex128OptionArrList, p Complex128OptionArrPredicate) Complex128OptionArrList {
-
-	acc := NilComplex128OptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128OptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyOptionArrList(l AnyOptionArrList, p AnyOptionArrPredicate) AnyOptionArrList {
-
-	acc := NilAnyOptionArrList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyOptionArrList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterBoolListList(l BoolListList, p BoolListPredicate) BoolListList {
-
-	acc := NilBoolListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilBoolListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterStringListList(l StringListList, p StringListPredicate) StringListList {
-
-	acc := NilStringListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilStringListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterIntListList(l IntListList, p IntListPredicate) IntListList {
-
-	acc := NilIntListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilIntListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt8ListList(l Int8ListList, p Int8ListPredicate) Int8ListList {
-
-	acc := NilInt8ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt8ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt16ListList(l Int16ListList, p Int16ListPredicate) Int16ListList {
-
-	acc := NilInt16ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt16ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt32ListList(l Int32ListList, p Int32ListPredicate) Int32ListList {
-
-	acc := NilInt32ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt32ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterInt64ListList(l Int64ListList, p Int64ListPredicate) Int64ListList {
-
-	acc := NilInt64ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilInt64ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintListList(l UintListList, p UintListPredicate) UintListList {
-
-	acc := NilUintListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint8ListList(l Uint8ListList, p Uint8ListPredicate) Uint8ListList {
-
-	acc := NilUint8ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint8ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint16ListList(l Uint16ListList, p Uint16ListPredicate) Uint16ListList {
-
-	acc := NilUint16ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint16ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint32ListList(l Uint32ListList, p Uint32ListPredicate) Uint32ListList {
-
-	acc := NilUint32ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint32ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUint64ListList(l Uint64ListList, p Uint64ListPredicate) Uint64ListList {
-
-	acc := NilUint64ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUint64ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterUintptrListList(l UintptrListList, p UintptrListPredicate) UintptrListList {
-
-	acc := NilUintptrListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilUintptrListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterByteListList(l ByteListList, p ByteListPredicate) ByteListList {
-
-	acc := NilByteListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilByteListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterRuneListList(l RuneListList, p RuneListPredicate) RuneListList {
-
-	acc := NilRuneListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilRuneListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat32ListList(l Float32ListList, p Float32ListPredicate) Float32ListList {
-
-	acc := NilFloat32ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat32ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterFloat64ListList(l Float64ListList, p Float64ListPredicate) Float64ListList {
-
-	acc := NilFloat64ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilFloat64ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex64ListList(l Complex64ListList, p Complex64ListPredicate) Complex64ListList {
-
-	acc := NilComplex64ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex64ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterComplex128ListList(l Complex128ListList, p Complex128ListPredicate) Complex128ListList {
-
-	acc := NilComplex128ListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilComplex128ListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func FilterAnyListList(l AnyListList, p AnyListPredicate) AnyListList {
-
-	acc := NilAnyListList
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			acc = acc.Cons(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  
+  acc := NilAnyListList
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) {
+      acc = acc.Cons(*xs.head)
+    }
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }

@@ -4,5284 +4,5283 @@
 package fp
 
 import "fmt"
-
 func MkStringBoolArr(o []bool, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, BoolToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, BoolToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArr(o []string, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, StringToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, StringToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArr(o []int, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, IntToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, IntToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8Arr(o []int8, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int8ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int8ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16Arr(o []int16, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int16ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int16ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32Arr(o []int32, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int32ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int32ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64Arr(o []int64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int64ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int64ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArr(o []uint, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, UintToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, UintToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8Arr(o []uint8, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint8ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16Arr(o []uint16, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint16ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32Arr(o []uint32, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint32ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64Arr(o []uint64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint64ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArr(o []uintptr, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, UintptrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, UintptrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArr(o []byte, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, ByteToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, ByteToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArr(o []rune, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, RuneToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, RuneToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32Arr(o []float32, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Float32ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Float32ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64Arr(o []float64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Float64ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Float64ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64Arr(o []complex64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Complex64ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128Arr(o []complex128, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Complex128ToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArr(o []Any, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, AnyToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, AnyToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrArr(o [][]bool, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, BoolArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrArr(o [][]string, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, StringArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, StringArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrArr(o [][]int, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, IntArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, IntArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrArr(o [][]int8, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int8ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrArr(o [][]int16, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int16ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrArr(o [][]int32, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int32ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrArr(o [][]int64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int64ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrArr(o [][]uint, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, UintArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, UintArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrArr(o [][]uint8, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint8ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrArr(o [][]uint16, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint16ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrArr(o [][]uint32, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint32ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrArr(o [][]uint64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint64ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrArr(o [][]uintptr, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, UintptrArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrArr(o [][]byte, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, ByteArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrArr(o [][]rune, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, RuneArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrArr(o [][]float32, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Float32ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrArr(o [][]float64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Float64ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrArr(o [][]complex64, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Complex64ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrArr(o [][]complex128, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Complex128ArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrArr(o [][]Any, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, AnyArrToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolOptionArr(o []BoolOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, BoolOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringOptionArr(o []StringOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, StringOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntOptionArr(o []IntOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, IntOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8OptionArr(o []Int8Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int8OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int8OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16OptionArr(o []Int16Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int16OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int16OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32OptionArr(o []Int32Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int32OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int32OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64OptionArr(o []Int64Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Int64OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintOptionArr(o []UintOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, UintOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, UintOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8OptionArr(o []Uint8Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint8OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint8OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16OptionArr(o []Uint16Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint16OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint16OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32OptionArr(o []Uint32Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint32OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint32OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64OptionArr(o []Uint64Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Uint64OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Uint64OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrOptionArr(o []UintptrOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, UintptrOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, UintptrOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteOptionArr(o []ByteOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, ByteOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneOptionArr(o []RuneOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, RuneOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32OptionArr(o []Float32Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Float32OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64OptionArr(o []Float64Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Float64OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64OptionArr(o []Complex64Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Complex64OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Complex64OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128OptionArr(o []Complex128Option, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, Complex128OptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, Complex128OptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyOptionArr(o []AnyOption, start, sep, end string) string {
-
-	content := ""
-	for _, e := range o {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionToString(e), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+	 content := ""
+	 for _, e := range o {
+	   content = fmt.Sprintf("%v%v%v", content, AnyOptionToString(e), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolList(o BoolList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringList(o StringList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntList(o IntList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8List(o Int8List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16List(o Int16List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32List(o Int32List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64List(o Int64List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintList(o UintList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8List(o Uint8List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16List(o Uint16List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32List(o Uint32List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64List(o Uint64List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrList(o UintptrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteList(o ByteList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneList(o RuneList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32List(o Float32List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64List(o Float64List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64List(o Complex64List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128List(o Complex128List, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyList(o AnyList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolOptionList(o BoolOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringOptionList(o StringOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntOptionList(o IntOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8OptionList(o Int8OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16OptionList(o Int16OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32OptionList(o Int32OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64OptionList(o Int64OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintOptionList(o UintOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8OptionList(o Uint8OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16OptionList(o Uint16OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32OptionList(o Uint32OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64OptionList(o Uint64OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrOptionList(o UintptrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteOptionList(o ByteOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneOptionList(o RuneOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32OptionList(o Float32OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64OptionList(o Float64OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64OptionList(o Complex64OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128OptionList(o Complex128OptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128OptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128OptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyOptionList(o AnyOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrOptionList(o BoolArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrOptionList(o StringArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrOptionList(o IntArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrOptionList(o Int8ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrOptionList(o Int16ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrOptionList(o Int32ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrOptionList(o Int64ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrOptionList(o UintArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrOptionList(o Uint8ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrOptionList(o Uint16ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrOptionList(o Uint32ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrOptionList(o Uint64ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrOptionList(o UintptrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrOptionList(o ByteArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrOptionList(o RuneArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrOptionList(o Float32ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrOptionList(o Float64ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrOptionList(o Complex64ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrOptionList(o Complex128ArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrOptionList(o AnyArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrArrOptionList(o BoolArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrArrOptionList(o StringArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrArrOptionList(o IntArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrArrOptionList(o Int8ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrArrOptionList(o Int16ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrArrOptionList(o Int32ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrArrOptionList(o Int64ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrArrOptionList(o UintArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrArrOptionList(o Uint8ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrArrOptionList(o Uint16ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrArrOptionList(o Uint32ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrArrOptionList(o Uint64ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrArrOptionList(o UintptrArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrArrOptionList(o ByteArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrArrOptionList(o RuneArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrArrOptionList(o Float32ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrArrOptionList(o Float64ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrArrOptionList(o Complex64ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrArrOptionList(o Complex128ArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrArrOptionList(o AnyArrArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyArrArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolOptionArrOptionList(o BoolOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringOptionArrOptionList(o StringOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntOptionArrOptionList(o IntOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8OptionArrOptionList(o Int8OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16OptionArrOptionList(o Int16OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32OptionArrOptionList(o Int32OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64OptionArrOptionList(o Int64OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintOptionArrOptionList(o UintOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8OptionArrOptionList(o Uint8OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16OptionArrOptionList(o Uint16OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32OptionArrOptionList(o Uint32OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64OptionArrOptionList(o Uint64OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrOptionArrOptionList(o UintptrOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteOptionArrOptionList(o ByteOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneOptionArrOptionList(o RuneOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32OptionArrOptionList(o Float32OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64OptionArrOptionList(o Float64OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64OptionArrOptionList(o Complex64OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128OptionArrOptionList(o Complex128OptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128OptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128OptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyOptionArrOptionList(o AnyOptionArrOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionArrOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyOptionArrOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolListOptionList(o BoolListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringListOptionList(o StringListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntListOptionList(o IntListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ListOptionList(o Int8ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ListOptionList(o Int16ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ListOptionList(o Int32ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ListOptionList(o Int64ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintListOptionList(o UintListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ListOptionList(o Uint8ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ListOptionList(o Uint16ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ListOptionList(o Uint32ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ListOptionList(o Uint64ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrListOptionList(o UintptrListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteListOptionList(o ByteListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneListOptionList(o RuneListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ListOptionList(o Float32ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ListOptionList(o Float64ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ListOptionList(o Complex64ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ListOptionList(o Complex128ListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyListOptionList(o AnyListOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyListOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyListOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolOptionOptionList(o BoolOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringOptionOptionList(o StringOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntOptionOptionList(o IntOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8OptionOptionList(o Int8OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16OptionOptionList(o Int16OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32OptionOptionList(o Int32OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64OptionOptionList(o Int64OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintOptionOptionList(o UintOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8OptionOptionList(o Uint8OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16OptionOptionList(o Uint16OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32OptionOptionList(o Uint32OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64OptionOptionList(o Uint64OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrOptionOptionList(o UintptrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteOptionOptionList(o ByteOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneOptionOptionList(o RuneOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32OptionOptionList(o Float32OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64OptionOptionList(o Float64OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64OptionOptionList(o Complex64OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128OptionOptionList(o Complex128OptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128OptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128OptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyOptionOptionList(o AnyOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrOptionOptionList(o BoolArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrOptionOptionList(o StringArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrOptionOptionList(o IntArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrOptionOptionList(o Int8ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrOptionOptionList(o Int16ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrOptionOptionList(o Int32ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrOptionOptionList(o Int64ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrOptionOptionList(o UintArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrOptionOptionList(o Uint8ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrOptionOptionList(o Uint16ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrOptionOptionList(o Uint32ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrOptionOptionList(o Uint64ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrOptionOptionList(o UintptrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrOptionOptionList(o ByteArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrOptionOptionList(o RuneArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrOptionOptionList(o Float32ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrOptionOptionList(o Float64ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrOptionOptionList(o Complex64ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrOptionOptionList(o Complex128ArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrOptionOptionList(o AnyArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrArrOptionOptionList(o BoolArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrArrOptionOptionList(o StringArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrArrOptionOptionList(o IntArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrArrOptionOptionList(o Int8ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrArrOptionOptionList(o Int16ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrArrOptionOptionList(o Int32ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrArrOptionOptionList(o Int64ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrArrOptionOptionList(o UintArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrArrOptionOptionList(o Uint8ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrArrOptionOptionList(o Uint16ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrArrOptionOptionList(o Uint32ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrArrOptionOptionList(o Uint64ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrArrOptionOptionList(o UintptrArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrArrOptionOptionList(o ByteArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrArrOptionOptionList(o RuneArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrArrOptionOptionList(o Float32ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrArrOptionOptionList(o Float64ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrArrOptionOptionList(o Complex64ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrArrOptionOptionList(o Complex128ArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrArrOptionOptionList(o AnyArrArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyArrArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolOptionArrOptionOptionList(o BoolOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringOptionArrOptionOptionList(o StringOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntOptionArrOptionOptionList(o IntOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8OptionArrOptionOptionList(o Int8OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16OptionArrOptionOptionList(o Int16OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32OptionArrOptionOptionList(o Int32OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64OptionArrOptionOptionList(o Int64OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintOptionArrOptionOptionList(o UintOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8OptionArrOptionOptionList(o Uint8OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16OptionArrOptionOptionList(o Uint16OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32OptionArrOptionOptionList(o Uint32OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64OptionArrOptionOptionList(o Uint64OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrOptionArrOptionOptionList(o UintptrOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteOptionArrOptionOptionList(o ByteOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneOptionArrOptionOptionList(o RuneOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32OptionArrOptionOptionList(o Float32OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64OptionArrOptionOptionList(o Float64OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64OptionArrOptionOptionList(o Complex64OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128OptionArrOptionOptionList(o Complex128OptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128OptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128OptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyOptionArrOptionOptionList(o AnyOptionArrOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionArrOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyOptionArrOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolListOptionOptionList(o BoolListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringListOptionOptionList(o StringListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntListOptionOptionList(o IntListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ListOptionOptionList(o Int8ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ListOptionOptionList(o Int16ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ListOptionOptionList(o Int32ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ListOptionOptionList(o Int64ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintListOptionOptionList(o UintListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ListOptionOptionList(o Uint8ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ListOptionOptionList(o Uint16ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ListOptionOptionList(o Uint32ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ListOptionOptionList(o Uint64ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrListOptionOptionList(o UintptrListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteListOptionOptionList(o ByteListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneListOptionOptionList(o RuneListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ListOptionOptionList(o Float32ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ListOptionOptionList(o Float64ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ListOptionOptionList(o Complex64ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ListOptionOptionList(o Complex128ListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyListOptionOptionList(o AnyListOptionOptionList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyListOptionOptionToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyListOptionOptionToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrList(o BoolArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrList(o StringArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrList(o IntArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrList(o Int8ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrList(o Int16ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrList(o Int32ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrList(o Int64ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrList(o UintArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrList(o Uint8ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrList(o Uint16ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrList(o Uint32ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrList(o Uint64ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrList(o UintptrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrList(o ByteArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrList(o RuneArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrList(o Float32ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrList(o Float64ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrList(o Complex64ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrList(o Complex128ArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrList(o AnyArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolArrArrList(o BoolArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringArrArrList(o StringArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntArrArrList(o IntArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ArrArrList(o Int8ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ArrArrList(o Int16ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ArrArrList(o Int32ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ArrArrList(o Int64ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintArrArrList(o UintArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ArrArrList(o Uint8ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ArrArrList(o Uint16ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ArrArrList(o Uint32ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ArrArrList(o Uint64ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrArrArrList(o UintptrArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteArrArrList(o ByteArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneArrArrList(o RuneArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ArrArrList(o Float32ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ArrArrList(o Float64ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ArrArrList(o Complex64ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ArrArrList(o Complex128ArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyArrArrList(o AnyArrArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyArrArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolOptionArrList(o BoolOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringOptionArrList(o StringOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntOptionArrList(o IntOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8OptionArrList(o Int8OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16OptionArrList(o Int16OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32OptionArrList(o Int32OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64OptionArrList(o Int64OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintOptionArrList(o UintOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8OptionArrList(o Uint8OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16OptionArrList(o Uint16OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32OptionArrList(o Uint32OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64OptionArrList(o Uint64OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrOptionArrList(o UintptrOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteOptionArrList(o ByteOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneOptionArrList(o RuneOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32OptionArrList(o Float32OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64OptionArrList(o Float64OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64OptionArrList(o Complex64OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128OptionArrList(o Complex128OptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128OptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128OptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyOptionArrList(o AnyOptionArrList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionArrToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyOptionArrToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringBoolListList(o BoolListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, BoolListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringStringListList(o StringListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, StringListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringIntListList(o IntListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, IntListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt8ListList(o Int8ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int8ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int8ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt16ListList(o Int16ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int16ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int16ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt32ListList(o Int32ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int32ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int32ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringInt64ListList(o Int64ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Int64ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintListList(o UintListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint8ListList(o Uint8ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint8ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint8ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint16ListList(o Uint16ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint16ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint16ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint32ListList(o Uint32ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint32ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint32ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUint64ListList(o Uint64ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Uint64ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Uint64ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringUintptrListList(o UintptrListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, UintptrListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, UintptrListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringByteListList(o ByteListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, ByteListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringRuneListList(o RuneListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, RuneListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat32ListList(o Float32ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float32ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringFloat64ListList(o Float64ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Float64ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex64ListList(o Complex64ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex64ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex64ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringComplex128ListList(o Complex128ListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Complex128ListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, Complex128ListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }
 func MkStringAnyListList(o AnyListList, start, sep, end string) string {
-
-	content := ""
-	xs := o
-	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyListToString(*xs.head), sep)
-		xs = *xs.tail
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+  
+   content := ""
+   xs := o
+   for xs.NonEmpty() {
+     content = fmt.Sprintf("%v%v%v", content, AnyListToString(*xs.head), sep)
+     xs = *xs.tail
+   }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return fmt.Sprintf("%v%v%v", start, content, end)
 
 }

@@ -3,6 +3,7 @@
 
 package fp
 
+
 type BoolPredicate func(t bool) bool
 type StringPredicate func(t string) bool
 type IntPredicate func(t int) bool

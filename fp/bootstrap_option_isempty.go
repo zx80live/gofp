@@ -3,6 +3,7 @@
 
 package fp
 
+
 func (o BoolOption) IsEmpty() bool { return o == NoneBoolOption }
 
 func (o StringOption) IsEmpty() bool { return o == NoneStringOption }
@@ -357,13 +358,9 @@ func (o Float32OptionArrOptionOption) IsEmpty() bool { return o == NoneFloat32Op
 
 func (o Float64OptionArrOptionOption) IsEmpty() bool { return o == NoneFloat64OptionArrOptionOption }
 
-func (o Complex64OptionArrOptionOption) IsEmpty() bool {
-	return o == NoneComplex64OptionArrOptionOption
-}
+func (o Complex64OptionArrOptionOption) IsEmpty() bool { return o == NoneComplex64OptionArrOptionOption }
 
-func (o Complex128OptionArrOptionOption) IsEmpty() bool {
-	return o == NoneComplex128OptionArrOptionOption
-}
+func (o Complex128OptionArrOptionOption) IsEmpty() bool { return o == NoneComplex128OptionArrOptionOption }
 
 func (o AnyOptionArrOptionOption) IsEmpty() bool { return o == NoneAnyOptionArrOptionOption }
 

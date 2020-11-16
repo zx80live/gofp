@@ -3,5183 +3,4144 @@
 
 package fp
 
-func BoolEquals(a, b bool) bool {
 
-	return a == b
+func BoolEquals(a, b bool) bool {
+  
+return a == b
 }
 func StringEquals(a, b string) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntEquals(a, b int) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8Equals(a, b int8) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16Equals(a, b int16) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32Equals(a, b int32) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64Equals(a, b int64) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintEquals(a, b uint) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8Equals(a, b uint8) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16Equals(a, b uint16) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32Equals(a, b uint32) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64Equals(a, b uint64) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrEquals(a, b uintptr) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteEquals(a, b byte) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneEquals(a, b rune) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32Equals(a, b float32) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64Equals(a, b float64) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64Equals(a, b complex64) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128Equals(a, b complex128) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyEquals(a, b Any) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolOptionEquals(a, b BoolOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringOptionEquals(a, b StringOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntOptionEquals(a, b IntOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8OptionEquals(a, b Int8Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16OptionEquals(a, b Int16Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32OptionEquals(a, b Int32Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64OptionEquals(a, b Int64Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintOptionEquals(a, b UintOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8OptionEquals(a, b Uint8Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16OptionEquals(a, b Uint16Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32OptionEquals(a, b Uint32Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64OptionEquals(a, b Uint64Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrOptionEquals(a, b UintptrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteOptionEquals(a, b ByteOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneOptionEquals(a, b RuneOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32OptionEquals(a, b Float32Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64OptionEquals(a, b Float64Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64OptionEquals(a, b Complex64Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128OptionEquals(a, b Complex128Option) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128Equals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128Equals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyOptionEquals(a, b AnyOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolArrOptionEquals(a, b BoolArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringArrOptionEquals(a, b StringArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntArrOptionEquals(a, b IntArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8ArrOptionEquals(a, b Int8ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16ArrOptionEquals(a, b Int16ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32ArrOptionEquals(a, b Int32ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64ArrOptionEquals(a, b Int64ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintArrOptionEquals(a, b UintArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8ArrOptionEquals(a, b Uint8ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16ArrOptionEquals(a, b Uint16ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32ArrOptionEquals(a, b Uint32ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64ArrOptionEquals(a, b Uint64ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrArrOptionEquals(a, b UintptrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteArrOptionEquals(a, b ByteArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneArrOptionEquals(a, b RuneArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32ArrOptionEquals(a, b Float32ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64ArrOptionEquals(a, b Float64ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64ArrOptionEquals(a, b Complex64ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128ArrOptionEquals(a, b Complex128ArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128ArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128ArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyArrOptionEquals(a, b AnyArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolArrArrOptionEquals(a, b BoolArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringArrArrOptionEquals(a, b StringArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntArrArrOptionEquals(a, b IntArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8ArrArrOptionEquals(a, b Int8ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16ArrArrOptionEquals(a, b Int16ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32ArrArrOptionEquals(a, b Int32ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64ArrArrOptionEquals(a, b Int64ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintArrArrOptionEquals(a, b UintArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8ArrArrOptionEquals(a, b Uint8ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16ArrArrOptionEquals(a, b Uint16ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32ArrArrOptionEquals(a, b Uint32ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64ArrArrOptionEquals(a, b Uint64ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrArrArrOptionEquals(a, b UintptrArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteArrArrOptionEquals(a, b ByteArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneArrArrOptionEquals(a, b RuneArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32ArrArrOptionEquals(a, b Float32ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64ArrArrOptionEquals(a, b Float64ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64ArrArrOptionEquals(a, b Complex64ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128ArrArrOptionEquals(a, b Complex128ArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128ArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128ArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyArrArrOptionEquals(a, b AnyArrArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyArrArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyArrArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolOptionArrOptionEquals(a, b BoolOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringOptionArrOptionEquals(a, b StringOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntOptionArrOptionEquals(a, b IntOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8OptionArrOptionEquals(a, b Int8OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16OptionArrOptionEquals(a, b Int16OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32OptionArrOptionEquals(a, b Int32OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64OptionArrOptionEquals(a, b Int64OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintOptionArrOptionEquals(a, b UintOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8OptionArrOptionEquals(a, b Uint8OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16OptionArrOptionEquals(a, b Uint16OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32OptionArrOptionEquals(a, b Uint32OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64OptionArrOptionEquals(a, b Uint64OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrOptionArrOptionEquals(a, b UintptrOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteOptionArrOptionEquals(a, b ByteOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneOptionArrOptionEquals(a, b RuneOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32OptionArrOptionEquals(a, b Float32OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64OptionArrOptionEquals(a, b Float64OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64OptionArrOptionEquals(a, b Complex64OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128OptionArrOptionEquals(a, b Complex128OptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128OptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128OptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyOptionArrOptionEquals(a, b AnyOptionArrOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyOptionArrEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyOptionArrEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolListOptionEquals(a, b BoolListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringListOptionEquals(a, b StringListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntListOptionEquals(a, b IntListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8ListOptionEquals(a, b Int8ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16ListOptionEquals(a, b Int16ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32ListOptionEquals(a, b Int32ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64ListOptionEquals(a, b Int64ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintListOptionEquals(a, b UintListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8ListOptionEquals(a, b Uint8ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16ListOptionEquals(a, b Uint16ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32ListOptionEquals(a, b Uint32ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64ListOptionEquals(a, b Uint64ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrListOptionEquals(a, b UintptrListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteListOptionEquals(a, b ByteListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneListOptionEquals(a, b RuneListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32ListOptionEquals(a, b Float32ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64ListOptionEquals(a, b Float64ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64ListOptionEquals(a, b Complex64ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128ListOptionEquals(a, b Complex128ListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128ListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128ListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyListOptionEquals(a, b AnyListOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyListEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyListEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolOptionOptionEquals(a, b BoolOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringOptionOptionEquals(a, b StringOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntOptionOptionEquals(a, b IntOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8OptionOptionEquals(a, b Int8OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16OptionOptionEquals(a, b Int16OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32OptionOptionEquals(a, b Int32OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64OptionOptionEquals(a, b Int64OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintOptionOptionEquals(a, b UintOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8OptionOptionEquals(a, b Uint8OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16OptionOptionEquals(a, b Uint16OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32OptionOptionEquals(a, b Uint32OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64OptionOptionEquals(a, b Uint64OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrOptionOptionEquals(a, b UintptrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteOptionOptionEquals(a, b ByteOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneOptionOptionEquals(a, b RuneOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32OptionOptionEquals(a, b Float32OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64OptionOptionEquals(a, b Float64OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64OptionOptionEquals(a, b Complex64OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128OptionOptionEquals(a, b Complex128OptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128OptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128OptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyOptionOptionEquals(a, b AnyOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolArrOptionOptionEquals(a, b BoolArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringArrOptionOptionEquals(a, b StringArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntArrOptionOptionEquals(a, b IntArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8ArrOptionOptionEquals(a, b Int8ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16ArrOptionOptionEquals(a, b Int16ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32ArrOptionOptionEquals(a, b Int32ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64ArrOptionOptionEquals(a, b Int64ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintArrOptionOptionEquals(a, b UintArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8ArrOptionOptionEquals(a, b Uint8ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16ArrOptionOptionEquals(a, b Uint16ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32ArrOptionOptionEquals(a, b Uint32ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64ArrOptionOptionEquals(a, b Uint64ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrArrOptionOptionEquals(a, b UintptrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteArrOptionOptionEquals(a, b ByteArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneArrOptionOptionEquals(a, b RuneArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32ArrOptionOptionEquals(a, b Float32ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64ArrOptionOptionEquals(a, b Float64ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64ArrOptionOptionEquals(a, b Complex64ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128ArrOptionOptionEquals(a, b Complex128ArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128ArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128ArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyArrOptionOptionEquals(a, b AnyArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolArrArrOptionOptionEquals(a, b BoolArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringArrArrOptionOptionEquals(a, b StringArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntArrArrOptionOptionEquals(a, b IntArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8ArrArrOptionOptionEquals(a, b Int8ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16ArrArrOptionOptionEquals(a, b Int16ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32ArrArrOptionOptionEquals(a, b Int32ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64ArrArrOptionOptionEquals(a, b Int64ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintArrArrOptionOptionEquals(a, b UintArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8ArrArrOptionOptionEquals(a, b Uint8ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16ArrArrOptionOptionEquals(a, b Uint16ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32ArrArrOptionOptionEquals(a, b Uint32ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64ArrArrOptionOptionEquals(a, b Uint64ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrArrArrOptionOptionEquals(a, b UintptrArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteArrArrOptionOptionEquals(a, b ByteArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneArrArrOptionOptionEquals(a, b RuneArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32ArrArrOptionOptionEquals(a, b Float32ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64ArrArrOptionOptionEquals(a, b Float64ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64ArrArrOptionOptionEquals(a, b Complex64ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128ArrArrOptionOptionEquals(a, b Complex128ArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128ArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128ArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyArrArrOptionOptionEquals(a, b AnyArrArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyArrArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyArrArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolOptionArrOptionOptionEquals(a, b BoolOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringOptionArrOptionOptionEquals(a, b StringOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntOptionArrOptionOptionEquals(a, b IntOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8OptionArrOptionOptionEquals(a, b Int8OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16OptionArrOptionOptionEquals(a, b Int16OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32OptionArrOptionOptionEquals(a, b Int32OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64OptionArrOptionOptionEquals(a, b Int64OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintOptionArrOptionOptionEquals(a, b UintOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8OptionArrOptionOptionEquals(a, b Uint8OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16OptionArrOptionOptionEquals(a, b Uint16OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32OptionArrOptionOptionEquals(a, b Uint32OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64OptionArrOptionOptionEquals(a, b Uint64OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrOptionArrOptionOptionEquals(a, b UintptrOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteOptionArrOptionOptionEquals(a, b ByteOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneOptionArrOptionOptionEquals(a, b RuneOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32OptionArrOptionOptionEquals(a, b Float32OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64OptionArrOptionOptionEquals(a, b Float64OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64OptionArrOptionOptionEquals(a, b Complex64OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128OptionArrOptionOptionEquals(a, b Complex128OptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128OptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128OptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyOptionArrOptionOptionEquals(a, b AnyOptionArrOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyOptionArrOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyOptionArrOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolListOptionOptionEquals(a, b BoolListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return BoolListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return BoolListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func StringListOptionOptionEquals(a, b StringListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return StringListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return StringListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func IntListOptionOptionEquals(a, b IntListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return IntListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return IntListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int8ListOptionOptionEquals(a, b Int8ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int8ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int8ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int16ListOptionOptionEquals(a, b Int16ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int16ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int16ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int32ListOptionOptionEquals(a, b Int32ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int32ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int32ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Int64ListOptionOptionEquals(a, b Int64ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Int64ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Int64ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintListOptionOptionEquals(a, b UintListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint8ListOptionOptionEquals(a, b Uint8ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint8ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint8ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint16ListOptionOptionEquals(a, b Uint16ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint16ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint16ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint32ListOptionOptionEquals(a, b Uint32ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint32ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint32ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Uint64ListOptionOptionEquals(a, b Uint64ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Uint64ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Uint64ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func UintptrListOptionOptionEquals(a, b UintptrListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return UintptrListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return UintptrListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func ByteListOptionOptionEquals(a, b ByteListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return ByteListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return ByteListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func RuneListOptionOptionEquals(a, b RuneListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return RuneListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return RuneListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float32ListOptionOptionEquals(a, b Float32ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float32ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float32ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Float64ListOptionOptionEquals(a, b Float64ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Float64ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Float64ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex64ListOptionOptionEquals(a, b Complex64ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex64ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex64ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func Complex128ListOptionOptionEquals(a, b Complex128ListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return Complex128ListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return Complex128ListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func AnyListOptionOptionEquals(a, b AnyListOptionOption) bool {
-
-	if a.IsDefined() {
-		if b.IsDefined() {
-			return AnyListOptionEquals(*a.value, *b.value)
-		} else {
-			return false
-		}
-	} else if b.IsDefined() {
-		return false
-	} else {
-		return true
-	}
+  
+  if a.IsDefined() {
+    if b.IsDefined() {
+      return AnyListOptionEquals(*a.value, *b.value)
+    } else { return false }
+  } else if b.IsDefined() {
+    return false
+  } else { return true }
 
 }
 func BoolArrEquals(a, b []bool) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !BoolEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !BoolEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func StringArrEquals(a, b []string) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !StringEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !StringEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func IntArrEquals(a, b []int) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !IntEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !IntEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int8ArrEquals(a, b []int8) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int8Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int8Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int16ArrEquals(a, b []int16) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int16Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int16Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int32ArrEquals(a, b []int32) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int32Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int32Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int64ArrEquals(a, b []int64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int64Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int64Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func UintArrEquals(a, b []uint) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !UintEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !UintEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint8ArrEquals(a, b []uint8) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint8Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint8Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint16ArrEquals(a, b []uint16) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint16Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint16Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint32ArrEquals(a, b []uint32) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint32Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint32Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint64ArrEquals(a, b []uint64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint64Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint64Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func UintptrArrEquals(a, b []uintptr) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !UintptrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !UintptrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func ByteArrEquals(a, b []byte) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !ByteEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !ByteEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func RuneArrEquals(a, b []rune) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !RuneEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !RuneEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Float32ArrEquals(a, b []float32) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Float32Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Float32Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Float64ArrEquals(a, b []float64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Float64Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Float64Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Complex64ArrEquals(a, b []complex64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Complex64Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Complex64Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Complex128ArrEquals(a, b []complex128) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Complex128Equals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Complex128Equals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func AnyArrEquals(a, b []Any) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !AnyEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !AnyEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func BoolArrArrEquals(a, b [][]bool) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !BoolArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !BoolArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func StringArrArrEquals(a, b [][]string) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !StringArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !StringArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func IntArrArrEquals(a, b [][]int) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !IntArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !IntArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int8ArrArrEquals(a, b [][]int8) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int8ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int8ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int16ArrArrEquals(a, b [][]int16) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int16ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int16ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int32ArrArrEquals(a, b [][]int32) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int32ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int32ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int64ArrArrEquals(a, b [][]int64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int64ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int64ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func UintArrArrEquals(a, b [][]uint) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !UintArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !UintArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint8ArrArrEquals(a, b [][]uint8) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint8ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint8ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint16ArrArrEquals(a, b [][]uint16) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint16ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint16ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint32ArrArrEquals(a, b [][]uint32) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint32ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint32ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint64ArrArrEquals(a, b [][]uint64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint64ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint64ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func UintptrArrArrEquals(a, b [][]uintptr) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !UintptrArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !UintptrArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func ByteArrArrEquals(a, b [][]byte) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !ByteArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !ByteArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func RuneArrArrEquals(a, b [][]rune) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !RuneArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !RuneArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Float32ArrArrEquals(a, b [][]float32) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Float32ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Float32ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Float64ArrArrEquals(a, b [][]float64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Float64ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Float64ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Complex64ArrArrEquals(a, b [][]complex64) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Complex64ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Complex64ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Complex128ArrArrEquals(a, b [][]complex128) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Complex128ArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Complex128ArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func AnyArrArrEquals(a, b [][]Any) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !AnyArrEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !AnyArrEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func BoolOptionArrEquals(a, b []BoolOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !BoolOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !BoolOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func StringOptionArrEquals(a, b []StringOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !StringOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !StringOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func IntOptionArrEquals(a, b []IntOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !IntOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !IntOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int8OptionArrEquals(a, b []Int8Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int8OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int8OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int16OptionArrEquals(a, b []Int16Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int16OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int16OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int32OptionArrEquals(a, b []Int32Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int32OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int32OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Int64OptionArrEquals(a, b []Int64Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Int64OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Int64OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func UintOptionArrEquals(a, b []UintOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !UintOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !UintOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint8OptionArrEquals(a, b []Uint8Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint8OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint8OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint16OptionArrEquals(a, b []Uint16Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint16OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint16OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint32OptionArrEquals(a, b []Uint32Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint32OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint32OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Uint64OptionArrEquals(a, b []Uint64Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Uint64OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Uint64OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func UintptrOptionArrEquals(a, b []UintptrOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !UintptrOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !UintptrOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func ByteOptionArrEquals(a, b []ByteOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !ByteOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !ByteOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func RuneOptionArrEquals(a, b []RuneOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !RuneOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !RuneOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Float32OptionArrEquals(a, b []Float32Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Float32OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Float32OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Float64OptionArrEquals(a, b []Float64Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Float64OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Float64OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Complex64OptionArrEquals(a, b []Complex64Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Complex64OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Complex64OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func Complex128OptionArrEquals(a, b []Complex128Option) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !Complex128OptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !Complex128OptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func AnyOptionArrEquals(a, b []AnyOption) bool {
+  
+  len1 := len(a)
+  if len1 != len(b) { return false }
 
-	len1 := len(a)
-	if len1 != len(b) {
-		return false
-	}
-
-	for i := 0; i < len1; i++ {
-		if !AnyOptionEquals(a[i], b[i]) {
-			return false
-		}
-	}
-	return true
+  for i := 0; i < len1; i ++ {
+    if !AnyOptionEquals(a[i], b[i]) { return false }
+  }
+  return true
 
 }
 func BoolListEquals(a, b BoolList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringListEquals(a, b StringList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntListEquals(a, b IntList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ListEquals(a, b Int8List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ListEquals(a, b Int16List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ListEquals(a, b Int32List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ListEquals(a, b Int64List) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintListEquals(a, b UintList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ListEquals(a, b Uint8List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ListEquals(a, b Uint16List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ListEquals(a, b Uint32List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ListEquals(a, b Uint64List) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrListEquals(a, b UintptrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteListEquals(a, b ByteList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneListEquals(a, b RuneList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ListEquals(a, b Float32List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ListEquals(a, b Float64List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ListEquals(a, b Complex64List) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ListEquals(a, b Complex128List) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyListEquals(a, b AnyList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolOptionListEquals(a, b BoolOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringOptionListEquals(a, b StringOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntOptionListEquals(a, b IntOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8OptionListEquals(a, b Int8OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16OptionListEquals(a, b Int16OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32OptionListEquals(a, b Int32OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64OptionListEquals(a, b Int64OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintOptionListEquals(a, b UintOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8OptionListEquals(a, b Uint8OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16OptionListEquals(a, b Uint16OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32OptionListEquals(a, b Uint32OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64OptionListEquals(a, b Uint64OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrOptionListEquals(a, b UintptrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteOptionListEquals(a, b ByteOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneOptionListEquals(a, b RuneOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32OptionListEquals(a, b Float32OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64OptionListEquals(a, b Float64OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64OptionListEquals(a, b Complex64OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128OptionListEquals(a, b Complex128OptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyOptionListEquals(a, b AnyOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolArrOptionListEquals(a, b BoolArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringArrOptionListEquals(a, b StringArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntArrOptionListEquals(a, b IntArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ArrOptionListEquals(a, b Int8ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ArrOptionListEquals(a, b Int16ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ArrOptionListEquals(a, b Int32ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ArrOptionListEquals(a, b Int64ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintArrOptionListEquals(a, b UintArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ArrOptionListEquals(a, b Uint8ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ArrOptionListEquals(a, b Uint16ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ArrOptionListEquals(a, b Uint32ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ArrOptionListEquals(a, b Uint64ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrArrOptionListEquals(a, b UintptrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteArrOptionListEquals(a, b ByteArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneArrOptionListEquals(a, b RuneArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ArrOptionListEquals(a, b Float32ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ArrOptionListEquals(a, b Float64ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ArrOptionListEquals(a, b Complex64ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ArrOptionListEquals(a, b Complex128ArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyArrOptionListEquals(a, b AnyArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolArrArrOptionListEquals(a, b BoolArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringArrArrOptionListEquals(a, b StringArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntArrArrOptionListEquals(a, b IntArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ArrArrOptionListEquals(a, b Int8ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ArrArrOptionListEquals(a, b Int16ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ArrArrOptionListEquals(a, b Int32ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ArrArrOptionListEquals(a, b Int64ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintArrArrOptionListEquals(a, b UintArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ArrArrOptionListEquals(a, b Uint8ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ArrArrOptionListEquals(a, b Uint16ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ArrArrOptionListEquals(a, b Uint32ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ArrArrOptionListEquals(a, b Uint64ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrArrArrOptionListEquals(a, b UintptrArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteArrArrOptionListEquals(a, b ByteArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneArrArrOptionListEquals(a, b RuneArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ArrArrOptionListEquals(a, b Float32ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ArrArrOptionListEquals(a, b Float64ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ArrArrOptionListEquals(a, b Complex64ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ArrArrOptionListEquals(a, b Complex128ArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyArrArrOptionListEquals(a, b AnyArrArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolOptionArrOptionListEquals(a, b BoolOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringOptionArrOptionListEquals(a, b StringOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntOptionArrOptionListEquals(a, b IntOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8OptionArrOptionListEquals(a, b Int8OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16OptionArrOptionListEquals(a, b Int16OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32OptionArrOptionListEquals(a, b Int32OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64OptionArrOptionListEquals(a, b Int64OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintOptionArrOptionListEquals(a, b UintOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8OptionArrOptionListEquals(a, b Uint8OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16OptionArrOptionListEquals(a, b Uint16OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32OptionArrOptionListEquals(a, b Uint32OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64OptionArrOptionListEquals(a, b Uint64OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrOptionArrOptionListEquals(a, b UintptrOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteOptionArrOptionListEquals(a, b ByteOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneOptionArrOptionListEquals(a, b RuneOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32OptionArrOptionListEquals(a, b Float32OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64OptionArrOptionListEquals(a, b Float64OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64OptionArrOptionListEquals(a, b Complex64OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128OptionArrOptionListEquals(a, b Complex128OptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyOptionArrOptionListEquals(a, b AnyOptionArrOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolListOptionListEquals(a, b BoolListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringListOptionListEquals(a, b StringListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntListOptionListEquals(a, b IntListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ListOptionListEquals(a, b Int8ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ListOptionListEquals(a, b Int16ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ListOptionListEquals(a, b Int32ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ListOptionListEquals(a, b Int64ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintListOptionListEquals(a, b UintListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ListOptionListEquals(a, b Uint8ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ListOptionListEquals(a, b Uint16ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ListOptionListEquals(a, b Uint32ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ListOptionListEquals(a, b Uint64ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrListOptionListEquals(a, b UintptrListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteListOptionListEquals(a, b ByteListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneListOptionListEquals(a, b RuneListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ListOptionListEquals(a, b Float32ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ListOptionListEquals(a, b Float64ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ListOptionListEquals(a, b Complex64ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ListOptionListEquals(a, b Complex128ListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyListOptionListEquals(a, b AnyListOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolOptionOptionListEquals(a, b BoolOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringOptionOptionListEquals(a, b StringOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntOptionOptionListEquals(a, b IntOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8OptionOptionListEquals(a, b Int8OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16OptionOptionListEquals(a, b Int16OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32OptionOptionListEquals(a, b Int32OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64OptionOptionListEquals(a, b Int64OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintOptionOptionListEquals(a, b UintOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8OptionOptionListEquals(a, b Uint8OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16OptionOptionListEquals(a, b Uint16OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32OptionOptionListEquals(a, b Uint32OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64OptionOptionListEquals(a, b Uint64OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrOptionOptionListEquals(a, b UintptrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteOptionOptionListEquals(a, b ByteOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneOptionOptionListEquals(a, b RuneOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32OptionOptionListEquals(a, b Float32OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64OptionOptionListEquals(a, b Float64OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64OptionOptionListEquals(a, b Complex64OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128OptionOptionListEquals(a, b Complex128OptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyOptionOptionListEquals(a, b AnyOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolArrOptionOptionListEquals(a, b BoolArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringArrOptionOptionListEquals(a, b StringArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntArrOptionOptionListEquals(a, b IntArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ArrOptionOptionListEquals(a, b Int8ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ArrOptionOptionListEquals(a, b Int16ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ArrOptionOptionListEquals(a, b Int32ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ArrOptionOptionListEquals(a, b Int64ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintArrOptionOptionListEquals(a, b UintArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ArrOptionOptionListEquals(a, b Uint8ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ArrOptionOptionListEquals(a, b Uint16ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ArrOptionOptionListEquals(a, b Uint32ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ArrOptionOptionListEquals(a, b Uint64ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrArrOptionOptionListEquals(a, b UintptrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteArrOptionOptionListEquals(a, b ByteArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneArrOptionOptionListEquals(a, b RuneArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ArrOptionOptionListEquals(a, b Float32ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ArrOptionOptionListEquals(a, b Float64ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ArrOptionOptionListEquals(a, b Complex64ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ArrOptionOptionListEquals(a, b Complex128ArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyArrOptionOptionListEquals(a, b AnyArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolArrArrOptionOptionListEquals(a, b BoolArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringArrArrOptionOptionListEquals(a, b StringArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntArrArrOptionOptionListEquals(a, b IntArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ArrArrOptionOptionListEquals(a, b Int8ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ArrArrOptionOptionListEquals(a, b Int16ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ArrArrOptionOptionListEquals(a, b Int32ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ArrArrOptionOptionListEquals(a, b Int64ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintArrArrOptionOptionListEquals(a, b UintArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ArrArrOptionOptionListEquals(a, b Uint8ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ArrArrOptionOptionListEquals(a, b Uint16ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ArrArrOptionOptionListEquals(a, b Uint32ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ArrArrOptionOptionListEquals(a, b Uint64ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrArrArrOptionOptionListEquals(a, b UintptrArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteArrArrOptionOptionListEquals(a, b ByteArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneArrArrOptionOptionListEquals(a, b RuneArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ArrArrOptionOptionListEquals(a, b Float32ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ArrArrOptionOptionListEquals(a, b Float64ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ArrArrOptionOptionListEquals(a, b Complex64ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ArrArrOptionOptionListEquals(a, b Complex128ArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyArrArrOptionOptionListEquals(a, b AnyArrArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolOptionArrOptionOptionListEquals(a, b BoolOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringOptionArrOptionOptionListEquals(a, b StringOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntOptionArrOptionOptionListEquals(a, b IntOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8OptionArrOptionOptionListEquals(a, b Int8OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16OptionArrOptionOptionListEquals(a, b Int16OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32OptionArrOptionOptionListEquals(a, b Int32OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64OptionArrOptionOptionListEquals(a, b Int64OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintOptionArrOptionOptionListEquals(a, b UintOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8OptionArrOptionOptionListEquals(a, b Uint8OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16OptionArrOptionOptionListEquals(a, b Uint16OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32OptionArrOptionOptionListEquals(a, b Uint32OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64OptionArrOptionOptionListEquals(a, b Uint64OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrOptionArrOptionOptionListEquals(a, b UintptrOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteOptionArrOptionOptionListEquals(a, b ByteOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneOptionArrOptionOptionListEquals(a, b RuneOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32OptionArrOptionOptionListEquals(a, b Float32OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64OptionArrOptionOptionListEquals(a, b Float64OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64OptionArrOptionOptionListEquals(a, b Complex64OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128OptionArrOptionOptionListEquals(a, b Complex128OptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyOptionArrOptionOptionListEquals(a, b AnyOptionArrOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolListOptionOptionListEquals(a, b BoolListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringListOptionOptionListEquals(a, b StringListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntListOptionOptionListEquals(a, b IntListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ListOptionOptionListEquals(a, b Int8ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ListOptionOptionListEquals(a, b Int16ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ListOptionOptionListEquals(a, b Int32ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ListOptionOptionListEquals(a, b Int64ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintListOptionOptionListEquals(a, b UintListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ListOptionOptionListEquals(a, b Uint8ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ListOptionOptionListEquals(a, b Uint16ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ListOptionOptionListEquals(a, b Uint32ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ListOptionOptionListEquals(a, b Uint64ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrListOptionOptionListEquals(a, b UintptrListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteListOptionOptionListEquals(a, b ByteListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneListOptionOptionListEquals(a, b RuneListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ListOptionOptionListEquals(a, b Float32ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ListOptionOptionListEquals(a, b Float64ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ListOptionOptionListEquals(a, b Complex64ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ListOptionOptionListEquals(a, b Complex128ListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyListOptionOptionListEquals(a, b AnyListOptionOptionList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolArrListEquals(a, b BoolArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringArrListEquals(a, b StringArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntArrListEquals(a, b IntArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ArrListEquals(a, b Int8ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ArrListEquals(a, b Int16ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ArrListEquals(a, b Int32ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ArrListEquals(a, b Int64ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintArrListEquals(a, b UintArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ArrListEquals(a, b Uint8ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ArrListEquals(a, b Uint16ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ArrListEquals(a, b Uint32ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ArrListEquals(a, b Uint64ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrArrListEquals(a, b UintptrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteArrListEquals(a, b ByteArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneArrListEquals(a, b RuneArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ArrListEquals(a, b Float32ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ArrListEquals(a, b Float64ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ArrListEquals(a, b Complex64ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ArrListEquals(a, b Complex128ArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyArrListEquals(a, b AnyArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolArrArrListEquals(a, b BoolArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringArrArrListEquals(a, b StringArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntArrArrListEquals(a, b IntArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ArrArrListEquals(a, b Int8ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ArrArrListEquals(a, b Int16ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ArrArrListEquals(a, b Int32ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ArrArrListEquals(a, b Int64ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintArrArrListEquals(a, b UintArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ArrArrListEquals(a, b Uint8ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ArrArrListEquals(a, b Uint16ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ArrArrListEquals(a, b Uint32ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ArrArrListEquals(a, b Uint64ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrArrArrListEquals(a, b UintptrArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteArrArrListEquals(a, b ByteArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneArrArrListEquals(a, b RuneArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ArrArrListEquals(a, b Float32ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ArrArrListEquals(a, b Float64ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ArrArrListEquals(a, b Complex64ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ArrArrListEquals(a, b Complex128ArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyArrArrListEquals(a, b AnyArrArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolOptionArrListEquals(a, b BoolOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringOptionArrListEquals(a, b StringOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntOptionArrListEquals(a, b IntOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8OptionArrListEquals(a, b Int8OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16OptionArrListEquals(a, b Int16OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32OptionArrListEquals(a, b Int32OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64OptionArrListEquals(a, b Int64OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintOptionArrListEquals(a, b UintOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8OptionArrListEquals(a, b Uint8OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16OptionArrListEquals(a, b Uint16OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32OptionArrListEquals(a, b Uint32OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64OptionArrListEquals(a, b Uint64OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrOptionArrListEquals(a, b UintptrOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteOptionArrListEquals(a, b ByteOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneOptionArrListEquals(a, b RuneOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32OptionArrListEquals(a, b Float32OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64OptionArrListEquals(a, b Float64OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64OptionArrListEquals(a, b Complex64OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128OptionArrListEquals(a, b Complex128OptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyOptionArrListEquals(a, b AnyOptionArrList) bool {
-
-	return a == b
+  
+return a == b
 }
 func BoolListListEquals(a, b BoolListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func StringListListEquals(a, b StringListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func IntListListEquals(a, b IntListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int8ListListEquals(a, b Int8ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int16ListListEquals(a, b Int16ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int32ListListEquals(a, b Int32ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Int64ListListEquals(a, b Int64ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintListListEquals(a, b UintListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint8ListListEquals(a, b Uint8ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint16ListListEquals(a, b Uint16ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint32ListListEquals(a, b Uint32ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Uint64ListListEquals(a, b Uint64ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func UintptrListListEquals(a, b UintptrListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func ByteListListEquals(a, b ByteListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func RuneListListEquals(a, b RuneListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float32ListListEquals(a, b Float32ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Float64ListListEquals(a, b Float64ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex64ListListEquals(a, b Complex64ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func Complex128ListListEquals(a, b Complex128ListList) bool {
-
-	return a == b
+  
+return a == b
 }
 func AnyListListEquals(a, b AnyListList) bool {
-
-	return a == b
+  
+return a == b
 }

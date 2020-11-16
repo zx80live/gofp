@@ -3,2703 +3,304 @@
 
 package fp
 
-func (l BoolList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128List) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128OptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyArrArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128OptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyOptionArrOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyListOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128OptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyArrArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128OptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyOptionArrOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyListOptionOptionList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyArrArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128OptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyOptionArrList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l BoolListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l StringListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l IntListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int8ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int16ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int32ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Int64ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint8ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint16ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint32ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Uint64ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l UintptrListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l ByteListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l RuneListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float32ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Float64ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex64ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l Complex128ListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
-func (l AnyListList) Size() int {
-	count := 0
-	xs := l
-	for xs.NonEmpty() {
-		count++
-		xs = *xs.tail
-	}
-	return count
-}
+
+func (l BoolList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128List) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128OptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyArrArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128OptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyOptionArrOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyListOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128OptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyArrArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128OptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyOptionArrOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyListOptionOptionList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyArrArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128OptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyOptionArrList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l BoolListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l StringListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l IntListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int8ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int16ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int32ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Int64ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint8ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint16ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint32ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Uint64ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l UintptrListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l ByteListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l RuneListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float32ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Float64ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex64ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l Complex128ListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }
+func (l AnyListList) Size() int { count := 0; xs := l; for xs.NonEmpty() { count ++; xs = *xs.tail }; return count }

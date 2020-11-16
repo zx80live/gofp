@@ -3,6 +3,7 @@
 
 package fp
 
+
 type BoolBoolTransformer func(in bool) bool
 type BoolStringTransformer func(in bool) string
 type BoolIntTransformer func(in bool) int

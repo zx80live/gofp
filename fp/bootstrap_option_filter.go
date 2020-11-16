@@ -3,531 +3,204 @@
 
 package fp
 
-func (m BoolOption) Filter(p BoolPredicate) BoolOption          { return FilterBoolOption(m, p) }
-func (m StringOption) Filter(p StringPredicate) StringOption    { return FilterStringOption(m, p) }
-func (m IntOption) Filter(p IntPredicate) IntOption             { return FilterIntOption(m, p) }
-func (m Int8Option) Filter(p Int8Predicate) Int8Option          { return FilterInt8Option(m, p) }
-func (m Int16Option) Filter(p Int16Predicate) Int16Option       { return FilterInt16Option(m, p) }
-func (m Int32Option) Filter(p Int32Predicate) Int32Option       { return FilterInt32Option(m, p) }
-func (m Int64Option) Filter(p Int64Predicate) Int64Option       { return FilterInt64Option(m, p) }
-func (m UintOption) Filter(p UintPredicate) UintOption          { return FilterUintOption(m, p) }
-func (m Uint8Option) Filter(p Uint8Predicate) Uint8Option       { return FilterUint8Option(m, p) }
-func (m Uint16Option) Filter(p Uint16Predicate) Uint16Option    { return FilterUint16Option(m, p) }
-func (m Uint32Option) Filter(p Uint32Predicate) Uint32Option    { return FilterUint32Option(m, p) }
-func (m Uint64Option) Filter(p Uint64Predicate) Uint64Option    { return FilterUint64Option(m, p) }
+
+func (m BoolOption) Filter(p BoolPredicate) BoolOption { return FilterBoolOption(m, p) }
+func (m StringOption) Filter(p StringPredicate) StringOption { return FilterStringOption(m, p) }
+func (m IntOption) Filter(p IntPredicate) IntOption { return FilterIntOption(m, p) }
+func (m Int8Option) Filter(p Int8Predicate) Int8Option { return FilterInt8Option(m, p) }
+func (m Int16Option) Filter(p Int16Predicate) Int16Option { return FilterInt16Option(m, p) }
+func (m Int32Option) Filter(p Int32Predicate) Int32Option { return FilterInt32Option(m, p) }
+func (m Int64Option) Filter(p Int64Predicate) Int64Option { return FilterInt64Option(m, p) }
+func (m UintOption) Filter(p UintPredicate) UintOption { return FilterUintOption(m, p) }
+func (m Uint8Option) Filter(p Uint8Predicate) Uint8Option { return FilterUint8Option(m, p) }
+func (m Uint16Option) Filter(p Uint16Predicate) Uint16Option { return FilterUint16Option(m, p) }
+func (m Uint32Option) Filter(p Uint32Predicate) Uint32Option { return FilterUint32Option(m, p) }
+func (m Uint64Option) Filter(p Uint64Predicate) Uint64Option { return FilterUint64Option(m, p) }
 func (m UintptrOption) Filter(p UintptrPredicate) UintptrOption { return FilterUintptrOption(m, p) }
-func (m ByteOption) Filter(p BytePredicate) ByteOption          { return FilterByteOption(m, p) }
-func (m RuneOption) Filter(p RunePredicate) RuneOption          { return FilterRuneOption(m, p) }
+func (m ByteOption) Filter(p BytePredicate) ByteOption { return FilterByteOption(m, p) }
+func (m RuneOption) Filter(p RunePredicate) RuneOption { return FilterRuneOption(m, p) }
 func (m Float32Option) Filter(p Float32Predicate) Float32Option { return FilterFloat32Option(m, p) }
 func (m Float64Option) Filter(p Float64Predicate) Float64Option { return FilterFloat64Option(m, p) }
-func (m Complex64Option) Filter(p Complex64Predicate) Complex64Option {
-	return FilterComplex64Option(m, p)
-}
-func (m Complex128Option) Filter(p Complex128Predicate) Complex128Option {
-	return FilterComplex128Option(m, p)
-}
-func (m AnyOption) Filter(p AnyPredicate) AnyOption             { return FilterAnyOption(m, p) }
+func (m Complex64Option) Filter(p Complex64Predicate) Complex64Option { return FilterComplex64Option(m, p) }
+func (m Complex128Option) Filter(p Complex128Predicate) Complex128Option { return FilterComplex128Option(m, p) }
+func (m AnyOption) Filter(p AnyPredicate) AnyOption { return FilterAnyOption(m, p) }
 func (m BoolArrOption) Filter(p BoolArrPredicate) BoolArrOption { return FilterBoolArrOption(m, p) }
-func (m StringArrOption) Filter(p StringArrPredicate) StringArrOption {
-	return FilterStringArrOption(m, p)
-}
-func (m IntArrOption) Filter(p IntArrPredicate) IntArrOption       { return FilterIntArrOption(m, p) }
-func (m Int8ArrOption) Filter(p Int8ArrPredicate) Int8ArrOption    { return FilterInt8ArrOption(m, p) }
+func (m StringArrOption) Filter(p StringArrPredicate) StringArrOption { return FilterStringArrOption(m, p) }
+func (m IntArrOption) Filter(p IntArrPredicate) IntArrOption { return FilterIntArrOption(m, p) }
+func (m Int8ArrOption) Filter(p Int8ArrPredicate) Int8ArrOption { return FilterInt8ArrOption(m, p) }
 func (m Int16ArrOption) Filter(p Int16ArrPredicate) Int16ArrOption { return FilterInt16ArrOption(m, p) }
 func (m Int32ArrOption) Filter(p Int32ArrPredicate) Int32ArrOption { return FilterInt32ArrOption(m, p) }
 func (m Int64ArrOption) Filter(p Int64ArrPredicate) Int64ArrOption { return FilterInt64ArrOption(m, p) }
-func (m UintArrOption) Filter(p UintArrPredicate) UintArrOption    { return FilterUintArrOption(m, p) }
+func (m UintArrOption) Filter(p UintArrPredicate) UintArrOption { return FilterUintArrOption(m, p) }
 func (m Uint8ArrOption) Filter(p Uint8ArrPredicate) Uint8ArrOption { return FilterUint8ArrOption(m, p) }
-func (m Uint16ArrOption) Filter(p Uint16ArrPredicate) Uint16ArrOption {
-	return FilterUint16ArrOption(m, p)
-}
-func (m Uint32ArrOption) Filter(p Uint32ArrPredicate) Uint32ArrOption {
-	return FilterUint32ArrOption(m, p)
-}
-func (m Uint64ArrOption) Filter(p Uint64ArrPredicate) Uint64ArrOption {
-	return FilterUint64ArrOption(m, p)
-}
-func (m UintptrArrOption) Filter(p UintptrArrPredicate) UintptrArrOption {
-	return FilterUintptrArrOption(m, p)
-}
+func (m Uint16ArrOption) Filter(p Uint16ArrPredicate) Uint16ArrOption { return FilterUint16ArrOption(m, p) }
+func (m Uint32ArrOption) Filter(p Uint32ArrPredicate) Uint32ArrOption { return FilterUint32ArrOption(m, p) }
+func (m Uint64ArrOption) Filter(p Uint64ArrPredicate) Uint64ArrOption { return FilterUint64ArrOption(m, p) }
+func (m UintptrArrOption) Filter(p UintptrArrPredicate) UintptrArrOption { return FilterUintptrArrOption(m, p) }
 func (m ByteArrOption) Filter(p ByteArrPredicate) ByteArrOption { return FilterByteArrOption(m, p) }
 func (m RuneArrOption) Filter(p RuneArrPredicate) RuneArrOption { return FilterRuneArrOption(m, p) }
-func (m Float32ArrOption) Filter(p Float32ArrPredicate) Float32ArrOption {
-	return FilterFloat32ArrOption(m, p)
-}
-func (m Float64ArrOption) Filter(p Float64ArrPredicate) Float64ArrOption {
-	return FilterFloat64ArrOption(m, p)
-}
-func (m Complex64ArrOption) Filter(p Complex64ArrPredicate) Complex64ArrOption {
-	return FilterComplex64ArrOption(m, p)
-}
-func (m Complex128ArrOption) Filter(p Complex128ArrPredicate) Complex128ArrOption {
-	return FilterComplex128ArrOption(m, p)
-}
+func (m Float32ArrOption) Filter(p Float32ArrPredicate) Float32ArrOption { return FilterFloat32ArrOption(m, p) }
+func (m Float64ArrOption) Filter(p Float64ArrPredicate) Float64ArrOption { return FilterFloat64ArrOption(m, p) }
+func (m Complex64ArrOption) Filter(p Complex64ArrPredicate) Complex64ArrOption { return FilterComplex64ArrOption(m, p) }
+func (m Complex128ArrOption) Filter(p Complex128ArrPredicate) Complex128ArrOption { return FilterComplex128ArrOption(m, p) }
 func (m AnyArrOption) Filter(p AnyArrPredicate) AnyArrOption { return FilterAnyArrOption(m, p) }
-func (m BoolArrArrOption) Filter(p BoolArrArrPredicate) BoolArrArrOption {
-	return FilterBoolArrArrOption(m, p)
-}
-func (m StringArrArrOption) Filter(p StringArrArrPredicate) StringArrArrOption {
-	return FilterStringArrArrOption(m, p)
-}
-func (m IntArrArrOption) Filter(p IntArrArrPredicate) IntArrArrOption {
-	return FilterIntArrArrOption(m, p)
-}
-func (m Int8ArrArrOption) Filter(p Int8ArrArrPredicate) Int8ArrArrOption {
-	return FilterInt8ArrArrOption(m, p)
-}
-func (m Int16ArrArrOption) Filter(p Int16ArrArrPredicate) Int16ArrArrOption {
-	return FilterInt16ArrArrOption(m, p)
-}
-func (m Int32ArrArrOption) Filter(p Int32ArrArrPredicate) Int32ArrArrOption {
-	return FilterInt32ArrArrOption(m, p)
-}
-func (m Int64ArrArrOption) Filter(p Int64ArrArrPredicate) Int64ArrArrOption {
-	return FilterInt64ArrArrOption(m, p)
-}
-func (m UintArrArrOption) Filter(p UintArrArrPredicate) UintArrArrOption {
-	return FilterUintArrArrOption(m, p)
-}
-func (m Uint8ArrArrOption) Filter(p Uint8ArrArrPredicate) Uint8ArrArrOption {
-	return FilterUint8ArrArrOption(m, p)
-}
-func (m Uint16ArrArrOption) Filter(p Uint16ArrArrPredicate) Uint16ArrArrOption {
-	return FilterUint16ArrArrOption(m, p)
-}
-func (m Uint32ArrArrOption) Filter(p Uint32ArrArrPredicate) Uint32ArrArrOption {
-	return FilterUint32ArrArrOption(m, p)
-}
-func (m Uint64ArrArrOption) Filter(p Uint64ArrArrPredicate) Uint64ArrArrOption {
-	return FilterUint64ArrArrOption(m, p)
-}
-func (m UintptrArrArrOption) Filter(p UintptrArrArrPredicate) UintptrArrArrOption {
-	return FilterUintptrArrArrOption(m, p)
-}
-func (m ByteArrArrOption) Filter(p ByteArrArrPredicate) ByteArrArrOption {
-	return FilterByteArrArrOption(m, p)
-}
-func (m RuneArrArrOption) Filter(p RuneArrArrPredicate) RuneArrArrOption {
-	return FilterRuneArrArrOption(m, p)
-}
-func (m Float32ArrArrOption) Filter(p Float32ArrArrPredicate) Float32ArrArrOption {
-	return FilterFloat32ArrArrOption(m, p)
-}
-func (m Float64ArrArrOption) Filter(p Float64ArrArrPredicate) Float64ArrArrOption {
-	return FilterFloat64ArrArrOption(m, p)
-}
-func (m Complex64ArrArrOption) Filter(p Complex64ArrArrPredicate) Complex64ArrArrOption {
-	return FilterComplex64ArrArrOption(m, p)
-}
-func (m Complex128ArrArrOption) Filter(p Complex128ArrArrPredicate) Complex128ArrArrOption {
-	return FilterComplex128ArrArrOption(m, p)
-}
-func (m AnyArrArrOption) Filter(p AnyArrArrPredicate) AnyArrArrOption {
-	return FilterAnyArrArrOption(m, p)
-}
-func (m BoolOptionArrOption) Filter(p BoolOptionArrPredicate) BoolOptionArrOption {
-	return FilterBoolOptionArrOption(m, p)
-}
-func (m StringOptionArrOption) Filter(p StringOptionArrPredicate) StringOptionArrOption {
-	return FilterStringOptionArrOption(m, p)
-}
-func (m IntOptionArrOption) Filter(p IntOptionArrPredicate) IntOptionArrOption {
-	return FilterIntOptionArrOption(m, p)
-}
-func (m Int8OptionArrOption) Filter(p Int8OptionArrPredicate) Int8OptionArrOption {
-	return FilterInt8OptionArrOption(m, p)
-}
-func (m Int16OptionArrOption) Filter(p Int16OptionArrPredicate) Int16OptionArrOption {
-	return FilterInt16OptionArrOption(m, p)
-}
-func (m Int32OptionArrOption) Filter(p Int32OptionArrPredicate) Int32OptionArrOption {
-	return FilterInt32OptionArrOption(m, p)
-}
-func (m Int64OptionArrOption) Filter(p Int64OptionArrPredicate) Int64OptionArrOption {
-	return FilterInt64OptionArrOption(m, p)
-}
-func (m UintOptionArrOption) Filter(p UintOptionArrPredicate) UintOptionArrOption {
-	return FilterUintOptionArrOption(m, p)
-}
-func (m Uint8OptionArrOption) Filter(p Uint8OptionArrPredicate) Uint8OptionArrOption {
-	return FilterUint8OptionArrOption(m, p)
-}
-func (m Uint16OptionArrOption) Filter(p Uint16OptionArrPredicate) Uint16OptionArrOption {
-	return FilterUint16OptionArrOption(m, p)
-}
-func (m Uint32OptionArrOption) Filter(p Uint32OptionArrPredicate) Uint32OptionArrOption {
-	return FilterUint32OptionArrOption(m, p)
-}
-func (m Uint64OptionArrOption) Filter(p Uint64OptionArrPredicate) Uint64OptionArrOption {
-	return FilterUint64OptionArrOption(m, p)
-}
-func (m UintptrOptionArrOption) Filter(p UintptrOptionArrPredicate) UintptrOptionArrOption {
-	return FilterUintptrOptionArrOption(m, p)
-}
-func (m ByteOptionArrOption) Filter(p ByteOptionArrPredicate) ByteOptionArrOption {
-	return FilterByteOptionArrOption(m, p)
-}
-func (m RuneOptionArrOption) Filter(p RuneOptionArrPredicate) RuneOptionArrOption {
-	return FilterRuneOptionArrOption(m, p)
-}
-func (m Float32OptionArrOption) Filter(p Float32OptionArrPredicate) Float32OptionArrOption {
-	return FilterFloat32OptionArrOption(m, p)
-}
-func (m Float64OptionArrOption) Filter(p Float64OptionArrPredicate) Float64OptionArrOption {
-	return FilterFloat64OptionArrOption(m, p)
-}
-func (m Complex64OptionArrOption) Filter(p Complex64OptionArrPredicate) Complex64OptionArrOption {
-	return FilterComplex64OptionArrOption(m, p)
-}
-func (m Complex128OptionArrOption) Filter(p Complex128OptionArrPredicate) Complex128OptionArrOption {
-	return FilterComplex128OptionArrOption(m, p)
-}
-func (m AnyOptionArrOption) Filter(p AnyOptionArrPredicate) AnyOptionArrOption {
-	return FilterAnyOptionArrOption(m, p)
-}
+func (m BoolArrArrOption) Filter(p BoolArrArrPredicate) BoolArrArrOption { return FilterBoolArrArrOption(m, p) }
+func (m StringArrArrOption) Filter(p StringArrArrPredicate) StringArrArrOption { return FilterStringArrArrOption(m, p) }
+func (m IntArrArrOption) Filter(p IntArrArrPredicate) IntArrArrOption { return FilterIntArrArrOption(m, p) }
+func (m Int8ArrArrOption) Filter(p Int8ArrArrPredicate) Int8ArrArrOption { return FilterInt8ArrArrOption(m, p) }
+func (m Int16ArrArrOption) Filter(p Int16ArrArrPredicate) Int16ArrArrOption { return FilterInt16ArrArrOption(m, p) }
+func (m Int32ArrArrOption) Filter(p Int32ArrArrPredicate) Int32ArrArrOption { return FilterInt32ArrArrOption(m, p) }
+func (m Int64ArrArrOption) Filter(p Int64ArrArrPredicate) Int64ArrArrOption { return FilterInt64ArrArrOption(m, p) }
+func (m UintArrArrOption) Filter(p UintArrArrPredicate) UintArrArrOption { return FilterUintArrArrOption(m, p) }
+func (m Uint8ArrArrOption) Filter(p Uint8ArrArrPredicate) Uint8ArrArrOption { return FilterUint8ArrArrOption(m, p) }
+func (m Uint16ArrArrOption) Filter(p Uint16ArrArrPredicate) Uint16ArrArrOption { return FilterUint16ArrArrOption(m, p) }
+func (m Uint32ArrArrOption) Filter(p Uint32ArrArrPredicate) Uint32ArrArrOption { return FilterUint32ArrArrOption(m, p) }
+func (m Uint64ArrArrOption) Filter(p Uint64ArrArrPredicate) Uint64ArrArrOption { return FilterUint64ArrArrOption(m, p) }
+func (m UintptrArrArrOption) Filter(p UintptrArrArrPredicate) UintptrArrArrOption { return FilterUintptrArrArrOption(m, p) }
+func (m ByteArrArrOption) Filter(p ByteArrArrPredicate) ByteArrArrOption { return FilterByteArrArrOption(m, p) }
+func (m RuneArrArrOption) Filter(p RuneArrArrPredicate) RuneArrArrOption { return FilterRuneArrArrOption(m, p) }
+func (m Float32ArrArrOption) Filter(p Float32ArrArrPredicate) Float32ArrArrOption { return FilterFloat32ArrArrOption(m, p) }
+func (m Float64ArrArrOption) Filter(p Float64ArrArrPredicate) Float64ArrArrOption { return FilterFloat64ArrArrOption(m, p) }
+func (m Complex64ArrArrOption) Filter(p Complex64ArrArrPredicate) Complex64ArrArrOption { return FilterComplex64ArrArrOption(m, p) }
+func (m Complex128ArrArrOption) Filter(p Complex128ArrArrPredicate) Complex128ArrArrOption { return FilterComplex128ArrArrOption(m, p) }
+func (m AnyArrArrOption) Filter(p AnyArrArrPredicate) AnyArrArrOption { return FilterAnyArrArrOption(m, p) }
+func (m BoolOptionArrOption) Filter(p BoolOptionArrPredicate) BoolOptionArrOption { return FilterBoolOptionArrOption(m, p) }
+func (m StringOptionArrOption) Filter(p StringOptionArrPredicate) StringOptionArrOption { return FilterStringOptionArrOption(m, p) }
+func (m IntOptionArrOption) Filter(p IntOptionArrPredicate) IntOptionArrOption { return FilterIntOptionArrOption(m, p) }
+func (m Int8OptionArrOption) Filter(p Int8OptionArrPredicate) Int8OptionArrOption { return FilterInt8OptionArrOption(m, p) }
+func (m Int16OptionArrOption) Filter(p Int16OptionArrPredicate) Int16OptionArrOption { return FilterInt16OptionArrOption(m, p) }
+func (m Int32OptionArrOption) Filter(p Int32OptionArrPredicate) Int32OptionArrOption { return FilterInt32OptionArrOption(m, p) }
+func (m Int64OptionArrOption) Filter(p Int64OptionArrPredicate) Int64OptionArrOption { return FilterInt64OptionArrOption(m, p) }
+func (m UintOptionArrOption) Filter(p UintOptionArrPredicate) UintOptionArrOption { return FilterUintOptionArrOption(m, p) }
+func (m Uint8OptionArrOption) Filter(p Uint8OptionArrPredicate) Uint8OptionArrOption { return FilterUint8OptionArrOption(m, p) }
+func (m Uint16OptionArrOption) Filter(p Uint16OptionArrPredicate) Uint16OptionArrOption { return FilterUint16OptionArrOption(m, p) }
+func (m Uint32OptionArrOption) Filter(p Uint32OptionArrPredicate) Uint32OptionArrOption { return FilterUint32OptionArrOption(m, p) }
+func (m Uint64OptionArrOption) Filter(p Uint64OptionArrPredicate) Uint64OptionArrOption { return FilterUint64OptionArrOption(m, p) }
+func (m UintptrOptionArrOption) Filter(p UintptrOptionArrPredicate) UintptrOptionArrOption { return FilterUintptrOptionArrOption(m, p) }
+func (m ByteOptionArrOption) Filter(p ByteOptionArrPredicate) ByteOptionArrOption { return FilterByteOptionArrOption(m, p) }
+func (m RuneOptionArrOption) Filter(p RuneOptionArrPredicate) RuneOptionArrOption { return FilterRuneOptionArrOption(m, p) }
+func (m Float32OptionArrOption) Filter(p Float32OptionArrPredicate) Float32OptionArrOption { return FilterFloat32OptionArrOption(m, p) }
+func (m Float64OptionArrOption) Filter(p Float64OptionArrPredicate) Float64OptionArrOption { return FilterFloat64OptionArrOption(m, p) }
+func (m Complex64OptionArrOption) Filter(p Complex64OptionArrPredicate) Complex64OptionArrOption { return FilterComplex64OptionArrOption(m, p) }
+func (m Complex128OptionArrOption) Filter(p Complex128OptionArrPredicate) Complex128OptionArrOption { return FilterComplex128OptionArrOption(m, p) }
+func (m AnyOptionArrOption) Filter(p AnyOptionArrPredicate) AnyOptionArrOption { return FilterAnyOptionArrOption(m, p) }
 func (m BoolListOption) Filter(p BoolListPredicate) BoolListOption { return FilterBoolListOption(m, p) }
-func (m StringListOption) Filter(p StringListPredicate) StringListOption {
-	return FilterStringListOption(m, p)
-}
-func (m IntListOption) Filter(p IntListPredicate) IntListOption    { return FilterIntListOption(m, p) }
+func (m StringListOption) Filter(p StringListPredicate) StringListOption { return FilterStringListOption(m, p) }
+func (m IntListOption) Filter(p IntListPredicate) IntListOption { return FilterIntListOption(m, p) }
 func (m Int8ListOption) Filter(p Int8ListPredicate) Int8ListOption { return FilterInt8ListOption(m, p) }
-func (m Int16ListOption) Filter(p Int16ListPredicate) Int16ListOption {
-	return FilterInt16ListOption(m, p)
-}
-func (m Int32ListOption) Filter(p Int32ListPredicate) Int32ListOption {
-	return FilterInt32ListOption(m, p)
-}
-func (m Int64ListOption) Filter(p Int64ListPredicate) Int64ListOption {
-	return FilterInt64ListOption(m, p)
-}
+func (m Int16ListOption) Filter(p Int16ListPredicate) Int16ListOption { return FilterInt16ListOption(m, p) }
+func (m Int32ListOption) Filter(p Int32ListPredicate) Int32ListOption { return FilterInt32ListOption(m, p) }
+func (m Int64ListOption) Filter(p Int64ListPredicate) Int64ListOption { return FilterInt64ListOption(m, p) }
 func (m UintListOption) Filter(p UintListPredicate) UintListOption { return FilterUintListOption(m, p) }
-func (m Uint8ListOption) Filter(p Uint8ListPredicate) Uint8ListOption {
-	return FilterUint8ListOption(m, p)
-}
-func (m Uint16ListOption) Filter(p Uint16ListPredicate) Uint16ListOption {
-	return FilterUint16ListOption(m, p)
-}
-func (m Uint32ListOption) Filter(p Uint32ListPredicate) Uint32ListOption {
-	return FilterUint32ListOption(m, p)
-}
-func (m Uint64ListOption) Filter(p Uint64ListPredicate) Uint64ListOption {
-	return FilterUint64ListOption(m, p)
-}
-func (m UintptrListOption) Filter(p UintptrListPredicate) UintptrListOption {
-	return FilterUintptrListOption(m, p)
-}
+func (m Uint8ListOption) Filter(p Uint8ListPredicate) Uint8ListOption { return FilterUint8ListOption(m, p) }
+func (m Uint16ListOption) Filter(p Uint16ListPredicate) Uint16ListOption { return FilterUint16ListOption(m, p) }
+func (m Uint32ListOption) Filter(p Uint32ListPredicate) Uint32ListOption { return FilterUint32ListOption(m, p) }
+func (m Uint64ListOption) Filter(p Uint64ListPredicate) Uint64ListOption { return FilterUint64ListOption(m, p) }
+func (m UintptrListOption) Filter(p UintptrListPredicate) UintptrListOption { return FilterUintptrListOption(m, p) }
 func (m ByteListOption) Filter(p ByteListPredicate) ByteListOption { return FilterByteListOption(m, p) }
 func (m RuneListOption) Filter(p RuneListPredicate) RuneListOption { return FilterRuneListOption(m, p) }
-func (m Float32ListOption) Filter(p Float32ListPredicate) Float32ListOption {
-	return FilterFloat32ListOption(m, p)
-}
-func (m Float64ListOption) Filter(p Float64ListPredicate) Float64ListOption {
-	return FilterFloat64ListOption(m, p)
-}
-func (m Complex64ListOption) Filter(p Complex64ListPredicate) Complex64ListOption {
-	return FilterComplex64ListOption(m, p)
-}
-func (m Complex128ListOption) Filter(p Complex128ListPredicate) Complex128ListOption {
-	return FilterComplex128ListOption(m, p)
-}
+func (m Float32ListOption) Filter(p Float32ListPredicate) Float32ListOption { return FilterFloat32ListOption(m, p) }
+func (m Float64ListOption) Filter(p Float64ListPredicate) Float64ListOption { return FilterFloat64ListOption(m, p) }
+func (m Complex64ListOption) Filter(p Complex64ListPredicate) Complex64ListOption { return FilterComplex64ListOption(m, p) }
+func (m Complex128ListOption) Filter(p Complex128ListPredicate) Complex128ListOption { return FilterComplex128ListOption(m, p) }
 func (m AnyListOption) Filter(p AnyListPredicate) AnyListOption { return FilterAnyListOption(m, p) }
-func (m BoolOptionOption) Filter(p BoolOptionPredicate) BoolOptionOption {
-	return FilterBoolOptionOption(m, p)
-}
-func (m StringOptionOption) Filter(p StringOptionPredicate) StringOptionOption {
-	return FilterStringOptionOption(m, p)
-}
-func (m IntOptionOption) Filter(p IntOptionPredicate) IntOptionOption {
-	return FilterIntOptionOption(m, p)
-}
-func (m Int8OptionOption) Filter(p Int8OptionPredicate) Int8OptionOption {
-	return FilterInt8OptionOption(m, p)
-}
-func (m Int16OptionOption) Filter(p Int16OptionPredicate) Int16OptionOption {
-	return FilterInt16OptionOption(m, p)
-}
-func (m Int32OptionOption) Filter(p Int32OptionPredicate) Int32OptionOption {
-	return FilterInt32OptionOption(m, p)
-}
-func (m Int64OptionOption) Filter(p Int64OptionPredicate) Int64OptionOption {
-	return FilterInt64OptionOption(m, p)
-}
-func (m UintOptionOption) Filter(p UintOptionPredicate) UintOptionOption {
-	return FilterUintOptionOption(m, p)
-}
-func (m Uint8OptionOption) Filter(p Uint8OptionPredicate) Uint8OptionOption {
-	return FilterUint8OptionOption(m, p)
-}
-func (m Uint16OptionOption) Filter(p Uint16OptionPredicate) Uint16OptionOption {
-	return FilterUint16OptionOption(m, p)
-}
-func (m Uint32OptionOption) Filter(p Uint32OptionPredicate) Uint32OptionOption {
-	return FilterUint32OptionOption(m, p)
-}
-func (m Uint64OptionOption) Filter(p Uint64OptionPredicate) Uint64OptionOption {
-	return FilterUint64OptionOption(m, p)
-}
-func (m UintptrOptionOption) Filter(p UintptrOptionPredicate) UintptrOptionOption {
-	return FilterUintptrOptionOption(m, p)
-}
-func (m ByteOptionOption) Filter(p ByteOptionPredicate) ByteOptionOption {
-	return FilterByteOptionOption(m, p)
-}
-func (m RuneOptionOption) Filter(p RuneOptionPredicate) RuneOptionOption {
-	return FilterRuneOptionOption(m, p)
-}
-func (m Float32OptionOption) Filter(p Float32OptionPredicate) Float32OptionOption {
-	return FilterFloat32OptionOption(m, p)
-}
-func (m Float64OptionOption) Filter(p Float64OptionPredicate) Float64OptionOption {
-	return FilterFloat64OptionOption(m, p)
-}
-func (m Complex64OptionOption) Filter(p Complex64OptionPredicate) Complex64OptionOption {
-	return FilterComplex64OptionOption(m, p)
-}
-func (m Complex128OptionOption) Filter(p Complex128OptionPredicate) Complex128OptionOption {
-	return FilterComplex128OptionOption(m, p)
-}
-func (m AnyOptionOption) Filter(p AnyOptionPredicate) AnyOptionOption {
-	return FilterAnyOptionOption(m, p)
-}
-func (m BoolArrOptionOption) Filter(p BoolArrOptionPredicate) BoolArrOptionOption {
-	return FilterBoolArrOptionOption(m, p)
-}
-func (m StringArrOptionOption) Filter(p StringArrOptionPredicate) StringArrOptionOption {
-	return FilterStringArrOptionOption(m, p)
-}
-func (m IntArrOptionOption) Filter(p IntArrOptionPredicate) IntArrOptionOption {
-	return FilterIntArrOptionOption(m, p)
-}
-func (m Int8ArrOptionOption) Filter(p Int8ArrOptionPredicate) Int8ArrOptionOption {
-	return FilterInt8ArrOptionOption(m, p)
-}
-func (m Int16ArrOptionOption) Filter(p Int16ArrOptionPredicate) Int16ArrOptionOption {
-	return FilterInt16ArrOptionOption(m, p)
-}
-func (m Int32ArrOptionOption) Filter(p Int32ArrOptionPredicate) Int32ArrOptionOption {
-	return FilterInt32ArrOptionOption(m, p)
-}
-func (m Int64ArrOptionOption) Filter(p Int64ArrOptionPredicate) Int64ArrOptionOption {
-	return FilterInt64ArrOptionOption(m, p)
-}
-func (m UintArrOptionOption) Filter(p UintArrOptionPredicate) UintArrOptionOption {
-	return FilterUintArrOptionOption(m, p)
-}
-func (m Uint8ArrOptionOption) Filter(p Uint8ArrOptionPredicate) Uint8ArrOptionOption {
-	return FilterUint8ArrOptionOption(m, p)
-}
-func (m Uint16ArrOptionOption) Filter(p Uint16ArrOptionPredicate) Uint16ArrOptionOption {
-	return FilterUint16ArrOptionOption(m, p)
-}
-func (m Uint32ArrOptionOption) Filter(p Uint32ArrOptionPredicate) Uint32ArrOptionOption {
-	return FilterUint32ArrOptionOption(m, p)
-}
-func (m Uint64ArrOptionOption) Filter(p Uint64ArrOptionPredicate) Uint64ArrOptionOption {
-	return FilterUint64ArrOptionOption(m, p)
-}
-func (m UintptrArrOptionOption) Filter(p UintptrArrOptionPredicate) UintptrArrOptionOption {
-	return FilterUintptrArrOptionOption(m, p)
-}
-func (m ByteArrOptionOption) Filter(p ByteArrOptionPredicate) ByteArrOptionOption {
-	return FilterByteArrOptionOption(m, p)
-}
-func (m RuneArrOptionOption) Filter(p RuneArrOptionPredicate) RuneArrOptionOption {
-	return FilterRuneArrOptionOption(m, p)
-}
-func (m Float32ArrOptionOption) Filter(p Float32ArrOptionPredicate) Float32ArrOptionOption {
-	return FilterFloat32ArrOptionOption(m, p)
-}
-func (m Float64ArrOptionOption) Filter(p Float64ArrOptionPredicate) Float64ArrOptionOption {
-	return FilterFloat64ArrOptionOption(m, p)
-}
-func (m Complex64ArrOptionOption) Filter(p Complex64ArrOptionPredicate) Complex64ArrOptionOption {
-	return FilterComplex64ArrOptionOption(m, p)
-}
-func (m Complex128ArrOptionOption) Filter(p Complex128ArrOptionPredicate) Complex128ArrOptionOption {
-	return FilterComplex128ArrOptionOption(m, p)
-}
-func (m AnyArrOptionOption) Filter(p AnyArrOptionPredicate) AnyArrOptionOption {
-	return FilterAnyArrOptionOption(m, p)
-}
-func (m BoolArrArrOptionOption) Filter(p BoolArrArrOptionPredicate) BoolArrArrOptionOption {
-	return FilterBoolArrArrOptionOption(m, p)
-}
-func (m StringArrArrOptionOption) Filter(p StringArrArrOptionPredicate) StringArrArrOptionOption {
-	return FilterStringArrArrOptionOption(m, p)
-}
-func (m IntArrArrOptionOption) Filter(p IntArrArrOptionPredicate) IntArrArrOptionOption {
-	return FilterIntArrArrOptionOption(m, p)
-}
-func (m Int8ArrArrOptionOption) Filter(p Int8ArrArrOptionPredicate) Int8ArrArrOptionOption {
-	return FilterInt8ArrArrOptionOption(m, p)
-}
-func (m Int16ArrArrOptionOption) Filter(p Int16ArrArrOptionPredicate) Int16ArrArrOptionOption {
-	return FilterInt16ArrArrOptionOption(m, p)
-}
-func (m Int32ArrArrOptionOption) Filter(p Int32ArrArrOptionPredicate) Int32ArrArrOptionOption {
-	return FilterInt32ArrArrOptionOption(m, p)
-}
-func (m Int64ArrArrOptionOption) Filter(p Int64ArrArrOptionPredicate) Int64ArrArrOptionOption {
-	return FilterInt64ArrArrOptionOption(m, p)
-}
-func (m UintArrArrOptionOption) Filter(p UintArrArrOptionPredicate) UintArrArrOptionOption {
-	return FilterUintArrArrOptionOption(m, p)
-}
-func (m Uint8ArrArrOptionOption) Filter(p Uint8ArrArrOptionPredicate) Uint8ArrArrOptionOption {
-	return FilterUint8ArrArrOptionOption(m, p)
-}
-func (m Uint16ArrArrOptionOption) Filter(p Uint16ArrArrOptionPredicate) Uint16ArrArrOptionOption {
-	return FilterUint16ArrArrOptionOption(m, p)
-}
-func (m Uint32ArrArrOptionOption) Filter(p Uint32ArrArrOptionPredicate) Uint32ArrArrOptionOption {
-	return FilterUint32ArrArrOptionOption(m, p)
-}
-func (m Uint64ArrArrOptionOption) Filter(p Uint64ArrArrOptionPredicate) Uint64ArrArrOptionOption {
-	return FilterUint64ArrArrOptionOption(m, p)
-}
-func (m UintptrArrArrOptionOption) Filter(p UintptrArrArrOptionPredicate) UintptrArrArrOptionOption {
-	return FilterUintptrArrArrOptionOption(m, p)
-}
-func (m ByteArrArrOptionOption) Filter(p ByteArrArrOptionPredicate) ByteArrArrOptionOption {
-	return FilterByteArrArrOptionOption(m, p)
-}
-func (m RuneArrArrOptionOption) Filter(p RuneArrArrOptionPredicate) RuneArrArrOptionOption {
-	return FilterRuneArrArrOptionOption(m, p)
-}
-func (m Float32ArrArrOptionOption) Filter(p Float32ArrArrOptionPredicate) Float32ArrArrOptionOption {
-	return FilterFloat32ArrArrOptionOption(m, p)
-}
-func (m Float64ArrArrOptionOption) Filter(p Float64ArrArrOptionPredicate) Float64ArrArrOptionOption {
-	return FilterFloat64ArrArrOptionOption(m, p)
-}
-func (m Complex64ArrArrOptionOption) Filter(p Complex64ArrArrOptionPredicate) Complex64ArrArrOptionOption {
-	return FilterComplex64ArrArrOptionOption(m, p)
-}
-func (m Complex128ArrArrOptionOption) Filter(p Complex128ArrArrOptionPredicate) Complex128ArrArrOptionOption {
-	return FilterComplex128ArrArrOptionOption(m, p)
-}
-func (m AnyArrArrOptionOption) Filter(p AnyArrArrOptionPredicate) AnyArrArrOptionOption {
-	return FilterAnyArrArrOptionOption(m, p)
-}
-func (m BoolOptionArrOptionOption) Filter(p BoolOptionArrOptionPredicate) BoolOptionArrOptionOption {
-	return FilterBoolOptionArrOptionOption(m, p)
-}
-func (m StringOptionArrOptionOption) Filter(p StringOptionArrOptionPredicate) StringOptionArrOptionOption {
-	return FilterStringOptionArrOptionOption(m, p)
-}
-func (m IntOptionArrOptionOption) Filter(p IntOptionArrOptionPredicate) IntOptionArrOptionOption {
-	return FilterIntOptionArrOptionOption(m, p)
-}
-func (m Int8OptionArrOptionOption) Filter(p Int8OptionArrOptionPredicate) Int8OptionArrOptionOption {
-	return FilterInt8OptionArrOptionOption(m, p)
-}
-func (m Int16OptionArrOptionOption) Filter(p Int16OptionArrOptionPredicate) Int16OptionArrOptionOption {
-	return FilterInt16OptionArrOptionOption(m, p)
-}
-func (m Int32OptionArrOptionOption) Filter(p Int32OptionArrOptionPredicate) Int32OptionArrOptionOption {
-	return FilterInt32OptionArrOptionOption(m, p)
-}
-func (m Int64OptionArrOptionOption) Filter(p Int64OptionArrOptionPredicate) Int64OptionArrOptionOption {
-	return FilterInt64OptionArrOptionOption(m, p)
-}
-func (m UintOptionArrOptionOption) Filter(p UintOptionArrOptionPredicate) UintOptionArrOptionOption {
-	return FilterUintOptionArrOptionOption(m, p)
-}
-func (m Uint8OptionArrOptionOption) Filter(p Uint8OptionArrOptionPredicate) Uint8OptionArrOptionOption {
-	return FilterUint8OptionArrOptionOption(m, p)
-}
-func (m Uint16OptionArrOptionOption) Filter(p Uint16OptionArrOptionPredicate) Uint16OptionArrOptionOption {
-	return FilterUint16OptionArrOptionOption(m, p)
-}
-func (m Uint32OptionArrOptionOption) Filter(p Uint32OptionArrOptionPredicate) Uint32OptionArrOptionOption {
-	return FilterUint32OptionArrOptionOption(m, p)
-}
-func (m Uint64OptionArrOptionOption) Filter(p Uint64OptionArrOptionPredicate) Uint64OptionArrOptionOption {
-	return FilterUint64OptionArrOptionOption(m, p)
-}
-func (m UintptrOptionArrOptionOption) Filter(p UintptrOptionArrOptionPredicate) UintptrOptionArrOptionOption {
-	return FilterUintptrOptionArrOptionOption(m, p)
-}
-func (m ByteOptionArrOptionOption) Filter(p ByteOptionArrOptionPredicate) ByteOptionArrOptionOption {
-	return FilterByteOptionArrOptionOption(m, p)
-}
-func (m RuneOptionArrOptionOption) Filter(p RuneOptionArrOptionPredicate) RuneOptionArrOptionOption {
-	return FilterRuneOptionArrOptionOption(m, p)
-}
-func (m Float32OptionArrOptionOption) Filter(p Float32OptionArrOptionPredicate) Float32OptionArrOptionOption {
-	return FilterFloat32OptionArrOptionOption(m, p)
-}
-func (m Float64OptionArrOptionOption) Filter(p Float64OptionArrOptionPredicate) Float64OptionArrOptionOption {
-	return FilterFloat64OptionArrOptionOption(m, p)
-}
-func (m Complex64OptionArrOptionOption) Filter(p Complex64OptionArrOptionPredicate) Complex64OptionArrOptionOption {
-	return FilterComplex64OptionArrOptionOption(m, p)
-}
-func (m Complex128OptionArrOptionOption) Filter(p Complex128OptionArrOptionPredicate) Complex128OptionArrOptionOption {
-	return FilterComplex128OptionArrOptionOption(m, p)
-}
-func (m AnyOptionArrOptionOption) Filter(p AnyOptionArrOptionPredicate) AnyOptionArrOptionOption {
-	return FilterAnyOptionArrOptionOption(m, p)
-}
-func (m BoolListOptionOption) Filter(p BoolListOptionPredicate) BoolListOptionOption {
-	return FilterBoolListOptionOption(m, p)
-}
-func (m StringListOptionOption) Filter(p StringListOptionPredicate) StringListOptionOption {
-	return FilterStringListOptionOption(m, p)
-}
-func (m IntListOptionOption) Filter(p IntListOptionPredicate) IntListOptionOption {
-	return FilterIntListOptionOption(m, p)
-}
-func (m Int8ListOptionOption) Filter(p Int8ListOptionPredicate) Int8ListOptionOption {
-	return FilterInt8ListOptionOption(m, p)
-}
-func (m Int16ListOptionOption) Filter(p Int16ListOptionPredicate) Int16ListOptionOption {
-	return FilterInt16ListOptionOption(m, p)
-}
-func (m Int32ListOptionOption) Filter(p Int32ListOptionPredicate) Int32ListOptionOption {
-	return FilterInt32ListOptionOption(m, p)
-}
-func (m Int64ListOptionOption) Filter(p Int64ListOptionPredicate) Int64ListOptionOption {
-	return FilterInt64ListOptionOption(m, p)
-}
-func (m UintListOptionOption) Filter(p UintListOptionPredicate) UintListOptionOption {
-	return FilterUintListOptionOption(m, p)
-}
-func (m Uint8ListOptionOption) Filter(p Uint8ListOptionPredicate) Uint8ListOptionOption {
-	return FilterUint8ListOptionOption(m, p)
-}
-func (m Uint16ListOptionOption) Filter(p Uint16ListOptionPredicate) Uint16ListOptionOption {
-	return FilterUint16ListOptionOption(m, p)
-}
-func (m Uint32ListOptionOption) Filter(p Uint32ListOptionPredicate) Uint32ListOptionOption {
-	return FilterUint32ListOptionOption(m, p)
-}
-func (m Uint64ListOptionOption) Filter(p Uint64ListOptionPredicate) Uint64ListOptionOption {
-	return FilterUint64ListOptionOption(m, p)
-}
-func (m UintptrListOptionOption) Filter(p UintptrListOptionPredicate) UintptrListOptionOption {
-	return FilterUintptrListOptionOption(m, p)
-}
-func (m ByteListOptionOption) Filter(p ByteListOptionPredicate) ByteListOptionOption {
-	return FilterByteListOptionOption(m, p)
-}
-func (m RuneListOptionOption) Filter(p RuneListOptionPredicate) RuneListOptionOption {
-	return FilterRuneListOptionOption(m, p)
-}
-func (m Float32ListOptionOption) Filter(p Float32ListOptionPredicate) Float32ListOptionOption {
-	return FilterFloat32ListOptionOption(m, p)
-}
-func (m Float64ListOptionOption) Filter(p Float64ListOptionPredicate) Float64ListOptionOption {
-	return FilterFloat64ListOptionOption(m, p)
-}
-func (m Complex64ListOptionOption) Filter(p Complex64ListOptionPredicate) Complex64ListOptionOption {
-	return FilterComplex64ListOptionOption(m, p)
-}
-func (m Complex128ListOptionOption) Filter(p Complex128ListOptionPredicate) Complex128ListOptionOption {
-	return FilterComplex128ListOptionOption(m, p)
-}
-func (m AnyListOptionOption) Filter(p AnyListOptionPredicate) AnyListOptionOption {
-	return FilterAnyListOptionOption(m, p)
-}
+func (m BoolOptionOption) Filter(p BoolOptionPredicate) BoolOptionOption { return FilterBoolOptionOption(m, p) }
+func (m StringOptionOption) Filter(p StringOptionPredicate) StringOptionOption { return FilterStringOptionOption(m, p) }
+func (m IntOptionOption) Filter(p IntOptionPredicate) IntOptionOption { return FilterIntOptionOption(m, p) }
+func (m Int8OptionOption) Filter(p Int8OptionPredicate) Int8OptionOption { return FilterInt8OptionOption(m, p) }
+func (m Int16OptionOption) Filter(p Int16OptionPredicate) Int16OptionOption { return FilterInt16OptionOption(m, p) }
+func (m Int32OptionOption) Filter(p Int32OptionPredicate) Int32OptionOption { return FilterInt32OptionOption(m, p) }
+func (m Int64OptionOption) Filter(p Int64OptionPredicate) Int64OptionOption { return FilterInt64OptionOption(m, p) }
+func (m UintOptionOption) Filter(p UintOptionPredicate) UintOptionOption { return FilterUintOptionOption(m, p) }
+func (m Uint8OptionOption) Filter(p Uint8OptionPredicate) Uint8OptionOption { return FilterUint8OptionOption(m, p) }
+func (m Uint16OptionOption) Filter(p Uint16OptionPredicate) Uint16OptionOption { return FilterUint16OptionOption(m, p) }
+func (m Uint32OptionOption) Filter(p Uint32OptionPredicate) Uint32OptionOption { return FilterUint32OptionOption(m, p) }
+func (m Uint64OptionOption) Filter(p Uint64OptionPredicate) Uint64OptionOption { return FilterUint64OptionOption(m, p) }
+func (m UintptrOptionOption) Filter(p UintptrOptionPredicate) UintptrOptionOption { return FilterUintptrOptionOption(m, p) }
+func (m ByteOptionOption) Filter(p ByteOptionPredicate) ByteOptionOption { return FilterByteOptionOption(m, p) }
+func (m RuneOptionOption) Filter(p RuneOptionPredicate) RuneOptionOption { return FilterRuneOptionOption(m, p) }
+func (m Float32OptionOption) Filter(p Float32OptionPredicate) Float32OptionOption { return FilterFloat32OptionOption(m, p) }
+func (m Float64OptionOption) Filter(p Float64OptionPredicate) Float64OptionOption { return FilterFloat64OptionOption(m, p) }
+func (m Complex64OptionOption) Filter(p Complex64OptionPredicate) Complex64OptionOption { return FilterComplex64OptionOption(m, p) }
+func (m Complex128OptionOption) Filter(p Complex128OptionPredicate) Complex128OptionOption { return FilterComplex128OptionOption(m, p) }
+func (m AnyOptionOption) Filter(p AnyOptionPredicate) AnyOptionOption { return FilterAnyOptionOption(m, p) }
+func (m BoolArrOptionOption) Filter(p BoolArrOptionPredicate) BoolArrOptionOption { return FilterBoolArrOptionOption(m, p) }
+func (m StringArrOptionOption) Filter(p StringArrOptionPredicate) StringArrOptionOption { return FilterStringArrOptionOption(m, p) }
+func (m IntArrOptionOption) Filter(p IntArrOptionPredicate) IntArrOptionOption { return FilterIntArrOptionOption(m, p) }
+func (m Int8ArrOptionOption) Filter(p Int8ArrOptionPredicate) Int8ArrOptionOption { return FilterInt8ArrOptionOption(m, p) }
+func (m Int16ArrOptionOption) Filter(p Int16ArrOptionPredicate) Int16ArrOptionOption { return FilterInt16ArrOptionOption(m, p) }
+func (m Int32ArrOptionOption) Filter(p Int32ArrOptionPredicate) Int32ArrOptionOption { return FilterInt32ArrOptionOption(m, p) }
+func (m Int64ArrOptionOption) Filter(p Int64ArrOptionPredicate) Int64ArrOptionOption { return FilterInt64ArrOptionOption(m, p) }
+func (m UintArrOptionOption) Filter(p UintArrOptionPredicate) UintArrOptionOption { return FilterUintArrOptionOption(m, p) }
+func (m Uint8ArrOptionOption) Filter(p Uint8ArrOptionPredicate) Uint8ArrOptionOption { return FilterUint8ArrOptionOption(m, p) }
+func (m Uint16ArrOptionOption) Filter(p Uint16ArrOptionPredicate) Uint16ArrOptionOption { return FilterUint16ArrOptionOption(m, p) }
+func (m Uint32ArrOptionOption) Filter(p Uint32ArrOptionPredicate) Uint32ArrOptionOption { return FilterUint32ArrOptionOption(m, p) }
+func (m Uint64ArrOptionOption) Filter(p Uint64ArrOptionPredicate) Uint64ArrOptionOption { return FilterUint64ArrOptionOption(m, p) }
+func (m UintptrArrOptionOption) Filter(p UintptrArrOptionPredicate) UintptrArrOptionOption { return FilterUintptrArrOptionOption(m, p) }
+func (m ByteArrOptionOption) Filter(p ByteArrOptionPredicate) ByteArrOptionOption { return FilterByteArrOptionOption(m, p) }
+func (m RuneArrOptionOption) Filter(p RuneArrOptionPredicate) RuneArrOptionOption { return FilterRuneArrOptionOption(m, p) }
+func (m Float32ArrOptionOption) Filter(p Float32ArrOptionPredicate) Float32ArrOptionOption { return FilterFloat32ArrOptionOption(m, p) }
+func (m Float64ArrOptionOption) Filter(p Float64ArrOptionPredicate) Float64ArrOptionOption { return FilterFloat64ArrOptionOption(m, p) }
+func (m Complex64ArrOptionOption) Filter(p Complex64ArrOptionPredicate) Complex64ArrOptionOption { return FilterComplex64ArrOptionOption(m, p) }
+func (m Complex128ArrOptionOption) Filter(p Complex128ArrOptionPredicate) Complex128ArrOptionOption { return FilterComplex128ArrOptionOption(m, p) }
+func (m AnyArrOptionOption) Filter(p AnyArrOptionPredicate) AnyArrOptionOption { return FilterAnyArrOptionOption(m, p) }
+func (m BoolArrArrOptionOption) Filter(p BoolArrArrOptionPredicate) BoolArrArrOptionOption { return FilterBoolArrArrOptionOption(m, p) }
+func (m StringArrArrOptionOption) Filter(p StringArrArrOptionPredicate) StringArrArrOptionOption { return FilterStringArrArrOptionOption(m, p) }
+func (m IntArrArrOptionOption) Filter(p IntArrArrOptionPredicate) IntArrArrOptionOption { return FilterIntArrArrOptionOption(m, p) }
+func (m Int8ArrArrOptionOption) Filter(p Int8ArrArrOptionPredicate) Int8ArrArrOptionOption { return FilterInt8ArrArrOptionOption(m, p) }
+func (m Int16ArrArrOptionOption) Filter(p Int16ArrArrOptionPredicate) Int16ArrArrOptionOption { return FilterInt16ArrArrOptionOption(m, p) }
+func (m Int32ArrArrOptionOption) Filter(p Int32ArrArrOptionPredicate) Int32ArrArrOptionOption { return FilterInt32ArrArrOptionOption(m, p) }
+func (m Int64ArrArrOptionOption) Filter(p Int64ArrArrOptionPredicate) Int64ArrArrOptionOption { return FilterInt64ArrArrOptionOption(m, p) }
+func (m UintArrArrOptionOption) Filter(p UintArrArrOptionPredicate) UintArrArrOptionOption { return FilterUintArrArrOptionOption(m, p) }
+func (m Uint8ArrArrOptionOption) Filter(p Uint8ArrArrOptionPredicate) Uint8ArrArrOptionOption { return FilterUint8ArrArrOptionOption(m, p) }
+func (m Uint16ArrArrOptionOption) Filter(p Uint16ArrArrOptionPredicate) Uint16ArrArrOptionOption { return FilterUint16ArrArrOptionOption(m, p) }
+func (m Uint32ArrArrOptionOption) Filter(p Uint32ArrArrOptionPredicate) Uint32ArrArrOptionOption { return FilterUint32ArrArrOptionOption(m, p) }
+func (m Uint64ArrArrOptionOption) Filter(p Uint64ArrArrOptionPredicate) Uint64ArrArrOptionOption { return FilterUint64ArrArrOptionOption(m, p) }
+func (m UintptrArrArrOptionOption) Filter(p UintptrArrArrOptionPredicate) UintptrArrArrOptionOption { return FilterUintptrArrArrOptionOption(m, p) }
+func (m ByteArrArrOptionOption) Filter(p ByteArrArrOptionPredicate) ByteArrArrOptionOption { return FilterByteArrArrOptionOption(m, p) }
+func (m RuneArrArrOptionOption) Filter(p RuneArrArrOptionPredicate) RuneArrArrOptionOption { return FilterRuneArrArrOptionOption(m, p) }
+func (m Float32ArrArrOptionOption) Filter(p Float32ArrArrOptionPredicate) Float32ArrArrOptionOption { return FilterFloat32ArrArrOptionOption(m, p) }
+func (m Float64ArrArrOptionOption) Filter(p Float64ArrArrOptionPredicate) Float64ArrArrOptionOption { return FilterFloat64ArrArrOptionOption(m, p) }
+func (m Complex64ArrArrOptionOption) Filter(p Complex64ArrArrOptionPredicate) Complex64ArrArrOptionOption { return FilterComplex64ArrArrOptionOption(m, p) }
+func (m Complex128ArrArrOptionOption) Filter(p Complex128ArrArrOptionPredicate) Complex128ArrArrOptionOption { return FilterComplex128ArrArrOptionOption(m, p) }
+func (m AnyArrArrOptionOption) Filter(p AnyArrArrOptionPredicate) AnyArrArrOptionOption { return FilterAnyArrArrOptionOption(m, p) }
+func (m BoolOptionArrOptionOption) Filter(p BoolOptionArrOptionPredicate) BoolOptionArrOptionOption { return FilterBoolOptionArrOptionOption(m, p) }
+func (m StringOptionArrOptionOption) Filter(p StringOptionArrOptionPredicate) StringOptionArrOptionOption { return FilterStringOptionArrOptionOption(m, p) }
+func (m IntOptionArrOptionOption) Filter(p IntOptionArrOptionPredicate) IntOptionArrOptionOption { return FilterIntOptionArrOptionOption(m, p) }
+func (m Int8OptionArrOptionOption) Filter(p Int8OptionArrOptionPredicate) Int8OptionArrOptionOption { return FilterInt8OptionArrOptionOption(m, p) }
+func (m Int16OptionArrOptionOption) Filter(p Int16OptionArrOptionPredicate) Int16OptionArrOptionOption { return FilterInt16OptionArrOptionOption(m, p) }
+func (m Int32OptionArrOptionOption) Filter(p Int32OptionArrOptionPredicate) Int32OptionArrOptionOption { return FilterInt32OptionArrOptionOption(m, p) }
+func (m Int64OptionArrOptionOption) Filter(p Int64OptionArrOptionPredicate) Int64OptionArrOptionOption { return FilterInt64OptionArrOptionOption(m, p) }
+func (m UintOptionArrOptionOption) Filter(p UintOptionArrOptionPredicate) UintOptionArrOptionOption { return FilterUintOptionArrOptionOption(m, p) }
+func (m Uint8OptionArrOptionOption) Filter(p Uint8OptionArrOptionPredicate) Uint8OptionArrOptionOption { return FilterUint8OptionArrOptionOption(m, p) }
+func (m Uint16OptionArrOptionOption) Filter(p Uint16OptionArrOptionPredicate) Uint16OptionArrOptionOption { return FilterUint16OptionArrOptionOption(m, p) }
+func (m Uint32OptionArrOptionOption) Filter(p Uint32OptionArrOptionPredicate) Uint32OptionArrOptionOption { return FilterUint32OptionArrOptionOption(m, p) }
+func (m Uint64OptionArrOptionOption) Filter(p Uint64OptionArrOptionPredicate) Uint64OptionArrOptionOption { return FilterUint64OptionArrOptionOption(m, p) }
+func (m UintptrOptionArrOptionOption) Filter(p UintptrOptionArrOptionPredicate) UintptrOptionArrOptionOption { return FilterUintptrOptionArrOptionOption(m, p) }
+func (m ByteOptionArrOptionOption) Filter(p ByteOptionArrOptionPredicate) ByteOptionArrOptionOption { return FilterByteOptionArrOptionOption(m, p) }
+func (m RuneOptionArrOptionOption) Filter(p RuneOptionArrOptionPredicate) RuneOptionArrOptionOption { return FilterRuneOptionArrOptionOption(m, p) }
+func (m Float32OptionArrOptionOption) Filter(p Float32OptionArrOptionPredicate) Float32OptionArrOptionOption { return FilterFloat32OptionArrOptionOption(m, p) }
+func (m Float64OptionArrOptionOption) Filter(p Float64OptionArrOptionPredicate) Float64OptionArrOptionOption { return FilterFloat64OptionArrOptionOption(m, p) }
+func (m Complex64OptionArrOptionOption) Filter(p Complex64OptionArrOptionPredicate) Complex64OptionArrOptionOption { return FilterComplex64OptionArrOptionOption(m, p) }
+func (m Complex128OptionArrOptionOption) Filter(p Complex128OptionArrOptionPredicate) Complex128OptionArrOptionOption { return FilterComplex128OptionArrOptionOption(m, p) }
+func (m AnyOptionArrOptionOption) Filter(p AnyOptionArrOptionPredicate) AnyOptionArrOptionOption { return FilterAnyOptionArrOptionOption(m, p) }
+func (m BoolListOptionOption) Filter(p BoolListOptionPredicate) BoolListOptionOption { return FilterBoolListOptionOption(m, p) }
+func (m StringListOptionOption) Filter(p StringListOptionPredicate) StringListOptionOption { return FilterStringListOptionOption(m, p) }
+func (m IntListOptionOption) Filter(p IntListOptionPredicate) IntListOptionOption { return FilterIntListOptionOption(m, p) }
+func (m Int8ListOptionOption) Filter(p Int8ListOptionPredicate) Int8ListOptionOption { return FilterInt8ListOptionOption(m, p) }
+func (m Int16ListOptionOption) Filter(p Int16ListOptionPredicate) Int16ListOptionOption { return FilterInt16ListOptionOption(m, p) }
+func (m Int32ListOptionOption) Filter(p Int32ListOptionPredicate) Int32ListOptionOption { return FilterInt32ListOptionOption(m, p) }
+func (m Int64ListOptionOption) Filter(p Int64ListOptionPredicate) Int64ListOptionOption { return FilterInt64ListOptionOption(m, p) }
+func (m UintListOptionOption) Filter(p UintListOptionPredicate) UintListOptionOption { return FilterUintListOptionOption(m, p) }
+func (m Uint8ListOptionOption) Filter(p Uint8ListOptionPredicate) Uint8ListOptionOption { return FilterUint8ListOptionOption(m, p) }
+func (m Uint16ListOptionOption) Filter(p Uint16ListOptionPredicate) Uint16ListOptionOption { return FilterUint16ListOptionOption(m, p) }
+func (m Uint32ListOptionOption) Filter(p Uint32ListOptionPredicate) Uint32ListOptionOption { return FilterUint32ListOptionOption(m, p) }
+func (m Uint64ListOptionOption) Filter(p Uint64ListOptionPredicate) Uint64ListOptionOption { return FilterUint64ListOptionOption(m, p) }
+func (m UintptrListOptionOption) Filter(p UintptrListOptionPredicate) UintptrListOptionOption { return FilterUintptrListOptionOption(m, p) }
+func (m ByteListOptionOption) Filter(p ByteListOptionPredicate) ByteListOptionOption { return FilterByteListOptionOption(m, p) }
+func (m RuneListOptionOption) Filter(p RuneListOptionPredicate) RuneListOptionOption { return FilterRuneListOptionOption(m, p) }
+func (m Float32ListOptionOption) Filter(p Float32ListOptionPredicate) Float32ListOptionOption { return FilterFloat32ListOptionOption(m, p) }
+func (m Float64ListOptionOption) Filter(p Float64ListOptionPredicate) Float64ListOptionOption { return FilterFloat64ListOptionOption(m, p) }
+func (m Complex64ListOptionOption) Filter(p Complex64ListOptionPredicate) Complex64ListOptionOption { return FilterComplex64ListOptionOption(m, p) }
+func (m Complex128ListOptionOption) Filter(p Complex128ListOptionPredicate) Complex128ListOptionOption { return FilterComplex128ListOptionOption(m, p) }
+func (m AnyListOptionOption) Filter(p AnyListOptionPredicate) AnyListOptionOption { return FilterAnyListOptionOption(m, p) }

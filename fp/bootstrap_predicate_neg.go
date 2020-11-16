@@ -3,1635 +3,584 @@
 
 package fp
 
-func (p BoolPredicate) Neg() BoolPredicate           { return func(e bool) bool { return !p(e) } }
-func (p StringPredicate) Neg() StringPredicate       { return func(e string) bool { return !p(e) } }
-func (p IntPredicate) Neg() IntPredicate             { return func(e int) bool { return !p(e) } }
-func (p Int8Predicate) Neg() Int8Predicate           { return func(e int8) bool { return !p(e) } }
-func (p Int16Predicate) Neg() Int16Predicate         { return func(e int16) bool { return !p(e) } }
-func (p Int32Predicate) Neg() Int32Predicate         { return func(e int32) bool { return !p(e) } }
-func (p Int64Predicate) Neg() Int64Predicate         { return func(e int64) bool { return !p(e) } }
-func (p UintPredicate) Neg() UintPredicate           { return func(e uint) bool { return !p(e) } }
-func (p Uint8Predicate) Neg() Uint8Predicate         { return func(e uint8) bool { return !p(e) } }
-func (p Uint16Predicate) Neg() Uint16Predicate       { return func(e uint16) bool { return !p(e) } }
-func (p Uint32Predicate) Neg() Uint32Predicate       { return func(e uint32) bool { return !p(e) } }
-func (p Uint64Predicate) Neg() Uint64Predicate       { return func(e uint64) bool { return !p(e) } }
-func (p UintptrPredicate) Neg() UintptrPredicate     { return func(e uintptr) bool { return !p(e) } }
-func (p BytePredicate) Neg() BytePredicate           { return func(e byte) bool { return !p(e) } }
-func (p RunePredicate) Neg() RunePredicate           { return func(e rune) bool { return !p(e) } }
-func (p Float32Predicate) Neg() Float32Predicate     { return func(e float32) bool { return !p(e) } }
-func (p Float64Predicate) Neg() Float64Predicate     { return func(e float64) bool { return !p(e) } }
+
+func (p BoolPredicate) Neg() BoolPredicate { return func(e bool) bool { return !p(e) } }
+func (p StringPredicate) Neg() StringPredicate { return func(e string) bool { return !p(e) } }
+func (p IntPredicate) Neg() IntPredicate { return func(e int) bool { return !p(e) } }
+func (p Int8Predicate) Neg() Int8Predicate { return func(e int8) bool { return !p(e) } }
+func (p Int16Predicate) Neg() Int16Predicate { return func(e int16) bool { return !p(e) } }
+func (p Int32Predicate) Neg() Int32Predicate { return func(e int32) bool { return !p(e) } }
+func (p Int64Predicate) Neg() Int64Predicate { return func(e int64) bool { return !p(e) } }
+func (p UintPredicate) Neg() UintPredicate { return func(e uint) bool { return !p(e) } }
+func (p Uint8Predicate) Neg() Uint8Predicate { return func(e uint8) bool { return !p(e) } }
+func (p Uint16Predicate) Neg() Uint16Predicate { return func(e uint16) bool { return !p(e) } }
+func (p Uint32Predicate) Neg() Uint32Predicate { return func(e uint32) bool { return !p(e) } }
+func (p Uint64Predicate) Neg() Uint64Predicate { return func(e uint64) bool { return !p(e) } }
+func (p UintptrPredicate) Neg() UintptrPredicate { return func(e uintptr) bool { return !p(e) } }
+func (p BytePredicate) Neg() BytePredicate { return func(e byte) bool { return !p(e) } }
+func (p RunePredicate) Neg() RunePredicate { return func(e rune) bool { return !p(e) } }
+func (p Float32Predicate) Neg() Float32Predicate { return func(e float32) bool { return !p(e) } }
+func (p Float64Predicate) Neg() Float64Predicate { return func(e float64) bool { return !p(e) } }
 func (p Complex64Predicate) Neg() Complex64Predicate { return func(e complex64) bool { return !p(e) } }
-func (p Complex128Predicate) Neg() Complex128Predicate {
-	return func(e complex128) bool { return !p(e) }
-}
-func (p AnyPredicate) Neg() AnyPredicate             { return func(e Any) bool { return !p(e) } }
-func (p BoolArrPredicate) Neg() BoolArrPredicate     { return func(e []bool) bool { return !p(e) } }
+func (p Complex128Predicate) Neg() Complex128Predicate { return func(e complex128) bool { return !p(e) } }
+func (p AnyPredicate) Neg() AnyPredicate { return func(e Any) bool { return !p(e) } }
+func (p BoolArrPredicate) Neg() BoolArrPredicate { return func(e []bool) bool { return !p(e) } }
 func (p StringArrPredicate) Neg() StringArrPredicate { return func(e []string) bool { return !p(e) } }
-func (p IntArrPredicate) Neg() IntArrPredicate       { return func(e []int) bool { return !p(e) } }
-func (p Int8ArrPredicate) Neg() Int8ArrPredicate     { return func(e []int8) bool { return !p(e) } }
-func (p Int16ArrPredicate) Neg() Int16ArrPredicate   { return func(e []int16) bool { return !p(e) } }
-func (p Int32ArrPredicate) Neg() Int32ArrPredicate   { return func(e []int32) bool { return !p(e) } }
-func (p Int64ArrPredicate) Neg() Int64ArrPredicate   { return func(e []int64) bool { return !p(e) } }
-func (p UintArrPredicate) Neg() UintArrPredicate     { return func(e []uint) bool { return !p(e) } }
-func (p Uint8ArrPredicate) Neg() Uint8ArrPredicate   { return func(e []uint8) bool { return !p(e) } }
+func (p IntArrPredicate) Neg() IntArrPredicate { return func(e []int) bool { return !p(e) } }
+func (p Int8ArrPredicate) Neg() Int8ArrPredicate { return func(e []int8) bool { return !p(e) } }
+func (p Int16ArrPredicate) Neg() Int16ArrPredicate { return func(e []int16) bool { return !p(e) } }
+func (p Int32ArrPredicate) Neg() Int32ArrPredicate { return func(e []int32) bool { return !p(e) } }
+func (p Int64ArrPredicate) Neg() Int64ArrPredicate { return func(e []int64) bool { return !p(e) } }
+func (p UintArrPredicate) Neg() UintArrPredicate { return func(e []uint) bool { return !p(e) } }
+func (p Uint8ArrPredicate) Neg() Uint8ArrPredicate { return func(e []uint8) bool { return !p(e) } }
 func (p Uint16ArrPredicate) Neg() Uint16ArrPredicate { return func(e []uint16) bool { return !p(e) } }
 func (p Uint32ArrPredicate) Neg() Uint32ArrPredicate { return func(e []uint32) bool { return !p(e) } }
 func (p Uint64ArrPredicate) Neg() Uint64ArrPredicate { return func(e []uint64) bool { return !p(e) } }
-func (p UintptrArrPredicate) Neg() UintptrArrPredicate {
-	return func(e []uintptr) bool { return !p(e) }
-}
+func (p UintptrArrPredicate) Neg() UintptrArrPredicate { return func(e []uintptr) bool { return !p(e) } }
 func (p ByteArrPredicate) Neg() ByteArrPredicate { return func(e []byte) bool { return !p(e) } }
 func (p RuneArrPredicate) Neg() RuneArrPredicate { return func(e []rune) bool { return !p(e) } }
-func (p Float32ArrPredicate) Neg() Float32ArrPredicate {
-	return func(e []float32) bool { return !p(e) }
-}
-func (p Float64ArrPredicate) Neg() Float64ArrPredicate {
-	return func(e []float64) bool { return !p(e) }
-}
-func (p Complex64ArrPredicate) Neg() Complex64ArrPredicate {
-	return func(e []complex64) bool { return !p(e) }
-}
-func (p Complex128ArrPredicate) Neg() Complex128ArrPredicate {
-	return func(e []complex128) bool { return !p(e) }
-}
-func (p AnyArrPredicate) Neg() AnyArrPredicate         { return func(e []Any) bool { return !p(e) } }
+func (p Float32ArrPredicate) Neg() Float32ArrPredicate { return func(e []float32) bool { return !p(e) } }
+func (p Float64ArrPredicate) Neg() Float64ArrPredicate { return func(e []float64) bool { return !p(e) } }
+func (p Complex64ArrPredicate) Neg() Complex64ArrPredicate { return func(e []complex64) bool { return !p(e) } }
+func (p Complex128ArrPredicate) Neg() Complex128ArrPredicate { return func(e []complex128) bool { return !p(e) } }
+func (p AnyArrPredicate) Neg() AnyArrPredicate { return func(e []Any) bool { return !p(e) } }
 func (p BoolArrArrPredicate) Neg() BoolArrArrPredicate { return func(e [][]bool) bool { return !p(e) } }
-func (p StringArrArrPredicate) Neg() StringArrArrPredicate {
-	return func(e [][]string) bool { return !p(e) }
-}
-func (p IntArrArrPredicate) Neg() IntArrArrPredicate   { return func(e [][]int) bool { return !p(e) } }
+func (p StringArrArrPredicate) Neg() StringArrArrPredicate { return func(e [][]string) bool { return !p(e) } }
+func (p IntArrArrPredicate) Neg() IntArrArrPredicate { return func(e [][]int) bool { return !p(e) } }
 func (p Int8ArrArrPredicate) Neg() Int8ArrArrPredicate { return func(e [][]int8) bool { return !p(e) } }
-func (p Int16ArrArrPredicate) Neg() Int16ArrArrPredicate {
-	return func(e [][]int16) bool { return !p(e) }
-}
-func (p Int32ArrArrPredicate) Neg() Int32ArrArrPredicate {
-	return func(e [][]int32) bool { return !p(e) }
-}
-func (p Int64ArrArrPredicate) Neg() Int64ArrArrPredicate {
-	return func(e [][]int64) bool { return !p(e) }
-}
+func (p Int16ArrArrPredicate) Neg() Int16ArrArrPredicate { return func(e [][]int16) bool { return !p(e) } }
+func (p Int32ArrArrPredicate) Neg() Int32ArrArrPredicate { return func(e [][]int32) bool { return !p(e) } }
+func (p Int64ArrArrPredicate) Neg() Int64ArrArrPredicate { return func(e [][]int64) bool { return !p(e) } }
 func (p UintArrArrPredicate) Neg() UintArrArrPredicate { return func(e [][]uint) bool { return !p(e) } }
-func (p Uint8ArrArrPredicate) Neg() Uint8ArrArrPredicate {
-	return func(e [][]uint8) bool { return !p(e) }
-}
-func (p Uint16ArrArrPredicate) Neg() Uint16ArrArrPredicate {
-	return func(e [][]uint16) bool { return !p(e) }
-}
-func (p Uint32ArrArrPredicate) Neg() Uint32ArrArrPredicate {
-	return func(e [][]uint32) bool { return !p(e) }
-}
-func (p Uint64ArrArrPredicate) Neg() Uint64ArrArrPredicate {
-	return func(e [][]uint64) bool { return !p(e) }
-}
-func (p UintptrArrArrPredicate) Neg() UintptrArrArrPredicate {
-	return func(e [][]uintptr) bool { return !p(e) }
-}
+func (p Uint8ArrArrPredicate) Neg() Uint8ArrArrPredicate { return func(e [][]uint8) bool { return !p(e) } }
+func (p Uint16ArrArrPredicate) Neg() Uint16ArrArrPredicate { return func(e [][]uint16) bool { return !p(e) } }
+func (p Uint32ArrArrPredicate) Neg() Uint32ArrArrPredicate { return func(e [][]uint32) bool { return !p(e) } }
+func (p Uint64ArrArrPredicate) Neg() Uint64ArrArrPredicate { return func(e [][]uint64) bool { return !p(e) } }
+func (p UintptrArrArrPredicate) Neg() UintptrArrArrPredicate { return func(e [][]uintptr) bool { return !p(e) } }
 func (p ByteArrArrPredicate) Neg() ByteArrArrPredicate { return func(e [][]byte) bool { return !p(e) } }
 func (p RuneArrArrPredicate) Neg() RuneArrArrPredicate { return func(e [][]rune) bool { return !p(e) } }
-func (p Float32ArrArrPredicate) Neg() Float32ArrArrPredicate {
-	return func(e [][]float32) bool { return !p(e) }
-}
-func (p Float64ArrArrPredicate) Neg() Float64ArrArrPredicate {
-	return func(e [][]float64) bool { return !p(e) }
-}
-func (p Complex64ArrArrPredicate) Neg() Complex64ArrArrPredicate {
-	return func(e [][]complex64) bool { return !p(e) }
-}
-func (p Complex128ArrArrPredicate) Neg() Complex128ArrArrPredicate {
-	return func(e [][]complex128) bool { return !p(e) }
-}
+func (p Float32ArrArrPredicate) Neg() Float32ArrArrPredicate { return func(e [][]float32) bool { return !p(e) } }
+func (p Float64ArrArrPredicate) Neg() Float64ArrArrPredicate { return func(e [][]float64) bool { return !p(e) } }
+func (p Complex64ArrArrPredicate) Neg() Complex64ArrArrPredicate { return func(e [][]complex64) bool { return !p(e) } }
+func (p Complex128ArrArrPredicate) Neg() Complex128ArrArrPredicate { return func(e [][]complex128) bool { return !p(e) } }
 func (p AnyArrArrPredicate) Neg() AnyArrArrPredicate { return func(e [][]Any) bool { return !p(e) } }
-func (p BoolOptionArrPredicate) Neg() BoolOptionArrPredicate {
-	return func(e []BoolOption) bool { return !p(e) }
-}
-func (p StringOptionArrPredicate) Neg() StringOptionArrPredicate {
-	return func(e []StringOption) bool { return !p(e) }
-}
-func (p IntOptionArrPredicate) Neg() IntOptionArrPredicate {
-	return func(e []IntOption) bool { return !p(e) }
-}
-func (p Int8OptionArrPredicate) Neg() Int8OptionArrPredicate {
-	return func(e []Int8Option) bool { return !p(e) }
-}
-func (p Int16OptionArrPredicate) Neg() Int16OptionArrPredicate {
-	return func(e []Int16Option) bool { return !p(e) }
-}
-func (p Int32OptionArrPredicate) Neg() Int32OptionArrPredicate {
-	return func(e []Int32Option) bool { return !p(e) }
-}
-func (p Int64OptionArrPredicate) Neg() Int64OptionArrPredicate {
-	return func(e []Int64Option) bool { return !p(e) }
-}
-func (p UintOptionArrPredicate) Neg() UintOptionArrPredicate {
-	return func(e []UintOption) bool { return !p(e) }
-}
-func (p Uint8OptionArrPredicate) Neg() Uint8OptionArrPredicate {
-	return func(e []Uint8Option) bool { return !p(e) }
-}
-func (p Uint16OptionArrPredicate) Neg() Uint16OptionArrPredicate {
-	return func(e []Uint16Option) bool { return !p(e) }
-}
-func (p Uint32OptionArrPredicate) Neg() Uint32OptionArrPredicate {
-	return func(e []Uint32Option) bool { return !p(e) }
-}
-func (p Uint64OptionArrPredicate) Neg() Uint64OptionArrPredicate {
-	return func(e []Uint64Option) bool { return !p(e) }
-}
-func (p UintptrOptionArrPredicate) Neg() UintptrOptionArrPredicate {
-	return func(e []UintptrOption) bool { return !p(e) }
-}
-func (p ByteOptionArrPredicate) Neg() ByteOptionArrPredicate {
-	return func(e []ByteOption) bool { return !p(e) }
-}
-func (p RuneOptionArrPredicate) Neg() RuneOptionArrPredicate {
-	return func(e []RuneOption) bool { return !p(e) }
-}
-func (p Float32OptionArrPredicate) Neg() Float32OptionArrPredicate {
-	return func(e []Float32Option) bool { return !p(e) }
-}
-func (p Float64OptionArrPredicate) Neg() Float64OptionArrPredicate {
-	return func(e []Float64Option) bool { return !p(e) }
-}
-func (p Complex64OptionArrPredicate) Neg() Complex64OptionArrPredicate {
-	return func(e []Complex64Option) bool { return !p(e) }
-}
-func (p Complex128OptionArrPredicate) Neg() Complex128OptionArrPredicate {
-	return func(e []Complex128Option) bool { return !p(e) }
-}
-func (p AnyOptionArrPredicate) Neg() AnyOptionArrPredicate {
-	return func(e []AnyOption) bool { return !p(e) }
-}
-func (p BoolOptionPredicate) Neg() BoolOptionPredicate {
-	return func(e BoolOption) bool { return !p(e) }
-}
-func (p StringOptionPredicate) Neg() StringOptionPredicate {
-	return func(e StringOption) bool { return !p(e) }
-}
+func (p BoolOptionArrPredicate) Neg() BoolOptionArrPredicate { return func(e []BoolOption) bool { return !p(e) } }
+func (p StringOptionArrPredicate) Neg() StringOptionArrPredicate { return func(e []StringOption) bool { return !p(e) } }
+func (p IntOptionArrPredicate) Neg() IntOptionArrPredicate { return func(e []IntOption) bool { return !p(e) } }
+func (p Int8OptionArrPredicate) Neg() Int8OptionArrPredicate { return func(e []Int8Option) bool { return !p(e) } }
+func (p Int16OptionArrPredicate) Neg() Int16OptionArrPredicate { return func(e []Int16Option) bool { return !p(e) } }
+func (p Int32OptionArrPredicate) Neg() Int32OptionArrPredicate { return func(e []Int32Option) bool { return !p(e) } }
+func (p Int64OptionArrPredicate) Neg() Int64OptionArrPredicate { return func(e []Int64Option) bool { return !p(e) } }
+func (p UintOptionArrPredicate) Neg() UintOptionArrPredicate { return func(e []UintOption) bool { return !p(e) } }
+func (p Uint8OptionArrPredicate) Neg() Uint8OptionArrPredicate { return func(e []Uint8Option) bool { return !p(e) } }
+func (p Uint16OptionArrPredicate) Neg() Uint16OptionArrPredicate { return func(e []Uint16Option) bool { return !p(e) } }
+func (p Uint32OptionArrPredicate) Neg() Uint32OptionArrPredicate { return func(e []Uint32Option) bool { return !p(e) } }
+func (p Uint64OptionArrPredicate) Neg() Uint64OptionArrPredicate { return func(e []Uint64Option) bool { return !p(e) } }
+func (p UintptrOptionArrPredicate) Neg() UintptrOptionArrPredicate { return func(e []UintptrOption) bool { return !p(e) } }
+func (p ByteOptionArrPredicate) Neg() ByteOptionArrPredicate { return func(e []ByteOption) bool { return !p(e) } }
+func (p RuneOptionArrPredicate) Neg() RuneOptionArrPredicate { return func(e []RuneOption) bool { return !p(e) } }
+func (p Float32OptionArrPredicate) Neg() Float32OptionArrPredicate { return func(e []Float32Option) bool { return !p(e) } }
+func (p Float64OptionArrPredicate) Neg() Float64OptionArrPredicate { return func(e []Float64Option) bool { return !p(e) } }
+func (p Complex64OptionArrPredicate) Neg() Complex64OptionArrPredicate { return func(e []Complex64Option) bool { return !p(e) } }
+func (p Complex128OptionArrPredicate) Neg() Complex128OptionArrPredicate { return func(e []Complex128Option) bool { return !p(e) } }
+func (p AnyOptionArrPredicate) Neg() AnyOptionArrPredicate { return func(e []AnyOption) bool { return !p(e) } }
+func (p BoolOptionPredicate) Neg() BoolOptionPredicate { return func(e BoolOption) bool { return !p(e) } }
+func (p StringOptionPredicate) Neg() StringOptionPredicate { return func(e StringOption) bool { return !p(e) } }
 func (p IntOptionPredicate) Neg() IntOptionPredicate { return func(e IntOption) bool { return !p(e) } }
-func (p Int8OptionPredicate) Neg() Int8OptionPredicate {
-	return func(e Int8Option) bool { return !p(e) }
-}
-func (p Int16OptionPredicate) Neg() Int16OptionPredicate {
-	return func(e Int16Option) bool { return !p(e) }
-}
-func (p Int32OptionPredicate) Neg() Int32OptionPredicate {
-	return func(e Int32Option) bool { return !p(e) }
-}
-func (p Int64OptionPredicate) Neg() Int64OptionPredicate {
-	return func(e Int64Option) bool { return !p(e) }
-}
-func (p UintOptionPredicate) Neg() UintOptionPredicate {
-	return func(e UintOption) bool { return !p(e) }
-}
-func (p Uint8OptionPredicate) Neg() Uint8OptionPredicate {
-	return func(e Uint8Option) bool { return !p(e) }
-}
-func (p Uint16OptionPredicate) Neg() Uint16OptionPredicate {
-	return func(e Uint16Option) bool { return !p(e) }
-}
-func (p Uint32OptionPredicate) Neg() Uint32OptionPredicate {
-	return func(e Uint32Option) bool { return !p(e) }
-}
-func (p Uint64OptionPredicate) Neg() Uint64OptionPredicate {
-	return func(e Uint64Option) bool { return !p(e) }
-}
-func (p UintptrOptionPredicate) Neg() UintptrOptionPredicate {
-	return func(e UintptrOption) bool { return !p(e) }
-}
-func (p ByteOptionPredicate) Neg() ByteOptionPredicate {
-	return func(e ByteOption) bool { return !p(e) }
-}
-func (p RuneOptionPredicate) Neg() RuneOptionPredicate {
-	return func(e RuneOption) bool { return !p(e) }
-}
-func (p Float32OptionPredicate) Neg() Float32OptionPredicate {
-	return func(e Float32Option) bool { return !p(e) }
-}
-func (p Float64OptionPredicate) Neg() Float64OptionPredicate {
-	return func(e Float64Option) bool { return !p(e) }
-}
-func (p Complex64OptionPredicate) Neg() Complex64OptionPredicate {
-	return func(e Complex64Option) bool { return !p(e) }
-}
-func (p Complex128OptionPredicate) Neg() Complex128OptionPredicate {
-	return func(e Complex128Option) bool { return !p(e) }
-}
+func (p Int8OptionPredicate) Neg() Int8OptionPredicate { return func(e Int8Option) bool { return !p(e) } }
+func (p Int16OptionPredicate) Neg() Int16OptionPredicate { return func(e Int16Option) bool { return !p(e) } }
+func (p Int32OptionPredicate) Neg() Int32OptionPredicate { return func(e Int32Option) bool { return !p(e) } }
+func (p Int64OptionPredicate) Neg() Int64OptionPredicate { return func(e Int64Option) bool { return !p(e) } }
+func (p UintOptionPredicate) Neg() UintOptionPredicate { return func(e UintOption) bool { return !p(e) } }
+func (p Uint8OptionPredicate) Neg() Uint8OptionPredicate { return func(e Uint8Option) bool { return !p(e) } }
+func (p Uint16OptionPredicate) Neg() Uint16OptionPredicate { return func(e Uint16Option) bool { return !p(e) } }
+func (p Uint32OptionPredicate) Neg() Uint32OptionPredicate { return func(e Uint32Option) bool { return !p(e) } }
+func (p Uint64OptionPredicate) Neg() Uint64OptionPredicate { return func(e Uint64Option) bool { return !p(e) } }
+func (p UintptrOptionPredicate) Neg() UintptrOptionPredicate { return func(e UintptrOption) bool { return !p(e) } }
+func (p ByteOptionPredicate) Neg() ByteOptionPredicate { return func(e ByteOption) bool { return !p(e) } }
+func (p RuneOptionPredicate) Neg() RuneOptionPredicate { return func(e RuneOption) bool { return !p(e) } }
+func (p Float32OptionPredicate) Neg() Float32OptionPredicate { return func(e Float32Option) bool { return !p(e) } }
+func (p Float64OptionPredicate) Neg() Float64OptionPredicate { return func(e Float64Option) bool { return !p(e) } }
+func (p Complex64OptionPredicate) Neg() Complex64OptionPredicate { return func(e Complex64Option) bool { return !p(e) } }
+func (p Complex128OptionPredicate) Neg() Complex128OptionPredicate { return func(e Complex128Option) bool { return !p(e) } }
 func (p AnyOptionPredicate) Neg() AnyOptionPredicate { return func(e AnyOption) bool { return !p(e) } }
-func (p BoolArrOptionPredicate) Neg() BoolArrOptionPredicate {
-	return func(e BoolArrOption) bool { return !p(e) }
-}
-func (p StringArrOptionPredicate) Neg() StringArrOptionPredicate {
-	return func(e StringArrOption) bool { return !p(e) }
-}
-func (p IntArrOptionPredicate) Neg() IntArrOptionPredicate {
-	return func(e IntArrOption) bool { return !p(e) }
-}
-func (p Int8ArrOptionPredicate) Neg() Int8ArrOptionPredicate {
-	return func(e Int8ArrOption) bool { return !p(e) }
-}
-func (p Int16ArrOptionPredicate) Neg() Int16ArrOptionPredicate {
-	return func(e Int16ArrOption) bool { return !p(e) }
-}
-func (p Int32ArrOptionPredicate) Neg() Int32ArrOptionPredicate {
-	return func(e Int32ArrOption) bool { return !p(e) }
-}
-func (p Int64ArrOptionPredicate) Neg() Int64ArrOptionPredicate {
-	return func(e Int64ArrOption) bool { return !p(e) }
-}
-func (p UintArrOptionPredicate) Neg() UintArrOptionPredicate {
-	return func(e UintArrOption) bool { return !p(e) }
-}
-func (p Uint8ArrOptionPredicate) Neg() Uint8ArrOptionPredicate {
-	return func(e Uint8ArrOption) bool { return !p(e) }
-}
-func (p Uint16ArrOptionPredicate) Neg() Uint16ArrOptionPredicate {
-	return func(e Uint16ArrOption) bool { return !p(e) }
-}
-func (p Uint32ArrOptionPredicate) Neg() Uint32ArrOptionPredicate {
-	return func(e Uint32ArrOption) bool { return !p(e) }
-}
-func (p Uint64ArrOptionPredicate) Neg() Uint64ArrOptionPredicate {
-	return func(e Uint64ArrOption) bool { return !p(e) }
-}
-func (p UintptrArrOptionPredicate) Neg() UintptrArrOptionPredicate {
-	return func(e UintptrArrOption) bool { return !p(e) }
-}
-func (p ByteArrOptionPredicate) Neg() ByteArrOptionPredicate {
-	return func(e ByteArrOption) bool { return !p(e) }
-}
-func (p RuneArrOptionPredicate) Neg() RuneArrOptionPredicate {
-	return func(e RuneArrOption) bool { return !p(e) }
-}
-func (p Float32ArrOptionPredicate) Neg() Float32ArrOptionPredicate {
-	return func(e Float32ArrOption) bool { return !p(e) }
-}
-func (p Float64ArrOptionPredicate) Neg() Float64ArrOptionPredicate {
-	return func(e Float64ArrOption) bool { return !p(e) }
-}
-func (p Complex64ArrOptionPredicate) Neg() Complex64ArrOptionPredicate {
-	return func(e Complex64ArrOption) bool { return !p(e) }
-}
-func (p Complex128ArrOptionPredicate) Neg() Complex128ArrOptionPredicate {
-	return func(e Complex128ArrOption) bool { return !p(e) }
-}
-func (p AnyArrOptionPredicate) Neg() AnyArrOptionPredicate {
-	return func(e AnyArrOption) bool { return !p(e) }
-}
-func (p BoolArrArrOptionPredicate) Neg() BoolArrArrOptionPredicate {
-	return func(e BoolArrArrOption) bool { return !p(e) }
-}
-func (p StringArrArrOptionPredicate) Neg() StringArrArrOptionPredicate {
-	return func(e StringArrArrOption) bool { return !p(e) }
-}
-func (p IntArrArrOptionPredicate) Neg() IntArrArrOptionPredicate {
-	return func(e IntArrArrOption) bool { return !p(e) }
-}
-func (p Int8ArrArrOptionPredicate) Neg() Int8ArrArrOptionPredicate {
-	return func(e Int8ArrArrOption) bool { return !p(e) }
-}
-func (p Int16ArrArrOptionPredicate) Neg() Int16ArrArrOptionPredicate {
-	return func(e Int16ArrArrOption) bool { return !p(e) }
-}
-func (p Int32ArrArrOptionPredicate) Neg() Int32ArrArrOptionPredicate {
-	return func(e Int32ArrArrOption) bool { return !p(e) }
-}
-func (p Int64ArrArrOptionPredicate) Neg() Int64ArrArrOptionPredicate {
-	return func(e Int64ArrArrOption) bool { return !p(e) }
-}
-func (p UintArrArrOptionPredicate) Neg() UintArrArrOptionPredicate {
-	return func(e UintArrArrOption) bool { return !p(e) }
-}
-func (p Uint8ArrArrOptionPredicate) Neg() Uint8ArrArrOptionPredicate {
-	return func(e Uint8ArrArrOption) bool { return !p(e) }
-}
-func (p Uint16ArrArrOptionPredicate) Neg() Uint16ArrArrOptionPredicate {
-	return func(e Uint16ArrArrOption) bool { return !p(e) }
-}
-func (p Uint32ArrArrOptionPredicate) Neg() Uint32ArrArrOptionPredicate {
-	return func(e Uint32ArrArrOption) bool { return !p(e) }
-}
-func (p Uint64ArrArrOptionPredicate) Neg() Uint64ArrArrOptionPredicate {
-	return func(e Uint64ArrArrOption) bool { return !p(e) }
-}
-func (p UintptrArrArrOptionPredicate) Neg() UintptrArrArrOptionPredicate {
-	return func(e UintptrArrArrOption) bool { return !p(e) }
-}
-func (p ByteArrArrOptionPredicate) Neg() ByteArrArrOptionPredicate {
-	return func(e ByteArrArrOption) bool { return !p(e) }
-}
-func (p RuneArrArrOptionPredicate) Neg() RuneArrArrOptionPredicate {
-	return func(e RuneArrArrOption) bool { return !p(e) }
-}
-func (p Float32ArrArrOptionPredicate) Neg() Float32ArrArrOptionPredicate {
-	return func(e Float32ArrArrOption) bool { return !p(e) }
-}
-func (p Float64ArrArrOptionPredicate) Neg() Float64ArrArrOptionPredicate {
-	return func(e Float64ArrArrOption) bool { return !p(e) }
-}
-func (p Complex64ArrArrOptionPredicate) Neg() Complex64ArrArrOptionPredicate {
-	return func(e Complex64ArrArrOption) bool { return !p(e) }
-}
-func (p Complex128ArrArrOptionPredicate) Neg() Complex128ArrArrOptionPredicate {
-	return func(e Complex128ArrArrOption) bool { return !p(e) }
-}
-func (p AnyArrArrOptionPredicate) Neg() AnyArrArrOptionPredicate {
-	return func(e AnyArrArrOption) bool { return !p(e) }
-}
-func (p BoolOptionArrOptionPredicate) Neg() BoolOptionArrOptionPredicate {
-	return func(e BoolOptionArrOption) bool { return !p(e) }
-}
-func (p StringOptionArrOptionPredicate) Neg() StringOptionArrOptionPredicate {
-	return func(e StringOptionArrOption) bool { return !p(e) }
-}
-func (p IntOptionArrOptionPredicate) Neg() IntOptionArrOptionPredicate {
-	return func(e IntOptionArrOption) bool { return !p(e) }
-}
-func (p Int8OptionArrOptionPredicate) Neg() Int8OptionArrOptionPredicate {
-	return func(e Int8OptionArrOption) bool { return !p(e) }
-}
-func (p Int16OptionArrOptionPredicate) Neg() Int16OptionArrOptionPredicate {
-	return func(e Int16OptionArrOption) bool { return !p(e) }
-}
-func (p Int32OptionArrOptionPredicate) Neg() Int32OptionArrOptionPredicate {
-	return func(e Int32OptionArrOption) bool { return !p(e) }
-}
-func (p Int64OptionArrOptionPredicate) Neg() Int64OptionArrOptionPredicate {
-	return func(e Int64OptionArrOption) bool { return !p(e) }
-}
-func (p UintOptionArrOptionPredicate) Neg() UintOptionArrOptionPredicate {
-	return func(e UintOptionArrOption) bool { return !p(e) }
-}
-func (p Uint8OptionArrOptionPredicate) Neg() Uint8OptionArrOptionPredicate {
-	return func(e Uint8OptionArrOption) bool { return !p(e) }
-}
-func (p Uint16OptionArrOptionPredicate) Neg() Uint16OptionArrOptionPredicate {
-	return func(e Uint16OptionArrOption) bool { return !p(e) }
-}
-func (p Uint32OptionArrOptionPredicate) Neg() Uint32OptionArrOptionPredicate {
-	return func(e Uint32OptionArrOption) bool { return !p(e) }
-}
-func (p Uint64OptionArrOptionPredicate) Neg() Uint64OptionArrOptionPredicate {
-	return func(e Uint64OptionArrOption) bool { return !p(e) }
-}
-func (p UintptrOptionArrOptionPredicate) Neg() UintptrOptionArrOptionPredicate {
-	return func(e UintptrOptionArrOption) bool { return !p(e) }
-}
-func (p ByteOptionArrOptionPredicate) Neg() ByteOptionArrOptionPredicate {
-	return func(e ByteOptionArrOption) bool { return !p(e) }
-}
-func (p RuneOptionArrOptionPredicate) Neg() RuneOptionArrOptionPredicate {
-	return func(e RuneOptionArrOption) bool { return !p(e) }
-}
-func (p Float32OptionArrOptionPredicate) Neg() Float32OptionArrOptionPredicate {
-	return func(e Float32OptionArrOption) bool { return !p(e) }
-}
-func (p Float64OptionArrOptionPredicate) Neg() Float64OptionArrOptionPredicate {
-	return func(e Float64OptionArrOption) bool { return !p(e) }
-}
-func (p Complex64OptionArrOptionPredicate) Neg() Complex64OptionArrOptionPredicate {
-	return func(e Complex64OptionArrOption) bool { return !p(e) }
-}
-func (p Complex128OptionArrOptionPredicate) Neg() Complex128OptionArrOptionPredicate {
-	return func(e Complex128OptionArrOption) bool { return !p(e) }
-}
-func (p AnyOptionArrOptionPredicate) Neg() AnyOptionArrOptionPredicate {
-	return func(e AnyOptionArrOption) bool { return !p(e) }
-}
-func (p BoolListOptionPredicate) Neg() BoolListOptionPredicate {
-	return func(e BoolListOption) bool { return !p(e) }
-}
-func (p StringListOptionPredicate) Neg() StringListOptionPredicate {
-	return func(e StringListOption) bool { return !p(e) }
-}
-func (p IntListOptionPredicate) Neg() IntListOptionPredicate {
-	return func(e IntListOption) bool { return !p(e) }
-}
-func (p Int8ListOptionPredicate) Neg() Int8ListOptionPredicate {
-	return func(e Int8ListOption) bool { return !p(e) }
-}
-func (p Int16ListOptionPredicate) Neg() Int16ListOptionPredicate {
-	return func(e Int16ListOption) bool { return !p(e) }
-}
-func (p Int32ListOptionPredicate) Neg() Int32ListOptionPredicate {
-	return func(e Int32ListOption) bool { return !p(e) }
-}
-func (p Int64ListOptionPredicate) Neg() Int64ListOptionPredicate {
-	return func(e Int64ListOption) bool { return !p(e) }
-}
-func (p UintListOptionPredicate) Neg() UintListOptionPredicate {
-	return func(e UintListOption) bool { return !p(e) }
-}
-func (p Uint8ListOptionPredicate) Neg() Uint8ListOptionPredicate {
-	return func(e Uint8ListOption) bool { return !p(e) }
-}
-func (p Uint16ListOptionPredicate) Neg() Uint16ListOptionPredicate {
-	return func(e Uint16ListOption) bool { return !p(e) }
-}
-func (p Uint32ListOptionPredicate) Neg() Uint32ListOptionPredicate {
-	return func(e Uint32ListOption) bool { return !p(e) }
-}
-func (p Uint64ListOptionPredicate) Neg() Uint64ListOptionPredicate {
-	return func(e Uint64ListOption) bool { return !p(e) }
-}
-func (p UintptrListOptionPredicate) Neg() UintptrListOptionPredicate {
-	return func(e UintptrListOption) bool { return !p(e) }
-}
-func (p ByteListOptionPredicate) Neg() ByteListOptionPredicate {
-	return func(e ByteListOption) bool { return !p(e) }
-}
-func (p RuneListOptionPredicate) Neg() RuneListOptionPredicate {
-	return func(e RuneListOption) bool { return !p(e) }
-}
-func (p Float32ListOptionPredicate) Neg() Float32ListOptionPredicate {
-	return func(e Float32ListOption) bool { return !p(e) }
-}
-func (p Float64ListOptionPredicate) Neg() Float64ListOptionPredicate {
-	return func(e Float64ListOption) bool { return !p(e) }
-}
-func (p Complex64ListOptionPredicate) Neg() Complex64ListOptionPredicate {
-	return func(e Complex64ListOption) bool { return !p(e) }
-}
-func (p Complex128ListOptionPredicate) Neg() Complex128ListOptionPredicate {
-	return func(e Complex128ListOption) bool { return !p(e) }
-}
-func (p AnyListOptionPredicate) Neg() AnyListOptionPredicate {
-	return func(e AnyListOption) bool { return !p(e) }
-}
-func (p BoolOptionOptionPredicate) Neg() BoolOptionOptionPredicate {
-	return func(e BoolOptionOption) bool { return !p(e) }
-}
-func (p StringOptionOptionPredicate) Neg() StringOptionOptionPredicate {
-	return func(e StringOptionOption) bool { return !p(e) }
-}
-func (p IntOptionOptionPredicate) Neg() IntOptionOptionPredicate {
-	return func(e IntOptionOption) bool { return !p(e) }
-}
-func (p Int8OptionOptionPredicate) Neg() Int8OptionOptionPredicate {
-	return func(e Int8OptionOption) bool { return !p(e) }
-}
-func (p Int16OptionOptionPredicate) Neg() Int16OptionOptionPredicate {
-	return func(e Int16OptionOption) bool { return !p(e) }
-}
-func (p Int32OptionOptionPredicate) Neg() Int32OptionOptionPredicate {
-	return func(e Int32OptionOption) bool { return !p(e) }
-}
-func (p Int64OptionOptionPredicate) Neg() Int64OptionOptionPredicate {
-	return func(e Int64OptionOption) bool { return !p(e) }
-}
-func (p UintOptionOptionPredicate) Neg() UintOptionOptionPredicate {
-	return func(e UintOptionOption) bool { return !p(e) }
-}
-func (p Uint8OptionOptionPredicate) Neg() Uint8OptionOptionPredicate {
-	return func(e Uint8OptionOption) bool { return !p(e) }
-}
-func (p Uint16OptionOptionPredicate) Neg() Uint16OptionOptionPredicate {
-	return func(e Uint16OptionOption) bool { return !p(e) }
-}
-func (p Uint32OptionOptionPredicate) Neg() Uint32OptionOptionPredicate {
-	return func(e Uint32OptionOption) bool { return !p(e) }
-}
-func (p Uint64OptionOptionPredicate) Neg() Uint64OptionOptionPredicate {
-	return func(e Uint64OptionOption) bool { return !p(e) }
-}
-func (p UintptrOptionOptionPredicate) Neg() UintptrOptionOptionPredicate {
-	return func(e UintptrOptionOption) bool { return !p(e) }
-}
-func (p ByteOptionOptionPredicate) Neg() ByteOptionOptionPredicate {
-	return func(e ByteOptionOption) bool { return !p(e) }
-}
-func (p RuneOptionOptionPredicate) Neg() RuneOptionOptionPredicate {
-	return func(e RuneOptionOption) bool { return !p(e) }
-}
-func (p Float32OptionOptionPredicate) Neg() Float32OptionOptionPredicate {
-	return func(e Float32OptionOption) bool { return !p(e) }
-}
-func (p Float64OptionOptionPredicate) Neg() Float64OptionOptionPredicate {
-	return func(e Float64OptionOption) bool { return !p(e) }
-}
-func (p Complex64OptionOptionPredicate) Neg() Complex64OptionOptionPredicate {
-	return func(e Complex64OptionOption) bool { return !p(e) }
-}
-func (p Complex128OptionOptionPredicate) Neg() Complex128OptionOptionPredicate {
-	return func(e Complex128OptionOption) bool { return !p(e) }
-}
-func (p AnyOptionOptionPredicate) Neg() AnyOptionOptionPredicate {
-	return func(e AnyOptionOption) bool { return !p(e) }
-}
-func (p BoolArrOptionOptionPredicate) Neg() BoolArrOptionOptionPredicate {
-	return func(e BoolArrOptionOption) bool { return !p(e) }
-}
-func (p StringArrOptionOptionPredicate) Neg() StringArrOptionOptionPredicate {
-	return func(e StringArrOptionOption) bool { return !p(e) }
-}
-func (p IntArrOptionOptionPredicate) Neg() IntArrOptionOptionPredicate {
-	return func(e IntArrOptionOption) bool { return !p(e) }
-}
-func (p Int8ArrOptionOptionPredicate) Neg() Int8ArrOptionOptionPredicate {
-	return func(e Int8ArrOptionOption) bool { return !p(e) }
-}
-func (p Int16ArrOptionOptionPredicate) Neg() Int16ArrOptionOptionPredicate {
-	return func(e Int16ArrOptionOption) bool { return !p(e) }
-}
-func (p Int32ArrOptionOptionPredicate) Neg() Int32ArrOptionOptionPredicate {
-	return func(e Int32ArrOptionOption) bool { return !p(e) }
-}
-func (p Int64ArrOptionOptionPredicate) Neg() Int64ArrOptionOptionPredicate {
-	return func(e Int64ArrOptionOption) bool { return !p(e) }
-}
-func (p UintArrOptionOptionPredicate) Neg() UintArrOptionOptionPredicate {
-	return func(e UintArrOptionOption) bool { return !p(e) }
-}
-func (p Uint8ArrOptionOptionPredicate) Neg() Uint8ArrOptionOptionPredicate {
-	return func(e Uint8ArrOptionOption) bool { return !p(e) }
-}
-func (p Uint16ArrOptionOptionPredicate) Neg() Uint16ArrOptionOptionPredicate {
-	return func(e Uint16ArrOptionOption) bool { return !p(e) }
-}
-func (p Uint32ArrOptionOptionPredicate) Neg() Uint32ArrOptionOptionPredicate {
-	return func(e Uint32ArrOptionOption) bool { return !p(e) }
-}
-func (p Uint64ArrOptionOptionPredicate) Neg() Uint64ArrOptionOptionPredicate {
-	return func(e Uint64ArrOptionOption) bool { return !p(e) }
-}
-func (p UintptrArrOptionOptionPredicate) Neg() UintptrArrOptionOptionPredicate {
-	return func(e UintptrArrOptionOption) bool { return !p(e) }
-}
-func (p ByteArrOptionOptionPredicate) Neg() ByteArrOptionOptionPredicate {
-	return func(e ByteArrOptionOption) bool { return !p(e) }
-}
-func (p RuneArrOptionOptionPredicate) Neg() RuneArrOptionOptionPredicate {
-	return func(e RuneArrOptionOption) bool { return !p(e) }
-}
-func (p Float32ArrOptionOptionPredicate) Neg() Float32ArrOptionOptionPredicate {
-	return func(e Float32ArrOptionOption) bool { return !p(e) }
-}
-func (p Float64ArrOptionOptionPredicate) Neg() Float64ArrOptionOptionPredicate {
-	return func(e Float64ArrOptionOption) bool { return !p(e) }
-}
-func (p Complex64ArrOptionOptionPredicate) Neg() Complex64ArrOptionOptionPredicate {
-	return func(e Complex64ArrOptionOption) bool { return !p(e) }
-}
-func (p Complex128ArrOptionOptionPredicate) Neg() Complex128ArrOptionOptionPredicate {
-	return func(e Complex128ArrOptionOption) bool { return !p(e) }
-}
-func (p AnyArrOptionOptionPredicate) Neg() AnyArrOptionOptionPredicate {
-	return func(e AnyArrOptionOption) bool { return !p(e) }
-}
-func (p BoolArrArrOptionOptionPredicate) Neg() BoolArrArrOptionOptionPredicate {
-	return func(e BoolArrArrOptionOption) bool { return !p(e) }
-}
-func (p StringArrArrOptionOptionPredicate) Neg() StringArrArrOptionOptionPredicate {
-	return func(e StringArrArrOptionOption) bool { return !p(e) }
-}
-func (p IntArrArrOptionOptionPredicate) Neg() IntArrArrOptionOptionPredicate {
-	return func(e IntArrArrOptionOption) bool { return !p(e) }
-}
-func (p Int8ArrArrOptionOptionPredicate) Neg() Int8ArrArrOptionOptionPredicate {
-	return func(e Int8ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Int16ArrArrOptionOptionPredicate) Neg() Int16ArrArrOptionOptionPredicate {
-	return func(e Int16ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Int32ArrArrOptionOptionPredicate) Neg() Int32ArrArrOptionOptionPredicate {
-	return func(e Int32ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Int64ArrArrOptionOptionPredicate) Neg() Int64ArrArrOptionOptionPredicate {
-	return func(e Int64ArrArrOptionOption) bool { return !p(e) }
-}
-func (p UintArrArrOptionOptionPredicate) Neg() UintArrArrOptionOptionPredicate {
-	return func(e UintArrArrOptionOption) bool { return !p(e) }
-}
-func (p Uint8ArrArrOptionOptionPredicate) Neg() Uint8ArrArrOptionOptionPredicate {
-	return func(e Uint8ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Uint16ArrArrOptionOptionPredicate) Neg() Uint16ArrArrOptionOptionPredicate {
-	return func(e Uint16ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Uint32ArrArrOptionOptionPredicate) Neg() Uint32ArrArrOptionOptionPredicate {
-	return func(e Uint32ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Uint64ArrArrOptionOptionPredicate) Neg() Uint64ArrArrOptionOptionPredicate {
-	return func(e Uint64ArrArrOptionOption) bool { return !p(e) }
-}
-func (p UintptrArrArrOptionOptionPredicate) Neg() UintptrArrArrOptionOptionPredicate {
-	return func(e UintptrArrArrOptionOption) bool { return !p(e) }
-}
-func (p ByteArrArrOptionOptionPredicate) Neg() ByteArrArrOptionOptionPredicate {
-	return func(e ByteArrArrOptionOption) bool { return !p(e) }
-}
-func (p RuneArrArrOptionOptionPredicate) Neg() RuneArrArrOptionOptionPredicate {
-	return func(e RuneArrArrOptionOption) bool { return !p(e) }
-}
-func (p Float32ArrArrOptionOptionPredicate) Neg() Float32ArrArrOptionOptionPredicate {
-	return func(e Float32ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Float64ArrArrOptionOptionPredicate) Neg() Float64ArrArrOptionOptionPredicate {
-	return func(e Float64ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Complex64ArrArrOptionOptionPredicate) Neg() Complex64ArrArrOptionOptionPredicate {
-	return func(e Complex64ArrArrOptionOption) bool { return !p(e) }
-}
-func (p Complex128ArrArrOptionOptionPredicate) Neg() Complex128ArrArrOptionOptionPredicate {
-	return func(e Complex128ArrArrOptionOption) bool { return !p(e) }
-}
-func (p AnyArrArrOptionOptionPredicate) Neg() AnyArrArrOptionOptionPredicate {
-	return func(e AnyArrArrOptionOption) bool { return !p(e) }
-}
-func (p BoolOptionArrOptionOptionPredicate) Neg() BoolOptionArrOptionOptionPredicate {
-	return func(e BoolOptionArrOptionOption) bool { return !p(e) }
-}
-func (p StringOptionArrOptionOptionPredicate) Neg() StringOptionArrOptionOptionPredicate {
-	return func(e StringOptionArrOptionOption) bool { return !p(e) }
-}
-func (p IntOptionArrOptionOptionPredicate) Neg() IntOptionArrOptionOptionPredicate {
-	return func(e IntOptionArrOptionOption) bool { return !p(e) }
-}
-func (p Int8OptionArrOptionOptionPredicate) Neg() Int8OptionArrOptionOptionPredicate {
-	return func(e Int8OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Int16OptionArrOptionOptionPredicate) Neg() Int16OptionArrOptionOptionPredicate {
-	return func(e Int16OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Int32OptionArrOptionOptionPredicate) Neg() Int32OptionArrOptionOptionPredicate {
-	return func(e Int32OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Int64OptionArrOptionOptionPredicate) Neg() Int64OptionArrOptionOptionPredicate {
-	return func(e Int64OptionArrOptionOption) bool { return !p(e) }
-}
-func (p UintOptionArrOptionOptionPredicate) Neg() UintOptionArrOptionOptionPredicate {
-	return func(e UintOptionArrOptionOption) bool { return !p(e) }
-}
-func (p Uint8OptionArrOptionOptionPredicate) Neg() Uint8OptionArrOptionOptionPredicate {
-	return func(e Uint8OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Uint16OptionArrOptionOptionPredicate) Neg() Uint16OptionArrOptionOptionPredicate {
-	return func(e Uint16OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Uint32OptionArrOptionOptionPredicate) Neg() Uint32OptionArrOptionOptionPredicate {
-	return func(e Uint32OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Uint64OptionArrOptionOptionPredicate) Neg() Uint64OptionArrOptionOptionPredicate {
-	return func(e Uint64OptionArrOptionOption) bool { return !p(e) }
-}
-func (p UintptrOptionArrOptionOptionPredicate) Neg() UintptrOptionArrOptionOptionPredicate {
-	return func(e UintptrOptionArrOptionOption) bool { return !p(e) }
-}
-func (p ByteOptionArrOptionOptionPredicate) Neg() ByteOptionArrOptionOptionPredicate {
-	return func(e ByteOptionArrOptionOption) bool { return !p(e) }
-}
-func (p RuneOptionArrOptionOptionPredicate) Neg() RuneOptionArrOptionOptionPredicate {
-	return func(e RuneOptionArrOptionOption) bool { return !p(e) }
-}
-func (p Float32OptionArrOptionOptionPredicate) Neg() Float32OptionArrOptionOptionPredicate {
-	return func(e Float32OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Float64OptionArrOptionOptionPredicate) Neg() Float64OptionArrOptionOptionPredicate {
-	return func(e Float64OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Complex64OptionArrOptionOptionPredicate) Neg() Complex64OptionArrOptionOptionPredicate {
-	return func(e Complex64OptionArrOptionOption) bool { return !p(e) }
-}
-func (p Complex128OptionArrOptionOptionPredicate) Neg() Complex128OptionArrOptionOptionPredicate {
-	return func(e Complex128OptionArrOptionOption) bool { return !p(e) }
-}
-func (p AnyOptionArrOptionOptionPredicate) Neg() AnyOptionArrOptionOptionPredicate {
-	return func(e AnyOptionArrOptionOption) bool { return !p(e) }
-}
-func (p BoolListOptionOptionPredicate) Neg() BoolListOptionOptionPredicate {
-	return func(e BoolListOptionOption) bool { return !p(e) }
-}
-func (p StringListOptionOptionPredicate) Neg() StringListOptionOptionPredicate {
-	return func(e StringListOptionOption) bool { return !p(e) }
-}
-func (p IntListOptionOptionPredicate) Neg() IntListOptionOptionPredicate {
-	return func(e IntListOptionOption) bool { return !p(e) }
-}
-func (p Int8ListOptionOptionPredicate) Neg() Int8ListOptionOptionPredicate {
-	return func(e Int8ListOptionOption) bool { return !p(e) }
-}
-func (p Int16ListOptionOptionPredicate) Neg() Int16ListOptionOptionPredicate {
-	return func(e Int16ListOptionOption) bool { return !p(e) }
-}
-func (p Int32ListOptionOptionPredicate) Neg() Int32ListOptionOptionPredicate {
-	return func(e Int32ListOptionOption) bool { return !p(e) }
-}
-func (p Int64ListOptionOptionPredicate) Neg() Int64ListOptionOptionPredicate {
-	return func(e Int64ListOptionOption) bool { return !p(e) }
-}
-func (p UintListOptionOptionPredicate) Neg() UintListOptionOptionPredicate {
-	return func(e UintListOptionOption) bool { return !p(e) }
-}
-func (p Uint8ListOptionOptionPredicate) Neg() Uint8ListOptionOptionPredicate {
-	return func(e Uint8ListOptionOption) bool { return !p(e) }
-}
-func (p Uint16ListOptionOptionPredicate) Neg() Uint16ListOptionOptionPredicate {
-	return func(e Uint16ListOptionOption) bool { return !p(e) }
-}
-func (p Uint32ListOptionOptionPredicate) Neg() Uint32ListOptionOptionPredicate {
-	return func(e Uint32ListOptionOption) bool { return !p(e) }
-}
-func (p Uint64ListOptionOptionPredicate) Neg() Uint64ListOptionOptionPredicate {
-	return func(e Uint64ListOptionOption) bool { return !p(e) }
-}
-func (p UintptrListOptionOptionPredicate) Neg() UintptrListOptionOptionPredicate {
-	return func(e UintptrListOptionOption) bool { return !p(e) }
-}
-func (p ByteListOptionOptionPredicate) Neg() ByteListOptionOptionPredicate {
-	return func(e ByteListOptionOption) bool { return !p(e) }
-}
-func (p RuneListOptionOptionPredicate) Neg() RuneListOptionOptionPredicate {
-	return func(e RuneListOptionOption) bool { return !p(e) }
-}
-func (p Float32ListOptionOptionPredicate) Neg() Float32ListOptionOptionPredicate {
-	return func(e Float32ListOptionOption) bool { return !p(e) }
-}
-func (p Float64ListOptionOptionPredicate) Neg() Float64ListOptionOptionPredicate {
-	return func(e Float64ListOptionOption) bool { return !p(e) }
-}
-func (p Complex64ListOptionOptionPredicate) Neg() Complex64ListOptionOptionPredicate {
-	return func(e Complex64ListOptionOption) bool { return !p(e) }
-}
-func (p Complex128ListOptionOptionPredicate) Neg() Complex128ListOptionOptionPredicate {
-	return func(e Complex128ListOptionOption) bool { return !p(e) }
-}
-func (p AnyListOptionOptionPredicate) Neg() AnyListOptionOptionPredicate {
-	return func(e AnyListOptionOption) bool { return !p(e) }
-}
+func (p BoolArrOptionPredicate) Neg() BoolArrOptionPredicate { return func(e BoolArrOption) bool { return !p(e) } }
+func (p StringArrOptionPredicate) Neg() StringArrOptionPredicate { return func(e StringArrOption) bool { return !p(e) } }
+func (p IntArrOptionPredicate) Neg() IntArrOptionPredicate { return func(e IntArrOption) bool { return !p(e) } }
+func (p Int8ArrOptionPredicate) Neg() Int8ArrOptionPredicate { return func(e Int8ArrOption) bool { return !p(e) } }
+func (p Int16ArrOptionPredicate) Neg() Int16ArrOptionPredicate { return func(e Int16ArrOption) bool { return !p(e) } }
+func (p Int32ArrOptionPredicate) Neg() Int32ArrOptionPredicate { return func(e Int32ArrOption) bool { return !p(e) } }
+func (p Int64ArrOptionPredicate) Neg() Int64ArrOptionPredicate { return func(e Int64ArrOption) bool { return !p(e) } }
+func (p UintArrOptionPredicate) Neg() UintArrOptionPredicate { return func(e UintArrOption) bool { return !p(e) } }
+func (p Uint8ArrOptionPredicate) Neg() Uint8ArrOptionPredicate { return func(e Uint8ArrOption) bool { return !p(e) } }
+func (p Uint16ArrOptionPredicate) Neg() Uint16ArrOptionPredicate { return func(e Uint16ArrOption) bool { return !p(e) } }
+func (p Uint32ArrOptionPredicate) Neg() Uint32ArrOptionPredicate { return func(e Uint32ArrOption) bool { return !p(e) } }
+func (p Uint64ArrOptionPredicate) Neg() Uint64ArrOptionPredicate { return func(e Uint64ArrOption) bool { return !p(e) } }
+func (p UintptrArrOptionPredicate) Neg() UintptrArrOptionPredicate { return func(e UintptrArrOption) bool { return !p(e) } }
+func (p ByteArrOptionPredicate) Neg() ByteArrOptionPredicate { return func(e ByteArrOption) bool { return !p(e) } }
+func (p RuneArrOptionPredicate) Neg() RuneArrOptionPredicate { return func(e RuneArrOption) bool { return !p(e) } }
+func (p Float32ArrOptionPredicate) Neg() Float32ArrOptionPredicate { return func(e Float32ArrOption) bool { return !p(e) } }
+func (p Float64ArrOptionPredicate) Neg() Float64ArrOptionPredicate { return func(e Float64ArrOption) bool { return !p(e) } }
+func (p Complex64ArrOptionPredicate) Neg() Complex64ArrOptionPredicate { return func(e Complex64ArrOption) bool { return !p(e) } }
+func (p Complex128ArrOptionPredicate) Neg() Complex128ArrOptionPredicate { return func(e Complex128ArrOption) bool { return !p(e) } }
+func (p AnyArrOptionPredicate) Neg() AnyArrOptionPredicate { return func(e AnyArrOption) bool { return !p(e) } }
+func (p BoolArrArrOptionPredicate) Neg() BoolArrArrOptionPredicate { return func(e BoolArrArrOption) bool { return !p(e) } }
+func (p StringArrArrOptionPredicate) Neg() StringArrArrOptionPredicate { return func(e StringArrArrOption) bool { return !p(e) } }
+func (p IntArrArrOptionPredicate) Neg() IntArrArrOptionPredicate { return func(e IntArrArrOption) bool { return !p(e) } }
+func (p Int8ArrArrOptionPredicate) Neg() Int8ArrArrOptionPredicate { return func(e Int8ArrArrOption) bool { return !p(e) } }
+func (p Int16ArrArrOptionPredicate) Neg() Int16ArrArrOptionPredicate { return func(e Int16ArrArrOption) bool { return !p(e) } }
+func (p Int32ArrArrOptionPredicate) Neg() Int32ArrArrOptionPredicate { return func(e Int32ArrArrOption) bool { return !p(e) } }
+func (p Int64ArrArrOptionPredicate) Neg() Int64ArrArrOptionPredicate { return func(e Int64ArrArrOption) bool { return !p(e) } }
+func (p UintArrArrOptionPredicate) Neg() UintArrArrOptionPredicate { return func(e UintArrArrOption) bool { return !p(e) } }
+func (p Uint8ArrArrOptionPredicate) Neg() Uint8ArrArrOptionPredicate { return func(e Uint8ArrArrOption) bool { return !p(e) } }
+func (p Uint16ArrArrOptionPredicate) Neg() Uint16ArrArrOptionPredicate { return func(e Uint16ArrArrOption) bool { return !p(e) } }
+func (p Uint32ArrArrOptionPredicate) Neg() Uint32ArrArrOptionPredicate { return func(e Uint32ArrArrOption) bool { return !p(e) } }
+func (p Uint64ArrArrOptionPredicate) Neg() Uint64ArrArrOptionPredicate { return func(e Uint64ArrArrOption) bool { return !p(e) } }
+func (p UintptrArrArrOptionPredicate) Neg() UintptrArrArrOptionPredicate { return func(e UintptrArrArrOption) bool { return !p(e) } }
+func (p ByteArrArrOptionPredicate) Neg() ByteArrArrOptionPredicate { return func(e ByteArrArrOption) bool { return !p(e) } }
+func (p RuneArrArrOptionPredicate) Neg() RuneArrArrOptionPredicate { return func(e RuneArrArrOption) bool { return !p(e) } }
+func (p Float32ArrArrOptionPredicate) Neg() Float32ArrArrOptionPredicate { return func(e Float32ArrArrOption) bool { return !p(e) } }
+func (p Float64ArrArrOptionPredicate) Neg() Float64ArrArrOptionPredicate { return func(e Float64ArrArrOption) bool { return !p(e) } }
+func (p Complex64ArrArrOptionPredicate) Neg() Complex64ArrArrOptionPredicate { return func(e Complex64ArrArrOption) bool { return !p(e) } }
+func (p Complex128ArrArrOptionPredicate) Neg() Complex128ArrArrOptionPredicate { return func(e Complex128ArrArrOption) bool { return !p(e) } }
+func (p AnyArrArrOptionPredicate) Neg() AnyArrArrOptionPredicate { return func(e AnyArrArrOption) bool { return !p(e) } }
+func (p BoolOptionArrOptionPredicate) Neg() BoolOptionArrOptionPredicate { return func(e BoolOptionArrOption) bool { return !p(e) } }
+func (p StringOptionArrOptionPredicate) Neg() StringOptionArrOptionPredicate { return func(e StringOptionArrOption) bool { return !p(e) } }
+func (p IntOptionArrOptionPredicate) Neg() IntOptionArrOptionPredicate { return func(e IntOptionArrOption) bool { return !p(e) } }
+func (p Int8OptionArrOptionPredicate) Neg() Int8OptionArrOptionPredicate { return func(e Int8OptionArrOption) bool { return !p(e) } }
+func (p Int16OptionArrOptionPredicate) Neg() Int16OptionArrOptionPredicate { return func(e Int16OptionArrOption) bool { return !p(e) } }
+func (p Int32OptionArrOptionPredicate) Neg() Int32OptionArrOptionPredicate { return func(e Int32OptionArrOption) bool { return !p(e) } }
+func (p Int64OptionArrOptionPredicate) Neg() Int64OptionArrOptionPredicate { return func(e Int64OptionArrOption) bool { return !p(e) } }
+func (p UintOptionArrOptionPredicate) Neg() UintOptionArrOptionPredicate { return func(e UintOptionArrOption) bool { return !p(e) } }
+func (p Uint8OptionArrOptionPredicate) Neg() Uint8OptionArrOptionPredicate { return func(e Uint8OptionArrOption) bool { return !p(e) } }
+func (p Uint16OptionArrOptionPredicate) Neg() Uint16OptionArrOptionPredicate { return func(e Uint16OptionArrOption) bool { return !p(e) } }
+func (p Uint32OptionArrOptionPredicate) Neg() Uint32OptionArrOptionPredicate { return func(e Uint32OptionArrOption) bool { return !p(e) } }
+func (p Uint64OptionArrOptionPredicate) Neg() Uint64OptionArrOptionPredicate { return func(e Uint64OptionArrOption) bool { return !p(e) } }
+func (p UintptrOptionArrOptionPredicate) Neg() UintptrOptionArrOptionPredicate { return func(e UintptrOptionArrOption) bool { return !p(e) } }
+func (p ByteOptionArrOptionPredicate) Neg() ByteOptionArrOptionPredicate { return func(e ByteOptionArrOption) bool { return !p(e) } }
+func (p RuneOptionArrOptionPredicate) Neg() RuneOptionArrOptionPredicate { return func(e RuneOptionArrOption) bool { return !p(e) } }
+func (p Float32OptionArrOptionPredicate) Neg() Float32OptionArrOptionPredicate { return func(e Float32OptionArrOption) bool { return !p(e) } }
+func (p Float64OptionArrOptionPredicate) Neg() Float64OptionArrOptionPredicate { return func(e Float64OptionArrOption) bool { return !p(e) } }
+func (p Complex64OptionArrOptionPredicate) Neg() Complex64OptionArrOptionPredicate { return func(e Complex64OptionArrOption) bool { return !p(e) } }
+func (p Complex128OptionArrOptionPredicate) Neg() Complex128OptionArrOptionPredicate { return func(e Complex128OptionArrOption) bool { return !p(e) } }
+func (p AnyOptionArrOptionPredicate) Neg() AnyOptionArrOptionPredicate { return func(e AnyOptionArrOption) bool { return !p(e) } }
+func (p BoolListOptionPredicate) Neg() BoolListOptionPredicate { return func(e BoolListOption) bool { return !p(e) } }
+func (p StringListOptionPredicate) Neg() StringListOptionPredicate { return func(e StringListOption) bool { return !p(e) } }
+func (p IntListOptionPredicate) Neg() IntListOptionPredicate { return func(e IntListOption) bool { return !p(e) } }
+func (p Int8ListOptionPredicate) Neg() Int8ListOptionPredicate { return func(e Int8ListOption) bool { return !p(e) } }
+func (p Int16ListOptionPredicate) Neg() Int16ListOptionPredicate { return func(e Int16ListOption) bool { return !p(e) } }
+func (p Int32ListOptionPredicate) Neg() Int32ListOptionPredicate { return func(e Int32ListOption) bool { return !p(e) } }
+func (p Int64ListOptionPredicate) Neg() Int64ListOptionPredicate { return func(e Int64ListOption) bool { return !p(e) } }
+func (p UintListOptionPredicate) Neg() UintListOptionPredicate { return func(e UintListOption) bool { return !p(e) } }
+func (p Uint8ListOptionPredicate) Neg() Uint8ListOptionPredicate { return func(e Uint8ListOption) bool { return !p(e) } }
+func (p Uint16ListOptionPredicate) Neg() Uint16ListOptionPredicate { return func(e Uint16ListOption) bool { return !p(e) } }
+func (p Uint32ListOptionPredicate) Neg() Uint32ListOptionPredicate { return func(e Uint32ListOption) bool { return !p(e) } }
+func (p Uint64ListOptionPredicate) Neg() Uint64ListOptionPredicate { return func(e Uint64ListOption) bool { return !p(e) } }
+func (p UintptrListOptionPredicate) Neg() UintptrListOptionPredicate { return func(e UintptrListOption) bool { return !p(e) } }
+func (p ByteListOptionPredicate) Neg() ByteListOptionPredicate { return func(e ByteListOption) bool { return !p(e) } }
+func (p RuneListOptionPredicate) Neg() RuneListOptionPredicate { return func(e RuneListOption) bool { return !p(e) } }
+func (p Float32ListOptionPredicate) Neg() Float32ListOptionPredicate { return func(e Float32ListOption) bool { return !p(e) } }
+func (p Float64ListOptionPredicate) Neg() Float64ListOptionPredicate { return func(e Float64ListOption) bool { return !p(e) } }
+func (p Complex64ListOptionPredicate) Neg() Complex64ListOptionPredicate { return func(e Complex64ListOption) bool { return !p(e) } }
+func (p Complex128ListOptionPredicate) Neg() Complex128ListOptionPredicate { return func(e Complex128ListOption) bool { return !p(e) } }
+func (p AnyListOptionPredicate) Neg() AnyListOptionPredicate { return func(e AnyListOption) bool { return !p(e) } }
+func (p BoolOptionOptionPredicate) Neg() BoolOptionOptionPredicate { return func(e BoolOptionOption) bool { return !p(e) } }
+func (p StringOptionOptionPredicate) Neg() StringOptionOptionPredicate { return func(e StringOptionOption) bool { return !p(e) } }
+func (p IntOptionOptionPredicate) Neg() IntOptionOptionPredicate { return func(e IntOptionOption) bool { return !p(e) } }
+func (p Int8OptionOptionPredicate) Neg() Int8OptionOptionPredicate { return func(e Int8OptionOption) bool { return !p(e) } }
+func (p Int16OptionOptionPredicate) Neg() Int16OptionOptionPredicate { return func(e Int16OptionOption) bool { return !p(e) } }
+func (p Int32OptionOptionPredicate) Neg() Int32OptionOptionPredicate { return func(e Int32OptionOption) bool { return !p(e) } }
+func (p Int64OptionOptionPredicate) Neg() Int64OptionOptionPredicate { return func(e Int64OptionOption) bool { return !p(e) } }
+func (p UintOptionOptionPredicate) Neg() UintOptionOptionPredicate { return func(e UintOptionOption) bool { return !p(e) } }
+func (p Uint8OptionOptionPredicate) Neg() Uint8OptionOptionPredicate { return func(e Uint8OptionOption) bool { return !p(e) } }
+func (p Uint16OptionOptionPredicate) Neg() Uint16OptionOptionPredicate { return func(e Uint16OptionOption) bool { return !p(e) } }
+func (p Uint32OptionOptionPredicate) Neg() Uint32OptionOptionPredicate { return func(e Uint32OptionOption) bool { return !p(e) } }
+func (p Uint64OptionOptionPredicate) Neg() Uint64OptionOptionPredicate { return func(e Uint64OptionOption) bool { return !p(e) } }
+func (p UintptrOptionOptionPredicate) Neg() UintptrOptionOptionPredicate { return func(e UintptrOptionOption) bool { return !p(e) } }
+func (p ByteOptionOptionPredicate) Neg() ByteOptionOptionPredicate { return func(e ByteOptionOption) bool { return !p(e) } }
+func (p RuneOptionOptionPredicate) Neg() RuneOptionOptionPredicate { return func(e RuneOptionOption) bool { return !p(e) } }
+func (p Float32OptionOptionPredicate) Neg() Float32OptionOptionPredicate { return func(e Float32OptionOption) bool { return !p(e) } }
+func (p Float64OptionOptionPredicate) Neg() Float64OptionOptionPredicate { return func(e Float64OptionOption) bool { return !p(e) } }
+func (p Complex64OptionOptionPredicate) Neg() Complex64OptionOptionPredicate { return func(e Complex64OptionOption) bool { return !p(e) } }
+func (p Complex128OptionOptionPredicate) Neg() Complex128OptionOptionPredicate { return func(e Complex128OptionOption) bool { return !p(e) } }
+func (p AnyOptionOptionPredicate) Neg() AnyOptionOptionPredicate { return func(e AnyOptionOption) bool { return !p(e) } }
+func (p BoolArrOptionOptionPredicate) Neg() BoolArrOptionOptionPredicate { return func(e BoolArrOptionOption) bool { return !p(e) } }
+func (p StringArrOptionOptionPredicate) Neg() StringArrOptionOptionPredicate { return func(e StringArrOptionOption) bool { return !p(e) } }
+func (p IntArrOptionOptionPredicate) Neg() IntArrOptionOptionPredicate { return func(e IntArrOptionOption) bool { return !p(e) } }
+func (p Int8ArrOptionOptionPredicate) Neg() Int8ArrOptionOptionPredicate { return func(e Int8ArrOptionOption) bool { return !p(e) } }
+func (p Int16ArrOptionOptionPredicate) Neg() Int16ArrOptionOptionPredicate { return func(e Int16ArrOptionOption) bool { return !p(e) } }
+func (p Int32ArrOptionOptionPredicate) Neg() Int32ArrOptionOptionPredicate { return func(e Int32ArrOptionOption) bool { return !p(e) } }
+func (p Int64ArrOptionOptionPredicate) Neg() Int64ArrOptionOptionPredicate { return func(e Int64ArrOptionOption) bool { return !p(e) } }
+func (p UintArrOptionOptionPredicate) Neg() UintArrOptionOptionPredicate { return func(e UintArrOptionOption) bool { return !p(e) } }
+func (p Uint8ArrOptionOptionPredicate) Neg() Uint8ArrOptionOptionPredicate { return func(e Uint8ArrOptionOption) bool { return !p(e) } }
+func (p Uint16ArrOptionOptionPredicate) Neg() Uint16ArrOptionOptionPredicate { return func(e Uint16ArrOptionOption) bool { return !p(e) } }
+func (p Uint32ArrOptionOptionPredicate) Neg() Uint32ArrOptionOptionPredicate { return func(e Uint32ArrOptionOption) bool { return !p(e) } }
+func (p Uint64ArrOptionOptionPredicate) Neg() Uint64ArrOptionOptionPredicate { return func(e Uint64ArrOptionOption) bool { return !p(e) } }
+func (p UintptrArrOptionOptionPredicate) Neg() UintptrArrOptionOptionPredicate { return func(e UintptrArrOptionOption) bool { return !p(e) } }
+func (p ByteArrOptionOptionPredicate) Neg() ByteArrOptionOptionPredicate { return func(e ByteArrOptionOption) bool { return !p(e) } }
+func (p RuneArrOptionOptionPredicate) Neg() RuneArrOptionOptionPredicate { return func(e RuneArrOptionOption) bool { return !p(e) } }
+func (p Float32ArrOptionOptionPredicate) Neg() Float32ArrOptionOptionPredicate { return func(e Float32ArrOptionOption) bool { return !p(e) } }
+func (p Float64ArrOptionOptionPredicate) Neg() Float64ArrOptionOptionPredicate { return func(e Float64ArrOptionOption) bool { return !p(e) } }
+func (p Complex64ArrOptionOptionPredicate) Neg() Complex64ArrOptionOptionPredicate { return func(e Complex64ArrOptionOption) bool { return !p(e) } }
+func (p Complex128ArrOptionOptionPredicate) Neg() Complex128ArrOptionOptionPredicate { return func(e Complex128ArrOptionOption) bool { return !p(e) } }
+func (p AnyArrOptionOptionPredicate) Neg() AnyArrOptionOptionPredicate { return func(e AnyArrOptionOption) bool { return !p(e) } }
+func (p BoolArrArrOptionOptionPredicate) Neg() BoolArrArrOptionOptionPredicate { return func(e BoolArrArrOptionOption) bool { return !p(e) } }
+func (p StringArrArrOptionOptionPredicate) Neg() StringArrArrOptionOptionPredicate { return func(e StringArrArrOptionOption) bool { return !p(e) } }
+func (p IntArrArrOptionOptionPredicate) Neg() IntArrArrOptionOptionPredicate { return func(e IntArrArrOptionOption) bool { return !p(e) } }
+func (p Int8ArrArrOptionOptionPredicate) Neg() Int8ArrArrOptionOptionPredicate { return func(e Int8ArrArrOptionOption) bool { return !p(e) } }
+func (p Int16ArrArrOptionOptionPredicate) Neg() Int16ArrArrOptionOptionPredicate { return func(e Int16ArrArrOptionOption) bool { return !p(e) } }
+func (p Int32ArrArrOptionOptionPredicate) Neg() Int32ArrArrOptionOptionPredicate { return func(e Int32ArrArrOptionOption) bool { return !p(e) } }
+func (p Int64ArrArrOptionOptionPredicate) Neg() Int64ArrArrOptionOptionPredicate { return func(e Int64ArrArrOptionOption) bool { return !p(e) } }
+func (p UintArrArrOptionOptionPredicate) Neg() UintArrArrOptionOptionPredicate { return func(e UintArrArrOptionOption) bool { return !p(e) } }
+func (p Uint8ArrArrOptionOptionPredicate) Neg() Uint8ArrArrOptionOptionPredicate { return func(e Uint8ArrArrOptionOption) bool { return !p(e) } }
+func (p Uint16ArrArrOptionOptionPredicate) Neg() Uint16ArrArrOptionOptionPredicate { return func(e Uint16ArrArrOptionOption) bool { return !p(e) } }
+func (p Uint32ArrArrOptionOptionPredicate) Neg() Uint32ArrArrOptionOptionPredicate { return func(e Uint32ArrArrOptionOption) bool { return !p(e) } }
+func (p Uint64ArrArrOptionOptionPredicate) Neg() Uint64ArrArrOptionOptionPredicate { return func(e Uint64ArrArrOptionOption) bool { return !p(e) } }
+func (p UintptrArrArrOptionOptionPredicate) Neg() UintptrArrArrOptionOptionPredicate { return func(e UintptrArrArrOptionOption) bool { return !p(e) } }
+func (p ByteArrArrOptionOptionPredicate) Neg() ByteArrArrOptionOptionPredicate { return func(e ByteArrArrOptionOption) bool { return !p(e) } }
+func (p RuneArrArrOptionOptionPredicate) Neg() RuneArrArrOptionOptionPredicate { return func(e RuneArrArrOptionOption) bool { return !p(e) } }
+func (p Float32ArrArrOptionOptionPredicate) Neg() Float32ArrArrOptionOptionPredicate { return func(e Float32ArrArrOptionOption) bool { return !p(e) } }
+func (p Float64ArrArrOptionOptionPredicate) Neg() Float64ArrArrOptionOptionPredicate { return func(e Float64ArrArrOptionOption) bool { return !p(e) } }
+func (p Complex64ArrArrOptionOptionPredicate) Neg() Complex64ArrArrOptionOptionPredicate { return func(e Complex64ArrArrOptionOption) bool { return !p(e) } }
+func (p Complex128ArrArrOptionOptionPredicate) Neg() Complex128ArrArrOptionOptionPredicate { return func(e Complex128ArrArrOptionOption) bool { return !p(e) } }
+func (p AnyArrArrOptionOptionPredicate) Neg() AnyArrArrOptionOptionPredicate { return func(e AnyArrArrOptionOption) bool { return !p(e) } }
+func (p BoolOptionArrOptionOptionPredicate) Neg() BoolOptionArrOptionOptionPredicate { return func(e BoolOptionArrOptionOption) bool { return !p(e) } }
+func (p StringOptionArrOptionOptionPredicate) Neg() StringOptionArrOptionOptionPredicate { return func(e StringOptionArrOptionOption) bool { return !p(e) } }
+func (p IntOptionArrOptionOptionPredicate) Neg() IntOptionArrOptionOptionPredicate { return func(e IntOptionArrOptionOption) bool { return !p(e) } }
+func (p Int8OptionArrOptionOptionPredicate) Neg() Int8OptionArrOptionOptionPredicate { return func(e Int8OptionArrOptionOption) bool { return !p(e) } }
+func (p Int16OptionArrOptionOptionPredicate) Neg() Int16OptionArrOptionOptionPredicate { return func(e Int16OptionArrOptionOption) bool { return !p(e) } }
+func (p Int32OptionArrOptionOptionPredicate) Neg() Int32OptionArrOptionOptionPredicate { return func(e Int32OptionArrOptionOption) bool { return !p(e) } }
+func (p Int64OptionArrOptionOptionPredicate) Neg() Int64OptionArrOptionOptionPredicate { return func(e Int64OptionArrOptionOption) bool { return !p(e) } }
+func (p UintOptionArrOptionOptionPredicate) Neg() UintOptionArrOptionOptionPredicate { return func(e UintOptionArrOptionOption) bool { return !p(e) } }
+func (p Uint8OptionArrOptionOptionPredicate) Neg() Uint8OptionArrOptionOptionPredicate { return func(e Uint8OptionArrOptionOption) bool { return !p(e) } }
+func (p Uint16OptionArrOptionOptionPredicate) Neg() Uint16OptionArrOptionOptionPredicate { return func(e Uint16OptionArrOptionOption) bool { return !p(e) } }
+func (p Uint32OptionArrOptionOptionPredicate) Neg() Uint32OptionArrOptionOptionPredicate { return func(e Uint32OptionArrOptionOption) bool { return !p(e) } }
+func (p Uint64OptionArrOptionOptionPredicate) Neg() Uint64OptionArrOptionOptionPredicate { return func(e Uint64OptionArrOptionOption) bool { return !p(e) } }
+func (p UintptrOptionArrOptionOptionPredicate) Neg() UintptrOptionArrOptionOptionPredicate { return func(e UintptrOptionArrOptionOption) bool { return !p(e) } }
+func (p ByteOptionArrOptionOptionPredicate) Neg() ByteOptionArrOptionOptionPredicate { return func(e ByteOptionArrOptionOption) bool { return !p(e) } }
+func (p RuneOptionArrOptionOptionPredicate) Neg() RuneOptionArrOptionOptionPredicate { return func(e RuneOptionArrOptionOption) bool { return !p(e) } }
+func (p Float32OptionArrOptionOptionPredicate) Neg() Float32OptionArrOptionOptionPredicate { return func(e Float32OptionArrOptionOption) bool { return !p(e) } }
+func (p Float64OptionArrOptionOptionPredicate) Neg() Float64OptionArrOptionOptionPredicate { return func(e Float64OptionArrOptionOption) bool { return !p(e) } }
+func (p Complex64OptionArrOptionOptionPredicate) Neg() Complex64OptionArrOptionOptionPredicate { return func(e Complex64OptionArrOptionOption) bool { return !p(e) } }
+func (p Complex128OptionArrOptionOptionPredicate) Neg() Complex128OptionArrOptionOptionPredicate { return func(e Complex128OptionArrOptionOption) bool { return !p(e) } }
+func (p AnyOptionArrOptionOptionPredicate) Neg() AnyOptionArrOptionOptionPredicate { return func(e AnyOptionArrOptionOption) bool { return !p(e) } }
+func (p BoolListOptionOptionPredicate) Neg() BoolListOptionOptionPredicate { return func(e BoolListOptionOption) bool { return !p(e) } }
+func (p StringListOptionOptionPredicate) Neg() StringListOptionOptionPredicate { return func(e StringListOptionOption) bool { return !p(e) } }
+func (p IntListOptionOptionPredicate) Neg() IntListOptionOptionPredicate { return func(e IntListOptionOption) bool { return !p(e) } }
+func (p Int8ListOptionOptionPredicate) Neg() Int8ListOptionOptionPredicate { return func(e Int8ListOptionOption) bool { return !p(e) } }
+func (p Int16ListOptionOptionPredicate) Neg() Int16ListOptionOptionPredicate { return func(e Int16ListOptionOption) bool { return !p(e) } }
+func (p Int32ListOptionOptionPredicate) Neg() Int32ListOptionOptionPredicate { return func(e Int32ListOptionOption) bool { return !p(e) } }
+func (p Int64ListOptionOptionPredicate) Neg() Int64ListOptionOptionPredicate { return func(e Int64ListOptionOption) bool { return !p(e) } }
+func (p UintListOptionOptionPredicate) Neg() UintListOptionOptionPredicate { return func(e UintListOptionOption) bool { return !p(e) } }
+func (p Uint8ListOptionOptionPredicate) Neg() Uint8ListOptionOptionPredicate { return func(e Uint8ListOptionOption) bool { return !p(e) } }
+func (p Uint16ListOptionOptionPredicate) Neg() Uint16ListOptionOptionPredicate { return func(e Uint16ListOptionOption) bool { return !p(e) } }
+func (p Uint32ListOptionOptionPredicate) Neg() Uint32ListOptionOptionPredicate { return func(e Uint32ListOptionOption) bool { return !p(e) } }
+func (p Uint64ListOptionOptionPredicate) Neg() Uint64ListOptionOptionPredicate { return func(e Uint64ListOptionOption) bool { return !p(e) } }
+func (p UintptrListOptionOptionPredicate) Neg() UintptrListOptionOptionPredicate { return func(e UintptrListOptionOption) bool { return !p(e) } }
+func (p ByteListOptionOptionPredicate) Neg() ByteListOptionOptionPredicate { return func(e ByteListOptionOption) bool { return !p(e) } }
+func (p RuneListOptionOptionPredicate) Neg() RuneListOptionOptionPredicate { return func(e RuneListOptionOption) bool { return !p(e) } }
+func (p Float32ListOptionOptionPredicate) Neg() Float32ListOptionOptionPredicate { return func(e Float32ListOptionOption) bool { return !p(e) } }
+func (p Float64ListOptionOptionPredicate) Neg() Float64ListOptionOptionPredicate { return func(e Float64ListOptionOption) bool { return !p(e) } }
+func (p Complex64ListOptionOptionPredicate) Neg() Complex64ListOptionOptionPredicate { return func(e Complex64ListOptionOption) bool { return !p(e) } }
+func (p Complex128ListOptionOptionPredicate) Neg() Complex128ListOptionOptionPredicate { return func(e Complex128ListOptionOption) bool { return !p(e) } }
+func (p AnyListOptionOptionPredicate) Neg() AnyListOptionOptionPredicate { return func(e AnyListOptionOption) bool { return !p(e) } }
 func (p BoolListPredicate) Neg() BoolListPredicate { return func(e BoolList) bool { return !p(e) } }
-func (p StringListPredicate) Neg() StringListPredicate {
-	return func(e StringList) bool { return !p(e) }
-}
-func (p IntListPredicate) Neg() IntListPredicate     { return func(e IntList) bool { return !p(e) } }
-func (p Int8ListPredicate) Neg() Int8ListPredicate   { return func(e Int8List) bool { return !p(e) } }
+func (p StringListPredicate) Neg() StringListPredicate { return func(e StringList) bool { return !p(e) } }
+func (p IntListPredicate) Neg() IntListPredicate { return func(e IntList) bool { return !p(e) } }
+func (p Int8ListPredicate) Neg() Int8ListPredicate { return func(e Int8List) bool { return !p(e) } }
 func (p Int16ListPredicate) Neg() Int16ListPredicate { return func(e Int16List) bool { return !p(e) } }
 func (p Int32ListPredicate) Neg() Int32ListPredicate { return func(e Int32List) bool { return !p(e) } }
 func (p Int64ListPredicate) Neg() Int64ListPredicate { return func(e Int64List) bool { return !p(e) } }
-func (p UintListPredicate) Neg() UintListPredicate   { return func(e UintList) bool { return !p(e) } }
+func (p UintListPredicate) Neg() UintListPredicate { return func(e UintList) bool { return !p(e) } }
 func (p Uint8ListPredicate) Neg() Uint8ListPredicate { return func(e Uint8List) bool { return !p(e) } }
-func (p Uint16ListPredicate) Neg() Uint16ListPredicate {
-	return func(e Uint16List) bool { return !p(e) }
-}
-func (p Uint32ListPredicate) Neg() Uint32ListPredicate {
-	return func(e Uint32List) bool { return !p(e) }
-}
-func (p Uint64ListPredicate) Neg() Uint64ListPredicate {
-	return func(e Uint64List) bool { return !p(e) }
-}
-func (p UintptrListPredicate) Neg() UintptrListPredicate {
-	return func(e UintptrList) bool { return !p(e) }
-}
+func (p Uint16ListPredicate) Neg() Uint16ListPredicate { return func(e Uint16List) bool { return !p(e) } }
+func (p Uint32ListPredicate) Neg() Uint32ListPredicate { return func(e Uint32List) bool { return !p(e) } }
+func (p Uint64ListPredicate) Neg() Uint64ListPredicate { return func(e Uint64List) bool { return !p(e) } }
+func (p UintptrListPredicate) Neg() UintptrListPredicate { return func(e UintptrList) bool { return !p(e) } }
 func (p ByteListPredicate) Neg() ByteListPredicate { return func(e ByteList) bool { return !p(e) } }
 func (p RuneListPredicate) Neg() RuneListPredicate { return func(e RuneList) bool { return !p(e) } }
-func (p Float32ListPredicate) Neg() Float32ListPredicate {
-	return func(e Float32List) bool { return !p(e) }
-}
-func (p Float64ListPredicate) Neg() Float64ListPredicate {
-	return func(e Float64List) bool { return !p(e) }
-}
-func (p Complex64ListPredicate) Neg() Complex64ListPredicate {
-	return func(e Complex64List) bool { return !p(e) }
-}
-func (p Complex128ListPredicate) Neg() Complex128ListPredicate {
-	return func(e Complex128List) bool { return !p(e) }
-}
+func (p Float32ListPredicate) Neg() Float32ListPredicate { return func(e Float32List) bool { return !p(e) } }
+func (p Float64ListPredicate) Neg() Float64ListPredicate { return func(e Float64List) bool { return !p(e) } }
+func (p Complex64ListPredicate) Neg() Complex64ListPredicate { return func(e Complex64List) bool { return !p(e) } }
+func (p Complex128ListPredicate) Neg() Complex128ListPredicate { return func(e Complex128List) bool { return !p(e) } }
 func (p AnyListPredicate) Neg() AnyListPredicate { return func(e AnyList) bool { return !p(e) } }
-func (p BoolOptionListPredicate) Neg() BoolOptionListPredicate {
-	return func(e BoolOptionList) bool { return !p(e) }
-}
-func (p StringOptionListPredicate) Neg() StringOptionListPredicate {
-	return func(e StringOptionList) bool { return !p(e) }
-}
-func (p IntOptionListPredicate) Neg() IntOptionListPredicate {
-	return func(e IntOptionList) bool { return !p(e) }
-}
-func (p Int8OptionListPredicate) Neg() Int8OptionListPredicate {
-	return func(e Int8OptionList) bool { return !p(e) }
-}
-func (p Int16OptionListPredicate) Neg() Int16OptionListPredicate {
-	return func(e Int16OptionList) bool { return !p(e) }
-}
-func (p Int32OptionListPredicate) Neg() Int32OptionListPredicate {
-	return func(e Int32OptionList) bool { return !p(e) }
-}
-func (p Int64OptionListPredicate) Neg() Int64OptionListPredicate {
-	return func(e Int64OptionList) bool { return !p(e) }
-}
-func (p UintOptionListPredicate) Neg() UintOptionListPredicate {
-	return func(e UintOptionList) bool { return !p(e) }
-}
-func (p Uint8OptionListPredicate) Neg() Uint8OptionListPredicate {
-	return func(e Uint8OptionList) bool { return !p(e) }
-}
-func (p Uint16OptionListPredicate) Neg() Uint16OptionListPredicate {
-	return func(e Uint16OptionList) bool { return !p(e) }
-}
-func (p Uint32OptionListPredicate) Neg() Uint32OptionListPredicate {
-	return func(e Uint32OptionList) bool { return !p(e) }
-}
-func (p Uint64OptionListPredicate) Neg() Uint64OptionListPredicate {
-	return func(e Uint64OptionList) bool { return !p(e) }
-}
-func (p UintptrOptionListPredicate) Neg() UintptrOptionListPredicate {
-	return func(e UintptrOptionList) bool { return !p(e) }
-}
-func (p ByteOptionListPredicate) Neg() ByteOptionListPredicate {
-	return func(e ByteOptionList) bool { return !p(e) }
-}
-func (p RuneOptionListPredicate) Neg() RuneOptionListPredicate {
-	return func(e RuneOptionList) bool { return !p(e) }
-}
-func (p Float32OptionListPredicate) Neg() Float32OptionListPredicate {
-	return func(e Float32OptionList) bool { return !p(e) }
-}
-func (p Float64OptionListPredicate) Neg() Float64OptionListPredicate {
-	return func(e Float64OptionList) bool { return !p(e) }
-}
-func (p Complex64OptionListPredicate) Neg() Complex64OptionListPredicate {
-	return func(e Complex64OptionList) bool { return !p(e) }
-}
-func (p Complex128OptionListPredicate) Neg() Complex128OptionListPredicate {
-	return func(e Complex128OptionList) bool { return !p(e) }
-}
-func (p AnyOptionListPredicate) Neg() AnyOptionListPredicate {
-	return func(e AnyOptionList) bool { return !p(e) }
-}
-func (p BoolArrOptionListPredicate) Neg() BoolArrOptionListPredicate {
-	return func(e BoolArrOptionList) bool { return !p(e) }
-}
-func (p StringArrOptionListPredicate) Neg() StringArrOptionListPredicate {
-	return func(e StringArrOptionList) bool { return !p(e) }
-}
-func (p IntArrOptionListPredicate) Neg() IntArrOptionListPredicate {
-	return func(e IntArrOptionList) bool { return !p(e) }
-}
-func (p Int8ArrOptionListPredicate) Neg() Int8ArrOptionListPredicate {
-	return func(e Int8ArrOptionList) bool { return !p(e) }
-}
-func (p Int16ArrOptionListPredicate) Neg() Int16ArrOptionListPredicate {
-	return func(e Int16ArrOptionList) bool { return !p(e) }
-}
-func (p Int32ArrOptionListPredicate) Neg() Int32ArrOptionListPredicate {
-	return func(e Int32ArrOptionList) bool { return !p(e) }
-}
-func (p Int64ArrOptionListPredicate) Neg() Int64ArrOptionListPredicate {
-	return func(e Int64ArrOptionList) bool { return !p(e) }
-}
-func (p UintArrOptionListPredicate) Neg() UintArrOptionListPredicate {
-	return func(e UintArrOptionList) bool { return !p(e) }
-}
-func (p Uint8ArrOptionListPredicate) Neg() Uint8ArrOptionListPredicate {
-	return func(e Uint8ArrOptionList) bool { return !p(e) }
-}
-func (p Uint16ArrOptionListPredicate) Neg() Uint16ArrOptionListPredicate {
-	return func(e Uint16ArrOptionList) bool { return !p(e) }
-}
-func (p Uint32ArrOptionListPredicate) Neg() Uint32ArrOptionListPredicate {
-	return func(e Uint32ArrOptionList) bool { return !p(e) }
-}
-func (p Uint64ArrOptionListPredicate) Neg() Uint64ArrOptionListPredicate {
-	return func(e Uint64ArrOptionList) bool { return !p(e) }
-}
-func (p UintptrArrOptionListPredicate) Neg() UintptrArrOptionListPredicate {
-	return func(e UintptrArrOptionList) bool { return !p(e) }
-}
-func (p ByteArrOptionListPredicate) Neg() ByteArrOptionListPredicate {
-	return func(e ByteArrOptionList) bool { return !p(e) }
-}
-func (p RuneArrOptionListPredicate) Neg() RuneArrOptionListPredicate {
-	return func(e RuneArrOptionList) bool { return !p(e) }
-}
-func (p Float32ArrOptionListPredicate) Neg() Float32ArrOptionListPredicate {
-	return func(e Float32ArrOptionList) bool { return !p(e) }
-}
-func (p Float64ArrOptionListPredicate) Neg() Float64ArrOptionListPredicate {
-	return func(e Float64ArrOptionList) bool { return !p(e) }
-}
-func (p Complex64ArrOptionListPredicate) Neg() Complex64ArrOptionListPredicate {
-	return func(e Complex64ArrOptionList) bool { return !p(e) }
-}
-func (p Complex128ArrOptionListPredicate) Neg() Complex128ArrOptionListPredicate {
-	return func(e Complex128ArrOptionList) bool { return !p(e) }
-}
-func (p AnyArrOptionListPredicate) Neg() AnyArrOptionListPredicate {
-	return func(e AnyArrOptionList) bool { return !p(e) }
-}
-func (p BoolArrArrOptionListPredicate) Neg() BoolArrArrOptionListPredicate {
-	return func(e BoolArrArrOptionList) bool { return !p(e) }
-}
-func (p StringArrArrOptionListPredicate) Neg() StringArrArrOptionListPredicate {
-	return func(e StringArrArrOptionList) bool { return !p(e) }
-}
-func (p IntArrArrOptionListPredicate) Neg() IntArrArrOptionListPredicate {
-	return func(e IntArrArrOptionList) bool { return !p(e) }
-}
-func (p Int8ArrArrOptionListPredicate) Neg() Int8ArrArrOptionListPredicate {
-	return func(e Int8ArrArrOptionList) bool { return !p(e) }
-}
-func (p Int16ArrArrOptionListPredicate) Neg() Int16ArrArrOptionListPredicate {
-	return func(e Int16ArrArrOptionList) bool { return !p(e) }
-}
-func (p Int32ArrArrOptionListPredicate) Neg() Int32ArrArrOptionListPredicate {
-	return func(e Int32ArrArrOptionList) bool { return !p(e) }
-}
-func (p Int64ArrArrOptionListPredicate) Neg() Int64ArrArrOptionListPredicate {
-	return func(e Int64ArrArrOptionList) bool { return !p(e) }
-}
-func (p UintArrArrOptionListPredicate) Neg() UintArrArrOptionListPredicate {
-	return func(e UintArrArrOptionList) bool { return !p(e) }
-}
-func (p Uint8ArrArrOptionListPredicate) Neg() Uint8ArrArrOptionListPredicate {
-	return func(e Uint8ArrArrOptionList) bool { return !p(e) }
-}
-func (p Uint16ArrArrOptionListPredicate) Neg() Uint16ArrArrOptionListPredicate {
-	return func(e Uint16ArrArrOptionList) bool { return !p(e) }
-}
-func (p Uint32ArrArrOptionListPredicate) Neg() Uint32ArrArrOptionListPredicate {
-	return func(e Uint32ArrArrOptionList) bool { return !p(e) }
-}
-func (p Uint64ArrArrOptionListPredicate) Neg() Uint64ArrArrOptionListPredicate {
-	return func(e Uint64ArrArrOptionList) bool { return !p(e) }
-}
-func (p UintptrArrArrOptionListPredicate) Neg() UintptrArrArrOptionListPredicate {
-	return func(e UintptrArrArrOptionList) bool { return !p(e) }
-}
-func (p ByteArrArrOptionListPredicate) Neg() ByteArrArrOptionListPredicate {
-	return func(e ByteArrArrOptionList) bool { return !p(e) }
-}
-func (p RuneArrArrOptionListPredicate) Neg() RuneArrArrOptionListPredicate {
-	return func(e RuneArrArrOptionList) bool { return !p(e) }
-}
-func (p Float32ArrArrOptionListPredicate) Neg() Float32ArrArrOptionListPredicate {
-	return func(e Float32ArrArrOptionList) bool { return !p(e) }
-}
-func (p Float64ArrArrOptionListPredicate) Neg() Float64ArrArrOptionListPredicate {
-	return func(e Float64ArrArrOptionList) bool { return !p(e) }
-}
-func (p Complex64ArrArrOptionListPredicate) Neg() Complex64ArrArrOptionListPredicate {
-	return func(e Complex64ArrArrOptionList) bool { return !p(e) }
-}
-func (p Complex128ArrArrOptionListPredicate) Neg() Complex128ArrArrOptionListPredicate {
-	return func(e Complex128ArrArrOptionList) bool { return !p(e) }
-}
-func (p AnyArrArrOptionListPredicate) Neg() AnyArrArrOptionListPredicate {
-	return func(e AnyArrArrOptionList) bool { return !p(e) }
-}
-func (p BoolOptionArrOptionListPredicate) Neg() BoolOptionArrOptionListPredicate {
-	return func(e BoolOptionArrOptionList) bool { return !p(e) }
-}
-func (p StringOptionArrOptionListPredicate) Neg() StringOptionArrOptionListPredicate {
-	return func(e StringOptionArrOptionList) bool { return !p(e) }
-}
-func (p IntOptionArrOptionListPredicate) Neg() IntOptionArrOptionListPredicate {
-	return func(e IntOptionArrOptionList) bool { return !p(e) }
-}
-func (p Int8OptionArrOptionListPredicate) Neg() Int8OptionArrOptionListPredicate {
-	return func(e Int8OptionArrOptionList) bool { return !p(e) }
-}
-func (p Int16OptionArrOptionListPredicate) Neg() Int16OptionArrOptionListPredicate {
-	return func(e Int16OptionArrOptionList) bool { return !p(e) }
-}
-func (p Int32OptionArrOptionListPredicate) Neg() Int32OptionArrOptionListPredicate {
-	return func(e Int32OptionArrOptionList) bool { return !p(e) }
-}
-func (p Int64OptionArrOptionListPredicate) Neg() Int64OptionArrOptionListPredicate {
-	return func(e Int64OptionArrOptionList) bool { return !p(e) }
-}
-func (p UintOptionArrOptionListPredicate) Neg() UintOptionArrOptionListPredicate {
-	return func(e UintOptionArrOptionList) bool { return !p(e) }
-}
-func (p Uint8OptionArrOptionListPredicate) Neg() Uint8OptionArrOptionListPredicate {
-	return func(e Uint8OptionArrOptionList) bool { return !p(e) }
-}
-func (p Uint16OptionArrOptionListPredicate) Neg() Uint16OptionArrOptionListPredicate {
-	return func(e Uint16OptionArrOptionList) bool { return !p(e) }
-}
-func (p Uint32OptionArrOptionListPredicate) Neg() Uint32OptionArrOptionListPredicate {
-	return func(e Uint32OptionArrOptionList) bool { return !p(e) }
-}
-func (p Uint64OptionArrOptionListPredicate) Neg() Uint64OptionArrOptionListPredicate {
-	return func(e Uint64OptionArrOptionList) bool { return !p(e) }
-}
-func (p UintptrOptionArrOptionListPredicate) Neg() UintptrOptionArrOptionListPredicate {
-	return func(e UintptrOptionArrOptionList) bool { return !p(e) }
-}
-func (p ByteOptionArrOptionListPredicate) Neg() ByteOptionArrOptionListPredicate {
-	return func(e ByteOptionArrOptionList) bool { return !p(e) }
-}
-func (p RuneOptionArrOptionListPredicate) Neg() RuneOptionArrOptionListPredicate {
-	return func(e RuneOptionArrOptionList) bool { return !p(e) }
-}
-func (p Float32OptionArrOptionListPredicate) Neg() Float32OptionArrOptionListPredicate {
-	return func(e Float32OptionArrOptionList) bool { return !p(e) }
-}
-func (p Float64OptionArrOptionListPredicate) Neg() Float64OptionArrOptionListPredicate {
-	return func(e Float64OptionArrOptionList) bool { return !p(e) }
-}
-func (p Complex64OptionArrOptionListPredicate) Neg() Complex64OptionArrOptionListPredicate {
-	return func(e Complex64OptionArrOptionList) bool { return !p(e) }
-}
-func (p Complex128OptionArrOptionListPredicate) Neg() Complex128OptionArrOptionListPredicate {
-	return func(e Complex128OptionArrOptionList) bool { return !p(e) }
-}
-func (p AnyOptionArrOptionListPredicate) Neg() AnyOptionArrOptionListPredicate {
-	return func(e AnyOptionArrOptionList) bool { return !p(e) }
-}
-func (p BoolListOptionListPredicate) Neg() BoolListOptionListPredicate {
-	return func(e BoolListOptionList) bool { return !p(e) }
-}
-func (p StringListOptionListPredicate) Neg() StringListOptionListPredicate {
-	return func(e StringListOptionList) bool { return !p(e) }
-}
-func (p IntListOptionListPredicate) Neg() IntListOptionListPredicate {
-	return func(e IntListOptionList) bool { return !p(e) }
-}
-func (p Int8ListOptionListPredicate) Neg() Int8ListOptionListPredicate {
-	return func(e Int8ListOptionList) bool { return !p(e) }
-}
-func (p Int16ListOptionListPredicate) Neg() Int16ListOptionListPredicate {
-	return func(e Int16ListOptionList) bool { return !p(e) }
-}
-func (p Int32ListOptionListPredicate) Neg() Int32ListOptionListPredicate {
-	return func(e Int32ListOptionList) bool { return !p(e) }
-}
-func (p Int64ListOptionListPredicate) Neg() Int64ListOptionListPredicate {
-	return func(e Int64ListOptionList) bool { return !p(e) }
-}
-func (p UintListOptionListPredicate) Neg() UintListOptionListPredicate {
-	return func(e UintListOptionList) bool { return !p(e) }
-}
-func (p Uint8ListOptionListPredicate) Neg() Uint8ListOptionListPredicate {
-	return func(e Uint8ListOptionList) bool { return !p(e) }
-}
-func (p Uint16ListOptionListPredicate) Neg() Uint16ListOptionListPredicate {
-	return func(e Uint16ListOptionList) bool { return !p(e) }
-}
-func (p Uint32ListOptionListPredicate) Neg() Uint32ListOptionListPredicate {
-	return func(e Uint32ListOptionList) bool { return !p(e) }
-}
-func (p Uint64ListOptionListPredicate) Neg() Uint64ListOptionListPredicate {
-	return func(e Uint64ListOptionList) bool { return !p(e) }
-}
-func (p UintptrListOptionListPredicate) Neg() UintptrListOptionListPredicate {
-	return func(e UintptrListOptionList) bool { return !p(e) }
-}
-func (p ByteListOptionListPredicate) Neg() ByteListOptionListPredicate {
-	return func(e ByteListOptionList) bool { return !p(e) }
-}
-func (p RuneListOptionListPredicate) Neg() RuneListOptionListPredicate {
-	return func(e RuneListOptionList) bool { return !p(e) }
-}
-func (p Float32ListOptionListPredicate) Neg() Float32ListOptionListPredicate {
-	return func(e Float32ListOptionList) bool { return !p(e) }
-}
-func (p Float64ListOptionListPredicate) Neg() Float64ListOptionListPredicate {
-	return func(e Float64ListOptionList) bool { return !p(e) }
-}
-func (p Complex64ListOptionListPredicate) Neg() Complex64ListOptionListPredicate {
-	return func(e Complex64ListOptionList) bool { return !p(e) }
-}
-func (p Complex128ListOptionListPredicate) Neg() Complex128ListOptionListPredicate {
-	return func(e Complex128ListOptionList) bool { return !p(e) }
-}
-func (p AnyListOptionListPredicate) Neg() AnyListOptionListPredicate {
-	return func(e AnyListOptionList) bool { return !p(e) }
-}
-func (p BoolOptionOptionListPredicate) Neg() BoolOptionOptionListPredicate {
-	return func(e BoolOptionOptionList) bool { return !p(e) }
-}
-func (p StringOptionOptionListPredicate) Neg() StringOptionOptionListPredicate {
-	return func(e StringOptionOptionList) bool { return !p(e) }
-}
-func (p IntOptionOptionListPredicate) Neg() IntOptionOptionListPredicate {
-	return func(e IntOptionOptionList) bool { return !p(e) }
-}
-func (p Int8OptionOptionListPredicate) Neg() Int8OptionOptionListPredicate {
-	return func(e Int8OptionOptionList) bool { return !p(e) }
-}
-func (p Int16OptionOptionListPredicate) Neg() Int16OptionOptionListPredicate {
-	return func(e Int16OptionOptionList) bool { return !p(e) }
-}
-func (p Int32OptionOptionListPredicate) Neg() Int32OptionOptionListPredicate {
-	return func(e Int32OptionOptionList) bool { return !p(e) }
-}
-func (p Int64OptionOptionListPredicate) Neg() Int64OptionOptionListPredicate {
-	return func(e Int64OptionOptionList) bool { return !p(e) }
-}
-func (p UintOptionOptionListPredicate) Neg() UintOptionOptionListPredicate {
-	return func(e UintOptionOptionList) bool { return !p(e) }
-}
-func (p Uint8OptionOptionListPredicate) Neg() Uint8OptionOptionListPredicate {
-	return func(e Uint8OptionOptionList) bool { return !p(e) }
-}
-func (p Uint16OptionOptionListPredicate) Neg() Uint16OptionOptionListPredicate {
-	return func(e Uint16OptionOptionList) bool { return !p(e) }
-}
-func (p Uint32OptionOptionListPredicate) Neg() Uint32OptionOptionListPredicate {
-	return func(e Uint32OptionOptionList) bool { return !p(e) }
-}
-func (p Uint64OptionOptionListPredicate) Neg() Uint64OptionOptionListPredicate {
-	return func(e Uint64OptionOptionList) bool { return !p(e) }
-}
-func (p UintptrOptionOptionListPredicate) Neg() UintptrOptionOptionListPredicate {
-	return func(e UintptrOptionOptionList) bool { return !p(e) }
-}
-func (p ByteOptionOptionListPredicate) Neg() ByteOptionOptionListPredicate {
-	return func(e ByteOptionOptionList) bool { return !p(e) }
-}
-func (p RuneOptionOptionListPredicate) Neg() RuneOptionOptionListPredicate {
-	return func(e RuneOptionOptionList) bool { return !p(e) }
-}
-func (p Float32OptionOptionListPredicate) Neg() Float32OptionOptionListPredicate {
-	return func(e Float32OptionOptionList) bool { return !p(e) }
-}
-func (p Float64OptionOptionListPredicate) Neg() Float64OptionOptionListPredicate {
-	return func(e Float64OptionOptionList) bool { return !p(e) }
-}
-func (p Complex64OptionOptionListPredicate) Neg() Complex64OptionOptionListPredicate {
-	return func(e Complex64OptionOptionList) bool { return !p(e) }
-}
-func (p Complex128OptionOptionListPredicate) Neg() Complex128OptionOptionListPredicate {
-	return func(e Complex128OptionOptionList) bool { return !p(e) }
-}
-func (p AnyOptionOptionListPredicate) Neg() AnyOptionOptionListPredicate {
-	return func(e AnyOptionOptionList) bool { return !p(e) }
-}
-func (p BoolArrOptionOptionListPredicate) Neg() BoolArrOptionOptionListPredicate {
-	return func(e BoolArrOptionOptionList) bool { return !p(e) }
-}
-func (p StringArrOptionOptionListPredicate) Neg() StringArrOptionOptionListPredicate {
-	return func(e StringArrOptionOptionList) bool { return !p(e) }
-}
-func (p IntArrOptionOptionListPredicate) Neg() IntArrOptionOptionListPredicate {
-	return func(e IntArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int8ArrOptionOptionListPredicate) Neg() Int8ArrOptionOptionListPredicate {
-	return func(e Int8ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int16ArrOptionOptionListPredicate) Neg() Int16ArrOptionOptionListPredicate {
-	return func(e Int16ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int32ArrOptionOptionListPredicate) Neg() Int32ArrOptionOptionListPredicate {
-	return func(e Int32ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int64ArrOptionOptionListPredicate) Neg() Int64ArrOptionOptionListPredicate {
-	return func(e Int64ArrOptionOptionList) bool { return !p(e) }
-}
-func (p UintArrOptionOptionListPredicate) Neg() UintArrOptionOptionListPredicate {
-	return func(e UintArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint8ArrOptionOptionListPredicate) Neg() Uint8ArrOptionOptionListPredicate {
-	return func(e Uint8ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint16ArrOptionOptionListPredicate) Neg() Uint16ArrOptionOptionListPredicate {
-	return func(e Uint16ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint32ArrOptionOptionListPredicate) Neg() Uint32ArrOptionOptionListPredicate {
-	return func(e Uint32ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint64ArrOptionOptionListPredicate) Neg() Uint64ArrOptionOptionListPredicate {
-	return func(e Uint64ArrOptionOptionList) bool { return !p(e) }
-}
-func (p UintptrArrOptionOptionListPredicate) Neg() UintptrArrOptionOptionListPredicate {
-	return func(e UintptrArrOptionOptionList) bool { return !p(e) }
-}
-func (p ByteArrOptionOptionListPredicate) Neg() ByteArrOptionOptionListPredicate {
-	return func(e ByteArrOptionOptionList) bool { return !p(e) }
-}
-func (p RuneArrOptionOptionListPredicate) Neg() RuneArrOptionOptionListPredicate {
-	return func(e RuneArrOptionOptionList) bool { return !p(e) }
-}
-func (p Float32ArrOptionOptionListPredicate) Neg() Float32ArrOptionOptionListPredicate {
-	return func(e Float32ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Float64ArrOptionOptionListPredicate) Neg() Float64ArrOptionOptionListPredicate {
-	return func(e Float64ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Complex64ArrOptionOptionListPredicate) Neg() Complex64ArrOptionOptionListPredicate {
-	return func(e Complex64ArrOptionOptionList) bool { return !p(e) }
-}
-func (p Complex128ArrOptionOptionListPredicate) Neg() Complex128ArrOptionOptionListPredicate {
-	return func(e Complex128ArrOptionOptionList) bool { return !p(e) }
-}
-func (p AnyArrOptionOptionListPredicate) Neg() AnyArrOptionOptionListPredicate {
-	return func(e AnyArrOptionOptionList) bool { return !p(e) }
-}
-func (p BoolArrArrOptionOptionListPredicate) Neg() BoolArrArrOptionOptionListPredicate {
-	return func(e BoolArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p StringArrArrOptionOptionListPredicate) Neg() StringArrArrOptionOptionListPredicate {
-	return func(e StringArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p IntArrArrOptionOptionListPredicate) Neg() IntArrArrOptionOptionListPredicate {
-	return func(e IntArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int8ArrArrOptionOptionListPredicate) Neg() Int8ArrArrOptionOptionListPredicate {
-	return func(e Int8ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int16ArrArrOptionOptionListPredicate) Neg() Int16ArrArrOptionOptionListPredicate {
-	return func(e Int16ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int32ArrArrOptionOptionListPredicate) Neg() Int32ArrArrOptionOptionListPredicate {
-	return func(e Int32ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int64ArrArrOptionOptionListPredicate) Neg() Int64ArrArrOptionOptionListPredicate {
-	return func(e Int64ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p UintArrArrOptionOptionListPredicate) Neg() UintArrArrOptionOptionListPredicate {
-	return func(e UintArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint8ArrArrOptionOptionListPredicate) Neg() Uint8ArrArrOptionOptionListPredicate {
-	return func(e Uint8ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint16ArrArrOptionOptionListPredicate) Neg() Uint16ArrArrOptionOptionListPredicate {
-	return func(e Uint16ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint32ArrArrOptionOptionListPredicate) Neg() Uint32ArrArrOptionOptionListPredicate {
-	return func(e Uint32ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint64ArrArrOptionOptionListPredicate) Neg() Uint64ArrArrOptionOptionListPredicate {
-	return func(e Uint64ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p UintptrArrArrOptionOptionListPredicate) Neg() UintptrArrArrOptionOptionListPredicate {
-	return func(e UintptrArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p ByteArrArrOptionOptionListPredicate) Neg() ByteArrArrOptionOptionListPredicate {
-	return func(e ByteArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p RuneArrArrOptionOptionListPredicate) Neg() RuneArrArrOptionOptionListPredicate {
-	return func(e RuneArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Float32ArrArrOptionOptionListPredicate) Neg() Float32ArrArrOptionOptionListPredicate {
-	return func(e Float32ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Float64ArrArrOptionOptionListPredicate) Neg() Float64ArrArrOptionOptionListPredicate {
-	return func(e Float64ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Complex64ArrArrOptionOptionListPredicate) Neg() Complex64ArrArrOptionOptionListPredicate {
-	return func(e Complex64ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p Complex128ArrArrOptionOptionListPredicate) Neg() Complex128ArrArrOptionOptionListPredicate {
-	return func(e Complex128ArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p AnyArrArrOptionOptionListPredicate) Neg() AnyArrArrOptionOptionListPredicate {
-	return func(e AnyArrArrOptionOptionList) bool { return !p(e) }
-}
-func (p BoolOptionArrOptionOptionListPredicate) Neg() BoolOptionArrOptionOptionListPredicate {
-	return func(e BoolOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p StringOptionArrOptionOptionListPredicate) Neg() StringOptionArrOptionOptionListPredicate {
-	return func(e StringOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p IntOptionArrOptionOptionListPredicate) Neg() IntOptionArrOptionOptionListPredicate {
-	return func(e IntOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int8OptionArrOptionOptionListPredicate) Neg() Int8OptionArrOptionOptionListPredicate {
-	return func(e Int8OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int16OptionArrOptionOptionListPredicate) Neg() Int16OptionArrOptionOptionListPredicate {
-	return func(e Int16OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int32OptionArrOptionOptionListPredicate) Neg() Int32OptionArrOptionOptionListPredicate {
-	return func(e Int32OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Int64OptionArrOptionOptionListPredicate) Neg() Int64OptionArrOptionOptionListPredicate {
-	return func(e Int64OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p UintOptionArrOptionOptionListPredicate) Neg() UintOptionArrOptionOptionListPredicate {
-	return func(e UintOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint8OptionArrOptionOptionListPredicate) Neg() Uint8OptionArrOptionOptionListPredicate {
-	return func(e Uint8OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint16OptionArrOptionOptionListPredicate) Neg() Uint16OptionArrOptionOptionListPredicate {
-	return func(e Uint16OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint32OptionArrOptionOptionListPredicate) Neg() Uint32OptionArrOptionOptionListPredicate {
-	return func(e Uint32OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Uint64OptionArrOptionOptionListPredicate) Neg() Uint64OptionArrOptionOptionListPredicate {
-	return func(e Uint64OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p UintptrOptionArrOptionOptionListPredicate) Neg() UintptrOptionArrOptionOptionListPredicate {
-	return func(e UintptrOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p ByteOptionArrOptionOptionListPredicate) Neg() ByteOptionArrOptionOptionListPredicate {
-	return func(e ByteOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p RuneOptionArrOptionOptionListPredicate) Neg() RuneOptionArrOptionOptionListPredicate {
-	return func(e RuneOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Float32OptionArrOptionOptionListPredicate) Neg() Float32OptionArrOptionOptionListPredicate {
-	return func(e Float32OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Float64OptionArrOptionOptionListPredicate) Neg() Float64OptionArrOptionOptionListPredicate {
-	return func(e Float64OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Complex64OptionArrOptionOptionListPredicate) Neg() Complex64OptionArrOptionOptionListPredicate {
-	return func(e Complex64OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p Complex128OptionArrOptionOptionListPredicate) Neg() Complex128OptionArrOptionOptionListPredicate {
-	return func(e Complex128OptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p AnyOptionArrOptionOptionListPredicate) Neg() AnyOptionArrOptionOptionListPredicate {
-	return func(e AnyOptionArrOptionOptionList) bool { return !p(e) }
-}
-func (p BoolListOptionOptionListPredicate) Neg() BoolListOptionOptionListPredicate {
-	return func(e BoolListOptionOptionList) bool { return !p(e) }
-}
-func (p StringListOptionOptionListPredicate) Neg() StringListOptionOptionListPredicate {
-	return func(e StringListOptionOptionList) bool { return !p(e) }
-}
-func (p IntListOptionOptionListPredicate) Neg() IntListOptionOptionListPredicate {
-	return func(e IntListOptionOptionList) bool { return !p(e) }
-}
-func (p Int8ListOptionOptionListPredicate) Neg() Int8ListOptionOptionListPredicate {
-	return func(e Int8ListOptionOptionList) bool { return !p(e) }
-}
-func (p Int16ListOptionOptionListPredicate) Neg() Int16ListOptionOptionListPredicate {
-	return func(e Int16ListOptionOptionList) bool { return !p(e) }
-}
-func (p Int32ListOptionOptionListPredicate) Neg() Int32ListOptionOptionListPredicate {
-	return func(e Int32ListOptionOptionList) bool { return !p(e) }
-}
-func (p Int64ListOptionOptionListPredicate) Neg() Int64ListOptionOptionListPredicate {
-	return func(e Int64ListOptionOptionList) bool { return !p(e) }
-}
-func (p UintListOptionOptionListPredicate) Neg() UintListOptionOptionListPredicate {
-	return func(e UintListOptionOptionList) bool { return !p(e) }
-}
-func (p Uint8ListOptionOptionListPredicate) Neg() Uint8ListOptionOptionListPredicate {
-	return func(e Uint8ListOptionOptionList) bool { return !p(e) }
-}
-func (p Uint16ListOptionOptionListPredicate) Neg() Uint16ListOptionOptionListPredicate {
-	return func(e Uint16ListOptionOptionList) bool { return !p(e) }
-}
-func (p Uint32ListOptionOptionListPredicate) Neg() Uint32ListOptionOptionListPredicate {
-	return func(e Uint32ListOptionOptionList) bool { return !p(e) }
-}
-func (p Uint64ListOptionOptionListPredicate) Neg() Uint64ListOptionOptionListPredicate {
-	return func(e Uint64ListOptionOptionList) bool { return !p(e) }
-}
-func (p UintptrListOptionOptionListPredicate) Neg() UintptrListOptionOptionListPredicate {
-	return func(e UintptrListOptionOptionList) bool { return !p(e) }
-}
-func (p ByteListOptionOptionListPredicate) Neg() ByteListOptionOptionListPredicate {
-	return func(e ByteListOptionOptionList) bool { return !p(e) }
-}
-func (p RuneListOptionOptionListPredicate) Neg() RuneListOptionOptionListPredicate {
-	return func(e RuneListOptionOptionList) bool { return !p(e) }
-}
-func (p Float32ListOptionOptionListPredicate) Neg() Float32ListOptionOptionListPredicate {
-	return func(e Float32ListOptionOptionList) bool { return !p(e) }
-}
-func (p Float64ListOptionOptionListPredicate) Neg() Float64ListOptionOptionListPredicate {
-	return func(e Float64ListOptionOptionList) bool { return !p(e) }
-}
-func (p Complex64ListOptionOptionListPredicate) Neg() Complex64ListOptionOptionListPredicate {
-	return func(e Complex64ListOptionOptionList) bool { return !p(e) }
-}
-func (p Complex128ListOptionOptionListPredicate) Neg() Complex128ListOptionOptionListPredicate {
-	return func(e Complex128ListOptionOptionList) bool { return !p(e) }
-}
-func (p AnyListOptionOptionListPredicate) Neg() AnyListOptionOptionListPredicate {
-	return func(e AnyListOptionOptionList) bool { return !p(e) }
-}
-func (p BoolArrListPredicate) Neg() BoolArrListPredicate {
-	return func(e BoolArrList) bool { return !p(e) }
-}
-func (p StringArrListPredicate) Neg() StringArrListPredicate {
-	return func(e StringArrList) bool { return !p(e) }
-}
-func (p IntArrListPredicate) Neg() IntArrListPredicate {
-	return func(e IntArrList) bool { return !p(e) }
-}
-func (p Int8ArrListPredicate) Neg() Int8ArrListPredicate {
-	return func(e Int8ArrList) bool { return !p(e) }
-}
-func (p Int16ArrListPredicate) Neg() Int16ArrListPredicate {
-	return func(e Int16ArrList) bool { return !p(e) }
-}
-func (p Int32ArrListPredicate) Neg() Int32ArrListPredicate {
-	return func(e Int32ArrList) bool { return !p(e) }
-}
-func (p Int64ArrListPredicate) Neg() Int64ArrListPredicate {
-	return func(e Int64ArrList) bool { return !p(e) }
-}
-func (p UintArrListPredicate) Neg() UintArrListPredicate {
-	return func(e UintArrList) bool { return !p(e) }
-}
-func (p Uint8ArrListPredicate) Neg() Uint8ArrListPredicate {
-	return func(e Uint8ArrList) bool { return !p(e) }
-}
-func (p Uint16ArrListPredicate) Neg() Uint16ArrListPredicate {
-	return func(e Uint16ArrList) bool { return !p(e) }
-}
-func (p Uint32ArrListPredicate) Neg() Uint32ArrListPredicate {
-	return func(e Uint32ArrList) bool { return !p(e) }
-}
-func (p Uint64ArrListPredicate) Neg() Uint64ArrListPredicate {
-	return func(e Uint64ArrList) bool { return !p(e) }
-}
-func (p UintptrArrListPredicate) Neg() UintptrArrListPredicate {
-	return func(e UintptrArrList) bool { return !p(e) }
-}
-func (p ByteArrListPredicate) Neg() ByteArrListPredicate {
-	return func(e ByteArrList) bool { return !p(e) }
-}
-func (p RuneArrListPredicate) Neg() RuneArrListPredicate {
-	return func(e RuneArrList) bool { return !p(e) }
-}
-func (p Float32ArrListPredicate) Neg() Float32ArrListPredicate {
-	return func(e Float32ArrList) bool { return !p(e) }
-}
-func (p Float64ArrListPredicate) Neg() Float64ArrListPredicate {
-	return func(e Float64ArrList) bool { return !p(e) }
-}
-func (p Complex64ArrListPredicate) Neg() Complex64ArrListPredicate {
-	return func(e Complex64ArrList) bool { return !p(e) }
-}
-func (p Complex128ArrListPredicate) Neg() Complex128ArrListPredicate {
-	return func(e Complex128ArrList) bool { return !p(e) }
-}
-func (p AnyArrListPredicate) Neg() AnyArrListPredicate {
-	return func(e AnyArrList) bool { return !p(e) }
-}
-func (p BoolArrArrListPredicate) Neg() BoolArrArrListPredicate {
-	return func(e BoolArrArrList) bool { return !p(e) }
-}
-func (p StringArrArrListPredicate) Neg() StringArrArrListPredicate {
-	return func(e StringArrArrList) bool { return !p(e) }
-}
-func (p IntArrArrListPredicate) Neg() IntArrArrListPredicate {
-	return func(e IntArrArrList) bool { return !p(e) }
-}
-func (p Int8ArrArrListPredicate) Neg() Int8ArrArrListPredicate {
-	return func(e Int8ArrArrList) bool { return !p(e) }
-}
-func (p Int16ArrArrListPredicate) Neg() Int16ArrArrListPredicate {
-	return func(e Int16ArrArrList) bool { return !p(e) }
-}
-func (p Int32ArrArrListPredicate) Neg() Int32ArrArrListPredicate {
-	return func(e Int32ArrArrList) bool { return !p(e) }
-}
-func (p Int64ArrArrListPredicate) Neg() Int64ArrArrListPredicate {
-	return func(e Int64ArrArrList) bool { return !p(e) }
-}
-func (p UintArrArrListPredicate) Neg() UintArrArrListPredicate {
-	return func(e UintArrArrList) bool { return !p(e) }
-}
-func (p Uint8ArrArrListPredicate) Neg() Uint8ArrArrListPredicate {
-	return func(e Uint8ArrArrList) bool { return !p(e) }
-}
-func (p Uint16ArrArrListPredicate) Neg() Uint16ArrArrListPredicate {
-	return func(e Uint16ArrArrList) bool { return !p(e) }
-}
-func (p Uint32ArrArrListPredicate) Neg() Uint32ArrArrListPredicate {
-	return func(e Uint32ArrArrList) bool { return !p(e) }
-}
-func (p Uint64ArrArrListPredicate) Neg() Uint64ArrArrListPredicate {
-	return func(e Uint64ArrArrList) bool { return !p(e) }
-}
-func (p UintptrArrArrListPredicate) Neg() UintptrArrArrListPredicate {
-	return func(e UintptrArrArrList) bool { return !p(e) }
-}
-func (p ByteArrArrListPredicate) Neg() ByteArrArrListPredicate {
-	return func(e ByteArrArrList) bool { return !p(e) }
-}
-func (p RuneArrArrListPredicate) Neg() RuneArrArrListPredicate {
-	return func(e RuneArrArrList) bool { return !p(e) }
-}
-func (p Float32ArrArrListPredicate) Neg() Float32ArrArrListPredicate {
-	return func(e Float32ArrArrList) bool { return !p(e) }
-}
-func (p Float64ArrArrListPredicate) Neg() Float64ArrArrListPredicate {
-	return func(e Float64ArrArrList) bool { return !p(e) }
-}
-func (p Complex64ArrArrListPredicate) Neg() Complex64ArrArrListPredicate {
-	return func(e Complex64ArrArrList) bool { return !p(e) }
-}
-func (p Complex128ArrArrListPredicate) Neg() Complex128ArrArrListPredicate {
-	return func(e Complex128ArrArrList) bool { return !p(e) }
-}
-func (p AnyArrArrListPredicate) Neg() AnyArrArrListPredicate {
-	return func(e AnyArrArrList) bool { return !p(e) }
-}
-func (p BoolOptionArrListPredicate) Neg() BoolOptionArrListPredicate {
-	return func(e BoolOptionArrList) bool { return !p(e) }
-}
-func (p StringOptionArrListPredicate) Neg() StringOptionArrListPredicate {
-	return func(e StringOptionArrList) bool { return !p(e) }
-}
-func (p IntOptionArrListPredicate) Neg() IntOptionArrListPredicate {
-	return func(e IntOptionArrList) bool { return !p(e) }
-}
-func (p Int8OptionArrListPredicate) Neg() Int8OptionArrListPredicate {
-	return func(e Int8OptionArrList) bool { return !p(e) }
-}
-func (p Int16OptionArrListPredicate) Neg() Int16OptionArrListPredicate {
-	return func(e Int16OptionArrList) bool { return !p(e) }
-}
-func (p Int32OptionArrListPredicate) Neg() Int32OptionArrListPredicate {
-	return func(e Int32OptionArrList) bool { return !p(e) }
-}
-func (p Int64OptionArrListPredicate) Neg() Int64OptionArrListPredicate {
-	return func(e Int64OptionArrList) bool { return !p(e) }
-}
-func (p UintOptionArrListPredicate) Neg() UintOptionArrListPredicate {
-	return func(e UintOptionArrList) bool { return !p(e) }
-}
-func (p Uint8OptionArrListPredicate) Neg() Uint8OptionArrListPredicate {
-	return func(e Uint8OptionArrList) bool { return !p(e) }
-}
-func (p Uint16OptionArrListPredicate) Neg() Uint16OptionArrListPredicate {
-	return func(e Uint16OptionArrList) bool { return !p(e) }
-}
-func (p Uint32OptionArrListPredicate) Neg() Uint32OptionArrListPredicate {
-	return func(e Uint32OptionArrList) bool { return !p(e) }
-}
-func (p Uint64OptionArrListPredicate) Neg() Uint64OptionArrListPredicate {
-	return func(e Uint64OptionArrList) bool { return !p(e) }
-}
-func (p UintptrOptionArrListPredicate) Neg() UintptrOptionArrListPredicate {
-	return func(e UintptrOptionArrList) bool { return !p(e) }
-}
-func (p ByteOptionArrListPredicate) Neg() ByteOptionArrListPredicate {
-	return func(e ByteOptionArrList) bool { return !p(e) }
-}
-func (p RuneOptionArrListPredicate) Neg() RuneOptionArrListPredicate {
-	return func(e RuneOptionArrList) bool { return !p(e) }
-}
-func (p Float32OptionArrListPredicate) Neg() Float32OptionArrListPredicate {
-	return func(e Float32OptionArrList) bool { return !p(e) }
-}
-func (p Float64OptionArrListPredicate) Neg() Float64OptionArrListPredicate {
-	return func(e Float64OptionArrList) bool { return !p(e) }
-}
-func (p Complex64OptionArrListPredicate) Neg() Complex64OptionArrListPredicate {
-	return func(e Complex64OptionArrList) bool { return !p(e) }
-}
-func (p Complex128OptionArrListPredicate) Neg() Complex128OptionArrListPredicate {
-	return func(e Complex128OptionArrList) bool { return !p(e) }
-}
-func (p AnyOptionArrListPredicate) Neg() AnyOptionArrListPredicate {
-	return func(e AnyOptionArrList) bool { return !p(e) }
-}
-func (p BoolListListPredicate) Neg() BoolListListPredicate {
-	return func(e BoolListList) bool { return !p(e) }
-}
-func (p StringListListPredicate) Neg() StringListListPredicate {
-	return func(e StringListList) bool { return !p(e) }
-}
-func (p IntListListPredicate) Neg() IntListListPredicate {
-	return func(e IntListList) bool { return !p(e) }
-}
-func (p Int8ListListPredicate) Neg() Int8ListListPredicate {
-	return func(e Int8ListList) bool { return !p(e) }
-}
-func (p Int16ListListPredicate) Neg() Int16ListListPredicate {
-	return func(e Int16ListList) bool { return !p(e) }
-}
-func (p Int32ListListPredicate) Neg() Int32ListListPredicate {
-	return func(e Int32ListList) bool { return !p(e) }
-}
-func (p Int64ListListPredicate) Neg() Int64ListListPredicate {
-	return func(e Int64ListList) bool { return !p(e) }
-}
-func (p UintListListPredicate) Neg() UintListListPredicate {
-	return func(e UintListList) bool { return !p(e) }
-}
-func (p Uint8ListListPredicate) Neg() Uint8ListListPredicate {
-	return func(e Uint8ListList) bool { return !p(e) }
-}
-func (p Uint16ListListPredicate) Neg() Uint16ListListPredicate {
-	return func(e Uint16ListList) bool { return !p(e) }
-}
-func (p Uint32ListListPredicate) Neg() Uint32ListListPredicate {
-	return func(e Uint32ListList) bool { return !p(e) }
-}
-func (p Uint64ListListPredicate) Neg() Uint64ListListPredicate {
-	return func(e Uint64ListList) bool { return !p(e) }
-}
-func (p UintptrListListPredicate) Neg() UintptrListListPredicate {
-	return func(e UintptrListList) bool { return !p(e) }
-}
-func (p ByteListListPredicate) Neg() ByteListListPredicate {
-	return func(e ByteListList) bool { return !p(e) }
-}
-func (p RuneListListPredicate) Neg() RuneListListPredicate {
-	return func(e RuneListList) bool { return !p(e) }
-}
-func (p Float32ListListPredicate) Neg() Float32ListListPredicate {
-	return func(e Float32ListList) bool { return !p(e) }
-}
-func (p Float64ListListPredicate) Neg() Float64ListListPredicate {
-	return func(e Float64ListList) bool { return !p(e) }
-}
-func (p Complex64ListListPredicate) Neg() Complex64ListListPredicate {
-	return func(e Complex64ListList) bool { return !p(e) }
-}
-func (p Complex128ListListPredicate) Neg() Complex128ListListPredicate {
-	return func(e Complex128ListList) bool { return !p(e) }
-}
-func (p AnyListListPredicate) Neg() AnyListListPredicate {
-	return func(e AnyListList) bool { return !p(e) }
-}
+func (p BoolOptionListPredicate) Neg() BoolOptionListPredicate { return func(e BoolOptionList) bool { return !p(e) } }
+func (p StringOptionListPredicate) Neg() StringOptionListPredicate { return func(e StringOptionList) bool { return !p(e) } }
+func (p IntOptionListPredicate) Neg() IntOptionListPredicate { return func(e IntOptionList) bool { return !p(e) } }
+func (p Int8OptionListPredicate) Neg() Int8OptionListPredicate { return func(e Int8OptionList) bool { return !p(e) } }
+func (p Int16OptionListPredicate) Neg() Int16OptionListPredicate { return func(e Int16OptionList) bool { return !p(e) } }
+func (p Int32OptionListPredicate) Neg() Int32OptionListPredicate { return func(e Int32OptionList) bool { return !p(e) } }
+func (p Int64OptionListPredicate) Neg() Int64OptionListPredicate { return func(e Int64OptionList) bool { return !p(e) } }
+func (p UintOptionListPredicate) Neg() UintOptionListPredicate { return func(e UintOptionList) bool { return !p(e) } }
+func (p Uint8OptionListPredicate) Neg() Uint8OptionListPredicate { return func(e Uint8OptionList) bool { return !p(e) } }
+func (p Uint16OptionListPredicate) Neg() Uint16OptionListPredicate { return func(e Uint16OptionList) bool { return !p(e) } }
+func (p Uint32OptionListPredicate) Neg() Uint32OptionListPredicate { return func(e Uint32OptionList) bool { return !p(e) } }
+func (p Uint64OptionListPredicate) Neg() Uint64OptionListPredicate { return func(e Uint64OptionList) bool { return !p(e) } }
+func (p UintptrOptionListPredicate) Neg() UintptrOptionListPredicate { return func(e UintptrOptionList) bool { return !p(e) } }
+func (p ByteOptionListPredicate) Neg() ByteOptionListPredicate { return func(e ByteOptionList) bool { return !p(e) } }
+func (p RuneOptionListPredicate) Neg() RuneOptionListPredicate { return func(e RuneOptionList) bool { return !p(e) } }
+func (p Float32OptionListPredicate) Neg() Float32OptionListPredicate { return func(e Float32OptionList) bool { return !p(e) } }
+func (p Float64OptionListPredicate) Neg() Float64OptionListPredicate { return func(e Float64OptionList) bool { return !p(e) } }
+func (p Complex64OptionListPredicate) Neg() Complex64OptionListPredicate { return func(e Complex64OptionList) bool { return !p(e) } }
+func (p Complex128OptionListPredicate) Neg() Complex128OptionListPredicate { return func(e Complex128OptionList) bool { return !p(e) } }
+func (p AnyOptionListPredicate) Neg() AnyOptionListPredicate { return func(e AnyOptionList) bool { return !p(e) } }
+func (p BoolArrOptionListPredicate) Neg() BoolArrOptionListPredicate { return func(e BoolArrOptionList) bool { return !p(e) } }
+func (p StringArrOptionListPredicate) Neg() StringArrOptionListPredicate { return func(e StringArrOptionList) bool { return !p(e) } }
+func (p IntArrOptionListPredicate) Neg() IntArrOptionListPredicate { return func(e IntArrOptionList) bool { return !p(e) } }
+func (p Int8ArrOptionListPredicate) Neg() Int8ArrOptionListPredicate { return func(e Int8ArrOptionList) bool { return !p(e) } }
+func (p Int16ArrOptionListPredicate) Neg() Int16ArrOptionListPredicate { return func(e Int16ArrOptionList) bool { return !p(e) } }
+func (p Int32ArrOptionListPredicate) Neg() Int32ArrOptionListPredicate { return func(e Int32ArrOptionList) bool { return !p(e) } }
+func (p Int64ArrOptionListPredicate) Neg() Int64ArrOptionListPredicate { return func(e Int64ArrOptionList) bool { return !p(e) } }
+func (p UintArrOptionListPredicate) Neg() UintArrOptionListPredicate { return func(e UintArrOptionList) bool { return !p(e) } }
+func (p Uint8ArrOptionListPredicate) Neg() Uint8ArrOptionListPredicate { return func(e Uint8ArrOptionList) bool { return !p(e) } }
+func (p Uint16ArrOptionListPredicate) Neg() Uint16ArrOptionListPredicate { return func(e Uint16ArrOptionList) bool { return !p(e) } }
+func (p Uint32ArrOptionListPredicate) Neg() Uint32ArrOptionListPredicate { return func(e Uint32ArrOptionList) bool { return !p(e) } }
+func (p Uint64ArrOptionListPredicate) Neg() Uint64ArrOptionListPredicate { return func(e Uint64ArrOptionList) bool { return !p(e) } }
+func (p UintptrArrOptionListPredicate) Neg() UintptrArrOptionListPredicate { return func(e UintptrArrOptionList) bool { return !p(e) } }
+func (p ByteArrOptionListPredicate) Neg() ByteArrOptionListPredicate { return func(e ByteArrOptionList) bool { return !p(e) } }
+func (p RuneArrOptionListPredicate) Neg() RuneArrOptionListPredicate { return func(e RuneArrOptionList) bool { return !p(e) } }
+func (p Float32ArrOptionListPredicate) Neg() Float32ArrOptionListPredicate { return func(e Float32ArrOptionList) bool { return !p(e) } }
+func (p Float64ArrOptionListPredicate) Neg() Float64ArrOptionListPredicate { return func(e Float64ArrOptionList) bool { return !p(e) } }
+func (p Complex64ArrOptionListPredicate) Neg() Complex64ArrOptionListPredicate { return func(e Complex64ArrOptionList) bool { return !p(e) } }
+func (p Complex128ArrOptionListPredicate) Neg() Complex128ArrOptionListPredicate { return func(e Complex128ArrOptionList) bool { return !p(e) } }
+func (p AnyArrOptionListPredicate) Neg() AnyArrOptionListPredicate { return func(e AnyArrOptionList) bool { return !p(e) } }
+func (p BoolArrArrOptionListPredicate) Neg() BoolArrArrOptionListPredicate { return func(e BoolArrArrOptionList) bool { return !p(e) } }
+func (p StringArrArrOptionListPredicate) Neg() StringArrArrOptionListPredicate { return func(e StringArrArrOptionList) bool { return !p(e) } }
+func (p IntArrArrOptionListPredicate) Neg() IntArrArrOptionListPredicate { return func(e IntArrArrOptionList) bool { return !p(e) } }
+func (p Int8ArrArrOptionListPredicate) Neg() Int8ArrArrOptionListPredicate { return func(e Int8ArrArrOptionList) bool { return !p(e) } }
+func (p Int16ArrArrOptionListPredicate) Neg() Int16ArrArrOptionListPredicate { return func(e Int16ArrArrOptionList) bool { return !p(e) } }
+func (p Int32ArrArrOptionListPredicate) Neg() Int32ArrArrOptionListPredicate { return func(e Int32ArrArrOptionList) bool { return !p(e) } }
+func (p Int64ArrArrOptionListPredicate) Neg() Int64ArrArrOptionListPredicate { return func(e Int64ArrArrOptionList) bool { return !p(e) } }
+func (p UintArrArrOptionListPredicate) Neg() UintArrArrOptionListPredicate { return func(e UintArrArrOptionList) bool { return !p(e) } }
+func (p Uint8ArrArrOptionListPredicate) Neg() Uint8ArrArrOptionListPredicate { return func(e Uint8ArrArrOptionList) bool { return !p(e) } }
+func (p Uint16ArrArrOptionListPredicate) Neg() Uint16ArrArrOptionListPredicate { return func(e Uint16ArrArrOptionList) bool { return !p(e) } }
+func (p Uint32ArrArrOptionListPredicate) Neg() Uint32ArrArrOptionListPredicate { return func(e Uint32ArrArrOptionList) bool { return !p(e) } }
+func (p Uint64ArrArrOptionListPredicate) Neg() Uint64ArrArrOptionListPredicate { return func(e Uint64ArrArrOptionList) bool { return !p(e) } }
+func (p UintptrArrArrOptionListPredicate) Neg() UintptrArrArrOptionListPredicate { return func(e UintptrArrArrOptionList) bool { return !p(e) } }
+func (p ByteArrArrOptionListPredicate) Neg() ByteArrArrOptionListPredicate { return func(e ByteArrArrOptionList) bool { return !p(e) } }
+func (p RuneArrArrOptionListPredicate) Neg() RuneArrArrOptionListPredicate { return func(e RuneArrArrOptionList) bool { return !p(e) } }
+func (p Float32ArrArrOptionListPredicate) Neg() Float32ArrArrOptionListPredicate { return func(e Float32ArrArrOptionList) bool { return !p(e) } }
+func (p Float64ArrArrOptionListPredicate) Neg() Float64ArrArrOptionListPredicate { return func(e Float64ArrArrOptionList) bool { return !p(e) } }
+func (p Complex64ArrArrOptionListPredicate) Neg() Complex64ArrArrOptionListPredicate { return func(e Complex64ArrArrOptionList) bool { return !p(e) } }
+func (p Complex128ArrArrOptionListPredicate) Neg() Complex128ArrArrOptionListPredicate { return func(e Complex128ArrArrOptionList) bool { return !p(e) } }
+func (p AnyArrArrOptionListPredicate) Neg() AnyArrArrOptionListPredicate { return func(e AnyArrArrOptionList) bool { return !p(e) } }
+func (p BoolOptionArrOptionListPredicate) Neg() BoolOptionArrOptionListPredicate { return func(e BoolOptionArrOptionList) bool { return !p(e) } }
+func (p StringOptionArrOptionListPredicate) Neg() StringOptionArrOptionListPredicate { return func(e StringOptionArrOptionList) bool { return !p(e) } }
+func (p IntOptionArrOptionListPredicate) Neg() IntOptionArrOptionListPredicate { return func(e IntOptionArrOptionList) bool { return !p(e) } }
+func (p Int8OptionArrOptionListPredicate) Neg() Int8OptionArrOptionListPredicate { return func(e Int8OptionArrOptionList) bool { return !p(e) } }
+func (p Int16OptionArrOptionListPredicate) Neg() Int16OptionArrOptionListPredicate { return func(e Int16OptionArrOptionList) bool { return !p(e) } }
+func (p Int32OptionArrOptionListPredicate) Neg() Int32OptionArrOptionListPredicate { return func(e Int32OptionArrOptionList) bool { return !p(e) } }
+func (p Int64OptionArrOptionListPredicate) Neg() Int64OptionArrOptionListPredicate { return func(e Int64OptionArrOptionList) bool { return !p(e) } }
+func (p UintOptionArrOptionListPredicate) Neg() UintOptionArrOptionListPredicate { return func(e UintOptionArrOptionList) bool { return !p(e) } }
+func (p Uint8OptionArrOptionListPredicate) Neg() Uint8OptionArrOptionListPredicate { return func(e Uint8OptionArrOptionList) bool { return !p(e) } }
+func (p Uint16OptionArrOptionListPredicate) Neg() Uint16OptionArrOptionListPredicate { return func(e Uint16OptionArrOptionList) bool { return !p(e) } }
+func (p Uint32OptionArrOptionListPredicate) Neg() Uint32OptionArrOptionListPredicate { return func(e Uint32OptionArrOptionList) bool { return !p(e) } }
+func (p Uint64OptionArrOptionListPredicate) Neg() Uint64OptionArrOptionListPredicate { return func(e Uint64OptionArrOptionList) bool { return !p(e) } }
+func (p UintptrOptionArrOptionListPredicate) Neg() UintptrOptionArrOptionListPredicate { return func(e UintptrOptionArrOptionList) bool { return !p(e) } }
+func (p ByteOptionArrOptionListPredicate) Neg() ByteOptionArrOptionListPredicate { return func(e ByteOptionArrOptionList) bool { return !p(e) } }
+func (p RuneOptionArrOptionListPredicate) Neg() RuneOptionArrOptionListPredicate { return func(e RuneOptionArrOptionList) bool { return !p(e) } }
+func (p Float32OptionArrOptionListPredicate) Neg() Float32OptionArrOptionListPredicate { return func(e Float32OptionArrOptionList) bool { return !p(e) } }
+func (p Float64OptionArrOptionListPredicate) Neg() Float64OptionArrOptionListPredicate { return func(e Float64OptionArrOptionList) bool { return !p(e) } }
+func (p Complex64OptionArrOptionListPredicate) Neg() Complex64OptionArrOptionListPredicate { return func(e Complex64OptionArrOptionList) bool { return !p(e) } }
+func (p Complex128OptionArrOptionListPredicate) Neg() Complex128OptionArrOptionListPredicate { return func(e Complex128OptionArrOptionList) bool { return !p(e) } }
+func (p AnyOptionArrOptionListPredicate) Neg() AnyOptionArrOptionListPredicate { return func(e AnyOptionArrOptionList) bool { return !p(e) } }
+func (p BoolListOptionListPredicate) Neg() BoolListOptionListPredicate { return func(e BoolListOptionList) bool { return !p(e) } }
+func (p StringListOptionListPredicate) Neg() StringListOptionListPredicate { return func(e StringListOptionList) bool { return !p(e) } }
+func (p IntListOptionListPredicate) Neg() IntListOptionListPredicate { return func(e IntListOptionList) bool { return !p(e) } }
+func (p Int8ListOptionListPredicate) Neg() Int8ListOptionListPredicate { return func(e Int8ListOptionList) bool { return !p(e) } }
+func (p Int16ListOptionListPredicate) Neg() Int16ListOptionListPredicate { return func(e Int16ListOptionList) bool { return !p(e) } }
+func (p Int32ListOptionListPredicate) Neg() Int32ListOptionListPredicate { return func(e Int32ListOptionList) bool { return !p(e) } }
+func (p Int64ListOptionListPredicate) Neg() Int64ListOptionListPredicate { return func(e Int64ListOptionList) bool { return !p(e) } }
+func (p UintListOptionListPredicate) Neg() UintListOptionListPredicate { return func(e UintListOptionList) bool { return !p(e) } }
+func (p Uint8ListOptionListPredicate) Neg() Uint8ListOptionListPredicate { return func(e Uint8ListOptionList) bool { return !p(e) } }
+func (p Uint16ListOptionListPredicate) Neg() Uint16ListOptionListPredicate { return func(e Uint16ListOptionList) bool { return !p(e) } }
+func (p Uint32ListOptionListPredicate) Neg() Uint32ListOptionListPredicate { return func(e Uint32ListOptionList) bool { return !p(e) } }
+func (p Uint64ListOptionListPredicate) Neg() Uint64ListOptionListPredicate { return func(e Uint64ListOptionList) bool { return !p(e) } }
+func (p UintptrListOptionListPredicate) Neg() UintptrListOptionListPredicate { return func(e UintptrListOptionList) bool { return !p(e) } }
+func (p ByteListOptionListPredicate) Neg() ByteListOptionListPredicate { return func(e ByteListOptionList) bool { return !p(e) } }
+func (p RuneListOptionListPredicate) Neg() RuneListOptionListPredicate { return func(e RuneListOptionList) bool { return !p(e) } }
+func (p Float32ListOptionListPredicate) Neg() Float32ListOptionListPredicate { return func(e Float32ListOptionList) bool { return !p(e) } }
+func (p Float64ListOptionListPredicate) Neg() Float64ListOptionListPredicate { return func(e Float64ListOptionList) bool { return !p(e) } }
+func (p Complex64ListOptionListPredicate) Neg() Complex64ListOptionListPredicate { return func(e Complex64ListOptionList) bool { return !p(e) } }
+func (p Complex128ListOptionListPredicate) Neg() Complex128ListOptionListPredicate { return func(e Complex128ListOptionList) bool { return !p(e) } }
+func (p AnyListOptionListPredicate) Neg() AnyListOptionListPredicate { return func(e AnyListOptionList) bool { return !p(e) } }
+func (p BoolOptionOptionListPredicate) Neg() BoolOptionOptionListPredicate { return func(e BoolOptionOptionList) bool { return !p(e) } }
+func (p StringOptionOptionListPredicate) Neg() StringOptionOptionListPredicate { return func(e StringOptionOptionList) bool { return !p(e) } }
+func (p IntOptionOptionListPredicate) Neg() IntOptionOptionListPredicate { return func(e IntOptionOptionList) bool { return !p(e) } }
+func (p Int8OptionOptionListPredicate) Neg() Int8OptionOptionListPredicate { return func(e Int8OptionOptionList) bool { return !p(e) } }
+func (p Int16OptionOptionListPredicate) Neg() Int16OptionOptionListPredicate { return func(e Int16OptionOptionList) bool { return !p(e) } }
+func (p Int32OptionOptionListPredicate) Neg() Int32OptionOptionListPredicate { return func(e Int32OptionOptionList) bool { return !p(e) } }
+func (p Int64OptionOptionListPredicate) Neg() Int64OptionOptionListPredicate { return func(e Int64OptionOptionList) bool { return !p(e) } }
+func (p UintOptionOptionListPredicate) Neg() UintOptionOptionListPredicate { return func(e UintOptionOptionList) bool { return !p(e) } }
+func (p Uint8OptionOptionListPredicate) Neg() Uint8OptionOptionListPredicate { return func(e Uint8OptionOptionList) bool { return !p(e) } }
+func (p Uint16OptionOptionListPredicate) Neg() Uint16OptionOptionListPredicate { return func(e Uint16OptionOptionList) bool { return !p(e) } }
+func (p Uint32OptionOptionListPredicate) Neg() Uint32OptionOptionListPredicate { return func(e Uint32OptionOptionList) bool { return !p(e) } }
+func (p Uint64OptionOptionListPredicate) Neg() Uint64OptionOptionListPredicate { return func(e Uint64OptionOptionList) bool { return !p(e) } }
+func (p UintptrOptionOptionListPredicate) Neg() UintptrOptionOptionListPredicate { return func(e UintptrOptionOptionList) bool { return !p(e) } }
+func (p ByteOptionOptionListPredicate) Neg() ByteOptionOptionListPredicate { return func(e ByteOptionOptionList) bool { return !p(e) } }
+func (p RuneOptionOptionListPredicate) Neg() RuneOptionOptionListPredicate { return func(e RuneOptionOptionList) bool { return !p(e) } }
+func (p Float32OptionOptionListPredicate) Neg() Float32OptionOptionListPredicate { return func(e Float32OptionOptionList) bool { return !p(e) } }
+func (p Float64OptionOptionListPredicate) Neg() Float64OptionOptionListPredicate { return func(e Float64OptionOptionList) bool { return !p(e) } }
+func (p Complex64OptionOptionListPredicate) Neg() Complex64OptionOptionListPredicate { return func(e Complex64OptionOptionList) bool { return !p(e) } }
+func (p Complex128OptionOptionListPredicate) Neg() Complex128OptionOptionListPredicate { return func(e Complex128OptionOptionList) bool { return !p(e) } }
+func (p AnyOptionOptionListPredicate) Neg() AnyOptionOptionListPredicate { return func(e AnyOptionOptionList) bool { return !p(e) } }
+func (p BoolArrOptionOptionListPredicate) Neg() BoolArrOptionOptionListPredicate { return func(e BoolArrOptionOptionList) bool { return !p(e) } }
+func (p StringArrOptionOptionListPredicate) Neg() StringArrOptionOptionListPredicate { return func(e StringArrOptionOptionList) bool { return !p(e) } }
+func (p IntArrOptionOptionListPredicate) Neg() IntArrOptionOptionListPredicate { return func(e IntArrOptionOptionList) bool { return !p(e) } }
+func (p Int8ArrOptionOptionListPredicate) Neg() Int8ArrOptionOptionListPredicate { return func(e Int8ArrOptionOptionList) bool { return !p(e) } }
+func (p Int16ArrOptionOptionListPredicate) Neg() Int16ArrOptionOptionListPredicate { return func(e Int16ArrOptionOptionList) bool { return !p(e) } }
+func (p Int32ArrOptionOptionListPredicate) Neg() Int32ArrOptionOptionListPredicate { return func(e Int32ArrOptionOptionList) bool { return !p(e) } }
+func (p Int64ArrOptionOptionListPredicate) Neg() Int64ArrOptionOptionListPredicate { return func(e Int64ArrOptionOptionList) bool { return !p(e) } }
+func (p UintArrOptionOptionListPredicate) Neg() UintArrOptionOptionListPredicate { return func(e UintArrOptionOptionList) bool { return !p(e) } }
+func (p Uint8ArrOptionOptionListPredicate) Neg() Uint8ArrOptionOptionListPredicate { return func(e Uint8ArrOptionOptionList) bool { return !p(e) } }
+func (p Uint16ArrOptionOptionListPredicate) Neg() Uint16ArrOptionOptionListPredicate { return func(e Uint16ArrOptionOptionList) bool { return !p(e) } }
+func (p Uint32ArrOptionOptionListPredicate) Neg() Uint32ArrOptionOptionListPredicate { return func(e Uint32ArrOptionOptionList) bool { return !p(e) } }
+func (p Uint64ArrOptionOptionListPredicate) Neg() Uint64ArrOptionOptionListPredicate { return func(e Uint64ArrOptionOptionList) bool { return !p(e) } }
+func (p UintptrArrOptionOptionListPredicate) Neg() UintptrArrOptionOptionListPredicate { return func(e UintptrArrOptionOptionList) bool { return !p(e) } }
+func (p ByteArrOptionOptionListPredicate) Neg() ByteArrOptionOptionListPredicate { return func(e ByteArrOptionOptionList) bool { return !p(e) } }
+func (p RuneArrOptionOptionListPredicate) Neg() RuneArrOptionOptionListPredicate { return func(e RuneArrOptionOptionList) bool { return !p(e) } }
+func (p Float32ArrOptionOptionListPredicate) Neg() Float32ArrOptionOptionListPredicate { return func(e Float32ArrOptionOptionList) bool { return !p(e) } }
+func (p Float64ArrOptionOptionListPredicate) Neg() Float64ArrOptionOptionListPredicate { return func(e Float64ArrOptionOptionList) bool { return !p(e) } }
+func (p Complex64ArrOptionOptionListPredicate) Neg() Complex64ArrOptionOptionListPredicate { return func(e Complex64ArrOptionOptionList) bool { return !p(e) } }
+func (p Complex128ArrOptionOptionListPredicate) Neg() Complex128ArrOptionOptionListPredicate { return func(e Complex128ArrOptionOptionList) bool { return !p(e) } }
+func (p AnyArrOptionOptionListPredicate) Neg() AnyArrOptionOptionListPredicate { return func(e AnyArrOptionOptionList) bool { return !p(e) } }
+func (p BoolArrArrOptionOptionListPredicate) Neg() BoolArrArrOptionOptionListPredicate { return func(e BoolArrArrOptionOptionList) bool { return !p(e) } }
+func (p StringArrArrOptionOptionListPredicate) Neg() StringArrArrOptionOptionListPredicate { return func(e StringArrArrOptionOptionList) bool { return !p(e) } }
+func (p IntArrArrOptionOptionListPredicate) Neg() IntArrArrOptionOptionListPredicate { return func(e IntArrArrOptionOptionList) bool { return !p(e) } }
+func (p Int8ArrArrOptionOptionListPredicate) Neg() Int8ArrArrOptionOptionListPredicate { return func(e Int8ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Int16ArrArrOptionOptionListPredicate) Neg() Int16ArrArrOptionOptionListPredicate { return func(e Int16ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Int32ArrArrOptionOptionListPredicate) Neg() Int32ArrArrOptionOptionListPredicate { return func(e Int32ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Int64ArrArrOptionOptionListPredicate) Neg() Int64ArrArrOptionOptionListPredicate { return func(e Int64ArrArrOptionOptionList) bool { return !p(e) } }
+func (p UintArrArrOptionOptionListPredicate) Neg() UintArrArrOptionOptionListPredicate { return func(e UintArrArrOptionOptionList) bool { return !p(e) } }
+func (p Uint8ArrArrOptionOptionListPredicate) Neg() Uint8ArrArrOptionOptionListPredicate { return func(e Uint8ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Uint16ArrArrOptionOptionListPredicate) Neg() Uint16ArrArrOptionOptionListPredicate { return func(e Uint16ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Uint32ArrArrOptionOptionListPredicate) Neg() Uint32ArrArrOptionOptionListPredicate { return func(e Uint32ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Uint64ArrArrOptionOptionListPredicate) Neg() Uint64ArrArrOptionOptionListPredicate { return func(e Uint64ArrArrOptionOptionList) bool { return !p(e) } }
+func (p UintptrArrArrOptionOptionListPredicate) Neg() UintptrArrArrOptionOptionListPredicate { return func(e UintptrArrArrOptionOptionList) bool { return !p(e) } }
+func (p ByteArrArrOptionOptionListPredicate) Neg() ByteArrArrOptionOptionListPredicate { return func(e ByteArrArrOptionOptionList) bool { return !p(e) } }
+func (p RuneArrArrOptionOptionListPredicate) Neg() RuneArrArrOptionOptionListPredicate { return func(e RuneArrArrOptionOptionList) bool { return !p(e) } }
+func (p Float32ArrArrOptionOptionListPredicate) Neg() Float32ArrArrOptionOptionListPredicate { return func(e Float32ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Float64ArrArrOptionOptionListPredicate) Neg() Float64ArrArrOptionOptionListPredicate { return func(e Float64ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Complex64ArrArrOptionOptionListPredicate) Neg() Complex64ArrArrOptionOptionListPredicate { return func(e Complex64ArrArrOptionOptionList) bool { return !p(e) } }
+func (p Complex128ArrArrOptionOptionListPredicate) Neg() Complex128ArrArrOptionOptionListPredicate { return func(e Complex128ArrArrOptionOptionList) bool { return !p(e) } }
+func (p AnyArrArrOptionOptionListPredicate) Neg() AnyArrArrOptionOptionListPredicate { return func(e AnyArrArrOptionOptionList) bool { return !p(e) } }
+func (p BoolOptionArrOptionOptionListPredicate) Neg() BoolOptionArrOptionOptionListPredicate { return func(e BoolOptionArrOptionOptionList) bool { return !p(e) } }
+func (p StringOptionArrOptionOptionListPredicate) Neg() StringOptionArrOptionOptionListPredicate { return func(e StringOptionArrOptionOptionList) bool { return !p(e) } }
+func (p IntOptionArrOptionOptionListPredicate) Neg() IntOptionArrOptionOptionListPredicate { return func(e IntOptionArrOptionOptionList) bool { return !p(e) } }
+func (p Int8OptionArrOptionOptionListPredicate) Neg() Int8OptionArrOptionOptionListPredicate { return func(e Int8OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Int16OptionArrOptionOptionListPredicate) Neg() Int16OptionArrOptionOptionListPredicate { return func(e Int16OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Int32OptionArrOptionOptionListPredicate) Neg() Int32OptionArrOptionOptionListPredicate { return func(e Int32OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Int64OptionArrOptionOptionListPredicate) Neg() Int64OptionArrOptionOptionListPredicate { return func(e Int64OptionArrOptionOptionList) bool { return !p(e) } }
+func (p UintOptionArrOptionOptionListPredicate) Neg() UintOptionArrOptionOptionListPredicate { return func(e UintOptionArrOptionOptionList) bool { return !p(e) } }
+func (p Uint8OptionArrOptionOptionListPredicate) Neg() Uint8OptionArrOptionOptionListPredicate { return func(e Uint8OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Uint16OptionArrOptionOptionListPredicate) Neg() Uint16OptionArrOptionOptionListPredicate { return func(e Uint16OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Uint32OptionArrOptionOptionListPredicate) Neg() Uint32OptionArrOptionOptionListPredicate { return func(e Uint32OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Uint64OptionArrOptionOptionListPredicate) Neg() Uint64OptionArrOptionOptionListPredicate { return func(e Uint64OptionArrOptionOptionList) bool { return !p(e) } }
+func (p UintptrOptionArrOptionOptionListPredicate) Neg() UintptrOptionArrOptionOptionListPredicate { return func(e UintptrOptionArrOptionOptionList) bool { return !p(e) } }
+func (p ByteOptionArrOptionOptionListPredicate) Neg() ByteOptionArrOptionOptionListPredicate { return func(e ByteOptionArrOptionOptionList) bool { return !p(e) } }
+func (p RuneOptionArrOptionOptionListPredicate) Neg() RuneOptionArrOptionOptionListPredicate { return func(e RuneOptionArrOptionOptionList) bool { return !p(e) } }
+func (p Float32OptionArrOptionOptionListPredicate) Neg() Float32OptionArrOptionOptionListPredicate { return func(e Float32OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Float64OptionArrOptionOptionListPredicate) Neg() Float64OptionArrOptionOptionListPredicate { return func(e Float64OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Complex64OptionArrOptionOptionListPredicate) Neg() Complex64OptionArrOptionOptionListPredicate { return func(e Complex64OptionArrOptionOptionList) bool { return !p(e) } }
+func (p Complex128OptionArrOptionOptionListPredicate) Neg() Complex128OptionArrOptionOptionListPredicate { return func(e Complex128OptionArrOptionOptionList) bool { return !p(e) } }
+func (p AnyOptionArrOptionOptionListPredicate) Neg() AnyOptionArrOptionOptionListPredicate { return func(e AnyOptionArrOptionOptionList) bool { return !p(e) } }
+func (p BoolListOptionOptionListPredicate) Neg() BoolListOptionOptionListPredicate { return func(e BoolListOptionOptionList) bool { return !p(e) } }
+func (p StringListOptionOptionListPredicate) Neg() StringListOptionOptionListPredicate { return func(e StringListOptionOptionList) bool { return !p(e) } }
+func (p IntListOptionOptionListPredicate) Neg() IntListOptionOptionListPredicate { return func(e IntListOptionOptionList) bool { return !p(e) } }
+func (p Int8ListOptionOptionListPredicate) Neg() Int8ListOptionOptionListPredicate { return func(e Int8ListOptionOptionList) bool { return !p(e) } }
+func (p Int16ListOptionOptionListPredicate) Neg() Int16ListOptionOptionListPredicate { return func(e Int16ListOptionOptionList) bool { return !p(e) } }
+func (p Int32ListOptionOptionListPredicate) Neg() Int32ListOptionOptionListPredicate { return func(e Int32ListOptionOptionList) bool { return !p(e) } }
+func (p Int64ListOptionOptionListPredicate) Neg() Int64ListOptionOptionListPredicate { return func(e Int64ListOptionOptionList) bool { return !p(e) } }
+func (p UintListOptionOptionListPredicate) Neg() UintListOptionOptionListPredicate { return func(e UintListOptionOptionList) bool { return !p(e) } }
+func (p Uint8ListOptionOptionListPredicate) Neg() Uint8ListOptionOptionListPredicate { return func(e Uint8ListOptionOptionList) bool { return !p(e) } }
+func (p Uint16ListOptionOptionListPredicate) Neg() Uint16ListOptionOptionListPredicate { return func(e Uint16ListOptionOptionList) bool { return !p(e) } }
+func (p Uint32ListOptionOptionListPredicate) Neg() Uint32ListOptionOptionListPredicate { return func(e Uint32ListOptionOptionList) bool { return !p(e) } }
+func (p Uint64ListOptionOptionListPredicate) Neg() Uint64ListOptionOptionListPredicate { return func(e Uint64ListOptionOptionList) bool { return !p(e) } }
+func (p UintptrListOptionOptionListPredicate) Neg() UintptrListOptionOptionListPredicate { return func(e UintptrListOptionOptionList) bool { return !p(e) } }
+func (p ByteListOptionOptionListPredicate) Neg() ByteListOptionOptionListPredicate { return func(e ByteListOptionOptionList) bool { return !p(e) } }
+func (p RuneListOptionOptionListPredicate) Neg() RuneListOptionOptionListPredicate { return func(e RuneListOptionOptionList) bool { return !p(e) } }
+func (p Float32ListOptionOptionListPredicate) Neg() Float32ListOptionOptionListPredicate { return func(e Float32ListOptionOptionList) bool { return !p(e) } }
+func (p Float64ListOptionOptionListPredicate) Neg() Float64ListOptionOptionListPredicate { return func(e Float64ListOptionOptionList) bool { return !p(e) } }
+func (p Complex64ListOptionOptionListPredicate) Neg() Complex64ListOptionOptionListPredicate { return func(e Complex64ListOptionOptionList) bool { return !p(e) } }
+func (p Complex128ListOptionOptionListPredicate) Neg() Complex128ListOptionOptionListPredicate { return func(e Complex128ListOptionOptionList) bool { return !p(e) } }
+func (p AnyListOptionOptionListPredicate) Neg() AnyListOptionOptionListPredicate { return func(e AnyListOptionOptionList) bool { return !p(e) } }
+func (p BoolArrListPredicate) Neg() BoolArrListPredicate { return func(e BoolArrList) bool { return !p(e) } }
+func (p StringArrListPredicate) Neg() StringArrListPredicate { return func(e StringArrList) bool { return !p(e) } }
+func (p IntArrListPredicate) Neg() IntArrListPredicate { return func(e IntArrList) bool { return !p(e) } }
+func (p Int8ArrListPredicate) Neg() Int8ArrListPredicate { return func(e Int8ArrList) bool { return !p(e) } }
+func (p Int16ArrListPredicate) Neg() Int16ArrListPredicate { return func(e Int16ArrList) bool { return !p(e) } }
+func (p Int32ArrListPredicate) Neg() Int32ArrListPredicate { return func(e Int32ArrList) bool { return !p(e) } }
+func (p Int64ArrListPredicate) Neg() Int64ArrListPredicate { return func(e Int64ArrList) bool { return !p(e) } }
+func (p UintArrListPredicate) Neg() UintArrListPredicate { return func(e UintArrList) bool { return !p(e) } }
+func (p Uint8ArrListPredicate) Neg() Uint8ArrListPredicate { return func(e Uint8ArrList) bool { return !p(e) } }
+func (p Uint16ArrListPredicate) Neg() Uint16ArrListPredicate { return func(e Uint16ArrList) bool { return !p(e) } }
+func (p Uint32ArrListPredicate) Neg() Uint32ArrListPredicate { return func(e Uint32ArrList) bool { return !p(e) } }
+func (p Uint64ArrListPredicate) Neg() Uint64ArrListPredicate { return func(e Uint64ArrList) bool { return !p(e) } }
+func (p UintptrArrListPredicate) Neg() UintptrArrListPredicate { return func(e UintptrArrList) bool { return !p(e) } }
+func (p ByteArrListPredicate) Neg() ByteArrListPredicate { return func(e ByteArrList) bool { return !p(e) } }
+func (p RuneArrListPredicate) Neg() RuneArrListPredicate { return func(e RuneArrList) bool { return !p(e) } }
+func (p Float32ArrListPredicate) Neg() Float32ArrListPredicate { return func(e Float32ArrList) bool { return !p(e) } }
+func (p Float64ArrListPredicate) Neg() Float64ArrListPredicate { return func(e Float64ArrList) bool { return !p(e) } }
+func (p Complex64ArrListPredicate) Neg() Complex64ArrListPredicate { return func(e Complex64ArrList) bool { return !p(e) } }
+func (p Complex128ArrListPredicate) Neg() Complex128ArrListPredicate { return func(e Complex128ArrList) bool { return !p(e) } }
+func (p AnyArrListPredicate) Neg() AnyArrListPredicate { return func(e AnyArrList) bool { return !p(e) } }
+func (p BoolArrArrListPredicate) Neg() BoolArrArrListPredicate { return func(e BoolArrArrList) bool { return !p(e) } }
+func (p StringArrArrListPredicate) Neg() StringArrArrListPredicate { return func(e StringArrArrList) bool { return !p(e) } }
+func (p IntArrArrListPredicate) Neg() IntArrArrListPredicate { return func(e IntArrArrList) bool { return !p(e) } }
+func (p Int8ArrArrListPredicate) Neg() Int8ArrArrListPredicate { return func(e Int8ArrArrList) bool { return !p(e) } }
+func (p Int16ArrArrListPredicate) Neg() Int16ArrArrListPredicate { return func(e Int16ArrArrList) bool { return !p(e) } }
+func (p Int32ArrArrListPredicate) Neg() Int32ArrArrListPredicate { return func(e Int32ArrArrList) bool { return !p(e) } }
+func (p Int64ArrArrListPredicate) Neg() Int64ArrArrListPredicate { return func(e Int64ArrArrList) bool { return !p(e) } }
+func (p UintArrArrListPredicate) Neg() UintArrArrListPredicate { return func(e UintArrArrList) bool { return !p(e) } }
+func (p Uint8ArrArrListPredicate) Neg() Uint8ArrArrListPredicate { return func(e Uint8ArrArrList) bool { return !p(e) } }
+func (p Uint16ArrArrListPredicate) Neg() Uint16ArrArrListPredicate { return func(e Uint16ArrArrList) bool { return !p(e) } }
+func (p Uint32ArrArrListPredicate) Neg() Uint32ArrArrListPredicate { return func(e Uint32ArrArrList) bool { return !p(e) } }
+func (p Uint64ArrArrListPredicate) Neg() Uint64ArrArrListPredicate { return func(e Uint64ArrArrList) bool { return !p(e) } }
+func (p UintptrArrArrListPredicate) Neg() UintptrArrArrListPredicate { return func(e UintptrArrArrList) bool { return !p(e) } }
+func (p ByteArrArrListPredicate) Neg() ByteArrArrListPredicate { return func(e ByteArrArrList) bool { return !p(e) } }
+func (p RuneArrArrListPredicate) Neg() RuneArrArrListPredicate { return func(e RuneArrArrList) bool { return !p(e) } }
+func (p Float32ArrArrListPredicate) Neg() Float32ArrArrListPredicate { return func(e Float32ArrArrList) bool { return !p(e) } }
+func (p Float64ArrArrListPredicate) Neg() Float64ArrArrListPredicate { return func(e Float64ArrArrList) bool { return !p(e) } }
+func (p Complex64ArrArrListPredicate) Neg() Complex64ArrArrListPredicate { return func(e Complex64ArrArrList) bool { return !p(e) } }
+func (p Complex128ArrArrListPredicate) Neg() Complex128ArrArrListPredicate { return func(e Complex128ArrArrList) bool { return !p(e) } }
+func (p AnyArrArrListPredicate) Neg() AnyArrArrListPredicate { return func(e AnyArrArrList) bool { return !p(e) } }
+func (p BoolOptionArrListPredicate) Neg() BoolOptionArrListPredicate { return func(e BoolOptionArrList) bool { return !p(e) } }
+func (p StringOptionArrListPredicate) Neg() StringOptionArrListPredicate { return func(e StringOptionArrList) bool { return !p(e) } }
+func (p IntOptionArrListPredicate) Neg() IntOptionArrListPredicate { return func(e IntOptionArrList) bool { return !p(e) } }
+func (p Int8OptionArrListPredicate) Neg() Int8OptionArrListPredicate { return func(e Int8OptionArrList) bool { return !p(e) } }
+func (p Int16OptionArrListPredicate) Neg() Int16OptionArrListPredicate { return func(e Int16OptionArrList) bool { return !p(e) } }
+func (p Int32OptionArrListPredicate) Neg() Int32OptionArrListPredicate { return func(e Int32OptionArrList) bool { return !p(e) } }
+func (p Int64OptionArrListPredicate) Neg() Int64OptionArrListPredicate { return func(e Int64OptionArrList) bool { return !p(e) } }
+func (p UintOptionArrListPredicate) Neg() UintOptionArrListPredicate { return func(e UintOptionArrList) bool { return !p(e) } }
+func (p Uint8OptionArrListPredicate) Neg() Uint8OptionArrListPredicate { return func(e Uint8OptionArrList) bool { return !p(e) } }
+func (p Uint16OptionArrListPredicate) Neg() Uint16OptionArrListPredicate { return func(e Uint16OptionArrList) bool { return !p(e) } }
+func (p Uint32OptionArrListPredicate) Neg() Uint32OptionArrListPredicate { return func(e Uint32OptionArrList) bool { return !p(e) } }
+func (p Uint64OptionArrListPredicate) Neg() Uint64OptionArrListPredicate { return func(e Uint64OptionArrList) bool { return !p(e) } }
+func (p UintptrOptionArrListPredicate) Neg() UintptrOptionArrListPredicate { return func(e UintptrOptionArrList) bool { return !p(e) } }
+func (p ByteOptionArrListPredicate) Neg() ByteOptionArrListPredicate { return func(e ByteOptionArrList) bool { return !p(e) } }
+func (p RuneOptionArrListPredicate) Neg() RuneOptionArrListPredicate { return func(e RuneOptionArrList) bool { return !p(e) } }
+func (p Float32OptionArrListPredicate) Neg() Float32OptionArrListPredicate { return func(e Float32OptionArrList) bool { return !p(e) } }
+func (p Float64OptionArrListPredicate) Neg() Float64OptionArrListPredicate { return func(e Float64OptionArrList) bool { return !p(e) } }
+func (p Complex64OptionArrListPredicate) Neg() Complex64OptionArrListPredicate { return func(e Complex64OptionArrList) bool { return !p(e) } }
+func (p Complex128OptionArrListPredicate) Neg() Complex128OptionArrListPredicate { return func(e Complex128OptionArrList) bool { return !p(e) } }
+func (p AnyOptionArrListPredicate) Neg() AnyOptionArrListPredicate { return func(e AnyOptionArrList) bool { return !p(e) } }
+func (p BoolListListPredicate) Neg() BoolListListPredicate { return func(e BoolListList) bool { return !p(e) } }
+func (p StringListListPredicate) Neg() StringListListPredicate { return func(e StringListList) bool { return !p(e) } }
+func (p IntListListPredicate) Neg() IntListListPredicate { return func(e IntListList) bool { return !p(e) } }
+func (p Int8ListListPredicate) Neg() Int8ListListPredicate { return func(e Int8ListList) bool { return !p(e) } }
+func (p Int16ListListPredicate) Neg() Int16ListListPredicate { return func(e Int16ListList) bool { return !p(e) } }
+func (p Int32ListListPredicate) Neg() Int32ListListPredicate { return func(e Int32ListList) bool { return !p(e) } }
+func (p Int64ListListPredicate) Neg() Int64ListListPredicate { return func(e Int64ListList) bool { return !p(e) } }
+func (p UintListListPredicate) Neg() UintListListPredicate { return func(e UintListList) bool { return !p(e) } }
+func (p Uint8ListListPredicate) Neg() Uint8ListListPredicate { return func(e Uint8ListList) bool { return !p(e) } }
+func (p Uint16ListListPredicate) Neg() Uint16ListListPredicate { return func(e Uint16ListList) bool { return !p(e) } }
+func (p Uint32ListListPredicate) Neg() Uint32ListListPredicate { return func(e Uint32ListList) bool { return !p(e) } }
+func (p Uint64ListListPredicate) Neg() Uint64ListListPredicate { return func(e Uint64ListList) bool { return !p(e) } }
+func (p UintptrListListPredicate) Neg() UintptrListListPredicate { return func(e UintptrListList) bool { return !p(e) } }
+func (p ByteListListPredicate) Neg() ByteListListPredicate { return func(e ByteListList) bool { return !p(e) } }
+func (p RuneListListPredicate) Neg() RuneListListPredicate { return func(e RuneListList) bool { return !p(e) } }
+func (p Float32ListListPredicate) Neg() Float32ListListPredicate { return func(e Float32ListList) bool { return !p(e) } }
+func (p Float64ListListPredicate) Neg() Float64ListListPredicate { return func(e Float64ListList) bool { return !p(e) } }
+func (p Complex64ListListPredicate) Neg() Complex64ListListPredicate { return func(e Complex64ListList) bool { return !p(e) } }
+func (p Complex128ListListPredicate) Neg() Complex128ListListPredicate { return func(e Complex128ListList) bool { return !p(e) } }
+func (p AnyListListPredicate) Neg() AnyListListPredicate { return func(e AnyListList) bool { return !p(e) } }

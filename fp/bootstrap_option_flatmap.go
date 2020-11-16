@@ -3,11203 +3,1604 @@
 
 package fp
 
-func (m BoolOption) FlatMapBool(f func(bool) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m BoolOption) FlatMapString(f func(bool) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m BoolOption) FlatMapInt(f func(bool) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m BoolOption) FlatMapInt8(f func(bool) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m BoolOption) FlatMapInt16(f func(bool) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m BoolOption) FlatMapInt32(f func(bool) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m BoolOption) FlatMapInt64(f func(bool) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m BoolOption) FlatMapUint(f func(bool) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m BoolOption) FlatMapUint8(f func(bool) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m BoolOption) FlatMapUint16(f func(bool) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m BoolOption) FlatMapUint32(f func(bool) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m BoolOption) FlatMapUint64(f func(bool) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m BoolOption) FlatMapUintptr(f func(bool) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m BoolOption) FlatMapByte(f func(bool) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m BoolOption) FlatMapRune(f func(bool) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m BoolOption) FlatMapFloat32(f func(bool) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m BoolOption) FlatMapFloat64(f func(bool) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m BoolOption) FlatMapComplex64(f func(bool) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m BoolOption) FlatMapComplex128(f func(bool) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m BoolOption) FlatMapAny(f func(bool) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m StringOption) FlatMapBool(f func(string) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m StringOption) FlatMapString(f func(string) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m StringOption) FlatMapInt(f func(string) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m StringOption) FlatMapInt8(f func(string) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m StringOption) FlatMapInt16(f func(string) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m StringOption) FlatMapInt32(f func(string) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m StringOption) FlatMapInt64(f func(string) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m StringOption) FlatMapUint(f func(string) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m StringOption) FlatMapUint8(f func(string) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m StringOption) FlatMapUint16(f func(string) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m StringOption) FlatMapUint32(f func(string) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m StringOption) FlatMapUint64(f func(string) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m StringOption) FlatMapUintptr(f func(string) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m StringOption) FlatMapByte(f func(string) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m StringOption) FlatMapRune(f func(string) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m StringOption) FlatMapFloat32(f func(string) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m StringOption) FlatMapFloat64(f func(string) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m StringOption) FlatMapComplex64(f func(string) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m StringOption) FlatMapComplex128(f func(string) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m StringOption) FlatMapAny(f func(string) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m IntOption) FlatMapBool(f func(int) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m IntOption) FlatMapString(f func(int) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m IntOption) FlatMapInt(f func(int) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m IntOption) FlatMapInt8(f func(int) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m IntOption) FlatMapInt16(f func(int) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m IntOption) FlatMapInt32(f func(int) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m IntOption) FlatMapInt64(f func(int) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m IntOption) FlatMapUint(f func(int) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m IntOption) FlatMapUint8(f func(int) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m IntOption) FlatMapUint16(f func(int) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m IntOption) FlatMapUint32(f func(int) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m IntOption) FlatMapUint64(f func(int) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m IntOption) FlatMapUintptr(f func(int) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m IntOption) FlatMapByte(f func(int) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m IntOption) FlatMapRune(f func(int) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m IntOption) FlatMapFloat32(f func(int) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m IntOption) FlatMapFloat64(f func(int) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m IntOption) FlatMapComplex64(f func(int) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m IntOption) FlatMapComplex128(f func(int) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m IntOption) FlatMapAny(f func(int) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int8Option) FlatMapBool(f func(int8) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int8Option) FlatMapString(f func(int8) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int8Option) FlatMapInt(f func(int8) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int8Option) FlatMapInt8(f func(int8) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int8Option) FlatMapInt16(f func(int8) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int8Option) FlatMapInt32(f func(int8) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int8Option) FlatMapInt64(f func(int8) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int8Option) FlatMapUint(f func(int8) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int8Option) FlatMapUint8(f func(int8) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int8Option) FlatMapUint16(f func(int8) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int8Option) FlatMapUint32(f func(int8) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int8Option) FlatMapUint64(f func(int8) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int8Option) FlatMapUintptr(f func(int8) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int8Option) FlatMapByte(f func(int8) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int8Option) FlatMapRune(f func(int8) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int8Option) FlatMapFloat32(f func(int8) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int8Option) FlatMapFloat64(f func(int8) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int8Option) FlatMapComplex64(f func(int8) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int8Option) FlatMapComplex128(f func(int8) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int8Option) FlatMapAny(f func(int8) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int16Option) FlatMapBool(f func(int16) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int16Option) FlatMapString(f func(int16) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int16Option) FlatMapInt(f func(int16) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int16Option) FlatMapInt8(f func(int16) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int16Option) FlatMapInt16(f func(int16) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int16Option) FlatMapInt32(f func(int16) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int16Option) FlatMapInt64(f func(int16) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int16Option) FlatMapUint(f func(int16) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int16Option) FlatMapUint8(f func(int16) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int16Option) FlatMapUint16(f func(int16) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int16Option) FlatMapUint32(f func(int16) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int16Option) FlatMapUint64(f func(int16) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int16Option) FlatMapUintptr(f func(int16) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int16Option) FlatMapByte(f func(int16) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int16Option) FlatMapRune(f func(int16) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int16Option) FlatMapFloat32(f func(int16) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int16Option) FlatMapFloat64(f func(int16) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int16Option) FlatMapComplex64(f func(int16) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int16Option) FlatMapComplex128(f func(int16) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int16Option) FlatMapAny(f func(int16) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int32Option) FlatMapBool(f func(int32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int32Option) FlatMapString(f func(int32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int32Option) FlatMapInt(f func(int32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int32Option) FlatMapInt8(f func(int32) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int32Option) FlatMapInt16(f func(int32) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int32Option) FlatMapInt32(f func(int32) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int32Option) FlatMapInt64(f func(int32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int32Option) FlatMapUint(f func(int32) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int32Option) FlatMapUint8(f func(int32) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int32Option) FlatMapUint16(f func(int32) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int32Option) FlatMapUint32(f func(int32) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int32Option) FlatMapUint64(f func(int32) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int32Option) FlatMapUintptr(f func(int32) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int32Option) FlatMapByte(f func(int32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int32Option) FlatMapRune(f func(int32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int32Option) FlatMapFloat32(f func(int32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int32Option) FlatMapFloat64(f func(int32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int32Option) FlatMapComplex64(f func(int32) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int32Option) FlatMapComplex128(f func(int32) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int32Option) FlatMapAny(f func(int32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int64Option) FlatMapBool(f func(int64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int64Option) FlatMapString(f func(int64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int64Option) FlatMapInt(f func(int64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int64Option) FlatMapInt8(f func(int64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int64Option) FlatMapInt16(f func(int64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int64Option) FlatMapInt32(f func(int64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int64Option) FlatMapInt64(f func(int64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int64Option) FlatMapUint(f func(int64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int64Option) FlatMapUint8(f func(int64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int64Option) FlatMapUint16(f func(int64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int64Option) FlatMapUint32(f func(int64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int64Option) FlatMapUint64(f func(int64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int64Option) FlatMapUintptr(f func(int64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int64Option) FlatMapByte(f func(int64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int64Option) FlatMapRune(f func(int64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int64Option) FlatMapFloat32(f func(int64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int64Option) FlatMapFloat64(f func(int64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int64Option) FlatMapComplex64(f func(int64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int64Option) FlatMapComplex128(f func(int64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int64Option) FlatMapAny(f func(int64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintOption) FlatMapBool(f func(uint) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintOption) FlatMapString(f func(uint) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintOption) FlatMapInt(f func(uint) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintOption) FlatMapInt8(f func(uint) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintOption) FlatMapInt16(f func(uint) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintOption) FlatMapInt32(f func(uint) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintOption) FlatMapInt64(f func(uint) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintOption) FlatMapUint(f func(uint) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintOption) FlatMapUint8(f func(uint) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintOption) FlatMapUint16(f func(uint) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintOption) FlatMapUint32(f func(uint) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintOption) FlatMapUint64(f func(uint) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintOption) FlatMapUintptr(f func(uint) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintOption) FlatMapByte(f func(uint) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintOption) FlatMapRune(f func(uint) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintOption) FlatMapFloat32(f func(uint) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintOption) FlatMapFloat64(f func(uint) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintOption) FlatMapComplex64(f func(uint) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintOption) FlatMapComplex128(f func(uint) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintOption) FlatMapAny(f func(uint) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint8Option) FlatMapBool(f func(uint8) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint8Option) FlatMapString(f func(uint8) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint8Option) FlatMapInt(f func(uint8) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint8Option) FlatMapInt8(f func(uint8) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint8Option) FlatMapInt16(f func(uint8) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint8Option) FlatMapInt32(f func(uint8) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint8Option) FlatMapInt64(f func(uint8) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint8Option) FlatMapUint(f func(uint8) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint8Option) FlatMapUint8(f func(uint8) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint8Option) FlatMapUint16(f func(uint8) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint8Option) FlatMapUint32(f func(uint8) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint8Option) FlatMapUint64(f func(uint8) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint8Option) FlatMapUintptr(f func(uint8) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint8Option) FlatMapByte(f func(uint8) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint8Option) FlatMapRune(f func(uint8) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint8Option) FlatMapFloat32(f func(uint8) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint8Option) FlatMapFloat64(f func(uint8) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint8Option) FlatMapComplex64(f func(uint8) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint8Option) FlatMapComplex128(f func(uint8) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint8Option) FlatMapAny(f func(uint8) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint16Option) FlatMapBool(f func(uint16) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint16Option) FlatMapString(f func(uint16) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint16Option) FlatMapInt(f func(uint16) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint16Option) FlatMapInt8(f func(uint16) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint16Option) FlatMapInt16(f func(uint16) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint16Option) FlatMapInt32(f func(uint16) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint16Option) FlatMapInt64(f func(uint16) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint16Option) FlatMapUint(f func(uint16) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint16Option) FlatMapUint8(f func(uint16) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint16Option) FlatMapUint16(f func(uint16) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint16Option) FlatMapUint32(f func(uint16) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint16Option) FlatMapUint64(f func(uint16) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint16Option) FlatMapUintptr(f func(uint16) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint16Option) FlatMapByte(f func(uint16) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint16Option) FlatMapRune(f func(uint16) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint16Option) FlatMapFloat32(f func(uint16) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint16Option) FlatMapFloat64(f func(uint16) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint16Option) FlatMapComplex64(f func(uint16) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint16Option) FlatMapComplex128(f func(uint16) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint16Option) FlatMapAny(f func(uint16) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint32Option) FlatMapBool(f func(uint32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint32Option) FlatMapString(f func(uint32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint32Option) FlatMapInt(f func(uint32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint32Option) FlatMapInt8(f func(uint32) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint32Option) FlatMapInt16(f func(uint32) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint32Option) FlatMapInt32(f func(uint32) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint32Option) FlatMapInt64(f func(uint32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint32Option) FlatMapUint(f func(uint32) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint32Option) FlatMapUint8(f func(uint32) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint32Option) FlatMapUint16(f func(uint32) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint32Option) FlatMapUint32(f func(uint32) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint32Option) FlatMapUint64(f func(uint32) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint32Option) FlatMapUintptr(f func(uint32) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint32Option) FlatMapByte(f func(uint32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint32Option) FlatMapRune(f func(uint32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint32Option) FlatMapFloat32(f func(uint32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint32Option) FlatMapFloat64(f func(uint32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint32Option) FlatMapComplex64(f func(uint32) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint32Option) FlatMapComplex128(f func(uint32) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint32Option) FlatMapAny(f func(uint32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint64Option) FlatMapBool(f func(uint64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint64Option) FlatMapString(f func(uint64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint64Option) FlatMapInt(f func(uint64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint64Option) FlatMapInt8(f func(uint64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint64Option) FlatMapInt16(f func(uint64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint64Option) FlatMapInt32(f func(uint64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint64Option) FlatMapInt64(f func(uint64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint64Option) FlatMapUint(f func(uint64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint64Option) FlatMapUint8(f func(uint64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint64Option) FlatMapUint16(f func(uint64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint64Option) FlatMapUint32(f func(uint64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint64Option) FlatMapUint64(f func(uint64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint64Option) FlatMapUintptr(f func(uint64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint64Option) FlatMapByte(f func(uint64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint64Option) FlatMapRune(f func(uint64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint64Option) FlatMapFloat32(f func(uint64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint64Option) FlatMapFloat64(f func(uint64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint64Option) FlatMapComplex64(f func(uint64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint64Option) FlatMapComplex128(f func(uint64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint64Option) FlatMapAny(f func(uint64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintptrOption) FlatMapBool(f func(uintptr) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintptrOption) FlatMapString(f func(uintptr) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintptrOption) FlatMapInt(f func(uintptr) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintptrOption) FlatMapInt8(f func(uintptr) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintptrOption) FlatMapInt16(f func(uintptr) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintptrOption) FlatMapInt32(f func(uintptr) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintptrOption) FlatMapInt64(f func(uintptr) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintptrOption) FlatMapUint(f func(uintptr) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintptrOption) FlatMapUint8(f func(uintptr) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintptrOption) FlatMapUint16(f func(uintptr) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintptrOption) FlatMapUint32(f func(uintptr) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintptrOption) FlatMapUint64(f func(uintptr) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintptrOption) FlatMapUintptr(f func(uintptr) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintptrOption) FlatMapByte(f func(uintptr) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintptrOption) FlatMapRune(f func(uintptr) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintptrOption) FlatMapFloat32(f func(uintptr) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintptrOption) FlatMapFloat64(f func(uintptr) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintptrOption) FlatMapComplex64(f func(uintptr) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintptrOption) FlatMapComplex128(f func(uintptr) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintptrOption) FlatMapAny(f func(uintptr) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m ByteOption) FlatMapBool(f func(byte) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m ByteOption) FlatMapString(f func(byte) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m ByteOption) FlatMapInt(f func(byte) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m ByteOption) FlatMapInt8(f func(byte) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m ByteOption) FlatMapInt16(f func(byte) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m ByteOption) FlatMapInt32(f func(byte) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m ByteOption) FlatMapInt64(f func(byte) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m ByteOption) FlatMapUint(f func(byte) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m ByteOption) FlatMapUint8(f func(byte) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m ByteOption) FlatMapUint16(f func(byte) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m ByteOption) FlatMapUint32(f func(byte) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m ByteOption) FlatMapUint64(f func(byte) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m ByteOption) FlatMapUintptr(f func(byte) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m ByteOption) FlatMapByte(f func(byte) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m ByteOption) FlatMapRune(f func(byte) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m ByteOption) FlatMapFloat32(f func(byte) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m ByteOption) FlatMapFloat64(f func(byte) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m ByteOption) FlatMapComplex64(f func(byte) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m ByteOption) FlatMapComplex128(f func(byte) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m ByteOption) FlatMapAny(f func(byte) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m RuneOption) FlatMapBool(f func(rune) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m RuneOption) FlatMapString(f func(rune) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m RuneOption) FlatMapInt(f func(rune) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m RuneOption) FlatMapInt8(f func(rune) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m RuneOption) FlatMapInt16(f func(rune) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m RuneOption) FlatMapInt32(f func(rune) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m RuneOption) FlatMapInt64(f func(rune) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m RuneOption) FlatMapUint(f func(rune) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m RuneOption) FlatMapUint8(f func(rune) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m RuneOption) FlatMapUint16(f func(rune) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m RuneOption) FlatMapUint32(f func(rune) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m RuneOption) FlatMapUint64(f func(rune) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m RuneOption) FlatMapUintptr(f func(rune) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m RuneOption) FlatMapByte(f func(rune) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m RuneOption) FlatMapRune(f func(rune) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m RuneOption) FlatMapFloat32(f func(rune) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m RuneOption) FlatMapFloat64(f func(rune) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m RuneOption) FlatMapComplex64(f func(rune) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m RuneOption) FlatMapComplex128(f func(rune) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m RuneOption) FlatMapAny(f func(rune) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float32Option) FlatMapBool(f func(float32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float32Option) FlatMapString(f func(float32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float32Option) FlatMapInt(f func(float32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float32Option) FlatMapInt8(f func(float32) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float32Option) FlatMapInt16(f func(float32) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float32Option) FlatMapInt32(f func(float32) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float32Option) FlatMapInt64(f func(float32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float32Option) FlatMapUint(f func(float32) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float32Option) FlatMapUint8(f func(float32) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float32Option) FlatMapUint16(f func(float32) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float32Option) FlatMapUint32(f func(float32) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float32Option) FlatMapUint64(f func(float32) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float32Option) FlatMapUintptr(f func(float32) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float32Option) FlatMapByte(f func(float32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float32Option) FlatMapRune(f func(float32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float32Option) FlatMapFloat32(f func(float32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float32Option) FlatMapFloat64(f func(float32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float32Option) FlatMapComplex64(f func(float32) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float32Option) FlatMapComplex128(f func(float32) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float32Option) FlatMapAny(f func(float32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float64Option) FlatMapBool(f func(float64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float64Option) FlatMapString(f func(float64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float64Option) FlatMapInt(f func(float64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float64Option) FlatMapInt8(f func(float64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float64Option) FlatMapInt16(f func(float64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float64Option) FlatMapInt32(f func(float64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float64Option) FlatMapInt64(f func(float64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float64Option) FlatMapUint(f func(float64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float64Option) FlatMapUint8(f func(float64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float64Option) FlatMapUint16(f func(float64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float64Option) FlatMapUint32(f func(float64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float64Option) FlatMapUint64(f func(float64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float64Option) FlatMapUintptr(f func(float64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float64Option) FlatMapByte(f func(float64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float64Option) FlatMapRune(f func(float64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float64Option) FlatMapFloat32(f func(float64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float64Option) FlatMapFloat64(f func(float64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float64Option) FlatMapComplex64(f func(float64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float64Option) FlatMapComplex128(f func(float64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float64Option) FlatMapAny(f func(float64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex64Option) FlatMapBool(f func(complex64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex64Option) FlatMapString(f func(complex64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex64Option) FlatMapInt(f func(complex64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex64Option) FlatMapInt8(f func(complex64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex64Option) FlatMapInt16(f func(complex64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex64Option) FlatMapInt32(f func(complex64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex64Option) FlatMapInt64(f func(complex64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex64Option) FlatMapUint(f func(complex64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex64Option) FlatMapUint8(f func(complex64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex64Option) FlatMapUint16(f func(complex64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex64Option) FlatMapUint32(f func(complex64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex64Option) FlatMapUint64(f func(complex64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex64Option) FlatMapUintptr(f func(complex64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex64Option) FlatMapByte(f func(complex64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex64Option) FlatMapRune(f func(complex64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex64Option) FlatMapFloat32(f func(complex64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex64Option) FlatMapFloat64(f func(complex64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex64Option) FlatMapComplex64(f func(complex64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex64Option) FlatMapComplex128(f func(complex64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex64Option) FlatMapAny(f func(complex64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex128Option) FlatMapBool(f func(complex128) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex128Option) FlatMapString(f func(complex128) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex128Option) FlatMapInt(f func(complex128) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex128Option) FlatMapInt8(f func(complex128) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex128Option) FlatMapInt16(f func(complex128) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex128Option) FlatMapInt32(f func(complex128) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex128Option) FlatMapInt64(f func(complex128) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex128Option) FlatMapUint(f func(complex128) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex128Option) FlatMapUint8(f func(complex128) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex128Option) FlatMapUint16(f func(complex128) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex128Option) FlatMapUint32(f func(complex128) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex128Option) FlatMapUint64(f func(complex128) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex128Option) FlatMapUintptr(f func(complex128) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex128Option) FlatMapByte(f func(complex128) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex128Option) FlatMapRune(f func(complex128) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex128Option) FlatMapFloat32(f func(complex128) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex128Option) FlatMapFloat64(f func(complex128) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex128Option) FlatMapComplex64(f func(complex128) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex128Option) FlatMapComplex128(f func(complex128) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex128Option) FlatMapAny(f func(complex128) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m AnyOption) FlatMapBool(f func(Any) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m AnyOption) FlatMapString(f func(Any) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m AnyOption) FlatMapInt(f func(Any) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m AnyOption) FlatMapInt8(f func(Any) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m AnyOption) FlatMapInt16(f func(Any) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m AnyOption) FlatMapInt32(f func(Any) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m AnyOption) FlatMapInt64(f func(Any) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m AnyOption) FlatMapUint(f func(Any) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m AnyOption) FlatMapUint8(f func(Any) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m AnyOption) FlatMapUint16(f func(Any) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m AnyOption) FlatMapUint32(f func(Any) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m AnyOption) FlatMapUint64(f func(Any) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m AnyOption) FlatMapUintptr(f func(Any) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m AnyOption) FlatMapByte(f func(Any) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m AnyOption) FlatMapRune(f func(Any) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m AnyOption) FlatMapFloat32(f func(Any) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m AnyOption) FlatMapFloat64(f func(Any) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m AnyOption) FlatMapComplex64(f func(Any) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m AnyOption) FlatMapComplex128(f func(Any) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m AnyOption) FlatMapAny(f func(Any) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m BoolOptionOption) FlatMapBool(f func(BoolOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m BoolOptionOption) FlatMapString(f func(BoolOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m BoolOptionOption) FlatMapInt(f func(BoolOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m BoolOptionOption) FlatMapInt8(f func(BoolOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m BoolOptionOption) FlatMapInt16(f func(BoolOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m BoolOptionOption) FlatMapInt32(f func(BoolOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m BoolOptionOption) FlatMapInt64(f func(BoolOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m BoolOptionOption) FlatMapUint(f func(BoolOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m BoolOptionOption) FlatMapUint8(f func(BoolOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m BoolOptionOption) FlatMapUint16(f func(BoolOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m BoolOptionOption) FlatMapUint32(f func(BoolOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m BoolOptionOption) FlatMapUint64(f func(BoolOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m BoolOptionOption) FlatMapUintptr(f func(BoolOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m BoolOptionOption) FlatMapByte(f func(BoolOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m BoolOptionOption) FlatMapRune(f func(BoolOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m BoolOptionOption) FlatMapFloat32(f func(BoolOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m BoolOptionOption) FlatMapFloat64(f func(BoolOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m BoolOptionOption) FlatMapComplex64(f func(BoolOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m BoolOptionOption) FlatMapComplex128(f func(BoolOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m BoolOptionOption) FlatMapAny(f func(BoolOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m StringOptionOption) FlatMapBool(f func(StringOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m StringOptionOption) FlatMapString(f func(StringOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m StringOptionOption) FlatMapInt(f func(StringOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m StringOptionOption) FlatMapInt8(f func(StringOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m StringOptionOption) FlatMapInt16(f func(StringOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m StringOptionOption) FlatMapInt32(f func(StringOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m StringOptionOption) FlatMapInt64(f func(StringOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m StringOptionOption) FlatMapUint(f func(StringOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m StringOptionOption) FlatMapUint8(f func(StringOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m StringOptionOption) FlatMapUint16(f func(StringOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m StringOptionOption) FlatMapUint32(f func(StringOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m StringOptionOption) FlatMapUint64(f func(StringOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m StringOptionOption) FlatMapUintptr(f func(StringOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m StringOptionOption) FlatMapByte(f func(StringOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m StringOptionOption) FlatMapRune(f func(StringOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m StringOptionOption) FlatMapFloat32(f func(StringOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m StringOptionOption) FlatMapFloat64(f func(StringOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m StringOptionOption) FlatMapComplex64(f func(StringOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m StringOptionOption) FlatMapComplex128(f func(StringOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m StringOptionOption) FlatMapAny(f func(StringOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m IntOptionOption) FlatMapBool(f func(IntOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m IntOptionOption) FlatMapString(f func(IntOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m IntOptionOption) FlatMapInt(f func(IntOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m IntOptionOption) FlatMapInt8(f func(IntOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m IntOptionOption) FlatMapInt16(f func(IntOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m IntOptionOption) FlatMapInt32(f func(IntOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m IntOptionOption) FlatMapInt64(f func(IntOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m IntOptionOption) FlatMapUint(f func(IntOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m IntOptionOption) FlatMapUint8(f func(IntOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m IntOptionOption) FlatMapUint16(f func(IntOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m IntOptionOption) FlatMapUint32(f func(IntOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m IntOptionOption) FlatMapUint64(f func(IntOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m IntOptionOption) FlatMapUintptr(f func(IntOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m IntOptionOption) FlatMapByte(f func(IntOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m IntOptionOption) FlatMapRune(f func(IntOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m IntOptionOption) FlatMapFloat32(f func(IntOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m IntOptionOption) FlatMapFloat64(f func(IntOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m IntOptionOption) FlatMapComplex64(f func(IntOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m IntOptionOption) FlatMapComplex128(f func(IntOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m IntOptionOption) FlatMapAny(f func(IntOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int8OptionOption) FlatMapBool(f func(Int8Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int8OptionOption) FlatMapString(f func(Int8Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int8OptionOption) FlatMapInt(f func(Int8Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int8OptionOption) FlatMapInt8(f func(Int8Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int8OptionOption) FlatMapInt16(f func(Int8Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int8OptionOption) FlatMapInt32(f func(Int8Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int8OptionOption) FlatMapInt64(f func(Int8Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int8OptionOption) FlatMapUint(f func(Int8Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int8OptionOption) FlatMapUint8(f func(Int8Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int8OptionOption) FlatMapUint16(f func(Int8Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int8OptionOption) FlatMapUint32(f func(Int8Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int8OptionOption) FlatMapUint64(f func(Int8Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int8OptionOption) FlatMapUintptr(f func(Int8Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int8OptionOption) FlatMapByte(f func(Int8Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int8OptionOption) FlatMapRune(f func(Int8Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int8OptionOption) FlatMapFloat32(f func(Int8Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int8OptionOption) FlatMapFloat64(f func(Int8Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int8OptionOption) FlatMapComplex64(f func(Int8Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int8OptionOption) FlatMapComplex128(f func(Int8Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int8OptionOption) FlatMapAny(f func(Int8Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int16OptionOption) FlatMapBool(f func(Int16Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int16OptionOption) FlatMapString(f func(Int16Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int16OptionOption) FlatMapInt(f func(Int16Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int16OptionOption) FlatMapInt8(f func(Int16Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int16OptionOption) FlatMapInt16(f func(Int16Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int16OptionOption) FlatMapInt32(f func(Int16Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int16OptionOption) FlatMapInt64(f func(Int16Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int16OptionOption) FlatMapUint(f func(Int16Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int16OptionOption) FlatMapUint8(f func(Int16Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int16OptionOption) FlatMapUint16(f func(Int16Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int16OptionOption) FlatMapUint32(f func(Int16Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int16OptionOption) FlatMapUint64(f func(Int16Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int16OptionOption) FlatMapUintptr(f func(Int16Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int16OptionOption) FlatMapByte(f func(Int16Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int16OptionOption) FlatMapRune(f func(Int16Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int16OptionOption) FlatMapFloat32(f func(Int16Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int16OptionOption) FlatMapFloat64(f func(Int16Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int16OptionOption) FlatMapComplex64(f func(Int16Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int16OptionOption) FlatMapComplex128(f func(Int16Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int16OptionOption) FlatMapAny(f func(Int16Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int32OptionOption) FlatMapBool(f func(Int32Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int32OptionOption) FlatMapString(f func(Int32Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int32OptionOption) FlatMapInt(f func(Int32Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int32OptionOption) FlatMapInt8(f func(Int32Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int32OptionOption) FlatMapInt16(f func(Int32Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int32OptionOption) FlatMapInt32(f func(Int32Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int32OptionOption) FlatMapInt64(f func(Int32Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int32OptionOption) FlatMapUint(f func(Int32Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int32OptionOption) FlatMapUint8(f func(Int32Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int32OptionOption) FlatMapUint16(f func(Int32Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int32OptionOption) FlatMapUint32(f func(Int32Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int32OptionOption) FlatMapUint64(f func(Int32Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int32OptionOption) FlatMapUintptr(f func(Int32Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int32OptionOption) FlatMapByte(f func(Int32Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int32OptionOption) FlatMapRune(f func(Int32Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int32OptionOption) FlatMapFloat32(f func(Int32Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int32OptionOption) FlatMapFloat64(f func(Int32Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int32OptionOption) FlatMapComplex64(f func(Int32Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int32OptionOption) FlatMapComplex128(f func(Int32Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int32OptionOption) FlatMapAny(f func(Int32Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int64OptionOption) FlatMapBool(f func(Int64Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int64OptionOption) FlatMapString(f func(Int64Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int64OptionOption) FlatMapInt(f func(Int64Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int64OptionOption) FlatMapInt8(f func(Int64Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int64OptionOption) FlatMapInt16(f func(Int64Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int64OptionOption) FlatMapInt32(f func(Int64Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int64OptionOption) FlatMapInt64(f func(Int64Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int64OptionOption) FlatMapUint(f func(Int64Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int64OptionOption) FlatMapUint8(f func(Int64Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int64OptionOption) FlatMapUint16(f func(Int64Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int64OptionOption) FlatMapUint32(f func(Int64Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int64OptionOption) FlatMapUint64(f func(Int64Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int64OptionOption) FlatMapUintptr(f func(Int64Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int64OptionOption) FlatMapByte(f func(Int64Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int64OptionOption) FlatMapRune(f func(Int64Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int64OptionOption) FlatMapFloat32(f func(Int64Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int64OptionOption) FlatMapFloat64(f func(Int64Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int64OptionOption) FlatMapComplex64(f func(Int64Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int64OptionOption) FlatMapComplex128(f func(Int64Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int64OptionOption) FlatMapAny(f func(Int64Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintOptionOption) FlatMapBool(f func(UintOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintOptionOption) FlatMapString(f func(UintOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintOptionOption) FlatMapInt(f func(UintOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintOptionOption) FlatMapInt8(f func(UintOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintOptionOption) FlatMapInt16(f func(UintOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintOptionOption) FlatMapInt32(f func(UintOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintOptionOption) FlatMapInt64(f func(UintOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintOptionOption) FlatMapUint(f func(UintOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintOptionOption) FlatMapUint8(f func(UintOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintOptionOption) FlatMapUint16(f func(UintOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintOptionOption) FlatMapUint32(f func(UintOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintOptionOption) FlatMapUint64(f func(UintOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintOptionOption) FlatMapUintptr(f func(UintOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintOptionOption) FlatMapByte(f func(UintOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintOptionOption) FlatMapRune(f func(UintOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintOptionOption) FlatMapFloat32(f func(UintOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintOptionOption) FlatMapFloat64(f func(UintOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintOptionOption) FlatMapComplex64(f func(UintOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintOptionOption) FlatMapComplex128(f func(UintOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintOptionOption) FlatMapAny(f func(UintOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint8OptionOption) FlatMapBool(f func(Uint8Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint8OptionOption) FlatMapString(f func(Uint8Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint8OptionOption) FlatMapInt(f func(Uint8Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint8OptionOption) FlatMapInt8(f func(Uint8Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint8OptionOption) FlatMapInt16(f func(Uint8Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint8OptionOption) FlatMapInt32(f func(Uint8Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint8OptionOption) FlatMapInt64(f func(Uint8Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint8OptionOption) FlatMapUint(f func(Uint8Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint8OptionOption) FlatMapUint8(f func(Uint8Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint8OptionOption) FlatMapUint16(f func(Uint8Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint8OptionOption) FlatMapUint32(f func(Uint8Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint8OptionOption) FlatMapUint64(f func(Uint8Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint8OptionOption) FlatMapUintptr(f func(Uint8Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint8OptionOption) FlatMapByte(f func(Uint8Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint8OptionOption) FlatMapRune(f func(Uint8Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint8OptionOption) FlatMapFloat32(f func(Uint8Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint8OptionOption) FlatMapFloat64(f func(Uint8Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint8OptionOption) FlatMapComplex64(f func(Uint8Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint8OptionOption) FlatMapComplex128(f func(Uint8Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint8OptionOption) FlatMapAny(f func(Uint8Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint16OptionOption) FlatMapBool(f func(Uint16Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint16OptionOption) FlatMapString(f func(Uint16Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint16OptionOption) FlatMapInt(f func(Uint16Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint16OptionOption) FlatMapInt8(f func(Uint16Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint16OptionOption) FlatMapInt16(f func(Uint16Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint16OptionOption) FlatMapInt32(f func(Uint16Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint16OptionOption) FlatMapInt64(f func(Uint16Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint16OptionOption) FlatMapUint(f func(Uint16Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint16OptionOption) FlatMapUint8(f func(Uint16Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint16OptionOption) FlatMapUint16(f func(Uint16Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint16OptionOption) FlatMapUint32(f func(Uint16Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint16OptionOption) FlatMapUint64(f func(Uint16Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint16OptionOption) FlatMapUintptr(f func(Uint16Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint16OptionOption) FlatMapByte(f func(Uint16Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint16OptionOption) FlatMapRune(f func(Uint16Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint16OptionOption) FlatMapFloat32(f func(Uint16Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint16OptionOption) FlatMapFloat64(f func(Uint16Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint16OptionOption) FlatMapComplex64(f func(Uint16Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint16OptionOption) FlatMapComplex128(f func(Uint16Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint16OptionOption) FlatMapAny(f func(Uint16Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint32OptionOption) FlatMapBool(f func(Uint32Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint32OptionOption) FlatMapString(f func(Uint32Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint32OptionOption) FlatMapInt(f func(Uint32Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint32OptionOption) FlatMapInt8(f func(Uint32Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint32OptionOption) FlatMapInt16(f func(Uint32Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint32OptionOption) FlatMapInt32(f func(Uint32Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint32OptionOption) FlatMapInt64(f func(Uint32Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint32OptionOption) FlatMapUint(f func(Uint32Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint32OptionOption) FlatMapUint8(f func(Uint32Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint32OptionOption) FlatMapUint16(f func(Uint32Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint32OptionOption) FlatMapUint32(f func(Uint32Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint32OptionOption) FlatMapUint64(f func(Uint32Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint32OptionOption) FlatMapUintptr(f func(Uint32Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint32OptionOption) FlatMapByte(f func(Uint32Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint32OptionOption) FlatMapRune(f func(Uint32Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint32OptionOption) FlatMapFloat32(f func(Uint32Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint32OptionOption) FlatMapFloat64(f func(Uint32Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint32OptionOption) FlatMapComplex64(f func(Uint32Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint32OptionOption) FlatMapComplex128(f func(Uint32Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint32OptionOption) FlatMapAny(f func(Uint32Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint64OptionOption) FlatMapBool(f func(Uint64Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint64OptionOption) FlatMapString(f func(Uint64Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint64OptionOption) FlatMapInt(f func(Uint64Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint64OptionOption) FlatMapInt8(f func(Uint64Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint64OptionOption) FlatMapInt16(f func(Uint64Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint64OptionOption) FlatMapInt32(f func(Uint64Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint64OptionOption) FlatMapInt64(f func(Uint64Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint64OptionOption) FlatMapUint(f func(Uint64Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint64OptionOption) FlatMapUint8(f func(Uint64Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint64OptionOption) FlatMapUint16(f func(Uint64Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint64OptionOption) FlatMapUint32(f func(Uint64Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint64OptionOption) FlatMapUint64(f func(Uint64Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint64OptionOption) FlatMapUintptr(f func(Uint64Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint64OptionOption) FlatMapByte(f func(Uint64Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint64OptionOption) FlatMapRune(f func(Uint64Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint64OptionOption) FlatMapFloat32(f func(Uint64Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint64OptionOption) FlatMapFloat64(f func(Uint64Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint64OptionOption) FlatMapComplex64(f func(Uint64Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint64OptionOption) FlatMapComplex128(f func(Uint64Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint64OptionOption) FlatMapAny(f func(Uint64Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintptrOptionOption) FlatMapBool(f func(UintptrOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintptrOptionOption) FlatMapString(f func(UintptrOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintptrOptionOption) FlatMapInt(f func(UintptrOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintptrOptionOption) FlatMapInt8(f func(UintptrOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintptrOptionOption) FlatMapInt16(f func(UintptrOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintptrOptionOption) FlatMapInt32(f func(UintptrOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintptrOptionOption) FlatMapInt64(f func(UintptrOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintptrOptionOption) FlatMapUint(f func(UintptrOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintptrOptionOption) FlatMapUint8(f func(UintptrOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintptrOptionOption) FlatMapUint16(f func(UintptrOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintptrOptionOption) FlatMapUint32(f func(UintptrOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintptrOptionOption) FlatMapUint64(f func(UintptrOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintptrOptionOption) FlatMapUintptr(f func(UintptrOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintptrOptionOption) FlatMapByte(f func(UintptrOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintptrOptionOption) FlatMapRune(f func(UintptrOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintptrOptionOption) FlatMapFloat32(f func(UintptrOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintptrOptionOption) FlatMapFloat64(f func(UintptrOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintptrOptionOption) FlatMapComplex64(f func(UintptrOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintptrOptionOption) FlatMapComplex128(f func(UintptrOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintptrOptionOption) FlatMapAny(f func(UintptrOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m ByteOptionOption) FlatMapBool(f func(ByteOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m ByteOptionOption) FlatMapString(f func(ByteOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m ByteOptionOption) FlatMapInt(f func(ByteOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m ByteOptionOption) FlatMapInt8(f func(ByteOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m ByteOptionOption) FlatMapInt16(f func(ByteOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m ByteOptionOption) FlatMapInt32(f func(ByteOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m ByteOptionOption) FlatMapInt64(f func(ByteOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m ByteOptionOption) FlatMapUint(f func(ByteOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m ByteOptionOption) FlatMapUint8(f func(ByteOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m ByteOptionOption) FlatMapUint16(f func(ByteOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m ByteOptionOption) FlatMapUint32(f func(ByteOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m ByteOptionOption) FlatMapUint64(f func(ByteOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m ByteOptionOption) FlatMapUintptr(f func(ByteOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m ByteOptionOption) FlatMapByte(f func(ByteOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m ByteOptionOption) FlatMapRune(f func(ByteOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m ByteOptionOption) FlatMapFloat32(f func(ByteOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m ByteOptionOption) FlatMapFloat64(f func(ByteOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m ByteOptionOption) FlatMapComplex64(f func(ByteOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m ByteOptionOption) FlatMapComplex128(f func(ByteOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m ByteOptionOption) FlatMapAny(f func(ByteOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m RuneOptionOption) FlatMapBool(f func(RuneOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m RuneOptionOption) FlatMapString(f func(RuneOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m RuneOptionOption) FlatMapInt(f func(RuneOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m RuneOptionOption) FlatMapInt8(f func(RuneOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m RuneOptionOption) FlatMapInt16(f func(RuneOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m RuneOptionOption) FlatMapInt32(f func(RuneOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m RuneOptionOption) FlatMapInt64(f func(RuneOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m RuneOptionOption) FlatMapUint(f func(RuneOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m RuneOptionOption) FlatMapUint8(f func(RuneOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m RuneOptionOption) FlatMapUint16(f func(RuneOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m RuneOptionOption) FlatMapUint32(f func(RuneOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m RuneOptionOption) FlatMapUint64(f func(RuneOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m RuneOptionOption) FlatMapUintptr(f func(RuneOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m RuneOptionOption) FlatMapByte(f func(RuneOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m RuneOptionOption) FlatMapRune(f func(RuneOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m RuneOptionOption) FlatMapFloat32(f func(RuneOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m RuneOptionOption) FlatMapFloat64(f func(RuneOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m RuneOptionOption) FlatMapComplex64(f func(RuneOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m RuneOptionOption) FlatMapComplex128(f func(RuneOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m RuneOptionOption) FlatMapAny(f func(RuneOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float32OptionOption) FlatMapBool(f func(Float32Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float32OptionOption) FlatMapString(f func(Float32Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float32OptionOption) FlatMapInt(f func(Float32Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float32OptionOption) FlatMapInt8(f func(Float32Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float32OptionOption) FlatMapInt16(f func(Float32Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float32OptionOption) FlatMapInt32(f func(Float32Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float32OptionOption) FlatMapInt64(f func(Float32Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float32OptionOption) FlatMapUint(f func(Float32Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float32OptionOption) FlatMapUint8(f func(Float32Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float32OptionOption) FlatMapUint16(f func(Float32Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float32OptionOption) FlatMapUint32(f func(Float32Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float32OptionOption) FlatMapUint64(f func(Float32Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float32OptionOption) FlatMapUintptr(f func(Float32Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float32OptionOption) FlatMapByte(f func(Float32Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float32OptionOption) FlatMapRune(f func(Float32Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float32OptionOption) FlatMapFloat32(f func(Float32Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float32OptionOption) FlatMapFloat64(f func(Float32Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float32OptionOption) FlatMapComplex64(f func(Float32Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float32OptionOption) FlatMapComplex128(f func(Float32Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float32OptionOption) FlatMapAny(f func(Float32Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float64OptionOption) FlatMapBool(f func(Float64Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float64OptionOption) FlatMapString(f func(Float64Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float64OptionOption) FlatMapInt(f func(Float64Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float64OptionOption) FlatMapInt8(f func(Float64Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float64OptionOption) FlatMapInt16(f func(Float64Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float64OptionOption) FlatMapInt32(f func(Float64Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float64OptionOption) FlatMapInt64(f func(Float64Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float64OptionOption) FlatMapUint(f func(Float64Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float64OptionOption) FlatMapUint8(f func(Float64Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float64OptionOption) FlatMapUint16(f func(Float64Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float64OptionOption) FlatMapUint32(f func(Float64Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float64OptionOption) FlatMapUint64(f func(Float64Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float64OptionOption) FlatMapUintptr(f func(Float64Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float64OptionOption) FlatMapByte(f func(Float64Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float64OptionOption) FlatMapRune(f func(Float64Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float64OptionOption) FlatMapFloat32(f func(Float64Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float64OptionOption) FlatMapFloat64(f func(Float64Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float64OptionOption) FlatMapComplex64(f func(Float64Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float64OptionOption) FlatMapComplex128(f func(Float64Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float64OptionOption) FlatMapAny(f func(Float64Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex64OptionOption) FlatMapBool(f func(Complex64Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex64OptionOption) FlatMapString(f func(Complex64Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex64OptionOption) FlatMapInt(f func(Complex64Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex64OptionOption) FlatMapInt8(f func(Complex64Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex64OptionOption) FlatMapInt16(f func(Complex64Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex64OptionOption) FlatMapInt32(f func(Complex64Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex64OptionOption) FlatMapInt64(f func(Complex64Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex64OptionOption) FlatMapUint(f func(Complex64Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex64OptionOption) FlatMapUint8(f func(Complex64Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex64OptionOption) FlatMapUint16(f func(Complex64Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex64OptionOption) FlatMapUint32(f func(Complex64Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex64OptionOption) FlatMapUint64(f func(Complex64Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex64OptionOption) FlatMapUintptr(f func(Complex64Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex64OptionOption) FlatMapByte(f func(Complex64Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex64OptionOption) FlatMapRune(f func(Complex64Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex64OptionOption) FlatMapFloat32(f func(Complex64Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex64OptionOption) FlatMapFloat64(f func(Complex64Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex64OptionOption) FlatMapComplex64(f func(Complex64Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex64OptionOption) FlatMapComplex128(f func(Complex64Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex64OptionOption) FlatMapAny(f func(Complex64Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex128OptionOption) FlatMapBool(f func(Complex128Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex128OptionOption) FlatMapString(f func(Complex128Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex128OptionOption) FlatMapInt(f func(Complex128Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex128OptionOption) FlatMapInt8(f func(Complex128Option) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex128OptionOption) FlatMapInt16(f func(Complex128Option) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex128OptionOption) FlatMapInt32(f func(Complex128Option) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex128OptionOption) FlatMapInt64(f func(Complex128Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex128OptionOption) FlatMapUint(f func(Complex128Option) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex128OptionOption) FlatMapUint8(f func(Complex128Option) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex128OptionOption) FlatMapUint16(f func(Complex128Option) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex128OptionOption) FlatMapUint32(f func(Complex128Option) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex128OptionOption) FlatMapUint64(f func(Complex128Option) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex128OptionOption) FlatMapUintptr(f func(Complex128Option) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex128OptionOption) FlatMapByte(f func(Complex128Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex128OptionOption) FlatMapRune(f func(Complex128Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex128OptionOption) FlatMapFloat32(f func(Complex128Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex128OptionOption) FlatMapFloat64(f func(Complex128Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex128OptionOption) FlatMapComplex64(f func(Complex128Option) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex128OptionOption) FlatMapComplex128(f func(Complex128Option) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex128OptionOption) FlatMapAny(f func(Complex128Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m AnyOptionOption) FlatMapBool(f func(AnyOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m AnyOptionOption) FlatMapString(f func(AnyOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m AnyOptionOption) FlatMapInt(f func(AnyOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m AnyOptionOption) FlatMapInt8(f func(AnyOption) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m AnyOptionOption) FlatMapInt16(f func(AnyOption) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m AnyOptionOption) FlatMapInt32(f func(AnyOption) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m AnyOptionOption) FlatMapInt64(f func(AnyOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m AnyOptionOption) FlatMapUint(f func(AnyOption) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m AnyOptionOption) FlatMapUint8(f func(AnyOption) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m AnyOptionOption) FlatMapUint16(f func(AnyOption) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m AnyOptionOption) FlatMapUint32(f func(AnyOption) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m AnyOptionOption) FlatMapUint64(f func(AnyOption) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m AnyOptionOption) FlatMapUintptr(f func(AnyOption) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m AnyOptionOption) FlatMapByte(f func(AnyOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m AnyOptionOption) FlatMapRune(f func(AnyOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m AnyOptionOption) FlatMapFloat32(f func(AnyOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m AnyOptionOption) FlatMapFloat64(f func(AnyOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m AnyOptionOption) FlatMapComplex64(f func(AnyOption) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m AnyOptionOption) FlatMapComplex128(f func(AnyOption) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m AnyOptionOption) FlatMapAny(f func(AnyOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m BoolArrOption) FlatMapBool(f func([]bool) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m BoolArrOption) FlatMapString(f func([]bool) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m BoolArrOption) FlatMapInt(f func([]bool) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m BoolArrOption) FlatMapInt8(f func([]bool) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m BoolArrOption) FlatMapInt16(f func([]bool) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m BoolArrOption) FlatMapInt32(f func([]bool) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m BoolArrOption) FlatMapInt64(f func([]bool) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m BoolArrOption) FlatMapUint(f func([]bool) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m BoolArrOption) FlatMapUint8(f func([]bool) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m BoolArrOption) FlatMapUint16(f func([]bool) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m BoolArrOption) FlatMapUint32(f func([]bool) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m BoolArrOption) FlatMapUint64(f func([]bool) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m BoolArrOption) FlatMapUintptr(f func([]bool) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m BoolArrOption) FlatMapByte(f func([]bool) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m BoolArrOption) FlatMapRune(f func([]bool) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m BoolArrOption) FlatMapFloat32(f func([]bool) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m BoolArrOption) FlatMapFloat64(f func([]bool) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m BoolArrOption) FlatMapComplex64(f func([]bool) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m BoolArrOption) FlatMapComplex128(f func([]bool) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m BoolArrOption) FlatMapAny(f func([]bool) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m StringArrOption) FlatMapBool(f func([]string) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m StringArrOption) FlatMapString(f func([]string) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m StringArrOption) FlatMapInt(f func([]string) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m StringArrOption) FlatMapInt8(f func([]string) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m StringArrOption) FlatMapInt16(f func([]string) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m StringArrOption) FlatMapInt32(f func([]string) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m StringArrOption) FlatMapInt64(f func([]string) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m StringArrOption) FlatMapUint(f func([]string) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m StringArrOption) FlatMapUint8(f func([]string) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m StringArrOption) FlatMapUint16(f func([]string) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m StringArrOption) FlatMapUint32(f func([]string) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m StringArrOption) FlatMapUint64(f func([]string) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m StringArrOption) FlatMapUintptr(f func([]string) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m StringArrOption) FlatMapByte(f func([]string) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m StringArrOption) FlatMapRune(f func([]string) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m StringArrOption) FlatMapFloat32(f func([]string) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m StringArrOption) FlatMapFloat64(f func([]string) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m StringArrOption) FlatMapComplex64(f func([]string) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m StringArrOption) FlatMapComplex128(f func([]string) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m StringArrOption) FlatMapAny(f func([]string) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m IntArrOption) FlatMapBool(f func([]int) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m IntArrOption) FlatMapString(f func([]int) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m IntArrOption) FlatMapInt(f func([]int) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m IntArrOption) FlatMapInt8(f func([]int) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m IntArrOption) FlatMapInt16(f func([]int) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m IntArrOption) FlatMapInt32(f func([]int) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m IntArrOption) FlatMapInt64(f func([]int) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m IntArrOption) FlatMapUint(f func([]int) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m IntArrOption) FlatMapUint8(f func([]int) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m IntArrOption) FlatMapUint16(f func([]int) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m IntArrOption) FlatMapUint32(f func([]int) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m IntArrOption) FlatMapUint64(f func([]int) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m IntArrOption) FlatMapUintptr(f func([]int) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m IntArrOption) FlatMapByte(f func([]int) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m IntArrOption) FlatMapRune(f func([]int) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m IntArrOption) FlatMapFloat32(f func([]int) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m IntArrOption) FlatMapFloat64(f func([]int) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m IntArrOption) FlatMapComplex64(f func([]int) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m IntArrOption) FlatMapComplex128(f func([]int) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m IntArrOption) FlatMapAny(f func([]int) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int8ArrOption) FlatMapBool(f func([]int8) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int8ArrOption) FlatMapString(f func([]int8) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int8ArrOption) FlatMapInt(f func([]int8) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int8ArrOption) FlatMapInt8(f func([]int8) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int8ArrOption) FlatMapInt16(f func([]int8) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int8ArrOption) FlatMapInt32(f func([]int8) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int8ArrOption) FlatMapInt64(f func([]int8) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int8ArrOption) FlatMapUint(f func([]int8) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int8ArrOption) FlatMapUint8(f func([]int8) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int8ArrOption) FlatMapUint16(f func([]int8) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int8ArrOption) FlatMapUint32(f func([]int8) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int8ArrOption) FlatMapUint64(f func([]int8) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int8ArrOption) FlatMapUintptr(f func([]int8) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int8ArrOption) FlatMapByte(f func([]int8) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int8ArrOption) FlatMapRune(f func([]int8) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int8ArrOption) FlatMapFloat32(f func([]int8) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int8ArrOption) FlatMapFloat64(f func([]int8) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int8ArrOption) FlatMapComplex64(f func([]int8) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int8ArrOption) FlatMapComplex128(f func([]int8) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int8ArrOption) FlatMapAny(f func([]int8) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int16ArrOption) FlatMapBool(f func([]int16) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int16ArrOption) FlatMapString(f func([]int16) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int16ArrOption) FlatMapInt(f func([]int16) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int16ArrOption) FlatMapInt8(f func([]int16) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int16ArrOption) FlatMapInt16(f func([]int16) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int16ArrOption) FlatMapInt32(f func([]int16) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int16ArrOption) FlatMapInt64(f func([]int16) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int16ArrOption) FlatMapUint(f func([]int16) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int16ArrOption) FlatMapUint8(f func([]int16) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int16ArrOption) FlatMapUint16(f func([]int16) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int16ArrOption) FlatMapUint32(f func([]int16) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int16ArrOption) FlatMapUint64(f func([]int16) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int16ArrOption) FlatMapUintptr(f func([]int16) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int16ArrOption) FlatMapByte(f func([]int16) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int16ArrOption) FlatMapRune(f func([]int16) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int16ArrOption) FlatMapFloat32(f func([]int16) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int16ArrOption) FlatMapFloat64(f func([]int16) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int16ArrOption) FlatMapComplex64(f func([]int16) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int16ArrOption) FlatMapComplex128(f func([]int16) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int16ArrOption) FlatMapAny(f func([]int16) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int32ArrOption) FlatMapBool(f func([]int32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int32ArrOption) FlatMapString(f func([]int32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int32ArrOption) FlatMapInt(f func([]int32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int32ArrOption) FlatMapInt8(f func([]int32) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int32ArrOption) FlatMapInt16(f func([]int32) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int32ArrOption) FlatMapInt32(f func([]int32) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int32ArrOption) FlatMapInt64(f func([]int32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int32ArrOption) FlatMapUint(f func([]int32) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int32ArrOption) FlatMapUint8(f func([]int32) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int32ArrOption) FlatMapUint16(f func([]int32) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int32ArrOption) FlatMapUint32(f func([]int32) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int32ArrOption) FlatMapUint64(f func([]int32) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int32ArrOption) FlatMapUintptr(f func([]int32) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int32ArrOption) FlatMapByte(f func([]int32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int32ArrOption) FlatMapRune(f func([]int32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int32ArrOption) FlatMapFloat32(f func([]int32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int32ArrOption) FlatMapFloat64(f func([]int32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int32ArrOption) FlatMapComplex64(f func([]int32) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int32ArrOption) FlatMapComplex128(f func([]int32) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int32ArrOption) FlatMapAny(f func([]int32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int64ArrOption) FlatMapBool(f func([]int64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int64ArrOption) FlatMapString(f func([]int64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int64ArrOption) FlatMapInt(f func([]int64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int64ArrOption) FlatMapInt8(f func([]int64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int64ArrOption) FlatMapInt16(f func([]int64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int64ArrOption) FlatMapInt32(f func([]int64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int64ArrOption) FlatMapInt64(f func([]int64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int64ArrOption) FlatMapUint(f func([]int64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int64ArrOption) FlatMapUint8(f func([]int64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int64ArrOption) FlatMapUint16(f func([]int64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int64ArrOption) FlatMapUint32(f func([]int64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int64ArrOption) FlatMapUint64(f func([]int64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int64ArrOption) FlatMapUintptr(f func([]int64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int64ArrOption) FlatMapByte(f func([]int64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int64ArrOption) FlatMapRune(f func([]int64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int64ArrOption) FlatMapFloat32(f func([]int64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int64ArrOption) FlatMapFloat64(f func([]int64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int64ArrOption) FlatMapComplex64(f func([]int64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int64ArrOption) FlatMapComplex128(f func([]int64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int64ArrOption) FlatMapAny(f func([]int64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintArrOption) FlatMapBool(f func([]uint) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintArrOption) FlatMapString(f func([]uint) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintArrOption) FlatMapInt(f func([]uint) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintArrOption) FlatMapInt8(f func([]uint) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintArrOption) FlatMapInt16(f func([]uint) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintArrOption) FlatMapInt32(f func([]uint) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintArrOption) FlatMapInt64(f func([]uint) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintArrOption) FlatMapUint(f func([]uint) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintArrOption) FlatMapUint8(f func([]uint) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintArrOption) FlatMapUint16(f func([]uint) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintArrOption) FlatMapUint32(f func([]uint) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintArrOption) FlatMapUint64(f func([]uint) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintArrOption) FlatMapUintptr(f func([]uint) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintArrOption) FlatMapByte(f func([]uint) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintArrOption) FlatMapRune(f func([]uint) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintArrOption) FlatMapFloat32(f func([]uint) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintArrOption) FlatMapFloat64(f func([]uint) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintArrOption) FlatMapComplex64(f func([]uint) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintArrOption) FlatMapComplex128(f func([]uint) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintArrOption) FlatMapAny(f func([]uint) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint8ArrOption) FlatMapBool(f func([]uint8) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint8ArrOption) FlatMapString(f func([]uint8) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint8ArrOption) FlatMapInt(f func([]uint8) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint8ArrOption) FlatMapInt8(f func([]uint8) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint8ArrOption) FlatMapInt16(f func([]uint8) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint8ArrOption) FlatMapInt32(f func([]uint8) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint8ArrOption) FlatMapInt64(f func([]uint8) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint8ArrOption) FlatMapUint(f func([]uint8) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint8ArrOption) FlatMapUint8(f func([]uint8) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint8ArrOption) FlatMapUint16(f func([]uint8) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint8ArrOption) FlatMapUint32(f func([]uint8) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint8ArrOption) FlatMapUint64(f func([]uint8) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint8ArrOption) FlatMapUintptr(f func([]uint8) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint8ArrOption) FlatMapByte(f func([]uint8) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint8ArrOption) FlatMapRune(f func([]uint8) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint8ArrOption) FlatMapFloat32(f func([]uint8) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint8ArrOption) FlatMapFloat64(f func([]uint8) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint8ArrOption) FlatMapComplex64(f func([]uint8) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint8ArrOption) FlatMapComplex128(f func([]uint8) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint8ArrOption) FlatMapAny(f func([]uint8) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint16ArrOption) FlatMapBool(f func([]uint16) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint16ArrOption) FlatMapString(f func([]uint16) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint16ArrOption) FlatMapInt(f func([]uint16) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint16ArrOption) FlatMapInt8(f func([]uint16) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint16ArrOption) FlatMapInt16(f func([]uint16) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint16ArrOption) FlatMapInt32(f func([]uint16) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint16ArrOption) FlatMapInt64(f func([]uint16) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint16ArrOption) FlatMapUint(f func([]uint16) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint16ArrOption) FlatMapUint8(f func([]uint16) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint16ArrOption) FlatMapUint16(f func([]uint16) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint16ArrOption) FlatMapUint32(f func([]uint16) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint16ArrOption) FlatMapUint64(f func([]uint16) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint16ArrOption) FlatMapUintptr(f func([]uint16) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint16ArrOption) FlatMapByte(f func([]uint16) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint16ArrOption) FlatMapRune(f func([]uint16) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint16ArrOption) FlatMapFloat32(f func([]uint16) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint16ArrOption) FlatMapFloat64(f func([]uint16) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint16ArrOption) FlatMapComplex64(f func([]uint16) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint16ArrOption) FlatMapComplex128(f func([]uint16) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint16ArrOption) FlatMapAny(f func([]uint16) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint32ArrOption) FlatMapBool(f func([]uint32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint32ArrOption) FlatMapString(f func([]uint32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint32ArrOption) FlatMapInt(f func([]uint32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint32ArrOption) FlatMapInt8(f func([]uint32) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint32ArrOption) FlatMapInt16(f func([]uint32) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint32ArrOption) FlatMapInt32(f func([]uint32) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint32ArrOption) FlatMapInt64(f func([]uint32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint32ArrOption) FlatMapUint(f func([]uint32) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint32ArrOption) FlatMapUint8(f func([]uint32) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint32ArrOption) FlatMapUint16(f func([]uint32) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint32ArrOption) FlatMapUint32(f func([]uint32) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint32ArrOption) FlatMapUint64(f func([]uint32) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint32ArrOption) FlatMapUintptr(f func([]uint32) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint32ArrOption) FlatMapByte(f func([]uint32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint32ArrOption) FlatMapRune(f func([]uint32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint32ArrOption) FlatMapFloat32(f func([]uint32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint32ArrOption) FlatMapFloat64(f func([]uint32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint32ArrOption) FlatMapComplex64(f func([]uint32) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint32ArrOption) FlatMapComplex128(f func([]uint32) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint32ArrOption) FlatMapAny(f func([]uint32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint64ArrOption) FlatMapBool(f func([]uint64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint64ArrOption) FlatMapString(f func([]uint64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint64ArrOption) FlatMapInt(f func([]uint64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint64ArrOption) FlatMapInt8(f func([]uint64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint64ArrOption) FlatMapInt16(f func([]uint64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint64ArrOption) FlatMapInt32(f func([]uint64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint64ArrOption) FlatMapInt64(f func([]uint64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint64ArrOption) FlatMapUint(f func([]uint64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint64ArrOption) FlatMapUint8(f func([]uint64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint64ArrOption) FlatMapUint16(f func([]uint64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint64ArrOption) FlatMapUint32(f func([]uint64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint64ArrOption) FlatMapUint64(f func([]uint64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint64ArrOption) FlatMapUintptr(f func([]uint64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint64ArrOption) FlatMapByte(f func([]uint64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint64ArrOption) FlatMapRune(f func([]uint64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint64ArrOption) FlatMapFloat32(f func([]uint64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint64ArrOption) FlatMapFloat64(f func([]uint64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint64ArrOption) FlatMapComplex64(f func([]uint64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint64ArrOption) FlatMapComplex128(f func([]uint64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint64ArrOption) FlatMapAny(f func([]uint64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintptrArrOption) FlatMapBool(f func([]uintptr) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintptrArrOption) FlatMapString(f func([]uintptr) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintptrArrOption) FlatMapInt(f func([]uintptr) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintptrArrOption) FlatMapInt8(f func([]uintptr) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintptrArrOption) FlatMapInt16(f func([]uintptr) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintptrArrOption) FlatMapInt32(f func([]uintptr) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintptrArrOption) FlatMapInt64(f func([]uintptr) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintptrArrOption) FlatMapUint(f func([]uintptr) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintptrArrOption) FlatMapUint8(f func([]uintptr) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintptrArrOption) FlatMapUint16(f func([]uintptr) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintptrArrOption) FlatMapUint32(f func([]uintptr) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintptrArrOption) FlatMapUint64(f func([]uintptr) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintptrArrOption) FlatMapUintptr(f func([]uintptr) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintptrArrOption) FlatMapByte(f func([]uintptr) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintptrArrOption) FlatMapRune(f func([]uintptr) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintptrArrOption) FlatMapFloat32(f func([]uintptr) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintptrArrOption) FlatMapFloat64(f func([]uintptr) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintptrArrOption) FlatMapComplex64(f func([]uintptr) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintptrArrOption) FlatMapComplex128(f func([]uintptr) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintptrArrOption) FlatMapAny(f func([]uintptr) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m ByteArrOption) FlatMapBool(f func([]byte) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m ByteArrOption) FlatMapString(f func([]byte) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m ByteArrOption) FlatMapInt(f func([]byte) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m ByteArrOption) FlatMapInt8(f func([]byte) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m ByteArrOption) FlatMapInt16(f func([]byte) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m ByteArrOption) FlatMapInt32(f func([]byte) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m ByteArrOption) FlatMapInt64(f func([]byte) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m ByteArrOption) FlatMapUint(f func([]byte) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m ByteArrOption) FlatMapUint8(f func([]byte) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m ByteArrOption) FlatMapUint16(f func([]byte) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m ByteArrOption) FlatMapUint32(f func([]byte) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m ByteArrOption) FlatMapUint64(f func([]byte) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m ByteArrOption) FlatMapUintptr(f func([]byte) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m ByteArrOption) FlatMapByte(f func([]byte) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m ByteArrOption) FlatMapRune(f func([]byte) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m ByteArrOption) FlatMapFloat32(f func([]byte) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m ByteArrOption) FlatMapFloat64(f func([]byte) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m ByteArrOption) FlatMapComplex64(f func([]byte) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m ByteArrOption) FlatMapComplex128(f func([]byte) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m ByteArrOption) FlatMapAny(f func([]byte) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m RuneArrOption) FlatMapBool(f func([]rune) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m RuneArrOption) FlatMapString(f func([]rune) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m RuneArrOption) FlatMapInt(f func([]rune) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m RuneArrOption) FlatMapInt8(f func([]rune) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m RuneArrOption) FlatMapInt16(f func([]rune) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m RuneArrOption) FlatMapInt32(f func([]rune) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m RuneArrOption) FlatMapInt64(f func([]rune) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m RuneArrOption) FlatMapUint(f func([]rune) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m RuneArrOption) FlatMapUint8(f func([]rune) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m RuneArrOption) FlatMapUint16(f func([]rune) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m RuneArrOption) FlatMapUint32(f func([]rune) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m RuneArrOption) FlatMapUint64(f func([]rune) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m RuneArrOption) FlatMapUintptr(f func([]rune) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m RuneArrOption) FlatMapByte(f func([]rune) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m RuneArrOption) FlatMapRune(f func([]rune) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m RuneArrOption) FlatMapFloat32(f func([]rune) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m RuneArrOption) FlatMapFloat64(f func([]rune) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m RuneArrOption) FlatMapComplex64(f func([]rune) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m RuneArrOption) FlatMapComplex128(f func([]rune) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m RuneArrOption) FlatMapAny(f func([]rune) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float32ArrOption) FlatMapBool(f func([]float32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float32ArrOption) FlatMapString(f func([]float32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float32ArrOption) FlatMapInt(f func([]float32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float32ArrOption) FlatMapInt8(f func([]float32) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float32ArrOption) FlatMapInt16(f func([]float32) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float32ArrOption) FlatMapInt32(f func([]float32) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float32ArrOption) FlatMapInt64(f func([]float32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float32ArrOption) FlatMapUint(f func([]float32) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float32ArrOption) FlatMapUint8(f func([]float32) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float32ArrOption) FlatMapUint16(f func([]float32) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float32ArrOption) FlatMapUint32(f func([]float32) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float32ArrOption) FlatMapUint64(f func([]float32) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float32ArrOption) FlatMapUintptr(f func([]float32) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float32ArrOption) FlatMapByte(f func([]float32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float32ArrOption) FlatMapRune(f func([]float32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float32ArrOption) FlatMapFloat32(f func([]float32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float32ArrOption) FlatMapFloat64(f func([]float32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float32ArrOption) FlatMapComplex64(f func([]float32) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float32ArrOption) FlatMapComplex128(f func([]float32) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float32ArrOption) FlatMapAny(f func([]float32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float64ArrOption) FlatMapBool(f func([]float64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float64ArrOption) FlatMapString(f func([]float64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float64ArrOption) FlatMapInt(f func([]float64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float64ArrOption) FlatMapInt8(f func([]float64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float64ArrOption) FlatMapInt16(f func([]float64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float64ArrOption) FlatMapInt32(f func([]float64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float64ArrOption) FlatMapInt64(f func([]float64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float64ArrOption) FlatMapUint(f func([]float64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float64ArrOption) FlatMapUint8(f func([]float64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float64ArrOption) FlatMapUint16(f func([]float64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float64ArrOption) FlatMapUint32(f func([]float64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float64ArrOption) FlatMapUint64(f func([]float64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float64ArrOption) FlatMapUintptr(f func([]float64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float64ArrOption) FlatMapByte(f func([]float64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float64ArrOption) FlatMapRune(f func([]float64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float64ArrOption) FlatMapFloat32(f func([]float64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float64ArrOption) FlatMapFloat64(f func([]float64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float64ArrOption) FlatMapComplex64(f func([]float64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float64ArrOption) FlatMapComplex128(f func([]float64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float64ArrOption) FlatMapAny(f func([]float64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex64ArrOption) FlatMapBool(f func([]complex64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex64ArrOption) FlatMapString(f func([]complex64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex64ArrOption) FlatMapInt(f func([]complex64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex64ArrOption) FlatMapInt8(f func([]complex64) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex64ArrOption) FlatMapInt16(f func([]complex64) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex64ArrOption) FlatMapInt32(f func([]complex64) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex64ArrOption) FlatMapInt64(f func([]complex64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex64ArrOption) FlatMapUint(f func([]complex64) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex64ArrOption) FlatMapUint8(f func([]complex64) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex64ArrOption) FlatMapUint16(f func([]complex64) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex64ArrOption) FlatMapUint32(f func([]complex64) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex64ArrOption) FlatMapUint64(f func([]complex64) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex64ArrOption) FlatMapUintptr(f func([]complex64) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex64ArrOption) FlatMapByte(f func([]complex64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex64ArrOption) FlatMapRune(f func([]complex64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex64ArrOption) FlatMapFloat32(f func([]complex64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex64ArrOption) FlatMapFloat64(f func([]complex64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex64ArrOption) FlatMapComplex64(f func([]complex64) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex64ArrOption) FlatMapComplex128(f func([]complex64) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex64ArrOption) FlatMapAny(f func([]complex64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex128ArrOption) FlatMapBool(f func([]complex128) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex128ArrOption) FlatMapString(f func([]complex128) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex128ArrOption) FlatMapInt(f func([]complex128) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex128ArrOption) FlatMapInt8(f func([]complex128) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex128ArrOption) FlatMapInt16(f func([]complex128) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex128ArrOption) FlatMapInt32(f func([]complex128) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex128ArrOption) FlatMapInt64(f func([]complex128) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex128ArrOption) FlatMapUint(f func([]complex128) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex128ArrOption) FlatMapUint8(f func([]complex128) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex128ArrOption) FlatMapUint16(f func([]complex128) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex128ArrOption) FlatMapUint32(f func([]complex128) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex128ArrOption) FlatMapUint64(f func([]complex128) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex128ArrOption) FlatMapUintptr(f func([]complex128) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex128ArrOption) FlatMapByte(f func([]complex128) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex128ArrOption) FlatMapRune(f func([]complex128) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex128ArrOption) FlatMapFloat32(f func([]complex128) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex128ArrOption) FlatMapFloat64(f func([]complex128) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex128ArrOption) FlatMapComplex64(f func([]complex128) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex128ArrOption) FlatMapComplex128(f func([]complex128) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex128ArrOption) FlatMapAny(f func([]complex128) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m AnyArrOption) FlatMapBool(f func([]Any) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m AnyArrOption) FlatMapString(f func([]Any) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m AnyArrOption) FlatMapInt(f func([]Any) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m AnyArrOption) FlatMapInt8(f func([]Any) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m AnyArrOption) FlatMapInt16(f func([]Any) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m AnyArrOption) FlatMapInt32(f func([]Any) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m AnyArrOption) FlatMapInt64(f func([]Any) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m AnyArrOption) FlatMapUint(f func([]Any) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m AnyArrOption) FlatMapUint8(f func([]Any) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m AnyArrOption) FlatMapUint16(f func([]Any) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m AnyArrOption) FlatMapUint32(f func([]Any) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m AnyArrOption) FlatMapUint64(f func([]Any) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m AnyArrOption) FlatMapUintptr(f func([]Any) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m AnyArrOption) FlatMapByte(f func([]Any) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m AnyArrOption) FlatMapRune(f func([]Any) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m AnyArrOption) FlatMapFloat32(f func([]Any) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m AnyArrOption) FlatMapFloat64(f func([]Any) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m AnyArrOption) FlatMapComplex64(f func([]Any) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m AnyArrOption) FlatMapComplex128(f func([]Any) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m AnyArrOption) FlatMapAny(f func([]Any) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m BoolListOption) FlatMapBool(f func(BoolList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m BoolListOption) FlatMapString(f func(BoolList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m BoolListOption) FlatMapInt(f func(BoolList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m BoolListOption) FlatMapInt8(f func(BoolList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m BoolListOption) FlatMapInt16(f func(BoolList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m BoolListOption) FlatMapInt32(f func(BoolList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m BoolListOption) FlatMapInt64(f func(BoolList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m BoolListOption) FlatMapUint(f func(BoolList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m BoolListOption) FlatMapUint8(f func(BoolList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m BoolListOption) FlatMapUint16(f func(BoolList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m BoolListOption) FlatMapUint32(f func(BoolList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m BoolListOption) FlatMapUint64(f func(BoolList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m BoolListOption) FlatMapUintptr(f func(BoolList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m BoolListOption) FlatMapByte(f func(BoolList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m BoolListOption) FlatMapRune(f func(BoolList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m BoolListOption) FlatMapFloat32(f func(BoolList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m BoolListOption) FlatMapFloat64(f func(BoolList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m BoolListOption) FlatMapComplex64(f func(BoolList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m BoolListOption) FlatMapComplex128(f func(BoolList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m BoolListOption) FlatMapAny(f func(BoolList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m StringListOption) FlatMapBool(f func(StringList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m StringListOption) FlatMapString(f func(StringList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m StringListOption) FlatMapInt(f func(StringList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m StringListOption) FlatMapInt8(f func(StringList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m StringListOption) FlatMapInt16(f func(StringList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m StringListOption) FlatMapInt32(f func(StringList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m StringListOption) FlatMapInt64(f func(StringList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m StringListOption) FlatMapUint(f func(StringList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m StringListOption) FlatMapUint8(f func(StringList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m StringListOption) FlatMapUint16(f func(StringList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m StringListOption) FlatMapUint32(f func(StringList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m StringListOption) FlatMapUint64(f func(StringList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m StringListOption) FlatMapUintptr(f func(StringList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m StringListOption) FlatMapByte(f func(StringList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m StringListOption) FlatMapRune(f func(StringList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m StringListOption) FlatMapFloat32(f func(StringList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m StringListOption) FlatMapFloat64(f func(StringList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m StringListOption) FlatMapComplex64(f func(StringList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m StringListOption) FlatMapComplex128(f func(StringList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m StringListOption) FlatMapAny(f func(StringList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m IntListOption) FlatMapBool(f func(IntList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m IntListOption) FlatMapString(f func(IntList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m IntListOption) FlatMapInt(f func(IntList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m IntListOption) FlatMapInt8(f func(IntList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m IntListOption) FlatMapInt16(f func(IntList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m IntListOption) FlatMapInt32(f func(IntList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m IntListOption) FlatMapInt64(f func(IntList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m IntListOption) FlatMapUint(f func(IntList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m IntListOption) FlatMapUint8(f func(IntList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m IntListOption) FlatMapUint16(f func(IntList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m IntListOption) FlatMapUint32(f func(IntList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m IntListOption) FlatMapUint64(f func(IntList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m IntListOption) FlatMapUintptr(f func(IntList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m IntListOption) FlatMapByte(f func(IntList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m IntListOption) FlatMapRune(f func(IntList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m IntListOption) FlatMapFloat32(f func(IntList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m IntListOption) FlatMapFloat64(f func(IntList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m IntListOption) FlatMapComplex64(f func(IntList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m IntListOption) FlatMapComplex128(f func(IntList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m IntListOption) FlatMapAny(f func(IntList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int8ListOption) FlatMapBool(f func(Int8List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int8ListOption) FlatMapString(f func(Int8List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int8ListOption) FlatMapInt(f func(Int8List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int8ListOption) FlatMapInt8(f func(Int8List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int8ListOption) FlatMapInt16(f func(Int8List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int8ListOption) FlatMapInt32(f func(Int8List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int8ListOption) FlatMapInt64(f func(Int8List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int8ListOption) FlatMapUint(f func(Int8List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int8ListOption) FlatMapUint8(f func(Int8List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int8ListOption) FlatMapUint16(f func(Int8List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int8ListOption) FlatMapUint32(f func(Int8List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int8ListOption) FlatMapUint64(f func(Int8List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int8ListOption) FlatMapUintptr(f func(Int8List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int8ListOption) FlatMapByte(f func(Int8List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int8ListOption) FlatMapRune(f func(Int8List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int8ListOption) FlatMapFloat32(f func(Int8List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int8ListOption) FlatMapFloat64(f func(Int8List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int8ListOption) FlatMapComplex64(f func(Int8List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int8ListOption) FlatMapComplex128(f func(Int8List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int8ListOption) FlatMapAny(f func(Int8List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int16ListOption) FlatMapBool(f func(Int16List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int16ListOption) FlatMapString(f func(Int16List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int16ListOption) FlatMapInt(f func(Int16List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int16ListOption) FlatMapInt8(f func(Int16List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int16ListOption) FlatMapInt16(f func(Int16List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int16ListOption) FlatMapInt32(f func(Int16List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int16ListOption) FlatMapInt64(f func(Int16List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int16ListOption) FlatMapUint(f func(Int16List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int16ListOption) FlatMapUint8(f func(Int16List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int16ListOption) FlatMapUint16(f func(Int16List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int16ListOption) FlatMapUint32(f func(Int16List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int16ListOption) FlatMapUint64(f func(Int16List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int16ListOption) FlatMapUintptr(f func(Int16List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int16ListOption) FlatMapByte(f func(Int16List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int16ListOption) FlatMapRune(f func(Int16List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int16ListOption) FlatMapFloat32(f func(Int16List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int16ListOption) FlatMapFloat64(f func(Int16List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int16ListOption) FlatMapComplex64(f func(Int16List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int16ListOption) FlatMapComplex128(f func(Int16List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int16ListOption) FlatMapAny(f func(Int16List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int32ListOption) FlatMapBool(f func(Int32List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int32ListOption) FlatMapString(f func(Int32List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int32ListOption) FlatMapInt(f func(Int32List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int32ListOption) FlatMapInt8(f func(Int32List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int32ListOption) FlatMapInt16(f func(Int32List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int32ListOption) FlatMapInt32(f func(Int32List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int32ListOption) FlatMapInt64(f func(Int32List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int32ListOption) FlatMapUint(f func(Int32List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int32ListOption) FlatMapUint8(f func(Int32List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int32ListOption) FlatMapUint16(f func(Int32List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int32ListOption) FlatMapUint32(f func(Int32List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int32ListOption) FlatMapUint64(f func(Int32List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int32ListOption) FlatMapUintptr(f func(Int32List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int32ListOption) FlatMapByte(f func(Int32List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int32ListOption) FlatMapRune(f func(Int32List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int32ListOption) FlatMapFloat32(f func(Int32List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int32ListOption) FlatMapFloat64(f func(Int32List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int32ListOption) FlatMapComplex64(f func(Int32List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int32ListOption) FlatMapComplex128(f func(Int32List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int32ListOption) FlatMapAny(f func(Int32List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Int64ListOption) FlatMapBool(f func(Int64List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Int64ListOption) FlatMapString(f func(Int64List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Int64ListOption) FlatMapInt(f func(Int64List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int64ListOption) FlatMapInt8(f func(Int64List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Int64ListOption) FlatMapInt16(f func(Int64List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Int64ListOption) FlatMapInt32(f func(Int64List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Int64ListOption) FlatMapInt64(f func(Int64List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Int64ListOption) FlatMapUint(f func(Int64List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Int64ListOption) FlatMapUint8(f func(Int64List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Int64ListOption) FlatMapUint16(f func(Int64List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Int64ListOption) FlatMapUint32(f func(Int64List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Int64ListOption) FlatMapUint64(f func(Int64List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Int64ListOption) FlatMapUintptr(f func(Int64List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Int64ListOption) FlatMapByte(f func(Int64List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Int64ListOption) FlatMapRune(f func(Int64List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Int64ListOption) FlatMapFloat32(f func(Int64List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Int64ListOption) FlatMapFloat64(f func(Int64List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Int64ListOption) FlatMapComplex64(f func(Int64List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Int64ListOption) FlatMapComplex128(f func(Int64List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Int64ListOption) FlatMapAny(f func(Int64List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintListOption) FlatMapBool(f func(UintList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintListOption) FlatMapString(f func(UintList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintListOption) FlatMapInt(f func(UintList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintListOption) FlatMapInt8(f func(UintList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintListOption) FlatMapInt16(f func(UintList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintListOption) FlatMapInt32(f func(UintList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintListOption) FlatMapInt64(f func(UintList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintListOption) FlatMapUint(f func(UintList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintListOption) FlatMapUint8(f func(UintList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintListOption) FlatMapUint16(f func(UintList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintListOption) FlatMapUint32(f func(UintList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintListOption) FlatMapUint64(f func(UintList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintListOption) FlatMapUintptr(f func(UintList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintListOption) FlatMapByte(f func(UintList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintListOption) FlatMapRune(f func(UintList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintListOption) FlatMapFloat32(f func(UintList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintListOption) FlatMapFloat64(f func(UintList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintListOption) FlatMapComplex64(f func(UintList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintListOption) FlatMapComplex128(f func(UintList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintListOption) FlatMapAny(f func(UintList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint8ListOption) FlatMapBool(f func(Uint8List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint8ListOption) FlatMapString(f func(Uint8List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint8ListOption) FlatMapInt(f func(Uint8List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint8ListOption) FlatMapInt8(f func(Uint8List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint8ListOption) FlatMapInt16(f func(Uint8List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint8ListOption) FlatMapInt32(f func(Uint8List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint8ListOption) FlatMapInt64(f func(Uint8List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint8ListOption) FlatMapUint(f func(Uint8List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint8ListOption) FlatMapUint8(f func(Uint8List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint8ListOption) FlatMapUint16(f func(Uint8List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint8ListOption) FlatMapUint32(f func(Uint8List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint8ListOption) FlatMapUint64(f func(Uint8List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint8ListOption) FlatMapUintptr(f func(Uint8List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint8ListOption) FlatMapByte(f func(Uint8List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint8ListOption) FlatMapRune(f func(Uint8List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint8ListOption) FlatMapFloat32(f func(Uint8List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint8ListOption) FlatMapFloat64(f func(Uint8List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint8ListOption) FlatMapComplex64(f func(Uint8List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint8ListOption) FlatMapComplex128(f func(Uint8List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint8ListOption) FlatMapAny(f func(Uint8List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint16ListOption) FlatMapBool(f func(Uint16List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint16ListOption) FlatMapString(f func(Uint16List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint16ListOption) FlatMapInt(f func(Uint16List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint16ListOption) FlatMapInt8(f func(Uint16List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint16ListOption) FlatMapInt16(f func(Uint16List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint16ListOption) FlatMapInt32(f func(Uint16List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint16ListOption) FlatMapInt64(f func(Uint16List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint16ListOption) FlatMapUint(f func(Uint16List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint16ListOption) FlatMapUint8(f func(Uint16List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint16ListOption) FlatMapUint16(f func(Uint16List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint16ListOption) FlatMapUint32(f func(Uint16List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint16ListOption) FlatMapUint64(f func(Uint16List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint16ListOption) FlatMapUintptr(f func(Uint16List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint16ListOption) FlatMapByte(f func(Uint16List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint16ListOption) FlatMapRune(f func(Uint16List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint16ListOption) FlatMapFloat32(f func(Uint16List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint16ListOption) FlatMapFloat64(f func(Uint16List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint16ListOption) FlatMapComplex64(f func(Uint16List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint16ListOption) FlatMapComplex128(f func(Uint16List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint16ListOption) FlatMapAny(f func(Uint16List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint32ListOption) FlatMapBool(f func(Uint32List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint32ListOption) FlatMapString(f func(Uint32List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint32ListOption) FlatMapInt(f func(Uint32List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint32ListOption) FlatMapInt8(f func(Uint32List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint32ListOption) FlatMapInt16(f func(Uint32List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint32ListOption) FlatMapInt32(f func(Uint32List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint32ListOption) FlatMapInt64(f func(Uint32List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint32ListOption) FlatMapUint(f func(Uint32List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint32ListOption) FlatMapUint8(f func(Uint32List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint32ListOption) FlatMapUint16(f func(Uint32List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint32ListOption) FlatMapUint32(f func(Uint32List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint32ListOption) FlatMapUint64(f func(Uint32List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint32ListOption) FlatMapUintptr(f func(Uint32List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint32ListOption) FlatMapByte(f func(Uint32List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint32ListOption) FlatMapRune(f func(Uint32List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint32ListOption) FlatMapFloat32(f func(Uint32List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint32ListOption) FlatMapFloat64(f func(Uint32List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint32ListOption) FlatMapComplex64(f func(Uint32List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint32ListOption) FlatMapComplex128(f func(Uint32List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint32ListOption) FlatMapAny(f func(Uint32List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Uint64ListOption) FlatMapBool(f func(Uint64List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Uint64ListOption) FlatMapString(f func(Uint64List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Uint64ListOption) FlatMapInt(f func(Uint64List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Uint64ListOption) FlatMapInt8(f func(Uint64List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Uint64ListOption) FlatMapInt16(f func(Uint64List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Uint64ListOption) FlatMapInt32(f func(Uint64List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Uint64ListOption) FlatMapInt64(f func(Uint64List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Uint64ListOption) FlatMapUint(f func(Uint64List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Uint64ListOption) FlatMapUint8(f func(Uint64List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Uint64ListOption) FlatMapUint16(f func(Uint64List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Uint64ListOption) FlatMapUint32(f func(Uint64List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Uint64ListOption) FlatMapUint64(f func(Uint64List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Uint64ListOption) FlatMapUintptr(f func(Uint64List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Uint64ListOption) FlatMapByte(f func(Uint64List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Uint64ListOption) FlatMapRune(f func(Uint64List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Uint64ListOption) FlatMapFloat32(f func(Uint64List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Uint64ListOption) FlatMapFloat64(f func(Uint64List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Uint64ListOption) FlatMapComplex64(f func(Uint64List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Uint64ListOption) FlatMapComplex128(f func(Uint64List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Uint64ListOption) FlatMapAny(f func(Uint64List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m UintptrListOption) FlatMapBool(f func(UintptrList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m UintptrListOption) FlatMapString(f func(UintptrList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m UintptrListOption) FlatMapInt(f func(UintptrList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m UintptrListOption) FlatMapInt8(f func(UintptrList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m UintptrListOption) FlatMapInt16(f func(UintptrList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m UintptrListOption) FlatMapInt32(f func(UintptrList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m UintptrListOption) FlatMapInt64(f func(UintptrList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m UintptrListOption) FlatMapUint(f func(UintptrList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m UintptrListOption) FlatMapUint8(f func(UintptrList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m UintptrListOption) FlatMapUint16(f func(UintptrList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m UintptrListOption) FlatMapUint32(f func(UintptrList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m UintptrListOption) FlatMapUint64(f func(UintptrList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m UintptrListOption) FlatMapUintptr(f func(UintptrList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m UintptrListOption) FlatMapByte(f func(UintptrList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m UintptrListOption) FlatMapRune(f func(UintptrList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m UintptrListOption) FlatMapFloat32(f func(UintptrList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m UintptrListOption) FlatMapFloat64(f func(UintptrList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m UintptrListOption) FlatMapComplex64(f func(UintptrList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m UintptrListOption) FlatMapComplex128(f func(UintptrList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m UintptrListOption) FlatMapAny(f func(UintptrList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m ByteListOption) FlatMapBool(f func(ByteList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m ByteListOption) FlatMapString(f func(ByteList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m ByteListOption) FlatMapInt(f func(ByteList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m ByteListOption) FlatMapInt8(f func(ByteList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m ByteListOption) FlatMapInt16(f func(ByteList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m ByteListOption) FlatMapInt32(f func(ByteList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m ByteListOption) FlatMapInt64(f func(ByteList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m ByteListOption) FlatMapUint(f func(ByteList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m ByteListOption) FlatMapUint8(f func(ByteList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m ByteListOption) FlatMapUint16(f func(ByteList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m ByteListOption) FlatMapUint32(f func(ByteList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m ByteListOption) FlatMapUint64(f func(ByteList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m ByteListOption) FlatMapUintptr(f func(ByteList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m ByteListOption) FlatMapByte(f func(ByteList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m ByteListOption) FlatMapRune(f func(ByteList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m ByteListOption) FlatMapFloat32(f func(ByteList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m ByteListOption) FlatMapFloat64(f func(ByteList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m ByteListOption) FlatMapComplex64(f func(ByteList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m ByteListOption) FlatMapComplex128(f func(ByteList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m ByteListOption) FlatMapAny(f func(ByteList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m RuneListOption) FlatMapBool(f func(RuneList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m RuneListOption) FlatMapString(f func(RuneList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m RuneListOption) FlatMapInt(f func(RuneList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m RuneListOption) FlatMapInt8(f func(RuneList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m RuneListOption) FlatMapInt16(f func(RuneList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m RuneListOption) FlatMapInt32(f func(RuneList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m RuneListOption) FlatMapInt64(f func(RuneList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m RuneListOption) FlatMapUint(f func(RuneList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m RuneListOption) FlatMapUint8(f func(RuneList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m RuneListOption) FlatMapUint16(f func(RuneList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m RuneListOption) FlatMapUint32(f func(RuneList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m RuneListOption) FlatMapUint64(f func(RuneList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m RuneListOption) FlatMapUintptr(f func(RuneList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m RuneListOption) FlatMapByte(f func(RuneList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m RuneListOption) FlatMapRune(f func(RuneList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m RuneListOption) FlatMapFloat32(f func(RuneList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m RuneListOption) FlatMapFloat64(f func(RuneList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m RuneListOption) FlatMapComplex64(f func(RuneList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m RuneListOption) FlatMapComplex128(f func(RuneList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m RuneListOption) FlatMapAny(f func(RuneList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float32ListOption) FlatMapBool(f func(Float32List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float32ListOption) FlatMapString(f func(Float32List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float32ListOption) FlatMapInt(f func(Float32List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float32ListOption) FlatMapInt8(f func(Float32List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float32ListOption) FlatMapInt16(f func(Float32List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float32ListOption) FlatMapInt32(f func(Float32List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float32ListOption) FlatMapInt64(f func(Float32List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float32ListOption) FlatMapUint(f func(Float32List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float32ListOption) FlatMapUint8(f func(Float32List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float32ListOption) FlatMapUint16(f func(Float32List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float32ListOption) FlatMapUint32(f func(Float32List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float32ListOption) FlatMapUint64(f func(Float32List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float32ListOption) FlatMapUintptr(f func(Float32List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float32ListOption) FlatMapByte(f func(Float32List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float32ListOption) FlatMapRune(f func(Float32List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float32ListOption) FlatMapFloat32(f func(Float32List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float32ListOption) FlatMapFloat64(f func(Float32List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float32ListOption) FlatMapComplex64(f func(Float32List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float32ListOption) FlatMapComplex128(f func(Float32List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float32ListOption) FlatMapAny(f func(Float32List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Float64ListOption) FlatMapBool(f func(Float64List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Float64ListOption) FlatMapString(f func(Float64List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Float64ListOption) FlatMapInt(f func(Float64List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Float64ListOption) FlatMapInt8(f func(Float64List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Float64ListOption) FlatMapInt16(f func(Float64List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Float64ListOption) FlatMapInt32(f func(Float64List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Float64ListOption) FlatMapInt64(f func(Float64List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Float64ListOption) FlatMapUint(f func(Float64List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Float64ListOption) FlatMapUint8(f func(Float64List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Float64ListOption) FlatMapUint16(f func(Float64List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Float64ListOption) FlatMapUint32(f func(Float64List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Float64ListOption) FlatMapUint64(f func(Float64List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Float64ListOption) FlatMapUintptr(f func(Float64List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Float64ListOption) FlatMapByte(f func(Float64List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Float64ListOption) FlatMapRune(f func(Float64List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float64ListOption) FlatMapFloat32(f func(Float64List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float64ListOption) FlatMapFloat64(f func(Float64List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Float64ListOption) FlatMapComplex64(f func(Float64List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Float64ListOption) FlatMapComplex128(f func(Float64List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Float64ListOption) FlatMapAny(f func(Float64List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex64ListOption) FlatMapBool(f func(Complex64List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex64ListOption) FlatMapString(f func(Complex64List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex64ListOption) FlatMapInt(f func(Complex64List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex64ListOption) FlatMapInt8(f func(Complex64List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex64ListOption) FlatMapInt16(f func(Complex64List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex64ListOption) FlatMapInt32(f func(Complex64List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex64ListOption) FlatMapInt64(f func(Complex64List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex64ListOption) FlatMapUint(f func(Complex64List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex64ListOption) FlatMapUint8(f func(Complex64List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex64ListOption) FlatMapUint16(f func(Complex64List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex64ListOption) FlatMapUint32(f func(Complex64List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex64ListOption) FlatMapUint64(f func(Complex64List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex64ListOption) FlatMapUintptr(f func(Complex64List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex64ListOption) FlatMapByte(f func(Complex64List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex64ListOption) FlatMapRune(f func(Complex64List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex64ListOption) FlatMapFloat32(f func(Complex64List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex64ListOption) FlatMapFloat64(f func(Complex64List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex64ListOption) FlatMapComplex64(f func(Complex64List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex64ListOption) FlatMapComplex128(f func(Complex64List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex64ListOption) FlatMapAny(f func(Complex64List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Complex128ListOption) FlatMapBool(f func(Complex128List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m Complex128ListOption) FlatMapString(f func(Complex128List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m Complex128ListOption) FlatMapInt(f func(Complex128List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Complex128ListOption) FlatMapInt8(f func(Complex128List) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m Complex128ListOption) FlatMapInt16(f func(Complex128List) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m Complex128ListOption) FlatMapInt32(f func(Complex128List) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m Complex128ListOption) FlatMapInt64(f func(Complex128List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m Complex128ListOption) FlatMapUint(f func(Complex128List) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m Complex128ListOption) FlatMapUint8(f func(Complex128List) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m Complex128ListOption) FlatMapUint16(f func(Complex128List) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m Complex128ListOption) FlatMapUint32(f func(Complex128List) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m Complex128ListOption) FlatMapUint64(f func(Complex128List) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m Complex128ListOption) FlatMapUintptr(f func(Complex128List) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m Complex128ListOption) FlatMapByte(f func(Complex128List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m Complex128ListOption) FlatMapRune(f func(Complex128List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Complex128ListOption) FlatMapFloat32(f func(Complex128List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Complex128ListOption) FlatMapFloat64(f func(Complex128List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m Complex128ListOption) FlatMapComplex64(f func(Complex128List) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m Complex128ListOption) FlatMapComplex128(f func(Complex128List) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m Complex128ListOption) FlatMapAny(f func(Complex128List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m AnyListOption) FlatMapBool(f func(AnyList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m AnyListOption) FlatMapString(f func(AnyList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneStringOption
-	}
-}
-func (m AnyListOption) FlatMapInt(f func(AnyList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneIntOption
-	}
-}
-func (m AnyListOption) FlatMapInt8(f func(AnyList) Int8Option) Int8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt8Option
-	}
-}
-func (m AnyListOption) FlatMapInt16(f func(AnyList) Int16Option) Int16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt16Option
-	}
-}
-func (m AnyListOption) FlatMapInt32(f func(AnyList) Int32Option) Int32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt32Option
-	}
-}
-func (m AnyListOption) FlatMapInt64(f func(AnyList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m AnyListOption) FlatMapUint(f func(AnyList) UintOption) UintOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintOption
-	}
-}
-func (m AnyListOption) FlatMapUint8(f func(AnyList) Uint8Option) Uint8Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint8Option
-	}
-}
-func (m AnyListOption) FlatMapUint16(f func(AnyList) Uint16Option) Uint16Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint16Option
-	}
-}
-func (m AnyListOption) FlatMapUint32(f func(AnyList) Uint32Option) Uint32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint32Option
-	}
-}
-func (m AnyListOption) FlatMapUint64(f func(AnyList) Uint64Option) Uint64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUint64Option
-	}
-}
-func (m AnyListOption) FlatMapUintptr(f func(AnyList) UintptrOption) UintptrOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneUintptrOption
-	}
-}
-func (m AnyListOption) FlatMapByte(f func(AnyList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByteOption
-	}
-}
-func (m AnyListOption) FlatMapRune(f func(AnyList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m AnyListOption) FlatMapFloat32(f func(AnyList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m AnyListOption) FlatMapFloat64(f func(AnyList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m AnyListOption) FlatMapComplex64(f func(AnyList) Complex64Option) Complex64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex64Option
-	}
-}
-func (m AnyListOption) FlatMapComplex128(f func(AnyList) Complex128Option) Complex128Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneComplex128Option
-	}
-}
-func (m AnyListOption) FlatMapAny(f func(AnyList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAnyOption
-	}
-}
+
+func (m BoolOption) FlatMapBool(f func(bool) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m BoolOption) FlatMapString(f func(bool) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m BoolOption) FlatMapInt(f func(bool) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m BoolOption) FlatMapInt8(f func(bool) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m BoolOption) FlatMapInt16(f func(bool) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m BoolOption) FlatMapInt32(f func(bool) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m BoolOption) FlatMapInt64(f func(bool) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m BoolOption) FlatMapUint(f func(bool) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m BoolOption) FlatMapUint8(f func(bool) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m BoolOption) FlatMapUint16(f func(bool) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m BoolOption) FlatMapUint32(f func(bool) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m BoolOption) FlatMapUint64(f func(bool) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m BoolOption) FlatMapUintptr(f func(bool) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m BoolOption) FlatMapByte(f func(bool) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m BoolOption) FlatMapRune(f func(bool) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m BoolOption) FlatMapFloat32(f func(bool) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m BoolOption) FlatMapFloat64(f func(bool) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m BoolOption) FlatMapComplex64(f func(bool) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m BoolOption) FlatMapComplex128(f func(bool) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m BoolOption) FlatMapAny(f func(bool) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m StringOption) FlatMapBool(f func(string) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m StringOption) FlatMapString(f func(string) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m StringOption) FlatMapInt(f func(string) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m StringOption) FlatMapInt8(f func(string) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m StringOption) FlatMapInt16(f func(string) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m StringOption) FlatMapInt32(f func(string) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m StringOption) FlatMapInt64(f func(string) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m StringOption) FlatMapUint(f func(string) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m StringOption) FlatMapUint8(f func(string) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m StringOption) FlatMapUint16(f func(string) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m StringOption) FlatMapUint32(f func(string) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m StringOption) FlatMapUint64(f func(string) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m StringOption) FlatMapUintptr(f func(string) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m StringOption) FlatMapByte(f func(string) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m StringOption) FlatMapRune(f func(string) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m StringOption) FlatMapFloat32(f func(string) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m StringOption) FlatMapFloat64(f func(string) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m StringOption) FlatMapComplex64(f func(string) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m StringOption) FlatMapComplex128(f func(string) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m StringOption) FlatMapAny(f func(string) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m IntOption) FlatMapBool(f func(int) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m IntOption) FlatMapString(f func(int) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m IntOption) FlatMapInt(f func(int) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m IntOption) FlatMapInt8(f func(int) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m IntOption) FlatMapInt16(f func(int) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m IntOption) FlatMapInt32(f func(int) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m IntOption) FlatMapInt64(f func(int) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m IntOption) FlatMapUint(f func(int) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m IntOption) FlatMapUint8(f func(int) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m IntOption) FlatMapUint16(f func(int) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m IntOption) FlatMapUint32(f func(int) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m IntOption) FlatMapUint64(f func(int) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m IntOption) FlatMapUintptr(f func(int) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m IntOption) FlatMapByte(f func(int) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m IntOption) FlatMapRune(f func(int) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m IntOption) FlatMapFloat32(f func(int) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m IntOption) FlatMapFloat64(f func(int) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m IntOption) FlatMapComplex64(f func(int) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m IntOption) FlatMapComplex128(f func(int) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m IntOption) FlatMapAny(f func(int) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int8Option) FlatMapBool(f func(int8) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int8Option) FlatMapString(f func(int8) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int8Option) FlatMapInt(f func(int8) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int8Option) FlatMapInt8(f func(int8) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int8Option) FlatMapInt16(f func(int8) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int8Option) FlatMapInt32(f func(int8) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int8Option) FlatMapInt64(f func(int8) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int8Option) FlatMapUint(f func(int8) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int8Option) FlatMapUint8(f func(int8) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int8Option) FlatMapUint16(f func(int8) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int8Option) FlatMapUint32(f func(int8) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int8Option) FlatMapUint64(f func(int8) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int8Option) FlatMapUintptr(f func(int8) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int8Option) FlatMapByte(f func(int8) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int8Option) FlatMapRune(f func(int8) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int8Option) FlatMapFloat32(f func(int8) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int8Option) FlatMapFloat64(f func(int8) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int8Option) FlatMapComplex64(f func(int8) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int8Option) FlatMapComplex128(f func(int8) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int8Option) FlatMapAny(f func(int8) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int16Option) FlatMapBool(f func(int16) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int16Option) FlatMapString(f func(int16) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int16Option) FlatMapInt(f func(int16) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int16Option) FlatMapInt8(f func(int16) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int16Option) FlatMapInt16(f func(int16) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int16Option) FlatMapInt32(f func(int16) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int16Option) FlatMapInt64(f func(int16) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int16Option) FlatMapUint(f func(int16) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int16Option) FlatMapUint8(f func(int16) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int16Option) FlatMapUint16(f func(int16) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int16Option) FlatMapUint32(f func(int16) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int16Option) FlatMapUint64(f func(int16) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int16Option) FlatMapUintptr(f func(int16) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int16Option) FlatMapByte(f func(int16) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int16Option) FlatMapRune(f func(int16) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int16Option) FlatMapFloat32(f func(int16) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int16Option) FlatMapFloat64(f func(int16) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int16Option) FlatMapComplex64(f func(int16) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int16Option) FlatMapComplex128(f func(int16) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int16Option) FlatMapAny(f func(int16) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int32Option) FlatMapBool(f func(int32) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int32Option) FlatMapString(f func(int32) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int32Option) FlatMapInt(f func(int32) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int32Option) FlatMapInt8(f func(int32) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int32Option) FlatMapInt16(f func(int32) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int32Option) FlatMapInt32(f func(int32) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int32Option) FlatMapInt64(f func(int32) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int32Option) FlatMapUint(f func(int32) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int32Option) FlatMapUint8(f func(int32) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int32Option) FlatMapUint16(f func(int32) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int32Option) FlatMapUint32(f func(int32) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int32Option) FlatMapUint64(f func(int32) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int32Option) FlatMapUintptr(f func(int32) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int32Option) FlatMapByte(f func(int32) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int32Option) FlatMapRune(f func(int32) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int32Option) FlatMapFloat32(f func(int32) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int32Option) FlatMapFloat64(f func(int32) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int32Option) FlatMapComplex64(f func(int32) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int32Option) FlatMapComplex128(f func(int32) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int32Option) FlatMapAny(f func(int32) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int64Option) FlatMapBool(f func(int64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int64Option) FlatMapString(f func(int64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int64Option) FlatMapInt(f func(int64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int64Option) FlatMapInt8(f func(int64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int64Option) FlatMapInt16(f func(int64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int64Option) FlatMapInt32(f func(int64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int64Option) FlatMapInt64(f func(int64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int64Option) FlatMapUint(f func(int64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int64Option) FlatMapUint8(f func(int64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int64Option) FlatMapUint16(f func(int64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int64Option) FlatMapUint32(f func(int64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int64Option) FlatMapUint64(f func(int64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int64Option) FlatMapUintptr(f func(int64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int64Option) FlatMapByte(f func(int64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int64Option) FlatMapRune(f func(int64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int64Option) FlatMapFloat32(f func(int64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int64Option) FlatMapFloat64(f func(int64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int64Option) FlatMapComplex64(f func(int64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int64Option) FlatMapComplex128(f func(int64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int64Option) FlatMapAny(f func(int64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintOption) FlatMapBool(f func(uint) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintOption) FlatMapString(f func(uint) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintOption) FlatMapInt(f func(uint) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintOption) FlatMapInt8(f func(uint) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintOption) FlatMapInt16(f func(uint) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintOption) FlatMapInt32(f func(uint) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintOption) FlatMapInt64(f func(uint) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintOption) FlatMapUint(f func(uint) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintOption) FlatMapUint8(f func(uint) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintOption) FlatMapUint16(f func(uint) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintOption) FlatMapUint32(f func(uint) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintOption) FlatMapUint64(f func(uint) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintOption) FlatMapUintptr(f func(uint) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintOption) FlatMapByte(f func(uint) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintOption) FlatMapRune(f func(uint) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintOption) FlatMapFloat32(f func(uint) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintOption) FlatMapFloat64(f func(uint) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintOption) FlatMapComplex64(f func(uint) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintOption) FlatMapComplex128(f func(uint) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintOption) FlatMapAny(f func(uint) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint8Option) FlatMapBool(f func(uint8) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint8Option) FlatMapString(f func(uint8) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint8Option) FlatMapInt(f func(uint8) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint8Option) FlatMapInt8(f func(uint8) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint8Option) FlatMapInt16(f func(uint8) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint8Option) FlatMapInt32(f func(uint8) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint8Option) FlatMapInt64(f func(uint8) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint8Option) FlatMapUint(f func(uint8) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint8Option) FlatMapUint8(f func(uint8) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint8Option) FlatMapUint16(f func(uint8) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint8Option) FlatMapUint32(f func(uint8) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint8Option) FlatMapUint64(f func(uint8) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint8Option) FlatMapUintptr(f func(uint8) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint8Option) FlatMapByte(f func(uint8) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint8Option) FlatMapRune(f func(uint8) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint8Option) FlatMapFloat32(f func(uint8) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint8Option) FlatMapFloat64(f func(uint8) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint8Option) FlatMapComplex64(f func(uint8) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint8Option) FlatMapComplex128(f func(uint8) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint8Option) FlatMapAny(f func(uint8) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint16Option) FlatMapBool(f func(uint16) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint16Option) FlatMapString(f func(uint16) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint16Option) FlatMapInt(f func(uint16) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint16Option) FlatMapInt8(f func(uint16) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint16Option) FlatMapInt16(f func(uint16) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint16Option) FlatMapInt32(f func(uint16) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint16Option) FlatMapInt64(f func(uint16) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint16Option) FlatMapUint(f func(uint16) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint16Option) FlatMapUint8(f func(uint16) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint16Option) FlatMapUint16(f func(uint16) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint16Option) FlatMapUint32(f func(uint16) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint16Option) FlatMapUint64(f func(uint16) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint16Option) FlatMapUintptr(f func(uint16) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint16Option) FlatMapByte(f func(uint16) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint16Option) FlatMapRune(f func(uint16) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint16Option) FlatMapFloat32(f func(uint16) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint16Option) FlatMapFloat64(f func(uint16) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint16Option) FlatMapComplex64(f func(uint16) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint16Option) FlatMapComplex128(f func(uint16) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint16Option) FlatMapAny(f func(uint16) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint32Option) FlatMapBool(f func(uint32) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint32Option) FlatMapString(f func(uint32) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint32Option) FlatMapInt(f func(uint32) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint32Option) FlatMapInt8(f func(uint32) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint32Option) FlatMapInt16(f func(uint32) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint32Option) FlatMapInt32(f func(uint32) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint32Option) FlatMapInt64(f func(uint32) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint32Option) FlatMapUint(f func(uint32) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint32Option) FlatMapUint8(f func(uint32) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint32Option) FlatMapUint16(f func(uint32) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint32Option) FlatMapUint32(f func(uint32) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint32Option) FlatMapUint64(f func(uint32) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint32Option) FlatMapUintptr(f func(uint32) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint32Option) FlatMapByte(f func(uint32) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint32Option) FlatMapRune(f func(uint32) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint32Option) FlatMapFloat32(f func(uint32) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint32Option) FlatMapFloat64(f func(uint32) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint32Option) FlatMapComplex64(f func(uint32) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint32Option) FlatMapComplex128(f func(uint32) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint32Option) FlatMapAny(f func(uint32) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint64Option) FlatMapBool(f func(uint64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint64Option) FlatMapString(f func(uint64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint64Option) FlatMapInt(f func(uint64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint64Option) FlatMapInt8(f func(uint64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint64Option) FlatMapInt16(f func(uint64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint64Option) FlatMapInt32(f func(uint64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint64Option) FlatMapInt64(f func(uint64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint64Option) FlatMapUint(f func(uint64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint64Option) FlatMapUint8(f func(uint64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint64Option) FlatMapUint16(f func(uint64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint64Option) FlatMapUint32(f func(uint64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint64Option) FlatMapUint64(f func(uint64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint64Option) FlatMapUintptr(f func(uint64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint64Option) FlatMapByte(f func(uint64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint64Option) FlatMapRune(f func(uint64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint64Option) FlatMapFloat32(f func(uint64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint64Option) FlatMapFloat64(f func(uint64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint64Option) FlatMapComplex64(f func(uint64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint64Option) FlatMapComplex128(f func(uint64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint64Option) FlatMapAny(f func(uint64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintptrOption) FlatMapBool(f func(uintptr) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintptrOption) FlatMapString(f func(uintptr) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintptrOption) FlatMapInt(f func(uintptr) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintptrOption) FlatMapInt8(f func(uintptr) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintptrOption) FlatMapInt16(f func(uintptr) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintptrOption) FlatMapInt32(f func(uintptr) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintptrOption) FlatMapInt64(f func(uintptr) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintptrOption) FlatMapUint(f func(uintptr) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintptrOption) FlatMapUint8(f func(uintptr) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintptrOption) FlatMapUint16(f func(uintptr) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintptrOption) FlatMapUint32(f func(uintptr) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintptrOption) FlatMapUint64(f func(uintptr) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintptrOption) FlatMapUintptr(f func(uintptr) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintptrOption) FlatMapByte(f func(uintptr) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintptrOption) FlatMapRune(f func(uintptr) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintptrOption) FlatMapFloat32(f func(uintptr) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintptrOption) FlatMapFloat64(f func(uintptr) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintptrOption) FlatMapComplex64(f func(uintptr) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintptrOption) FlatMapComplex128(f func(uintptr) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintptrOption) FlatMapAny(f func(uintptr) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m ByteOption) FlatMapBool(f func(byte) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m ByteOption) FlatMapString(f func(byte) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m ByteOption) FlatMapInt(f func(byte) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m ByteOption) FlatMapInt8(f func(byte) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m ByteOption) FlatMapInt16(f func(byte) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m ByteOption) FlatMapInt32(f func(byte) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m ByteOption) FlatMapInt64(f func(byte) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m ByteOption) FlatMapUint(f func(byte) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m ByteOption) FlatMapUint8(f func(byte) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m ByteOption) FlatMapUint16(f func(byte) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m ByteOption) FlatMapUint32(f func(byte) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m ByteOption) FlatMapUint64(f func(byte) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m ByteOption) FlatMapUintptr(f func(byte) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m ByteOption) FlatMapByte(f func(byte) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m ByteOption) FlatMapRune(f func(byte) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m ByteOption) FlatMapFloat32(f func(byte) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m ByteOption) FlatMapFloat64(f func(byte) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m ByteOption) FlatMapComplex64(f func(byte) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m ByteOption) FlatMapComplex128(f func(byte) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m ByteOption) FlatMapAny(f func(byte) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m RuneOption) FlatMapBool(f func(rune) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m RuneOption) FlatMapString(f func(rune) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m RuneOption) FlatMapInt(f func(rune) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m RuneOption) FlatMapInt8(f func(rune) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m RuneOption) FlatMapInt16(f func(rune) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m RuneOption) FlatMapInt32(f func(rune) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m RuneOption) FlatMapInt64(f func(rune) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m RuneOption) FlatMapUint(f func(rune) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m RuneOption) FlatMapUint8(f func(rune) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m RuneOption) FlatMapUint16(f func(rune) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m RuneOption) FlatMapUint32(f func(rune) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m RuneOption) FlatMapUint64(f func(rune) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m RuneOption) FlatMapUintptr(f func(rune) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m RuneOption) FlatMapByte(f func(rune) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m RuneOption) FlatMapRune(f func(rune) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m RuneOption) FlatMapFloat32(f func(rune) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m RuneOption) FlatMapFloat64(f func(rune) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m RuneOption) FlatMapComplex64(f func(rune) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m RuneOption) FlatMapComplex128(f func(rune) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m RuneOption) FlatMapAny(f func(rune) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float32Option) FlatMapBool(f func(float32) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float32Option) FlatMapString(f func(float32) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float32Option) FlatMapInt(f func(float32) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float32Option) FlatMapInt8(f func(float32) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float32Option) FlatMapInt16(f func(float32) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float32Option) FlatMapInt32(f func(float32) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float32Option) FlatMapInt64(f func(float32) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float32Option) FlatMapUint(f func(float32) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float32Option) FlatMapUint8(f func(float32) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float32Option) FlatMapUint16(f func(float32) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float32Option) FlatMapUint32(f func(float32) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float32Option) FlatMapUint64(f func(float32) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float32Option) FlatMapUintptr(f func(float32) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float32Option) FlatMapByte(f func(float32) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float32Option) FlatMapRune(f func(float32) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float32Option) FlatMapFloat32(f func(float32) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float32Option) FlatMapFloat64(f func(float32) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float32Option) FlatMapComplex64(f func(float32) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float32Option) FlatMapComplex128(f func(float32) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float32Option) FlatMapAny(f func(float32) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float64Option) FlatMapBool(f func(float64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float64Option) FlatMapString(f func(float64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float64Option) FlatMapInt(f func(float64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float64Option) FlatMapInt8(f func(float64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float64Option) FlatMapInt16(f func(float64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float64Option) FlatMapInt32(f func(float64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float64Option) FlatMapInt64(f func(float64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float64Option) FlatMapUint(f func(float64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float64Option) FlatMapUint8(f func(float64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float64Option) FlatMapUint16(f func(float64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float64Option) FlatMapUint32(f func(float64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float64Option) FlatMapUint64(f func(float64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float64Option) FlatMapUintptr(f func(float64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float64Option) FlatMapByte(f func(float64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float64Option) FlatMapRune(f func(float64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float64Option) FlatMapFloat32(f func(float64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float64Option) FlatMapFloat64(f func(float64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float64Option) FlatMapComplex64(f func(float64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float64Option) FlatMapComplex128(f func(float64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float64Option) FlatMapAny(f func(float64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex64Option) FlatMapBool(f func(complex64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex64Option) FlatMapString(f func(complex64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex64Option) FlatMapInt(f func(complex64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex64Option) FlatMapInt8(f func(complex64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex64Option) FlatMapInt16(f func(complex64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex64Option) FlatMapInt32(f func(complex64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex64Option) FlatMapInt64(f func(complex64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex64Option) FlatMapUint(f func(complex64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex64Option) FlatMapUint8(f func(complex64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex64Option) FlatMapUint16(f func(complex64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex64Option) FlatMapUint32(f func(complex64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex64Option) FlatMapUint64(f func(complex64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex64Option) FlatMapUintptr(f func(complex64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex64Option) FlatMapByte(f func(complex64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex64Option) FlatMapRune(f func(complex64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex64Option) FlatMapFloat32(f func(complex64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex64Option) FlatMapFloat64(f func(complex64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex64Option) FlatMapComplex64(f func(complex64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex64Option) FlatMapComplex128(f func(complex64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex64Option) FlatMapAny(f func(complex64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex128Option) FlatMapBool(f func(complex128) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex128Option) FlatMapString(f func(complex128) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex128Option) FlatMapInt(f func(complex128) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex128Option) FlatMapInt8(f func(complex128) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex128Option) FlatMapInt16(f func(complex128) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex128Option) FlatMapInt32(f func(complex128) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex128Option) FlatMapInt64(f func(complex128) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex128Option) FlatMapUint(f func(complex128) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex128Option) FlatMapUint8(f func(complex128) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex128Option) FlatMapUint16(f func(complex128) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex128Option) FlatMapUint32(f func(complex128) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex128Option) FlatMapUint64(f func(complex128) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex128Option) FlatMapUintptr(f func(complex128) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex128Option) FlatMapByte(f func(complex128) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex128Option) FlatMapRune(f func(complex128) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex128Option) FlatMapFloat32(f func(complex128) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex128Option) FlatMapFloat64(f func(complex128) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex128Option) FlatMapComplex64(f func(complex128) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex128Option) FlatMapComplex128(f func(complex128) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex128Option) FlatMapAny(f func(complex128) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m AnyOption) FlatMapBool(f func(Any) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m AnyOption) FlatMapString(f func(Any) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m AnyOption) FlatMapInt(f func(Any) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m AnyOption) FlatMapInt8(f func(Any) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m AnyOption) FlatMapInt16(f func(Any) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m AnyOption) FlatMapInt32(f func(Any) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m AnyOption) FlatMapInt64(f func(Any) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m AnyOption) FlatMapUint(f func(Any) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m AnyOption) FlatMapUint8(f func(Any) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m AnyOption) FlatMapUint16(f func(Any) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m AnyOption) FlatMapUint32(f func(Any) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m AnyOption) FlatMapUint64(f func(Any) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m AnyOption) FlatMapUintptr(f func(Any) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m AnyOption) FlatMapByte(f func(Any) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m AnyOption) FlatMapRune(f func(Any) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m AnyOption) FlatMapFloat32(f func(Any) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m AnyOption) FlatMapFloat64(f func(Any) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m AnyOption) FlatMapComplex64(f func(Any) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m AnyOption) FlatMapComplex128(f func(Any) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m AnyOption) FlatMapAny(f func(Any) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m BoolOptionOption) FlatMapBool(f func(BoolOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m BoolOptionOption) FlatMapString(f func(BoolOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m BoolOptionOption) FlatMapInt(f func(BoolOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m BoolOptionOption) FlatMapInt8(f func(BoolOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m BoolOptionOption) FlatMapInt16(f func(BoolOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m BoolOptionOption) FlatMapInt32(f func(BoolOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m BoolOptionOption) FlatMapInt64(f func(BoolOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m BoolOptionOption) FlatMapUint(f func(BoolOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m BoolOptionOption) FlatMapUint8(f func(BoolOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m BoolOptionOption) FlatMapUint16(f func(BoolOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m BoolOptionOption) FlatMapUint32(f func(BoolOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m BoolOptionOption) FlatMapUint64(f func(BoolOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m BoolOptionOption) FlatMapUintptr(f func(BoolOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m BoolOptionOption) FlatMapByte(f func(BoolOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m BoolOptionOption) FlatMapRune(f func(BoolOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m BoolOptionOption) FlatMapFloat32(f func(BoolOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m BoolOptionOption) FlatMapFloat64(f func(BoolOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m BoolOptionOption) FlatMapComplex64(f func(BoolOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m BoolOptionOption) FlatMapComplex128(f func(BoolOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m BoolOptionOption) FlatMapAny(f func(BoolOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m StringOptionOption) FlatMapBool(f func(StringOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m StringOptionOption) FlatMapString(f func(StringOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m StringOptionOption) FlatMapInt(f func(StringOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m StringOptionOption) FlatMapInt8(f func(StringOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m StringOptionOption) FlatMapInt16(f func(StringOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m StringOptionOption) FlatMapInt32(f func(StringOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m StringOptionOption) FlatMapInt64(f func(StringOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m StringOptionOption) FlatMapUint(f func(StringOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m StringOptionOption) FlatMapUint8(f func(StringOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m StringOptionOption) FlatMapUint16(f func(StringOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m StringOptionOption) FlatMapUint32(f func(StringOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m StringOptionOption) FlatMapUint64(f func(StringOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m StringOptionOption) FlatMapUintptr(f func(StringOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m StringOptionOption) FlatMapByte(f func(StringOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m StringOptionOption) FlatMapRune(f func(StringOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m StringOptionOption) FlatMapFloat32(f func(StringOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m StringOptionOption) FlatMapFloat64(f func(StringOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m StringOptionOption) FlatMapComplex64(f func(StringOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m StringOptionOption) FlatMapComplex128(f func(StringOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m StringOptionOption) FlatMapAny(f func(StringOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m IntOptionOption) FlatMapBool(f func(IntOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m IntOptionOption) FlatMapString(f func(IntOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m IntOptionOption) FlatMapInt(f func(IntOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m IntOptionOption) FlatMapInt8(f func(IntOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m IntOptionOption) FlatMapInt16(f func(IntOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m IntOptionOption) FlatMapInt32(f func(IntOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m IntOptionOption) FlatMapInt64(f func(IntOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m IntOptionOption) FlatMapUint(f func(IntOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m IntOptionOption) FlatMapUint8(f func(IntOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m IntOptionOption) FlatMapUint16(f func(IntOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m IntOptionOption) FlatMapUint32(f func(IntOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m IntOptionOption) FlatMapUint64(f func(IntOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m IntOptionOption) FlatMapUintptr(f func(IntOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m IntOptionOption) FlatMapByte(f func(IntOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m IntOptionOption) FlatMapRune(f func(IntOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m IntOptionOption) FlatMapFloat32(f func(IntOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m IntOptionOption) FlatMapFloat64(f func(IntOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m IntOptionOption) FlatMapComplex64(f func(IntOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m IntOptionOption) FlatMapComplex128(f func(IntOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m IntOptionOption) FlatMapAny(f func(IntOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int8OptionOption) FlatMapBool(f func(Int8Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int8OptionOption) FlatMapString(f func(Int8Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int8OptionOption) FlatMapInt(f func(Int8Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int8OptionOption) FlatMapInt8(f func(Int8Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int8OptionOption) FlatMapInt16(f func(Int8Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int8OptionOption) FlatMapInt32(f func(Int8Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int8OptionOption) FlatMapInt64(f func(Int8Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int8OptionOption) FlatMapUint(f func(Int8Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int8OptionOption) FlatMapUint8(f func(Int8Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int8OptionOption) FlatMapUint16(f func(Int8Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int8OptionOption) FlatMapUint32(f func(Int8Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int8OptionOption) FlatMapUint64(f func(Int8Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int8OptionOption) FlatMapUintptr(f func(Int8Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int8OptionOption) FlatMapByte(f func(Int8Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int8OptionOption) FlatMapRune(f func(Int8Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int8OptionOption) FlatMapFloat32(f func(Int8Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int8OptionOption) FlatMapFloat64(f func(Int8Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int8OptionOption) FlatMapComplex64(f func(Int8Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int8OptionOption) FlatMapComplex128(f func(Int8Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int8OptionOption) FlatMapAny(f func(Int8Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int16OptionOption) FlatMapBool(f func(Int16Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int16OptionOption) FlatMapString(f func(Int16Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int16OptionOption) FlatMapInt(f func(Int16Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int16OptionOption) FlatMapInt8(f func(Int16Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int16OptionOption) FlatMapInt16(f func(Int16Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int16OptionOption) FlatMapInt32(f func(Int16Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int16OptionOption) FlatMapInt64(f func(Int16Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int16OptionOption) FlatMapUint(f func(Int16Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int16OptionOption) FlatMapUint8(f func(Int16Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int16OptionOption) FlatMapUint16(f func(Int16Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int16OptionOption) FlatMapUint32(f func(Int16Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int16OptionOption) FlatMapUint64(f func(Int16Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int16OptionOption) FlatMapUintptr(f func(Int16Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int16OptionOption) FlatMapByte(f func(Int16Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int16OptionOption) FlatMapRune(f func(Int16Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int16OptionOption) FlatMapFloat32(f func(Int16Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int16OptionOption) FlatMapFloat64(f func(Int16Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int16OptionOption) FlatMapComplex64(f func(Int16Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int16OptionOption) FlatMapComplex128(f func(Int16Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int16OptionOption) FlatMapAny(f func(Int16Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int32OptionOption) FlatMapBool(f func(Int32Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int32OptionOption) FlatMapString(f func(Int32Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int32OptionOption) FlatMapInt(f func(Int32Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int32OptionOption) FlatMapInt8(f func(Int32Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int32OptionOption) FlatMapInt16(f func(Int32Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int32OptionOption) FlatMapInt32(f func(Int32Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int32OptionOption) FlatMapInt64(f func(Int32Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int32OptionOption) FlatMapUint(f func(Int32Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int32OptionOption) FlatMapUint8(f func(Int32Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int32OptionOption) FlatMapUint16(f func(Int32Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int32OptionOption) FlatMapUint32(f func(Int32Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int32OptionOption) FlatMapUint64(f func(Int32Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int32OptionOption) FlatMapUintptr(f func(Int32Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int32OptionOption) FlatMapByte(f func(Int32Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int32OptionOption) FlatMapRune(f func(Int32Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int32OptionOption) FlatMapFloat32(f func(Int32Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int32OptionOption) FlatMapFloat64(f func(Int32Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int32OptionOption) FlatMapComplex64(f func(Int32Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int32OptionOption) FlatMapComplex128(f func(Int32Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int32OptionOption) FlatMapAny(f func(Int32Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int64OptionOption) FlatMapBool(f func(Int64Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int64OptionOption) FlatMapString(f func(Int64Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int64OptionOption) FlatMapInt(f func(Int64Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int64OptionOption) FlatMapInt8(f func(Int64Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int64OptionOption) FlatMapInt16(f func(Int64Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int64OptionOption) FlatMapInt32(f func(Int64Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int64OptionOption) FlatMapInt64(f func(Int64Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int64OptionOption) FlatMapUint(f func(Int64Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int64OptionOption) FlatMapUint8(f func(Int64Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int64OptionOption) FlatMapUint16(f func(Int64Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int64OptionOption) FlatMapUint32(f func(Int64Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int64OptionOption) FlatMapUint64(f func(Int64Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int64OptionOption) FlatMapUintptr(f func(Int64Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int64OptionOption) FlatMapByte(f func(Int64Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int64OptionOption) FlatMapRune(f func(Int64Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int64OptionOption) FlatMapFloat32(f func(Int64Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int64OptionOption) FlatMapFloat64(f func(Int64Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int64OptionOption) FlatMapComplex64(f func(Int64Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int64OptionOption) FlatMapComplex128(f func(Int64Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int64OptionOption) FlatMapAny(f func(Int64Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintOptionOption) FlatMapBool(f func(UintOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintOptionOption) FlatMapString(f func(UintOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintOptionOption) FlatMapInt(f func(UintOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintOptionOption) FlatMapInt8(f func(UintOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintOptionOption) FlatMapInt16(f func(UintOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintOptionOption) FlatMapInt32(f func(UintOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintOptionOption) FlatMapInt64(f func(UintOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintOptionOption) FlatMapUint(f func(UintOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintOptionOption) FlatMapUint8(f func(UintOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintOptionOption) FlatMapUint16(f func(UintOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintOptionOption) FlatMapUint32(f func(UintOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintOptionOption) FlatMapUint64(f func(UintOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintOptionOption) FlatMapUintptr(f func(UintOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintOptionOption) FlatMapByte(f func(UintOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintOptionOption) FlatMapRune(f func(UintOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintOptionOption) FlatMapFloat32(f func(UintOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintOptionOption) FlatMapFloat64(f func(UintOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintOptionOption) FlatMapComplex64(f func(UintOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintOptionOption) FlatMapComplex128(f func(UintOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintOptionOption) FlatMapAny(f func(UintOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint8OptionOption) FlatMapBool(f func(Uint8Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint8OptionOption) FlatMapString(f func(Uint8Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint8OptionOption) FlatMapInt(f func(Uint8Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint8OptionOption) FlatMapInt8(f func(Uint8Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint8OptionOption) FlatMapInt16(f func(Uint8Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint8OptionOption) FlatMapInt32(f func(Uint8Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint8OptionOption) FlatMapInt64(f func(Uint8Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint8OptionOption) FlatMapUint(f func(Uint8Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint8OptionOption) FlatMapUint8(f func(Uint8Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint8OptionOption) FlatMapUint16(f func(Uint8Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint8OptionOption) FlatMapUint32(f func(Uint8Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint8OptionOption) FlatMapUint64(f func(Uint8Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint8OptionOption) FlatMapUintptr(f func(Uint8Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint8OptionOption) FlatMapByte(f func(Uint8Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint8OptionOption) FlatMapRune(f func(Uint8Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint8OptionOption) FlatMapFloat32(f func(Uint8Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint8OptionOption) FlatMapFloat64(f func(Uint8Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint8OptionOption) FlatMapComplex64(f func(Uint8Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint8OptionOption) FlatMapComplex128(f func(Uint8Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint8OptionOption) FlatMapAny(f func(Uint8Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint16OptionOption) FlatMapBool(f func(Uint16Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint16OptionOption) FlatMapString(f func(Uint16Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint16OptionOption) FlatMapInt(f func(Uint16Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint16OptionOption) FlatMapInt8(f func(Uint16Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint16OptionOption) FlatMapInt16(f func(Uint16Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint16OptionOption) FlatMapInt32(f func(Uint16Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint16OptionOption) FlatMapInt64(f func(Uint16Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint16OptionOption) FlatMapUint(f func(Uint16Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint16OptionOption) FlatMapUint8(f func(Uint16Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint16OptionOption) FlatMapUint16(f func(Uint16Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint16OptionOption) FlatMapUint32(f func(Uint16Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint16OptionOption) FlatMapUint64(f func(Uint16Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint16OptionOption) FlatMapUintptr(f func(Uint16Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint16OptionOption) FlatMapByte(f func(Uint16Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint16OptionOption) FlatMapRune(f func(Uint16Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint16OptionOption) FlatMapFloat32(f func(Uint16Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint16OptionOption) FlatMapFloat64(f func(Uint16Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint16OptionOption) FlatMapComplex64(f func(Uint16Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint16OptionOption) FlatMapComplex128(f func(Uint16Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint16OptionOption) FlatMapAny(f func(Uint16Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint32OptionOption) FlatMapBool(f func(Uint32Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint32OptionOption) FlatMapString(f func(Uint32Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint32OptionOption) FlatMapInt(f func(Uint32Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint32OptionOption) FlatMapInt8(f func(Uint32Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint32OptionOption) FlatMapInt16(f func(Uint32Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint32OptionOption) FlatMapInt32(f func(Uint32Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint32OptionOption) FlatMapInt64(f func(Uint32Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint32OptionOption) FlatMapUint(f func(Uint32Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint32OptionOption) FlatMapUint8(f func(Uint32Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint32OptionOption) FlatMapUint16(f func(Uint32Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint32OptionOption) FlatMapUint32(f func(Uint32Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint32OptionOption) FlatMapUint64(f func(Uint32Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint32OptionOption) FlatMapUintptr(f func(Uint32Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint32OptionOption) FlatMapByte(f func(Uint32Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint32OptionOption) FlatMapRune(f func(Uint32Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint32OptionOption) FlatMapFloat32(f func(Uint32Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint32OptionOption) FlatMapFloat64(f func(Uint32Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint32OptionOption) FlatMapComplex64(f func(Uint32Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint32OptionOption) FlatMapComplex128(f func(Uint32Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint32OptionOption) FlatMapAny(f func(Uint32Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint64OptionOption) FlatMapBool(f func(Uint64Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint64OptionOption) FlatMapString(f func(Uint64Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint64OptionOption) FlatMapInt(f func(Uint64Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint64OptionOption) FlatMapInt8(f func(Uint64Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint64OptionOption) FlatMapInt16(f func(Uint64Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint64OptionOption) FlatMapInt32(f func(Uint64Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint64OptionOption) FlatMapInt64(f func(Uint64Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint64OptionOption) FlatMapUint(f func(Uint64Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint64OptionOption) FlatMapUint8(f func(Uint64Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint64OptionOption) FlatMapUint16(f func(Uint64Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint64OptionOption) FlatMapUint32(f func(Uint64Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint64OptionOption) FlatMapUint64(f func(Uint64Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint64OptionOption) FlatMapUintptr(f func(Uint64Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint64OptionOption) FlatMapByte(f func(Uint64Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint64OptionOption) FlatMapRune(f func(Uint64Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint64OptionOption) FlatMapFloat32(f func(Uint64Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint64OptionOption) FlatMapFloat64(f func(Uint64Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint64OptionOption) FlatMapComplex64(f func(Uint64Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint64OptionOption) FlatMapComplex128(f func(Uint64Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint64OptionOption) FlatMapAny(f func(Uint64Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintptrOptionOption) FlatMapBool(f func(UintptrOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintptrOptionOption) FlatMapString(f func(UintptrOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintptrOptionOption) FlatMapInt(f func(UintptrOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintptrOptionOption) FlatMapInt8(f func(UintptrOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintptrOptionOption) FlatMapInt16(f func(UintptrOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintptrOptionOption) FlatMapInt32(f func(UintptrOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintptrOptionOption) FlatMapInt64(f func(UintptrOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintptrOptionOption) FlatMapUint(f func(UintptrOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintptrOptionOption) FlatMapUint8(f func(UintptrOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintptrOptionOption) FlatMapUint16(f func(UintptrOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintptrOptionOption) FlatMapUint32(f func(UintptrOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintptrOptionOption) FlatMapUint64(f func(UintptrOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintptrOptionOption) FlatMapUintptr(f func(UintptrOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintptrOptionOption) FlatMapByte(f func(UintptrOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintptrOptionOption) FlatMapRune(f func(UintptrOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintptrOptionOption) FlatMapFloat32(f func(UintptrOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintptrOptionOption) FlatMapFloat64(f func(UintptrOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintptrOptionOption) FlatMapComplex64(f func(UintptrOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintptrOptionOption) FlatMapComplex128(f func(UintptrOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintptrOptionOption) FlatMapAny(f func(UintptrOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m ByteOptionOption) FlatMapBool(f func(ByteOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m ByteOptionOption) FlatMapString(f func(ByteOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m ByteOptionOption) FlatMapInt(f func(ByteOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m ByteOptionOption) FlatMapInt8(f func(ByteOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m ByteOptionOption) FlatMapInt16(f func(ByteOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m ByteOptionOption) FlatMapInt32(f func(ByteOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m ByteOptionOption) FlatMapInt64(f func(ByteOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m ByteOptionOption) FlatMapUint(f func(ByteOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m ByteOptionOption) FlatMapUint8(f func(ByteOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m ByteOptionOption) FlatMapUint16(f func(ByteOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m ByteOptionOption) FlatMapUint32(f func(ByteOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m ByteOptionOption) FlatMapUint64(f func(ByteOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m ByteOptionOption) FlatMapUintptr(f func(ByteOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m ByteOptionOption) FlatMapByte(f func(ByteOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m ByteOptionOption) FlatMapRune(f func(ByteOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m ByteOptionOption) FlatMapFloat32(f func(ByteOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m ByteOptionOption) FlatMapFloat64(f func(ByteOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m ByteOptionOption) FlatMapComplex64(f func(ByteOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m ByteOptionOption) FlatMapComplex128(f func(ByteOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m ByteOptionOption) FlatMapAny(f func(ByteOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m RuneOptionOption) FlatMapBool(f func(RuneOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m RuneOptionOption) FlatMapString(f func(RuneOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m RuneOptionOption) FlatMapInt(f func(RuneOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m RuneOptionOption) FlatMapInt8(f func(RuneOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m RuneOptionOption) FlatMapInt16(f func(RuneOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m RuneOptionOption) FlatMapInt32(f func(RuneOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m RuneOptionOption) FlatMapInt64(f func(RuneOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m RuneOptionOption) FlatMapUint(f func(RuneOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m RuneOptionOption) FlatMapUint8(f func(RuneOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m RuneOptionOption) FlatMapUint16(f func(RuneOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m RuneOptionOption) FlatMapUint32(f func(RuneOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m RuneOptionOption) FlatMapUint64(f func(RuneOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m RuneOptionOption) FlatMapUintptr(f func(RuneOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m RuneOptionOption) FlatMapByte(f func(RuneOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m RuneOptionOption) FlatMapRune(f func(RuneOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m RuneOptionOption) FlatMapFloat32(f func(RuneOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m RuneOptionOption) FlatMapFloat64(f func(RuneOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m RuneOptionOption) FlatMapComplex64(f func(RuneOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m RuneOptionOption) FlatMapComplex128(f func(RuneOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m RuneOptionOption) FlatMapAny(f func(RuneOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float32OptionOption) FlatMapBool(f func(Float32Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float32OptionOption) FlatMapString(f func(Float32Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float32OptionOption) FlatMapInt(f func(Float32Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float32OptionOption) FlatMapInt8(f func(Float32Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float32OptionOption) FlatMapInt16(f func(Float32Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float32OptionOption) FlatMapInt32(f func(Float32Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float32OptionOption) FlatMapInt64(f func(Float32Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float32OptionOption) FlatMapUint(f func(Float32Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float32OptionOption) FlatMapUint8(f func(Float32Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float32OptionOption) FlatMapUint16(f func(Float32Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float32OptionOption) FlatMapUint32(f func(Float32Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float32OptionOption) FlatMapUint64(f func(Float32Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float32OptionOption) FlatMapUintptr(f func(Float32Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float32OptionOption) FlatMapByte(f func(Float32Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float32OptionOption) FlatMapRune(f func(Float32Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float32OptionOption) FlatMapFloat32(f func(Float32Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float32OptionOption) FlatMapFloat64(f func(Float32Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float32OptionOption) FlatMapComplex64(f func(Float32Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float32OptionOption) FlatMapComplex128(f func(Float32Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float32OptionOption) FlatMapAny(f func(Float32Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float64OptionOption) FlatMapBool(f func(Float64Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float64OptionOption) FlatMapString(f func(Float64Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float64OptionOption) FlatMapInt(f func(Float64Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float64OptionOption) FlatMapInt8(f func(Float64Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float64OptionOption) FlatMapInt16(f func(Float64Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float64OptionOption) FlatMapInt32(f func(Float64Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float64OptionOption) FlatMapInt64(f func(Float64Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float64OptionOption) FlatMapUint(f func(Float64Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float64OptionOption) FlatMapUint8(f func(Float64Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float64OptionOption) FlatMapUint16(f func(Float64Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float64OptionOption) FlatMapUint32(f func(Float64Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float64OptionOption) FlatMapUint64(f func(Float64Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float64OptionOption) FlatMapUintptr(f func(Float64Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float64OptionOption) FlatMapByte(f func(Float64Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float64OptionOption) FlatMapRune(f func(Float64Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float64OptionOption) FlatMapFloat32(f func(Float64Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float64OptionOption) FlatMapFloat64(f func(Float64Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float64OptionOption) FlatMapComplex64(f func(Float64Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float64OptionOption) FlatMapComplex128(f func(Float64Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float64OptionOption) FlatMapAny(f func(Float64Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex64OptionOption) FlatMapBool(f func(Complex64Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex64OptionOption) FlatMapString(f func(Complex64Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex64OptionOption) FlatMapInt(f func(Complex64Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex64OptionOption) FlatMapInt8(f func(Complex64Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex64OptionOption) FlatMapInt16(f func(Complex64Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex64OptionOption) FlatMapInt32(f func(Complex64Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex64OptionOption) FlatMapInt64(f func(Complex64Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex64OptionOption) FlatMapUint(f func(Complex64Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex64OptionOption) FlatMapUint8(f func(Complex64Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex64OptionOption) FlatMapUint16(f func(Complex64Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex64OptionOption) FlatMapUint32(f func(Complex64Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex64OptionOption) FlatMapUint64(f func(Complex64Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex64OptionOption) FlatMapUintptr(f func(Complex64Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex64OptionOption) FlatMapByte(f func(Complex64Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex64OptionOption) FlatMapRune(f func(Complex64Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex64OptionOption) FlatMapFloat32(f func(Complex64Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex64OptionOption) FlatMapFloat64(f func(Complex64Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex64OptionOption) FlatMapComplex64(f func(Complex64Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex64OptionOption) FlatMapComplex128(f func(Complex64Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex64OptionOption) FlatMapAny(f func(Complex64Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex128OptionOption) FlatMapBool(f func(Complex128Option) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex128OptionOption) FlatMapString(f func(Complex128Option) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex128OptionOption) FlatMapInt(f func(Complex128Option) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex128OptionOption) FlatMapInt8(f func(Complex128Option) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex128OptionOption) FlatMapInt16(f func(Complex128Option) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex128OptionOption) FlatMapInt32(f func(Complex128Option) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex128OptionOption) FlatMapInt64(f func(Complex128Option) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex128OptionOption) FlatMapUint(f func(Complex128Option) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex128OptionOption) FlatMapUint8(f func(Complex128Option) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex128OptionOption) FlatMapUint16(f func(Complex128Option) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex128OptionOption) FlatMapUint32(f func(Complex128Option) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex128OptionOption) FlatMapUint64(f func(Complex128Option) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex128OptionOption) FlatMapUintptr(f func(Complex128Option) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex128OptionOption) FlatMapByte(f func(Complex128Option) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex128OptionOption) FlatMapRune(f func(Complex128Option) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex128OptionOption) FlatMapFloat32(f func(Complex128Option) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex128OptionOption) FlatMapFloat64(f func(Complex128Option) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex128OptionOption) FlatMapComplex64(f func(Complex128Option) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex128OptionOption) FlatMapComplex128(f func(Complex128Option) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex128OptionOption) FlatMapAny(f func(Complex128Option) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m AnyOptionOption) FlatMapBool(f func(AnyOption) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m AnyOptionOption) FlatMapString(f func(AnyOption) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m AnyOptionOption) FlatMapInt(f func(AnyOption) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m AnyOptionOption) FlatMapInt8(f func(AnyOption) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m AnyOptionOption) FlatMapInt16(f func(AnyOption) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m AnyOptionOption) FlatMapInt32(f func(AnyOption) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m AnyOptionOption) FlatMapInt64(f func(AnyOption) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m AnyOptionOption) FlatMapUint(f func(AnyOption) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m AnyOptionOption) FlatMapUint8(f func(AnyOption) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m AnyOptionOption) FlatMapUint16(f func(AnyOption) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m AnyOptionOption) FlatMapUint32(f func(AnyOption) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m AnyOptionOption) FlatMapUint64(f func(AnyOption) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m AnyOptionOption) FlatMapUintptr(f func(AnyOption) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m AnyOptionOption) FlatMapByte(f func(AnyOption) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m AnyOptionOption) FlatMapRune(f func(AnyOption) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m AnyOptionOption) FlatMapFloat32(f func(AnyOption) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m AnyOptionOption) FlatMapFloat64(f func(AnyOption) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m AnyOptionOption) FlatMapComplex64(f func(AnyOption) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m AnyOptionOption) FlatMapComplex128(f func(AnyOption) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m AnyOptionOption) FlatMapAny(f func(AnyOption) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m BoolArrOption) FlatMapBool(f func([]bool) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m BoolArrOption) FlatMapString(f func([]bool) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m BoolArrOption) FlatMapInt(f func([]bool) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m BoolArrOption) FlatMapInt8(f func([]bool) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m BoolArrOption) FlatMapInt16(f func([]bool) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m BoolArrOption) FlatMapInt32(f func([]bool) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m BoolArrOption) FlatMapInt64(f func([]bool) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m BoolArrOption) FlatMapUint(f func([]bool) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m BoolArrOption) FlatMapUint8(f func([]bool) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m BoolArrOption) FlatMapUint16(f func([]bool) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m BoolArrOption) FlatMapUint32(f func([]bool) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m BoolArrOption) FlatMapUint64(f func([]bool) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m BoolArrOption) FlatMapUintptr(f func([]bool) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m BoolArrOption) FlatMapByte(f func([]bool) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m BoolArrOption) FlatMapRune(f func([]bool) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m BoolArrOption) FlatMapFloat32(f func([]bool) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m BoolArrOption) FlatMapFloat64(f func([]bool) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m BoolArrOption) FlatMapComplex64(f func([]bool) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m BoolArrOption) FlatMapComplex128(f func([]bool) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m BoolArrOption) FlatMapAny(f func([]bool) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m StringArrOption) FlatMapBool(f func([]string) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m StringArrOption) FlatMapString(f func([]string) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m StringArrOption) FlatMapInt(f func([]string) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m StringArrOption) FlatMapInt8(f func([]string) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m StringArrOption) FlatMapInt16(f func([]string) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m StringArrOption) FlatMapInt32(f func([]string) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m StringArrOption) FlatMapInt64(f func([]string) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m StringArrOption) FlatMapUint(f func([]string) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m StringArrOption) FlatMapUint8(f func([]string) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m StringArrOption) FlatMapUint16(f func([]string) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m StringArrOption) FlatMapUint32(f func([]string) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m StringArrOption) FlatMapUint64(f func([]string) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m StringArrOption) FlatMapUintptr(f func([]string) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m StringArrOption) FlatMapByte(f func([]string) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m StringArrOption) FlatMapRune(f func([]string) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m StringArrOption) FlatMapFloat32(f func([]string) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m StringArrOption) FlatMapFloat64(f func([]string) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m StringArrOption) FlatMapComplex64(f func([]string) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m StringArrOption) FlatMapComplex128(f func([]string) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m StringArrOption) FlatMapAny(f func([]string) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m IntArrOption) FlatMapBool(f func([]int) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m IntArrOption) FlatMapString(f func([]int) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m IntArrOption) FlatMapInt(f func([]int) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m IntArrOption) FlatMapInt8(f func([]int) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m IntArrOption) FlatMapInt16(f func([]int) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m IntArrOption) FlatMapInt32(f func([]int) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m IntArrOption) FlatMapInt64(f func([]int) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m IntArrOption) FlatMapUint(f func([]int) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m IntArrOption) FlatMapUint8(f func([]int) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m IntArrOption) FlatMapUint16(f func([]int) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m IntArrOption) FlatMapUint32(f func([]int) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m IntArrOption) FlatMapUint64(f func([]int) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m IntArrOption) FlatMapUintptr(f func([]int) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m IntArrOption) FlatMapByte(f func([]int) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m IntArrOption) FlatMapRune(f func([]int) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m IntArrOption) FlatMapFloat32(f func([]int) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m IntArrOption) FlatMapFloat64(f func([]int) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m IntArrOption) FlatMapComplex64(f func([]int) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m IntArrOption) FlatMapComplex128(f func([]int) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m IntArrOption) FlatMapAny(f func([]int) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int8ArrOption) FlatMapBool(f func([]int8) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int8ArrOption) FlatMapString(f func([]int8) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int8ArrOption) FlatMapInt(f func([]int8) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int8ArrOption) FlatMapInt8(f func([]int8) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int8ArrOption) FlatMapInt16(f func([]int8) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int8ArrOption) FlatMapInt32(f func([]int8) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int8ArrOption) FlatMapInt64(f func([]int8) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int8ArrOption) FlatMapUint(f func([]int8) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int8ArrOption) FlatMapUint8(f func([]int8) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int8ArrOption) FlatMapUint16(f func([]int8) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int8ArrOption) FlatMapUint32(f func([]int8) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int8ArrOption) FlatMapUint64(f func([]int8) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int8ArrOption) FlatMapUintptr(f func([]int8) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int8ArrOption) FlatMapByte(f func([]int8) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int8ArrOption) FlatMapRune(f func([]int8) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int8ArrOption) FlatMapFloat32(f func([]int8) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int8ArrOption) FlatMapFloat64(f func([]int8) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int8ArrOption) FlatMapComplex64(f func([]int8) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int8ArrOption) FlatMapComplex128(f func([]int8) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int8ArrOption) FlatMapAny(f func([]int8) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int16ArrOption) FlatMapBool(f func([]int16) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int16ArrOption) FlatMapString(f func([]int16) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int16ArrOption) FlatMapInt(f func([]int16) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int16ArrOption) FlatMapInt8(f func([]int16) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int16ArrOption) FlatMapInt16(f func([]int16) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int16ArrOption) FlatMapInt32(f func([]int16) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int16ArrOption) FlatMapInt64(f func([]int16) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int16ArrOption) FlatMapUint(f func([]int16) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int16ArrOption) FlatMapUint8(f func([]int16) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int16ArrOption) FlatMapUint16(f func([]int16) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int16ArrOption) FlatMapUint32(f func([]int16) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int16ArrOption) FlatMapUint64(f func([]int16) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int16ArrOption) FlatMapUintptr(f func([]int16) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int16ArrOption) FlatMapByte(f func([]int16) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int16ArrOption) FlatMapRune(f func([]int16) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int16ArrOption) FlatMapFloat32(f func([]int16) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int16ArrOption) FlatMapFloat64(f func([]int16) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int16ArrOption) FlatMapComplex64(f func([]int16) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int16ArrOption) FlatMapComplex128(f func([]int16) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int16ArrOption) FlatMapAny(f func([]int16) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int32ArrOption) FlatMapBool(f func([]int32) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int32ArrOption) FlatMapString(f func([]int32) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int32ArrOption) FlatMapInt(f func([]int32) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int32ArrOption) FlatMapInt8(f func([]int32) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int32ArrOption) FlatMapInt16(f func([]int32) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int32ArrOption) FlatMapInt32(f func([]int32) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int32ArrOption) FlatMapInt64(f func([]int32) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int32ArrOption) FlatMapUint(f func([]int32) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int32ArrOption) FlatMapUint8(f func([]int32) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int32ArrOption) FlatMapUint16(f func([]int32) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int32ArrOption) FlatMapUint32(f func([]int32) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int32ArrOption) FlatMapUint64(f func([]int32) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int32ArrOption) FlatMapUintptr(f func([]int32) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int32ArrOption) FlatMapByte(f func([]int32) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int32ArrOption) FlatMapRune(f func([]int32) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int32ArrOption) FlatMapFloat32(f func([]int32) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int32ArrOption) FlatMapFloat64(f func([]int32) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int32ArrOption) FlatMapComplex64(f func([]int32) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int32ArrOption) FlatMapComplex128(f func([]int32) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int32ArrOption) FlatMapAny(f func([]int32) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int64ArrOption) FlatMapBool(f func([]int64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int64ArrOption) FlatMapString(f func([]int64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int64ArrOption) FlatMapInt(f func([]int64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int64ArrOption) FlatMapInt8(f func([]int64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int64ArrOption) FlatMapInt16(f func([]int64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int64ArrOption) FlatMapInt32(f func([]int64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int64ArrOption) FlatMapInt64(f func([]int64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int64ArrOption) FlatMapUint(f func([]int64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int64ArrOption) FlatMapUint8(f func([]int64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int64ArrOption) FlatMapUint16(f func([]int64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int64ArrOption) FlatMapUint32(f func([]int64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int64ArrOption) FlatMapUint64(f func([]int64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int64ArrOption) FlatMapUintptr(f func([]int64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int64ArrOption) FlatMapByte(f func([]int64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int64ArrOption) FlatMapRune(f func([]int64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int64ArrOption) FlatMapFloat32(f func([]int64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int64ArrOption) FlatMapFloat64(f func([]int64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int64ArrOption) FlatMapComplex64(f func([]int64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int64ArrOption) FlatMapComplex128(f func([]int64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int64ArrOption) FlatMapAny(f func([]int64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintArrOption) FlatMapBool(f func([]uint) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintArrOption) FlatMapString(f func([]uint) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintArrOption) FlatMapInt(f func([]uint) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintArrOption) FlatMapInt8(f func([]uint) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintArrOption) FlatMapInt16(f func([]uint) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintArrOption) FlatMapInt32(f func([]uint) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintArrOption) FlatMapInt64(f func([]uint) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintArrOption) FlatMapUint(f func([]uint) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintArrOption) FlatMapUint8(f func([]uint) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintArrOption) FlatMapUint16(f func([]uint) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintArrOption) FlatMapUint32(f func([]uint) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintArrOption) FlatMapUint64(f func([]uint) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintArrOption) FlatMapUintptr(f func([]uint) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintArrOption) FlatMapByte(f func([]uint) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintArrOption) FlatMapRune(f func([]uint) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintArrOption) FlatMapFloat32(f func([]uint) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintArrOption) FlatMapFloat64(f func([]uint) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintArrOption) FlatMapComplex64(f func([]uint) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintArrOption) FlatMapComplex128(f func([]uint) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintArrOption) FlatMapAny(f func([]uint) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint8ArrOption) FlatMapBool(f func([]uint8) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint8ArrOption) FlatMapString(f func([]uint8) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint8ArrOption) FlatMapInt(f func([]uint8) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint8ArrOption) FlatMapInt8(f func([]uint8) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint8ArrOption) FlatMapInt16(f func([]uint8) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint8ArrOption) FlatMapInt32(f func([]uint8) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint8ArrOption) FlatMapInt64(f func([]uint8) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint8ArrOption) FlatMapUint(f func([]uint8) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint8ArrOption) FlatMapUint8(f func([]uint8) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint8ArrOption) FlatMapUint16(f func([]uint8) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint8ArrOption) FlatMapUint32(f func([]uint8) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint8ArrOption) FlatMapUint64(f func([]uint8) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint8ArrOption) FlatMapUintptr(f func([]uint8) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint8ArrOption) FlatMapByte(f func([]uint8) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint8ArrOption) FlatMapRune(f func([]uint8) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint8ArrOption) FlatMapFloat32(f func([]uint8) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint8ArrOption) FlatMapFloat64(f func([]uint8) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint8ArrOption) FlatMapComplex64(f func([]uint8) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint8ArrOption) FlatMapComplex128(f func([]uint8) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint8ArrOption) FlatMapAny(f func([]uint8) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint16ArrOption) FlatMapBool(f func([]uint16) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint16ArrOption) FlatMapString(f func([]uint16) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint16ArrOption) FlatMapInt(f func([]uint16) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint16ArrOption) FlatMapInt8(f func([]uint16) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint16ArrOption) FlatMapInt16(f func([]uint16) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint16ArrOption) FlatMapInt32(f func([]uint16) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint16ArrOption) FlatMapInt64(f func([]uint16) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint16ArrOption) FlatMapUint(f func([]uint16) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint16ArrOption) FlatMapUint8(f func([]uint16) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint16ArrOption) FlatMapUint16(f func([]uint16) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint16ArrOption) FlatMapUint32(f func([]uint16) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint16ArrOption) FlatMapUint64(f func([]uint16) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint16ArrOption) FlatMapUintptr(f func([]uint16) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint16ArrOption) FlatMapByte(f func([]uint16) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint16ArrOption) FlatMapRune(f func([]uint16) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint16ArrOption) FlatMapFloat32(f func([]uint16) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint16ArrOption) FlatMapFloat64(f func([]uint16) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint16ArrOption) FlatMapComplex64(f func([]uint16) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint16ArrOption) FlatMapComplex128(f func([]uint16) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint16ArrOption) FlatMapAny(f func([]uint16) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint32ArrOption) FlatMapBool(f func([]uint32) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint32ArrOption) FlatMapString(f func([]uint32) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint32ArrOption) FlatMapInt(f func([]uint32) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint32ArrOption) FlatMapInt8(f func([]uint32) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint32ArrOption) FlatMapInt16(f func([]uint32) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint32ArrOption) FlatMapInt32(f func([]uint32) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint32ArrOption) FlatMapInt64(f func([]uint32) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint32ArrOption) FlatMapUint(f func([]uint32) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint32ArrOption) FlatMapUint8(f func([]uint32) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint32ArrOption) FlatMapUint16(f func([]uint32) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint32ArrOption) FlatMapUint32(f func([]uint32) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint32ArrOption) FlatMapUint64(f func([]uint32) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint32ArrOption) FlatMapUintptr(f func([]uint32) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint32ArrOption) FlatMapByte(f func([]uint32) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint32ArrOption) FlatMapRune(f func([]uint32) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint32ArrOption) FlatMapFloat32(f func([]uint32) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint32ArrOption) FlatMapFloat64(f func([]uint32) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint32ArrOption) FlatMapComplex64(f func([]uint32) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint32ArrOption) FlatMapComplex128(f func([]uint32) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint32ArrOption) FlatMapAny(f func([]uint32) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint64ArrOption) FlatMapBool(f func([]uint64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint64ArrOption) FlatMapString(f func([]uint64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint64ArrOption) FlatMapInt(f func([]uint64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint64ArrOption) FlatMapInt8(f func([]uint64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint64ArrOption) FlatMapInt16(f func([]uint64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint64ArrOption) FlatMapInt32(f func([]uint64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint64ArrOption) FlatMapInt64(f func([]uint64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint64ArrOption) FlatMapUint(f func([]uint64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint64ArrOption) FlatMapUint8(f func([]uint64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint64ArrOption) FlatMapUint16(f func([]uint64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint64ArrOption) FlatMapUint32(f func([]uint64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint64ArrOption) FlatMapUint64(f func([]uint64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint64ArrOption) FlatMapUintptr(f func([]uint64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint64ArrOption) FlatMapByte(f func([]uint64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint64ArrOption) FlatMapRune(f func([]uint64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint64ArrOption) FlatMapFloat32(f func([]uint64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint64ArrOption) FlatMapFloat64(f func([]uint64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint64ArrOption) FlatMapComplex64(f func([]uint64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint64ArrOption) FlatMapComplex128(f func([]uint64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint64ArrOption) FlatMapAny(f func([]uint64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintptrArrOption) FlatMapBool(f func([]uintptr) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintptrArrOption) FlatMapString(f func([]uintptr) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintptrArrOption) FlatMapInt(f func([]uintptr) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintptrArrOption) FlatMapInt8(f func([]uintptr) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintptrArrOption) FlatMapInt16(f func([]uintptr) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintptrArrOption) FlatMapInt32(f func([]uintptr) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintptrArrOption) FlatMapInt64(f func([]uintptr) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintptrArrOption) FlatMapUint(f func([]uintptr) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintptrArrOption) FlatMapUint8(f func([]uintptr) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintptrArrOption) FlatMapUint16(f func([]uintptr) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintptrArrOption) FlatMapUint32(f func([]uintptr) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintptrArrOption) FlatMapUint64(f func([]uintptr) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintptrArrOption) FlatMapUintptr(f func([]uintptr) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintptrArrOption) FlatMapByte(f func([]uintptr) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintptrArrOption) FlatMapRune(f func([]uintptr) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintptrArrOption) FlatMapFloat32(f func([]uintptr) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintptrArrOption) FlatMapFloat64(f func([]uintptr) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintptrArrOption) FlatMapComplex64(f func([]uintptr) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintptrArrOption) FlatMapComplex128(f func([]uintptr) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintptrArrOption) FlatMapAny(f func([]uintptr) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m ByteArrOption) FlatMapBool(f func([]byte) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m ByteArrOption) FlatMapString(f func([]byte) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m ByteArrOption) FlatMapInt(f func([]byte) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m ByteArrOption) FlatMapInt8(f func([]byte) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m ByteArrOption) FlatMapInt16(f func([]byte) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m ByteArrOption) FlatMapInt32(f func([]byte) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m ByteArrOption) FlatMapInt64(f func([]byte) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m ByteArrOption) FlatMapUint(f func([]byte) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m ByteArrOption) FlatMapUint8(f func([]byte) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m ByteArrOption) FlatMapUint16(f func([]byte) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m ByteArrOption) FlatMapUint32(f func([]byte) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m ByteArrOption) FlatMapUint64(f func([]byte) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m ByteArrOption) FlatMapUintptr(f func([]byte) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m ByteArrOption) FlatMapByte(f func([]byte) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m ByteArrOption) FlatMapRune(f func([]byte) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m ByteArrOption) FlatMapFloat32(f func([]byte) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m ByteArrOption) FlatMapFloat64(f func([]byte) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m ByteArrOption) FlatMapComplex64(f func([]byte) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m ByteArrOption) FlatMapComplex128(f func([]byte) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m ByteArrOption) FlatMapAny(f func([]byte) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m RuneArrOption) FlatMapBool(f func([]rune) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m RuneArrOption) FlatMapString(f func([]rune) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m RuneArrOption) FlatMapInt(f func([]rune) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m RuneArrOption) FlatMapInt8(f func([]rune) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m RuneArrOption) FlatMapInt16(f func([]rune) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m RuneArrOption) FlatMapInt32(f func([]rune) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m RuneArrOption) FlatMapInt64(f func([]rune) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m RuneArrOption) FlatMapUint(f func([]rune) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m RuneArrOption) FlatMapUint8(f func([]rune) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m RuneArrOption) FlatMapUint16(f func([]rune) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m RuneArrOption) FlatMapUint32(f func([]rune) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m RuneArrOption) FlatMapUint64(f func([]rune) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m RuneArrOption) FlatMapUintptr(f func([]rune) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m RuneArrOption) FlatMapByte(f func([]rune) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m RuneArrOption) FlatMapRune(f func([]rune) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m RuneArrOption) FlatMapFloat32(f func([]rune) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m RuneArrOption) FlatMapFloat64(f func([]rune) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m RuneArrOption) FlatMapComplex64(f func([]rune) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m RuneArrOption) FlatMapComplex128(f func([]rune) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m RuneArrOption) FlatMapAny(f func([]rune) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float32ArrOption) FlatMapBool(f func([]float32) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float32ArrOption) FlatMapString(f func([]float32) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float32ArrOption) FlatMapInt(f func([]float32) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float32ArrOption) FlatMapInt8(f func([]float32) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float32ArrOption) FlatMapInt16(f func([]float32) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float32ArrOption) FlatMapInt32(f func([]float32) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float32ArrOption) FlatMapInt64(f func([]float32) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float32ArrOption) FlatMapUint(f func([]float32) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float32ArrOption) FlatMapUint8(f func([]float32) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float32ArrOption) FlatMapUint16(f func([]float32) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float32ArrOption) FlatMapUint32(f func([]float32) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float32ArrOption) FlatMapUint64(f func([]float32) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float32ArrOption) FlatMapUintptr(f func([]float32) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float32ArrOption) FlatMapByte(f func([]float32) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float32ArrOption) FlatMapRune(f func([]float32) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float32ArrOption) FlatMapFloat32(f func([]float32) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float32ArrOption) FlatMapFloat64(f func([]float32) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float32ArrOption) FlatMapComplex64(f func([]float32) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float32ArrOption) FlatMapComplex128(f func([]float32) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float32ArrOption) FlatMapAny(f func([]float32) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float64ArrOption) FlatMapBool(f func([]float64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float64ArrOption) FlatMapString(f func([]float64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float64ArrOption) FlatMapInt(f func([]float64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float64ArrOption) FlatMapInt8(f func([]float64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float64ArrOption) FlatMapInt16(f func([]float64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float64ArrOption) FlatMapInt32(f func([]float64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float64ArrOption) FlatMapInt64(f func([]float64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float64ArrOption) FlatMapUint(f func([]float64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float64ArrOption) FlatMapUint8(f func([]float64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float64ArrOption) FlatMapUint16(f func([]float64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float64ArrOption) FlatMapUint32(f func([]float64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float64ArrOption) FlatMapUint64(f func([]float64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float64ArrOption) FlatMapUintptr(f func([]float64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float64ArrOption) FlatMapByte(f func([]float64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float64ArrOption) FlatMapRune(f func([]float64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float64ArrOption) FlatMapFloat32(f func([]float64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float64ArrOption) FlatMapFloat64(f func([]float64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float64ArrOption) FlatMapComplex64(f func([]float64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float64ArrOption) FlatMapComplex128(f func([]float64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float64ArrOption) FlatMapAny(f func([]float64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex64ArrOption) FlatMapBool(f func([]complex64) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex64ArrOption) FlatMapString(f func([]complex64) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex64ArrOption) FlatMapInt(f func([]complex64) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex64ArrOption) FlatMapInt8(f func([]complex64) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex64ArrOption) FlatMapInt16(f func([]complex64) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex64ArrOption) FlatMapInt32(f func([]complex64) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex64ArrOption) FlatMapInt64(f func([]complex64) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex64ArrOption) FlatMapUint(f func([]complex64) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex64ArrOption) FlatMapUint8(f func([]complex64) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex64ArrOption) FlatMapUint16(f func([]complex64) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex64ArrOption) FlatMapUint32(f func([]complex64) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex64ArrOption) FlatMapUint64(f func([]complex64) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex64ArrOption) FlatMapUintptr(f func([]complex64) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex64ArrOption) FlatMapByte(f func([]complex64) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex64ArrOption) FlatMapRune(f func([]complex64) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex64ArrOption) FlatMapFloat32(f func([]complex64) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex64ArrOption) FlatMapFloat64(f func([]complex64) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex64ArrOption) FlatMapComplex64(f func([]complex64) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex64ArrOption) FlatMapComplex128(f func([]complex64) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex64ArrOption) FlatMapAny(f func([]complex64) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex128ArrOption) FlatMapBool(f func([]complex128) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex128ArrOption) FlatMapString(f func([]complex128) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex128ArrOption) FlatMapInt(f func([]complex128) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex128ArrOption) FlatMapInt8(f func([]complex128) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex128ArrOption) FlatMapInt16(f func([]complex128) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex128ArrOption) FlatMapInt32(f func([]complex128) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex128ArrOption) FlatMapInt64(f func([]complex128) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex128ArrOption) FlatMapUint(f func([]complex128) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex128ArrOption) FlatMapUint8(f func([]complex128) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex128ArrOption) FlatMapUint16(f func([]complex128) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex128ArrOption) FlatMapUint32(f func([]complex128) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex128ArrOption) FlatMapUint64(f func([]complex128) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex128ArrOption) FlatMapUintptr(f func([]complex128) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex128ArrOption) FlatMapByte(f func([]complex128) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex128ArrOption) FlatMapRune(f func([]complex128) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex128ArrOption) FlatMapFloat32(f func([]complex128) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex128ArrOption) FlatMapFloat64(f func([]complex128) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex128ArrOption) FlatMapComplex64(f func([]complex128) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex128ArrOption) FlatMapComplex128(f func([]complex128) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex128ArrOption) FlatMapAny(f func([]complex128) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m AnyArrOption) FlatMapBool(f func([]Any) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m AnyArrOption) FlatMapString(f func([]Any) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m AnyArrOption) FlatMapInt(f func([]Any) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m AnyArrOption) FlatMapInt8(f func([]Any) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m AnyArrOption) FlatMapInt16(f func([]Any) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m AnyArrOption) FlatMapInt32(f func([]Any) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m AnyArrOption) FlatMapInt64(f func([]Any) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m AnyArrOption) FlatMapUint(f func([]Any) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m AnyArrOption) FlatMapUint8(f func([]Any) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m AnyArrOption) FlatMapUint16(f func([]Any) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m AnyArrOption) FlatMapUint32(f func([]Any) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m AnyArrOption) FlatMapUint64(f func([]Any) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m AnyArrOption) FlatMapUintptr(f func([]Any) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m AnyArrOption) FlatMapByte(f func([]Any) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m AnyArrOption) FlatMapRune(f func([]Any) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m AnyArrOption) FlatMapFloat32(f func([]Any) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m AnyArrOption) FlatMapFloat64(f func([]Any) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m AnyArrOption) FlatMapComplex64(f func([]Any) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m AnyArrOption) FlatMapComplex128(f func([]Any) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m AnyArrOption) FlatMapAny(f func([]Any) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m BoolListOption) FlatMapBool(f func(BoolList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m BoolListOption) FlatMapString(f func(BoolList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m BoolListOption) FlatMapInt(f func(BoolList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m BoolListOption) FlatMapInt8(f func(BoolList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m BoolListOption) FlatMapInt16(f func(BoolList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m BoolListOption) FlatMapInt32(f func(BoolList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m BoolListOption) FlatMapInt64(f func(BoolList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m BoolListOption) FlatMapUint(f func(BoolList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m BoolListOption) FlatMapUint8(f func(BoolList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m BoolListOption) FlatMapUint16(f func(BoolList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m BoolListOption) FlatMapUint32(f func(BoolList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m BoolListOption) FlatMapUint64(f func(BoolList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m BoolListOption) FlatMapUintptr(f func(BoolList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m BoolListOption) FlatMapByte(f func(BoolList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m BoolListOption) FlatMapRune(f func(BoolList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m BoolListOption) FlatMapFloat32(f func(BoolList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m BoolListOption) FlatMapFloat64(f func(BoolList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m BoolListOption) FlatMapComplex64(f func(BoolList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m BoolListOption) FlatMapComplex128(f func(BoolList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m BoolListOption) FlatMapAny(f func(BoolList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m StringListOption) FlatMapBool(f func(StringList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m StringListOption) FlatMapString(f func(StringList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m StringListOption) FlatMapInt(f func(StringList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m StringListOption) FlatMapInt8(f func(StringList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m StringListOption) FlatMapInt16(f func(StringList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m StringListOption) FlatMapInt32(f func(StringList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m StringListOption) FlatMapInt64(f func(StringList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m StringListOption) FlatMapUint(f func(StringList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m StringListOption) FlatMapUint8(f func(StringList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m StringListOption) FlatMapUint16(f func(StringList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m StringListOption) FlatMapUint32(f func(StringList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m StringListOption) FlatMapUint64(f func(StringList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m StringListOption) FlatMapUintptr(f func(StringList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m StringListOption) FlatMapByte(f func(StringList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m StringListOption) FlatMapRune(f func(StringList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m StringListOption) FlatMapFloat32(f func(StringList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m StringListOption) FlatMapFloat64(f func(StringList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m StringListOption) FlatMapComplex64(f func(StringList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m StringListOption) FlatMapComplex128(f func(StringList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m StringListOption) FlatMapAny(f func(StringList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m IntListOption) FlatMapBool(f func(IntList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m IntListOption) FlatMapString(f func(IntList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m IntListOption) FlatMapInt(f func(IntList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m IntListOption) FlatMapInt8(f func(IntList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m IntListOption) FlatMapInt16(f func(IntList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m IntListOption) FlatMapInt32(f func(IntList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m IntListOption) FlatMapInt64(f func(IntList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m IntListOption) FlatMapUint(f func(IntList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m IntListOption) FlatMapUint8(f func(IntList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m IntListOption) FlatMapUint16(f func(IntList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m IntListOption) FlatMapUint32(f func(IntList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m IntListOption) FlatMapUint64(f func(IntList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m IntListOption) FlatMapUintptr(f func(IntList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m IntListOption) FlatMapByte(f func(IntList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m IntListOption) FlatMapRune(f func(IntList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m IntListOption) FlatMapFloat32(f func(IntList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m IntListOption) FlatMapFloat64(f func(IntList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m IntListOption) FlatMapComplex64(f func(IntList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m IntListOption) FlatMapComplex128(f func(IntList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m IntListOption) FlatMapAny(f func(IntList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int8ListOption) FlatMapBool(f func(Int8List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int8ListOption) FlatMapString(f func(Int8List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int8ListOption) FlatMapInt(f func(Int8List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int8ListOption) FlatMapInt8(f func(Int8List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int8ListOption) FlatMapInt16(f func(Int8List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int8ListOption) FlatMapInt32(f func(Int8List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int8ListOption) FlatMapInt64(f func(Int8List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int8ListOption) FlatMapUint(f func(Int8List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int8ListOption) FlatMapUint8(f func(Int8List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int8ListOption) FlatMapUint16(f func(Int8List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int8ListOption) FlatMapUint32(f func(Int8List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int8ListOption) FlatMapUint64(f func(Int8List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int8ListOption) FlatMapUintptr(f func(Int8List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int8ListOption) FlatMapByte(f func(Int8List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int8ListOption) FlatMapRune(f func(Int8List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int8ListOption) FlatMapFloat32(f func(Int8List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int8ListOption) FlatMapFloat64(f func(Int8List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int8ListOption) FlatMapComplex64(f func(Int8List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int8ListOption) FlatMapComplex128(f func(Int8List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int8ListOption) FlatMapAny(f func(Int8List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int16ListOption) FlatMapBool(f func(Int16List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int16ListOption) FlatMapString(f func(Int16List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int16ListOption) FlatMapInt(f func(Int16List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int16ListOption) FlatMapInt8(f func(Int16List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int16ListOption) FlatMapInt16(f func(Int16List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int16ListOption) FlatMapInt32(f func(Int16List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int16ListOption) FlatMapInt64(f func(Int16List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int16ListOption) FlatMapUint(f func(Int16List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int16ListOption) FlatMapUint8(f func(Int16List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int16ListOption) FlatMapUint16(f func(Int16List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int16ListOption) FlatMapUint32(f func(Int16List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int16ListOption) FlatMapUint64(f func(Int16List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int16ListOption) FlatMapUintptr(f func(Int16List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int16ListOption) FlatMapByte(f func(Int16List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int16ListOption) FlatMapRune(f func(Int16List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int16ListOption) FlatMapFloat32(f func(Int16List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int16ListOption) FlatMapFloat64(f func(Int16List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int16ListOption) FlatMapComplex64(f func(Int16List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int16ListOption) FlatMapComplex128(f func(Int16List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int16ListOption) FlatMapAny(f func(Int16List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int32ListOption) FlatMapBool(f func(Int32List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int32ListOption) FlatMapString(f func(Int32List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int32ListOption) FlatMapInt(f func(Int32List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int32ListOption) FlatMapInt8(f func(Int32List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int32ListOption) FlatMapInt16(f func(Int32List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int32ListOption) FlatMapInt32(f func(Int32List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int32ListOption) FlatMapInt64(f func(Int32List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int32ListOption) FlatMapUint(f func(Int32List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int32ListOption) FlatMapUint8(f func(Int32List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int32ListOption) FlatMapUint16(f func(Int32List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int32ListOption) FlatMapUint32(f func(Int32List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int32ListOption) FlatMapUint64(f func(Int32List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int32ListOption) FlatMapUintptr(f func(Int32List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int32ListOption) FlatMapByte(f func(Int32List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int32ListOption) FlatMapRune(f func(Int32List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int32ListOption) FlatMapFloat32(f func(Int32List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int32ListOption) FlatMapFloat64(f func(Int32List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int32ListOption) FlatMapComplex64(f func(Int32List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int32ListOption) FlatMapComplex128(f func(Int32List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int32ListOption) FlatMapAny(f func(Int32List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Int64ListOption) FlatMapBool(f func(Int64List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Int64ListOption) FlatMapString(f func(Int64List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Int64ListOption) FlatMapInt(f func(Int64List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Int64ListOption) FlatMapInt8(f func(Int64List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Int64ListOption) FlatMapInt16(f func(Int64List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Int64ListOption) FlatMapInt32(f func(Int64List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Int64ListOption) FlatMapInt64(f func(Int64List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Int64ListOption) FlatMapUint(f func(Int64List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Int64ListOption) FlatMapUint8(f func(Int64List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Int64ListOption) FlatMapUint16(f func(Int64List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Int64ListOption) FlatMapUint32(f func(Int64List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Int64ListOption) FlatMapUint64(f func(Int64List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Int64ListOption) FlatMapUintptr(f func(Int64List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Int64ListOption) FlatMapByte(f func(Int64List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Int64ListOption) FlatMapRune(f func(Int64List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Int64ListOption) FlatMapFloat32(f func(Int64List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Int64ListOption) FlatMapFloat64(f func(Int64List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Int64ListOption) FlatMapComplex64(f func(Int64List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Int64ListOption) FlatMapComplex128(f func(Int64List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Int64ListOption) FlatMapAny(f func(Int64List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintListOption) FlatMapBool(f func(UintList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintListOption) FlatMapString(f func(UintList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintListOption) FlatMapInt(f func(UintList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintListOption) FlatMapInt8(f func(UintList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintListOption) FlatMapInt16(f func(UintList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintListOption) FlatMapInt32(f func(UintList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintListOption) FlatMapInt64(f func(UintList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintListOption) FlatMapUint(f func(UintList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintListOption) FlatMapUint8(f func(UintList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintListOption) FlatMapUint16(f func(UintList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintListOption) FlatMapUint32(f func(UintList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintListOption) FlatMapUint64(f func(UintList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintListOption) FlatMapUintptr(f func(UintList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintListOption) FlatMapByte(f func(UintList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintListOption) FlatMapRune(f func(UintList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintListOption) FlatMapFloat32(f func(UintList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintListOption) FlatMapFloat64(f func(UintList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintListOption) FlatMapComplex64(f func(UintList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintListOption) FlatMapComplex128(f func(UintList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintListOption) FlatMapAny(f func(UintList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint8ListOption) FlatMapBool(f func(Uint8List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint8ListOption) FlatMapString(f func(Uint8List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint8ListOption) FlatMapInt(f func(Uint8List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint8ListOption) FlatMapInt8(f func(Uint8List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint8ListOption) FlatMapInt16(f func(Uint8List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint8ListOption) FlatMapInt32(f func(Uint8List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint8ListOption) FlatMapInt64(f func(Uint8List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint8ListOption) FlatMapUint(f func(Uint8List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint8ListOption) FlatMapUint8(f func(Uint8List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint8ListOption) FlatMapUint16(f func(Uint8List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint8ListOption) FlatMapUint32(f func(Uint8List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint8ListOption) FlatMapUint64(f func(Uint8List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint8ListOption) FlatMapUintptr(f func(Uint8List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint8ListOption) FlatMapByte(f func(Uint8List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint8ListOption) FlatMapRune(f func(Uint8List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint8ListOption) FlatMapFloat32(f func(Uint8List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint8ListOption) FlatMapFloat64(f func(Uint8List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint8ListOption) FlatMapComplex64(f func(Uint8List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint8ListOption) FlatMapComplex128(f func(Uint8List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint8ListOption) FlatMapAny(f func(Uint8List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint16ListOption) FlatMapBool(f func(Uint16List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint16ListOption) FlatMapString(f func(Uint16List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint16ListOption) FlatMapInt(f func(Uint16List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint16ListOption) FlatMapInt8(f func(Uint16List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint16ListOption) FlatMapInt16(f func(Uint16List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint16ListOption) FlatMapInt32(f func(Uint16List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint16ListOption) FlatMapInt64(f func(Uint16List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint16ListOption) FlatMapUint(f func(Uint16List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint16ListOption) FlatMapUint8(f func(Uint16List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint16ListOption) FlatMapUint16(f func(Uint16List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint16ListOption) FlatMapUint32(f func(Uint16List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint16ListOption) FlatMapUint64(f func(Uint16List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint16ListOption) FlatMapUintptr(f func(Uint16List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint16ListOption) FlatMapByte(f func(Uint16List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint16ListOption) FlatMapRune(f func(Uint16List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint16ListOption) FlatMapFloat32(f func(Uint16List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint16ListOption) FlatMapFloat64(f func(Uint16List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint16ListOption) FlatMapComplex64(f func(Uint16List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint16ListOption) FlatMapComplex128(f func(Uint16List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint16ListOption) FlatMapAny(f func(Uint16List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint32ListOption) FlatMapBool(f func(Uint32List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint32ListOption) FlatMapString(f func(Uint32List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint32ListOption) FlatMapInt(f func(Uint32List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint32ListOption) FlatMapInt8(f func(Uint32List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint32ListOption) FlatMapInt16(f func(Uint32List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint32ListOption) FlatMapInt32(f func(Uint32List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint32ListOption) FlatMapInt64(f func(Uint32List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint32ListOption) FlatMapUint(f func(Uint32List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint32ListOption) FlatMapUint8(f func(Uint32List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint32ListOption) FlatMapUint16(f func(Uint32List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint32ListOption) FlatMapUint32(f func(Uint32List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint32ListOption) FlatMapUint64(f func(Uint32List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint32ListOption) FlatMapUintptr(f func(Uint32List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint32ListOption) FlatMapByte(f func(Uint32List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint32ListOption) FlatMapRune(f func(Uint32List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint32ListOption) FlatMapFloat32(f func(Uint32List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint32ListOption) FlatMapFloat64(f func(Uint32List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint32ListOption) FlatMapComplex64(f func(Uint32List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint32ListOption) FlatMapComplex128(f func(Uint32List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint32ListOption) FlatMapAny(f func(Uint32List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Uint64ListOption) FlatMapBool(f func(Uint64List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Uint64ListOption) FlatMapString(f func(Uint64List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Uint64ListOption) FlatMapInt(f func(Uint64List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Uint64ListOption) FlatMapInt8(f func(Uint64List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Uint64ListOption) FlatMapInt16(f func(Uint64List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Uint64ListOption) FlatMapInt32(f func(Uint64List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Uint64ListOption) FlatMapInt64(f func(Uint64List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Uint64ListOption) FlatMapUint(f func(Uint64List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Uint64ListOption) FlatMapUint8(f func(Uint64List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Uint64ListOption) FlatMapUint16(f func(Uint64List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Uint64ListOption) FlatMapUint32(f func(Uint64List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Uint64ListOption) FlatMapUint64(f func(Uint64List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Uint64ListOption) FlatMapUintptr(f func(Uint64List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Uint64ListOption) FlatMapByte(f func(Uint64List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Uint64ListOption) FlatMapRune(f func(Uint64List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Uint64ListOption) FlatMapFloat32(f func(Uint64List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Uint64ListOption) FlatMapFloat64(f func(Uint64List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Uint64ListOption) FlatMapComplex64(f func(Uint64List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Uint64ListOption) FlatMapComplex128(f func(Uint64List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Uint64ListOption) FlatMapAny(f func(Uint64List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m UintptrListOption) FlatMapBool(f func(UintptrList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m UintptrListOption) FlatMapString(f func(UintptrList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m UintptrListOption) FlatMapInt(f func(UintptrList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m UintptrListOption) FlatMapInt8(f func(UintptrList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m UintptrListOption) FlatMapInt16(f func(UintptrList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m UintptrListOption) FlatMapInt32(f func(UintptrList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m UintptrListOption) FlatMapInt64(f func(UintptrList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m UintptrListOption) FlatMapUint(f func(UintptrList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m UintptrListOption) FlatMapUint8(f func(UintptrList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m UintptrListOption) FlatMapUint16(f func(UintptrList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m UintptrListOption) FlatMapUint32(f func(UintptrList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m UintptrListOption) FlatMapUint64(f func(UintptrList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m UintptrListOption) FlatMapUintptr(f func(UintptrList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m UintptrListOption) FlatMapByte(f func(UintptrList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m UintptrListOption) FlatMapRune(f func(UintptrList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m UintptrListOption) FlatMapFloat32(f func(UintptrList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m UintptrListOption) FlatMapFloat64(f func(UintptrList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m UintptrListOption) FlatMapComplex64(f func(UintptrList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m UintptrListOption) FlatMapComplex128(f func(UintptrList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m UintptrListOption) FlatMapAny(f func(UintptrList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m ByteListOption) FlatMapBool(f func(ByteList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m ByteListOption) FlatMapString(f func(ByteList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m ByteListOption) FlatMapInt(f func(ByteList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m ByteListOption) FlatMapInt8(f func(ByteList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m ByteListOption) FlatMapInt16(f func(ByteList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m ByteListOption) FlatMapInt32(f func(ByteList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m ByteListOption) FlatMapInt64(f func(ByteList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m ByteListOption) FlatMapUint(f func(ByteList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m ByteListOption) FlatMapUint8(f func(ByteList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m ByteListOption) FlatMapUint16(f func(ByteList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m ByteListOption) FlatMapUint32(f func(ByteList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m ByteListOption) FlatMapUint64(f func(ByteList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m ByteListOption) FlatMapUintptr(f func(ByteList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m ByteListOption) FlatMapByte(f func(ByteList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m ByteListOption) FlatMapRune(f func(ByteList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m ByteListOption) FlatMapFloat32(f func(ByteList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m ByteListOption) FlatMapFloat64(f func(ByteList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m ByteListOption) FlatMapComplex64(f func(ByteList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m ByteListOption) FlatMapComplex128(f func(ByteList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m ByteListOption) FlatMapAny(f func(ByteList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m RuneListOption) FlatMapBool(f func(RuneList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m RuneListOption) FlatMapString(f func(RuneList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m RuneListOption) FlatMapInt(f func(RuneList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m RuneListOption) FlatMapInt8(f func(RuneList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m RuneListOption) FlatMapInt16(f func(RuneList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m RuneListOption) FlatMapInt32(f func(RuneList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m RuneListOption) FlatMapInt64(f func(RuneList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m RuneListOption) FlatMapUint(f func(RuneList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m RuneListOption) FlatMapUint8(f func(RuneList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m RuneListOption) FlatMapUint16(f func(RuneList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m RuneListOption) FlatMapUint32(f func(RuneList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m RuneListOption) FlatMapUint64(f func(RuneList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m RuneListOption) FlatMapUintptr(f func(RuneList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m RuneListOption) FlatMapByte(f func(RuneList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m RuneListOption) FlatMapRune(f func(RuneList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m RuneListOption) FlatMapFloat32(f func(RuneList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m RuneListOption) FlatMapFloat64(f func(RuneList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m RuneListOption) FlatMapComplex64(f func(RuneList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m RuneListOption) FlatMapComplex128(f func(RuneList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m RuneListOption) FlatMapAny(f func(RuneList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float32ListOption) FlatMapBool(f func(Float32List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float32ListOption) FlatMapString(f func(Float32List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float32ListOption) FlatMapInt(f func(Float32List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float32ListOption) FlatMapInt8(f func(Float32List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float32ListOption) FlatMapInt16(f func(Float32List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float32ListOption) FlatMapInt32(f func(Float32List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float32ListOption) FlatMapInt64(f func(Float32List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float32ListOption) FlatMapUint(f func(Float32List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float32ListOption) FlatMapUint8(f func(Float32List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float32ListOption) FlatMapUint16(f func(Float32List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float32ListOption) FlatMapUint32(f func(Float32List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float32ListOption) FlatMapUint64(f func(Float32List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float32ListOption) FlatMapUintptr(f func(Float32List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float32ListOption) FlatMapByte(f func(Float32List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float32ListOption) FlatMapRune(f func(Float32List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float32ListOption) FlatMapFloat32(f func(Float32List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float32ListOption) FlatMapFloat64(f func(Float32List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float32ListOption) FlatMapComplex64(f func(Float32List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float32ListOption) FlatMapComplex128(f func(Float32List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float32ListOption) FlatMapAny(f func(Float32List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Float64ListOption) FlatMapBool(f func(Float64List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Float64ListOption) FlatMapString(f func(Float64List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Float64ListOption) FlatMapInt(f func(Float64List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Float64ListOption) FlatMapInt8(f func(Float64List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Float64ListOption) FlatMapInt16(f func(Float64List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Float64ListOption) FlatMapInt32(f func(Float64List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Float64ListOption) FlatMapInt64(f func(Float64List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Float64ListOption) FlatMapUint(f func(Float64List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Float64ListOption) FlatMapUint8(f func(Float64List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Float64ListOption) FlatMapUint16(f func(Float64List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Float64ListOption) FlatMapUint32(f func(Float64List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Float64ListOption) FlatMapUint64(f func(Float64List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Float64ListOption) FlatMapUintptr(f func(Float64List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Float64ListOption) FlatMapByte(f func(Float64List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Float64ListOption) FlatMapRune(f func(Float64List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Float64ListOption) FlatMapFloat32(f func(Float64List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Float64ListOption) FlatMapFloat64(f func(Float64List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Float64ListOption) FlatMapComplex64(f func(Float64List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Float64ListOption) FlatMapComplex128(f func(Float64List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Float64ListOption) FlatMapAny(f func(Float64List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex64ListOption) FlatMapBool(f func(Complex64List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex64ListOption) FlatMapString(f func(Complex64List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex64ListOption) FlatMapInt(f func(Complex64List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex64ListOption) FlatMapInt8(f func(Complex64List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex64ListOption) FlatMapInt16(f func(Complex64List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex64ListOption) FlatMapInt32(f func(Complex64List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex64ListOption) FlatMapInt64(f func(Complex64List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex64ListOption) FlatMapUint(f func(Complex64List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex64ListOption) FlatMapUint8(f func(Complex64List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex64ListOption) FlatMapUint16(f func(Complex64List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex64ListOption) FlatMapUint32(f func(Complex64List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex64ListOption) FlatMapUint64(f func(Complex64List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex64ListOption) FlatMapUintptr(f func(Complex64List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex64ListOption) FlatMapByte(f func(Complex64List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex64ListOption) FlatMapRune(f func(Complex64List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex64ListOption) FlatMapFloat32(f func(Complex64List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex64ListOption) FlatMapFloat64(f func(Complex64List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex64ListOption) FlatMapComplex64(f func(Complex64List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex64ListOption) FlatMapComplex128(f func(Complex64List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex64ListOption) FlatMapAny(f func(Complex64List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m Complex128ListOption) FlatMapBool(f func(Complex128List) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m Complex128ListOption) FlatMapString(f func(Complex128List) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m Complex128ListOption) FlatMapInt(f func(Complex128List) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m Complex128ListOption) FlatMapInt8(f func(Complex128List) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m Complex128ListOption) FlatMapInt16(f func(Complex128List) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m Complex128ListOption) FlatMapInt32(f func(Complex128List) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m Complex128ListOption) FlatMapInt64(f func(Complex128List) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m Complex128ListOption) FlatMapUint(f func(Complex128List) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m Complex128ListOption) FlatMapUint8(f func(Complex128List) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m Complex128ListOption) FlatMapUint16(f func(Complex128List) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m Complex128ListOption) FlatMapUint32(f func(Complex128List) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m Complex128ListOption) FlatMapUint64(f func(Complex128List) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m Complex128ListOption) FlatMapUintptr(f func(Complex128List) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m Complex128ListOption) FlatMapByte(f func(Complex128List) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m Complex128ListOption) FlatMapRune(f func(Complex128List) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m Complex128ListOption) FlatMapFloat32(f func(Complex128List) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m Complex128ListOption) FlatMapFloat64(f func(Complex128List) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m Complex128ListOption) FlatMapComplex64(f func(Complex128List) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m Complex128ListOption) FlatMapComplex128(f func(Complex128List) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m Complex128ListOption) FlatMapAny(f func(Complex128List) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }
+func (m AnyListOption) FlatMapBool(f func(AnyList) BoolOption) BoolOption { if m.IsDefined() { return f(*m.value) } else { return NoneBoolOption } }
+func (m AnyListOption) FlatMapString(f func(AnyList) StringOption) StringOption { if m.IsDefined() { return f(*m.value) } else { return NoneStringOption } }
+func (m AnyListOption) FlatMapInt(f func(AnyList) IntOption) IntOption { if m.IsDefined() { return f(*m.value) } else { return NoneIntOption } }
+func (m AnyListOption) FlatMapInt8(f func(AnyList) Int8Option) Int8Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt8Option } }
+func (m AnyListOption) FlatMapInt16(f func(AnyList) Int16Option) Int16Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt16Option } }
+func (m AnyListOption) FlatMapInt32(f func(AnyList) Int32Option) Int32Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt32Option } }
+func (m AnyListOption) FlatMapInt64(f func(AnyList) Int64Option) Int64Option { if m.IsDefined() { return f(*m.value) } else { return NoneInt64Option } }
+func (m AnyListOption) FlatMapUint(f func(AnyList) UintOption) UintOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintOption } }
+func (m AnyListOption) FlatMapUint8(f func(AnyList) Uint8Option) Uint8Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint8Option } }
+func (m AnyListOption) FlatMapUint16(f func(AnyList) Uint16Option) Uint16Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint16Option } }
+func (m AnyListOption) FlatMapUint32(f func(AnyList) Uint32Option) Uint32Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint32Option } }
+func (m AnyListOption) FlatMapUint64(f func(AnyList) Uint64Option) Uint64Option { if m.IsDefined() { return f(*m.value) } else { return NoneUint64Option } }
+func (m AnyListOption) FlatMapUintptr(f func(AnyList) UintptrOption) UintptrOption { if m.IsDefined() { return f(*m.value) } else { return NoneUintptrOption } }
+func (m AnyListOption) FlatMapByte(f func(AnyList) ByteOption) ByteOption { if m.IsDefined() { return f(*m.value) } else { return NoneByteOption } }
+func (m AnyListOption) FlatMapRune(f func(AnyList) RuneOption) RuneOption { if m.IsDefined() { return f(*m.value) } else { return NoneRuneOption } }
+func (m AnyListOption) FlatMapFloat32(f func(AnyList) Float32Option) Float32Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat32Option } }
+func (m AnyListOption) FlatMapFloat64(f func(AnyList) Float64Option) Float64Option { if m.IsDefined() { return f(*m.value) } else { return NoneFloat64Option } }
+func (m AnyListOption) FlatMapComplex64(f func(AnyList) Complex64Option) Complex64Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex64Option } }
+func (m AnyListOption) FlatMapComplex128(f func(AnyList) Complex128Option) Complex128Option { if m.IsDefined() { return f(*m.value) } else { return NoneComplex128Option } }
+func (m AnyListOption) FlatMapAny(f func(AnyList) AnyOption) AnyOption { if m.IsDefined() { return f(*m.value) } else { return NoneAnyOption } }

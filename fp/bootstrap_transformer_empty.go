@@ -3,6 +3,7 @@
 
 package fp
 
+
 var BoolEmptyTransformer func(bool) bool = func(in bool) bool { return in }
 var StringEmptyTransformer func(string) string = func(in string) string { return in }
 var IntEmptyTransformer func(int) int = func(in int) int { return in }

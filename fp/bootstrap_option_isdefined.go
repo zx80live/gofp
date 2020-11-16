@@ -3,6 +3,7 @@
 
 package fp
 
+
 func (o BoolOption) IsDefined() bool { return o != NoneBoolOption }
 
 func (o StringOption) IsDefined() bool { return o != NoneStringOption }
@@ -357,13 +358,9 @@ func (o Float32OptionArrOptionOption) IsDefined() bool { return o != NoneFloat32
 
 func (o Float64OptionArrOptionOption) IsDefined() bool { return o != NoneFloat64OptionArrOptionOption }
 
-func (o Complex64OptionArrOptionOption) IsDefined() bool {
-	return o != NoneComplex64OptionArrOptionOption
-}
+func (o Complex64OptionArrOptionOption) IsDefined() bool { return o != NoneComplex64OptionArrOptionOption }
 
-func (o Complex128OptionArrOptionOption) IsDefined() bool {
-	return o != NoneComplex128OptionArrOptionOption
-}
+func (o Complex128OptionArrOptionOption) IsDefined() bool { return o != NoneComplex128OptionArrOptionOption }
 
 func (o AnyOptionArrOptionOption) IsDefined() bool { return o != NoneAnyOptionArrOptionOption }
 
