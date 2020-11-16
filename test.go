@@ -50,4 +50,10 @@ func main() {
 	var isXdefined bool = &x == nil
 	fmt.Println(isXdefined)
 
+	mapString := MakeIntList(1, 2, 3, 4, 5).MapString(func(e int) string { return fmt.Sprintf("{%v}", e) })
+	mapString.Foreach(func(e string) {
+		fmt.Println("> ", e)
+	})
+	fmt.Println(mapString.ToString())
+
 }
