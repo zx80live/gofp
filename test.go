@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	fmt.Println("Hello")
 
 	l := MakeIntList(1, 2, 3, 4, 5, 6, -7, 8, 9, -10)
@@ -56,4 +57,20 @@ func main() {
 	})
 	fmt.Println(mapString.ToString())
 
+	sum1 := Int(10).FlatMapInt(func(i int) IntOption {
+		return Int(20).MapInt(func(j int) int {
+			return i + j
+		})
+	})
+
+	fmt.Println(sum1.ToString())
+
+	xs1 := MakeIntListList(MakeIntList(1, 2), NilIntList, MakeIntList(3), MakeIntList(4, 5, 6))
+	fmt.Println(xs1.ToString())
+	res1 := xs1.FlatMapInt(func(list IntList) IntList {
+		fmt.Println(" flatMap.iterate ->", list.ToString())
+		return list
+	})
+
+	fmt.Println(res1.ToString())
 }
