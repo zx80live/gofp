@@ -19,17 +19,18 @@ func main() {
 			fmt.Println(">", e)
 		})
 
-	var i1 OptionInt = Int(1)
-	var i2 OptionInt = NoneInt
+	var i1 IntOption = Int(1)
+	var i2 IntOption = NoneIntOption
+
 	fmt.Println(i1.ToString(), i1.IsDefined(), i1.IsEmpty(), i1.Filter(even).ToString(), i1.Filter(pos).ToString(), i1.MapInt(func(e int) int { return e + 100 }).ToString())
 	fmt.Println(i2.ToString(), i2.IsDefined(), i2.IsEmpty(), i2.Filter(even).ToString(), i2.Filter(pos).ToString(), i1.MapInt(func(e int) int { return e + 100 }).ToString())
 
-	fmt.Println(NoneInt.Equals(NoneInt))
+	fmt.Println(NoneIntOption.Equals(NoneIntOption))
 
 	fmt.Println(MakeIntList(1, 2, 3, 4, 5).Size())
 	fmt.Println(MakeIntList(1, 2).Size())
 	fmt.Println(MakeIntList(1).Size())
-	fmt.Println(NilInt.Size())
+	fmt.Println(NilIntList.Size())
 
 	fmt.Println(MakeIntList(1, 2, 3).Equals(MakeIntList(1, 2, 3)))
 	fmt.Println(MakeIntList(1, 2, 3, 4).Equals(MakeIntList(1, 2, 3)))
@@ -44,5 +45,9 @@ func main() {
 	nestedList := MakeIntArrList([]int{1, 2, 3}, []int{4, 5, 6}, []int{7})
 	fmt.Println(MkStringIntArrList(nestedList, "[", ",", "]"))
 	fmt.Println(nestedList.ToString())
+
+	var x int = 100
+	var isXdefined bool = &x == nil
+	fmt.Println(isXdefined)
 
 }

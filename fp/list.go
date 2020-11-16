@@ -154,38 +154,40 @@ func (l List) Reverse() List {
 }
 
 func (l1 List) Zip(l2 List) List {
-	zipped := Nil
-	it1 := &l1
-	it2 := &l2
-	for {
-		if it1.head != nil && it2.head != nil {
-			zipped = zipped.Cons(Tuple2{it1.head, it2.head})
-			it1 = it1.tail
-			it2 = it2.tail
-		} else {
-			break
-		}
-	}
-
-	return zipped.Reverse()
+	//zipped := Nil
+	//it1 := &l1
+	//it2 := &l2
+	//for {
+	//	if it1.head != nil && it2.head != nil {
+	//		zipped = zipped.Cons(Tuple2{it1.head, it2.head})
+	//		it1 = it1.tail
+	//		it2 = it2.tail
+	//	} else {
+	//		break
+	//	}
+	//}
+	//
+	//return zipped.Reverse()
+	return Nil
 }
 
 func (l List) ZipWithIndex() List {
-	zipped := Nil
-	i := 0
-	it := &l
-
-	for {
-		if it.head != nil {
-			zipped = zipped.Cons(Tuple2{it.head, i})
-			it = it.tail
-			i = i + 1
-		} else {
-			break
-		}
-	}
-
-	return zipped.Reverse()
+	//zipped := Nil
+	//i := 0
+	//it := &l
+	//
+	//for {
+	//	if it.head != nil {
+	//		zipped = zipped.Cons(Tuple2{it.head, i})
+	//		it = it.tail
+	//		i = i + 1
+	//	} else {
+	//		break
+	//	}
+	//}
+	//
+	//return zipped.Reverse()
+	return Nil
 }
 
 func (l List) Count(p Predicate) int {
