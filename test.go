@@ -78,5 +78,5 @@ func main() {
 		FlatMapInt(func(i int) IntList { return MakeIntList(i * 10) }).
 		Foreach(func(i int) { fmt.Println(" ", i) })
 
-	fmt.Println(MakeIntList(1, 2).HeadOption().ToString())
+	fmt.Println(MakeIntList(1, 2).Tail().Tail().HeadOption().ToString())
 }
