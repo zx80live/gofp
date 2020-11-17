@@ -3,2104 +3,2803 @@
 
 package fp
 
-
 func (l BoolList) Foreach(f func(bool)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringList) Foreach(f func(string)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntList) Foreach(f func(int)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8List) Foreach(f func(int8)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16List) Foreach(f func(int16)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32List) Foreach(f func(int32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64List) Foreach(f func(int64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintList) Foreach(f func(uint)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8List) Foreach(f func(uint8)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16List) Foreach(f func(uint16)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32List) Foreach(f func(uint32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64List) Foreach(f func(uint64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrList) Foreach(f func(uintptr)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteList) Foreach(f func(byte)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneList) Foreach(f func(rune)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32List) Foreach(f func(float32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64List) Foreach(f func(float64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64List) Foreach(f func(complex64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128List) Foreach(f func(complex128)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyList) Foreach(f func(Any)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolOptionList) Foreach(f func(BoolOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringOptionList) Foreach(f func(StringOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntOptionList) Foreach(f func(IntOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8OptionList) Foreach(f func(Int8Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16OptionList) Foreach(f func(Int16Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32OptionList) Foreach(f func(Int32Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64OptionList) Foreach(f func(Int64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintOptionList) Foreach(f func(UintOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8OptionList) Foreach(f func(Uint8Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16OptionList) Foreach(f func(Uint16Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32OptionList) Foreach(f func(Uint32Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64OptionList) Foreach(f func(Uint64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrOptionList) Foreach(f func(UintptrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteOptionList) Foreach(f func(ByteOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneOptionList) Foreach(f func(RuneOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32OptionList) Foreach(f func(Float32Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64OptionList) Foreach(f func(Float64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64OptionList) Foreach(f func(Complex64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128OptionList) Foreach(f func(Complex128Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyOptionList) Foreach(f func(AnyOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolArrOptionList) Foreach(f func(BoolArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringArrOptionList) Foreach(f func(StringArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntArrOptionList) Foreach(f func(IntArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ArrOptionList) Foreach(f func(Int8ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ArrOptionList) Foreach(f func(Int16ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ArrOptionList) Foreach(f func(Int32ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ArrOptionList) Foreach(f func(Int64ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintArrOptionList) Foreach(f func(UintArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ArrOptionList) Foreach(f func(Uint8ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ArrOptionList) Foreach(f func(Uint16ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ArrOptionList) Foreach(f func(Uint32ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ArrOptionList) Foreach(f func(Uint64ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrArrOptionList) Foreach(f func(UintptrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteArrOptionList) Foreach(f func(ByteArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneArrOptionList) Foreach(f func(RuneArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ArrOptionList) Foreach(f func(Float32ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ArrOptionList) Foreach(f func(Float64ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ArrOptionList) Foreach(f func(Complex64ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ArrOptionList) Foreach(f func(Complex128ArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyArrOptionList) Foreach(f func(AnyArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolArrArrOptionList) Foreach(f func(BoolArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringArrArrOptionList) Foreach(f func(StringArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntArrArrOptionList) Foreach(f func(IntArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ArrArrOptionList) Foreach(f func(Int8ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ArrArrOptionList) Foreach(f func(Int16ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ArrArrOptionList) Foreach(f func(Int32ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ArrArrOptionList) Foreach(f func(Int64ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintArrArrOptionList) Foreach(f func(UintArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ArrArrOptionList) Foreach(f func(Uint8ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ArrArrOptionList) Foreach(f func(Uint16ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ArrArrOptionList) Foreach(f func(Uint32ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ArrArrOptionList) Foreach(f func(Uint64ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrArrArrOptionList) Foreach(f func(UintptrArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteArrArrOptionList) Foreach(f func(ByteArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneArrArrOptionList) Foreach(f func(RuneArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ArrArrOptionList) Foreach(f func(Float32ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ArrArrOptionList) Foreach(f func(Float64ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ArrArrOptionList) Foreach(f func(Complex64ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ArrArrOptionList) Foreach(f func(Complex128ArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyArrArrOptionList) Foreach(f func(AnyArrArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolOptionArrOptionList) Foreach(f func(BoolOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringOptionArrOptionList) Foreach(f func(StringOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntOptionArrOptionList) Foreach(f func(IntOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8OptionArrOptionList) Foreach(f func(Int8OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16OptionArrOptionList) Foreach(f func(Int16OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32OptionArrOptionList) Foreach(f func(Int32OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64OptionArrOptionList) Foreach(f func(Int64OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintOptionArrOptionList) Foreach(f func(UintOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8OptionArrOptionList) Foreach(f func(Uint8OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16OptionArrOptionList) Foreach(f func(Uint16OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32OptionArrOptionList) Foreach(f func(Uint32OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64OptionArrOptionList) Foreach(f func(Uint64OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrOptionArrOptionList) Foreach(f func(UintptrOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteOptionArrOptionList) Foreach(f func(ByteOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneOptionArrOptionList) Foreach(f func(RuneOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32OptionArrOptionList) Foreach(f func(Float32OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64OptionArrOptionList) Foreach(f func(Float64OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64OptionArrOptionList) Foreach(f func(Complex64OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128OptionArrOptionList) Foreach(f func(Complex128OptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyOptionArrOptionList) Foreach(f func(AnyOptionArrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolListOptionList) Foreach(f func(BoolListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringListOptionList) Foreach(f func(StringListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntListOptionList) Foreach(f func(IntListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ListOptionList) Foreach(f func(Int8ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ListOptionList) Foreach(f func(Int16ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ListOptionList) Foreach(f func(Int32ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ListOptionList) Foreach(f func(Int64ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintListOptionList) Foreach(f func(UintListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ListOptionList) Foreach(f func(Uint8ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ListOptionList) Foreach(f func(Uint16ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ListOptionList) Foreach(f func(Uint32ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ListOptionList) Foreach(f func(Uint64ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrListOptionList) Foreach(f func(UintptrListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteListOptionList) Foreach(f func(ByteListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneListOptionList) Foreach(f func(RuneListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ListOptionList) Foreach(f func(Float32ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ListOptionList) Foreach(f func(Float64ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ListOptionList) Foreach(f func(Complex64ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ListOptionList) Foreach(f func(Complex128ListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyListOptionList) Foreach(f func(AnyListOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolOptionOptionList) Foreach(f func(BoolOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringOptionOptionList) Foreach(f func(StringOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntOptionOptionList) Foreach(f func(IntOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8OptionOptionList) Foreach(f func(Int8OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16OptionOptionList) Foreach(f func(Int16OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32OptionOptionList) Foreach(f func(Int32OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64OptionOptionList) Foreach(f func(Int64OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintOptionOptionList) Foreach(f func(UintOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8OptionOptionList) Foreach(f func(Uint8OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16OptionOptionList) Foreach(f func(Uint16OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32OptionOptionList) Foreach(f func(Uint32OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64OptionOptionList) Foreach(f func(Uint64OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrOptionOptionList) Foreach(f func(UintptrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteOptionOptionList) Foreach(f func(ByteOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneOptionOptionList) Foreach(f func(RuneOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32OptionOptionList) Foreach(f func(Float32OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64OptionOptionList) Foreach(f func(Float64OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64OptionOptionList) Foreach(f func(Complex64OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128OptionOptionList) Foreach(f func(Complex128OptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyOptionOptionList) Foreach(f func(AnyOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolArrOptionOptionList) Foreach(f func(BoolArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringArrOptionOptionList) Foreach(f func(StringArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntArrOptionOptionList) Foreach(f func(IntArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ArrOptionOptionList) Foreach(f func(Int8ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ArrOptionOptionList) Foreach(f func(Int16ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ArrOptionOptionList) Foreach(f func(Int32ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ArrOptionOptionList) Foreach(f func(Int64ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintArrOptionOptionList) Foreach(f func(UintArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ArrOptionOptionList) Foreach(f func(Uint8ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ArrOptionOptionList) Foreach(f func(Uint16ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ArrOptionOptionList) Foreach(f func(Uint32ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ArrOptionOptionList) Foreach(f func(Uint64ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrArrOptionOptionList) Foreach(f func(UintptrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteArrOptionOptionList) Foreach(f func(ByteArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneArrOptionOptionList) Foreach(f func(RuneArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ArrOptionOptionList) Foreach(f func(Float32ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ArrOptionOptionList) Foreach(f func(Float64ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ArrOptionOptionList) Foreach(f func(Complex64ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ArrOptionOptionList) Foreach(f func(Complex128ArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyArrOptionOptionList) Foreach(f func(AnyArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolArrArrOptionOptionList) Foreach(f func(BoolArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringArrArrOptionOptionList) Foreach(f func(StringArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntArrArrOptionOptionList) Foreach(f func(IntArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ArrArrOptionOptionList) Foreach(f func(Int8ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ArrArrOptionOptionList) Foreach(f func(Int16ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ArrArrOptionOptionList) Foreach(f func(Int32ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ArrArrOptionOptionList) Foreach(f func(Int64ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintArrArrOptionOptionList) Foreach(f func(UintArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ArrArrOptionOptionList) Foreach(f func(Uint8ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ArrArrOptionOptionList) Foreach(f func(Uint16ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ArrArrOptionOptionList) Foreach(f func(Uint32ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ArrArrOptionOptionList) Foreach(f func(Uint64ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrArrArrOptionOptionList) Foreach(f func(UintptrArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteArrArrOptionOptionList) Foreach(f func(ByteArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneArrArrOptionOptionList) Foreach(f func(RuneArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ArrArrOptionOptionList) Foreach(f func(Float32ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ArrArrOptionOptionList) Foreach(f func(Float64ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ArrArrOptionOptionList) Foreach(f func(Complex64ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ArrArrOptionOptionList) Foreach(f func(Complex128ArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyArrArrOptionOptionList) Foreach(f func(AnyArrArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolOptionArrOptionOptionList) Foreach(f func(BoolOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringOptionArrOptionOptionList) Foreach(f func(StringOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntOptionArrOptionOptionList) Foreach(f func(IntOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8OptionArrOptionOptionList) Foreach(f func(Int8OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16OptionArrOptionOptionList) Foreach(f func(Int16OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32OptionArrOptionOptionList) Foreach(f func(Int32OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64OptionArrOptionOptionList) Foreach(f func(Int64OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintOptionArrOptionOptionList) Foreach(f func(UintOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8OptionArrOptionOptionList) Foreach(f func(Uint8OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16OptionArrOptionOptionList) Foreach(f func(Uint16OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32OptionArrOptionOptionList) Foreach(f func(Uint32OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64OptionArrOptionOptionList) Foreach(f func(Uint64OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrOptionArrOptionOptionList) Foreach(f func(UintptrOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteOptionArrOptionOptionList) Foreach(f func(ByteOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneOptionArrOptionOptionList) Foreach(f func(RuneOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32OptionArrOptionOptionList) Foreach(f func(Float32OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64OptionArrOptionOptionList) Foreach(f func(Float64OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64OptionArrOptionOptionList) Foreach(f func(Complex64OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128OptionArrOptionOptionList) Foreach(f func(Complex128OptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyOptionArrOptionOptionList) Foreach(f func(AnyOptionArrOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolListOptionOptionList) Foreach(f func(BoolListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringListOptionOptionList) Foreach(f func(StringListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntListOptionOptionList) Foreach(f func(IntListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ListOptionOptionList) Foreach(f func(Int8ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ListOptionOptionList) Foreach(f func(Int16ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ListOptionOptionList) Foreach(f func(Int32ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ListOptionOptionList) Foreach(f func(Int64ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintListOptionOptionList) Foreach(f func(UintListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ListOptionOptionList) Foreach(f func(Uint8ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ListOptionOptionList) Foreach(f func(Uint16ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ListOptionOptionList) Foreach(f func(Uint32ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ListOptionOptionList) Foreach(f func(Uint64ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrListOptionOptionList) Foreach(f func(UintptrListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteListOptionOptionList) Foreach(f func(ByteListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneListOptionOptionList) Foreach(f func(RuneListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ListOptionOptionList) Foreach(f func(Float32ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ListOptionOptionList) Foreach(f func(Float64ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ListOptionOptionList) Foreach(f func(Complex64ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ListOptionOptionList) Foreach(f func(Complex128ListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyListOptionOptionList) Foreach(f func(AnyListOptionOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l BoolOptionOptionOptionList) Foreach(f func(BoolOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l StringOptionOptionOptionList) Foreach(f func(StringOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l IntOptionOptionOptionList) Foreach(f func(IntOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int8OptionOptionOptionList) Foreach(f func(Int8OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int16OptionOptionOptionList) Foreach(f func(Int16OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int32OptionOptionOptionList) Foreach(f func(Int32OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int64OptionOptionOptionList) Foreach(f func(Int64OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintOptionOptionOptionList) Foreach(f func(UintOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint8OptionOptionOptionList) Foreach(f func(Uint8OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint16OptionOptionOptionList) Foreach(f func(Uint16OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint32OptionOptionOptionList) Foreach(f func(Uint32OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint64OptionOptionOptionList) Foreach(f func(Uint64OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintptrOptionOptionOptionList) Foreach(f func(UintptrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l ByteOptionOptionOptionList) Foreach(f func(ByteOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l RuneOptionOptionOptionList) Foreach(f func(RuneOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float32OptionOptionOptionList) Foreach(f func(Float32OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float64OptionOptionOptionList) Foreach(f func(Float64OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex64OptionOptionOptionList) Foreach(f func(Complex64OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex128OptionOptionOptionList) Foreach(f func(Complex128OptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l AnyOptionOptionOptionList) Foreach(f func(AnyOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l BoolArrOptionOptionOptionList) Foreach(f func(BoolArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l StringArrOptionOptionOptionList) Foreach(f func(StringArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l IntArrOptionOptionOptionList) Foreach(f func(IntArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int8ArrOptionOptionOptionList) Foreach(f func(Int8ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int16ArrOptionOptionOptionList) Foreach(f func(Int16ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int32ArrOptionOptionOptionList) Foreach(f func(Int32ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int64ArrOptionOptionOptionList) Foreach(f func(Int64ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintArrOptionOptionOptionList) Foreach(f func(UintArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint8ArrOptionOptionOptionList) Foreach(f func(Uint8ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint16ArrOptionOptionOptionList) Foreach(f func(Uint16ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint32ArrOptionOptionOptionList) Foreach(f func(Uint32ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint64ArrOptionOptionOptionList) Foreach(f func(Uint64ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintptrArrOptionOptionOptionList) Foreach(f func(UintptrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l ByteArrOptionOptionOptionList) Foreach(f func(ByteArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l RuneArrOptionOptionOptionList) Foreach(f func(RuneArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float32ArrOptionOptionOptionList) Foreach(f func(Float32ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float64ArrOptionOptionOptionList) Foreach(f func(Float64ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex64ArrOptionOptionOptionList) Foreach(f func(Complex64ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex128ArrOptionOptionOptionList) Foreach(f func(Complex128ArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l AnyArrOptionOptionOptionList) Foreach(f func(AnyArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l BoolArrArrOptionOptionOptionList) Foreach(f func(BoolArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l StringArrArrOptionOptionOptionList) Foreach(f func(StringArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l IntArrArrOptionOptionOptionList) Foreach(f func(IntArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int8ArrArrOptionOptionOptionList) Foreach(f func(Int8ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int16ArrArrOptionOptionOptionList) Foreach(f func(Int16ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int32ArrArrOptionOptionOptionList) Foreach(f func(Int32ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int64ArrArrOptionOptionOptionList) Foreach(f func(Int64ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintArrArrOptionOptionOptionList) Foreach(f func(UintArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint8ArrArrOptionOptionOptionList) Foreach(f func(Uint8ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint16ArrArrOptionOptionOptionList) Foreach(f func(Uint16ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint32ArrArrOptionOptionOptionList) Foreach(f func(Uint32ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint64ArrArrOptionOptionOptionList) Foreach(f func(Uint64ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintptrArrArrOptionOptionOptionList) Foreach(f func(UintptrArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l ByteArrArrOptionOptionOptionList) Foreach(f func(ByteArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l RuneArrArrOptionOptionOptionList) Foreach(f func(RuneArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float32ArrArrOptionOptionOptionList) Foreach(f func(Float32ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float64ArrArrOptionOptionOptionList) Foreach(f func(Float64ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex64ArrArrOptionOptionOptionList) Foreach(f func(Complex64ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex128ArrArrOptionOptionOptionList) Foreach(f func(Complex128ArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l AnyArrArrOptionOptionOptionList) Foreach(f func(AnyArrArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l BoolOptionArrOptionOptionOptionList) Foreach(f func(BoolOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l StringOptionArrOptionOptionOptionList) Foreach(f func(StringOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l IntOptionArrOptionOptionOptionList) Foreach(f func(IntOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int8OptionArrOptionOptionOptionList) Foreach(f func(Int8OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int16OptionArrOptionOptionOptionList) Foreach(f func(Int16OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int32OptionArrOptionOptionOptionList) Foreach(f func(Int32OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int64OptionArrOptionOptionOptionList) Foreach(f func(Int64OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintOptionArrOptionOptionOptionList) Foreach(f func(UintOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint8OptionArrOptionOptionOptionList) Foreach(f func(Uint8OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint16OptionArrOptionOptionOptionList) Foreach(f func(Uint16OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint32OptionArrOptionOptionOptionList) Foreach(f func(Uint32OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint64OptionArrOptionOptionOptionList) Foreach(f func(Uint64OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintptrOptionArrOptionOptionOptionList) Foreach(f func(UintptrOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l ByteOptionArrOptionOptionOptionList) Foreach(f func(ByteOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l RuneOptionArrOptionOptionOptionList) Foreach(f func(RuneOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float32OptionArrOptionOptionOptionList) Foreach(f func(Float32OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float64OptionArrOptionOptionOptionList) Foreach(f func(Float64OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex64OptionArrOptionOptionOptionList) Foreach(f func(Complex64OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex128OptionArrOptionOptionOptionList) Foreach(f func(Complex128OptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l AnyOptionArrOptionOptionOptionList) Foreach(f func(AnyOptionArrOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l BoolListOptionOptionOptionList) Foreach(f func(BoolListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l StringListOptionOptionOptionList) Foreach(f func(StringListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l IntListOptionOptionOptionList) Foreach(f func(IntListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int8ListOptionOptionOptionList) Foreach(f func(Int8ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int16ListOptionOptionOptionList) Foreach(f func(Int16ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int32ListOptionOptionOptionList) Foreach(f func(Int32ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Int64ListOptionOptionOptionList) Foreach(f func(Int64ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintListOptionOptionOptionList) Foreach(f func(UintListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint8ListOptionOptionOptionList) Foreach(f func(Uint8ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint16ListOptionOptionOptionList) Foreach(f func(Uint16ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint32ListOptionOptionOptionList) Foreach(f func(Uint32ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Uint64ListOptionOptionOptionList) Foreach(f func(Uint64ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l UintptrListOptionOptionOptionList) Foreach(f func(UintptrListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l ByteListOptionOptionOptionList) Foreach(f func(ByteListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l RuneListOptionOptionOptionList) Foreach(f func(RuneListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float32ListOptionOptionOptionList) Foreach(f func(Float32ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Float64ListOptionOptionOptionList) Foreach(f func(Float64ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex64ListOptionOptionOptionList) Foreach(f func(Complex64ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l Complex128ListOptionOptionOptionList) Foreach(f func(Complex128ListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
+}
+func (l AnyListOptionOptionOptionList) Foreach(f func(AnyListOptionOptionOption)) {
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolArrList) Foreach(f func([]bool)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringArrList) Foreach(f func([]string)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntArrList) Foreach(f func([]int)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ArrList) Foreach(f func([]int8)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ArrList) Foreach(f func([]int16)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ArrList) Foreach(f func([]int32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ArrList) Foreach(f func([]int64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintArrList) Foreach(f func([]uint)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ArrList) Foreach(f func([]uint8)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ArrList) Foreach(f func([]uint16)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ArrList) Foreach(f func([]uint32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ArrList) Foreach(f func([]uint64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrArrList) Foreach(f func([]uintptr)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteArrList) Foreach(f func([]byte)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneArrList) Foreach(f func([]rune)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ArrList) Foreach(f func([]float32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ArrList) Foreach(f func([]float64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ArrList) Foreach(f func([]complex64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ArrList) Foreach(f func([]complex128)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyArrList) Foreach(f func([]Any)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolArrArrList) Foreach(f func([][]bool)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringArrArrList) Foreach(f func([][]string)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntArrArrList) Foreach(f func([][]int)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ArrArrList) Foreach(f func([][]int8)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ArrArrList) Foreach(f func([][]int16)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ArrArrList) Foreach(f func([][]int32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ArrArrList) Foreach(f func([][]int64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintArrArrList) Foreach(f func([][]uint)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ArrArrList) Foreach(f func([][]uint8)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ArrArrList) Foreach(f func([][]uint16)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ArrArrList) Foreach(f func([][]uint32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ArrArrList) Foreach(f func([][]uint64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrArrArrList) Foreach(f func([][]uintptr)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteArrArrList) Foreach(f func([][]byte)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneArrArrList) Foreach(f func([][]rune)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ArrArrList) Foreach(f func([][]float32)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ArrArrList) Foreach(f func([][]float64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ArrArrList) Foreach(f func([][]complex64)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ArrArrList) Foreach(f func([][]complex128)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyArrArrList) Foreach(f func([][]Any)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolOptionArrList) Foreach(f func([]BoolOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringOptionArrList) Foreach(f func([]StringOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntOptionArrList) Foreach(f func([]IntOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8OptionArrList) Foreach(f func([]Int8Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16OptionArrList) Foreach(f func([]Int16Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32OptionArrList) Foreach(f func([]Int32Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64OptionArrList) Foreach(f func([]Int64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintOptionArrList) Foreach(f func([]UintOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8OptionArrList) Foreach(f func([]Uint8Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16OptionArrList) Foreach(f func([]Uint16Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32OptionArrList) Foreach(f func([]Uint32Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64OptionArrList) Foreach(f func([]Uint64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrOptionArrList) Foreach(f func([]UintptrOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteOptionArrList) Foreach(f func([]ByteOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneOptionArrList) Foreach(f func([]RuneOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32OptionArrList) Foreach(f func([]Float32Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64OptionArrList) Foreach(f func([]Float64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64OptionArrList) Foreach(f func([]Complex64Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128OptionArrList) Foreach(f func([]Complex128Option)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyOptionArrList) Foreach(f func([]AnyOption)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l BoolListList) Foreach(f func(BoolList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l StringListList) Foreach(f func(StringList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l IntListList) Foreach(f func(IntList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int8ListList) Foreach(f func(Int8List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int16ListList) Foreach(f func(Int16List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int32ListList) Foreach(f func(Int32List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Int64ListList) Foreach(f func(Int64List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintListList) Foreach(f func(UintList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint8ListList) Foreach(f func(Uint8List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint16ListList) Foreach(f func(Uint16List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint32ListList) Foreach(f func(Uint32List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Uint64ListList) Foreach(f func(Uint64List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l UintptrListList) Foreach(f func(UintptrList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l ByteListList) Foreach(f func(ByteList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l RuneListList) Foreach(f func(RuneList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float32ListList) Foreach(f func(Float32List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Float64ListList) Foreach(f func(Float64List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex64ListList) Foreach(f func(Complex64List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l Complex128ListList) Foreach(f func(Complex128List)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }
 func (l AnyListList) Foreach(f func(AnyList)) {
-  xs := l
-  for xs.NonEmpty() {
-    f(*xs.head)
-    xs = *xs.tail
-  }
+	xs := l
+	for xs.NonEmpty() {
+		f(*xs.head)
+		xs = *xs.tail
+	}
 }

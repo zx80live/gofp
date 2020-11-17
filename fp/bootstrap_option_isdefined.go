@@ -3,7 +3,6 @@
 
 package fp
 
-
 func (o BoolOption) IsDefined() bool { return o != NoneBoolOption }
 
 func (o StringOption) IsDefined() bool { return o != NoneStringOption }
@@ -358,9 +357,13 @@ func (o Float32OptionArrOptionOption) IsDefined() bool { return o != NoneFloat32
 
 func (o Float64OptionArrOptionOption) IsDefined() bool { return o != NoneFloat64OptionArrOptionOption }
 
-func (o Complex64OptionArrOptionOption) IsDefined() bool { return o != NoneComplex64OptionArrOptionOption }
+func (o Complex64OptionArrOptionOption) IsDefined() bool {
+	return o != NoneComplex64OptionArrOptionOption
+}
 
-func (o Complex128OptionArrOptionOption) IsDefined() bool { return o != NoneComplex128OptionArrOptionOption }
+func (o Complex128OptionArrOptionOption) IsDefined() bool {
+	return o != NoneComplex128OptionArrOptionOption
+}
 
 func (o AnyOptionArrOptionOption) IsDefined() bool { return o != NoneAnyOptionArrOptionOption }
 
@@ -403,3 +406,283 @@ func (o Complex64ListOptionOption) IsDefined() bool { return o != NoneComplex64L
 func (o Complex128ListOptionOption) IsDefined() bool { return o != NoneComplex128ListOptionOption }
 
 func (o AnyListOptionOption) IsDefined() bool { return o != NoneAnyListOptionOption }
+
+func (o BoolOptionOptionOption) IsDefined() bool { return o != NoneBoolOptionOptionOption }
+
+func (o StringOptionOptionOption) IsDefined() bool { return o != NoneStringOptionOptionOption }
+
+func (o IntOptionOptionOption) IsDefined() bool { return o != NoneIntOptionOptionOption }
+
+func (o Int8OptionOptionOption) IsDefined() bool { return o != NoneInt8OptionOptionOption }
+
+func (o Int16OptionOptionOption) IsDefined() bool { return o != NoneInt16OptionOptionOption }
+
+func (o Int32OptionOptionOption) IsDefined() bool { return o != NoneInt32OptionOptionOption }
+
+func (o Int64OptionOptionOption) IsDefined() bool { return o != NoneInt64OptionOptionOption }
+
+func (o UintOptionOptionOption) IsDefined() bool { return o != NoneUintOptionOptionOption }
+
+func (o Uint8OptionOptionOption) IsDefined() bool { return o != NoneUint8OptionOptionOption }
+
+func (o Uint16OptionOptionOption) IsDefined() bool { return o != NoneUint16OptionOptionOption }
+
+func (o Uint32OptionOptionOption) IsDefined() bool { return o != NoneUint32OptionOptionOption }
+
+func (o Uint64OptionOptionOption) IsDefined() bool { return o != NoneUint64OptionOptionOption }
+
+func (o UintptrOptionOptionOption) IsDefined() bool { return o != NoneUintptrOptionOptionOption }
+
+func (o ByteOptionOptionOption) IsDefined() bool { return o != NoneByteOptionOptionOption }
+
+func (o RuneOptionOptionOption) IsDefined() bool { return o != NoneRuneOptionOptionOption }
+
+func (o Float32OptionOptionOption) IsDefined() bool { return o != NoneFloat32OptionOptionOption }
+
+func (o Float64OptionOptionOption) IsDefined() bool { return o != NoneFloat64OptionOptionOption }
+
+func (o Complex64OptionOptionOption) IsDefined() bool { return o != NoneComplex64OptionOptionOption }
+
+func (o Complex128OptionOptionOption) IsDefined() bool { return o != NoneComplex128OptionOptionOption }
+
+func (o AnyOptionOptionOption) IsDefined() bool { return o != NoneAnyOptionOptionOption }
+
+func (o BoolArrOptionOptionOption) IsDefined() bool { return o != NoneBoolArrOptionOptionOption }
+
+func (o StringArrOptionOptionOption) IsDefined() bool { return o != NoneStringArrOptionOptionOption }
+
+func (o IntArrOptionOptionOption) IsDefined() bool { return o != NoneIntArrOptionOptionOption }
+
+func (o Int8ArrOptionOptionOption) IsDefined() bool { return o != NoneInt8ArrOptionOptionOption }
+
+func (o Int16ArrOptionOptionOption) IsDefined() bool { return o != NoneInt16ArrOptionOptionOption }
+
+func (o Int32ArrOptionOptionOption) IsDefined() bool { return o != NoneInt32ArrOptionOptionOption }
+
+func (o Int64ArrOptionOptionOption) IsDefined() bool { return o != NoneInt64ArrOptionOptionOption }
+
+func (o UintArrOptionOptionOption) IsDefined() bool { return o != NoneUintArrOptionOptionOption }
+
+func (o Uint8ArrOptionOptionOption) IsDefined() bool { return o != NoneUint8ArrOptionOptionOption }
+
+func (o Uint16ArrOptionOptionOption) IsDefined() bool { return o != NoneUint16ArrOptionOptionOption }
+
+func (o Uint32ArrOptionOptionOption) IsDefined() bool { return o != NoneUint32ArrOptionOptionOption }
+
+func (o Uint64ArrOptionOptionOption) IsDefined() bool { return o != NoneUint64ArrOptionOptionOption }
+
+func (o UintptrArrOptionOptionOption) IsDefined() bool { return o != NoneUintptrArrOptionOptionOption }
+
+func (o ByteArrOptionOptionOption) IsDefined() bool { return o != NoneByteArrOptionOptionOption }
+
+func (o RuneArrOptionOptionOption) IsDefined() bool { return o != NoneRuneArrOptionOptionOption }
+
+func (o Float32ArrOptionOptionOption) IsDefined() bool { return o != NoneFloat32ArrOptionOptionOption }
+
+func (o Float64ArrOptionOptionOption) IsDefined() bool { return o != NoneFloat64ArrOptionOptionOption }
+
+func (o Complex64ArrOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex64ArrOptionOptionOption
+}
+
+func (o Complex128ArrOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex128ArrOptionOptionOption
+}
+
+func (o AnyArrOptionOptionOption) IsDefined() bool { return o != NoneAnyArrOptionOptionOption }
+
+func (o BoolArrArrOptionOptionOption) IsDefined() bool { return o != NoneBoolArrArrOptionOptionOption }
+
+func (o StringArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneStringArrArrOptionOptionOption
+}
+
+func (o IntArrArrOptionOptionOption) IsDefined() bool { return o != NoneIntArrArrOptionOptionOption }
+
+func (o Int8ArrArrOptionOptionOption) IsDefined() bool { return o != NoneInt8ArrArrOptionOptionOption }
+
+func (o Int16ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt16ArrArrOptionOptionOption
+}
+
+func (o Int32ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt32ArrArrOptionOptionOption
+}
+
+func (o Int64ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt64ArrArrOptionOptionOption
+}
+
+func (o UintArrArrOptionOptionOption) IsDefined() bool { return o != NoneUintArrArrOptionOptionOption }
+
+func (o Uint8ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint8ArrArrOptionOptionOption
+}
+
+func (o Uint16ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint16ArrArrOptionOptionOption
+}
+
+func (o Uint32ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint32ArrArrOptionOptionOption
+}
+
+func (o Uint64ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint64ArrArrOptionOptionOption
+}
+
+func (o UintptrArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUintptrArrArrOptionOptionOption
+}
+
+func (o ByteArrArrOptionOptionOption) IsDefined() bool { return o != NoneByteArrArrOptionOptionOption }
+
+func (o RuneArrArrOptionOptionOption) IsDefined() bool { return o != NoneRuneArrArrOptionOptionOption }
+
+func (o Float32ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneFloat32ArrArrOptionOptionOption
+}
+
+func (o Float64ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneFloat64ArrArrOptionOptionOption
+}
+
+func (o Complex64ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex64ArrArrOptionOptionOption
+}
+
+func (o Complex128ArrArrOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex128ArrArrOptionOptionOption
+}
+
+func (o AnyArrArrOptionOptionOption) IsDefined() bool { return o != NoneAnyArrArrOptionOptionOption }
+
+func (o BoolOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneBoolOptionArrOptionOptionOption
+}
+
+func (o StringOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneStringOptionArrOptionOptionOption
+}
+
+func (o IntOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneIntOptionArrOptionOptionOption
+}
+
+func (o Int8OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt8OptionArrOptionOptionOption
+}
+
+func (o Int16OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt16OptionArrOptionOptionOption
+}
+
+func (o Int32OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt32OptionArrOptionOptionOption
+}
+
+func (o Int64OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneInt64OptionArrOptionOptionOption
+}
+
+func (o UintOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUintOptionArrOptionOptionOption
+}
+
+func (o Uint8OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint8OptionArrOptionOptionOption
+}
+
+func (o Uint16OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint16OptionArrOptionOptionOption
+}
+
+func (o Uint32OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint32OptionArrOptionOptionOption
+}
+
+func (o Uint64OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUint64OptionArrOptionOptionOption
+}
+
+func (o UintptrOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneUintptrOptionArrOptionOptionOption
+}
+
+func (o ByteOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneByteOptionArrOptionOptionOption
+}
+
+func (o RuneOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneRuneOptionArrOptionOptionOption
+}
+
+func (o Float32OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneFloat32OptionArrOptionOptionOption
+}
+
+func (o Float64OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneFloat64OptionArrOptionOptionOption
+}
+
+func (o Complex64OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex64OptionArrOptionOptionOption
+}
+
+func (o Complex128OptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex128OptionArrOptionOptionOption
+}
+
+func (o AnyOptionArrOptionOptionOption) IsDefined() bool {
+	return o != NoneAnyOptionArrOptionOptionOption
+}
+
+func (o BoolListOptionOptionOption) IsDefined() bool { return o != NoneBoolListOptionOptionOption }
+
+func (o StringListOptionOptionOption) IsDefined() bool { return o != NoneStringListOptionOptionOption }
+
+func (o IntListOptionOptionOption) IsDefined() bool { return o != NoneIntListOptionOptionOption }
+
+func (o Int8ListOptionOptionOption) IsDefined() bool { return o != NoneInt8ListOptionOptionOption }
+
+func (o Int16ListOptionOptionOption) IsDefined() bool { return o != NoneInt16ListOptionOptionOption }
+
+func (o Int32ListOptionOptionOption) IsDefined() bool { return o != NoneInt32ListOptionOptionOption }
+
+func (o Int64ListOptionOptionOption) IsDefined() bool { return o != NoneInt64ListOptionOptionOption }
+
+func (o UintListOptionOptionOption) IsDefined() bool { return o != NoneUintListOptionOptionOption }
+
+func (o Uint8ListOptionOptionOption) IsDefined() bool { return o != NoneUint8ListOptionOptionOption }
+
+func (o Uint16ListOptionOptionOption) IsDefined() bool { return o != NoneUint16ListOptionOptionOption }
+
+func (o Uint32ListOptionOptionOption) IsDefined() bool { return o != NoneUint32ListOptionOptionOption }
+
+func (o Uint64ListOptionOptionOption) IsDefined() bool { return o != NoneUint64ListOptionOptionOption }
+
+func (o UintptrListOptionOptionOption) IsDefined() bool {
+	return o != NoneUintptrListOptionOptionOption
+}
+
+func (o ByteListOptionOptionOption) IsDefined() bool { return o != NoneByteListOptionOptionOption }
+
+func (o RuneListOptionOptionOption) IsDefined() bool { return o != NoneRuneListOptionOptionOption }
+
+func (o Float32ListOptionOptionOption) IsDefined() bool {
+	return o != NoneFloat32ListOptionOptionOption
+}
+
+func (o Float64ListOptionOptionOption) IsDefined() bool {
+	return o != NoneFloat64ListOptionOptionOption
+}
+
+func (o Complex64ListOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex64ListOptionOptionOption
+}
+
+func (o Complex128ListOptionOptionOption) IsDefined() bool {
+	return o != NoneComplex128ListOptionOptionOption
+}
+
+func (o AnyListOptionOptionOption) IsDefined() bool { return o != NoneAnyListOptionOptionOption }

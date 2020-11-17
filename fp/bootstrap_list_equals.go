@@ -3,304 +3,981 @@
 
 package fp
 
-
-func (m1 BoolList) Equals(m2 BoolList) bool { return BoolListEquals(m1, m2) }
-func (m1 StringList) Equals(m2 StringList) bool { return StringListEquals(m1, m2) }
-func (m1 IntList) Equals(m2 IntList) bool { return IntListEquals(m1, m2) }
-func (m1 Int8List) Equals(m2 Int8List) bool { return Int8ListEquals(m1, m2) }
-func (m1 Int16List) Equals(m2 Int16List) bool { return Int16ListEquals(m1, m2) }
-func (m1 Int32List) Equals(m2 Int32List) bool { return Int32ListEquals(m1, m2) }
-func (m1 Int64List) Equals(m2 Int64List) bool { return Int64ListEquals(m1, m2) }
-func (m1 UintList) Equals(m2 UintList) bool { return UintListEquals(m1, m2) }
-func (m1 Uint8List) Equals(m2 Uint8List) bool { return Uint8ListEquals(m1, m2) }
-func (m1 Uint16List) Equals(m2 Uint16List) bool { return Uint16ListEquals(m1, m2) }
-func (m1 Uint32List) Equals(m2 Uint32List) bool { return Uint32ListEquals(m1, m2) }
-func (m1 Uint64List) Equals(m2 Uint64List) bool { return Uint64ListEquals(m1, m2) }
-func (m1 UintptrList) Equals(m2 UintptrList) bool { return UintptrListEquals(m1, m2) }
-func (m1 ByteList) Equals(m2 ByteList) bool { return ByteListEquals(m1, m2) }
-func (m1 RuneList) Equals(m2 RuneList) bool { return RuneListEquals(m1, m2) }
-func (m1 Float32List) Equals(m2 Float32List) bool { return Float32ListEquals(m1, m2) }
-func (m1 Float64List) Equals(m2 Float64List) bool { return Float64ListEquals(m1, m2) }
-func (m1 Complex64List) Equals(m2 Complex64List) bool { return Complex64ListEquals(m1, m2) }
-func (m1 Complex128List) Equals(m2 Complex128List) bool { return Complex128ListEquals(m1, m2) }
-func (m1 AnyList) Equals(m2 AnyList) bool { return AnyListEquals(m1, m2) }
-func (m1 BoolOptionList) Equals(m2 BoolOptionList) bool { return BoolOptionListEquals(m1, m2) }
-func (m1 StringOptionList) Equals(m2 StringOptionList) bool { return StringOptionListEquals(m1, m2) }
-func (m1 IntOptionList) Equals(m2 IntOptionList) bool { return IntOptionListEquals(m1, m2) }
-func (m1 Int8OptionList) Equals(m2 Int8OptionList) bool { return Int8OptionListEquals(m1, m2) }
-func (m1 Int16OptionList) Equals(m2 Int16OptionList) bool { return Int16OptionListEquals(m1, m2) }
-func (m1 Int32OptionList) Equals(m2 Int32OptionList) bool { return Int32OptionListEquals(m1, m2) }
-func (m1 Int64OptionList) Equals(m2 Int64OptionList) bool { return Int64OptionListEquals(m1, m2) }
-func (m1 UintOptionList) Equals(m2 UintOptionList) bool { return UintOptionListEquals(m1, m2) }
-func (m1 Uint8OptionList) Equals(m2 Uint8OptionList) bool { return Uint8OptionListEquals(m1, m2) }
-func (m1 Uint16OptionList) Equals(m2 Uint16OptionList) bool { return Uint16OptionListEquals(m1, m2) }
-func (m1 Uint32OptionList) Equals(m2 Uint32OptionList) bool { return Uint32OptionListEquals(m1, m2) }
-func (m1 Uint64OptionList) Equals(m2 Uint64OptionList) bool { return Uint64OptionListEquals(m1, m2) }
+func (m1 BoolList) Equals(m2 BoolList) bool                   { return BoolListEquals(m1, m2) }
+func (m1 StringList) Equals(m2 StringList) bool               { return StringListEquals(m1, m2) }
+func (m1 IntList) Equals(m2 IntList) bool                     { return IntListEquals(m1, m2) }
+func (m1 Int8List) Equals(m2 Int8List) bool                   { return Int8ListEquals(m1, m2) }
+func (m1 Int16List) Equals(m2 Int16List) bool                 { return Int16ListEquals(m1, m2) }
+func (m1 Int32List) Equals(m2 Int32List) bool                 { return Int32ListEquals(m1, m2) }
+func (m1 Int64List) Equals(m2 Int64List) bool                 { return Int64ListEquals(m1, m2) }
+func (m1 UintList) Equals(m2 UintList) bool                   { return UintListEquals(m1, m2) }
+func (m1 Uint8List) Equals(m2 Uint8List) bool                 { return Uint8ListEquals(m1, m2) }
+func (m1 Uint16List) Equals(m2 Uint16List) bool               { return Uint16ListEquals(m1, m2) }
+func (m1 Uint32List) Equals(m2 Uint32List) bool               { return Uint32ListEquals(m1, m2) }
+func (m1 Uint64List) Equals(m2 Uint64List) bool               { return Uint64ListEquals(m1, m2) }
+func (m1 UintptrList) Equals(m2 UintptrList) bool             { return UintptrListEquals(m1, m2) }
+func (m1 ByteList) Equals(m2 ByteList) bool                   { return ByteListEquals(m1, m2) }
+func (m1 RuneList) Equals(m2 RuneList) bool                   { return RuneListEquals(m1, m2) }
+func (m1 Float32List) Equals(m2 Float32List) bool             { return Float32ListEquals(m1, m2) }
+func (m1 Float64List) Equals(m2 Float64List) bool             { return Float64ListEquals(m1, m2) }
+func (m1 Complex64List) Equals(m2 Complex64List) bool         { return Complex64ListEquals(m1, m2) }
+func (m1 Complex128List) Equals(m2 Complex128List) bool       { return Complex128ListEquals(m1, m2) }
+func (m1 AnyList) Equals(m2 AnyList) bool                     { return AnyListEquals(m1, m2) }
+func (m1 BoolOptionList) Equals(m2 BoolOptionList) bool       { return BoolOptionListEquals(m1, m2) }
+func (m1 StringOptionList) Equals(m2 StringOptionList) bool   { return StringOptionListEquals(m1, m2) }
+func (m1 IntOptionList) Equals(m2 IntOptionList) bool         { return IntOptionListEquals(m1, m2) }
+func (m1 Int8OptionList) Equals(m2 Int8OptionList) bool       { return Int8OptionListEquals(m1, m2) }
+func (m1 Int16OptionList) Equals(m2 Int16OptionList) bool     { return Int16OptionListEquals(m1, m2) }
+func (m1 Int32OptionList) Equals(m2 Int32OptionList) bool     { return Int32OptionListEquals(m1, m2) }
+func (m1 Int64OptionList) Equals(m2 Int64OptionList) bool     { return Int64OptionListEquals(m1, m2) }
+func (m1 UintOptionList) Equals(m2 UintOptionList) bool       { return UintOptionListEquals(m1, m2) }
+func (m1 Uint8OptionList) Equals(m2 Uint8OptionList) bool     { return Uint8OptionListEquals(m1, m2) }
+func (m1 Uint16OptionList) Equals(m2 Uint16OptionList) bool   { return Uint16OptionListEquals(m1, m2) }
+func (m1 Uint32OptionList) Equals(m2 Uint32OptionList) bool   { return Uint32OptionListEquals(m1, m2) }
+func (m1 Uint64OptionList) Equals(m2 Uint64OptionList) bool   { return Uint64OptionListEquals(m1, m2) }
 func (m1 UintptrOptionList) Equals(m2 UintptrOptionList) bool { return UintptrOptionListEquals(m1, m2) }
-func (m1 ByteOptionList) Equals(m2 ByteOptionList) bool { return ByteOptionListEquals(m1, m2) }
-func (m1 RuneOptionList) Equals(m2 RuneOptionList) bool { return RuneOptionListEquals(m1, m2) }
+func (m1 ByteOptionList) Equals(m2 ByteOptionList) bool       { return ByteOptionListEquals(m1, m2) }
+func (m1 RuneOptionList) Equals(m2 RuneOptionList) bool       { return RuneOptionListEquals(m1, m2) }
 func (m1 Float32OptionList) Equals(m2 Float32OptionList) bool { return Float32OptionListEquals(m1, m2) }
 func (m1 Float64OptionList) Equals(m2 Float64OptionList) bool { return Float64OptionListEquals(m1, m2) }
-func (m1 Complex64OptionList) Equals(m2 Complex64OptionList) bool { return Complex64OptionListEquals(m1, m2) }
-func (m1 Complex128OptionList) Equals(m2 Complex128OptionList) bool { return Complex128OptionListEquals(m1, m2) }
-func (m1 AnyOptionList) Equals(m2 AnyOptionList) bool { return AnyOptionListEquals(m1, m2) }
+func (m1 Complex64OptionList) Equals(m2 Complex64OptionList) bool {
+	return Complex64OptionListEquals(m1, m2)
+}
+func (m1 Complex128OptionList) Equals(m2 Complex128OptionList) bool {
+	return Complex128OptionListEquals(m1, m2)
+}
+func (m1 AnyOptionList) Equals(m2 AnyOptionList) bool         { return AnyOptionListEquals(m1, m2) }
 func (m1 BoolArrOptionList) Equals(m2 BoolArrOptionList) bool { return BoolArrOptionListEquals(m1, m2) }
-func (m1 StringArrOptionList) Equals(m2 StringArrOptionList) bool { return StringArrOptionListEquals(m1, m2) }
-func (m1 IntArrOptionList) Equals(m2 IntArrOptionList) bool { return IntArrOptionListEquals(m1, m2) }
+func (m1 StringArrOptionList) Equals(m2 StringArrOptionList) bool {
+	return StringArrOptionListEquals(m1, m2)
+}
+func (m1 IntArrOptionList) Equals(m2 IntArrOptionList) bool   { return IntArrOptionListEquals(m1, m2) }
 func (m1 Int8ArrOptionList) Equals(m2 Int8ArrOptionList) bool { return Int8ArrOptionListEquals(m1, m2) }
-func (m1 Int16ArrOptionList) Equals(m2 Int16ArrOptionList) bool { return Int16ArrOptionListEquals(m1, m2) }
-func (m1 Int32ArrOptionList) Equals(m2 Int32ArrOptionList) bool { return Int32ArrOptionListEquals(m1, m2) }
-func (m1 Int64ArrOptionList) Equals(m2 Int64ArrOptionList) bool { return Int64ArrOptionListEquals(m1, m2) }
+func (m1 Int16ArrOptionList) Equals(m2 Int16ArrOptionList) bool {
+	return Int16ArrOptionListEquals(m1, m2)
+}
+func (m1 Int32ArrOptionList) Equals(m2 Int32ArrOptionList) bool {
+	return Int32ArrOptionListEquals(m1, m2)
+}
+func (m1 Int64ArrOptionList) Equals(m2 Int64ArrOptionList) bool {
+	return Int64ArrOptionListEquals(m1, m2)
+}
 func (m1 UintArrOptionList) Equals(m2 UintArrOptionList) bool { return UintArrOptionListEquals(m1, m2) }
-func (m1 Uint8ArrOptionList) Equals(m2 Uint8ArrOptionList) bool { return Uint8ArrOptionListEquals(m1, m2) }
-func (m1 Uint16ArrOptionList) Equals(m2 Uint16ArrOptionList) bool { return Uint16ArrOptionListEquals(m1, m2) }
-func (m1 Uint32ArrOptionList) Equals(m2 Uint32ArrOptionList) bool { return Uint32ArrOptionListEquals(m1, m2) }
-func (m1 Uint64ArrOptionList) Equals(m2 Uint64ArrOptionList) bool { return Uint64ArrOptionListEquals(m1, m2) }
-func (m1 UintptrArrOptionList) Equals(m2 UintptrArrOptionList) bool { return UintptrArrOptionListEquals(m1, m2) }
+func (m1 Uint8ArrOptionList) Equals(m2 Uint8ArrOptionList) bool {
+	return Uint8ArrOptionListEquals(m1, m2)
+}
+func (m1 Uint16ArrOptionList) Equals(m2 Uint16ArrOptionList) bool {
+	return Uint16ArrOptionListEquals(m1, m2)
+}
+func (m1 Uint32ArrOptionList) Equals(m2 Uint32ArrOptionList) bool {
+	return Uint32ArrOptionListEquals(m1, m2)
+}
+func (m1 Uint64ArrOptionList) Equals(m2 Uint64ArrOptionList) bool {
+	return Uint64ArrOptionListEquals(m1, m2)
+}
+func (m1 UintptrArrOptionList) Equals(m2 UintptrArrOptionList) bool {
+	return UintptrArrOptionListEquals(m1, m2)
+}
 func (m1 ByteArrOptionList) Equals(m2 ByteArrOptionList) bool { return ByteArrOptionListEquals(m1, m2) }
 func (m1 RuneArrOptionList) Equals(m2 RuneArrOptionList) bool { return RuneArrOptionListEquals(m1, m2) }
-func (m1 Float32ArrOptionList) Equals(m2 Float32ArrOptionList) bool { return Float32ArrOptionListEquals(m1, m2) }
-func (m1 Float64ArrOptionList) Equals(m2 Float64ArrOptionList) bool { return Float64ArrOptionListEquals(m1, m2) }
-func (m1 Complex64ArrOptionList) Equals(m2 Complex64ArrOptionList) bool { return Complex64ArrOptionListEquals(m1, m2) }
-func (m1 Complex128ArrOptionList) Equals(m2 Complex128ArrOptionList) bool { return Complex128ArrOptionListEquals(m1, m2) }
+func (m1 Float32ArrOptionList) Equals(m2 Float32ArrOptionList) bool {
+	return Float32ArrOptionListEquals(m1, m2)
+}
+func (m1 Float64ArrOptionList) Equals(m2 Float64ArrOptionList) bool {
+	return Float64ArrOptionListEquals(m1, m2)
+}
+func (m1 Complex64ArrOptionList) Equals(m2 Complex64ArrOptionList) bool {
+	return Complex64ArrOptionListEquals(m1, m2)
+}
+func (m1 Complex128ArrOptionList) Equals(m2 Complex128ArrOptionList) bool {
+	return Complex128ArrOptionListEquals(m1, m2)
+}
 func (m1 AnyArrOptionList) Equals(m2 AnyArrOptionList) bool { return AnyArrOptionListEquals(m1, m2) }
-func (m1 BoolArrArrOptionList) Equals(m2 BoolArrArrOptionList) bool { return BoolArrArrOptionListEquals(m1, m2) }
-func (m1 StringArrArrOptionList) Equals(m2 StringArrArrOptionList) bool { return StringArrArrOptionListEquals(m1, m2) }
-func (m1 IntArrArrOptionList) Equals(m2 IntArrArrOptionList) bool { return IntArrArrOptionListEquals(m1, m2) }
-func (m1 Int8ArrArrOptionList) Equals(m2 Int8ArrArrOptionList) bool { return Int8ArrArrOptionListEquals(m1, m2) }
-func (m1 Int16ArrArrOptionList) Equals(m2 Int16ArrArrOptionList) bool { return Int16ArrArrOptionListEquals(m1, m2) }
-func (m1 Int32ArrArrOptionList) Equals(m2 Int32ArrArrOptionList) bool { return Int32ArrArrOptionListEquals(m1, m2) }
-func (m1 Int64ArrArrOptionList) Equals(m2 Int64ArrArrOptionList) bool { return Int64ArrArrOptionListEquals(m1, m2) }
-func (m1 UintArrArrOptionList) Equals(m2 UintArrArrOptionList) bool { return UintArrArrOptionListEquals(m1, m2) }
-func (m1 Uint8ArrArrOptionList) Equals(m2 Uint8ArrArrOptionList) bool { return Uint8ArrArrOptionListEquals(m1, m2) }
-func (m1 Uint16ArrArrOptionList) Equals(m2 Uint16ArrArrOptionList) bool { return Uint16ArrArrOptionListEquals(m1, m2) }
-func (m1 Uint32ArrArrOptionList) Equals(m2 Uint32ArrArrOptionList) bool { return Uint32ArrArrOptionListEquals(m1, m2) }
-func (m1 Uint64ArrArrOptionList) Equals(m2 Uint64ArrArrOptionList) bool { return Uint64ArrArrOptionListEquals(m1, m2) }
-func (m1 UintptrArrArrOptionList) Equals(m2 UintptrArrArrOptionList) bool { return UintptrArrArrOptionListEquals(m1, m2) }
-func (m1 ByteArrArrOptionList) Equals(m2 ByteArrArrOptionList) bool { return ByteArrArrOptionListEquals(m1, m2) }
-func (m1 RuneArrArrOptionList) Equals(m2 RuneArrArrOptionList) bool { return RuneArrArrOptionListEquals(m1, m2) }
-func (m1 Float32ArrArrOptionList) Equals(m2 Float32ArrArrOptionList) bool { return Float32ArrArrOptionListEquals(m1, m2) }
-func (m1 Float64ArrArrOptionList) Equals(m2 Float64ArrArrOptionList) bool { return Float64ArrArrOptionListEquals(m1, m2) }
-func (m1 Complex64ArrArrOptionList) Equals(m2 Complex64ArrArrOptionList) bool { return Complex64ArrArrOptionListEquals(m1, m2) }
-func (m1 Complex128ArrArrOptionList) Equals(m2 Complex128ArrArrOptionList) bool { return Complex128ArrArrOptionListEquals(m1, m2) }
-func (m1 AnyArrArrOptionList) Equals(m2 AnyArrArrOptionList) bool { return AnyArrArrOptionListEquals(m1, m2) }
-func (m1 BoolOptionArrOptionList) Equals(m2 BoolOptionArrOptionList) bool { return BoolOptionArrOptionListEquals(m1, m2) }
-func (m1 StringOptionArrOptionList) Equals(m2 StringOptionArrOptionList) bool { return StringOptionArrOptionListEquals(m1, m2) }
-func (m1 IntOptionArrOptionList) Equals(m2 IntOptionArrOptionList) bool { return IntOptionArrOptionListEquals(m1, m2) }
-func (m1 Int8OptionArrOptionList) Equals(m2 Int8OptionArrOptionList) bool { return Int8OptionArrOptionListEquals(m1, m2) }
-func (m1 Int16OptionArrOptionList) Equals(m2 Int16OptionArrOptionList) bool { return Int16OptionArrOptionListEquals(m1, m2) }
-func (m1 Int32OptionArrOptionList) Equals(m2 Int32OptionArrOptionList) bool { return Int32OptionArrOptionListEquals(m1, m2) }
-func (m1 Int64OptionArrOptionList) Equals(m2 Int64OptionArrOptionList) bool { return Int64OptionArrOptionListEquals(m1, m2) }
-func (m1 UintOptionArrOptionList) Equals(m2 UintOptionArrOptionList) bool { return UintOptionArrOptionListEquals(m1, m2) }
-func (m1 Uint8OptionArrOptionList) Equals(m2 Uint8OptionArrOptionList) bool { return Uint8OptionArrOptionListEquals(m1, m2) }
-func (m1 Uint16OptionArrOptionList) Equals(m2 Uint16OptionArrOptionList) bool { return Uint16OptionArrOptionListEquals(m1, m2) }
-func (m1 Uint32OptionArrOptionList) Equals(m2 Uint32OptionArrOptionList) bool { return Uint32OptionArrOptionListEquals(m1, m2) }
-func (m1 Uint64OptionArrOptionList) Equals(m2 Uint64OptionArrOptionList) bool { return Uint64OptionArrOptionListEquals(m1, m2) }
-func (m1 UintptrOptionArrOptionList) Equals(m2 UintptrOptionArrOptionList) bool { return UintptrOptionArrOptionListEquals(m1, m2) }
-func (m1 ByteOptionArrOptionList) Equals(m2 ByteOptionArrOptionList) bool { return ByteOptionArrOptionListEquals(m1, m2) }
-func (m1 RuneOptionArrOptionList) Equals(m2 RuneOptionArrOptionList) bool { return RuneOptionArrOptionListEquals(m1, m2) }
-func (m1 Float32OptionArrOptionList) Equals(m2 Float32OptionArrOptionList) bool { return Float32OptionArrOptionListEquals(m1, m2) }
-func (m1 Float64OptionArrOptionList) Equals(m2 Float64OptionArrOptionList) bool { return Float64OptionArrOptionListEquals(m1, m2) }
-func (m1 Complex64OptionArrOptionList) Equals(m2 Complex64OptionArrOptionList) bool { return Complex64OptionArrOptionListEquals(m1, m2) }
-func (m1 Complex128OptionArrOptionList) Equals(m2 Complex128OptionArrOptionList) bool { return Complex128OptionArrOptionListEquals(m1, m2) }
-func (m1 AnyOptionArrOptionList) Equals(m2 AnyOptionArrOptionList) bool { return AnyOptionArrOptionListEquals(m1, m2) }
-func (m1 BoolListOptionList) Equals(m2 BoolListOptionList) bool { return BoolListOptionListEquals(m1, m2) }
-func (m1 StringListOptionList) Equals(m2 StringListOptionList) bool { return StringListOptionListEquals(m1, m2) }
+func (m1 BoolArrArrOptionList) Equals(m2 BoolArrArrOptionList) bool {
+	return BoolArrArrOptionListEquals(m1, m2)
+}
+func (m1 StringArrArrOptionList) Equals(m2 StringArrArrOptionList) bool {
+	return StringArrArrOptionListEquals(m1, m2)
+}
+func (m1 IntArrArrOptionList) Equals(m2 IntArrArrOptionList) bool {
+	return IntArrArrOptionListEquals(m1, m2)
+}
+func (m1 Int8ArrArrOptionList) Equals(m2 Int8ArrArrOptionList) bool {
+	return Int8ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Int16ArrArrOptionList) Equals(m2 Int16ArrArrOptionList) bool {
+	return Int16ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Int32ArrArrOptionList) Equals(m2 Int32ArrArrOptionList) bool {
+	return Int32ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Int64ArrArrOptionList) Equals(m2 Int64ArrArrOptionList) bool {
+	return Int64ArrArrOptionListEquals(m1, m2)
+}
+func (m1 UintArrArrOptionList) Equals(m2 UintArrArrOptionList) bool {
+	return UintArrArrOptionListEquals(m1, m2)
+}
+func (m1 Uint8ArrArrOptionList) Equals(m2 Uint8ArrArrOptionList) bool {
+	return Uint8ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Uint16ArrArrOptionList) Equals(m2 Uint16ArrArrOptionList) bool {
+	return Uint16ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Uint32ArrArrOptionList) Equals(m2 Uint32ArrArrOptionList) bool {
+	return Uint32ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Uint64ArrArrOptionList) Equals(m2 Uint64ArrArrOptionList) bool {
+	return Uint64ArrArrOptionListEquals(m1, m2)
+}
+func (m1 UintptrArrArrOptionList) Equals(m2 UintptrArrArrOptionList) bool {
+	return UintptrArrArrOptionListEquals(m1, m2)
+}
+func (m1 ByteArrArrOptionList) Equals(m2 ByteArrArrOptionList) bool {
+	return ByteArrArrOptionListEquals(m1, m2)
+}
+func (m1 RuneArrArrOptionList) Equals(m2 RuneArrArrOptionList) bool {
+	return RuneArrArrOptionListEquals(m1, m2)
+}
+func (m1 Float32ArrArrOptionList) Equals(m2 Float32ArrArrOptionList) bool {
+	return Float32ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Float64ArrArrOptionList) Equals(m2 Float64ArrArrOptionList) bool {
+	return Float64ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Complex64ArrArrOptionList) Equals(m2 Complex64ArrArrOptionList) bool {
+	return Complex64ArrArrOptionListEquals(m1, m2)
+}
+func (m1 Complex128ArrArrOptionList) Equals(m2 Complex128ArrArrOptionList) bool {
+	return Complex128ArrArrOptionListEquals(m1, m2)
+}
+func (m1 AnyArrArrOptionList) Equals(m2 AnyArrArrOptionList) bool {
+	return AnyArrArrOptionListEquals(m1, m2)
+}
+func (m1 BoolOptionArrOptionList) Equals(m2 BoolOptionArrOptionList) bool {
+	return BoolOptionArrOptionListEquals(m1, m2)
+}
+func (m1 StringOptionArrOptionList) Equals(m2 StringOptionArrOptionList) bool {
+	return StringOptionArrOptionListEquals(m1, m2)
+}
+func (m1 IntOptionArrOptionList) Equals(m2 IntOptionArrOptionList) bool {
+	return IntOptionArrOptionListEquals(m1, m2)
+}
+func (m1 Int8OptionArrOptionList) Equals(m2 Int8OptionArrOptionList) bool {
+	return Int8OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Int16OptionArrOptionList) Equals(m2 Int16OptionArrOptionList) bool {
+	return Int16OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Int32OptionArrOptionList) Equals(m2 Int32OptionArrOptionList) bool {
+	return Int32OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Int64OptionArrOptionList) Equals(m2 Int64OptionArrOptionList) bool {
+	return Int64OptionArrOptionListEquals(m1, m2)
+}
+func (m1 UintOptionArrOptionList) Equals(m2 UintOptionArrOptionList) bool {
+	return UintOptionArrOptionListEquals(m1, m2)
+}
+func (m1 Uint8OptionArrOptionList) Equals(m2 Uint8OptionArrOptionList) bool {
+	return Uint8OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Uint16OptionArrOptionList) Equals(m2 Uint16OptionArrOptionList) bool {
+	return Uint16OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Uint32OptionArrOptionList) Equals(m2 Uint32OptionArrOptionList) bool {
+	return Uint32OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Uint64OptionArrOptionList) Equals(m2 Uint64OptionArrOptionList) bool {
+	return Uint64OptionArrOptionListEquals(m1, m2)
+}
+func (m1 UintptrOptionArrOptionList) Equals(m2 UintptrOptionArrOptionList) bool {
+	return UintptrOptionArrOptionListEquals(m1, m2)
+}
+func (m1 ByteOptionArrOptionList) Equals(m2 ByteOptionArrOptionList) bool {
+	return ByteOptionArrOptionListEquals(m1, m2)
+}
+func (m1 RuneOptionArrOptionList) Equals(m2 RuneOptionArrOptionList) bool {
+	return RuneOptionArrOptionListEquals(m1, m2)
+}
+func (m1 Float32OptionArrOptionList) Equals(m2 Float32OptionArrOptionList) bool {
+	return Float32OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Float64OptionArrOptionList) Equals(m2 Float64OptionArrOptionList) bool {
+	return Float64OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Complex64OptionArrOptionList) Equals(m2 Complex64OptionArrOptionList) bool {
+	return Complex64OptionArrOptionListEquals(m1, m2)
+}
+func (m1 Complex128OptionArrOptionList) Equals(m2 Complex128OptionArrOptionList) bool {
+	return Complex128OptionArrOptionListEquals(m1, m2)
+}
+func (m1 AnyOptionArrOptionList) Equals(m2 AnyOptionArrOptionList) bool {
+	return AnyOptionArrOptionListEquals(m1, m2)
+}
+func (m1 BoolListOptionList) Equals(m2 BoolListOptionList) bool {
+	return BoolListOptionListEquals(m1, m2)
+}
+func (m1 StringListOptionList) Equals(m2 StringListOptionList) bool {
+	return StringListOptionListEquals(m1, m2)
+}
 func (m1 IntListOptionList) Equals(m2 IntListOptionList) bool { return IntListOptionListEquals(m1, m2) }
-func (m1 Int8ListOptionList) Equals(m2 Int8ListOptionList) bool { return Int8ListOptionListEquals(m1, m2) }
-func (m1 Int16ListOptionList) Equals(m2 Int16ListOptionList) bool { return Int16ListOptionListEquals(m1, m2) }
-func (m1 Int32ListOptionList) Equals(m2 Int32ListOptionList) bool { return Int32ListOptionListEquals(m1, m2) }
-func (m1 Int64ListOptionList) Equals(m2 Int64ListOptionList) bool { return Int64ListOptionListEquals(m1, m2) }
-func (m1 UintListOptionList) Equals(m2 UintListOptionList) bool { return UintListOptionListEquals(m1, m2) }
-func (m1 Uint8ListOptionList) Equals(m2 Uint8ListOptionList) bool { return Uint8ListOptionListEquals(m1, m2) }
-func (m1 Uint16ListOptionList) Equals(m2 Uint16ListOptionList) bool { return Uint16ListOptionListEquals(m1, m2) }
-func (m1 Uint32ListOptionList) Equals(m2 Uint32ListOptionList) bool { return Uint32ListOptionListEquals(m1, m2) }
-func (m1 Uint64ListOptionList) Equals(m2 Uint64ListOptionList) bool { return Uint64ListOptionListEquals(m1, m2) }
-func (m1 UintptrListOptionList) Equals(m2 UintptrListOptionList) bool { return UintptrListOptionListEquals(m1, m2) }
-func (m1 ByteListOptionList) Equals(m2 ByteListOptionList) bool { return ByteListOptionListEquals(m1, m2) }
-func (m1 RuneListOptionList) Equals(m2 RuneListOptionList) bool { return RuneListOptionListEquals(m1, m2) }
-func (m1 Float32ListOptionList) Equals(m2 Float32ListOptionList) bool { return Float32ListOptionListEquals(m1, m2) }
-func (m1 Float64ListOptionList) Equals(m2 Float64ListOptionList) bool { return Float64ListOptionListEquals(m1, m2) }
-func (m1 Complex64ListOptionList) Equals(m2 Complex64ListOptionList) bool { return Complex64ListOptionListEquals(m1, m2) }
-func (m1 Complex128ListOptionList) Equals(m2 Complex128ListOptionList) bool { return Complex128ListOptionListEquals(m1, m2) }
+func (m1 Int8ListOptionList) Equals(m2 Int8ListOptionList) bool {
+	return Int8ListOptionListEquals(m1, m2)
+}
+func (m1 Int16ListOptionList) Equals(m2 Int16ListOptionList) bool {
+	return Int16ListOptionListEquals(m1, m2)
+}
+func (m1 Int32ListOptionList) Equals(m2 Int32ListOptionList) bool {
+	return Int32ListOptionListEquals(m1, m2)
+}
+func (m1 Int64ListOptionList) Equals(m2 Int64ListOptionList) bool {
+	return Int64ListOptionListEquals(m1, m2)
+}
+func (m1 UintListOptionList) Equals(m2 UintListOptionList) bool {
+	return UintListOptionListEquals(m1, m2)
+}
+func (m1 Uint8ListOptionList) Equals(m2 Uint8ListOptionList) bool {
+	return Uint8ListOptionListEquals(m1, m2)
+}
+func (m1 Uint16ListOptionList) Equals(m2 Uint16ListOptionList) bool {
+	return Uint16ListOptionListEquals(m1, m2)
+}
+func (m1 Uint32ListOptionList) Equals(m2 Uint32ListOptionList) bool {
+	return Uint32ListOptionListEquals(m1, m2)
+}
+func (m1 Uint64ListOptionList) Equals(m2 Uint64ListOptionList) bool {
+	return Uint64ListOptionListEquals(m1, m2)
+}
+func (m1 UintptrListOptionList) Equals(m2 UintptrListOptionList) bool {
+	return UintptrListOptionListEquals(m1, m2)
+}
+func (m1 ByteListOptionList) Equals(m2 ByteListOptionList) bool {
+	return ByteListOptionListEquals(m1, m2)
+}
+func (m1 RuneListOptionList) Equals(m2 RuneListOptionList) bool {
+	return RuneListOptionListEquals(m1, m2)
+}
+func (m1 Float32ListOptionList) Equals(m2 Float32ListOptionList) bool {
+	return Float32ListOptionListEquals(m1, m2)
+}
+func (m1 Float64ListOptionList) Equals(m2 Float64ListOptionList) bool {
+	return Float64ListOptionListEquals(m1, m2)
+}
+func (m1 Complex64ListOptionList) Equals(m2 Complex64ListOptionList) bool {
+	return Complex64ListOptionListEquals(m1, m2)
+}
+func (m1 Complex128ListOptionList) Equals(m2 Complex128ListOptionList) bool {
+	return Complex128ListOptionListEquals(m1, m2)
+}
 func (m1 AnyListOptionList) Equals(m2 AnyListOptionList) bool { return AnyListOptionListEquals(m1, m2) }
-func (m1 BoolOptionOptionList) Equals(m2 BoolOptionOptionList) bool { return BoolOptionOptionListEquals(m1, m2) }
-func (m1 StringOptionOptionList) Equals(m2 StringOptionOptionList) bool { return StringOptionOptionListEquals(m1, m2) }
-func (m1 IntOptionOptionList) Equals(m2 IntOptionOptionList) bool { return IntOptionOptionListEquals(m1, m2) }
-func (m1 Int8OptionOptionList) Equals(m2 Int8OptionOptionList) bool { return Int8OptionOptionListEquals(m1, m2) }
-func (m1 Int16OptionOptionList) Equals(m2 Int16OptionOptionList) bool { return Int16OptionOptionListEquals(m1, m2) }
-func (m1 Int32OptionOptionList) Equals(m2 Int32OptionOptionList) bool { return Int32OptionOptionListEquals(m1, m2) }
-func (m1 Int64OptionOptionList) Equals(m2 Int64OptionOptionList) bool { return Int64OptionOptionListEquals(m1, m2) }
-func (m1 UintOptionOptionList) Equals(m2 UintOptionOptionList) bool { return UintOptionOptionListEquals(m1, m2) }
-func (m1 Uint8OptionOptionList) Equals(m2 Uint8OptionOptionList) bool { return Uint8OptionOptionListEquals(m1, m2) }
-func (m1 Uint16OptionOptionList) Equals(m2 Uint16OptionOptionList) bool { return Uint16OptionOptionListEquals(m1, m2) }
-func (m1 Uint32OptionOptionList) Equals(m2 Uint32OptionOptionList) bool { return Uint32OptionOptionListEquals(m1, m2) }
-func (m1 Uint64OptionOptionList) Equals(m2 Uint64OptionOptionList) bool { return Uint64OptionOptionListEquals(m1, m2) }
-func (m1 UintptrOptionOptionList) Equals(m2 UintptrOptionOptionList) bool { return UintptrOptionOptionListEquals(m1, m2) }
-func (m1 ByteOptionOptionList) Equals(m2 ByteOptionOptionList) bool { return ByteOptionOptionListEquals(m1, m2) }
-func (m1 RuneOptionOptionList) Equals(m2 RuneOptionOptionList) bool { return RuneOptionOptionListEquals(m1, m2) }
-func (m1 Float32OptionOptionList) Equals(m2 Float32OptionOptionList) bool { return Float32OptionOptionListEquals(m1, m2) }
-func (m1 Float64OptionOptionList) Equals(m2 Float64OptionOptionList) bool { return Float64OptionOptionListEquals(m1, m2) }
-func (m1 Complex64OptionOptionList) Equals(m2 Complex64OptionOptionList) bool { return Complex64OptionOptionListEquals(m1, m2) }
-func (m1 Complex128OptionOptionList) Equals(m2 Complex128OptionOptionList) bool { return Complex128OptionOptionListEquals(m1, m2) }
-func (m1 AnyOptionOptionList) Equals(m2 AnyOptionOptionList) bool { return AnyOptionOptionListEquals(m1, m2) }
-func (m1 BoolArrOptionOptionList) Equals(m2 BoolArrOptionOptionList) bool { return BoolArrOptionOptionListEquals(m1, m2) }
-func (m1 StringArrOptionOptionList) Equals(m2 StringArrOptionOptionList) bool { return StringArrOptionOptionListEquals(m1, m2) }
-func (m1 IntArrOptionOptionList) Equals(m2 IntArrOptionOptionList) bool { return IntArrOptionOptionListEquals(m1, m2) }
-func (m1 Int8ArrOptionOptionList) Equals(m2 Int8ArrOptionOptionList) bool { return Int8ArrOptionOptionListEquals(m1, m2) }
-func (m1 Int16ArrOptionOptionList) Equals(m2 Int16ArrOptionOptionList) bool { return Int16ArrOptionOptionListEquals(m1, m2) }
-func (m1 Int32ArrOptionOptionList) Equals(m2 Int32ArrOptionOptionList) bool { return Int32ArrOptionOptionListEquals(m1, m2) }
-func (m1 Int64ArrOptionOptionList) Equals(m2 Int64ArrOptionOptionList) bool { return Int64ArrOptionOptionListEquals(m1, m2) }
-func (m1 UintArrOptionOptionList) Equals(m2 UintArrOptionOptionList) bool { return UintArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint8ArrOptionOptionList) Equals(m2 Uint8ArrOptionOptionList) bool { return Uint8ArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint16ArrOptionOptionList) Equals(m2 Uint16ArrOptionOptionList) bool { return Uint16ArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint32ArrOptionOptionList) Equals(m2 Uint32ArrOptionOptionList) bool { return Uint32ArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint64ArrOptionOptionList) Equals(m2 Uint64ArrOptionOptionList) bool { return Uint64ArrOptionOptionListEquals(m1, m2) }
-func (m1 UintptrArrOptionOptionList) Equals(m2 UintptrArrOptionOptionList) bool { return UintptrArrOptionOptionListEquals(m1, m2) }
-func (m1 ByteArrOptionOptionList) Equals(m2 ByteArrOptionOptionList) bool { return ByteArrOptionOptionListEquals(m1, m2) }
-func (m1 RuneArrOptionOptionList) Equals(m2 RuneArrOptionOptionList) bool { return RuneArrOptionOptionListEquals(m1, m2) }
-func (m1 Float32ArrOptionOptionList) Equals(m2 Float32ArrOptionOptionList) bool { return Float32ArrOptionOptionListEquals(m1, m2) }
-func (m1 Float64ArrOptionOptionList) Equals(m2 Float64ArrOptionOptionList) bool { return Float64ArrOptionOptionListEquals(m1, m2) }
-func (m1 Complex64ArrOptionOptionList) Equals(m2 Complex64ArrOptionOptionList) bool { return Complex64ArrOptionOptionListEquals(m1, m2) }
-func (m1 Complex128ArrOptionOptionList) Equals(m2 Complex128ArrOptionOptionList) bool { return Complex128ArrOptionOptionListEquals(m1, m2) }
-func (m1 AnyArrOptionOptionList) Equals(m2 AnyArrOptionOptionList) bool { return AnyArrOptionOptionListEquals(m1, m2) }
-func (m1 BoolArrArrOptionOptionList) Equals(m2 BoolArrArrOptionOptionList) bool { return BoolArrArrOptionOptionListEquals(m1, m2) }
-func (m1 StringArrArrOptionOptionList) Equals(m2 StringArrArrOptionOptionList) bool { return StringArrArrOptionOptionListEquals(m1, m2) }
-func (m1 IntArrArrOptionOptionList) Equals(m2 IntArrArrOptionOptionList) bool { return IntArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Int8ArrArrOptionOptionList) Equals(m2 Int8ArrArrOptionOptionList) bool { return Int8ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Int16ArrArrOptionOptionList) Equals(m2 Int16ArrArrOptionOptionList) bool { return Int16ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Int32ArrArrOptionOptionList) Equals(m2 Int32ArrArrOptionOptionList) bool { return Int32ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Int64ArrArrOptionOptionList) Equals(m2 Int64ArrArrOptionOptionList) bool { return Int64ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 UintArrArrOptionOptionList) Equals(m2 UintArrArrOptionOptionList) bool { return UintArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint8ArrArrOptionOptionList) Equals(m2 Uint8ArrArrOptionOptionList) bool { return Uint8ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint16ArrArrOptionOptionList) Equals(m2 Uint16ArrArrOptionOptionList) bool { return Uint16ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint32ArrArrOptionOptionList) Equals(m2 Uint32ArrArrOptionOptionList) bool { return Uint32ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint64ArrArrOptionOptionList) Equals(m2 Uint64ArrArrOptionOptionList) bool { return Uint64ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 UintptrArrArrOptionOptionList) Equals(m2 UintptrArrArrOptionOptionList) bool { return UintptrArrArrOptionOptionListEquals(m1, m2) }
-func (m1 ByteArrArrOptionOptionList) Equals(m2 ByteArrArrOptionOptionList) bool { return ByteArrArrOptionOptionListEquals(m1, m2) }
-func (m1 RuneArrArrOptionOptionList) Equals(m2 RuneArrArrOptionOptionList) bool { return RuneArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Float32ArrArrOptionOptionList) Equals(m2 Float32ArrArrOptionOptionList) bool { return Float32ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Float64ArrArrOptionOptionList) Equals(m2 Float64ArrArrOptionOptionList) bool { return Float64ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Complex64ArrArrOptionOptionList) Equals(m2 Complex64ArrArrOptionOptionList) bool { return Complex64ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 Complex128ArrArrOptionOptionList) Equals(m2 Complex128ArrArrOptionOptionList) bool { return Complex128ArrArrOptionOptionListEquals(m1, m2) }
-func (m1 AnyArrArrOptionOptionList) Equals(m2 AnyArrArrOptionOptionList) bool { return AnyArrArrOptionOptionListEquals(m1, m2) }
-func (m1 BoolOptionArrOptionOptionList) Equals(m2 BoolOptionArrOptionOptionList) bool { return BoolOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 StringOptionArrOptionOptionList) Equals(m2 StringOptionArrOptionOptionList) bool { return StringOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 IntOptionArrOptionOptionList) Equals(m2 IntOptionArrOptionOptionList) bool { return IntOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Int8OptionArrOptionOptionList) Equals(m2 Int8OptionArrOptionOptionList) bool { return Int8OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Int16OptionArrOptionOptionList) Equals(m2 Int16OptionArrOptionOptionList) bool { return Int16OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Int32OptionArrOptionOptionList) Equals(m2 Int32OptionArrOptionOptionList) bool { return Int32OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Int64OptionArrOptionOptionList) Equals(m2 Int64OptionArrOptionOptionList) bool { return Int64OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 UintOptionArrOptionOptionList) Equals(m2 UintOptionArrOptionOptionList) bool { return UintOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint8OptionArrOptionOptionList) Equals(m2 Uint8OptionArrOptionOptionList) bool { return Uint8OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint16OptionArrOptionOptionList) Equals(m2 Uint16OptionArrOptionOptionList) bool { return Uint16OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint32OptionArrOptionOptionList) Equals(m2 Uint32OptionArrOptionOptionList) bool { return Uint32OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Uint64OptionArrOptionOptionList) Equals(m2 Uint64OptionArrOptionOptionList) bool { return Uint64OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 UintptrOptionArrOptionOptionList) Equals(m2 UintptrOptionArrOptionOptionList) bool { return UintptrOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 ByteOptionArrOptionOptionList) Equals(m2 ByteOptionArrOptionOptionList) bool { return ByteOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 RuneOptionArrOptionOptionList) Equals(m2 RuneOptionArrOptionOptionList) bool { return RuneOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Float32OptionArrOptionOptionList) Equals(m2 Float32OptionArrOptionOptionList) bool { return Float32OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Float64OptionArrOptionOptionList) Equals(m2 Float64OptionArrOptionOptionList) bool { return Float64OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Complex64OptionArrOptionOptionList) Equals(m2 Complex64OptionArrOptionOptionList) bool { return Complex64OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 Complex128OptionArrOptionOptionList) Equals(m2 Complex128OptionArrOptionOptionList) bool { return Complex128OptionArrOptionOptionListEquals(m1, m2) }
-func (m1 AnyOptionArrOptionOptionList) Equals(m2 AnyOptionArrOptionOptionList) bool { return AnyOptionArrOptionOptionListEquals(m1, m2) }
-func (m1 BoolListOptionOptionList) Equals(m2 BoolListOptionOptionList) bool { return BoolListOptionOptionListEquals(m1, m2) }
-func (m1 StringListOptionOptionList) Equals(m2 StringListOptionOptionList) bool { return StringListOptionOptionListEquals(m1, m2) }
-func (m1 IntListOptionOptionList) Equals(m2 IntListOptionOptionList) bool { return IntListOptionOptionListEquals(m1, m2) }
-func (m1 Int8ListOptionOptionList) Equals(m2 Int8ListOptionOptionList) bool { return Int8ListOptionOptionListEquals(m1, m2) }
-func (m1 Int16ListOptionOptionList) Equals(m2 Int16ListOptionOptionList) bool { return Int16ListOptionOptionListEquals(m1, m2) }
-func (m1 Int32ListOptionOptionList) Equals(m2 Int32ListOptionOptionList) bool { return Int32ListOptionOptionListEquals(m1, m2) }
-func (m1 Int64ListOptionOptionList) Equals(m2 Int64ListOptionOptionList) bool { return Int64ListOptionOptionListEquals(m1, m2) }
-func (m1 UintListOptionOptionList) Equals(m2 UintListOptionOptionList) bool { return UintListOptionOptionListEquals(m1, m2) }
-func (m1 Uint8ListOptionOptionList) Equals(m2 Uint8ListOptionOptionList) bool { return Uint8ListOptionOptionListEquals(m1, m2) }
-func (m1 Uint16ListOptionOptionList) Equals(m2 Uint16ListOptionOptionList) bool { return Uint16ListOptionOptionListEquals(m1, m2) }
-func (m1 Uint32ListOptionOptionList) Equals(m2 Uint32ListOptionOptionList) bool { return Uint32ListOptionOptionListEquals(m1, m2) }
-func (m1 Uint64ListOptionOptionList) Equals(m2 Uint64ListOptionOptionList) bool { return Uint64ListOptionOptionListEquals(m1, m2) }
-func (m1 UintptrListOptionOptionList) Equals(m2 UintptrListOptionOptionList) bool { return UintptrListOptionOptionListEquals(m1, m2) }
-func (m1 ByteListOptionOptionList) Equals(m2 ByteListOptionOptionList) bool { return ByteListOptionOptionListEquals(m1, m2) }
-func (m1 RuneListOptionOptionList) Equals(m2 RuneListOptionOptionList) bool { return RuneListOptionOptionListEquals(m1, m2) }
-func (m1 Float32ListOptionOptionList) Equals(m2 Float32ListOptionOptionList) bool { return Float32ListOptionOptionListEquals(m1, m2) }
-func (m1 Float64ListOptionOptionList) Equals(m2 Float64ListOptionOptionList) bool { return Float64ListOptionOptionListEquals(m1, m2) }
-func (m1 Complex64ListOptionOptionList) Equals(m2 Complex64ListOptionOptionList) bool { return Complex64ListOptionOptionListEquals(m1, m2) }
-func (m1 Complex128ListOptionOptionList) Equals(m2 Complex128ListOptionOptionList) bool { return Complex128ListOptionOptionListEquals(m1, m2) }
-func (m1 AnyListOptionOptionList) Equals(m2 AnyListOptionOptionList) bool { return AnyListOptionOptionListEquals(m1, m2) }
-func (m1 BoolArrList) Equals(m2 BoolArrList) bool { return BoolArrListEquals(m1, m2) }
-func (m1 StringArrList) Equals(m2 StringArrList) bool { return StringArrListEquals(m1, m2) }
-func (m1 IntArrList) Equals(m2 IntArrList) bool { return IntArrListEquals(m1, m2) }
-func (m1 Int8ArrList) Equals(m2 Int8ArrList) bool { return Int8ArrListEquals(m1, m2) }
-func (m1 Int16ArrList) Equals(m2 Int16ArrList) bool { return Int16ArrListEquals(m1, m2) }
-func (m1 Int32ArrList) Equals(m2 Int32ArrList) bool { return Int32ArrListEquals(m1, m2) }
-func (m1 Int64ArrList) Equals(m2 Int64ArrList) bool { return Int64ArrListEquals(m1, m2) }
-func (m1 UintArrList) Equals(m2 UintArrList) bool { return UintArrListEquals(m1, m2) }
-func (m1 Uint8ArrList) Equals(m2 Uint8ArrList) bool { return Uint8ArrListEquals(m1, m2) }
-func (m1 Uint16ArrList) Equals(m2 Uint16ArrList) bool { return Uint16ArrListEquals(m1, m2) }
-func (m1 Uint32ArrList) Equals(m2 Uint32ArrList) bool { return Uint32ArrListEquals(m1, m2) }
-func (m1 Uint64ArrList) Equals(m2 Uint64ArrList) bool { return Uint64ArrListEquals(m1, m2) }
-func (m1 UintptrArrList) Equals(m2 UintptrArrList) bool { return UintptrArrListEquals(m1, m2) }
-func (m1 ByteArrList) Equals(m2 ByteArrList) bool { return ByteArrListEquals(m1, m2) }
-func (m1 RuneArrList) Equals(m2 RuneArrList) bool { return RuneArrListEquals(m1, m2) }
-func (m1 Float32ArrList) Equals(m2 Float32ArrList) bool { return Float32ArrListEquals(m1, m2) }
-func (m1 Float64ArrList) Equals(m2 Float64ArrList) bool { return Float64ArrListEquals(m1, m2) }
-func (m1 Complex64ArrList) Equals(m2 Complex64ArrList) bool { return Complex64ArrListEquals(m1, m2) }
+func (m1 BoolOptionOptionList) Equals(m2 BoolOptionOptionList) bool {
+	return BoolOptionOptionListEquals(m1, m2)
+}
+func (m1 StringOptionOptionList) Equals(m2 StringOptionOptionList) bool {
+	return StringOptionOptionListEquals(m1, m2)
+}
+func (m1 IntOptionOptionList) Equals(m2 IntOptionOptionList) bool {
+	return IntOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8OptionOptionList) Equals(m2 Int8OptionOptionList) bool {
+	return Int8OptionOptionListEquals(m1, m2)
+}
+func (m1 Int16OptionOptionList) Equals(m2 Int16OptionOptionList) bool {
+	return Int16OptionOptionListEquals(m1, m2)
+}
+func (m1 Int32OptionOptionList) Equals(m2 Int32OptionOptionList) bool {
+	return Int32OptionOptionListEquals(m1, m2)
+}
+func (m1 Int64OptionOptionList) Equals(m2 Int64OptionOptionList) bool {
+	return Int64OptionOptionListEquals(m1, m2)
+}
+func (m1 UintOptionOptionList) Equals(m2 UintOptionOptionList) bool {
+	return UintOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8OptionOptionList) Equals(m2 Uint8OptionOptionList) bool {
+	return Uint8OptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16OptionOptionList) Equals(m2 Uint16OptionOptionList) bool {
+	return Uint16OptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32OptionOptionList) Equals(m2 Uint32OptionOptionList) bool {
+	return Uint32OptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64OptionOptionList) Equals(m2 Uint64OptionOptionList) bool {
+	return Uint64OptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrOptionOptionList) Equals(m2 UintptrOptionOptionList) bool {
+	return UintptrOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteOptionOptionList) Equals(m2 ByteOptionOptionList) bool {
+	return ByteOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneOptionOptionList) Equals(m2 RuneOptionOptionList) bool {
+	return RuneOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32OptionOptionList) Equals(m2 Float32OptionOptionList) bool {
+	return Float32OptionOptionListEquals(m1, m2)
+}
+func (m1 Float64OptionOptionList) Equals(m2 Float64OptionOptionList) bool {
+	return Float64OptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64OptionOptionList) Equals(m2 Complex64OptionOptionList) bool {
+	return Complex64OptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128OptionOptionList) Equals(m2 Complex128OptionOptionList) bool {
+	return Complex128OptionOptionListEquals(m1, m2)
+}
+func (m1 AnyOptionOptionList) Equals(m2 AnyOptionOptionList) bool {
+	return AnyOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolArrOptionOptionList) Equals(m2 BoolArrOptionOptionList) bool {
+	return BoolArrOptionOptionListEquals(m1, m2)
+}
+func (m1 StringArrOptionOptionList) Equals(m2 StringArrOptionOptionList) bool {
+	return StringArrOptionOptionListEquals(m1, m2)
+}
+func (m1 IntArrOptionOptionList) Equals(m2 IntArrOptionOptionList) bool {
+	return IntArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8ArrOptionOptionList) Equals(m2 Int8ArrOptionOptionList) bool {
+	return Int8ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16ArrOptionOptionList) Equals(m2 Int16ArrOptionOptionList) bool {
+	return Int16ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32ArrOptionOptionList) Equals(m2 Int32ArrOptionOptionList) bool {
+	return Int32ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64ArrOptionOptionList) Equals(m2 Int64ArrOptionOptionList) bool {
+	return Int64ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 UintArrOptionOptionList) Equals(m2 UintArrOptionOptionList) bool {
+	return UintArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8ArrOptionOptionList) Equals(m2 Uint8ArrOptionOptionList) bool {
+	return Uint8ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16ArrOptionOptionList) Equals(m2 Uint16ArrOptionOptionList) bool {
+	return Uint16ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32ArrOptionOptionList) Equals(m2 Uint32ArrOptionOptionList) bool {
+	return Uint32ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64ArrOptionOptionList) Equals(m2 Uint64ArrOptionOptionList) bool {
+	return Uint64ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrArrOptionOptionList) Equals(m2 UintptrArrOptionOptionList) bool {
+	return UintptrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteArrOptionOptionList) Equals(m2 ByteArrOptionOptionList) bool {
+	return ByteArrOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneArrOptionOptionList) Equals(m2 RuneArrOptionOptionList) bool {
+	return RuneArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32ArrOptionOptionList) Equals(m2 Float32ArrOptionOptionList) bool {
+	return Float32ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64ArrOptionOptionList) Equals(m2 Float64ArrOptionOptionList) bool {
+	return Float64ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64ArrOptionOptionList) Equals(m2 Complex64ArrOptionOptionList) bool {
+	return Complex64ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128ArrOptionOptionList) Equals(m2 Complex128ArrOptionOptionList) bool {
+	return Complex128ArrOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyArrOptionOptionList) Equals(m2 AnyArrOptionOptionList) bool {
+	return AnyArrOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolArrArrOptionOptionList) Equals(m2 BoolArrArrOptionOptionList) bool {
+	return BoolArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 StringArrArrOptionOptionList) Equals(m2 StringArrArrOptionOptionList) bool {
+	return StringArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 IntArrArrOptionOptionList) Equals(m2 IntArrArrOptionOptionList) bool {
+	return IntArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8ArrArrOptionOptionList) Equals(m2 Int8ArrArrOptionOptionList) bool {
+	return Int8ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16ArrArrOptionOptionList) Equals(m2 Int16ArrArrOptionOptionList) bool {
+	return Int16ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32ArrArrOptionOptionList) Equals(m2 Int32ArrArrOptionOptionList) bool {
+	return Int32ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64ArrArrOptionOptionList) Equals(m2 Int64ArrArrOptionOptionList) bool {
+	return Int64ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 UintArrArrOptionOptionList) Equals(m2 UintArrArrOptionOptionList) bool {
+	return UintArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8ArrArrOptionOptionList) Equals(m2 Uint8ArrArrOptionOptionList) bool {
+	return Uint8ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16ArrArrOptionOptionList) Equals(m2 Uint16ArrArrOptionOptionList) bool {
+	return Uint16ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32ArrArrOptionOptionList) Equals(m2 Uint32ArrArrOptionOptionList) bool {
+	return Uint32ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64ArrArrOptionOptionList) Equals(m2 Uint64ArrArrOptionOptionList) bool {
+	return Uint64ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrArrArrOptionOptionList) Equals(m2 UintptrArrArrOptionOptionList) bool {
+	return UintptrArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteArrArrOptionOptionList) Equals(m2 ByteArrArrOptionOptionList) bool {
+	return ByteArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneArrArrOptionOptionList) Equals(m2 RuneArrArrOptionOptionList) bool {
+	return RuneArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32ArrArrOptionOptionList) Equals(m2 Float32ArrArrOptionOptionList) bool {
+	return Float32ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64ArrArrOptionOptionList) Equals(m2 Float64ArrArrOptionOptionList) bool {
+	return Float64ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64ArrArrOptionOptionList) Equals(m2 Complex64ArrArrOptionOptionList) bool {
+	return Complex64ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128ArrArrOptionOptionList) Equals(m2 Complex128ArrArrOptionOptionList) bool {
+	return Complex128ArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyArrArrOptionOptionList) Equals(m2 AnyArrArrOptionOptionList) bool {
+	return AnyArrArrOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolOptionArrOptionOptionList) Equals(m2 BoolOptionArrOptionOptionList) bool {
+	return BoolOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 StringOptionArrOptionOptionList) Equals(m2 StringOptionArrOptionOptionList) bool {
+	return StringOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 IntOptionArrOptionOptionList) Equals(m2 IntOptionArrOptionOptionList) bool {
+	return IntOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8OptionArrOptionOptionList) Equals(m2 Int8OptionArrOptionOptionList) bool {
+	return Int8OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16OptionArrOptionOptionList) Equals(m2 Int16OptionArrOptionOptionList) bool {
+	return Int16OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32OptionArrOptionOptionList) Equals(m2 Int32OptionArrOptionOptionList) bool {
+	return Int32OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64OptionArrOptionOptionList) Equals(m2 Int64OptionArrOptionOptionList) bool {
+	return Int64OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 UintOptionArrOptionOptionList) Equals(m2 UintOptionArrOptionOptionList) bool {
+	return UintOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8OptionArrOptionOptionList) Equals(m2 Uint8OptionArrOptionOptionList) bool {
+	return Uint8OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16OptionArrOptionOptionList) Equals(m2 Uint16OptionArrOptionOptionList) bool {
+	return Uint16OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32OptionArrOptionOptionList) Equals(m2 Uint32OptionArrOptionOptionList) bool {
+	return Uint32OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64OptionArrOptionOptionList) Equals(m2 Uint64OptionArrOptionOptionList) bool {
+	return Uint64OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrOptionArrOptionOptionList) Equals(m2 UintptrOptionArrOptionOptionList) bool {
+	return UintptrOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteOptionArrOptionOptionList) Equals(m2 ByteOptionArrOptionOptionList) bool {
+	return ByteOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneOptionArrOptionOptionList) Equals(m2 RuneOptionArrOptionOptionList) bool {
+	return RuneOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32OptionArrOptionOptionList) Equals(m2 Float32OptionArrOptionOptionList) bool {
+	return Float32OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64OptionArrOptionOptionList) Equals(m2 Float64OptionArrOptionOptionList) bool {
+	return Float64OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64OptionArrOptionOptionList) Equals(m2 Complex64OptionArrOptionOptionList) bool {
+	return Complex64OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128OptionArrOptionOptionList) Equals(m2 Complex128OptionArrOptionOptionList) bool {
+	return Complex128OptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyOptionArrOptionOptionList) Equals(m2 AnyOptionArrOptionOptionList) bool {
+	return AnyOptionArrOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolListOptionOptionList) Equals(m2 BoolListOptionOptionList) bool {
+	return BoolListOptionOptionListEquals(m1, m2)
+}
+func (m1 StringListOptionOptionList) Equals(m2 StringListOptionOptionList) bool {
+	return StringListOptionOptionListEquals(m1, m2)
+}
+func (m1 IntListOptionOptionList) Equals(m2 IntListOptionOptionList) bool {
+	return IntListOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8ListOptionOptionList) Equals(m2 Int8ListOptionOptionList) bool {
+	return Int8ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16ListOptionOptionList) Equals(m2 Int16ListOptionOptionList) bool {
+	return Int16ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32ListOptionOptionList) Equals(m2 Int32ListOptionOptionList) bool {
+	return Int32ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64ListOptionOptionList) Equals(m2 Int64ListOptionOptionList) bool {
+	return Int64ListOptionOptionListEquals(m1, m2)
+}
+func (m1 UintListOptionOptionList) Equals(m2 UintListOptionOptionList) bool {
+	return UintListOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8ListOptionOptionList) Equals(m2 Uint8ListOptionOptionList) bool {
+	return Uint8ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16ListOptionOptionList) Equals(m2 Uint16ListOptionOptionList) bool {
+	return Uint16ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32ListOptionOptionList) Equals(m2 Uint32ListOptionOptionList) bool {
+	return Uint32ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64ListOptionOptionList) Equals(m2 Uint64ListOptionOptionList) bool {
+	return Uint64ListOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrListOptionOptionList) Equals(m2 UintptrListOptionOptionList) bool {
+	return UintptrListOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteListOptionOptionList) Equals(m2 ByteListOptionOptionList) bool {
+	return ByteListOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneListOptionOptionList) Equals(m2 RuneListOptionOptionList) bool {
+	return RuneListOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32ListOptionOptionList) Equals(m2 Float32ListOptionOptionList) bool {
+	return Float32ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64ListOptionOptionList) Equals(m2 Float64ListOptionOptionList) bool {
+	return Float64ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64ListOptionOptionList) Equals(m2 Complex64ListOptionOptionList) bool {
+	return Complex64ListOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128ListOptionOptionList) Equals(m2 Complex128ListOptionOptionList) bool {
+	return Complex128ListOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyListOptionOptionList) Equals(m2 AnyListOptionOptionList) bool {
+	return AnyListOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolOptionOptionOptionList) Equals(m2 BoolOptionOptionOptionList) bool {
+	return BoolOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 StringOptionOptionOptionList) Equals(m2 StringOptionOptionOptionList) bool {
+	return StringOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 IntOptionOptionOptionList) Equals(m2 IntOptionOptionOptionList) bool {
+	return IntOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8OptionOptionOptionList) Equals(m2 Int8OptionOptionOptionList) bool {
+	return Int8OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16OptionOptionOptionList) Equals(m2 Int16OptionOptionOptionList) bool {
+	return Int16OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32OptionOptionOptionList) Equals(m2 Int32OptionOptionOptionList) bool {
+	return Int32OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64OptionOptionOptionList) Equals(m2 Int64OptionOptionOptionList) bool {
+	return Int64OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintOptionOptionOptionList) Equals(m2 UintOptionOptionOptionList) bool {
+	return UintOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8OptionOptionOptionList) Equals(m2 Uint8OptionOptionOptionList) bool {
+	return Uint8OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16OptionOptionOptionList) Equals(m2 Uint16OptionOptionOptionList) bool {
+	return Uint16OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32OptionOptionOptionList) Equals(m2 Uint32OptionOptionOptionList) bool {
+	return Uint32OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64OptionOptionOptionList) Equals(m2 Uint64OptionOptionOptionList) bool {
+	return Uint64OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrOptionOptionOptionList) Equals(m2 UintptrOptionOptionOptionList) bool {
+	return UintptrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteOptionOptionOptionList) Equals(m2 ByteOptionOptionOptionList) bool {
+	return ByteOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneOptionOptionOptionList) Equals(m2 RuneOptionOptionOptionList) bool {
+	return RuneOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32OptionOptionOptionList) Equals(m2 Float32OptionOptionOptionList) bool {
+	return Float32OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64OptionOptionOptionList) Equals(m2 Float64OptionOptionOptionList) bool {
+	return Float64OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64OptionOptionOptionList) Equals(m2 Complex64OptionOptionOptionList) bool {
+	return Complex64OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128OptionOptionOptionList) Equals(m2 Complex128OptionOptionOptionList) bool {
+	return Complex128OptionOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyOptionOptionOptionList) Equals(m2 AnyOptionOptionOptionList) bool {
+	return AnyOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolArrOptionOptionOptionList) Equals(m2 BoolArrOptionOptionOptionList) bool {
+	return BoolArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 StringArrOptionOptionOptionList) Equals(m2 StringArrOptionOptionOptionList) bool {
+	return StringArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 IntArrOptionOptionOptionList) Equals(m2 IntArrOptionOptionOptionList) bool {
+	return IntArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8ArrOptionOptionOptionList) Equals(m2 Int8ArrOptionOptionOptionList) bool {
+	return Int8ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16ArrOptionOptionOptionList) Equals(m2 Int16ArrOptionOptionOptionList) bool {
+	return Int16ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32ArrOptionOptionOptionList) Equals(m2 Int32ArrOptionOptionOptionList) bool {
+	return Int32ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64ArrOptionOptionOptionList) Equals(m2 Int64ArrOptionOptionOptionList) bool {
+	return Int64ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintArrOptionOptionOptionList) Equals(m2 UintArrOptionOptionOptionList) bool {
+	return UintArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8ArrOptionOptionOptionList) Equals(m2 Uint8ArrOptionOptionOptionList) bool {
+	return Uint8ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16ArrOptionOptionOptionList) Equals(m2 Uint16ArrOptionOptionOptionList) bool {
+	return Uint16ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32ArrOptionOptionOptionList) Equals(m2 Uint32ArrOptionOptionOptionList) bool {
+	return Uint32ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64ArrOptionOptionOptionList) Equals(m2 Uint64ArrOptionOptionOptionList) bool {
+	return Uint64ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrArrOptionOptionOptionList) Equals(m2 UintptrArrOptionOptionOptionList) bool {
+	return UintptrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteArrOptionOptionOptionList) Equals(m2 ByteArrOptionOptionOptionList) bool {
+	return ByteArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneArrOptionOptionOptionList) Equals(m2 RuneArrOptionOptionOptionList) bool {
+	return RuneArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32ArrOptionOptionOptionList) Equals(m2 Float32ArrOptionOptionOptionList) bool {
+	return Float32ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64ArrOptionOptionOptionList) Equals(m2 Float64ArrOptionOptionOptionList) bool {
+	return Float64ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64ArrOptionOptionOptionList) Equals(m2 Complex64ArrOptionOptionOptionList) bool {
+	return Complex64ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128ArrOptionOptionOptionList) Equals(m2 Complex128ArrOptionOptionOptionList) bool {
+	return Complex128ArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyArrOptionOptionOptionList) Equals(m2 AnyArrOptionOptionOptionList) bool {
+	return AnyArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolArrArrOptionOptionOptionList) Equals(m2 BoolArrArrOptionOptionOptionList) bool {
+	return BoolArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 StringArrArrOptionOptionOptionList) Equals(m2 StringArrArrOptionOptionOptionList) bool {
+	return StringArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 IntArrArrOptionOptionOptionList) Equals(m2 IntArrArrOptionOptionOptionList) bool {
+	return IntArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8ArrArrOptionOptionOptionList) Equals(m2 Int8ArrArrOptionOptionOptionList) bool {
+	return Int8ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16ArrArrOptionOptionOptionList) Equals(m2 Int16ArrArrOptionOptionOptionList) bool {
+	return Int16ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32ArrArrOptionOptionOptionList) Equals(m2 Int32ArrArrOptionOptionOptionList) bool {
+	return Int32ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64ArrArrOptionOptionOptionList) Equals(m2 Int64ArrArrOptionOptionOptionList) bool {
+	return Int64ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintArrArrOptionOptionOptionList) Equals(m2 UintArrArrOptionOptionOptionList) bool {
+	return UintArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8ArrArrOptionOptionOptionList) Equals(m2 Uint8ArrArrOptionOptionOptionList) bool {
+	return Uint8ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16ArrArrOptionOptionOptionList) Equals(m2 Uint16ArrArrOptionOptionOptionList) bool {
+	return Uint16ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32ArrArrOptionOptionOptionList) Equals(m2 Uint32ArrArrOptionOptionOptionList) bool {
+	return Uint32ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64ArrArrOptionOptionOptionList) Equals(m2 Uint64ArrArrOptionOptionOptionList) bool {
+	return Uint64ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrArrArrOptionOptionOptionList) Equals(m2 UintptrArrArrOptionOptionOptionList) bool {
+	return UintptrArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteArrArrOptionOptionOptionList) Equals(m2 ByteArrArrOptionOptionOptionList) bool {
+	return ByteArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneArrArrOptionOptionOptionList) Equals(m2 RuneArrArrOptionOptionOptionList) bool {
+	return RuneArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32ArrArrOptionOptionOptionList) Equals(m2 Float32ArrArrOptionOptionOptionList) bool {
+	return Float32ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64ArrArrOptionOptionOptionList) Equals(m2 Float64ArrArrOptionOptionOptionList) bool {
+	return Float64ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64ArrArrOptionOptionOptionList) Equals(m2 Complex64ArrArrOptionOptionOptionList) bool {
+	return Complex64ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128ArrArrOptionOptionOptionList) Equals(m2 Complex128ArrArrOptionOptionOptionList) bool {
+	return Complex128ArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyArrArrOptionOptionOptionList) Equals(m2 AnyArrArrOptionOptionOptionList) bool {
+	return AnyArrArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolOptionArrOptionOptionOptionList) Equals(m2 BoolOptionArrOptionOptionOptionList) bool {
+	return BoolOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 StringOptionArrOptionOptionOptionList) Equals(m2 StringOptionArrOptionOptionOptionList) bool {
+	return StringOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 IntOptionArrOptionOptionOptionList) Equals(m2 IntOptionArrOptionOptionOptionList) bool {
+	return IntOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8OptionArrOptionOptionOptionList) Equals(m2 Int8OptionArrOptionOptionOptionList) bool {
+	return Int8OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16OptionArrOptionOptionOptionList) Equals(m2 Int16OptionArrOptionOptionOptionList) bool {
+	return Int16OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32OptionArrOptionOptionOptionList) Equals(m2 Int32OptionArrOptionOptionOptionList) bool {
+	return Int32OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64OptionArrOptionOptionOptionList) Equals(m2 Int64OptionArrOptionOptionOptionList) bool {
+	return Int64OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintOptionArrOptionOptionOptionList) Equals(m2 UintOptionArrOptionOptionOptionList) bool {
+	return UintOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8OptionArrOptionOptionOptionList) Equals(m2 Uint8OptionArrOptionOptionOptionList) bool {
+	return Uint8OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16OptionArrOptionOptionOptionList) Equals(m2 Uint16OptionArrOptionOptionOptionList) bool {
+	return Uint16OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32OptionArrOptionOptionOptionList) Equals(m2 Uint32OptionArrOptionOptionOptionList) bool {
+	return Uint32OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64OptionArrOptionOptionOptionList) Equals(m2 Uint64OptionArrOptionOptionOptionList) bool {
+	return Uint64OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrOptionArrOptionOptionOptionList) Equals(m2 UintptrOptionArrOptionOptionOptionList) bool {
+	return UintptrOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteOptionArrOptionOptionOptionList) Equals(m2 ByteOptionArrOptionOptionOptionList) bool {
+	return ByteOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneOptionArrOptionOptionOptionList) Equals(m2 RuneOptionArrOptionOptionOptionList) bool {
+	return RuneOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32OptionArrOptionOptionOptionList) Equals(m2 Float32OptionArrOptionOptionOptionList) bool {
+	return Float32OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64OptionArrOptionOptionOptionList) Equals(m2 Float64OptionArrOptionOptionOptionList) bool {
+	return Float64OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64OptionArrOptionOptionOptionList) Equals(m2 Complex64OptionArrOptionOptionOptionList) bool {
+	return Complex64OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128OptionArrOptionOptionOptionList) Equals(m2 Complex128OptionArrOptionOptionOptionList) bool {
+	return Complex128OptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyOptionArrOptionOptionOptionList) Equals(m2 AnyOptionArrOptionOptionOptionList) bool {
+	return AnyOptionArrOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolListOptionOptionOptionList) Equals(m2 BoolListOptionOptionOptionList) bool {
+	return BoolListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 StringListOptionOptionOptionList) Equals(m2 StringListOptionOptionOptionList) bool {
+	return StringListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 IntListOptionOptionOptionList) Equals(m2 IntListOptionOptionOptionList) bool {
+	return IntListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int8ListOptionOptionOptionList) Equals(m2 Int8ListOptionOptionOptionList) bool {
+	return Int8ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int16ListOptionOptionOptionList) Equals(m2 Int16ListOptionOptionOptionList) bool {
+	return Int16ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int32ListOptionOptionOptionList) Equals(m2 Int32ListOptionOptionOptionList) bool {
+	return Int32ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Int64ListOptionOptionOptionList) Equals(m2 Int64ListOptionOptionOptionList) bool {
+	return Int64ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintListOptionOptionOptionList) Equals(m2 UintListOptionOptionOptionList) bool {
+	return UintListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint8ListOptionOptionOptionList) Equals(m2 Uint8ListOptionOptionOptionList) bool {
+	return Uint8ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint16ListOptionOptionOptionList) Equals(m2 Uint16ListOptionOptionOptionList) bool {
+	return Uint16ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint32ListOptionOptionOptionList) Equals(m2 Uint32ListOptionOptionOptionList) bool {
+	return Uint32ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Uint64ListOptionOptionOptionList) Equals(m2 Uint64ListOptionOptionOptionList) bool {
+	return Uint64ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 UintptrListOptionOptionOptionList) Equals(m2 UintptrListOptionOptionOptionList) bool {
+	return UintptrListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 ByteListOptionOptionOptionList) Equals(m2 ByteListOptionOptionOptionList) bool {
+	return ByteListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 RuneListOptionOptionOptionList) Equals(m2 RuneListOptionOptionOptionList) bool {
+	return RuneListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float32ListOptionOptionOptionList) Equals(m2 Float32ListOptionOptionOptionList) bool {
+	return Float32ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Float64ListOptionOptionOptionList) Equals(m2 Float64ListOptionOptionOptionList) bool {
+	return Float64ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex64ListOptionOptionOptionList) Equals(m2 Complex64ListOptionOptionOptionList) bool {
+	return Complex64ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 Complex128ListOptionOptionOptionList) Equals(m2 Complex128ListOptionOptionOptionList) bool {
+	return Complex128ListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 AnyListOptionOptionOptionList) Equals(m2 AnyListOptionOptionOptionList) bool {
+	return AnyListOptionOptionOptionListEquals(m1, m2)
+}
+func (m1 BoolArrList) Equals(m2 BoolArrList) bool             { return BoolArrListEquals(m1, m2) }
+func (m1 StringArrList) Equals(m2 StringArrList) bool         { return StringArrListEquals(m1, m2) }
+func (m1 IntArrList) Equals(m2 IntArrList) bool               { return IntArrListEquals(m1, m2) }
+func (m1 Int8ArrList) Equals(m2 Int8ArrList) bool             { return Int8ArrListEquals(m1, m2) }
+func (m1 Int16ArrList) Equals(m2 Int16ArrList) bool           { return Int16ArrListEquals(m1, m2) }
+func (m1 Int32ArrList) Equals(m2 Int32ArrList) bool           { return Int32ArrListEquals(m1, m2) }
+func (m1 Int64ArrList) Equals(m2 Int64ArrList) bool           { return Int64ArrListEquals(m1, m2) }
+func (m1 UintArrList) Equals(m2 UintArrList) bool             { return UintArrListEquals(m1, m2) }
+func (m1 Uint8ArrList) Equals(m2 Uint8ArrList) bool           { return Uint8ArrListEquals(m1, m2) }
+func (m1 Uint16ArrList) Equals(m2 Uint16ArrList) bool         { return Uint16ArrListEquals(m1, m2) }
+func (m1 Uint32ArrList) Equals(m2 Uint32ArrList) bool         { return Uint32ArrListEquals(m1, m2) }
+func (m1 Uint64ArrList) Equals(m2 Uint64ArrList) bool         { return Uint64ArrListEquals(m1, m2) }
+func (m1 UintptrArrList) Equals(m2 UintptrArrList) bool       { return UintptrArrListEquals(m1, m2) }
+func (m1 ByteArrList) Equals(m2 ByteArrList) bool             { return ByteArrListEquals(m1, m2) }
+func (m1 RuneArrList) Equals(m2 RuneArrList) bool             { return RuneArrListEquals(m1, m2) }
+func (m1 Float32ArrList) Equals(m2 Float32ArrList) bool       { return Float32ArrListEquals(m1, m2) }
+func (m1 Float64ArrList) Equals(m2 Float64ArrList) bool       { return Float64ArrListEquals(m1, m2) }
+func (m1 Complex64ArrList) Equals(m2 Complex64ArrList) bool   { return Complex64ArrListEquals(m1, m2) }
 func (m1 Complex128ArrList) Equals(m2 Complex128ArrList) bool { return Complex128ArrListEquals(m1, m2) }
-func (m1 AnyArrList) Equals(m2 AnyArrList) bool { return AnyArrListEquals(m1, m2) }
-func (m1 BoolArrArrList) Equals(m2 BoolArrArrList) bool { return BoolArrArrListEquals(m1, m2) }
-func (m1 StringArrArrList) Equals(m2 StringArrArrList) bool { return StringArrArrListEquals(m1, m2) }
-func (m1 IntArrArrList) Equals(m2 IntArrArrList) bool { return IntArrArrListEquals(m1, m2) }
-func (m1 Int8ArrArrList) Equals(m2 Int8ArrArrList) bool { return Int8ArrArrListEquals(m1, m2) }
-func (m1 Int16ArrArrList) Equals(m2 Int16ArrArrList) bool { return Int16ArrArrListEquals(m1, m2) }
-func (m1 Int32ArrArrList) Equals(m2 Int32ArrArrList) bool { return Int32ArrArrListEquals(m1, m2) }
-func (m1 Int64ArrArrList) Equals(m2 Int64ArrArrList) bool { return Int64ArrArrListEquals(m1, m2) }
-func (m1 UintArrArrList) Equals(m2 UintArrArrList) bool { return UintArrArrListEquals(m1, m2) }
-func (m1 Uint8ArrArrList) Equals(m2 Uint8ArrArrList) bool { return Uint8ArrArrListEquals(m1, m2) }
-func (m1 Uint16ArrArrList) Equals(m2 Uint16ArrArrList) bool { return Uint16ArrArrListEquals(m1, m2) }
-func (m1 Uint32ArrArrList) Equals(m2 Uint32ArrArrList) bool { return Uint32ArrArrListEquals(m1, m2) }
-func (m1 Uint64ArrArrList) Equals(m2 Uint64ArrArrList) bool { return Uint64ArrArrListEquals(m1, m2) }
+func (m1 AnyArrList) Equals(m2 AnyArrList) bool               { return AnyArrListEquals(m1, m2) }
+func (m1 BoolArrArrList) Equals(m2 BoolArrArrList) bool       { return BoolArrArrListEquals(m1, m2) }
+func (m1 StringArrArrList) Equals(m2 StringArrArrList) bool   { return StringArrArrListEquals(m1, m2) }
+func (m1 IntArrArrList) Equals(m2 IntArrArrList) bool         { return IntArrArrListEquals(m1, m2) }
+func (m1 Int8ArrArrList) Equals(m2 Int8ArrArrList) bool       { return Int8ArrArrListEquals(m1, m2) }
+func (m1 Int16ArrArrList) Equals(m2 Int16ArrArrList) bool     { return Int16ArrArrListEquals(m1, m2) }
+func (m1 Int32ArrArrList) Equals(m2 Int32ArrArrList) bool     { return Int32ArrArrListEquals(m1, m2) }
+func (m1 Int64ArrArrList) Equals(m2 Int64ArrArrList) bool     { return Int64ArrArrListEquals(m1, m2) }
+func (m1 UintArrArrList) Equals(m2 UintArrArrList) bool       { return UintArrArrListEquals(m1, m2) }
+func (m1 Uint8ArrArrList) Equals(m2 Uint8ArrArrList) bool     { return Uint8ArrArrListEquals(m1, m2) }
+func (m1 Uint16ArrArrList) Equals(m2 Uint16ArrArrList) bool   { return Uint16ArrArrListEquals(m1, m2) }
+func (m1 Uint32ArrArrList) Equals(m2 Uint32ArrArrList) bool   { return Uint32ArrArrListEquals(m1, m2) }
+func (m1 Uint64ArrArrList) Equals(m2 Uint64ArrArrList) bool   { return Uint64ArrArrListEquals(m1, m2) }
 func (m1 UintptrArrArrList) Equals(m2 UintptrArrArrList) bool { return UintptrArrArrListEquals(m1, m2) }
-func (m1 ByteArrArrList) Equals(m2 ByteArrArrList) bool { return ByteArrArrListEquals(m1, m2) }
-func (m1 RuneArrArrList) Equals(m2 RuneArrArrList) bool { return RuneArrArrListEquals(m1, m2) }
+func (m1 ByteArrArrList) Equals(m2 ByteArrArrList) bool       { return ByteArrArrListEquals(m1, m2) }
+func (m1 RuneArrArrList) Equals(m2 RuneArrArrList) bool       { return RuneArrArrListEquals(m1, m2) }
 func (m1 Float32ArrArrList) Equals(m2 Float32ArrArrList) bool { return Float32ArrArrListEquals(m1, m2) }
 func (m1 Float64ArrArrList) Equals(m2 Float64ArrArrList) bool { return Float64ArrArrListEquals(m1, m2) }
-func (m1 Complex64ArrArrList) Equals(m2 Complex64ArrArrList) bool { return Complex64ArrArrListEquals(m1, m2) }
-func (m1 Complex128ArrArrList) Equals(m2 Complex128ArrArrList) bool { return Complex128ArrArrListEquals(m1, m2) }
-func (m1 AnyArrArrList) Equals(m2 AnyArrArrList) bool { return AnyArrArrListEquals(m1, m2) }
+func (m1 Complex64ArrArrList) Equals(m2 Complex64ArrArrList) bool {
+	return Complex64ArrArrListEquals(m1, m2)
+}
+func (m1 Complex128ArrArrList) Equals(m2 Complex128ArrArrList) bool {
+	return Complex128ArrArrListEquals(m1, m2)
+}
+func (m1 AnyArrArrList) Equals(m2 AnyArrArrList) bool         { return AnyArrArrListEquals(m1, m2) }
 func (m1 BoolOptionArrList) Equals(m2 BoolOptionArrList) bool { return BoolOptionArrListEquals(m1, m2) }
-func (m1 StringOptionArrList) Equals(m2 StringOptionArrList) bool { return StringOptionArrListEquals(m1, m2) }
-func (m1 IntOptionArrList) Equals(m2 IntOptionArrList) bool { return IntOptionArrListEquals(m1, m2) }
+func (m1 StringOptionArrList) Equals(m2 StringOptionArrList) bool {
+	return StringOptionArrListEquals(m1, m2)
+}
+func (m1 IntOptionArrList) Equals(m2 IntOptionArrList) bool   { return IntOptionArrListEquals(m1, m2) }
 func (m1 Int8OptionArrList) Equals(m2 Int8OptionArrList) bool { return Int8OptionArrListEquals(m1, m2) }
-func (m1 Int16OptionArrList) Equals(m2 Int16OptionArrList) bool { return Int16OptionArrListEquals(m1, m2) }
-func (m1 Int32OptionArrList) Equals(m2 Int32OptionArrList) bool { return Int32OptionArrListEquals(m1, m2) }
-func (m1 Int64OptionArrList) Equals(m2 Int64OptionArrList) bool { return Int64OptionArrListEquals(m1, m2) }
+func (m1 Int16OptionArrList) Equals(m2 Int16OptionArrList) bool {
+	return Int16OptionArrListEquals(m1, m2)
+}
+func (m1 Int32OptionArrList) Equals(m2 Int32OptionArrList) bool {
+	return Int32OptionArrListEquals(m1, m2)
+}
+func (m1 Int64OptionArrList) Equals(m2 Int64OptionArrList) bool {
+	return Int64OptionArrListEquals(m1, m2)
+}
 func (m1 UintOptionArrList) Equals(m2 UintOptionArrList) bool { return UintOptionArrListEquals(m1, m2) }
-func (m1 Uint8OptionArrList) Equals(m2 Uint8OptionArrList) bool { return Uint8OptionArrListEquals(m1, m2) }
-func (m1 Uint16OptionArrList) Equals(m2 Uint16OptionArrList) bool { return Uint16OptionArrListEquals(m1, m2) }
-func (m1 Uint32OptionArrList) Equals(m2 Uint32OptionArrList) bool { return Uint32OptionArrListEquals(m1, m2) }
-func (m1 Uint64OptionArrList) Equals(m2 Uint64OptionArrList) bool { return Uint64OptionArrListEquals(m1, m2) }
-func (m1 UintptrOptionArrList) Equals(m2 UintptrOptionArrList) bool { return UintptrOptionArrListEquals(m1, m2) }
+func (m1 Uint8OptionArrList) Equals(m2 Uint8OptionArrList) bool {
+	return Uint8OptionArrListEquals(m1, m2)
+}
+func (m1 Uint16OptionArrList) Equals(m2 Uint16OptionArrList) bool {
+	return Uint16OptionArrListEquals(m1, m2)
+}
+func (m1 Uint32OptionArrList) Equals(m2 Uint32OptionArrList) bool {
+	return Uint32OptionArrListEquals(m1, m2)
+}
+func (m1 Uint64OptionArrList) Equals(m2 Uint64OptionArrList) bool {
+	return Uint64OptionArrListEquals(m1, m2)
+}
+func (m1 UintptrOptionArrList) Equals(m2 UintptrOptionArrList) bool {
+	return UintptrOptionArrListEquals(m1, m2)
+}
 func (m1 ByteOptionArrList) Equals(m2 ByteOptionArrList) bool { return ByteOptionArrListEquals(m1, m2) }
 func (m1 RuneOptionArrList) Equals(m2 RuneOptionArrList) bool { return RuneOptionArrListEquals(m1, m2) }
-func (m1 Float32OptionArrList) Equals(m2 Float32OptionArrList) bool { return Float32OptionArrListEquals(m1, m2) }
-func (m1 Float64OptionArrList) Equals(m2 Float64OptionArrList) bool { return Float64OptionArrListEquals(m1, m2) }
-func (m1 Complex64OptionArrList) Equals(m2 Complex64OptionArrList) bool { return Complex64OptionArrListEquals(m1, m2) }
-func (m1 Complex128OptionArrList) Equals(m2 Complex128OptionArrList) bool { return Complex128OptionArrListEquals(m1, m2) }
-func (m1 AnyOptionArrList) Equals(m2 AnyOptionArrList) bool { return AnyOptionArrListEquals(m1, m2) }
-func (m1 BoolListList) Equals(m2 BoolListList) bool { return BoolListListEquals(m1, m2) }
-func (m1 StringListList) Equals(m2 StringListList) bool { return StringListListEquals(m1, m2) }
-func (m1 IntListList) Equals(m2 IntListList) bool { return IntListListEquals(m1, m2) }
-func (m1 Int8ListList) Equals(m2 Int8ListList) bool { return Int8ListListEquals(m1, m2) }
-func (m1 Int16ListList) Equals(m2 Int16ListList) bool { return Int16ListListEquals(m1, m2) }
-func (m1 Int32ListList) Equals(m2 Int32ListList) bool { return Int32ListListEquals(m1, m2) }
-func (m1 Int64ListList) Equals(m2 Int64ListList) bool { return Int64ListListEquals(m1, m2) }
-func (m1 UintListList) Equals(m2 UintListList) bool { return UintListListEquals(m1, m2) }
-func (m1 Uint8ListList) Equals(m2 Uint8ListList) bool { return Uint8ListListEquals(m1, m2) }
-func (m1 Uint16ListList) Equals(m2 Uint16ListList) bool { return Uint16ListListEquals(m1, m2) }
-func (m1 Uint32ListList) Equals(m2 Uint32ListList) bool { return Uint32ListListEquals(m1, m2) }
-func (m1 Uint64ListList) Equals(m2 Uint64ListList) bool { return Uint64ListListEquals(m1, m2) }
-func (m1 UintptrListList) Equals(m2 UintptrListList) bool { return UintptrListListEquals(m1, m2) }
-func (m1 ByteListList) Equals(m2 ByteListList) bool { return ByteListListEquals(m1, m2) }
-func (m1 RuneListList) Equals(m2 RuneListList) bool { return RuneListListEquals(m1, m2) }
-func (m1 Float32ListList) Equals(m2 Float32ListList) bool { return Float32ListListEquals(m1, m2) }
-func (m1 Float64ListList) Equals(m2 Float64ListList) bool { return Float64ListListEquals(m1, m2) }
+func (m1 Float32OptionArrList) Equals(m2 Float32OptionArrList) bool {
+	return Float32OptionArrListEquals(m1, m2)
+}
+func (m1 Float64OptionArrList) Equals(m2 Float64OptionArrList) bool {
+	return Float64OptionArrListEquals(m1, m2)
+}
+func (m1 Complex64OptionArrList) Equals(m2 Complex64OptionArrList) bool {
+	return Complex64OptionArrListEquals(m1, m2)
+}
+func (m1 Complex128OptionArrList) Equals(m2 Complex128OptionArrList) bool {
+	return Complex128OptionArrListEquals(m1, m2)
+}
+func (m1 AnyOptionArrList) Equals(m2 AnyOptionArrList) bool   { return AnyOptionArrListEquals(m1, m2) }
+func (m1 BoolListList) Equals(m2 BoolListList) bool           { return BoolListListEquals(m1, m2) }
+func (m1 StringListList) Equals(m2 StringListList) bool       { return StringListListEquals(m1, m2) }
+func (m1 IntListList) Equals(m2 IntListList) bool             { return IntListListEquals(m1, m2) }
+func (m1 Int8ListList) Equals(m2 Int8ListList) bool           { return Int8ListListEquals(m1, m2) }
+func (m1 Int16ListList) Equals(m2 Int16ListList) bool         { return Int16ListListEquals(m1, m2) }
+func (m1 Int32ListList) Equals(m2 Int32ListList) bool         { return Int32ListListEquals(m1, m2) }
+func (m1 Int64ListList) Equals(m2 Int64ListList) bool         { return Int64ListListEquals(m1, m2) }
+func (m1 UintListList) Equals(m2 UintListList) bool           { return UintListListEquals(m1, m2) }
+func (m1 Uint8ListList) Equals(m2 Uint8ListList) bool         { return Uint8ListListEquals(m1, m2) }
+func (m1 Uint16ListList) Equals(m2 Uint16ListList) bool       { return Uint16ListListEquals(m1, m2) }
+func (m1 Uint32ListList) Equals(m2 Uint32ListList) bool       { return Uint32ListListEquals(m1, m2) }
+func (m1 Uint64ListList) Equals(m2 Uint64ListList) bool       { return Uint64ListListEquals(m1, m2) }
+func (m1 UintptrListList) Equals(m2 UintptrListList) bool     { return UintptrListListEquals(m1, m2) }
+func (m1 ByteListList) Equals(m2 ByteListList) bool           { return ByteListListEquals(m1, m2) }
+func (m1 RuneListList) Equals(m2 RuneListList) bool           { return RuneListListEquals(m1, m2) }
+func (m1 Float32ListList) Equals(m2 Float32ListList) bool     { return Float32ListListEquals(m1, m2) }
+func (m1 Float64ListList) Equals(m2 Float64ListList) bool     { return Float64ListListEquals(m1, m2) }
 func (m1 Complex64ListList) Equals(m2 Complex64ListList) bool { return Complex64ListListEquals(m1, m2) }
-func (m1 Complex128ListList) Equals(m2 Complex128ListList) bool { return Complex128ListListEquals(m1, m2) }
+func (m1 Complex128ListList) Equals(m2 Complex128ListList) bool {
+	return Complex128ListListEquals(m1, m2)
+}
 func (m1 AnyListList) Equals(m2 AnyListList) bool { return AnyListListEquals(m1, m2) }

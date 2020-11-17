@@ -3,204 +3,421 @@
 
 package fp
 
-
-func (m BoolOption) ToString() string { return BoolOptionToString(m) }
-func (m StringOption) ToString() string { return StringOptionToString(m) }
-func (m IntOption) ToString() string { return IntOptionToString(m) }
-func (m Int8Option) ToString() string { return Int8OptionToString(m) }
-func (m Int16Option) ToString() string { return Int16OptionToString(m) }
-func (m Int32Option) ToString() string { return Int32OptionToString(m) }
-func (m Int64Option) ToString() string { return Int64OptionToString(m) }
-func (m UintOption) ToString() string { return UintOptionToString(m) }
-func (m Uint8Option) ToString() string { return Uint8OptionToString(m) }
-func (m Uint16Option) ToString() string { return Uint16OptionToString(m) }
-func (m Uint32Option) ToString() string { return Uint32OptionToString(m) }
-func (m Uint64Option) ToString() string { return Uint64OptionToString(m) }
-func (m UintptrOption) ToString() string { return UintptrOptionToString(m) }
-func (m ByteOption) ToString() string { return ByteOptionToString(m) }
-func (m RuneOption) ToString() string { return RuneOptionToString(m) }
-func (m Float32Option) ToString() string { return Float32OptionToString(m) }
-func (m Float64Option) ToString() string { return Float64OptionToString(m) }
-func (m Complex64Option) ToString() string { return Complex64OptionToString(m) }
-func (m Complex128Option) ToString() string { return Complex128OptionToString(m) }
-func (m AnyOption) ToString() string { return AnyOptionToString(m) }
-func (m BoolArrOption) ToString() string { return BoolArrOptionToString(m) }
-func (m StringArrOption) ToString() string { return StringArrOptionToString(m) }
-func (m IntArrOption) ToString() string { return IntArrOptionToString(m) }
-func (m Int8ArrOption) ToString() string { return Int8ArrOptionToString(m) }
-func (m Int16ArrOption) ToString() string { return Int16ArrOptionToString(m) }
-func (m Int32ArrOption) ToString() string { return Int32ArrOptionToString(m) }
-func (m Int64ArrOption) ToString() string { return Int64ArrOptionToString(m) }
-func (m UintArrOption) ToString() string { return UintArrOptionToString(m) }
-func (m Uint8ArrOption) ToString() string { return Uint8ArrOptionToString(m) }
-func (m Uint16ArrOption) ToString() string { return Uint16ArrOptionToString(m) }
-func (m Uint32ArrOption) ToString() string { return Uint32ArrOptionToString(m) }
-func (m Uint64ArrOption) ToString() string { return Uint64ArrOptionToString(m) }
-func (m UintptrArrOption) ToString() string { return UintptrArrOptionToString(m) }
-func (m ByteArrOption) ToString() string { return ByteArrOptionToString(m) }
-func (m RuneArrOption) ToString() string { return RuneArrOptionToString(m) }
-func (m Float32ArrOption) ToString() string { return Float32ArrOptionToString(m) }
-func (m Float64ArrOption) ToString() string { return Float64ArrOptionToString(m) }
-func (m Complex64ArrOption) ToString() string { return Complex64ArrOptionToString(m) }
-func (m Complex128ArrOption) ToString() string { return Complex128ArrOptionToString(m) }
-func (m AnyArrOption) ToString() string { return AnyArrOptionToString(m) }
-func (m BoolArrArrOption) ToString() string { return BoolArrArrOptionToString(m) }
-func (m StringArrArrOption) ToString() string { return StringArrArrOptionToString(m) }
-func (m IntArrArrOption) ToString() string { return IntArrArrOptionToString(m) }
-func (m Int8ArrArrOption) ToString() string { return Int8ArrArrOptionToString(m) }
-func (m Int16ArrArrOption) ToString() string { return Int16ArrArrOptionToString(m) }
-func (m Int32ArrArrOption) ToString() string { return Int32ArrArrOptionToString(m) }
-func (m Int64ArrArrOption) ToString() string { return Int64ArrArrOptionToString(m) }
-func (m UintArrArrOption) ToString() string { return UintArrArrOptionToString(m) }
-func (m Uint8ArrArrOption) ToString() string { return Uint8ArrArrOptionToString(m) }
-func (m Uint16ArrArrOption) ToString() string { return Uint16ArrArrOptionToString(m) }
-func (m Uint32ArrArrOption) ToString() string { return Uint32ArrArrOptionToString(m) }
-func (m Uint64ArrArrOption) ToString() string { return Uint64ArrArrOptionToString(m) }
-func (m UintptrArrArrOption) ToString() string { return UintptrArrArrOptionToString(m) }
-func (m ByteArrArrOption) ToString() string { return ByteArrArrOptionToString(m) }
-func (m RuneArrArrOption) ToString() string { return RuneArrArrOptionToString(m) }
-func (m Float32ArrArrOption) ToString() string { return Float32ArrArrOptionToString(m) }
-func (m Float64ArrArrOption) ToString() string { return Float64ArrArrOptionToString(m) }
-func (m Complex64ArrArrOption) ToString() string { return Complex64ArrArrOptionToString(m) }
-func (m Complex128ArrArrOption) ToString() string { return Complex128ArrArrOptionToString(m) }
-func (m AnyArrArrOption) ToString() string { return AnyArrArrOptionToString(m) }
-func (m BoolOptionArrOption) ToString() string { return BoolOptionArrOptionToString(m) }
-func (m StringOptionArrOption) ToString() string { return StringOptionArrOptionToString(m) }
-func (m IntOptionArrOption) ToString() string { return IntOptionArrOptionToString(m) }
-func (m Int8OptionArrOption) ToString() string { return Int8OptionArrOptionToString(m) }
-func (m Int16OptionArrOption) ToString() string { return Int16OptionArrOptionToString(m) }
-func (m Int32OptionArrOption) ToString() string { return Int32OptionArrOptionToString(m) }
-func (m Int64OptionArrOption) ToString() string { return Int64OptionArrOptionToString(m) }
-func (m UintOptionArrOption) ToString() string { return UintOptionArrOptionToString(m) }
-func (m Uint8OptionArrOption) ToString() string { return Uint8OptionArrOptionToString(m) }
-func (m Uint16OptionArrOption) ToString() string { return Uint16OptionArrOptionToString(m) }
-func (m Uint32OptionArrOption) ToString() string { return Uint32OptionArrOptionToString(m) }
-func (m Uint64OptionArrOption) ToString() string { return Uint64OptionArrOptionToString(m) }
-func (m UintptrOptionArrOption) ToString() string { return UintptrOptionArrOptionToString(m) }
-func (m ByteOptionArrOption) ToString() string { return ByteOptionArrOptionToString(m) }
-func (m RuneOptionArrOption) ToString() string { return RuneOptionArrOptionToString(m) }
-func (m Float32OptionArrOption) ToString() string { return Float32OptionArrOptionToString(m) }
-func (m Float64OptionArrOption) ToString() string { return Float64OptionArrOptionToString(m) }
-func (m Complex64OptionArrOption) ToString() string { return Complex64OptionArrOptionToString(m) }
-func (m Complex128OptionArrOption) ToString() string { return Complex128OptionArrOptionToString(m) }
-func (m AnyOptionArrOption) ToString() string { return AnyOptionArrOptionToString(m) }
-func (m BoolListOption) ToString() string { return BoolListOptionToString(m) }
-func (m StringListOption) ToString() string { return StringListOptionToString(m) }
-func (m IntListOption) ToString() string { return IntListOptionToString(m) }
-func (m Int8ListOption) ToString() string { return Int8ListOptionToString(m) }
-func (m Int16ListOption) ToString() string { return Int16ListOptionToString(m) }
-func (m Int32ListOption) ToString() string { return Int32ListOptionToString(m) }
-func (m Int64ListOption) ToString() string { return Int64ListOptionToString(m) }
-func (m UintListOption) ToString() string { return UintListOptionToString(m) }
-func (m Uint8ListOption) ToString() string { return Uint8ListOptionToString(m) }
-func (m Uint16ListOption) ToString() string { return Uint16ListOptionToString(m) }
-func (m Uint32ListOption) ToString() string { return Uint32ListOptionToString(m) }
-func (m Uint64ListOption) ToString() string { return Uint64ListOptionToString(m) }
-func (m UintptrListOption) ToString() string { return UintptrListOptionToString(m) }
-func (m ByteListOption) ToString() string { return ByteListOptionToString(m) }
-func (m RuneListOption) ToString() string { return RuneListOptionToString(m) }
-func (m Float32ListOption) ToString() string { return Float32ListOptionToString(m) }
-func (m Float64ListOption) ToString() string { return Float64ListOptionToString(m) }
-func (m Complex64ListOption) ToString() string { return Complex64ListOptionToString(m) }
-func (m Complex128ListOption) ToString() string { return Complex128ListOptionToString(m) }
-func (m AnyListOption) ToString() string { return AnyListOptionToString(m) }
-func (m BoolOptionOption) ToString() string { return BoolOptionOptionToString(m) }
-func (m StringOptionOption) ToString() string { return StringOptionOptionToString(m) }
-func (m IntOptionOption) ToString() string { return IntOptionOptionToString(m) }
-func (m Int8OptionOption) ToString() string { return Int8OptionOptionToString(m) }
-func (m Int16OptionOption) ToString() string { return Int16OptionOptionToString(m) }
-func (m Int32OptionOption) ToString() string { return Int32OptionOptionToString(m) }
-func (m Int64OptionOption) ToString() string { return Int64OptionOptionToString(m) }
-func (m UintOptionOption) ToString() string { return UintOptionOptionToString(m) }
-func (m Uint8OptionOption) ToString() string { return Uint8OptionOptionToString(m) }
-func (m Uint16OptionOption) ToString() string { return Uint16OptionOptionToString(m) }
-func (m Uint32OptionOption) ToString() string { return Uint32OptionOptionToString(m) }
-func (m Uint64OptionOption) ToString() string { return Uint64OptionOptionToString(m) }
-func (m UintptrOptionOption) ToString() string { return UintptrOptionOptionToString(m) }
-func (m ByteOptionOption) ToString() string { return ByteOptionOptionToString(m) }
-func (m RuneOptionOption) ToString() string { return RuneOptionOptionToString(m) }
-func (m Float32OptionOption) ToString() string { return Float32OptionOptionToString(m) }
-func (m Float64OptionOption) ToString() string { return Float64OptionOptionToString(m) }
-func (m Complex64OptionOption) ToString() string { return Complex64OptionOptionToString(m) }
-func (m Complex128OptionOption) ToString() string { return Complex128OptionOptionToString(m) }
-func (m AnyOptionOption) ToString() string { return AnyOptionOptionToString(m) }
-func (m BoolArrOptionOption) ToString() string { return BoolArrOptionOptionToString(m) }
-func (m StringArrOptionOption) ToString() string { return StringArrOptionOptionToString(m) }
-func (m IntArrOptionOption) ToString() string { return IntArrOptionOptionToString(m) }
-func (m Int8ArrOptionOption) ToString() string { return Int8ArrOptionOptionToString(m) }
-func (m Int16ArrOptionOption) ToString() string { return Int16ArrOptionOptionToString(m) }
-func (m Int32ArrOptionOption) ToString() string { return Int32ArrOptionOptionToString(m) }
-func (m Int64ArrOptionOption) ToString() string { return Int64ArrOptionOptionToString(m) }
-func (m UintArrOptionOption) ToString() string { return UintArrOptionOptionToString(m) }
-func (m Uint8ArrOptionOption) ToString() string { return Uint8ArrOptionOptionToString(m) }
-func (m Uint16ArrOptionOption) ToString() string { return Uint16ArrOptionOptionToString(m) }
-func (m Uint32ArrOptionOption) ToString() string { return Uint32ArrOptionOptionToString(m) }
-func (m Uint64ArrOptionOption) ToString() string { return Uint64ArrOptionOptionToString(m) }
-func (m UintptrArrOptionOption) ToString() string { return UintptrArrOptionOptionToString(m) }
-func (m ByteArrOptionOption) ToString() string { return ByteArrOptionOptionToString(m) }
-func (m RuneArrOptionOption) ToString() string { return RuneArrOptionOptionToString(m) }
-func (m Float32ArrOptionOption) ToString() string { return Float32ArrOptionOptionToString(m) }
-func (m Float64ArrOptionOption) ToString() string { return Float64ArrOptionOptionToString(m) }
-func (m Complex64ArrOptionOption) ToString() string { return Complex64ArrOptionOptionToString(m) }
-func (m Complex128ArrOptionOption) ToString() string { return Complex128ArrOptionOptionToString(m) }
-func (m AnyArrOptionOption) ToString() string { return AnyArrOptionOptionToString(m) }
-func (m BoolArrArrOptionOption) ToString() string { return BoolArrArrOptionOptionToString(m) }
-func (m StringArrArrOptionOption) ToString() string { return StringArrArrOptionOptionToString(m) }
-func (m IntArrArrOptionOption) ToString() string { return IntArrArrOptionOptionToString(m) }
-func (m Int8ArrArrOptionOption) ToString() string { return Int8ArrArrOptionOptionToString(m) }
-func (m Int16ArrArrOptionOption) ToString() string { return Int16ArrArrOptionOptionToString(m) }
-func (m Int32ArrArrOptionOption) ToString() string { return Int32ArrArrOptionOptionToString(m) }
-func (m Int64ArrArrOptionOption) ToString() string { return Int64ArrArrOptionOptionToString(m) }
-func (m UintArrArrOptionOption) ToString() string { return UintArrArrOptionOptionToString(m) }
-func (m Uint8ArrArrOptionOption) ToString() string { return Uint8ArrArrOptionOptionToString(m) }
-func (m Uint16ArrArrOptionOption) ToString() string { return Uint16ArrArrOptionOptionToString(m) }
-func (m Uint32ArrArrOptionOption) ToString() string { return Uint32ArrArrOptionOptionToString(m) }
-func (m Uint64ArrArrOptionOption) ToString() string { return Uint64ArrArrOptionOptionToString(m) }
-func (m UintptrArrArrOptionOption) ToString() string { return UintptrArrArrOptionOptionToString(m) }
-func (m ByteArrArrOptionOption) ToString() string { return ByteArrArrOptionOptionToString(m) }
-func (m RuneArrArrOptionOption) ToString() string { return RuneArrArrOptionOptionToString(m) }
-func (m Float32ArrArrOptionOption) ToString() string { return Float32ArrArrOptionOptionToString(m) }
-func (m Float64ArrArrOptionOption) ToString() string { return Float64ArrArrOptionOptionToString(m) }
+func (m BoolOption) ToString() string                  { return BoolOptionToString(m) }
+func (m StringOption) ToString() string                { return StringOptionToString(m) }
+func (m IntOption) ToString() string                   { return IntOptionToString(m) }
+func (m Int8Option) ToString() string                  { return Int8OptionToString(m) }
+func (m Int16Option) ToString() string                 { return Int16OptionToString(m) }
+func (m Int32Option) ToString() string                 { return Int32OptionToString(m) }
+func (m Int64Option) ToString() string                 { return Int64OptionToString(m) }
+func (m UintOption) ToString() string                  { return UintOptionToString(m) }
+func (m Uint8Option) ToString() string                 { return Uint8OptionToString(m) }
+func (m Uint16Option) ToString() string                { return Uint16OptionToString(m) }
+func (m Uint32Option) ToString() string                { return Uint32OptionToString(m) }
+func (m Uint64Option) ToString() string                { return Uint64OptionToString(m) }
+func (m UintptrOption) ToString() string               { return UintptrOptionToString(m) }
+func (m ByteOption) ToString() string                  { return ByteOptionToString(m) }
+func (m RuneOption) ToString() string                  { return RuneOptionToString(m) }
+func (m Float32Option) ToString() string               { return Float32OptionToString(m) }
+func (m Float64Option) ToString() string               { return Float64OptionToString(m) }
+func (m Complex64Option) ToString() string             { return Complex64OptionToString(m) }
+func (m Complex128Option) ToString() string            { return Complex128OptionToString(m) }
+func (m AnyOption) ToString() string                   { return AnyOptionToString(m) }
+func (m BoolArrOption) ToString() string               { return BoolArrOptionToString(m) }
+func (m StringArrOption) ToString() string             { return StringArrOptionToString(m) }
+func (m IntArrOption) ToString() string                { return IntArrOptionToString(m) }
+func (m Int8ArrOption) ToString() string               { return Int8ArrOptionToString(m) }
+func (m Int16ArrOption) ToString() string              { return Int16ArrOptionToString(m) }
+func (m Int32ArrOption) ToString() string              { return Int32ArrOptionToString(m) }
+func (m Int64ArrOption) ToString() string              { return Int64ArrOptionToString(m) }
+func (m UintArrOption) ToString() string               { return UintArrOptionToString(m) }
+func (m Uint8ArrOption) ToString() string              { return Uint8ArrOptionToString(m) }
+func (m Uint16ArrOption) ToString() string             { return Uint16ArrOptionToString(m) }
+func (m Uint32ArrOption) ToString() string             { return Uint32ArrOptionToString(m) }
+func (m Uint64ArrOption) ToString() string             { return Uint64ArrOptionToString(m) }
+func (m UintptrArrOption) ToString() string            { return UintptrArrOptionToString(m) }
+func (m ByteArrOption) ToString() string               { return ByteArrOptionToString(m) }
+func (m RuneArrOption) ToString() string               { return RuneArrOptionToString(m) }
+func (m Float32ArrOption) ToString() string            { return Float32ArrOptionToString(m) }
+func (m Float64ArrOption) ToString() string            { return Float64ArrOptionToString(m) }
+func (m Complex64ArrOption) ToString() string          { return Complex64ArrOptionToString(m) }
+func (m Complex128ArrOption) ToString() string         { return Complex128ArrOptionToString(m) }
+func (m AnyArrOption) ToString() string                { return AnyArrOptionToString(m) }
+func (m BoolArrArrOption) ToString() string            { return BoolArrArrOptionToString(m) }
+func (m StringArrArrOption) ToString() string          { return StringArrArrOptionToString(m) }
+func (m IntArrArrOption) ToString() string             { return IntArrArrOptionToString(m) }
+func (m Int8ArrArrOption) ToString() string            { return Int8ArrArrOptionToString(m) }
+func (m Int16ArrArrOption) ToString() string           { return Int16ArrArrOptionToString(m) }
+func (m Int32ArrArrOption) ToString() string           { return Int32ArrArrOptionToString(m) }
+func (m Int64ArrArrOption) ToString() string           { return Int64ArrArrOptionToString(m) }
+func (m UintArrArrOption) ToString() string            { return UintArrArrOptionToString(m) }
+func (m Uint8ArrArrOption) ToString() string           { return Uint8ArrArrOptionToString(m) }
+func (m Uint16ArrArrOption) ToString() string          { return Uint16ArrArrOptionToString(m) }
+func (m Uint32ArrArrOption) ToString() string          { return Uint32ArrArrOptionToString(m) }
+func (m Uint64ArrArrOption) ToString() string          { return Uint64ArrArrOptionToString(m) }
+func (m UintptrArrArrOption) ToString() string         { return UintptrArrArrOptionToString(m) }
+func (m ByteArrArrOption) ToString() string            { return ByteArrArrOptionToString(m) }
+func (m RuneArrArrOption) ToString() string            { return RuneArrArrOptionToString(m) }
+func (m Float32ArrArrOption) ToString() string         { return Float32ArrArrOptionToString(m) }
+func (m Float64ArrArrOption) ToString() string         { return Float64ArrArrOptionToString(m) }
+func (m Complex64ArrArrOption) ToString() string       { return Complex64ArrArrOptionToString(m) }
+func (m Complex128ArrArrOption) ToString() string      { return Complex128ArrArrOptionToString(m) }
+func (m AnyArrArrOption) ToString() string             { return AnyArrArrOptionToString(m) }
+func (m BoolOptionArrOption) ToString() string         { return BoolOptionArrOptionToString(m) }
+func (m StringOptionArrOption) ToString() string       { return StringOptionArrOptionToString(m) }
+func (m IntOptionArrOption) ToString() string          { return IntOptionArrOptionToString(m) }
+func (m Int8OptionArrOption) ToString() string         { return Int8OptionArrOptionToString(m) }
+func (m Int16OptionArrOption) ToString() string        { return Int16OptionArrOptionToString(m) }
+func (m Int32OptionArrOption) ToString() string        { return Int32OptionArrOptionToString(m) }
+func (m Int64OptionArrOption) ToString() string        { return Int64OptionArrOptionToString(m) }
+func (m UintOptionArrOption) ToString() string         { return UintOptionArrOptionToString(m) }
+func (m Uint8OptionArrOption) ToString() string        { return Uint8OptionArrOptionToString(m) }
+func (m Uint16OptionArrOption) ToString() string       { return Uint16OptionArrOptionToString(m) }
+func (m Uint32OptionArrOption) ToString() string       { return Uint32OptionArrOptionToString(m) }
+func (m Uint64OptionArrOption) ToString() string       { return Uint64OptionArrOptionToString(m) }
+func (m UintptrOptionArrOption) ToString() string      { return UintptrOptionArrOptionToString(m) }
+func (m ByteOptionArrOption) ToString() string         { return ByteOptionArrOptionToString(m) }
+func (m RuneOptionArrOption) ToString() string         { return RuneOptionArrOptionToString(m) }
+func (m Float32OptionArrOption) ToString() string      { return Float32OptionArrOptionToString(m) }
+func (m Float64OptionArrOption) ToString() string      { return Float64OptionArrOptionToString(m) }
+func (m Complex64OptionArrOption) ToString() string    { return Complex64OptionArrOptionToString(m) }
+func (m Complex128OptionArrOption) ToString() string   { return Complex128OptionArrOptionToString(m) }
+func (m AnyOptionArrOption) ToString() string          { return AnyOptionArrOptionToString(m) }
+func (m BoolListOption) ToString() string              { return BoolListOptionToString(m) }
+func (m StringListOption) ToString() string            { return StringListOptionToString(m) }
+func (m IntListOption) ToString() string               { return IntListOptionToString(m) }
+func (m Int8ListOption) ToString() string              { return Int8ListOptionToString(m) }
+func (m Int16ListOption) ToString() string             { return Int16ListOptionToString(m) }
+func (m Int32ListOption) ToString() string             { return Int32ListOptionToString(m) }
+func (m Int64ListOption) ToString() string             { return Int64ListOptionToString(m) }
+func (m UintListOption) ToString() string              { return UintListOptionToString(m) }
+func (m Uint8ListOption) ToString() string             { return Uint8ListOptionToString(m) }
+func (m Uint16ListOption) ToString() string            { return Uint16ListOptionToString(m) }
+func (m Uint32ListOption) ToString() string            { return Uint32ListOptionToString(m) }
+func (m Uint64ListOption) ToString() string            { return Uint64ListOptionToString(m) }
+func (m UintptrListOption) ToString() string           { return UintptrListOptionToString(m) }
+func (m ByteListOption) ToString() string              { return ByteListOptionToString(m) }
+func (m RuneListOption) ToString() string              { return RuneListOptionToString(m) }
+func (m Float32ListOption) ToString() string           { return Float32ListOptionToString(m) }
+func (m Float64ListOption) ToString() string           { return Float64ListOptionToString(m) }
+func (m Complex64ListOption) ToString() string         { return Complex64ListOptionToString(m) }
+func (m Complex128ListOption) ToString() string        { return Complex128ListOptionToString(m) }
+func (m AnyListOption) ToString() string               { return AnyListOptionToString(m) }
+func (m BoolOptionOption) ToString() string            { return BoolOptionOptionToString(m) }
+func (m StringOptionOption) ToString() string          { return StringOptionOptionToString(m) }
+func (m IntOptionOption) ToString() string             { return IntOptionOptionToString(m) }
+func (m Int8OptionOption) ToString() string            { return Int8OptionOptionToString(m) }
+func (m Int16OptionOption) ToString() string           { return Int16OptionOptionToString(m) }
+func (m Int32OptionOption) ToString() string           { return Int32OptionOptionToString(m) }
+func (m Int64OptionOption) ToString() string           { return Int64OptionOptionToString(m) }
+func (m UintOptionOption) ToString() string            { return UintOptionOptionToString(m) }
+func (m Uint8OptionOption) ToString() string           { return Uint8OptionOptionToString(m) }
+func (m Uint16OptionOption) ToString() string          { return Uint16OptionOptionToString(m) }
+func (m Uint32OptionOption) ToString() string          { return Uint32OptionOptionToString(m) }
+func (m Uint64OptionOption) ToString() string          { return Uint64OptionOptionToString(m) }
+func (m UintptrOptionOption) ToString() string         { return UintptrOptionOptionToString(m) }
+func (m ByteOptionOption) ToString() string            { return ByteOptionOptionToString(m) }
+func (m RuneOptionOption) ToString() string            { return RuneOptionOptionToString(m) }
+func (m Float32OptionOption) ToString() string         { return Float32OptionOptionToString(m) }
+func (m Float64OptionOption) ToString() string         { return Float64OptionOptionToString(m) }
+func (m Complex64OptionOption) ToString() string       { return Complex64OptionOptionToString(m) }
+func (m Complex128OptionOption) ToString() string      { return Complex128OptionOptionToString(m) }
+func (m AnyOptionOption) ToString() string             { return AnyOptionOptionToString(m) }
+func (m BoolArrOptionOption) ToString() string         { return BoolArrOptionOptionToString(m) }
+func (m StringArrOptionOption) ToString() string       { return StringArrOptionOptionToString(m) }
+func (m IntArrOptionOption) ToString() string          { return IntArrOptionOptionToString(m) }
+func (m Int8ArrOptionOption) ToString() string         { return Int8ArrOptionOptionToString(m) }
+func (m Int16ArrOptionOption) ToString() string        { return Int16ArrOptionOptionToString(m) }
+func (m Int32ArrOptionOption) ToString() string        { return Int32ArrOptionOptionToString(m) }
+func (m Int64ArrOptionOption) ToString() string        { return Int64ArrOptionOptionToString(m) }
+func (m UintArrOptionOption) ToString() string         { return UintArrOptionOptionToString(m) }
+func (m Uint8ArrOptionOption) ToString() string        { return Uint8ArrOptionOptionToString(m) }
+func (m Uint16ArrOptionOption) ToString() string       { return Uint16ArrOptionOptionToString(m) }
+func (m Uint32ArrOptionOption) ToString() string       { return Uint32ArrOptionOptionToString(m) }
+func (m Uint64ArrOptionOption) ToString() string       { return Uint64ArrOptionOptionToString(m) }
+func (m UintptrArrOptionOption) ToString() string      { return UintptrArrOptionOptionToString(m) }
+func (m ByteArrOptionOption) ToString() string         { return ByteArrOptionOptionToString(m) }
+func (m RuneArrOptionOption) ToString() string         { return RuneArrOptionOptionToString(m) }
+func (m Float32ArrOptionOption) ToString() string      { return Float32ArrOptionOptionToString(m) }
+func (m Float64ArrOptionOption) ToString() string      { return Float64ArrOptionOptionToString(m) }
+func (m Complex64ArrOptionOption) ToString() string    { return Complex64ArrOptionOptionToString(m) }
+func (m Complex128ArrOptionOption) ToString() string   { return Complex128ArrOptionOptionToString(m) }
+func (m AnyArrOptionOption) ToString() string          { return AnyArrOptionOptionToString(m) }
+func (m BoolArrArrOptionOption) ToString() string      { return BoolArrArrOptionOptionToString(m) }
+func (m StringArrArrOptionOption) ToString() string    { return StringArrArrOptionOptionToString(m) }
+func (m IntArrArrOptionOption) ToString() string       { return IntArrArrOptionOptionToString(m) }
+func (m Int8ArrArrOptionOption) ToString() string      { return Int8ArrArrOptionOptionToString(m) }
+func (m Int16ArrArrOptionOption) ToString() string     { return Int16ArrArrOptionOptionToString(m) }
+func (m Int32ArrArrOptionOption) ToString() string     { return Int32ArrArrOptionOptionToString(m) }
+func (m Int64ArrArrOptionOption) ToString() string     { return Int64ArrArrOptionOptionToString(m) }
+func (m UintArrArrOptionOption) ToString() string      { return UintArrArrOptionOptionToString(m) }
+func (m Uint8ArrArrOptionOption) ToString() string     { return Uint8ArrArrOptionOptionToString(m) }
+func (m Uint16ArrArrOptionOption) ToString() string    { return Uint16ArrArrOptionOptionToString(m) }
+func (m Uint32ArrArrOptionOption) ToString() string    { return Uint32ArrArrOptionOptionToString(m) }
+func (m Uint64ArrArrOptionOption) ToString() string    { return Uint64ArrArrOptionOptionToString(m) }
+func (m UintptrArrArrOptionOption) ToString() string   { return UintptrArrArrOptionOptionToString(m) }
+func (m ByteArrArrOptionOption) ToString() string      { return ByteArrArrOptionOptionToString(m) }
+func (m RuneArrArrOptionOption) ToString() string      { return RuneArrArrOptionOptionToString(m) }
+func (m Float32ArrArrOptionOption) ToString() string   { return Float32ArrArrOptionOptionToString(m) }
+func (m Float64ArrArrOptionOption) ToString() string   { return Float64ArrArrOptionOptionToString(m) }
 func (m Complex64ArrArrOptionOption) ToString() string { return Complex64ArrArrOptionOptionToString(m) }
-func (m Complex128ArrArrOptionOption) ToString() string { return Complex128ArrArrOptionOptionToString(m) }
-func (m AnyArrArrOptionOption) ToString() string { return AnyArrArrOptionOptionToString(m) }
-func (m BoolOptionArrOptionOption) ToString() string { return BoolOptionArrOptionOptionToString(m) }
+func (m Complex128ArrArrOptionOption) ToString() string {
+	return Complex128ArrArrOptionOptionToString(m)
+}
+func (m AnyArrArrOptionOption) ToString() string       { return AnyArrArrOptionOptionToString(m) }
+func (m BoolOptionArrOptionOption) ToString() string   { return BoolOptionArrOptionOptionToString(m) }
 func (m StringOptionArrOptionOption) ToString() string { return StringOptionArrOptionOptionToString(m) }
-func (m IntOptionArrOptionOption) ToString() string { return IntOptionArrOptionOptionToString(m) }
-func (m Int8OptionArrOptionOption) ToString() string { return Int8OptionArrOptionOptionToString(m) }
-func (m Int16OptionArrOptionOption) ToString() string { return Int16OptionArrOptionOptionToString(m) }
-func (m Int32OptionArrOptionOption) ToString() string { return Int32OptionArrOptionOptionToString(m) }
-func (m Int64OptionArrOptionOption) ToString() string { return Int64OptionArrOptionOptionToString(m) }
-func (m UintOptionArrOptionOption) ToString() string { return UintOptionArrOptionOptionToString(m) }
-func (m Uint8OptionArrOptionOption) ToString() string { return Uint8OptionArrOptionOptionToString(m) }
+func (m IntOptionArrOptionOption) ToString() string    { return IntOptionArrOptionOptionToString(m) }
+func (m Int8OptionArrOptionOption) ToString() string   { return Int8OptionArrOptionOptionToString(m) }
+func (m Int16OptionArrOptionOption) ToString() string  { return Int16OptionArrOptionOptionToString(m) }
+func (m Int32OptionArrOptionOption) ToString() string  { return Int32OptionArrOptionOptionToString(m) }
+func (m Int64OptionArrOptionOption) ToString() string  { return Int64OptionArrOptionOptionToString(m) }
+func (m UintOptionArrOptionOption) ToString() string   { return UintOptionArrOptionOptionToString(m) }
+func (m Uint8OptionArrOptionOption) ToString() string  { return Uint8OptionArrOptionOptionToString(m) }
 func (m Uint16OptionArrOptionOption) ToString() string { return Uint16OptionArrOptionOptionToString(m) }
 func (m Uint32OptionArrOptionOption) ToString() string { return Uint32OptionArrOptionOptionToString(m) }
 func (m Uint64OptionArrOptionOption) ToString() string { return Uint64OptionArrOptionOptionToString(m) }
-func (m UintptrOptionArrOptionOption) ToString() string { return UintptrOptionArrOptionOptionToString(m) }
+func (m UintptrOptionArrOptionOption) ToString() string {
+	return UintptrOptionArrOptionOptionToString(m)
+}
 func (m ByteOptionArrOptionOption) ToString() string { return ByteOptionArrOptionOptionToString(m) }
 func (m RuneOptionArrOptionOption) ToString() string { return RuneOptionArrOptionOptionToString(m) }
-func (m Float32OptionArrOptionOption) ToString() string { return Float32OptionArrOptionOptionToString(m) }
-func (m Float64OptionArrOptionOption) ToString() string { return Float64OptionArrOptionOptionToString(m) }
-func (m Complex64OptionArrOptionOption) ToString() string { return Complex64OptionArrOptionOptionToString(m) }
-func (m Complex128OptionArrOptionOption) ToString() string { return Complex128OptionArrOptionOptionToString(m) }
-func (m AnyOptionArrOptionOption) ToString() string { return AnyOptionArrOptionOptionToString(m) }
-func (m BoolListOptionOption) ToString() string { return BoolListOptionOptionToString(m) }
-func (m StringListOptionOption) ToString() string { return StringListOptionOptionToString(m) }
-func (m IntListOptionOption) ToString() string { return IntListOptionOptionToString(m) }
-func (m Int8ListOptionOption) ToString() string { return Int8ListOptionOptionToString(m) }
-func (m Int16ListOptionOption) ToString() string { return Int16ListOptionOptionToString(m) }
-func (m Int32ListOptionOption) ToString() string { return Int32ListOptionOptionToString(m) }
-func (m Int64ListOptionOption) ToString() string { return Int64ListOptionOptionToString(m) }
-func (m UintListOptionOption) ToString() string { return UintListOptionOptionToString(m) }
-func (m Uint8ListOptionOption) ToString() string { return Uint8ListOptionOptionToString(m) }
-func (m Uint16ListOptionOption) ToString() string { return Uint16ListOptionOptionToString(m) }
-func (m Uint32ListOptionOption) ToString() string { return Uint32ListOptionOptionToString(m) }
-func (m Uint64ListOptionOption) ToString() string { return Uint64ListOptionOptionToString(m) }
-func (m UintptrListOptionOption) ToString() string { return UintptrListOptionOptionToString(m) }
-func (m ByteListOptionOption) ToString() string { return ByteListOptionOptionToString(m) }
-func (m RuneListOptionOption) ToString() string { return RuneListOptionOptionToString(m) }
-func (m Float32ListOptionOption) ToString() string { return Float32ListOptionOptionToString(m) }
-func (m Float64ListOptionOption) ToString() string { return Float64ListOptionOptionToString(m) }
-func (m Complex64ListOptionOption) ToString() string { return Complex64ListOptionOptionToString(m) }
-func (m Complex128ListOptionOption) ToString() string { return Complex128ListOptionOptionToString(m) }
-func (m AnyListOptionOption) ToString() string { return AnyListOptionOptionToString(m) }
+func (m Float32OptionArrOptionOption) ToString() string {
+	return Float32OptionArrOptionOptionToString(m)
+}
+func (m Float64OptionArrOptionOption) ToString() string {
+	return Float64OptionArrOptionOptionToString(m)
+}
+func (m Complex64OptionArrOptionOption) ToString() string {
+	return Complex64OptionArrOptionOptionToString(m)
+}
+func (m Complex128OptionArrOptionOption) ToString() string {
+	return Complex128OptionArrOptionOptionToString(m)
+}
+func (m AnyOptionArrOptionOption) ToString() string    { return AnyOptionArrOptionOptionToString(m) }
+func (m BoolListOptionOption) ToString() string        { return BoolListOptionOptionToString(m) }
+func (m StringListOptionOption) ToString() string      { return StringListOptionOptionToString(m) }
+func (m IntListOptionOption) ToString() string         { return IntListOptionOptionToString(m) }
+func (m Int8ListOptionOption) ToString() string        { return Int8ListOptionOptionToString(m) }
+func (m Int16ListOptionOption) ToString() string       { return Int16ListOptionOptionToString(m) }
+func (m Int32ListOptionOption) ToString() string       { return Int32ListOptionOptionToString(m) }
+func (m Int64ListOptionOption) ToString() string       { return Int64ListOptionOptionToString(m) }
+func (m UintListOptionOption) ToString() string        { return UintListOptionOptionToString(m) }
+func (m Uint8ListOptionOption) ToString() string       { return Uint8ListOptionOptionToString(m) }
+func (m Uint16ListOptionOption) ToString() string      { return Uint16ListOptionOptionToString(m) }
+func (m Uint32ListOptionOption) ToString() string      { return Uint32ListOptionOptionToString(m) }
+func (m Uint64ListOptionOption) ToString() string      { return Uint64ListOptionOptionToString(m) }
+func (m UintptrListOptionOption) ToString() string     { return UintptrListOptionOptionToString(m) }
+func (m ByteListOptionOption) ToString() string        { return ByteListOptionOptionToString(m) }
+func (m RuneListOptionOption) ToString() string        { return RuneListOptionOptionToString(m) }
+func (m Float32ListOptionOption) ToString() string     { return Float32ListOptionOptionToString(m) }
+func (m Float64ListOptionOption) ToString() string     { return Float64ListOptionOptionToString(m) }
+func (m Complex64ListOptionOption) ToString() string   { return Complex64ListOptionOptionToString(m) }
+func (m Complex128ListOptionOption) ToString() string  { return Complex128ListOptionOptionToString(m) }
+func (m AnyListOptionOption) ToString() string         { return AnyListOptionOptionToString(m) }
+func (m BoolOptionOptionOption) ToString() string      { return BoolOptionOptionOptionToString(m) }
+func (m StringOptionOptionOption) ToString() string    { return StringOptionOptionOptionToString(m) }
+func (m IntOptionOptionOption) ToString() string       { return IntOptionOptionOptionToString(m) }
+func (m Int8OptionOptionOption) ToString() string      { return Int8OptionOptionOptionToString(m) }
+func (m Int16OptionOptionOption) ToString() string     { return Int16OptionOptionOptionToString(m) }
+func (m Int32OptionOptionOption) ToString() string     { return Int32OptionOptionOptionToString(m) }
+func (m Int64OptionOptionOption) ToString() string     { return Int64OptionOptionOptionToString(m) }
+func (m UintOptionOptionOption) ToString() string      { return UintOptionOptionOptionToString(m) }
+func (m Uint8OptionOptionOption) ToString() string     { return Uint8OptionOptionOptionToString(m) }
+func (m Uint16OptionOptionOption) ToString() string    { return Uint16OptionOptionOptionToString(m) }
+func (m Uint32OptionOptionOption) ToString() string    { return Uint32OptionOptionOptionToString(m) }
+func (m Uint64OptionOptionOption) ToString() string    { return Uint64OptionOptionOptionToString(m) }
+func (m UintptrOptionOptionOption) ToString() string   { return UintptrOptionOptionOptionToString(m) }
+func (m ByteOptionOptionOption) ToString() string      { return ByteOptionOptionOptionToString(m) }
+func (m RuneOptionOptionOption) ToString() string      { return RuneOptionOptionOptionToString(m) }
+func (m Float32OptionOptionOption) ToString() string   { return Float32OptionOptionOptionToString(m) }
+func (m Float64OptionOptionOption) ToString() string   { return Float64OptionOptionOptionToString(m) }
+func (m Complex64OptionOptionOption) ToString() string { return Complex64OptionOptionOptionToString(m) }
+func (m Complex128OptionOptionOption) ToString() string {
+	return Complex128OptionOptionOptionToString(m)
+}
+func (m AnyOptionOptionOption) ToString() string       { return AnyOptionOptionOptionToString(m) }
+func (m BoolArrOptionOptionOption) ToString() string   { return BoolArrOptionOptionOptionToString(m) }
+func (m StringArrOptionOptionOption) ToString() string { return StringArrOptionOptionOptionToString(m) }
+func (m IntArrOptionOptionOption) ToString() string    { return IntArrOptionOptionOptionToString(m) }
+func (m Int8ArrOptionOptionOption) ToString() string   { return Int8ArrOptionOptionOptionToString(m) }
+func (m Int16ArrOptionOptionOption) ToString() string  { return Int16ArrOptionOptionOptionToString(m) }
+func (m Int32ArrOptionOptionOption) ToString() string  { return Int32ArrOptionOptionOptionToString(m) }
+func (m Int64ArrOptionOptionOption) ToString() string  { return Int64ArrOptionOptionOptionToString(m) }
+func (m UintArrOptionOptionOption) ToString() string   { return UintArrOptionOptionOptionToString(m) }
+func (m Uint8ArrOptionOptionOption) ToString() string  { return Uint8ArrOptionOptionOptionToString(m) }
+func (m Uint16ArrOptionOptionOption) ToString() string { return Uint16ArrOptionOptionOptionToString(m) }
+func (m Uint32ArrOptionOptionOption) ToString() string { return Uint32ArrOptionOptionOptionToString(m) }
+func (m Uint64ArrOptionOptionOption) ToString() string { return Uint64ArrOptionOptionOptionToString(m) }
+func (m UintptrArrOptionOptionOption) ToString() string {
+	return UintptrArrOptionOptionOptionToString(m)
+}
+func (m ByteArrOptionOptionOption) ToString() string { return ByteArrOptionOptionOptionToString(m) }
+func (m RuneArrOptionOptionOption) ToString() string { return RuneArrOptionOptionOptionToString(m) }
+func (m Float32ArrOptionOptionOption) ToString() string {
+	return Float32ArrOptionOptionOptionToString(m)
+}
+func (m Float64ArrOptionOptionOption) ToString() string {
+	return Float64ArrOptionOptionOptionToString(m)
+}
+func (m Complex64ArrOptionOptionOption) ToString() string {
+	return Complex64ArrOptionOptionOptionToString(m)
+}
+func (m Complex128ArrOptionOptionOption) ToString() string {
+	return Complex128ArrOptionOptionOptionToString(m)
+}
+func (m AnyArrOptionOptionOption) ToString() string { return AnyArrOptionOptionOptionToString(m) }
+func (m BoolArrArrOptionOptionOption) ToString() string {
+	return BoolArrArrOptionOptionOptionToString(m)
+}
+func (m StringArrArrOptionOptionOption) ToString() string {
+	return StringArrArrOptionOptionOptionToString(m)
+}
+func (m IntArrArrOptionOptionOption) ToString() string { return IntArrArrOptionOptionOptionToString(m) }
+func (m Int8ArrArrOptionOptionOption) ToString() string {
+	return Int8ArrArrOptionOptionOptionToString(m)
+}
+func (m Int16ArrArrOptionOptionOption) ToString() string {
+	return Int16ArrArrOptionOptionOptionToString(m)
+}
+func (m Int32ArrArrOptionOptionOption) ToString() string {
+	return Int32ArrArrOptionOptionOptionToString(m)
+}
+func (m Int64ArrArrOptionOptionOption) ToString() string {
+	return Int64ArrArrOptionOptionOptionToString(m)
+}
+func (m UintArrArrOptionOptionOption) ToString() string {
+	return UintArrArrOptionOptionOptionToString(m)
+}
+func (m Uint8ArrArrOptionOptionOption) ToString() string {
+	return Uint8ArrArrOptionOptionOptionToString(m)
+}
+func (m Uint16ArrArrOptionOptionOption) ToString() string {
+	return Uint16ArrArrOptionOptionOptionToString(m)
+}
+func (m Uint32ArrArrOptionOptionOption) ToString() string {
+	return Uint32ArrArrOptionOptionOptionToString(m)
+}
+func (m Uint64ArrArrOptionOptionOption) ToString() string {
+	return Uint64ArrArrOptionOptionOptionToString(m)
+}
+func (m UintptrArrArrOptionOptionOption) ToString() string {
+	return UintptrArrArrOptionOptionOptionToString(m)
+}
+func (m ByteArrArrOptionOptionOption) ToString() string {
+	return ByteArrArrOptionOptionOptionToString(m)
+}
+func (m RuneArrArrOptionOptionOption) ToString() string {
+	return RuneArrArrOptionOptionOptionToString(m)
+}
+func (m Float32ArrArrOptionOptionOption) ToString() string {
+	return Float32ArrArrOptionOptionOptionToString(m)
+}
+func (m Float64ArrArrOptionOptionOption) ToString() string {
+	return Float64ArrArrOptionOptionOptionToString(m)
+}
+func (m Complex64ArrArrOptionOptionOption) ToString() string {
+	return Complex64ArrArrOptionOptionOptionToString(m)
+}
+func (m Complex128ArrArrOptionOptionOption) ToString() string {
+	return Complex128ArrArrOptionOptionOptionToString(m)
+}
+func (m AnyArrArrOptionOptionOption) ToString() string { return AnyArrArrOptionOptionOptionToString(m) }
+func (m BoolOptionArrOptionOptionOption) ToString() string {
+	return BoolOptionArrOptionOptionOptionToString(m)
+}
+func (m StringOptionArrOptionOptionOption) ToString() string {
+	return StringOptionArrOptionOptionOptionToString(m)
+}
+func (m IntOptionArrOptionOptionOption) ToString() string {
+	return IntOptionArrOptionOptionOptionToString(m)
+}
+func (m Int8OptionArrOptionOptionOption) ToString() string {
+	return Int8OptionArrOptionOptionOptionToString(m)
+}
+func (m Int16OptionArrOptionOptionOption) ToString() string {
+	return Int16OptionArrOptionOptionOptionToString(m)
+}
+func (m Int32OptionArrOptionOptionOption) ToString() string {
+	return Int32OptionArrOptionOptionOptionToString(m)
+}
+func (m Int64OptionArrOptionOptionOption) ToString() string {
+	return Int64OptionArrOptionOptionOptionToString(m)
+}
+func (m UintOptionArrOptionOptionOption) ToString() string {
+	return UintOptionArrOptionOptionOptionToString(m)
+}
+func (m Uint8OptionArrOptionOptionOption) ToString() string {
+	return Uint8OptionArrOptionOptionOptionToString(m)
+}
+func (m Uint16OptionArrOptionOptionOption) ToString() string {
+	return Uint16OptionArrOptionOptionOptionToString(m)
+}
+func (m Uint32OptionArrOptionOptionOption) ToString() string {
+	return Uint32OptionArrOptionOptionOptionToString(m)
+}
+func (m Uint64OptionArrOptionOptionOption) ToString() string {
+	return Uint64OptionArrOptionOptionOptionToString(m)
+}
+func (m UintptrOptionArrOptionOptionOption) ToString() string {
+	return UintptrOptionArrOptionOptionOptionToString(m)
+}
+func (m ByteOptionArrOptionOptionOption) ToString() string {
+	return ByteOptionArrOptionOptionOptionToString(m)
+}
+func (m RuneOptionArrOptionOptionOption) ToString() string {
+	return RuneOptionArrOptionOptionOptionToString(m)
+}
+func (m Float32OptionArrOptionOptionOption) ToString() string {
+	return Float32OptionArrOptionOptionOptionToString(m)
+}
+func (m Float64OptionArrOptionOptionOption) ToString() string {
+	return Float64OptionArrOptionOptionOptionToString(m)
+}
+func (m Complex64OptionArrOptionOptionOption) ToString() string {
+	return Complex64OptionArrOptionOptionOptionToString(m)
+}
+func (m Complex128OptionArrOptionOptionOption) ToString() string {
+	return Complex128OptionArrOptionOptionOptionToString(m)
+}
+func (m AnyOptionArrOptionOptionOption) ToString() string {
+	return AnyOptionArrOptionOptionOptionToString(m)
+}
+func (m BoolListOptionOptionOption) ToString() string { return BoolListOptionOptionOptionToString(m) }
+func (m StringListOptionOptionOption) ToString() string {
+	return StringListOptionOptionOptionToString(m)
+}
+func (m IntListOptionOptionOption) ToString() string   { return IntListOptionOptionOptionToString(m) }
+func (m Int8ListOptionOptionOption) ToString() string  { return Int8ListOptionOptionOptionToString(m) }
+func (m Int16ListOptionOptionOption) ToString() string { return Int16ListOptionOptionOptionToString(m) }
+func (m Int32ListOptionOptionOption) ToString() string { return Int32ListOptionOptionOptionToString(m) }
+func (m Int64ListOptionOptionOption) ToString() string { return Int64ListOptionOptionOptionToString(m) }
+func (m UintListOptionOptionOption) ToString() string  { return UintListOptionOptionOptionToString(m) }
+func (m Uint8ListOptionOptionOption) ToString() string { return Uint8ListOptionOptionOptionToString(m) }
+func (m Uint16ListOptionOptionOption) ToString() string {
+	return Uint16ListOptionOptionOptionToString(m)
+}
+func (m Uint32ListOptionOptionOption) ToString() string {
+	return Uint32ListOptionOptionOptionToString(m)
+}
+func (m Uint64ListOptionOptionOption) ToString() string {
+	return Uint64ListOptionOptionOptionToString(m)
+}
+func (m UintptrListOptionOptionOption) ToString() string {
+	return UintptrListOptionOptionOptionToString(m)
+}
+func (m ByteListOptionOptionOption) ToString() string { return ByteListOptionOptionOptionToString(m) }
+func (m RuneListOptionOptionOption) ToString() string { return RuneListOptionOptionOptionToString(m) }
+func (m Float32ListOptionOptionOption) ToString() string {
+	return Float32ListOptionOptionOptionToString(m)
+}
+func (m Float64ListOptionOptionOption) ToString() string {
+	return Float64ListOptionOptionOptionToString(m)
+}
+func (m Complex64ListOptionOptionOption) ToString() string {
+	return Complex64ListOptionOptionOptionToString(m)
+}
+func (m Complex128ListOptionOptionOption) ToString() string {
+	return Complex128ListOptionOptionOptionToString(m)
+}
+func (m AnyListOptionOptionOption) ToString() string { return AnyListOptionOptionOptionToString(m) }

@@ -4,2143 +4,3844 @@
 package fp
 
 import "fmt"
+
 func BoolToString(o bool) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func StringToString(o string) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func IntToString(o int) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Int8ToString(o int8) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Int16ToString(o int16) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Int32ToString(o int32) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Int64ToString(o int64) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func UintToString(o uint) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Uint8ToString(o uint8) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Uint16ToString(o uint16) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Uint32ToString(o uint32) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Uint64ToString(o uint64) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func UintptrToString(o uintptr) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func ByteToString(o byte) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func RuneToString(o rune) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Float32ToString(o float32) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Float64ToString(o float64) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Complex64ToString(o complex64) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func Complex128ToString(o complex128) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func AnyToString(o Any) string {
-    return fmt.Sprintf("%v", o)
+	return fmt.Sprintf("%v", o)
 }
 func BoolOptionToString(o BoolOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringOptionToString(o StringOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntOptionToString(o IntOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8OptionToString(o Int8Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16OptionToString(o Int16Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32OptionToString(o Int32Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64OptionToString(o Int64Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintOptionToString(o UintOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8OptionToString(o Uint8Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16OptionToString(o Uint16Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32OptionToString(o Uint32Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64OptionToString(o Uint64Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrOptionToString(o UintptrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteOptionToString(o ByteOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneOptionToString(o RuneOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32OptionToString(o Float32Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64OptionToString(o Float64Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64OptionToString(o Complex64Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128OptionToString(o Complex128Option) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyOptionToString(o AnyOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolArrOptionToString(o BoolArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringArrOptionToString(o StringArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntArrOptionToString(o IntArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8ArrOptionToString(o Int8ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16ArrOptionToString(o Int16ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32ArrOptionToString(o Int32ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64ArrOptionToString(o Int64ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintArrOptionToString(o UintArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8ArrOptionToString(o Uint8ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16ArrOptionToString(o Uint16ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32ArrOptionToString(o Uint32ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64ArrOptionToString(o Uint64ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrArrOptionToString(o UintptrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteArrOptionToString(o ByteArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneArrOptionToString(o RuneArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32ArrOptionToString(o Float32ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64ArrOptionToString(o Float64ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64ArrOptionToString(o Complex64ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128ArrOptionToString(o Complex128ArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyArrOptionToString(o AnyArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolArrArrOptionToString(o BoolArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringArrArrOptionToString(o StringArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntArrArrOptionToString(o IntArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8ArrArrOptionToString(o Int8ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16ArrArrOptionToString(o Int16ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32ArrArrOptionToString(o Int32ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64ArrArrOptionToString(o Int64ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintArrArrOptionToString(o UintArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8ArrArrOptionToString(o Uint8ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16ArrArrOptionToString(o Uint16ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32ArrArrOptionToString(o Uint32ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64ArrArrOptionToString(o Uint64ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrArrArrOptionToString(o UintptrArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteArrArrOptionToString(o ByteArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneArrArrOptionToString(o RuneArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32ArrArrOptionToString(o Float32ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64ArrArrOptionToString(o Float64ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64ArrArrOptionToString(o Complex64ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128ArrArrOptionToString(o Complex128ArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyArrArrOptionToString(o AnyArrArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyArrArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyArrArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolOptionArrOptionToString(o BoolOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringOptionArrOptionToString(o StringOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntOptionArrOptionToString(o IntOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8OptionArrOptionToString(o Int8OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16OptionArrOptionToString(o Int16OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32OptionArrOptionToString(o Int32OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64OptionArrOptionToString(o Int64OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintOptionArrOptionToString(o UintOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8OptionArrOptionToString(o Uint8OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16OptionArrOptionToString(o Uint16OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32OptionArrOptionToString(o Uint32OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64OptionArrOptionToString(o Uint64OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrOptionArrOptionToString(o UintptrOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteOptionArrOptionToString(o ByteOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneOptionArrOptionToString(o RuneOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32OptionArrOptionToString(o Float32OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64OptionArrOptionToString(o Float64OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64OptionArrOptionToString(o Complex64OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128OptionArrOptionToString(o Complex128OptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyOptionArrOptionToString(o AnyOptionArrOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyOptionArrToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyOptionArrToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolListOptionToString(o BoolListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringListOptionToString(o StringListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntListOptionToString(o IntListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8ListOptionToString(o Int8ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16ListOptionToString(o Int16ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32ListOptionToString(o Int32ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64ListOptionToString(o Int64ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintListOptionToString(o UintListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8ListOptionToString(o Uint8ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16ListOptionToString(o Uint16ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32ListOptionToString(o Uint32ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64ListOptionToString(o Uint64ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrListOptionToString(o UintptrListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteListOptionToString(o ByteListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneListOptionToString(o RuneListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32ListOptionToString(o Float32ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64ListOptionToString(o Float64ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64ListOptionToString(o Complex64ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128ListOptionToString(o Complex128ListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyListOptionToString(o AnyListOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyListToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyListToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolOptionOptionToString(o BoolOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringOptionOptionToString(o StringOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntOptionOptionToString(o IntOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8OptionOptionToString(o Int8OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16OptionOptionToString(o Int16OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32OptionOptionToString(o Int32OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64OptionOptionToString(o Int64OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintOptionOptionToString(o UintOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8OptionOptionToString(o Uint8OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16OptionOptionToString(o Uint16OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32OptionOptionToString(o Uint32OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64OptionOptionToString(o Uint64OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrOptionOptionToString(o UintptrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteOptionOptionToString(o ByteOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneOptionOptionToString(o RuneOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32OptionOptionToString(o Float32OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64OptionOptionToString(o Float64OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64OptionOptionToString(o Complex64OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128OptionOptionToString(o Complex128OptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyOptionOptionToString(o AnyOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolArrOptionOptionToString(o BoolArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringArrOptionOptionToString(o StringArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntArrOptionOptionToString(o IntArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8ArrOptionOptionToString(o Int8ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16ArrOptionOptionToString(o Int16ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32ArrOptionOptionToString(o Int32ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64ArrOptionOptionToString(o Int64ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintArrOptionOptionToString(o UintArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8ArrOptionOptionToString(o Uint8ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16ArrOptionOptionToString(o Uint16ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32ArrOptionOptionToString(o Uint32ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64ArrOptionOptionToString(o Uint64ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrArrOptionOptionToString(o UintptrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteArrOptionOptionToString(o ByteArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneArrOptionOptionToString(o RuneArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32ArrOptionOptionToString(o Float32ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64ArrOptionOptionToString(o Float64ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64ArrOptionOptionToString(o Complex64ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128ArrOptionOptionToString(o Complex128ArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyArrOptionOptionToString(o AnyArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolArrArrOptionOptionToString(o BoolArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringArrArrOptionOptionToString(o StringArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntArrArrOptionOptionToString(o IntArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8ArrArrOptionOptionToString(o Int8ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16ArrArrOptionOptionToString(o Int16ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32ArrArrOptionOptionToString(o Int32ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64ArrArrOptionOptionToString(o Int64ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintArrArrOptionOptionToString(o UintArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8ArrArrOptionOptionToString(o Uint8ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16ArrArrOptionOptionToString(o Uint16ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32ArrArrOptionOptionToString(o Uint32ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64ArrArrOptionOptionToString(o Uint64ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrArrArrOptionOptionToString(o UintptrArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteArrArrOptionOptionToString(o ByteArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneArrArrOptionOptionToString(o RuneArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32ArrArrOptionOptionToString(o Float32ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64ArrArrOptionOptionToString(o Float64ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64ArrArrOptionOptionToString(o Complex64ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128ArrArrOptionOptionToString(o Complex128ArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyArrArrOptionOptionToString(o AnyArrArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyArrArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyArrArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolOptionArrOptionOptionToString(o BoolOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringOptionArrOptionOptionToString(o StringOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntOptionArrOptionOptionToString(o IntOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8OptionArrOptionOptionToString(o Int8OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16OptionArrOptionOptionToString(o Int16OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32OptionArrOptionOptionToString(o Int32OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64OptionArrOptionOptionToString(o Int64OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintOptionArrOptionOptionToString(o UintOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8OptionArrOptionOptionToString(o Uint8OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16OptionArrOptionOptionToString(o Uint16OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32OptionArrOptionOptionToString(o Uint32OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64OptionArrOptionOptionToString(o Uint64OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrOptionArrOptionOptionToString(o UintptrOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteOptionArrOptionOptionToString(o ByteOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneOptionArrOptionOptionToString(o RuneOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32OptionArrOptionOptionToString(o Float32OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64OptionArrOptionOptionToString(o Float64OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64OptionArrOptionOptionToString(o Complex64OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128OptionArrOptionOptionToString(o Complex128OptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyOptionArrOptionOptionToString(o AnyOptionArrOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyOptionArrOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyOptionArrOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolListOptionOptionToString(o BoolListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", BoolListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func StringListOptionOptionToString(o StringListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", StringListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func IntListOptionOptionToString(o IntListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", IntListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int8ListOptionOptionToString(o Int8ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int8ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int16ListOptionOptionToString(o Int16ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int16ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int32ListOptionOptionToString(o Int32ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int32ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Int64ListOptionOptionToString(o Int64ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Int64ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintListOptionOptionToString(o UintListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint8ListOptionOptionToString(o Uint8ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint8ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint16ListOptionOptionToString(o Uint16ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint16ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint32ListOptionOptionToString(o Uint32ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint32ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Uint64ListOptionOptionToString(o Uint64ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Uint64ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func UintptrListOptionOptionToString(o UintptrListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", UintptrListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func ByteListOptionOptionToString(o ByteListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", ByteListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func RuneListOptionOptionToString(o RuneListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", RuneListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float32ListOptionOptionToString(o Float32ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float32ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Float64ListOptionOptionToString(o Float64ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Float64ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex64ListOptionOptionToString(o Complex64ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex64ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func Complex128ListOptionOptionToString(o Complex128ListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", Complex128ListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func AnyListOptionOptionToString(o AnyListOptionOption) string {
-  
-  if o.IsDefined() { return fmt.Sprintf("%v%v%v", "Some(", AnyListOptionToString(*o.value), ")")
-  } else { return "None" }
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyListOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func BoolOptionOptionOptionToString(o BoolOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func StringOptionOptionOptionToString(o StringOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func IntOptionOptionOptionToString(o IntOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int8OptionOptionOptionToString(o Int8OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int16OptionOptionOptionToString(o Int16OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int32OptionOptionOptionToString(o Int32OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int64OptionOptionOptionToString(o Int64OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintOptionOptionOptionToString(o UintOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint8OptionOptionOptionToString(o Uint8OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint16OptionOptionOptionToString(o Uint16OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint32OptionOptionOptionToString(o Uint32OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint64OptionOptionOptionToString(o Uint64OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintptrOptionOptionOptionToString(o UintptrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func ByteOptionOptionOptionToString(o ByteOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func RuneOptionOptionOptionToString(o RuneOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float32OptionOptionOptionToString(o Float32OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float64OptionOptionOptionToString(o Float64OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex64OptionOptionOptionToString(o Complex64OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex128OptionOptionOptionToString(o Complex128OptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func AnyOptionOptionOptionToString(o AnyOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func BoolArrOptionOptionOptionToString(o BoolArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func StringArrOptionOptionOptionToString(o StringArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func IntArrOptionOptionOptionToString(o IntArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int8ArrOptionOptionOptionToString(o Int8ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int16ArrOptionOptionOptionToString(o Int16ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int32ArrOptionOptionOptionToString(o Int32ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int64ArrOptionOptionOptionToString(o Int64ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintArrOptionOptionOptionToString(o UintArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint8ArrOptionOptionOptionToString(o Uint8ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint16ArrOptionOptionOptionToString(o Uint16ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint32ArrOptionOptionOptionToString(o Uint32ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint64ArrOptionOptionOptionToString(o Uint64ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintptrArrOptionOptionOptionToString(o UintptrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func ByteArrOptionOptionOptionToString(o ByteArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func RuneArrOptionOptionOptionToString(o RuneArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float32ArrOptionOptionOptionToString(o Float32ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float64ArrOptionOptionOptionToString(o Float64ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex64ArrOptionOptionOptionToString(o Complex64ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex128ArrOptionOptionOptionToString(o Complex128ArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func AnyArrOptionOptionOptionToString(o AnyArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func BoolArrArrOptionOptionOptionToString(o BoolArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func StringArrArrOptionOptionOptionToString(o StringArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func IntArrArrOptionOptionOptionToString(o IntArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int8ArrArrOptionOptionOptionToString(o Int8ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int16ArrArrOptionOptionOptionToString(o Int16ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int32ArrArrOptionOptionOptionToString(o Int32ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int64ArrArrOptionOptionOptionToString(o Int64ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintArrArrOptionOptionOptionToString(o UintArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint8ArrArrOptionOptionOptionToString(o Uint8ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint16ArrArrOptionOptionOptionToString(o Uint16ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint32ArrArrOptionOptionOptionToString(o Uint32ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint64ArrArrOptionOptionOptionToString(o Uint64ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintptrArrArrOptionOptionOptionToString(o UintptrArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func ByteArrArrOptionOptionOptionToString(o ByteArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func RuneArrArrOptionOptionOptionToString(o RuneArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float32ArrArrOptionOptionOptionToString(o Float32ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float64ArrArrOptionOptionOptionToString(o Float64ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex64ArrArrOptionOptionOptionToString(o Complex64ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex128ArrArrOptionOptionOptionToString(o Complex128ArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func AnyArrArrOptionOptionOptionToString(o AnyArrArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyArrArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func BoolOptionArrOptionOptionOptionToString(o BoolOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func StringOptionArrOptionOptionOptionToString(o StringOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func IntOptionArrOptionOptionOptionToString(o IntOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int8OptionArrOptionOptionOptionToString(o Int8OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int16OptionArrOptionOptionOptionToString(o Int16OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int32OptionArrOptionOptionOptionToString(o Int32OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int64OptionArrOptionOptionOptionToString(o Int64OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintOptionArrOptionOptionOptionToString(o UintOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint8OptionArrOptionOptionOptionToString(o Uint8OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint16OptionArrOptionOptionOptionToString(o Uint16OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint32OptionArrOptionOptionOptionToString(o Uint32OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint64OptionArrOptionOptionOptionToString(o Uint64OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintptrOptionArrOptionOptionOptionToString(o UintptrOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func ByteOptionArrOptionOptionOptionToString(o ByteOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func RuneOptionArrOptionOptionOptionToString(o RuneOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float32OptionArrOptionOptionOptionToString(o Float32OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float64OptionArrOptionOptionOptionToString(o Float64OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex64OptionArrOptionOptionOptionToString(o Complex64OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex128OptionArrOptionOptionOptionToString(o Complex128OptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128OptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func AnyOptionArrOptionOptionOptionToString(o AnyOptionArrOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyOptionArrOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func BoolListOptionOptionOptionToString(o BoolListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", BoolListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func StringListOptionOptionOptionToString(o StringListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", StringListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func IntListOptionOptionOptionToString(o IntListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", IntListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int8ListOptionOptionOptionToString(o Int8ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int8ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int16ListOptionOptionOptionToString(o Int16ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int16ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int32ListOptionOptionOptionToString(o Int32ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int32ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Int64ListOptionOptionOptionToString(o Int64ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Int64ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintListOptionOptionOptionToString(o UintListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint8ListOptionOptionOptionToString(o Uint8ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint8ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint16ListOptionOptionOptionToString(o Uint16ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint16ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint32ListOptionOptionOptionToString(o Uint32ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint32ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Uint64ListOptionOptionOptionToString(o Uint64ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Uint64ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func UintptrListOptionOptionOptionToString(o UintptrListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", UintptrListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func ByteListOptionOptionOptionToString(o ByteListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", ByteListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func RuneListOptionOptionOptionToString(o RuneListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", RuneListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float32ListOptionOptionOptionToString(o Float32ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float32ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Float64ListOptionOptionOptionToString(o Float64ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Float64ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex64ListOptionOptionOptionToString(o Complex64ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex64ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func Complex128ListOptionOptionOptionToString(o Complex128ListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", Complex128ListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
+}
+func AnyListOptionOptionOptionToString(o AnyListOptionOptionOption) string {
+
+	if o.IsDefined() {
+		return fmt.Sprintf("%v%v%v", "Some(", AnyListOptionOptionToString(*o.value), ")")
+	} else {
+		return "None"
+	}
 }
 func BoolArrToString(o []bool) string {
-    return MkStringBoolArr(o, "[", ",", "]")
+	return MkStringBoolArr(o, "[", ",", "]")
 }
 func StringArrToString(o []string) string {
-    return MkStringStringArr(o, "[", ",", "]")
+	return MkStringStringArr(o, "[", ",", "]")
 }
 func IntArrToString(o []int) string {
-    return MkStringIntArr(o, "[", ",", "]")
+	return MkStringIntArr(o, "[", ",", "]")
 }
 func Int8ArrToString(o []int8) string {
-    return MkStringInt8Arr(o, "[", ",", "]")
+	return MkStringInt8Arr(o, "[", ",", "]")
 }
 func Int16ArrToString(o []int16) string {
-    return MkStringInt16Arr(o, "[", ",", "]")
+	return MkStringInt16Arr(o, "[", ",", "]")
 }
 func Int32ArrToString(o []int32) string {
-    return MkStringInt32Arr(o, "[", ",", "]")
+	return MkStringInt32Arr(o, "[", ",", "]")
 }
 func Int64ArrToString(o []int64) string {
-    return MkStringInt64Arr(o, "[", ",", "]")
+	return MkStringInt64Arr(o, "[", ",", "]")
 }
 func UintArrToString(o []uint) string {
-    return MkStringUintArr(o, "[", ",", "]")
+	return MkStringUintArr(o, "[", ",", "]")
 }
 func Uint8ArrToString(o []uint8) string {
-    return MkStringUint8Arr(o, "[", ",", "]")
+	return MkStringUint8Arr(o, "[", ",", "]")
 }
 func Uint16ArrToString(o []uint16) string {
-    return MkStringUint16Arr(o, "[", ",", "]")
+	return MkStringUint16Arr(o, "[", ",", "]")
 }
 func Uint32ArrToString(o []uint32) string {
-    return MkStringUint32Arr(o, "[", ",", "]")
+	return MkStringUint32Arr(o, "[", ",", "]")
 }
 func Uint64ArrToString(o []uint64) string {
-    return MkStringUint64Arr(o, "[", ",", "]")
+	return MkStringUint64Arr(o, "[", ",", "]")
 }
 func UintptrArrToString(o []uintptr) string {
-    return MkStringUintptrArr(o, "[", ",", "]")
+	return MkStringUintptrArr(o, "[", ",", "]")
 }
 func ByteArrToString(o []byte) string {
-    return MkStringByteArr(o, "[", ",", "]")
+	return MkStringByteArr(o, "[", ",", "]")
 }
 func RuneArrToString(o []rune) string {
-    return MkStringRuneArr(o, "[", ",", "]")
+	return MkStringRuneArr(o, "[", ",", "]")
 }
 func Float32ArrToString(o []float32) string {
-    return MkStringFloat32Arr(o, "[", ",", "]")
+	return MkStringFloat32Arr(o, "[", ",", "]")
 }
 func Float64ArrToString(o []float64) string {
-    return MkStringFloat64Arr(o, "[", ",", "]")
+	return MkStringFloat64Arr(o, "[", ",", "]")
 }
 func Complex64ArrToString(o []complex64) string {
-    return MkStringComplex64Arr(o, "[", ",", "]")
+	return MkStringComplex64Arr(o, "[", ",", "]")
 }
 func Complex128ArrToString(o []complex128) string {
-    return MkStringComplex128Arr(o, "[", ",", "]")
+	return MkStringComplex128Arr(o, "[", ",", "]")
 }
 func AnyArrToString(o []Any) string {
-    return MkStringAnyArr(o, "[", ",", "]")
+	return MkStringAnyArr(o, "[", ",", "]")
 }
 func BoolArrArrToString(o [][]bool) string {
-    return MkStringBoolArrArr(o, "[", ",", "]")
+	return MkStringBoolArrArr(o, "[", ",", "]")
 }
 func StringArrArrToString(o [][]string) string {
-    return MkStringStringArrArr(o, "[", ",", "]")
+	return MkStringStringArrArr(o, "[", ",", "]")
 }
 func IntArrArrToString(o [][]int) string {
-    return MkStringIntArrArr(o, "[", ",", "]")
+	return MkStringIntArrArr(o, "[", ",", "]")
 }
 func Int8ArrArrToString(o [][]int8) string {
-    return MkStringInt8ArrArr(o, "[", ",", "]")
+	return MkStringInt8ArrArr(o, "[", ",", "]")
 }
 func Int16ArrArrToString(o [][]int16) string {
-    return MkStringInt16ArrArr(o, "[", ",", "]")
+	return MkStringInt16ArrArr(o, "[", ",", "]")
 }
 func Int32ArrArrToString(o [][]int32) string {
-    return MkStringInt32ArrArr(o, "[", ",", "]")
+	return MkStringInt32ArrArr(o, "[", ",", "]")
 }
 func Int64ArrArrToString(o [][]int64) string {
-    return MkStringInt64ArrArr(o, "[", ",", "]")
+	return MkStringInt64ArrArr(o, "[", ",", "]")
 }
 func UintArrArrToString(o [][]uint) string {
-    return MkStringUintArrArr(o, "[", ",", "]")
+	return MkStringUintArrArr(o, "[", ",", "]")
 }
 func Uint8ArrArrToString(o [][]uint8) string {
-    return MkStringUint8ArrArr(o, "[", ",", "]")
+	return MkStringUint8ArrArr(o, "[", ",", "]")
 }
 func Uint16ArrArrToString(o [][]uint16) string {
-    return MkStringUint16ArrArr(o, "[", ",", "]")
+	return MkStringUint16ArrArr(o, "[", ",", "]")
 }
 func Uint32ArrArrToString(o [][]uint32) string {
-    return MkStringUint32ArrArr(o, "[", ",", "]")
+	return MkStringUint32ArrArr(o, "[", ",", "]")
 }
 func Uint64ArrArrToString(o [][]uint64) string {
-    return MkStringUint64ArrArr(o, "[", ",", "]")
+	return MkStringUint64ArrArr(o, "[", ",", "]")
 }
 func UintptrArrArrToString(o [][]uintptr) string {
-    return MkStringUintptrArrArr(o, "[", ",", "]")
+	return MkStringUintptrArrArr(o, "[", ",", "]")
 }
 func ByteArrArrToString(o [][]byte) string {
-    return MkStringByteArrArr(o, "[", ",", "]")
+	return MkStringByteArrArr(o, "[", ",", "]")
 }
 func RuneArrArrToString(o [][]rune) string {
-    return MkStringRuneArrArr(o, "[", ",", "]")
+	return MkStringRuneArrArr(o, "[", ",", "]")
 }
 func Float32ArrArrToString(o [][]float32) string {
-    return MkStringFloat32ArrArr(o, "[", ",", "]")
+	return MkStringFloat32ArrArr(o, "[", ",", "]")
 }
 func Float64ArrArrToString(o [][]float64) string {
-    return MkStringFloat64ArrArr(o, "[", ",", "]")
+	return MkStringFloat64ArrArr(o, "[", ",", "]")
 }
 func Complex64ArrArrToString(o [][]complex64) string {
-    return MkStringComplex64ArrArr(o, "[", ",", "]")
+	return MkStringComplex64ArrArr(o, "[", ",", "]")
 }
 func Complex128ArrArrToString(o [][]complex128) string {
-    return MkStringComplex128ArrArr(o, "[", ",", "]")
+	return MkStringComplex128ArrArr(o, "[", ",", "]")
 }
 func AnyArrArrToString(o [][]Any) string {
-    return MkStringAnyArrArr(o, "[", ",", "]")
+	return MkStringAnyArrArr(o, "[", ",", "]")
 }
 func BoolOptionArrToString(o []BoolOption) string {
-    return MkStringBoolOptionArr(o, "[", ",", "]")
+	return MkStringBoolOptionArr(o, "[", ",", "]")
 }
 func StringOptionArrToString(o []StringOption) string {
-    return MkStringStringOptionArr(o, "[", ",", "]")
+	return MkStringStringOptionArr(o, "[", ",", "]")
 }
 func IntOptionArrToString(o []IntOption) string {
-    return MkStringIntOptionArr(o, "[", ",", "]")
+	return MkStringIntOptionArr(o, "[", ",", "]")
 }
 func Int8OptionArrToString(o []Int8Option) string {
-    return MkStringInt8OptionArr(o, "[", ",", "]")
+	return MkStringInt8OptionArr(o, "[", ",", "]")
 }
 func Int16OptionArrToString(o []Int16Option) string {
-    return MkStringInt16OptionArr(o, "[", ",", "]")
+	return MkStringInt16OptionArr(o, "[", ",", "]")
 }
 func Int32OptionArrToString(o []Int32Option) string {
-    return MkStringInt32OptionArr(o, "[", ",", "]")
+	return MkStringInt32OptionArr(o, "[", ",", "]")
 }
 func Int64OptionArrToString(o []Int64Option) string {
-    return MkStringInt64OptionArr(o, "[", ",", "]")
+	return MkStringInt64OptionArr(o, "[", ",", "]")
 }
 func UintOptionArrToString(o []UintOption) string {
-    return MkStringUintOptionArr(o, "[", ",", "]")
+	return MkStringUintOptionArr(o, "[", ",", "]")
 }
 func Uint8OptionArrToString(o []Uint8Option) string {
-    return MkStringUint8OptionArr(o, "[", ",", "]")
+	return MkStringUint8OptionArr(o, "[", ",", "]")
 }
 func Uint16OptionArrToString(o []Uint16Option) string {
-    return MkStringUint16OptionArr(o, "[", ",", "]")
+	return MkStringUint16OptionArr(o, "[", ",", "]")
 }
 func Uint32OptionArrToString(o []Uint32Option) string {
-    return MkStringUint32OptionArr(o, "[", ",", "]")
+	return MkStringUint32OptionArr(o, "[", ",", "]")
 }
 func Uint64OptionArrToString(o []Uint64Option) string {
-    return MkStringUint64OptionArr(o, "[", ",", "]")
+	return MkStringUint64OptionArr(o, "[", ",", "]")
 }
 func UintptrOptionArrToString(o []UintptrOption) string {
-    return MkStringUintptrOptionArr(o, "[", ",", "]")
+	return MkStringUintptrOptionArr(o, "[", ",", "]")
 }
 func ByteOptionArrToString(o []ByteOption) string {
-    return MkStringByteOptionArr(o, "[", ",", "]")
+	return MkStringByteOptionArr(o, "[", ",", "]")
 }
 func RuneOptionArrToString(o []RuneOption) string {
-    return MkStringRuneOptionArr(o, "[", ",", "]")
+	return MkStringRuneOptionArr(o, "[", ",", "]")
 }
 func Float32OptionArrToString(o []Float32Option) string {
-    return MkStringFloat32OptionArr(o, "[", ",", "]")
+	return MkStringFloat32OptionArr(o, "[", ",", "]")
 }
 func Float64OptionArrToString(o []Float64Option) string {
-    return MkStringFloat64OptionArr(o, "[", ",", "]")
+	return MkStringFloat64OptionArr(o, "[", ",", "]")
 }
 func Complex64OptionArrToString(o []Complex64Option) string {
-    return MkStringComplex64OptionArr(o, "[", ",", "]")
+	return MkStringComplex64OptionArr(o, "[", ",", "]")
 }
 func Complex128OptionArrToString(o []Complex128Option) string {
-    return MkStringComplex128OptionArr(o, "[", ",", "]")
+	return MkStringComplex128OptionArr(o, "[", ",", "]")
 }
 func AnyOptionArrToString(o []AnyOption) string {
-    return MkStringAnyOptionArr(o, "[", ",", "]")
+	return MkStringAnyOptionArr(o, "[", ",", "]")
 }
 func BoolListToString(o BoolList) string {
-    return MkStringBoolList(o, "List(", ",", ")")
+	return MkStringBoolList(o, "List(", ",", ")")
 }
 func StringListToString(o StringList) string {
-    return MkStringStringList(o, "List(", ",", ")")
+	return MkStringStringList(o, "List(", ",", ")")
 }
 func IntListToString(o IntList) string {
-    return MkStringIntList(o, "List(", ",", ")")
+	return MkStringIntList(o, "List(", ",", ")")
 }
 func Int8ListToString(o Int8List) string {
-    return MkStringInt8List(o, "List(", ",", ")")
+	return MkStringInt8List(o, "List(", ",", ")")
 }
 func Int16ListToString(o Int16List) string {
-    return MkStringInt16List(o, "List(", ",", ")")
+	return MkStringInt16List(o, "List(", ",", ")")
 }
 func Int32ListToString(o Int32List) string {
-    return MkStringInt32List(o, "List(", ",", ")")
+	return MkStringInt32List(o, "List(", ",", ")")
 }
 func Int64ListToString(o Int64List) string {
-    return MkStringInt64List(o, "List(", ",", ")")
+	return MkStringInt64List(o, "List(", ",", ")")
 }
 func UintListToString(o UintList) string {
-    return MkStringUintList(o, "List(", ",", ")")
+	return MkStringUintList(o, "List(", ",", ")")
 }
 func Uint8ListToString(o Uint8List) string {
-    return MkStringUint8List(o, "List(", ",", ")")
+	return MkStringUint8List(o, "List(", ",", ")")
 }
 func Uint16ListToString(o Uint16List) string {
-    return MkStringUint16List(o, "List(", ",", ")")
+	return MkStringUint16List(o, "List(", ",", ")")
 }
 func Uint32ListToString(o Uint32List) string {
-    return MkStringUint32List(o, "List(", ",", ")")
+	return MkStringUint32List(o, "List(", ",", ")")
 }
 func Uint64ListToString(o Uint64List) string {
-    return MkStringUint64List(o, "List(", ",", ")")
+	return MkStringUint64List(o, "List(", ",", ")")
 }
 func UintptrListToString(o UintptrList) string {
-    return MkStringUintptrList(o, "List(", ",", ")")
+	return MkStringUintptrList(o, "List(", ",", ")")
 }
 func ByteListToString(o ByteList) string {
-    return MkStringByteList(o, "List(", ",", ")")
+	return MkStringByteList(o, "List(", ",", ")")
 }
 func RuneListToString(o RuneList) string {
-    return MkStringRuneList(o, "List(", ",", ")")
+	return MkStringRuneList(o, "List(", ",", ")")
 }
 func Float32ListToString(o Float32List) string {
-    return MkStringFloat32List(o, "List(", ",", ")")
+	return MkStringFloat32List(o, "List(", ",", ")")
 }
 func Float64ListToString(o Float64List) string {
-    return MkStringFloat64List(o, "List(", ",", ")")
+	return MkStringFloat64List(o, "List(", ",", ")")
 }
 func Complex64ListToString(o Complex64List) string {
-    return MkStringComplex64List(o, "List(", ",", ")")
+	return MkStringComplex64List(o, "List(", ",", ")")
 }
 func Complex128ListToString(o Complex128List) string {
-    return MkStringComplex128List(o, "List(", ",", ")")
+	return MkStringComplex128List(o, "List(", ",", ")")
 }
 func AnyListToString(o AnyList) string {
-    return MkStringAnyList(o, "List(", ",", ")")
+	return MkStringAnyList(o, "List(", ",", ")")
 }
 func BoolOptionListToString(o BoolOptionList) string {
-    return MkStringBoolOptionList(o, "List(", ",", ")")
+	return MkStringBoolOptionList(o, "List(", ",", ")")
 }
 func StringOptionListToString(o StringOptionList) string {
-    return MkStringStringOptionList(o, "List(", ",", ")")
+	return MkStringStringOptionList(o, "List(", ",", ")")
 }
 func IntOptionListToString(o IntOptionList) string {
-    return MkStringIntOptionList(o, "List(", ",", ")")
+	return MkStringIntOptionList(o, "List(", ",", ")")
 }
 func Int8OptionListToString(o Int8OptionList) string {
-    return MkStringInt8OptionList(o, "List(", ",", ")")
+	return MkStringInt8OptionList(o, "List(", ",", ")")
 }
 func Int16OptionListToString(o Int16OptionList) string {
-    return MkStringInt16OptionList(o, "List(", ",", ")")
+	return MkStringInt16OptionList(o, "List(", ",", ")")
 }
 func Int32OptionListToString(o Int32OptionList) string {
-    return MkStringInt32OptionList(o, "List(", ",", ")")
+	return MkStringInt32OptionList(o, "List(", ",", ")")
 }
 func Int64OptionListToString(o Int64OptionList) string {
-    return MkStringInt64OptionList(o, "List(", ",", ")")
+	return MkStringInt64OptionList(o, "List(", ",", ")")
 }
 func UintOptionListToString(o UintOptionList) string {
-    return MkStringUintOptionList(o, "List(", ",", ")")
+	return MkStringUintOptionList(o, "List(", ",", ")")
 }
 func Uint8OptionListToString(o Uint8OptionList) string {
-    return MkStringUint8OptionList(o, "List(", ",", ")")
+	return MkStringUint8OptionList(o, "List(", ",", ")")
 }
 func Uint16OptionListToString(o Uint16OptionList) string {
-    return MkStringUint16OptionList(o, "List(", ",", ")")
+	return MkStringUint16OptionList(o, "List(", ",", ")")
 }
 func Uint32OptionListToString(o Uint32OptionList) string {
-    return MkStringUint32OptionList(o, "List(", ",", ")")
+	return MkStringUint32OptionList(o, "List(", ",", ")")
 }
 func Uint64OptionListToString(o Uint64OptionList) string {
-    return MkStringUint64OptionList(o, "List(", ",", ")")
+	return MkStringUint64OptionList(o, "List(", ",", ")")
 }
 func UintptrOptionListToString(o UintptrOptionList) string {
-    return MkStringUintptrOptionList(o, "List(", ",", ")")
+	return MkStringUintptrOptionList(o, "List(", ",", ")")
 }
 func ByteOptionListToString(o ByteOptionList) string {
-    return MkStringByteOptionList(o, "List(", ",", ")")
+	return MkStringByteOptionList(o, "List(", ",", ")")
 }
 func RuneOptionListToString(o RuneOptionList) string {
-    return MkStringRuneOptionList(o, "List(", ",", ")")
+	return MkStringRuneOptionList(o, "List(", ",", ")")
 }
 func Float32OptionListToString(o Float32OptionList) string {
-    return MkStringFloat32OptionList(o, "List(", ",", ")")
+	return MkStringFloat32OptionList(o, "List(", ",", ")")
 }
 func Float64OptionListToString(o Float64OptionList) string {
-    return MkStringFloat64OptionList(o, "List(", ",", ")")
+	return MkStringFloat64OptionList(o, "List(", ",", ")")
 }
 func Complex64OptionListToString(o Complex64OptionList) string {
-    return MkStringComplex64OptionList(o, "List(", ",", ")")
+	return MkStringComplex64OptionList(o, "List(", ",", ")")
 }
 func Complex128OptionListToString(o Complex128OptionList) string {
-    return MkStringComplex128OptionList(o, "List(", ",", ")")
+	return MkStringComplex128OptionList(o, "List(", ",", ")")
 }
 func AnyOptionListToString(o AnyOptionList) string {
-    return MkStringAnyOptionList(o, "List(", ",", ")")
+	return MkStringAnyOptionList(o, "List(", ",", ")")
 }
 func BoolArrOptionListToString(o BoolArrOptionList) string {
-    return MkStringBoolArrOptionList(o, "List(", ",", ")")
+	return MkStringBoolArrOptionList(o, "List(", ",", ")")
 }
 func StringArrOptionListToString(o StringArrOptionList) string {
-    return MkStringStringArrOptionList(o, "List(", ",", ")")
+	return MkStringStringArrOptionList(o, "List(", ",", ")")
 }
 func IntArrOptionListToString(o IntArrOptionList) string {
-    return MkStringIntArrOptionList(o, "List(", ",", ")")
+	return MkStringIntArrOptionList(o, "List(", ",", ")")
 }
 func Int8ArrOptionListToString(o Int8ArrOptionList) string {
-    return MkStringInt8ArrOptionList(o, "List(", ",", ")")
+	return MkStringInt8ArrOptionList(o, "List(", ",", ")")
 }
 func Int16ArrOptionListToString(o Int16ArrOptionList) string {
-    return MkStringInt16ArrOptionList(o, "List(", ",", ")")
+	return MkStringInt16ArrOptionList(o, "List(", ",", ")")
 }
 func Int32ArrOptionListToString(o Int32ArrOptionList) string {
-    return MkStringInt32ArrOptionList(o, "List(", ",", ")")
+	return MkStringInt32ArrOptionList(o, "List(", ",", ")")
 }
 func Int64ArrOptionListToString(o Int64ArrOptionList) string {
-    return MkStringInt64ArrOptionList(o, "List(", ",", ")")
+	return MkStringInt64ArrOptionList(o, "List(", ",", ")")
 }
 func UintArrOptionListToString(o UintArrOptionList) string {
-    return MkStringUintArrOptionList(o, "List(", ",", ")")
+	return MkStringUintArrOptionList(o, "List(", ",", ")")
 }
 func Uint8ArrOptionListToString(o Uint8ArrOptionList) string {
-    return MkStringUint8ArrOptionList(o, "List(", ",", ")")
+	return MkStringUint8ArrOptionList(o, "List(", ",", ")")
 }
 func Uint16ArrOptionListToString(o Uint16ArrOptionList) string {
-    return MkStringUint16ArrOptionList(o, "List(", ",", ")")
+	return MkStringUint16ArrOptionList(o, "List(", ",", ")")
 }
 func Uint32ArrOptionListToString(o Uint32ArrOptionList) string {
-    return MkStringUint32ArrOptionList(o, "List(", ",", ")")
+	return MkStringUint32ArrOptionList(o, "List(", ",", ")")
 }
 func Uint64ArrOptionListToString(o Uint64ArrOptionList) string {
-    return MkStringUint64ArrOptionList(o, "List(", ",", ")")
+	return MkStringUint64ArrOptionList(o, "List(", ",", ")")
 }
 func UintptrArrOptionListToString(o UintptrArrOptionList) string {
-    return MkStringUintptrArrOptionList(o, "List(", ",", ")")
+	return MkStringUintptrArrOptionList(o, "List(", ",", ")")
 }
 func ByteArrOptionListToString(o ByteArrOptionList) string {
-    return MkStringByteArrOptionList(o, "List(", ",", ")")
+	return MkStringByteArrOptionList(o, "List(", ",", ")")
 }
 func RuneArrOptionListToString(o RuneArrOptionList) string {
-    return MkStringRuneArrOptionList(o, "List(", ",", ")")
+	return MkStringRuneArrOptionList(o, "List(", ",", ")")
 }
 func Float32ArrOptionListToString(o Float32ArrOptionList) string {
-    return MkStringFloat32ArrOptionList(o, "List(", ",", ")")
+	return MkStringFloat32ArrOptionList(o, "List(", ",", ")")
 }
 func Float64ArrOptionListToString(o Float64ArrOptionList) string {
-    return MkStringFloat64ArrOptionList(o, "List(", ",", ")")
+	return MkStringFloat64ArrOptionList(o, "List(", ",", ")")
 }
 func Complex64ArrOptionListToString(o Complex64ArrOptionList) string {
-    return MkStringComplex64ArrOptionList(o, "List(", ",", ")")
+	return MkStringComplex64ArrOptionList(o, "List(", ",", ")")
 }
 func Complex128ArrOptionListToString(o Complex128ArrOptionList) string {
-    return MkStringComplex128ArrOptionList(o, "List(", ",", ")")
+	return MkStringComplex128ArrOptionList(o, "List(", ",", ")")
 }
 func AnyArrOptionListToString(o AnyArrOptionList) string {
-    return MkStringAnyArrOptionList(o, "List(", ",", ")")
+	return MkStringAnyArrOptionList(o, "List(", ",", ")")
 }
 func BoolArrArrOptionListToString(o BoolArrArrOptionList) string {
-    return MkStringBoolArrArrOptionList(o, "List(", ",", ")")
+	return MkStringBoolArrArrOptionList(o, "List(", ",", ")")
 }
 func StringArrArrOptionListToString(o StringArrArrOptionList) string {
-    return MkStringStringArrArrOptionList(o, "List(", ",", ")")
+	return MkStringStringArrArrOptionList(o, "List(", ",", ")")
 }
 func IntArrArrOptionListToString(o IntArrArrOptionList) string {
-    return MkStringIntArrArrOptionList(o, "List(", ",", ")")
+	return MkStringIntArrArrOptionList(o, "List(", ",", ")")
 }
 func Int8ArrArrOptionListToString(o Int8ArrArrOptionList) string {
-    return MkStringInt8ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringInt8ArrArrOptionList(o, "List(", ",", ")")
 }
 func Int16ArrArrOptionListToString(o Int16ArrArrOptionList) string {
-    return MkStringInt16ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringInt16ArrArrOptionList(o, "List(", ",", ")")
 }
 func Int32ArrArrOptionListToString(o Int32ArrArrOptionList) string {
-    return MkStringInt32ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringInt32ArrArrOptionList(o, "List(", ",", ")")
 }
 func Int64ArrArrOptionListToString(o Int64ArrArrOptionList) string {
-    return MkStringInt64ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringInt64ArrArrOptionList(o, "List(", ",", ")")
 }
 func UintArrArrOptionListToString(o UintArrArrOptionList) string {
-    return MkStringUintArrArrOptionList(o, "List(", ",", ")")
+	return MkStringUintArrArrOptionList(o, "List(", ",", ")")
 }
 func Uint8ArrArrOptionListToString(o Uint8ArrArrOptionList) string {
-    return MkStringUint8ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringUint8ArrArrOptionList(o, "List(", ",", ")")
 }
 func Uint16ArrArrOptionListToString(o Uint16ArrArrOptionList) string {
-    return MkStringUint16ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringUint16ArrArrOptionList(o, "List(", ",", ")")
 }
 func Uint32ArrArrOptionListToString(o Uint32ArrArrOptionList) string {
-    return MkStringUint32ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringUint32ArrArrOptionList(o, "List(", ",", ")")
 }
 func Uint64ArrArrOptionListToString(o Uint64ArrArrOptionList) string {
-    return MkStringUint64ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringUint64ArrArrOptionList(o, "List(", ",", ")")
 }
 func UintptrArrArrOptionListToString(o UintptrArrArrOptionList) string {
-    return MkStringUintptrArrArrOptionList(o, "List(", ",", ")")
+	return MkStringUintptrArrArrOptionList(o, "List(", ",", ")")
 }
 func ByteArrArrOptionListToString(o ByteArrArrOptionList) string {
-    return MkStringByteArrArrOptionList(o, "List(", ",", ")")
+	return MkStringByteArrArrOptionList(o, "List(", ",", ")")
 }
 func RuneArrArrOptionListToString(o RuneArrArrOptionList) string {
-    return MkStringRuneArrArrOptionList(o, "List(", ",", ")")
+	return MkStringRuneArrArrOptionList(o, "List(", ",", ")")
 }
 func Float32ArrArrOptionListToString(o Float32ArrArrOptionList) string {
-    return MkStringFloat32ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringFloat32ArrArrOptionList(o, "List(", ",", ")")
 }
 func Float64ArrArrOptionListToString(o Float64ArrArrOptionList) string {
-    return MkStringFloat64ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringFloat64ArrArrOptionList(o, "List(", ",", ")")
 }
 func Complex64ArrArrOptionListToString(o Complex64ArrArrOptionList) string {
-    return MkStringComplex64ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringComplex64ArrArrOptionList(o, "List(", ",", ")")
 }
 func Complex128ArrArrOptionListToString(o Complex128ArrArrOptionList) string {
-    return MkStringComplex128ArrArrOptionList(o, "List(", ",", ")")
+	return MkStringComplex128ArrArrOptionList(o, "List(", ",", ")")
 }
 func AnyArrArrOptionListToString(o AnyArrArrOptionList) string {
-    return MkStringAnyArrArrOptionList(o, "List(", ",", ")")
+	return MkStringAnyArrArrOptionList(o, "List(", ",", ")")
 }
 func BoolOptionArrOptionListToString(o BoolOptionArrOptionList) string {
-    return MkStringBoolOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringBoolOptionArrOptionList(o, "List(", ",", ")")
 }
 func StringOptionArrOptionListToString(o StringOptionArrOptionList) string {
-    return MkStringStringOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringStringOptionArrOptionList(o, "List(", ",", ")")
 }
 func IntOptionArrOptionListToString(o IntOptionArrOptionList) string {
-    return MkStringIntOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringIntOptionArrOptionList(o, "List(", ",", ")")
 }
 func Int8OptionArrOptionListToString(o Int8OptionArrOptionList) string {
-    return MkStringInt8OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringInt8OptionArrOptionList(o, "List(", ",", ")")
 }
 func Int16OptionArrOptionListToString(o Int16OptionArrOptionList) string {
-    return MkStringInt16OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringInt16OptionArrOptionList(o, "List(", ",", ")")
 }
 func Int32OptionArrOptionListToString(o Int32OptionArrOptionList) string {
-    return MkStringInt32OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringInt32OptionArrOptionList(o, "List(", ",", ")")
 }
 func Int64OptionArrOptionListToString(o Int64OptionArrOptionList) string {
-    return MkStringInt64OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringInt64OptionArrOptionList(o, "List(", ",", ")")
 }
 func UintOptionArrOptionListToString(o UintOptionArrOptionList) string {
-    return MkStringUintOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringUintOptionArrOptionList(o, "List(", ",", ")")
 }
 func Uint8OptionArrOptionListToString(o Uint8OptionArrOptionList) string {
-    return MkStringUint8OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringUint8OptionArrOptionList(o, "List(", ",", ")")
 }
 func Uint16OptionArrOptionListToString(o Uint16OptionArrOptionList) string {
-    return MkStringUint16OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringUint16OptionArrOptionList(o, "List(", ",", ")")
 }
 func Uint32OptionArrOptionListToString(o Uint32OptionArrOptionList) string {
-    return MkStringUint32OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringUint32OptionArrOptionList(o, "List(", ",", ")")
 }
 func Uint64OptionArrOptionListToString(o Uint64OptionArrOptionList) string {
-    return MkStringUint64OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringUint64OptionArrOptionList(o, "List(", ",", ")")
 }
 func UintptrOptionArrOptionListToString(o UintptrOptionArrOptionList) string {
-    return MkStringUintptrOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringUintptrOptionArrOptionList(o, "List(", ",", ")")
 }
 func ByteOptionArrOptionListToString(o ByteOptionArrOptionList) string {
-    return MkStringByteOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringByteOptionArrOptionList(o, "List(", ",", ")")
 }
 func RuneOptionArrOptionListToString(o RuneOptionArrOptionList) string {
-    return MkStringRuneOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringRuneOptionArrOptionList(o, "List(", ",", ")")
 }
 func Float32OptionArrOptionListToString(o Float32OptionArrOptionList) string {
-    return MkStringFloat32OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringFloat32OptionArrOptionList(o, "List(", ",", ")")
 }
 func Float64OptionArrOptionListToString(o Float64OptionArrOptionList) string {
-    return MkStringFloat64OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringFloat64OptionArrOptionList(o, "List(", ",", ")")
 }
 func Complex64OptionArrOptionListToString(o Complex64OptionArrOptionList) string {
-    return MkStringComplex64OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringComplex64OptionArrOptionList(o, "List(", ",", ")")
 }
 func Complex128OptionArrOptionListToString(o Complex128OptionArrOptionList) string {
-    return MkStringComplex128OptionArrOptionList(o, "List(", ",", ")")
+	return MkStringComplex128OptionArrOptionList(o, "List(", ",", ")")
 }
 func AnyOptionArrOptionListToString(o AnyOptionArrOptionList) string {
-    return MkStringAnyOptionArrOptionList(o, "List(", ",", ")")
+	return MkStringAnyOptionArrOptionList(o, "List(", ",", ")")
 }
 func BoolListOptionListToString(o BoolListOptionList) string {
-    return MkStringBoolListOptionList(o, "List(", ",", ")")
+	return MkStringBoolListOptionList(o, "List(", ",", ")")
 }
 func StringListOptionListToString(o StringListOptionList) string {
-    return MkStringStringListOptionList(o, "List(", ",", ")")
+	return MkStringStringListOptionList(o, "List(", ",", ")")
 }
 func IntListOptionListToString(o IntListOptionList) string {
-    return MkStringIntListOptionList(o, "List(", ",", ")")
+	return MkStringIntListOptionList(o, "List(", ",", ")")
 }
 func Int8ListOptionListToString(o Int8ListOptionList) string {
-    return MkStringInt8ListOptionList(o, "List(", ",", ")")
+	return MkStringInt8ListOptionList(o, "List(", ",", ")")
 }
 func Int16ListOptionListToString(o Int16ListOptionList) string {
-    return MkStringInt16ListOptionList(o, "List(", ",", ")")
+	return MkStringInt16ListOptionList(o, "List(", ",", ")")
 }
 func Int32ListOptionListToString(o Int32ListOptionList) string {
-    return MkStringInt32ListOptionList(o, "List(", ",", ")")
+	return MkStringInt32ListOptionList(o, "List(", ",", ")")
 }
 func Int64ListOptionListToString(o Int64ListOptionList) string {
-    return MkStringInt64ListOptionList(o, "List(", ",", ")")
+	return MkStringInt64ListOptionList(o, "List(", ",", ")")
 }
 func UintListOptionListToString(o UintListOptionList) string {
-    return MkStringUintListOptionList(o, "List(", ",", ")")
+	return MkStringUintListOptionList(o, "List(", ",", ")")
 }
 func Uint8ListOptionListToString(o Uint8ListOptionList) string {
-    return MkStringUint8ListOptionList(o, "List(", ",", ")")
+	return MkStringUint8ListOptionList(o, "List(", ",", ")")
 }
 func Uint16ListOptionListToString(o Uint16ListOptionList) string {
-    return MkStringUint16ListOptionList(o, "List(", ",", ")")
+	return MkStringUint16ListOptionList(o, "List(", ",", ")")
 }
 func Uint32ListOptionListToString(o Uint32ListOptionList) string {
-    return MkStringUint32ListOptionList(o, "List(", ",", ")")
+	return MkStringUint32ListOptionList(o, "List(", ",", ")")
 }
 func Uint64ListOptionListToString(o Uint64ListOptionList) string {
-    return MkStringUint64ListOptionList(o, "List(", ",", ")")
+	return MkStringUint64ListOptionList(o, "List(", ",", ")")
 }
 func UintptrListOptionListToString(o UintptrListOptionList) string {
-    return MkStringUintptrListOptionList(o, "List(", ",", ")")
+	return MkStringUintptrListOptionList(o, "List(", ",", ")")
 }
 func ByteListOptionListToString(o ByteListOptionList) string {
-    return MkStringByteListOptionList(o, "List(", ",", ")")
+	return MkStringByteListOptionList(o, "List(", ",", ")")
 }
 func RuneListOptionListToString(o RuneListOptionList) string {
-    return MkStringRuneListOptionList(o, "List(", ",", ")")
+	return MkStringRuneListOptionList(o, "List(", ",", ")")
 }
 func Float32ListOptionListToString(o Float32ListOptionList) string {
-    return MkStringFloat32ListOptionList(o, "List(", ",", ")")
+	return MkStringFloat32ListOptionList(o, "List(", ",", ")")
 }
 func Float64ListOptionListToString(o Float64ListOptionList) string {
-    return MkStringFloat64ListOptionList(o, "List(", ",", ")")
+	return MkStringFloat64ListOptionList(o, "List(", ",", ")")
 }
 func Complex64ListOptionListToString(o Complex64ListOptionList) string {
-    return MkStringComplex64ListOptionList(o, "List(", ",", ")")
+	return MkStringComplex64ListOptionList(o, "List(", ",", ")")
 }
 func Complex128ListOptionListToString(o Complex128ListOptionList) string {
-    return MkStringComplex128ListOptionList(o, "List(", ",", ")")
+	return MkStringComplex128ListOptionList(o, "List(", ",", ")")
 }
 func AnyListOptionListToString(o AnyListOptionList) string {
-    return MkStringAnyListOptionList(o, "List(", ",", ")")
+	return MkStringAnyListOptionList(o, "List(", ",", ")")
 }
 func BoolOptionOptionListToString(o BoolOptionOptionList) string {
-    return MkStringBoolOptionOptionList(o, "List(", ",", ")")
+	return MkStringBoolOptionOptionList(o, "List(", ",", ")")
 }
 func StringOptionOptionListToString(o StringOptionOptionList) string {
-    return MkStringStringOptionOptionList(o, "List(", ",", ")")
+	return MkStringStringOptionOptionList(o, "List(", ",", ")")
 }
 func IntOptionOptionListToString(o IntOptionOptionList) string {
-    return MkStringIntOptionOptionList(o, "List(", ",", ")")
+	return MkStringIntOptionOptionList(o, "List(", ",", ")")
 }
 func Int8OptionOptionListToString(o Int8OptionOptionList) string {
-    return MkStringInt8OptionOptionList(o, "List(", ",", ")")
+	return MkStringInt8OptionOptionList(o, "List(", ",", ")")
 }
 func Int16OptionOptionListToString(o Int16OptionOptionList) string {
-    return MkStringInt16OptionOptionList(o, "List(", ",", ")")
+	return MkStringInt16OptionOptionList(o, "List(", ",", ")")
 }
 func Int32OptionOptionListToString(o Int32OptionOptionList) string {
-    return MkStringInt32OptionOptionList(o, "List(", ",", ")")
+	return MkStringInt32OptionOptionList(o, "List(", ",", ")")
 }
 func Int64OptionOptionListToString(o Int64OptionOptionList) string {
-    return MkStringInt64OptionOptionList(o, "List(", ",", ")")
+	return MkStringInt64OptionOptionList(o, "List(", ",", ")")
 }
 func UintOptionOptionListToString(o UintOptionOptionList) string {
-    return MkStringUintOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintOptionOptionList(o, "List(", ",", ")")
 }
 func Uint8OptionOptionListToString(o Uint8OptionOptionList) string {
-    return MkStringUint8OptionOptionList(o, "List(", ",", ")")
+	return MkStringUint8OptionOptionList(o, "List(", ",", ")")
 }
 func Uint16OptionOptionListToString(o Uint16OptionOptionList) string {
-    return MkStringUint16OptionOptionList(o, "List(", ",", ")")
+	return MkStringUint16OptionOptionList(o, "List(", ",", ")")
 }
 func Uint32OptionOptionListToString(o Uint32OptionOptionList) string {
-    return MkStringUint32OptionOptionList(o, "List(", ",", ")")
+	return MkStringUint32OptionOptionList(o, "List(", ",", ")")
 }
 func Uint64OptionOptionListToString(o Uint64OptionOptionList) string {
-    return MkStringUint64OptionOptionList(o, "List(", ",", ")")
+	return MkStringUint64OptionOptionList(o, "List(", ",", ")")
 }
 func UintptrOptionOptionListToString(o UintptrOptionOptionList) string {
-    return MkStringUintptrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintptrOptionOptionList(o, "List(", ",", ")")
 }
 func ByteOptionOptionListToString(o ByteOptionOptionList) string {
-    return MkStringByteOptionOptionList(o, "List(", ",", ")")
+	return MkStringByteOptionOptionList(o, "List(", ",", ")")
 }
 func RuneOptionOptionListToString(o RuneOptionOptionList) string {
-    return MkStringRuneOptionOptionList(o, "List(", ",", ")")
+	return MkStringRuneOptionOptionList(o, "List(", ",", ")")
 }
 func Float32OptionOptionListToString(o Float32OptionOptionList) string {
-    return MkStringFloat32OptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat32OptionOptionList(o, "List(", ",", ")")
 }
 func Float64OptionOptionListToString(o Float64OptionOptionList) string {
-    return MkStringFloat64OptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat64OptionOptionList(o, "List(", ",", ")")
 }
 func Complex64OptionOptionListToString(o Complex64OptionOptionList) string {
-    return MkStringComplex64OptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex64OptionOptionList(o, "List(", ",", ")")
 }
 func Complex128OptionOptionListToString(o Complex128OptionOptionList) string {
-    return MkStringComplex128OptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex128OptionOptionList(o, "List(", ",", ")")
 }
 func AnyOptionOptionListToString(o AnyOptionOptionList) string {
-    return MkStringAnyOptionOptionList(o, "List(", ",", ")")
+	return MkStringAnyOptionOptionList(o, "List(", ",", ")")
 }
 func BoolArrOptionOptionListToString(o BoolArrOptionOptionList) string {
-    return MkStringBoolArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringBoolArrOptionOptionList(o, "List(", ",", ")")
 }
 func StringArrOptionOptionListToString(o StringArrOptionOptionList) string {
-    return MkStringStringArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringStringArrOptionOptionList(o, "List(", ",", ")")
 }
 func IntArrOptionOptionListToString(o IntArrOptionOptionList) string {
-    return MkStringIntArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringIntArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int8ArrOptionOptionListToString(o Int8ArrOptionOptionList) string {
-    return MkStringInt8ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt8ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int16ArrOptionOptionListToString(o Int16ArrOptionOptionList) string {
-    return MkStringInt16ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt16ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int32ArrOptionOptionListToString(o Int32ArrOptionOptionList) string {
-    return MkStringInt32ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt32ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int64ArrOptionOptionListToString(o Int64ArrOptionOptionList) string {
-    return MkStringInt64ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt64ArrOptionOptionList(o, "List(", ",", ")")
 }
 func UintArrOptionOptionListToString(o UintArrOptionOptionList) string {
-    return MkStringUintArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint8ArrOptionOptionListToString(o Uint8ArrOptionOptionList) string {
-    return MkStringUint8ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint8ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint16ArrOptionOptionListToString(o Uint16ArrOptionOptionList) string {
-    return MkStringUint16ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint16ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint32ArrOptionOptionListToString(o Uint32ArrOptionOptionList) string {
-    return MkStringUint32ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint32ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint64ArrOptionOptionListToString(o Uint64ArrOptionOptionList) string {
-    return MkStringUint64ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint64ArrOptionOptionList(o, "List(", ",", ")")
 }
 func UintptrArrOptionOptionListToString(o UintptrArrOptionOptionList) string {
-    return MkStringUintptrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintptrArrOptionOptionList(o, "List(", ",", ")")
 }
 func ByteArrOptionOptionListToString(o ByteArrOptionOptionList) string {
-    return MkStringByteArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringByteArrOptionOptionList(o, "List(", ",", ")")
 }
 func RuneArrOptionOptionListToString(o RuneArrOptionOptionList) string {
-    return MkStringRuneArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringRuneArrOptionOptionList(o, "List(", ",", ")")
 }
 func Float32ArrOptionOptionListToString(o Float32ArrOptionOptionList) string {
-    return MkStringFloat32ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat32ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Float64ArrOptionOptionListToString(o Float64ArrOptionOptionList) string {
-    return MkStringFloat64ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat64ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Complex64ArrOptionOptionListToString(o Complex64ArrOptionOptionList) string {
-    return MkStringComplex64ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex64ArrOptionOptionList(o, "List(", ",", ")")
 }
 func Complex128ArrOptionOptionListToString(o Complex128ArrOptionOptionList) string {
-    return MkStringComplex128ArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex128ArrOptionOptionList(o, "List(", ",", ")")
 }
 func AnyArrOptionOptionListToString(o AnyArrOptionOptionList) string {
-    return MkStringAnyArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringAnyArrOptionOptionList(o, "List(", ",", ")")
 }
 func BoolArrArrOptionOptionListToString(o BoolArrArrOptionOptionList) string {
-    return MkStringBoolArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringBoolArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func StringArrArrOptionOptionListToString(o StringArrArrOptionOptionList) string {
-    return MkStringStringArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringStringArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func IntArrArrOptionOptionListToString(o IntArrArrOptionOptionList) string {
-    return MkStringIntArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringIntArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int8ArrArrOptionOptionListToString(o Int8ArrArrOptionOptionList) string {
-    return MkStringInt8ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt8ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int16ArrArrOptionOptionListToString(o Int16ArrArrOptionOptionList) string {
-    return MkStringInt16ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt16ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int32ArrArrOptionOptionListToString(o Int32ArrArrOptionOptionList) string {
-    return MkStringInt32ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt32ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int64ArrArrOptionOptionListToString(o Int64ArrArrOptionOptionList) string {
-    return MkStringInt64ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt64ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func UintArrArrOptionOptionListToString(o UintArrArrOptionOptionList) string {
-    return MkStringUintArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint8ArrArrOptionOptionListToString(o Uint8ArrArrOptionOptionList) string {
-    return MkStringUint8ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint8ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint16ArrArrOptionOptionListToString(o Uint16ArrArrOptionOptionList) string {
-    return MkStringUint16ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint16ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint32ArrArrOptionOptionListToString(o Uint32ArrArrOptionOptionList) string {
-    return MkStringUint32ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint32ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint64ArrArrOptionOptionListToString(o Uint64ArrArrOptionOptionList) string {
-    return MkStringUint64ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint64ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func UintptrArrArrOptionOptionListToString(o UintptrArrArrOptionOptionList) string {
-    return MkStringUintptrArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintptrArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func ByteArrArrOptionOptionListToString(o ByteArrArrOptionOptionList) string {
-    return MkStringByteArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringByteArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func RuneArrArrOptionOptionListToString(o RuneArrArrOptionOptionList) string {
-    return MkStringRuneArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringRuneArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Float32ArrArrOptionOptionListToString(o Float32ArrArrOptionOptionList) string {
-    return MkStringFloat32ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat32ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Float64ArrArrOptionOptionListToString(o Float64ArrArrOptionOptionList) string {
-    return MkStringFloat64ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat64ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Complex64ArrArrOptionOptionListToString(o Complex64ArrArrOptionOptionList) string {
-    return MkStringComplex64ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex64ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func Complex128ArrArrOptionOptionListToString(o Complex128ArrArrOptionOptionList) string {
-    return MkStringComplex128ArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex128ArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func AnyArrArrOptionOptionListToString(o AnyArrArrOptionOptionList) string {
-    return MkStringAnyArrArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringAnyArrArrOptionOptionList(o, "List(", ",", ")")
 }
 func BoolOptionArrOptionOptionListToString(o BoolOptionArrOptionOptionList) string {
-    return MkStringBoolOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringBoolOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func StringOptionArrOptionOptionListToString(o StringOptionArrOptionOptionList) string {
-    return MkStringStringOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringStringOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func IntOptionArrOptionOptionListToString(o IntOptionArrOptionOptionList) string {
-    return MkStringIntOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringIntOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int8OptionArrOptionOptionListToString(o Int8OptionArrOptionOptionList) string {
-    return MkStringInt8OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt8OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int16OptionArrOptionOptionListToString(o Int16OptionArrOptionOptionList) string {
-    return MkStringInt16OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt16OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int32OptionArrOptionOptionListToString(o Int32OptionArrOptionOptionList) string {
-    return MkStringInt32OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt32OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Int64OptionArrOptionOptionListToString(o Int64OptionArrOptionOptionList) string {
-    return MkStringInt64OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt64OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func UintOptionArrOptionOptionListToString(o UintOptionArrOptionOptionList) string {
-    return MkStringUintOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint8OptionArrOptionOptionListToString(o Uint8OptionArrOptionOptionList) string {
-    return MkStringUint8OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint8OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint16OptionArrOptionOptionListToString(o Uint16OptionArrOptionOptionList) string {
-    return MkStringUint16OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint16OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint32OptionArrOptionOptionListToString(o Uint32OptionArrOptionOptionList) string {
-    return MkStringUint32OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint32OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Uint64OptionArrOptionOptionListToString(o Uint64OptionArrOptionOptionList) string {
-    return MkStringUint64OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint64OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func UintptrOptionArrOptionOptionListToString(o UintptrOptionArrOptionOptionList) string {
-    return MkStringUintptrOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintptrOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func ByteOptionArrOptionOptionListToString(o ByteOptionArrOptionOptionList) string {
-    return MkStringByteOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringByteOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func RuneOptionArrOptionOptionListToString(o RuneOptionArrOptionOptionList) string {
-    return MkStringRuneOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringRuneOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Float32OptionArrOptionOptionListToString(o Float32OptionArrOptionOptionList) string {
-    return MkStringFloat32OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat32OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Float64OptionArrOptionOptionListToString(o Float64OptionArrOptionOptionList) string {
-    return MkStringFloat64OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat64OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Complex64OptionArrOptionOptionListToString(o Complex64OptionArrOptionOptionList) string {
-    return MkStringComplex64OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex64OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func Complex128OptionArrOptionOptionListToString(o Complex128OptionArrOptionOptionList) string {
-    return MkStringComplex128OptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex128OptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func AnyOptionArrOptionOptionListToString(o AnyOptionArrOptionOptionList) string {
-    return MkStringAnyOptionArrOptionOptionList(o, "List(", ",", ")")
+	return MkStringAnyOptionArrOptionOptionList(o, "List(", ",", ")")
 }
 func BoolListOptionOptionListToString(o BoolListOptionOptionList) string {
-    return MkStringBoolListOptionOptionList(o, "List(", ",", ")")
+	return MkStringBoolListOptionOptionList(o, "List(", ",", ")")
 }
 func StringListOptionOptionListToString(o StringListOptionOptionList) string {
-    return MkStringStringListOptionOptionList(o, "List(", ",", ")")
+	return MkStringStringListOptionOptionList(o, "List(", ",", ")")
 }
 func IntListOptionOptionListToString(o IntListOptionOptionList) string {
-    return MkStringIntListOptionOptionList(o, "List(", ",", ")")
+	return MkStringIntListOptionOptionList(o, "List(", ",", ")")
 }
 func Int8ListOptionOptionListToString(o Int8ListOptionOptionList) string {
-    return MkStringInt8ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt8ListOptionOptionList(o, "List(", ",", ")")
 }
 func Int16ListOptionOptionListToString(o Int16ListOptionOptionList) string {
-    return MkStringInt16ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt16ListOptionOptionList(o, "List(", ",", ")")
 }
 func Int32ListOptionOptionListToString(o Int32ListOptionOptionList) string {
-    return MkStringInt32ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt32ListOptionOptionList(o, "List(", ",", ")")
 }
 func Int64ListOptionOptionListToString(o Int64ListOptionOptionList) string {
-    return MkStringInt64ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringInt64ListOptionOptionList(o, "List(", ",", ")")
 }
 func UintListOptionOptionListToString(o UintListOptionOptionList) string {
-    return MkStringUintListOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintListOptionOptionList(o, "List(", ",", ")")
 }
 func Uint8ListOptionOptionListToString(o Uint8ListOptionOptionList) string {
-    return MkStringUint8ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint8ListOptionOptionList(o, "List(", ",", ")")
 }
 func Uint16ListOptionOptionListToString(o Uint16ListOptionOptionList) string {
-    return MkStringUint16ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint16ListOptionOptionList(o, "List(", ",", ")")
 }
 func Uint32ListOptionOptionListToString(o Uint32ListOptionOptionList) string {
-    return MkStringUint32ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint32ListOptionOptionList(o, "List(", ",", ")")
 }
 func Uint64ListOptionOptionListToString(o Uint64ListOptionOptionList) string {
-    return MkStringUint64ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringUint64ListOptionOptionList(o, "List(", ",", ")")
 }
 func UintptrListOptionOptionListToString(o UintptrListOptionOptionList) string {
-    return MkStringUintptrListOptionOptionList(o, "List(", ",", ")")
+	return MkStringUintptrListOptionOptionList(o, "List(", ",", ")")
 }
 func ByteListOptionOptionListToString(o ByteListOptionOptionList) string {
-    return MkStringByteListOptionOptionList(o, "List(", ",", ")")
+	return MkStringByteListOptionOptionList(o, "List(", ",", ")")
 }
 func RuneListOptionOptionListToString(o RuneListOptionOptionList) string {
-    return MkStringRuneListOptionOptionList(o, "List(", ",", ")")
+	return MkStringRuneListOptionOptionList(o, "List(", ",", ")")
 }
 func Float32ListOptionOptionListToString(o Float32ListOptionOptionList) string {
-    return MkStringFloat32ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat32ListOptionOptionList(o, "List(", ",", ")")
 }
 func Float64ListOptionOptionListToString(o Float64ListOptionOptionList) string {
-    return MkStringFloat64ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringFloat64ListOptionOptionList(o, "List(", ",", ")")
 }
 func Complex64ListOptionOptionListToString(o Complex64ListOptionOptionList) string {
-    return MkStringComplex64ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex64ListOptionOptionList(o, "List(", ",", ")")
 }
 func Complex128ListOptionOptionListToString(o Complex128ListOptionOptionList) string {
-    return MkStringComplex128ListOptionOptionList(o, "List(", ",", ")")
+	return MkStringComplex128ListOptionOptionList(o, "List(", ",", ")")
 }
 func AnyListOptionOptionListToString(o AnyListOptionOptionList) string {
-    return MkStringAnyListOptionOptionList(o, "List(", ",", ")")
+	return MkStringAnyListOptionOptionList(o, "List(", ",", ")")
+}
+func BoolOptionOptionOptionListToString(o BoolOptionOptionOptionList) string {
+	return MkStringBoolOptionOptionOptionList(o, "List(", ",", ")")
+}
+func StringOptionOptionOptionListToString(o StringOptionOptionOptionList) string {
+	return MkStringStringOptionOptionOptionList(o, "List(", ",", ")")
+}
+func IntOptionOptionOptionListToString(o IntOptionOptionOptionList) string {
+	return MkStringIntOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int8OptionOptionOptionListToString(o Int8OptionOptionOptionList) string {
+	return MkStringInt8OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int16OptionOptionOptionListToString(o Int16OptionOptionOptionList) string {
+	return MkStringInt16OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int32OptionOptionOptionListToString(o Int32OptionOptionOptionList) string {
+	return MkStringInt32OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int64OptionOptionOptionListToString(o Int64OptionOptionOptionList) string {
+	return MkStringInt64OptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintOptionOptionOptionListToString(o UintOptionOptionOptionList) string {
+	return MkStringUintOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint8OptionOptionOptionListToString(o Uint8OptionOptionOptionList) string {
+	return MkStringUint8OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint16OptionOptionOptionListToString(o Uint16OptionOptionOptionList) string {
+	return MkStringUint16OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint32OptionOptionOptionListToString(o Uint32OptionOptionOptionList) string {
+	return MkStringUint32OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint64OptionOptionOptionListToString(o Uint64OptionOptionOptionList) string {
+	return MkStringUint64OptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintptrOptionOptionOptionListToString(o UintptrOptionOptionOptionList) string {
+	return MkStringUintptrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func ByteOptionOptionOptionListToString(o ByteOptionOptionOptionList) string {
+	return MkStringByteOptionOptionOptionList(o, "List(", ",", ")")
+}
+func RuneOptionOptionOptionListToString(o RuneOptionOptionOptionList) string {
+	return MkStringRuneOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float32OptionOptionOptionListToString(o Float32OptionOptionOptionList) string {
+	return MkStringFloat32OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float64OptionOptionOptionListToString(o Float64OptionOptionOptionList) string {
+	return MkStringFloat64OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex64OptionOptionOptionListToString(o Complex64OptionOptionOptionList) string {
+	return MkStringComplex64OptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex128OptionOptionOptionListToString(o Complex128OptionOptionOptionList) string {
+	return MkStringComplex128OptionOptionOptionList(o, "List(", ",", ")")
+}
+func AnyOptionOptionOptionListToString(o AnyOptionOptionOptionList) string {
+	return MkStringAnyOptionOptionOptionList(o, "List(", ",", ")")
+}
+func BoolArrOptionOptionOptionListToString(o BoolArrOptionOptionOptionList) string {
+	return MkStringBoolArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func StringArrOptionOptionOptionListToString(o StringArrOptionOptionOptionList) string {
+	return MkStringStringArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func IntArrOptionOptionOptionListToString(o IntArrOptionOptionOptionList) string {
+	return MkStringIntArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int8ArrOptionOptionOptionListToString(o Int8ArrOptionOptionOptionList) string {
+	return MkStringInt8ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int16ArrOptionOptionOptionListToString(o Int16ArrOptionOptionOptionList) string {
+	return MkStringInt16ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int32ArrOptionOptionOptionListToString(o Int32ArrOptionOptionOptionList) string {
+	return MkStringInt32ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int64ArrOptionOptionOptionListToString(o Int64ArrOptionOptionOptionList) string {
+	return MkStringInt64ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintArrOptionOptionOptionListToString(o UintArrOptionOptionOptionList) string {
+	return MkStringUintArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint8ArrOptionOptionOptionListToString(o Uint8ArrOptionOptionOptionList) string {
+	return MkStringUint8ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint16ArrOptionOptionOptionListToString(o Uint16ArrOptionOptionOptionList) string {
+	return MkStringUint16ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint32ArrOptionOptionOptionListToString(o Uint32ArrOptionOptionOptionList) string {
+	return MkStringUint32ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint64ArrOptionOptionOptionListToString(o Uint64ArrOptionOptionOptionList) string {
+	return MkStringUint64ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintptrArrOptionOptionOptionListToString(o UintptrArrOptionOptionOptionList) string {
+	return MkStringUintptrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func ByteArrOptionOptionOptionListToString(o ByteArrOptionOptionOptionList) string {
+	return MkStringByteArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func RuneArrOptionOptionOptionListToString(o RuneArrOptionOptionOptionList) string {
+	return MkStringRuneArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float32ArrOptionOptionOptionListToString(o Float32ArrOptionOptionOptionList) string {
+	return MkStringFloat32ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float64ArrOptionOptionOptionListToString(o Float64ArrOptionOptionOptionList) string {
+	return MkStringFloat64ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex64ArrOptionOptionOptionListToString(o Complex64ArrOptionOptionOptionList) string {
+	return MkStringComplex64ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex128ArrOptionOptionOptionListToString(o Complex128ArrOptionOptionOptionList) string {
+	return MkStringComplex128ArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func AnyArrOptionOptionOptionListToString(o AnyArrOptionOptionOptionList) string {
+	return MkStringAnyArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func BoolArrArrOptionOptionOptionListToString(o BoolArrArrOptionOptionOptionList) string {
+	return MkStringBoolArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func StringArrArrOptionOptionOptionListToString(o StringArrArrOptionOptionOptionList) string {
+	return MkStringStringArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func IntArrArrOptionOptionOptionListToString(o IntArrArrOptionOptionOptionList) string {
+	return MkStringIntArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int8ArrArrOptionOptionOptionListToString(o Int8ArrArrOptionOptionOptionList) string {
+	return MkStringInt8ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int16ArrArrOptionOptionOptionListToString(o Int16ArrArrOptionOptionOptionList) string {
+	return MkStringInt16ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int32ArrArrOptionOptionOptionListToString(o Int32ArrArrOptionOptionOptionList) string {
+	return MkStringInt32ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int64ArrArrOptionOptionOptionListToString(o Int64ArrArrOptionOptionOptionList) string {
+	return MkStringInt64ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintArrArrOptionOptionOptionListToString(o UintArrArrOptionOptionOptionList) string {
+	return MkStringUintArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint8ArrArrOptionOptionOptionListToString(o Uint8ArrArrOptionOptionOptionList) string {
+	return MkStringUint8ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint16ArrArrOptionOptionOptionListToString(o Uint16ArrArrOptionOptionOptionList) string {
+	return MkStringUint16ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint32ArrArrOptionOptionOptionListToString(o Uint32ArrArrOptionOptionOptionList) string {
+	return MkStringUint32ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint64ArrArrOptionOptionOptionListToString(o Uint64ArrArrOptionOptionOptionList) string {
+	return MkStringUint64ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintptrArrArrOptionOptionOptionListToString(o UintptrArrArrOptionOptionOptionList) string {
+	return MkStringUintptrArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func ByteArrArrOptionOptionOptionListToString(o ByteArrArrOptionOptionOptionList) string {
+	return MkStringByteArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func RuneArrArrOptionOptionOptionListToString(o RuneArrArrOptionOptionOptionList) string {
+	return MkStringRuneArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float32ArrArrOptionOptionOptionListToString(o Float32ArrArrOptionOptionOptionList) string {
+	return MkStringFloat32ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float64ArrArrOptionOptionOptionListToString(o Float64ArrArrOptionOptionOptionList) string {
+	return MkStringFloat64ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex64ArrArrOptionOptionOptionListToString(o Complex64ArrArrOptionOptionOptionList) string {
+	return MkStringComplex64ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex128ArrArrOptionOptionOptionListToString(o Complex128ArrArrOptionOptionOptionList) string {
+	return MkStringComplex128ArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func AnyArrArrOptionOptionOptionListToString(o AnyArrArrOptionOptionOptionList) string {
+	return MkStringAnyArrArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func BoolOptionArrOptionOptionOptionListToString(o BoolOptionArrOptionOptionOptionList) string {
+	return MkStringBoolOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func StringOptionArrOptionOptionOptionListToString(o StringOptionArrOptionOptionOptionList) string {
+	return MkStringStringOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func IntOptionArrOptionOptionOptionListToString(o IntOptionArrOptionOptionOptionList) string {
+	return MkStringIntOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int8OptionArrOptionOptionOptionListToString(o Int8OptionArrOptionOptionOptionList) string {
+	return MkStringInt8OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int16OptionArrOptionOptionOptionListToString(o Int16OptionArrOptionOptionOptionList) string {
+	return MkStringInt16OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int32OptionArrOptionOptionOptionListToString(o Int32OptionArrOptionOptionOptionList) string {
+	return MkStringInt32OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int64OptionArrOptionOptionOptionListToString(o Int64OptionArrOptionOptionOptionList) string {
+	return MkStringInt64OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintOptionArrOptionOptionOptionListToString(o UintOptionArrOptionOptionOptionList) string {
+	return MkStringUintOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint8OptionArrOptionOptionOptionListToString(o Uint8OptionArrOptionOptionOptionList) string {
+	return MkStringUint8OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint16OptionArrOptionOptionOptionListToString(o Uint16OptionArrOptionOptionOptionList) string {
+	return MkStringUint16OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint32OptionArrOptionOptionOptionListToString(o Uint32OptionArrOptionOptionOptionList) string {
+	return MkStringUint32OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint64OptionArrOptionOptionOptionListToString(o Uint64OptionArrOptionOptionOptionList) string {
+	return MkStringUint64OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintptrOptionArrOptionOptionOptionListToString(o UintptrOptionArrOptionOptionOptionList) string {
+	return MkStringUintptrOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func ByteOptionArrOptionOptionOptionListToString(o ByteOptionArrOptionOptionOptionList) string {
+	return MkStringByteOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func RuneOptionArrOptionOptionOptionListToString(o RuneOptionArrOptionOptionOptionList) string {
+	return MkStringRuneOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float32OptionArrOptionOptionOptionListToString(o Float32OptionArrOptionOptionOptionList) string {
+	return MkStringFloat32OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float64OptionArrOptionOptionOptionListToString(o Float64OptionArrOptionOptionOptionList) string {
+	return MkStringFloat64OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex64OptionArrOptionOptionOptionListToString(o Complex64OptionArrOptionOptionOptionList) string {
+	return MkStringComplex64OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex128OptionArrOptionOptionOptionListToString(o Complex128OptionArrOptionOptionOptionList) string {
+	return MkStringComplex128OptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func AnyOptionArrOptionOptionOptionListToString(o AnyOptionArrOptionOptionOptionList) string {
+	return MkStringAnyOptionArrOptionOptionOptionList(o, "List(", ",", ")")
+}
+func BoolListOptionOptionOptionListToString(o BoolListOptionOptionOptionList) string {
+	return MkStringBoolListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func StringListOptionOptionOptionListToString(o StringListOptionOptionOptionList) string {
+	return MkStringStringListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func IntListOptionOptionOptionListToString(o IntListOptionOptionOptionList) string {
+	return MkStringIntListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int8ListOptionOptionOptionListToString(o Int8ListOptionOptionOptionList) string {
+	return MkStringInt8ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int16ListOptionOptionOptionListToString(o Int16ListOptionOptionOptionList) string {
+	return MkStringInt16ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int32ListOptionOptionOptionListToString(o Int32ListOptionOptionOptionList) string {
+	return MkStringInt32ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Int64ListOptionOptionOptionListToString(o Int64ListOptionOptionOptionList) string {
+	return MkStringInt64ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintListOptionOptionOptionListToString(o UintListOptionOptionOptionList) string {
+	return MkStringUintListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint8ListOptionOptionOptionListToString(o Uint8ListOptionOptionOptionList) string {
+	return MkStringUint8ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint16ListOptionOptionOptionListToString(o Uint16ListOptionOptionOptionList) string {
+	return MkStringUint16ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint32ListOptionOptionOptionListToString(o Uint32ListOptionOptionOptionList) string {
+	return MkStringUint32ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Uint64ListOptionOptionOptionListToString(o Uint64ListOptionOptionOptionList) string {
+	return MkStringUint64ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func UintptrListOptionOptionOptionListToString(o UintptrListOptionOptionOptionList) string {
+	return MkStringUintptrListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func ByteListOptionOptionOptionListToString(o ByteListOptionOptionOptionList) string {
+	return MkStringByteListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func RuneListOptionOptionOptionListToString(o RuneListOptionOptionOptionList) string {
+	return MkStringRuneListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float32ListOptionOptionOptionListToString(o Float32ListOptionOptionOptionList) string {
+	return MkStringFloat32ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Float64ListOptionOptionOptionListToString(o Float64ListOptionOptionOptionList) string {
+	return MkStringFloat64ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex64ListOptionOptionOptionListToString(o Complex64ListOptionOptionOptionList) string {
+	return MkStringComplex64ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func Complex128ListOptionOptionOptionListToString(o Complex128ListOptionOptionOptionList) string {
+	return MkStringComplex128ListOptionOptionOptionList(o, "List(", ",", ")")
+}
+func AnyListOptionOptionOptionListToString(o AnyListOptionOptionOptionList) string {
+	return MkStringAnyListOptionOptionOptionList(o, "List(", ",", ")")
 }
 func BoolArrListToString(o BoolArrList) string {
-    return MkStringBoolArrList(o, "List(", ",", ")")
+	return MkStringBoolArrList(o, "List(", ",", ")")
 }
 func StringArrListToString(o StringArrList) string {
-    return MkStringStringArrList(o, "List(", ",", ")")
+	return MkStringStringArrList(o, "List(", ",", ")")
 }
 func IntArrListToString(o IntArrList) string {
-    return MkStringIntArrList(o, "List(", ",", ")")
+	return MkStringIntArrList(o, "List(", ",", ")")
 }
 func Int8ArrListToString(o Int8ArrList) string {
-    return MkStringInt8ArrList(o, "List(", ",", ")")
+	return MkStringInt8ArrList(o, "List(", ",", ")")
 }
 func Int16ArrListToString(o Int16ArrList) string {
-    return MkStringInt16ArrList(o, "List(", ",", ")")
+	return MkStringInt16ArrList(o, "List(", ",", ")")
 }
 func Int32ArrListToString(o Int32ArrList) string {
-    return MkStringInt32ArrList(o, "List(", ",", ")")
+	return MkStringInt32ArrList(o, "List(", ",", ")")
 }
 func Int64ArrListToString(o Int64ArrList) string {
-    return MkStringInt64ArrList(o, "List(", ",", ")")
+	return MkStringInt64ArrList(o, "List(", ",", ")")
 }
 func UintArrListToString(o UintArrList) string {
-    return MkStringUintArrList(o, "List(", ",", ")")
+	return MkStringUintArrList(o, "List(", ",", ")")
 }
 func Uint8ArrListToString(o Uint8ArrList) string {
-    return MkStringUint8ArrList(o, "List(", ",", ")")
+	return MkStringUint8ArrList(o, "List(", ",", ")")
 }
 func Uint16ArrListToString(o Uint16ArrList) string {
-    return MkStringUint16ArrList(o, "List(", ",", ")")
+	return MkStringUint16ArrList(o, "List(", ",", ")")
 }
 func Uint32ArrListToString(o Uint32ArrList) string {
-    return MkStringUint32ArrList(o, "List(", ",", ")")
+	return MkStringUint32ArrList(o, "List(", ",", ")")
 }
 func Uint64ArrListToString(o Uint64ArrList) string {
-    return MkStringUint64ArrList(o, "List(", ",", ")")
+	return MkStringUint64ArrList(o, "List(", ",", ")")
 }
 func UintptrArrListToString(o UintptrArrList) string {
-    return MkStringUintptrArrList(o, "List(", ",", ")")
+	return MkStringUintptrArrList(o, "List(", ",", ")")
 }
 func ByteArrListToString(o ByteArrList) string {
-    return MkStringByteArrList(o, "List(", ",", ")")
+	return MkStringByteArrList(o, "List(", ",", ")")
 }
 func RuneArrListToString(o RuneArrList) string {
-    return MkStringRuneArrList(o, "List(", ",", ")")
+	return MkStringRuneArrList(o, "List(", ",", ")")
 }
 func Float32ArrListToString(o Float32ArrList) string {
-    return MkStringFloat32ArrList(o, "List(", ",", ")")
+	return MkStringFloat32ArrList(o, "List(", ",", ")")
 }
 func Float64ArrListToString(o Float64ArrList) string {
-    return MkStringFloat64ArrList(o, "List(", ",", ")")
+	return MkStringFloat64ArrList(o, "List(", ",", ")")
 }
 func Complex64ArrListToString(o Complex64ArrList) string {
-    return MkStringComplex64ArrList(o, "List(", ",", ")")
+	return MkStringComplex64ArrList(o, "List(", ",", ")")
 }
 func Complex128ArrListToString(o Complex128ArrList) string {
-    return MkStringComplex128ArrList(o, "List(", ",", ")")
+	return MkStringComplex128ArrList(o, "List(", ",", ")")
 }
 func AnyArrListToString(o AnyArrList) string {
-    return MkStringAnyArrList(o, "List(", ",", ")")
+	return MkStringAnyArrList(o, "List(", ",", ")")
 }
 func BoolArrArrListToString(o BoolArrArrList) string {
-    return MkStringBoolArrArrList(o, "List(", ",", ")")
+	return MkStringBoolArrArrList(o, "List(", ",", ")")
 }
 func StringArrArrListToString(o StringArrArrList) string {
-    return MkStringStringArrArrList(o, "List(", ",", ")")
+	return MkStringStringArrArrList(o, "List(", ",", ")")
 }
 func IntArrArrListToString(o IntArrArrList) string {
-    return MkStringIntArrArrList(o, "List(", ",", ")")
+	return MkStringIntArrArrList(o, "List(", ",", ")")
 }
 func Int8ArrArrListToString(o Int8ArrArrList) string {
-    return MkStringInt8ArrArrList(o, "List(", ",", ")")
+	return MkStringInt8ArrArrList(o, "List(", ",", ")")
 }
 func Int16ArrArrListToString(o Int16ArrArrList) string {
-    return MkStringInt16ArrArrList(o, "List(", ",", ")")
+	return MkStringInt16ArrArrList(o, "List(", ",", ")")
 }
 func Int32ArrArrListToString(o Int32ArrArrList) string {
-    return MkStringInt32ArrArrList(o, "List(", ",", ")")
+	return MkStringInt32ArrArrList(o, "List(", ",", ")")
 }
 func Int64ArrArrListToString(o Int64ArrArrList) string {
-    return MkStringInt64ArrArrList(o, "List(", ",", ")")
+	return MkStringInt64ArrArrList(o, "List(", ",", ")")
 }
 func UintArrArrListToString(o UintArrArrList) string {
-    return MkStringUintArrArrList(o, "List(", ",", ")")
+	return MkStringUintArrArrList(o, "List(", ",", ")")
 }
 func Uint8ArrArrListToString(o Uint8ArrArrList) string {
-    return MkStringUint8ArrArrList(o, "List(", ",", ")")
+	return MkStringUint8ArrArrList(o, "List(", ",", ")")
 }
 func Uint16ArrArrListToString(o Uint16ArrArrList) string {
-    return MkStringUint16ArrArrList(o, "List(", ",", ")")
+	return MkStringUint16ArrArrList(o, "List(", ",", ")")
 }
 func Uint32ArrArrListToString(o Uint32ArrArrList) string {
-    return MkStringUint32ArrArrList(o, "List(", ",", ")")
+	return MkStringUint32ArrArrList(o, "List(", ",", ")")
 }
 func Uint64ArrArrListToString(o Uint64ArrArrList) string {
-    return MkStringUint64ArrArrList(o, "List(", ",", ")")
+	return MkStringUint64ArrArrList(o, "List(", ",", ")")
 }
 func UintptrArrArrListToString(o UintptrArrArrList) string {
-    return MkStringUintptrArrArrList(o, "List(", ",", ")")
+	return MkStringUintptrArrArrList(o, "List(", ",", ")")
 }
 func ByteArrArrListToString(o ByteArrArrList) string {
-    return MkStringByteArrArrList(o, "List(", ",", ")")
+	return MkStringByteArrArrList(o, "List(", ",", ")")
 }
 func RuneArrArrListToString(o RuneArrArrList) string {
-    return MkStringRuneArrArrList(o, "List(", ",", ")")
+	return MkStringRuneArrArrList(o, "List(", ",", ")")
 }
 func Float32ArrArrListToString(o Float32ArrArrList) string {
-    return MkStringFloat32ArrArrList(o, "List(", ",", ")")
+	return MkStringFloat32ArrArrList(o, "List(", ",", ")")
 }
 func Float64ArrArrListToString(o Float64ArrArrList) string {
-    return MkStringFloat64ArrArrList(o, "List(", ",", ")")
+	return MkStringFloat64ArrArrList(o, "List(", ",", ")")
 }
 func Complex64ArrArrListToString(o Complex64ArrArrList) string {
-    return MkStringComplex64ArrArrList(o, "List(", ",", ")")
+	return MkStringComplex64ArrArrList(o, "List(", ",", ")")
 }
 func Complex128ArrArrListToString(o Complex128ArrArrList) string {
-    return MkStringComplex128ArrArrList(o, "List(", ",", ")")
+	return MkStringComplex128ArrArrList(o, "List(", ",", ")")
 }
 func AnyArrArrListToString(o AnyArrArrList) string {
-    return MkStringAnyArrArrList(o, "List(", ",", ")")
+	return MkStringAnyArrArrList(o, "List(", ",", ")")
 }
 func BoolOptionArrListToString(o BoolOptionArrList) string {
-    return MkStringBoolOptionArrList(o, "List(", ",", ")")
+	return MkStringBoolOptionArrList(o, "List(", ",", ")")
 }
 func StringOptionArrListToString(o StringOptionArrList) string {
-    return MkStringStringOptionArrList(o, "List(", ",", ")")
+	return MkStringStringOptionArrList(o, "List(", ",", ")")
 }
 func IntOptionArrListToString(o IntOptionArrList) string {
-    return MkStringIntOptionArrList(o, "List(", ",", ")")
+	return MkStringIntOptionArrList(o, "List(", ",", ")")
 }
 func Int8OptionArrListToString(o Int8OptionArrList) string {
-    return MkStringInt8OptionArrList(o, "List(", ",", ")")
+	return MkStringInt8OptionArrList(o, "List(", ",", ")")
 }
 func Int16OptionArrListToString(o Int16OptionArrList) string {
-    return MkStringInt16OptionArrList(o, "List(", ",", ")")
+	return MkStringInt16OptionArrList(o, "List(", ",", ")")
 }
 func Int32OptionArrListToString(o Int32OptionArrList) string {
-    return MkStringInt32OptionArrList(o, "List(", ",", ")")
+	return MkStringInt32OptionArrList(o, "List(", ",", ")")
 }
 func Int64OptionArrListToString(o Int64OptionArrList) string {
-    return MkStringInt64OptionArrList(o, "List(", ",", ")")
+	return MkStringInt64OptionArrList(o, "List(", ",", ")")
 }
 func UintOptionArrListToString(o UintOptionArrList) string {
-    return MkStringUintOptionArrList(o, "List(", ",", ")")
+	return MkStringUintOptionArrList(o, "List(", ",", ")")
 }
 func Uint8OptionArrListToString(o Uint8OptionArrList) string {
-    return MkStringUint8OptionArrList(o, "List(", ",", ")")
+	return MkStringUint8OptionArrList(o, "List(", ",", ")")
 }
 func Uint16OptionArrListToString(o Uint16OptionArrList) string {
-    return MkStringUint16OptionArrList(o, "List(", ",", ")")
+	return MkStringUint16OptionArrList(o, "List(", ",", ")")
 }
 func Uint32OptionArrListToString(o Uint32OptionArrList) string {
-    return MkStringUint32OptionArrList(o, "List(", ",", ")")
+	return MkStringUint32OptionArrList(o, "List(", ",", ")")
 }
 func Uint64OptionArrListToString(o Uint64OptionArrList) string {
-    return MkStringUint64OptionArrList(o, "List(", ",", ")")
+	return MkStringUint64OptionArrList(o, "List(", ",", ")")
 }
 func UintptrOptionArrListToString(o UintptrOptionArrList) string {
-    return MkStringUintptrOptionArrList(o, "List(", ",", ")")
+	return MkStringUintptrOptionArrList(o, "List(", ",", ")")
 }
 func ByteOptionArrListToString(o ByteOptionArrList) string {
-    return MkStringByteOptionArrList(o, "List(", ",", ")")
+	return MkStringByteOptionArrList(o, "List(", ",", ")")
 }
 func RuneOptionArrListToString(o RuneOptionArrList) string {
-    return MkStringRuneOptionArrList(o, "List(", ",", ")")
+	return MkStringRuneOptionArrList(o, "List(", ",", ")")
 }
 func Float32OptionArrListToString(o Float32OptionArrList) string {
-    return MkStringFloat32OptionArrList(o, "List(", ",", ")")
+	return MkStringFloat32OptionArrList(o, "List(", ",", ")")
 }
 func Float64OptionArrListToString(o Float64OptionArrList) string {
-    return MkStringFloat64OptionArrList(o, "List(", ",", ")")
+	return MkStringFloat64OptionArrList(o, "List(", ",", ")")
 }
 func Complex64OptionArrListToString(o Complex64OptionArrList) string {
-    return MkStringComplex64OptionArrList(o, "List(", ",", ")")
+	return MkStringComplex64OptionArrList(o, "List(", ",", ")")
 }
 func Complex128OptionArrListToString(o Complex128OptionArrList) string {
-    return MkStringComplex128OptionArrList(o, "List(", ",", ")")
+	return MkStringComplex128OptionArrList(o, "List(", ",", ")")
 }
 func AnyOptionArrListToString(o AnyOptionArrList) string {
-    return MkStringAnyOptionArrList(o, "List(", ",", ")")
+	return MkStringAnyOptionArrList(o, "List(", ",", ")")
 }
 func BoolListListToString(o BoolListList) string {
-    return MkStringBoolListList(o, "List(", ",", ")")
+	return MkStringBoolListList(o, "List(", ",", ")")
 }
 func StringListListToString(o StringListList) string {
-    return MkStringStringListList(o, "List(", ",", ")")
+	return MkStringStringListList(o, "List(", ",", ")")
 }
 func IntListListToString(o IntListList) string {
-    return MkStringIntListList(o, "List(", ",", ")")
+	return MkStringIntListList(o, "List(", ",", ")")
 }
 func Int8ListListToString(o Int8ListList) string {
-    return MkStringInt8ListList(o, "List(", ",", ")")
+	return MkStringInt8ListList(o, "List(", ",", ")")
 }
 func Int16ListListToString(o Int16ListList) string {
-    return MkStringInt16ListList(o, "List(", ",", ")")
+	return MkStringInt16ListList(o, "List(", ",", ")")
 }
 func Int32ListListToString(o Int32ListList) string {
-    return MkStringInt32ListList(o, "List(", ",", ")")
+	return MkStringInt32ListList(o, "List(", ",", ")")
 }
 func Int64ListListToString(o Int64ListList) string {
-    return MkStringInt64ListList(o, "List(", ",", ")")
+	return MkStringInt64ListList(o, "List(", ",", ")")
 }
 func UintListListToString(o UintListList) string {
-    return MkStringUintListList(o, "List(", ",", ")")
+	return MkStringUintListList(o, "List(", ",", ")")
 }
 func Uint8ListListToString(o Uint8ListList) string {
-    return MkStringUint8ListList(o, "List(", ",", ")")
+	return MkStringUint8ListList(o, "List(", ",", ")")
 }
 func Uint16ListListToString(o Uint16ListList) string {
-    return MkStringUint16ListList(o, "List(", ",", ")")
+	return MkStringUint16ListList(o, "List(", ",", ")")
 }
 func Uint32ListListToString(o Uint32ListList) string {
-    return MkStringUint32ListList(o, "List(", ",", ")")
+	return MkStringUint32ListList(o, "List(", ",", ")")
 }
 func Uint64ListListToString(o Uint64ListList) string {
-    return MkStringUint64ListList(o, "List(", ",", ")")
+	return MkStringUint64ListList(o, "List(", ",", ")")
 }
 func UintptrListListToString(o UintptrListList) string {
-    return MkStringUintptrListList(o, "List(", ",", ")")
+	return MkStringUintptrListList(o, "List(", ",", ")")
 }
 func ByteListListToString(o ByteListList) string {
-    return MkStringByteListList(o, "List(", ",", ")")
+	return MkStringByteListList(o, "List(", ",", ")")
 }
 func RuneListListToString(o RuneListList) string {
-    return MkStringRuneListList(o, "List(", ",", ")")
+	return MkStringRuneListList(o, "List(", ",", ")")
 }
 func Float32ListListToString(o Float32ListList) string {
-    return MkStringFloat32ListList(o, "List(", ",", ")")
+	return MkStringFloat32ListList(o, "List(", ",", ")")
 }
 func Float64ListListToString(o Float64ListList) string {
-    return MkStringFloat64ListList(o, "List(", ",", ")")
+	return MkStringFloat64ListList(o, "List(", ",", ")")
 }
 func Complex64ListListToString(o Complex64ListList) string {
-    return MkStringComplex64ListList(o, "List(", ",", ")")
+	return MkStringComplex64ListList(o, "List(", ",", ")")
 }
 func Complex128ListListToString(o Complex128ListList) string {
-    return MkStringComplex128ListList(o, "List(", ",", ")")
+	return MkStringComplex128ListList(o, "List(", ",", ")")
 }
 func AnyListListToString(o AnyListList) string {
-    return MkStringAnyListList(o, "List(", ",", ")")
+	return MkStringAnyListList(o, "List(", ",", ")")
 }

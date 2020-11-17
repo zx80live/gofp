@@ -3,2104 +3,2803 @@
 
 package fp
 
-
 func MakeBoolList(elements ...bool) BoolList {
-  xs := NilBoolList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringList(elements ...string) StringList {
-  xs := NilStringList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntList(elements ...int) IntList {
-  xs := NilIntList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8List(elements ...int8) Int8List {
-  xs := NilInt8List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16List(elements ...int16) Int16List {
-  xs := NilInt16List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32List(elements ...int32) Int32List {
-  xs := NilInt32List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64List(elements ...int64) Int64List {
-  xs := NilInt64List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintList(elements ...uint) UintList {
-  xs := NilUintList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8List(elements ...uint8) Uint8List {
-  xs := NilUint8List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16List(elements ...uint16) Uint16List {
-  xs := NilUint16List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32List(elements ...uint32) Uint32List {
-  xs := NilUint32List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64List(elements ...uint64) Uint64List {
-  xs := NilUint64List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrList(elements ...uintptr) UintptrList {
-  xs := NilUintptrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteList(elements ...byte) ByteList {
-  xs := NilByteList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneList(elements ...rune) RuneList {
-  xs := NilRuneList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32List(elements ...float32) Float32List {
-  xs := NilFloat32List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64List(elements ...float64) Float64List {
-  xs := NilFloat64List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64List(elements ...complex64) Complex64List {
-  xs := NilComplex64List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128List(elements ...complex128) Complex128List {
-  xs := NilComplex128List
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128List
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyList(elements ...Any) AnyList {
-  xs := NilAnyList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolOptionList(elements ...BoolOption) BoolOptionList {
-  xs := NilBoolOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringOptionList(elements ...StringOption) StringOptionList {
-  xs := NilStringOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntOptionList(elements ...IntOption) IntOptionList {
-  xs := NilIntOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8OptionList(elements ...Int8Option) Int8OptionList {
-  xs := NilInt8OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16OptionList(elements ...Int16Option) Int16OptionList {
-  xs := NilInt16OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32OptionList(elements ...Int32Option) Int32OptionList {
-  xs := NilInt32OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64OptionList(elements ...Int64Option) Int64OptionList {
-  xs := NilInt64OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintOptionList(elements ...UintOption) UintOptionList {
-  xs := NilUintOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8OptionList(elements ...Uint8Option) Uint8OptionList {
-  xs := NilUint8OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16OptionList(elements ...Uint16Option) Uint16OptionList {
-  xs := NilUint16OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32OptionList(elements ...Uint32Option) Uint32OptionList {
-  xs := NilUint32OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64OptionList(elements ...Uint64Option) Uint64OptionList {
-  xs := NilUint64OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrOptionList(elements ...UintptrOption) UintptrOptionList {
-  xs := NilUintptrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteOptionList(elements ...ByteOption) ByteOptionList {
-  xs := NilByteOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneOptionList(elements ...RuneOption) RuneOptionList {
-  xs := NilRuneOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32OptionList(elements ...Float32Option) Float32OptionList {
-  xs := NilFloat32OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64OptionList(elements ...Float64Option) Float64OptionList {
-  xs := NilFloat64OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64OptionList(elements ...Complex64Option) Complex64OptionList {
-  xs := NilComplex64OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128OptionList(elements ...Complex128Option) Complex128OptionList {
-  xs := NilComplex128OptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128OptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyOptionList(elements ...AnyOption) AnyOptionList {
-  xs := NilAnyOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolArrOptionList(elements ...BoolArrOption) BoolArrOptionList {
-  xs := NilBoolArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringArrOptionList(elements ...StringArrOption) StringArrOptionList {
-  xs := NilStringArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntArrOptionList(elements ...IntArrOption) IntArrOptionList {
-  xs := NilIntArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ArrOptionList(elements ...Int8ArrOption) Int8ArrOptionList {
-  xs := NilInt8ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ArrOptionList(elements ...Int16ArrOption) Int16ArrOptionList {
-  xs := NilInt16ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ArrOptionList(elements ...Int32ArrOption) Int32ArrOptionList {
-  xs := NilInt32ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ArrOptionList(elements ...Int64ArrOption) Int64ArrOptionList {
-  xs := NilInt64ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintArrOptionList(elements ...UintArrOption) UintArrOptionList {
-  xs := NilUintArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ArrOptionList(elements ...Uint8ArrOption) Uint8ArrOptionList {
-  xs := NilUint8ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ArrOptionList(elements ...Uint16ArrOption) Uint16ArrOptionList {
-  xs := NilUint16ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ArrOptionList(elements ...Uint32ArrOption) Uint32ArrOptionList {
-  xs := NilUint32ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ArrOptionList(elements ...Uint64ArrOption) Uint64ArrOptionList {
-  xs := NilUint64ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrArrOptionList(elements ...UintptrArrOption) UintptrArrOptionList {
-  xs := NilUintptrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteArrOptionList(elements ...ByteArrOption) ByteArrOptionList {
-  xs := NilByteArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneArrOptionList(elements ...RuneArrOption) RuneArrOptionList {
-  xs := NilRuneArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ArrOptionList(elements ...Float32ArrOption) Float32ArrOptionList {
-  xs := NilFloat32ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ArrOptionList(elements ...Float64ArrOption) Float64ArrOptionList {
-  xs := NilFloat64ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ArrOptionList(elements ...Complex64ArrOption) Complex64ArrOptionList {
-  xs := NilComplex64ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ArrOptionList(elements ...Complex128ArrOption) Complex128ArrOptionList {
-  xs := NilComplex128ArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyArrOptionList(elements ...AnyArrOption) AnyArrOptionList {
-  xs := NilAnyArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolArrArrOptionList(elements ...BoolArrArrOption) BoolArrArrOptionList {
-  xs := NilBoolArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringArrArrOptionList(elements ...StringArrArrOption) StringArrArrOptionList {
-  xs := NilStringArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntArrArrOptionList(elements ...IntArrArrOption) IntArrArrOptionList {
-  xs := NilIntArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ArrArrOptionList(elements ...Int8ArrArrOption) Int8ArrArrOptionList {
-  xs := NilInt8ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ArrArrOptionList(elements ...Int16ArrArrOption) Int16ArrArrOptionList {
-  xs := NilInt16ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ArrArrOptionList(elements ...Int32ArrArrOption) Int32ArrArrOptionList {
-  xs := NilInt32ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ArrArrOptionList(elements ...Int64ArrArrOption) Int64ArrArrOptionList {
-  xs := NilInt64ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintArrArrOptionList(elements ...UintArrArrOption) UintArrArrOptionList {
-  xs := NilUintArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ArrArrOptionList(elements ...Uint8ArrArrOption) Uint8ArrArrOptionList {
-  xs := NilUint8ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ArrArrOptionList(elements ...Uint16ArrArrOption) Uint16ArrArrOptionList {
-  xs := NilUint16ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ArrArrOptionList(elements ...Uint32ArrArrOption) Uint32ArrArrOptionList {
-  xs := NilUint32ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ArrArrOptionList(elements ...Uint64ArrArrOption) Uint64ArrArrOptionList {
-  xs := NilUint64ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrArrArrOptionList(elements ...UintptrArrArrOption) UintptrArrArrOptionList {
-  xs := NilUintptrArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteArrArrOptionList(elements ...ByteArrArrOption) ByteArrArrOptionList {
-  xs := NilByteArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneArrArrOptionList(elements ...RuneArrArrOption) RuneArrArrOptionList {
-  xs := NilRuneArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ArrArrOptionList(elements ...Float32ArrArrOption) Float32ArrArrOptionList {
-  xs := NilFloat32ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ArrArrOptionList(elements ...Float64ArrArrOption) Float64ArrArrOptionList {
-  xs := NilFloat64ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ArrArrOptionList(elements ...Complex64ArrArrOption) Complex64ArrArrOptionList {
-  xs := NilComplex64ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ArrArrOptionList(elements ...Complex128ArrArrOption) Complex128ArrArrOptionList {
-  xs := NilComplex128ArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyArrArrOptionList(elements ...AnyArrArrOption) AnyArrArrOptionList {
-  xs := NilAnyArrArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyArrArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolOptionArrOptionList(elements ...BoolOptionArrOption) BoolOptionArrOptionList {
-  xs := NilBoolOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringOptionArrOptionList(elements ...StringOptionArrOption) StringOptionArrOptionList {
-  xs := NilStringOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntOptionArrOptionList(elements ...IntOptionArrOption) IntOptionArrOptionList {
-  xs := NilIntOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8OptionArrOptionList(elements ...Int8OptionArrOption) Int8OptionArrOptionList {
-  xs := NilInt8OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16OptionArrOptionList(elements ...Int16OptionArrOption) Int16OptionArrOptionList {
-  xs := NilInt16OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32OptionArrOptionList(elements ...Int32OptionArrOption) Int32OptionArrOptionList {
-  xs := NilInt32OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64OptionArrOptionList(elements ...Int64OptionArrOption) Int64OptionArrOptionList {
-  xs := NilInt64OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintOptionArrOptionList(elements ...UintOptionArrOption) UintOptionArrOptionList {
-  xs := NilUintOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8OptionArrOptionList(elements ...Uint8OptionArrOption) Uint8OptionArrOptionList {
-  xs := NilUint8OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16OptionArrOptionList(elements ...Uint16OptionArrOption) Uint16OptionArrOptionList {
-  xs := NilUint16OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32OptionArrOptionList(elements ...Uint32OptionArrOption) Uint32OptionArrOptionList {
-  xs := NilUint32OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64OptionArrOptionList(elements ...Uint64OptionArrOption) Uint64OptionArrOptionList {
-  xs := NilUint64OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrOptionArrOptionList(elements ...UintptrOptionArrOption) UintptrOptionArrOptionList {
-  xs := NilUintptrOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteOptionArrOptionList(elements ...ByteOptionArrOption) ByteOptionArrOptionList {
-  xs := NilByteOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneOptionArrOptionList(elements ...RuneOptionArrOption) RuneOptionArrOptionList {
-  xs := NilRuneOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32OptionArrOptionList(elements ...Float32OptionArrOption) Float32OptionArrOptionList {
-  xs := NilFloat32OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64OptionArrOptionList(elements ...Float64OptionArrOption) Float64OptionArrOptionList {
-  xs := NilFloat64OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64OptionArrOptionList(elements ...Complex64OptionArrOption) Complex64OptionArrOptionList {
-  xs := NilComplex64OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128OptionArrOptionList(elements ...Complex128OptionArrOption) Complex128OptionArrOptionList {
-  xs := NilComplex128OptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128OptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyOptionArrOptionList(elements ...AnyOptionArrOption) AnyOptionArrOptionList {
-  xs := NilAnyOptionArrOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyOptionArrOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolListOptionList(elements ...BoolListOption) BoolListOptionList {
-  xs := NilBoolListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringListOptionList(elements ...StringListOption) StringListOptionList {
-  xs := NilStringListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntListOptionList(elements ...IntListOption) IntListOptionList {
-  xs := NilIntListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ListOptionList(elements ...Int8ListOption) Int8ListOptionList {
-  xs := NilInt8ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ListOptionList(elements ...Int16ListOption) Int16ListOptionList {
-  xs := NilInt16ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ListOptionList(elements ...Int32ListOption) Int32ListOptionList {
-  xs := NilInt32ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ListOptionList(elements ...Int64ListOption) Int64ListOptionList {
-  xs := NilInt64ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintListOptionList(elements ...UintListOption) UintListOptionList {
-  xs := NilUintListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ListOptionList(elements ...Uint8ListOption) Uint8ListOptionList {
-  xs := NilUint8ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ListOptionList(elements ...Uint16ListOption) Uint16ListOptionList {
-  xs := NilUint16ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ListOptionList(elements ...Uint32ListOption) Uint32ListOptionList {
-  xs := NilUint32ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ListOptionList(elements ...Uint64ListOption) Uint64ListOptionList {
-  xs := NilUint64ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrListOptionList(elements ...UintptrListOption) UintptrListOptionList {
-  xs := NilUintptrListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteListOptionList(elements ...ByteListOption) ByteListOptionList {
-  xs := NilByteListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneListOptionList(elements ...RuneListOption) RuneListOptionList {
-  xs := NilRuneListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ListOptionList(elements ...Float32ListOption) Float32ListOptionList {
-  xs := NilFloat32ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ListOptionList(elements ...Float64ListOption) Float64ListOptionList {
-  xs := NilFloat64ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ListOptionList(elements ...Complex64ListOption) Complex64ListOptionList {
-  xs := NilComplex64ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ListOptionList(elements ...Complex128ListOption) Complex128ListOptionList {
-  xs := NilComplex128ListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyListOptionList(elements ...AnyListOption) AnyListOptionList {
-  xs := NilAnyListOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyListOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolOptionOptionList(elements ...BoolOptionOption) BoolOptionOptionList {
-  xs := NilBoolOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringOptionOptionList(elements ...StringOptionOption) StringOptionOptionList {
-  xs := NilStringOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntOptionOptionList(elements ...IntOptionOption) IntOptionOptionList {
-  xs := NilIntOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8OptionOptionList(elements ...Int8OptionOption) Int8OptionOptionList {
-  xs := NilInt8OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16OptionOptionList(elements ...Int16OptionOption) Int16OptionOptionList {
-  xs := NilInt16OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32OptionOptionList(elements ...Int32OptionOption) Int32OptionOptionList {
-  xs := NilInt32OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64OptionOptionList(elements ...Int64OptionOption) Int64OptionOptionList {
-  xs := NilInt64OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintOptionOptionList(elements ...UintOptionOption) UintOptionOptionList {
-  xs := NilUintOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8OptionOptionList(elements ...Uint8OptionOption) Uint8OptionOptionList {
-  xs := NilUint8OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16OptionOptionList(elements ...Uint16OptionOption) Uint16OptionOptionList {
-  xs := NilUint16OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32OptionOptionList(elements ...Uint32OptionOption) Uint32OptionOptionList {
-  xs := NilUint32OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64OptionOptionList(elements ...Uint64OptionOption) Uint64OptionOptionList {
-  xs := NilUint64OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrOptionOptionList(elements ...UintptrOptionOption) UintptrOptionOptionList {
-  xs := NilUintptrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteOptionOptionList(elements ...ByteOptionOption) ByteOptionOptionList {
-  xs := NilByteOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneOptionOptionList(elements ...RuneOptionOption) RuneOptionOptionList {
-  xs := NilRuneOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32OptionOptionList(elements ...Float32OptionOption) Float32OptionOptionList {
-  xs := NilFloat32OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64OptionOptionList(elements ...Float64OptionOption) Float64OptionOptionList {
-  xs := NilFloat64OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64OptionOptionList(elements ...Complex64OptionOption) Complex64OptionOptionList {
-  xs := NilComplex64OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128OptionOptionList(elements ...Complex128OptionOption) Complex128OptionOptionList {
-  xs := NilComplex128OptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128OptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyOptionOptionList(elements ...AnyOptionOption) AnyOptionOptionList {
-  xs := NilAnyOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolArrOptionOptionList(elements ...BoolArrOptionOption) BoolArrOptionOptionList {
-  xs := NilBoolArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringArrOptionOptionList(elements ...StringArrOptionOption) StringArrOptionOptionList {
-  xs := NilStringArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntArrOptionOptionList(elements ...IntArrOptionOption) IntArrOptionOptionList {
-  xs := NilIntArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ArrOptionOptionList(elements ...Int8ArrOptionOption) Int8ArrOptionOptionList {
-  xs := NilInt8ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ArrOptionOptionList(elements ...Int16ArrOptionOption) Int16ArrOptionOptionList {
-  xs := NilInt16ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ArrOptionOptionList(elements ...Int32ArrOptionOption) Int32ArrOptionOptionList {
-  xs := NilInt32ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ArrOptionOptionList(elements ...Int64ArrOptionOption) Int64ArrOptionOptionList {
-  xs := NilInt64ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintArrOptionOptionList(elements ...UintArrOptionOption) UintArrOptionOptionList {
-  xs := NilUintArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ArrOptionOptionList(elements ...Uint8ArrOptionOption) Uint8ArrOptionOptionList {
-  xs := NilUint8ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ArrOptionOptionList(elements ...Uint16ArrOptionOption) Uint16ArrOptionOptionList {
-  xs := NilUint16ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ArrOptionOptionList(elements ...Uint32ArrOptionOption) Uint32ArrOptionOptionList {
-  xs := NilUint32ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ArrOptionOptionList(elements ...Uint64ArrOptionOption) Uint64ArrOptionOptionList {
-  xs := NilUint64ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrArrOptionOptionList(elements ...UintptrArrOptionOption) UintptrArrOptionOptionList {
-  xs := NilUintptrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteArrOptionOptionList(elements ...ByteArrOptionOption) ByteArrOptionOptionList {
-  xs := NilByteArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneArrOptionOptionList(elements ...RuneArrOptionOption) RuneArrOptionOptionList {
-  xs := NilRuneArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ArrOptionOptionList(elements ...Float32ArrOptionOption) Float32ArrOptionOptionList {
-  xs := NilFloat32ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ArrOptionOptionList(elements ...Float64ArrOptionOption) Float64ArrOptionOptionList {
-  xs := NilFloat64ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ArrOptionOptionList(elements ...Complex64ArrOptionOption) Complex64ArrOptionOptionList {
-  xs := NilComplex64ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ArrOptionOptionList(elements ...Complex128ArrOptionOption) Complex128ArrOptionOptionList {
-  xs := NilComplex128ArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyArrOptionOptionList(elements ...AnyArrOptionOption) AnyArrOptionOptionList {
-  xs := NilAnyArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolArrArrOptionOptionList(elements ...BoolArrArrOptionOption) BoolArrArrOptionOptionList {
-  xs := NilBoolArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringArrArrOptionOptionList(elements ...StringArrArrOptionOption) StringArrArrOptionOptionList {
-  xs := NilStringArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntArrArrOptionOptionList(elements ...IntArrArrOptionOption) IntArrArrOptionOptionList {
-  xs := NilIntArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ArrArrOptionOptionList(elements ...Int8ArrArrOptionOption) Int8ArrArrOptionOptionList {
-  xs := NilInt8ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ArrArrOptionOptionList(elements ...Int16ArrArrOptionOption) Int16ArrArrOptionOptionList {
-  xs := NilInt16ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ArrArrOptionOptionList(elements ...Int32ArrArrOptionOption) Int32ArrArrOptionOptionList {
-  xs := NilInt32ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ArrArrOptionOptionList(elements ...Int64ArrArrOptionOption) Int64ArrArrOptionOptionList {
-  xs := NilInt64ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintArrArrOptionOptionList(elements ...UintArrArrOptionOption) UintArrArrOptionOptionList {
-  xs := NilUintArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ArrArrOptionOptionList(elements ...Uint8ArrArrOptionOption) Uint8ArrArrOptionOptionList {
-  xs := NilUint8ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ArrArrOptionOptionList(elements ...Uint16ArrArrOptionOption) Uint16ArrArrOptionOptionList {
-  xs := NilUint16ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ArrArrOptionOptionList(elements ...Uint32ArrArrOptionOption) Uint32ArrArrOptionOptionList {
-  xs := NilUint32ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ArrArrOptionOptionList(elements ...Uint64ArrArrOptionOption) Uint64ArrArrOptionOptionList {
-  xs := NilUint64ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrArrArrOptionOptionList(elements ...UintptrArrArrOptionOption) UintptrArrArrOptionOptionList {
-  xs := NilUintptrArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteArrArrOptionOptionList(elements ...ByteArrArrOptionOption) ByteArrArrOptionOptionList {
-  xs := NilByteArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneArrArrOptionOptionList(elements ...RuneArrArrOptionOption) RuneArrArrOptionOptionList {
-  xs := NilRuneArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ArrArrOptionOptionList(elements ...Float32ArrArrOptionOption) Float32ArrArrOptionOptionList {
-  xs := NilFloat32ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ArrArrOptionOptionList(elements ...Float64ArrArrOptionOption) Float64ArrArrOptionOptionList {
-  xs := NilFloat64ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ArrArrOptionOptionList(elements ...Complex64ArrArrOptionOption) Complex64ArrArrOptionOptionList {
-  xs := NilComplex64ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ArrArrOptionOptionList(elements ...Complex128ArrArrOptionOption) Complex128ArrArrOptionOptionList {
-  xs := NilComplex128ArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyArrArrOptionOptionList(elements ...AnyArrArrOptionOption) AnyArrArrOptionOptionList {
-  xs := NilAnyArrArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyArrArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolOptionArrOptionOptionList(elements ...BoolOptionArrOptionOption) BoolOptionArrOptionOptionList {
-  xs := NilBoolOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringOptionArrOptionOptionList(elements ...StringOptionArrOptionOption) StringOptionArrOptionOptionList {
-  xs := NilStringOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntOptionArrOptionOptionList(elements ...IntOptionArrOptionOption) IntOptionArrOptionOptionList {
-  xs := NilIntOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8OptionArrOptionOptionList(elements ...Int8OptionArrOptionOption) Int8OptionArrOptionOptionList {
-  xs := NilInt8OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16OptionArrOptionOptionList(elements ...Int16OptionArrOptionOption) Int16OptionArrOptionOptionList {
-  xs := NilInt16OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32OptionArrOptionOptionList(elements ...Int32OptionArrOptionOption) Int32OptionArrOptionOptionList {
-  xs := NilInt32OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64OptionArrOptionOptionList(elements ...Int64OptionArrOptionOption) Int64OptionArrOptionOptionList {
-  xs := NilInt64OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintOptionArrOptionOptionList(elements ...UintOptionArrOptionOption) UintOptionArrOptionOptionList {
-  xs := NilUintOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8OptionArrOptionOptionList(elements ...Uint8OptionArrOptionOption) Uint8OptionArrOptionOptionList {
-  xs := NilUint8OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16OptionArrOptionOptionList(elements ...Uint16OptionArrOptionOption) Uint16OptionArrOptionOptionList {
-  xs := NilUint16OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32OptionArrOptionOptionList(elements ...Uint32OptionArrOptionOption) Uint32OptionArrOptionOptionList {
-  xs := NilUint32OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64OptionArrOptionOptionList(elements ...Uint64OptionArrOptionOption) Uint64OptionArrOptionOptionList {
-  xs := NilUint64OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrOptionArrOptionOptionList(elements ...UintptrOptionArrOptionOption) UintptrOptionArrOptionOptionList {
-  xs := NilUintptrOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteOptionArrOptionOptionList(elements ...ByteOptionArrOptionOption) ByteOptionArrOptionOptionList {
-  xs := NilByteOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneOptionArrOptionOptionList(elements ...RuneOptionArrOptionOption) RuneOptionArrOptionOptionList {
-  xs := NilRuneOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32OptionArrOptionOptionList(elements ...Float32OptionArrOptionOption) Float32OptionArrOptionOptionList {
-  xs := NilFloat32OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64OptionArrOptionOptionList(elements ...Float64OptionArrOptionOption) Float64OptionArrOptionOptionList {
-  xs := NilFloat64OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64OptionArrOptionOptionList(elements ...Complex64OptionArrOptionOption) Complex64OptionArrOptionOptionList {
-  xs := NilComplex64OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128OptionArrOptionOptionList(elements ...Complex128OptionArrOptionOption) Complex128OptionArrOptionOptionList {
-  xs := NilComplex128OptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128OptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyOptionArrOptionOptionList(elements ...AnyOptionArrOptionOption) AnyOptionArrOptionOptionList {
-  xs := NilAnyOptionArrOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyOptionArrOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolListOptionOptionList(elements ...BoolListOptionOption) BoolListOptionOptionList {
-  xs := NilBoolListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringListOptionOptionList(elements ...StringListOptionOption) StringListOptionOptionList {
-  xs := NilStringListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntListOptionOptionList(elements ...IntListOptionOption) IntListOptionOptionList {
-  xs := NilIntListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ListOptionOptionList(elements ...Int8ListOptionOption) Int8ListOptionOptionList {
-  xs := NilInt8ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ListOptionOptionList(elements ...Int16ListOptionOption) Int16ListOptionOptionList {
-  xs := NilInt16ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ListOptionOptionList(elements ...Int32ListOptionOption) Int32ListOptionOptionList {
-  xs := NilInt32ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ListOptionOptionList(elements ...Int64ListOptionOption) Int64ListOptionOptionList {
-  xs := NilInt64ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintListOptionOptionList(elements ...UintListOptionOption) UintListOptionOptionList {
-  xs := NilUintListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ListOptionOptionList(elements ...Uint8ListOptionOption) Uint8ListOptionOptionList {
-  xs := NilUint8ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ListOptionOptionList(elements ...Uint16ListOptionOption) Uint16ListOptionOptionList {
-  xs := NilUint16ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ListOptionOptionList(elements ...Uint32ListOptionOption) Uint32ListOptionOptionList {
-  xs := NilUint32ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ListOptionOptionList(elements ...Uint64ListOptionOption) Uint64ListOptionOptionList {
-  xs := NilUint64ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrListOptionOptionList(elements ...UintptrListOptionOption) UintptrListOptionOptionList {
-  xs := NilUintptrListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteListOptionOptionList(elements ...ByteListOptionOption) ByteListOptionOptionList {
-  xs := NilByteListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneListOptionOptionList(elements ...RuneListOptionOption) RuneListOptionOptionList {
-  xs := NilRuneListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ListOptionOptionList(elements ...Float32ListOptionOption) Float32ListOptionOptionList {
-  xs := NilFloat32ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ListOptionOptionList(elements ...Float64ListOptionOption) Float64ListOptionOptionList {
-  xs := NilFloat64ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ListOptionOptionList(elements ...Complex64ListOptionOption) Complex64ListOptionOptionList {
-  xs := NilComplex64ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ListOptionOptionList(elements ...Complex128ListOptionOption) Complex128ListOptionOptionList {
-  xs := NilComplex128ListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyListOptionOptionList(elements ...AnyListOptionOption) AnyListOptionOptionList {
-  xs := NilAnyListOptionOptionList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyListOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeBoolOptionOptionOptionList(elements ...BoolOptionOptionOption) BoolOptionOptionOptionList {
+	xs := NilBoolOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeStringOptionOptionOptionList(elements ...StringOptionOptionOption) StringOptionOptionOptionList {
+	xs := NilStringOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeIntOptionOptionOptionList(elements ...IntOptionOptionOption) IntOptionOptionOptionList {
+	xs := NilIntOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt8OptionOptionOptionList(elements ...Int8OptionOptionOption) Int8OptionOptionOptionList {
+	xs := NilInt8OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt16OptionOptionOptionList(elements ...Int16OptionOptionOption) Int16OptionOptionOptionList {
+	xs := NilInt16OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt32OptionOptionOptionList(elements ...Int32OptionOptionOption) Int32OptionOptionOptionList {
+	xs := NilInt32OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt64OptionOptionOptionList(elements ...Int64OptionOptionOption) Int64OptionOptionOptionList {
+	xs := NilInt64OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintOptionOptionOptionList(elements ...UintOptionOptionOption) UintOptionOptionOptionList {
+	xs := NilUintOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint8OptionOptionOptionList(elements ...Uint8OptionOptionOption) Uint8OptionOptionOptionList {
+	xs := NilUint8OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint16OptionOptionOptionList(elements ...Uint16OptionOptionOption) Uint16OptionOptionOptionList {
+	xs := NilUint16OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint32OptionOptionOptionList(elements ...Uint32OptionOptionOption) Uint32OptionOptionOptionList {
+	xs := NilUint32OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint64OptionOptionOptionList(elements ...Uint64OptionOptionOption) Uint64OptionOptionOptionList {
+	xs := NilUint64OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintptrOptionOptionOptionList(elements ...UintptrOptionOptionOption) UintptrOptionOptionOptionList {
+	xs := NilUintptrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeByteOptionOptionOptionList(elements ...ByteOptionOptionOption) ByteOptionOptionOptionList {
+	xs := NilByteOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeRuneOptionOptionOptionList(elements ...RuneOptionOptionOption) RuneOptionOptionOptionList {
+	xs := NilRuneOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat32OptionOptionOptionList(elements ...Float32OptionOptionOption) Float32OptionOptionOptionList {
+	xs := NilFloat32OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat64OptionOptionOptionList(elements ...Float64OptionOptionOption) Float64OptionOptionOptionList {
+	xs := NilFloat64OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex64OptionOptionOptionList(elements ...Complex64OptionOptionOption) Complex64OptionOptionOptionList {
+	xs := NilComplex64OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex128OptionOptionOptionList(elements ...Complex128OptionOptionOption) Complex128OptionOptionOptionList {
+	xs := NilComplex128OptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeAnyOptionOptionOptionList(elements ...AnyOptionOptionOption) AnyOptionOptionOptionList {
+	xs := NilAnyOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeBoolArrOptionOptionOptionList(elements ...BoolArrOptionOptionOption) BoolArrOptionOptionOptionList {
+	xs := NilBoolArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeStringArrOptionOptionOptionList(elements ...StringArrOptionOptionOption) StringArrOptionOptionOptionList {
+	xs := NilStringArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeIntArrOptionOptionOptionList(elements ...IntArrOptionOptionOption) IntArrOptionOptionOptionList {
+	xs := NilIntArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt8ArrOptionOptionOptionList(elements ...Int8ArrOptionOptionOption) Int8ArrOptionOptionOptionList {
+	xs := NilInt8ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt16ArrOptionOptionOptionList(elements ...Int16ArrOptionOptionOption) Int16ArrOptionOptionOptionList {
+	xs := NilInt16ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt32ArrOptionOptionOptionList(elements ...Int32ArrOptionOptionOption) Int32ArrOptionOptionOptionList {
+	xs := NilInt32ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt64ArrOptionOptionOptionList(elements ...Int64ArrOptionOptionOption) Int64ArrOptionOptionOptionList {
+	xs := NilInt64ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintArrOptionOptionOptionList(elements ...UintArrOptionOptionOption) UintArrOptionOptionOptionList {
+	xs := NilUintArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint8ArrOptionOptionOptionList(elements ...Uint8ArrOptionOptionOption) Uint8ArrOptionOptionOptionList {
+	xs := NilUint8ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint16ArrOptionOptionOptionList(elements ...Uint16ArrOptionOptionOption) Uint16ArrOptionOptionOptionList {
+	xs := NilUint16ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint32ArrOptionOptionOptionList(elements ...Uint32ArrOptionOptionOption) Uint32ArrOptionOptionOptionList {
+	xs := NilUint32ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint64ArrOptionOptionOptionList(elements ...Uint64ArrOptionOptionOption) Uint64ArrOptionOptionOptionList {
+	xs := NilUint64ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintptrArrOptionOptionOptionList(elements ...UintptrArrOptionOptionOption) UintptrArrOptionOptionOptionList {
+	xs := NilUintptrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeByteArrOptionOptionOptionList(elements ...ByteArrOptionOptionOption) ByteArrOptionOptionOptionList {
+	xs := NilByteArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeRuneArrOptionOptionOptionList(elements ...RuneArrOptionOptionOption) RuneArrOptionOptionOptionList {
+	xs := NilRuneArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat32ArrOptionOptionOptionList(elements ...Float32ArrOptionOptionOption) Float32ArrOptionOptionOptionList {
+	xs := NilFloat32ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat64ArrOptionOptionOptionList(elements ...Float64ArrOptionOptionOption) Float64ArrOptionOptionOptionList {
+	xs := NilFloat64ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex64ArrOptionOptionOptionList(elements ...Complex64ArrOptionOptionOption) Complex64ArrOptionOptionOptionList {
+	xs := NilComplex64ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex128ArrOptionOptionOptionList(elements ...Complex128ArrOptionOptionOption) Complex128ArrOptionOptionOptionList {
+	xs := NilComplex128ArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeAnyArrOptionOptionOptionList(elements ...AnyArrOptionOptionOption) AnyArrOptionOptionOptionList {
+	xs := NilAnyArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeBoolArrArrOptionOptionOptionList(elements ...BoolArrArrOptionOptionOption) BoolArrArrOptionOptionOptionList {
+	xs := NilBoolArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeStringArrArrOptionOptionOptionList(elements ...StringArrArrOptionOptionOption) StringArrArrOptionOptionOptionList {
+	xs := NilStringArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeIntArrArrOptionOptionOptionList(elements ...IntArrArrOptionOptionOption) IntArrArrOptionOptionOptionList {
+	xs := NilIntArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt8ArrArrOptionOptionOptionList(elements ...Int8ArrArrOptionOptionOption) Int8ArrArrOptionOptionOptionList {
+	xs := NilInt8ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt16ArrArrOptionOptionOptionList(elements ...Int16ArrArrOptionOptionOption) Int16ArrArrOptionOptionOptionList {
+	xs := NilInt16ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt32ArrArrOptionOptionOptionList(elements ...Int32ArrArrOptionOptionOption) Int32ArrArrOptionOptionOptionList {
+	xs := NilInt32ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt64ArrArrOptionOptionOptionList(elements ...Int64ArrArrOptionOptionOption) Int64ArrArrOptionOptionOptionList {
+	xs := NilInt64ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintArrArrOptionOptionOptionList(elements ...UintArrArrOptionOptionOption) UintArrArrOptionOptionOptionList {
+	xs := NilUintArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint8ArrArrOptionOptionOptionList(elements ...Uint8ArrArrOptionOptionOption) Uint8ArrArrOptionOptionOptionList {
+	xs := NilUint8ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint16ArrArrOptionOptionOptionList(elements ...Uint16ArrArrOptionOptionOption) Uint16ArrArrOptionOptionOptionList {
+	xs := NilUint16ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint32ArrArrOptionOptionOptionList(elements ...Uint32ArrArrOptionOptionOption) Uint32ArrArrOptionOptionOptionList {
+	xs := NilUint32ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint64ArrArrOptionOptionOptionList(elements ...Uint64ArrArrOptionOptionOption) Uint64ArrArrOptionOptionOptionList {
+	xs := NilUint64ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintptrArrArrOptionOptionOptionList(elements ...UintptrArrArrOptionOptionOption) UintptrArrArrOptionOptionOptionList {
+	xs := NilUintptrArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeByteArrArrOptionOptionOptionList(elements ...ByteArrArrOptionOptionOption) ByteArrArrOptionOptionOptionList {
+	xs := NilByteArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeRuneArrArrOptionOptionOptionList(elements ...RuneArrArrOptionOptionOption) RuneArrArrOptionOptionOptionList {
+	xs := NilRuneArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat32ArrArrOptionOptionOptionList(elements ...Float32ArrArrOptionOptionOption) Float32ArrArrOptionOptionOptionList {
+	xs := NilFloat32ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat64ArrArrOptionOptionOptionList(elements ...Float64ArrArrOptionOptionOption) Float64ArrArrOptionOptionOptionList {
+	xs := NilFloat64ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex64ArrArrOptionOptionOptionList(elements ...Complex64ArrArrOptionOptionOption) Complex64ArrArrOptionOptionOptionList {
+	xs := NilComplex64ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex128ArrArrOptionOptionOptionList(elements ...Complex128ArrArrOptionOptionOption) Complex128ArrArrOptionOptionOptionList {
+	xs := NilComplex128ArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeAnyArrArrOptionOptionOptionList(elements ...AnyArrArrOptionOptionOption) AnyArrArrOptionOptionOptionList {
+	xs := NilAnyArrArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeBoolOptionArrOptionOptionOptionList(elements ...BoolOptionArrOptionOptionOption) BoolOptionArrOptionOptionOptionList {
+	xs := NilBoolOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeStringOptionArrOptionOptionOptionList(elements ...StringOptionArrOptionOptionOption) StringOptionArrOptionOptionOptionList {
+	xs := NilStringOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeIntOptionArrOptionOptionOptionList(elements ...IntOptionArrOptionOptionOption) IntOptionArrOptionOptionOptionList {
+	xs := NilIntOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt8OptionArrOptionOptionOptionList(elements ...Int8OptionArrOptionOptionOption) Int8OptionArrOptionOptionOptionList {
+	xs := NilInt8OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt16OptionArrOptionOptionOptionList(elements ...Int16OptionArrOptionOptionOption) Int16OptionArrOptionOptionOptionList {
+	xs := NilInt16OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt32OptionArrOptionOptionOptionList(elements ...Int32OptionArrOptionOptionOption) Int32OptionArrOptionOptionOptionList {
+	xs := NilInt32OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt64OptionArrOptionOptionOptionList(elements ...Int64OptionArrOptionOptionOption) Int64OptionArrOptionOptionOptionList {
+	xs := NilInt64OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintOptionArrOptionOptionOptionList(elements ...UintOptionArrOptionOptionOption) UintOptionArrOptionOptionOptionList {
+	xs := NilUintOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint8OptionArrOptionOptionOptionList(elements ...Uint8OptionArrOptionOptionOption) Uint8OptionArrOptionOptionOptionList {
+	xs := NilUint8OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint16OptionArrOptionOptionOptionList(elements ...Uint16OptionArrOptionOptionOption) Uint16OptionArrOptionOptionOptionList {
+	xs := NilUint16OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint32OptionArrOptionOptionOptionList(elements ...Uint32OptionArrOptionOptionOption) Uint32OptionArrOptionOptionOptionList {
+	xs := NilUint32OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint64OptionArrOptionOptionOptionList(elements ...Uint64OptionArrOptionOptionOption) Uint64OptionArrOptionOptionOptionList {
+	xs := NilUint64OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintptrOptionArrOptionOptionOptionList(elements ...UintptrOptionArrOptionOptionOption) UintptrOptionArrOptionOptionOptionList {
+	xs := NilUintptrOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeByteOptionArrOptionOptionOptionList(elements ...ByteOptionArrOptionOptionOption) ByteOptionArrOptionOptionOptionList {
+	xs := NilByteOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeRuneOptionArrOptionOptionOptionList(elements ...RuneOptionArrOptionOptionOption) RuneOptionArrOptionOptionOptionList {
+	xs := NilRuneOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat32OptionArrOptionOptionOptionList(elements ...Float32OptionArrOptionOptionOption) Float32OptionArrOptionOptionOptionList {
+	xs := NilFloat32OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat64OptionArrOptionOptionOptionList(elements ...Float64OptionArrOptionOptionOption) Float64OptionArrOptionOptionOptionList {
+	xs := NilFloat64OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex64OptionArrOptionOptionOptionList(elements ...Complex64OptionArrOptionOptionOption) Complex64OptionArrOptionOptionOptionList {
+	xs := NilComplex64OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex128OptionArrOptionOptionOptionList(elements ...Complex128OptionArrOptionOptionOption) Complex128OptionArrOptionOptionOptionList {
+	xs := NilComplex128OptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeAnyOptionArrOptionOptionOptionList(elements ...AnyOptionArrOptionOptionOption) AnyOptionArrOptionOptionOptionList {
+	xs := NilAnyOptionArrOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeBoolListOptionOptionOptionList(elements ...BoolListOptionOptionOption) BoolListOptionOptionOptionList {
+	xs := NilBoolListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeStringListOptionOptionOptionList(elements ...StringListOptionOptionOption) StringListOptionOptionOptionList {
+	xs := NilStringListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeIntListOptionOptionOptionList(elements ...IntListOptionOptionOption) IntListOptionOptionOptionList {
+	xs := NilIntListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt8ListOptionOptionOptionList(elements ...Int8ListOptionOptionOption) Int8ListOptionOptionOptionList {
+	xs := NilInt8ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt16ListOptionOptionOptionList(elements ...Int16ListOptionOptionOption) Int16ListOptionOptionOptionList {
+	xs := NilInt16ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt32ListOptionOptionOptionList(elements ...Int32ListOptionOptionOption) Int32ListOptionOptionOptionList {
+	xs := NilInt32ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeInt64ListOptionOptionOptionList(elements ...Int64ListOptionOptionOption) Int64ListOptionOptionOptionList {
+	xs := NilInt64ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintListOptionOptionOptionList(elements ...UintListOptionOptionOption) UintListOptionOptionOptionList {
+	xs := NilUintListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint8ListOptionOptionOptionList(elements ...Uint8ListOptionOptionOption) Uint8ListOptionOptionOptionList {
+	xs := NilUint8ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint16ListOptionOptionOptionList(elements ...Uint16ListOptionOptionOption) Uint16ListOptionOptionOptionList {
+	xs := NilUint16ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint32ListOptionOptionOptionList(elements ...Uint32ListOptionOptionOption) Uint32ListOptionOptionOptionList {
+	xs := NilUint32ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUint64ListOptionOptionOptionList(elements ...Uint64ListOptionOptionOption) Uint64ListOptionOptionOptionList {
+	xs := NilUint64ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeUintptrListOptionOptionOptionList(elements ...UintptrListOptionOptionOption) UintptrListOptionOptionOptionList {
+	xs := NilUintptrListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeByteListOptionOptionOptionList(elements ...ByteListOptionOptionOption) ByteListOptionOptionOptionList {
+	xs := NilByteListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeRuneListOptionOptionOptionList(elements ...RuneListOptionOptionOption) RuneListOptionOptionOptionList {
+	xs := NilRuneListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat32ListOptionOptionOptionList(elements ...Float32ListOptionOptionOption) Float32ListOptionOptionOptionList {
+	xs := NilFloat32ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeFloat64ListOptionOptionOptionList(elements ...Float64ListOptionOptionOption) Float64ListOptionOptionOptionList {
+	xs := NilFloat64ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex64ListOptionOptionOptionList(elements ...Complex64ListOptionOptionOption) Complex64ListOptionOptionOptionList {
+	xs := NilComplex64ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeComplex128ListOptionOptionOptionList(elements ...Complex128ListOptionOptionOption) Complex128ListOptionOptionOptionList {
+	xs := NilComplex128ListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeAnyListOptionOptionOptionList(elements ...AnyListOptionOptionOption) AnyListOptionOptionOptionList {
+	xs := NilAnyListOptionOptionOptionList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolArrList(elements ...[]bool) BoolArrList {
-  xs := NilBoolArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringArrList(elements ...[]string) StringArrList {
-  xs := NilStringArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntArrList(elements ...[]int) IntArrList {
-  xs := NilIntArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ArrList(elements ...[]int8) Int8ArrList {
-  xs := NilInt8ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ArrList(elements ...[]int16) Int16ArrList {
-  xs := NilInt16ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ArrList(elements ...[]int32) Int32ArrList {
-  xs := NilInt32ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ArrList(elements ...[]int64) Int64ArrList {
-  xs := NilInt64ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintArrList(elements ...[]uint) UintArrList {
-  xs := NilUintArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ArrList(elements ...[]uint8) Uint8ArrList {
-  xs := NilUint8ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ArrList(elements ...[]uint16) Uint16ArrList {
-  xs := NilUint16ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ArrList(elements ...[]uint32) Uint32ArrList {
-  xs := NilUint32ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ArrList(elements ...[]uint64) Uint64ArrList {
-  xs := NilUint64ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrArrList(elements ...[]uintptr) UintptrArrList {
-  xs := NilUintptrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteArrList(elements ...[]byte) ByteArrList {
-  xs := NilByteArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneArrList(elements ...[]rune) RuneArrList {
-  xs := NilRuneArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ArrList(elements ...[]float32) Float32ArrList {
-  xs := NilFloat32ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ArrList(elements ...[]float64) Float64ArrList {
-  xs := NilFloat64ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ArrList(elements ...[]complex64) Complex64ArrList {
-  xs := NilComplex64ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ArrList(elements ...[]complex128) Complex128ArrList {
-  xs := NilComplex128ArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyArrList(elements ...[]Any) AnyArrList {
-  xs := NilAnyArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolArrArrList(elements ...[][]bool) BoolArrArrList {
-  xs := NilBoolArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringArrArrList(elements ...[][]string) StringArrArrList {
-  xs := NilStringArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntArrArrList(elements ...[][]int) IntArrArrList {
-  xs := NilIntArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ArrArrList(elements ...[][]int8) Int8ArrArrList {
-  xs := NilInt8ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ArrArrList(elements ...[][]int16) Int16ArrArrList {
-  xs := NilInt16ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ArrArrList(elements ...[][]int32) Int32ArrArrList {
-  xs := NilInt32ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ArrArrList(elements ...[][]int64) Int64ArrArrList {
-  xs := NilInt64ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintArrArrList(elements ...[][]uint) UintArrArrList {
-  xs := NilUintArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ArrArrList(elements ...[][]uint8) Uint8ArrArrList {
-  xs := NilUint8ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ArrArrList(elements ...[][]uint16) Uint16ArrArrList {
-  xs := NilUint16ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ArrArrList(elements ...[][]uint32) Uint32ArrArrList {
-  xs := NilUint32ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ArrArrList(elements ...[][]uint64) Uint64ArrArrList {
-  xs := NilUint64ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrArrArrList(elements ...[][]uintptr) UintptrArrArrList {
-  xs := NilUintptrArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteArrArrList(elements ...[][]byte) ByteArrArrList {
-  xs := NilByteArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneArrArrList(elements ...[][]rune) RuneArrArrList {
-  xs := NilRuneArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ArrArrList(elements ...[][]float32) Float32ArrArrList {
-  xs := NilFloat32ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ArrArrList(elements ...[][]float64) Float64ArrArrList {
-  xs := NilFloat64ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ArrArrList(elements ...[][]complex64) Complex64ArrArrList {
-  xs := NilComplex64ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ArrArrList(elements ...[][]complex128) Complex128ArrArrList {
-  xs := NilComplex128ArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyArrArrList(elements ...[][]Any) AnyArrArrList {
-  xs := NilAnyArrArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyArrArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolOptionArrList(elements ...[]BoolOption) BoolOptionArrList {
-  xs := NilBoolOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringOptionArrList(elements ...[]StringOption) StringOptionArrList {
-  xs := NilStringOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntOptionArrList(elements ...[]IntOption) IntOptionArrList {
-  xs := NilIntOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8OptionArrList(elements ...[]Int8Option) Int8OptionArrList {
-  xs := NilInt8OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16OptionArrList(elements ...[]Int16Option) Int16OptionArrList {
-  xs := NilInt16OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32OptionArrList(elements ...[]Int32Option) Int32OptionArrList {
-  xs := NilInt32OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64OptionArrList(elements ...[]Int64Option) Int64OptionArrList {
-  xs := NilInt64OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintOptionArrList(elements ...[]UintOption) UintOptionArrList {
-  xs := NilUintOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8OptionArrList(elements ...[]Uint8Option) Uint8OptionArrList {
-  xs := NilUint8OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16OptionArrList(elements ...[]Uint16Option) Uint16OptionArrList {
-  xs := NilUint16OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32OptionArrList(elements ...[]Uint32Option) Uint32OptionArrList {
-  xs := NilUint32OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64OptionArrList(elements ...[]Uint64Option) Uint64OptionArrList {
-  xs := NilUint64OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrOptionArrList(elements ...[]UintptrOption) UintptrOptionArrList {
-  xs := NilUintptrOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteOptionArrList(elements ...[]ByteOption) ByteOptionArrList {
-  xs := NilByteOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneOptionArrList(elements ...[]RuneOption) RuneOptionArrList {
-  xs := NilRuneOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32OptionArrList(elements ...[]Float32Option) Float32OptionArrList {
-  xs := NilFloat32OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64OptionArrList(elements ...[]Float64Option) Float64OptionArrList {
-  xs := NilFloat64OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64OptionArrList(elements ...[]Complex64Option) Complex64OptionArrList {
-  xs := NilComplex64OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128OptionArrList(elements ...[]Complex128Option) Complex128OptionArrList {
-  xs := NilComplex128OptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128OptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyOptionArrList(elements ...[]AnyOption) AnyOptionArrList {
-  xs := NilAnyOptionArrList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyOptionArrList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeBoolListList(elements ...BoolList) BoolListList {
-  xs := NilBoolListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilBoolListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeStringListList(elements ...StringList) StringListList {
-  xs := NilStringListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilStringListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeIntListList(elements ...IntList) IntListList {
-  xs := NilIntListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilIntListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt8ListList(elements ...Int8List) Int8ListList {
-  xs := NilInt8ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt8ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt16ListList(elements ...Int16List) Int16ListList {
-  xs := NilInt16ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt16ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt32ListList(elements ...Int32List) Int32ListList {
-  xs := NilInt32ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt32ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeInt64ListList(elements ...Int64List) Int64ListList {
-  xs := NilInt64ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilInt64ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintListList(elements ...UintList) UintListList {
-  xs := NilUintListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint8ListList(elements ...Uint8List) Uint8ListList {
-  xs := NilUint8ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint8ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint16ListList(elements ...Uint16List) Uint16ListList {
-  xs := NilUint16ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint16ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint32ListList(elements ...Uint32List) Uint32ListList {
-  xs := NilUint32ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint32ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUint64ListList(elements ...Uint64List) Uint64ListList {
-  xs := NilUint64ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUint64ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeUintptrListList(elements ...UintptrList) UintptrListList {
-  xs := NilUintptrListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilUintptrListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeByteListList(elements ...ByteList) ByteListList {
-  xs := NilByteListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilByteListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeRuneListList(elements ...RuneList) RuneListList {
-  xs := NilRuneListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilRuneListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat32ListList(elements ...Float32List) Float32ListList {
-  xs := NilFloat32ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat32ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeFloat64ListList(elements ...Float64List) Float64ListList {
-  xs := NilFloat64ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilFloat64ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex64ListList(elements ...Complex64List) Complex64ListList {
-  xs := NilComplex64ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex64ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeComplex128ListList(elements ...Complex128List) Complex128ListList {
-  xs := NilComplex128ListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilComplex128ListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }
 func MakeAnyListList(elements ...AnyList) AnyListList {
-  xs := NilAnyListList
-  for _, e := range elements {
-    xs = xs.Cons(e)
-  }
-  return xs.Reverse()
+	xs := NilAnyListList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
 }

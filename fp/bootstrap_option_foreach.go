@@ -3,204 +3,1503 @@
 
 package fp
 
-
-func (o BoolOption) Foreach(f func(bool)) { if o.IsDefined() { f(*o.value) } }
-func (o StringOption) Foreach(f func(string)) { if o.IsDefined() { f(*o.value) } }
-func (o IntOption) Foreach(f func(int)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8Option) Foreach(f func(int8)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16Option) Foreach(f func(int16)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32Option) Foreach(f func(int32)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64Option) Foreach(f func(int64)) { if o.IsDefined() { f(*o.value) } }
-func (o UintOption) Foreach(f func(uint)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8Option) Foreach(f func(uint8)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16Option) Foreach(f func(uint16)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32Option) Foreach(f func(uint32)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64Option) Foreach(f func(uint64)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrOption) Foreach(f func(uintptr)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteOption) Foreach(f func(byte)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneOption) Foreach(f func(rune)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32Option) Foreach(f func(float32)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64Option) Foreach(f func(float64)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64Option) Foreach(f func(complex64)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128Option) Foreach(f func(complex128)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyOption) Foreach(f func(Any)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolArrOption) Foreach(f func([]bool)) { if o.IsDefined() { f(*o.value) } }
-func (o StringArrOption) Foreach(f func([]string)) { if o.IsDefined() { f(*o.value) } }
-func (o IntArrOption) Foreach(f func([]int)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8ArrOption) Foreach(f func([]int8)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16ArrOption) Foreach(f func([]int16)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32ArrOption) Foreach(f func([]int32)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64ArrOption) Foreach(f func([]int64)) { if o.IsDefined() { f(*o.value) } }
-func (o UintArrOption) Foreach(f func([]uint)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8ArrOption) Foreach(f func([]uint8)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16ArrOption) Foreach(f func([]uint16)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32ArrOption) Foreach(f func([]uint32)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64ArrOption) Foreach(f func([]uint64)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrArrOption) Foreach(f func([]uintptr)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteArrOption) Foreach(f func([]byte)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneArrOption) Foreach(f func([]rune)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32ArrOption) Foreach(f func([]float32)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64ArrOption) Foreach(f func([]float64)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64ArrOption) Foreach(f func([]complex64)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128ArrOption) Foreach(f func([]complex128)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyArrOption) Foreach(f func([]Any)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolArrArrOption) Foreach(f func([][]bool)) { if o.IsDefined() { f(*o.value) } }
-func (o StringArrArrOption) Foreach(f func([][]string)) { if o.IsDefined() { f(*o.value) } }
-func (o IntArrArrOption) Foreach(f func([][]int)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8ArrArrOption) Foreach(f func([][]int8)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16ArrArrOption) Foreach(f func([][]int16)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32ArrArrOption) Foreach(f func([][]int32)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64ArrArrOption) Foreach(f func([][]int64)) { if o.IsDefined() { f(*o.value) } }
-func (o UintArrArrOption) Foreach(f func([][]uint)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8ArrArrOption) Foreach(f func([][]uint8)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16ArrArrOption) Foreach(f func([][]uint16)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32ArrArrOption) Foreach(f func([][]uint32)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64ArrArrOption) Foreach(f func([][]uint64)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrArrArrOption) Foreach(f func([][]uintptr)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteArrArrOption) Foreach(f func([][]byte)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneArrArrOption) Foreach(f func([][]rune)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32ArrArrOption) Foreach(f func([][]float32)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64ArrArrOption) Foreach(f func([][]float64)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64ArrArrOption) Foreach(f func([][]complex64)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128ArrArrOption) Foreach(f func([][]complex128)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyArrArrOption) Foreach(f func([][]Any)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolOptionArrOption) Foreach(f func([]BoolOption)) { if o.IsDefined() { f(*o.value) } }
-func (o StringOptionArrOption) Foreach(f func([]StringOption)) { if o.IsDefined() { f(*o.value) } }
-func (o IntOptionArrOption) Foreach(f func([]IntOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8OptionArrOption) Foreach(f func([]Int8Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16OptionArrOption) Foreach(f func([]Int16Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32OptionArrOption) Foreach(f func([]Int32Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64OptionArrOption) Foreach(f func([]Int64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o UintOptionArrOption) Foreach(f func([]UintOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8OptionArrOption) Foreach(f func([]Uint8Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16OptionArrOption) Foreach(f func([]Uint16Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32OptionArrOption) Foreach(f func([]Uint32Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64OptionArrOption) Foreach(f func([]Uint64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrOptionArrOption) Foreach(f func([]UintptrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteOptionArrOption) Foreach(f func([]ByteOption)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneOptionArrOption) Foreach(f func([]RuneOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32OptionArrOption) Foreach(f func([]Float32Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64OptionArrOption) Foreach(f func([]Float64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64OptionArrOption) Foreach(f func([]Complex64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128OptionArrOption) Foreach(f func([]Complex128Option)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyOptionArrOption) Foreach(f func([]AnyOption)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolListOption) Foreach(f func(BoolList)) { if o.IsDefined() { f(*o.value) } }
-func (o StringListOption) Foreach(f func(StringList)) { if o.IsDefined() { f(*o.value) } }
-func (o IntListOption) Foreach(f func(IntList)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8ListOption) Foreach(f func(Int8List)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16ListOption) Foreach(f func(Int16List)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32ListOption) Foreach(f func(Int32List)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64ListOption) Foreach(f func(Int64List)) { if o.IsDefined() { f(*o.value) } }
-func (o UintListOption) Foreach(f func(UintList)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8ListOption) Foreach(f func(Uint8List)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16ListOption) Foreach(f func(Uint16List)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32ListOption) Foreach(f func(Uint32List)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64ListOption) Foreach(f func(Uint64List)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrListOption) Foreach(f func(UintptrList)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteListOption) Foreach(f func(ByteList)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneListOption) Foreach(f func(RuneList)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32ListOption) Foreach(f func(Float32List)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64ListOption) Foreach(f func(Float64List)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64ListOption) Foreach(f func(Complex64List)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128ListOption) Foreach(f func(Complex128List)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyListOption) Foreach(f func(AnyList)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolOptionOption) Foreach(f func(BoolOption)) { if o.IsDefined() { f(*o.value) } }
-func (o StringOptionOption) Foreach(f func(StringOption)) { if o.IsDefined() { f(*o.value) } }
-func (o IntOptionOption) Foreach(f func(IntOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8OptionOption) Foreach(f func(Int8Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16OptionOption) Foreach(f func(Int16Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32OptionOption) Foreach(f func(Int32Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64OptionOption) Foreach(f func(Int64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o UintOptionOption) Foreach(f func(UintOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8OptionOption) Foreach(f func(Uint8Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16OptionOption) Foreach(f func(Uint16Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32OptionOption) Foreach(f func(Uint32Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64OptionOption) Foreach(f func(Uint64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrOptionOption) Foreach(f func(UintptrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteOptionOption) Foreach(f func(ByteOption)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneOptionOption) Foreach(f func(RuneOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32OptionOption) Foreach(f func(Float32Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64OptionOption) Foreach(f func(Float64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64OptionOption) Foreach(f func(Complex64Option)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128OptionOption) Foreach(f func(Complex128Option)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyOptionOption) Foreach(f func(AnyOption)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolArrOptionOption) Foreach(f func(BoolArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o StringArrOptionOption) Foreach(f func(StringArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o IntArrOptionOption) Foreach(f func(IntArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8ArrOptionOption) Foreach(f func(Int8ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16ArrOptionOption) Foreach(f func(Int16ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32ArrOptionOption) Foreach(f func(Int32ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64ArrOptionOption) Foreach(f func(Int64ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintArrOptionOption) Foreach(f func(UintArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8ArrOptionOption) Foreach(f func(Uint8ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16ArrOptionOption) Foreach(f func(Uint16ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32ArrOptionOption) Foreach(f func(Uint32ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64ArrOptionOption) Foreach(f func(Uint64ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrArrOptionOption) Foreach(f func(UintptrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteArrOptionOption) Foreach(f func(ByteArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneArrOptionOption) Foreach(f func(RuneArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32ArrOptionOption) Foreach(f func(Float32ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64ArrOptionOption) Foreach(f func(Float64ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64ArrOptionOption) Foreach(f func(Complex64ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128ArrOptionOption) Foreach(f func(Complex128ArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyArrOptionOption) Foreach(f func(AnyArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolArrArrOptionOption) Foreach(f func(BoolArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o StringArrArrOptionOption) Foreach(f func(StringArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o IntArrArrOptionOption) Foreach(f func(IntArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8ArrArrOptionOption) Foreach(f func(Int8ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16ArrArrOptionOption) Foreach(f func(Int16ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32ArrArrOptionOption) Foreach(f func(Int32ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64ArrArrOptionOption) Foreach(f func(Int64ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintArrArrOptionOption) Foreach(f func(UintArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8ArrArrOptionOption) Foreach(f func(Uint8ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16ArrArrOptionOption) Foreach(f func(Uint16ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32ArrArrOptionOption) Foreach(f func(Uint32ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64ArrArrOptionOption) Foreach(f func(Uint64ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrArrArrOptionOption) Foreach(f func(UintptrArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteArrArrOptionOption) Foreach(f func(ByteArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneArrArrOptionOption) Foreach(f func(RuneArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32ArrArrOptionOption) Foreach(f func(Float32ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64ArrArrOptionOption) Foreach(f func(Float64ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64ArrArrOptionOption) Foreach(f func(Complex64ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128ArrArrOptionOption) Foreach(f func(Complex128ArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyArrArrOptionOption) Foreach(f func(AnyArrArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolOptionArrOptionOption) Foreach(f func(BoolOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o StringOptionArrOptionOption) Foreach(f func(StringOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o IntOptionArrOptionOption) Foreach(f func(IntOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8OptionArrOptionOption) Foreach(f func(Int8OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16OptionArrOptionOption) Foreach(f func(Int16OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32OptionArrOptionOption) Foreach(f func(Int32OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64OptionArrOptionOption) Foreach(f func(Int64OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintOptionArrOptionOption) Foreach(f func(UintOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8OptionArrOptionOption) Foreach(f func(Uint8OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16OptionArrOptionOption) Foreach(f func(Uint16OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32OptionArrOptionOption) Foreach(f func(Uint32OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64OptionArrOptionOption) Foreach(f func(Uint64OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrOptionArrOptionOption) Foreach(f func(UintptrOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteOptionArrOptionOption) Foreach(f func(ByteOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneOptionArrOptionOption) Foreach(f func(RuneOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32OptionArrOptionOption) Foreach(f func(Float32OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64OptionArrOptionOption) Foreach(f func(Float64OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64OptionArrOptionOption) Foreach(f func(Complex64OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128OptionArrOptionOption) Foreach(f func(Complex128OptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyOptionArrOptionOption) Foreach(f func(AnyOptionArrOption)) { if o.IsDefined() { f(*o.value) } }
-func (o BoolListOptionOption) Foreach(f func(BoolListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o StringListOptionOption) Foreach(f func(StringListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o IntListOptionOption) Foreach(f func(IntListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int8ListOptionOption) Foreach(f func(Int8ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int16ListOptionOption) Foreach(f func(Int16ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int32ListOptionOption) Foreach(f func(Int32ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Int64ListOptionOption) Foreach(f func(Int64ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintListOptionOption) Foreach(f func(UintListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint8ListOptionOption) Foreach(f func(Uint8ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint16ListOptionOption) Foreach(f func(Uint16ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint32ListOptionOption) Foreach(f func(Uint32ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Uint64ListOptionOption) Foreach(f func(Uint64ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o UintptrListOptionOption) Foreach(f func(UintptrListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o ByteListOptionOption) Foreach(f func(ByteListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o RuneListOptionOption) Foreach(f func(RuneListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float32ListOptionOption) Foreach(f func(Float32ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Float64ListOptionOption) Foreach(f func(Float64ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex64ListOptionOption) Foreach(f func(Complex64ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o Complex128ListOptionOption) Foreach(f func(Complex128ListOption)) { if o.IsDefined() { f(*o.value) } }
-func (o AnyListOptionOption) Foreach(f func(AnyListOption)) { if o.IsDefined() { f(*o.value) } }
+func (o BoolOption) Foreach(f func(bool)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringOption) Foreach(f func(string)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntOption) Foreach(f func(int)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8Option) Foreach(f func(int8)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16Option) Foreach(f func(int16)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32Option) Foreach(f func(int32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64Option) Foreach(f func(int64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintOption) Foreach(f func(uint)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8Option) Foreach(f func(uint8)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16Option) Foreach(f func(uint16)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32Option) Foreach(f func(uint32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64Option) Foreach(f func(uint64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrOption) Foreach(f func(uintptr)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteOption) Foreach(f func(byte)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneOption) Foreach(f func(rune)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32Option) Foreach(f func(float32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64Option) Foreach(f func(float64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64Option) Foreach(f func(complex64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128Option) Foreach(f func(complex128)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyOption) Foreach(f func(Any)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolArrOption) Foreach(f func([]bool)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringArrOption) Foreach(f func([]string)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntArrOption) Foreach(f func([]int)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ArrOption) Foreach(f func([]int8)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ArrOption) Foreach(f func([]int16)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ArrOption) Foreach(f func([]int32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ArrOption) Foreach(f func([]int64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintArrOption) Foreach(f func([]uint)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ArrOption) Foreach(f func([]uint8)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ArrOption) Foreach(f func([]uint16)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ArrOption) Foreach(f func([]uint32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ArrOption) Foreach(f func([]uint64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrArrOption) Foreach(f func([]uintptr)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteArrOption) Foreach(f func([]byte)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneArrOption) Foreach(f func([]rune)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ArrOption) Foreach(f func([]float32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ArrOption) Foreach(f func([]float64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ArrOption) Foreach(f func([]complex64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ArrOption) Foreach(f func([]complex128)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyArrOption) Foreach(f func([]Any)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolArrArrOption) Foreach(f func([][]bool)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringArrArrOption) Foreach(f func([][]string)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntArrArrOption) Foreach(f func([][]int)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ArrArrOption) Foreach(f func([][]int8)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ArrArrOption) Foreach(f func([][]int16)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ArrArrOption) Foreach(f func([][]int32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ArrArrOption) Foreach(f func([][]int64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintArrArrOption) Foreach(f func([][]uint)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ArrArrOption) Foreach(f func([][]uint8)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ArrArrOption) Foreach(f func([][]uint16)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ArrArrOption) Foreach(f func([][]uint32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ArrArrOption) Foreach(f func([][]uint64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrArrArrOption) Foreach(f func([][]uintptr)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteArrArrOption) Foreach(f func([][]byte)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneArrArrOption) Foreach(f func([][]rune)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ArrArrOption) Foreach(f func([][]float32)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ArrArrOption) Foreach(f func([][]float64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ArrArrOption) Foreach(f func([][]complex64)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ArrArrOption) Foreach(f func([][]complex128)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyArrArrOption) Foreach(f func([][]Any)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolOptionArrOption) Foreach(f func([]BoolOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringOptionArrOption) Foreach(f func([]StringOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntOptionArrOption) Foreach(f func([]IntOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8OptionArrOption) Foreach(f func([]Int8Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16OptionArrOption) Foreach(f func([]Int16Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32OptionArrOption) Foreach(f func([]Int32Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64OptionArrOption) Foreach(f func([]Int64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintOptionArrOption) Foreach(f func([]UintOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8OptionArrOption) Foreach(f func([]Uint8Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16OptionArrOption) Foreach(f func([]Uint16Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32OptionArrOption) Foreach(f func([]Uint32Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64OptionArrOption) Foreach(f func([]Uint64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrOptionArrOption) Foreach(f func([]UintptrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteOptionArrOption) Foreach(f func([]ByteOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneOptionArrOption) Foreach(f func([]RuneOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32OptionArrOption) Foreach(f func([]Float32Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64OptionArrOption) Foreach(f func([]Float64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64OptionArrOption) Foreach(f func([]Complex64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128OptionArrOption) Foreach(f func([]Complex128Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyOptionArrOption) Foreach(f func([]AnyOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolListOption) Foreach(f func(BoolList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringListOption) Foreach(f func(StringList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntListOption) Foreach(f func(IntList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ListOption) Foreach(f func(Int8List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ListOption) Foreach(f func(Int16List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ListOption) Foreach(f func(Int32List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ListOption) Foreach(f func(Int64List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintListOption) Foreach(f func(UintList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ListOption) Foreach(f func(Uint8List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ListOption) Foreach(f func(Uint16List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ListOption) Foreach(f func(Uint32List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ListOption) Foreach(f func(Uint64List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrListOption) Foreach(f func(UintptrList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteListOption) Foreach(f func(ByteList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneListOption) Foreach(f func(RuneList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ListOption) Foreach(f func(Float32List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ListOption) Foreach(f func(Float64List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ListOption) Foreach(f func(Complex64List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ListOption) Foreach(f func(Complex128List)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyListOption) Foreach(f func(AnyList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolOptionOption) Foreach(f func(BoolOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringOptionOption) Foreach(f func(StringOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntOptionOption) Foreach(f func(IntOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8OptionOption) Foreach(f func(Int8Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16OptionOption) Foreach(f func(Int16Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32OptionOption) Foreach(f func(Int32Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64OptionOption) Foreach(f func(Int64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintOptionOption) Foreach(f func(UintOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8OptionOption) Foreach(f func(Uint8Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16OptionOption) Foreach(f func(Uint16Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32OptionOption) Foreach(f func(Uint32Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64OptionOption) Foreach(f func(Uint64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrOptionOption) Foreach(f func(UintptrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteOptionOption) Foreach(f func(ByteOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneOptionOption) Foreach(f func(RuneOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32OptionOption) Foreach(f func(Float32Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64OptionOption) Foreach(f func(Float64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64OptionOption) Foreach(f func(Complex64Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128OptionOption) Foreach(f func(Complex128Option)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyOptionOption) Foreach(f func(AnyOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolArrOptionOption) Foreach(f func(BoolArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringArrOptionOption) Foreach(f func(StringArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntArrOptionOption) Foreach(f func(IntArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ArrOptionOption) Foreach(f func(Int8ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ArrOptionOption) Foreach(f func(Int16ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ArrOptionOption) Foreach(f func(Int32ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ArrOptionOption) Foreach(f func(Int64ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintArrOptionOption) Foreach(f func(UintArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ArrOptionOption) Foreach(f func(Uint8ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ArrOptionOption) Foreach(f func(Uint16ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ArrOptionOption) Foreach(f func(Uint32ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ArrOptionOption) Foreach(f func(Uint64ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrArrOptionOption) Foreach(f func(UintptrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteArrOptionOption) Foreach(f func(ByteArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneArrOptionOption) Foreach(f func(RuneArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ArrOptionOption) Foreach(f func(Float32ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ArrOptionOption) Foreach(f func(Float64ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ArrOptionOption) Foreach(f func(Complex64ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ArrOptionOption) Foreach(f func(Complex128ArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyArrOptionOption) Foreach(f func(AnyArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolArrArrOptionOption) Foreach(f func(BoolArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringArrArrOptionOption) Foreach(f func(StringArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntArrArrOptionOption) Foreach(f func(IntArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ArrArrOptionOption) Foreach(f func(Int8ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ArrArrOptionOption) Foreach(f func(Int16ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ArrArrOptionOption) Foreach(f func(Int32ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ArrArrOptionOption) Foreach(f func(Int64ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintArrArrOptionOption) Foreach(f func(UintArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ArrArrOptionOption) Foreach(f func(Uint8ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ArrArrOptionOption) Foreach(f func(Uint16ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ArrArrOptionOption) Foreach(f func(Uint32ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ArrArrOptionOption) Foreach(f func(Uint64ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrArrArrOptionOption) Foreach(f func(UintptrArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteArrArrOptionOption) Foreach(f func(ByteArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneArrArrOptionOption) Foreach(f func(RuneArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ArrArrOptionOption) Foreach(f func(Float32ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ArrArrOptionOption) Foreach(f func(Float64ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ArrArrOptionOption) Foreach(f func(Complex64ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ArrArrOptionOption) Foreach(f func(Complex128ArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyArrArrOptionOption) Foreach(f func(AnyArrArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolOptionArrOptionOption) Foreach(f func(BoolOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringOptionArrOptionOption) Foreach(f func(StringOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntOptionArrOptionOption) Foreach(f func(IntOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8OptionArrOptionOption) Foreach(f func(Int8OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16OptionArrOptionOption) Foreach(f func(Int16OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32OptionArrOptionOption) Foreach(f func(Int32OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64OptionArrOptionOption) Foreach(f func(Int64OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintOptionArrOptionOption) Foreach(f func(UintOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8OptionArrOptionOption) Foreach(f func(Uint8OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16OptionArrOptionOption) Foreach(f func(Uint16OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32OptionArrOptionOption) Foreach(f func(Uint32OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64OptionArrOptionOption) Foreach(f func(Uint64OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrOptionArrOptionOption) Foreach(f func(UintptrOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteOptionArrOptionOption) Foreach(f func(ByteOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneOptionArrOptionOption) Foreach(f func(RuneOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32OptionArrOptionOption) Foreach(f func(Float32OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64OptionArrOptionOption) Foreach(f func(Float64OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64OptionArrOptionOption) Foreach(f func(Complex64OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128OptionArrOptionOption) Foreach(f func(Complex128OptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyOptionArrOptionOption) Foreach(f func(AnyOptionArrOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolListOptionOption) Foreach(f func(BoolListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringListOptionOption) Foreach(f func(StringListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntListOptionOption) Foreach(f func(IntListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ListOptionOption) Foreach(f func(Int8ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ListOptionOption) Foreach(f func(Int16ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ListOptionOption) Foreach(f func(Int32ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ListOptionOption) Foreach(f func(Int64ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintListOptionOption) Foreach(f func(UintListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ListOptionOption) Foreach(f func(Uint8ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ListOptionOption) Foreach(f func(Uint16ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ListOptionOption) Foreach(f func(Uint32ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ListOptionOption) Foreach(f func(Uint64ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrListOptionOption) Foreach(f func(UintptrListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteListOptionOption) Foreach(f func(ByteListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneListOptionOption) Foreach(f func(RuneListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ListOptionOption) Foreach(f func(Float32ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ListOptionOption) Foreach(f func(Float64ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ListOptionOption) Foreach(f func(Complex64ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ListOptionOption) Foreach(f func(Complex128ListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyListOptionOption) Foreach(f func(AnyListOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolOptionOptionOption) Foreach(f func(BoolOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringOptionOptionOption) Foreach(f func(StringOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntOptionOptionOption) Foreach(f func(IntOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8OptionOptionOption) Foreach(f func(Int8OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16OptionOptionOption) Foreach(f func(Int16OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32OptionOptionOption) Foreach(f func(Int32OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64OptionOptionOption) Foreach(f func(Int64OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintOptionOptionOption) Foreach(f func(UintOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8OptionOptionOption) Foreach(f func(Uint8OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16OptionOptionOption) Foreach(f func(Uint16OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32OptionOptionOption) Foreach(f func(Uint32OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64OptionOptionOption) Foreach(f func(Uint64OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrOptionOptionOption) Foreach(f func(UintptrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteOptionOptionOption) Foreach(f func(ByteOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneOptionOptionOption) Foreach(f func(RuneOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32OptionOptionOption) Foreach(f func(Float32OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64OptionOptionOption) Foreach(f func(Float64OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64OptionOptionOption) Foreach(f func(Complex64OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128OptionOptionOption) Foreach(f func(Complex128OptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyOptionOptionOption) Foreach(f func(AnyOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolArrOptionOptionOption) Foreach(f func(BoolArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringArrOptionOptionOption) Foreach(f func(StringArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntArrOptionOptionOption) Foreach(f func(IntArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ArrOptionOptionOption) Foreach(f func(Int8ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ArrOptionOptionOption) Foreach(f func(Int16ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ArrOptionOptionOption) Foreach(f func(Int32ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ArrOptionOptionOption) Foreach(f func(Int64ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintArrOptionOptionOption) Foreach(f func(UintArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ArrOptionOptionOption) Foreach(f func(Uint8ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ArrOptionOptionOption) Foreach(f func(Uint16ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ArrOptionOptionOption) Foreach(f func(Uint32ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ArrOptionOptionOption) Foreach(f func(Uint64ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrArrOptionOptionOption) Foreach(f func(UintptrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteArrOptionOptionOption) Foreach(f func(ByteArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneArrOptionOptionOption) Foreach(f func(RuneArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ArrOptionOptionOption) Foreach(f func(Float32ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ArrOptionOptionOption) Foreach(f func(Float64ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ArrOptionOptionOption) Foreach(f func(Complex64ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ArrOptionOptionOption) Foreach(f func(Complex128ArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyArrOptionOptionOption) Foreach(f func(AnyArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolArrArrOptionOptionOption) Foreach(f func(BoolArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringArrArrOptionOptionOption) Foreach(f func(StringArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntArrArrOptionOptionOption) Foreach(f func(IntArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ArrArrOptionOptionOption) Foreach(f func(Int8ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ArrArrOptionOptionOption) Foreach(f func(Int16ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ArrArrOptionOptionOption) Foreach(f func(Int32ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ArrArrOptionOptionOption) Foreach(f func(Int64ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintArrArrOptionOptionOption) Foreach(f func(UintArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ArrArrOptionOptionOption) Foreach(f func(Uint8ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ArrArrOptionOptionOption) Foreach(f func(Uint16ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ArrArrOptionOptionOption) Foreach(f func(Uint32ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ArrArrOptionOptionOption) Foreach(f func(Uint64ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrArrArrOptionOptionOption) Foreach(f func(UintptrArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteArrArrOptionOptionOption) Foreach(f func(ByteArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneArrArrOptionOptionOption) Foreach(f func(RuneArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ArrArrOptionOptionOption) Foreach(f func(Float32ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ArrArrOptionOptionOption) Foreach(f func(Float64ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ArrArrOptionOptionOption) Foreach(f func(Complex64ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ArrArrOptionOptionOption) Foreach(f func(Complex128ArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyArrArrOptionOptionOption) Foreach(f func(AnyArrArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolOptionArrOptionOptionOption) Foreach(f func(BoolOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringOptionArrOptionOptionOption) Foreach(f func(StringOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntOptionArrOptionOptionOption) Foreach(f func(IntOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8OptionArrOptionOptionOption) Foreach(f func(Int8OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16OptionArrOptionOptionOption) Foreach(f func(Int16OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32OptionArrOptionOptionOption) Foreach(f func(Int32OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64OptionArrOptionOptionOption) Foreach(f func(Int64OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintOptionArrOptionOptionOption) Foreach(f func(UintOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8OptionArrOptionOptionOption) Foreach(f func(Uint8OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16OptionArrOptionOptionOption) Foreach(f func(Uint16OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32OptionArrOptionOptionOption) Foreach(f func(Uint32OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64OptionArrOptionOptionOption) Foreach(f func(Uint64OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrOptionArrOptionOptionOption) Foreach(f func(UintptrOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteOptionArrOptionOptionOption) Foreach(f func(ByteOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneOptionArrOptionOptionOption) Foreach(f func(RuneOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32OptionArrOptionOptionOption) Foreach(f func(Float32OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64OptionArrOptionOptionOption) Foreach(f func(Float64OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64OptionArrOptionOptionOption) Foreach(f func(Complex64OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128OptionArrOptionOptionOption) Foreach(f func(Complex128OptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyOptionArrOptionOptionOption) Foreach(f func(AnyOptionArrOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o BoolListOptionOptionOption) Foreach(f func(BoolListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o StringListOptionOptionOption) Foreach(f func(StringListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o IntListOptionOptionOption) Foreach(f func(IntListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int8ListOptionOptionOption) Foreach(f func(Int8ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int16ListOptionOptionOption) Foreach(f func(Int16ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int32ListOptionOptionOption) Foreach(f func(Int32ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Int64ListOptionOptionOption) Foreach(f func(Int64ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintListOptionOptionOption) Foreach(f func(UintListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint8ListOptionOptionOption) Foreach(f func(Uint8ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint16ListOptionOptionOption) Foreach(f func(Uint16ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint32ListOptionOptionOption) Foreach(f func(Uint32ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Uint64ListOptionOptionOption) Foreach(f func(Uint64ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o UintptrListOptionOptionOption) Foreach(f func(UintptrListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o ByteListOptionOptionOption) Foreach(f func(ByteListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o RuneListOptionOptionOption) Foreach(f func(RuneListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float32ListOptionOptionOption) Foreach(f func(Float32ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Float64ListOptionOptionOption) Foreach(f func(Float64ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex64ListOptionOptionOption) Foreach(f func(Complex64ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Complex128ListOptionOptionOption) Foreach(f func(Complex128ListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o AnyListOptionOptionOption) Foreach(f func(AnyListOptionOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}

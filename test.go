@@ -73,4 +73,10 @@ func main() {
 	})
 
 	fmt.Println(res1.ToString())
+
+	MakeIntList(1, 2, 3, 4, 5).
+		FlatMapInt(func(i int) IntList { return MakeIntList(i * 10) }).
+		Foreach(func(i int) { fmt.Println(" ", i) })
+
+	fmt.Println(MakeIntList(1, 2).HeadOption().ToString())
 }

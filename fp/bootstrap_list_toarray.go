@@ -3,304 +3,4003 @@
 
 package fp
 
-
-func (l BoolList) ToArray() []bool { acc := make([]bool, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringList) ToArray() []string { acc := make([]string, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntList) ToArray() []int { acc := make([]int, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8List) ToArray() []int8 { acc := make([]int8, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16List) ToArray() []int16 { acc := make([]int16, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32List) ToArray() []int32 { acc := make([]int32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64List) ToArray() []int64 { acc := make([]int64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintList) ToArray() []uint { acc := make([]uint, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8List) ToArray() []uint8 { acc := make([]uint8, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16List) ToArray() []uint16 { acc := make([]uint16, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32List) ToArray() []uint32 { acc := make([]uint32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64List) ToArray() []uint64 { acc := make([]uint64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrList) ToArray() []uintptr { acc := make([]uintptr, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteList) ToArray() []byte { acc := make([]byte, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneList) ToArray() []rune { acc := make([]rune, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32List) ToArray() []float32 { acc := make([]float32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64List) ToArray() []float64 { acc := make([]float64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64List) ToArray() []complex64 { acc := make([]complex64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128List) ToArray() []complex128 { acc := make([]complex128, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyList) ToArray() []Any { acc := make([]Any, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolOptionList) ToArray() []BoolOption { acc := make([]BoolOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringOptionList) ToArray() []StringOption { acc := make([]StringOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntOptionList) ToArray() []IntOption { acc := make([]IntOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8OptionList) ToArray() []Int8Option { acc := make([]Int8Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16OptionList) ToArray() []Int16Option { acc := make([]Int16Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32OptionList) ToArray() []Int32Option { acc := make([]Int32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64OptionList) ToArray() []Int64Option { acc := make([]Int64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintOptionList) ToArray() []UintOption { acc := make([]UintOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8OptionList) ToArray() []Uint8Option { acc := make([]Uint8Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16OptionList) ToArray() []Uint16Option { acc := make([]Uint16Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32OptionList) ToArray() []Uint32Option { acc := make([]Uint32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64OptionList) ToArray() []Uint64Option { acc := make([]Uint64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrOptionList) ToArray() []UintptrOption { acc := make([]UintptrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteOptionList) ToArray() []ByteOption { acc := make([]ByteOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneOptionList) ToArray() []RuneOption { acc := make([]RuneOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32OptionList) ToArray() []Float32Option { acc := make([]Float32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64OptionList) ToArray() []Float64Option { acc := make([]Float64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64OptionList) ToArray() []Complex64Option { acc := make([]Complex64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128OptionList) ToArray() []Complex128Option { acc := make([]Complex128Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyOptionList) ToArray() []AnyOption { acc := make([]AnyOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolArrOptionList) ToArray() []BoolArrOption { acc := make([]BoolArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringArrOptionList) ToArray() []StringArrOption { acc := make([]StringArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntArrOptionList) ToArray() []IntArrOption { acc := make([]IntArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ArrOptionList) ToArray() []Int8ArrOption { acc := make([]Int8ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ArrOptionList) ToArray() []Int16ArrOption { acc := make([]Int16ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ArrOptionList) ToArray() []Int32ArrOption { acc := make([]Int32ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ArrOptionList) ToArray() []Int64ArrOption { acc := make([]Int64ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintArrOptionList) ToArray() []UintArrOption { acc := make([]UintArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ArrOptionList) ToArray() []Uint8ArrOption { acc := make([]Uint8ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ArrOptionList) ToArray() []Uint16ArrOption { acc := make([]Uint16ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ArrOptionList) ToArray() []Uint32ArrOption { acc := make([]Uint32ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ArrOptionList) ToArray() []Uint64ArrOption { acc := make([]Uint64ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrArrOptionList) ToArray() []UintptrArrOption { acc := make([]UintptrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteArrOptionList) ToArray() []ByteArrOption { acc := make([]ByteArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneArrOptionList) ToArray() []RuneArrOption { acc := make([]RuneArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ArrOptionList) ToArray() []Float32ArrOption { acc := make([]Float32ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ArrOptionList) ToArray() []Float64ArrOption { acc := make([]Float64ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ArrOptionList) ToArray() []Complex64ArrOption { acc := make([]Complex64ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ArrOptionList) ToArray() []Complex128ArrOption { acc := make([]Complex128ArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyArrOptionList) ToArray() []AnyArrOption { acc := make([]AnyArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolArrArrOptionList) ToArray() []BoolArrArrOption { acc := make([]BoolArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringArrArrOptionList) ToArray() []StringArrArrOption { acc := make([]StringArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntArrArrOptionList) ToArray() []IntArrArrOption { acc := make([]IntArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ArrArrOptionList) ToArray() []Int8ArrArrOption { acc := make([]Int8ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ArrArrOptionList) ToArray() []Int16ArrArrOption { acc := make([]Int16ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ArrArrOptionList) ToArray() []Int32ArrArrOption { acc := make([]Int32ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ArrArrOptionList) ToArray() []Int64ArrArrOption { acc := make([]Int64ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintArrArrOptionList) ToArray() []UintArrArrOption { acc := make([]UintArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ArrArrOptionList) ToArray() []Uint8ArrArrOption { acc := make([]Uint8ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ArrArrOptionList) ToArray() []Uint16ArrArrOption { acc := make([]Uint16ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ArrArrOptionList) ToArray() []Uint32ArrArrOption { acc := make([]Uint32ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ArrArrOptionList) ToArray() []Uint64ArrArrOption { acc := make([]Uint64ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrArrArrOptionList) ToArray() []UintptrArrArrOption { acc := make([]UintptrArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteArrArrOptionList) ToArray() []ByteArrArrOption { acc := make([]ByteArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneArrArrOptionList) ToArray() []RuneArrArrOption { acc := make([]RuneArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ArrArrOptionList) ToArray() []Float32ArrArrOption { acc := make([]Float32ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ArrArrOptionList) ToArray() []Float64ArrArrOption { acc := make([]Float64ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ArrArrOptionList) ToArray() []Complex64ArrArrOption { acc := make([]Complex64ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ArrArrOptionList) ToArray() []Complex128ArrArrOption { acc := make([]Complex128ArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyArrArrOptionList) ToArray() []AnyArrArrOption { acc := make([]AnyArrArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolOptionArrOptionList) ToArray() []BoolOptionArrOption { acc := make([]BoolOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringOptionArrOptionList) ToArray() []StringOptionArrOption { acc := make([]StringOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntOptionArrOptionList) ToArray() []IntOptionArrOption { acc := make([]IntOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8OptionArrOptionList) ToArray() []Int8OptionArrOption { acc := make([]Int8OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16OptionArrOptionList) ToArray() []Int16OptionArrOption { acc := make([]Int16OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32OptionArrOptionList) ToArray() []Int32OptionArrOption { acc := make([]Int32OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64OptionArrOptionList) ToArray() []Int64OptionArrOption { acc := make([]Int64OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintOptionArrOptionList) ToArray() []UintOptionArrOption { acc := make([]UintOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8OptionArrOptionList) ToArray() []Uint8OptionArrOption { acc := make([]Uint8OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16OptionArrOptionList) ToArray() []Uint16OptionArrOption { acc := make([]Uint16OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32OptionArrOptionList) ToArray() []Uint32OptionArrOption { acc := make([]Uint32OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64OptionArrOptionList) ToArray() []Uint64OptionArrOption { acc := make([]Uint64OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrOptionArrOptionList) ToArray() []UintptrOptionArrOption { acc := make([]UintptrOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteOptionArrOptionList) ToArray() []ByteOptionArrOption { acc := make([]ByteOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneOptionArrOptionList) ToArray() []RuneOptionArrOption { acc := make([]RuneOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32OptionArrOptionList) ToArray() []Float32OptionArrOption { acc := make([]Float32OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64OptionArrOptionList) ToArray() []Float64OptionArrOption { acc := make([]Float64OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64OptionArrOptionList) ToArray() []Complex64OptionArrOption { acc := make([]Complex64OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128OptionArrOptionList) ToArray() []Complex128OptionArrOption { acc := make([]Complex128OptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyOptionArrOptionList) ToArray() []AnyOptionArrOption { acc := make([]AnyOptionArrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolListOptionList) ToArray() []BoolListOption { acc := make([]BoolListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringListOptionList) ToArray() []StringListOption { acc := make([]StringListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntListOptionList) ToArray() []IntListOption { acc := make([]IntListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ListOptionList) ToArray() []Int8ListOption { acc := make([]Int8ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ListOptionList) ToArray() []Int16ListOption { acc := make([]Int16ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ListOptionList) ToArray() []Int32ListOption { acc := make([]Int32ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ListOptionList) ToArray() []Int64ListOption { acc := make([]Int64ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintListOptionList) ToArray() []UintListOption { acc := make([]UintListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ListOptionList) ToArray() []Uint8ListOption { acc := make([]Uint8ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ListOptionList) ToArray() []Uint16ListOption { acc := make([]Uint16ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ListOptionList) ToArray() []Uint32ListOption { acc := make([]Uint32ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ListOptionList) ToArray() []Uint64ListOption { acc := make([]Uint64ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrListOptionList) ToArray() []UintptrListOption { acc := make([]UintptrListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteListOptionList) ToArray() []ByteListOption { acc := make([]ByteListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneListOptionList) ToArray() []RuneListOption { acc := make([]RuneListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ListOptionList) ToArray() []Float32ListOption { acc := make([]Float32ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ListOptionList) ToArray() []Float64ListOption { acc := make([]Float64ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ListOptionList) ToArray() []Complex64ListOption { acc := make([]Complex64ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ListOptionList) ToArray() []Complex128ListOption { acc := make([]Complex128ListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyListOptionList) ToArray() []AnyListOption { acc := make([]AnyListOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolOptionOptionList) ToArray() []BoolOptionOption { acc := make([]BoolOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringOptionOptionList) ToArray() []StringOptionOption { acc := make([]StringOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntOptionOptionList) ToArray() []IntOptionOption { acc := make([]IntOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8OptionOptionList) ToArray() []Int8OptionOption { acc := make([]Int8OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16OptionOptionList) ToArray() []Int16OptionOption { acc := make([]Int16OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32OptionOptionList) ToArray() []Int32OptionOption { acc := make([]Int32OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64OptionOptionList) ToArray() []Int64OptionOption { acc := make([]Int64OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintOptionOptionList) ToArray() []UintOptionOption { acc := make([]UintOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8OptionOptionList) ToArray() []Uint8OptionOption { acc := make([]Uint8OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16OptionOptionList) ToArray() []Uint16OptionOption { acc := make([]Uint16OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32OptionOptionList) ToArray() []Uint32OptionOption { acc := make([]Uint32OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64OptionOptionList) ToArray() []Uint64OptionOption { acc := make([]Uint64OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrOptionOptionList) ToArray() []UintptrOptionOption { acc := make([]UintptrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteOptionOptionList) ToArray() []ByteOptionOption { acc := make([]ByteOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneOptionOptionList) ToArray() []RuneOptionOption { acc := make([]RuneOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32OptionOptionList) ToArray() []Float32OptionOption { acc := make([]Float32OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64OptionOptionList) ToArray() []Float64OptionOption { acc := make([]Float64OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64OptionOptionList) ToArray() []Complex64OptionOption { acc := make([]Complex64OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128OptionOptionList) ToArray() []Complex128OptionOption { acc := make([]Complex128OptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyOptionOptionList) ToArray() []AnyOptionOption { acc := make([]AnyOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolArrOptionOptionList) ToArray() []BoolArrOptionOption { acc := make([]BoolArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringArrOptionOptionList) ToArray() []StringArrOptionOption { acc := make([]StringArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntArrOptionOptionList) ToArray() []IntArrOptionOption { acc := make([]IntArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ArrOptionOptionList) ToArray() []Int8ArrOptionOption { acc := make([]Int8ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ArrOptionOptionList) ToArray() []Int16ArrOptionOption { acc := make([]Int16ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ArrOptionOptionList) ToArray() []Int32ArrOptionOption { acc := make([]Int32ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ArrOptionOptionList) ToArray() []Int64ArrOptionOption { acc := make([]Int64ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintArrOptionOptionList) ToArray() []UintArrOptionOption { acc := make([]UintArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ArrOptionOptionList) ToArray() []Uint8ArrOptionOption { acc := make([]Uint8ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ArrOptionOptionList) ToArray() []Uint16ArrOptionOption { acc := make([]Uint16ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ArrOptionOptionList) ToArray() []Uint32ArrOptionOption { acc := make([]Uint32ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ArrOptionOptionList) ToArray() []Uint64ArrOptionOption { acc := make([]Uint64ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrArrOptionOptionList) ToArray() []UintptrArrOptionOption { acc := make([]UintptrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteArrOptionOptionList) ToArray() []ByteArrOptionOption { acc := make([]ByteArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneArrOptionOptionList) ToArray() []RuneArrOptionOption { acc := make([]RuneArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ArrOptionOptionList) ToArray() []Float32ArrOptionOption { acc := make([]Float32ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ArrOptionOptionList) ToArray() []Float64ArrOptionOption { acc := make([]Float64ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ArrOptionOptionList) ToArray() []Complex64ArrOptionOption { acc := make([]Complex64ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ArrOptionOptionList) ToArray() []Complex128ArrOptionOption { acc := make([]Complex128ArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyArrOptionOptionList) ToArray() []AnyArrOptionOption { acc := make([]AnyArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolArrArrOptionOptionList) ToArray() []BoolArrArrOptionOption { acc := make([]BoolArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringArrArrOptionOptionList) ToArray() []StringArrArrOptionOption { acc := make([]StringArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntArrArrOptionOptionList) ToArray() []IntArrArrOptionOption { acc := make([]IntArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ArrArrOptionOptionList) ToArray() []Int8ArrArrOptionOption { acc := make([]Int8ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ArrArrOptionOptionList) ToArray() []Int16ArrArrOptionOption { acc := make([]Int16ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ArrArrOptionOptionList) ToArray() []Int32ArrArrOptionOption { acc := make([]Int32ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ArrArrOptionOptionList) ToArray() []Int64ArrArrOptionOption { acc := make([]Int64ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintArrArrOptionOptionList) ToArray() []UintArrArrOptionOption { acc := make([]UintArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ArrArrOptionOptionList) ToArray() []Uint8ArrArrOptionOption { acc := make([]Uint8ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ArrArrOptionOptionList) ToArray() []Uint16ArrArrOptionOption { acc := make([]Uint16ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ArrArrOptionOptionList) ToArray() []Uint32ArrArrOptionOption { acc := make([]Uint32ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ArrArrOptionOptionList) ToArray() []Uint64ArrArrOptionOption { acc := make([]Uint64ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrArrArrOptionOptionList) ToArray() []UintptrArrArrOptionOption { acc := make([]UintptrArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteArrArrOptionOptionList) ToArray() []ByteArrArrOptionOption { acc := make([]ByteArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneArrArrOptionOptionList) ToArray() []RuneArrArrOptionOption { acc := make([]RuneArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ArrArrOptionOptionList) ToArray() []Float32ArrArrOptionOption { acc := make([]Float32ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ArrArrOptionOptionList) ToArray() []Float64ArrArrOptionOption { acc := make([]Float64ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ArrArrOptionOptionList) ToArray() []Complex64ArrArrOptionOption { acc := make([]Complex64ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ArrArrOptionOptionList) ToArray() []Complex128ArrArrOptionOption { acc := make([]Complex128ArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyArrArrOptionOptionList) ToArray() []AnyArrArrOptionOption { acc := make([]AnyArrArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolOptionArrOptionOptionList) ToArray() []BoolOptionArrOptionOption { acc := make([]BoolOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringOptionArrOptionOptionList) ToArray() []StringOptionArrOptionOption { acc := make([]StringOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntOptionArrOptionOptionList) ToArray() []IntOptionArrOptionOption { acc := make([]IntOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8OptionArrOptionOptionList) ToArray() []Int8OptionArrOptionOption { acc := make([]Int8OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16OptionArrOptionOptionList) ToArray() []Int16OptionArrOptionOption { acc := make([]Int16OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32OptionArrOptionOptionList) ToArray() []Int32OptionArrOptionOption { acc := make([]Int32OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64OptionArrOptionOptionList) ToArray() []Int64OptionArrOptionOption { acc := make([]Int64OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintOptionArrOptionOptionList) ToArray() []UintOptionArrOptionOption { acc := make([]UintOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8OptionArrOptionOptionList) ToArray() []Uint8OptionArrOptionOption { acc := make([]Uint8OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16OptionArrOptionOptionList) ToArray() []Uint16OptionArrOptionOption { acc := make([]Uint16OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32OptionArrOptionOptionList) ToArray() []Uint32OptionArrOptionOption { acc := make([]Uint32OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64OptionArrOptionOptionList) ToArray() []Uint64OptionArrOptionOption { acc := make([]Uint64OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrOptionArrOptionOptionList) ToArray() []UintptrOptionArrOptionOption { acc := make([]UintptrOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteOptionArrOptionOptionList) ToArray() []ByteOptionArrOptionOption { acc := make([]ByteOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneOptionArrOptionOptionList) ToArray() []RuneOptionArrOptionOption { acc := make([]RuneOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32OptionArrOptionOptionList) ToArray() []Float32OptionArrOptionOption { acc := make([]Float32OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64OptionArrOptionOptionList) ToArray() []Float64OptionArrOptionOption { acc := make([]Float64OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64OptionArrOptionOptionList) ToArray() []Complex64OptionArrOptionOption { acc := make([]Complex64OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128OptionArrOptionOptionList) ToArray() []Complex128OptionArrOptionOption { acc := make([]Complex128OptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyOptionArrOptionOptionList) ToArray() []AnyOptionArrOptionOption { acc := make([]AnyOptionArrOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolListOptionOptionList) ToArray() []BoolListOptionOption { acc := make([]BoolListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringListOptionOptionList) ToArray() []StringListOptionOption { acc := make([]StringListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntListOptionOptionList) ToArray() []IntListOptionOption { acc := make([]IntListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ListOptionOptionList) ToArray() []Int8ListOptionOption { acc := make([]Int8ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ListOptionOptionList) ToArray() []Int16ListOptionOption { acc := make([]Int16ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ListOptionOptionList) ToArray() []Int32ListOptionOption { acc := make([]Int32ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ListOptionOptionList) ToArray() []Int64ListOptionOption { acc := make([]Int64ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintListOptionOptionList) ToArray() []UintListOptionOption { acc := make([]UintListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ListOptionOptionList) ToArray() []Uint8ListOptionOption { acc := make([]Uint8ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ListOptionOptionList) ToArray() []Uint16ListOptionOption { acc := make([]Uint16ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ListOptionOptionList) ToArray() []Uint32ListOptionOption { acc := make([]Uint32ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ListOptionOptionList) ToArray() []Uint64ListOptionOption { acc := make([]Uint64ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrListOptionOptionList) ToArray() []UintptrListOptionOption { acc := make([]UintptrListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteListOptionOptionList) ToArray() []ByteListOptionOption { acc := make([]ByteListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneListOptionOptionList) ToArray() []RuneListOptionOption { acc := make([]RuneListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ListOptionOptionList) ToArray() []Float32ListOptionOption { acc := make([]Float32ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ListOptionOptionList) ToArray() []Float64ListOptionOption { acc := make([]Float64ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ListOptionOptionList) ToArray() []Complex64ListOptionOption { acc := make([]Complex64ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ListOptionOptionList) ToArray() []Complex128ListOptionOption { acc := make([]Complex128ListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyListOptionOptionList) ToArray() []AnyListOptionOption { acc := make([]AnyListOptionOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolArrList) ToArray() [][]bool { acc := make([][]bool, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringArrList) ToArray() [][]string { acc := make([][]string, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntArrList) ToArray() [][]int { acc := make([][]int, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ArrList) ToArray() [][]int8 { acc := make([][]int8, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ArrList) ToArray() [][]int16 { acc := make([][]int16, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ArrList) ToArray() [][]int32 { acc := make([][]int32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ArrList) ToArray() [][]int64 { acc := make([][]int64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintArrList) ToArray() [][]uint { acc := make([][]uint, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ArrList) ToArray() [][]uint8 { acc := make([][]uint8, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ArrList) ToArray() [][]uint16 { acc := make([][]uint16, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ArrList) ToArray() [][]uint32 { acc := make([][]uint32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ArrList) ToArray() [][]uint64 { acc := make([][]uint64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrArrList) ToArray() [][]uintptr { acc := make([][]uintptr, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteArrList) ToArray() [][]byte { acc := make([][]byte, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneArrList) ToArray() [][]rune { acc := make([][]rune, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ArrList) ToArray() [][]float32 { acc := make([][]float32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ArrList) ToArray() [][]float64 { acc := make([][]float64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ArrList) ToArray() [][]complex64 { acc := make([][]complex64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ArrList) ToArray() [][]complex128 { acc := make([][]complex128, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyArrList) ToArray() [][]Any { acc := make([][]Any, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolArrArrList) ToArray() [][][]bool { acc := make([][][]bool, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringArrArrList) ToArray() [][][]string { acc := make([][][]string, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntArrArrList) ToArray() [][][]int { acc := make([][][]int, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ArrArrList) ToArray() [][][]int8 { acc := make([][][]int8, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ArrArrList) ToArray() [][][]int16 { acc := make([][][]int16, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ArrArrList) ToArray() [][][]int32 { acc := make([][][]int32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ArrArrList) ToArray() [][][]int64 { acc := make([][][]int64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintArrArrList) ToArray() [][][]uint { acc := make([][][]uint, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ArrArrList) ToArray() [][][]uint8 { acc := make([][][]uint8, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ArrArrList) ToArray() [][][]uint16 { acc := make([][][]uint16, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ArrArrList) ToArray() [][][]uint32 { acc := make([][][]uint32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ArrArrList) ToArray() [][][]uint64 { acc := make([][][]uint64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrArrArrList) ToArray() [][][]uintptr { acc := make([][][]uintptr, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteArrArrList) ToArray() [][][]byte { acc := make([][][]byte, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneArrArrList) ToArray() [][][]rune { acc := make([][][]rune, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ArrArrList) ToArray() [][][]float32 { acc := make([][][]float32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ArrArrList) ToArray() [][][]float64 { acc := make([][][]float64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ArrArrList) ToArray() [][][]complex64 { acc := make([][][]complex64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ArrArrList) ToArray() [][][]complex128 { acc := make([][][]complex128, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyArrArrList) ToArray() [][][]Any { acc := make([][][]Any, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolOptionArrList) ToArray() [][]BoolOption { acc := make([][]BoolOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringOptionArrList) ToArray() [][]StringOption { acc := make([][]StringOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntOptionArrList) ToArray() [][]IntOption { acc := make([][]IntOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8OptionArrList) ToArray() [][]Int8Option { acc := make([][]Int8Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16OptionArrList) ToArray() [][]Int16Option { acc := make([][]Int16Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32OptionArrList) ToArray() [][]Int32Option { acc := make([][]Int32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64OptionArrList) ToArray() [][]Int64Option { acc := make([][]Int64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintOptionArrList) ToArray() [][]UintOption { acc := make([][]UintOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8OptionArrList) ToArray() [][]Uint8Option { acc := make([][]Uint8Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16OptionArrList) ToArray() [][]Uint16Option { acc := make([][]Uint16Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32OptionArrList) ToArray() [][]Uint32Option { acc := make([][]Uint32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64OptionArrList) ToArray() [][]Uint64Option { acc := make([][]Uint64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrOptionArrList) ToArray() [][]UintptrOption { acc := make([][]UintptrOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteOptionArrList) ToArray() [][]ByteOption { acc := make([][]ByteOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneOptionArrList) ToArray() [][]RuneOption { acc := make([][]RuneOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32OptionArrList) ToArray() [][]Float32Option { acc := make([][]Float32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64OptionArrList) ToArray() [][]Float64Option { acc := make([][]Float64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64OptionArrList) ToArray() [][]Complex64Option { acc := make([][]Complex64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128OptionArrList) ToArray() [][]Complex128Option { acc := make([][]Complex128Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyOptionArrList) ToArray() [][]AnyOption { acc := make([][]AnyOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l BoolListList) ToArray() []BoolList { acc := make([]BoolList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l StringListList) ToArray() []StringList { acc := make([]StringList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l IntListList) ToArray() []IntList { acc := make([]IntList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int8ListList) ToArray() []Int8List { acc := make([]Int8List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int16ListList) ToArray() []Int16List { acc := make([]Int16List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int32ListList) ToArray() []Int32List { acc := make([]Int32List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Int64ListList) ToArray() []Int64List { acc := make([]Int64List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintListList) ToArray() []UintList { acc := make([]UintList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint8ListList) ToArray() []Uint8List { acc := make([]Uint8List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint16ListList) ToArray() []Uint16List { acc := make([]Uint16List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint32ListList) ToArray() []Uint32List { acc := make([]Uint32List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Uint64ListList) ToArray() []Uint64List { acc := make([]Uint64List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l UintptrListList) ToArray() []UintptrList { acc := make([]UintptrList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l ByteListList) ToArray() []ByteList { acc := make([]ByteList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l RuneListList) ToArray() []RuneList { acc := make([]RuneList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float32ListList) ToArray() []Float32List { acc := make([]Float32List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Float64ListList) ToArray() []Float64List { acc := make([]Float64List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex64ListList) ToArray() []Complex64List { acc := make([]Complex64List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l Complex128ListList) ToArray() []Complex128List { acc := make([]Complex128List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
-func (l AnyListList) ToArray() []AnyList { acc := make([]AnyList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l BoolList) ToArray() []bool {
+	acc := make([]bool, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringList) ToArray() []string {
+	acc := make([]string, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntList) ToArray() []int {
+	acc := make([]int, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8List) ToArray() []int8 {
+	acc := make([]int8, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16List) ToArray() []int16 {
+	acc := make([]int16, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32List) ToArray() []int32 {
+	acc := make([]int32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64List) ToArray() []int64 {
+	acc := make([]int64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintList) ToArray() []uint {
+	acc := make([]uint, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8List) ToArray() []uint8 {
+	acc := make([]uint8, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16List) ToArray() []uint16 {
+	acc := make([]uint16, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32List) ToArray() []uint32 {
+	acc := make([]uint32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64List) ToArray() []uint64 {
+	acc := make([]uint64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrList) ToArray() []uintptr {
+	acc := make([]uintptr, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteList) ToArray() []byte {
+	acc := make([]byte, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneList) ToArray() []rune {
+	acc := make([]rune, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32List) ToArray() []float32 {
+	acc := make([]float32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64List) ToArray() []float64 {
+	acc := make([]float64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64List) ToArray() []complex64 {
+	acc := make([]complex64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128List) ToArray() []complex128 {
+	acc := make([]complex128, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyList) ToArray() []Any {
+	acc := make([]Any, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionList) ToArray() []BoolOption {
+	acc := make([]BoolOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionList) ToArray() []StringOption {
+	acc := make([]StringOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionList) ToArray() []IntOption {
+	acc := make([]IntOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionList) ToArray() []Int8Option {
+	acc := make([]Int8Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionList) ToArray() []Int16Option {
+	acc := make([]Int16Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionList) ToArray() []Int32Option {
+	acc := make([]Int32Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionList) ToArray() []Int64Option {
+	acc := make([]Int64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionList) ToArray() []UintOption {
+	acc := make([]UintOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionList) ToArray() []Uint8Option {
+	acc := make([]Uint8Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionList) ToArray() []Uint16Option {
+	acc := make([]Uint16Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionList) ToArray() []Uint32Option {
+	acc := make([]Uint32Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionList) ToArray() []Uint64Option {
+	acc := make([]Uint64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionList) ToArray() []UintptrOption {
+	acc := make([]UintptrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionList) ToArray() []ByteOption {
+	acc := make([]ByteOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionList) ToArray() []RuneOption {
+	acc := make([]RuneOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionList) ToArray() []Float32Option {
+	acc := make([]Float32Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionList) ToArray() []Float64Option {
+	acc := make([]Float64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionList) ToArray() []Complex64Option {
+	acc := make([]Complex64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionList) ToArray() []Complex128Option {
+	acc := make([]Complex128Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionList) ToArray() []AnyOption {
+	acc := make([]AnyOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrOptionList) ToArray() []BoolArrOption {
+	acc := make([]BoolArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrOptionList) ToArray() []StringArrOption {
+	acc := make([]StringArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrOptionList) ToArray() []IntArrOption {
+	acc := make([]IntArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrOptionList) ToArray() []Int8ArrOption {
+	acc := make([]Int8ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrOptionList) ToArray() []Int16ArrOption {
+	acc := make([]Int16ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrOptionList) ToArray() []Int32ArrOption {
+	acc := make([]Int32ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrOptionList) ToArray() []Int64ArrOption {
+	acc := make([]Int64ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrOptionList) ToArray() []UintArrOption {
+	acc := make([]UintArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrOptionList) ToArray() []Uint8ArrOption {
+	acc := make([]Uint8ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrOptionList) ToArray() []Uint16ArrOption {
+	acc := make([]Uint16ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrOptionList) ToArray() []Uint32ArrOption {
+	acc := make([]Uint32ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrOptionList) ToArray() []Uint64ArrOption {
+	acc := make([]Uint64ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrOptionList) ToArray() []UintptrArrOption {
+	acc := make([]UintptrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrOptionList) ToArray() []ByteArrOption {
+	acc := make([]ByteArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrOptionList) ToArray() []RuneArrOption {
+	acc := make([]RuneArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrOptionList) ToArray() []Float32ArrOption {
+	acc := make([]Float32ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrOptionList) ToArray() []Float64ArrOption {
+	acc := make([]Float64ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrOptionList) ToArray() []Complex64ArrOption {
+	acc := make([]Complex64ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrOptionList) ToArray() []Complex128ArrOption {
+	acc := make([]Complex128ArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrOptionList) ToArray() []AnyArrOption {
+	acc := make([]AnyArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrArrOptionList) ToArray() []BoolArrArrOption {
+	acc := make([]BoolArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrArrOptionList) ToArray() []StringArrArrOption {
+	acc := make([]StringArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrArrOptionList) ToArray() []IntArrArrOption {
+	acc := make([]IntArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrArrOptionList) ToArray() []Int8ArrArrOption {
+	acc := make([]Int8ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrArrOptionList) ToArray() []Int16ArrArrOption {
+	acc := make([]Int16ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrArrOptionList) ToArray() []Int32ArrArrOption {
+	acc := make([]Int32ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrArrOptionList) ToArray() []Int64ArrArrOption {
+	acc := make([]Int64ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrArrOptionList) ToArray() []UintArrArrOption {
+	acc := make([]UintArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrArrOptionList) ToArray() []Uint8ArrArrOption {
+	acc := make([]Uint8ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrArrOptionList) ToArray() []Uint16ArrArrOption {
+	acc := make([]Uint16ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrArrOptionList) ToArray() []Uint32ArrArrOption {
+	acc := make([]Uint32ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrArrOptionList) ToArray() []Uint64ArrArrOption {
+	acc := make([]Uint64ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrArrOptionList) ToArray() []UintptrArrArrOption {
+	acc := make([]UintptrArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrArrOptionList) ToArray() []ByteArrArrOption {
+	acc := make([]ByteArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrArrOptionList) ToArray() []RuneArrArrOption {
+	acc := make([]RuneArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrArrOptionList) ToArray() []Float32ArrArrOption {
+	acc := make([]Float32ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrArrOptionList) ToArray() []Float64ArrArrOption {
+	acc := make([]Float64ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrArrOptionList) ToArray() []Complex64ArrArrOption {
+	acc := make([]Complex64ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrArrOptionList) ToArray() []Complex128ArrArrOption {
+	acc := make([]Complex128ArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrArrOptionList) ToArray() []AnyArrArrOption {
+	acc := make([]AnyArrArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionArrOptionList) ToArray() []BoolOptionArrOption {
+	acc := make([]BoolOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionArrOptionList) ToArray() []StringOptionArrOption {
+	acc := make([]StringOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionArrOptionList) ToArray() []IntOptionArrOption {
+	acc := make([]IntOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionArrOptionList) ToArray() []Int8OptionArrOption {
+	acc := make([]Int8OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionArrOptionList) ToArray() []Int16OptionArrOption {
+	acc := make([]Int16OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionArrOptionList) ToArray() []Int32OptionArrOption {
+	acc := make([]Int32OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionArrOptionList) ToArray() []Int64OptionArrOption {
+	acc := make([]Int64OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionArrOptionList) ToArray() []UintOptionArrOption {
+	acc := make([]UintOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionArrOptionList) ToArray() []Uint8OptionArrOption {
+	acc := make([]Uint8OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionArrOptionList) ToArray() []Uint16OptionArrOption {
+	acc := make([]Uint16OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionArrOptionList) ToArray() []Uint32OptionArrOption {
+	acc := make([]Uint32OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionArrOptionList) ToArray() []Uint64OptionArrOption {
+	acc := make([]Uint64OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionArrOptionList) ToArray() []UintptrOptionArrOption {
+	acc := make([]UintptrOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionArrOptionList) ToArray() []ByteOptionArrOption {
+	acc := make([]ByteOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionArrOptionList) ToArray() []RuneOptionArrOption {
+	acc := make([]RuneOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionArrOptionList) ToArray() []Float32OptionArrOption {
+	acc := make([]Float32OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionArrOptionList) ToArray() []Float64OptionArrOption {
+	acc := make([]Float64OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionArrOptionList) ToArray() []Complex64OptionArrOption {
+	acc := make([]Complex64OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionArrOptionList) ToArray() []Complex128OptionArrOption {
+	acc := make([]Complex128OptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionArrOptionList) ToArray() []AnyOptionArrOption {
+	acc := make([]AnyOptionArrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolListOptionList) ToArray() []BoolListOption {
+	acc := make([]BoolListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringListOptionList) ToArray() []StringListOption {
+	acc := make([]StringListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntListOptionList) ToArray() []IntListOption {
+	acc := make([]IntListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ListOptionList) ToArray() []Int8ListOption {
+	acc := make([]Int8ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ListOptionList) ToArray() []Int16ListOption {
+	acc := make([]Int16ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ListOptionList) ToArray() []Int32ListOption {
+	acc := make([]Int32ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ListOptionList) ToArray() []Int64ListOption {
+	acc := make([]Int64ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintListOptionList) ToArray() []UintListOption {
+	acc := make([]UintListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ListOptionList) ToArray() []Uint8ListOption {
+	acc := make([]Uint8ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ListOptionList) ToArray() []Uint16ListOption {
+	acc := make([]Uint16ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ListOptionList) ToArray() []Uint32ListOption {
+	acc := make([]Uint32ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ListOptionList) ToArray() []Uint64ListOption {
+	acc := make([]Uint64ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrListOptionList) ToArray() []UintptrListOption {
+	acc := make([]UintptrListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteListOptionList) ToArray() []ByteListOption {
+	acc := make([]ByteListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneListOptionList) ToArray() []RuneListOption {
+	acc := make([]RuneListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ListOptionList) ToArray() []Float32ListOption {
+	acc := make([]Float32ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ListOptionList) ToArray() []Float64ListOption {
+	acc := make([]Float64ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ListOptionList) ToArray() []Complex64ListOption {
+	acc := make([]Complex64ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ListOptionList) ToArray() []Complex128ListOption {
+	acc := make([]Complex128ListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyListOptionList) ToArray() []AnyListOption {
+	acc := make([]AnyListOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionOptionList) ToArray() []BoolOptionOption {
+	acc := make([]BoolOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionOptionList) ToArray() []StringOptionOption {
+	acc := make([]StringOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionOptionList) ToArray() []IntOptionOption {
+	acc := make([]IntOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionOptionList) ToArray() []Int8OptionOption {
+	acc := make([]Int8OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionOptionList) ToArray() []Int16OptionOption {
+	acc := make([]Int16OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionOptionList) ToArray() []Int32OptionOption {
+	acc := make([]Int32OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionOptionList) ToArray() []Int64OptionOption {
+	acc := make([]Int64OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionOptionList) ToArray() []UintOptionOption {
+	acc := make([]UintOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionOptionList) ToArray() []Uint8OptionOption {
+	acc := make([]Uint8OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionOptionList) ToArray() []Uint16OptionOption {
+	acc := make([]Uint16OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionOptionList) ToArray() []Uint32OptionOption {
+	acc := make([]Uint32OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionOptionList) ToArray() []Uint64OptionOption {
+	acc := make([]Uint64OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionOptionList) ToArray() []UintptrOptionOption {
+	acc := make([]UintptrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionOptionList) ToArray() []ByteOptionOption {
+	acc := make([]ByteOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionOptionList) ToArray() []RuneOptionOption {
+	acc := make([]RuneOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionOptionList) ToArray() []Float32OptionOption {
+	acc := make([]Float32OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionOptionList) ToArray() []Float64OptionOption {
+	acc := make([]Float64OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionOptionList) ToArray() []Complex64OptionOption {
+	acc := make([]Complex64OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionOptionList) ToArray() []Complex128OptionOption {
+	acc := make([]Complex128OptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionOptionList) ToArray() []AnyOptionOption {
+	acc := make([]AnyOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrOptionOptionList) ToArray() []BoolArrOptionOption {
+	acc := make([]BoolArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrOptionOptionList) ToArray() []StringArrOptionOption {
+	acc := make([]StringArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrOptionOptionList) ToArray() []IntArrOptionOption {
+	acc := make([]IntArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrOptionOptionList) ToArray() []Int8ArrOptionOption {
+	acc := make([]Int8ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrOptionOptionList) ToArray() []Int16ArrOptionOption {
+	acc := make([]Int16ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrOptionOptionList) ToArray() []Int32ArrOptionOption {
+	acc := make([]Int32ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrOptionOptionList) ToArray() []Int64ArrOptionOption {
+	acc := make([]Int64ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrOptionOptionList) ToArray() []UintArrOptionOption {
+	acc := make([]UintArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrOptionOptionList) ToArray() []Uint8ArrOptionOption {
+	acc := make([]Uint8ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrOptionOptionList) ToArray() []Uint16ArrOptionOption {
+	acc := make([]Uint16ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrOptionOptionList) ToArray() []Uint32ArrOptionOption {
+	acc := make([]Uint32ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrOptionOptionList) ToArray() []Uint64ArrOptionOption {
+	acc := make([]Uint64ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrOptionOptionList) ToArray() []UintptrArrOptionOption {
+	acc := make([]UintptrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrOptionOptionList) ToArray() []ByteArrOptionOption {
+	acc := make([]ByteArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrOptionOptionList) ToArray() []RuneArrOptionOption {
+	acc := make([]RuneArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrOptionOptionList) ToArray() []Float32ArrOptionOption {
+	acc := make([]Float32ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrOptionOptionList) ToArray() []Float64ArrOptionOption {
+	acc := make([]Float64ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrOptionOptionList) ToArray() []Complex64ArrOptionOption {
+	acc := make([]Complex64ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrOptionOptionList) ToArray() []Complex128ArrOptionOption {
+	acc := make([]Complex128ArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrOptionOptionList) ToArray() []AnyArrOptionOption {
+	acc := make([]AnyArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrArrOptionOptionList) ToArray() []BoolArrArrOptionOption {
+	acc := make([]BoolArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrArrOptionOptionList) ToArray() []StringArrArrOptionOption {
+	acc := make([]StringArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrArrOptionOptionList) ToArray() []IntArrArrOptionOption {
+	acc := make([]IntArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrArrOptionOptionList) ToArray() []Int8ArrArrOptionOption {
+	acc := make([]Int8ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrArrOptionOptionList) ToArray() []Int16ArrArrOptionOption {
+	acc := make([]Int16ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrArrOptionOptionList) ToArray() []Int32ArrArrOptionOption {
+	acc := make([]Int32ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrArrOptionOptionList) ToArray() []Int64ArrArrOptionOption {
+	acc := make([]Int64ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrArrOptionOptionList) ToArray() []UintArrArrOptionOption {
+	acc := make([]UintArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrArrOptionOptionList) ToArray() []Uint8ArrArrOptionOption {
+	acc := make([]Uint8ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrArrOptionOptionList) ToArray() []Uint16ArrArrOptionOption {
+	acc := make([]Uint16ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrArrOptionOptionList) ToArray() []Uint32ArrArrOptionOption {
+	acc := make([]Uint32ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrArrOptionOptionList) ToArray() []Uint64ArrArrOptionOption {
+	acc := make([]Uint64ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrArrOptionOptionList) ToArray() []UintptrArrArrOptionOption {
+	acc := make([]UintptrArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrArrOptionOptionList) ToArray() []ByteArrArrOptionOption {
+	acc := make([]ByteArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrArrOptionOptionList) ToArray() []RuneArrArrOptionOption {
+	acc := make([]RuneArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrArrOptionOptionList) ToArray() []Float32ArrArrOptionOption {
+	acc := make([]Float32ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrArrOptionOptionList) ToArray() []Float64ArrArrOptionOption {
+	acc := make([]Float64ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrArrOptionOptionList) ToArray() []Complex64ArrArrOptionOption {
+	acc := make([]Complex64ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrArrOptionOptionList) ToArray() []Complex128ArrArrOptionOption {
+	acc := make([]Complex128ArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrArrOptionOptionList) ToArray() []AnyArrArrOptionOption {
+	acc := make([]AnyArrArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionArrOptionOptionList) ToArray() []BoolOptionArrOptionOption {
+	acc := make([]BoolOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionArrOptionOptionList) ToArray() []StringOptionArrOptionOption {
+	acc := make([]StringOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionArrOptionOptionList) ToArray() []IntOptionArrOptionOption {
+	acc := make([]IntOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionArrOptionOptionList) ToArray() []Int8OptionArrOptionOption {
+	acc := make([]Int8OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionArrOptionOptionList) ToArray() []Int16OptionArrOptionOption {
+	acc := make([]Int16OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionArrOptionOptionList) ToArray() []Int32OptionArrOptionOption {
+	acc := make([]Int32OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionArrOptionOptionList) ToArray() []Int64OptionArrOptionOption {
+	acc := make([]Int64OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionArrOptionOptionList) ToArray() []UintOptionArrOptionOption {
+	acc := make([]UintOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionArrOptionOptionList) ToArray() []Uint8OptionArrOptionOption {
+	acc := make([]Uint8OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionArrOptionOptionList) ToArray() []Uint16OptionArrOptionOption {
+	acc := make([]Uint16OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionArrOptionOptionList) ToArray() []Uint32OptionArrOptionOption {
+	acc := make([]Uint32OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionArrOptionOptionList) ToArray() []Uint64OptionArrOptionOption {
+	acc := make([]Uint64OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionArrOptionOptionList) ToArray() []UintptrOptionArrOptionOption {
+	acc := make([]UintptrOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionArrOptionOptionList) ToArray() []ByteOptionArrOptionOption {
+	acc := make([]ByteOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionArrOptionOptionList) ToArray() []RuneOptionArrOptionOption {
+	acc := make([]RuneOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionArrOptionOptionList) ToArray() []Float32OptionArrOptionOption {
+	acc := make([]Float32OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionArrOptionOptionList) ToArray() []Float64OptionArrOptionOption {
+	acc := make([]Float64OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionArrOptionOptionList) ToArray() []Complex64OptionArrOptionOption {
+	acc := make([]Complex64OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionArrOptionOptionList) ToArray() []Complex128OptionArrOptionOption {
+	acc := make([]Complex128OptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionArrOptionOptionList) ToArray() []AnyOptionArrOptionOption {
+	acc := make([]AnyOptionArrOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolListOptionOptionList) ToArray() []BoolListOptionOption {
+	acc := make([]BoolListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringListOptionOptionList) ToArray() []StringListOptionOption {
+	acc := make([]StringListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntListOptionOptionList) ToArray() []IntListOptionOption {
+	acc := make([]IntListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ListOptionOptionList) ToArray() []Int8ListOptionOption {
+	acc := make([]Int8ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ListOptionOptionList) ToArray() []Int16ListOptionOption {
+	acc := make([]Int16ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ListOptionOptionList) ToArray() []Int32ListOptionOption {
+	acc := make([]Int32ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ListOptionOptionList) ToArray() []Int64ListOptionOption {
+	acc := make([]Int64ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintListOptionOptionList) ToArray() []UintListOptionOption {
+	acc := make([]UintListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ListOptionOptionList) ToArray() []Uint8ListOptionOption {
+	acc := make([]Uint8ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ListOptionOptionList) ToArray() []Uint16ListOptionOption {
+	acc := make([]Uint16ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ListOptionOptionList) ToArray() []Uint32ListOptionOption {
+	acc := make([]Uint32ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ListOptionOptionList) ToArray() []Uint64ListOptionOption {
+	acc := make([]Uint64ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrListOptionOptionList) ToArray() []UintptrListOptionOption {
+	acc := make([]UintptrListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteListOptionOptionList) ToArray() []ByteListOptionOption {
+	acc := make([]ByteListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneListOptionOptionList) ToArray() []RuneListOptionOption {
+	acc := make([]RuneListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ListOptionOptionList) ToArray() []Float32ListOptionOption {
+	acc := make([]Float32ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ListOptionOptionList) ToArray() []Float64ListOptionOption {
+	acc := make([]Float64ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ListOptionOptionList) ToArray() []Complex64ListOptionOption {
+	acc := make([]Complex64ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ListOptionOptionList) ToArray() []Complex128ListOptionOption {
+	acc := make([]Complex128ListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyListOptionOptionList) ToArray() []AnyListOptionOption {
+	acc := make([]AnyListOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionOptionOptionList) ToArray() []BoolOptionOptionOption {
+	acc := make([]BoolOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionOptionOptionList) ToArray() []StringOptionOptionOption {
+	acc := make([]StringOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionOptionOptionList) ToArray() []IntOptionOptionOption {
+	acc := make([]IntOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionOptionOptionList) ToArray() []Int8OptionOptionOption {
+	acc := make([]Int8OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionOptionOptionList) ToArray() []Int16OptionOptionOption {
+	acc := make([]Int16OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionOptionOptionList) ToArray() []Int32OptionOptionOption {
+	acc := make([]Int32OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionOptionOptionList) ToArray() []Int64OptionOptionOption {
+	acc := make([]Int64OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionOptionOptionList) ToArray() []UintOptionOptionOption {
+	acc := make([]UintOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionOptionOptionList) ToArray() []Uint8OptionOptionOption {
+	acc := make([]Uint8OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionOptionOptionList) ToArray() []Uint16OptionOptionOption {
+	acc := make([]Uint16OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionOptionOptionList) ToArray() []Uint32OptionOptionOption {
+	acc := make([]Uint32OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionOptionOptionList) ToArray() []Uint64OptionOptionOption {
+	acc := make([]Uint64OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionOptionOptionList) ToArray() []UintptrOptionOptionOption {
+	acc := make([]UintptrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionOptionOptionList) ToArray() []ByteOptionOptionOption {
+	acc := make([]ByteOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionOptionOptionList) ToArray() []RuneOptionOptionOption {
+	acc := make([]RuneOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionOptionOptionList) ToArray() []Float32OptionOptionOption {
+	acc := make([]Float32OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionOptionOptionList) ToArray() []Float64OptionOptionOption {
+	acc := make([]Float64OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionOptionOptionList) ToArray() []Complex64OptionOptionOption {
+	acc := make([]Complex64OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionOptionOptionList) ToArray() []Complex128OptionOptionOption {
+	acc := make([]Complex128OptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionOptionOptionList) ToArray() []AnyOptionOptionOption {
+	acc := make([]AnyOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrOptionOptionOptionList) ToArray() []BoolArrOptionOptionOption {
+	acc := make([]BoolArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrOptionOptionOptionList) ToArray() []StringArrOptionOptionOption {
+	acc := make([]StringArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrOptionOptionOptionList) ToArray() []IntArrOptionOptionOption {
+	acc := make([]IntArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrOptionOptionOptionList) ToArray() []Int8ArrOptionOptionOption {
+	acc := make([]Int8ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrOptionOptionOptionList) ToArray() []Int16ArrOptionOptionOption {
+	acc := make([]Int16ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrOptionOptionOptionList) ToArray() []Int32ArrOptionOptionOption {
+	acc := make([]Int32ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrOptionOptionOptionList) ToArray() []Int64ArrOptionOptionOption {
+	acc := make([]Int64ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrOptionOptionOptionList) ToArray() []UintArrOptionOptionOption {
+	acc := make([]UintArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrOptionOptionOptionList) ToArray() []Uint8ArrOptionOptionOption {
+	acc := make([]Uint8ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrOptionOptionOptionList) ToArray() []Uint16ArrOptionOptionOption {
+	acc := make([]Uint16ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrOptionOptionOptionList) ToArray() []Uint32ArrOptionOptionOption {
+	acc := make([]Uint32ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrOptionOptionOptionList) ToArray() []Uint64ArrOptionOptionOption {
+	acc := make([]Uint64ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrOptionOptionOptionList) ToArray() []UintptrArrOptionOptionOption {
+	acc := make([]UintptrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrOptionOptionOptionList) ToArray() []ByteArrOptionOptionOption {
+	acc := make([]ByteArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrOptionOptionOptionList) ToArray() []RuneArrOptionOptionOption {
+	acc := make([]RuneArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrOptionOptionOptionList) ToArray() []Float32ArrOptionOptionOption {
+	acc := make([]Float32ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrOptionOptionOptionList) ToArray() []Float64ArrOptionOptionOption {
+	acc := make([]Float64ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrOptionOptionOptionList) ToArray() []Complex64ArrOptionOptionOption {
+	acc := make([]Complex64ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrOptionOptionOptionList) ToArray() []Complex128ArrOptionOptionOption {
+	acc := make([]Complex128ArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrOptionOptionOptionList) ToArray() []AnyArrOptionOptionOption {
+	acc := make([]AnyArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrArrOptionOptionOptionList) ToArray() []BoolArrArrOptionOptionOption {
+	acc := make([]BoolArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrArrOptionOptionOptionList) ToArray() []StringArrArrOptionOptionOption {
+	acc := make([]StringArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrArrOptionOptionOptionList) ToArray() []IntArrArrOptionOptionOption {
+	acc := make([]IntArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrArrOptionOptionOptionList) ToArray() []Int8ArrArrOptionOptionOption {
+	acc := make([]Int8ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrArrOptionOptionOptionList) ToArray() []Int16ArrArrOptionOptionOption {
+	acc := make([]Int16ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrArrOptionOptionOptionList) ToArray() []Int32ArrArrOptionOptionOption {
+	acc := make([]Int32ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrArrOptionOptionOptionList) ToArray() []Int64ArrArrOptionOptionOption {
+	acc := make([]Int64ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrArrOptionOptionOptionList) ToArray() []UintArrArrOptionOptionOption {
+	acc := make([]UintArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrArrOptionOptionOptionList) ToArray() []Uint8ArrArrOptionOptionOption {
+	acc := make([]Uint8ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrArrOptionOptionOptionList) ToArray() []Uint16ArrArrOptionOptionOption {
+	acc := make([]Uint16ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrArrOptionOptionOptionList) ToArray() []Uint32ArrArrOptionOptionOption {
+	acc := make([]Uint32ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrArrOptionOptionOptionList) ToArray() []Uint64ArrArrOptionOptionOption {
+	acc := make([]Uint64ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrArrOptionOptionOptionList) ToArray() []UintptrArrArrOptionOptionOption {
+	acc := make([]UintptrArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrArrOptionOptionOptionList) ToArray() []ByteArrArrOptionOptionOption {
+	acc := make([]ByteArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrArrOptionOptionOptionList) ToArray() []RuneArrArrOptionOptionOption {
+	acc := make([]RuneArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrArrOptionOptionOptionList) ToArray() []Float32ArrArrOptionOptionOption {
+	acc := make([]Float32ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrArrOptionOptionOptionList) ToArray() []Float64ArrArrOptionOptionOption {
+	acc := make([]Float64ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrArrOptionOptionOptionList) ToArray() []Complex64ArrArrOptionOptionOption {
+	acc := make([]Complex64ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrArrOptionOptionOptionList) ToArray() []Complex128ArrArrOptionOptionOption {
+	acc := make([]Complex128ArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrArrOptionOptionOptionList) ToArray() []AnyArrArrOptionOptionOption {
+	acc := make([]AnyArrArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionArrOptionOptionOptionList) ToArray() []BoolOptionArrOptionOptionOption {
+	acc := make([]BoolOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionArrOptionOptionOptionList) ToArray() []StringOptionArrOptionOptionOption {
+	acc := make([]StringOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionArrOptionOptionOptionList) ToArray() []IntOptionArrOptionOptionOption {
+	acc := make([]IntOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionArrOptionOptionOptionList) ToArray() []Int8OptionArrOptionOptionOption {
+	acc := make([]Int8OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionArrOptionOptionOptionList) ToArray() []Int16OptionArrOptionOptionOption {
+	acc := make([]Int16OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionArrOptionOptionOptionList) ToArray() []Int32OptionArrOptionOptionOption {
+	acc := make([]Int32OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionArrOptionOptionOptionList) ToArray() []Int64OptionArrOptionOptionOption {
+	acc := make([]Int64OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionArrOptionOptionOptionList) ToArray() []UintOptionArrOptionOptionOption {
+	acc := make([]UintOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionArrOptionOptionOptionList) ToArray() []Uint8OptionArrOptionOptionOption {
+	acc := make([]Uint8OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionArrOptionOptionOptionList) ToArray() []Uint16OptionArrOptionOptionOption {
+	acc := make([]Uint16OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionArrOptionOptionOptionList) ToArray() []Uint32OptionArrOptionOptionOption {
+	acc := make([]Uint32OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionArrOptionOptionOptionList) ToArray() []Uint64OptionArrOptionOptionOption {
+	acc := make([]Uint64OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionArrOptionOptionOptionList) ToArray() []UintptrOptionArrOptionOptionOption {
+	acc := make([]UintptrOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionArrOptionOptionOptionList) ToArray() []ByteOptionArrOptionOptionOption {
+	acc := make([]ByteOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionArrOptionOptionOptionList) ToArray() []RuneOptionArrOptionOptionOption {
+	acc := make([]RuneOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionArrOptionOptionOptionList) ToArray() []Float32OptionArrOptionOptionOption {
+	acc := make([]Float32OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionArrOptionOptionOptionList) ToArray() []Float64OptionArrOptionOptionOption {
+	acc := make([]Float64OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionArrOptionOptionOptionList) ToArray() []Complex64OptionArrOptionOptionOption {
+	acc := make([]Complex64OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionArrOptionOptionOptionList) ToArray() []Complex128OptionArrOptionOptionOption {
+	acc := make([]Complex128OptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionArrOptionOptionOptionList) ToArray() []AnyOptionArrOptionOptionOption {
+	acc := make([]AnyOptionArrOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolListOptionOptionOptionList) ToArray() []BoolListOptionOptionOption {
+	acc := make([]BoolListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringListOptionOptionOptionList) ToArray() []StringListOptionOptionOption {
+	acc := make([]StringListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntListOptionOptionOptionList) ToArray() []IntListOptionOptionOption {
+	acc := make([]IntListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ListOptionOptionOptionList) ToArray() []Int8ListOptionOptionOption {
+	acc := make([]Int8ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ListOptionOptionOptionList) ToArray() []Int16ListOptionOptionOption {
+	acc := make([]Int16ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ListOptionOptionOptionList) ToArray() []Int32ListOptionOptionOption {
+	acc := make([]Int32ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ListOptionOptionOptionList) ToArray() []Int64ListOptionOptionOption {
+	acc := make([]Int64ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintListOptionOptionOptionList) ToArray() []UintListOptionOptionOption {
+	acc := make([]UintListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ListOptionOptionOptionList) ToArray() []Uint8ListOptionOptionOption {
+	acc := make([]Uint8ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ListOptionOptionOptionList) ToArray() []Uint16ListOptionOptionOption {
+	acc := make([]Uint16ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ListOptionOptionOptionList) ToArray() []Uint32ListOptionOptionOption {
+	acc := make([]Uint32ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ListOptionOptionOptionList) ToArray() []Uint64ListOptionOptionOption {
+	acc := make([]Uint64ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrListOptionOptionOptionList) ToArray() []UintptrListOptionOptionOption {
+	acc := make([]UintptrListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteListOptionOptionOptionList) ToArray() []ByteListOptionOptionOption {
+	acc := make([]ByteListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneListOptionOptionOptionList) ToArray() []RuneListOptionOptionOption {
+	acc := make([]RuneListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ListOptionOptionOptionList) ToArray() []Float32ListOptionOptionOption {
+	acc := make([]Float32ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ListOptionOptionOptionList) ToArray() []Float64ListOptionOptionOption {
+	acc := make([]Float64ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ListOptionOptionOptionList) ToArray() []Complex64ListOptionOptionOption {
+	acc := make([]Complex64ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ListOptionOptionOptionList) ToArray() []Complex128ListOptionOptionOption {
+	acc := make([]Complex128ListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyListOptionOptionOptionList) ToArray() []AnyListOptionOptionOption {
+	acc := make([]AnyListOptionOptionOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrList) ToArray() [][]bool {
+	acc := make([][]bool, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrList) ToArray() [][]string {
+	acc := make([][]string, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrList) ToArray() [][]int {
+	acc := make([][]int, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrList) ToArray() [][]int8 {
+	acc := make([][]int8, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrList) ToArray() [][]int16 {
+	acc := make([][]int16, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrList) ToArray() [][]int32 {
+	acc := make([][]int32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrList) ToArray() [][]int64 {
+	acc := make([][]int64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrList) ToArray() [][]uint {
+	acc := make([][]uint, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrList) ToArray() [][]uint8 {
+	acc := make([][]uint8, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrList) ToArray() [][]uint16 {
+	acc := make([][]uint16, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrList) ToArray() [][]uint32 {
+	acc := make([][]uint32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrList) ToArray() [][]uint64 {
+	acc := make([][]uint64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrList) ToArray() [][]uintptr {
+	acc := make([][]uintptr, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrList) ToArray() [][]byte {
+	acc := make([][]byte, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrList) ToArray() [][]rune {
+	acc := make([][]rune, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrList) ToArray() [][]float32 {
+	acc := make([][]float32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrList) ToArray() [][]float64 {
+	acc := make([][]float64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrList) ToArray() [][]complex64 {
+	acc := make([][]complex64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrList) ToArray() [][]complex128 {
+	acc := make([][]complex128, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrList) ToArray() [][]Any {
+	acc := make([][]Any, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolArrArrList) ToArray() [][][]bool {
+	acc := make([][][]bool, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringArrArrList) ToArray() [][][]string {
+	acc := make([][][]string, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntArrArrList) ToArray() [][][]int {
+	acc := make([][][]int, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ArrArrList) ToArray() [][][]int8 {
+	acc := make([][][]int8, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ArrArrList) ToArray() [][][]int16 {
+	acc := make([][][]int16, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ArrArrList) ToArray() [][][]int32 {
+	acc := make([][][]int32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ArrArrList) ToArray() [][][]int64 {
+	acc := make([][][]int64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintArrArrList) ToArray() [][][]uint {
+	acc := make([][][]uint, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ArrArrList) ToArray() [][][]uint8 {
+	acc := make([][][]uint8, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ArrArrList) ToArray() [][][]uint16 {
+	acc := make([][][]uint16, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ArrArrList) ToArray() [][][]uint32 {
+	acc := make([][][]uint32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ArrArrList) ToArray() [][][]uint64 {
+	acc := make([][][]uint64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrArrArrList) ToArray() [][][]uintptr {
+	acc := make([][][]uintptr, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteArrArrList) ToArray() [][][]byte {
+	acc := make([][][]byte, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneArrArrList) ToArray() [][][]rune {
+	acc := make([][][]rune, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ArrArrList) ToArray() [][][]float32 {
+	acc := make([][][]float32, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ArrArrList) ToArray() [][][]float64 {
+	acc := make([][][]float64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ArrArrList) ToArray() [][][]complex64 {
+	acc := make([][][]complex64, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ArrArrList) ToArray() [][][]complex128 {
+	acc := make([][][]complex128, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyArrArrList) ToArray() [][][]Any {
+	acc := make([][][]Any, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolOptionArrList) ToArray() [][]BoolOption {
+	acc := make([][]BoolOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringOptionArrList) ToArray() [][]StringOption {
+	acc := make([][]StringOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntOptionArrList) ToArray() [][]IntOption {
+	acc := make([][]IntOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8OptionArrList) ToArray() [][]Int8Option {
+	acc := make([][]Int8Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16OptionArrList) ToArray() [][]Int16Option {
+	acc := make([][]Int16Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32OptionArrList) ToArray() [][]Int32Option {
+	acc := make([][]Int32Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64OptionArrList) ToArray() [][]Int64Option {
+	acc := make([][]Int64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintOptionArrList) ToArray() [][]UintOption {
+	acc := make([][]UintOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8OptionArrList) ToArray() [][]Uint8Option {
+	acc := make([][]Uint8Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16OptionArrList) ToArray() [][]Uint16Option {
+	acc := make([][]Uint16Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32OptionArrList) ToArray() [][]Uint32Option {
+	acc := make([][]Uint32Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64OptionArrList) ToArray() [][]Uint64Option {
+	acc := make([][]Uint64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrOptionArrList) ToArray() [][]UintptrOption {
+	acc := make([][]UintptrOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteOptionArrList) ToArray() [][]ByteOption {
+	acc := make([][]ByteOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneOptionArrList) ToArray() [][]RuneOption {
+	acc := make([][]RuneOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32OptionArrList) ToArray() [][]Float32Option {
+	acc := make([][]Float32Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64OptionArrList) ToArray() [][]Float64Option {
+	acc := make([][]Float64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64OptionArrList) ToArray() [][]Complex64Option {
+	acc := make([][]Complex64Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128OptionArrList) ToArray() [][]Complex128Option {
+	acc := make([][]Complex128Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyOptionArrList) ToArray() [][]AnyOption {
+	acc := make([][]AnyOption, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l BoolListList) ToArray() []BoolList {
+	acc := make([]BoolList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l StringListList) ToArray() []StringList {
+	acc := make([]StringList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l IntListList) ToArray() []IntList {
+	acc := make([]IntList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int8ListList) ToArray() []Int8List {
+	acc := make([]Int8List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int16ListList) ToArray() []Int16List {
+	acc := make([]Int16List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int32ListList) ToArray() []Int32List {
+	acc := make([]Int32List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Int64ListList) ToArray() []Int64List {
+	acc := make([]Int64List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintListList) ToArray() []UintList {
+	acc := make([]UintList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint8ListList) ToArray() []Uint8List {
+	acc := make([]Uint8List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint16ListList) ToArray() []Uint16List {
+	acc := make([]Uint16List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint32ListList) ToArray() []Uint32List {
+	acc := make([]Uint32List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Uint64ListList) ToArray() []Uint64List {
+	acc := make([]Uint64List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l UintptrListList) ToArray() []UintptrList {
+	acc := make([]UintptrList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l ByteListList) ToArray() []ByteList {
+	acc := make([]ByteList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l RuneListList) ToArray() []RuneList {
+	acc := make([]RuneList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float32ListList) ToArray() []Float32List {
+	acc := make([]Float32List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Float64ListList) ToArray() []Float64List {
+	acc := make([]Float64List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex64ListList) ToArray() []Complex64List {
+	acc := make([]Complex64List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Complex128ListList) ToArray() []Complex128List {
+	acc := make([]Complex128List, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l AnyListList) ToArray() []AnyList {
+	acc := make([]AnyList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}

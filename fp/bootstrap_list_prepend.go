@@ -3,304 +3,981 @@
 
 package fp
 
-
-func (l BoolList) Cons(e bool) BoolList { return BoolList { &e, &l } }
-func (l StringList) Cons(e string) StringList { return StringList { &e, &l } }
-func (l IntList) Cons(e int) IntList { return IntList { &e, &l } }
-func (l Int8List) Cons(e int8) Int8List { return Int8List { &e, &l } }
-func (l Int16List) Cons(e int16) Int16List { return Int16List { &e, &l } }
-func (l Int32List) Cons(e int32) Int32List { return Int32List { &e, &l } }
-func (l Int64List) Cons(e int64) Int64List { return Int64List { &e, &l } }
-func (l UintList) Cons(e uint) UintList { return UintList { &e, &l } }
-func (l Uint8List) Cons(e uint8) Uint8List { return Uint8List { &e, &l } }
-func (l Uint16List) Cons(e uint16) Uint16List { return Uint16List { &e, &l } }
-func (l Uint32List) Cons(e uint32) Uint32List { return Uint32List { &e, &l } }
-func (l Uint64List) Cons(e uint64) Uint64List { return Uint64List { &e, &l } }
-func (l UintptrList) Cons(e uintptr) UintptrList { return UintptrList { &e, &l } }
-func (l ByteList) Cons(e byte) ByteList { return ByteList { &e, &l } }
-func (l RuneList) Cons(e rune) RuneList { return RuneList { &e, &l } }
-func (l Float32List) Cons(e float32) Float32List { return Float32List { &e, &l } }
-func (l Float64List) Cons(e float64) Float64List { return Float64List { &e, &l } }
-func (l Complex64List) Cons(e complex64) Complex64List { return Complex64List { &e, &l } }
-func (l Complex128List) Cons(e complex128) Complex128List { return Complex128List { &e, &l } }
-func (l AnyList) Cons(e Any) AnyList { return AnyList { &e, &l } }
-func (l BoolOptionList) Cons(e BoolOption) BoolOptionList { return BoolOptionList { &e, &l } }
-func (l StringOptionList) Cons(e StringOption) StringOptionList { return StringOptionList { &e, &l } }
-func (l IntOptionList) Cons(e IntOption) IntOptionList { return IntOptionList { &e, &l } }
-func (l Int8OptionList) Cons(e Int8Option) Int8OptionList { return Int8OptionList { &e, &l } }
-func (l Int16OptionList) Cons(e Int16Option) Int16OptionList { return Int16OptionList { &e, &l } }
-func (l Int32OptionList) Cons(e Int32Option) Int32OptionList { return Int32OptionList { &e, &l } }
-func (l Int64OptionList) Cons(e Int64Option) Int64OptionList { return Int64OptionList { &e, &l } }
-func (l UintOptionList) Cons(e UintOption) UintOptionList { return UintOptionList { &e, &l } }
-func (l Uint8OptionList) Cons(e Uint8Option) Uint8OptionList { return Uint8OptionList { &e, &l } }
-func (l Uint16OptionList) Cons(e Uint16Option) Uint16OptionList { return Uint16OptionList { &e, &l } }
-func (l Uint32OptionList) Cons(e Uint32Option) Uint32OptionList { return Uint32OptionList { &e, &l } }
-func (l Uint64OptionList) Cons(e Uint64Option) Uint64OptionList { return Uint64OptionList { &e, &l } }
-func (l UintptrOptionList) Cons(e UintptrOption) UintptrOptionList { return UintptrOptionList { &e, &l } }
-func (l ByteOptionList) Cons(e ByteOption) ByteOptionList { return ByteOptionList { &e, &l } }
-func (l RuneOptionList) Cons(e RuneOption) RuneOptionList { return RuneOptionList { &e, &l } }
-func (l Float32OptionList) Cons(e Float32Option) Float32OptionList { return Float32OptionList { &e, &l } }
-func (l Float64OptionList) Cons(e Float64Option) Float64OptionList { return Float64OptionList { &e, &l } }
-func (l Complex64OptionList) Cons(e Complex64Option) Complex64OptionList { return Complex64OptionList { &e, &l } }
-func (l Complex128OptionList) Cons(e Complex128Option) Complex128OptionList { return Complex128OptionList { &e, &l } }
-func (l AnyOptionList) Cons(e AnyOption) AnyOptionList { return AnyOptionList { &e, &l } }
-func (l BoolArrOptionList) Cons(e BoolArrOption) BoolArrOptionList { return BoolArrOptionList { &e, &l } }
-func (l StringArrOptionList) Cons(e StringArrOption) StringArrOptionList { return StringArrOptionList { &e, &l } }
-func (l IntArrOptionList) Cons(e IntArrOption) IntArrOptionList { return IntArrOptionList { &e, &l } }
-func (l Int8ArrOptionList) Cons(e Int8ArrOption) Int8ArrOptionList { return Int8ArrOptionList { &e, &l } }
-func (l Int16ArrOptionList) Cons(e Int16ArrOption) Int16ArrOptionList { return Int16ArrOptionList { &e, &l } }
-func (l Int32ArrOptionList) Cons(e Int32ArrOption) Int32ArrOptionList { return Int32ArrOptionList { &e, &l } }
-func (l Int64ArrOptionList) Cons(e Int64ArrOption) Int64ArrOptionList { return Int64ArrOptionList { &e, &l } }
-func (l UintArrOptionList) Cons(e UintArrOption) UintArrOptionList { return UintArrOptionList { &e, &l } }
-func (l Uint8ArrOptionList) Cons(e Uint8ArrOption) Uint8ArrOptionList { return Uint8ArrOptionList { &e, &l } }
-func (l Uint16ArrOptionList) Cons(e Uint16ArrOption) Uint16ArrOptionList { return Uint16ArrOptionList { &e, &l } }
-func (l Uint32ArrOptionList) Cons(e Uint32ArrOption) Uint32ArrOptionList { return Uint32ArrOptionList { &e, &l } }
-func (l Uint64ArrOptionList) Cons(e Uint64ArrOption) Uint64ArrOptionList { return Uint64ArrOptionList { &e, &l } }
-func (l UintptrArrOptionList) Cons(e UintptrArrOption) UintptrArrOptionList { return UintptrArrOptionList { &e, &l } }
-func (l ByteArrOptionList) Cons(e ByteArrOption) ByteArrOptionList { return ByteArrOptionList { &e, &l } }
-func (l RuneArrOptionList) Cons(e RuneArrOption) RuneArrOptionList { return RuneArrOptionList { &e, &l } }
-func (l Float32ArrOptionList) Cons(e Float32ArrOption) Float32ArrOptionList { return Float32ArrOptionList { &e, &l } }
-func (l Float64ArrOptionList) Cons(e Float64ArrOption) Float64ArrOptionList { return Float64ArrOptionList { &e, &l } }
-func (l Complex64ArrOptionList) Cons(e Complex64ArrOption) Complex64ArrOptionList { return Complex64ArrOptionList { &e, &l } }
-func (l Complex128ArrOptionList) Cons(e Complex128ArrOption) Complex128ArrOptionList { return Complex128ArrOptionList { &e, &l } }
-func (l AnyArrOptionList) Cons(e AnyArrOption) AnyArrOptionList { return AnyArrOptionList { &e, &l } }
-func (l BoolArrArrOptionList) Cons(e BoolArrArrOption) BoolArrArrOptionList { return BoolArrArrOptionList { &e, &l } }
-func (l StringArrArrOptionList) Cons(e StringArrArrOption) StringArrArrOptionList { return StringArrArrOptionList { &e, &l } }
-func (l IntArrArrOptionList) Cons(e IntArrArrOption) IntArrArrOptionList { return IntArrArrOptionList { &e, &l } }
-func (l Int8ArrArrOptionList) Cons(e Int8ArrArrOption) Int8ArrArrOptionList { return Int8ArrArrOptionList { &e, &l } }
-func (l Int16ArrArrOptionList) Cons(e Int16ArrArrOption) Int16ArrArrOptionList { return Int16ArrArrOptionList { &e, &l } }
-func (l Int32ArrArrOptionList) Cons(e Int32ArrArrOption) Int32ArrArrOptionList { return Int32ArrArrOptionList { &e, &l } }
-func (l Int64ArrArrOptionList) Cons(e Int64ArrArrOption) Int64ArrArrOptionList { return Int64ArrArrOptionList { &e, &l } }
-func (l UintArrArrOptionList) Cons(e UintArrArrOption) UintArrArrOptionList { return UintArrArrOptionList { &e, &l } }
-func (l Uint8ArrArrOptionList) Cons(e Uint8ArrArrOption) Uint8ArrArrOptionList { return Uint8ArrArrOptionList { &e, &l } }
-func (l Uint16ArrArrOptionList) Cons(e Uint16ArrArrOption) Uint16ArrArrOptionList { return Uint16ArrArrOptionList { &e, &l } }
-func (l Uint32ArrArrOptionList) Cons(e Uint32ArrArrOption) Uint32ArrArrOptionList { return Uint32ArrArrOptionList { &e, &l } }
-func (l Uint64ArrArrOptionList) Cons(e Uint64ArrArrOption) Uint64ArrArrOptionList { return Uint64ArrArrOptionList { &e, &l } }
-func (l UintptrArrArrOptionList) Cons(e UintptrArrArrOption) UintptrArrArrOptionList { return UintptrArrArrOptionList { &e, &l } }
-func (l ByteArrArrOptionList) Cons(e ByteArrArrOption) ByteArrArrOptionList { return ByteArrArrOptionList { &e, &l } }
-func (l RuneArrArrOptionList) Cons(e RuneArrArrOption) RuneArrArrOptionList { return RuneArrArrOptionList { &e, &l } }
-func (l Float32ArrArrOptionList) Cons(e Float32ArrArrOption) Float32ArrArrOptionList { return Float32ArrArrOptionList { &e, &l } }
-func (l Float64ArrArrOptionList) Cons(e Float64ArrArrOption) Float64ArrArrOptionList { return Float64ArrArrOptionList { &e, &l } }
-func (l Complex64ArrArrOptionList) Cons(e Complex64ArrArrOption) Complex64ArrArrOptionList { return Complex64ArrArrOptionList { &e, &l } }
-func (l Complex128ArrArrOptionList) Cons(e Complex128ArrArrOption) Complex128ArrArrOptionList { return Complex128ArrArrOptionList { &e, &l } }
-func (l AnyArrArrOptionList) Cons(e AnyArrArrOption) AnyArrArrOptionList { return AnyArrArrOptionList { &e, &l } }
-func (l BoolOptionArrOptionList) Cons(e BoolOptionArrOption) BoolOptionArrOptionList { return BoolOptionArrOptionList { &e, &l } }
-func (l StringOptionArrOptionList) Cons(e StringOptionArrOption) StringOptionArrOptionList { return StringOptionArrOptionList { &e, &l } }
-func (l IntOptionArrOptionList) Cons(e IntOptionArrOption) IntOptionArrOptionList { return IntOptionArrOptionList { &e, &l } }
-func (l Int8OptionArrOptionList) Cons(e Int8OptionArrOption) Int8OptionArrOptionList { return Int8OptionArrOptionList { &e, &l } }
-func (l Int16OptionArrOptionList) Cons(e Int16OptionArrOption) Int16OptionArrOptionList { return Int16OptionArrOptionList { &e, &l } }
-func (l Int32OptionArrOptionList) Cons(e Int32OptionArrOption) Int32OptionArrOptionList { return Int32OptionArrOptionList { &e, &l } }
-func (l Int64OptionArrOptionList) Cons(e Int64OptionArrOption) Int64OptionArrOptionList { return Int64OptionArrOptionList { &e, &l } }
-func (l UintOptionArrOptionList) Cons(e UintOptionArrOption) UintOptionArrOptionList { return UintOptionArrOptionList { &e, &l } }
-func (l Uint8OptionArrOptionList) Cons(e Uint8OptionArrOption) Uint8OptionArrOptionList { return Uint8OptionArrOptionList { &e, &l } }
-func (l Uint16OptionArrOptionList) Cons(e Uint16OptionArrOption) Uint16OptionArrOptionList { return Uint16OptionArrOptionList { &e, &l } }
-func (l Uint32OptionArrOptionList) Cons(e Uint32OptionArrOption) Uint32OptionArrOptionList { return Uint32OptionArrOptionList { &e, &l } }
-func (l Uint64OptionArrOptionList) Cons(e Uint64OptionArrOption) Uint64OptionArrOptionList { return Uint64OptionArrOptionList { &e, &l } }
-func (l UintptrOptionArrOptionList) Cons(e UintptrOptionArrOption) UintptrOptionArrOptionList { return UintptrOptionArrOptionList { &e, &l } }
-func (l ByteOptionArrOptionList) Cons(e ByteOptionArrOption) ByteOptionArrOptionList { return ByteOptionArrOptionList { &e, &l } }
-func (l RuneOptionArrOptionList) Cons(e RuneOptionArrOption) RuneOptionArrOptionList { return RuneOptionArrOptionList { &e, &l } }
-func (l Float32OptionArrOptionList) Cons(e Float32OptionArrOption) Float32OptionArrOptionList { return Float32OptionArrOptionList { &e, &l } }
-func (l Float64OptionArrOptionList) Cons(e Float64OptionArrOption) Float64OptionArrOptionList { return Float64OptionArrOptionList { &e, &l } }
-func (l Complex64OptionArrOptionList) Cons(e Complex64OptionArrOption) Complex64OptionArrOptionList { return Complex64OptionArrOptionList { &e, &l } }
-func (l Complex128OptionArrOptionList) Cons(e Complex128OptionArrOption) Complex128OptionArrOptionList { return Complex128OptionArrOptionList { &e, &l } }
-func (l AnyOptionArrOptionList) Cons(e AnyOptionArrOption) AnyOptionArrOptionList { return AnyOptionArrOptionList { &e, &l } }
-func (l BoolListOptionList) Cons(e BoolListOption) BoolListOptionList { return BoolListOptionList { &e, &l } }
-func (l StringListOptionList) Cons(e StringListOption) StringListOptionList { return StringListOptionList { &e, &l } }
-func (l IntListOptionList) Cons(e IntListOption) IntListOptionList { return IntListOptionList { &e, &l } }
-func (l Int8ListOptionList) Cons(e Int8ListOption) Int8ListOptionList { return Int8ListOptionList { &e, &l } }
-func (l Int16ListOptionList) Cons(e Int16ListOption) Int16ListOptionList { return Int16ListOptionList { &e, &l } }
-func (l Int32ListOptionList) Cons(e Int32ListOption) Int32ListOptionList { return Int32ListOptionList { &e, &l } }
-func (l Int64ListOptionList) Cons(e Int64ListOption) Int64ListOptionList { return Int64ListOptionList { &e, &l } }
-func (l UintListOptionList) Cons(e UintListOption) UintListOptionList { return UintListOptionList { &e, &l } }
-func (l Uint8ListOptionList) Cons(e Uint8ListOption) Uint8ListOptionList { return Uint8ListOptionList { &e, &l } }
-func (l Uint16ListOptionList) Cons(e Uint16ListOption) Uint16ListOptionList { return Uint16ListOptionList { &e, &l } }
-func (l Uint32ListOptionList) Cons(e Uint32ListOption) Uint32ListOptionList { return Uint32ListOptionList { &e, &l } }
-func (l Uint64ListOptionList) Cons(e Uint64ListOption) Uint64ListOptionList { return Uint64ListOptionList { &e, &l } }
-func (l UintptrListOptionList) Cons(e UintptrListOption) UintptrListOptionList { return UintptrListOptionList { &e, &l } }
-func (l ByteListOptionList) Cons(e ByteListOption) ByteListOptionList { return ByteListOptionList { &e, &l } }
-func (l RuneListOptionList) Cons(e RuneListOption) RuneListOptionList { return RuneListOptionList { &e, &l } }
-func (l Float32ListOptionList) Cons(e Float32ListOption) Float32ListOptionList { return Float32ListOptionList { &e, &l } }
-func (l Float64ListOptionList) Cons(e Float64ListOption) Float64ListOptionList { return Float64ListOptionList { &e, &l } }
-func (l Complex64ListOptionList) Cons(e Complex64ListOption) Complex64ListOptionList { return Complex64ListOptionList { &e, &l } }
-func (l Complex128ListOptionList) Cons(e Complex128ListOption) Complex128ListOptionList { return Complex128ListOptionList { &e, &l } }
-func (l AnyListOptionList) Cons(e AnyListOption) AnyListOptionList { return AnyListOptionList { &e, &l } }
-func (l BoolOptionOptionList) Cons(e BoolOptionOption) BoolOptionOptionList { return BoolOptionOptionList { &e, &l } }
-func (l StringOptionOptionList) Cons(e StringOptionOption) StringOptionOptionList { return StringOptionOptionList { &e, &l } }
-func (l IntOptionOptionList) Cons(e IntOptionOption) IntOptionOptionList { return IntOptionOptionList { &e, &l } }
-func (l Int8OptionOptionList) Cons(e Int8OptionOption) Int8OptionOptionList { return Int8OptionOptionList { &e, &l } }
-func (l Int16OptionOptionList) Cons(e Int16OptionOption) Int16OptionOptionList { return Int16OptionOptionList { &e, &l } }
-func (l Int32OptionOptionList) Cons(e Int32OptionOption) Int32OptionOptionList { return Int32OptionOptionList { &e, &l } }
-func (l Int64OptionOptionList) Cons(e Int64OptionOption) Int64OptionOptionList { return Int64OptionOptionList { &e, &l } }
-func (l UintOptionOptionList) Cons(e UintOptionOption) UintOptionOptionList { return UintOptionOptionList { &e, &l } }
-func (l Uint8OptionOptionList) Cons(e Uint8OptionOption) Uint8OptionOptionList { return Uint8OptionOptionList { &e, &l } }
-func (l Uint16OptionOptionList) Cons(e Uint16OptionOption) Uint16OptionOptionList { return Uint16OptionOptionList { &e, &l } }
-func (l Uint32OptionOptionList) Cons(e Uint32OptionOption) Uint32OptionOptionList { return Uint32OptionOptionList { &e, &l } }
-func (l Uint64OptionOptionList) Cons(e Uint64OptionOption) Uint64OptionOptionList { return Uint64OptionOptionList { &e, &l } }
-func (l UintptrOptionOptionList) Cons(e UintptrOptionOption) UintptrOptionOptionList { return UintptrOptionOptionList { &e, &l } }
-func (l ByteOptionOptionList) Cons(e ByteOptionOption) ByteOptionOptionList { return ByteOptionOptionList { &e, &l } }
-func (l RuneOptionOptionList) Cons(e RuneOptionOption) RuneOptionOptionList { return RuneOptionOptionList { &e, &l } }
-func (l Float32OptionOptionList) Cons(e Float32OptionOption) Float32OptionOptionList { return Float32OptionOptionList { &e, &l } }
-func (l Float64OptionOptionList) Cons(e Float64OptionOption) Float64OptionOptionList { return Float64OptionOptionList { &e, &l } }
-func (l Complex64OptionOptionList) Cons(e Complex64OptionOption) Complex64OptionOptionList { return Complex64OptionOptionList { &e, &l } }
-func (l Complex128OptionOptionList) Cons(e Complex128OptionOption) Complex128OptionOptionList { return Complex128OptionOptionList { &e, &l } }
-func (l AnyOptionOptionList) Cons(e AnyOptionOption) AnyOptionOptionList { return AnyOptionOptionList { &e, &l } }
-func (l BoolArrOptionOptionList) Cons(e BoolArrOptionOption) BoolArrOptionOptionList { return BoolArrOptionOptionList { &e, &l } }
-func (l StringArrOptionOptionList) Cons(e StringArrOptionOption) StringArrOptionOptionList { return StringArrOptionOptionList { &e, &l } }
-func (l IntArrOptionOptionList) Cons(e IntArrOptionOption) IntArrOptionOptionList { return IntArrOptionOptionList { &e, &l } }
-func (l Int8ArrOptionOptionList) Cons(e Int8ArrOptionOption) Int8ArrOptionOptionList { return Int8ArrOptionOptionList { &e, &l } }
-func (l Int16ArrOptionOptionList) Cons(e Int16ArrOptionOption) Int16ArrOptionOptionList { return Int16ArrOptionOptionList { &e, &l } }
-func (l Int32ArrOptionOptionList) Cons(e Int32ArrOptionOption) Int32ArrOptionOptionList { return Int32ArrOptionOptionList { &e, &l } }
-func (l Int64ArrOptionOptionList) Cons(e Int64ArrOptionOption) Int64ArrOptionOptionList { return Int64ArrOptionOptionList { &e, &l } }
-func (l UintArrOptionOptionList) Cons(e UintArrOptionOption) UintArrOptionOptionList { return UintArrOptionOptionList { &e, &l } }
-func (l Uint8ArrOptionOptionList) Cons(e Uint8ArrOptionOption) Uint8ArrOptionOptionList { return Uint8ArrOptionOptionList { &e, &l } }
-func (l Uint16ArrOptionOptionList) Cons(e Uint16ArrOptionOption) Uint16ArrOptionOptionList { return Uint16ArrOptionOptionList { &e, &l } }
-func (l Uint32ArrOptionOptionList) Cons(e Uint32ArrOptionOption) Uint32ArrOptionOptionList { return Uint32ArrOptionOptionList { &e, &l } }
-func (l Uint64ArrOptionOptionList) Cons(e Uint64ArrOptionOption) Uint64ArrOptionOptionList { return Uint64ArrOptionOptionList { &e, &l } }
-func (l UintptrArrOptionOptionList) Cons(e UintptrArrOptionOption) UintptrArrOptionOptionList { return UintptrArrOptionOptionList { &e, &l } }
-func (l ByteArrOptionOptionList) Cons(e ByteArrOptionOption) ByteArrOptionOptionList { return ByteArrOptionOptionList { &e, &l } }
-func (l RuneArrOptionOptionList) Cons(e RuneArrOptionOption) RuneArrOptionOptionList { return RuneArrOptionOptionList { &e, &l } }
-func (l Float32ArrOptionOptionList) Cons(e Float32ArrOptionOption) Float32ArrOptionOptionList { return Float32ArrOptionOptionList { &e, &l } }
-func (l Float64ArrOptionOptionList) Cons(e Float64ArrOptionOption) Float64ArrOptionOptionList { return Float64ArrOptionOptionList { &e, &l } }
-func (l Complex64ArrOptionOptionList) Cons(e Complex64ArrOptionOption) Complex64ArrOptionOptionList { return Complex64ArrOptionOptionList { &e, &l } }
-func (l Complex128ArrOptionOptionList) Cons(e Complex128ArrOptionOption) Complex128ArrOptionOptionList { return Complex128ArrOptionOptionList { &e, &l } }
-func (l AnyArrOptionOptionList) Cons(e AnyArrOptionOption) AnyArrOptionOptionList { return AnyArrOptionOptionList { &e, &l } }
-func (l BoolArrArrOptionOptionList) Cons(e BoolArrArrOptionOption) BoolArrArrOptionOptionList { return BoolArrArrOptionOptionList { &e, &l } }
-func (l StringArrArrOptionOptionList) Cons(e StringArrArrOptionOption) StringArrArrOptionOptionList { return StringArrArrOptionOptionList { &e, &l } }
-func (l IntArrArrOptionOptionList) Cons(e IntArrArrOptionOption) IntArrArrOptionOptionList { return IntArrArrOptionOptionList { &e, &l } }
-func (l Int8ArrArrOptionOptionList) Cons(e Int8ArrArrOptionOption) Int8ArrArrOptionOptionList { return Int8ArrArrOptionOptionList { &e, &l } }
-func (l Int16ArrArrOptionOptionList) Cons(e Int16ArrArrOptionOption) Int16ArrArrOptionOptionList { return Int16ArrArrOptionOptionList { &e, &l } }
-func (l Int32ArrArrOptionOptionList) Cons(e Int32ArrArrOptionOption) Int32ArrArrOptionOptionList { return Int32ArrArrOptionOptionList { &e, &l } }
-func (l Int64ArrArrOptionOptionList) Cons(e Int64ArrArrOptionOption) Int64ArrArrOptionOptionList { return Int64ArrArrOptionOptionList { &e, &l } }
-func (l UintArrArrOptionOptionList) Cons(e UintArrArrOptionOption) UintArrArrOptionOptionList { return UintArrArrOptionOptionList { &e, &l } }
-func (l Uint8ArrArrOptionOptionList) Cons(e Uint8ArrArrOptionOption) Uint8ArrArrOptionOptionList { return Uint8ArrArrOptionOptionList { &e, &l } }
-func (l Uint16ArrArrOptionOptionList) Cons(e Uint16ArrArrOptionOption) Uint16ArrArrOptionOptionList { return Uint16ArrArrOptionOptionList { &e, &l } }
-func (l Uint32ArrArrOptionOptionList) Cons(e Uint32ArrArrOptionOption) Uint32ArrArrOptionOptionList { return Uint32ArrArrOptionOptionList { &e, &l } }
-func (l Uint64ArrArrOptionOptionList) Cons(e Uint64ArrArrOptionOption) Uint64ArrArrOptionOptionList { return Uint64ArrArrOptionOptionList { &e, &l } }
-func (l UintptrArrArrOptionOptionList) Cons(e UintptrArrArrOptionOption) UintptrArrArrOptionOptionList { return UintptrArrArrOptionOptionList { &e, &l } }
-func (l ByteArrArrOptionOptionList) Cons(e ByteArrArrOptionOption) ByteArrArrOptionOptionList { return ByteArrArrOptionOptionList { &e, &l } }
-func (l RuneArrArrOptionOptionList) Cons(e RuneArrArrOptionOption) RuneArrArrOptionOptionList { return RuneArrArrOptionOptionList { &e, &l } }
-func (l Float32ArrArrOptionOptionList) Cons(e Float32ArrArrOptionOption) Float32ArrArrOptionOptionList { return Float32ArrArrOptionOptionList { &e, &l } }
-func (l Float64ArrArrOptionOptionList) Cons(e Float64ArrArrOptionOption) Float64ArrArrOptionOptionList { return Float64ArrArrOptionOptionList { &e, &l } }
-func (l Complex64ArrArrOptionOptionList) Cons(e Complex64ArrArrOptionOption) Complex64ArrArrOptionOptionList { return Complex64ArrArrOptionOptionList { &e, &l } }
-func (l Complex128ArrArrOptionOptionList) Cons(e Complex128ArrArrOptionOption) Complex128ArrArrOptionOptionList { return Complex128ArrArrOptionOptionList { &e, &l } }
-func (l AnyArrArrOptionOptionList) Cons(e AnyArrArrOptionOption) AnyArrArrOptionOptionList { return AnyArrArrOptionOptionList { &e, &l } }
-func (l BoolOptionArrOptionOptionList) Cons(e BoolOptionArrOptionOption) BoolOptionArrOptionOptionList { return BoolOptionArrOptionOptionList { &e, &l } }
-func (l StringOptionArrOptionOptionList) Cons(e StringOptionArrOptionOption) StringOptionArrOptionOptionList { return StringOptionArrOptionOptionList { &e, &l } }
-func (l IntOptionArrOptionOptionList) Cons(e IntOptionArrOptionOption) IntOptionArrOptionOptionList { return IntOptionArrOptionOptionList { &e, &l } }
-func (l Int8OptionArrOptionOptionList) Cons(e Int8OptionArrOptionOption) Int8OptionArrOptionOptionList { return Int8OptionArrOptionOptionList { &e, &l } }
-func (l Int16OptionArrOptionOptionList) Cons(e Int16OptionArrOptionOption) Int16OptionArrOptionOptionList { return Int16OptionArrOptionOptionList { &e, &l } }
-func (l Int32OptionArrOptionOptionList) Cons(e Int32OptionArrOptionOption) Int32OptionArrOptionOptionList { return Int32OptionArrOptionOptionList { &e, &l } }
-func (l Int64OptionArrOptionOptionList) Cons(e Int64OptionArrOptionOption) Int64OptionArrOptionOptionList { return Int64OptionArrOptionOptionList { &e, &l } }
-func (l UintOptionArrOptionOptionList) Cons(e UintOptionArrOptionOption) UintOptionArrOptionOptionList { return UintOptionArrOptionOptionList { &e, &l } }
-func (l Uint8OptionArrOptionOptionList) Cons(e Uint8OptionArrOptionOption) Uint8OptionArrOptionOptionList { return Uint8OptionArrOptionOptionList { &e, &l } }
-func (l Uint16OptionArrOptionOptionList) Cons(e Uint16OptionArrOptionOption) Uint16OptionArrOptionOptionList { return Uint16OptionArrOptionOptionList { &e, &l } }
-func (l Uint32OptionArrOptionOptionList) Cons(e Uint32OptionArrOptionOption) Uint32OptionArrOptionOptionList { return Uint32OptionArrOptionOptionList { &e, &l } }
-func (l Uint64OptionArrOptionOptionList) Cons(e Uint64OptionArrOptionOption) Uint64OptionArrOptionOptionList { return Uint64OptionArrOptionOptionList { &e, &l } }
-func (l UintptrOptionArrOptionOptionList) Cons(e UintptrOptionArrOptionOption) UintptrOptionArrOptionOptionList { return UintptrOptionArrOptionOptionList { &e, &l } }
-func (l ByteOptionArrOptionOptionList) Cons(e ByteOptionArrOptionOption) ByteOptionArrOptionOptionList { return ByteOptionArrOptionOptionList { &e, &l } }
-func (l RuneOptionArrOptionOptionList) Cons(e RuneOptionArrOptionOption) RuneOptionArrOptionOptionList { return RuneOptionArrOptionOptionList { &e, &l } }
-func (l Float32OptionArrOptionOptionList) Cons(e Float32OptionArrOptionOption) Float32OptionArrOptionOptionList { return Float32OptionArrOptionOptionList { &e, &l } }
-func (l Float64OptionArrOptionOptionList) Cons(e Float64OptionArrOptionOption) Float64OptionArrOptionOptionList { return Float64OptionArrOptionOptionList { &e, &l } }
-func (l Complex64OptionArrOptionOptionList) Cons(e Complex64OptionArrOptionOption) Complex64OptionArrOptionOptionList { return Complex64OptionArrOptionOptionList { &e, &l } }
-func (l Complex128OptionArrOptionOptionList) Cons(e Complex128OptionArrOptionOption) Complex128OptionArrOptionOptionList { return Complex128OptionArrOptionOptionList { &e, &l } }
-func (l AnyOptionArrOptionOptionList) Cons(e AnyOptionArrOptionOption) AnyOptionArrOptionOptionList { return AnyOptionArrOptionOptionList { &e, &l } }
-func (l BoolListOptionOptionList) Cons(e BoolListOptionOption) BoolListOptionOptionList { return BoolListOptionOptionList { &e, &l } }
-func (l StringListOptionOptionList) Cons(e StringListOptionOption) StringListOptionOptionList { return StringListOptionOptionList { &e, &l } }
-func (l IntListOptionOptionList) Cons(e IntListOptionOption) IntListOptionOptionList { return IntListOptionOptionList { &e, &l } }
-func (l Int8ListOptionOptionList) Cons(e Int8ListOptionOption) Int8ListOptionOptionList { return Int8ListOptionOptionList { &e, &l } }
-func (l Int16ListOptionOptionList) Cons(e Int16ListOptionOption) Int16ListOptionOptionList { return Int16ListOptionOptionList { &e, &l } }
-func (l Int32ListOptionOptionList) Cons(e Int32ListOptionOption) Int32ListOptionOptionList { return Int32ListOptionOptionList { &e, &l } }
-func (l Int64ListOptionOptionList) Cons(e Int64ListOptionOption) Int64ListOptionOptionList { return Int64ListOptionOptionList { &e, &l } }
-func (l UintListOptionOptionList) Cons(e UintListOptionOption) UintListOptionOptionList { return UintListOptionOptionList { &e, &l } }
-func (l Uint8ListOptionOptionList) Cons(e Uint8ListOptionOption) Uint8ListOptionOptionList { return Uint8ListOptionOptionList { &e, &l } }
-func (l Uint16ListOptionOptionList) Cons(e Uint16ListOptionOption) Uint16ListOptionOptionList { return Uint16ListOptionOptionList { &e, &l } }
-func (l Uint32ListOptionOptionList) Cons(e Uint32ListOptionOption) Uint32ListOptionOptionList { return Uint32ListOptionOptionList { &e, &l } }
-func (l Uint64ListOptionOptionList) Cons(e Uint64ListOptionOption) Uint64ListOptionOptionList { return Uint64ListOptionOptionList { &e, &l } }
-func (l UintptrListOptionOptionList) Cons(e UintptrListOptionOption) UintptrListOptionOptionList { return UintptrListOptionOptionList { &e, &l } }
-func (l ByteListOptionOptionList) Cons(e ByteListOptionOption) ByteListOptionOptionList { return ByteListOptionOptionList { &e, &l } }
-func (l RuneListOptionOptionList) Cons(e RuneListOptionOption) RuneListOptionOptionList { return RuneListOptionOptionList { &e, &l } }
-func (l Float32ListOptionOptionList) Cons(e Float32ListOptionOption) Float32ListOptionOptionList { return Float32ListOptionOptionList { &e, &l } }
-func (l Float64ListOptionOptionList) Cons(e Float64ListOptionOption) Float64ListOptionOptionList { return Float64ListOptionOptionList { &e, &l } }
-func (l Complex64ListOptionOptionList) Cons(e Complex64ListOptionOption) Complex64ListOptionOptionList { return Complex64ListOptionOptionList { &e, &l } }
-func (l Complex128ListOptionOptionList) Cons(e Complex128ListOptionOption) Complex128ListOptionOptionList { return Complex128ListOptionOptionList { &e, &l } }
-func (l AnyListOptionOptionList) Cons(e AnyListOptionOption) AnyListOptionOptionList { return AnyListOptionOptionList { &e, &l } }
-func (l BoolArrList) Cons(e []bool) BoolArrList { return BoolArrList { &e, &l } }
-func (l StringArrList) Cons(e []string) StringArrList { return StringArrList { &e, &l } }
-func (l IntArrList) Cons(e []int) IntArrList { return IntArrList { &e, &l } }
-func (l Int8ArrList) Cons(e []int8) Int8ArrList { return Int8ArrList { &e, &l } }
-func (l Int16ArrList) Cons(e []int16) Int16ArrList { return Int16ArrList { &e, &l } }
-func (l Int32ArrList) Cons(e []int32) Int32ArrList { return Int32ArrList { &e, &l } }
-func (l Int64ArrList) Cons(e []int64) Int64ArrList { return Int64ArrList { &e, &l } }
-func (l UintArrList) Cons(e []uint) UintArrList { return UintArrList { &e, &l } }
-func (l Uint8ArrList) Cons(e []uint8) Uint8ArrList { return Uint8ArrList { &e, &l } }
-func (l Uint16ArrList) Cons(e []uint16) Uint16ArrList { return Uint16ArrList { &e, &l } }
-func (l Uint32ArrList) Cons(e []uint32) Uint32ArrList { return Uint32ArrList { &e, &l } }
-func (l Uint64ArrList) Cons(e []uint64) Uint64ArrList { return Uint64ArrList { &e, &l } }
-func (l UintptrArrList) Cons(e []uintptr) UintptrArrList { return UintptrArrList { &e, &l } }
-func (l ByteArrList) Cons(e []byte) ByteArrList { return ByteArrList { &e, &l } }
-func (l RuneArrList) Cons(e []rune) RuneArrList { return RuneArrList { &e, &l } }
-func (l Float32ArrList) Cons(e []float32) Float32ArrList { return Float32ArrList { &e, &l } }
-func (l Float64ArrList) Cons(e []float64) Float64ArrList { return Float64ArrList { &e, &l } }
-func (l Complex64ArrList) Cons(e []complex64) Complex64ArrList { return Complex64ArrList { &e, &l } }
-func (l Complex128ArrList) Cons(e []complex128) Complex128ArrList { return Complex128ArrList { &e, &l } }
-func (l AnyArrList) Cons(e []Any) AnyArrList { return AnyArrList { &e, &l } }
-func (l BoolArrArrList) Cons(e [][]bool) BoolArrArrList { return BoolArrArrList { &e, &l } }
-func (l StringArrArrList) Cons(e [][]string) StringArrArrList { return StringArrArrList { &e, &l } }
-func (l IntArrArrList) Cons(e [][]int) IntArrArrList { return IntArrArrList { &e, &l } }
-func (l Int8ArrArrList) Cons(e [][]int8) Int8ArrArrList { return Int8ArrArrList { &e, &l } }
-func (l Int16ArrArrList) Cons(e [][]int16) Int16ArrArrList { return Int16ArrArrList { &e, &l } }
-func (l Int32ArrArrList) Cons(e [][]int32) Int32ArrArrList { return Int32ArrArrList { &e, &l } }
-func (l Int64ArrArrList) Cons(e [][]int64) Int64ArrArrList { return Int64ArrArrList { &e, &l } }
-func (l UintArrArrList) Cons(e [][]uint) UintArrArrList { return UintArrArrList { &e, &l } }
-func (l Uint8ArrArrList) Cons(e [][]uint8) Uint8ArrArrList { return Uint8ArrArrList { &e, &l } }
-func (l Uint16ArrArrList) Cons(e [][]uint16) Uint16ArrArrList { return Uint16ArrArrList { &e, &l } }
-func (l Uint32ArrArrList) Cons(e [][]uint32) Uint32ArrArrList { return Uint32ArrArrList { &e, &l } }
-func (l Uint64ArrArrList) Cons(e [][]uint64) Uint64ArrArrList { return Uint64ArrArrList { &e, &l } }
-func (l UintptrArrArrList) Cons(e [][]uintptr) UintptrArrArrList { return UintptrArrArrList { &e, &l } }
-func (l ByteArrArrList) Cons(e [][]byte) ByteArrArrList { return ByteArrArrList { &e, &l } }
-func (l RuneArrArrList) Cons(e [][]rune) RuneArrArrList { return RuneArrArrList { &e, &l } }
-func (l Float32ArrArrList) Cons(e [][]float32) Float32ArrArrList { return Float32ArrArrList { &e, &l } }
-func (l Float64ArrArrList) Cons(e [][]float64) Float64ArrArrList { return Float64ArrArrList { &e, &l } }
-func (l Complex64ArrArrList) Cons(e [][]complex64) Complex64ArrArrList { return Complex64ArrArrList { &e, &l } }
-func (l Complex128ArrArrList) Cons(e [][]complex128) Complex128ArrArrList { return Complex128ArrArrList { &e, &l } }
-func (l AnyArrArrList) Cons(e [][]Any) AnyArrArrList { return AnyArrArrList { &e, &l } }
-func (l BoolOptionArrList) Cons(e []BoolOption) BoolOptionArrList { return BoolOptionArrList { &e, &l } }
-func (l StringOptionArrList) Cons(e []StringOption) StringOptionArrList { return StringOptionArrList { &e, &l } }
-func (l IntOptionArrList) Cons(e []IntOption) IntOptionArrList { return IntOptionArrList { &e, &l } }
-func (l Int8OptionArrList) Cons(e []Int8Option) Int8OptionArrList { return Int8OptionArrList { &e, &l } }
-func (l Int16OptionArrList) Cons(e []Int16Option) Int16OptionArrList { return Int16OptionArrList { &e, &l } }
-func (l Int32OptionArrList) Cons(e []Int32Option) Int32OptionArrList { return Int32OptionArrList { &e, &l } }
-func (l Int64OptionArrList) Cons(e []Int64Option) Int64OptionArrList { return Int64OptionArrList { &e, &l } }
-func (l UintOptionArrList) Cons(e []UintOption) UintOptionArrList { return UintOptionArrList { &e, &l } }
-func (l Uint8OptionArrList) Cons(e []Uint8Option) Uint8OptionArrList { return Uint8OptionArrList { &e, &l } }
-func (l Uint16OptionArrList) Cons(e []Uint16Option) Uint16OptionArrList { return Uint16OptionArrList { &e, &l } }
-func (l Uint32OptionArrList) Cons(e []Uint32Option) Uint32OptionArrList { return Uint32OptionArrList { &e, &l } }
-func (l Uint64OptionArrList) Cons(e []Uint64Option) Uint64OptionArrList { return Uint64OptionArrList { &e, &l } }
-func (l UintptrOptionArrList) Cons(e []UintptrOption) UintptrOptionArrList { return UintptrOptionArrList { &e, &l } }
-func (l ByteOptionArrList) Cons(e []ByteOption) ByteOptionArrList { return ByteOptionArrList { &e, &l } }
-func (l RuneOptionArrList) Cons(e []RuneOption) RuneOptionArrList { return RuneOptionArrList { &e, &l } }
-func (l Float32OptionArrList) Cons(e []Float32Option) Float32OptionArrList { return Float32OptionArrList { &e, &l } }
-func (l Float64OptionArrList) Cons(e []Float64Option) Float64OptionArrList { return Float64OptionArrList { &e, &l } }
-func (l Complex64OptionArrList) Cons(e []Complex64Option) Complex64OptionArrList { return Complex64OptionArrList { &e, &l } }
-func (l Complex128OptionArrList) Cons(e []Complex128Option) Complex128OptionArrList { return Complex128OptionArrList { &e, &l } }
-func (l AnyOptionArrList) Cons(e []AnyOption) AnyOptionArrList { return AnyOptionArrList { &e, &l } }
-func (l BoolListList) Cons(e BoolList) BoolListList { return BoolListList { &e, &l } }
-func (l StringListList) Cons(e StringList) StringListList { return StringListList { &e, &l } }
-func (l IntListList) Cons(e IntList) IntListList { return IntListList { &e, &l } }
-func (l Int8ListList) Cons(e Int8List) Int8ListList { return Int8ListList { &e, &l } }
-func (l Int16ListList) Cons(e Int16List) Int16ListList { return Int16ListList { &e, &l } }
-func (l Int32ListList) Cons(e Int32List) Int32ListList { return Int32ListList { &e, &l } }
-func (l Int64ListList) Cons(e Int64List) Int64ListList { return Int64ListList { &e, &l } }
-func (l UintListList) Cons(e UintList) UintListList { return UintListList { &e, &l } }
-func (l Uint8ListList) Cons(e Uint8List) Uint8ListList { return Uint8ListList { &e, &l } }
-func (l Uint16ListList) Cons(e Uint16List) Uint16ListList { return Uint16ListList { &e, &l } }
-func (l Uint32ListList) Cons(e Uint32List) Uint32ListList { return Uint32ListList { &e, &l } }
-func (l Uint64ListList) Cons(e Uint64List) Uint64ListList { return Uint64ListList { &e, &l } }
-func (l UintptrListList) Cons(e UintptrList) UintptrListList { return UintptrListList { &e, &l } }
-func (l ByteListList) Cons(e ByteList) ByteListList { return ByteListList { &e, &l } }
-func (l RuneListList) Cons(e RuneList) RuneListList { return RuneListList { &e, &l } }
-func (l Float32ListList) Cons(e Float32List) Float32ListList { return Float32ListList { &e, &l } }
-func (l Float64ListList) Cons(e Float64List) Float64ListList { return Float64ListList { &e, &l } }
-func (l Complex64ListList) Cons(e Complex64List) Complex64ListList { return Complex64ListList { &e, &l } }
-func (l Complex128ListList) Cons(e Complex128List) Complex128ListList { return Complex128ListList { &e, &l } }
-func (l AnyListList) Cons(e AnyList) AnyListList { return AnyListList { &e, &l } }
+func (l BoolList) Cons(e bool) BoolList                            { return BoolList{&e, &l} }
+func (l StringList) Cons(e string) StringList                      { return StringList{&e, &l} }
+func (l IntList) Cons(e int) IntList                               { return IntList{&e, &l} }
+func (l Int8List) Cons(e int8) Int8List                            { return Int8List{&e, &l} }
+func (l Int16List) Cons(e int16) Int16List                         { return Int16List{&e, &l} }
+func (l Int32List) Cons(e int32) Int32List                         { return Int32List{&e, &l} }
+func (l Int64List) Cons(e int64) Int64List                         { return Int64List{&e, &l} }
+func (l UintList) Cons(e uint) UintList                            { return UintList{&e, &l} }
+func (l Uint8List) Cons(e uint8) Uint8List                         { return Uint8List{&e, &l} }
+func (l Uint16List) Cons(e uint16) Uint16List                      { return Uint16List{&e, &l} }
+func (l Uint32List) Cons(e uint32) Uint32List                      { return Uint32List{&e, &l} }
+func (l Uint64List) Cons(e uint64) Uint64List                      { return Uint64List{&e, &l} }
+func (l UintptrList) Cons(e uintptr) UintptrList                   { return UintptrList{&e, &l} }
+func (l ByteList) Cons(e byte) ByteList                            { return ByteList{&e, &l} }
+func (l RuneList) Cons(e rune) RuneList                            { return RuneList{&e, &l} }
+func (l Float32List) Cons(e float32) Float32List                   { return Float32List{&e, &l} }
+func (l Float64List) Cons(e float64) Float64List                   { return Float64List{&e, &l} }
+func (l Complex64List) Cons(e complex64) Complex64List             { return Complex64List{&e, &l} }
+func (l Complex128List) Cons(e complex128) Complex128List          { return Complex128List{&e, &l} }
+func (l AnyList) Cons(e Any) AnyList                               { return AnyList{&e, &l} }
+func (l BoolOptionList) Cons(e BoolOption) BoolOptionList          { return BoolOptionList{&e, &l} }
+func (l StringOptionList) Cons(e StringOption) StringOptionList    { return StringOptionList{&e, &l} }
+func (l IntOptionList) Cons(e IntOption) IntOptionList             { return IntOptionList{&e, &l} }
+func (l Int8OptionList) Cons(e Int8Option) Int8OptionList          { return Int8OptionList{&e, &l} }
+func (l Int16OptionList) Cons(e Int16Option) Int16OptionList       { return Int16OptionList{&e, &l} }
+func (l Int32OptionList) Cons(e Int32Option) Int32OptionList       { return Int32OptionList{&e, &l} }
+func (l Int64OptionList) Cons(e Int64Option) Int64OptionList       { return Int64OptionList{&e, &l} }
+func (l UintOptionList) Cons(e UintOption) UintOptionList          { return UintOptionList{&e, &l} }
+func (l Uint8OptionList) Cons(e Uint8Option) Uint8OptionList       { return Uint8OptionList{&e, &l} }
+func (l Uint16OptionList) Cons(e Uint16Option) Uint16OptionList    { return Uint16OptionList{&e, &l} }
+func (l Uint32OptionList) Cons(e Uint32Option) Uint32OptionList    { return Uint32OptionList{&e, &l} }
+func (l Uint64OptionList) Cons(e Uint64Option) Uint64OptionList    { return Uint64OptionList{&e, &l} }
+func (l UintptrOptionList) Cons(e UintptrOption) UintptrOptionList { return UintptrOptionList{&e, &l} }
+func (l ByteOptionList) Cons(e ByteOption) ByteOptionList          { return ByteOptionList{&e, &l} }
+func (l RuneOptionList) Cons(e RuneOption) RuneOptionList          { return RuneOptionList{&e, &l} }
+func (l Float32OptionList) Cons(e Float32Option) Float32OptionList { return Float32OptionList{&e, &l} }
+func (l Float64OptionList) Cons(e Float64Option) Float64OptionList { return Float64OptionList{&e, &l} }
+func (l Complex64OptionList) Cons(e Complex64Option) Complex64OptionList {
+	return Complex64OptionList{&e, &l}
+}
+func (l Complex128OptionList) Cons(e Complex128Option) Complex128OptionList {
+	return Complex128OptionList{&e, &l}
+}
+func (l AnyOptionList) Cons(e AnyOption) AnyOptionList             { return AnyOptionList{&e, &l} }
+func (l BoolArrOptionList) Cons(e BoolArrOption) BoolArrOptionList { return BoolArrOptionList{&e, &l} }
+func (l StringArrOptionList) Cons(e StringArrOption) StringArrOptionList {
+	return StringArrOptionList{&e, &l}
+}
+func (l IntArrOptionList) Cons(e IntArrOption) IntArrOptionList    { return IntArrOptionList{&e, &l} }
+func (l Int8ArrOptionList) Cons(e Int8ArrOption) Int8ArrOptionList { return Int8ArrOptionList{&e, &l} }
+func (l Int16ArrOptionList) Cons(e Int16ArrOption) Int16ArrOptionList {
+	return Int16ArrOptionList{&e, &l}
+}
+func (l Int32ArrOptionList) Cons(e Int32ArrOption) Int32ArrOptionList {
+	return Int32ArrOptionList{&e, &l}
+}
+func (l Int64ArrOptionList) Cons(e Int64ArrOption) Int64ArrOptionList {
+	return Int64ArrOptionList{&e, &l}
+}
+func (l UintArrOptionList) Cons(e UintArrOption) UintArrOptionList { return UintArrOptionList{&e, &l} }
+func (l Uint8ArrOptionList) Cons(e Uint8ArrOption) Uint8ArrOptionList {
+	return Uint8ArrOptionList{&e, &l}
+}
+func (l Uint16ArrOptionList) Cons(e Uint16ArrOption) Uint16ArrOptionList {
+	return Uint16ArrOptionList{&e, &l}
+}
+func (l Uint32ArrOptionList) Cons(e Uint32ArrOption) Uint32ArrOptionList {
+	return Uint32ArrOptionList{&e, &l}
+}
+func (l Uint64ArrOptionList) Cons(e Uint64ArrOption) Uint64ArrOptionList {
+	return Uint64ArrOptionList{&e, &l}
+}
+func (l UintptrArrOptionList) Cons(e UintptrArrOption) UintptrArrOptionList {
+	return UintptrArrOptionList{&e, &l}
+}
+func (l ByteArrOptionList) Cons(e ByteArrOption) ByteArrOptionList { return ByteArrOptionList{&e, &l} }
+func (l RuneArrOptionList) Cons(e RuneArrOption) RuneArrOptionList { return RuneArrOptionList{&e, &l} }
+func (l Float32ArrOptionList) Cons(e Float32ArrOption) Float32ArrOptionList {
+	return Float32ArrOptionList{&e, &l}
+}
+func (l Float64ArrOptionList) Cons(e Float64ArrOption) Float64ArrOptionList {
+	return Float64ArrOptionList{&e, &l}
+}
+func (l Complex64ArrOptionList) Cons(e Complex64ArrOption) Complex64ArrOptionList {
+	return Complex64ArrOptionList{&e, &l}
+}
+func (l Complex128ArrOptionList) Cons(e Complex128ArrOption) Complex128ArrOptionList {
+	return Complex128ArrOptionList{&e, &l}
+}
+func (l AnyArrOptionList) Cons(e AnyArrOption) AnyArrOptionList { return AnyArrOptionList{&e, &l} }
+func (l BoolArrArrOptionList) Cons(e BoolArrArrOption) BoolArrArrOptionList {
+	return BoolArrArrOptionList{&e, &l}
+}
+func (l StringArrArrOptionList) Cons(e StringArrArrOption) StringArrArrOptionList {
+	return StringArrArrOptionList{&e, &l}
+}
+func (l IntArrArrOptionList) Cons(e IntArrArrOption) IntArrArrOptionList {
+	return IntArrArrOptionList{&e, &l}
+}
+func (l Int8ArrArrOptionList) Cons(e Int8ArrArrOption) Int8ArrArrOptionList {
+	return Int8ArrArrOptionList{&e, &l}
+}
+func (l Int16ArrArrOptionList) Cons(e Int16ArrArrOption) Int16ArrArrOptionList {
+	return Int16ArrArrOptionList{&e, &l}
+}
+func (l Int32ArrArrOptionList) Cons(e Int32ArrArrOption) Int32ArrArrOptionList {
+	return Int32ArrArrOptionList{&e, &l}
+}
+func (l Int64ArrArrOptionList) Cons(e Int64ArrArrOption) Int64ArrArrOptionList {
+	return Int64ArrArrOptionList{&e, &l}
+}
+func (l UintArrArrOptionList) Cons(e UintArrArrOption) UintArrArrOptionList {
+	return UintArrArrOptionList{&e, &l}
+}
+func (l Uint8ArrArrOptionList) Cons(e Uint8ArrArrOption) Uint8ArrArrOptionList {
+	return Uint8ArrArrOptionList{&e, &l}
+}
+func (l Uint16ArrArrOptionList) Cons(e Uint16ArrArrOption) Uint16ArrArrOptionList {
+	return Uint16ArrArrOptionList{&e, &l}
+}
+func (l Uint32ArrArrOptionList) Cons(e Uint32ArrArrOption) Uint32ArrArrOptionList {
+	return Uint32ArrArrOptionList{&e, &l}
+}
+func (l Uint64ArrArrOptionList) Cons(e Uint64ArrArrOption) Uint64ArrArrOptionList {
+	return Uint64ArrArrOptionList{&e, &l}
+}
+func (l UintptrArrArrOptionList) Cons(e UintptrArrArrOption) UintptrArrArrOptionList {
+	return UintptrArrArrOptionList{&e, &l}
+}
+func (l ByteArrArrOptionList) Cons(e ByteArrArrOption) ByteArrArrOptionList {
+	return ByteArrArrOptionList{&e, &l}
+}
+func (l RuneArrArrOptionList) Cons(e RuneArrArrOption) RuneArrArrOptionList {
+	return RuneArrArrOptionList{&e, &l}
+}
+func (l Float32ArrArrOptionList) Cons(e Float32ArrArrOption) Float32ArrArrOptionList {
+	return Float32ArrArrOptionList{&e, &l}
+}
+func (l Float64ArrArrOptionList) Cons(e Float64ArrArrOption) Float64ArrArrOptionList {
+	return Float64ArrArrOptionList{&e, &l}
+}
+func (l Complex64ArrArrOptionList) Cons(e Complex64ArrArrOption) Complex64ArrArrOptionList {
+	return Complex64ArrArrOptionList{&e, &l}
+}
+func (l Complex128ArrArrOptionList) Cons(e Complex128ArrArrOption) Complex128ArrArrOptionList {
+	return Complex128ArrArrOptionList{&e, &l}
+}
+func (l AnyArrArrOptionList) Cons(e AnyArrArrOption) AnyArrArrOptionList {
+	return AnyArrArrOptionList{&e, &l}
+}
+func (l BoolOptionArrOptionList) Cons(e BoolOptionArrOption) BoolOptionArrOptionList {
+	return BoolOptionArrOptionList{&e, &l}
+}
+func (l StringOptionArrOptionList) Cons(e StringOptionArrOption) StringOptionArrOptionList {
+	return StringOptionArrOptionList{&e, &l}
+}
+func (l IntOptionArrOptionList) Cons(e IntOptionArrOption) IntOptionArrOptionList {
+	return IntOptionArrOptionList{&e, &l}
+}
+func (l Int8OptionArrOptionList) Cons(e Int8OptionArrOption) Int8OptionArrOptionList {
+	return Int8OptionArrOptionList{&e, &l}
+}
+func (l Int16OptionArrOptionList) Cons(e Int16OptionArrOption) Int16OptionArrOptionList {
+	return Int16OptionArrOptionList{&e, &l}
+}
+func (l Int32OptionArrOptionList) Cons(e Int32OptionArrOption) Int32OptionArrOptionList {
+	return Int32OptionArrOptionList{&e, &l}
+}
+func (l Int64OptionArrOptionList) Cons(e Int64OptionArrOption) Int64OptionArrOptionList {
+	return Int64OptionArrOptionList{&e, &l}
+}
+func (l UintOptionArrOptionList) Cons(e UintOptionArrOption) UintOptionArrOptionList {
+	return UintOptionArrOptionList{&e, &l}
+}
+func (l Uint8OptionArrOptionList) Cons(e Uint8OptionArrOption) Uint8OptionArrOptionList {
+	return Uint8OptionArrOptionList{&e, &l}
+}
+func (l Uint16OptionArrOptionList) Cons(e Uint16OptionArrOption) Uint16OptionArrOptionList {
+	return Uint16OptionArrOptionList{&e, &l}
+}
+func (l Uint32OptionArrOptionList) Cons(e Uint32OptionArrOption) Uint32OptionArrOptionList {
+	return Uint32OptionArrOptionList{&e, &l}
+}
+func (l Uint64OptionArrOptionList) Cons(e Uint64OptionArrOption) Uint64OptionArrOptionList {
+	return Uint64OptionArrOptionList{&e, &l}
+}
+func (l UintptrOptionArrOptionList) Cons(e UintptrOptionArrOption) UintptrOptionArrOptionList {
+	return UintptrOptionArrOptionList{&e, &l}
+}
+func (l ByteOptionArrOptionList) Cons(e ByteOptionArrOption) ByteOptionArrOptionList {
+	return ByteOptionArrOptionList{&e, &l}
+}
+func (l RuneOptionArrOptionList) Cons(e RuneOptionArrOption) RuneOptionArrOptionList {
+	return RuneOptionArrOptionList{&e, &l}
+}
+func (l Float32OptionArrOptionList) Cons(e Float32OptionArrOption) Float32OptionArrOptionList {
+	return Float32OptionArrOptionList{&e, &l}
+}
+func (l Float64OptionArrOptionList) Cons(e Float64OptionArrOption) Float64OptionArrOptionList {
+	return Float64OptionArrOptionList{&e, &l}
+}
+func (l Complex64OptionArrOptionList) Cons(e Complex64OptionArrOption) Complex64OptionArrOptionList {
+	return Complex64OptionArrOptionList{&e, &l}
+}
+func (l Complex128OptionArrOptionList) Cons(e Complex128OptionArrOption) Complex128OptionArrOptionList {
+	return Complex128OptionArrOptionList{&e, &l}
+}
+func (l AnyOptionArrOptionList) Cons(e AnyOptionArrOption) AnyOptionArrOptionList {
+	return AnyOptionArrOptionList{&e, &l}
+}
+func (l BoolListOptionList) Cons(e BoolListOption) BoolListOptionList {
+	return BoolListOptionList{&e, &l}
+}
+func (l StringListOptionList) Cons(e StringListOption) StringListOptionList {
+	return StringListOptionList{&e, &l}
+}
+func (l IntListOptionList) Cons(e IntListOption) IntListOptionList { return IntListOptionList{&e, &l} }
+func (l Int8ListOptionList) Cons(e Int8ListOption) Int8ListOptionList {
+	return Int8ListOptionList{&e, &l}
+}
+func (l Int16ListOptionList) Cons(e Int16ListOption) Int16ListOptionList {
+	return Int16ListOptionList{&e, &l}
+}
+func (l Int32ListOptionList) Cons(e Int32ListOption) Int32ListOptionList {
+	return Int32ListOptionList{&e, &l}
+}
+func (l Int64ListOptionList) Cons(e Int64ListOption) Int64ListOptionList {
+	return Int64ListOptionList{&e, &l}
+}
+func (l UintListOptionList) Cons(e UintListOption) UintListOptionList {
+	return UintListOptionList{&e, &l}
+}
+func (l Uint8ListOptionList) Cons(e Uint8ListOption) Uint8ListOptionList {
+	return Uint8ListOptionList{&e, &l}
+}
+func (l Uint16ListOptionList) Cons(e Uint16ListOption) Uint16ListOptionList {
+	return Uint16ListOptionList{&e, &l}
+}
+func (l Uint32ListOptionList) Cons(e Uint32ListOption) Uint32ListOptionList {
+	return Uint32ListOptionList{&e, &l}
+}
+func (l Uint64ListOptionList) Cons(e Uint64ListOption) Uint64ListOptionList {
+	return Uint64ListOptionList{&e, &l}
+}
+func (l UintptrListOptionList) Cons(e UintptrListOption) UintptrListOptionList {
+	return UintptrListOptionList{&e, &l}
+}
+func (l ByteListOptionList) Cons(e ByteListOption) ByteListOptionList {
+	return ByteListOptionList{&e, &l}
+}
+func (l RuneListOptionList) Cons(e RuneListOption) RuneListOptionList {
+	return RuneListOptionList{&e, &l}
+}
+func (l Float32ListOptionList) Cons(e Float32ListOption) Float32ListOptionList {
+	return Float32ListOptionList{&e, &l}
+}
+func (l Float64ListOptionList) Cons(e Float64ListOption) Float64ListOptionList {
+	return Float64ListOptionList{&e, &l}
+}
+func (l Complex64ListOptionList) Cons(e Complex64ListOption) Complex64ListOptionList {
+	return Complex64ListOptionList{&e, &l}
+}
+func (l Complex128ListOptionList) Cons(e Complex128ListOption) Complex128ListOptionList {
+	return Complex128ListOptionList{&e, &l}
+}
+func (l AnyListOptionList) Cons(e AnyListOption) AnyListOptionList { return AnyListOptionList{&e, &l} }
+func (l BoolOptionOptionList) Cons(e BoolOptionOption) BoolOptionOptionList {
+	return BoolOptionOptionList{&e, &l}
+}
+func (l StringOptionOptionList) Cons(e StringOptionOption) StringOptionOptionList {
+	return StringOptionOptionList{&e, &l}
+}
+func (l IntOptionOptionList) Cons(e IntOptionOption) IntOptionOptionList {
+	return IntOptionOptionList{&e, &l}
+}
+func (l Int8OptionOptionList) Cons(e Int8OptionOption) Int8OptionOptionList {
+	return Int8OptionOptionList{&e, &l}
+}
+func (l Int16OptionOptionList) Cons(e Int16OptionOption) Int16OptionOptionList {
+	return Int16OptionOptionList{&e, &l}
+}
+func (l Int32OptionOptionList) Cons(e Int32OptionOption) Int32OptionOptionList {
+	return Int32OptionOptionList{&e, &l}
+}
+func (l Int64OptionOptionList) Cons(e Int64OptionOption) Int64OptionOptionList {
+	return Int64OptionOptionList{&e, &l}
+}
+func (l UintOptionOptionList) Cons(e UintOptionOption) UintOptionOptionList {
+	return UintOptionOptionList{&e, &l}
+}
+func (l Uint8OptionOptionList) Cons(e Uint8OptionOption) Uint8OptionOptionList {
+	return Uint8OptionOptionList{&e, &l}
+}
+func (l Uint16OptionOptionList) Cons(e Uint16OptionOption) Uint16OptionOptionList {
+	return Uint16OptionOptionList{&e, &l}
+}
+func (l Uint32OptionOptionList) Cons(e Uint32OptionOption) Uint32OptionOptionList {
+	return Uint32OptionOptionList{&e, &l}
+}
+func (l Uint64OptionOptionList) Cons(e Uint64OptionOption) Uint64OptionOptionList {
+	return Uint64OptionOptionList{&e, &l}
+}
+func (l UintptrOptionOptionList) Cons(e UintptrOptionOption) UintptrOptionOptionList {
+	return UintptrOptionOptionList{&e, &l}
+}
+func (l ByteOptionOptionList) Cons(e ByteOptionOption) ByteOptionOptionList {
+	return ByteOptionOptionList{&e, &l}
+}
+func (l RuneOptionOptionList) Cons(e RuneOptionOption) RuneOptionOptionList {
+	return RuneOptionOptionList{&e, &l}
+}
+func (l Float32OptionOptionList) Cons(e Float32OptionOption) Float32OptionOptionList {
+	return Float32OptionOptionList{&e, &l}
+}
+func (l Float64OptionOptionList) Cons(e Float64OptionOption) Float64OptionOptionList {
+	return Float64OptionOptionList{&e, &l}
+}
+func (l Complex64OptionOptionList) Cons(e Complex64OptionOption) Complex64OptionOptionList {
+	return Complex64OptionOptionList{&e, &l}
+}
+func (l Complex128OptionOptionList) Cons(e Complex128OptionOption) Complex128OptionOptionList {
+	return Complex128OptionOptionList{&e, &l}
+}
+func (l AnyOptionOptionList) Cons(e AnyOptionOption) AnyOptionOptionList {
+	return AnyOptionOptionList{&e, &l}
+}
+func (l BoolArrOptionOptionList) Cons(e BoolArrOptionOption) BoolArrOptionOptionList {
+	return BoolArrOptionOptionList{&e, &l}
+}
+func (l StringArrOptionOptionList) Cons(e StringArrOptionOption) StringArrOptionOptionList {
+	return StringArrOptionOptionList{&e, &l}
+}
+func (l IntArrOptionOptionList) Cons(e IntArrOptionOption) IntArrOptionOptionList {
+	return IntArrOptionOptionList{&e, &l}
+}
+func (l Int8ArrOptionOptionList) Cons(e Int8ArrOptionOption) Int8ArrOptionOptionList {
+	return Int8ArrOptionOptionList{&e, &l}
+}
+func (l Int16ArrOptionOptionList) Cons(e Int16ArrOptionOption) Int16ArrOptionOptionList {
+	return Int16ArrOptionOptionList{&e, &l}
+}
+func (l Int32ArrOptionOptionList) Cons(e Int32ArrOptionOption) Int32ArrOptionOptionList {
+	return Int32ArrOptionOptionList{&e, &l}
+}
+func (l Int64ArrOptionOptionList) Cons(e Int64ArrOptionOption) Int64ArrOptionOptionList {
+	return Int64ArrOptionOptionList{&e, &l}
+}
+func (l UintArrOptionOptionList) Cons(e UintArrOptionOption) UintArrOptionOptionList {
+	return UintArrOptionOptionList{&e, &l}
+}
+func (l Uint8ArrOptionOptionList) Cons(e Uint8ArrOptionOption) Uint8ArrOptionOptionList {
+	return Uint8ArrOptionOptionList{&e, &l}
+}
+func (l Uint16ArrOptionOptionList) Cons(e Uint16ArrOptionOption) Uint16ArrOptionOptionList {
+	return Uint16ArrOptionOptionList{&e, &l}
+}
+func (l Uint32ArrOptionOptionList) Cons(e Uint32ArrOptionOption) Uint32ArrOptionOptionList {
+	return Uint32ArrOptionOptionList{&e, &l}
+}
+func (l Uint64ArrOptionOptionList) Cons(e Uint64ArrOptionOption) Uint64ArrOptionOptionList {
+	return Uint64ArrOptionOptionList{&e, &l}
+}
+func (l UintptrArrOptionOptionList) Cons(e UintptrArrOptionOption) UintptrArrOptionOptionList {
+	return UintptrArrOptionOptionList{&e, &l}
+}
+func (l ByteArrOptionOptionList) Cons(e ByteArrOptionOption) ByteArrOptionOptionList {
+	return ByteArrOptionOptionList{&e, &l}
+}
+func (l RuneArrOptionOptionList) Cons(e RuneArrOptionOption) RuneArrOptionOptionList {
+	return RuneArrOptionOptionList{&e, &l}
+}
+func (l Float32ArrOptionOptionList) Cons(e Float32ArrOptionOption) Float32ArrOptionOptionList {
+	return Float32ArrOptionOptionList{&e, &l}
+}
+func (l Float64ArrOptionOptionList) Cons(e Float64ArrOptionOption) Float64ArrOptionOptionList {
+	return Float64ArrOptionOptionList{&e, &l}
+}
+func (l Complex64ArrOptionOptionList) Cons(e Complex64ArrOptionOption) Complex64ArrOptionOptionList {
+	return Complex64ArrOptionOptionList{&e, &l}
+}
+func (l Complex128ArrOptionOptionList) Cons(e Complex128ArrOptionOption) Complex128ArrOptionOptionList {
+	return Complex128ArrOptionOptionList{&e, &l}
+}
+func (l AnyArrOptionOptionList) Cons(e AnyArrOptionOption) AnyArrOptionOptionList {
+	return AnyArrOptionOptionList{&e, &l}
+}
+func (l BoolArrArrOptionOptionList) Cons(e BoolArrArrOptionOption) BoolArrArrOptionOptionList {
+	return BoolArrArrOptionOptionList{&e, &l}
+}
+func (l StringArrArrOptionOptionList) Cons(e StringArrArrOptionOption) StringArrArrOptionOptionList {
+	return StringArrArrOptionOptionList{&e, &l}
+}
+func (l IntArrArrOptionOptionList) Cons(e IntArrArrOptionOption) IntArrArrOptionOptionList {
+	return IntArrArrOptionOptionList{&e, &l}
+}
+func (l Int8ArrArrOptionOptionList) Cons(e Int8ArrArrOptionOption) Int8ArrArrOptionOptionList {
+	return Int8ArrArrOptionOptionList{&e, &l}
+}
+func (l Int16ArrArrOptionOptionList) Cons(e Int16ArrArrOptionOption) Int16ArrArrOptionOptionList {
+	return Int16ArrArrOptionOptionList{&e, &l}
+}
+func (l Int32ArrArrOptionOptionList) Cons(e Int32ArrArrOptionOption) Int32ArrArrOptionOptionList {
+	return Int32ArrArrOptionOptionList{&e, &l}
+}
+func (l Int64ArrArrOptionOptionList) Cons(e Int64ArrArrOptionOption) Int64ArrArrOptionOptionList {
+	return Int64ArrArrOptionOptionList{&e, &l}
+}
+func (l UintArrArrOptionOptionList) Cons(e UintArrArrOptionOption) UintArrArrOptionOptionList {
+	return UintArrArrOptionOptionList{&e, &l}
+}
+func (l Uint8ArrArrOptionOptionList) Cons(e Uint8ArrArrOptionOption) Uint8ArrArrOptionOptionList {
+	return Uint8ArrArrOptionOptionList{&e, &l}
+}
+func (l Uint16ArrArrOptionOptionList) Cons(e Uint16ArrArrOptionOption) Uint16ArrArrOptionOptionList {
+	return Uint16ArrArrOptionOptionList{&e, &l}
+}
+func (l Uint32ArrArrOptionOptionList) Cons(e Uint32ArrArrOptionOption) Uint32ArrArrOptionOptionList {
+	return Uint32ArrArrOptionOptionList{&e, &l}
+}
+func (l Uint64ArrArrOptionOptionList) Cons(e Uint64ArrArrOptionOption) Uint64ArrArrOptionOptionList {
+	return Uint64ArrArrOptionOptionList{&e, &l}
+}
+func (l UintptrArrArrOptionOptionList) Cons(e UintptrArrArrOptionOption) UintptrArrArrOptionOptionList {
+	return UintptrArrArrOptionOptionList{&e, &l}
+}
+func (l ByteArrArrOptionOptionList) Cons(e ByteArrArrOptionOption) ByteArrArrOptionOptionList {
+	return ByteArrArrOptionOptionList{&e, &l}
+}
+func (l RuneArrArrOptionOptionList) Cons(e RuneArrArrOptionOption) RuneArrArrOptionOptionList {
+	return RuneArrArrOptionOptionList{&e, &l}
+}
+func (l Float32ArrArrOptionOptionList) Cons(e Float32ArrArrOptionOption) Float32ArrArrOptionOptionList {
+	return Float32ArrArrOptionOptionList{&e, &l}
+}
+func (l Float64ArrArrOptionOptionList) Cons(e Float64ArrArrOptionOption) Float64ArrArrOptionOptionList {
+	return Float64ArrArrOptionOptionList{&e, &l}
+}
+func (l Complex64ArrArrOptionOptionList) Cons(e Complex64ArrArrOptionOption) Complex64ArrArrOptionOptionList {
+	return Complex64ArrArrOptionOptionList{&e, &l}
+}
+func (l Complex128ArrArrOptionOptionList) Cons(e Complex128ArrArrOptionOption) Complex128ArrArrOptionOptionList {
+	return Complex128ArrArrOptionOptionList{&e, &l}
+}
+func (l AnyArrArrOptionOptionList) Cons(e AnyArrArrOptionOption) AnyArrArrOptionOptionList {
+	return AnyArrArrOptionOptionList{&e, &l}
+}
+func (l BoolOptionArrOptionOptionList) Cons(e BoolOptionArrOptionOption) BoolOptionArrOptionOptionList {
+	return BoolOptionArrOptionOptionList{&e, &l}
+}
+func (l StringOptionArrOptionOptionList) Cons(e StringOptionArrOptionOption) StringOptionArrOptionOptionList {
+	return StringOptionArrOptionOptionList{&e, &l}
+}
+func (l IntOptionArrOptionOptionList) Cons(e IntOptionArrOptionOption) IntOptionArrOptionOptionList {
+	return IntOptionArrOptionOptionList{&e, &l}
+}
+func (l Int8OptionArrOptionOptionList) Cons(e Int8OptionArrOptionOption) Int8OptionArrOptionOptionList {
+	return Int8OptionArrOptionOptionList{&e, &l}
+}
+func (l Int16OptionArrOptionOptionList) Cons(e Int16OptionArrOptionOption) Int16OptionArrOptionOptionList {
+	return Int16OptionArrOptionOptionList{&e, &l}
+}
+func (l Int32OptionArrOptionOptionList) Cons(e Int32OptionArrOptionOption) Int32OptionArrOptionOptionList {
+	return Int32OptionArrOptionOptionList{&e, &l}
+}
+func (l Int64OptionArrOptionOptionList) Cons(e Int64OptionArrOptionOption) Int64OptionArrOptionOptionList {
+	return Int64OptionArrOptionOptionList{&e, &l}
+}
+func (l UintOptionArrOptionOptionList) Cons(e UintOptionArrOptionOption) UintOptionArrOptionOptionList {
+	return UintOptionArrOptionOptionList{&e, &l}
+}
+func (l Uint8OptionArrOptionOptionList) Cons(e Uint8OptionArrOptionOption) Uint8OptionArrOptionOptionList {
+	return Uint8OptionArrOptionOptionList{&e, &l}
+}
+func (l Uint16OptionArrOptionOptionList) Cons(e Uint16OptionArrOptionOption) Uint16OptionArrOptionOptionList {
+	return Uint16OptionArrOptionOptionList{&e, &l}
+}
+func (l Uint32OptionArrOptionOptionList) Cons(e Uint32OptionArrOptionOption) Uint32OptionArrOptionOptionList {
+	return Uint32OptionArrOptionOptionList{&e, &l}
+}
+func (l Uint64OptionArrOptionOptionList) Cons(e Uint64OptionArrOptionOption) Uint64OptionArrOptionOptionList {
+	return Uint64OptionArrOptionOptionList{&e, &l}
+}
+func (l UintptrOptionArrOptionOptionList) Cons(e UintptrOptionArrOptionOption) UintptrOptionArrOptionOptionList {
+	return UintptrOptionArrOptionOptionList{&e, &l}
+}
+func (l ByteOptionArrOptionOptionList) Cons(e ByteOptionArrOptionOption) ByteOptionArrOptionOptionList {
+	return ByteOptionArrOptionOptionList{&e, &l}
+}
+func (l RuneOptionArrOptionOptionList) Cons(e RuneOptionArrOptionOption) RuneOptionArrOptionOptionList {
+	return RuneOptionArrOptionOptionList{&e, &l}
+}
+func (l Float32OptionArrOptionOptionList) Cons(e Float32OptionArrOptionOption) Float32OptionArrOptionOptionList {
+	return Float32OptionArrOptionOptionList{&e, &l}
+}
+func (l Float64OptionArrOptionOptionList) Cons(e Float64OptionArrOptionOption) Float64OptionArrOptionOptionList {
+	return Float64OptionArrOptionOptionList{&e, &l}
+}
+func (l Complex64OptionArrOptionOptionList) Cons(e Complex64OptionArrOptionOption) Complex64OptionArrOptionOptionList {
+	return Complex64OptionArrOptionOptionList{&e, &l}
+}
+func (l Complex128OptionArrOptionOptionList) Cons(e Complex128OptionArrOptionOption) Complex128OptionArrOptionOptionList {
+	return Complex128OptionArrOptionOptionList{&e, &l}
+}
+func (l AnyOptionArrOptionOptionList) Cons(e AnyOptionArrOptionOption) AnyOptionArrOptionOptionList {
+	return AnyOptionArrOptionOptionList{&e, &l}
+}
+func (l BoolListOptionOptionList) Cons(e BoolListOptionOption) BoolListOptionOptionList {
+	return BoolListOptionOptionList{&e, &l}
+}
+func (l StringListOptionOptionList) Cons(e StringListOptionOption) StringListOptionOptionList {
+	return StringListOptionOptionList{&e, &l}
+}
+func (l IntListOptionOptionList) Cons(e IntListOptionOption) IntListOptionOptionList {
+	return IntListOptionOptionList{&e, &l}
+}
+func (l Int8ListOptionOptionList) Cons(e Int8ListOptionOption) Int8ListOptionOptionList {
+	return Int8ListOptionOptionList{&e, &l}
+}
+func (l Int16ListOptionOptionList) Cons(e Int16ListOptionOption) Int16ListOptionOptionList {
+	return Int16ListOptionOptionList{&e, &l}
+}
+func (l Int32ListOptionOptionList) Cons(e Int32ListOptionOption) Int32ListOptionOptionList {
+	return Int32ListOptionOptionList{&e, &l}
+}
+func (l Int64ListOptionOptionList) Cons(e Int64ListOptionOption) Int64ListOptionOptionList {
+	return Int64ListOptionOptionList{&e, &l}
+}
+func (l UintListOptionOptionList) Cons(e UintListOptionOption) UintListOptionOptionList {
+	return UintListOptionOptionList{&e, &l}
+}
+func (l Uint8ListOptionOptionList) Cons(e Uint8ListOptionOption) Uint8ListOptionOptionList {
+	return Uint8ListOptionOptionList{&e, &l}
+}
+func (l Uint16ListOptionOptionList) Cons(e Uint16ListOptionOption) Uint16ListOptionOptionList {
+	return Uint16ListOptionOptionList{&e, &l}
+}
+func (l Uint32ListOptionOptionList) Cons(e Uint32ListOptionOption) Uint32ListOptionOptionList {
+	return Uint32ListOptionOptionList{&e, &l}
+}
+func (l Uint64ListOptionOptionList) Cons(e Uint64ListOptionOption) Uint64ListOptionOptionList {
+	return Uint64ListOptionOptionList{&e, &l}
+}
+func (l UintptrListOptionOptionList) Cons(e UintptrListOptionOption) UintptrListOptionOptionList {
+	return UintptrListOptionOptionList{&e, &l}
+}
+func (l ByteListOptionOptionList) Cons(e ByteListOptionOption) ByteListOptionOptionList {
+	return ByteListOptionOptionList{&e, &l}
+}
+func (l RuneListOptionOptionList) Cons(e RuneListOptionOption) RuneListOptionOptionList {
+	return RuneListOptionOptionList{&e, &l}
+}
+func (l Float32ListOptionOptionList) Cons(e Float32ListOptionOption) Float32ListOptionOptionList {
+	return Float32ListOptionOptionList{&e, &l}
+}
+func (l Float64ListOptionOptionList) Cons(e Float64ListOptionOption) Float64ListOptionOptionList {
+	return Float64ListOptionOptionList{&e, &l}
+}
+func (l Complex64ListOptionOptionList) Cons(e Complex64ListOptionOption) Complex64ListOptionOptionList {
+	return Complex64ListOptionOptionList{&e, &l}
+}
+func (l Complex128ListOptionOptionList) Cons(e Complex128ListOptionOption) Complex128ListOptionOptionList {
+	return Complex128ListOptionOptionList{&e, &l}
+}
+func (l AnyListOptionOptionList) Cons(e AnyListOptionOption) AnyListOptionOptionList {
+	return AnyListOptionOptionList{&e, &l}
+}
+func (l BoolOptionOptionOptionList) Cons(e BoolOptionOptionOption) BoolOptionOptionOptionList {
+	return BoolOptionOptionOptionList{&e, &l}
+}
+func (l StringOptionOptionOptionList) Cons(e StringOptionOptionOption) StringOptionOptionOptionList {
+	return StringOptionOptionOptionList{&e, &l}
+}
+func (l IntOptionOptionOptionList) Cons(e IntOptionOptionOption) IntOptionOptionOptionList {
+	return IntOptionOptionOptionList{&e, &l}
+}
+func (l Int8OptionOptionOptionList) Cons(e Int8OptionOptionOption) Int8OptionOptionOptionList {
+	return Int8OptionOptionOptionList{&e, &l}
+}
+func (l Int16OptionOptionOptionList) Cons(e Int16OptionOptionOption) Int16OptionOptionOptionList {
+	return Int16OptionOptionOptionList{&e, &l}
+}
+func (l Int32OptionOptionOptionList) Cons(e Int32OptionOptionOption) Int32OptionOptionOptionList {
+	return Int32OptionOptionOptionList{&e, &l}
+}
+func (l Int64OptionOptionOptionList) Cons(e Int64OptionOptionOption) Int64OptionOptionOptionList {
+	return Int64OptionOptionOptionList{&e, &l}
+}
+func (l UintOptionOptionOptionList) Cons(e UintOptionOptionOption) UintOptionOptionOptionList {
+	return UintOptionOptionOptionList{&e, &l}
+}
+func (l Uint8OptionOptionOptionList) Cons(e Uint8OptionOptionOption) Uint8OptionOptionOptionList {
+	return Uint8OptionOptionOptionList{&e, &l}
+}
+func (l Uint16OptionOptionOptionList) Cons(e Uint16OptionOptionOption) Uint16OptionOptionOptionList {
+	return Uint16OptionOptionOptionList{&e, &l}
+}
+func (l Uint32OptionOptionOptionList) Cons(e Uint32OptionOptionOption) Uint32OptionOptionOptionList {
+	return Uint32OptionOptionOptionList{&e, &l}
+}
+func (l Uint64OptionOptionOptionList) Cons(e Uint64OptionOptionOption) Uint64OptionOptionOptionList {
+	return Uint64OptionOptionOptionList{&e, &l}
+}
+func (l UintptrOptionOptionOptionList) Cons(e UintptrOptionOptionOption) UintptrOptionOptionOptionList {
+	return UintptrOptionOptionOptionList{&e, &l}
+}
+func (l ByteOptionOptionOptionList) Cons(e ByteOptionOptionOption) ByteOptionOptionOptionList {
+	return ByteOptionOptionOptionList{&e, &l}
+}
+func (l RuneOptionOptionOptionList) Cons(e RuneOptionOptionOption) RuneOptionOptionOptionList {
+	return RuneOptionOptionOptionList{&e, &l}
+}
+func (l Float32OptionOptionOptionList) Cons(e Float32OptionOptionOption) Float32OptionOptionOptionList {
+	return Float32OptionOptionOptionList{&e, &l}
+}
+func (l Float64OptionOptionOptionList) Cons(e Float64OptionOptionOption) Float64OptionOptionOptionList {
+	return Float64OptionOptionOptionList{&e, &l}
+}
+func (l Complex64OptionOptionOptionList) Cons(e Complex64OptionOptionOption) Complex64OptionOptionOptionList {
+	return Complex64OptionOptionOptionList{&e, &l}
+}
+func (l Complex128OptionOptionOptionList) Cons(e Complex128OptionOptionOption) Complex128OptionOptionOptionList {
+	return Complex128OptionOptionOptionList{&e, &l}
+}
+func (l AnyOptionOptionOptionList) Cons(e AnyOptionOptionOption) AnyOptionOptionOptionList {
+	return AnyOptionOptionOptionList{&e, &l}
+}
+func (l BoolArrOptionOptionOptionList) Cons(e BoolArrOptionOptionOption) BoolArrOptionOptionOptionList {
+	return BoolArrOptionOptionOptionList{&e, &l}
+}
+func (l StringArrOptionOptionOptionList) Cons(e StringArrOptionOptionOption) StringArrOptionOptionOptionList {
+	return StringArrOptionOptionOptionList{&e, &l}
+}
+func (l IntArrOptionOptionOptionList) Cons(e IntArrOptionOptionOption) IntArrOptionOptionOptionList {
+	return IntArrOptionOptionOptionList{&e, &l}
+}
+func (l Int8ArrOptionOptionOptionList) Cons(e Int8ArrOptionOptionOption) Int8ArrOptionOptionOptionList {
+	return Int8ArrOptionOptionOptionList{&e, &l}
+}
+func (l Int16ArrOptionOptionOptionList) Cons(e Int16ArrOptionOptionOption) Int16ArrOptionOptionOptionList {
+	return Int16ArrOptionOptionOptionList{&e, &l}
+}
+func (l Int32ArrOptionOptionOptionList) Cons(e Int32ArrOptionOptionOption) Int32ArrOptionOptionOptionList {
+	return Int32ArrOptionOptionOptionList{&e, &l}
+}
+func (l Int64ArrOptionOptionOptionList) Cons(e Int64ArrOptionOptionOption) Int64ArrOptionOptionOptionList {
+	return Int64ArrOptionOptionOptionList{&e, &l}
+}
+func (l UintArrOptionOptionOptionList) Cons(e UintArrOptionOptionOption) UintArrOptionOptionOptionList {
+	return UintArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint8ArrOptionOptionOptionList) Cons(e Uint8ArrOptionOptionOption) Uint8ArrOptionOptionOptionList {
+	return Uint8ArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint16ArrOptionOptionOptionList) Cons(e Uint16ArrOptionOptionOption) Uint16ArrOptionOptionOptionList {
+	return Uint16ArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint32ArrOptionOptionOptionList) Cons(e Uint32ArrOptionOptionOption) Uint32ArrOptionOptionOptionList {
+	return Uint32ArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint64ArrOptionOptionOptionList) Cons(e Uint64ArrOptionOptionOption) Uint64ArrOptionOptionOptionList {
+	return Uint64ArrOptionOptionOptionList{&e, &l}
+}
+func (l UintptrArrOptionOptionOptionList) Cons(e UintptrArrOptionOptionOption) UintptrArrOptionOptionOptionList {
+	return UintptrArrOptionOptionOptionList{&e, &l}
+}
+func (l ByteArrOptionOptionOptionList) Cons(e ByteArrOptionOptionOption) ByteArrOptionOptionOptionList {
+	return ByteArrOptionOptionOptionList{&e, &l}
+}
+func (l RuneArrOptionOptionOptionList) Cons(e RuneArrOptionOptionOption) RuneArrOptionOptionOptionList {
+	return RuneArrOptionOptionOptionList{&e, &l}
+}
+func (l Float32ArrOptionOptionOptionList) Cons(e Float32ArrOptionOptionOption) Float32ArrOptionOptionOptionList {
+	return Float32ArrOptionOptionOptionList{&e, &l}
+}
+func (l Float64ArrOptionOptionOptionList) Cons(e Float64ArrOptionOptionOption) Float64ArrOptionOptionOptionList {
+	return Float64ArrOptionOptionOptionList{&e, &l}
+}
+func (l Complex64ArrOptionOptionOptionList) Cons(e Complex64ArrOptionOptionOption) Complex64ArrOptionOptionOptionList {
+	return Complex64ArrOptionOptionOptionList{&e, &l}
+}
+func (l Complex128ArrOptionOptionOptionList) Cons(e Complex128ArrOptionOptionOption) Complex128ArrOptionOptionOptionList {
+	return Complex128ArrOptionOptionOptionList{&e, &l}
+}
+func (l AnyArrOptionOptionOptionList) Cons(e AnyArrOptionOptionOption) AnyArrOptionOptionOptionList {
+	return AnyArrOptionOptionOptionList{&e, &l}
+}
+func (l BoolArrArrOptionOptionOptionList) Cons(e BoolArrArrOptionOptionOption) BoolArrArrOptionOptionOptionList {
+	return BoolArrArrOptionOptionOptionList{&e, &l}
+}
+func (l StringArrArrOptionOptionOptionList) Cons(e StringArrArrOptionOptionOption) StringArrArrOptionOptionOptionList {
+	return StringArrArrOptionOptionOptionList{&e, &l}
+}
+func (l IntArrArrOptionOptionOptionList) Cons(e IntArrArrOptionOptionOption) IntArrArrOptionOptionOptionList {
+	return IntArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Int8ArrArrOptionOptionOptionList) Cons(e Int8ArrArrOptionOptionOption) Int8ArrArrOptionOptionOptionList {
+	return Int8ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Int16ArrArrOptionOptionOptionList) Cons(e Int16ArrArrOptionOptionOption) Int16ArrArrOptionOptionOptionList {
+	return Int16ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Int32ArrArrOptionOptionOptionList) Cons(e Int32ArrArrOptionOptionOption) Int32ArrArrOptionOptionOptionList {
+	return Int32ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Int64ArrArrOptionOptionOptionList) Cons(e Int64ArrArrOptionOptionOption) Int64ArrArrOptionOptionOptionList {
+	return Int64ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l UintArrArrOptionOptionOptionList) Cons(e UintArrArrOptionOptionOption) UintArrArrOptionOptionOptionList {
+	return UintArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint8ArrArrOptionOptionOptionList) Cons(e Uint8ArrArrOptionOptionOption) Uint8ArrArrOptionOptionOptionList {
+	return Uint8ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint16ArrArrOptionOptionOptionList) Cons(e Uint16ArrArrOptionOptionOption) Uint16ArrArrOptionOptionOptionList {
+	return Uint16ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint32ArrArrOptionOptionOptionList) Cons(e Uint32ArrArrOptionOptionOption) Uint32ArrArrOptionOptionOptionList {
+	return Uint32ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint64ArrArrOptionOptionOptionList) Cons(e Uint64ArrArrOptionOptionOption) Uint64ArrArrOptionOptionOptionList {
+	return Uint64ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l UintptrArrArrOptionOptionOptionList) Cons(e UintptrArrArrOptionOptionOption) UintptrArrArrOptionOptionOptionList {
+	return UintptrArrArrOptionOptionOptionList{&e, &l}
+}
+func (l ByteArrArrOptionOptionOptionList) Cons(e ByteArrArrOptionOptionOption) ByteArrArrOptionOptionOptionList {
+	return ByteArrArrOptionOptionOptionList{&e, &l}
+}
+func (l RuneArrArrOptionOptionOptionList) Cons(e RuneArrArrOptionOptionOption) RuneArrArrOptionOptionOptionList {
+	return RuneArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Float32ArrArrOptionOptionOptionList) Cons(e Float32ArrArrOptionOptionOption) Float32ArrArrOptionOptionOptionList {
+	return Float32ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Float64ArrArrOptionOptionOptionList) Cons(e Float64ArrArrOptionOptionOption) Float64ArrArrOptionOptionOptionList {
+	return Float64ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Complex64ArrArrOptionOptionOptionList) Cons(e Complex64ArrArrOptionOptionOption) Complex64ArrArrOptionOptionOptionList {
+	return Complex64ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l Complex128ArrArrOptionOptionOptionList) Cons(e Complex128ArrArrOptionOptionOption) Complex128ArrArrOptionOptionOptionList {
+	return Complex128ArrArrOptionOptionOptionList{&e, &l}
+}
+func (l AnyArrArrOptionOptionOptionList) Cons(e AnyArrArrOptionOptionOption) AnyArrArrOptionOptionOptionList {
+	return AnyArrArrOptionOptionOptionList{&e, &l}
+}
+func (l BoolOptionArrOptionOptionOptionList) Cons(e BoolOptionArrOptionOptionOption) BoolOptionArrOptionOptionOptionList {
+	return BoolOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l StringOptionArrOptionOptionOptionList) Cons(e StringOptionArrOptionOptionOption) StringOptionArrOptionOptionOptionList {
+	return StringOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l IntOptionArrOptionOptionOptionList) Cons(e IntOptionArrOptionOptionOption) IntOptionArrOptionOptionOptionList {
+	return IntOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Int8OptionArrOptionOptionOptionList) Cons(e Int8OptionArrOptionOptionOption) Int8OptionArrOptionOptionOptionList {
+	return Int8OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Int16OptionArrOptionOptionOptionList) Cons(e Int16OptionArrOptionOptionOption) Int16OptionArrOptionOptionOptionList {
+	return Int16OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Int32OptionArrOptionOptionOptionList) Cons(e Int32OptionArrOptionOptionOption) Int32OptionArrOptionOptionOptionList {
+	return Int32OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Int64OptionArrOptionOptionOptionList) Cons(e Int64OptionArrOptionOptionOption) Int64OptionArrOptionOptionOptionList {
+	return Int64OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l UintOptionArrOptionOptionOptionList) Cons(e UintOptionArrOptionOptionOption) UintOptionArrOptionOptionOptionList {
+	return UintOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint8OptionArrOptionOptionOptionList) Cons(e Uint8OptionArrOptionOptionOption) Uint8OptionArrOptionOptionOptionList {
+	return Uint8OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint16OptionArrOptionOptionOptionList) Cons(e Uint16OptionArrOptionOptionOption) Uint16OptionArrOptionOptionOptionList {
+	return Uint16OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint32OptionArrOptionOptionOptionList) Cons(e Uint32OptionArrOptionOptionOption) Uint32OptionArrOptionOptionOptionList {
+	return Uint32OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Uint64OptionArrOptionOptionOptionList) Cons(e Uint64OptionArrOptionOptionOption) Uint64OptionArrOptionOptionOptionList {
+	return Uint64OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l UintptrOptionArrOptionOptionOptionList) Cons(e UintptrOptionArrOptionOptionOption) UintptrOptionArrOptionOptionOptionList {
+	return UintptrOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l ByteOptionArrOptionOptionOptionList) Cons(e ByteOptionArrOptionOptionOption) ByteOptionArrOptionOptionOptionList {
+	return ByteOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l RuneOptionArrOptionOptionOptionList) Cons(e RuneOptionArrOptionOptionOption) RuneOptionArrOptionOptionOptionList {
+	return RuneOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Float32OptionArrOptionOptionOptionList) Cons(e Float32OptionArrOptionOptionOption) Float32OptionArrOptionOptionOptionList {
+	return Float32OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Float64OptionArrOptionOptionOptionList) Cons(e Float64OptionArrOptionOptionOption) Float64OptionArrOptionOptionOptionList {
+	return Float64OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Complex64OptionArrOptionOptionOptionList) Cons(e Complex64OptionArrOptionOptionOption) Complex64OptionArrOptionOptionOptionList {
+	return Complex64OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l Complex128OptionArrOptionOptionOptionList) Cons(e Complex128OptionArrOptionOptionOption) Complex128OptionArrOptionOptionOptionList {
+	return Complex128OptionArrOptionOptionOptionList{&e, &l}
+}
+func (l AnyOptionArrOptionOptionOptionList) Cons(e AnyOptionArrOptionOptionOption) AnyOptionArrOptionOptionOptionList {
+	return AnyOptionArrOptionOptionOptionList{&e, &l}
+}
+func (l BoolListOptionOptionOptionList) Cons(e BoolListOptionOptionOption) BoolListOptionOptionOptionList {
+	return BoolListOptionOptionOptionList{&e, &l}
+}
+func (l StringListOptionOptionOptionList) Cons(e StringListOptionOptionOption) StringListOptionOptionOptionList {
+	return StringListOptionOptionOptionList{&e, &l}
+}
+func (l IntListOptionOptionOptionList) Cons(e IntListOptionOptionOption) IntListOptionOptionOptionList {
+	return IntListOptionOptionOptionList{&e, &l}
+}
+func (l Int8ListOptionOptionOptionList) Cons(e Int8ListOptionOptionOption) Int8ListOptionOptionOptionList {
+	return Int8ListOptionOptionOptionList{&e, &l}
+}
+func (l Int16ListOptionOptionOptionList) Cons(e Int16ListOptionOptionOption) Int16ListOptionOptionOptionList {
+	return Int16ListOptionOptionOptionList{&e, &l}
+}
+func (l Int32ListOptionOptionOptionList) Cons(e Int32ListOptionOptionOption) Int32ListOptionOptionOptionList {
+	return Int32ListOptionOptionOptionList{&e, &l}
+}
+func (l Int64ListOptionOptionOptionList) Cons(e Int64ListOptionOptionOption) Int64ListOptionOptionOptionList {
+	return Int64ListOptionOptionOptionList{&e, &l}
+}
+func (l UintListOptionOptionOptionList) Cons(e UintListOptionOptionOption) UintListOptionOptionOptionList {
+	return UintListOptionOptionOptionList{&e, &l}
+}
+func (l Uint8ListOptionOptionOptionList) Cons(e Uint8ListOptionOptionOption) Uint8ListOptionOptionOptionList {
+	return Uint8ListOptionOptionOptionList{&e, &l}
+}
+func (l Uint16ListOptionOptionOptionList) Cons(e Uint16ListOptionOptionOption) Uint16ListOptionOptionOptionList {
+	return Uint16ListOptionOptionOptionList{&e, &l}
+}
+func (l Uint32ListOptionOptionOptionList) Cons(e Uint32ListOptionOptionOption) Uint32ListOptionOptionOptionList {
+	return Uint32ListOptionOptionOptionList{&e, &l}
+}
+func (l Uint64ListOptionOptionOptionList) Cons(e Uint64ListOptionOptionOption) Uint64ListOptionOptionOptionList {
+	return Uint64ListOptionOptionOptionList{&e, &l}
+}
+func (l UintptrListOptionOptionOptionList) Cons(e UintptrListOptionOptionOption) UintptrListOptionOptionOptionList {
+	return UintptrListOptionOptionOptionList{&e, &l}
+}
+func (l ByteListOptionOptionOptionList) Cons(e ByteListOptionOptionOption) ByteListOptionOptionOptionList {
+	return ByteListOptionOptionOptionList{&e, &l}
+}
+func (l RuneListOptionOptionOptionList) Cons(e RuneListOptionOptionOption) RuneListOptionOptionOptionList {
+	return RuneListOptionOptionOptionList{&e, &l}
+}
+func (l Float32ListOptionOptionOptionList) Cons(e Float32ListOptionOptionOption) Float32ListOptionOptionOptionList {
+	return Float32ListOptionOptionOptionList{&e, &l}
+}
+func (l Float64ListOptionOptionOptionList) Cons(e Float64ListOptionOptionOption) Float64ListOptionOptionOptionList {
+	return Float64ListOptionOptionOptionList{&e, &l}
+}
+func (l Complex64ListOptionOptionOptionList) Cons(e Complex64ListOptionOptionOption) Complex64ListOptionOptionOptionList {
+	return Complex64ListOptionOptionOptionList{&e, &l}
+}
+func (l Complex128ListOptionOptionOptionList) Cons(e Complex128ListOptionOptionOption) Complex128ListOptionOptionOptionList {
+	return Complex128ListOptionOptionOptionList{&e, &l}
+}
+func (l AnyListOptionOptionOptionList) Cons(e AnyListOptionOptionOption) AnyListOptionOptionOptionList {
+	return AnyListOptionOptionOptionList{&e, &l}
+}
+func (l BoolArrList) Cons(e []bool) BoolArrList                   { return BoolArrList{&e, &l} }
+func (l StringArrList) Cons(e []string) StringArrList             { return StringArrList{&e, &l} }
+func (l IntArrList) Cons(e []int) IntArrList                      { return IntArrList{&e, &l} }
+func (l Int8ArrList) Cons(e []int8) Int8ArrList                   { return Int8ArrList{&e, &l} }
+func (l Int16ArrList) Cons(e []int16) Int16ArrList                { return Int16ArrList{&e, &l} }
+func (l Int32ArrList) Cons(e []int32) Int32ArrList                { return Int32ArrList{&e, &l} }
+func (l Int64ArrList) Cons(e []int64) Int64ArrList                { return Int64ArrList{&e, &l} }
+func (l UintArrList) Cons(e []uint) UintArrList                   { return UintArrList{&e, &l} }
+func (l Uint8ArrList) Cons(e []uint8) Uint8ArrList                { return Uint8ArrList{&e, &l} }
+func (l Uint16ArrList) Cons(e []uint16) Uint16ArrList             { return Uint16ArrList{&e, &l} }
+func (l Uint32ArrList) Cons(e []uint32) Uint32ArrList             { return Uint32ArrList{&e, &l} }
+func (l Uint64ArrList) Cons(e []uint64) Uint64ArrList             { return Uint64ArrList{&e, &l} }
+func (l UintptrArrList) Cons(e []uintptr) UintptrArrList          { return UintptrArrList{&e, &l} }
+func (l ByteArrList) Cons(e []byte) ByteArrList                   { return ByteArrList{&e, &l} }
+func (l RuneArrList) Cons(e []rune) RuneArrList                   { return RuneArrList{&e, &l} }
+func (l Float32ArrList) Cons(e []float32) Float32ArrList          { return Float32ArrList{&e, &l} }
+func (l Float64ArrList) Cons(e []float64) Float64ArrList          { return Float64ArrList{&e, &l} }
+func (l Complex64ArrList) Cons(e []complex64) Complex64ArrList    { return Complex64ArrList{&e, &l} }
+func (l Complex128ArrList) Cons(e []complex128) Complex128ArrList { return Complex128ArrList{&e, &l} }
+func (l AnyArrList) Cons(e []Any) AnyArrList                      { return AnyArrList{&e, &l} }
+func (l BoolArrArrList) Cons(e [][]bool) BoolArrArrList           { return BoolArrArrList{&e, &l} }
+func (l StringArrArrList) Cons(e [][]string) StringArrArrList     { return StringArrArrList{&e, &l} }
+func (l IntArrArrList) Cons(e [][]int) IntArrArrList              { return IntArrArrList{&e, &l} }
+func (l Int8ArrArrList) Cons(e [][]int8) Int8ArrArrList           { return Int8ArrArrList{&e, &l} }
+func (l Int16ArrArrList) Cons(e [][]int16) Int16ArrArrList        { return Int16ArrArrList{&e, &l} }
+func (l Int32ArrArrList) Cons(e [][]int32) Int32ArrArrList        { return Int32ArrArrList{&e, &l} }
+func (l Int64ArrArrList) Cons(e [][]int64) Int64ArrArrList        { return Int64ArrArrList{&e, &l} }
+func (l UintArrArrList) Cons(e [][]uint) UintArrArrList           { return UintArrArrList{&e, &l} }
+func (l Uint8ArrArrList) Cons(e [][]uint8) Uint8ArrArrList        { return Uint8ArrArrList{&e, &l} }
+func (l Uint16ArrArrList) Cons(e [][]uint16) Uint16ArrArrList     { return Uint16ArrArrList{&e, &l} }
+func (l Uint32ArrArrList) Cons(e [][]uint32) Uint32ArrArrList     { return Uint32ArrArrList{&e, &l} }
+func (l Uint64ArrArrList) Cons(e [][]uint64) Uint64ArrArrList     { return Uint64ArrArrList{&e, &l} }
+func (l UintptrArrArrList) Cons(e [][]uintptr) UintptrArrArrList  { return UintptrArrArrList{&e, &l} }
+func (l ByteArrArrList) Cons(e [][]byte) ByteArrArrList           { return ByteArrArrList{&e, &l} }
+func (l RuneArrArrList) Cons(e [][]rune) RuneArrArrList           { return RuneArrArrList{&e, &l} }
+func (l Float32ArrArrList) Cons(e [][]float32) Float32ArrArrList  { return Float32ArrArrList{&e, &l} }
+func (l Float64ArrArrList) Cons(e [][]float64) Float64ArrArrList  { return Float64ArrArrList{&e, &l} }
+func (l Complex64ArrArrList) Cons(e [][]complex64) Complex64ArrArrList {
+	return Complex64ArrArrList{&e, &l}
+}
+func (l Complex128ArrArrList) Cons(e [][]complex128) Complex128ArrArrList {
+	return Complex128ArrArrList{&e, &l}
+}
+func (l AnyArrArrList) Cons(e [][]Any) AnyArrArrList              { return AnyArrArrList{&e, &l} }
+func (l BoolOptionArrList) Cons(e []BoolOption) BoolOptionArrList { return BoolOptionArrList{&e, &l} }
+func (l StringOptionArrList) Cons(e []StringOption) StringOptionArrList {
+	return StringOptionArrList{&e, &l}
+}
+func (l IntOptionArrList) Cons(e []IntOption) IntOptionArrList    { return IntOptionArrList{&e, &l} }
+func (l Int8OptionArrList) Cons(e []Int8Option) Int8OptionArrList { return Int8OptionArrList{&e, &l} }
+func (l Int16OptionArrList) Cons(e []Int16Option) Int16OptionArrList {
+	return Int16OptionArrList{&e, &l}
+}
+func (l Int32OptionArrList) Cons(e []Int32Option) Int32OptionArrList {
+	return Int32OptionArrList{&e, &l}
+}
+func (l Int64OptionArrList) Cons(e []Int64Option) Int64OptionArrList {
+	return Int64OptionArrList{&e, &l}
+}
+func (l UintOptionArrList) Cons(e []UintOption) UintOptionArrList { return UintOptionArrList{&e, &l} }
+func (l Uint8OptionArrList) Cons(e []Uint8Option) Uint8OptionArrList {
+	return Uint8OptionArrList{&e, &l}
+}
+func (l Uint16OptionArrList) Cons(e []Uint16Option) Uint16OptionArrList {
+	return Uint16OptionArrList{&e, &l}
+}
+func (l Uint32OptionArrList) Cons(e []Uint32Option) Uint32OptionArrList {
+	return Uint32OptionArrList{&e, &l}
+}
+func (l Uint64OptionArrList) Cons(e []Uint64Option) Uint64OptionArrList {
+	return Uint64OptionArrList{&e, &l}
+}
+func (l UintptrOptionArrList) Cons(e []UintptrOption) UintptrOptionArrList {
+	return UintptrOptionArrList{&e, &l}
+}
+func (l ByteOptionArrList) Cons(e []ByteOption) ByteOptionArrList { return ByteOptionArrList{&e, &l} }
+func (l RuneOptionArrList) Cons(e []RuneOption) RuneOptionArrList { return RuneOptionArrList{&e, &l} }
+func (l Float32OptionArrList) Cons(e []Float32Option) Float32OptionArrList {
+	return Float32OptionArrList{&e, &l}
+}
+func (l Float64OptionArrList) Cons(e []Float64Option) Float64OptionArrList {
+	return Float64OptionArrList{&e, &l}
+}
+func (l Complex64OptionArrList) Cons(e []Complex64Option) Complex64OptionArrList {
+	return Complex64OptionArrList{&e, &l}
+}
+func (l Complex128OptionArrList) Cons(e []Complex128Option) Complex128OptionArrList {
+	return Complex128OptionArrList{&e, &l}
+}
+func (l AnyOptionArrList) Cons(e []AnyOption) AnyOptionArrList     { return AnyOptionArrList{&e, &l} }
+func (l BoolListList) Cons(e BoolList) BoolListList                { return BoolListList{&e, &l} }
+func (l StringListList) Cons(e StringList) StringListList          { return StringListList{&e, &l} }
+func (l IntListList) Cons(e IntList) IntListList                   { return IntListList{&e, &l} }
+func (l Int8ListList) Cons(e Int8List) Int8ListList                { return Int8ListList{&e, &l} }
+func (l Int16ListList) Cons(e Int16List) Int16ListList             { return Int16ListList{&e, &l} }
+func (l Int32ListList) Cons(e Int32List) Int32ListList             { return Int32ListList{&e, &l} }
+func (l Int64ListList) Cons(e Int64List) Int64ListList             { return Int64ListList{&e, &l} }
+func (l UintListList) Cons(e UintList) UintListList                { return UintListList{&e, &l} }
+func (l Uint8ListList) Cons(e Uint8List) Uint8ListList             { return Uint8ListList{&e, &l} }
+func (l Uint16ListList) Cons(e Uint16List) Uint16ListList          { return Uint16ListList{&e, &l} }
+func (l Uint32ListList) Cons(e Uint32List) Uint32ListList          { return Uint32ListList{&e, &l} }
+func (l Uint64ListList) Cons(e Uint64List) Uint64ListList          { return Uint64ListList{&e, &l} }
+func (l UintptrListList) Cons(e UintptrList) UintptrListList       { return UintptrListList{&e, &l} }
+func (l ByteListList) Cons(e ByteList) ByteListList                { return ByteListList{&e, &l} }
+func (l RuneListList) Cons(e RuneList) RuneListList                { return RuneListList{&e, &l} }
+func (l Float32ListList) Cons(e Float32List) Float32ListList       { return Float32ListList{&e, &l} }
+func (l Float64ListList) Cons(e Float64List) Float64ListList       { return Float64ListList{&e, &l} }
+func (l Complex64ListList) Cons(e Complex64List) Complex64ListList { return Complex64ListList{&e, &l} }
+func (l Complex128ListList) Cons(e Complex128List) Complex128ListList {
+	return Complex128ListList{&e, &l}
+}
+func (l AnyListList) Cons(e AnyList) AnyListList { return AnyListList{&e, &l} }
