@@ -79,4 +79,9 @@ func main() {
 		Foreach(func(i int) { fmt.Println(" ", i) })
 
 	fmt.Println(MakeIntList(1, 2).Tail().Tail().HeadOption().ToString())
+
+	fmt.Println(MakeIntList(1, 2, 3).Equals(MakeIntList(1, 2, 3)))
+	fmt.Println(MakeIntList(1, 2).Equals(MakeIntList(1, 2, 3)))
+	fmt.Println(MakeIntListList(MakeIntList(1, 2), MakeIntList(3), MakeIntList(4, 5)).
+		Equals(MakeIntListList(MakeIntList(1, 2), MakeIntList(3), MakeIntList(4, 5))))
 }
