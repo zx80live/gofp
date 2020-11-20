@@ -57,7 +57,7 @@ func main() {
 	})
 	fmt.Println(mapString.ToString())
 
-	sum1 := Int(10).FlatMapInt(func(i int) IntOption {
+	sum1 := Int(10).FlatMapIntOption(func(i int) IntOption {
 		return Int(20).MapInt(func(j int) int {
 			return i + j
 		})
@@ -67,7 +67,7 @@ func main() {
 
 	xs1 := MakeIntListList(MakeIntList(1, 2), NilIntList, MakeIntList(3), MakeIntList(4, 5, 6))
 	fmt.Println(xs1.ToString())
-	res1 := xs1.FlatMapInt(func(list IntList) IntList {
+	res1 := xs1.FlatMapIntList(func(list IntList) IntList {
 		fmt.Println(" flatMap.iterate ->", list.ToString())
 		return list
 	})
@@ -75,7 +75,7 @@ func main() {
 	fmt.Println(res1.ToString())
 
 	MakeIntList(1, 2, 3, 4, 5).
-		FlatMapInt(func(i int) IntList { return MakeIntList(i * 10) }).
+		FlatMapIntList(func(i int) IntList { return MakeIntList(i * 10) }).
 		Foreach(func(i int) { fmt.Println(" ", i) })
 
 	fmt.Println(MakeIntList(1, 2).Tail().Tail().HeadOption().ToString())
