@@ -3,651 +3,705 @@
 
 package fp
 
-func Bool(e bool) BoolOption                                     { return BoolOption{&e} }
-func String(e string) StringOption                               { return StringOption{&e} }
-func Int(e int) IntOption                                        { return IntOption{&e} }
-func Int8(e int8) Int8Option                                     { return Int8Option{&e} }
-func Int16(e int16) Int16Option                                  { return Int16Option{&e} }
-func Int32(e int32) Int32Option                                  { return Int32Option{&e} }
-func Int64(e int64) Int64Option                                  { return Int64Option{&e} }
-func Uint(e uint) UintOption                                     { return UintOption{&e} }
-func Uint8(e uint8) Uint8Option                                  { return Uint8Option{&e} }
-func Uint16(e uint16) Uint16Option                               { return Uint16Option{&e} }
-func Uint32(e uint32) Uint32Option                               { return Uint32Option{&e} }
-func Uint64(e uint64) Uint64Option                               { return Uint64Option{&e} }
-func Uintptr(e uintptr) UintptrOption                            { return UintptrOption{&e} }
-func Byte(e byte) ByteOption                                     { return ByteOption{&e} }
-func Rune(e rune) RuneOption                                     { return RuneOption{&e} }
-func Float32(e float32) Float32Option                            { return Float32Option{&e} }
-func Float64(e float64) Float64Option                            { return Float64Option{&e} }
-func Complex64(e complex64) Complex64Option                      { return Complex64Option{&e} }
-func Complex128(e complex128) Complex128Option                   { return Complex128Option{&e} }
-func AnyOpt(e Any) AnyOption                                     { return AnyOption{&e} }
-func BoolArrayOpt(e []bool) BoolArrayOption                      { return BoolArrayOption{&e} }
-func StringArrayOpt(e []string) StringArrayOption                { return StringArrayOption{&e} }
-func IntArrayOpt(e []int) IntArrayOption                         { return IntArrayOption{&e} }
-func Int8ArrayOpt(e []int8) Int8ArrayOption                      { return Int8ArrayOption{&e} }
-func Int16ArrayOpt(e []int16) Int16ArrayOption                   { return Int16ArrayOption{&e} }
-func Int32ArrayOpt(e []int32) Int32ArrayOption                   { return Int32ArrayOption{&e} }
-func Int64ArrayOpt(e []int64) Int64ArrayOption                   { return Int64ArrayOption{&e} }
-func UintArrayOpt(e []uint) UintArrayOption                      { return UintArrayOption{&e} }
-func Uint8ArrayOpt(e []uint8) Uint8ArrayOption                   { return Uint8ArrayOption{&e} }
-func Uint16ArrayOpt(e []uint16) Uint16ArrayOption                { return Uint16ArrayOption{&e} }
-func Uint32ArrayOpt(e []uint32) Uint32ArrayOption                { return Uint32ArrayOption{&e} }
-func Uint64ArrayOpt(e []uint64) Uint64ArrayOption                { return Uint64ArrayOption{&e} }
-func UintptrArrayOpt(e []uintptr) UintptrArrayOption             { return UintptrArrayOption{&e} }
-func ByteArrayOpt(e []byte) ByteArrayOption                      { return ByteArrayOption{&e} }
-func RuneArrayOpt(e []rune) RuneArrayOption                      { return RuneArrayOption{&e} }
-func Float32ArrayOpt(e []float32) Float32ArrayOption             { return Float32ArrayOption{&e} }
-func Float64ArrayOpt(e []float64) Float64ArrayOption             { return Float64ArrayOption{&e} }
-func Complex64ArrayOpt(e []complex64) Complex64ArrayOption       { return Complex64ArrayOption{&e} }
-func Complex128ArrayOpt(e []complex128) Complex128ArrayOption    { return Complex128ArrayOption{&e} }
-func AnyArrayOpt(e []Any) AnyArrayOption                         { return AnyArrayOption{&e} }
-func BoolArrayArrayOpt(e [][]bool) BoolArrayArrayOption          { return BoolArrayArrayOption{&e} }
-func StringArrayArrayOpt(e [][]string) StringArrayArrayOption    { return StringArrayArrayOption{&e} }
-func IntArrayArrayOpt(e [][]int) IntArrayArrayOption             { return IntArrayArrayOption{&e} }
-func Int8ArrayArrayOpt(e [][]int8) Int8ArrayArrayOption          { return Int8ArrayArrayOption{&e} }
-func Int16ArrayArrayOpt(e [][]int16) Int16ArrayArrayOption       { return Int16ArrayArrayOption{&e} }
-func Int32ArrayArrayOpt(e [][]int32) Int32ArrayArrayOption       { return Int32ArrayArrayOption{&e} }
-func Int64ArrayArrayOpt(e [][]int64) Int64ArrayArrayOption       { return Int64ArrayArrayOption{&e} }
-func UintArrayArrayOpt(e [][]uint) UintArrayArrayOption          { return UintArrayArrayOption{&e} }
-func Uint8ArrayArrayOpt(e [][]uint8) Uint8ArrayArrayOption       { return Uint8ArrayArrayOption{&e} }
-func Uint16ArrayArrayOpt(e [][]uint16) Uint16ArrayArrayOption    { return Uint16ArrayArrayOption{&e} }
-func Uint32ArrayArrayOpt(e [][]uint32) Uint32ArrayArrayOption    { return Uint32ArrayArrayOption{&e} }
-func Uint64ArrayArrayOpt(e [][]uint64) Uint64ArrayArrayOption    { return Uint64ArrayArrayOption{&e} }
-func UintptrArrayArrayOpt(e [][]uintptr) UintptrArrayArrayOption { return UintptrArrayArrayOption{&e} }
-func ByteArrayArrayOpt(e [][]byte) ByteArrayArrayOption          { return ByteArrayArrayOption{&e} }
-func RuneArrayArrayOpt(e [][]rune) RuneArrayArrayOption          { return RuneArrayArrayOption{&e} }
-func Float32ArrayArrayOpt(e [][]float32) Float32ArrayArrayOption { return Float32ArrayArrayOption{&e} }
-func Float64ArrayArrayOpt(e [][]float64) Float64ArrayArrayOption { return Float64ArrayArrayOption{&e} }
-func Complex64ArrayArrayOpt(e [][]complex64) Complex64ArrayArrayOption {
+func MakeBoolOption(e bool) BoolOption                            { return BoolOption{&e} }
+func MakeStringOption(e string) StringOption                      { return StringOption{&e} }
+func MakeIntOption(e int) IntOption                               { return IntOption{&e} }
+func MakeInt8Option(e int8) Int8Option                            { return Int8Option{&e} }
+func MakeInt16Option(e int16) Int16Option                         { return Int16Option{&e} }
+func MakeInt32Option(e int32) Int32Option                         { return Int32Option{&e} }
+func MakeInt64Option(e int64) Int64Option                         { return Int64Option{&e} }
+func MakeUintOption(e uint) UintOption                            { return UintOption{&e} }
+func MakeUint8Option(e uint8) Uint8Option                         { return Uint8Option{&e} }
+func MakeUint16Option(e uint16) Uint16Option                      { return Uint16Option{&e} }
+func MakeUint32Option(e uint32) Uint32Option                      { return Uint32Option{&e} }
+func MakeUint64Option(e uint64) Uint64Option                      { return Uint64Option{&e} }
+func MakeUintptrOption(e uintptr) UintptrOption                   { return UintptrOption{&e} }
+func MakeByteOption(e byte) ByteOption                            { return ByteOption{&e} }
+func MakeRuneOption(e rune) RuneOption                            { return RuneOption{&e} }
+func MakeFloat32Option(e float32) Float32Option                   { return Float32Option{&e} }
+func MakeFloat64Option(e float64) Float64Option                   { return Float64Option{&e} }
+func MakeComplex64Option(e complex64) Complex64Option             { return Complex64Option{&e} }
+func MakeComplex128Option(e complex128) Complex128Option          { return Complex128Option{&e} }
+func MakeAnyOption(e Any) AnyOption                               { return AnyOption{&e} }
+func MakeBoolArrayOption(e []bool) BoolArrayOption                { return BoolArrayOption{&e} }
+func MakeStringArrayOption(e []string) StringArrayOption          { return StringArrayOption{&e} }
+func MakeIntArrayOption(e []int) IntArrayOption                   { return IntArrayOption{&e} }
+func MakeInt8ArrayOption(e []int8) Int8ArrayOption                { return Int8ArrayOption{&e} }
+func MakeInt16ArrayOption(e []int16) Int16ArrayOption             { return Int16ArrayOption{&e} }
+func MakeInt32ArrayOption(e []int32) Int32ArrayOption             { return Int32ArrayOption{&e} }
+func MakeInt64ArrayOption(e []int64) Int64ArrayOption             { return Int64ArrayOption{&e} }
+func MakeUintArrayOption(e []uint) UintArrayOption                { return UintArrayOption{&e} }
+func MakeUint8ArrayOption(e []uint8) Uint8ArrayOption             { return Uint8ArrayOption{&e} }
+func MakeUint16ArrayOption(e []uint16) Uint16ArrayOption          { return Uint16ArrayOption{&e} }
+func MakeUint32ArrayOption(e []uint32) Uint32ArrayOption          { return Uint32ArrayOption{&e} }
+func MakeUint64ArrayOption(e []uint64) Uint64ArrayOption          { return Uint64ArrayOption{&e} }
+func MakeUintptrArrayOption(e []uintptr) UintptrArrayOption       { return UintptrArrayOption{&e} }
+func MakeByteArrayOption(e []byte) ByteArrayOption                { return ByteArrayOption{&e} }
+func MakeRuneArrayOption(e []rune) RuneArrayOption                { return RuneArrayOption{&e} }
+func MakeFloat32ArrayOption(e []float32) Float32ArrayOption       { return Float32ArrayOption{&e} }
+func MakeFloat64ArrayOption(e []float64) Float64ArrayOption       { return Float64ArrayOption{&e} }
+func MakeComplex64ArrayOption(e []complex64) Complex64ArrayOption { return Complex64ArrayOption{&e} }
+func MakeComplex128ArrayOption(e []complex128) Complex128ArrayOption {
+	return Complex128ArrayOption{&e}
+}
+func MakeAnyArrayOption(e []Any) AnyArrayOption                { return AnyArrayOption{&e} }
+func MakeBoolArrayArrayOption(e [][]bool) BoolArrayArrayOption { return BoolArrayArrayOption{&e} }
+func MakeStringArrayArrayOption(e [][]string) StringArrayArrayOption {
+	return StringArrayArrayOption{&e}
+}
+func MakeIntArrayArrayOption(e [][]int) IntArrayArrayOption       { return IntArrayArrayOption{&e} }
+func MakeInt8ArrayArrayOption(e [][]int8) Int8ArrayArrayOption    { return Int8ArrayArrayOption{&e} }
+func MakeInt16ArrayArrayOption(e [][]int16) Int16ArrayArrayOption { return Int16ArrayArrayOption{&e} }
+func MakeInt32ArrayArrayOption(e [][]int32) Int32ArrayArrayOption { return Int32ArrayArrayOption{&e} }
+func MakeInt64ArrayArrayOption(e [][]int64) Int64ArrayArrayOption { return Int64ArrayArrayOption{&e} }
+func MakeUintArrayArrayOption(e [][]uint) UintArrayArrayOption    { return UintArrayArrayOption{&e} }
+func MakeUint8ArrayArrayOption(e [][]uint8) Uint8ArrayArrayOption { return Uint8ArrayArrayOption{&e} }
+func MakeUint16ArrayArrayOption(e [][]uint16) Uint16ArrayArrayOption {
+	return Uint16ArrayArrayOption{&e}
+}
+func MakeUint32ArrayArrayOption(e [][]uint32) Uint32ArrayArrayOption {
+	return Uint32ArrayArrayOption{&e}
+}
+func MakeUint64ArrayArrayOption(e [][]uint64) Uint64ArrayArrayOption {
+	return Uint64ArrayArrayOption{&e}
+}
+func MakeUintptrArrayArrayOption(e [][]uintptr) UintptrArrayArrayOption {
+	return UintptrArrayArrayOption{&e}
+}
+func MakeByteArrayArrayOption(e [][]byte) ByteArrayArrayOption { return ByteArrayArrayOption{&e} }
+func MakeRuneArrayArrayOption(e [][]rune) RuneArrayArrayOption { return RuneArrayArrayOption{&e} }
+func MakeFloat32ArrayArrayOption(e [][]float32) Float32ArrayArrayOption {
+	return Float32ArrayArrayOption{&e}
+}
+func MakeFloat64ArrayArrayOption(e [][]float64) Float64ArrayArrayOption {
+	return Float64ArrayArrayOption{&e}
+}
+func MakeComplex64ArrayArrayOption(e [][]complex64) Complex64ArrayArrayOption {
 	return Complex64ArrayArrayOption{&e}
 }
-func Complex128ArrayArrayOpt(e [][]complex128) Complex128ArrayArrayOption {
+func MakeComplex128ArrayArrayOption(e [][]complex128) Complex128ArrayArrayOption {
 	return Complex128ArrayArrayOption{&e}
 }
-func AnyArrayArrayOpt(e [][]Any) AnyArrayArrayOption          { return AnyArrayArrayOption{&e} }
-func BoolOptionArrayOpt(e []BoolOption) BoolOptionArrayOption { return BoolOptionArrayOption{&e} }
-func StringOptionArrayOpt(e []StringOption) StringOptionArrayOption {
+func MakeAnyArrayArrayOption(e [][]Any) AnyArrayArrayOption { return AnyArrayArrayOption{&e} }
+func MakeBoolOptionArrayOption(e []BoolOption) BoolOptionArrayOption {
+	return BoolOptionArrayOption{&e}
+}
+func MakeStringOptionArrayOption(e []StringOption) StringOptionArrayOption {
 	return StringOptionArrayOption{&e}
 }
-func IntOptionArrayOpt(e []IntOption) IntOptionArrayOption       { return IntOptionArrayOption{&e} }
-func Int8OptionArrayOpt(e []Int8Option) Int8OptionArrayOption    { return Int8OptionArrayOption{&e} }
-func Int16OptionArrayOpt(e []Int16Option) Int16OptionArrayOption { return Int16OptionArrayOption{&e} }
-func Int32OptionArrayOpt(e []Int32Option) Int32OptionArrayOption { return Int32OptionArrayOption{&e} }
-func Int64OptionArrayOpt(e []Int64Option) Int64OptionArrayOption { return Int64OptionArrayOption{&e} }
-func UintOptionArrayOpt(e []UintOption) UintOptionArrayOption    { return UintOptionArrayOption{&e} }
-func Uint8OptionArrayOpt(e []Uint8Option) Uint8OptionArrayOption { return Uint8OptionArrayOption{&e} }
-func Uint16OptionArrayOpt(e []Uint16Option) Uint16OptionArrayOption {
+func MakeIntOptionArrayOption(e []IntOption) IntOptionArrayOption { return IntOptionArrayOption{&e} }
+func MakeInt8OptionArrayOption(e []Int8Option) Int8OptionArrayOption {
+	return Int8OptionArrayOption{&e}
+}
+func MakeInt16OptionArrayOption(e []Int16Option) Int16OptionArrayOption {
+	return Int16OptionArrayOption{&e}
+}
+func MakeInt32OptionArrayOption(e []Int32Option) Int32OptionArrayOption {
+	return Int32OptionArrayOption{&e}
+}
+func MakeInt64OptionArrayOption(e []Int64Option) Int64OptionArrayOption {
+	return Int64OptionArrayOption{&e}
+}
+func MakeUintOptionArrayOption(e []UintOption) UintOptionArrayOption {
+	return UintOptionArrayOption{&e}
+}
+func MakeUint8OptionArrayOption(e []Uint8Option) Uint8OptionArrayOption {
+	return Uint8OptionArrayOption{&e}
+}
+func MakeUint16OptionArrayOption(e []Uint16Option) Uint16OptionArrayOption {
 	return Uint16OptionArrayOption{&e}
 }
-func Uint32OptionArrayOpt(e []Uint32Option) Uint32OptionArrayOption {
+func MakeUint32OptionArrayOption(e []Uint32Option) Uint32OptionArrayOption {
 	return Uint32OptionArrayOption{&e}
 }
-func Uint64OptionArrayOpt(e []Uint64Option) Uint64OptionArrayOption {
+func MakeUint64OptionArrayOption(e []Uint64Option) Uint64OptionArrayOption {
 	return Uint64OptionArrayOption{&e}
 }
-func UintptrOptionArrayOpt(e []UintptrOption) UintptrOptionArrayOption {
+func MakeUintptrOptionArrayOption(e []UintptrOption) UintptrOptionArrayOption {
 	return UintptrOptionArrayOption{&e}
 }
-func ByteOptionArrayOpt(e []ByteOption) ByteOptionArrayOption { return ByteOptionArrayOption{&e} }
-func RuneOptionArrayOpt(e []RuneOption) RuneOptionArrayOption { return RuneOptionArrayOption{&e} }
-func Float32OptionArrayOpt(e []Float32Option) Float32OptionArrayOption {
+func MakeByteOptionArrayOption(e []ByteOption) ByteOptionArrayOption {
+	return ByteOptionArrayOption{&e}
+}
+func MakeRuneOptionArrayOption(e []RuneOption) RuneOptionArrayOption {
+	return RuneOptionArrayOption{&e}
+}
+func MakeFloat32OptionArrayOption(e []Float32Option) Float32OptionArrayOption {
 	return Float32OptionArrayOption{&e}
 }
-func Float64OptionArrayOpt(e []Float64Option) Float64OptionArrayOption {
+func MakeFloat64OptionArrayOption(e []Float64Option) Float64OptionArrayOption {
 	return Float64OptionArrayOption{&e}
 }
-func Complex64OptionArrayOpt(e []Complex64Option) Complex64OptionArrayOption {
+func MakeComplex64OptionArrayOption(e []Complex64Option) Complex64OptionArrayOption {
 	return Complex64OptionArrayOption{&e}
 }
-func Complex128OptionArrayOpt(e []Complex128Option) Complex128OptionArrayOption {
+func MakeComplex128OptionArrayOption(e []Complex128Option) Complex128OptionArrayOption {
 	return Complex128OptionArrayOption{&e}
 }
-func AnyOptionArrayOpt(e []AnyOption) AnyOptionArrayOption     { return AnyOptionArrayOption{&e} }
-func BoolListOpt(e BoolList) BoolListOption                    { return BoolListOption{&e} }
-func StringListOpt(e StringList) StringListOption              { return StringListOption{&e} }
-func IntListOpt(e IntList) IntListOption                       { return IntListOption{&e} }
-func Int8ListOpt(e Int8List) Int8ListOption                    { return Int8ListOption{&e} }
-func Int16ListOpt(e Int16List) Int16ListOption                 { return Int16ListOption{&e} }
-func Int32ListOpt(e Int32List) Int32ListOption                 { return Int32ListOption{&e} }
-func Int64ListOpt(e Int64List) Int64ListOption                 { return Int64ListOption{&e} }
-func UintListOpt(e UintList) UintListOption                    { return UintListOption{&e} }
-func Uint8ListOpt(e Uint8List) Uint8ListOption                 { return Uint8ListOption{&e} }
-func Uint16ListOpt(e Uint16List) Uint16ListOption              { return Uint16ListOption{&e} }
-func Uint32ListOpt(e Uint32List) Uint32ListOption              { return Uint32ListOption{&e} }
-func Uint64ListOpt(e Uint64List) Uint64ListOption              { return Uint64ListOption{&e} }
-func UintptrListOpt(e UintptrList) UintptrListOption           { return UintptrListOption{&e} }
-func ByteListOpt(e ByteList) ByteListOption                    { return ByteListOption{&e} }
-func RuneListOpt(e RuneList) RuneListOption                    { return RuneListOption{&e} }
-func Float32ListOpt(e Float32List) Float32ListOption           { return Float32ListOption{&e} }
-func Float64ListOpt(e Float64List) Float64ListOption           { return Float64ListOption{&e} }
-func Complex64ListOpt(e Complex64List) Complex64ListOption     { return Complex64ListOption{&e} }
-func Complex128ListOpt(e Complex128List) Complex128ListOption  { return Complex128ListOption{&e} }
-func AnyListOpt(e AnyList) AnyListOption                       { return AnyListOption{&e} }
-func BoolBoolOption(e BoolOption) BoolOptionOption             { return BoolOptionOption{&e} }
-func StringStringOption(e StringOption) StringOptionOption     { return StringOptionOption{&e} }
-func IntIntOption(e IntOption) IntOptionOption                 { return IntOptionOption{&e} }
-func Int8Int8Option(e Int8Option) Int8OptionOption             { return Int8OptionOption{&e} }
-func Int16Int16Option(e Int16Option) Int16OptionOption         { return Int16OptionOption{&e} }
-func Int32Int32Option(e Int32Option) Int32OptionOption         { return Int32OptionOption{&e} }
-func Int64Int64Option(e Int64Option) Int64OptionOption         { return Int64OptionOption{&e} }
-func UintUintOption(e UintOption) UintOptionOption             { return UintOptionOption{&e} }
-func Uint8Uint8Option(e Uint8Option) Uint8OptionOption         { return Uint8OptionOption{&e} }
-func Uint16Uint16Option(e Uint16Option) Uint16OptionOption     { return Uint16OptionOption{&e} }
-func Uint32Uint32Option(e Uint32Option) Uint32OptionOption     { return Uint32OptionOption{&e} }
-func Uint64Uint64Option(e Uint64Option) Uint64OptionOption     { return Uint64OptionOption{&e} }
-func UintptrUintptrOption(e UintptrOption) UintptrOptionOption { return UintptrOptionOption{&e} }
-func ByteByteOption(e ByteOption) ByteOptionOption             { return ByteOptionOption{&e} }
-func RuneRuneOption(e RuneOption) RuneOptionOption             { return RuneOptionOption{&e} }
-func Float32Float32Option(e Float32Option) Float32OptionOption { return Float32OptionOption{&e} }
-func Float64Float64Option(e Float64Option) Float64OptionOption { return Float64OptionOption{&e} }
-func Complex64Complex64Option(e Complex64Option) Complex64OptionOption {
+func MakeAnyOptionArrayOption(e []AnyOption) AnyOptionArrayOption    { return AnyOptionArrayOption{&e} }
+func MakeBoolListOption(e BoolList) BoolListOption                   { return BoolListOption{&e} }
+func MakeStringListOption(e StringList) StringListOption             { return StringListOption{&e} }
+func MakeIntListOption(e IntList) IntListOption                      { return IntListOption{&e} }
+func MakeInt8ListOption(e Int8List) Int8ListOption                   { return Int8ListOption{&e} }
+func MakeInt16ListOption(e Int16List) Int16ListOption                { return Int16ListOption{&e} }
+func MakeInt32ListOption(e Int32List) Int32ListOption                { return Int32ListOption{&e} }
+func MakeInt64ListOption(e Int64List) Int64ListOption                { return Int64ListOption{&e} }
+func MakeUintListOption(e UintList) UintListOption                   { return UintListOption{&e} }
+func MakeUint8ListOption(e Uint8List) Uint8ListOption                { return Uint8ListOption{&e} }
+func MakeUint16ListOption(e Uint16List) Uint16ListOption             { return Uint16ListOption{&e} }
+func MakeUint32ListOption(e Uint32List) Uint32ListOption             { return Uint32ListOption{&e} }
+func MakeUint64ListOption(e Uint64List) Uint64ListOption             { return Uint64ListOption{&e} }
+func MakeUintptrListOption(e UintptrList) UintptrListOption          { return UintptrListOption{&e} }
+func MakeByteListOption(e ByteList) ByteListOption                   { return ByteListOption{&e} }
+func MakeRuneListOption(e RuneList) RuneListOption                   { return RuneListOption{&e} }
+func MakeFloat32ListOption(e Float32List) Float32ListOption          { return Float32ListOption{&e} }
+func MakeFloat64ListOption(e Float64List) Float64ListOption          { return Float64ListOption{&e} }
+func MakeComplex64ListOption(e Complex64List) Complex64ListOption    { return Complex64ListOption{&e} }
+func MakeComplex128ListOption(e Complex128List) Complex128ListOption { return Complex128ListOption{&e} }
+func MakeAnyListOption(e AnyList) AnyListOption                      { return AnyListOption{&e} }
+func MakeBoolOptionOption(e BoolOption) BoolOptionOption             { return BoolOptionOption{&e} }
+func MakeStringOptionOption(e StringOption) StringOptionOption       { return StringOptionOption{&e} }
+func MakeIntOptionOption(e IntOption) IntOptionOption                { return IntOptionOption{&e} }
+func MakeInt8OptionOption(e Int8Option) Int8OptionOption             { return Int8OptionOption{&e} }
+func MakeInt16OptionOption(e Int16Option) Int16OptionOption          { return Int16OptionOption{&e} }
+func MakeInt32OptionOption(e Int32Option) Int32OptionOption          { return Int32OptionOption{&e} }
+func MakeInt64OptionOption(e Int64Option) Int64OptionOption          { return Int64OptionOption{&e} }
+func MakeUintOptionOption(e UintOption) UintOptionOption             { return UintOptionOption{&e} }
+func MakeUint8OptionOption(e Uint8Option) Uint8OptionOption          { return Uint8OptionOption{&e} }
+func MakeUint16OptionOption(e Uint16Option) Uint16OptionOption       { return Uint16OptionOption{&e} }
+func MakeUint32OptionOption(e Uint32Option) Uint32OptionOption       { return Uint32OptionOption{&e} }
+func MakeUint64OptionOption(e Uint64Option) Uint64OptionOption       { return Uint64OptionOption{&e} }
+func MakeUintptrOptionOption(e UintptrOption) UintptrOptionOption    { return UintptrOptionOption{&e} }
+func MakeByteOptionOption(e ByteOption) ByteOptionOption             { return ByteOptionOption{&e} }
+func MakeRuneOptionOption(e RuneOption) RuneOptionOption             { return RuneOptionOption{&e} }
+func MakeFloat32OptionOption(e Float32Option) Float32OptionOption    { return Float32OptionOption{&e} }
+func MakeFloat64OptionOption(e Float64Option) Float64OptionOption    { return Float64OptionOption{&e} }
+func MakeComplex64OptionOption(e Complex64Option) Complex64OptionOption {
 	return Complex64OptionOption{&e}
 }
-func Complex128Complex128Option(e Complex128Option) Complex128OptionOption {
+func MakeComplex128OptionOption(e Complex128Option) Complex128OptionOption {
 	return Complex128OptionOption{&e}
 }
-func AnyOptAnyOption(e AnyOption) AnyOptionOption                   { return AnyOptionOption{&e} }
-func BoolArrayOptBoolArray(e BoolArrayOption) BoolArrayOptionOption { return BoolArrayOptionOption{&e} }
-func StringArrayOptStringArray(e StringArrayOption) StringArrayOptionOption {
+func MakeAnyOptionOption(e AnyOption) AnyOptionOption { return AnyOptionOption{&e} }
+func MakeBoolArrayOptionOption(e BoolArrayOption) BoolArrayOptionOption {
+	return BoolArrayOptionOption{&e}
+}
+func MakeStringArrayOptionOption(e StringArrayOption) StringArrayOptionOption {
 	return StringArrayOptionOption{&e}
 }
-func IntArrayOptIntArray(e IntArrayOption) IntArrayOptionOption     { return IntArrayOptionOption{&e} }
-func Int8ArrayOptInt8Array(e Int8ArrayOption) Int8ArrayOptionOption { return Int8ArrayOptionOption{&e} }
-func Int16ArrayOptInt16Array(e Int16ArrayOption) Int16ArrayOptionOption {
+func MakeIntArrayOptionOption(e IntArrayOption) IntArrayOptionOption { return IntArrayOptionOption{&e} }
+func MakeInt8ArrayOptionOption(e Int8ArrayOption) Int8ArrayOptionOption {
+	return Int8ArrayOptionOption{&e}
+}
+func MakeInt16ArrayOptionOption(e Int16ArrayOption) Int16ArrayOptionOption {
 	return Int16ArrayOptionOption{&e}
 }
-func Int32ArrayOptInt32Array(e Int32ArrayOption) Int32ArrayOptionOption {
+func MakeInt32ArrayOptionOption(e Int32ArrayOption) Int32ArrayOptionOption {
 	return Int32ArrayOptionOption{&e}
 }
-func Int64ArrayOptInt64Array(e Int64ArrayOption) Int64ArrayOptionOption {
+func MakeInt64ArrayOptionOption(e Int64ArrayOption) Int64ArrayOptionOption {
 	return Int64ArrayOptionOption{&e}
 }
-func UintArrayOptUintArray(e UintArrayOption) UintArrayOptionOption { return UintArrayOptionOption{&e} }
-func Uint8ArrayOptUint8Array(e Uint8ArrayOption) Uint8ArrayOptionOption {
+func MakeUintArrayOptionOption(e UintArrayOption) UintArrayOptionOption {
+	return UintArrayOptionOption{&e}
+}
+func MakeUint8ArrayOptionOption(e Uint8ArrayOption) Uint8ArrayOptionOption {
 	return Uint8ArrayOptionOption{&e}
 }
-func Uint16ArrayOptUint16Array(e Uint16ArrayOption) Uint16ArrayOptionOption {
+func MakeUint16ArrayOptionOption(e Uint16ArrayOption) Uint16ArrayOptionOption {
 	return Uint16ArrayOptionOption{&e}
 }
-func Uint32ArrayOptUint32Array(e Uint32ArrayOption) Uint32ArrayOptionOption {
+func MakeUint32ArrayOptionOption(e Uint32ArrayOption) Uint32ArrayOptionOption {
 	return Uint32ArrayOptionOption{&e}
 }
-func Uint64ArrayOptUint64Array(e Uint64ArrayOption) Uint64ArrayOptionOption {
+func MakeUint64ArrayOptionOption(e Uint64ArrayOption) Uint64ArrayOptionOption {
 	return Uint64ArrayOptionOption{&e}
 }
-func UintptrArrayOptUintptrArray(e UintptrArrayOption) UintptrArrayOptionOption {
+func MakeUintptrArrayOptionOption(e UintptrArrayOption) UintptrArrayOptionOption {
 	return UintptrArrayOptionOption{&e}
 }
-func ByteArrayOptByteArray(e ByteArrayOption) ByteArrayOptionOption { return ByteArrayOptionOption{&e} }
-func RuneArrayOptRuneArray(e RuneArrayOption) RuneArrayOptionOption { return RuneArrayOptionOption{&e} }
-func Float32ArrayOptFloat32Array(e Float32ArrayOption) Float32ArrayOptionOption {
+func MakeByteArrayOptionOption(e ByteArrayOption) ByteArrayOptionOption {
+	return ByteArrayOptionOption{&e}
+}
+func MakeRuneArrayOptionOption(e RuneArrayOption) RuneArrayOptionOption {
+	return RuneArrayOptionOption{&e}
+}
+func MakeFloat32ArrayOptionOption(e Float32ArrayOption) Float32ArrayOptionOption {
 	return Float32ArrayOptionOption{&e}
 }
-func Float64ArrayOptFloat64Array(e Float64ArrayOption) Float64ArrayOptionOption {
+func MakeFloat64ArrayOptionOption(e Float64ArrayOption) Float64ArrayOptionOption {
 	return Float64ArrayOptionOption{&e}
 }
-func Complex64ArrayOptComplex64Array(e Complex64ArrayOption) Complex64ArrayOptionOption {
+func MakeComplex64ArrayOptionOption(e Complex64ArrayOption) Complex64ArrayOptionOption {
 	return Complex64ArrayOptionOption{&e}
 }
-func Complex128ArrayOptComplex128Array(e Complex128ArrayOption) Complex128ArrayOptionOption {
+func MakeComplex128ArrayOptionOption(e Complex128ArrayOption) Complex128ArrayOptionOption {
 	return Complex128ArrayOptionOption{&e}
 }
-func AnyArrayOptAnyArray(e AnyArrayOption) AnyArrayOptionOption { return AnyArrayOptionOption{&e} }
-func BoolArrayArrayOptBoolArray(e BoolArrayArrayOption) BoolArrayArrayOptionOption {
+func MakeAnyArrayOptionOption(e AnyArrayOption) AnyArrayOptionOption { return AnyArrayOptionOption{&e} }
+func MakeBoolArrayArrayOptionOption(e BoolArrayArrayOption) BoolArrayArrayOptionOption {
 	return BoolArrayArrayOptionOption{&e}
 }
-func StringArrayArrayOptStringArray(e StringArrayArrayOption) StringArrayArrayOptionOption {
+func MakeStringArrayArrayOptionOption(e StringArrayArrayOption) StringArrayArrayOptionOption {
 	return StringArrayArrayOptionOption{&e}
 }
-func IntArrayArrayOptIntArray(e IntArrayArrayOption) IntArrayArrayOptionOption {
+func MakeIntArrayArrayOptionOption(e IntArrayArrayOption) IntArrayArrayOptionOption {
 	return IntArrayArrayOptionOption{&e}
 }
-func Int8ArrayArrayOptInt8Array(e Int8ArrayArrayOption) Int8ArrayArrayOptionOption {
+func MakeInt8ArrayArrayOptionOption(e Int8ArrayArrayOption) Int8ArrayArrayOptionOption {
 	return Int8ArrayArrayOptionOption{&e}
 }
-func Int16ArrayArrayOptInt16Array(e Int16ArrayArrayOption) Int16ArrayArrayOptionOption {
+func MakeInt16ArrayArrayOptionOption(e Int16ArrayArrayOption) Int16ArrayArrayOptionOption {
 	return Int16ArrayArrayOptionOption{&e}
 }
-func Int32ArrayArrayOptInt32Array(e Int32ArrayArrayOption) Int32ArrayArrayOptionOption {
+func MakeInt32ArrayArrayOptionOption(e Int32ArrayArrayOption) Int32ArrayArrayOptionOption {
 	return Int32ArrayArrayOptionOption{&e}
 }
-func Int64ArrayArrayOptInt64Array(e Int64ArrayArrayOption) Int64ArrayArrayOptionOption {
+func MakeInt64ArrayArrayOptionOption(e Int64ArrayArrayOption) Int64ArrayArrayOptionOption {
 	return Int64ArrayArrayOptionOption{&e}
 }
-func UintArrayArrayOptUintArray(e UintArrayArrayOption) UintArrayArrayOptionOption {
+func MakeUintArrayArrayOptionOption(e UintArrayArrayOption) UintArrayArrayOptionOption {
 	return UintArrayArrayOptionOption{&e}
 }
-func Uint8ArrayArrayOptUint8Array(e Uint8ArrayArrayOption) Uint8ArrayArrayOptionOption {
+func MakeUint8ArrayArrayOptionOption(e Uint8ArrayArrayOption) Uint8ArrayArrayOptionOption {
 	return Uint8ArrayArrayOptionOption{&e}
 }
-func Uint16ArrayArrayOptUint16Array(e Uint16ArrayArrayOption) Uint16ArrayArrayOptionOption {
+func MakeUint16ArrayArrayOptionOption(e Uint16ArrayArrayOption) Uint16ArrayArrayOptionOption {
 	return Uint16ArrayArrayOptionOption{&e}
 }
-func Uint32ArrayArrayOptUint32Array(e Uint32ArrayArrayOption) Uint32ArrayArrayOptionOption {
+func MakeUint32ArrayArrayOptionOption(e Uint32ArrayArrayOption) Uint32ArrayArrayOptionOption {
 	return Uint32ArrayArrayOptionOption{&e}
 }
-func Uint64ArrayArrayOptUint64Array(e Uint64ArrayArrayOption) Uint64ArrayArrayOptionOption {
+func MakeUint64ArrayArrayOptionOption(e Uint64ArrayArrayOption) Uint64ArrayArrayOptionOption {
 	return Uint64ArrayArrayOptionOption{&e}
 }
-func UintptrArrayArrayOptUintptrArray(e UintptrArrayArrayOption) UintptrArrayArrayOptionOption {
+func MakeUintptrArrayArrayOptionOption(e UintptrArrayArrayOption) UintptrArrayArrayOptionOption {
 	return UintptrArrayArrayOptionOption{&e}
 }
-func ByteArrayArrayOptByteArray(e ByteArrayArrayOption) ByteArrayArrayOptionOption {
+func MakeByteArrayArrayOptionOption(e ByteArrayArrayOption) ByteArrayArrayOptionOption {
 	return ByteArrayArrayOptionOption{&e}
 }
-func RuneArrayArrayOptRuneArray(e RuneArrayArrayOption) RuneArrayArrayOptionOption {
+func MakeRuneArrayArrayOptionOption(e RuneArrayArrayOption) RuneArrayArrayOptionOption {
 	return RuneArrayArrayOptionOption{&e}
 }
-func Float32ArrayArrayOptFloat32Array(e Float32ArrayArrayOption) Float32ArrayArrayOptionOption {
+func MakeFloat32ArrayArrayOptionOption(e Float32ArrayArrayOption) Float32ArrayArrayOptionOption {
 	return Float32ArrayArrayOptionOption{&e}
 }
-func Float64ArrayArrayOptFloat64Array(e Float64ArrayArrayOption) Float64ArrayArrayOptionOption {
+func MakeFloat64ArrayArrayOptionOption(e Float64ArrayArrayOption) Float64ArrayArrayOptionOption {
 	return Float64ArrayArrayOptionOption{&e}
 }
-func Complex64ArrayArrayOptComplex64Array(e Complex64ArrayArrayOption) Complex64ArrayArrayOptionOption {
+func MakeComplex64ArrayArrayOptionOption(e Complex64ArrayArrayOption) Complex64ArrayArrayOptionOption {
 	return Complex64ArrayArrayOptionOption{&e}
 }
-func Complex128ArrayArrayOptComplex128Array(e Complex128ArrayArrayOption) Complex128ArrayArrayOptionOption {
+func MakeComplex128ArrayArrayOptionOption(e Complex128ArrayArrayOption) Complex128ArrayArrayOptionOption {
 	return Complex128ArrayArrayOptionOption{&e}
 }
-func AnyArrayArrayOptAnyArray(e AnyArrayArrayOption) AnyArrayArrayOptionOption {
+func MakeAnyArrayArrayOptionOption(e AnyArrayArrayOption) AnyArrayArrayOptionOption {
 	return AnyArrayArrayOptionOption{&e}
 }
-func BoolOptionArrayOptBoolOption(e BoolOptionArrayOption) BoolOptionArrayOptionOption {
+func MakeBoolOptionArrayOptionOption(e BoolOptionArrayOption) BoolOptionArrayOptionOption {
 	return BoolOptionArrayOptionOption{&e}
 }
-func StringOptionArrayOptStringOption(e StringOptionArrayOption) StringOptionArrayOptionOption {
+func MakeStringOptionArrayOptionOption(e StringOptionArrayOption) StringOptionArrayOptionOption {
 	return StringOptionArrayOptionOption{&e}
 }
-func IntOptionArrayOptIntOption(e IntOptionArrayOption) IntOptionArrayOptionOption {
+func MakeIntOptionArrayOptionOption(e IntOptionArrayOption) IntOptionArrayOptionOption {
 	return IntOptionArrayOptionOption{&e}
 }
-func Int8OptionArrayOptInt8Option(e Int8OptionArrayOption) Int8OptionArrayOptionOption {
+func MakeInt8OptionArrayOptionOption(e Int8OptionArrayOption) Int8OptionArrayOptionOption {
 	return Int8OptionArrayOptionOption{&e}
 }
-func Int16OptionArrayOptInt16Option(e Int16OptionArrayOption) Int16OptionArrayOptionOption {
+func MakeInt16OptionArrayOptionOption(e Int16OptionArrayOption) Int16OptionArrayOptionOption {
 	return Int16OptionArrayOptionOption{&e}
 }
-func Int32OptionArrayOptInt32Option(e Int32OptionArrayOption) Int32OptionArrayOptionOption {
+func MakeInt32OptionArrayOptionOption(e Int32OptionArrayOption) Int32OptionArrayOptionOption {
 	return Int32OptionArrayOptionOption{&e}
 }
-func Int64OptionArrayOptInt64Option(e Int64OptionArrayOption) Int64OptionArrayOptionOption {
+func MakeInt64OptionArrayOptionOption(e Int64OptionArrayOption) Int64OptionArrayOptionOption {
 	return Int64OptionArrayOptionOption{&e}
 }
-func UintOptionArrayOptUintOption(e UintOptionArrayOption) UintOptionArrayOptionOption {
+func MakeUintOptionArrayOptionOption(e UintOptionArrayOption) UintOptionArrayOptionOption {
 	return UintOptionArrayOptionOption{&e}
 }
-func Uint8OptionArrayOptUint8Option(e Uint8OptionArrayOption) Uint8OptionArrayOptionOption {
+func MakeUint8OptionArrayOptionOption(e Uint8OptionArrayOption) Uint8OptionArrayOptionOption {
 	return Uint8OptionArrayOptionOption{&e}
 }
-func Uint16OptionArrayOptUint16Option(e Uint16OptionArrayOption) Uint16OptionArrayOptionOption {
+func MakeUint16OptionArrayOptionOption(e Uint16OptionArrayOption) Uint16OptionArrayOptionOption {
 	return Uint16OptionArrayOptionOption{&e}
 }
-func Uint32OptionArrayOptUint32Option(e Uint32OptionArrayOption) Uint32OptionArrayOptionOption {
+func MakeUint32OptionArrayOptionOption(e Uint32OptionArrayOption) Uint32OptionArrayOptionOption {
 	return Uint32OptionArrayOptionOption{&e}
 }
-func Uint64OptionArrayOptUint64Option(e Uint64OptionArrayOption) Uint64OptionArrayOptionOption {
+func MakeUint64OptionArrayOptionOption(e Uint64OptionArrayOption) Uint64OptionArrayOptionOption {
 	return Uint64OptionArrayOptionOption{&e}
 }
-func UintptrOptionArrayOptUintptrOption(e UintptrOptionArrayOption) UintptrOptionArrayOptionOption {
+func MakeUintptrOptionArrayOptionOption(e UintptrOptionArrayOption) UintptrOptionArrayOptionOption {
 	return UintptrOptionArrayOptionOption{&e}
 }
-func ByteOptionArrayOptByteOption(e ByteOptionArrayOption) ByteOptionArrayOptionOption {
+func MakeByteOptionArrayOptionOption(e ByteOptionArrayOption) ByteOptionArrayOptionOption {
 	return ByteOptionArrayOptionOption{&e}
 }
-func RuneOptionArrayOptRuneOption(e RuneOptionArrayOption) RuneOptionArrayOptionOption {
+func MakeRuneOptionArrayOptionOption(e RuneOptionArrayOption) RuneOptionArrayOptionOption {
 	return RuneOptionArrayOptionOption{&e}
 }
-func Float32OptionArrayOptFloat32Option(e Float32OptionArrayOption) Float32OptionArrayOptionOption {
+func MakeFloat32OptionArrayOptionOption(e Float32OptionArrayOption) Float32OptionArrayOptionOption {
 	return Float32OptionArrayOptionOption{&e}
 }
-func Float64OptionArrayOptFloat64Option(e Float64OptionArrayOption) Float64OptionArrayOptionOption {
+func MakeFloat64OptionArrayOptionOption(e Float64OptionArrayOption) Float64OptionArrayOptionOption {
 	return Float64OptionArrayOptionOption{&e}
 }
-func Complex64OptionArrayOptComplex64Option(e Complex64OptionArrayOption) Complex64OptionArrayOptionOption {
+func MakeComplex64OptionArrayOptionOption(e Complex64OptionArrayOption) Complex64OptionArrayOptionOption {
 	return Complex64OptionArrayOptionOption{&e}
 }
-func Complex128OptionArrayOptComplex128Option(e Complex128OptionArrayOption) Complex128OptionArrayOptionOption {
+func MakeComplex128OptionArrayOptionOption(e Complex128OptionArrayOption) Complex128OptionArrayOptionOption {
 	return Complex128OptionArrayOptionOption{&e}
 }
-func AnyOptionArrayOptAnyOption(e AnyOptionArrayOption) AnyOptionArrayOptionOption {
+func MakeAnyOptionArrayOptionOption(e AnyOptionArrayOption) AnyOptionArrayOptionOption {
 	return AnyOptionArrayOptionOption{&e}
 }
-func BoolListOptBoolList(e BoolListOption) BoolListOptionOption { return BoolListOptionOption{&e} }
-func StringListOptStringList(e StringListOption) StringListOptionOption {
+func MakeBoolListOptionOption(e BoolListOption) BoolListOptionOption { return BoolListOptionOption{&e} }
+func MakeStringListOptionOption(e StringListOption) StringListOptionOption {
 	return StringListOptionOption{&e}
 }
-func IntListOptIntList(e IntListOption) IntListOptionOption         { return IntListOptionOption{&e} }
-func Int8ListOptInt8List(e Int8ListOption) Int8ListOptionOption     { return Int8ListOptionOption{&e} }
-func Int16ListOptInt16List(e Int16ListOption) Int16ListOptionOption { return Int16ListOptionOption{&e} }
-func Int32ListOptInt32List(e Int32ListOption) Int32ListOptionOption { return Int32ListOptionOption{&e} }
-func Int64ListOptInt64List(e Int64ListOption) Int64ListOptionOption { return Int64ListOptionOption{&e} }
-func UintListOptUintList(e UintListOption) UintListOptionOption     { return UintListOptionOption{&e} }
-func Uint8ListOptUint8List(e Uint8ListOption) Uint8ListOptionOption { return Uint8ListOptionOption{&e} }
-func Uint16ListOptUint16List(e Uint16ListOption) Uint16ListOptionOption {
+func MakeIntListOptionOption(e IntListOption) IntListOptionOption    { return IntListOptionOption{&e} }
+func MakeInt8ListOptionOption(e Int8ListOption) Int8ListOptionOption { return Int8ListOptionOption{&e} }
+func MakeInt16ListOptionOption(e Int16ListOption) Int16ListOptionOption {
+	return Int16ListOptionOption{&e}
+}
+func MakeInt32ListOptionOption(e Int32ListOption) Int32ListOptionOption {
+	return Int32ListOptionOption{&e}
+}
+func MakeInt64ListOptionOption(e Int64ListOption) Int64ListOptionOption {
+	return Int64ListOptionOption{&e}
+}
+func MakeUintListOptionOption(e UintListOption) UintListOptionOption { return UintListOptionOption{&e} }
+func MakeUint8ListOptionOption(e Uint8ListOption) Uint8ListOptionOption {
+	return Uint8ListOptionOption{&e}
+}
+func MakeUint16ListOptionOption(e Uint16ListOption) Uint16ListOptionOption {
 	return Uint16ListOptionOption{&e}
 }
-func Uint32ListOptUint32List(e Uint32ListOption) Uint32ListOptionOption {
+func MakeUint32ListOptionOption(e Uint32ListOption) Uint32ListOptionOption {
 	return Uint32ListOptionOption{&e}
 }
-func Uint64ListOptUint64List(e Uint64ListOption) Uint64ListOptionOption {
+func MakeUint64ListOptionOption(e Uint64ListOption) Uint64ListOptionOption {
 	return Uint64ListOptionOption{&e}
 }
-func UintptrListOptUintptrList(e UintptrListOption) UintptrListOptionOption {
+func MakeUintptrListOptionOption(e UintptrListOption) UintptrListOptionOption {
 	return UintptrListOptionOption{&e}
 }
-func ByteListOptByteList(e ByteListOption) ByteListOptionOption { return ByteListOptionOption{&e} }
-func RuneListOptRuneList(e RuneListOption) RuneListOptionOption { return RuneListOptionOption{&e} }
-func Float32ListOptFloat32List(e Float32ListOption) Float32ListOptionOption {
+func MakeByteListOptionOption(e ByteListOption) ByteListOptionOption { return ByteListOptionOption{&e} }
+func MakeRuneListOptionOption(e RuneListOption) RuneListOptionOption { return RuneListOptionOption{&e} }
+func MakeFloat32ListOptionOption(e Float32ListOption) Float32ListOptionOption {
 	return Float32ListOptionOption{&e}
 }
-func Float64ListOptFloat64List(e Float64ListOption) Float64ListOptionOption {
+func MakeFloat64ListOptionOption(e Float64ListOption) Float64ListOptionOption {
 	return Float64ListOptionOption{&e}
 }
-func Complex64ListOptComplex64List(e Complex64ListOption) Complex64ListOptionOption {
+func MakeComplex64ListOptionOption(e Complex64ListOption) Complex64ListOptionOption {
 	return Complex64ListOptionOption{&e}
 }
-func Complex128ListOptComplex128List(e Complex128ListOption) Complex128ListOptionOption {
+func MakeComplex128ListOptionOption(e Complex128ListOption) Complex128ListOptionOption {
 	return Complex128ListOptionOption{&e}
 }
-func AnyListOptAnyList(e AnyListOption) AnyListOptionOption { return AnyListOptionOption{&e} }
-func BoolBoolOptionBoolOption(e BoolOptionOption) BoolOptionOptionOption {
+func MakeAnyListOptionOption(e AnyListOption) AnyListOptionOption { return AnyListOptionOption{&e} }
+func MakeBoolOptionOptionOption(e BoolOptionOption) BoolOptionOptionOption {
 	return BoolOptionOptionOption{&e}
 }
-func StringStringOptionStringOption(e StringOptionOption) StringOptionOptionOption {
+func MakeStringOptionOptionOption(e StringOptionOption) StringOptionOptionOption {
 	return StringOptionOptionOption{&e}
 }
-func IntIntOptionIntOption(e IntOptionOption) IntOptionOptionOption { return IntOptionOptionOption{&e} }
-func Int8Int8OptionInt8Option(e Int8OptionOption) Int8OptionOptionOption {
+func MakeIntOptionOptionOption(e IntOptionOption) IntOptionOptionOption {
+	return IntOptionOptionOption{&e}
+}
+func MakeInt8OptionOptionOption(e Int8OptionOption) Int8OptionOptionOption {
 	return Int8OptionOptionOption{&e}
 }
-func Int16Int16OptionInt16Option(e Int16OptionOption) Int16OptionOptionOption {
+func MakeInt16OptionOptionOption(e Int16OptionOption) Int16OptionOptionOption {
 	return Int16OptionOptionOption{&e}
 }
-func Int32Int32OptionInt32Option(e Int32OptionOption) Int32OptionOptionOption {
+func MakeInt32OptionOptionOption(e Int32OptionOption) Int32OptionOptionOption {
 	return Int32OptionOptionOption{&e}
 }
-func Int64Int64OptionInt64Option(e Int64OptionOption) Int64OptionOptionOption {
+func MakeInt64OptionOptionOption(e Int64OptionOption) Int64OptionOptionOption {
 	return Int64OptionOptionOption{&e}
 }
-func UintUintOptionUintOption(e UintOptionOption) UintOptionOptionOption {
+func MakeUintOptionOptionOption(e UintOptionOption) UintOptionOptionOption {
 	return UintOptionOptionOption{&e}
 }
-func Uint8Uint8OptionUint8Option(e Uint8OptionOption) Uint8OptionOptionOption {
+func MakeUint8OptionOptionOption(e Uint8OptionOption) Uint8OptionOptionOption {
 	return Uint8OptionOptionOption{&e}
 }
-func Uint16Uint16OptionUint16Option(e Uint16OptionOption) Uint16OptionOptionOption {
+func MakeUint16OptionOptionOption(e Uint16OptionOption) Uint16OptionOptionOption {
 	return Uint16OptionOptionOption{&e}
 }
-func Uint32Uint32OptionUint32Option(e Uint32OptionOption) Uint32OptionOptionOption {
+func MakeUint32OptionOptionOption(e Uint32OptionOption) Uint32OptionOptionOption {
 	return Uint32OptionOptionOption{&e}
 }
-func Uint64Uint64OptionUint64Option(e Uint64OptionOption) Uint64OptionOptionOption {
+func MakeUint64OptionOptionOption(e Uint64OptionOption) Uint64OptionOptionOption {
 	return Uint64OptionOptionOption{&e}
 }
-func UintptrUintptrOptionUintptrOption(e UintptrOptionOption) UintptrOptionOptionOption {
+func MakeUintptrOptionOptionOption(e UintptrOptionOption) UintptrOptionOptionOption {
 	return UintptrOptionOptionOption{&e}
 }
-func ByteByteOptionByteOption(e ByteOptionOption) ByteOptionOptionOption {
+func MakeByteOptionOptionOption(e ByteOptionOption) ByteOptionOptionOption {
 	return ByteOptionOptionOption{&e}
 }
-func RuneRuneOptionRuneOption(e RuneOptionOption) RuneOptionOptionOption {
+func MakeRuneOptionOptionOption(e RuneOptionOption) RuneOptionOptionOption {
 	return RuneOptionOptionOption{&e}
 }
-func Float32Float32OptionFloat32Option(e Float32OptionOption) Float32OptionOptionOption {
+func MakeFloat32OptionOptionOption(e Float32OptionOption) Float32OptionOptionOption {
 	return Float32OptionOptionOption{&e}
 }
-func Float64Float64OptionFloat64Option(e Float64OptionOption) Float64OptionOptionOption {
+func MakeFloat64OptionOptionOption(e Float64OptionOption) Float64OptionOptionOption {
 	return Float64OptionOptionOption{&e}
 }
-func Complex64Complex64OptionComplex64Option(e Complex64OptionOption) Complex64OptionOptionOption {
+func MakeComplex64OptionOptionOption(e Complex64OptionOption) Complex64OptionOptionOption {
 	return Complex64OptionOptionOption{&e}
 }
-func Complex128Complex128OptionComplex128Option(e Complex128OptionOption) Complex128OptionOptionOption {
+func MakeComplex128OptionOptionOption(e Complex128OptionOption) Complex128OptionOptionOption {
 	return Complex128OptionOptionOption{&e}
 }
-func AnyOptAnyOptionAnyOption(e AnyOptionOption) AnyOptionOptionOption {
+func MakeAnyOptionOptionOption(e AnyOptionOption) AnyOptionOptionOption {
 	return AnyOptionOptionOption{&e}
 }
-func BoolArrayOptBoolArrayBoolArray(e BoolArrayOptionOption) BoolArrayOptionOptionOption {
+func MakeBoolArrayOptionOptionOption(e BoolArrayOptionOption) BoolArrayOptionOptionOption {
 	return BoolArrayOptionOptionOption{&e}
 }
-func StringArrayOptStringArrayStringArray(e StringArrayOptionOption) StringArrayOptionOptionOption {
+func MakeStringArrayOptionOptionOption(e StringArrayOptionOption) StringArrayOptionOptionOption {
 	return StringArrayOptionOptionOption{&e}
 }
-func IntArrayOptIntArrayIntArray(e IntArrayOptionOption) IntArrayOptionOptionOption {
+func MakeIntArrayOptionOptionOption(e IntArrayOptionOption) IntArrayOptionOptionOption {
 	return IntArrayOptionOptionOption{&e}
 }
-func Int8ArrayOptInt8ArrayInt8Array(e Int8ArrayOptionOption) Int8ArrayOptionOptionOption {
+func MakeInt8ArrayOptionOptionOption(e Int8ArrayOptionOption) Int8ArrayOptionOptionOption {
 	return Int8ArrayOptionOptionOption{&e}
 }
-func Int16ArrayOptInt16ArrayInt16Array(e Int16ArrayOptionOption) Int16ArrayOptionOptionOption {
+func MakeInt16ArrayOptionOptionOption(e Int16ArrayOptionOption) Int16ArrayOptionOptionOption {
 	return Int16ArrayOptionOptionOption{&e}
 }
-func Int32ArrayOptInt32ArrayInt32Array(e Int32ArrayOptionOption) Int32ArrayOptionOptionOption {
+func MakeInt32ArrayOptionOptionOption(e Int32ArrayOptionOption) Int32ArrayOptionOptionOption {
 	return Int32ArrayOptionOptionOption{&e}
 }
-func Int64ArrayOptInt64ArrayInt64Array(e Int64ArrayOptionOption) Int64ArrayOptionOptionOption {
+func MakeInt64ArrayOptionOptionOption(e Int64ArrayOptionOption) Int64ArrayOptionOptionOption {
 	return Int64ArrayOptionOptionOption{&e}
 }
-func UintArrayOptUintArrayUintArray(e UintArrayOptionOption) UintArrayOptionOptionOption {
+func MakeUintArrayOptionOptionOption(e UintArrayOptionOption) UintArrayOptionOptionOption {
 	return UintArrayOptionOptionOption{&e}
 }
-func Uint8ArrayOptUint8ArrayUint8Array(e Uint8ArrayOptionOption) Uint8ArrayOptionOptionOption {
+func MakeUint8ArrayOptionOptionOption(e Uint8ArrayOptionOption) Uint8ArrayOptionOptionOption {
 	return Uint8ArrayOptionOptionOption{&e}
 }
-func Uint16ArrayOptUint16ArrayUint16Array(e Uint16ArrayOptionOption) Uint16ArrayOptionOptionOption {
+func MakeUint16ArrayOptionOptionOption(e Uint16ArrayOptionOption) Uint16ArrayOptionOptionOption {
 	return Uint16ArrayOptionOptionOption{&e}
 }
-func Uint32ArrayOptUint32ArrayUint32Array(e Uint32ArrayOptionOption) Uint32ArrayOptionOptionOption {
+func MakeUint32ArrayOptionOptionOption(e Uint32ArrayOptionOption) Uint32ArrayOptionOptionOption {
 	return Uint32ArrayOptionOptionOption{&e}
 }
-func Uint64ArrayOptUint64ArrayUint64Array(e Uint64ArrayOptionOption) Uint64ArrayOptionOptionOption {
+func MakeUint64ArrayOptionOptionOption(e Uint64ArrayOptionOption) Uint64ArrayOptionOptionOption {
 	return Uint64ArrayOptionOptionOption{&e}
 }
-func UintptrArrayOptUintptrArrayUintptrArray(e UintptrArrayOptionOption) UintptrArrayOptionOptionOption {
+func MakeUintptrArrayOptionOptionOption(e UintptrArrayOptionOption) UintptrArrayOptionOptionOption {
 	return UintptrArrayOptionOptionOption{&e}
 }
-func ByteArrayOptByteArrayByteArray(e ByteArrayOptionOption) ByteArrayOptionOptionOption {
+func MakeByteArrayOptionOptionOption(e ByteArrayOptionOption) ByteArrayOptionOptionOption {
 	return ByteArrayOptionOptionOption{&e}
 }
-func RuneArrayOptRuneArrayRuneArray(e RuneArrayOptionOption) RuneArrayOptionOptionOption {
+func MakeRuneArrayOptionOptionOption(e RuneArrayOptionOption) RuneArrayOptionOptionOption {
 	return RuneArrayOptionOptionOption{&e}
 }
-func Float32ArrayOptFloat32ArrayFloat32Array(e Float32ArrayOptionOption) Float32ArrayOptionOptionOption {
+func MakeFloat32ArrayOptionOptionOption(e Float32ArrayOptionOption) Float32ArrayOptionOptionOption {
 	return Float32ArrayOptionOptionOption{&e}
 }
-func Float64ArrayOptFloat64ArrayFloat64Array(e Float64ArrayOptionOption) Float64ArrayOptionOptionOption {
+func MakeFloat64ArrayOptionOptionOption(e Float64ArrayOptionOption) Float64ArrayOptionOptionOption {
 	return Float64ArrayOptionOptionOption{&e}
 }
-func Complex64ArrayOptComplex64ArrayComplex64Array(e Complex64ArrayOptionOption) Complex64ArrayOptionOptionOption {
+func MakeComplex64ArrayOptionOptionOption(e Complex64ArrayOptionOption) Complex64ArrayOptionOptionOption {
 	return Complex64ArrayOptionOptionOption{&e}
 }
-func Complex128ArrayOptComplex128ArrayComplex128Array(e Complex128ArrayOptionOption) Complex128ArrayOptionOptionOption {
+func MakeComplex128ArrayOptionOptionOption(e Complex128ArrayOptionOption) Complex128ArrayOptionOptionOption {
 	return Complex128ArrayOptionOptionOption{&e}
 }
-func AnyArrayOptAnyArrayAnyArray(e AnyArrayOptionOption) AnyArrayOptionOptionOption {
+func MakeAnyArrayOptionOptionOption(e AnyArrayOptionOption) AnyArrayOptionOptionOption {
 	return AnyArrayOptionOptionOption{&e}
 }
-func BoolArrayArrayOptBoolArrayBoolArray(e BoolArrayArrayOptionOption) BoolArrayArrayOptionOptionOption {
+func MakeBoolArrayArrayOptionOptionOption(e BoolArrayArrayOptionOption) BoolArrayArrayOptionOptionOption {
 	return BoolArrayArrayOptionOptionOption{&e}
 }
-func StringArrayArrayOptStringArrayStringArray(e StringArrayArrayOptionOption) StringArrayArrayOptionOptionOption {
+func MakeStringArrayArrayOptionOptionOption(e StringArrayArrayOptionOption) StringArrayArrayOptionOptionOption {
 	return StringArrayArrayOptionOptionOption{&e}
 }
-func IntArrayArrayOptIntArrayIntArray(e IntArrayArrayOptionOption) IntArrayArrayOptionOptionOption {
+func MakeIntArrayArrayOptionOptionOption(e IntArrayArrayOptionOption) IntArrayArrayOptionOptionOption {
 	return IntArrayArrayOptionOptionOption{&e}
 }
-func Int8ArrayArrayOptInt8ArrayInt8Array(e Int8ArrayArrayOptionOption) Int8ArrayArrayOptionOptionOption {
+func MakeInt8ArrayArrayOptionOptionOption(e Int8ArrayArrayOptionOption) Int8ArrayArrayOptionOptionOption {
 	return Int8ArrayArrayOptionOptionOption{&e}
 }
-func Int16ArrayArrayOptInt16ArrayInt16Array(e Int16ArrayArrayOptionOption) Int16ArrayArrayOptionOptionOption {
+func MakeInt16ArrayArrayOptionOptionOption(e Int16ArrayArrayOptionOption) Int16ArrayArrayOptionOptionOption {
 	return Int16ArrayArrayOptionOptionOption{&e}
 }
-func Int32ArrayArrayOptInt32ArrayInt32Array(e Int32ArrayArrayOptionOption) Int32ArrayArrayOptionOptionOption {
+func MakeInt32ArrayArrayOptionOptionOption(e Int32ArrayArrayOptionOption) Int32ArrayArrayOptionOptionOption {
 	return Int32ArrayArrayOptionOptionOption{&e}
 }
-func Int64ArrayArrayOptInt64ArrayInt64Array(e Int64ArrayArrayOptionOption) Int64ArrayArrayOptionOptionOption {
+func MakeInt64ArrayArrayOptionOptionOption(e Int64ArrayArrayOptionOption) Int64ArrayArrayOptionOptionOption {
 	return Int64ArrayArrayOptionOptionOption{&e}
 }
-func UintArrayArrayOptUintArrayUintArray(e UintArrayArrayOptionOption) UintArrayArrayOptionOptionOption {
+func MakeUintArrayArrayOptionOptionOption(e UintArrayArrayOptionOption) UintArrayArrayOptionOptionOption {
 	return UintArrayArrayOptionOptionOption{&e}
 }
-func Uint8ArrayArrayOptUint8ArrayUint8Array(e Uint8ArrayArrayOptionOption) Uint8ArrayArrayOptionOptionOption {
+func MakeUint8ArrayArrayOptionOptionOption(e Uint8ArrayArrayOptionOption) Uint8ArrayArrayOptionOptionOption {
 	return Uint8ArrayArrayOptionOptionOption{&e}
 }
-func Uint16ArrayArrayOptUint16ArrayUint16Array(e Uint16ArrayArrayOptionOption) Uint16ArrayArrayOptionOptionOption {
+func MakeUint16ArrayArrayOptionOptionOption(e Uint16ArrayArrayOptionOption) Uint16ArrayArrayOptionOptionOption {
 	return Uint16ArrayArrayOptionOptionOption{&e}
 }
-func Uint32ArrayArrayOptUint32ArrayUint32Array(e Uint32ArrayArrayOptionOption) Uint32ArrayArrayOptionOptionOption {
+func MakeUint32ArrayArrayOptionOptionOption(e Uint32ArrayArrayOptionOption) Uint32ArrayArrayOptionOptionOption {
 	return Uint32ArrayArrayOptionOptionOption{&e}
 }
-func Uint64ArrayArrayOptUint64ArrayUint64Array(e Uint64ArrayArrayOptionOption) Uint64ArrayArrayOptionOptionOption {
+func MakeUint64ArrayArrayOptionOptionOption(e Uint64ArrayArrayOptionOption) Uint64ArrayArrayOptionOptionOption {
 	return Uint64ArrayArrayOptionOptionOption{&e}
 }
-func UintptrArrayArrayOptUintptrArrayUintptrArray(e UintptrArrayArrayOptionOption) UintptrArrayArrayOptionOptionOption {
+func MakeUintptrArrayArrayOptionOptionOption(e UintptrArrayArrayOptionOption) UintptrArrayArrayOptionOptionOption {
 	return UintptrArrayArrayOptionOptionOption{&e}
 }
-func ByteArrayArrayOptByteArrayByteArray(e ByteArrayArrayOptionOption) ByteArrayArrayOptionOptionOption {
+func MakeByteArrayArrayOptionOptionOption(e ByteArrayArrayOptionOption) ByteArrayArrayOptionOptionOption {
 	return ByteArrayArrayOptionOptionOption{&e}
 }
-func RuneArrayArrayOptRuneArrayRuneArray(e RuneArrayArrayOptionOption) RuneArrayArrayOptionOptionOption {
+func MakeRuneArrayArrayOptionOptionOption(e RuneArrayArrayOptionOption) RuneArrayArrayOptionOptionOption {
 	return RuneArrayArrayOptionOptionOption{&e}
 }
-func Float32ArrayArrayOptFloat32ArrayFloat32Array(e Float32ArrayArrayOptionOption) Float32ArrayArrayOptionOptionOption {
+func MakeFloat32ArrayArrayOptionOptionOption(e Float32ArrayArrayOptionOption) Float32ArrayArrayOptionOptionOption {
 	return Float32ArrayArrayOptionOptionOption{&e}
 }
-func Float64ArrayArrayOptFloat64ArrayFloat64Array(e Float64ArrayArrayOptionOption) Float64ArrayArrayOptionOptionOption {
+func MakeFloat64ArrayArrayOptionOptionOption(e Float64ArrayArrayOptionOption) Float64ArrayArrayOptionOptionOption {
 	return Float64ArrayArrayOptionOptionOption{&e}
 }
-func Complex64ArrayArrayOptComplex64ArrayComplex64Array(e Complex64ArrayArrayOptionOption) Complex64ArrayArrayOptionOptionOption {
+func MakeComplex64ArrayArrayOptionOptionOption(e Complex64ArrayArrayOptionOption) Complex64ArrayArrayOptionOptionOption {
 	return Complex64ArrayArrayOptionOptionOption{&e}
 }
-func Complex128ArrayArrayOptComplex128ArrayComplex128Array(e Complex128ArrayArrayOptionOption) Complex128ArrayArrayOptionOptionOption {
+func MakeComplex128ArrayArrayOptionOptionOption(e Complex128ArrayArrayOptionOption) Complex128ArrayArrayOptionOptionOption {
 	return Complex128ArrayArrayOptionOptionOption{&e}
 }
-func AnyArrayArrayOptAnyArrayAnyArray(e AnyArrayArrayOptionOption) AnyArrayArrayOptionOptionOption {
+func MakeAnyArrayArrayOptionOptionOption(e AnyArrayArrayOptionOption) AnyArrayArrayOptionOptionOption {
 	return AnyArrayArrayOptionOptionOption{&e}
 }
-func BoolOptionArrayOptBoolOptionBoolOption(e BoolOptionArrayOptionOption) BoolOptionArrayOptionOptionOption {
+func MakeBoolOptionArrayOptionOptionOption(e BoolOptionArrayOptionOption) BoolOptionArrayOptionOptionOption {
 	return BoolOptionArrayOptionOptionOption{&e}
 }
-func StringOptionArrayOptStringOptionStringOption(e StringOptionArrayOptionOption) StringOptionArrayOptionOptionOption {
+func MakeStringOptionArrayOptionOptionOption(e StringOptionArrayOptionOption) StringOptionArrayOptionOptionOption {
 	return StringOptionArrayOptionOptionOption{&e}
 }
-func IntOptionArrayOptIntOptionIntOption(e IntOptionArrayOptionOption) IntOptionArrayOptionOptionOption {
+func MakeIntOptionArrayOptionOptionOption(e IntOptionArrayOptionOption) IntOptionArrayOptionOptionOption {
 	return IntOptionArrayOptionOptionOption{&e}
 }
-func Int8OptionArrayOptInt8OptionInt8Option(e Int8OptionArrayOptionOption) Int8OptionArrayOptionOptionOption {
+func MakeInt8OptionArrayOptionOptionOption(e Int8OptionArrayOptionOption) Int8OptionArrayOptionOptionOption {
 	return Int8OptionArrayOptionOptionOption{&e}
 }
-func Int16OptionArrayOptInt16OptionInt16Option(e Int16OptionArrayOptionOption) Int16OptionArrayOptionOptionOption {
+func MakeInt16OptionArrayOptionOptionOption(e Int16OptionArrayOptionOption) Int16OptionArrayOptionOptionOption {
 	return Int16OptionArrayOptionOptionOption{&e}
 }
-func Int32OptionArrayOptInt32OptionInt32Option(e Int32OptionArrayOptionOption) Int32OptionArrayOptionOptionOption {
+func MakeInt32OptionArrayOptionOptionOption(e Int32OptionArrayOptionOption) Int32OptionArrayOptionOptionOption {
 	return Int32OptionArrayOptionOptionOption{&e}
 }
-func Int64OptionArrayOptInt64OptionInt64Option(e Int64OptionArrayOptionOption) Int64OptionArrayOptionOptionOption {
+func MakeInt64OptionArrayOptionOptionOption(e Int64OptionArrayOptionOption) Int64OptionArrayOptionOptionOption {
 	return Int64OptionArrayOptionOptionOption{&e}
 }
-func UintOptionArrayOptUintOptionUintOption(e UintOptionArrayOptionOption) UintOptionArrayOptionOptionOption {
+func MakeUintOptionArrayOptionOptionOption(e UintOptionArrayOptionOption) UintOptionArrayOptionOptionOption {
 	return UintOptionArrayOptionOptionOption{&e}
 }
-func Uint8OptionArrayOptUint8OptionUint8Option(e Uint8OptionArrayOptionOption) Uint8OptionArrayOptionOptionOption {
+func MakeUint8OptionArrayOptionOptionOption(e Uint8OptionArrayOptionOption) Uint8OptionArrayOptionOptionOption {
 	return Uint8OptionArrayOptionOptionOption{&e}
 }
-func Uint16OptionArrayOptUint16OptionUint16Option(e Uint16OptionArrayOptionOption) Uint16OptionArrayOptionOptionOption {
+func MakeUint16OptionArrayOptionOptionOption(e Uint16OptionArrayOptionOption) Uint16OptionArrayOptionOptionOption {
 	return Uint16OptionArrayOptionOptionOption{&e}
 }
-func Uint32OptionArrayOptUint32OptionUint32Option(e Uint32OptionArrayOptionOption) Uint32OptionArrayOptionOptionOption {
+func MakeUint32OptionArrayOptionOptionOption(e Uint32OptionArrayOptionOption) Uint32OptionArrayOptionOptionOption {
 	return Uint32OptionArrayOptionOptionOption{&e}
 }
-func Uint64OptionArrayOptUint64OptionUint64Option(e Uint64OptionArrayOptionOption) Uint64OptionArrayOptionOptionOption {
+func MakeUint64OptionArrayOptionOptionOption(e Uint64OptionArrayOptionOption) Uint64OptionArrayOptionOptionOption {
 	return Uint64OptionArrayOptionOptionOption{&e}
 }
-func UintptrOptionArrayOptUintptrOptionUintptrOption(e UintptrOptionArrayOptionOption) UintptrOptionArrayOptionOptionOption {
+func MakeUintptrOptionArrayOptionOptionOption(e UintptrOptionArrayOptionOption) UintptrOptionArrayOptionOptionOption {
 	return UintptrOptionArrayOptionOptionOption{&e}
 }
-func ByteOptionArrayOptByteOptionByteOption(e ByteOptionArrayOptionOption) ByteOptionArrayOptionOptionOption {
+func MakeByteOptionArrayOptionOptionOption(e ByteOptionArrayOptionOption) ByteOptionArrayOptionOptionOption {
 	return ByteOptionArrayOptionOptionOption{&e}
 }
-func RuneOptionArrayOptRuneOptionRuneOption(e RuneOptionArrayOptionOption) RuneOptionArrayOptionOptionOption {
+func MakeRuneOptionArrayOptionOptionOption(e RuneOptionArrayOptionOption) RuneOptionArrayOptionOptionOption {
 	return RuneOptionArrayOptionOptionOption{&e}
 }
-func Float32OptionArrayOptFloat32OptionFloat32Option(e Float32OptionArrayOptionOption) Float32OptionArrayOptionOptionOption {
+func MakeFloat32OptionArrayOptionOptionOption(e Float32OptionArrayOptionOption) Float32OptionArrayOptionOptionOption {
 	return Float32OptionArrayOptionOptionOption{&e}
 }
-func Float64OptionArrayOptFloat64OptionFloat64Option(e Float64OptionArrayOptionOption) Float64OptionArrayOptionOptionOption {
+func MakeFloat64OptionArrayOptionOptionOption(e Float64OptionArrayOptionOption) Float64OptionArrayOptionOptionOption {
 	return Float64OptionArrayOptionOptionOption{&e}
 }
-func Complex64OptionArrayOptComplex64OptionComplex64Option(e Complex64OptionArrayOptionOption) Complex64OptionArrayOptionOptionOption {
+func MakeComplex64OptionArrayOptionOptionOption(e Complex64OptionArrayOptionOption) Complex64OptionArrayOptionOptionOption {
 	return Complex64OptionArrayOptionOptionOption{&e}
 }
-func Complex128OptionArrayOptComplex128OptionComplex128Option(e Complex128OptionArrayOptionOption) Complex128OptionArrayOptionOptionOption {
+func MakeComplex128OptionArrayOptionOptionOption(e Complex128OptionArrayOptionOption) Complex128OptionArrayOptionOptionOption {
 	return Complex128OptionArrayOptionOptionOption{&e}
 }
-func AnyOptionArrayOptAnyOptionAnyOption(e AnyOptionArrayOptionOption) AnyOptionArrayOptionOptionOption {
+func MakeAnyOptionArrayOptionOptionOption(e AnyOptionArrayOptionOption) AnyOptionArrayOptionOptionOption {
 	return AnyOptionArrayOptionOptionOption{&e}
 }
-func BoolListOptBoolListBoolList(e BoolListOptionOption) BoolListOptionOptionOption {
+func MakeBoolListOptionOptionOption(e BoolListOptionOption) BoolListOptionOptionOption {
 	return BoolListOptionOptionOption{&e}
 }
-func StringListOptStringListStringList(e StringListOptionOption) StringListOptionOptionOption {
+func MakeStringListOptionOptionOption(e StringListOptionOption) StringListOptionOptionOption {
 	return StringListOptionOptionOption{&e}
 }
-func IntListOptIntListIntList(e IntListOptionOption) IntListOptionOptionOption {
+func MakeIntListOptionOptionOption(e IntListOptionOption) IntListOptionOptionOption {
 	return IntListOptionOptionOption{&e}
 }
-func Int8ListOptInt8ListInt8List(e Int8ListOptionOption) Int8ListOptionOptionOption {
+func MakeInt8ListOptionOptionOption(e Int8ListOptionOption) Int8ListOptionOptionOption {
 	return Int8ListOptionOptionOption{&e}
 }
-func Int16ListOptInt16ListInt16List(e Int16ListOptionOption) Int16ListOptionOptionOption {
+func MakeInt16ListOptionOptionOption(e Int16ListOptionOption) Int16ListOptionOptionOption {
 	return Int16ListOptionOptionOption{&e}
 }
-func Int32ListOptInt32ListInt32List(e Int32ListOptionOption) Int32ListOptionOptionOption {
+func MakeInt32ListOptionOptionOption(e Int32ListOptionOption) Int32ListOptionOptionOption {
 	return Int32ListOptionOptionOption{&e}
 }
-func Int64ListOptInt64ListInt64List(e Int64ListOptionOption) Int64ListOptionOptionOption {
+func MakeInt64ListOptionOptionOption(e Int64ListOptionOption) Int64ListOptionOptionOption {
 	return Int64ListOptionOptionOption{&e}
 }
-func UintListOptUintListUintList(e UintListOptionOption) UintListOptionOptionOption {
+func MakeUintListOptionOptionOption(e UintListOptionOption) UintListOptionOptionOption {
 	return UintListOptionOptionOption{&e}
 }
-func Uint8ListOptUint8ListUint8List(e Uint8ListOptionOption) Uint8ListOptionOptionOption {
+func MakeUint8ListOptionOptionOption(e Uint8ListOptionOption) Uint8ListOptionOptionOption {
 	return Uint8ListOptionOptionOption{&e}
 }
-func Uint16ListOptUint16ListUint16List(e Uint16ListOptionOption) Uint16ListOptionOptionOption {
+func MakeUint16ListOptionOptionOption(e Uint16ListOptionOption) Uint16ListOptionOptionOption {
 	return Uint16ListOptionOptionOption{&e}
 }
-func Uint32ListOptUint32ListUint32List(e Uint32ListOptionOption) Uint32ListOptionOptionOption {
+func MakeUint32ListOptionOptionOption(e Uint32ListOptionOption) Uint32ListOptionOptionOption {
 	return Uint32ListOptionOptionOption{&e}
 }
-func Uint64ListOptUint64ListUint64List(e Uint64ListOptionOption) Uint64ListOptionOptionOption {
+func MakeUint64ListOptionOptionOption(e Uint64ListOptionOption) Uint64ListOptionOptionOption {
 	return Uint64ListOptionOptionOption{&e}
 }
-func UintptrListOptUintptrListUintptrList(e UintptrListOptionOption) UintptrListOptionOptionOption {
+func MakeUintptrListOptionOptionOption(e UintptrListOptionOption) UintptrListOptionOptionOption {
 	return UintptrListOptionOptionOption{&e}
 }
-func ByteListOptByteListByteList(e ByteListOptionOption) ByteListOptionOptionOption {
+func MakeByteListOptionOptionOption(e ByteListOptionOption) ByteListOptionOptionOption {
 	return ByteListOptionOptionOption{&e}
 }
-func RuneListOptRuneListRuneList(e RuneListOptionOption) RuneListOptionOptionOption {
+func MakeRuneListOptionOptionOption(e RuneListOptionOption) RuneListOptionOptionOption {
 	return RuneListOptionOptionOption{&e}
 }
-func Float32ListOptFloat32ListFloat32List(e Float32ListOptionOption) Float32ListOptionOptionOption {
+func MakeFloat32ListOptionOptionOption(e Float32ListOptionOption) Float32ListOptionOptionOption {
 	return Float32ListOptionOptionOption{&e}
 }
-func Float64ListOptFloat64ListFloat64List(e Float64ListOptionOption) Float64ListOptionOptionOption {
+func MakeFloat64ListOptionOptionOption(e Float64ListOptionOption) Float64ListOptionOptionOption {
 	return Float64ListOptionOptionOption{&e}
 }
-func Complex64ListOptComplex64ListComplex64List(e Complex64ListOptionOption) Complex64ListOptionOptionOption {
+func MakeComplex64ListOptionOptionOption(e Complex64ListOptionOption) Complex64ListOptionOptionOption {
 	return Complex64ListOptionOptionOption{&e}
 }
-func Complex128ListOptComplex128ListComplex128List(e Complex128ListOptionOption) Complex128ListOptionOptionOption {
+func MakeComplex128ListOptionOptionOption(e Complex128ListOptionOption) Complex128ListOptionOptionOption {
 	return Complex128ListOptionOptionOption{&e}
 }
-func AnyListOptAnyListAnyList(e AnyListOptionOption) AnyListOptionOptionOption {
+func MakeAnyListOptionOptionOption(e AnyListOptionOption) AnyListOptionOptionOption {
 	return AnyListOptionOptionOption{&e}
 }

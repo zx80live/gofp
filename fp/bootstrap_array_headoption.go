@@ -5,420 +5,420 @@ package fp
 
 func BoolArrayHeadOption(m []bool) BoolOption {
 	if len(m) > 0 {
-		return Bool(m[0])
+		return MakeBoolOption(m[0])
 	} else {
 		return NoneBool
 	}
 }
 func StringArrayHeadOption(m []string) StringOption {
 	if len(m) > 0 {
-		return String(m[0])
+		return MakeStringOption(m[0])
 	} else {
 		return NoneString
 	}
 }
 func IntArrayHeadOption(m []int) IntOption {
 	if len(m) > 0 {
-		return Int(m[0])
+		return MakeIntOption(m[0])
 	} else {
 		return NoneInt
 	}
 }
 func Int8ArrayHeadOption(m []int8) Int8Option {
 	if len(m) > 0 {
-		return Int8(m[0])
+		return MakeInt8Option(m[0])
 	} else {
 		return NoneInt8
 	}
 }
 func Int16ArrayHeadOption(m []int16) Int16Option {
 	if len(m) > 0 {
-		return Int16(m[0])
+		return MakeInt16Option(m[0])
 	} else {
 		return NoneInt16
 	}
 }
 func Int32ArrayHeadOption(m []int32) Int32Option {
 	if len(m) > 0 {
-		return Int32(m[0])
+		return MakeInt32Option(m[0])
 	} else {
 		return NoneInt32
 	}
 }
 func Int64ArrayHeadOption(m []int64) Int64Option {
 	if len(m) > 0 {
-		return Int64(m[0])
+		return MakeInt64Option(m[0])
 	} else {
 		return NoneInt64
 	}
 }
 func UintArrayHeadOption(m []uint) UintOption {
 	if len(m) > 0 {
-		return Uint(m[0])
+		return MakeUintOption(m[0])
 	} else {
 		return NoneUint
 	}
 }
 func Uint8ArrayHeadOption(m []uint8) Uint8Option {
 	if len(m) > 0 {
-		return Uint8(m[0])
+		return MakeUint8Option(m[0])
 	} else {
 		return NoneUint8
 	}
 }
 func Uint16ArrayHeadOption(m []uint16) Uint16Option {
 	if len(m) > 0 {
-		return Uint16(m[0])
+		return MakeUint16Option(m[0])
 	} else {
 		return NoneUint16
 	}
 }
 func Uint32ArrayHeadOption(m []uint32) Uint32Option {
 	if len(m) > 0 {
-		return Uint32(m[0])
+		return MakeUint32Option(m[0])
 	} else {
 		return NoneUint32
 	}
 }
 func Uint64ArrayHeadOption(m []uint64) Uint64Option {
 	if len(m) > 0 {
-		return Uint64(m[0])
+		return MakeUint64Option(m[0])
 	} else {
 		return NoneUint64
 	}
 }
 func UintptrArrayHeadOption(m []uintptr) UintptrOption {
 	if len(m) > 0 {
-		return Uintptr(m[0])
+		return MakeUintptrOption(m[0])
 	} else {
 		return NoneUintptr
 	}
 }
 func ByteArrayHeadOption(m []byte) ByteOption {
 	if len(m) > 0 {
-		return Byte(m[0])
+		return MakeByteOption(m[0])
 	} else {
 		return NoneByte
 	}
 }
 func RuneArrayHeadOption(m []rune) RuneOption {
 	if len(m) > 0 {
-		return Rune(m[0])
+		return MakeRuneOption(m[0])
 	} else {
 		return NoneRune
 	}
 }
 func Float32ArrayHeadOption(m []float32) Float32Option {
 	if len(m) > 0 {
-		return Float32(m[0])
+		return MakeFloat32Option(m[0])
 	} else {
 		return NoneFloat32
 	}
 }
 func Float64ArrayHeadOption(m []float64) Float64Option {
 	if len(m) > 0 {
-		return Float64(m[0])
+		return MakeFloat64Option(m[0])
 	} else {
 		return NoneFloat64
 	}
 }
 func Complex64ArrayHeadOption(m []complex64) Complex64Option {
 	if len(m) > 0 {
-		return Complex64(m[0])
+		return MakeComplex64Option(m[0])
 	} else {
 		return NoneComplex64
 	}
 }
 func Complex128ArrayHeadOption(m []complex128) Complex128Option {
 	if len(m) > 0 {
-		return Complex128(m[0])
+		return MakeComplex128Option(m[0])
 	} else {
 		return NoneComplex128
 	}
 }
 func AnyArrayHeadOption(m []Any) AnyOption {
 	if len(m) > 0 {
-		return AnyOpt(m[0])
+		return MakeAnyOption(m[0])
 	} else {
 		return NoneAny
 	}
 }
 func BoolArrayArrayHeadOption(m [][]bool) BoolArrayOption {
 	if len(m) > 0 {
-		return BoolArrayOpt(m[0])
+		return MakeBoolArrayOption(m[0])
 	} else {
 		return NoneBoolArray
 	}
 }
 func StringArrayArrayHeadOption(m [][]string) StringArrayOption {
 	if len(m) > 0 {
-		return StringArrayOpt(m[0])
+		return MakeStringArrayOption(m[0])
 	} else {
 		return NoneStringArray
 	}
 }
 func IntArrayArrayHeadOption(m [][]int) IntArrayOption {
 	if len(m) > 0 {
-		return IntArrayOpt(m[0])
+		return MakeIntArrayOption(m[0])
 	} else {
 		return NoneIntArray
 	}
 }
 func Int8ArrayArrayHeadOption(m [][]int8) Int8ArrayOption {
 	if len(m) > 0 {
-		return Int8ArrayOpt(m[0])
+		return MakeInt8ArrayOption(m[0])
 	} else {
 		return NoneInt8Array
 	}
 }
 func Int16ArrayArrayHeadOption(m [][]int16) Int16ArrayOption {
 	if len(m) > 0 {
-		return Int16ArrayOpt(m[0])
+		return MakeInt16ArrayOption(m[0])
 	} else {
 		return NoneInt16Array
 	}
 }
 func Int32ArrayArrayHeadOption(m [][]int32) Int32ArrayOption {
 	if len(m) > 0 {
-		return Int32ArrayOpt(m[0])
+		return MakeInt32ArrayOption(m[0])
 	} else {
 		return NoneInt32Array
 	}
 }
 func Int64ArrayArrayHeadOption(m [][]int64) Int64ArrayOption {
 	if len(m) > 0 {
-		return Int64ArrayOpt(m[0])
+		return MakeInt64ArrayOption(m[0])
 	} else {
 		return NoneInt64Array
 	}
 }
 func UintArrayArrayHeadOption(m [][]uint) UintArrayOption {
 	if len(m) > 0 {
-		return UintArrayOpt(m[0])
+		return MakeUintArrayOption(m[0])
 	} else {
 		return NoneUintArray
 	}
 }
 func Uint8ArrayArrayHeadOption(m [][]uint8) Uint8ArrayOption {
 	if len(m) > 0 {
-		return Uint8ArrayOpt(m[0])
+		return MakeUint8ArrayOption(m[0])
 	} else {
 		return NoneUint8Array
 	}
 }
 func Uint16ArrayArrayHeadOption(m [][]uint16) Uint16ArrayOption {
 	if len(m) > 0 {
-		return Uint16ArrayOpt(m[0])
+		return MakeUint16ArrayOption(m[0])
 	} else {
 		return NoneUint16Array
 	}
 }
 func Uint32ArrayArrayHeadOption(m [][]uint32) Uint32ArrayOption {
 	if len(m) > 0 {
-		return Uint32ArrayOpt(m[0])
+		return MakeUint32ArrayOption(m[0])
 	} else {
 		return NoneUint32Array
 	}
 }
 func Uint64ArrayArrayHeadOption(m [][]uint64) Uint64ArrayOption {
 	if len(m) > 0 {
-		return Uint64ArrayOpt(m[0])
+		return MakeUint64ArrayOption(m[0])
 	} else {
 		return NoneUint64Array
 	}
 }
 func UintptrArrayArrayHeadOption(m [][]uintptr) UintptrArrayOption {
 	if len(m) > 0 {
-		return UintptrArrayOpt(m[0])
+		return MakeUintptrArrayOption(m[0])
 	} else {
 		return NoneUintptrArray
 	}
 }
 func ByteArrayArrayHeadOption(m [][]byte) ByteArrayOption {
 	if len(m) > 0 {
-		return ByteArrayOpt(m[0])
+		return MakeByteArrayOption(m[0])
 	} else {
 		return NoneByteArray
 	}
 }
 func RuneArrayArrayHeadOption(m [][]rune) RuneArrayOption {
 	if len(m) > 0 {
-		return RuneArrayOpt(m[0])
+		return MakeRuneArrayOption(m[0])
 	} else {
 		return NoneRuneArray
 	}
 }
 func Float32ArrayArrayHeadOption(m [][]float32) Float32ArrayOption {
 	if len(m) > 0 {
-		return Float32ArrayOpt(m[0])
+		return MakeFloat32ArrayOption(m[0])
 	} else {
 		return NoneFloat32Array
 	}
 }
 func Float64ArrayArrayHeadOption(m [][]float64) Float64ArrayOption {
 	if len(m) > 0 {
-		return Float64ArrayOpt(m[0])
+		return MakeFloat64ArrayOption(m[0])
 	} else {
 		return NoneFloat64Array
 	}
 }
 func Complex64ArrayArrayHeadOption(m [][]complex64) Complex64ArrayOption {
 	if len(m) > 0 {
-		return Complex64ArrayOpt(m[0])
+		return MakeComplex64ArrayOption(m[0])
 	} else {
 		return NoneComplex64Array
 	}
 }
 func Complex128ArrayArrayHeadOption(m [][]complex128) Complex128ArrayOption {
 	if len(m) > 0 {
-		return Complex128ArrayOpt(m[0])
+		return MakeComplex128ArrayOption(m[0])
 	} else {
 		return NoneComplex128Array
 	}
 }
 func AnyArrayArrayHeadOption(m [][]Any) AnyArrayOption {
 	if len(m) > 0 {
-		return AnyArrayOpt(m[0])
+		return MakeAnyArrayOption(m[0])
 	} else {
 		return NoneAnyArray
 	}
 }
 func BoolOptionArrayHeadOption(m []BoolOption) BoolOptionOption {
 	if len(m) > 0 {
-		return BoolBoolOption(m[0])
+		return MakeBoolOptionOption(m[0])
 	} else {
 		return NoneBoolOption
 	}
 }
 func StringOptionArrayHeadOption(m []StringOption) StringOptionOption {
 	if len(m) > 0 {
-		return StringStringOption(m[0])
+		return MakeStringOptionOption(m[0])
 	} else {
 		return NoneStringOption
 	}
 }
 func IntOptionArrayHeadOption(m []IntOption) IntOptionOption {
 	if len(m) > 0 {
-		return IntIntOption(m[0])
+		return MakeIntOptionOption(m[0])
 	} else {
 		return NoneIntOption
 	}
 }
 func Int8OptionArrayHeadOption(m []Int8Option) Int8OptionOption {
 	if len(m) > 0 {
-		return Int8Int8Option(m[0])
+		return MakeInt8OptionOption(m[0])
 	} else {
 		return NoneInt8Option
 	}
 }
 func Int16OptionArrayHeadOption(m []Int16Option) Int16OptionOption {
 	if len(m) > 0 {
-		return Int16Int16Option(m[0])
+		return MakeInt16OptionOption(m[0])
 	} else {
 		return NoneInt16Option
 	}
 }
 func Int32OptionArrayHeadOption(m []Int32Option) Int32OptionOption {
 	if len(m) > 0 {
-		return Int32Int32Option(m[0])
+		return MakeInt32OptionOption(m[0])
 	} else {
 		return NoneInt32Option
 	}
 }
 func Int64OptionArrayHeadOption(m []Int64Option) Int64OptionOption {
 	if len(m) > 0 {
-		return Int64Int64Option(m[0])
+		return MakeInt64OptionOption(m[0])
 	} else {
 		return NoneInt64Option
 	}
 }
 func UintOptionArrayHeadOption(m []UintOption) UintOptionOption {
 	if len(m) > 0 {
-		return UintUintOption(m[0])
+		return MakeUintOptionOption(m[0])
 	} else {
 		return NoneUintOption
 	}
 }
 func Uint8OptionArrayHeadOption(m []Uint8Option) Uint8OptionOption {
 	if len(m) > 0 {
-		return Uint8Uint8Option(m[0])
+		return MakeUint8OptionOption(m[0])
 	} else {
 		return NoneUint8Option
 	}
 }
 func Uint16OptionArrayHeadOption(m []Uint16Option) Uint16OptionOption {
 	if len(m) > 0 {
-		return Uint16Uint16Option(m[0])
+		return MakeUint16OptionOption(m[0])
 	} else {
 		return NoneUint16Option
 	}
 }
 func Uint32OptionArrayHeadOption(m []Uint32Option) Uint32OptionOption {
 	if len(m) > 0 {
-		return Uint32Uint32Option(m[0])
+		return MakeUint32OptionOption(m[0])
 	} else {
 		return NoneUint32Option
 	}
 }
 func Uint64OptionArrayHeadOption(m []Uint64Option) Uint64OptionOption {
 	if len(m) > 0 {
-		return Uint64Uint64Option(m[0])
+		return MakeUint64OptionOption(m[0])
 	} else {
 		return NoneUint64Option
 	}
 }
 func UintptrOptionArrayHeadOption(m []UintptrOption) UintptrOptionOption {
 	if len(m) > 0 {
-		return UintptrUintptrOption(m[0])
+		return MakeUintptrOptionOption(m[0])
 	} else {
 		return NoneUintptrOption
 	}
 }
 func ByteOptionArrayHeadOption(m []ByteOption) ByteOptionOption {
 	if len(m) > 0 {
-		return ByteByteOption(m[0])
+		return MakeByteOptionOption(m[0])
 	} else {
 		return NoneByteOption
 	}
 }
 func RuneOptionArrayHeadOption(m []RuneOption) RuneOptionOption {
 	if len(m) > 0 {
-		return RuneRuneOption(m[0])
+		return MakeRuneOptionOption(m[0])
 	} else {
 		return NoneRuneOption
 	}
 }
 func Float32OptionArrayHeadOption(m []Float32Option) Float32OptionOption {
 	if len(m) > 0 {
-		return Float32Float32Option(m[0])
+		return MakeFloat32OptionOption(m[0])
 	} else {
 		return NoneFloat32Option
 	}
 }
 func Float64OptionArrayHeadOption(m []Float64Option) Float64OptionOption {
 	if len(m) > 0 {
-		return Float64Float64Option(m[0])
+		return MakeFloat64OptionOption(m[0])
 	} else {
 		return NoneFloat64Option
 	}
 }
 func Complex64OptionArrayHeadOption(m []Complex64Option) Complex64OptionOption {
 	if len(m) > 0 {
-		return Complex64Complex64Option(m[0])
+		return MakeComplex64OptionOption(m[0])
 	} else {
 		return NoneComplex64Option
 	}
 }
 func Complex128OptionArrayHeadOption(m []Complex128Option) Complex128OptionOption {
 	if len(m) > 0 {
-		return Complex128Complex128Option(m[0])
+		return MakeComplex128OptionOption(m[0])
 	} else {
 		return NoneComplex128Option
 	}
 }
 func AnyOptionArrayHeadOption(m []AnyOption) AnyOptionOption {
 	if len(m) > 0 {
-		return AnyOptAnyOption(m[0])
+		return MakeAnyOptionOption(m[0])
 	} else {
 		return NoneAnyOption
 	}
