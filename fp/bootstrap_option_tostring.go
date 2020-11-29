@@ -3,421 +3,2105 @@
 
 package fp
 
-func (m BoolOption) ToString() string                  { return BoolOptionToString(m) }
-func (m StringOption) ToString() string                { return StringOptionToString(m) }
-func (m IntOption) ToString() string                   { return IntOptionToString(m) }
-func (m Int8Option) ToString() string                  { return Int8OptionToString(m) }
-func (m Int16Option) ToString() string                 { return Int16OptionToString(m) }
-func (m Int32Option) ToString() string                 { return Int32OptionToString(m) }
-func (m Int64Option) ToString() string                 { return Int64OptionToString(m) }
-func (m UintOption) ToString() string                  { return UintOptionToString(m) }
-func (m Uint8Option) ToString() string                 { return Uint8OptionToString(m) }
-func (m Uint16Option) ToString() string                { return Uint16OptionToString(m) }
-func (m Uint32Option) ToString() string                { return Uint32OptionToString(m) }
-func (m Uint64Option) ToString() string                { return Uint64OptionToString(m) }
-func (m UintptrOption) ToString() string               { return UintptrOptionToString(m) }
-func (m ByteOption) ToString() string                  { return ByteOptionToString(m) }
-func (m RuneOption) ToString() string                  { return RuneOptionToString(m) }
-func (m Float32Option) ToString() string               { return Float32OptionToString(m) }
-func (m Float64Option) ToString() string               { return Float64OptionToString(m) }
-func (m Complex64Option) ToString() string             { return Complex64OptionToString(m) }
-func (m Complex128Option) ToString() string            { return Complex128OptionToString(m) }
-func (m AnyOption) ToString() string                   { return AnyOptionToString(m) }
-func (m BoolArrOption) ToString() string               { return BoolArrOptionToString(m) }
-func (m StringArrOption) ToString() string             { return StringArrOptionToString(m) }
-func (m IntArrOption) ToString() string                { return IntArrOptionToString(m) }
-func (m Int8ArrOption) ToString() string               { return Int8ArrOptionToString(m) }
-func (m Int16ArrOption) ToString() string              { return Int16ArrOptionToString(m) }
-func (m Int32ArrOption) ToString() string              { return Int32ArrOptionToString(m) }
-func (m Int64ArrOption) ToString() string              { return Int64ArrOptionToString(m) }
-func (m UintArrOption) ToString() string               { return UintArrOptionToString(m) }
-func (m Uint8ArrOption) ToString() string              { return Uint8ArrOptionToString(m) }
-func (m Uint16ArrOption) ToString() string             { return Uint16ArrOptionToString(m) }
-func (m Uint32ArrOption) ToString() string             { return Uint32ArrOptionToString(m) }
-func (m Uint64ArrOption) ToString() string             { return Uint64ArrOptionToString(m) }
-func (m UintptrArrOption) ToString() string            { return UintptrArrOptionToString(m) }
-func (m ByteArrOption) ToString() string               { return ByteArrOptionToString(m) }
-func (m RuneArrOption) ToString() string               { return RuneArrOptionToString(m) }
-func (m Float32ArrOption) ToString() string            { return Float32ArrOptionToString(m) }
-func (m Float64ArrOption) ToString() string            { return Float64ArrOptionToString(m) }
-func (m Complex64ArrOption) ToString() string          { return Complex64ArrOptionToString(m) }
-func (m Complex128ArrOption) ToString() string         { return Complex128ArrOptionToString(m) }
-func (m AnyArrOption) ToString() string                { return AnyArrOptionToString(m) }
-func (m BoolArrArrOption) ToString() string            { return BoolArrArrOptionToString(m) }
-func (m StringArrArrOption) ToString() string          { return StringArrArrOptionToString(m) }
-func (m IntArrArrOption) ToString() string             { return IntArrArrOptionToString(m) }
-func (m Int8ArrArrOption) ToString() string            { return Int8ArrArrOptionToString(m) }
-func (m Int16ArrArrOption) ToString() string           { return Int16ArrArrOptionToString(m) }
-func (m Int32ArrArrOption) ToString() string           { return Int32ArrArrOptionToString(m) }
-func (m Int64ArrArrOption) ToString() string           { return Int64ArrArrOptionToString(m) }
-func (m UintArrArrOption) ToString() string            { return UintArrArrOptionToString(m) }
-func (m Uint8ArrArrOption) ToString() string           { return Uint8ArrArrOptionToString(m) }
-func (m Uint16ArrArrOption) ToString() string          { return Uint16ArrArrOptionToString(m) }
-func (m Uint32ArrArrOption) ToString() string          { return Uint32ArrArrOptionToString(m) }
-func (m Uint64ArrArrOption) ToString() string          { return Uint64ArrArrOptionToString(m) }
-func (m UintptrArrArrOption) ToString() string         { return UintptrArrArrOptionToString(m) }
-func (m ByteArrArrOption) ToString() string            { return ByteArrArrOptionToString(m) }
-func (m RuneArrArrOption) ToString() string            { return RuneArrArrOptionToString(m) }
-func (m Float32ArrArrOption) ToString() string         { return Float32ArrArrOptionToString(m) }
-func (m Float64ArrArrOption) ToString() string         { return Float64ArrArrOptionToString(m) }
-func (m Complex64ArrArrOption) ToString() string       { return Complex64ArrArrOptionToString(m) }
-func (m Complex128ArrArrOption) ToString() string      { return Complex128ArrArrOptionToString(m) }
-func (m AnyArrArrOption) ToString() string             { return AnyArrArrOptionToString(m) }
-func (m BoolOptionArrOption) ToString() string         { return BoolOptionArrOptionToString(m) }
-func (m StringOptionArrOption) ToString() string       { return StringOptionArrOptionToString(m) }
-func (m IntOptionArrOption) ToString() string          { return IntOptionArrOptionToString(m) }
-func (m Int8OptionArrOption) ToString() string         { return Int8OptionArrOptionToString(m) }
-func (m Int16OptionArrOption) ToString() string        { return Int16OptionArrOptionToString(m) }
-func (m Int32OptionArrOption) ToString() string        { return Int32OptionArrOptionToString(m) }
-func (m Int64OptionArrOption) ToString() string        { return Int64OptionArrOptionToString(m) }
-func (m UintOptionArrOption) ToString() string         { return UintOptionArrOptionToString(m) }
-func (m Uint8OptionArrOption) ToString() string        { return Uint8OptionArrOptionToString(m) }
-func (m Uint16OptionArrOption) ToString() string       { return Uint16OptionArrOptionToString(m) }
-func (m Uint32OptionArrOption) ToString() string       { return Uint32OptionArrOptionToString(m) }
-func (m Uint64OptionArrOption) ToString() string       { return Uint64OptionArrOptionToString(m) }
-func (m UintptrOptionArrOption) ToString() string      { return UintptrOptionArrOptionToString(m) }
-func (m ByteOptionArrOption) ToString() string         { return ByteOptionArrOptionToString(m) }
-func (m RuneOptionArrOption) ToString() string         { return RuneOptionArrOptionToString(m) }
-func (m Float32OptionArrOption) ToString() string      { return Float32OptionArrOptionToString(m) }
-func (m Float64OptionArrOption) ToString() string      { return Float64OptionArrOptionToString(m) }
-func (m Complex64OptionArrOption) ToString() string    { return Complex64OptionArrOptionToString(m) }
-func (m Complex128OptionArrOption) ToString() string   { return Complex128OptionArrOptionToString(m) }
-func (m AnyOptionArrOption) ToString() string          { return AnyOptionArrOptionToString(m) }
-func (m BoolListOption) ToString() string              { return BoolListOptionToString(m) }
-func (m StringListOption) ToString() string            { return StringListOptionToString(m) }
-func (m IntListOption) ToString() string               { return IntListOptionToString(m) }
-func (m Int8ListOption) ToString() string              { return Int8ListOptionToString(m) }
-func (m Int16ListOption) ToString() string             { return Int16ListOptionToString(m) }
-func (m Int32ListOption) ToString() string             { return Int32ListOptionToString(m) }
-func (m Int64ListOption) ToString() string             { return Int64ListOptionToString(m) }
-func (m UintListOption) ToString() string              { return UintListOptionToString(m) }
-func (m Uint8ListOption) ToString() string             { return Uint8ListOptionToString(m) }
-func (m Uint16ListOption) ToString() string            { return Uint16ListOptionToString(m) }
-func (m Uint32ListOption) ToString() string            { return Uint32ListOptionToString(m) }
-func (m Uint64ListOption) ToString() string            { return Uint64ListOptionToString(m) }
-func (m UintptrListOption) ToString() string           { return UintptrListOptionToString(m) }
-func (m ByteListOption) ToString() string              { return ByteListOptionToString(m) }
-func (m RuneListOption) ToString() string              { return RuneListOptionToString(m) }
-func (m Float32ListOption) ToString() string           { return Float32ListOptionToString(m) }
-func (m Float64ListOption) ToString() string           { return Float64ListOptionToString(m) }
-func (m Complex64ListOption) ToString() string         { return Complex64ListOptionToString(m) }
-func (m Complex128ListOption) ToString() string        { return Complex128ListOptionToString(m) }
-func (m AnyListOption) ToString() string               { return AnyListOptionToString(m) }
-func (m BoolOptionOption) ToString() string            { return BoolOptionOptionToString(m) }
-func (m StringOptionOption) ToString() string          { return StringOptionOptionToString(m) }
-func (m IntOptionOption) ToString() string             { return IntOptionOptionToString(m) }
-func (m Int8OptionOption) ToString() string            { return Int8OptionOptionToString(m) }
-func (m Int16OptionOption) ToString() string           { return Int16OptionOptionToString(m) }
-func (m Int32OptionOption) ToString() string           { return Int32OptionOptionToString(m) }
-func (m Int64OptionOption) ToString() string           { return Int64OptionOptionToString(m) }
-func (m UintOptionOption) ToString() string            { return UintOptionOptionToString(m) }
-func (m Uint8OptionOption) ToString() string           { return Uint8OptionOptionToString(m) }
-func (m Uint16OptionOption) ToString() string          { return Uint16OptionOptionToString(m) }
-func (m Uint32OptionOption) ToString() string          { return Uint32OptionOptionToString(m) }
-func (m Uint64OptionOption) ToString() string          { return Uint64OptionOptionToString(m) }
-func (m UintptrOptionOption) ToString() string         { return UintptrOptionOptionToString(m) }
-func (m ByteOptionOption) ToString() string            { return ByteOptionOptionToString(m) }
-func (m RuneOptionOption) ToString() string            { return RuneOptionOptionToString(m) }
-func (m Float32OptionOption) ToString() string         { return Float32OptionOptionToString(m) }
-func (m Float64OptionOption) ToString() string         { return Float64OptionOptionToString(m) }
-func (m Complex64OptionOption) ToString() string       { return Complex64OptionOptionToString(m) }
-func (m Complex128OptionOption) ToString() string      { return Complex128OptionOptionToString(m) }
-func (m AnyOptionOption) ToString() string             { return AnyOptionOptionToString(m) }
-func (m BoolArrOptionOption) ToString() string         { return BoolArrOptionOptionToString(m) }
-func (m StringArrOptionOption) ToString() string       { return StringArrOptionOptionToString(m) }
-func (m IntArrOptionOption) ToString() string          { return IntArrOptionOptionToString(m) }
-func (m Int8ArrOptionOption) ToString() string         { return Int8ArrOptionOptionToString(m) }
-func (m Int16ArrOptionOption) ToString() string        { return Int16ArrOptionOptionToString(m) }
-func (m Int32ArrOptionOption) ToString() string        { return Int32ArrOptionOptionToString(m) }
-func (m Int64ArrOptionOption) ToString() string        { return Int64ArrOptionOptionToString(m) }
-func (m UintArrOptionOption) ToString() string         { return UintArrOptionOptionToString(m) }
-func (m Uint8ArrOptionOption) ToString() string        { return Uint8ArrOptionOptionToString(m) }
-func (m Uint16ArrOptionOption) ToString() string       { return Uint16ArrOptionOptionToString(m) }
-func (m Uint32ArrOptionOption) ToString() string       { return Uint32ArrOptionOptionToString(m) }
-func (m Uint64ArrOptionOption) ToString() string       { return Uint64ArrOptionOptionToString(m) }
-func (m UintptrArrOptionOption) ToString() string      { return UintptrArrOptionOptionToString(m) }
-func (m ByteArrOptionOption) ToString() string         { return ByteArrOptionOptionToString(m) }
-func (m RuneArrOptionOption) ToString() string         { return RuneArrOptionOptionToString(m) }
-func (m Float32ArrOptionOption) ToString() string      { return Float32ArrOptionOptionToString(m) }
-func (m Float64ArrOptionOption) ToString() string      { return Float64ArrOptionOptionToString(m) }
-func (m Complex64ArrOptionOption) ToString() string    { return Complex64ArrOptionOptionToString(m) }
-func (m Complex128ArrOptionOption) ToString() string   { return Complex128ArrOptionOptionToString(m) }
-func (m AnyArrOptionOption) ToString() string          { return AnyArrOptionOptionToString(m) }
-func (m BoolArrArrOptionOption) ToString() string      { return BoolArrArrOptionOptionToString(m) }
-func (m StringArrArrOptionOption) ToString() string    { return StringArrArrOptionOptionToString(m) }
-func (m IntArrArrOptionOption) ToString() string       { return IntArrArrOptionOptionToString(m) }
-func (m Int8ArrArrOptionOption) ToString() string      { return Int8ArrArrOptionOptionToString(m) }
-func (m Int16ArrArrOptionOption) ToString() string     { return Int16ArrArrOptionOptionToString(m) }
-func (m Int32ArrArrOptionOption) ToString() string     { return Int32ArrArrOptionOptionToString(m) }
-func (m Int64ArrArrOptionOption) ToString() string     { return Int64ArrArrOptionOptionToString(m) }
-func (m UintArrArrOptionOption) ToString() string      { return UintArrArrOptionOptionToString(m) }
-func (m Uint8ArrArrOptionOption) ToString() string     { return Uint8ArrArrOptionOptionToString(m) }
-func (m Uint16ArrArrOptionOption) ToString() string    { return Uint16ArrArrOptionOptionToString(m) }
-func (m Uint32ArrArrOptionOption) ToString() string    { return Uint32ArrArrOptionOptionToString(m) }
-func (m Uint64ArrArrOptionOption) ToString() string    { return Uint64ArrArrOptionOptionToString(m) }
-func (m UintptrArrArrOptionOption) ToString() string   { return UintptrArrArrOptionOptionToString(m) }
-func (m ByteArrArrOptionOption) ToString() string      { return ByteArrArrOptionOptionToString(m) }
-func (m RuneArrArrOptionOption) ToString() string      { return RuneArrArrOptionOptionToString(m) }
-func (m Float32ArrArrOptionOption) ToString() string   { return Float32ArrArrOptionOptionToString(m) }
-func (m Float64ArrArrOptionOption) ToString() string   { return Float64ArrArrOptionOptionToString(m) }
-func (m Complex64ArrArrOptionOption) ToString() string { return Complex64ArrArrOptionOptionToString(m) }
-func (m Complex128ArrArrOptionOption) ToString() string {
-	return Complex128ArrArrOptionOptionToString(m)
+import "fmt"
+
+func (o BoolOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyArrArrOptionOption) ToString() string       { return AnyArrArrOptionOptionToString(m) }
-func (m BoolOptionArrOptionOption) ToString() string   { return BoolOptionArrOptionOptionToString(m) }
-func (m StringOptionArrOptionOption) ToString() string { return StringOptionArrOptionOptionToString(m) }
-func (m IntOptionArrOptionOption) ToString() string    { return IntOptionArrOptionOptionToString(m) }
-func (m Int8OptionArrOptionOption) ToString() string   { return Int8OptionArrOptionOptionToString(m) }
-func (m Int16OptionArrOptionOption) ToString() string  { return Int16OptionArrOptionOptionToString(m) }
-func (m Int32OptionArrOptionOption) ToString() string  { return Int32OptionArrOptionOptionToString(m) }
-func (m Int64OptionArrOptionOption) ToString() string  { return Int64OptionArrOptionOptionToString(m) }
-func (m UintOptionArrOptionOption) ToString() string   { return UintOptionArrOptionOptionToString(m) }
-func (m Uint8OptionArrOptionOption) ToString() string  { return Uint8OptionArrOptionOptionToString(m) }
-func (m Uint16OptionArrOptionOption) ToString() string { return Uint16OptionArrOptionOptionToString(m) }
-func (m Uint32OptionArrOptionOption) ToString() string { return Uint32OptionArrOptionOptionToString(m) }
-func (m Uint64OptionArrOptionOption) ToString() string { return Uint64OptionArrOptionOptionToString(m) }
-func (m UintptrOptionArrOptionOption) ToString() string {
-	return UintptrOptionArrOptionOptionToString(m)
+func (o StringOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringToString)
+	} else {
+		return "None"
+	}
 }
-func (m ByteOptionArrOptionOption) ToString() string { return ByteOptionArrOptionOptionToString(m) }
-func (m RuneOptionArrOptionOption) ToString() string { return RuneOptionArrOptionOptionToString(m) }
-func (m Float32OptionArrOptionOption) ToString() string {
-	return Float32OptionArrOptionOptionToString(m)
+func (o IntOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float64OptionArrOptionOption) ToString() string {
-	return Float64OptionArrOptionOptionToString(m)
+func (o Int8Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex64OptionArrOptionOption) ToString() string {
-	return Complex64OptionArrOptionOptionToString(m)
+func (o Int16Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex128OptionArrOptionOption) ToString() string {
-	return Complex128OptionArrOptionOptionToString(m)
+func (o Int32Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyOptionArrOptionOption) ToString() string    { return AnyOptionArrOptionOptionToString(m) }
-func (m BoolListOptionOption) ToString() string        { return BoolListOptionOptionToString(m) }
-func (m StringListOptionOption) ToString() string      { return StringListOptionOptionToString(m) }
-func (m IntListOptionOption) ToString() string         { return IntListOptionOptionToString(m) }
-func (m Int8ListOptionOption) ToString() string        { return Int8ListOptionOptionToString(m) }
-func (m Int16ListOptionOption) ToString() string       { return Int16ListOptionOptionToString(m) }
-func (m Int32ListOptionOption) ToString() string       { return Int32ListOptionOptionToString(m) }
-func (m Int64ListOptionOption) ToString() string       { return Int64ListOptionOptionToString(m) }
-func (m UintListOptionOption) ToString() string        { return UintListOptionOptionToString(m) }
-func (m Uint8ListOptionOption) ToString() string       { return Uint8ListOptionOptionToString(m) }
-func (m Uint16ListOptionOption) ToString() string      { return Uint16ListOptionOptionToString(m) }
-func (m Uint32ListOptionOption) ToString() string      { return Uint32ListOptionOptionToString(m) }
-func (m Uint64ListOptionOption) ToString() string      { return Uint64ListOptionOptionToString(m) }
-func (m UintptrListOptionOption) ToString() string     { return UintptrListOptionOptionToString(m) }
-func (m ByteListOptionOption) ToString() string        { return ByteListOptionOptionToString(m) }
-func (m RuneListOptionOption) ToString() string        { return RuneListOptionOptionToString(m) }
-func (m Float32ListOptionOption) ToString() string     { return Float32ListOptionOptionToString(m) }
-func (m Float64ListOptionOption) ToString() string     { return Float64ListOptionOptionToString(m) }
-func (m Complex64ListOptionOption) ToString() string   { return Complex64ListOptionOptionToString(m) }
-func (m Complex128ListOptionOption) ToString() string  { return Complex128ListOptionOptionToString(m) }
-func (m AnyListOptionOption) ToString() string         { return AnyListOptionOptionToString(m) }
-func (m BoolOptionOptionOption) ToString() string      { return BoolOptionOptionOptionToString(m) }
-func (m StringOptionOptionOption) ToString() string    { return StringOptionOptionOptionToString(m) }
-func (m IntOptionOptionOption) ToString() string       { return IntOptionOptionOptionToString(m) }
-func (m Int8OptionOptionOption) ToString() string      { return Int8OptionOptionOptionToString(m) }
-func (m Int16OptionOptionOption) ToString() string     { return Int16OptionOptionOptionToString(m) }
-func (m Int32OptionOptionOption) ToString() string     { return Int32OptionOptionOptionToString(m) }
-func (m Int64OptionOptionOption) ToString() string     { return Int64OptionOptionOptionToString(m) }
-func (m UintOptionOptionOption) ToString() string      { return UintOptionOptionOptionToString(m) }
-func (m Uint8OptionOptionOption) ToString() string     { return Uint8OptionOptionOptionToString(m) }
-func (m Uint16OptionOptionOption) ToString() string    { return Uint16OptionOptionOptionToString(m) }
-func (m Uint32OptionOptionOption) ToString() string    { return Uint32OptionOptionOptionToString(m) }
-func (m Uint64OptionOptionOption) ToString() string    { return Uint64OptionOptionOptionToString(m) }
-func (m UintptrOptionOptionOption) ToString() string   { return UintptrOptionOptionOptionToString(m) }
-func (m ByteOptionOptionOption) ToString() string      { return ByteOptionOptionOptionToString(m) }
-func (m RuneOptionOptionOption) ToString() string      { return RuneOptionOptionOptionToString(m) }
-func (m Float32OptionOptionOption) ToString() string   { return Float32OptionOptionOptionToString(m) }
-func (m Float64OptionOptionOption) ToString() string   { return Float64OptionOptionOptionToString(m) }
-func (m Complex64OptionOptionOption) ToString() string { return Complex64OptionOptionOptionToString(m) }
-func (m Complex128OptionOptionOption) ToString() string {
-	return Complex128OptionOptionOptionToString(m)
+func (o Int64Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyOptionOptionOption) ToString() string       { return AnyOptionOptionOptionToString(m) }
-func (m BoolArrOptionOptionOption) ToString() string   { return BoolArrOptionOptionOptionToString(m) }
-func (m StringArrOptionOptionOption) ToString() string { return StringArrOptionOptionOptionToString(m) }
-func (m IntArrOptionOptionOption) ToString() string    { return IntArrOptionOptionOptionToString(m) }
-func (m Int8ArrOptionOptionOption) ToString() string   { return Int8ArrOptionOptionOptionToString(m) }
-func (m Int16ArrOptionOptionOption) ToString() string  { return Int16ArrOptionOptionOptionToString(m) }
-func (m Int32ArrOptionOptionOption) ToString() string  { return Int32ArrOptionOptionOptionToString(m) }
-func (m Int64ArrOptionOptionOption) ToString() string  { return Int64ArrOptionOptionOptionToString(m) }
-func (m UintArrOptionOptionOption) ToString() string   { return UintArrOptionOptionOptionToString(m) }
-func (m Uint8ArrOptionOptionOption) ToString() string  { return Uint8ArrOptionOptionOptionToString(m) }
-func (m Uint16ArrOptionOptionOption) ToString() string { return Uint16ArrOptionOptionOptionToString(m) }
-func (m Uint32ArrOptionOptionOption) ToString() string { return Uint32ArrOptionOptionOptionToString(m) }
-func (m Uint64ArrOptionOptionOption) ToString() string { return Uint64ArrOptionOptionOptionToString(m) }
-func (m UintptrArrOptionOptionOption) ToString() string {
-	return UintptrArrOptionOptionOptionToString(m)
+func (o UintOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintToString)
+	} else {
+		return "None"
+	}
 }
-func (m ByteArrOptionOptionOption) ToString() string { return ByteArrOptionOptionOptionToString(m) }
-func (m RuneArrOptionOptionOption) ToString() string { return RuneArrOptionOptionOptionToString(m) }
-func (m Float32ArrOptionOptionOption) ToString() string {
-	return Float32ArrOptionOptionOptionToString(m)
+func (o Uint8Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float64ArrOptionOptionOption) ToString() string {
-	return Float64ArrOptionOptionOptionToString(m)
+func (o Uint16Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex64ArrOptionOptionOption) ToString() string {
-	return Complex64ArrOptionOptionOptionToString(m)
+func (o Uint32Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex128ArrOptionOptionOption) ToString() string {
-	return Complex128ArrOptionOptionOptionToString(m)
+func (o Uint64Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyArrOptionOptionOption) ToString() string { return AnyArrOptionOptionOptionToString(m) }
-func (m BoolArrArrOptionOptionOption) ToString() string {
-	return BoolArrArrOptionOptionOptionToString(m)
+func (o UintptrOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrToString)
+	} else {
+		return "None"
+	}
 }
-func (m StringArrArrOptionOptionOption) ToString() string {
-	return StringArrArrOptionOptionOptionToString(m)
+func (o ByteOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteToString)
+	} else {
+		return "None"
+	}
 }
-func (m IntArrArrOptionOptionOption) ToString() string { return IntArrArrOptionOptionOptionToString(m) }
-func (m Int8ArrArrOptionOptionOption) ToString() string {
-	return Int8ArrArrOptionOptionOptionToString(m)
+func (o RuneOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int16ArrArrOptionOptionOption) ToString() string {
-	return Int16ArrArrOptionOptionOptionToString(m)
+func (o Float32Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int32ArrArrOptionOptionOption) ToString() string {
-	return Int32ArrArrOptionOptionOptionToString(m)
+func (o Float64Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int64ArrArrOptionOptionOption) ToString() string {
-	return Int64ArrArrOptionOptionOptionToString(m)
+func (o Complex64Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ToString)
+	} else {
+		return "None"
+	}
 }
-func (m UintArrArrOptionOptionOption) ToString() string {
-	return UintArrArrOptionOptionOptionToString(m)
+func (o Complex128Option) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint8ArrArrOptionOptionOption) ToString() string {
-	return Uint8ArrArrOptionOptionOptionToString(m)
+func (o AnyOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint16ArrArrOptionOptionOption) ToString() string {
-	return Uint16ArrArrOptionOptionOptionToString(m)
+func (o BoolArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint32ArrArrOptionOptionOption) ToString() string {
-	return Uint32ArrArrOptionOptionOptionToString(m)
+func (o StringArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint64ArrArrOptionOptionOption) ToString() string {
-	return Uint64ArrArrOptionOptionOptionToString(m)
+func (o IntArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m UintptrArrArrOptionOptionOption) ToString() string {
-	return UintptrArrArrOptionOptionOptionToString(m)
+func (o Int8ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m ByteArrArrOptionOptionOption) ToString() string {
-	return ByteArrArrOptionOptionOptionToString(m)
+func (o Int16ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m RuneArrArrOptionOptionOption) ToString() string {
-	return RuneArrArrOptionOptionOptionToString(m)
+func (o Int32ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float32ArrArrOptionOptionOption) ToString() string {
-	return Float32ArrArrOptionOptionOptionToString(m)
+func (o Int64ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float64ArrArrOptionOptionOption) ToString() string {
-	return Float64ArrArrOptionOptionOptionToString(m)
+func (o UintArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex64ArrArrOptionOptionOption) ToString() string {
-	return Complex64ArrArrOptionOptionOptionToString(m)
+func (o Uint8ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex128ArrArrOptionOptionOption) ToString() string {
-	return Complex128ArrArrOptionOptionOptionToString(m)
+func (o Uint16ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyArrArrOptionOptionOption) ToString() string { return AnyArrArrOptionOptionOptionToString(m) }
-func (m BoolOptionArrOptionOptionOption) ToString() string {
-	return BoolOptionArrOptionOptionOptionToString(m)
+func (o Uint32ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m StringOptionArrOptionOptionOption) ToString() string {
-	return StringOptionArrOptionOptionOptionToString(m)
+func (o Uint64ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m IntOptionArrOptionOptionOption) ToString() string {
-	return IntOptionArrOptionOptionOptionToString(m)
+func (o UintptrArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int8OptionArrOptionOptionOption) ToString() string {
-	return Int8OptionArrOptionOptionOptionToString(m)
+func (o ByteArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int16OptionArrOptionOptionOption) ToString() string {
-	return Int16OptionArrOptionOptionOptionToString(m)
+func (o RuneArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int32OptionArrOptionOptionOption) ToString() string {
-	return Int32OptionArrOptionOptionOptionToString(m)
+func (o Float32ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Int64OptionArrOptionOptionOption) ToString() string {
-	return Int64OptionArrOptionOptionOptionToString(m)
+func (o Float64ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m UintOptionArrOptionOptionOption) ToString() string {
-	return UintOptionArrOptionOptionOptionToString(m)
+func (o Complex64ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint8OptionArrOptionOptionOption) ToString() string {
-	return Uint8OptionArrOptionOptionOptionToString(m)
+func (o Complex128ArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint16OptionArrOptionOptionOption) ToString() string {
-	return Uint16OptionArrOptionOptionOptionToString(m)
+func (o AnyArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint32OptionArrOptionOptionOption) ToString() string {
-	return Uint32OptionArrOptionOptionOptionToString(m)
+func (o BoolArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint64OptionArrOptionOptionOption) ToString() string {
-	return Uint64OptionArrOptionOptionOptionToString(m)
+func (o StringArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m UintptrOptionArrOptionOptionOption) ToString() string {
-	return UintptrOptionArrOptionOptionOptionToString(m)
+func (o IntArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m ByteOptionArrOptionOptionOption) ToString() string {
-	return ByteOptionArrOptionOptionOptionToString(m)
+func (o Int8ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m RuneOptionArrOptionOptionOption) ToString() string {
-	return RuneOptionArrOptionOptionOptionToString(m)
+func (o Int16ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float32OptionArrOptionOptionOption) ToString() string {
-	return Float32OptionArrOptionOptionOptionToString(m)
+func (o Int32ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float64OptionArrOptionOptionOption) ToString() string {
-	return Float64OptionArrOptionOptionOptionToString(m)
+func (o Int64ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex64OptionArrOptionOptionOption) ToString() string {
-	return Complex64OptionArrOptionOptionOptionToString(m)
+func (o UintArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex128OptionArrOptionOptionOption) ToString() string {
-	return Complex128OptionArrOptionOptionOptionToString(m)
+func (o Uint8ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyOptionArrOptionOptionOption) ToString() string {
-	return AnyOptionArrOptionOptionOptionToString(m)
+func (o Uint16ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m BoolListOptionOptionOption) ToString() string { return BoolListOptionOptionOptionToString(m) }
-func (m StringListOptionOptionOption) ToString() string {
-	return StringListOptionOptionOptionToString(m)
+func (o Uint32ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m IntListOptionOptionOption) ToString() string   { return IntListOptionOptionOptionToString(m) }
-func (m Int8ListOptionOptionOption) ToString() string  { return Int8ListOptionOptionOptionToString(m) }
-func (m Int16ListOptionOptionOption) ToString() string { return Int16ListOptionOptionOptionToString(m) }
-func (m Int32ListOptionOptionOption) ToString() string { return Int32ListOptionOptionOptionToString(m) }
-func (m Int64ListOptionOptionOption) ToString() string { return Int64ListOptionOptionOptionToString(m) }
-func (m UintListOptionOptionOption) ToString() string  { return UintListOptionOptionOptionToString(m) }
-func (m Uint8ListOptionOptionOption) ToString() string { return Uint8ListOptionOptionOptionToString(m) }
-func (m Uint16ListOptionOptionOption) ToString() string {
-	return Uint16ListOptionOptionOptionToString(m)
+func (o Uint64ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint32ListOptionOptionOption) ToString() string {
-	return Uint32ListOptionOptionOptionToString(m)
+func (o UintptrArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Uint64ListOptionOptionOption) ToString() string {
-	return Uint64ListOptionOptionOptionToString(m)
+func (o ByteArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m UintptrListOptionOptionOption) ToString() string {
-	return UintptrListOptionOptionOptionToString(m)
+func (o RuneArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m ByteListOptionOptionOption) ToString() string { return ByteListOptionOptionOptionToString(m) }
-func (m RuneListOptionOptionOption) ToString() string { return RuneListOptionOptionOptionToString(m) }
-func (m Float32ListOptionOptionOption) ToString() string {
-	return Float32ListOptionOptionOptionToString(m)
+func (o Float32ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Float64ListOptionOptionOption) ToString() string {
-	return Float64ListOptionOptionOptionToString(m)
+func (o Float64ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex64ListOptionOptionOption) ToString() string {
-	return Complex64ListOptionOptionOptionToString(m)
+func (o Complex64ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m Complex128ListOptionOptionOption) ToString() string {
-	return Complex128ListOptionOptionOptionToString(m)
+func (o Complex128ArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ArrayArrayToString)
+	} else {
+		return "None"
+	}
 }
-func (m AnyListOptionOptionOption) ToString() string { return AnyListOptionOptionOptionToString(m) }
+func (o AnyArrayArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyArrayArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128OptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128OptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyOptionArrayOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyOptionArrayToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolListToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringListToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrListToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteListToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ListToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyListOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyListToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128OptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128OptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyArrayArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyArrayArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128OptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128OptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyOptionArrayOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyOptionArrayOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyListOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyListOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128OptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128OptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyArrayArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyArrayArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128OptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128OptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyOptionArrayOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyOptionArrayOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o BoolListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", BoolListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o StringListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", StringListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o IntListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", IntListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int8ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int8ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int16ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int16ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int32ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int32ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Int64ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Int64ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint8ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint8ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint16ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint16ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint32ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint32ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Uint64ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Uint64ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o UintptrListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", UintptrListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o ByteListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", ByteListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o RuneListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", RuneListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float32ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float32ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Float64ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Float64ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex64ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex64ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o Complex128ListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", Complex128ListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}
+func (o AnyListOptionOptionOption) ToString() string {
+	if o.IsDefined() {
+		return fmt.Sprintf("Some(%v)", AnyListOptionOptionToString)
+	} else {
+		return "None"
+	}
+}

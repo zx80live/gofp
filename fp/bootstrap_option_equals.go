@@ -3,747 +3,3903 @@
 
 package fp
 
-func (m1 BoolOption) Equals(m2 BoolOption) bool             { return BoolOptionEquals(m1, m2) }
-func (m1 StringOption) Equals(m2 StringOption) bool         { return StringOptionEquals(m1, m2) }
-func (m1 IntOption) Equals(m2 IntOption) bool               { return IntOptionEquals(m1, m2) }
-func (m1 Int8Option) Equals(m2 Int8Option) bool             { return Int8OptionEquals(m1, m2) }
-func (m1 Int16Option) Equals(m2 Int16Option) bool           { return Int16OptionEquals(m1, m2) }
-func (m1 Int32Option) Equals(m2 Int32Option) bool           { return Int32OptionEquals(m1, m2) }
-func (m1 Int64Option) Equals(m2 Int64Option) bool           { return Int64OptionEquals(m1, m2) }
-func (m1 UintOption) Equals(m2 UintOption) bool             { return UintOptionEquals(m1, m2) }
-func (m1 Uint8Option) Equals(m2 Uint8Option) bool           { return Uint8OptionEquals(m1, m2) }
-func (m1 Uint16Option) Equals(m2 Uint16Option) bool         { return Uint16OptionEquals(m1, m2) }
-func (m1 Uint32Option) Equals(m2 Uint32Option) bool         { return Uint32OptionEquals(m1, m2) }
-func (m1 Uint64Option) Equals(m2 Uint64Option) bool         { return Uint64OptionEquals(m1, m2) }
-func (m1 UintptrOption) Equals(m2 UintptrOption) bool       { return UintptrOptionEquals(m1, m2) }
-func (m1 ByteOption) Equals(m2 ByteOption) bool             { return ByteOptionEquals(m1, m2) }
-func (m1 RuneOption) Equals(m2 RuneOption) bool             { return RuneOptionEquals(m1, m2) }
-func (m1 Float32Option) Equals(m2 Float32Option) bool       { return Float32OptionEquals(m1, m2) }
-func (m1 Float64Option) Equals(m2 Float64Option) bool       { return Float64OptionEquals(m1, m2) }
-func (m1 Complex64Option) Equals(m2 Complex64Option) bool   { return Complex64OptionEquals(m1, m2) }
-func (m1 Complex128Option) Equals(m2 Complex128Option) bool { return Complex128OptionEquals(m1, m2) }
-func (m1 AnyOption) Equals(m2 AnyOption) bool               { return AnyOptionEquals(m1, m2) }
-func (m1 BoolArrOption) Equals(m2 BoolArrOption) bool       { return BoolArrOptionEquals(m1, m2) }
-func (m1 StringArrOption) Equals(m2 StringArrOption) bool   { return StringArrOptionEquals(m1, m2) }
-func (m1 IntArrOption) Equals(m2 IntArrOption) bool         { return IntArrOptionEquals(m1, m2) }
-func (m1 Int8ArrOption) Equals(m2 Int8ArrOption) bool       { return Int8ArrOptionEquals(m1, m2) }
-func (m1 Int16ArrOption) Equals(m2 Int16ArrOption) bool     { return Int16ArrOptionEquals(m1, m2) }
-func (m1 Int32ArrOption) Equals(m2 Int32ArrOption) bool     { return Int32ArrOptionEquals(m1, m2) }
-func (m1 Int64ArrOption) Equals(m2 Int64ArrOption) bool     { return Int64ArrOptionEquals(m1, m2) }
-func (m1 UintArrOption) Equals(m2 UintArrOption) bool       { return UintArrOptionEquals(m1, m2) }
-func (m1 Uint8ArrOption) Equals(m2 Uint8ArrOption) bool     { return Uint8ArrOptionEquals(m1, m2) }
-func (m1 Uint16ArrOption) Equals(m2 Uint16ArrOption) bool   { return Uint16ArrOptionEquals(m1, m2) }
-func (m1 Uint32ArrOption) Equals(m2 Uint32ArrOption) bool   { return Uint32ArrOptionEquals(m1, m2) }
-func (m1 Uint64ArrOption) Equals(m2 Uint64ArrOption) bool   { return Uint64ArrOptionEquals(m1, m2) }
-func (m1 UintptrArrOption) Equals(m2 UintptrArrOption) bool { return UintptrArrOptionEquals(m1, m2) }
-func (m1 ByteArrOption) Equals(m2 ByteArrOption) bool       { return ByteArrOptionEquals(m1, m2) }
-func (m1 RuneArrOption) Equals(m2 RuneArrOption) bool       { return RuneArrOptionEquals(m1, m2) }
-func (m1 Float32ArrOption) Equals(m2 Float32ArrOption) bool { return Float32ArrOptionEquals(m1, m2) }
-func (m1 Float64ArrOption) Equals(m2 Float64ArrOption) bool { return Float64ArrOptionEquals(m1, m2) }
-func (m1 Complex64ArrOption) Equals(m2 Complex64ArrOption) bool {
-	return Complex64ArrOptionEquals(m1, m2)
-}
-func (m1 Complex128ArrOption) Equals(m2 Complex128ArrOption) bool {
-	return Complex128ArrOptionEquals(m1, m2)
-}
-func (m1 AnyArrOption) Equals(m2 AnyArrOption) bool         { return AnyArrOptionEquals(m1, m2) }
-func (m1 BoolArrArrOption) Equals(m2 BoolArrArrOption) bool { return BoolArrArrOptionEquals(m1, m2) }
-func (m1 StringArrArrOption) Equals(m2 StringArrArrOption) bool {
-	return StringArrArrOptionEquals(m1, m2)
-}
-func (m1 IntArrArrOption) Equals(m2 IntArrArrOption) bool     { return IntArrArrOptionEquals(m1, m2) }
-func (m1 Int8ArrArrOption) Equals(m2 Int8ArrArrOption) bool   { return Int8ArrArrOptionEquals(m1, m2) }
-func (m1 Int16ArrArrOption) Equals(m2 Int16ArrArrOption) bool { return Int16ArrArrOptionEquals(m1, m2) }
-func (m1 Int32ArrArrOption) Equals(m2 Int32ArrArrOption) bool { return Int32ArrArrOptionEquals(m1, m2) }
-func (m1 Int64ArrArrOption) Equals(m2 Int64ArrArrOption) bool { return Int64ArrArrOptionEquals(m1, m2) }
-func (m1 UintArrArrOption) Equals(m2 UintArrArrOption) bool   { return UintArrArrOptionEquals(m1, m2) }
-func (m1 Uint8ArrArrOption) Equals(m2 Uint8ArrArrOption) bool { return Uint8ArrArrOptionEquals(m1, m2) }
-func (m1 Uint16ArrArrOption) Equals(m2 Uint16ArrArrOption) bool {
-	return Uint16ArrArrOptionEquals(m1, m2)
-}
-func (m1 Uint32ArrArrOption) Equals(m2 Uint32ArrArrOption) bool {
-	return Uint32ArrArrOptionEquals(m1, m2)
-}
-func (m1 Uint64ArrArrOption) Equals(m2 Uint64ArrArrOption) bool {
-	return Uint64ArrArrOptionEquals(m1, m2)
-}
-func (m1 UintptrArrArrOption) Equals(m2 UintptrArrArrOption) bool {
-	return UintptrArrArrOptionEquals(m1, m2)
-}
-func (m1 ByteArrArrOption) Equals(m2 ByteArrArrOption) bool { return ByteArrArrOptionEquals(m1, m2) }
-func (m1 RuneArrArrOption) Equals(m2 RuneArrArrOption) bool { return RuneArrArrOptionEquals(m1, m2) }
-func (m1 Float32ArrArrOption) Equals(m2 Float32ArrArrOption) bool {
-	return Float32ArrArrOptionEquals(m1, m2)
-}
-func (m1 Float64ArrArrOption) Equals(m2 Float64ArrArrOption) bool {
-	return Float64ArrArrOptionEquals(m1, m2)
-}
-func (m1 Complex64ArrArrOption) Equals(m2 Complex64ArrArrOption) bool {
-	return Complex64ArrArrOptionEquals(m1, m2)
-}
-func (m1 Complex128ArrArrOption) Equals(m2 Complex128ArrArrOption) bool {
-	return Complex128ArrArrOptionEquals(m1, m2)
-}
-func (m1 AnyArrArrOption) Equals(m2 AnyArrArrOption) bool { return AnyArrArrOptionEquals(m1, m2) }
-func (m1 BoolOptionArrOption) Equals(m2 BoolOptionArrOption) bool {
-	return BoolOptionArrOptionEquals(m1, m2)
-}
-func (m1 StringOptionArrOption) Equals(m2 StringOptionArrOption) bool {
-	return StringOptionArrOptionEquals(m1, m2)
-}
-func (m1 IntOptionArrOption) Equals(m2 IntOptionArrOption) bool {
-	return IntOptionArrOptionEquals(m1, m2)
-}
-func (m1 Int8OptionArrOption) Equals(m2 Int8OptionArrOption) bool {
-	return Int8OptionArrOptionEquals(m1, m2)
-}
-func (m1 Int16OptionArrOption) Equals(m2 Int16OptionArrOption) bool {
-	return Int16OptionArrOptionEquals(m1, m2)
-}
-func (m1 Int32OptionArrOption) Equals(m2 Int32OptionArrOption) bool {
-	return Int32OptionArrOptionEquals(m1, m2)
-}
-func (m1 Int64OptionArrOption) Equals(m2 Int64OptionArrOption) bool {
-	return Int64OptionArrOptionEquals(m1, m2)
-}
-func (m1 UintOptionArrOption) Equals(m2 UintOptionArrOption) bool {
-	return UintOptionArrOptionEquals(m1, m2)
-}
-func (m1 Uint8OptionArrOption) Equals(m2 Uint8OptionArrOption) bool {
-	return Uint8OptionArrOptionEquals(m1, m2)
-}
-func (m1 Uint16OptionArrOption) Equals(m2 Uint16OptionArrOption) bool {
-	return Uint16OptionArrOptionEquals(m1, m2)
-}
-func (m1 Uint32OptionArrOption) Equals(m2 Uint32OptionArrOption) bool {
-	return Uint32OptionArrOptionEquals(m1, m2)
-}
-func (m1 Uint64OptionArrOption) Equals(m2 Uint64OptionArrOption) bool {
-	return Uint64OptionArrOptionEquals(m1, m2)
-}
-func (m1 UintptrOptionArrOption) Equals(m2 UintptrOptionArrOption) bool {
-	return UintptrOptionArrOptionEquals(m1, m2)
-}
-func (m1 ByteOptionArrOption) Equals(m2 ByteOptionArrOption) bool {
-	return ByteOptionArrOptionEquals(m1, m2)
-}
-func (m1 RuneOptionArrOption) Equals(m2 RuneOptionArrOption) bool {
-	return RuneOptionArrOptionEquals(m1, m2)
-}
-func (m1 Float32OptionArrOption) Equals(m2 Float32OptionArrOption) bool {
-	return Float32OptionArrOptionEquals(m1, m2)
-}
-func (m1 Float64OptionArrOption) Equals(m2 Float64OptionArrOption) bool {
-	return Float64OptionArrOptionEquals(m1, m2)
-}
-func (m1 Complex64OptionArrOption) Equals(m2 Complex64OptionArrOption) bool {
-	return Complex64OptionArrOptionEquals(m1, m2)
-}
-func (m1 Complex128OptionArrOption) Equals(m2 Complex128OptionArrOption) bool {
-	return Complex128OptionArrOptionEquals(m1, m2)
-}
-func (m1 AnyOptionArrOption) Equals(m2 AnyOptionArrOption) bool {
-	return AnyOptionArrOptionEquals(m1, m2)
-}
-func (m1 BoolListOption) Equals(m2 BoolListOption) bool       { return BoolListOptionEquals(m1, m2) }
-func (m1 StringListOption) Equals(m2 StringListOption) bool   { return StringListOptionEquals(m1, m2) }
-func (m1 IntListOption) Equals(m2 IntListOption) bool         { return IntListOptionEquals(m1, m2) }
-func (m1 Int8ListOption) Equals(m2 Int8ListOption) bool       { return Int8ListOptionEquals(m1, m2) }
-func (m1 Int16ListOption) Equals(m2 Int16ListOption) bool     { return Int16ListOptionEquals(m1, m2) }
-func (m1 Int32ListOption) Equals(m2 Int32ListOption) bool     { return Int32ListOptionEquals(m1, m2) }
-func (m1 Int64ListOption) Equals(m2 Int64ListOption) bool     { return Int64ListOptionEquals(m1, m2) }
-func (m1 UintListOption) Equals(m2 UintListOption) bool       { return UintListOptionEquals(m1, m2) }
-func (m1 Uint8ListOption) Equals(m2 Uint8ListOption) bool     { return Uint8ListOptionEquals(m1, m2) }
-func (m1 Uint16ListOption) Equals(m2 Uint16ListOption) bool   { return Uint16ListOptionEquals(m1, m2) }
-func (m1 Uint32ListOption) Equals(m2 Uint32ListOption) bool   { return Uint32ListOptionEquals(m1, m2) }
-func (m1 Uint64ListOption) Equals(m2 Uint64ListOption) bool   { return Uint64ListOptionEquals(m1, m2) }
-func (m1 UintptrListOption) Equals(m2 UintptrListOption) bool { return UintptrListOptionEquals(m1, m2) }
-func (m1 ByteListOption) Equals(m2 ByteListOption) bool       { return ByteListOptionEquals(m1, m2) }
-func (m1 RuneListOption) Equals(m2 RuneListOption) bool       { return RuneListOptionEquals(m1, m2) }
-func (m1 Float32ListOption) Equals(m2 Float32ListOption) bool { return Float32ListOptionEquals(m1, m2) }
-func (m1 Float64ListOption) Equals(m2 Float64ListOption) bool { return Float64ListOptionEquals(m1, m2) }
-func (m1 Complex64ListOption) Equals(m2 Complex64ListOption) bool {
-	return Complex64ListOptionEquals(m1, m2)
-}
-func (m1 Complex128ListOption) Equals(m2 Complex128ListOption) bool {
-	return Complex128ListOptionEquals(m1, m2)
-}
-func (m1 AnyListOption) Equals(m2 AnyListOption) bool       { return AnyListOptionEquals(m1, m2) }
-func (m1 BoolOptionOption) Equals(m2 BoolOptionOption) bool { return BoolOptionOptionEquals(m1, m2) }
-func (m1 StringOptionOption) Equals(m2 StringOptionOption) bool {
-	return StringOptionOptionEquals(m1, m2)
-}
-func (m1 IntOptionOption) Equals(m2 IntOptionOption) bool     { return IntOptionOptionEquals(m1, m2) }
-func (m1 Int8OptionOption) Equals(m2 Int8OptionOption) bool   { return Int8OptionOptionEquals(m1, m2) }
-func (m1 Int16OptionOption) Equals(m2 Int16OptionOption) bool { return Int16OptionOptionEquals(m1, m2) }
-func (m1 Int32OptionOption) Equals(m2 Int32OptionOption) bool { return Int32OptionOptionEquals(m1, m2) }
-func (m1 Int64OptionOption) Equals(m2 Int64OptionOption) bool { return Int64OptionOptionEquals(m1, m2) }
-func (m1 UintOptionOption) Equals(m2 UintOptionOption) bool   { return UintOptionOptionEquals(m1, m2) }
-func (m1 Uint8OptionOption) Equals(m2 Uint8OptionOption) bool { return Uint8OptionOptionEquals(m1, m2) }
-func (m1 Uint16OptionOption) Equals(m2 Uint16OptionOption) bool {
-	return Uint16OptionOptionEquals(m1, m2)
-}
-func (m1 Uint32OptionOption) Equals(m2 Uint32OptionOption) bool {
-	return Uint32OptionOptionEquals(m1, m2)
-}
-func (m1 Uint64OptionOption) Equals(m2 Uint64OptionOption) bool {
-	return Uint64OptionOptionEquals(m1, m2)
-}
-func (m1 UintptrOptionOption) Equals(m2 UintptrOptionOption) bool {
-	return UintptrOptionOptionEquals(m1, m2)
-}
-func (m1 ByteOptionOption) Equals(m2 ByteOptionOption) bool { return ByteOptionOptionEquals(m1, m2) }
-func (m1 RuneOptionOption) Equals(m2 RuneOptionOption) bool { return RuneOptionOptionEquals(m1, m2) }
-func (m1 Float32OptionOption) Equals(m2 Float32OptionOption) bool {
-	return Float32OptionOptionEquals(m1, m2)
-}
-func (m1 Float64OptionOption) Equals(m2 Float64OptionOption) bool {
-	return Float64OptionOptionEquals(m1, m2)
-}
-func (m1 Complex64OptionOption) Equals(m2 Complex64OptionOption) bool {
-	return Complex64OptionOptionEquals(m1, m2)
-}
-func (m1 Complex128OptionOption) Equals(m2 Complex128OptionOption) bool {
-	return Complex128OptionOptionEquals(m1, m2)
-}
-func (m1 AnyOptionOption) Equals(m2 AnyOptionOption) bool { return AnyOptionOptionEquals(m1, m2) }
-func (m1 BoolArrOptionOption) Equals(m2 BoolArrOptionOption) bool {
-	return BoolArrOptionOptionEquals(m1, m2)
-}
-func (m1 StringArrOptionOption) Equals(m2 StringArrOptionOption) bool {
-	return StringArrOptionOptionEquals(m1, m2)
-}
-func (m1 IntArrOptionOption) Equals(m2 IntArrOptionOption) bool {
-	return IntArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int8ArrOptionOption) Equals(m2 Int8ArrOptionOption) bool {
-	return Int8ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int16ArrOptionOption) Equals(m2 Int16ArrOptionOption) bool {
-	return Int16ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int32ArrOptionOption) Equals(m2 Int32ArrOptionOption) bool {
-	return Int32ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int64ArrOptionOption) Equals(m2 Int64ArrOptionOption) bool {
-	return Int64ArrOptionOptionEquals(m1, m2)
-}
-func (m1 UintArrOptionOption) Equals(m2 UintArrOptionOption) bool {
-	return UintArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8ArrOptionOption) Equals(m2 Uint8ArrOptionOption) bool {
-	return Uint8ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16ArrOptionOption) Equals(m2 Uint16ArrOptionOption) bool {
-	return Uint16ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32ArrOptionOption) Equals(m2 Uint32ArrOptionOption) bool {
-	return Uint32ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64ArrOptionOption) Equals(m2 Uint64ArrOptionOption) bool {
-	return Uint64ArrOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrArrOptionOption) Equals(m2 UintptrArrOptionOption) bool {
-	return UintptrArrOptionOptionEquals(m1, m2)
-}
-func (m1 ByteArrOptionOption) Equals(m2 ByteArrOptionOption) bool {
-	return ByteArrOptionOptionEquals(m1, m2)
-}
-func (m1 RuneArrOptionOption) Equals(m2 RuneArrOptionOption) bool {
-	return RuneArrOptionOptionEquals(m1, m2)
-}
-func (m1 Float32ArrOptionOption) Equals(m2 Float32ArrOptionOption) bool {
-	return Float32ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Float64ArrOptionOption) Equals(m2 Float64ArrOptionOption) bool {
-	return Float64ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64ArrOptionOption) Equals(m2 Complex64ArrOptionOption) bool {
-	return Complex64ArrOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128ArrOptionOption) Equals(m2 Complex128ArrOptionOption) bool {
-	return Complex128ArrOptionOptionEquals(m1, m2)
-}
-func (m1 AnyArrOptionOption) Equals(m2 AnyArrOptionOption) bool {
-	return AnyArrOptionOptionEquals(m1, m2)
-}
-func (m1 BoolArrArrOptionOption) Equals(m2 BoolArrArrOptionOption) bool {
-	return BoolArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 StringArrArrOptionOption) Equals(m2 StringArrArrOptionOption) bool {
-	return StringArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 IntArrArrOptionOption) Equals(m2 IntArrArrOptionOption) bool {
-	return IntArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int8ArrArrOptionOption) Equals(m2 Int8ArrArrOptionOption) bool {
-	return Int8ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int16ArrArrOptionOption) Equals(m2 Int16ArrArrOptionOption) bool {
-	return Int16ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int32ArrArrOptionOption) Equals(m2 Int32ArrArrOptionOption) bool {
-	return Int32ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int64ArrArrOptionOption) Equals(m2 Int64ArrArrOptionOption) bool {
-	return Int64ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 UintArrArrOptionOption) Equals(m2 UintArrArrOptionOption) bool {
-	return UintArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8ArrArrOptionOption) Equals(m2 Uint8ArrArrOptionOption) bool {
-	return Uint8ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16ArrArrOptionOption) Equals(m2 Uint16ArrArrOptionOption) bool {
-	return Uint16ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32ArrArrOptionOption) Equals(m2 Uint32ArrArrOptionOption) bool {
-	return Uint32ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64ArrArrOptionOption) Equals(m2 Uint64ArrArrOptionOption) bool {
-	return Uint64ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrArrArrOptionOption) Equals(m2 UintptrArrArrOptionOption) bool {
-	return UintptrArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 ByteArrArrOptionOption) Equals(m2 ByteArrArrOptionOption) bool {
-	return ByteArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 RuneArrArrOptionOption) Equals(m2 RuneArrArrOptionOption) bool {
-	return RuneArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Float32ArrArrOptionOption) Equals(m2 Float32ArrArrOptionOption) bool {
-	return Float32ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Float64ArrArrOptionOption) Equals(m2 Float64ArrArrOptionOption) bool {
-	return Float64ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64ArrArrOptionOption) Equals(m2 Complex64ArrArrOptionOption) bool {
-	return Complex64ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128ArrArrOptionOption) Equals(m2 Complex128ArrArrOptionOption) bool {
-	return Complex128ArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 AnyArrArrOptionOption) Equals(m2 AnyArrArrOptionOption) bool {
-	return AnyArrArrOptionOptionEquals(m1, m2)
-}
-func (m1 BoolOptionArrOptionOption) Equals(m2 BoolOptionArrOptionOption) bool {
-	return BoolOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 StringOptionArrOptionOption) Equals(m2 StringOptionArrOptionOption) bool {
-	return StringOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 IntOptionArrOptionOption) Equals(m2 IntOptionArrOptionOption) bool {
-	return IntOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int8OptionArrOptionOption) Equals(m2 Int8OptionArrOptionOption) bool {
-	return Int8OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int16OptionArrOptionOption) Equals(m2 Int16OptionArrOptionOption) bool {
-	return Int16OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int32OptionArrOptionOption) Equals(m2 Int32OptionArrOptionOption) bool {
-	return Int32OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Int64OptionArrOptionOption) Equals(m2 Int64OptionArrOptionOption) bool {
-	return Int64OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 UintOptionArrOptionOption) Equals(m2 UintOptionArrOptionOption) bool {
-	return UintOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8OptionArrOptionOption) Equals(m2 Uint8OptionArrOptionOption) bool {
-	return Uint8OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16OptionArrOptionOption) Equals(m2 Uint16OptionArrOptionOption) bool {
-	return Uint16OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32OptionArrOptionOption) Equals(m2 Uint32OptionArrOptionOption) bool {
-	return Uint32OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64OptionArrOptionOption) Equals(m2 Uint64OptionArrOptionOption) bool {
-	return Uint64OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrOptionArrOptionOption) Equals(m2 UintptrOptionArrOptionOption) bool {
-	return UintptrOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 ByteOptionArrOptionOption) Equals(m2 ByteOptionArrOptionOption) bool {
-	return ByteOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 RuneOptionArrOptionOption) Equals(m2 RuneOptionArrOptionOption) bool {
-	return RuneOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Float32OptionArrOptionOption) Equals(m2 Float32OptionArrOptionOption) bool {
-	return Float32OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Float64OptionArrOptionOption) Equals(m2 Float64OptionArrOptionOption) bool {
-	return Float64OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64OptionArrOptionOption) Equals(m2 Complex64OptionArrOptionOption) bool {
-	return Complex64OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128OptionArrOptionOption) Equals(m2 Complex128OptionArrOptionOption) bool {
-	return Complex128OptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 AnyOptionArrOptionOption) Equals(m2 AnyOptionArrOptionOption) bool {
-	return AnyOptionArrOptionOptionEquals(m1, m2)
-}
-func (m1 BoolListOptionOption) Equals(m2 BoolListOptionOption) bool {
-	return BoolListOptionOptionEquals(m1, m2)
-}
-func (m1 StringListOptionOption) Equals(m2 StringListOptionOption) bool {
-	return StringListOptionOptionEquals(m1, m2)
-}
-func (m1 IntListOptionOption) Equals(m2 IntListOptionOption) bool {
-	return IntListOptionOptionEquals(m1, m2)
-}
-func (m1 Int8ListOptionOption) Equals(m2 Int8ListOptionOption) bool {
-	return Int8ListOptionOptionEquals(m1, m2)
-}
-func (m1 Int16ListOptionOption) Equals(m2 Int16ListOptionOption) bool {
-	return Int16ListOptionOptionEquals(m1, m2)
-}
-func (m1 Int32ListOptionOption) Equals(m2 Int32ListOptionOption) bool {
-	return Int32ListOptionOptionEquals(m1, m2)
-}
-func (m1 Int64ListOptionOption) Equals(m2 Int64ListOptionOption) bool {
-	return Int64ListOptionOptionEquals(m1, m2)
-}
-func (m1 UintListOptionOption) Equals(m2 UintListOptionOption) bool {
-	return UintListOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8ListOptionOption) Equals(m2 Uint8ListOptionOption) bool {
-	return Uint8ListOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16ListOptionOption) Equals(m2 Uint16ListOptionOption) bool {
-	return Uint16ListOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32ListOptionOption) Equals(m2 Uint32ListOptionOption) bool {
-	return Uint32ListOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64ListOptionOption) Equals(m2 Uint64ListOptionOption) bool {
-	return Uint64ListOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrListOptionOption) Equals(m2 UintptrListOptionOption) bool {
-	return UintptrListOptionOptionEquals(m1, m2)
-}
-func (m1 ByteListOptionOption) Equals(m2 ByteListOptionOption) bool {
-	return ByteListOptionOptionEquals(m1, m2)
-}
-func (m1 RuneListOptionOption) Equals(m2 RuneListOptionOption) bool {
-	return RuneListOptionOptionEquals(m1, m2)
-}
-func (m1 Float32ListOptionOption) Equals(m2 Float32ListOptionOption) bool {
-	return Float32ListOptionOptionEquals(m1, m2)
-}
-func (m1 Float64ListOptionOption) Equals(m2 Float64ListOptionOption) bool {
-	return Float64ListOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64ListOptionOption) Equals(m2 Complex64ListOptionOption) bool {
-	return Complex64ListOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128ListOptionOption) Equals(m2 Complex128ListOptionOption) bool {
-	return Complex128ListOptionOptionEquals(m1, m2)
-}
-func (m1 AnyListOptionOption) Equals(m2 AnyListOptionOption) bool {
-	return AnyListOptionOptionEquals(m1, m2)
-}
-func (m1 BoolOptionOptionOption) Equals(m2 BoolOptionOptionOption) bool {
-	return BoolOptionOptionOptionEquals(m1, m2)
-}
-func (m1 StringOptionOptionOption) Equals(m2 StringOptionOptionOption) bool {
-	return StringOptionOptionOptionEquals(m1, m2)
-}
-func (m1 IntOptionOptionOption) Equals(m2 IntOptionOptionOption) bool {
-	return IntOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int8OptionOptionOption) Equals(m2 Int8OptionOptionOption) bool {
-	return Int8OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int16OptionOptionOption) Equals(m2 Int16OptionOptionOption) bool {
-	return Int16OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int32OptionOptionOption) Equals(m2 Int32OptionOptionOption) bool {
-	return Int32OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int64OptionOptionOption) Equals(m2 Int64OptionOptionOption) bool {
-	return Int64OptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintOptionOptionOption) Equals(m2 UintOptionOptionOption) bool {
-	return UintOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8OptionOptionOption) Equals(m2 Uint8OptionOptionOption) bool {
-	return Uint8OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16OptionOptionOption) Equals(m2 Uint16OptionOptionOption) bool {
-	return Uint16OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32OptionOptionOption) Equals(m2 Uint32OptionOptionOption) bool {
-	return Uint32OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64OptionOptionOption) Equals(m2 Uint64OptionOptionOption) bool {
-	return Uint64OptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrOptionOptionOption) Equals(m2 UintptrOptionOptionOption) bool {
-	return UintptrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 ByteOptionOptionOption) Equals(m2 ByteOptionOptionOption) bool {
-	return ByteOptionOptionOptionEquals(m1, m2)
-}
-func (m1 RuneOptionOptionOption) Equals(m2 RuneOptionOptionOption) bool {
-	return RuneOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float32OptionOptionOption) Equals(m2 Float32OptionOptionOption) bool {
-	return Float32OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float64OptionOptionOption) Equals(m2 Float64OptionOptionOption) bool {
-	return Float64OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64OptionOptionOption) Equals(m2 Complex64OptionOptionOption) bool {
-	return Complex64OptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128OptionOptionOption) Equals(m2 Complex128OptionOptionOption) bool {
-	return Complex128OptionOptionOptionEquals(m1, m2)
-}
-func (m1 AnyOptionOptionOption) Equals(m2 AnyOptionOptionOption) bool {
-	return AnyOptionOptionOptionEquals(m1, m2)
-}
-func (m1 BoolArrOptionOptionOption) Equals(m2 BoolArrOptionOptionOption) bool {
-	return BoolArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 StringArrOptionOptionOption) Equals(m2 StringArrOptionOptionOption) bool {
-	return StringArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 IntArrOptionOptionOption) Equals(m2 IntArrOptionOptionOption) bool {
-	return IntArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int8ArrOptionOptionOption) Equals(m2 Int8ArrOptionOptionOption) bool {
-	return Int8ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int16ArrOptionOptionOption) Equals(m2 Int16ArrOptionOptionOption) bool {
-	return Int16ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int32ArrOptionOptionOption) Equals(m2 Int32ArrOptionOptionOption) bool {
-	return Int32ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int64ArrOptionOptionOption) Equals(m2 Int64ArrOptionOptionOption) bool {
-	return Int64ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintArrOptionOptionOption) Equals(m2 UintArrOptionOptionOption) bool {
-	return UintArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8ArrOptionOptionOption) Equals(m2 Uint8ArrOptionOptionOption) bool {
-	return Uint8ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16ArrOptionOptionOption) Equals(m2 Uint16ArrOptionOptionOption) bool {
-	return Uint16ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32ArrOptionOptionOption) Equals(m2 Uint32ArrOptionOptionOption) bool {
-	return Uint32ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64ArrOptionOptionOption) Equals(m2 Uint64ArrOptionOptionOption) bool {
-	return Uint64ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrArrOptionOptionOption) Equals(m2 UintptrArrOptionOptionOption) bool {
-	return UintptrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 ByteArrOptionOptionOption) Equals(m2 ByteArrOptionOptionOption) bool {
-	return ByteArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 RuneArrOptionOptionOption) Equals(m2 RuneArrOptionOptionOption) bool {
-	return RuneArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float32ArrOptionOptionOption) Equals(m2 Float32ArrOptionOptionOption) bool {
-	return Float32ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float64ArrOptionOptionOption) Equals(m2 Float64ArrOptionOptionOption) bool {
-	return Float64ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64ArrOptionOptionOption) Equals(m2 Complex64ArrOptionOptionOption) bool {
-	return Complex64ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128ArrOptionOptionOption) Equals(m2 Complex128ArrOptionOptionOption) bool {
-	return Complex128ArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 AnyArrOptionOptionOption) Equals(m2 AnyArrOptionOptionOption) bool {
-	return AnyArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 BoolArrArrOptionOptionOption) Equals(m2 BoolArrArrOptionOptionOption) bool {
-	return BoolArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 StringArrArrOptionOptionOption) Equals(m2 StringArrArrOptionOptionOption) bool {
-	return StringArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 IntArrArrOptionOptionOption) Equals(m2 IntArrArrOptionOptionOption) bool {
-	return IntArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int8ArrArrOptionOptionOption) Equals(m2 Int8ArrArrOptionOptionOption) bool {
-	return Int8ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int16ArrArrOptionOptionOption) Equals(m2 Int16ArrArrOptionOptionOption) bool {
-	return Int16ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int32ArrArrOptionOptionOption) Equals(m2 Int32ArrArrOptionOptionOption) bool {
-	return Int32ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int64ArrArrOptionOptionOption) Equals(m2 Int64ArrArrOptionOptionOption) bool {
-	return Int64ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintArrArrOptionOptionOption) Equals(m2 UintArrArrOptionOptionOption) bool {
-	return UintArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8ArrArrOptionOptionOption) Equals(m2 Uint8ArrArrOptionOptionOption) bool {
-	return Uint8ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16ArrArrOptionOptionOption) Equals(m2 Uint16ArrArrOptionOptionOption) bool {
-	return Uint16ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32ArrArrOptionOptionOption) Equals(m2 Uint32ArrArrOptionOptionOption) bool {
-	return Uint32ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64ArrArrOptionOptionOption) Equals(m2 Uint64ArrArrOptionOptionOption) bool {
-	return Uint64ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrArrArrOptionOptionOption) Equals(m2 UintptrArrArrOptionOptionOption) bool {
-	return UintptrArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 ByteArrArrOptionOptionOption) Equals(m2 ByteArrArrOptionOptionOption) bool {
-	return ByteArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 RuneArrArrOptionOptionOption) Equals(m2 RuneArrArrOptionOptionOption) bool {
-	return RuneArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float32ArrArrOptionOptionOption) Equals(m2 Float32ArrArrOptionOptionOption) bool {
-	return Float32ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float64ArrArrOptionOptionOption) Equals(m2 Float64ArrArrOptionOptionOption) bool {
-	return Float64ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64ArrArrOptionOptionOption) Equals(m2 Complex64ArrArrOptionOptionOption) bool {
-	return Complex64ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128ArrArrOptionOptionOption) Equals(m2 Complex128ArrArrOptionOptionOption) bool {
-	return Complex128ArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 AnyArrArrOptionOptionOption) Equals(m2 AnyArrArrOptionOptionOption) bool {
-	return AnyArrArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 BoolOptionArrOptionOptionOption) Equals(m2 BoolOptionArrOptionOptionOption) bool {
-	return BoolOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 StringOptionArrOptionOptionOption) Equals(m2 StringOptionArrOptionOptionOption) bool {
-	return StringOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 IntOptionArrOptionOptionOption) Equals(m2 IntOptionArrOptionOptionOption) bool {
-	return IntOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int8OptionArrOptionOptionOption) Equals(m2 Int8OptionArrOptionOptionOption) bool {
-	return Int8OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int16OptionArrOptionOptionOption) Equals(m2 Int16OptionArrOptionOptionOption) bool {
-	return Int16OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int32OptionArrOptionOptionOption) Equals(m2 Int32OptionArrOptionOptionOption) bool {
-	return Int32OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int64OptionArrOptionOptionOption) Equals(m2 Int64OptionArrOptionOptionOption) bool {
-	return Int64OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintOptionArrOptionOptionOption) Equals(m2 UintOptionArrOptionOptionOption) bool {
-	return UintOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8OptionArrOptionOptionOption) Equals(m2 Uint8OptionArrOptionOptionOption) bool {
-	return Uint8OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16OptionArrOptionOptionOption) Equals(m2 Uint16OptionArrOptionOptionOption) bool {
-	return Uint16OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32OptionArrOptionOptionOption) Equals(m2 Uint32OptionArrOptionOptionOption) bool {
-	return Uint32OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64OptionArrOptionOptionOption) Equals(m2 Uint64OptionArrOptionOptionOption) bool {
-	return Uint64OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrOptionArrOptionOptionOption) Equals(m2 UintptrOptionArrOptionOptionOption) bool {
-	return UintptrOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 ByteOptionArrOptionOptionOption) Equals(m2 ByteOptionArrOptionOptionOption) bool {
-	return ByteOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 RuneOptionArrOptionOptionOption) Equals(m2 RuneOptionArrOptionOptionOption) bool {
-	return RuneOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float32OptionArrOptionOptionOption) Equals(m2 Float32OptionArrOptionOptionOption) bool {
-	return Float32OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float64OptionArrOptionOptionOption) Equals(m2 Float64OptionArrOptionOptionOption) bool {
-	return Float64OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64OptionArrOptionOptionOption) Equals(m2 Complex64OptionArrOptionOptionOption) bool {
-	return Complex64OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128OptionArrOptionOptionOption) Equals(m2 Complex128OptionArrOptionOptionOption) bool {
-	return Complex128OptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 AnyOptionArrOptionOptionOption) Equals(m2 AnyOptionArrOptionOptionOption) bool {
-	return AnyOptionArrOptionOptionOptionEquals(m1, m2)
-}
-func (m1 BoolListOptionOptionOption) Equals(m2 BoolListOptionOptionOption) bool {
-	return BoolListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 StringListOptionOptionOption) Equals(m2 StringListOptionOptionOption) bool {
-	return StringListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 IntListOptionOptionOption) Equals(m2 IntListOptionOptionOption) bool {
-	return IntListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int8ListOptionOptionOption) Equals(m2 Int8ListOptionOptionOption) bool {
-	return Int8ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int16ListOptionOptionOption) Equals(m2 Int16ListOptionOptionOption) bool {
-	return Int16ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int32ListOptionOptionOption) Equals(m2 Int32ListOptionOptionOption) bool {
-	return Int32ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Int64ListOptionOptionOption) Equals(m2 Int64ListOptionOptionOption) bool {
-	return Int64ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintListOptionOptionOption) Equals(m2 UintListOptionOptionOption) bool {
-	return UintListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint8ListOptionOptionOption) Equals(m2 Uint8ListOptionOptionOption) bool {
-	return Uint8ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint16ListOptionOptionOption) Equals(m2 Uint16ListOptionOptionOption) bool {
-	return Uint16ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint32ListOptionOptionOption) Equals(m2 Uint32ListOptionOptionOption) bool {
-	return Uint32ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Uint64ListOptionOptionOption) Equals(m2 Uint64ListOptionOptionOption) bool {
-	return Uint64ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 UintptrListOptionOptionOption) Equals(m2 UintptrListOptionOptionOption) bool {
-	return UintptrListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 ByteListOptionOptionOption) Equals(m2 ByteListOptionOptionOption) bool {
-	return ByteListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 RuneListOptionOptionOption) Equals(m2 RuneListOptionOptionOption) bool {
-	return RuneListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float32ListOptionOptionOption) Equals(m2 Float32ListOptionOptionOption) bool {
-	return Float32ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Float64ListOptionOptionOption) Equals(m2 Float64ListOptionOptionOption) bool {
-	return Float64ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex64ListOptionOptionOption) Equals(m2 Complex64ListOptionOptionOption) bool {
-	return Complex64ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 Complex128ListOptionOptionOption) Equals(m2 Complex128ListOptionOptionOption) bool {
-	return Complex128ListOptionOptionOptionEquals(m1, m2)
-}
-func (m1 AnyListOptionOptionOption) Equals(m2 AnyListOptionOptionOption) bool {
-	return AnyListOptionOptionOptionEquals(m1, m2)
+func (a BoolOption) Equals(b BoolOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringOption) Equals(b StringOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntOption) Equals(b IntOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8Option) Equals(b Int8Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16Option) Equals(b Int16Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32Option) Equals(b Int32Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64Option) Equals(b Int64Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintOption) Equals(b UintOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8Option) Equals(b Uint8Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16Option) Equals(b Uint16Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32Option) Equals(b Uint32Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64Option) Equals(b Uint64Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrOption) Equals(b UintptrOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteOption) Equals(b ByteOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneOption) Equals(b RuneOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32Option) Equals(b Float32Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64Option) Equals(b Float64Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64Option) Equals(b Complex64Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128Option) Equals(b Complex128Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128Equals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyOption) Equals(b AnyOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolArrayOption) Equals(b BoolArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringArrayOption) Equals(b StringArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntArrayOption) Equals(b IntArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ArrayOption) Equals(b Int8ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ArrayOption) Equals(b Int16ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ArrayOption) Equals(b Int32ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ArrayOption) Equals(b Int64ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintArrayOption) Equals(b UintArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ArrayOption) Equals(b Uint8ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ArrayOption) Equals(b Uint16ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ArrayOption) Equals(b Uint32ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ArrayOption) Equals(b Uint64ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrArrayOption) Equals(b UintptrArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteArrayOption) Equals(b ByteArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneArrayOption) Equals(b RuneArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ArrayOption) Equals(b Float32ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ArrayOption) Equals(b Float64ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ArrayOption) Equals(b Complex64ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ArrayOption) Equals(b Complex128ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyArrayOption) Equals(b AnyArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolArrayArrayOption) Equals(b BoolArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringArrayArrayOption) Equals(b StringArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntArrayArrayOption) Equals(b IntArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ArrayArrayOption) Equals(b Int8ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ArrayArrayOption) Equals(b Int16ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ArrayArrayOption) Equals(b Int32ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ArrayArrayOption) Equals(b Int64ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintArrayArrayOption) Equals(b UintArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ArrayArrayOption) Equals(b Uint8ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ArrayArrayOption) Equals(b Uint16ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ArrayArrayOption) Equals(b Uint32ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ArrayArrayOption) Equals(b Uint64ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrArrayArrayOption) Equals(b UintptrArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteArrayArrayOption) Equals(b ByteArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneArrayArrayOption) Equals(b RuneArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ArrayArrayOption) Equals(b Float32ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ArrayArrayOption) Equals(b Float64ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ArrayArrayOption) Equals(b Complex64ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ArrayArrayOption) Equals(b Complex128ArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyArrayArrayOption) Equals(b AnyArrayArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyArrayArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolOptionArrayOption) Equals(b BoolOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringOptionArrayOption) Equals(b StringOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntOptionArrayOption) Equals(b IntOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8OptionArrayOption) Equals(b Int8OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16OptionArrayOption) Equals(b Int16OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32OptionArrayOption) Equals(b Int32OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64OptionArrayOption) Equals(b Int64OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintOptionArrayOption) Equals(b UintOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8OptionArrayOption) Equals(b Uint8OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16OptionArrayOption) Equals(b Uint16OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32OptionArrayOption) Equals(b Uint32OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64OptionArrayOption) Equals(b Uint64OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrOptionArrayOption) Equals(b UintptrOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteOptionArrayOption) Equals(b ByteOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneOptionArrayOption) Equals(b RuneOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32OptionArrayOption) Equals(b Float32OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64OptionArrayOption) Equals(b Float64OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64OptionArrayOption) Equals(b Complex64OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128OptionArrayOption) Equals(b Complex128OptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128OptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyOptionArrayOption) Equals(b AnyOptionArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyOptionArrayEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolListOption) Equals(b BoolListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringListOption) Equals(b StringListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntListOption) Equals(b IntListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ListOption) Equals(b Int8ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ListOption) Equals(b Int16ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ListOption) Equals(b Int32ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ListOption) Equals(b Int64ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintListOption) Equals(b UintListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ListOption) Equals(b Uint8ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ListOption) Equals(b Uint16ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ListOption) Equals(b Uint32ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ListOption) Equals(b Uint64ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrListOption) Equals(b UintptrListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteListOption) Equals(b ByteListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneListOption) Equals(b RuneListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ListOption) Equals(b Float32ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ListOption) Equals(b Float64ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ListOption) Equals(b Complex64ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ListOption) Equals(b Complex128ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyListOption) Equals(b AnyListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyListEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolOptionOption) Equals(b BoolOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringOptionOption) Equals(b StringOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntOptionOption) Equals(b IntOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8OptionOption) Equals(b Int8OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16OptionOption) Equals(b Int16OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32OptionOption) Equals(b Int32OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64OptionOption) Equals(b Int64OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintOptionOption) Equals(b UintOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8OptionOption) Equals(b Uint8OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16OptionOption) Equals(b Uint16OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32OptionOption) Equals(b Uint32OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64OptionOption) Equals(b Uint64OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrOptionOption) Equals(b UintptrOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteOptionOption) Equals(b ByteOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneOptionOption) Equals(b RuneOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32OptionOption) Equals(b Float32OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64OptionOption) Equals(b Float64OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64OptionOption) Equals(b Complex64OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128OptionOption) Equals(b Complex128OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128OptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyOptionOption) Equals(b AnyOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolArrayOptionOption) Equals(b BoolArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringArrayOptionOption) Equals(b StringArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntArrayOptionOption) Equals(b IntArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ArrayOptionOption) Equals(b Int8ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ArrayOptionOption) Equals(b Int16ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ArrayOptionOption) Equals(b Int32ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ArrayOptionOption) Equals(b Int64ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintArrayOptionOption) Equals(b UintArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ArrayOptionOption) Equals(b Uint8ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ArrayOptionOption) Equals(b Uint16ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ArrayOptionOption) Equals(b Uint32ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ArrayOptionOption) Equals(b Uint64ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrArrayOptionOption) Equals(b UintptrArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteArrayOptionOption) Equals(b ByteArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneArrayOptionOption) Equals(b RuneArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ArrayOptionOption) Equals(b Float32ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ArrayOptionOption) Equals(b Float64ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ArrayOptionOption) Equals(b Complex64ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ArrayOptionOption) Equals(b Complex128ArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyArrayOptionOption) Equals(b AnyArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolArrayArrayOptionOption) Equals(b BoolArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringArrayArrayOptionOption) Equals(b StringArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntArrayArrayOptionOption) Equals(b IntArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ArrayArrayOptionOption) Equals(b Int8ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ArrayArrayOptionOption) Equals(b Int16ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ArrayArrayOptionOption) Equals(b Int32ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ArrayArrayOptionOption) Equals(b Int64ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintArrayArrayOptionOption) Equals(b UintArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ArrayArrayOptionOption) Equals(b Uint8ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ArrayArrayOptionOption) Equals(b Uint16ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ArrayArrayOptionOption) Equals(b Uint32ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ArrayArrayOptionOption) Equals(b Uint64ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrArrayArrayOptionOption) Equals(b UintptrArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteArrayArrayOptionOption) Equals(b ByteArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneArrayArrayOptionOption) Equals(b RuneArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ArrayArrayOptionOption) Equals(b Float32ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ArrayArrayOptionOption) Equals(b Float64ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ArrayArrayOptionOption) Equals(b Complex64ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ArrayArrayOptionOption) Equals(b Complex128ArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyArrayArrayOptionOption) Equals(b AnyArrayArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyArrayArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolOptionArrayOptionOption) Equals(b BoolOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringOptionArrayOptionOption) Equals(b StringOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntOptionArrayOptionOption) Equals(b IntOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8OptionArrayOptionOption) Equals(b Int8OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16OptionArrayOptionOption) Equals(b Int16OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32OptionArrayOptionOption) Equals(b Int32OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64OptionArrayOptionOption) Equals(b Int64OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintOptionArrayOptionOption) Equals(b UintOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8OptionArrayOptionOption) Equals(b Uint8OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16OptionArrayOptionOption) Equals(b Uint16OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32OptionArrayOptionOption) Equals(b Uint32OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64OptionArrayOptionOption) Equals(b Uint64OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrOptionArrayOptionOption) Equals(b UintptrOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteOptionArrayOptionOption) Equals(b ByteOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneOptionArrayOptionOption) Equals(b RuneOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32OptionArrayOptionOption) Equals(b Float32OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64OptionArrayOptionOption) Equals(b Float64OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64OptionArrayOptionOption) Equals(b Complex64OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128OptionArrayOptionOption) Equals(b Complex128OptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128OptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyOptionArrayOptionOption) Equals(b AnyOptionArrayOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyOptionArrayOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolListOptionOption) Equals(b BoolListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringListOptionOption) Equals(b StringListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntListOptionOption) Equals(b IntListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ListOptionOption) Equals(b Int8ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ListOptionOption) Equals(b Int16ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ListOptionOption) Equals(b Int32ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ListOptionOption) Equals(b Int64ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintListOptionOption) Equals(b UintListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ListOptionOption) Equals(b Uint8ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ListOptionOption) Equals(b Uint16ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ListOptionOption) Equals(b Uint32ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ListOptionOption) Equals(b Uint64ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrListOptionOption) Equals(b UintptrListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteListOptionOption) Equals(b ByteListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneListOptionOption) Equals(b RuneListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ListOptionOption) Equals(b Float32ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ListOptionOption) Equals(b Float64ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ListOptionOption) Equals(b Complex64ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ListOptionOption) Equals(b Complex128ListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyListOptionOption) Equals(b AnyListOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyListOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolOptionOptionOption) Equals(b BoolOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringOptionOptionOption) Equals(b StringOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntOptionOptionOption) Equals(b IntOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8OptionOptionOption) Equals(b Int8OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16OptionOptionOption) Equals(b Int16OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32OptionOptionOption) Equals(b Int32OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64OptionOptionOption) Equals(b Int64OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintOptionOptionOption) Equals(b UintOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8OptionOptionOption) Equals(b Uint8OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16OptionOptionOption) Equals(b Uint16OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32OptionOptionOption) Equals(b Uint32OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64OptionOptionOption) Equals(b Uint64OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrOptionOptionOption) Equals(b UintptrOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteOptionOptionOption) Equals(b ByteOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneOptionOptionOption) Equals(b RuneOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32OptionOptionOption) Equals(b Float32OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64OptionOptionOption) Equals(b Float64OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64OptionOptionOption) Equals(b Complex64OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128OptionOptionOption) Equals(b Complex128OptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128OptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyOptionOptionOption) Equals(b AnyOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolArrayOptionOptionOption) Equals(b BoolArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringArrayOptionOptionOption) Equals(b StringArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntArrayOptionOptionOption) Equals(b IntArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ArrayOptionOptionOption) Equals(b Int8ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ArrayOptionOptionOption) Equals(b Int16ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ArrayOptionOptionOption) Equals(b Int32ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ArrayOptionOptionOption) Equals(b Int64ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintArrayOptionOptionOption) Equals(b UintArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ArrayOptionOptionOption) Equals(b Uint8ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ArrayOptionOptionOption) Equals(b Uint16ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ArrayOptionOptionOption) Equals(b Uint32ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ArrayOptionOptionOption) Equals(b Uint64ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrArrayOptionOptionOption) Equals(b UintptrArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteArrayOptionOptionOption) Equals(b ByteArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneArrayOptionOptionOption) Equals(b RuneArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ArrayOptionOptionOption) Equals(b Float32ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ArrayOptionOptionOption) Equals(b Float64ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ArrayOptionOptionOption) Equals(b Complex64ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ArrayOptionOptionOption) Equals(b Complex128ArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyArrayOptionOptionOption) Equals(b AnyArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolArrayArrayOptionOptionOption) Equals(b BoolArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringArrayArrayOptionOptionOption) Equals(b StringArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntArrayArrayOptionOptionOption) Equals(b IntArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ArrayArrayOptionOptionOption) Equals(b Int8ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ArrayArrayOptionOptionOption) Equals(b Int16ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ArrayArrayOptionOptionOption) Equals(b Int32ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ArrayArrayOptionOptionOption) Equals(b Int64ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintArrayArrayOptionOptionOption) Equals(b UintArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ArrayArrayOptionOptionOption) Equals(b Uint8ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ArrayArrayOptionOptionOption) Equals(b Uint16ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ArrayArrayOptionOptionOption) Equals(b Uint32ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ArrayArrayOptionOptionOption) Equals(b Uint64ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrArrayArrayOptionOptionOption) Equals(b UintptrArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteArrayArrayOptionOptionOption) Equals(b ByteArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneArrayArrayOptionOptionOption) Equals(b RuneArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ArrayArrayOptionOptionOption) Equals(b Float32ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ArrayArrayOptionOptionOption) Equals(b Float64ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ArrayArrayOptionOptionOption) Equals(b Complex64ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ArrayArrayOptionOptionOption) Equals(b Complex128ArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyArrayArrayOptionOptionOption) Equals(b AnyArrayArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyArrayArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolOptionArrayOptionOptionOption) Equals(b BoolOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringOptionArrayOptionOptionOption) Equals(b StringOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntOptionArrayOptionOptionOption) Equals(b IntOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8OptionArrayOptionOptionOption) Equals(b Int8OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16OptionArrayOptionOptionOption) Equals(b Int16OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32OptionArrayOptionOptionOption) Equals(b Int32OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64OptionArrayOptionOptionOption) Equals(b Int64OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintOptionArrayOptionOptionOption) Equals(b UintOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8OptionArrayOptionOptionOption) Equals(b Uint8OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16OptionArrayOptionOptionOption) Equals(b Uint16OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32OptionArrayOptionOptionOption) Equals(b Uint32OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64OptionArrayOptionOptionOption) Equals(b Uint64OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrOptionArrayOptionOptionOption) Equals(b UintptrOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteOptionArrayOptionOptionOption) Equals(b ByteOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneOptionArrayOptionOptionOption) Equals(b RuneOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32OptionArrayOptionOptionOption) Equals(b Float32OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64OptionArrayOptionOptionOption) Equals(b Float64OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64OptionArrayOptionOptionOption) Equals(b Complex64OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128OptionArrayOptionOptionOption) Equals(b Complex128OptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128OptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyOptionArrayOptionOptionOption) Equals(b AnyOptionArrayOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyOptionArrayOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a BoolListOptionOptionOption) Equals(b BoolListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return BoolListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a StringListOptionOptionOption) Equals(b StringListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return StringListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a IntListOptionOptionOption) Equals(b IntListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return IntListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int8ListOptionOptionOption) Equals(b Int8ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int8ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int16ListOptionOptionOption) Equals(b Int16ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int16ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int32ListOptionOptionOption) Equals(b Int32ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int32ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Int64ListOptionOptionOption) Equals(b Int64ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Int64ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintListOptionOptionOption) Equals(b UintListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint8ListOptionOptionOption) Equals(b Uint8ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint8ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint16ListOptionOptionOption) Equals(b Uint16ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint16ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint32ListOptionOptionOption) Equals(b Uint32ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint32ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Uint64ListOptionOptionOption) Equals(b Uint64ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Uint64ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a UintptrListOptionOptionOption) Equals(b UintptrListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return UintptrListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a ByteListOptionOptionOption) Equals(b ByteListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return ByteListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a RuneListOptionOptionOption) Equals(b RuneListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return RuneListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float32ListOptionOptionOption) Equals(b Float32ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float32ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Float64ListOptionOptionOption) Equals(b Float64ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Float64ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex64ListOptionOptionOption) Equals(b Complex64ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex64ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Complex128ListOptionOptionOption) Equals(b Complex128ListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Complex128ListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a AnyListOptionOptionOption) Equals(b AnyListOptionOptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return AnyListOptionOptionEquals(*a.value, *b.value)
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
 }

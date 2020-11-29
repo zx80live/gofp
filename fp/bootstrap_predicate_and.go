@@ -63,184 +63,184 @@ func (p1 Complex128Predicate) And(p2 Complex128Predicate) Complex128Predicate {
 func (p1 AnyPredicate) And(p2 AnyPredicate) AnyPredicate {
 	return func(e Any) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrPredicate) And(p2 BoolArrPredicate) BoolArrPredicate {
+func (p1 BoolArrayPredicate) And(p2 BoolArrayPredicate) BoolArrayPredicate {
 	return func(e []bool) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrPredicate) And(p2 StringArrPredicate) StringArrPredicate {
+func (p1 StringArrayPredicate) And(p2 StringArrayPredicate) StringArrayPredicate {
 	return func(e []string) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrPredicate) And(p2 IntArrPredicate) IntArrPredicate {
+func (p1 IntArrayPredicate) And(p2 IntArrayPredicate) IntArrayPredicate {
 	return func(e []int) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrPredicate) And(p2 Int8ArrPredicate) Int8ArrPredicate {
+func (p1 Int8ArrayPredicate) And(p2 Int8ArrayPredicate) Int8ArrayPredicate {
 	return func(e []int8) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrPredicate) And(p2 Int16ArrPredicate) Int16ArrPredicate {
+func (p1 Int16ArrayPredicate) And(p2 Int16ArrayPredicate) Int16ArrayPredicate {
 	return func(e []int16) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrPredicate) And(p2 Int32ArrPredicate) Int32ArrPredicate {
+func (p1 Int32ArrayPredicate) And(p2 Int32ArrayPredicate) Int32ArrayPredicate {
 	return func(e []int32) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrPredicate) And(p2 Int64ArrPredicate) Int64ArrPredicate {
+func (p1 Int64ArrayPredicate) And(p2 Int64ArrayPredicate) Int64ArrayPredicate {
 	return func(e []int64) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrPredicate) And(p2 UintArrPredicate) UintArrPredicate {
+func (p1 UintArrayPredicate) And(p2 UintArrayPredicate) UintArrayPredicate {
 	return func(e []uint) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrPredicate) And(p2 Uint8ArrPredicate) Uint8ArrPredicate {
+func (p1 Uint8ArrayPredicate) And(p2 Uint8ArrayPredicate) Uint8ArrayPredicate {
 	return func(e []uint8) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrPredicate) And(p2 Uint16ArrPredicate) Uint16ArrPredicate {
+func (p1 Uint16ArrayPredicate) And(p2 Uint16ArrayPredicate) Uint16ArrayPredicate {
 	return func(e []uint16) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrPredicate) And(p2 Uint32ArrPredicate) Uint32ArrPredicate {
+func (p1 Uint32ArrayPredicate) And(p2 Uint32ArrayPredicate) Uint32ArrayPredicate {
 	return func(e []uint32) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrPredicate) And(p2 Uint64ArrPredicate) Uint64ArrPredicate {
+func (p1 Uint64ArrayPredicate) And(p2 Uint64ArrayPredicate) Uint64ArrayPredicate {
 	return func(e []uint64) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrPredicate) And(p2 UintptrArrPredicate) UintptrArrPredicate {
+func (p1 UintptrArrayPredicate) And(p2 UintptrArrayPredicate) UintptrArrayPredicate {
 	return func(e []uintptr) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrPredicate) And(p2 ByteArrPredicate) ByteArrPredicate {
+func (p1 ByteArrayPredicate) And(p2 ByteArrayPredicate) ByteArrayPredicate {
 	return func(e []byte) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrPredicate) And(p2 RuneArrPredicate) RuneArrPredicate {
+func (p1 RuneArrayPredicate) And(p2 RuneArrayPredicate) RuneArrayPredicate {
 	return func(e []rune) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrPredicate) And(p2 Float32ArrPredicate) Float32ArrPredicate {
+func (p1 Float32ArrayPredicate) And(p2 Float32ArrayPredicate) Float32ArrayPredicate {
 	return func(e []float32) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrPredicate) And(p2 Float64ArrPredicate) Float64ArrPredicate {
+func (p1 Float64ArrayPredicate) And(p2 Float64ArrayPredicate) Float64ArrayPredicate {
 	return func(e []float64) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrPredicate) And(p2 Complex64ArrPredicate) Complex64ArrPredicate {
+func (p1 Complex64ArrayPredicate) And(p2 Complex64ArrayPredicate) Complex64ArrayPredicate {
 	return func(e []complex64) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrPredicate) And(p2 Complex128ArrPredicate) Complex128ArrPredicate {
+func (p1 Complex128ArrayPredicate) And(p2 Complex128ArrayPredicate) Complex128ArrayPredicate {
 	return func(e []complex128) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrPredicate) And(p2 AnyArrPredicate) AnyArrPredicate {
+func (p1 AnyArrayPredicate) And(p2 AnyArrayPredicate) AnyArrayPredicate {
 	return func(e []Any) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrPredicate) And(p2 BoolArrArrPredicate) BoolArrArrPredicate {
+func (p1 BoolArrayArrayPredicate) And(p2 BoolArrayArrayPredicate) BoolArrayArrayPredicate {
 	return func(e [][]bool) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrPredicate) And(p2 StringArrArrPredicate) StringArrArrPredicate {
+func (p1 StringArrayArrayPredicate) And(p2 StringArrayArrayPredicate) StringArrayArrayPredicate {
 	return func(e [][]string) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrPredicate) And(p2 IntArrArrPredicate) IntArrArrPredicate {
+func (p1 IntArrayArrayPredicate) And(p2 IntArrayArrayPredicate) IntArrayArrayPredicate {
 	return func(e [][]int) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrPredicate) And(p2 Int8ArrArrPredicate) Int8ArrArrPredicate {
+func (p1 Int8ArrayArrayPredicate) And(p2 Int8ArrayArrayPredicate) Int8ArrayArrayPredicate {
 	return func(e [][]int8) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrPredicate) And(p2 Int16ArrArrPredicate) Int16ArrArrPredicate {
+func (p1 Int16ArrayArrayPredicate) And(p2 Int16ArrayArrayPredicate) Int16ArrayArrayPredicate {
 	return func(e [][]int16) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrPredicate) And(p2 Int32ArrArrPredicate) Int32ArrArrPredicate {
+func (p1 Int32ArrayArrayPredicate) And(p2 Int32ArrayArrayPredicate) Int32ArrayArrayPredicate {
 	return func(e [][]int32) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrPredicate) And(p2 Int64ArrArrPredicate) Int64ArrArrPredicate {
+func (p1 Int64ArrayArrayPredicate) And(p2 Int64ArrayArrayPredicate) Int64ArrayArrayPredicate {
 	return func(e [][]int64) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrPredicate) And(p2 UintArrArrPredicate) UintArrArrPredicate {
+func (p1 UintArrayArrayPredicate) And(p2 UintArrayArrayPredicate) UintArrayArrayPredicate {
 	return func(e [][]uint) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrPredicate) And(p2 Uint8ArrArrPredicate) Uint8ArrArrPredicate {
+func (p1 Uint8ArrayArrayPredicate) And(p2 Uint8ArrayArrayPredicate) Uint8ArrayArrayPredicate {
 	return func(e [][]uint8) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrPredicate) And(p2 Uint16ArrArrPredicate) Uint16ArrArrPredicate {
+func (p1 Uint16ArrayArrayPredicate) And(p2 Uint16ArrayArrayPredicate) Uint16ArrayArrayPredicate {
 	return func(e [][]uint16) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrPredicate) And(p2 Uint32ArrArrPredicate) Uint32ArrArrPredicate {
+func (p1 Uint32ArrayArrayPredicate) And(p2 Uint32ArrayArrayPredicate) Uint32ArrayArrayPredicate {
 	return func(e [][]uint32) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrPredicate) And(p2 Uint64ArrArrPredicate) Uint64ArrArrPredicate {
+func (p1 Uint64ArrayArrayPredicate) And(p2 Uint64ArrayArrayPredicate) Uint64ArrayArrayPredicate {
 	return func(e [][]uint64) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrPredicate) And(p2 UintptrArrArrPredicate) UintptrArrArrPredicate {
+func (p1 UintptrArrayArrayPredicate) And(p2 UintptrArrayArrayPredicate) UintptrArrayArrayPredicate {
 	return func(e [][]uintptr) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrPredicate) And(p2 ByteArrArrPredicate) ByteArrArrPredicate {
+func (p1 ByteArrayArrayPredicate) And(p2 ByteArrayArrayPredicate) ByteArrayArrayPredicate {
 	return func(e [][]byte) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrPredicate) And(p2 RuneArrArrPredicate) RuneArrArrPredicate {
+func (p1 RuneArrayArrayPredicate) And(p2 RuneArrayArrayPredicate) RuneArrayArrayPredicate {
 	return func(e [][]rune) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrPredicate) And(p2 Float32ArrArrPredicate) Float32ArrArrPredicate {
+func (p1 Float32ArrayArrayPredicate) And(p2 Float32ArrayArrayPredicate) Float32ArrayArrayPredicate {
 	return func(e [][]float32) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrPredicate) And(p2 Float64ArrArrPredicate) Float64ArrArrPredicate {
+func (p1 Float64ArrayArrayPredicate) And(p2 Float64ArrayArrayPredicate) Float64ArrayArrayPredicate {
 	return func(e [][]float64) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrPredicate) And(p2 Complex64ArrArrPredicate) Complex64ArrArrPredicate {
+func (p1 Complex64ArrayArrayPredicate) And(p2 Complex64ArrayArrayPredicate) Complex64ArrayArrayPredicate {
 	return func(e [][]complex64) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrPredicate) And(p2 Complex128ArrArrPredicate) Complex128ArrArrPredicate {
+func (p1 Complex128ArrayArrayPredicate) And(p2 Complex128ArrayArrayPredicate) Complex128ArrayArrayPredicate {
 	return func(e [][]complex128) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrPredicate) And(p2 AnyArrArrPredicate) AnyArrArrPredicate {
+func (p1 AnyArrayArrayPredicate) And(p2 AnyArrayArrayPredicate) AnyArrayArrayPredicate {
 	return func(e [][]Any) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrPredicate) And(p2 BoolOptionArrPredicate) BoolOptionArrPredicate {
+func (p1 BoolOptionArrayPredicate) And(p2 BoolOptionArrayPredicate) BoolOptionArrayPredicate {
 	return func(e []BoolOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrPredicate) And(p2 StringOptionArrPredicate) StringOptionArrPredicate {
+func (p1 StringOptionArrayPredicate) And(p2 StringOptionArrayPredicate) StringOptionArrayPredicate {
 	return func(e []StringOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrPredicate) And(p2 IntOptionArrPredicate) IntOptionArrPredicate {
+func (p1 IntOptionArrayPredicate) And(p2 IntOptionArrayPredicate) IntOptionArrayPredicate {
 	return func(e []IntOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrPredicate) And(p2 Int8OptionArrPredicate) Int8OptionArrPredicate {
+func (p1 Int8OptionArrayPredicate) And(p2 Int8OptionArrayPredicate) Int8OptionArrayPredicate {
 	return func(e []Int8Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrPredicate) And(p2 Int16OptionArrPredicate) Int16OptionArrPredicate {
+func (p1 Int16OptionArrayPredicate) And(p2 Int16OptionArrayPredicate) Int16OptionArrayPredicate {
 	return func(e []Int16Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrPredicate) And(p2 Int32OptionArrPredicate) Int32OptionArrPredicate {
+func (p1 Int32OptionArrayPredicate) And(p2 Int32OptionArrayPredicate) Int32OptionArrayPredicate {
 	return func(e []Int32Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrPredicate) And(p2 Int64OptionArrPredicate) Int64OptionArrPredicate {
+func (p1 Int64OptionArrayPredicate) And(p2 Int64OptionArrayPredicate) Int64OptionArrayPredicate {
 	return func(e []Int64Option) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrPredicate) And(p2 UintOptionArrPredicate) UintOptionArrPredicate {
+func (p1 UintOptionArrayPredicate) And(p2 UintOptionArrayPredicate) UintOptionArrayPredicate {
 	return func(e []UintOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrPredicate) And(p2 Uint8OptionArrPredicate) Uint8OptionArrPredicate {
+func (p1 Uint8OptionArrayPredicate) And(p2 Uint8OptionArrayPredicate) Uint8OptionArrayPredicate {
 	return func(e []Uint8Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrPredicate) And(p2 Uint16OptionArrPredicate) Uint16OptionArrPredicate {
+func (p1 Uint16OptionArrayPredicate) And(p2 Uint16OptionArrayPredicate) Uint16OptionArrayPredicate {
 	return func(e []Uint16Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrPredicate) And(p2 Uint32OptionArrPredicate) Uint32OptionArrPredicate {
+func (p1 Uint32OptionArrayPredicate) And(p2 Uint32OptionArrayPredicate) Uint32OptionArrayPredicate {
 	return func(e []Uint32Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrPredicate) And(p2 Uint64OptionArrPredicate) Uint64OptionArrPredicate {
+func (p1 Uint64OptionArrayPredicate) And(p2 Uint64OptionArrayPredicate) Uint64OptionArrayPredicate {
 	return func(e []Uint64Option) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrPredicate) And(p2 UintptrOptionArrPredicate) UintptrOptionArrPredicate {
+func (p1 UintptrOptionArrayPredicate) And(p2 UintptrOptionArrayPredicate) UintptrOptionArrayPredicate {
 	return func(e []UintptrOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrPredicate) And(p2 ByteOptionArrPredicate) ByteOptionArrPredicate {
+func (p1 ByteOptionArrayPredicate) And(p2 ByteOptionArrayPredicate) ByteOptionArrayPredicate {
 	return func(e []ByteOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrPredicate) And(p2 RuneOptionArrPredicate) RuneOptionArrPredicate {
+func (p1 RuneOptionArrayPredicate) And(p2 RuneOptionArrayPredicate) RuneOptionArrayPredicate {
 	return func(e []RuneOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrPredicate) And(p2 Float32OptionArrPredicate) Float32OptionArrPredicate {
+func (p1 Float32OptionArrayPredicate) And(p2 Float32OptionArrayPredicate) Float32OptionArrayPredicate {
 	return func(e []Float32Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrPredicate) And(p2 Float64OptionArrPredicate) Float64OptionArrPredicate {
+func (p1 Float64OptionArrayPredicate) And(p2 Float64OptionArrayPredicate) Float64OptionArrayPredicate {
 	return func(e []Float64Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrPredicate) And(p2 Complex64OptionArrPredicate) Complex64OptionArrPredicate {
+func (p1 Complex64OptionArrayPredicate) And(p2 Complex64OptionArrayPredicate) Complex64OptionArrayPredicate {
 	return func(e []Complex64Option) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrPredicate) And(p2 Complex128OptionArrPredicate) Complex128OptionArrPredicate {
+func (p1 Complex128OptionArrayPredicate) And(p2 Complex128OptionArrayPredicate) Complex128OptionArrayPredicate {
 	return func(e []Complex128Option) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrPredicate) And(p2 AnyOptionArrPredicate) AnyOptionArrPredicate {
+func (p1 AnyOptionArrayPredicate) And(p2 AnyOptionArrayPredicate) AnyOptionArrayPredicate {
 	return func(e []AnyOption) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolOptionPredicate) And(p2 BoolOptionPredicate) BoolOptionPredicate {
@@ -303,185 +303,185 @@ func (p1 Complex128OptionPredicate) And(p2 Complex128OptionPredicate) Complex128
 func (p1 AnyOptionPredicate) And(p2 AnyOptionPredicate) AnyOptionPredicate {
 	return func(e AnyOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrOptionPredicate) And(p2 BoolArrOptionPredicate) BoolArrOptionPredicate {
-	return func(e BoolArrOption) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayOptionPredicate) And(p2 BoolArrayOptionPredicate) BoolArrayOptionPredicate {
+	return func(e BoolArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrOptionPredicate) And(p2 StringArrOptionPredicate) StringArrOptionPredicate {
-	return func(e StringArrOption) bool { return p1(e) && p2(e) }
+func (p1 StringArrayOptionPredicate) And(p2 StringArrayOptionPredicate) StringArrayOptionPredicate {
+	return func(e StringArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrOptionPredicate) And(p2 IntArrOptionPredicate) IntArrOptionPredicate {
-	return func(e IntArrOption) bool { return p1(e) && p2(e) }
+func (p1 IntArrayOptionPredicate) And(p2 IntArrayOptionPredicate) IntArrayOptionPredicate {
+	return func(e IntArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrOptionPredicate) And(p2 Int8ArrOptionPredicate) Int8ArrOptionPredicate {
-	return func(e Int8ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayOptionPredicate) And(p2 Int8ArrayOptionPredicate) Int8ArrayOptionPredicate {
+	return func(e Int8ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrOptionPredicate) And(p2 Int16ArrOptionPredicate) Int16ArrOptionPredicate {
-	return func(e Int16ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayOptionPredicate) And(p2 Int16ArrayOptionPredicate) Int16ArrayOptionPredicate {
+	return func(e Int16ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrOptionPredicate) And(p2 Int32ArrOptionPredicate) Int32ArrOptionPredicate {
-	return func(e Int32ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayOptionPredicate) And(p2 Int32ArrayOptionPredicate) Int32ArrayOptionPredicate {
+	return func(e Int32ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrOptionPredicate) And(p2 Int64ArrOptionPredicate) Int64ArrOptionPredicate {
-	return func(e Int64ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayOptionPredicate) And(p2 Int64ArrayOptionPredicate) Int64ArrayOptionPredicate {
+	return func(e Int64ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrOptionPredicate) And(p2 UintArrOptionPredicate) UintArrOptionPredicate {
-	return func(e UintArrOption) bool { return p1(e) && p2(e) }
+func (p1 UintArrayOptionPredicate) And(p2 UintArrayOptionPredicate) UintArrayOptionPredicate {
+	return func(e UintArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrOptionPredicate) And(p2 Uint8ArrOptionPredicate) Uint8ArrOptionPredicate {
-	return func(e Uint8ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayOptionPredicate) And(p2 Uint8ArrayOptionPredicate) Uint8ArrayOptionPredicate {
+	return func(e Uint8ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrOptionPredicate) And(p2 Uint16ArrOptionPredicate) Uint16ArrOptionPredicate {
-	return func(e Uint16ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayOptionPredicate) And(p2 Uint16ArrayOptionPredicate) Uint16ArrayOptionPredicate {
+	return func(e Uint16ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrOptionPredicate) And(p2 Uint32ArrOptionPredicate) Uint32ArrOptionPredicate {
-	return func(e Uint32ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayOptionPredicate) And(p2 Uint32ArrayOptionPredicate) Uint32ArrayOptionPredicate {
+	return func(e Uint32ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrOptionPredicate) And(p2 Uint64ArrOptionPredicate) Uint64ArrOptionPredicate {
-	return func(e Uint64ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayOptionPredicate) And(p2 Uint64ArrayOptionPredicate) Uint64ArrayOptionPredicate {
+	return func(e Uint64ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrOptionPredicate) And(p2 UintptrArrOptionPredicate) UintptrArrOptionPredicate {
-	return func(e UintptrArrOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayOptionPredicate) And(p2 UintptrArrayOptionPredicate) UintptrArrayOptionPredicate {
+	return func(e UintptrArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrOptionPredicate) And(p2 ByteArrOptionPredicate) ByteArrOptionPredicate {
-	return func(e ByteArrOption) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayOptionPredicate) And(p2 ByteArrayOptionPredicate) ByteArrayOptionPredicate {
+	return func(e ByteArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrOptionPredicate) And(p2 RuneArrOptionPredicate) RuneArrOptionPredicate {
-	return func(e RuneArrOption) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayOptionPredicate) And(p2 RuneArrayOptionPredicate) RuneArrayOptionPredicate {
+	return func(e RuneArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrOptionPredicate) And(p2 Float32ArrOptionPredicate) Float32ArrOptionPredicate {
-	return func(e Float32ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayOptionPredicate) And(p2 Float32ArrayOptionPredicate) Float32ArrayOptionPredicate {
+	return func(e Float32ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrOptionPredicate) And(p2 Float64ArrOptionPredicate) Float64ArrOptionPredicate {
-	return func(e Float64ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayOptionPredicate) And(p2 Float64ArrayOptionPredicate) Float64ArrayOptionPredicate {
+	return func(e Float64ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrOptionPredicate) And(p2 Complex64ArrOptionPredicate) Complex64ArrOptionPredicate {
-	return func(e Complex64ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayOptionPredicate) And(p2 Complex64ArrayOptionPredicate) Complex64ArrayOptionPredicate {
+	return func(e Complex64ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrOptionPredicate) And(p2 Complex128ArrOptionPredicate) Complex128ArrOptionPredicate {
-	return func(e Complex128ArrOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayOptionPredicate) And(p2 Complex128ArrayOptionPredicate) Complex128ArrayOptionPredicate {
+	return func(e Complex128ArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrOptionPredicate) And(p2 AnyArrOptionPredicate) AnyArrOptionPredicate {
-	return func(e AnyArrOption) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayOptionPredicate) And(p2 AnyArrayOptionPredicate) AnyArrayOptionPredicate {
+	return func(e AnyArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrOptionPredicate) And(p2 BoolArrArrOptionPredicate) BoolArrArrOptionPredicate {
-	return func(e BoolArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayOptionPredicate) And(p2 BoolArrayArrayOptionPredicate) BoolArrayArrayOptionPredicate {
+	return func(e BoolArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrOptionPredicate) And(p2 StringArrArrOptionPredicate) StringArrArrOptionPredicate {
-	return func(e StringArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayOptionPredicate) And(p2 StringArrayArrayOptionPredicate) StringArrayArrayOptionPredicate {
+	return func(e StringArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrOptionPredicate) And(p2 IntArrArrOptionPredicate) IntArrArrOptionPredicate {
-	return func(e IntArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayOptionPredicate) And(p2 IntArrayArrayOptionPredicate) IntArrayArrayOptionPredicate {
+	return func(e IntArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrOptionPredicate) And(p2 Int8ArrArrOptionPredicate) Int8ArrArrOptionPredicate {
-	return func(e Int8ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayOptionPredicate) And(p2 Int8ArrayArrayOptionPredicate) Int8ArrayArrayOptionPredicate {
+	return func(e Int8ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrOptionPredicate) And(p2 Int16ArrArrOptionPredicate) Int16ArrArrOptionPredicate {
-	return func(e Int16ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayOptionPredicate) And(p2 Int16ArrayArrayOptionPredicate) Int16ArrayArrayOptionPredicate {
+	return func(e Int16ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrOptionPredicate) And(p2 Int32ArrArrOptionPredicate) Int32ArrArrOptionPredicate {
-	return func(e Int32ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayOptionPredicate) And(p2 Int32ArrayArrayOptionPredicate) Int32ArrayArrayOptionPredicate {
+	return func(e Int32ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrOptionPredicate) And(p2 Int64ArrArrOptionPredicate) Int64ArrArrOptionPredicate {
-	return func(e Int64ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayOptionPredicate) And(p2 Int64ArrayArrayOptionPredicate) Int64ArrayArrayOptionPredicate {
+	return func(e Int64ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrOptionPredicate) And(p2 UintArrArrOptionPredicate) UintArrArrOptionPredicate {
-	return func(e UintArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayOptionPredicate) And(p2 UintArrayArrayOptionPredicate) UintArrayArrayOptionPredicate {
+	return func(e UintArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrOptionPredicate) And(p2 Uint8ArrArrOptionPredicate) Uint8ArrArrOptionPredicate {
-	return func(e Uint8ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayOptionPredicate) And(p2 Uint8ArrayArrayOptionPredicate) Uint8ArrayArrayOptionPredicate {
+	return func(e Uint8ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrOptionPredicate) And(p2 Uint16ArrArrOptionPredicate) Uint16ArrArrOptionPredicate {
-	return func(e Uint16ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayOptionPredicate) And(p2 Uint16ArrayArrayOptionPredicate) Uint16ArrayArrayOptionPredicate {
+	return func(e Uint16ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrOptionPredicate) And(p2 Uint32ArrArrOptionPredicate) Uint32ArrArrOptionPredicate {
-	return func(e Uint32ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayOptionPredicate) And(p2 Uint32ArrayArrayOptionPredicate) Uint32ArrayArrayOptionPredicate {
+	return func(e Uint32ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrOptionPredicate) And(p2 Uint64ArrArrOptionPredicate) Uint64ArrArrOptionPredicate {
-	return func(e Uint64ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayOptionPredicate) And(p2 Uint64ArrayArrayOptionPredicate) Uint64ArrayArrayOptionPredicate {
+	return func(e Uint64ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrOptionPredicate) And(p2 UintptrArrArrOptionPredicate) UintptrArrArrOptionPredicate {
-	return func(e UintptrArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayOptionPredicate) And(p2 UintptrArrayArrayOptionPredicate) UintptrArrayArrayOptionPredicate {
+	return func(e UintptrArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrOptionPredicate) And(p2 ByteArrArrOptionPredicate) ByteArrArrOptionPredicate {
-	return func(e ByteArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayOptionPredicate) And(p2 ByteArrayArrayOptionPredicate) ByteArrayArrayOptionPredicate {
+	return func(e ByteArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrOptionPredicate) And(p2 RuneArrArrOptionPredicate) RuneArrArrOptionPredicate {
-	return func(e RuneArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayOptionPredicate) And(p2 RuneArrayArrayOptionPredicate) RuneArrayArrayOptionPredicate {
+	return func(e RuneArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrOptionPredicate) And(p2 Float32ArrArrOptionPredicate) Float32ArrArrOptionPredicate {
-	return func(e Float32ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayOptionPredicate) And(p2 Float32ArrayArrayOptionPredicate) Float32ArrayArrayOptionPredicate {
+	return func(e Float32ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrOptionPredicate) And(p2 Float64ArrArrOptionPredicate) Float64ArrArrOptionPredicate {
-	return func(e Float64ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayOptionPredicate) And(p2 Float64ArrayArrayOptionPredicate) Float64ArrayArrayOptionPredicate {
+	return func(e Float64ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrOptionPredicate) And(p2 Complex64ArrArrOptionPredicate) Complex64ArrArrOptionPredicate {
-	return func(e Complex64ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayOptionPredicate) And(p2 Complex64ArrayArrayOptionPredicate) Complex64ArrayArrayOptionPredicate {
+	return func(e Complex64ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrOptionPredicate) And(p2 Complex128ArrArrOptionPredicate) Complex128ArrArrOptionPredicate {
-	return func(e Complex128ArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayOptionPredicate) And(p2 Complex128ArrayArrayOptionPredicate) Complex128ArrayArrayOptionPredicate {
+	return func(e Complex128ArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrOptionPredicate) And(p2 AnyArrArrOptionPredicate) AnyArrArrOptionPredicate {
-	return func(e AnyArrArrOption) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayOptionPredicate) And(p2 AnyArrayArrayOptionPredicate) AnyArrayArrayOptionPredicate {
+	return func(e AnyArrayArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrOptionPredicate) And(p2 BoolOptionArrOptionPredicate) BoolOptionArrOptionPredicate {
-	return func(e BoolOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayOptionPredicate) And(p2 BoolOptionArrayOptionPredicate) BoolOptionArrayOptionPredicate {
+	return func(e BoolOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrOptionPredicate) And(p2 StringOptionArrOptionPredicate) StringOptionArrOptionPredicate {
-	return func(e StringOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayOptionPredicate) And(p2 StringOptionArrayOptionPredicate) StringOptionArrayOptionPredicate {
+	return func(e StringOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrOptionPredicate) And(p2 IntOptionArrOptionPredicate) IntOptionArrOptionPredicate {
-	return func(e IntOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayOptionPredicate) And(p2 IntOptionArrayOptionPredicate) IntOptionArrayOptionPredicate {
+	return func(e IntOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrOptionPredicate) And(p2 Int8OptionArrOptionPredicate) Int8OptionArrOptionPredicate {
-	return func(e Int8OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayOptionPredicate) And(p2 Int8OptionArrayOptionPredicate) Int8OptionArrayOptionPredicate {
+	return func(e Int8OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrOptionPredicate) And(p2 Int16OptionArrOptionPredicate) Int16OptionArrOptionPredicate {
-	return func(e Int16OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayOptionPredicate) And(p2 Int16OptionArrayOptionPredicate) Int16OptionArrayOptionPredicate {
+	return func(e Int16OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrOptionPredicate) And(p2 Int32OptionArrOptionPredicate) Int32OptionArrOptionPredicate {
-	return func(e Int32OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayOptionPredicate) And(p2 Int32OptionArrayOptionPredicate) Int32OptionArrayOptionPredicate {
+	return func(e Int32OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrOptionPredicate) And(p2 Int64OptionArrOptionPredicate) Int64OptionArrOptionPredicate {
-	return func(e Int64OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayOptionPredicate) And(p2 Int64OptionArrayOptionPredicate) Int64OptionArrayOptionPredicate {
+	return func(e Int64OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrOptionPredicate) And(p2 UintOptionArrOptionPredicate) UintOptionArrOptionPredicate {
-	return func(e UintOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayOptionPredicate) And(p2 UintOptionArrayOptionPredicate) UintOptionArrayOptionPredicate {
+	return func(e UintOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrOptionPredicate) And(p2 Uint8OptionArrOptionPredicate) Uint8OptionArrOptionPredicate {
-	return func(e Uint8OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayOptionPredicate) And(p2 Uint8OptionArrayOptionPredicate) Uint8OptionArrayOptionPredicate {
+	return func(e Uint8OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrOptionPredicate) And(p2 Uint16OptionArrOptionPredicate) Uint16OptionArrOptionPredicate {
-	return func(e Uint16OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayOptionPredicate) And(p2 Uint16OptionArrayOptionPredicate) Uint16OptionArrayOptionPredicate {
+	return func(e Uint16OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrOptionPredicate) And(p2 Uint32OptionArrOptionPredicate) Uint32OptionArrOptionPredicate {
-	return func(e Uint32OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayOptionPredicate) And(p2 Uint32OptionArrayOptionPredicate) Uint32OptionArrayOptionPredicate {
+	return func(e Uint32OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrOptionPredicate) And(p2 Uint64OptionArrOptionPredicate) Uint64OptionArrOptionPredicate {
-	return func(e Uint64OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayOptionPredicate) And(p2 Uint64OptionArrayOptionPredicate) Uint64OptionArrayOptionPredicate {
+	return func(e Uint64OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrOptionPredicate) And(p2 UintptrOptionArrOptionPredicate) UintptrOptionArrOptionPredicate {
-	return func(e UintptrOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayOptionPredicate) And(p2 UintptrOptionArrayOptionPredicate) UintptrOptionArrayOptionPredicate {
+	return func(e UintptrOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrOptionPredicate) And(p2 ByteOptionArrOptionPredicate) ByteOptionArrOptionPredicate {
-	return func(e ByteOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayOptionPredicate) And(p2 ByteOptionArrayOptionPredicate) ByteOptionArrayOptionPredicate {
+	return func(e ByteOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrOptionPredicate) And(p2 RuneOptionArrOptionPredicate) RuneOptionArrOptionPredicate {
-	return func(e RuneOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayOptionPredicate) And(p2 RuneOptionArrayOptionPredicate) RuneOptionArrayOptionPredicate {
+	return func(e RuneOptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrOptionPredicate) And(p2 Float32OptionArrOptionPredicate) Float32OptionArrOptionPredicate {
-	return func(e Float32OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayOptionPredicate) And(p2 Float32OptionArrayOptionPredicate) Float32OptionArrayOptionPredicate {
+	return func(e Float32OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrOptionPredicate) And(p2 Float64OptionArrOptionPredicate) Float64OptionArrOptionPredicate {
-	return func(e Float64OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayOptionPredicate) And(p2 Float64OptionArrayOptionPredicate) Float64OptionArrayOptionPredicate {
+	return func(e Float64OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrOptionPredicate) And(p2 Complex64OptionArrOptionPredicate) Complex64OptionArrOptionPredicate {
-	return func(e Complex64OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayOptionPredicate) And(p2 Complex64OptionArrayOptionPredicate) Complex64OptionArrayOptionPredicate {
+	return func(e Complex64OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrOptionPredicate) And(p2 Complex128OptionArrOptionPredicate) Complex128OptionArrOptionPredicate {
-	return func(e Complex128OptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayOptionPredicate) And(p2 Complex128OptionArrayOptionPredicate) Complex128OptionArrayOptionPredicate {
+	return func(e Complex128OptionArrayOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrOptionPredicate) And(p2 AnyOptionArrOptionPredicate) AnyOptionArrOptionPredicate {
-	return func(e AnyOptionArrOption) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayOptionPredicate) And(p2 AnyOptionArrayOptionPredicate) AnyOptionArrayOptionPredicate {
+	return func(e AnyOptionArrayOption) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListOptionPredicate) And(p2 BoolListOptionPredicate) BoolListOptionPredicate {
 	return func(e BoolListOption) bool { return p1(e) && p2(e) }
@@ -603,185 +603,185 @@ func (p1 Complex128OptionOptionPredicate) And(p2 Complex128OptionOptionPredicate
 func (p1 AnyOptionOptionPredicate) And(p2 AnyOptionOptionPredicate) AnyOptionOptionPredicate {
 	return func(e AnyOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrOptionOptionPredicate) And(p2 BoolArrOptionOptionPredicate) BoolArrOptionOptionPredicate {
-	return func(e BoolArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayOptionOptionPredicate) And(p2 BoolArrayOptionOptionPredicate) BoolArrayOptionOptionPredicate {
+	return func(e BoolArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrOptionOptionPredicate) And(p2 StringArrOptionOptionPredicate) StringArrOptionOptionPredicate {
-	return func(e StringArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 StringArrayOptionOptionPredicate) And(p2 StringArrayOptionOptionPredicate) StringArrayOptionOptionPredicate {
+	return func(e StringArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrOptionOptionPredicate) And(p2 IntArrOptionOptionPredicate) IntArrOptionOptionPredicate {
-	return func(e IntArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 IntArrayOptionOptionPredicate) And(p2 IntArrayOptionOptionPredicate) IntArrayOptionOptionPredicate {
+	return func(e IntArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrOptionOptionPredicate) And(p2 Int8ArrOptionOptionPredicate) Int8ArrOptionOptionPredicate {
-	return func(e Int8ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayOptionOptionPredicate) And(p2 Int8ArrayOptionOptionPredicate) Int8ArrayOptionOptionPredicate {
+	return func(e Int8ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrOptionOptionPredicate) And(p2 Int16ArrOptionOptionPredicate) Int16ArrOptionOptionPredicate {
-	return func(e Int16ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayOptionOptionPredicate) And(p2 Int16ArrayOptionOptionPredicate) Int16ArrayOptionOptionPredicate {
+	return func(e Int16ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrOptionOptionPredicate) And(p2 Int32ArrOptionOptionPredicate) Int32ArrOptionOptionPredicate {
-	return func(e Int32ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayOptionOptionPredicate) And(p2 Int32ArrayOptionOptionPredicate) Int32ArrayOptionOptionPredicate {
+	return func(e Int32ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrOptionOptionPredicate) And(p2 Int64ArrOptionOptionPredicate) Int64ArrOptionOptionPredicate {
-	return func(e Int64ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayOptionOptionPredicate) And(p2 Int64ArrayOptionOptionPredicate) Int64ArrayOptionOptionPredicate {
+	return func(e Int64ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrOptionOptionPredicate) And(p2 UintArrOptionOptionPredicate) UintArrOptionOptionPredicate {
-	return func(e UintArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintArrayOptionOptionPredicate) And(p2 UintArrayOptionOptionPredicate) UintArrayOptionOptionPredicate {
+	return func(e UintArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrOptionOptionPredicate) And(p2 Uint8ArrOptionOptionPredicate) Uint8ArrOptionOptionPredicate {
-	return func(e Uint8ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayOptionOptionPredicate) And(p2 Uint8ArrayOptionOptionPredicate) Uint8ArrayOptionOptionPredicate {
+	return func(e Uint8ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrOptionOptionPredicate) And(p2 Uint16ArrOptionOptionPredicate) Uint16ArrOptionOptionPredicate {
-	return func(e Uint16ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayOptionOptionPredicate) And(p2 Uint16ArrayOptionOptionPredicate) Uint16ArrayOptionOptionPredicate {
+	return func(e Uint16ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrOptionOptionPredicate) And(p2 Uint32ArrOptionOptionPredicate) Uint32ArrOptionOptionPredicate {
-	return func(e Uint32ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayOptionOptionPredicate) And(p2 Uint32ArrayOptionOptionPredicate) Uint32ArrayOptionOptionPredicate {
+	return func(e Uint32ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrOptionOptionPredicate) And(p2 Uint64ArrOptionOptionPredicate) Uint64ArrOptionOptionPredicate {
-	return func(e Uint64ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayOptionOptionPredicate) And(p2 Uint64ArrayOptionOptionPredicate) Uint64ArrayOptionOptionPredicate {
+	return func(e Uint64ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrOptionOptionPredicate) And(p2 UintptrArrOptionOptionPredicate) UintptrArrOptionOptionPredicate {
-	return func(e UintptrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayOptionOptionPredicate) And(p2 UintptrArrayOptionOptionPredicate) UintptrArrayOptionOptionPredicate {
+	return func(e UintptrArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrOptionOptionPredicate) And(p2 ByteArrOptionOptionPredicate) ByteArrOptionOptionPredicate {
-	return func(e ByteArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayOptionOptionPredicate) And(p2 ByteArrayOptionOptionPredicate) ByteArrayOptionOptionPredicate {
+	return func(e ByteArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrOptionOptionPredicate) And(p2 RuneArrOptionOptionPredicate) RuneArrOptionOptionPredicate {
-	return func(e RuneArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayOptionOptionPredicate) And(p2 RuneArrayOptionOptionPredicate) RuneArrayOptionOptionPredicate {
+	return func(e RuneArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrOptionOptionPredicate) And(p2 Float32ArrOptionOptionPredicate) Float32ArrOptionOptionPredicate {
-	return func(e Float32ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayOptionOptionPredicate) And(p2 Float32ArrayOptionOptionPredicate) Float32ArrayOptionOptionPredicate {
+	return func(e Float32ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrOptionOptionPredicate) And(p2 Float64ArrOptionOptionPredicate) Float64ArrOptionOptionPredicate {
-	return func(e Float64ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayOptionOptionPredicate) And(p2 Float64ArrayOptionOptionPredicate) Float64ArrayOptionOptionPredicate {
+	return func(e Float64ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrOptionOptionPredicate) And(p2 Complex64ArrOptionOptionPredicate) Complex64ArrOptionOptionPredicate {
-	return func(e Complex64ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayOptionOptionPredicate) And(p2 Complex64ArrayOptionOptionPredicate) Complex64ArrayOptionOptionPredicate {
+	return func(e Complex64ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrOptionOptionPredicate) And(p2 Complex128ArrOptionOptionPredicate) Complex128ArrOptionOptionPredicate {
-	return func(e Complex128ArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayOptionOptionPredicate) And(p2 Complex128ArrayOptionOptionPredicate) Complex128ArrayOptionOptionPredicate {
+	return func(e Complex128ArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrOptionOptionPredicate) And(p2 AnyArrOptionOptionPredicate) AnyArrOptionOptionPredicate {
-	return func(e AnyArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayOptionOptionPredicate) And(p2 AnyArrayOptionOptionPredicate) AnyArrayOptionOptionPredicate {
+	return func(e AnyArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrOptionOptionPredicate) And(p2 BoolArrArrOptionOptionPredicate) BoolArrArrOptionOptionPredicate {
-	return func(e BoolArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayOptionOptionPredicate) And(p2 BoolArrayArrayOptionOptionPredicate) BoolArrayArrayOptionOptionPredicate {
+	return func(e BoolArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrOptionOptionPredicate) And(p2 StringArrArrOptionOptionPredicate) StringArrArrOptionOptionPredicate {
-	return func(e StringArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayOptionOptionPredicate) And(p2 StringArrayArrayOptionOptionPredicate) StringArrayArrayOptionOptionPredicate {
+	return func(e StringArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrOptionOptionPredicate) And(p2 IntArrArrOptionOptionPredicate) IntArrArrOptionOptionPredicate {
-	return func(e IntArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayOptionOptionPredicate) And(p2 IntArrayArrayOptionOptionPredicate) IntArrayArrayOptionOptionPredicate {
+	return func(e IntArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrOptionOptionPredicate) And(p2 Int8ArrArrOptionOptionPredicate) Int8ArrArrOptionOptionPredicate {
-	return func(e Int8ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayOptionOptionPredicate) And(p2 Int8ArrayArrayOptionOptionPredicate) Int8ArrayArrayOptionOptionPredicate {
+	return func(e Int8ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrOptionOptionPredicate) And(p2 Int16ArrArrOptionOptionPredicate) Int16ArrArrOptionOptionPredicate {
-	return func(e Int16ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayOptionOptionPredicate) And(p2 Int16ArrayArrayOptionOptionPredicate) Int16ArrayArrayOptionOptionPredicate {
+	return func(e Int16ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrOptionOptionPredicate) And(p2 Int32ArrArrOptionOptionPredicate) Int32ArrArrOptionOptionPredicate {
-	return func(e Int32ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayOptionOptionPredicate) And(p2 Int32ArrayArrayOptionOptionPredicate) Int32ArrayArrayOptionOptionPredicate {
+	return func(e Int32ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrOptionOptionPredicate) And(p2 Int64ArrArrOptionOptionPredicate) Int64ArrArrOptionOptionPredicate {
-	return func(e Int64ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayOptionOptionPredicate) And(p2 Int64ArrayArrayOptionOptionPredicate) Int64ArrayArrayOptionOptionPredicate {
+	return func(e Int64ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrOptionOptionPredicate) And(p2 UintArrArrOptionOptionPredicate) UintArrArrOptionOptionPredicate {
-	return func(e UintArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayOptionOptionPredicate) And(p2 UintArrayArrayOptionOptionPredicate) UintArrayArrayOptionOptionPredicate {
+	return func(e UintArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrOptionOptionPredicate) And(p2 Uint8ArrArrOptionOptionPredicate) Uint8ArrArrOptionOptionPredicate {
-	return func(e Uint8ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayOptionOptionPredicate) And(p2 Uint8ArrayArrayOptionOptionPredicate) Uint8ArrayArrayOptionOptionPredicate {
+	return func(e Uint8ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrOptionOptionPredicate) And(p2 Uint16ArrArrOptionOptionPredicate) Uint16ArrArrOptionOptionPredicate {
-	return func(e Uint16ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayOptionOptionPredicate) And(p2 Uint16ArrayArrayOptionOptionPredicate) Uint16ArrayArrayOptionOptionPredicate {
+	return func(e Uint16ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrOptionOptionPredicate) And(p2 Uint32ArrArrOptionOptionPredicate) Uint32ArrArrOptionOptionPredicate {
-	return func(e Uint32ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayOptionOptionPredicate) And(p2 Uint32ArrayArrayOptionOptionPredicate) Uint32ArrayArrayOptionOptionPredicate {
+	return func(e Uint32ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrOptionOptionPredicate) And(p2 Uint64ArrArrOptionOptionPredicate) Uint64ArrArrOptionOptionPredicate {
-	return func(e Uint64ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayOptionOptionPredicate) And(p2 Uint64ArrayArrayOptionOptionPredicate) Uint64ArrayArrayOptionOptionPredicate {
+	return func(e Uint64ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrOptionOptionPredicate) And(p2 UintptrArrArrOptionOptionPredicate) UintptrArrArrOptionOptionPredicate {
-	return func(e UintptrArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayOptionOptionPredicate) And(p2 UintptrArrayArrayOptionOptionPredicate) UintptrArrayArrayOptionOptionPredicate {
+	return func(e UintptrArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrOptionOptionPredicate) And(p2 ByteArrArrOptionOptionPredicate) ByteArrArrOptionOptionPredicate {
-	return func(e ByteArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayOptionOptionPredicate) And(p2 ByteArrayArrayOptionOptionPredicate) ByteArrayArrayOptionOptionPredicate {
+	return func(e ByteArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrOptionOptionPredicate) And(p2 RuneArrArrOptionOptionPredicate) RuneArrArrOptionOptionPredicate {
-	return func(e RuneArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayOptionOptionPredicate) And(p2 RuneArrayArrayOptionOptionPredicate) RuneArrayArrayOptionOptionPredicate {
+	return func(e RuneArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrOptionOptionPredicate) And(p2 Float32ArrArrOptionOptionPredicate) Float32ArrArrOptionOptionPredicate {
-	return func(e Float32ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayOptionOptionPredicate) And(p2 Float32ArrayArrayOptionOptionPredicate) Float32ArrayArrayOptionOptionPredicate {
+	return func(e Float32ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrOptionOptionPredicate) And(p2 Float64ArrArrOptionOptionPredicate) Float64ArrArrOptionOptionPredicate {
-	return func(e Float64ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayOptionOptionPredicate) And(p2 Float64ArrayArrayOptionOptionPredicate) Float64ArrayArrayOptionOptionPredicate {
+	return func(e Float64ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrOptionOptionPredicate) And(p2 Complex64ArrArrOptionOptionPredicate) Complex64ArrArrOptionOptionPredicate {
-	return func(e Complex64ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayOptionOptionPredicate) And(p2 Complex64ArrayArrayOptionOptionPredicate) Complex64ArrayArrayOptionOptionPredicate {
+	return func(e Complex64ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrOptionOptionPredicate) And(p2 Complex128ArrArrOptionOptionPredicate) Complex128ArrArrOptionOptionPredicate {
-	return func(e Complex128ArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayOptionOptionPredicate) And(p2 Complex128ArrayArrayOptionOptionPredicate) Complex128ArrayArrayOptionOptionPredicate {
+	return func(e Complex128ArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrOptionOptionPredicate) And(p2 AnyArrArrOptionOptionPredicate) AnyArrArrOptionOptionPredicate {
-	return func(e AnyArrArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayOptionOptionPredicate) And(p2 AnyArrayArrayOptionOptionPredicate) AnyArrayArrayOptionOptionPredicate {
+	return func(e AnyArrayArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrOptionOptionPredicate) And(p2 BoolOptionArrOptionOptionPredicate) BoolOptionArrOptionOptionPredicate {
-	return func(e BoolOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayOptionOptionPredicate) And(p2 BoolOptionArrayOptionOptionPredicate) BoolOptionArrayOptionOptionPredicate {
+	return func(e BoolOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrOptionOptionPredicate) And(p2 StringOptionArrOptionOptionPredicate) StringOptionArrOptionOptionPredicate {
-	return func(e StringOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayOptionOptionPredicate) And(p2 StringOptionArrayOptionOptionPredicate) StringOptionArrayOptionOptionPredicate {
+	return func(e StringOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrOptionOptionPredicate) And(p2 IntOptionArrOptionOptionPredicate) IntOptionArrOptionOptionPredicate {
-	return func(e IntOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayOptionOptionPredicate) And(p2 IntOptionArrayOptionOptionPredicate) IntOptionArrayOptionOptionPredicate {
+	return func(e IntOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrOptionOptionPredicate) And(p2 Int8OptionArrOptionOptionPredicate) Int8OptionArrOptionOptionPredicate {
-	return func(e Int8OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayOptionOptionPredicate) And(p2 Int8OptionArrayOptionOptionPredicate) Int8OptionArrayOptionOptionPredicate {
+	return func(e Int8OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrOptionOptionPredicate) And(p2 Int16OptionArrOptionOptionPredicate) Int16OptionArrOptionOptionPredicate {
-	return func(e Int16OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayOptionOptionPredicate) And(p2 Int16OptionArrayOptionOptionPredicate) Int16OptionArrayOptionOptionPredicate {
+	return func(e Int16OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrOptionOptionPredicate) And(p2 Int32OptionArrOptionOptionPredicate) Int32OptionArrOptionOptionPredicate {
-	return func(e Int32OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayOptionOptionPredicate) And(p2 Int32OptionArrayOptionOptionPredicate) Int32OptionArrayOptionOptionPredicate {
+	return func(e Int32OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrOptionOptionPredicate) And(p2 Int64OptionArrOptionOptionPredicate) Int64OptionArrOptionOptionPredicate {
-	return func(e Int64OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayOptionOptionPredicate) And(p2 Int64OptionArrayOptionOptionPredicate) Int64OptionArrayOptionOptionPredicate {
+	return func(e Int64OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrOptionOptionPredicate) And(p2 UintOptionArrOptionOptionPredicate) UintOptionArrOptionOptionPredicate {
-	return func(e UintOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayOptionOptionPredicate) And(p2 UintOptionArrayOptionOptionPredicate) UintOptionArrayOptionOptionPredicate {
+	return func(e UintOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrOptionOptionPredicate) And(p2 Uint8OptionArrOptionOptionPredicate) Uint8OptionArrOptionOptionPredicate {
-	return func(e Uint8OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayOptionOptionPredicate) And(p2 Uint8OptionArrayOptionOptionPredicate) Uint8OptionArrayOptionOptionPredicate {
+	return func(e Uint8OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrOptionOptionPredicate) And(p2 Uint16OptionArrOptionOptionPredicate) Uint16OptionArrOptionOptionPredicate {
-	return func(e Uint16OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayOptionOptionPredicate) And(p2 Uint16OptionArrayOptionOptionPredicate) Uint16OptionArrayOptionOptionPredicate {
+	return func(e Uint16OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrOptionOptionPredicate) And(p2 Uint32OptionArrOptionOptionPredicate) Uint32OptionArrOptionOptionPredicate {
-	return func(e Uint32OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayOptionOptionPredicate) And(p2 Uint32OptionArrayOptionOptionPredicate) Uint32OptionArrayOptionOptionPredicate {
+	return func(e Uint32OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrOptionOptionPredicate) And(p2 Uint64OptionArrOptionOptionPredicate) Uint64OptionArrOptionOptionPredicate {
-	return func(e Uint64OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayOptionOptionPredicate) And(p2 Uint64OptionArrayOptionOptionPredicate) Uint64OptionArrayOptionOptionPredicate {
+	return func(e Uint64OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrOptionOptionPredicate) And(p2 UintptrOptionArrOptionOptionPredicate) UintptrOptionArrOptionOptionPredicate {
-	return func(e UintptrOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayOptionOptionPredicate) And(p2 UintptrOptionArrayOptionOptionPredicate) UintptrOptionArrayOptionOptionPredicate {
+	return func(e UintptrOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrOptionOptionPredicate) And(p2 ByteOptionArrOptionOptionPredicate) ByteOptionArrOptionOptionPredicate {
-	return func(e ByteOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayOptionOptionPredicate) And(p2 ByteOptionArrayOptionOptionPredicate) ByteOptionArrayOptionOptionPredicate {
+	return func(e ByteOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrOptionOptionPredicate) And(p2 RuneOptionArrOptionOptionPredicate) RuneOptionArrOptionOptionPredicate {
-	return func(e RuneOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayOptionOptionPredicate) And(p2 RuneOptionArrayOptionOptionPredicate) RuneOptionArrayOptionOptionPredicate {
+	return func(e RuneOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrOptionOptionPredicate) And(p2 Float32OptionArrOptionOptionPredicate) Float32OptionArrOptionOptionPredicate {
-	return func(e Float32OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayOptionOptionPredicate) And(p2 Float32OptionArrayOptionOptionPredicate) Float32OptionArrayOptionOptionPredicate {
+	return func(e Float32OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrOptionOptionPredicate) And(p2 Float64OptionArrOptionOptionPredicate) Float64OptionArrOptionOptionPredicate {
-	return func(e Float64OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayOptionOptionPredicate) And(p2 Float64OptionArrayOptionOptionPredicate) Float64OptionArrayOptionOptionPredicate {
+	return func(e Float64OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrOptionOptionPredicate) And(p2 Complex64OptionArrOptionOptionPredicate) Complex64OptionArrOptionOptionPredicate {
-	return func(e Complex64OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayOptionOptionPredicate) And(p2 Complex64OptionArrayOptionOptionPredicate) Complex64OptionArrayOptionOptionPredicate {
+	return func(e Complex64OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrOptionOptionPredicate) And(p2 Complex128OptionArrOptionOptionPredicate) Complex128OptionArrOptionOptionPredicate {
-	return func(e Complex128OptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayOptionOptionPredicate) And(p2 Complex128OptionArrayOptionOptionPredicate) Complex128OptionArrayOptionOptionPredicate {
+	return func(e Complex128OptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrOptionOptionPredicate) And(p2 AnyOptionArrOptionOptionPredicate) AnyOptionArrOptionOptionPredicate {
-	return func(e AnyOptionArrOptionOption) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayOptionOptionPredicate) And(p2 AnyOptionArrayOptionOptionPredicate) AnyOptionArrayOptionOptionPredicate {
+	return func(e AnyOptionArrayOptionOption) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListOptionOptionPredicate) And(p2 BoolListOptionOptionPredicate) BoolListOptionOptionPredicate {
 	return func(e BoolListOptionOption) bool { return p1(e) && p2(e) }
@@ -903,185 +903,185 @@ func (p1 Complex128OptionOptionOptionPredicate) And(p2 Complex128OptionOptionOpt
 func (p1 AnyOptionOptionOptionPredicate) And(p2 AnyOptionOptionOptionPredicate) AnyOptionOptionOptionPredicate {
 	return func(e AnyOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrOptionOptionOptionPredicate) And(p2 BoolArrOptionOptionOptionPredicate) BoolArrOptionOptionOptionPredicate {
-	return func(e BoolArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayOptionOptionOptionPredicate) And(p2 BoolArrayOptionOptionOptionPredicate) BoolArrayOptionOptionOptionPredicate {
+	return func(e BoolArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrOptionOptionOptionPredicate) And(p2 StringArrOptionOptionOptionPredicate) StringArrOptionOptionOptionPredicate {
-	return func(e StringArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 StringArrayOptionOptionOptionPredicate) And(p2 StringArrayOptionOptionOptionPredicate) StringArrayOptionOptionOptionPredicate {
+	return func(e StringArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrOptionOptionOptionPredicate) And(p2 IntArrOptionOptionOptionPredicate) IntArrOptionOptionOptionPredicate {
-	return func(e IntArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 IntArrayOptionOptionOptionPredicate) And(p2 IntArrayOptionOptionOptionPredicate) IntArrayOptionOptionOptionPredicate {
+	return func(e IntArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrOptionOptionOptionPredicate) And(p2 Int8ArrOptionOptionOptionPredicate) Int8ArrOptionOptionOptionPredicate {
-	return func(e Int8ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayOptionOptionOptionPredicate) And(p2 Int8ArrayOptionOptionOptionPredicate) Int8ArrayOptionOptionOptionPredicate {
+	return func(e Int8ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrOptionOptionOptionPredicate) And(p2 Int16ArrOptionOptionOptionPredicate) Int16ArrOptionOptionOptionPredicate {
-	return func(e Int16ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayOptionOptionOptionPredicate) And(p2 Int16ArrayOptionOptionOptionPredicate) Int16ArrayOptionOptionOptionPredicate {
+	return func(e Int16ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrOptionOptionOptionPredicate) And(p2 Int32ArrOptionOptionOptionPredicate) Int32ArrOptionOptionOptionPredicate {
-	return func(e Int32ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayOptionOptionOptionPredicate) And(p2 Int32ArrayOptionOptionOptionPredicate) Int32ArrayOptionOptionOptionPredicate {
+	return func(e Int32ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrOptionOptionOptionPredicate) And(p2 Int64ArrOptionOptionOptionPredicate) Int64ArrOptionOptionOptionPredicate {
-	return func(e Int64ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayOptionOptionOptionPredicate) And(p2 Int64ArrayOptionOptionOptionPredicate) Int64ArrayOptionOptionOptionPredicate {
+	return func(e Int64ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrOptionOptionOptionPredicate) And(p2 UintArrOptionOptionOptionPredicate) UintArrOptionOptionOptionPredicate {
-	return func(e UintArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintArrayOptionOptionOptionPredicate) And(p2 UintArrayOptionOptionOptionPredicate) UintArrayOptionOptionOptionPredicate {
+	return func(e UintArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrOptionOptionOptionPredicate) And(p2 Uint8ArrOptionOptionOptionPredicate) Uint8ArrOptionOptionOptionPredicate {
-	return func(e Uint8ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayOptionOptionOptionPredicate) And(p2 Uint8ArrayOptionOptionOptionPredicate) Uint8ArrayOptionOptionOptionPredicate {
+	return func(e Uint8ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrOptionOptionOptionPredicate) And(p2 Uint16ArrOptionOptionOptionPredicate) Uint16ArrOptionOptionOptionPredicate {
-	return func(e Uint16ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayOptionOptionOptionPredicate) And(p2 Uint16ArrayOptionOptionOptionPredicate) Uint16ArrayOptionOptionOptionPredicate {
+	return func(e Uint16ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrOptionOptionOptionPredicate) And(p2 Uint32ArrOptionOptionOptionPredicate) Uint32ArrOptionOptionOptionPredicate {
-	return func(e Uint32ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayOptionOptionOptionPredicate) And(p2 Uint32ArrayOptionOptionOptionPredicate) Uint32ArrayOptionOptionOptionPredicate {
+	return func(e Uint32ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrOptionOptionOptionPredicate) And(p2 Uint64ArrOptionOptionOptionPredicate) Uint64ArrOptionOptionOptionPredicate {
-	return func(e Uint64ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayOptionOptionOptionPredicate) And(p2 Uint64ArrayOptionOptionOptionPredicate) Uint64ArrayOptionOptionOptionPredicate {
+	return func(e Uint64ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrOptionOptionOptionPredicate) And(p2 UintptrArrOptionOptionOptionPredicate) UintptrArrOptionOptionOptionPredicate {
-	return func(e UintptrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayOptionOptionOptionPredicate) And(p2 UintptrArrayOptionOptionOptionPredicate) UintptrArrayOptionOptionOptionPredicate {
+	return func(e UintptrArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrOptionOptionOptionPredicate) And(p2 ByteArrOptionOptionOptionPredicate) ByteArrOptionOptionOptionPredicate {
-	return func(e ByteArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayOptionOptionOptionPredicate) And(p2 ByteArrayOptionOptionOptionPredicate) ByteArrayOptionOptionOptionPredicate {
+	return func(e ByteArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrOptionOptionOptionPredicate) And(p2 RuneArrOptionOptionOptionPredicate) RuneArrOptionOptionOptionPredicate {
-	return func(e RuneArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayOptionOptionOptionPredicate) And(p2 RuneArrayOptionOptionOptionPredicate) RuneArrayOptionOptionOptionPredicate {
+	return func(e RuneArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrOptionOptionOptionPredicate) And(p2 Float32ArrOptionOptionOptionPredicate) Float32ArrOptionOptionOptionPredicate {
-	return func(e Float32ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayOptionOptionOptionPredicate) And(p2 Float32ArrayOptionOptionOptionPredicate) Float32ArrayOptionOptionOptionPredicate {
+	return func(e Float32ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrOptionOptionOptionPredicate) And(p2 Float64ArrOptionOptionOptionPredicate) Float64ArrOptionOptionOptionPredicate {
-	return func(e Float64ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayOptionOptionOptionPredicate) And(p2 Float64ArrayOptionOptionOptionPredicate) Float64ArrayOptionOptionOptionPredicate {
+	return func(e Float64ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrOptionOptionOptionPredicate) And(p2 Complex64ArrOptionOptionOptionPredicate) Complex64ArrOptionOptionOptionPredicate {
-	return func(e Complex64ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayOptionOptionOptionPredicate) And(p2 Complex64ArrayOptionOptionOptionPredicate) Complex64ArrayOptionOptionOptionPredicate {
+	return func(e Complex64ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrOptionOptionOptionPredicate) And(p2 Complex128ArrOptionOptionOptionPredicate) Complex128ArrOptionOptionOptionPredicate {
-	return func(e Complex128ArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayOptionOptionOptionPredicate) And(p2 Complex128ArrayOptionOptionOptionPredicate) Complex128ArrayOptionOptionOptionPredicate {
+	return func(e Complex128ArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrOptionOptionOptionPredicate) And(p2 AnyArrOptionOptionOptionPredicate) AnyArrOptionOptionOptionPredicate {
-	return func(e AnyArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayOptionOptionOptionPredicate) And(p2 AnyArrayOptionOptionOptionPredicate) AnyArrayOptionOptionOptionPredicate {
+	return func(e AnyArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrOptionOptionOptionPredicate) And(p2 BoolArrArrOptionOptionOptionPredicate) BoolArrArrOptionOptionOptionPredicate {
-	return func(e BoolArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayOptionOptionOptionPredicate) And(p2 BoolArrayArrayOptionOptionOptionPredicate) BoolArrayArrayOptionOptionOptionPredicate {
+	return func(e BoolArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrOptionOptionOptionPredicate) And(p2 StringArrArrOptionOptionOptionPredicate) StringArrArrOptionOptionOptionPredicate {
-	return func(e StringArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayOptionOptionOptionPredicate) And(p2 StringArrayArrayOptionOptionOptionPredicate) StringArrayArrayOptionOptionOptionPredicate {
+	return func(e StringArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrOptionOptionOptionPredicate) And(p2 IntArrArrOptionOptionOptionPredicate) IntArrArrOptionOptionOptionPredicate {
-	return func(e IntArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayOptionOptionOptionPredicate) And(p2 IntArrayArrayOptionOptionOptionPredicate) IntArrayArrayOptionOptionOptionPredicate {
+	return func(e IntArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrOptionOptionOptionPredicate) And(p2 Int8ArrArrOptionOptionOptionPredicate) Int8ArrArrOptionOptionOptionPredicate {
-	return func(e Int8ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayOptionOptionOptionPredicate) And(p2 Int8ArrayArrayOptionOptionOptionPredicate) Int8ArrayArrayOptionOptionOptionPredicate {
+	return func(e Int8ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrOptionOptionOptionPredicate) And(p2 Int16ArrArrOptionOptionOptionPredicate) Int16ArrArrOptionOptionOptionPredicate {
-	return func(e Int16ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayOptionOptionOptionPredicate) And(p2 Int16ArrayArrayOptionOptionOptionPredicate) Int16ArrayArrayOptionOptionOptionPredicate {
+	return func(e Int16ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrOptionOptionOptionPredicate) And(p2 Int32ArrArrOptionOptionOptionPredicate) Int32ArrArrOptionOptionOptionPredicate {
-	return func(e Int32ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayOptionOptionOptionPredicate) And(p2 Int32ArrayArrayOptionOptionOptionPredicate) Int32ArrayArrayOptionOptionOptionPredicate {
+	return func(e Int32ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrOptionOptionOptionPredicate) And(p2 Int64ArrArrOptionOptionOptionPredicate) Int64ArrArrOptionOptionOptionPredicate {
-	return func(e Int64ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayOptionOptionOptionPredicate) And(p2 Int64ArrayArrayOptionOptionOptionPredicate) Int64ArrayArrayOptionOptionOptionPredicate {
+	return func(e Int64ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrOptionOptionOptionPredicate) And(p2 UintArrArrOptionOptionOptionPredicate) UintArrArrOptionOptionOptionPredicate {
-	return func(e UintArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayOptionOptionOptionPredicate) And(p2 UintArrayArrayOptionOptionOptionPredicate) UintArrayArrayOptionOptionOptionPredicate {
+	return func(e UintArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrOptionOptionOptionPredicate) And(p2 Uint8ArrArrOptionOptionOptionPredicate) Uint8ArrArrOptionOptionOptionPredicate {
-	return func(e Uint8ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayOptionOptionOptionPredicate) And(p2 Uint8ArrayArrayOptionOptionOptionPredicate) Uint8ArrayArrayOptionOptionOptionPredicate {
+	return func(e Uint8ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrOptionOptionOptionPredicate) And(p2 Uint16ArrArrOptionOptionOptionPredicate) Uint16ArrArrOptionOptionOptionPredicate {
-	return func(e Uint16ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayOptionOptionOptionPredicate) And(p2 Uint16ArrayArrayOptionOptionOptionPredicate) Uint16ArrayArrayOptionOptionOptionPredicate {
+	return func(e Uint16ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrOptionOptionOptionPredicate) And(p2 Uint32ArrArrOptionOptionOptionPredicate) Uint32ArrArrOptionOptionOptionPredicate {
-	return func(e Uint32ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayOptionOptionOptionPredicate) And(p2 Uint32ArrayArrayOptionOptionOptionPredicate) Uint32ArrayArrayOptionOptionOptionPredicate {
+	return func(e Uint32ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrOptionOptionOptionPredicate) And(p2 Uint64ArrArrOptionOptionOptionPredicate) Uint64ArrArrOptionOptionOptionPredicate {
-	return func(e Uint64ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayOptionOptionOptionPredicate) And(p2 Uint64ArrayArrayOptionOptionOptionPredicate) Uint64ArrayArrayOptionOptionOptionPredicate {
+	return func(e Uint64ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrOptionOptionOptionPredicate) And(p2 UintptrArrArrOptionOptionOptionPredicate) UintptrArrArrOptionOptionOptionPredicate {
-	return func(e UintptrArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayOptionOptionOptionPredicate) And(p2 UintptrArrayArrayOptionOptionOptionPredicate) UintptrArrayArrayOptionOptionOptionPredicate {
+	return func(e UintptrArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrOptionOptionOptionPredicate) And(p2 ByteArrArrOptionOptionOptionPredicate) ByteArrArrOptionOptionOptionPredicate {
-	return func(e ByteArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayOptionOptionOptionPredicate) And(p2 ByteArrayArrayOptionOptionOptionPredicate) ByteArrayArrayOptionOptionOptionPredicate {
+	return func(e ByteArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrOptionOptionOptionPredicate) And(p2 RuneArrArrOptionOptionOptionPredicate) RuneArrArrOptionOptionOptionPredicate {
-	return func(e RuneArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayOptionOptionOptionPredicate) And(p2 RuneArrayArrayOptionOptionOptionPredicate) RuneArrayArrayOptionOptionOptionPredicate {
+	return func(e RuneArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrOptionOptionOptionPredicate) And(p2 Float32ArrArrOptionOptionOptionPredicate) Float32ArrArrOptionOptionOptionPredicate {
-	return func(e Float32ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayOptionOptionOptionPredicate) And(p2 Float32ArrayArrayOptionOptionOptionPredicate) Float32ArrayArrayOptionOptionOptionPredicate {
+	return func(e Float32ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrOptionOptionOptionPredicate) And(p2 Float64ArrArrOptionOptionOptionPredicate) Float64ArrArrOptionOptionOptionPredicate {
-	return func(e Float64ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayOptionOptionOptionPredicate) And(p2 Float64ArrayArrayOptionOptionOptionPredicate) Float64ArrayArrayOptionOptionOptionPredicate {
+	return func(e Float64ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrOptionOptionOptionPredicate) And(p2 Complex64ArrArrOptionOptionOptionPredicate) Complex64ArrArrOptionOptionOptionPredicate {
-	return func(e Complex64ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayOptionOptionOptionPredicate) And(p2 Complex64ArrayArrayOptionOptionOptionPredicate) Complex64ArrayArrayOptionOptionOptionPredicate {
+	return func(e Complex64ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrOptionOptionOptionPredicate) And(p2 Complex128ArrArrOptionOptionOptionPredicate) Complex128ArrArrOptionOptionOptionPredicate {
-	return func(e Complex128ArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayOptionOptionOptionPredicate) And(p2 Complex128ArrayArrayOptionOptionOptionPredicate) Complex128ArrayArrayOptionOptionOptionPredicate {
+	return func(e Complex128ArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrOptionOptionOptionPredicate) And(p2 AnyArrArrOptionOptionOptionPredicate) AnyArrArrOptionOptionOptionPredicate {
-	return func(e AnyArrArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayOptionOptionOptionPredicate) And(p2 AnyArrayArrayOptionOptionOptionPredicate) AnyArrayArrayOptionOptionOptionPredicate {
+	return func(e AnyArrayArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrOptionOptionOptionPredicate) And(p2 BoolOptionArrOptionOptionOptionPredicate) BoolOptionArrOptionOptionOptionPredicate {
-	return func(e BoolOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayOptionOptionOptionPredicate) And(p2 BoolOptionArrayOptionOptionOptionPredicate) BoolOptionArrayOptionOptionOptionPredicate {
+	return func(e BoolOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrOptionOptionOptionPredicate) And(p2 StringOptionArrOptionOptionOptionPredicate) StringOptionArrOptionOptionOptionPredicate {
-	return func(e StringOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayOptionOptionOptionPredicate) And(p2 StringOptionArrayOptionOptionOptionPredicate) StringOptionArrayOptionOptionOptionPredicate {
+	return func(e StringOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrOptionOptionOptionPredicate) And(p2 IntOptionArrOptionOptionOptionPredicate) IntOptionArrOptionOptionOptionPredicate {
-	return func(e IntOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayOptionOptionOptionPredicate) And(p2 IntOptionArrayOptionOptionOptionPredicate) IntOptionArrayOptionOptionOptionPredicate {
+	return func(e IntOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrOptionOptionOptionPredicate) And(p2 Int8OptionArrOptionOptionOptionPredicate) Int8OptionArrOptionOptionOptionPredicate {
-	return func(e Int8OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayOptionOptionOptionPredicate) And(p2 Int8OptionArrayOptionOptionOptionPredicate) Int8OptionArrayOptionOptionOptionPredicate {
+	return func(e Int8OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrOptionOptionOptionPredicate) And(p2 Int16OptionArrOptionOptionOptionPredicate) Int16OptionArrOptionOptionOptionPredicate {
-	return func(e Int16OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayOptionOptionOptionPredicate) And(p2 Int16OptionArrayOptionOptionOptionPredicate) Int16OptionArrayOptionOptionOptionPredicate {
+	return func(e Int16OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrOptionOptionOptionPredicate) And(p2 Int32OptionArrOptionOptionOptionPredicate) Int32OptionArrOptionOptionOptionPredicate {
-	return func(e Int32OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayOptionOptionOptionPredicate) And(p2 Int32OptionArrayOptionOptionOptionPredicate) Int32OptionArrayOptionOptionOptionPredicate {
+	return func(e Int32OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrOptionOptionOptionPredicate) And(p2 Int64OptionArrOptionOptionOptionPredicate) Int64OptionArrOptionOptionOptionPredicate {
-	return func(e Int64OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayOptionOptionOptionPredicate) And(p2 Int64OptionArrayOptionOptionOptionPredicate) Int64OptionArrayOptionOptionOptionPredicate {
+	return func(e Int64OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrOptionOptionOptionPredicate) And(p2 UintOptionArrOptionOptionOptionPredicate) UintOptionArrOptionOptionOptionPredicate {
-	return func(e UintOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayOptionOptionOptionPredicate) And(p2 UintOptionArrayOptionOptionOptionPredicate) UintOptionArrayOptionOptionOptionPredicate {
+	return func(e UintOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrOptionOptionOptionPredicate) And(p2 Uint8OptionArrOptionOptionOptionPredicate) Uint8OptionArrOptionOptionOptionPredicate {
-	return func(e Uint8OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayOptionOptionOptionPredicate) And(p2 Uint8OptionArrayOptionOptionOptionPredicate) Uint8OptionArrayOptionOptionOptionPredicate {
+	return func(e Uint8OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrOptionOptionOptionPredicate) And(p2 Uint16OptionArrOptionOptionOptionPredicate) Uint16OptionArrOptionOptionOptionPredicate {
-	return func(e Uint16OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayOptionOptionOptionPredicate) And(p2 Uint16OptionArrayOptionOptionOptionPredicate) Uint16OptionArrayOptionOptionOptionPredicate {
+	return func(e Uint16OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrOptionOptionOptionPredicate) And(p2 Uint32OptionArrOptionOptionOptionPredicate) Uint32OptionArrOptionOptionOptionPredicate {
-	return func(e Uint32OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayOptionOptionOptionPredicate) And(p2 Uint32OptionArrayOptionOptionOptionPredicate) Uint32OptionArrayOptionOptionOptionPredicate {
+	return func(e Uint32OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrOptionOptionOptionPredicate) And(p2 Uint64OptionArrOptionOptionOptionPredicate) Uint64OptionArrOptionOptionOptionPredicate {
-	return func(e Uint64OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayOptionOptionOptionPredicate) And(p2 Uint64OptionArrayOptionOptionOptionPredicate) Uint64OptionArrayOptionOptionOptionPredicate {
+	return func(e Uint64OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrOptionOptionOptionPredicate) And(p2 UintptrOptionArrOptionOptionOptionPredicate) UintptrOptionArrOptionOptionOptionPredicate {
-	return func(e UintptrOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayOptionOptionOptionPredicate) And(p2 UintptrOptionArrayOptionOptionOptionPredicate) UintptrOptionArrayOptionOptionOptionPredicate {
+	return func(e UintptrOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrOptionOptionOptionPredicate) And(p2 ByteOptionArrOptionOptionOptionPredicate) ByteOptionArrOptionOptionOptionPredicate {
-	return func(e ByteOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayOptionOptionOptionPredicate) And(p2 ByteOptionArrayOptionOptionOptionPredicate) ByteOptionArrayOptionOptionOptionPredicate {
+	return func(e ByteOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrOptionOptionOptionPredicate) And(p2 RuneOptionArrOptionOptionOptionPredicate) RuneOptionArrOptionOptionOptionPredicate {
-	return func(e RuneOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayOptionOptionOptionPredicate) And(p2 RuneOptionArrayOptionOptionOptionPredicate) RuneOptionArrayOptionOptionOptionPredicate {
+	return func(e RuneOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrOptionOptionOptionPredicate) And(p2 Float32OptionArrOptionOptionOptionPredicate) Float32OptionArrOptionOptionOptionPredicate {
-	return func(e Float32OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayOptionOptionOptionPredicate) And(p2 Float32OptionArrayOptionOptionOptionPredicate) Float32OptionArrayOptionOptionOptionPredicate {
+	return func(e Float32OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrOptionOptionOptionPredicate) And(p2 Float64OptionArrOptionOptionOptionPredicate) Float64OptionArrOptionOptionOptionPredicate {
-	return func(e Float64OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayOptionOptionOptionPredicate) And(p2 Float64OptionArrayOptionOptionOptionPredicate) Float64OptionArrayOptionOptionOptionPredicate {
+	return func(e Float64OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrOptionOptionOptionPredicate) And(p2 Complex64OptionArrOptionOptionOptionPredicate) Complex64OptionArrOptionOptionOptionPredicate {
-	return func(e Complex64OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayOptionOptionOptionPredicate) And(p2 Complex64OptionArrayOptionOptionOptionPredicate) Complex64OptionArrayOptionOptionOptionPredicate {
+	return func(e Complex64OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrOptionOptionOptionPredicate) And(p2 Complex128OptionArrOptionOptionOptionPredicate) Complex128OptionArrOptionOptionOptionPredicate {
-	return func(e Complex128OptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayOptionOptionOptionPredicate) And(p2 Complex128OptionArrayOptionOptionOptionPredicate) Complex128OptionArrayOptionOptionOptionPredicate {
+	return func(e Complex128OptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrOptionOptionOptionPredicate) And(p2 AnyOptionArrOptionOptionOptionPredicate) AnyOptionArrOptionOptionOptionPredicate {
-	return func(e AnyOptionArrOptionOptionOption) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayOptionOptionOptionPredicate) And(p2 AnyOptionArrayOptionOptionOptionPredicate) AnyOptionArrayOptionOptionOptionPredicate {
+	return func(e AnyOptionArrayOptionOptionOption) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListOptionOptionOptionPredicate) And(p2 BoolListOptionOptionOptionPredicate) BoolListOptionOptionOptionPredicate {
 	return func(e BoolListOptionOptionOption) bool { return p1(e) && p2(e) }
@@ -1263,185 +1263,185 @@ func (p1 Complex128OptionListPredicate) And(p2 Complex128OptionListPredicate) Co
 func (p1 AnyOptionListPredicate) And(p2 AnyOptionListPredicate) AnyOptionListPredicate {
 	return func(e AnyOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrOptionListPredicate) And(p2 BoolArrOptionListPredicate) BoolArrOptionListPredicate {
-	return func(e BoolArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayOptionListPredicate) And(p2 BoolArrayOptionListPredicate) BoolArrayOptionListPredicate {
+	return func(e BoolArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrOptionListPredicate) And(p2 StringArrOptionListPredicate) StringArrOptionListPredicate {
-	return func(e StringArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayOptionListPredicate) And(p2 StringArrayOptionListPredicate) StringArrayOptionListPredicate {
+	return func(e StringArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrOptionListPredicate) And(p2 IntArrOptionListPredicate) IntArrOptionListPredicate {
-	return func(e IntArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayOptionListPredicate) And(p2 IntArrayOptionListPredicate) IntArrayOptionListPredicate {
+	return func(e IntArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrOptionListPredicate) And(p2 Int8ArrOptionListPredicate) Int8ArrOptionListPredicate {
-	return func(e Int8ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayOptionListPredicate) And(p2 Int8ArrayOptionListPredicate) Int8ArrayOptionListPredicate {
+	return func(e Int8ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrOptionListPredicate) And(p2 Int16ArrOptionListPredicate) Int16ArrOptionListPredicate {
-	return func(e Int16ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayOptionListPredicate) And(p2 Int16ArrayOptionListPredicate) Int16ArrayOptionListPredicate {
+	return func(e Int16ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrOptionListPredicate) And(p2 Int32ArrOptionListPredicate) Int32ArrOptionListPredicate {
-	return func(e Int32ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayOptionListPredicate) And(p2 Int32ArrayOptionListPredicate) Int32ArrayOptionListPredicate {
+	return func(e Int32ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrOptionListPredicate) And(p2 Int64ArrOptionListPredicate) Int64ArrOptionListPredicate {
-	return func(e Int64ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayOptionListPredicate) And(p2 Int64ArrayOptionListPredicate) Int64ArrayOptionListPredicate {
+	return func(e Int64ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrOptionListPredicate) And(p2 UintArrOptionListPredicate) UintArrOptionListPredicate {
-	return func(e UintArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayOptionListPredicate) And(p2 UintArrayOptionListPredicate) UintArrayOptionListPredicate {
+	return func(e UintArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrOptionListPredicate) And(p2 Uint8ArrOptionListPredicate) Uint8ArrOptionListPredicate {
-	return func(e Uint8ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayOptionListPredicate) And(p2 Uint8ArrayOptionListPredicate) Uint8ArrayOptionListPredicate {
+	return func(e Uint8ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrOptionListPredicate) And(p2 Uint16ArrOptionListPredicate) Uint16ArrOptionListPredicate {
-	return func(e Uint16ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayOptionListPredicate) And(p2 Uint16ArrayOptionListPredicate) Uint16ArrayOptionListPredicate {
+	return func(e Uint16ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrOptionListPredicate) And(p2 Uint32ArrOptionListPredicate) Uint32ArrOptionListPredicate {
-	return func(e Uint32ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayOptionListPredicate) And(p2 Uint32ArrayOptionListPredicate) Uint32ArrayOptionListPredicate {
+	return func(e Uint32ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrOptionListPredicate) And(p2 Uint64ArrOptionListPredicate) Uint64ArrOptionListPredicate {
-	return func(e Uint64ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayOptionListPredicate) And(p2 Uint64ArrayOptionListPredicate) Uint64ArrayOptionListPredicate {
+	return func(e Uint64ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrOptionListPredicate) And(p2 UintptrArrOptionListPredicate) UintptrArrOptionListPredicate {
-	return func(e UintptrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayOptionListPredicate) And(p2 UintptrArrayOptionListPredicate) UintptrArrayOptionListPredicate {
+	return func(e UintptrArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrOptionListPredicate) And(p2 ByteArrOptionListPredicate) ByteArrOptionListPredicate {
-	return func(e ByteArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayOptionListPredicate) And(p2 ByteArrayOptionListPredicate) ByteArrayOptionListPredicate {
+	return func(e ByteArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrOptionListPredicate) And(p2 RuneArrOptionListPredicate) RuneArrOptionListPredicate {
-	return func(e RuneArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayOptionListPredicate) And(p2 RuneArrayOptionListPredicate) RuneArrayOptionListPredicate {
+	return func(e RuneArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrOptionListPredicate) And(p2 Float32ArrOptionListPredicate) Float32ArrOptionListPredicate {
-	return func(e Float32ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayOptionListPredicate) And(p2 Float32ArrayOptionListPredicate) Float32ArrayOptionListPredicate {
+	return func(e Float32ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrOptionListPredicate) And(p2 Float64ArrOptionListPredicate) Float64ArrOptionListPredicate {
-	return func(e Float64ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayOptionListPredicate) And(p2 Float64ArrayOptionListPredicate) Float64ArrayOptionListPredicate {
+	return func(e Float64ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrOptionListPredicate) And(p2 Complex64ArrOptionListPredicate) Complex64ArrOptionListPredicate {
-	return func(e Complex64ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayOptionListPredicate) And(p2 Complex64ArrayOptionListPredicate) Complex64ArrayOptionListPredicate {
+	return func(e Complex64ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrOptionListPredicate) And(p2 Complex128ArrOptionListPredicate) Complex128ArrOptionListPredicate {
-	return func(e Complex128ArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayOptionListPredicate) And(p2 Complex128ArrayOptionListPredicate) Complex128ArrayOptionListPredicate {
+	return func(e Complex128ArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrOptionListPredicate) And(p2 AnyArrOptionListPredicate) AnyArrOptionListPredicate {
-	return func(e AnyArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayOptionListPredicate) And(p2 AnyArrayOptionListPredicate) AnyArrayOptionListPredicate {
+	return func(e AnyArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrOptionListPredicate) And(p2 BoolArrArrOptionListPredicate) BoolArrArrOptionListPredicate {
-	return func(e BoolArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayOptionListPredicate) And(p2 BoolArrayArrayOptionListPredicate) BoolArrayArrayOptionListPredicate {
+	return func(e BoolArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrOptionListPredicate) And(p2 StringArrArrOptionListPredicate) StringArrArrOptionListPredicate {
-	return func(e StringArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayOptionListPredicate) And(p2 StringArrayArrayOptionListPredicate) StringArrayArrayOptionListPredicate {
+	return func(e StringArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrOptionListPredicate) And(p2 IntArrArrOptionListPredicate) IntArrArrOptionListPredicate {
-	return func(e IntArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayOptionListPredicate) And(p2 IntArrayArrayOptionListPredicate) IntArrayArrayOptionListPredicate {
+	return func(e IntArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrOptionListPredicate) And(p2 Int8ArrArrOptionListPredicate) Int8ArrArrOptionListPredicate {
-	return func(e Int8ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayOptionListPredicate) And(p2 Int8ArrayArrayOptionListPredicate) Int8ArrayArrayOptionListPredicate {
+	return func(e Int8ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrOptionListPredicate) And(p2 Int16ArrArrOptionListPredicate) Int16ArrArrOptionListPredicate {
-	return func(e Int16ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayOptionListPredicate) And(p2 Int16ArrayArrayOptionListPredicate) Int16ArrayArrayOptionListPredicate {
+	return func(e Int16ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrOptionListPredicate) And(p2 Int32ArrArrOptionListPredicate) Int32ArrArrOptionListPredicate {
-	return func(e Int32ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayOptionListPredicate) And(p2 Int32ArrayArrayOptionListPredicate) Int32ArrayArrayOptionListPredicate {
+	return func(e Int32ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrOptionListPredicate) And(p2 Int64ArrArrOptionListPredicate) Int64ArrArrOptionListPredicate {
-	return func(e Int64ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayOptionListPredicate) And(p2 Int64ArrayArrayOptionListPredicate) Int64ArrayArrayOptionListPredicate {
+	return func(e Int64ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrOptionListPredicate) And(p2 UintArrArrOptionListPredicate) UintArrArrOptionListPredicate {
-	return func(e UintArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayOptionListPredicate) And(p2 UintArrayArrayOptionListPredicate) UintArrayArrayOptionListPredicate {
+	return func(e UintArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrOptionListPredicate) And(p2 Uint8ArrArrOptionListPredicate) Uint8ArrArrOptionListPredicate {
-	return func(e Uint8ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayOptionListPredicate) And(p2 Uint8ArrayArrayOptionListPredicate) Uint8ArrayArrayOptionListPredicate {
+	return func(e Uint8ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrOptionListPredicate) And(p2 Uint16ArrArrOptionListPredicate) Uint16ArrArrOptionListPredicate {
-	return func(e Uint16ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayOptionListPredicate) And(p2 Uint16ArrayArrayOptionListPredicate) Uint16ArrayArrayOptionListPredicate {
+	return func(e Uint16ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrOptionListPredicate) And(p2 Uint32ArrArrOptionListPredicate) Uint32ArrArrOptionListPredicate {
-	return func(e Uint32ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayOptionListPredicate) And(p2 Uint32ArrayArrayOptionListPredicate) Uint32ArrayArrayOptionListPredicate {
+	return func(e Uint32ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrOptionListPredicate) And(p2 Uint64ArrArrOptionListPredicate) Uint64ArrArrOptionListPredicate {
-	return func(e Uint64ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayOptionListPredicate) And(p2 Uint64ArrayArrayOptionListPredicate) Uint64ArrayArrayOptionListPredicate {
+	return func(e Uint64ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrOptionListPredicate) And(p2 UintptrArrArrOptionListPredicate) UintptrArrArrOptionListPredicate {
-	return func(e UintptrArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayOptionListPredicate) And(p2 UintptrArrayArrayOptionListPredicate) UintptrArrayArrayOptionListPredicate {
+	return func(e UintptrArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrOptionListPredicate) And(p2 ByteArrArrOptionListPredicate) ByteArrArrOptionListPredicate {
-	return func(e ByteArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayOptionListPredicate) And(p2 ByteArrayArrayOptionListPredicate) ByteArrayArrayOptionListPredicate {
+	return func(e ByteArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrOptionListPredicate) And(p2 RuneArrArrOptionListPredicate) RuneArrArrOptionListPredicate {
-	return func(e RuneArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayOptionListPredicate) And(p2 RuneArrayArrayOptionListPredicate) RuneArrayArrayOptionListPredicate {
+	return func(e RuneArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrOptionListPredicate) And(p2 Float32ArrArrOptionListPredicate) Float32ArrArrOptionListPredicate {
-	return func(e Float32ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayOptionListPredicate) And(p2 Float32ArrayArrayOptionListPredicate) Float32ArrayArrayOptionListPredicate {
+	return func(e Float32ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrOptionListPredicate) And(p2 Float64ArrArrOptionListPredicate) Float64ArrArrOptionListPredicate {
-	return func(e Float64ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayOptionListPredicate) And(p2 Float64ArrayArrayOptionListPredicate) Float64ArrayArrayOptionListPredicate {
+	return func(e Float64ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrOptionListPredicate) And(p2 Complex64ArrArrOptionListPredicate) Complex64ArrArrOptionListPredicate {
-	return func(e Complex64ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayOptionListPredicate) And(p2 Complex64ArrayArrayOptionListPredicate) Complex64ArrayArrayOptionListPredicate {
+	return func(e Complex64ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrOptionListPredicate) And(p2 Complex128ArrArrOptionListPredicate) Complex128ArrArrOptionListPredicate {
-	return func(e Complex128ArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayOptionListPredicate) And(p2 Complex128ArrayArrayOptionListPredicate) Complex128ArrayArrayOptionListPredicate {
+	return func(e Complex128ArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrOptionListPredicate) And(p2 AnyArrArrOptionListPredicate) AnyArrArrOptionListPredicate {
-	return func(e AnyArrArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayOptionListPredicate) And(p2 AnyArrayArrayOptionListPredicate) AnyArrayArrayOptionListPredicate {
+	return func(e AnyArrayArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrOptionListPredicate) And(p2 BoolOptionArrOptionListPredicate) BoolOptionArrOptionListPredicate {
-	return func(e BoolOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayOptionListPredicate) And(p2 BoolOptionArrayOptionListPredicate) BoolOptionArrayOptionListPredicate {
+	return func(e BoolOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrOptionListPredicate) And(p2 StringOptionArrOptionListPredicate) StringOptionArrOptionListPredicate {
-	return func(e StringOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayOptionListPredicate) And(p2 StringOptionArrayOptionListPredicate) StringOptionArrayOptionListPredicate {
+	return func(e StringOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrOptionListPredicate) And(p2 IntOptionArrOptionListPredicate) IntOptionArrOptionListPredicate {
-	return func(e IntOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayOptionListPredicate) And(p2 IntOptionArrayOptionListPredicate) IntOptionArrayOptionListPredicate {
+	return func(e IntOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrOptionListPredicate) And(p2 Int8OptionArrOptionListPredicate) Int8OptionArrOptionListPredicate {
-	return func(e Int8OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayOptionListPredicate) And(p2 Int8OptionArrayOptionListPredicate) Int8OptionArrayOptionListPredicate {
+	return func(e Int8OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrOptionListPredicate) And(p2 Int16OptionArrOptionListPredicate) Int16OptionArrOptionListPredicate {
-	return func(e Int16OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayOptionListPredicate) And(p2 Int16OptionArrayOptionListPredicate) Int16OptionArrayOptionListPredicate {
+	return func(e Int16OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrOptionListPredicate) And(p2 Int32OptionArrOptionListPredicate) Int32OptionArrOptionListPredicate {
-	return func(e Int32OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayOptionListPredicate) And(p2 Int32OptionArrayOptionListPredicate) Int32OptionArrayOptionListPredicate {
+	return func(e Int32OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrOptionListPredicate) And(p2 Int64OptionArrOptionListPredicate) Int64OptionArrOptionListPredicate {
-	return func(e Int64OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayOptionListPredicate) And(p2 Int64OptionArrayOptionListPredicate) Int64OptionArrayOptionListPredicate {
+	return func(e Int64OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrOptionListPredicate) And(p2 UintOptionArrOptionListPredicate) UintOptionArrOptionListPredicate {
-	return func(e UintOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayOptionListPredicate) And(p2 UintOptionArrayOptionListPredicate) UintOptionArrayOptionListPredicate {
+	return func(e UintOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrOptionListPredicate) And(p2 Uint8OptionArrOptionListPredicate) Uint8OptionArrOptionListPredicate {
-	return func(e Uint8OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayOptionListPredicate) And(p2 Uint8OptionArrayOptionListPredicate) Uint8OptionArrayOptionListPredicate {
+	return func(e Uint8OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrOptionListPredicate) And(p2 Uint16OptionArrOptionListPredicate) Uint16OptionArrOptionListPredicate {
-	return func(e Uint16OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayOptionListPredicate) And(p2 Uint16OptionArrayOptionListPredicate) Uint16OptionArrayOptionListPredicate {
+	return func(e Uint16OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrOptionListPredicate) And(p2 Uint32OptionArrOptionListPredicate) Uint32OptionArrOptionListPredicate {
-	return func(e Uint32OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayOptionListPredicate) And(p2 Uint32OptionArrayOptionListPredicate) Uint32OptionArrayOptionListPredicate {
+	return func(e Uint32OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrOptionListPredicate) And(p2 Uint64OptionArrOptionListPredicate) Uint64OptionArrOptionListPredicate {
-	return func(e Uint64OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayOptionListPredicate) And(p2 Uint64OptionArrayOptionListPredicate) Uint64OptionArrayOptionListPredicate {
+	return func(e Uint64OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrOptionListPredicate) And(p2 UintptrOptionArrOptionListPredicate) UintptrOptionArrOptionListPredicate {
-	return func(e UintptrOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayOptionListPredicate) And(p2 UintptrOptionArrayOptionListPredicate) UintptrOptionArrayOptionListPredicate {
+	return func(e UintptrOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrOptionListPredicate) And(p2 ByteOptionArrOptionListPredicate) ByteOptionArrOptionListPredicate {
-	return func(e ByteOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayOptionListPredicate) And(p2 ByteOptionArrayOptionListPredicate) ByteOptionArrayOptionListPredicate {
+	return func(e ByteOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrOptionListPredicate) And(p2 RuneOptionArrOptionListPredicate) RuneOptionArrOptionListPredicate {
-	return func(e RuneOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayOptionListPredicate) And(p2 RuneOptionArrayOptionListPredicate) RuneOptionArrayOptionListPredicate {
+	return func(e RuneOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrOptionListPredicate) And(p2 Float32OptionArrOptionListPredicate) Float32OptionArrOptionListPredicate {
-	return func(e Float32OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayOptionListPredicate) And(p2 Float32OptionArrayOptionListPredicate) Float32OptionArrayOptionListPredicate {
+	return func(e Float32OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrOptionListPredicate) And(p2 Float64OptionArrOptionListPredicate) Float64OptionArrOptionListPredicate {
-	return func(e Float64OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayOptionListPredicate) And(p2 Float64OptionArrayOptionListPredicate) Float64OptionArrayOptionListPredicate {
+	return func(e Float64OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrOptionListPredicate) And(p2 Complex64OptionArrOptionListPredicate) Complex64OptionArrOptionListPredicate {
-	return func(e Complex64OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayOptionListPredicate) And(p2 Complex64OptionArrayOptionListPredicate) Complex64OptionArrayOptionListPredicate {
+	return func(e Complex64OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrOptionListPredicate) And(p2 Complex128OptionArrOptionListPredicate) Complex128OptionArrOptionListPredicate {
-	return func(e Complex128OptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayOptionListPredicate) And(p2 Complex128OptionArrayOptionListPredicate) Complex128OptionArrayOptionListPredicate {
+	return func(e Complex128OptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrOptionListPredicate) And(p2 AnyOptionArrOptionListPredicate) AnyOptionArrOptionListPredicate {
-	return func(e AnyOptionArrOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayOptionListPredicate) And(p2 AnyOptionArrayOptionListPredicate) AnyOptionArrayOptionListPredicate {
+	return func(e AnyOptionArrayOptionList) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListOptionListPredicate) And(p2 BoolListOptionListPredicate) BoolListOptionListPredicate {
 	return func(e BoolListOptionList) bool { return p1(e) && p2(e) }
@@ -1563,185 +1563,185 @@ func (p1 Complex128OptionOptionListPredicate) And(p2 Complex128OptionOptionListP
 func (p1 AnyOptionOptionListPredicate) And(p2 AnyOptionOptionListPredicate) AnyOptionOptionListPredicate {
 	return func(e AnyOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrOptionOptionListPredicate) And(p2 BoolArrOptionOptionListPredicate) BoolArrOptionOptionListPredicate {
-	return func(e BoolArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayOptionOptionListPredicate) And(p2 BoolArrayOptionOptionListPredicate) BoolArrayOptionOptionListPredicate {
+	return func(e BoolArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrOptionOptionListPredicate) And(p2 StringArrOptionOptionListPredicate) StringArrOptionOptionListPredicate {
-	return func(e StringArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayOptionOptionListPredicate) And(p2 StringArrayOptionOptionListPredicate) StringArrayOptionOptionListPredicate {
+	return func(e StringArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrOptionOptionListPredicate) And(p2 IntArrOptionOptionListPredicate) IntArrOptionOptionListPredicate {
-	return func(e IntArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayOptionOptionListPredicate) And(p2 IntArrayOptionOptionListPredicate) IntArrayOptionOptionListPredicate {
+	return func(e IntArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrOptionOptionListPredicate) And(p2 Int8ArrOptionOptionListPredicate) Int8ArrOptionOptionListPredicate {
-	return func(e Int8ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayOptionOptionListPredicate) And(p2 Int8ArrayOptionOptionListPredicate) Int8ArrayOptionOptionListPredicate {
+	return func(e Int8ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrOptionOptionListPredicate) And(p2 Int16ArrOptionOptionListPredicate) Int16ArrOptionOptionListPredicate {
-	return func(e Int16ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayOptionOptionListPredicate) And(p2 Int16ArrayOptionOptionListPredicate) Int16ArrayOptionOptionListPredicate {
+	return func(e Int16ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrOptionOptionListPredicate) And(p2 Int32ArrOptionOptionListPredicate) Int32ArrOptionOptionListPredicate {
-	return func(e Int32ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayOptionOptionListPredicate) And(p2 Int32ArrayOptionOptionListPredicate) Int32ArrayOptionOptionListPredicate {
+	return func(e Int32ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrOptionOptionListPredicate) And(p2 Int64ArrOptionOptionListPredicate) Int64ArrOptionOptionListPredicate {
-	return func(e Int64ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayOptionOptionListPredicate) And(p2 Int64ArrayOptionOptionListPredicate) Int64ArrayOptionOptionListPredicate {
+	return func(e Int64ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrOptionOptionListPredicate) And(p2 UintArrOptionOptionListPredicate) UintArrOptionOptionListPredicate {
-	return func(e UintArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayOptionOptionListPredicate) And(p2 UintArrayOptionOptionListPredicate) UintArrayOptionOptionListPredicate {
+	return func(e UintArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrOptionOptionListPredicate) And(p2 Uint8ArrOptionOptionListPredicate) Uint8ArrOptionOptionListPredicate {
-	return func(e Uint8ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayOptionOptionListPredicate) And(p2 Uint8ArrayOptionOptionListPredicate) Uint8ArrayOptionOptionListPredicate {
+	return func(e Uint8ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrOptionOptionListPredicate) And(p2 Uint16ArrOptionOptionListPredicate) Uint16ArrOptionOptionListPredicate {
-	return func(e Uint16ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayOptionOptionListPredicate) And(p2 Uint16ArrayOptionOptionListPredicate) Uint16ArrayOptionOptionListPredicate {
+	return func(e Uint16ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrOptionOptionListPredicate) And(p2 Uint32ArrOptionOptionListPredicate) Uint32ArrOptionOptionListPredicate {
-	return func(e Uint32ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayOptionOptionListPredicate) And(p2 Uint32ArrayOptionOptionListPredicate) Uint32ArrayOptionOptionListPredicate {
+	return func(e Uint32ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrOptionOptionListPredicate) And(p2 Uint64ArrOptionOptionListPredicate) Uint64ArrOptionOptionListPredicate {
-	return func(e Uint64ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayOptionOptionListPredicate) And(p2 Uint64ArrayOptionOptionListPredicate) Uint64ArrayOptionOptionListPredicate {
+	return func(e Uint64ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrOptionOptionListPredicate) And(p2 UintptrArrOptionOptionListPredicate) UintptrArrOptionOptionListPredicate {
-	return func(e UintptrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayOptionOptionListPredicate) And(p2 UintptrArrayOptionOptionListPredicate) UintptrArrayOptionOptionListPredicate {
+	return func(e UintptrArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrOptionOptionListPredicate) And(p2 ByteArrOptionOptionListPredicate) ByteArrOptionOptionListPredicate {
-	return func(e ByteArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayOptionOptionListPredicate) And(p2 ByteArrayOptionOptionListPredicate) ByteArrayOptionOptionListPredicate {
+	return func(e ByteArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrOptionOptionListPredicate) And(p2 RuneArrOptionOptionListPredicate) RuneArrOptionOptionListPredicate {
-	return func(e RuneArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayOptionOptionListPredicate) And(p2 RuneArrayOptionOptionListPredicate) RuneArrayOptionOptionListPredicate {
+	return func(e RuneArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrOptionOptionListPredicate) And(p2 Float32ArrOptionOptionListPredicate) Float32ArrOptionOptionListPredicate {
-	return func(e Float32ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayOptionOptionListPredicate) And(p2 Float32ArrayOptionOptionListPredicate) Float32ArrayOptionOptionListPredicate {
+	return func(e Float32ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrOptionOptionListPredicate) And(p2 Float64ArrOptionOptionListPredicate) Float64ArrOptionOptionListPredicate {
-	return func(e Float64ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayOptionOptionListPredicate) And(p2 Float64ArrayOptionOptionListPredicate) Float64ArrayOptionOptionListPredicate {
+	return func(e Float64ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrOptionOptionListPredicate) And(p2 Complex64ArrOptionOptionListPredicate) Complex64ArrOptionOptionListPredicate {
-	return func(e Complex64ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayOptionOptionListPredicate) And(p2 Complex64ArrayOptionOptionListPredicate) Complex64ArrayOptionOptionListPredicate {
+	return func(e Complex64ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrOptionOptionListPredicate) And(p2 Complex128ArrOptionOptionListPredicate) Complex128ArrOptionOptionListPredicate {
-	return func(e Complex128ArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayOptionOptionListPredicate) And(p2 Complex128ArrayOptionOptionListPredicate) Complex128ArrayOptionOptionListPredicate {
+	return func(e Complex128ArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrOptionOptionListPredicate) And(p2 AnyArrOptionOptionListPredicate) AnyArrOptionOptionListPredicate {
-	return func(e AnyArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayOptionOptionListPredicate) And(p2 AnyArrayOptionOptionListPredicate) AnyArrayOptionOptionListPredicate {
+	return func(e AnyArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrOptionOptionListPredicate) And(p2 BoolArrArrOptionOptionListPredicate) BoolArrArrOptionOptionListPredicate {
-	return func(e BoolArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayOptionOptionListPredicate) And(p2 BoolArrayArrayOptionOptionListPredicate) BoolArrayArrayOptionOptionListPredicate {
+	return func(e BoolArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrOptionOptionListPredicate) And(p2 StringArrArrOptionOptionListPredicate) StringArrArrOptionOptionListPredicate {
-	return func(e StringArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayOptionOptionListPredicate) And(p2 StringArrayArrayOptionOptionListPredicate) StringArrayArrayOptionOptionListPredicate {
+	return func(e StringArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrOptionOptionListPredicate) And(p2 IntArrArrOptionOptionListPredicate) IntArrArrOptionOptionListPredicate {
-	return func(e IntArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayOptionOptionListPredicate) And(p2 IntArrayArrayOptionOptionListPredicate) IntArrayArrayOptionOptionListPredicate {
+	return func(e IntArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrOptionOptionListPredicate) And(p2 Int8ArrArrOptionOptionListPredicate) Int8ArrArrOptionOptionListPredicate {
-	return func(e Int8ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayOptionOptionListPredicate) And(p2 Int8ArrayArrayOptionOptionListPredicate) Int8ArrayArrayOptionOptionListPredicate {
+	return func(e Int8ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrOptionOptionListPredicate) And(p2 Int16ArrArrOptionOptionListPredicate) Int16ArrArrOptionOptionListPredicate {
-	return func(e Int16ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayOptionOptionListPredicate) And(p2 Int16ArrayArrayOptionOptionListPredicate) Int16ArrayArrayOptionOptionListPredicate {
+	return func(e Int16ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrOptionOptionListPredicate) And(p2 Int32ArrArrOptionOptionListPredicate) Int32ArrArrOptionOptionListPredicate {
-	return func(e Int32ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayOptionOptionListPredicate) And(p2 Int32ArrayArrayOptionOptionListPredicate) Int32ArrayArrayOptionOptionListPredicate {
+	return func(e Int32ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrOptionOptionListPredicate) And(p2 Int64ArrArrOptionOptionListPredicate) Int64ArrArrOptionOptionListPredicate {
-	return func(e Int64ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayOptionOptionListPredicate) And(p2 Int64ArrayArrayOptionOptionListPredicate) Int64ArrayArrayOptionOptionListPredicate {
+	return func(e Int64ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrOptionOptionListPredicate) And(p2 UintArrArrOptionOptionListPredicate) UintArrArrOptionOptionListPredicate {
-	return func(e UintArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayOptionOptionListPredicate) And(p2 UintArrayArrayOptionOptionListPredicate) UintArrayArrayOptionOptionListPredicate {
+	return func(e UintArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrOptionOptionListPredicate) And(p2 Uint8ArrArrOptionOptionListPredicate) Uint8ArrArrOptionOptionListPredicate {
-	return func(e Uint8ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayOptionOptionListPredicate) And(p2 Uint8ArrayArrayOptionOptionListPredicate) Uint8ArrayArrayOptionOptionListPredicate {
+	return func(e Uint8ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrOptionOptionListPredicate) And(p2 Uint16ArrArrOptionOptionListPredicate) Uint16ArrArrOptionOptionListPredicate {
-	return func(e Uint16ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayOptionOptionListPredicate) And(p2 Uint16ArrayArrayOptionOptionListPredicate) Uint16ArrayArrayOptionOptionListPredicate {
+	return func(e Uint16ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrOptionOptionListPredicate) And(p2 Uint32ArrArrOptionOptionListPredicate) Uint32ArrArrOptionOptionListPredicate {
-	return func(e Uint32ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayOptionOptionListPredicate) And(p2 Uint32ArrayArrayOptionOptionListPredicate) Uint32ArrayArrayOptionOptionListPredicate {
+	return func(e Uint32ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrOptionOptionListPredicate) And(p2 Uint64ArrArrOptionOptionListPredicate) Uint64ArrArrOptionOptionListPredicate {
-	return func(e Uint64ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayOptionOptionListPredicate) And(p2 Uint64ArrayArrayOptionOptionListPredicate) Uint64ArrayArrayOptionOptionListPredicate {
+	return func(e Uint64ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrOptionOptionListPredicate) And(p2 UintptrArrArrOptionOptionListPredicate) UintptrArrArrOptionOptionListPredicate {
-	return func(e UintptrArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayOptionOptionListPredicate) And(p2 UintptrArrayArrayOptionOptionListPredicate) UintptrArrayArrayOptionOptionListPredicate {
+	return func(e UintptrArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrOptionOptionListPredicate) And(p2 ByteArrArrOptionOptionListPredicate) ByteArrArrOptionOptionListPredicate {
-	return func(e ByteArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayOptionOptionListPredicate) And(p2 ByteArrayArrayOptionOptionListPredicate) ByteArrayArrayOptionOptionListPredicate {
+	return func(e ByteArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrOptionOptionListPredicate) And(p2 RuneArrArrOptionOptionListPredicate) RuneArrArrOptionOptionListPredicate {
-	return func(e RuneArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayOptionOptionListPredicate) And(p2 RuneArrayArrayOptionOptionListPredicate) RuneArrayArrayOptionOptionListPredicate {
+	return func(e RuneArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrOptionOptionListPredicate) And(p2 Float32ArrArrOptionOptionListPredicate) Float32ArrArrOptionOptionListPredicate {
-	return func(e Float32ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayOptionOptionListPredicate) And(p2 Float32ArrayArrayOptionOptionListPredicate) Float32ArrayArrayOptionOptionListPredicate {
+	return func(e Float32ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrOptionOptionListPredicate) And(p2 Float64ArrArrOptionOptionListPredicate) Float64ArrArrOptionOptionListPredicate {
-	return func(e Float64ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayOptionOptionListPredicate) And(p2 Float64ArrayArrayOptionOptionListPredicate) Float64ArrayArrayOptionOptionListPredicate {
+	return func(e Float64ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrOptionOptionListPredicate) And(p2 Complex64ArrArrOptionOptionListPredicate) Complex64ArrArrOptionOptionListPredicate {
-	return func(e Complex64ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayOptionOptionListPredicate) And(p2 Complex64ArrayArrayOptionOptionListPredicate) Complex64ArrayArrayOptionOptionListPredicate {
+	return func(e Complex64ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrOptionOptionListPredicate) And(p2 Complex128ArrArrOptionOptionListPredicate) Complex128ArrArrOptionOptionListPredicate {
-	return func(e Complex128ArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayOptionOptionListPredicate) And(p2 Complex128ArrayArrayOptionOptionListPredicate) Complex128ArrayArrayOptionOptionListPredicate {
+	return func(e Complex128ArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrOptionOptionListPredicate) And(p2 AnyArrArrOptionOptionListPredicate) AnyArrArrOptionOptionListPredicate {
-	return func(e AnyArrArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayOptionOptionListPredicate) And(p2 AnyArrayArrayOptionOptionListPredicate) AnyArrayArrayOptionOptionListPredicate {
+	return func(e AnyArrayArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrOptionOptionListPredicate) And(p2 BoolOptionArrOptionOptionListPredicate) BoolOptionArrOptionOptionListPredicate {
-	return func(e BoolOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayOptionOptionListPredicate) And(p2 BoolOptionArrayOptionOptionListPredicate) BoolOptionArrayOptionOptionListPredicate {
+	return func(e BoolOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrOptionOptionListPredicate) And(p2 StringOptionArrOptionOptionListPredicate) StringOptionArrOptionOptionListPredicate {
-	return func(e StringOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayOptionOptionListPredicate) And(p2 StringOptionArrayOptionOptionListPredicate) StringOptionArrayOptionOptionListPredicate {
+	return func(e StringOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrOptionOptionListPredicate) And(p2 IntOptionArrOptionOptionListPredicate) IntOptionArrOptionOptionListPredicate {
-	return func(e IntOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayOptionOptionListPredicate) And(p2 IntOptionArrayOptionOptionListPredicate) IntOptionArrayOptionOptionListPredicate {
+	return func(e IntOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrOptionOptionListPredicate) And(p2 Int8OptionArrOptionOptionListPredicate) Int8OptionArrOptionOptionListPredicate {
-	return func(e Int8OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayOptionOptionListPredicate) And(p2 Int8OptionArrayOptionOptionListPredicate) Int8OptionArrayOptionOptionListPredicate {
+	return func(e Int8OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrOptionOptionListPredicate) And(p2 Int16OptionArrOptionOptionListPredicate) Int16OptionArrOptionOptionListPredicate {
-	return func(e Int16OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayOptionOptionListPredicate) And(p2 Int16OptionArrayOptionOptionListPredicate) Int16OptionArrayOptionOptionListPredicate {
+	return func(e Int16OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrOptionOptionListPredicate) And(p2 Int32OptionArrOptionOptionListPredicate) Int32OptionArrOptionOptionListPredicate {
-	return func(e Int32OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayOptionOptionListPredicate) And(p2 Int32OptionArrayOptionOptionListPredicate) Int32OptionArrayOptionOptionListPredicate {
+	return func(e Int32OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrOptionOptionListPredicate) And(p2 Int64OptionArrOptionOptionListPredicate) Int64OptionArrOptionOptionListPredicate {
-	return func(e Int64OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayOptionOptionListPredicate) And(p2 Int64OptionArrayOptionOptionListPredicate) Int64OptionArrayOptionOptionListPredicate {
+	return func(e Int64OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrOptionOptionListPredicate) And(p2 UintOptionArrOptionOptionListPredicate) UintOptionArrOptionOptionListPredicate {
-	return func(e UintOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayOptionOptionListPredicate) And(p2 UintOptionArrayOptionOptionListPredicate) UintOptionArrayOptionOptionListPredicate {
+	return func(e UintOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrOptionOptionListPredicate) And(p2 Uint8OptionArrOptionOptionListPredicate) Uint8OptionArrOptionOptionListPredicate {
-	return func(e Uint8OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayOptionOptionListPredicate) And(p2 Uint8OptionArrayOptionOptionListPredicate) Uint8OptionArrayOptionOptionListPredicate {
+	return func(e Uint8OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrOptionOptionListPredicate) And(p2 Uint16OptionArrOptionOptionListPredicate) Uint16OptionArrOptionOptionListPredicate {
-	return func(e Uint16OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayOptionOptionListPredicate) And(p2 Uint16OptionArrayOptionOptionListPredicate) Uint16OptionArrayOptionOptionListPredicate {
+	return func(e Uint16OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrOptionOptionListPredicate) And(p2 Uint32OptionArrOptionOptionListPredicate) Uint32OptionArrOptionOptionListPredicate {
-	return func(e Uint32OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayOptionOptionListPredicate) And(p2 Uint32OptionArrayOptionOptionListPredicate) Uint32OptionArrayOptionOptionListPredicate {
+	return func(e Uint32OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrOptionOptionListPredicate) And(p2 Uint64OptionArrOptionOptionListPredicate) Uint64OptionArrOptionOptionListPredicate {
-	return func(e Uint64OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayOptionOptionListPredicate) And(p2 Uint64OptionArrayOptionOptionListPredicate) Uint64OptionArrayOptionOptionListPredicate {
+	return func(e Uint64OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrOptionOptionListPredicate) And(p2 UintptrOptionArrOptionOptionListPredicate) UintptrOptionArrOptionOptionListPredicate {
-	return func(e UintptrOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayOptionOptionListPredicate) And(p2 UintptrOptionArrayOptionOptionListPredicate) UintptrOptionArrayOptionOptionListPredicate {
+	return func(e UintptrOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrOptionOptionListPredicate) And(p2 ByteOptionArrOptionOptionListPredicate) ByteOptionArrOptionOptionListPredicate {
-	return func(e ByteOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayOptionOptionListPredicate) And(p2 ByteOptionArrayOptionOptionListPredicate) ByteOptionArrayOptionOptionListPredicate {
+	return func(e ByteOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrOptionOptionListPredicate) And(p2 RuneOptionArrOptionOptionListPredicate) RuneOptionArrOptionOptionListPredicate {
-	return func(e RuneOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayOptionOptionListPredicate) And(p2 RuneOptionArrayOptionOptionListPredicate) RuneOptionArrayOptionOptionListPredicate {
+	return func(e RuneOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrOptionOptionListPredicate) And(p2 Float32OptionArrOptionOptionListPredicate) Float32OptionArrOptionOptionListPredicate {
-	return func(e Float32OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayOptionOptionListPredicate) And(p2 Float32OptionArrayOptionOptionListPredicate) Float32OptionArrayOptionOptionListPredicate {
+	return func(e Float32OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrOptionOptionListPredicate) And(p2 Float64OptionArrOptionOptionListPredicate) Float64OptionArrOptionOptionListPredicate {
-	return func(e Float64OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayOptionOptionListPredicate) And(p2 Float64OptionArrayOptionOptionListPredicate) Float64OptionArrayOptionOptionListPredicate {
+	return func(e Float64OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrOptionOptionListPredicate) And(p2 Complex64OptionArrOptionOptionListPredicate) Complex64OptionArrOptionOptionListPredicate {
-	return func(e Complex64OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayOptionOptionListPredicate) And(p2 Complex64OptionArrayOptionOptionListPredicate) Complex64OptionArrayOptionOptionListPredicate {
+	return func(e Complex64OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrOptionOptionListPredicate) And(p2 Complex128OptionArrOptionOptionListPredicate) Complex128OptionArrOptionOptionListPredicate {
-	return func(e Complex128OptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayOptionOptionListPredicate) And(p2 Complex128OptionArrayOptionOptionListPredicate) Complex128OptionArrayOptionOptionListPredicate {
+	return func(e Complex128OptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrOptionOptionListPredicate) And(p2 AnyOptionArrOptionOptionListPredicate) AnyOptionArrOptionOptionListPredicate {
-	return func(e AnyOptionArrOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayOptionOptionListPredicate) And(p2 AnyOptionArrayOptionOptionListPredicate) AnyOptionArrayOptionOptionListPredicate {
+	return func(e AnyOptionArrayOptionOptionList) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListOptionOptionListPredicate) And(p2 BoolListOptionOptionListPredicate) BoolListOptionOptionListPredicate {
 	return func(e BoolListOptionOptionList) bool { return p1(e) && p2(e) }
@@ -1863,185 +1863,185 @@ func (p1 Complex128OptionOptionOptionListPredicate) And(p2 Complex128OptionOptio
 func (p1 AnyOptionOptionOptionListPredicate) And(p2 AnyOptionOptionOptionListPredicate) AnyOptionOptionOptionListPredicate {
 	return func(e AnyOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrOptionOptionOptionListPredicate) And(p2 BoolArrOptionOptionOptionListPredicate) BoolArrOptionOptionOptionListPredicate {
-	return func(e BoolArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayOptionOptionOptionListPredicate) And(p2 BoolArrayOptionOptionOptionListPredicate) BoolArrayOptionOptionOptionListPredicate {
+	return func(e BoolArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrOptionOptionOptionListPredicate) And(p2 StringArrOptionOptionOptionListPredicate) StringArrOptionOptionOptionListPredicate {
-	return func(e StringArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayOptionOptionOptionListPredicate) And(p2 StringArrayOptionOptionOptionListPredicate) StringArrayOptionOptionOptionListPredicate {
+	return func(e StringArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrOptionOptionOptionListPredicate) And(p2 IntArrOptionOptionOptionListPredicate) IntArrOptionOptionOptionListPredicate {
-	return func(e IntArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayOptionOptionOptionListPredicate) And(p2 IntArrayOptionOptionOptionListPredicate) IntArrayOptionOptionOptionListPredicate {
+	return func(e IntArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrOptionOptionOptionListPredicate) And(p2 Int8ArrOptionOptionOptionListPredicate) Int8ArrOptionOptionOptionListPredicate {
-	return func(e Int8ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayOptionOptionOptionListPredicate) And(p2 Int8ArrayOptionOptionOptionListPredicate) Int8ArrayOptionOptionOptionListPredicate {
+	return func(e Int8ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrOptionOptionOptionListPredicate) And(p2 Int16ArrOptionOptionOptionListPredicate) Int16ArrOptionOptionOptionListPredicate {
-	return func(e Int16ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayOptionOptionOptionListPredicate) And(p2 Int16ArrayOptionOptionOptionListPredicate) Int16ArrayOptionOptionOptionListPredicate {
+	return func(e Int16ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrOptionOptionOptionListPredicate) And(p2 Int32ArrOptionOptionOptionListPredicate) Int32ArrOptionOptionOptionListPredicate {
-	return func(e Int32ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayOptionOptionOptionListPredicate) And(p2 Int32ArrayOptionOptionOptionListPredicate) Int32ArrayOptionOptionOptionListPredicate {
+	return func(e Int32ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrOptionOptionOptionListPredicate) And(p2 Int64ArrOptionOptionOptionListPredicate) Int64ArrOptionOptionOptionListPredicate {
-	return func(e Int64ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayOptionOptionOptionListPredicate) And(p2 Int64ArrayOptionOptionOptionListPredicate) Int64ArrayOptionOptionOptionListPredicate {
+	return func(e Int64ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrOptionOptionOptionListPredicate) And(p2 UintArrOptionOptionOptionListPredicate) UintArrOptionOptionOptionListPredicate {
-	return func(e UintArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayOptionOptionOptionListPredicate) And(p2 UintArrayOptionOptionOptionListPredicate) UintArrayOptionOptionOptionListPredicate {
+	return func(e UintArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrOptionOptionOptionListPredicate) And(p2 Uint8ArrOptionOptionOptionListPredicate) Uint8ArrOptionOptionOptionListPredicate {
-	return func(e Uint8ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayOptionOptionOptionListPredicate) And(p2 Uint8ArrayOptionOptionOptionListPredicate) Uint8ArrayOptionOptionOptionListPredicate {
+	return func(e Uint8ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrOptionOptionOptionListPredicate) And(p2 Uint16ArrOptionOptionOptionListPredicate) Uint16ArrOptionOptionOptionListPredicate {
-	return func(e Uint16ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayOptionOptionOptionListPredicate) And(p2 Uint16ArrayOptionOptionOptionListPredicate) Uint16ArrayOptionOptionOptionListPredicate {
+	return func(e Uint16ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrOptionOptionOptionListPredicate) And(p2 Uint32ArrOptionOptionOptionListPredicate) Uint32ArrOptionOptionOptionListPredicate {
-	return func(e Uint32ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayOptionOptionOptionListPredicate) And(p2 Uint32ArrayOptionOptionOptionListPredicate) Uint32ArrayOptionOptionOptionListPredicate {
+	return func(e Uint32ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrOptionOptionOptionListPredicate) And(p2 Uint64ArrOptionOptionOptionListPredicate) Uint64ArrOptionOptionOptionListPredicate {
-	return func(e Uint64ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayOptionOptionOptionListPredicate) And(p2 Uint64ArrayOptionOptionOptionListPredicate) Uint64ArrayOptionOptionOptionListPredicate {
+	return func(e Uint64ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrOptionOptionOptionListPredicate) And(p2 UintptrArrOptionOptionOptionListPredicate) UintptrArrOptionOptionOptionListPredicate {
-	return func(e UintptrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayOptionOptionOptionListPredicate) And(p2 UintptrArrayOptionOptionOptionListPredicate) UintptrArrayOptionOptionOptionListPredicate {
+	return func(e UintptrArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrOptionOptionOptionListPredicate) And(p2 ByteArrOptionOptionOptionListPredicate) ByteArrOptionOptionOptionListPredicate {
-	return func(e ByteArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayOptionOptionOptionListPredicate) And(p2 ByteArrayOptionOptionOptionListPredicate) ByteArrayOptionOptionOptionListPredicate {
+	return func(e ByteArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrOptionOptionOptionListPredicate) And(p2 RuneArrOptionOptionOptionListPredicate) RuneArrOptionOptionOptionListPredicate {
-	return func(e RuneArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayOptionOptionOptionListPredicate) And(p2 RuneArrayOptionOptionOptionListPredicate) RuneArrayOptionOptionOptionListPredicate {
+	return func(e RuneArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrOptionOptionOptionListPredicate) And(p2 Float32ArrOptionOptionOptionListPredicate) Float32ArrOptionOptionOptionListPredicate {
-	return func(e Float32ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayOptionOptionOptionListPredicate) And(p2 Float32ArrayOptionOptionOptionListPredicate) Float32ArrayOptionOptionOptionListPredicate {
+	return func(e Float32ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrOptionOptionOptionListPredicate) And(p2 Float64ArrOptionOptionOptionListPredicate) Float64ArrOptionOptionOptionListPredicate {
-	return func(e Float64ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayOptionOptionOptionListPredicate) And(p2 Float64ArrayOptionOptionOptionListPredicate) Float64ArrayOptionOptionOptionListPredicate {
+	return func(e Float64ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrOptionOptionOptionListPredicate) And(p2 Complex64ArrOptionOptionOptionListPredicate) Complex64ArrOptionOptionOptionListPredicate {
-	return func(e Complex64ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayOptionOptionOptionListPredicate) And(p2 Complex64ArrayOptionOptionOptionListPredicate) Complex64ArrayOptionOptionOptionListPredicate {
+	return func(e Complex64ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrOptionOptionOptionListPredicate) And(p2 Complex128ArrOptionOptionOptionListPredicate) Complex128ArrOptionOptionOptionListPredicate {
-	return func(e Complex128ArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayOptionOptionOptionListPredicate) And(p2 Complex128ArrayOptionOptionOptionListPredicate) Complex128ArrayOptionOptionOptionListPredicate {
+	return func(e Complex128ArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrOptionOptionOptionListPredicate) And(p2 AnyArrOptionOptionOptionListPredicate) AnyArrOptionOptionOptionListPredicate {
-	return func(e AnyArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayOptionOptionOptionListPredicate) And(p2 AnyArrayOptionOptionOptionListPredicate) AnyArrayOptionOptionOptionListPredicate {
+	return func(e AnyArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrOptionOptionOptionListPredicate) And(p2 BoolArrArrOptionOptionOptionListPredicate) BoolArrArrOptionOptionOptionListPredicate {
-	return func(e BoolArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayOptionOptionOptionListPredicate) And(p2 BoolArrayArrayOptionOptionOptionListPredicate) BoolArrayArrayOptionOptionOptionListPredicate {
+	return func(e BoolArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrOptionOptionOptionListPredicate) And(p2 StringArrArrOptionOptionOptionListPredicate) StringArrArrOptionOptionOptionListPredicate {
-	return func(e StringArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayOptionOptionOptionListPredicate) And(p2 StringArrayArrayOptionOptionOptionListPredicate) StringArrayArrayOptionOptionOptionListPredicate {
+	return func(e StringArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrOptionOptionOptionListPredicate) And(p2 IntArrArrOptionOptionOptionListPredicate) IntArrArrOptionOptionOptionListPredicate {
-	return func(e IntArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayOptionOptionOptionListPredicate) And(p2 IntArrayArrayOptionOptionOptionListPredicate) IntArrayArrayOptionOptionOptionListPredicate {
+	return func(e IntArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrOptionOptionOptionListPredicate) And(p2 Int8ArrArrOptionOptionOptionListPredicate) Int8ArrArrOptionOptionOptionListPredicate {
-	return func(e Int8ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayOptionOptionOptionListPredicate) And(p2 Int8ArrayArrayOptionOptionOptionListPredicate) Int8ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Int8ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrOptionOptionOptionListPredicate) And(p2 Int16ArrArrOptionOptionOptionListPredicate) Int16ArrArrOptionOptionOptionListPredicate {
-	return func(e Int16ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayOptionOptionOptionListPredicate) And(p2 Int16ArrayArrayOptionOptionOptionListPredicate) Int16ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Int16ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrOptionOptionOptionListPredicate) And(p2 Int32ArrArrOptionOptionOptionListPredicate) Int32ArrArrOptionOptionOptionListPredicate {
-	return func(e Int32ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayOptionOptionOptionListPredicate) And(p2 Int32ArrayArrayOptionOptionOptionListPredicate) Int32ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Int32ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrOptionOptionOptionListPredicate) And(p2 Int64ArrArrOptionOptionOptionListPredicate) Int64ArrArrOptionOptionOptionListPredicate {
-	return func(e Int64ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayOptionOptionOptionListPredicate) And(p2 Int64ArrayArrayOptionOptionOptionListPredicate) Int64ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Int64ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrOptionOptionOptionListPredicate) And(p2 UintArrArrOptionOptionOptionListPredicate) UintArrArrOptionOptionOptionListPredicate {
-	return func(e UintArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayOptionOptionOptionListPredicate) And(p2 UintArrayArrayOptionOptionOptionListPredicate) UintArrayArrayOptionOptionOptionListPredicate {
+	return func(e UintArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrOptionOptionOptionListPredicate) And(p2 Uint8ArrArrOptionOptionOptionListPredicate) Uint8ArrArrOptionOptionOptionListPredicate {
-	return func(e Uint8ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayOptionOptionOptionListPredicate) And(p2 Uint8ArrayArrayOptionOptionOptionListPredicate) Uint8ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Uint8ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrOptionOptionOptionListPredicate) And(p2 Uint16ArrArrOptionOptionOptionListPredicate) Uint16ArrArrOptionOptionOptionListPredicate {
-	return func(e Uint16ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayOptionOptionOptionListPredicate) And(p2 Uint16ArrayArrayOptionOptionOptionListPredicate) Uint16ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Uint16ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrOptionOptionOptionListPredicate) And(p2 Uint32ArrArrOptionOptionOptionListPredicate) Uint32ArrArrOptionOptionOptionListPredicate {
-	return func(e Uint32ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayOptionOptionOptionListPredicate) And(p2 Uint32ArrayArrayOptionOptionOptionListPredicate) Uint32ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Uint32ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrOptionOptionOptionListPredicate) And(p2 Uint64ArrArrOptionOptionOptionListPredicate) Uint64ArrArrOptionOptionOptionListPredicate {
-	return func(e Uint64ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayOptionOptionOptionListPredicate) And(p2 Uint64ArrayArrayOptionOptionOptionListPredicate) Uint64ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Uint64ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrOptionOptionOptionListPredicate) And(p2 UintptrArrArrOptionOptionOptionListPredicate) UintptrArrArrOptionOptionOptionListPredicate {
-	return func(e UintptrArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayOptionOptionOptionListPredicate) And(p2 UintptrArrayArrayOptionOptionOptionListPredicate) UintptrArrayArrayOptionOptionOptionListPredicate {
+	return func(e UintptrArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrOptionOptionOptionListPredicate) And(p2 ByteArrArrOptionOptionOptionListPredicate) ByteArrArrOptionOptionOptionListPredicate {
-	return func(e ByteArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayOptionOptionOptionListPredicate) And(p2 ByteArrayArrayOptionOptionOptionListPredicate) ByteArrayArrayOptionOptionOptionListPredicate {
+	return func(e ByteArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrOptionOptionOptionListPredicate) And(p2 RuneArrArrOptionOptionOptionListPredicate) RuneArrArrOptionOptionOptionListPredicate {
-	return func(e RuneArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayOptionOptionOptionListPredicate) And(p2 RuneArrayArrayOptionOptionOptionListPredicate) RuneArrayArrayOptionOptionOptionListPredicate {
+	return func(e RuneArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrOptionOptionOptionListPredicate) And(p2 Float32ArrArrOptionOptionOptionListPredicate) Float32ArrArrOptionOptionOptionListPredicate {
-	return func(e Float32ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayOptionOptionOptionListPredicate) And(p2 Float32ArrayArrayOptionOptionOptionListPredicate) Float32ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Float32ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrOptionOptionOptionListPredicate) And(p2 Float64ArrArrOptionOptionOptionListPredicate) Float64ArrArrOptionOptionOptionListPredicate {
-	return func(e Float64ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayOptionOptionOptionListPredicate) And(p2 Float64ArrayArrayOptionOptionOptionListPredicate) Float64ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Float64ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrOptionOptionOptionListPredicate) And(p2 Complex64ArrArrOptionOptionOptionListPredicate) Complex64ArrArrOptionOptionOptionListPredicate {
-	return func(e Complex64ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayOptionOptionOptionListPredicate) And(p2 Complex64ArrayArrayOptionOptionOptionListPredicate) Complex64ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Complex64ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrOptionOptionOptionListPredicate) And(p2 Complex128ArrArrOptionOptionOptionListPredicate) Complex128ArrArrOptionOptionOptionListPredicate {
-	return func(e Complex128ArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayOptionOptionOptionListPredicate) And(p2 Complex128ArrayArrayOptionOptionOptionListPredicate) Complex128ArrayArrayOptionOptionOptionListPredicate {
+	return func(e Complex128ArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrOptionOptionOptionListPredicate) And(p2 AnyArrArrOptionOptionOptionListPredicate) AnyArrArrOptionOptionOptionListPredicate {
-	return func(e AnyArrArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayOptionOptionOptionListPredicate) And(p2 AnyArrayArrayOptionOptionOptionListPredicate) AnyArrayArrayOptionOptionOptionListPredicate {
+	return func(e AnyArrayArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrOptionOptionOptionListPredicate) And(p2 BoolOptionArrOptionOptionOptionListPredicate) BoolOptionArrOptionOptionOptionListPredicate {
-	return func(e BoolOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayOptionOptionOptionListPredicate) And(p2 BoolOptionArrayOptionOptionOptionListPredicate) BoolOptionArrayOptionOptionOptionListPredicate {
+	return func(e BoolOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrOptionOptionOptionListPredicate) And(p2 StringOptionArrOptionOptionOptionListPredicate) StringOptionArrOptionOptionOptionListPredicate {
-	return func(e StringOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayOptionOptionOptionListPredicate) And(p2 StringOptionArrayOptionOptionOptionListPredicate) StringOptionArrayOptionOptionOptionListPredicate {
+	return func(e StringOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrOptionOptionOptionListPredicate) And(p2 IntOptionArrOptionOptionOptionListPredicate) IntOptionArrOptionOptionOptionListPredicate {
-	return func(e IntOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayOptionOptionOptionListPredicate) And(p2 IntOptionArrayOptionOptionOptionListPredicate) IntOptionArrayOptionOptionOptionListPredicate {
+	return func(e IntOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrOptionOptionOptionListPredicate) And(p2 Int8OptionArrOptionOptionOptionListPredicate) Int8OptionArrOptionOptionOptionListPredicate {
-	return func(e Int8OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayOptionOptionOptionListPredicate) And(p2 Int8OptionArrayOptionOptionOptionListPredicate) Int8OptionArrayOptionOptionOptionListPredicate {
+	return func(e Int8OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrOptionOptionOptionListPredicate) And(p2 Int16OptionArrOptionOptionOptionListPredicate) Int16OptionArrOptionOptionOptionListPredicate {
-	return func(e Int16OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayOptionOptionOptionListPredicate) And(p2 Int16OptionArrayOptionOptionOptionListPredicate) Int16OptionArrayOptionOptionOptionListPredicate {
+	return func(e Int16OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrOptionOptionOptionListPredicate) And(p2 Int32OptionArrOptionOptionOptionListPredicate) Int32OptionArrOptionOptionOptionListPredicate {
-	return func(e Int32OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayOptionOptionOptionListPredicate) And(p2 Int32OptionArrayOptionOptionOptionListPredicate) Int32OptionArrayOptionOptionOptionListPredicate {
+	return func(e Int32OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrOptionOptionOptionListPredicate) And(p2 Int64OptionArrOptionOptionOptionListPredicate) Int64OptionArrOptionOptionOptionListPredicate {
-	return func(e Int64OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayOptionOptionOptionListPredicate) And(p2 Int64OptionArrayOptionOptionOptionListPredicate) Int64OptionArrayOptionOptionOptionListPredicate {
+	return func(e Int64OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrOptionOptionOptionListPredicate) And(p2 UintOptionArrOptionOptionOptionListPredicate) UintOptionArrOptionOptionOptionListPredicate {
-	return func(e UintOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayOptionOptionOptionListPredicate) And(p2 UintOptionArrayOptionOptionOptionListPredicate) UintOptionArrayOptionOptionOptionListPredicate {
+	return func(e UintOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrOptionOptionOptionListPredicate) And(p2 Uint8OptionArrOptionOptionOptionListPredicate) Uint8OptionArrOptionOptionOptionListPredicate {
-	return func(e Uint8OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayOptionOptionOptionListPredicate) And(p2 Uint8OptionArrayOptionOptionOptionListPredicate) Uint8OptionArrayOptionOptionOptionListPredicate {
+	return func(e Uint8OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrOptionOptionOptionListPredicate) And(p2 Uint16OptionArrOptionOptionOptionListPredicate) Uint16OptionArrOptionOptionOptionListPredicate {
-	return func(e Uint16OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayOptionOptionOptionListPredicate) And(p2 Uint16OptionArrayOptionOptionOptionListPredicate) Uint16OptionArrayOptionOptionOptionListPredicate {
+	return func(e Uint16OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrOptionOptionOptionListPredicate) And(p2 Uint32OptionArrOptionOptionOptionListPredicate) Uint32OptionArrOptionOptionOptionListPredicate {
-	return func(e Uint32OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayOptionOptionOptionListPredicate) And(p2 Uint32OptionArrayOptionOptionOptionListPredicate) Uint32OptionArrayOptionOptionOptionListPredicate {
+	return func(e Uint32OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrOptionOptionOptionListPredicate) And(p2 Uint64OptionArrOptionOptionOptionListPredicate) Uint64OptionArrOptionOptionOptionListPredicate {
-	return func(e Uint64OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayOptionOptionOptionListPredicate) And(p2 Uint64OptionArrayOptionOptionOptionListPredicate) Uint64OptionArrayOptionOptionOptionListPredicate {
+	return func(e Uint64OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrOptionOptionOptionListPredicate) And(p2 UintptrOptionArrOptionOptionOptionListPredicate) UintptrOptionArrOptionOptionOptionListPredicate {
-	return func(e UintptrOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayOptionOptionOptionListPredicate) And(p2 UintptrOptionArrayOptionOptionOptionListPredicate) UintptrOptionArrayOptionOptionOptionListPredicate {
+	return func(e UintptrOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrOptionOptionOptionListPredicate) And(p2 ByteOptionArrOptionOptionOptionListPredicate) ByteOptionArrOptionOptionOptionListPredicate {
-	return func(e ByteOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayOptionOptionOptionListPredicate) And(p2 ByteOptionArrayOptionOptionOptionListPredicate) ByteOptionArrayOptionOptionOptionListPredicate {
+	return func(e ByteOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrOptionOptionOptionListPredicate) And(p2 RuneOptionArrOptionOptionOptionListPredicate) RuneOptionArrOptionOptionOptionListPredicate {
-	return func(e RuneOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayOptionOptionOptionListPredicate) And(p2 RuneOptionArrayOptionOptionOptionListPredicate) RuneOptionArrayOptionOptionOptionListPredicate {
+	return func(e RuneOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrOptionOptionOptionListPredicate) And(p2 Float32OptionArrOptionOptionOptionListPredicate) Float32OptionArrOptionOptionOptionListPredicate {
-	return func(e Float32OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayOptionOptionOptionListPredicate) And(p2 Float32OptionArrayOptionOptionOptionListPredicate) Float32OptionArrayOptionOptionOptionListPredicate {
+	return func(e Float32OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrOptionOptionOptionListPredicate) And(p2 Float64OptionArrOptionOptionOptionListPredicate) Float64OptionArrOptionOptionOptionListPredicate {
-	return func(e Float64OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayOptionOptionOptionListPredicate) And(p2 Float64OptionArrayOptionOptionOptionListPredicate) Float64OptionArrayOptionOptionOptionListPredicate {
+	return func(e Float64OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrOptionOptionOptionListPredicate) And(p2 Complex64OptionArrOptionOptionOptionListPredicate) Complex64OptionArrOptionOptionOptionListPredicate {
-	return func(e Complex64OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayOptionOptionOptionListPredicate) And(p2 Complex64OptionArrayOptionOptionOptionListPredicate) Complex64OptionArrayOptionOptionOptionListPredicate {
+	return func(e Complex64OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrOptionOptionOptionListPredicate) And(p2 Complex128OptionArrOptionOptionOptionListPredicate) Complex128OptionArrOptionOptionOptionListPredicate {
-	return func(e Complex128OptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayOptionOptionOptionListPredicate) And(p2 Complex128OptionArrayOptionOptionOptionListPredicate) Complex128OptionArrayOptionOptionOptionListPredicate {
+	return func(e Complex128OptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrOptionOptionOptionListPredicate) And(p2 AnyOptionArrOptionOptionOptionListPredicate) AnyOptionArrOptionOptionOptionListPredicate {
-	return func(e AnyOptionArrOptionOptionOptionList) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayOptionOptionOptionListPredicate) And(p2 AnyOptionArrayOptionOptionOptionListPredicate) AnyOptionArrayOptionOptionOptionListPredicate {
+	return func(e AnyOptionArrayOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListOptionOptionOptionListPredicate) And(p2 BoolListOptionOptionOptionListPredicate) BoolListOptionOptionOptionListPredicate {
 	return func(e BoolListOptionOptionOptionList) bool { return p1(e) && p2(e) }
@@ -2103,185 +2103,185 @@ func (p1 Complex128ListOptionOptionOptionListPredicate) And(p2 Complex128ListOpt
 func (p1 AnyListOptionOptionOptionListPredicate) And(p2 AnyListOptionOptionOptionListPredicate) AnyListOptionOptionOptionListPredicate {
 	return func(e AnyListOptionOptionOptionList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrListPredicate) And(p2 BoolArrListPredicate) BoolArrListPredicate {
-	return func(e BoolArrList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayListPredicate) And(p2 BoolArrayListPredicate) BoolArrayListPredicate {
+	return func(e BoolArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrListPredicate) And(p2 StringArrListPredicate) StringArrListPredicate {
-	return func(e StringArrList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayListPredicate) And(p2 StringArrayListPredicate) StringArrayListPredicate {
+	return func(e StringArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrListPredicate) And(p2 IntArrListPredicate) IntArrListPredicate {
-	return func(e IntArrList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayListPredicate) And(p2 IntArrayListPredicate) IntArrayListPredicate {
+	return func(e IntArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrListPredicate) And(p2 Int8ArrListPredicate) Int8ArrListPredicate {
-	return func(e Int8ArrList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayListPredicate) And(p2 Int8ArrayListPredicate) Int8ArrayListPredicate {
+	return func(e Int8ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrListPredicate) And(p2 Int16ArrListPredicate) Int16ArrListPredicate {
-	return func(e Int16ArrList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayListPredicate) And(p2 Int16ArrayListPredicate) Int16ArrayListPredicate {
+	return func(e Int16ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrListPredicate) And(p2 Int32ArrListPredicate) Int32ArrListPredicate {
-	return func(e Int32ArrList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayListPredicate) And(p2 Int32ArrayListPredicate) Int32ArrayListPredicate {
+	return func(e Int32ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrListPredicate) And(p2 Int64ArrListPredicate) Int64ArrListPredicate {
-	return func(e Int64ArrList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayListPredicate) And(p2 Int64ArrayListPredicate) Int64ArrayListPredicate {
+	return func(e Int64ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrListPredicate) And(p2 UintArrListPredicate) UintArrListPredicate {
-	return func(e UintArrList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayListPredicate) And(p2 UintArrayListPredicate) UintArrayListPredicate {
+	return func(e UintArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrListPredicate) And(p2 Uint8ArrListPredicate) Uint8ArrListPredicate {
-	return func(e Uint8ArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayListPredicate) And(p2 Uint8ArrayListPredicate) Uint8ArrayListPredicate {
+	return func(e Uint8ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrListPredicate) And(p2 Uint16ArrListPredicate) Uint16ArrListPredicate {
-	return func(e Uint16ArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayListPredicate) And(p2 Uint16ArrayListPredicate) Uint16ArrayListPredicate {
+	return func(e Uint16ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrListPredicate) And(p2 Uint32ArrListPredicate) Uint32ArrListPredicate {
-	return func(e Uint32ArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayListPredicate) And(p2 Uint32ArrayListPredicate) Uint32ArrayListPredicate {
+	return func(e Uint32ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrListPredicate) And(p2 Uint64ArrListPredicate) Uint64ArrListPredicate {
-	return func(e Uint64ArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayListPredicate) And(p2 Uint64ArrayListPredicate) Uint64ArrayListPredicate {
+	return func(e Uint64ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrListPredicate) And(p2 UintptrArrListPredicate) UintptrArrListPredicate {
-	return func(e UintptrArrList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayListPredicate) And(p2 UintptrArrayListPredicate) UintptrArrayListPredicate {
+	return func(e UintptrArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrListPredicate) And(p2 ByteArrListPredicate) ByteArrListPredicate {
-	return func(e ByteArrList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayListPredicate) And(p2 ByteArrayListPredicate) ByteArrayListPredicate {
+	return func(e ByteArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrListPredicate) And(p2 RuneArrListPredicate) RuneArrListPredicate {
-	return func(e RuneArrList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayListPredicate) And(p2 RuneArrayListPredicate) RuneArrayListPredicate {
+	return func(e RuneArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrListPredicate) And(p2 Float32ArrListPredicate) Float32ArrListPredicate {
-	return func(e Float32ArrList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayListPredicate) And(p2 Float32ArrayListPredicate) Float32ArrayListPredicate {
+	return func(e Float32ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrListPredicate) And(p2 Float64ArrListPredicate) Float64ArrListPredicate {
-	return func(e Float64ArrList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayListPredicate) And(p2 Float64ArrayListPredicate) Float64ArrayListPredicate {
+	return func(e Float64ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrListPredicate) And(p2 Complex64ArrListPredicate) Complex64ArrListPredicate {
-	return func(e Complex64ArrList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayListPredicate) And(p2 Complex64ArrayListPredicate) Complex64ArrayListPredicate {
+	return func(e Complex64ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrListPredicate) And(p2 Complex128ArrListPredicate) Complex128ArrListPredicate {
-	return func(e Complex128ArrList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayListPredicate) And(p2 Complex128ArrayListPredicate) Complex128ArrayListPredicate {
+	return func(e Complex128ArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrListPredicate) And(p2 AnyArrListPredicate) AnyArrListPredicate {
-	return func(e AnyArrList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayListPredicate) And(p2 AnyArrayListPredicate) AnyArrayListPredicate {
+	return func(e AnyArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolArrArrListPredicate) And(p2 BoolArrArrListPredicate) BoolArrArrListPredicate {
-	return func(e BoolArrArrList) bool { return p1(e) && p2(e) }
+func (p1 BoolArrayArrayListPredicate) And(p2 BoolArrayArrayListPredicate) BoolArrayArrayListPredicate {
+	return func(e BoolArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringArrArrListPredicate) And(p2 StringArrArrListPredicate) StringArrArrListPredicate {
-	return func(e StringArrArrList) bool { return p1(e) && p2(e) }
+func (p1 StringArrayArrayListPredicate) And(p2 StringArrayArrayListPredicate) StringArrayArrayListPredicate {
+	return func(e StringArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntArrArrListPredicate) And(p2 IntArrArrListPredicate) IntArrArrListPredicate {
-	return func(e IntArrArrList) bool { return p1(e) && p2(e) }
+func (p1 IntArrayArrayListPredicate) And(p2 IntArrayArrayListPredicate) IntArrayArrayListPredicate {
+	return func(e IntArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8ArrArrListPredicate) And(p2 Int8ArrArrListPredicate) Int8ArrArrListPredicate {
-	return func(e Int8ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Int8ArrayArrayListPredicate) And(p2 Int8ArrayArrayListPredicate) Int8ArrayArrayListPredicate {
+	return func(e Int8ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16ArrArrListPredicate) And(p2 Int16ArrArrListPredicate) Int16ArrArrListPredicate {
-	return func(e Int16ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Int16ArrayArrayListPredicate) And(p2 Int16ArrayArrayListPredicate) Int16ArrayArrayListPredicate {
+	return func(e Int16ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32ArrArrListPredicate) And(p2 Int32ArrArrListPredicate) Int32ArrArrListPredicate {
-	return func(e Int32ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Int32ArrayArrayListPredicate) And(p2 Int32ArrayArrayListPredicate) Int32ArrayArrayListPredicate {
+	return func(e Int32ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64ArrArrListPredicate) And(p2 Int64ArrArrListPredicate) Int64ArrArrListPredicate {
-	return func(e Int64ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Int64ArrayArrayListPredicate) And(p2 Int64ArrayArrayListPredicate) Int64ArrayArrayListPredicate {
+	return func(e Int64ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintArrArrListPredicate) And(p2 UintArrArrListPredicate) UintArrArrListPredicate {
-	return func(e UintArrArrList) bool { return p1(e) && p2(e) }
+func (p1 UintArrayArrayListPredicate) And(p2 UintArrayArrayListPredicate) UintArrayArrayListPredicate {
+	return func(e UintArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8ArrArrListPredicate) And(p2 Uint8ArrArrListPredicate) Uint8ArrArrListPredicate {
-	return func(e Uint8ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint8ArrayArrayListPredicate) And(p2 Uint8ArrayArrayListPredicate) Uint8ArrayArrayListPredicate {
+	return func(e Uint8ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16ArrArrListPredicate) And(p2 Uint16ArrArrListPredicate) Uint16ArrArrListPredicate {
-	return func(e Uint16ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint16ArrayArrayListPredicate) And(p2 Uint16ArrayArrayListPredicate) Uint16ArrayArrayListPredicate {
+	return func(e Uint16ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32ArrArrListPredicate) And(p2 Uint32ArrArrListPredicate) Uint32ArrArrListPredicate {
-	return func(e Uint32ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint32ArrayArrayListPredicate) And(p2 Uint32ArrayArrayListPredicate) Uint32ArrayArrayListPredicate {
+	return func(e Uint32ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64ArrArrListPredicate) And(p2 Uint64ArrArrListPredicate) Uint64ArrArrListPredicate {
-	return func(e Uint64ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint64ArrayArrayListPredicate) And(p2 Uint64ArrayArrayListPredicate) Uint64ArrayArrayListPredicate {
+	return func(e Uint64ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrArrArrListPredicate) And(p2 UintptrArrArrListPredicate) UintptrArrArrListPredicate {
-	return func(e UintptrArrArrList) bool { return p1(e) && p2(e) }
+func (p1 UintptrArrayArrayListPredicate) And(p2 UintptrArrayArrayListPredicate) UintptrArrayArrayListPredicate {
+	return func(e UintptrArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteArrArrListPredicate) And(p2 ByteArrArrListPredicate) ByteArrArrListPredicate {
-	return func(e ByteArrArrList) bool { return p1(e) && p2(e) }
+func (p1 ByteArrayArrayListPredicate) And(p2 ByteArrayArrayListPredicate) ByteArrayArrayListPredicate {
+	return func(e ByteArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneArrArrListPredicate) And(p2 RuneArrArrListPredicate) RuneArrArrListPredicate {
-	return func(e RuneArrArrList) bool { return p1(e) && p2(e) }
+func (p1 RuneArrayArrayListPredicate) And(p2 RuneArrayArrayListPredicate) RuneArrayArrayListPredicate {
+	return func(e RuneArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32ArrArrListPredicate) And(p2 Float32ArrArrListPredicate) Float32ArrArrListPredicate {
-	return func(e Float32ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Float32ArrayArrayListPredicate) And(p2 Float32ArrayArrayListPredicate) Float32ArrayArrayListPredicate {
+	return func(e Float32ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64ArrArrListPredicate) And(p2 Float64ArrArrListPredicate) Float64ArrArrListPredicate {
-	return func(e Float64ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Float64ArrayArrayListPredicate) And(p2 Float64ArrayArrayListPredicate) Float64ArrayArrayListPredicate {
+	return func(e Float64ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64ArrArrListPredicate) And(p2 Complex64ArrArrListPredicate) Complex64ArrArrListPredicate {
-	return func(e Complex64ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Complex64ArrayArrayListPredicate) And(p2 Complex64ArrayArrayListPredicate) Complex64ArrayArrayListPredicate {
+	return func(e Complex64ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128ArrArrListPredicate) And(p2 Complex128ArrArrListPredicate) Complex128ArrArrListPredicate {
-	return func(e Complex128ArrArrList) bool { return p1(e) && p2(e) }
+func (p1 Complex128ArrayArrayListPredicate) And(p2 Complex128ArrayArrayListPredicate) Complex128ArrayArrayListPredicate {
+	return func(e Complex128ArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyArrArrListPredicate) And(p2 AnyArrArrListPredicate) AnyArrArrListPredicate {
-	return func(e AnyArrArrList) bool { return p1(e) && p2(e) }
+func (p1 AnyArrayArrayListPredicate) And(p2 AnyArrayArrayListPredicate) AnyArrayArrayListPredicate {
+	return func(e AnyArrayArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 BoolOptionArrListPredicate) And(p2 BoolOptionArrListPredicate) BoolOptionArrListPredicate {
-	return func(e BoolOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 BoolOptionArrayListPredicate) And(p2 BoolOptionArrayListPredicate) BoolOptionArrayListPredicate {
+	return func(e BoolOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 StringOptionArrListPredicate) And(p2 StringOptionArrListPredicate) StringOptionArrListPredicate {
-	return func(e StringOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 StringOptionArrayListPredicate) And(p2 StringOptionArrayListPredicate) StringOptionArrayListPredicate {
+	return func(e StringOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 IntOptionArrListPredicate) And(p2 IntOptionArrListPredicate) IntOptionArrListPredicate {
-	return func(e IntOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 IntOptionArrayListPredicate) And(p2 IntOptionArrayListPredicate) IntOptionArrayListPredicate {
+	return func(e IntOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int8OptionArrListPredicate) And(p2 Int8OptionArrListPredicate) Int8OptionArrListPredicate {
-	return func(e Int8OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Int8OptionArrayListPredicate) And(p2 Int8OptionArrayListPredicate) Int8OptionArrayListPredicate {
+	return func(e Int8OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int16OptionArrListPredicate) And(p2 Int16OptionArrListPredicate) Int16OptionArrListPredicate {
-	return func(e Int16OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Int16OptionArrayListPredicate) And(p2 Int16OptionArrayListPredicate) Int16OptionArrayListPredicate {
+	return func(e Int16OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int32OptionArrListPredicate) And(p2 Int32OptionArrListPredicate) Int32OptionArrListPredicate {
-	return func(e Int32OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Int32OptionArrayListPredicate) And(p2 Int32OptionArrayListPredicate) Int32OptionArrayListPredicate {
+	return func(e Int32OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Int64OptionArrListPredicate) And(p2 Int64OptionArrListPredicate) Int64OptionArrListPredicate {
-	return func(e Int64OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Int64OptionArrayListPredicate) And(p2 Int64OptionArrayListPredicate) Int64OptionArrayListPredicate {
+	return func(e Int64OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintOptionArrListPredicate) And(p2 UintOptionArrListPredicate) UintOptionArrListPredicate {
-	return func(e UintOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 UintOptionArrayListPredicate) And(p2 UintOptionArrayListPredicate) UintOptionArrayListPredicate {
+	return func(e UintOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint8OptionArrListPredicate) And(p2 Uint8OptionArrListPredicate) Uint8OptionArrListPredicate {
-	return func(e Uint8OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint8OptionArrayListPredicate) And(p2 Uint8OptionArrayListPredicate) Uint8OptionArrayListPredicate {
+	return func(e Uint8OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint16OptionArrListPredicate) And(p2 Uint16OptionArrListPredicate) Uint16OptionArrListPredicate {
-	return func(e Uint16OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint16OptionArrayListPredicate) And(p2 Uint16OptionArrayListPredicate) Uint16OptionArrayListPredicate {
+	return func(e Uint16OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint32OptionArrListPredicate) And(p2 Uint32OptionArrListPredicate) Uint32OptionArrListPredicate {
-	return func(e Uint32OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint32OptionArrayListPredicate) And(p2 Uint32OptionArrayListPredicate) Uint32OptionArrayListPredicate {
+	return func(e Uint32OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Uint64OptionArrListPredicate) And(p2 Uint64OptionArrListPredicate) Uint64OptionArrListPredicate {
-	return func(e Uint64OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Uint64OptionArrayListPredicate) And(p2 Uint64OptionArrayListPredicate) Uint64OptionArrayListPredicate {
+	return func(e Uint64OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 UintptrOptionArrListPredicate) And(p2 UintptrOptionArrListPredicate) UintptrOptionArrListPredicate {
-	return func(e UintptrOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 UintptrOptionArrayListPredicate) And(p2 UintptrOptionArrayListPredicate) UintptrOptionArrayListPredicate {
+	return func(e UintptrOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 ByteOptionArrListPredicate) And(p2 ByteOptionArrListPredicate) ByteOptionArrListPredicate {
-	return func(e ByteOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 ByteOptionArrayListPredicate) And(p2 ByteOptionArrayListPredicate) ByteOptionArrayListPredicate {
+	return func(e ByteOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 RuneOptionArrListPredicate) And(p2 RuneOptionArrListPredicate) RuneOptionArrListPredicate {
-	return func(e RuneOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 RuneOptionArrayListPredicate) And(p2 RuneOptionArrayListPredicate) RuneOptionArrayListPredicate {
+	return func(e RuneOptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float32OptionArrListPredicate) And(p2 Float32OptionArrListPredicate) Float32OptionArrListPredicate {
-	return func(e Float32OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Float32OptionArrayListPredicate) And(p2 Float32OptionArrayListPredicate) Float32OptionArrayListPredicate {
+	return func(e Float32OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Float64OptionArrListPredicate) And(p2 Float64OptionArrListPredicate) Float64OptionArrListPredicate {
-	return func(e Float64OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Float64OptionArrayListPredicate) And(p2 Float64OptionArrayListPredicate) Float64OptionArrayListPredicate {
+	return func(e Float64OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex64OptionArrListPredicate) And(p2 Complex64OptionArrListPredicate) Complex64OptionArrListPredicate {
-	return func(e Complex64OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Complex64OptionArrayListPredicate) And(p2 Complex64OptionArrayListPredicate) Complex64OptionArrayListPredicate {
+	return func(e Complex64OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 Complex128OptionArrListPredicate) And(p2 Complex128OptionArrListPredicate) Complex128OptionArrListPredicate {
-	return func(e Complex128OptionArrList) bool { return p1(e) && p2(e) }
+func (p1 Complex128OptionArrayListPredicate) And(p2 Complex128OptionArrayListPredicate) Complex128OptionArrayListPredicate {
+	return func(e Complex128OptionArrayList) bool { return p1(e) && p2(e) }
 }
-func (p1 AnyOptionArrListPredicate) And(p2 AnyOptionArrListPredicate) AnyOptionArrListPredicate {
-	return func(e AnyOptionArrList) bool { return p1(e) && p2(e) }
+func (p1 AnyOptionArrayListPredicate) And(p2 AnyOptionArrayListPredicate) AnyOptionArrayListPredicate {
+	return func(e AnyOptionArrayList) bool { return p1(e) && p2(e) }
 }
 func (p1 BoolListListPredicate) And(p2 BoolListListPredicate) BoolListListPredicate {
 	return func(e BoolListList) bool { return p1(e) && p2(e) }

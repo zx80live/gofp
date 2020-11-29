@@ -3,1105 +3,4403 @@
 
 package fp
 
-func (m BoolList) Filter(p BoolPredicate) BoolList                { return FilterBoolList(m, p) }
-func (m StringList) Filter(p StringPredicate) StringList          { return FilterStringList(m, p) }
-func (m IntList) Filter(p IntPredicate) IntList                   { return FilterIntList(m, p) }
-func (m Int8List) Filter(p Int8Predicate) Int8List                { return FilterInt8List(m, p) }
-func (m Int16List) Filter(p Int16Predicate) Int16List             { return FilterInt16List(m, p) }
-func (m Int32List) Filter(p Int32Predicate) Int32List             { return FilterInt32List(m, p) }
-func (m Int64List) Filter(p Int64Predicate) Int64List             { return FilterInt64List(m, p) }
-func (m UintList) Filter(p UintPredicate) UintList                { return FilterUintList(m, p) }
-func (m Uint8List) Filter(p Uint8Predicate) Uint8List             { return FilterUint8List(m, p) }
-func (m Uint16List) Filter(p Uint16Predicate) Uint16List          { return FilterUint16List(m, p) }
-func (m Uint32List) Filter(p Uint32Predicate) Uint32List          { return FilterUint32List(m, p) }
-func (m Uint64List) Filter(p Uint64Predicate) Uint64List          { return FilterUint64List(m, p) }
-func (m UintptrList) Filter(p UintptrPredicate) UintptrList       { return FilterUintptrList(m, p) }
-func (m ByteList) Filter(p BytePredicate) ByteList                { return FilterByteList(m, p) }
-func (m RuneList) Filter(p RunePredicate) RuneList                { return FilterRuneList(m, p) }
-func (m Float32List) Filter(p Float32Predicate) Float32List       { return FilterFloat32List(m, p) }
-func (m Float64List) Filter(p Float64Predicate) Float64List       { return FilterFloat64List(m, p) }
-func (m Complex64List) Filter(p Complex64Predicate) Complex64List { return FilterComplex64List(m, p) }
-func (m Complex128List) Filter(p Complex128Predicate) Complex128List {
-	return FilterComplex128List(m, p)
+func (l BoolList) Filter(p BoolPredicate) BoolList {
+	acc := NilBool
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringList) Filter(p StringPredicate) StringList {
+	acc := NilString
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntList) Filter(p IntPredicate) IntList {
+	acc := NilInt
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8List) Filter(p Int8Predicate) Int8List {
+	acc := NilInt8
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16List) Filter(p Int16Predicate) Int16List {
+	acc := NilInt16
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32List) Filter(p Int32Predicate) Int32List {
+	acc := NilInt32
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64List) Filter(p Int64Predicate) Int64List {
+	acc := NilInt64
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintList) Filter(p UintPredicate) UintList {
+	acc := NilUint
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8List) Filter(p Uint8Predicate) Uint8List {
+	acc := NilUint8
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16List) Filter(p Uint16Predicate) Uint16List {
+	acc := NilUint16
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32List) Filter(p Uint32Predicate) Uint32List {
+	acc := NilUint32
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64List) Filter(p Uint64Predicate) Uint64List {
+	acc := NilUint64
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrList) Filter(p UintptrPredicate) UintptrList {
+	acc := NilUintptr
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteList) Filter(p BytePredicate) ByteList {
+	acc := NilByte
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneList) Filter(p RunePredicate) RuneList {
+	acc := NilRune
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32List) Filter(p Float32Predicate) Float32List {
+	acc := NilFloat32
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64List) Filter(p Float64Predicate) Float64List {
+	acc := NilFloat64
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64List) Filter(p Complex64Predicate) Complex64List {
+	acc := NilComplex64
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128List) Filter(p Complex128Predicate) Complex128List {
+	acc := NilComplex128
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyList) Filter(p AnyPredicate) AnyList {
+	acc := NilAny
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionList) Filter(p BoolOptionPredicate) BoolOptionList {
+	acc := NilBoolOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionList) Filter(p StringOptionPredicate) StringOptionList {
+	acc := NilStringOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionList) Filter(p IntOptionPredicate) IntOptionList {
+	acc := NilIntOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionList) Filter(p Int8OptionPredicate) Int8OptionList {
+	acc := NilInt8Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionList) Filter(p Int16OptionPredicate) Int16OptionList {
+	acc := NilInt16Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionList) Filter(p Int32OptionPredicate) Int32OptionList {
+	acc := NilInt32Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionList) Filter(p Int64OptionPredicate) Int64OptionList {
+	acc := NilInt64Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionList) Filter(p UintOptionPredicate) UintOptionList {
+	acc := NilUintOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionList) Filter(p Uint8OptionPredicate) Uint8OptionList {
+	acc := NilUint8Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionList) Filter(p Uint16OptionPredicate) Uint16OptionList {
+	acc := NilUint16Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionList) Filter(p Uint32OptionPredicate) Uint32OptionList {
+	acc := NilUint32Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionList) Filter(p Uint64OptionPredicate) Uint64OptionList {
+	acc := NilUint64Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionList) Filter(p UintptrOptionPredicate) UintptrOptionList {
+	acc := NilUintptrOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionList) Filter(p ByteOptionPredicate) ByteOptionList {
+	acc := NilByteOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionList) Filter(p RuneOptionPredicate) RuneOptionList {
+	acc := NilRuneOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionList) Filter(p Float32OptionPredicate) Float32OptionList {
+	acc := NilFloat32Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionList) Filter(p Float64OptionPredicate) Float64OptionList {
+	acc := NilFloat64Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionList) Filter(p Complex64OptionPredicate) Complex64OptionList {
+	acc := NilComplex64Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionList) Filter(p Complex128OptionPredicate) Complex128OptionList {
+	acc := NilComplex128Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionList) Filter(p AnyOptionPredicate) AnyOptionList {
+	acc := NilAnyOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayOptionList) Filter(p BoolArrayOptionPredicate) BoolArrayOptionList {
+	acc := NilBoolArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayOptionList) Filter(p StringArrayOptionPredicate) StringArrayOptionList {
+	acc := NilStringArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayOptionList) Filter(p IntArrayOptionPredicate) IntArrayOptionList {
+	acc := NilIntArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayOptionList) Filter(p Int8ArrayOptionPredicate) Int8ArrayOptionList {
+	acc := NilInt8ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayOptionList) Filter(p Int16ArrayOptionPredicate) Int16ArrayOptionList {
+	acc := NilInt16ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayOptionList) Filter(p Int32ArrayOptionPredicate) Int32ArrayOptionList {
+	acc := NilInt32ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayOptionList) Filter(p Int64ArrayOptionPredicate) Int64ArrayOptionList {
+	acc := NilInt64ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayOptionList) Filter(p UintArrayOptionPredicate) UintArrayOptionList {
+	acc := NilUintArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayOptionList) Filter(p Uint8ArrayOptionPredicate) Uint8ArrayOptionList {
+	acc := NilUint8ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayOptionList) Filter(p Uint16ArrayOptionPredicate) Uint16ArrayOptionList {
+	acc := NilUint16ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayOptionList) Filter(p Uint32ArrayOptionPredicate) Uint32ArrayOptionList {
+	acc := NilUint32ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayOptionList) Filter(p Uint64ArrayOptionPredicate) Uint64ArrayOptionList {
+	acc := NilUint64ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayOptionList) Filter(p UintptrArrayOptionPredicate) UintptrArrayOptionList {
+	acc := NilUintptrArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayOptionList) Filter(p ByteArrayOptionPredicate) ByteArrayOptionList {
+	acc := NilByteArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayOptionList) Filter(p RuneArrayOptionPredicate) RuneArrayOptionList {
+	acc := NilRuneArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayOptionList) Filter(p Float32ArrayOptionPredicate) Float32ArrayOptionList {
+	acc := NilFloat32ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayOptionList) Filter(p Float64ArrayOptionPredicate) Float64ArrayOptionList {
+	acc := NilFloat64ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayOptionList) Filter(p Complex64ArrayOptionPredicate) Complex64ArrayOptionList {
+	acc := NilComplex64ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayOptionList) Filter(p Complex128ArrayOptionPredicate) Complex128ArrayOptionList {
+	acc := NilComplex128ArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayOptionList) Filter(p AnyArrayOptionPredicate) AnyArrayOptionList {
+	acc := NilAnyArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayArrayOptionList) Filter(p BoolArrayArrayOptionPredicate) BoolArrayArrayOptionList {
+	acc := NilBoolArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayArrayOptionList) Filter(p StringArrayArrayOptionPredicate) StringArrayArrayOptionList {
+	acc := NilStringArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayArrayOptionList) Filter(p IntArrayArrayOptionPredicate) IntArrayArrayOptionList {
+	acc := NilIntArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayArrayOptionList) Filter(p Int8ArrayArrayOptionPredicate) Int8ArrayArrayOptionList {
+	acc := NilInt8ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayArrayOptionList) Filter(p Int16ArrayArrayOptionPredicate) Int16ArrayArrayOptionList {
+	acc := NilInt16ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayArrayOptionList) Filter(p Int32ArrayArrayOptionPredicate) Int32ArrayArrayOptionList {
+	acc := NilInt32ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayArrayOptionList) Filter(p Int64ArrayArrayOptionPredicate) Int64ArrayArrayOptionList {
+	acc := NilInt64ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayArrayOptionList) Filter(p UintArrayArrayOptionPredicate) UintArrayArrayOptionList {
+	acc := NilUintArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayArrayOptionList) Filter(p Uint8ArrayArrayOptionPredicate) Uint8ArrayArrayOptionList {
+	acc := NilUint8ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayArrayOptionList) Filter(p Uint16ArrayArrayOptionPredicate) Uint16ArrayArrayOptionList {
+	acc := NilUint16ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayArrayOptionList) Filter(p Uint32ArrayArrayOptionPredicate) Uint32ArrayArrayOptionList {
+	acc := NilUint32ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayArrayOptionList) Filter(p Uint64ArrayArrayOptionPredicate) Uint64ArrayArrayOptionList {
+	acc := NilUint64ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayArrayOptionList) Filter(p UintptrArrayArrayOptionPredicate) UintptrArrayArrayOptionList {
+	acc := NilUintptrArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayArrayOptionList) Filter(p ByteArrayArrayOptionPredicate) ByteArrayArrayOptionList {
+	acc := NilByteArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayArrayOptionList) Filter(p RuneArrayArrayOptionPredicate) RuneArrayArrayOptionList {
+	acc := NilRuneArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayArrayOptionList) Filter(p Float32ArrayArrayOptionPredicate) Float32ArrayArrayOptionList {
+	acc := NilFloat32ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayArrayOptionList) Filter(p Float64ArrayArrayOptionPredicate) Float64ArrayArrayOptionList {
+	acc := NilFloat64ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayArrayOptionList) Filter(p Complex64ArrayArrayOptionPredicate) Complex64ArrayArrayOptionList {
+	acc := NilComplex64ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayArrayOptionList) Filter(p Complex128ArrayArrayOptionPredicate) Complex128ArrayArrayOptionList {
+	acc := NilComplex128ArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayArrayOptionList) Filter(p AnyArrayArrayOptionPredicate) AnyArrayArrayOptionList {
+	acc := NilAnyArrayArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionArrayOptionList) Filter(p BoolOptionArrayOptionPredicate) BoolOptionArrayOptionList {
+	acc := NilBoolOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionArrayOptionList) Filter(p StringOptionArrayOptionPredicate) StringOptionArrayOptionList {
+	acc := NilStringOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionArrayOptionList) Filter(p IntOptionArrayOptionPredicate) IntOptionArrayOptionList {
+	acc := NilIntOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionArrayOptionList) Filter(p Int8OptionArrayOptionPredicate) Int8OptionArrayOptionList {
+	acc := NilInt8OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionArrayOptionList) Filter(p Int16OptionArrayOptionPredicate) Int16OptionArrayOptionList {
+	acc := NilInt16OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionArrayOptionList) Filter(p Int32OptionArrayOptionPredicate) Int32OptionArrayOptionList {
+	acc := NilInt32OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionArrayOptionList) Filter(p Int64OptionArrayOptionPredicate) Int64OptionArrayOptionList {
+	acc := NilInt64OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionArrayOptionList) Filter(p UintOptionArrayOptionPredicate) UintOptionArrayOptionList {
+	acc := NilUintOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionArrayOptionList) Filter(p Uint8OptionArrayOptionPredicate) Uint8OptionArrayOptionList {
+	acc := NilUint8OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionArrayOptionList) Filter(p Uint16OptionArrayOptionPredicate) Uint16OptionArrayOptionList {
+	acc := NilUint16OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionArrayOptionList) Filter(p Uint32OptionArrayOptionPredicate) Uint32OptionArrayOptionList {
+	acc := NilUint32OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionArrayOptionList) Filter(p Uint64OptionArrayOptionPredicate) Uint64OptionArrayOptionList {
+	acc := NilUint64OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionArrayOptionList) Filter(p UintptrOptionArrayOptionPredicate) UintptrOptionArrayOptionList {
+	acc := NilUintptrOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionArrayOptionList) Filter(p ByteOptionArrayOptionPredicate) ByteOptionArrayOptionList {
+	acc := NilByteOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionArrayOptionList) Filter(p RuneOptionArrayOptionPredicate) RuneOptionArrayOptionList {
+	acc := NilRuneOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionArrayOptionList) Filter(p Float32OptionArrayOptionPredicate) Float32OptionArrayOptionList {
+	acc := NilFloat32OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionArrayOptionList) Filter(p Float64OptionArrayOptionPredicate) Float64OptionArrayOptionList {
+	acc := NilFloat64OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionArrayOptionList) Filter(p Complex64OptionArrayOptionPredicate) Complex64OptionArrayOptionList {
+	acc := NilComplex64OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionArrayOptionList) Filter(p Complex128OptionArrayOptionPredicate) Complex128OptionArrayOptionList {
+	acc := NilComplex128OptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionArrayOptionList) Filter(p AnyOptionArrayOptionPredicate) AnyOptionArrayOptionList {
+	acc := NilAnyOptionArrayOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolListOptionList) Filter(p BoolListOptionPredicate) BoolListOptionList {
+	acc := NilBoolListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringListOptionList) Filter(p StringListOptionPredicate) StringListOptionList {
+	acc := NilStringListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntListOptionList) Filter(p IntListOptionPredicate) IntListOptionList {
+	acc := NilIntListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ListOptionList) Filter(p Int8ListOptionPredicate) Int8ListOptionList {
+	acc := NilInt8ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ListOptionList) Filter(p Int16ListOptionPredicate) Int16ListOptionList {
+	acc := NilInt16ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ListOptionList) Filter(p Int32ListOptionPredicate) Int32ListOptionList {
+	acc := NilInt32ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ListOptionList) Filter(p Int64ListOptionPredicate) Int64ListOptionList {
+	acc := NilInt64ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintListOptionList) Filter(p UintListOptionPredicate) UintListOptionList {
+	acc := NilUintListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ListOptionList) Filter(p Uint8ListOptionPredicate) Uint8ListOptionList {
+	acc := NilUint8ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ListOptionList) Filter(p Uint16ListOptionPredicate) Uint16ListOptionList {
+	acc := NilUint16ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ListOptionList) Filter(p Uint32ListOptionPredicate) Uint32ListOptionList {
+	acc := NilUint32ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ListOptionList) Filter(p Uint64ListOptionPredicate) Uint64ListOptionList {
+	acc := NilUint64ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrListOptionList) Filter(p UintptrListOptionPredicate) UintptrListOptionList {
+	acc := NilUintptrListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteListOptionList) Filter(p ByteListOptionPredicate) ByteListOptionList {
+	acc := NilByteListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneListOptionList) Filter(p RuneListOptionPredicate) RuneListOptionList {
+	acc := NilRuneListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ListOptionList) Filter(p Float32ListOptionPredicate) Float32ListOptionList {
+	acc := NilFloat32ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ListOptionList) Filter(p Float64ListOptionPredicate) Float64ListOptionList {
+	acc := NilFloat64ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ListOptionList) Filter(p Complex64ListOptionPredicate) Complex64ListOptionList {
+	acc := NilComplex64ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ListOptionList) Filter(p Complex128ListOptionPredicate) Complex128ListOptionList {
+	acc := NilComplex128ListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyListOptionList) Filter(p AnyListOptionPredicate) AnyListOptionList {
+	acc := NilAnyListOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionOptionList) Filter(p BoolOptionOptionPredicate) BoolOptionOptionList {
+	acc := NilBoolOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionOptionList) Filter(p StringOptionOptionPredicate) StringOptionOptionList {
+	acc := NilStringOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionOptionList) Filter(p IntOptionOptionPredicate) IntOptionOptionList {
+	acc := NilIntOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionOptionList) Filter(p Int8OptionOptionPredicate) Int8OptionOptionList {
+	acc := NilInt8OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionOptionList) Filter(p Int16OptionOptionPredicate) Int16OptionOptionList {
+	acc := NilInt16OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionOptionList) Filter(p Int32OptionOptionPredicate) Int32OptionOptionList {
+	acc := NilInt32OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionOptionList) Filter(p Int64OptionOptionPredicate) Int64OptionOptionList {
+	acc := NilInt64OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionOptionList) Filter(p UintOptionOptionPredicate) UintOptionOptionList {
+	acc := NilUintOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionOptionList) Filter(p Uint8OptionOptionPredicate) Uint8OptionOptionList {
+	acc := NilUint8OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionOptionList) Filter(p Uint16OptionOptionPredicate) Uint16OptionOptionList {
+	acc := NilUint16OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionOptionList) Filter(p Uint32OptionOptionPredicate) Uint32OptionOptionList {
+	acc := NilUint32OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionOptionList) Filter(p Uint64OptionOptionPredicate) Uint64OptionOptionList {
+	acc := NilUint64OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionOptionList) Filter(p UintptrOptionOptionPredicate) UintptrOptionOptionList {
+	acc := NilUintptrOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionOptionList) Filter(p ByteOptionOptionPredicate) ByteOptionOptionList {
+	acc := NilByteOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionOptionList) Filter(p RuneOptionOptionPredicate) RuneOptionOptionList {
+	acc := NilRuneOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionOptionList) Filter(p Float32OptionOptionPredicate) Float32OptionOptionList {
+	acc := NilFloat32OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionOptionList) Filter(p Float64OptionOptionPredicate) Float64OptionOptionList {
+	acc := NilFloat64OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionOptionList) Filter(p Complex64OptionOptionPredicate) Complex64OptionOptionList {
+	acc := NilComplex64OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionOptionList) Filter(p Complex128OptionOptionPredicate) Complex128OptionOptionList {
+	acc := NilComplex128OptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionOptionList) Filter(p AnyOptionOptionPredicate) AnyOptionOptionList {
+	acc := NilAnyOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayOptionOptionList) Filter(p BoolArrayOptionOptionPredicate) BoolArrayOptionOptionList {
+	acc := NilBoolArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayOptionOptionList) Filter(p StringArrayOptionOptionPredicate) StringArrayOptionOptionList {
+	acc := NilStringArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayOptionOptionList) Filter(p IntArrayOptionOptionPredicate) IntArrayOptionOptionList {
+	acc := NilIntArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayOptionOptionList) Filter(p Int8ArrayOptionOptionPredicate) Int8ArrayOptionOptionList {
+	acc := NilInt8ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayOptionOptionList) Filter(p Int16ArrayOptionOptionPredicate) Int16ArrayOptionOptionList {
+	acc := NilInt16ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayOptionOptionList) Filter(p Int32ArrayOptionOptionPredicate) Int32ArrayOptionOptionList {
+	acc := NilInt32ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayOptionOptionList) Filter(p Int64ArrayOptionOptionPredicate) Int64ArrayOptionOptionList {
+	acc := NilInt64ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayOptionOptionList) Filter(p UintArrayOptionOptionPredicate) UintArrayOptionOptionList {
+	acc := NilUintArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayOptionOptionList) Filter(p Uint8ArrayOptionOptionPredicate) Uint8ArrayOptionOptionList {
+	acc := NilUint8ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayOptionOptionList) Filter(p Uint16ArrayOptionOptionPredicate) Uint16ArrayOptionOptionList {
+	acc := NilUint16ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayOptionOptionList) Filter(p Uint32ArrayOptionOptionPredicate) Uint32ArrayOptionOptionList {
+	acc := NilUint32ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayOptionOptionList) Filter(p Uint64ArrayOptionOptionPredicate) Uint64ArrayOptionOptionList {
+	acc := NilUint64ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayOptionOptionList) Filter(p UintptrArrayOptionOptionPredicate) UintptrArrayOptionOptionList {
+	acc := NilUintptrArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayOptionOptionList) Filter(p ByteArrayOptionOptionPredicate) ByteArrayOptionOptionList {
+	acc := NilByteArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayOptionOptionList) Filter(p RuneArrayOptionOptionPredicate) RuneArrayOptionOptionList {
+	acc := NilRuneArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayOptionOptionList) Filter(p Float32ArrayOptionOptionPredicate) Float32ArrayOptionOptionList {
+	acc := NilFloat32ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayOptionOptionList) Filter(p Float64ArrayOptionOptionPredicate) Float64ArrayOptionOptionList {
+	acc := NilFloat64ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayOptionOptionList) Filter(p Complex64ArrayOptionOptionPredicate) Complex64ArrayOptionOptionList {
+	acc := NilComplex64ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayOptionOptionList) Filter(p Complex128ArrayOptionOptionPredicate) Complex128ArrayOptionOptionList {
+	acc := NilComplex128ArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayOptionOptionList) Filter(p AnyArrayOptionOptionPredicate) AnyArrayOptionOptionList {
+	acc := NilAnyArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayArrayOptionOptionList) Filter(p BoolArrayArrayOptionOptionPredicate) BoolArrayArrayOptionOptionList {
+	acc := NilBoolArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayArrayOptionOptionList) Filter(p StringArrayArrayOptionOptionPredicate) StringArrayArrayOptionOptionList {
+	acc := NilStringArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayArrayOptionOptionList) Filter(p IntArrayArrayOptionOptionPredicate) IntArrayArrayOptionOptionList {
+	acc := NilIntArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayArrayOptionOptionList) Filter(p Int8ArrayArrayOptionOptionPredicate) Int8ArrayArrayOptionOptionList {
+	acc := NilInt8ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayArrayOptionOptionList) Filter(p Int16ArrayArrayOptionOptionPredicate) Int16ArrayArrayOptionOptionList {
+	acc := NilInt16ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayArrayOptionOptionList) Filter(p Int32ArrayArrayOptionOptionPredicate) Int32ArrayArrayOptionOptionList {
+	acc := NilInt32ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayArrayOptionOptionList) Filter(p Int64ArrayArrayOptionOptionPredicate) Int64ArrayArrayOptionOptionList {
+	acc := NilInt64ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayArrayOptionOptionList) Filter(p UintArrayArrayOptionOptionPredicate) UintArrayArrayOptionOptionList {
+	acc := NilUintArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayArrayOptionOptionList) Filter(p Uint8ArrayArrayOptionOptionPredicate) Uint8ArrayArrayOptionOptionList {
+	acc := NilUint8ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayArrayOptionOptionList) Filter(p Uint16ArrayArrayOptionOptionPredicate) Uint16ArrayArrayOptionOptionList {
+	acc := NilUint16ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayArrayOptionOptionList) Filter(p Uint32ArrayArrayOptionOptionPredicate) Uint32ArrayArrayOptionOptionList {
+	acc := NilUint32ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayArrayOptionOptionList) Filter(p Uint64ArrayArrayOptionOptionPredicate) Uint64ArrayArrayOptionOptionList {
+	acc := NilUint64ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayArrayOptionOptionList) Filter(p UintptrArrayArrayOptionOptionPredicate) UintptrArrayArrayOptionOptionList {
+	acc := NilUintptrArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayArrayOptionOptionList) Filter(p ByteArrayArrayOptionOptionPredicate) ByteArrayArrayOptionOptionList {
+	acc := NilByteArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayArrayOptionOptionList) Filter(p RuneArrayArrayOptionOptionPredicate) RuneArrayArrayOptionOptionList {
+	acc := NilRuneArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayArrayOptionOptionList) Filter(p Float32ArrayArrayOptionOptionPredicate) Float32ArrayArrayOptionOptionList {
+	acc := NilFloat32ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayArrayOptionOptionList) Filter(p Float64ArrayArrayOptionOptionPredicate) Float64ArrayArrayOptionOptionList {
+	acc := NilFloat64ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayArrayOptionOptionList) Filter(p Complex64ArrayArrayOptionOptionPredicate) Complex64ArrayArrayOptionOptionList {
+	acc := NilComplex64ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayArrayOptionOptionList) Filter(p Complex128ArrayArrayOptionOptionPredicate) Complex128ArrayArrayOptionOptionList {
+	acc := NilComplex128ArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayArrayOptionOptionList) Filter(p AnyArrayArrayOptionOptionPredicate) AnyArrayArrayOptionOptionList {
+	acc := NilAnyArrayArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionArrayOptionOptionList) Filter(p BoolOptionArrayOptionOptionPredicate) BoolOptionArrayOptionOptionList {
+	acc := NilBoolOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionArrayOptionOptionList) Filter(p StringOptionArrayOptionOptionPredicate) StringOptionArrayOptionOptionList {
+	acc := NilStringOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionArrayOptionOptionList) Filter(p IntOptionArrayOptionOptionPredicate) IntOptionArrayOptionOptionList {
+	acc := NilIntOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionArrayOptionOptionList) Filter(p Int8OptionArrayOptionOptionPredicate) Int8OptionArrayOptionOptionList {
+	acc := NilInt8OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionArrayOptionOptionList) Filter(p Int16OptionArrayOptionOptionPredicate) Int16OptionArrayOptionOptionList {
+	acc := NilInt16OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionArrayOptionOptionList) Filter(p Int32OptionArrayOptionOptionPredicate) Int32OptionArrayOptionOptionList {
+	acc := NilInt32OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionArrayOptionOptionList) Filter(p Int64OptionArrayOptionOptionPredicate) Int64OptionArrayOptionOptionList {
+	acc := NilInt64OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionArrayOptionOptionList) Filter(p UintOptionArrayOptionOptionPredicate) UintOptionArrayOptionOptionList {
+	acc := NilUintOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionArrayOptionOptionList) Filter(p Uint8OptionArrayOptionOptionPredicate) Uint8OptionArrayOptionOptionList {
+	acc := NilUint8OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionArrayOptionOptionList) Filter(p Uint16OptionArrayOptionOptionPredicate) Uint16OptionArrayOptionOptionList {
+	acc := NilUint16OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionArrayOptionOptionList) Filter(p Uint32OptionArrayOptionOptionPredicate) Uint32OptionArrayOptionOptionList {
+	acc := NilUint32OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionArrayOptionOptionList) Filter(p Uint64OptionArrayOptionOptionPredicate) Uint64OptionArrayOptionOptionList {
+	acc := NilUint64OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionArrayOptionOptionList) Filter(p UintptrOptionArrayOptionOptionPredicate) UintptrOptionArrayOptionOptionList {
+	acc := NilUintptrOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionArrayOptionOptionList) Filter(p ByteOptionArrayOptionOptionPredicate) ByteOptionArrayOptionOptionList {
+	acc := NilByteOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionArrayOptionOptionList) Filter(p RuneOptionArrayOptionOptionPredicate) RuneOptionArrayOptionOptionList {
+	acc := NilRuneOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionArrayOptionOptionList) Filter(p Float32OptionArrayOptionOptionPredicate) Float32OptionArrayOptionOptionList {
+	acc := NilFloat32OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionArrayOptionOptionList) Filter(p Float64OptionArrayOptionOptionPredicate) Float64OptionArrayOptionOptionList {
+	acc := NilFloat64OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionArrayOptionOptionList) Filter(p Complex64OptionArrayOptionOptionPredicate) Complex64OptionArrayOptionOptionList {
+	acc := NilComplex64OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionArrayOptionOptionList) Filter(p Complex128OptionArrayOptionOptionPredicate) Complex128OptionArrayOptionOptionList {
+	acc := NilComplex128OptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionArrayOptionOptionList) Filter(p AnyOptionArrayOptionOptionPredicate) AnyOptionArrayOptionOptionList {
+	acc := NilAnyOptionArrayOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolListOptionOptionList) Filter(p BoolListOptionOptionPredicate) BoolListOptionOptionList {
+	acc := NilBoolListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringListOptionOptionList) Filter(p StringListOptionOptionPredicate) StringListOptionOptionList {
+	acc := NilStringListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntListOptionOptionList) Filter(p IntListOptionOptionPredicate) IntListOptionOptionList {
+	acc := NilIntListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ListOptionOptionList) Filter(p Int8ListOptionOptionPredicate) Int8ListOptionOptionList {
+	acc := NilInt8ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ListOptionOptionList) Filter(p Int16ListOptionOptionPredicate) Int16ListOptionOptionList {
+	acc := NilInt16ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ListOptionOptionList) Filter(p Int32ListOptionOptionPredicate) Int32ListOptionOptionList {
+	acc := NilInt32ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ListOptionOptionList) Filter(p Int64ListOptionOptionPredicate) Int64ListOptionOptionList {
+	acc := NilInt64ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintListOptionOptionList) Filter(p UintListOptionOptionPredicate) UintListOptionOptionList {
+	acc := NilUintListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ListOptionOptionList) Filter(p Uint8ListOptionOptionPredicate) Uint8ListOptionOptionList {
+	acc := NilUint8ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ListOptionOptionList) Filter(p Uint16ListOptionOptionPredicate) Uint16ListOptionOptionList {
+	acc := NilUint16ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ListOptionOptionList) Filter(p Uint32ListOptionOptionPredicate) Uint32ListOptionOptionList {
+	acc := NilUint32ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ListOptionOptionList) Filter(p Uint64ListOptionOptionPredicate) Uint64ListOptionOptionList {
+	acc := NilUint64ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrListOptionOptionList) Filter(p UintptrListOptionOptionPredicate) UintptrListOptionOptionList {
+	acc := NilUintptrListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteListOptionOptionList) Filter(p ByteListOptionOptionPredicate) ByteListOptionOptionList {
+	acc := NilByteListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneListOptionOptionList) Filter(p RuneListOptionOptionPredicate) RuneListOptionOptionList {
+	acc := NilRuneListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ListOptionOptionList) Filter(p Float32ListOptionOptionPredicate) Float32ListOptionOptionList {
+	acc := NilFloat32ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ListOptionOptionList) Filter(p Float64ListOptionOptionPredicate) Float64ListOptionOptionList {
+	acc := NilFloat64ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ListOptionOptionList) Filter(p Complex64ListOptionOptionPredicate) Complex64ListOptionOptionList {
+	acc := NilComplex64ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ListOptionOptionList) Filter(p Complex128ListOptionOptionPredicate) Complex128ListOptionOptionList {
+	acc := NilComplex128ListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyListOptionOptionList) Filter(p AnyListOptionOptionPredicate) AnyListOptionOptionList {
+	acc := NilAnyListOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionOptionOptionList) Filter(p BoolOptionOptionOptionPredicate) BoolOptionOptionOptionList {
+	acc := NilBoolOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionOptionOptionList) Filter(p StringOptionOptionOptionPredicate) StringOptionOptionOptionList {
+	acc := NilStringOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionOptionOptionList) Filter(p IntOptionOptionOptionPredicate) IntOptionOptionOptionList {
+	acc := NilIntOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionOptionOptionList) Filter(p Int8OptionOptionOptionPredicate) Int8OptionOptionOptionList {
+	acc := NilInt8OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionOptionOptionList) Filter(p Int16OptionOptionOptionPredicate) Int16OptionOptionOptionList {
+	acc := NilInt16OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionOptionOptionList) Filter(p Int32OptionOptionOptionPredicate) Int32OptionOptionOptionList {
+	acc := NilInt32OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionOptionOptionList) Filter(p Int64OptionOptionOptionPredicate) Int64OptionOptionOptionList {
+	acc := NilInt64OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionOptionOptionList) Filter(p UintOptionOptionOptionPredicate) UintOptionOptionOptionList {
+	acc := NilUintOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionOptionOptionList) Filter(p Uint8OptionOptionOptionPredicate) Uint8OptionOptionOptionList {
+	acc := NilUint8OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionOptionOptionList) Filter(p Uint16OptionOptionOptionPredicate) Uint16OptionOptionOptionList {
+	acc := NilUint16OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionOptionOptionList) Filter(p Uint32OptionOptionOptionPredicate) Uint32OptionOptionOptionList {
+	acc := NilUint32OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionOptionOptionList) Filter(p Uint64OptionOptionOptionPredicate) Uint64OptionOptionOptionList {
+	acc := NilUint64OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionOptionOptionList) Filter(p UintptrOptionOptionOptionPredicate) UintptrOptionOptionOptionList {
+	acc := NilUintptrOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionOptionOptionList) Filter(p ByteOptionOptionOptionPredicate) ByteOptionOptionOptionList {
+	acc := NilByteOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionOptionOptionList) Filter(p RuneOptionOptionOptionPredicate) RuneOptionOptionOptionList {
+	acc := NilRuneOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionOptionOptionList) Filter(p Float32OptionOptionOptionPredicate) Float32OptionOptionOptionList {
+	acc := NilFloat32OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionOptionOptionList) Filter(p Float64OptionOptionOptionPredicate) Float64OptionOptionOptionList {
+	acc := NilFloat64OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionOptionOptionList) Filter(p Complex64OptionOptionOptionPredicate) Complex64OptionOptionOptionList {
+	acc := NilComplex64OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionOptionOptionList) Filter(p Complex128OptionOptionOptionPredicate) Complex128OptionOptionOptionList {
+	acc := NilComplex128OptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionOptionOptionList) Filter(p AnyOptionOptionOptionPredicate) AnyOptionOptionOptionList {
+	acc := NilAnyOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayOptionOptionOptionList) Filter(p BoolArrayOptionOptionOptionPredicate) BoolArrayOptionOptionOptionList {
+	acc := NilBoolArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayOptionOptionOptionList) Filter(p StringArrayOptionOptionOptionPredicate) StringArrayOptionOptionOptionList {
+	acc := NilStringArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayOptionOptionOptionList) Filter(p IntArrayOptionOptionOptionPredicate) IntArrayOptionOptionOptionList {
+	acc := NilIntArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayOptionOptionOptionList) Filter(p Int8ArrayOptionOptionOptionPredicate) Int8ArrayOptionOptionOptionList {
+	acc := NilInt8ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayOptionOptionOptionList) Filter(p Int16ArrayOptionOptionOptionPredicate) Int16ArrayOptionOptionOptionList {
+	acc := NilInt16ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayOptionOptionOptionList) Filter(p Int32ArrayOptionOptionOptionPredicate) Int32ArrayOptionOptionOptionList {
+	acc := NilInt32ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayOptionOptionOptionList) Filter(p Int64ArrayOptionOptionOptionPredicate) Int64ArrayOptionOptionOptionList {
+	acc := NilInt64ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayOptionOptionOptionList) Filter(p UintArrayOptionOptionOptionPredicate) UintArrayOptionOptionOptionList {
+	acc := NilUintArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayOptionOptionOptionList) Filter(p Uint8ArrayOptionOptionOptionPredicate) Uint8ArrayOptionOptionOptionList {
+	acc := NilUint8ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayOptionOptionOptionList) Filter(p Uint16ArrayOptionOptionOptionPredicate) Uint16ArrayOptionOptionOptionList {
+	acc := NilUint16ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayOptionOptionOptionList) Filter(p Uint32ArrayOptionOptionOptionPredicate) Uint32ArrayOptionOptionOptionList {
+	acc := NilUint32ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayOptionOptionOptionList) Filter(p Uint64ArrayOptionOptionOptionPredicate) Uint64ArrayOptionOptionOptionList {
+	acc := NilUint64ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayOptionOptionOptionList) Filter(p UintptrArrayOptionOptionOptionPredicate) UintptrArrayOptionOptionOptionList {
+	acc := NilUintptrArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayOptionOptionOptionList) Filter(p ByteArrayOptionOptionOptionPredicate) ByteArrayOptionOptionOptionList {
+	acc := NilByteArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayOptionOptionOptionList) Filter(p RuneArrayOptionOptionOptionPredicate) RuneArrayOptionOptionOptionList {
+	acc := NilRuneArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayOptionOptionOptionList) Filter(p Float32ArrayOptionOptionOptionPredicate) Float32ArrayOptionOptionOptionList {
+	acc := NilFloat32ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayOptionOptionOptionList) Filter(p Float64ArrayOptionOptionOptionPredicate) Float64ArrayOptionOptionOptionList {
+	acc := NilFloat64ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayOptionOptionOptionList) Filter(p Complex64ArrayOptionOptionOptionPredicate) Complex64ArrayOptionOptionOptionList {
+	acc := NilComplex64ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayOptionOptionOptionList) Filter(p Complex128ArrayOptionOptionOptionPredicate) Complex128ArrayOptionOptionOptionList {
+	acc := NilComplex128ArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayOptionOptionOptionList) Filter(p AnyArrayOptionOptionOptionPredicate) AnyArrayOptionOptionOptionList {
+	acc := NilAnyArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayArrayOptionOptionOptionList) Filter(p BoolArrayArrayOptionOptionOptionPredicate) BoolArrayArrayOptionOptionOptionList {
+	acc := NilBoolArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayArrayOptionOptionOptionList) Filter(p StringArrayArrayOptionOptionOptionPredicate) StringArrayArrayOptionOptionOptionList {
+	acc := NilStringArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayArrayOptionOptionOptionList) Filter(p IntArrayArrayOptionOptionOptionPredicate) IntArrayArrayOptionOptionOptionList {
+	acc := NilIntArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayArrayOptionOptionOptionList) Filter(p Int8ArrayArrayOptionOptionOptionPredicate) Int8ArrayArrayOptionOptionOptionList {
+	acc := NilInt8ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayArrayOptionOptionOptionList) Filter(p Int16ArrayArrayOptionOptionOptionPredicate) Int16ArrayArrayOptionOptionOptionList {
+	acc := NilInt16ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayArrayOptionOptionOptionList) Filter(p Int32ArrayArrayOptionOptionOptionPredicate) Int32ArrayArrayOptionOptionOptionList {
+	acc := NilInt32ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayArrayOptionOptionOptionList) Filter(p Int64ArrayArrayOptionOptionOptionPredicate) Int64ArrayArrayOptionOptionOptionList {
+	acc := NilInt64ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayArrayOptionOptionOptionList) Filter(p UintArrayArrayOptionOptionOptionPredicate) UintArrayArrayOptionOptionOptionList {
+	acc := NilUintArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayArrayOptionOptionOptionList) Filter(p Uint8ArrayArrayOptionOptionOptionPredicate) Uint8ArrayArrayOptionOptionOptionList {
+	acc := NilUint8ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayArrayOptionOptionOptionList) Filter(p Uint16ArrayArrayOptionOptionOptionPredicate) Uint16ArrayArrayOptionOptionOptionList {
+	acc := NilUint16ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayArrayOptionOptionOptionList) Filter(p Uint32ArrayArrayOptionOptionOptionPredicate) Uint32ArrayArrayOptionOptionOptionList {
+	acc := NilUint32ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayArrayOptionOptionOptionList) Filter(p Uint64ArrayArrayOptionOptionOptionPredicate) Uint64ArrayArrayOptionOptionOptionList {
+	acc := NilUint64ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayArrayOptionOptionOptionList) Filter(p UintptrArrayArrayOptionOptionOptionPredicate) UintptrArrayArrayOptionOptionOptionList {
+	acc := NilUintptrArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayArrayOptionOptionOptionList) Filter(p ByteArrayArrayOptionOptionOptionPredicate) ByteArrayArrayOptionOptionOptionList {
+	acc := NilByteArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayArrayOptionOptionOptionList) Filter(p RuneArrayArrayOptionOptionOptionPredicate) RuneArrayArrayOptionOptionOptionList {
+	acc := NilRuneArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayArrayOptionOptionOptionList) Filter(p Float32ArrayArrayOptionOptionOptionPredicate) Float32ArrayArrayOptionOptionOptionList {
+	acc := NilFloat32ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayArrayOptionOptionOptionList) Filter(p Float64ArrayArrayOptionOptionOptionPredicate) Float64ArrayArrayOptionOptionOptionList {
+	acc := NilFloat64ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayArrayOptionOptionOptionList) Filter(p Complex64ArrayArrayOptionOptionOptionPredicate) Complex64ArrayArrayOptionOptionOptionList {
+	acc := NilComplex64ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayArrayOptionOptionOptionList) Filter(p Complex128ArrayArrayOptionOptionOptionPredicate) Complex128ArrayArrayOptionOptionOptionList {
+	acc := NilComplex128ArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayArrayOptionOptionOptionList) Filter(p AnyArrayArrayOptionOptionOptionPredicate) AnyArrayArrayOptionOptionOptionList {
+	acc := NilAnyArrayArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionArrayOptionOptionOptionList) Filter(p BoolOptionArrayOptionOptionOptionPredicate) BoolOptionArrayOptionOptionOptionList {
+	acc := NilBoolOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionArrayOptionOptionOptionList) Filter(p StringOptionArrayOptionOptionOptionPredicate) StringOptionArrayOptionOptionOptionList {
+	acc := NilStringOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionArrayOptionOptionOptionList) Filter(p IntOptionArrayOptionOptionOptionPredicate) IntOptionArrayOptionOptionOptionList {
+	acc := NilIntOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionArrayOptionOptionOptionList) Filter(p Int8OptionArrayOptionOptionOptionPredicate) Int8OptionArrayOptionOptionOptionList {
+	acc := NilInt8OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionArrayOptionOptionOptionList) Filter(p Int16OptionArrayOptionOptionOptionPredicate) Int16OptionArrayOptionOptionOptionList {
+	acc := NilInt16OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionArrayOptionOptionOptionList) Filter(p Int32OptionArrayOptionOptionOptionPredicate) Int32OptionArrayOptionOptionOptionList {
+	acc := NilInt32OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionArrayOptionOptionOptionList) Filter(p Int64OptionArrayOptionOptionOptionPredicate) Int64OptionArrayOptionOptionOptionList {
+	acc := NilInt64OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionArrayOptionOptionOptionList) Filter(p UintOptionArrayOptionOptionOptionPredicate) UintOptionArrayOptionOptionOptionList {
+	acc := NilUintOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionArrayOptionOptionOptionList) Filter(p Uint8OptionArrayOptionOptionOptionPredicate) Uint8OptionArrayOptionOptionOptionList {
+	acc := NilUint8OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionArrayOptionOptionOptionList) Filter(p Uint16OptionArrayOptionOptionOptionPredicate) Uint16OptionArrayOptionOptionOptionList {
+	acc := NilUint16OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionArrayOptionOptionOptionList) Filter(p Uint32OptionArrayOptionOptionOptionPredicate) Uint32OptionArrayOptionOptionOptionList {
+	acc := NilUint32OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionArrayOptionOptionOptionList) Filter(p Uint64OptionArrayOptionOptionOptionPredicate) Uint64OptionArrayOptionOptionOptionList {
+	acc := NilUint64OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionArrayOptionOptionOptionList) Filter(p UintptrOptionArrayOptionOptionOptionPredicate) UintptrOptionArrayOptionOptionOptionList {
+	acc := NilUintptrOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionArrayOptionOptionOptionList) Filter(p ByteOptionArrayOptionOptionOptionPredicate) ByteOptionArrayOptionOptionOptionList {
+	acc := NilByteOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionArrayOptionOptionOptionList) Filter(p RuneOptionArrayOptionOptionOptionPredicate) RuneOptionArrayOptionOptionOptionList {
+	acc := NilRuneOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionArrayOptionOptionOptionList) Filter(p Float32OptionArrayOptionOptionOptionPredicate) Float32OptionArrayOptionOptionOptionList {
+	acc := NilFloat32OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionArrayOptionOptionOptionList) Filter(p Float64OptionArrayOptionOptionOptionPredicate) Float64OptionArrayOptionOptionOptionList {
+	acc := NilFloat64OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionArrayOptionOptionOptionList) Filter(p Complex64OptionArrayOptionOptionOptionPredicate) Complex64OptionArrayOptionOptionOptionList {
+	acc := NilComplex64OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionArrayOptionOptionOptionList) Filter(p Complex128OptionArrayOptionOptionOptionPredicate) Complex128OptionArrayOptionOptionOptionList {
+	acc := NilComplex128OptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionArrayOptionOptionOptionList) Filter(p AnyOptionArrayOptionOptionOptionPredicate) AnyOptionArrayOptionOptionOptionList {
+	acc := NilAnyOptionArrayOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolListOptionOptionOptionList) Filter(p BoolListOptionOptionOptionPredicate) BoolListOptionOptionOptionList {
+	acc := NilBoolListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringListOptionOptionOptionList) Filter(p StringListOptionOptionOptionPredicate) StringListOptionOptionOptionList {
+	acc := NilStringListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntListOptionOptionOptionList) Filter(p IntListOptionOptionOptionPredicate) IntListOptionOptionOptionList {
+	acc := NilIntListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ListOptionOptionOptionList) Filter(p Int8ListOptionOptionOptionPredicate) Int8ListOptionOptionOptionList {
+	acc := NilInt8ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ListOptionOptionOptionList) Filter(p Int16ListOptionOptionOptionPredicate) Int16ListOptionOptionOptionList {
+	acc := NilInt16ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ListOptionOptionOptionList) Filter(p Int32ListOptionOptionOptionPredicate) Int32ListOptionOptionOptionList {
+	acc := NilInt32ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ListOptionOptionOptionList) Filter(p Int64ListOptionOptionOptionPredicate) Int64ListOptionOptionOptionList {
+	acc := NilInt64ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintListOptionOptionOptionList) Filter(p UintListOptionOptionOptionPredicate) UintListOptionOptionOptionList {
+	acc := NilUintListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ListOptionOptionOptionList) Filter(p Uint8ListOptionOptionOptionPredicate) Uint8ListOptionOptionOptionList {
+	acc := NilUint8ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ListOptionOptionOptionList) Filter(p Uint16ListOptionOptionOptionPredicate) Uint16ListOptionOptionOptionList {
+	acc := NilUint16ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ListOptionOptionOptionList) Filter(p Uint32ListOptionOptionOptionPredicate) Uint32ListOptionOptionOptionList {
+	acc := NilUint32ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ListOptionOptionOptionList) Filter(p Uint64ListOptionOptionOptionPredicate) Uint64ListOptionOptionOptionList {
+	acc := NilUint64ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrListOptionOptionOptionList) Filter(p UintptrListOptionOptionOptionPredicate) UintptrListOptionOptionOptionList {
+	acc := NilUintptrListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteListOptionOptionOptionList) Filter(p ByteListOptionOptionOptionPredicate) ByteListOptionOptionOptionList {
+	acc := NilByteListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneListOptionOptionOptionList) Filter(p RuneListOptionOptionOptionPredicate) RuneListOptionOptionOptionList {
+	acc := NilRuneListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ListOptionOptionOptionList) Filter(p Float32ListOptionOptionOptionPredicate) Float32ListOptionOptionOptionList {
+	acc := NilFloat32ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ListOptionOptionOptionList) Filter(p Float64ListOptionOptionOptionPredicate) Float64ListOptionOptionOptionList {
+	acc := NilFloat64ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ListOptionOptionOptionList) Filter(p Complex64ListOptionOptionOptionPredicate) Complex64ListOptionOptionOptionList {
+	acc := NilComplex64ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ListOptionOptionOptionList) Filter(p Complex128ListOptionOptionOptionPredicate) Complex128ListOptionOptionOptionList {
+	acc := NilComplex128ListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyListOptionOptionOptionList) Filter(p AnyListOptionOptionOptionPredicate) AnyListOptionOptionOptionList {
+	acc := NilAnyListOptionOptionOption
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayList) Filter(p BoolArrayPredicate) BoolArrayList {
+	acc := NilBoolArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayList) Filter(p StringArrayPredicate) StringArrayList {
+	acc := NilStringArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayList) Filter(p IntArrayPredicate) IntArrayList {
+	acc := NilIntArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayList) Filter(p Int8ArrayPredicate) Int8ArrayList {
+	acc := NilInt8Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayList) Filter(p Int16ArrayPredicate) Int16ArrayList {
+	acc := NilInt16Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayList) Filter(p Int32ArrayPredicate) Int32ArrayList {
+	acc := NilInt32Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayList) Filter(p Int64ArrayPredicate) Int64ArrayList {
+	acc := NilInt64Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayList) Filter(p UintArrayPredicate) UintArrayList {
+	acc := NilUintArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayList) Filter(p Uint8ArrayPredicate) Uint8ArrayList {
+	acc := NilUint8Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayList) Filter(p Uint16ArrayPredicate) Uint16ArrayList {
+	acc := NilUint16Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayList) Filter(p Uint32ArrayPredicate) Uint32ArrayList {
+	acc := NilUint32Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayList) Filter(p Uint64ArrayPredicate) Uint64ArrayList {
+	acc := NilUint64Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayList) Filter(p UintptrArrayPredicate) UintptrArrayList {
+	acc := NilUintptrArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayList) Filter(p ByteArrayPredicate) ByteArrayList {
+	acc := NilByteArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayList) Filter(p RuneArrayPredicate) RuneArrayList {
+	acc := NilRuneArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayList) Filter(p Float32ArrayPredicate) Float32ArrayList {
+	acc := NilFloat32Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayList) Filter(p Float64ArrayPredicate) Float64ArrayList {
+	acc := NilFloat64Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayList) Filter(p Complex64ArrayPredicate) Complex64ArrayList {
+	acc := NilComplex64Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayList) Filter(p Complex128ArrayPredicate) Complex128ArrayList {
+	acc := NilComplex128Array
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayList) Filter(p AnyArrayPredicate) AnyArrayList {
+	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayArrayList) Filter(p BoolArrayArrayPredicate) BoolArrayArrayList {
+	acc := NilBoolArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayArrayList) Filter(p StringArrayArrayPredicate) StringArrayArrayList {
+	acc := NilStringArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayArrayList) Filter(p IntArrayArrayPredicate) IntArrayArrayList {
+	acc := NilIntArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ArrayArrayList) Filter(p Int8ArrayArrayPredicate) Int8ArrayArrayList {
+	acc := NilInt8ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ArrayArrayList) Filter(p Int16ArrayArrayPredicate) Int16ArrayArrayList {
+	acc := NilInt16ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ArrayArrayList) Filter(p Int32ArrayArrayPredicate) Int32ArrayArrayList {
+	acc := NilInt32ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayArrayList) Filter(p Int64ArrayArrayPredicate) Int64ArrayArrayList {
+	acc := NilInt64ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintArrayArrayList) Filter(p UintArrayArrayPredicate) UintArrayArrayList {
+	acc := NilUintArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ArrayArrayList) Filter(p Uint8ArrayArrayPredicate) Uint8ArrayArrayList {
+	acc := NilUint8ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ArrayArrayList) Filter(p Uint16ArrayArrayPredicate) Uint16ArrayArrayList {
+	acc := NilUint16ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ArrayArrayList) Filter(p Uint32ArrayArrayPredicate) Uint32ArrayArrayList {
+	acc := NilUint32ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ArrayArrayList) Filter(p Uint64ArrayArrayPredicate) Uint64ArrayArrayList {
+	acc := NilUint64ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrArrayArrayList) Filter(p UintptrArrayArrayPredicate) UintptrArrayArrayList {
+	acc := NilUintptrArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayArrayList) Filter(p ByteArrayArrayPredicate) ByteArrayArrayList {
+	acc := NilByteArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayArrayList) Filter(p RuneArrayArrayPredicate) RuneArrayArrayList {
+	acc := NilRuneArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayArrayList) Filter(p Float32ArrayArrayPredicate) Float32ArrayArrayList {
+	acc := NilFloat32ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayArrayList) Filter(p Float64ArrayArrayPredicate) Float64ArrayArrayList {
+	acc := NilFloat64ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ArrayArrayList) Filter(p Complex64ArrayArrayPredicate) Complex64ArrayArrayList {
+	acc := NilComplex64ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ArrayArrayList) Filter(p Complex128ArrayArrayPredicate) Complex128ArrayArrayList {
+	acc := NilComplex128ArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayArrayList) Filter(p AnyArrayArrayPredicate) AnyArrayArrayList {
+	acc := NilAnyArrayArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionArrayList) Filter(p BoolOptionArrayPredicate) BoolOptionArrayList {
+	acc := NilBoolOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionArrayList) Filter(p StringOptionArrayPredicate) StringOptionArrayList {
+	acc := NilStringOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionArrayList) Filter(p IntOptionArrayPredicate) IntOptionArrayList {
+	acc := NilIntOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8OptionArrayList) Filter(p Int8OptionArrayPredicate) Int8OptionArrayList {
+	acc := NilInt8OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16OptionArrayList) Filter(p Int16OptionArrayPredicate) Int16OptionArrayList {
+	acc := NilInt16OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32OptionArrayList) Filter(p Int32OptionArrayPredicate) Int32OptionArrayList {
+	acc := NilInt32OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionArrayList) Filter(p Int64OptionArrayPredicate) Int64OptionArrayList {
+	acc := NilInt64OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintOptionArrayList) Filter(p UintOptionArrayPredicate) UintOptionArrayList {
+	acc := NilUintOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8OptionArrayList) Filter(p Uint8OptionArrayPredicate) Uint8OptionArrayList {
+	acc := NilUint8OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16OptionArrayList) Filter(p Uint16OptionArrayPredicate) Uint16OptionArrayList {
+	acc := NilUint16OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32OptionArrayList) Filter(p Uint32OptionArrayPredicate) Uint32OptionArrayList {
+	acc := NilUint32OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64OptionArrayList) Filter(p Uint64OptionArrayPredicate) Uint64OptionArrayList {
+	acc := NilUint64OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrOptionArrayList) Filter(p UintptrOptionArrayPredicate) UintptrOptionArrayList {
+	acc := NilUintptrOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionArrayList) Filter(p ByteOptionArrayPredicate) ByteOptionArrayList {
+	acc := NilByteOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionArrayList) Filter(p RuneOptionArrayPredicate) RuneOptionArrayList {
+	acc := NilRuneOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionArrayList) Filter(p Float32OptionArrayPredicate) Float32OptionArrayList {
+	acc := NilFloat32OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionArrayList) Filter(p Float64OptionArrayPredicate) Float64OptionArrayList {
+	acc := NilFloat64OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64OptionArrayList) Filter(p Complex64OptionArrayPredicate) Complex64OptionArrayList {
+	acc := NilComplex64OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128OptionArrayList) Filter(p Complex128OptionArrayPredicate) Complex128OptionArrayList {
+	acc := NilComplex128OptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionArrayList) Filter(p AnyOptionArrayPredicate) AnyOptionArrayList {
+	acc := NilAnyOptionArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolListList) Filter(p BoolListPredicate) BoolListList {
+	acc := NilBoolList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringListList) Filter(p StringListPredicate) StringListList {
+	acc := NilStringList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntListList) Filter(p IntListPredicate) IntListList {
+	acc := NilIntList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int8ListList) Filter(p Int8ListPredicate) Int8ListList {
+	acc := NilInt8List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int16ListList) Filter(p Int16ListPredicate) Int16ListList {
+	acc := NilInt16List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int32ListList) Filter(p Int32ListPredicate) Int32ListList {
+	acc := NilInt32List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ListList) Filter(p Int64ListPredicate) Int64ListList {
+	acc := NilInt64List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintListList) Filter(p UintListPredicate) UintListList {
+	acc := NilUintList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint8ListList) Filter(p Uint8ListPredicate) Uint8ListList {
+	acc := NilUint8List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint16ListList) Filter(p Uint16ListPredicate) Uint16ListList {
+	acc := NilUint16List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint32ListList) Filter(p Uint32ListPredicate) Uint32ListList {
+	acc := NilUint32List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Uint64ListList) Filter(p Uint64ListPredicate) Uint64ListList {
+	acc := NilUint64List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l UintptrListList) Filter(p UintptrListPredicate) UintptrListList {
+	acc := NilUintptrList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteListList) Filter(p ByteListPredicate) ByteListList {
+	acc := NilByteList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneListList) Filter(p RuneListPredicate) RuneListList {
+	acc := NilRuneList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ListList) Filter(p Float32ListPredicate) Float32ListList {
+	acc := NilFloat32List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ListList) Filter(p Float64ListPredicate) Float64ListList {
+	acc := NilFloat64List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex64ListList) Filter(p Complex64ListPredicate) Complex64ListList {
+	acc := NilComplex64List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Complex128ListList) Filter(p Complex128ListPredicate) Complex128ListList {
+	acc := NilComplex128List
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyListList) Filter(p AnyListPredicate) AnyListList {
+	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
 }
-func (m AnyList) Filter(p AnyPredicate) AnyList { return FilterAnyList(m, p) }
-func (m BoolOptionList) Filter(p BoolOptionPredicate) BoolOptionList {
-	return FilterBoolOptionList(m, p)
-}
-func (m StringOptionList) Filter(p StringOptionPredicate) StringOptionList {
-	return FilterStringOptionList(m, p)
-}
-func (m IntOptionList) Filter(p IntOptionPredicate) IntOptionList { return FilterIntOptionList(m, p) }
-func (m Int8OptionList) Filter(p Int8OptionPredicate) Int8OptionList {
-	return FilterInt8OptionList(m, p)
-}
-func (m Int16OptionList) Filter(p Int16OptionPredicate) Int16OptionList {
-	return FilterInt16OptionList(m, p)
-}
-func (m Int32OptionList) Filter(p Int32OptionPredicate) Int32OptionList {
-	return FilterInt32OptionList(m, p)
-}
-func (m Int64OptionList) Filter(p Int64OptionPredicate) Int64OptionList {
-	return FilterInt64OptionList(m, p)
-}
-func (m UintOptionList) Filter(p UintOptionPredicate) UintOptionList {
-	return FilterUintOptionList(m, p)
-}
-func (m Uint8OptionList) Filter(p Uint8OptionPredicate) Uint8OptionList {
-	return FilterUint8OptionList(m, p)
-}
-func (m Uint16OptionList) Filter(p Uint16OptionPredicate) Uint16OptionList {
-	return FilterUint16OptionList(m, p)
-}
-func (m Uint32OptionList) Filter(p Uint32OptionPredicate) Uint32OptionList {
-	return FilterUint32OptionList(m, p)
-}
-func (m Uint64OptionList) Filter(p Uint64OptionPredicate) Uint64OptionList {
-	return FilterUint64OptionList(m, p)
-}
-func (m UintptrOptionList) Filter(p UintptrOptionPredicate) UintptrOptionList {
-	return FilterUintptrOptionList(m, p)
-}
-func (m ByteOptionList) Filter(p ByteOptionPredicate) ByteOptionList {
-	return FilterByteOptionList(m, p)
-}
-func (m RuneOptionList) Filter(p RuneOptionPredicate) RuneOptionList {
-	return FilterRuneOptionList(m, p)
-}
-func (m Float32OptionList) Filter(p Float32OptionPredicate) Float32OptionList {
-	return FilterFloat32OptionList(m, p)
-}
-func (m Float64OptionList) Filter(p Float64OptionPredicate) Float64OptionList {
-	return FilterFloat64OptionList(m, p)
-}
-func (m Complex64OptionList) Filter(p Complex64OptionPredicate) Complex64OptionList {
-	return FilterComplex64OptionList(m, p)
-}
-func (m Complex128OptionList) Filter(p Complex128OptionPredicate) Complex128OptionList {
-	return FilterComplex128OptionList(m, p)
-}
-func (m AnyOptionList) Filter(p AnyOptionPredicate) AnyOptionList { return FilterAnyOptionList(m, p) }
-func (m BoolArrOptionList) Filter(p BoolArrOptionPredicate) BoolArrOptionList {
-	return FilterBoolArrOptionList(m, p)
-}
-func (m StringArrOptionList) Filter(p StringArrOptionPredicate) StringArrOptionList {
-	return FilterStringArrOptionList(m, p)
-}
-func (m IntArrOptionList) Filter(p IntArrOptionPredicate) IntArrOptionList {
-	return FilterIntArrOptionList(m, p)
-}
-func (m Int8ArrOptionList) Filter(p Int8ArrOptionPredicate) Int8ArrOptionList {
-	return FilterInt8ArrOptionList(m, p)
-}
-func (m Int16ArrOptionList) Filter(p Int16ArrOptionPredicate) Int16ArrOptionList {
-	return FilterInt16ArrOptionList(m, p)
-}
-func (m Int32ArrOptionList) Filter(p Int32ArrOptionPredicate) Int32ArrOptionList {
-	return FilterInt32ArrOptionList(m, p)
-}
-func (m Int64ArrOptionList) Filter(p Int64ArrOptionPredicate) Int64ArrOptionList {
-	return FilterInt64ArrOptionList(m, p)
-}
-func (m UintArrOptionList) Filter(p UintArrOptionPredicate) UintArrOptionList {
-	return FilterUintArrOptionList(m, p)
-}
-func (m Uint8ArrOptionList) Filter(p Uint8ArrOptionPredicate) Uint8ArrOptionList {
-	return FilterUint8ArrOptionList(m, p)
-}
-func (m Uint16ArrOptionList) Filter(p Uint16ArrOptionPredicate) Uint16ArrOptionList {
-	return FilterUint16ArrOptionList(m, p)
-}
-func (m Uint32ArrOptionList) Filter(p Uint32ArrOptionPredicate) Uint32ArrOptionList {
-	return FilterUint32ArrOptionList(m, p)
-}
-func (m Uint64ArrOptionList) Filter(p Uint64ArrOptionPredicate) Uint64ArrOptionList {
-	return FilterUint64ArrOptionList(m, p)
-}
-func (m UintptrArrOptionList) Filter(p UintptrArrOptionPredicate) UintptrArrOptionList {
-	return FilterUintptrArrOptionList(m, p)
-}
-func (m ByteArrOptionList) Filter(p ByteArrOptionPredicate) ByteArrOptionList {
-	return FilterByteArrOptionList(m, p)
-}
-func (m RuneArrOptionList) Filter(p RuneArrOptionPredicate) RuneArrOptionList {
-	return FilterRuneArrOptionList(m, p)
-}
-func (m Float32ArrOptionList) Filter(p Float32ArrOptionPredicate) Float32ArrOptionList {
-	return FilterFloat32ArrOptionList(m, p)
-}
-func (m Float64ArrOptionList) Filter(p Float64ArrOptionPredicate) Float64ArrOptionList {
-	return FilterFloat64ArrOptionList(m, p)
-}
-func (m Complex64ArrOptionList) Filter(p Complex64ArrOptionPredicate) Complex64ArrOptionList {
-	return FilterComplex64ArrOptionList(m, p)
-}
-func (m Complex128ArrOptionList) Filter(p Complex128ArrOptionPredicate) Complex128ArrOptionList {
-	return FilterComplex128ArrOptionList(m, p)
-}
-func (m AnyArrOptionList) Filter(p AnyArrOptionPredicate) AnyArrOptionList {
-	return FilterAnyArrOptionList(m, p)
-}
-func (m BoolArrArrOptionList) Filter(p BoolArrArrOptionPredicate) BoolArrArrOptionList {
-	return FilterBoolArrArrOptionList(m, p)
-}
-func (m StringArrArrOptionList) Filter(p StringArrArrOptionPredicate) StringArrArrOptionList {
-	return FilterStringArrArrOptionList(m, p)
-}
-func (m IntArrArrOptionList) Filter(p IntArrArrOptionPredicate) IntArrArrOptionList {
-	return FilterIntArrArrOptionList(m, p)
-}
-func (m Int8ArrArrOptionList) Filter(p Int8ArrArrOptionPredicate) Int8ArrArrOptionList {
-	return FilterInt8ArrArrOptionList(m, p)
-}
-func (m Int16ArrArrOptionList) Filter(p Int16ArrArrOptionPredicate) Int16ArrArrOptionList {
-	return FilterInt16ArrArrOptionList(m, p)
-}
-func (m Int32ArrArrOptionList) Filter(p Int32ArrArrOptionPredicate) Int32ArrArrOptionList {
-	return FilterInt32ArrArrOptionList(m, p)
-}
-func (m Int64ArrArrOptionList) Filter(p Int64ArrArrOptionPredicate) Int64ArrArrOptionList {
-	return FilterInt64ArrArrOptionList(m, p)
-}
-func (m UintArrArrOptionList) Filter(p UintArrArrOptionPredicate) UintArrArrOptionList {
-	return FilterUintArrArrOptionList(m, p)
-}
-func (m Uint8ArrArrOptionList) Filter(p Uint8ArrArrOptionPredicate) Uint8ArrArrOptionList {
-	return FilterUint8ArrArrOptionList(m, p)
-}
-func (m Uint16ArrArrOptionList) Filter(p Uint16ArrArrOptionPredicate) Uint16ArrArrOptionList {
-	return FilterUint16ArrArrOptionList(m, p)
-}
-func (m Uint32ArrArrOptionList) Filter(p Uint32ArrArrOptionPredicate) Uint32ArrArrOptionList {
-	return FilterUint32ArrArrOptionList(m, p)
-}
-func (m Uint64ArrArrOptionList) Filter(p Uint64ArrArrOptionPredicate) Uint64ArrArrOptionList {
-	return FilterUint64ArrArrOptionList(m, p)
-}
-func (m UintptrArrArrOptionList) Filter(p UintptrArrArrOptionPredicate) UintptrArrArrOptionList {
-	return FilterUintptrArrArrOptionList(m, p)
-}
-func (m ByteArrArrOptionList) Filter(p ByteArrArrOptionPredicate) ByteArrArrOptionList {
-	return FilterByteArrArrOptionList(m, p)
-}
-func (m RuneArrArrOptionList) Filter(p RuneArrArrOptionPredicate) RuneArrArrOptionList {
-	return FilterRuneArrArrOptionList(m, p)
-}
-func (m Float32ArrArrOptionList) Filter(p Float32ArrArrOptionPredicate) Float32ArrArrOptionList {
-	return FilterFloat32ArrArrOptionList(m, p)
-}
-func (m Float64ArrArrOptionList) Filter(p Float64ArrArrOptionPredicate) Float64ArrArrOptionList {
-	return FilterFloat64ArrArrOptionList(m, p)
-}
-func (m Complex64ArrArrOptionList) Filter(p Complex64ArrArrOptionPredicate) Complex64ArrArrOptionList {
-	return FilterComplex64ArrArrOptionList(m, p)
-}
-func (m Complex128ArrArrOptionList) Filter(p Complex128ArrArrOptionPredicate) Complex128ArrArrOptionList {
-	return FilterComplex128ArrArrOptionList(m, p)
-}
-func (m AnyArrArrOptionList) Filter(p AnyArrArrOptionPredicate) AnyArrArrOptionList {
-	return FilterAnyArrArrOptionList(m, p)
-}
-func (m BoolOptionArrOptionList) Filter(p BoolOptionArrOptionPredicate) BoolOptionArrOptionList {
-	return FilterBoolOptionArrOptionList(m, p)
-}
-func (m StringOptionArrOptionList) Filter(p StringOptionArrOptionPredicate) StringOptionArrOptionList {
-	return FilterStringOptionArrOptionList(m, p)
-}
-func (m IntOptionArrOptionList) Filter(p IntOptionArrOptionPredicate) IntOptionArrOptionList {
-	return FilterIntOptionArrOptionList(m, p)
-}
-func (m Int8OptionArrOptionList) Filter(p Int8OptionArrOptionPredicate) Int8OptionArrOptionList {
-	return FilterInt8OptionArrOptionList(m, p)
-}
-func (m Int16OptionArrOptionList) Filter(p Int16OptionArrOptionPredicate) Int16OptionArrOptionList {
-	return FilterInt16OptionArrOptionList(m, p)
-}
-func (m Int32OptionArrOptionList) Filter(p Int32OptionArrOptionPredicate) Int32OptionArrOptionList {
-	return FilterInt32OptionArrOptionList(m, p)
-}
-func (m Int64OptionArrOptionList) Filter(p Int64OptionArrOptionPredicate) Int64OptionArrOptionList {
-	return FilterInt64OptionArrOptionList(m, p)
-}
-func (m UintOptionArrOptionList) Filter(p UintOptionArrOptionPredicate) UintOptionArrOptionList {
-	return FilterUintOptionArrOptionList(m, p)
-}
-func (m Uint8OptionArrOptionList) Filter(p Uint8OptionArrOptionPredicate) Uint8OptionArrOptionList {
-	return FilterUint8OptionArrOptionList(m, p)
-}
-func (m Uint16OptionArrOptionList) Filter(p Uint16OptionArrOptionPredicate) Uint16OptionArrOptionList {
-	return FilterUint16OptionArrOptionList(m, p)
-}
-func (m Uint32OptionArrOptionList) Filter(p Uint32OptionArrOptionPredicate) Uint32OptionArrOptionList {
-	return FilterUint32OptionArrOptionList(m, p)
-}
-func (m Uint64OptionArrOptionList) Filter(p Uint64OptionArrOptionPredicate) Uint64OptionArrOptionList {
-	return FilterUint64OptionArrOptionList(m, p)
-}
-func (m UintptrOptionArrOptionList) Filter(p UintptrOptionArrOptionPredicate) UintptrOptionArrOptionList {
-	return FilterUintptrOptionArrOptionList(m, p)
-}
-func (m ByteOptionArrOptionList) Filter(p ByteOptionArrOptionPredicate) ByteOptionArrOptionList {
-	return FilterByteOptionArrOptionList(m, p)
-}
-func (m RuneOptionArrOptionList) Filter(p RuneOptionArrOptionPredicate) RuneOptionArrOptionList {
-	return FilterRuneOptionArrOptionList(m, p)
-}
-func (m Float32OptionArrOptionList) Filter(p Float32OptionArrOptionPredicate) Float32OptionArrOptionList {
-	return FilterFloat32OptionArrOptionList(m, p)
-}
-func (m Float64OptionArrOptionList) Filter(p Float64OptionArrOptionPredicate) Float64OptionArrOptionList {
-	return FilterFloat64OptionArrOptionList(m, p)
-}
-func (m Complex64OptionArrOptionList) Filter(p Complex64OptionArrOptionPredicate) Complex64OptionArrOptionList {
-	return FilterComplex64OptionArrOptionList(m, p)
-}
-func (m Complex128OptionArrOptionList) Filter(p Complex128OptionArrOptionPredicate) Complex128OptionArrOptionList {
-	return FilterComplex128OptionArrOptionList(m, p)
-}
-func (m AnyOptionArrOptionList) Filter(p AnyOptionArrOptionPredicate) AnyOptionArrOptionList {
-	return FilterAnyOptionArrOptionList(m, p)
-}
-func (m BoolListOptionList) Filter(p BoolListOptionPredicate) BoolListOptionList {
-	return FilterBoolListOptionList(m, p)
-}
-func (m StringListOptionList) Filter(p StringListOptionPredicate) StringListOptionList {
-	return FilterStringListOptionList(m, p)
-}
-func (m IntListOptionList) Filter(p IntListOptionPredicate) IntListOptionList {
-	return FilterIntListOptionList(m, p)
-}
-func (m Int8ListOptionList) Filter(p Int8ListOptionPredicate) Int8ListOptionList {
-	return FilterInt8ListOptionList(m, p)
-}
-func (m Int16ListOptionList) Filter(p Int16ListOptionPredicate) Int16ListOptionList {
-	return FilterInt16ListOptionList(m, p)
-}
-func (m Int32ListOptionList) Filter(p Int32ListOptionPredicate) Int32ListOptionList {
-	return FilterInt32ListOptionList(m, p)
-}
-func (m Int64ListOptionList) Filter(p Int64ListOptionPredicate) Int64ListOptionList {
-	return FilterInt64ListOptionList(m, p)
-}
-func (m UintListOptionList) Filter(p UintListOptionPredicate) UintListOptionList {
-	return FilterUintListOptionList(m, p)
-}
-func (m Uint8ListOptionList) Filter(p Uint8ListOptionPredicate) Uint8ListOptionList {
-	return FilterUint8ListOptionList(m, p)
-}
-func (m Uint16ListOptionList) Filter(p Uint16ListOptionPredicate) Uint16ListOptionList {
-	return FilterUint16ListOptionList(m, p)
-}
-func (m Uint32ListOptionList) Filter(p Uint32ListOptionPredicate) Uint32ListOptionList {
-	return FilterUint32ListOptionList(m, p)
-}
-func (m Uint64ListOptionList) Filter(p Uint64ListOptionPredicate) Uint64ListOptionList {
-	return FilterUint64ListOptionList(m, p)
-}
-func (m UintptrListOptionList) Filter(p UintptrListOptionPredicate) UintptrListOptionList {
-	return FilterUintptrListOptionList(m, p)
-}
-func (m ByteListOptionList) Filter(p ByteListOptionPredicate) ByteListOptionList {
-	return FilterByteListOptionList(m, p)
-}
-func (m RuneListOptionList) Filter(p RuneListOptionPredicate) RuneListOptionList {
-	return FilterRuneListOptionList(m, p)
-}
-func (m Float32ListOptionList) Filter(p Float32ListOptionPredicate) Float32ListOptionList {
-	return FilterFloat32ListOptionList(m, p)
-}
-func (m Float64ListOptionList) Filter(p Float64ListOptionPredicate) Float64ListOptionList {
-	return FilterFloat64ListOptionList(m, p)
-}
-func (m Complex64ListOptionList) Filter(p Complex64ListOptionPredicate) Complex64ListOptionList {
-	return FilterComplex64ListOptionList(m, p)
-}
-func (m Complex128ListOptionList) Filter(p Complex128ListOptionPredicate) Complex128ListOptionList {
-	return FilterComplex128ListOptionList(m, p)
-}
-func (m AnyListOptionList) Filter(p AnyListOptionPredicate) AnyListOptionList {
-	return FilterAnyListOptionList(m, p)
-}
-func (m BoolOptionOptionList) Filter(p BoolOptionOptionPredicate) BoolOptionOptionList {
-	return FilterBoolOptionOptionList(m, p)
-}
-func (m StringOptionOptionList) Filter(p StringOptionOptionPredicate) StringOptionOptionList {
-	return FilterStringOptionOptionList(m, p)
-}
-func (m IntOptionOptionList) Filter(p IntOptionOptionPredicate) IntOptionOptionList {
-	return FilterIntOptionOptionList(m, p)
-}
-func (m Int8OptionOptionList) Filter(p Int8OptionOptionPredicate) Int8OptionOptionList {
-	return FilterInt8OptionOptionList(m, p)
-}
-func (m Int16OptionOptionList) Filter(p Int16OptionOptionPredicate) Int16OptionOptionList {
-	return FilterInt16OptionOptionList(m, p)
-}
-func (m Int32OptionOptionList) Filter(p Int32OptionOptionPredicate) Int32OptionOptionList {
-	return FilterInt32OptionOptionList(m, p)
-}
-func (m Int64OptionOptionList) Filter(p Int64OptionOptionPredicate) Int64OptionOptionList {
-	return FilterInt64OptionOptionList(m, p)
-}
-func (m UintOptionOptionList) Filter(p UintOptionOptionPredicate) UintOptionOptionList {
-	return FilterUintOptionOptionList(m, p)
-}
-func (m Uint8OptionOptionList) Filter(p Uint8OptionOptionPredicate) Uint8OptionOptionList {
-	return FilterUint8OptionOptionList(m, p)
-}
-func (m Uint16OptionOptionList) Filter(p Uint16OptionOptionPredicate) Uint16OptionOptionList {
-	return FilterUint16OptionOptionList(m, p)
-}
-func (m Uint32OptionOptionList) Filter(p Uint32OptionOptionPredicate) Uint32OptionOptionList {
-	return FilterUint32OptionOptionList(m, p)
-}
-func (m Uint64OptionOptionList) Filter(p Uint64OptionOptionPredicate) Uint64OptionOptionList {
-	return FilterUint64OptionOptionList(m, p)
-}
-func (m UintptrOptionOptionList) Filter(p UintptrOptionOptionPredicate) UintptrOptionOptionList {
-	return FilterUintptrOptionOptionList(m, p)
-}
-func (m ByteOptionOptionList) Filter(p ByteOptionOptionPredicate) ByteOptionOptionList {
-	return FilterByteOptionOptionList(m, p)
-}
-func (m RuneOptionOptionList) Filter(p RuneOptionOptionPredicate) RuneOptionOptionList {
-	return FilterRuneOptionOptionList(m, p)
-}
-func (m Float32OptionOptionList) Filter(p Float32OptionOptionPredicate) Float32OptionOptionList {
-	return FilterFloat32OptionOptionList(m, p)
-}
-func (m Float64OptionOptionList) Filter(p Float64OptionOptionPredicate) Float64OptionOptionList {
-	return FilterFloat64OptionOptionList(m, p)
-}
-func (m Complex64OptionOptionList) Filter(p Complex64OptionOptionPredicate) Complex64OptionOptionList {
-	return FilterComplex64OptionOptionList(m, p)
-}
-func (m Complex128OptionOptionList) Filter(p Complex128OptionOptionPredicate) Complex128OptionOptionList {
-	return FilterComplex128OptionOptionList(m, p)
-}
-func (m AnyOptionOptionList) Filter(p AnyOptionOptionPredicate) AnyOptionOptionList {
-	return FilterAnyOptionOptionList(m, p)
-}
-func (m BoolArrOptionOptionList) Filter(p BoolArrOptionOptionPredicate) BoolArrOptionOptionList {
-	return FilterBoolArrOptionOptionList(m, p)
-}
-func (m StringArrOptionOptionList) Filter(p StringArrOptionOptionPredicate) StringArrOptionOptionList {
-	return FilterStringArrOptionOptionList(m, p)
-}
-func (m IntArrOptionOptionList) Filter(p IntArrOptionOptionPredicate) IntArrOptionOptionList {
-	return FilterIntArrOptionOptionList(m, p)
-}
-func (m Int8ArrOptionOptionList) Filter(p Int8ArrOptionOptionPredicate) Int8ArrOptionOptionList {
-	return FilterInt8ArrOptionOptionList(m, p)
-}
-func (m Int16ArrOptionOptionList) Filter(p Int16ArrOptionOptionPredicate) Int16ArrOptionOptionList {
-	return FilterInt16ArrOptionOptionList(m, p)
-}
-func (m Int32ArrOptionOptionList) Filter(p Int32ArrOptionOptionPredicate) Int32ArrOptionOptionList {
-	return FilterInt32ArrOptionOptionList(m, p)
-}
-func (m Int64ArrOptionOptionList) Filter(p Int64ArrOptionOptionPredicate) Int64ArrOptionOptionList {
-	return FilterInt64ArrOptionOptionList(m, p)
-}
-func (m UintArrOptionOptionList) Filter(p UintArrOptionOptionPredicate) UintArrOptionOptionList {
-	return FilterUintArrOptionOptionList(m, p)
-}
-func (m Uint8ArrOptionOptionList) Filter(p Uint8ArrOptionOptionPredicate) Uint8ArrOptionOptionList {
-	return FilterUint8ArrOptionOptionList(m, p)
-}
-func (m Uint16ArrOptionOptionList) Filter(p Uint16ArrOptionOptionPredicate) Uint16ArrOptionOptionList {
-	return FilterUint16ArrOptionOptionList(m, p)
-}
-func (m Uint32ArrOptionOptionList) Filter(p Uint32ArrOptionOptionPredicate) Uint32ArrOptionOptionList {
-	return FilterUint32ArrOptionOptionList(m, p)
-}
-func (m Uint64ArrOptionOptionList) Filter(p Uint64ArrOptionOptionPredicate) Uint64ArrOptionOptionList {
-	return FilterUint64ArrOptionOptionList(m, p)
-}
-func (m UintptrArrOptionOptionList) Filter(p UintptrArrOptionOptionPredicate) UintptrArrOptionOptionList {
-	return FilterUintptrArrOptionOptionList(m, p)
-}
-func (m ByteArrOptionOptionList) Filter(p ByteArrOptionOptionPredicate) ByteArrOptionOptionList {
-	return FilterByteArrOptionOptionList(m, p)
-}
-func (m RuneArrOptionOptionList) Filter(p RuneArrOptionOptionPredicate) RuneArrOptionOptionList {
-	return FilterRuneArrOptionOptionList(m, p)
-}
-func (m Float32ArrOptionOptionList) Filter(p Float32ArrOptionOptionPredicate) Float32ArrOptionOptionList {
-	return FilterFloat32ArrOptionOptionList(m, p)
-}
-func (m Float64ArrOptionOptionList) Filter(p Float64ArrOptionOptionPredicate) Float64ArrOptionOptionList {
-	return FilterFloat64ArrOptionOptionList(m, p)
-}
-func (m Complex64ArrOptionOptionList) Filter(p Complex64ArrOptionOptionPredicate) Complex64ArrOptionOptionList {
-	return FilterComplex64ArrOptionOptionList(m, p)
-}
-func (m Complex128ArrOptionOptionList) Filter(p Complex128ArrOptionOptionPredicate) Complex128ArrOptionOptionList {
-	return FilterComplex128ArrOptionOptionList(m, p)
-}
-func (m AnyArrOptionOptionList) Filter(p AnyArrOptionOptionPredicate) AnyArrOptionOptionList {
-	return FilterAnyArrOptionOptionList(m, p)
-}
-func (m BoolArrArrOptionOptionList) Filter(p BoolArrArrOptionOptionPredicate) BoolArrArrOptionOptionList {
-	return FilterBoolArrArrOptionOptionList(m, p)
-}
-func (m StringArrArrOptionOptionList) Filter(p StringArrArrOptionOptionPredicate) StringArrArrOptionOptionList {
-	return FilterStringArrArrOptionOptionList(m, p)
-}
-func (m IntArrArrOptionOptionList) Filter(p IntArrArrOptionOptionPredicate) IntArrArrOptionOptionList {
-	return FilterIntArrArrOptionOptionList(m, p)
-}
-func (m Int8ArrArrOptionOptionList) Filter(p Int8ArrArrOptionOptionPredicate) Int8ArrArrOptionOptionList {
-	return FilterInt8ArrArrOptionOptionList(m, p)
-}
-func (m Int16ArrArrOptionOptionList) Filter(p Int16ArrArrOptionOptionPredicate) Int16ArrArrOptionOptionList {
-	return FilterInt16ArrArrOptionOptionList(m, p)
-}
-func (m Int32ArrArrOptionOptionList) Filter(p Int32ArrArrOptionOptionPredicate) Int32ArrArrOptionOptionList {
-	return FilterInt32ArrArrOptionOptionList(m, p)
-}
-func (m Int64ArrArrOptionOptionList) Filter(p Int64ArrArrOptionOptionPredicate) Int64ArrArrOptionOptionList {
-	return FilterInt64ArrArrOptionOptionList(m, p)
-}
-func (m UintArrArrOptionOptionList) Filter(p UintArrArrOptionOptionPredicate) UintArrArrOptionOptionList {
-	return FilterUintArrArrOptionOptionList(m, p)
-}
-func (m Uint8ArrArrOptionOptionList) Filter(p Uint8ArrArrOptionOptionPredicate) Uint8ArrArrOptionOptionList {
-	return FilterUint8ArrArrOptionOptionList(m, p)
-}
-func (m Uint16ArrArrOptionOptionList) Filter(p Uint16ArrArrOptionOptionPredicate) Uint16ArrArrOptionOptionList {
-	return FilterUint16ArrArrOptionOptionList(m, p)
-}
-func (m Uint32ArrArrOptionOptionList) Filter(p Uint32ArrArrOptionOptionPredicate) Uint32ArrArrOptionOptionList {
-	return FilterUint32ArrArrOptionOptionList(m, p)
-}
-func (m Uint64ArrArrOptionOptionList) Filter(p Uint64ArrArrOptionOptionPredicate) Uint64ArrArrOptionOptionList {
-	return FilterUint64ArrArrOptionOptionList(m, p)
-}
-func (m UintptrArrArrOptionOptionList) Filter(p UintptrArrArrOptionOptionPredicate) UintptrArrArrOptionOptionList {
-	return FilterUintptrArrArrOptionOptionList(m, p)
-}
-func (m ByteArrArrOptionOptionList) Filter(p ByteArrArrOptionOptionPredicate) ByteArrArrOptionOptionList {
-	return FilterByteArrArrOptionOptionList(m, p)
-}
-func (m RuneArrArrOptionOptionList) Filter(p RuneArrArrOptionOptionPredicate) RuneArrArrOptionOptionList {
-	return FilterRuneArrArrOptionOptionList(m, p)
-}
-func (m Float32ArrArrOptionOptionList) Filter(p Float32ArrArrOptionOptionPredicate) Float32ArrArrOptionOptionList {
-	return FilterFloat32ArrArrOptionOptionList(m, p)
-}
-func (m Float64ArrArrOptionOptionList) Filter(p Float64ArrArrOptionOptionPredicate) Float64ArrArrOptionOptionList {
-	return FilterFloat64ArrArrOptionOptionList(m, p)
-}
-func (m Complex64ArrArrOptionOptionList) Filter(p Complex64ArrArrOptionOptionPredicate) Complex64ArrArrOptionOptionList {
-	return FilterComplex64ArrArrOptionOptionList(m, p)
-}
-func (m Complex128ArrArrOptionOptionList) Filter(p Complex128ArrArrOptionOptionPredicate) Complex128ArrArrOptionOptionList {
-	return FilterComplex128ArrArrOptionOptionList(m, p)
-}
-func (m AnyArrArrOptionOptionList) Filter(p AnyArrArrOptionOptionPredicate) AnyArrArrOptionOptionList {
-	return FilterAnyArrArrOptionOptionList(m, p)
-}
-func (m BoolOptionArrOptionOptionList) Filter(p BoolOptionArrOptionOptionPredicate) BoolOptionArrOptionOptionList {
-	return FilterBoolOptionArrOptionOptionList(m, p)
-}
-func (m StringOptionArrOptionOptionList) Filter(p StringOptionArrOptionOptionPredicate) StringOptionArrOptionOptionList {
-	return FilterStringOptionArrOptionOptionList(m, p)
-}
-func (m IntOptionArrOptionOptionList) Filter(p IntOptionArrOptionOptionPredicate) IntOptionArrOptionOptionList {
-	return FilterIntOptionArrOptionOptionList(m, p)
-}
-func (m Int8OptionArrOptionOptionList) Filter(p Int8OptionArrOptionOptionPredicate) Int8OptionArrOptionOptionList {
-	return FilterInt8OptionArrOptionOptionList(m, p)
-}
-func (m Int16OptionArrOptionOptionList) Filter(p Int16OptionArrOptionOptionPredicate) Int16OptionArrOptionOptionList {
-	return FilterInt16OptionArrOptionOptionList(m, p)
-}
-func (m Int32OptionArrOptionOptionList) Filter(p Int32OptionArrOptionOptionPredicate) Int32OptionArrOptionOptionList {
-	return FilterInt32OptionArrOptionOptionList(m, p)
-}
-func (m Int64OptionArrOptionOptionList) Filter(p Int64OptionArrOptionOptionPredicate) Int64OptionArrOptionOptionList {
-	return FilterInt64OptionArrOptionOptionList(m, p)
-}
-func (m UintOptionArrOptionOptionList) Filter(p UintOptionArrOptionOptionPredicate) UintOptionArrOptionOptionList {
-	return FilterUintOptionArrOptionOptionList(m, p)
-}
-func (m Uint8OptionArrOptionOptionList) Filter(p Uint8OptionArrOptionOptionPredicate) Uint8OptionArrOptionOptionList {
-	return FilterUint8OptionArrOptionOptionList(m, p)
-}
-func (m Uint16OptionArrOptionOptionList) Filter(p Uint16OptionArrOptionOptionPredicate) Uint16OptionArrOptionOptionList {
-	return FilterUint16OptionArrOptionOptionList(m, p)
-}
-func (m Uint32OptionArrOptionOptionList) Filter(p Uint32OptionArrOptionOptionPredicate) Uint32OptionArrOptionOptionList {
-	return FilterUint32OptionArrOptionOptionList(m, p)
-}
-func (m Uint64OptionArrOptionOptionList) Filter(p Uint64OptionArrOptionOptionPredicate) Uint64OptionArrOptionOptionList {
-	return FilterUint64OptionArrOptionOptionList(m, p)
-}
-func (m UintptrOptionArrOptionOptionList) Filter(p UintptrOptionArrOptionOptionPredicate) UintptrOptionArrOptionOptionList {
-	return FilterUintptrOptionArrOptionOptionList(m, p)
-}
-func (m ByteOptionArrOptionOptionList) Filter(p ByteOptionArrOptionOptionPredicate) ByteOptionArrOptionOptionList {
-	return FilterByteOptionArrOptionOptionList(m, p)
-}
-func (m RuneOptionArrOptionOptionList) Filter(p RuneOptionArrOptionOptionPredicate) RuneOptionArrOptionOptionList {
-	return FilterRuneOptionArrOptionOptionList(m, p)
-}
-func (m Float32OptionArrOptionOptionList) Filter(p Float32OptionArrOptionOptionPredicate) Float32OptionArrOptionOptionList {
-	return FilterFloat32OptionArrOptionOptionList(m, p)
-}
-func (m Float64OptionArrOptionOptionList) Filter(p Float64OptionArrOptionOptionPredicate) Float64OptionArrOptionOptionList {
-	return FilterFloat64OptionArrOptionOptionList(m, p)
-}
-func (m Complex64OptionArrOptionOptionList) Filter(p Complex64OptionArrOptionOptionPredicate) Complex64OptionArrOptionOptionList {
-	return FilterComplex64OptionArrOptionOptionList(m, p)
-}
-func (m Complex128OptionArrOptionOptionList) Filter(p Complex128OptionArrOptionOptionPredicate) Complex128OptionArrOptionOptionList {
-	return FilterComplex128OptionArrOptionOptionList(m, p)
-}
-func (m AnyOptionArrOptionOptionList) Filter(p AnyOptionArrOptionOptionPredicate) AnyOptionArrOptionOptionList {
-	return FilterAnyOptionArrOptionOptionList(m, p)
-}
-func (m BoolListOptionOptionList) Filter(p BoolListOptionOptionPredicate) BoolListOptionOptionList {
-	return FilterBoolListOptionOptionList(m, p)
-}
-func (m StringListOptionOptionList) Filter(p StringListOptionOptionPredicate) StringListOptionOptionList {
-	return FilterStringListOptionOptionList(m, p)
-}
-func (m IntListOptionOptionList) Filter(p IntListOptionOptionPredicate) IntListOptionOptionList {
-	return FilterIntListOptionOptionList(m, p)
-}
-func (m Int8ListOptionOptionList) Filter(p Int8ListOptionOptionPredicate) Int8ListOptionOptionList {
-	return FilterInt8ListOptionOptionList(m, p)
-}
-func (m Int16ListOptionOptionList) Filter(p Int16ListOptionOptionPredicate) Int16ListOptionOptionList {
-	return FilterInt16ListOptionOptionList(m, p)
-}
-func (m Int32ListOptionOptionList) Filter(p Int32ListOptionOptionPredicate) Int32ListOptionOptionList {
-	return FilterInt32ListOptionOptionList(m, p)
-}
-func (m Int64ListOptionOptionList) Filter(p Int64ListOptionOptionPredicate) Int64ListOptionOptionList {
-	return FilterInt64ListOptionOptionList(m, p)
-}
-func (m UintListOptionOptionList) Filter(p UintListOptionOptionPredicate) UintListOptionOptionList {
-	return FilterUintListOptionOptionList(m, p)
-}
-func (m Uint8ListOptionOptionList) Filter(p Uint8ListOptionOptionPredicate) Uint8ListOptionOptionList {
-	return FilterUint8ListOptionOptionList(m, p)
-}
-func (m Uint16ListOptionOptionList) Filter(p Uint16ListOptionOptionPredicate) Uint16ListOptionOptionList {
-	return FilterUint16ListOptionOptionList(m, p)
-}
-func (m Uint32ListOptionOptionList) Filter(p Uint32ListOptionOptionPredicate) Uint32ListOptionOptionList {
-	return FilterUint32ListOptionOptionList(m, p)
-}
-func (m Uint64ListOptionOptionList) Filter(p Uint64ListOptionOptionPredicate) Uint64ListOptionOptionList {
-	return FilterUint64ListOptionOptionList(m, p)
-}
-func (m UintptrListOptionOptionList) Filter(p UintptrListOptionOptionPredicate) UintptrListOptionOptionList {
-	return FilterUintptrListOptionOptionList(m, p)
-}
-func (m ByteListOptionOptionList) Filter(p ByteListOptionOptionPredicate) ByteListOptionOptionList {
-	return FilterByteListOptionOptionList(m, p)
-}
-func (m RuneListOptionOptionList) Filter(p RuneListOptionOptionPredicate) RuneListOptionOptionList {
-	return FilterRuneListOptionOptionList(m, p)
-}
-func (m Float32ListOptionOptionList) Filter(p Float32ListOptionOptionPredicate) Float32ListOptionOptionList {
-	return FilterFloat32ListOptionOptionList(m, p)
-}
-func (m Float64ListOptionOptionList) Filter(p Float64ListOptionOptionPredicate) Float64ListOptionOptionList {
-	return FilterFloat64ListOptionOptionList(m, p)
-}
-func (m Complex64ListOptionOptionList) Filter(p Complex64ListOptionOptionPredicate) Complex64ListOptionOptionList {
-	return FilterComplex64ListOptionOptionList(m, p)
-}
-func (m Complex128ListOptionOptionList) Filter(p Complex128ListOptionOptionPredicate) Complex128ListOptionOptionList {
-	return FilterComplex128ListOptionOptionList(m, p)
-}
-func (m AnyListOptionOptionList) Filter(p AnyListOptionOptionPredicate) AnyListOptionOptionList {
-	return FilterAnyListOptionOptionList(m, p)
-}
-func (m BoolOptionOptionOptionList) Filter(p BoolOptionOptionOptionPredicate) BoolOptionOptionOptionList {
-	return FilterBoolOptionOptionOptionList(m, p)
-}
-func (m StringOptionOptionOptionList) Filter(p StringOptionOptionOptionPredicate) StringOptionOptionOptionList {
-	return FilterStringOptionOptionOptionList(m, p)
-}
-func (m IntOptionOptionOptionList) Filter(p IntOptionOptionOptionPredicate) IntOptionOptionOptionList {
-	return FilterIntOptionOptionOptionList(m, p)
-}
-func (m Int8OptionOptionOptionList) Filter(p Int8OptionOptionOptionPredicate) Int8OptionOptionOptionList {
-	return FilterInt8OptionOptionOptionList(m, p)
-}
-func (m Int16OptionOptionOptionList) Filter(p Int16OptionOptionOptionPredicate) Int16OptionOptionOptionList {
-	return FilterInt16OptionOptionOptionList(m, p)
-}
-func (m Int32OptionOptionOptionList) Filter(p Int32OptionOptionOptionPredicate) Int32OptionOptionOptionList {
-	return FilterInt32OptionOptionOptionList(m, p)
-}
-func (m Int64OptionOptionOptionList) Filter(p Int64OptionOptionOptionPredicate) Int64OptionOptionOptionList {
-	return FilterInt64OptionOptionOptionList(m, p)
-}
-func (m UintOptionOptionOptionList) Filter(p UintOptionOptionOptionPredicate) UintOptionOptionOptionList {
-	return FilterUintOptionOptionOptionList(m, p)
-}
-func (m Uint8OptionOptionOptionList) Filter(p Uint8OptionOptionOptionPredicate) Uint8OptionOptionOptionList {
-	return FilterUint8OptionOptionOptionList(m, p)
-}
-func (m Uint16OptionOptionOptionList) Filter(p Uint16OptionOptionOptionPredicate) Uint16OptionOptionOptionList {
-	return FilterUint16OptionOptionOptionList(m, p)
-}
-func (m Uint32OptionOptionOptionList) Filter(p Uint32OptionOptionOptionPredicate) Uint32OptionOptionOptionList {
-	return FilterUint32OptionOptionOptionList(m, p)
-}
-func (m Uint64OptionOptionOptionList) Filter(p Uint64OptionOptionOptionPredicate) Uint64OptionOptionOptionList {
-	return FilterUint64OptionOptionOptionList(m, p)
-}
-func (m UintptrOptionOptionOptionList) Filter(p UintptrOptionOptionOptionPredicate) UintptrOptionOptionOptionList {
-	return FilterUintptrOptionOptionOptionList(m, p)
-}
-func (m ByteOptionOptionOptionList) Filter(p ByteOptionOptionOptionPredicate) ByteOptionOptionOptionList {
-	return FilterByteOptionOptionOptionList(m, p)
-}
-func (m RuneOptionOptionOptionList) Filter(p RuneOptionOptionOptionPredicate) RuneOptionOptionOptionList {
-	return FilterRuneOptionOptionOptionList(m, p)
-}
-func (m Float32OptionOptionOptionList) Filter(p Float32OptionOptionOptionPredicate) Float32OptionOptionOptionList {
-	return FilterFloat32OptionOptionOptionList(m, p)
-}
-func (m Float64OptionOptionOptionList) Filter(p Float64OptionOptionOptionPredicate) Float64OptionOptionOptionList {
-	return FilterFloat64OptionOptionOptionList(m, p)
-}
-func (m Complex64OptionOptionOptionList) Filter(p Complex64OptionOptionOptionPredicate) Complex64OptionOptionOptionList {
-	return FilterComplex64OptionOptionOptionList(m, p)
-}
-func (m Complex128OptionOptionOptionList) Filter(p Complex128OptionOptionOptionPredicate) Complex128OptionOptionOptionList {
-	return FilterComplex128OptionOptionOptionList(m, p)
-}
-func (m AnyOptionOptionOptionList) Filter(p AnyOptionOptionOptionPredicate) AnyOptionOptionOptionList {
-	return FilterAnyOptionOptionOptionList(m, p)
-}
-func (m BoolArrOptionOptionOptionList) Filter(p BoolArrOptionOptionOptionPredicate) BoolArrOptionOptionOptionList {
-	return FilterBoolArrOptionOptionOptionList(m, p)
-}
-func (m StringArrOptionOptionOptionList) Filter(p StringArrOptionOptionOptionPredicate) StringArrOptionOptionOptionList {
-	return FilterStringArrOptionOptionOptionList(m, p)
-}
-func (m IntArrOptionOptionOptionList) Filter(p IntArrOptionOptionOptionPredicate) IntArrOptionOptionOptionList {
-	return FilterIntArrOptionOptionOptionList(m, p)
-}
-func (m Int8ArrOptionOptionOptionList) Filter(p Int8ArrOptionOptionOptionPredicate) Int8ArrOptionOptionOptionList {
-	return FilterInt8ArrOptionOptionOptionList(m, p)
-}
-func (m Int16ArrOptionOptionOptionList) Filter(p Int16ArrOptionOptionOptionPredicate) Int16ArrOptionOptionOptionList {
-	return FilterInt16ArrOptionOptionOptionList(m, p)
-}
-func (m Int32ArrOptionOptionOptionList) Filter(p Int32ArrOptionOptionOptionPredicate) Int32ArrOptionOptionOptionList {
-	return FilterInt32ArrOptionOptionOptionList(m, p)
-}
-func (m Int64ArrOptionOptionOptionList) Filter(p Int64ArrOptionOptionOptionPredicate) Int64ArrOptionOptionOptionList {
-	return FilterInt64ArrOptionOptionOptionList(m, p)
-}
-func (m UintArrOptionOptionOptionList) Filter(p UintArrOptionOptionOptionPredicate) UintArrOptionOptionOptionList {
-	return FilterUintArrOptionOptionOptionList(m, p)
-}
-func (m Uint8ArrOptionOptionOptionList) Filter(p Uint8ArrOptionOptionOptionPredicate) Uint8ArrOptionOptionOptionList {
-	return FilterUint8ArrOptionOptionOptionList(m, p)
-}
-func (m Uint16ArrOptionOptionOptionList) Filter(p Uint16ArrOptionOptionOptionPredicate) Uint16ArrOptionOptionOptionList {
-	return FilterUint16ArrOptionOptionOptionList(m, p)
-}
-func (m Uint32ArrOptionOptionOptionList) Filter(p Uint32ArrOptionOptionOptionPredicate) Uint32ArrOptionOptionOptionList {
-	return FilterUint32ArrOptionOptionOptionList(m, p)
-}
-func (m Uint64ArrOptionOptionOptionList) Filter(p Uint64ArrOptionOptionOptionPredicate) Uint64ArrOptionOptionOptionList {
-	return FilterUint64ArrOptionOptionOptionList(m, p)
-}
-func (m UintptrArrOptionOptionOptionList) Filter(p UintptrArrOptionOptionOptionPredicate) UintptrArrOptionOptionOptionList {
-	return FilterUintptrArrOptionOptionOptionList(m, p)
-}
-func (m ByteArrOptionOptionOptionList) Filter(p ByteArrOptionOptionOptionPredicate) ByteArrOptionOptionOptionList {
-	return FilterByteArrOptionOptionOptionList(m, p)
-}
-func (m RuneArrOptionOptionOptionList) Filter(p RuneArrOptionOptionOptionPredicate) RuneArrOptionOptionOptionList {
-	return FilterRuneArrOptionOptionOptionList(m, p)
-}
-func (m Float32ArrOptionOptionOptionList) Filter(p Float32ArrOptionOptionOptionPredicate) Float32ArrOptionOptionOptionList {
-	return FilterFloat32ArrOptionOptionOptionList(m, p)
-}
-func (m Float64ArrOptionOptionOptionList) Filter(p Float64ArrOptionOptionOptionPredicate) Float64ArrOptionOptionOptionList {
-	return FilterFloat64ArrOptionOptionOptionList(m, p)
-}
-func (m Complex64ArrOptionOptionOptionList) Filter(p Complex64ArrOptionOptionOptionPredicate) Complex64ArrOptionOptionOptionList {
-	return FilterComplex64ArrOptionOptionOptionList(m, p)
-}
-func (m Complex128ArrOptionOptionOptionList) Filter(p Complex128ArrOptionOptionOptionPredicate) Complex128ArrOptionOptionOptionList {
-	return FilterComplex128ArrOptionOptionOptionList(m, p)
-}
-func (m AnyArrOptionOptionOptionList) Filter(p AnyArrOptionOptionOptionPredicate) AnyArrOptionOptionOptionList {
-	return FilterAnyArrOptionOptionOptionList(m, p)
-}
-func (m BoolArrArrOptionOptionOptionList) Filter(p BoolArrArrOptionOptionOptionPredicate) BoolArrArrOptionOptionOptionList {
-	return FilterBoolArrArrOptionOptionOptionList(m, p)
-}
-func (m StringArrArrOptionOptionOptionList) Filter(p StringArrArrOptionOptionOptionPredicate) StringArrArrOptionOptionOptionList {
-	return FilterStringArrArrOptionOptionOptionList(m, p)
-}
-func (m IntArrArrOptionOptionOptionList) Filter(p IntArrArrOptionOptionOptionPredicate) IntArrArrOptionOptionOptionList {
-	return FilterIntArrArrOptionOptionOptionList(m, p)
-}
-func (m Int8ArrArrOptionOptionOptionList) Filter(p Int8ArrArrOptionOptionOptionPredicate) Int8ArrArrOptionOptionOptionList {
-	return FilterInt8ArrArrOptionOptionOptionList(m, p)
-}
-func (m Int16ArrArrOptionOptionOptionList) Filter(p Int16ArrArrOptionOptionOptionPredicate) Int16ArrArrOptionOptionOptionList {
-	return FilterInt16ArrArrOptionOptionOptionList(m, p)
-}
-func (m Int32ArrArrOptionOptionOptionList) Filter(p Int32ArrArrOptionOptionOptionPredicate) Int32ArrArrOptionOptionOptionList {
-	return FilterInt32ArrArrOptionOptionOptionList(m, p)
-}
-func (m Int64ArrArrOptionOptionOptionList) Filter(p Int64ArrArrOptionOptionOptionPredicate) Int64ArrArrOptionOptionOptionList {
-	return FilterInt64ArrArrOptionOptionOptionList(m, p)
-}
-func (m UintArrArrOptionOptionOptionList) Filter(p UintArrArrOptionOptionOptionPredicate) UintArrArrOptionOptionOptionList {
-	return FilterUintArrArrOptionOptionOptionList(m, p)
-}
-func (m Uint8ArrArrOptionOptionOptionList) Filter(p Uint8ArrArrOptionOptionOptionPredicate) Uint8ArrArrOptionOptionOptionList {
-	return FilterUint8ArrArrOptionOptionOptionList(m, p)
-}
-func (m Uint16ArrArrOptionOptionOptionList) Filter(p Uint16ArrArrOptionOptionOptionPredicate) Uint16ArrArrOptionOptionOptionList {
-	return FilterUint16ArrArrOptionOptionOptionList(m, p)
-}
-func (m Uint32ArrArrOptionOptionOptionList) Filter(p Uint32ArrArrOptionOptionOptionPredicate) Uint32ArrArrOptionOptionOptionList {
-	return FilterUint32ArrArrOptionOptionOptionList(m, p)
-}
-func (m Uint64ArrArrOptionOptionOptionList) Filter(p Uint64ArrArrOptionOptionOptionPredicate) Uint64ArrArrOptionOptionOptionList {
-	return FilterUint64ArrArrOptionOptionOptionList(m, p)
-}
-func (m UintptrArrArrOptionOptionOptionList) Filter(p UintptrArrArrOptionOptionOptionPredicate) UintptrArrArrOptionOptionOptionList {
-	return FilterUintptrArrArrOptionOptionOptionList(m, p)
-}
-func (m ByteArrArrOptionOptionOptionList) Filter(p ByteArrArrOptionOptionOptionPredicate) ByteArrArrOptionOptionOptionList {
-	return FilterByteArrArrOptionOptionOptionList(m, p)
-}
-func (m RuneArrArrOptionOptionOptionList) Filter(p RuneArrArrOptionOptionOptionPredicate) RuneArrArrOptionOptionOptionList {
-	return FilterRuneArrArrOptionOptionOptionList(m, p)
-}
-func (m Float32ArrArrOptionOptionOptionList) Filter(p Float32ArrArrOptionOptionOptionPredicate) Float32ArrArrOptionOptionOptionList {
-	return FilterFloat32ArrArrOptionOptionOptionList(m, p)
-}
-func (m Float64ArrArrOptionOptionOptionList) Filter(p Float64ArrArrOptionOptionOptionPredicate) Float64ArrArrOptionOptionOptionList {
-	return FilterFloat64ArrArrOptionOptionOptionList(m, p)
-}
-func (m Complex64ArrArrOptionOptionOptionList) Filter(p Complex64ArrArrOptionOptionOptionPredicate) Complex64ArrArrOptionOptionOptionList {
-	return FilterComplex64ArrArrOptionOptionOptionList(m, p)
-}
-func (m Complex128ArrArrOptionOptionOptionList) Filter(p Complex128ArrArrOptionOptionOptionPredicate) Complex128ArrArrOptionOptionOptionList {
-	return FilterComplex128ArrArrOptionOptionOptionList(m, p)
-}
-func (m AnyArrArrOptionOptionOptionList) Filter(p AnyArrArrOptionOptionOptionPredicate) AnyArrArrOptionOptionOptionList {
-	return FilterAnyArrArrOptionOptionOptionList(m, p)
-}
-func (m BoolOptionArrOptionOptionOptionList) Filter(p BoolOptionArrOptionOptionOptionPredicate) BoolOptionArrOptionOptionOptionList {
-	return FilterBoolOptionArrOptionOptionOptionList(m, p)
-}
-func (m StringOptionArrOptionOptionOptionList) Filter(p StringOptionArrOptionOptionOptionPredicate) StringOptionArrOptionOptionOptionList {
-	return FilterStringOptionArrOptionOptionOptionList(m, p)
-}
-func (m IntOptionArrOptionOptionOptionList) Filter(p IntOptionArrOptionOptionOptionPredicate) IntOptionArrOptionOptionOptionList {
-	return FilterIntOptionArrOptionOptionOptionList(m, p)
-}
-func (m Int8OptionArrOptionOptionOptionList) Filter(p Int8OptionArrOptionOptionOptionPredicate) Int8OptionArrOptionOptionOptionList {
-	return FilterInt8OptionArrOptionOptionOptionList(m, p)
-}
-func (m Int16OptionArrOptionOptionOptionList) Filter(p Int16OptionArrOptionOptionOptionPredicate) Int16OptionArrOptionOptionOptionList {
-	return FilterInt16OptionArrOptionOptionOptionList(m, p)
-}
-func (m Int32OptionArrOptionOptionOptionList) Filter(p Int32OptionArrOptionOptionOptionPredicate) Int32OptionArrOptionOptionOptionList {
-	return FilterInt32OptionArrOptionOptionOptionList(m, p)
-}
-func (m Int64OptionArrOptionOptionOptionList) Filter(p Int64OptionArrOptionOptionOptionPredicate) Int64OptionArrOptionOptionOptionList {
-	return FilterInt64OptionArrOptionOptionOptionList(m, p)
-}
-func (m UintOptionArrOptionOptionOptionList) Filter(p UintOptionArrOptionOptionOptionPredicate) UintOptionArrOptionOptionOptionList {
-	return FilterUintOptionArrOptionOptionOptionList(m, p)
-}
-func (m Uint8OptionArrOptionOptionOptionList) Filter(p Uint8OptionArrOptionOptionOptionPredicate) Uint8OptionArrOptionOptionOptionList {
-	return FilterUint8OptionArrOptionOptionOptionList(m, p)
-}
-func (m Uint16OptionArrOptionOptionOptionList) Filter(p Uint16OptionArrOptionOptionOptionPredicate) Uint16OptionArrOptionOptionOptionList {
-	return FilterUint16OptionArrOptionOptionOptionList(m, p)
-}
-func (m Uint32OptionArrOptionOptionOptionList) Filter(p Uint32OptionArrOptionOptionOptionPredicate) Uint32OptionArrOptionOptionOptionList {
-	return FilterUint32OptionArrOptionOptionOptionList(m, p)
-}
-func (m Uint64OptionArrOptionOptionOptionList) Filter(p Uint64OptionArrOptionOptionOptionPredicate) Uint64OptionArrOptionOptionOptionList {
-	return FilterUint64OptionArrOptionOptionOptionList(m, p)
-}
-func (m UintptrOptionArrOptionOptionOptionList) Filter(p UintptrOptionArrOptionOptionOptionPredicate) UintptrOptionArrOptionOptionOptionList {
-	return FilterUintptrOptionArrOptionOptionOptionList(m, p)
-}
-func (m ByteOptionArrOptionOptionOptionList) Filter(p ByteOptionArrOptionOptionOptionPredicate) ByteOptionArrOptionOptionOptionList {
-	return FilterByteOptionArrOptionOptionOptionList(m, p)
-}
-func (m RuneOptionArrOptionOptionOptionList) Filter(p RuneOptionArrOptionOptionOptionPredicate) RuneOptionArrOptionOptionOptionList {
-	return FilterRuneOptionArrOptionOptionOptionList(m, p)
-}
-func (m Float32OptionArrOptionOptionOptionList) Filter(p Float32OptionArrOptionOptionOptionPredicate) Float32OptionArrOptionOptionOptionList {
-	return FilterFloat32OptionArrOptionOptionOptionList(m, p)
-}
-func (m Float64OptionArrOptionOptionOptionList) Filter(p Float64OptionArrOptionOptionOptionPredicate) Float64OptionArrOptionOptionOptionList {
-	return FilterFloat64OptionArrOptionOptionOptionList(m, p)
-}
-func (m Complex64OptionArrOptionOptionOptionList) Filter(p Complex64OptionArrOptionOptionOptionPredicate) Complex64OptionArrOptionOptionOptionList {
-	return FilterComplex64OptionArrOptionOptionOptionList(m, p)
-}
-func (m Complex128OptionArrOptionOptionOptionList) Filter(p Complex128OptionArrOptionOptionOptionPredicate) Complex128OptionArrOptionOptionOptionList {
-	return FilterComplex128OptionArrOptionOptionOptionList(m, p)
-}
-func (m AnyOptionArrOptionOptionOptionList) Filter(p AnyOptionArrOptionOptionOptionPredicate) AnyOptionArrOptionOptionOptionList {
-	return FilterAnyOptionArrOptionOptionOptionList(m, p)
-}
-func (m BoolListOptionOptionOptionList) Filter(p BoolListOptionOptionOptionPredicate) BoolListOptionOptionOptionList {
-	return FilterBoolListOptionOptionOptionList(m, p)
-}
-func (m StringListOptionOptionOptionList) Filter(p StringListOptionOptionOptionPredicate) StringListOptionOptionOptionList {
-	return FilterStringListOptionOptionOptionList(m, p)
-}
-func (m IntListOptionOptionOptionList) Filter(p IntListOptionOptionOptionPredicate) IntListOptionOptionOptionList {
-	return FilterIntListOptionOptionOptionList(m, p)
-}
-func (m Int8ListOptionOptionOptionList) Filter(p Int8ListOptionOptionOptionPredicate) Int8ListOptionOptionOptionList {
-	return FilterInt8ListOptionOptionOptionList(m, p)
-}
-func (m Int16ListOptionOptionOptionList) Filter(p Int16ListOptionOptionOptionPredicate) Int16ListOptionOptionOptionList {
-	return FilterInt16ListOptionOptionOptionList(m, p)
-}
-func (m Int32ListOptionOptionOptionList) Filter(p Int32ListOptionOptionOptionPredicate) Int32ListOptionOptionOptionList {
-	return FilterInt32ListOptionOptionOptionList(m, p)
-}
-func (m Int64ListOptionOptionOptionList) Filter(p Int64ListOptionOptionOptionPredicate) Int64ListOptionOptionOptionList {
-	return FilterInt64ListOptionOptionOptionList(m, p)
-}
-func (m UintListOptionOptionOptionList) Filter(p UintListOptionOptionOptionPredicate) UintListOptionOptionOptionList {
-	return FilterUintListOptionOptionOptionList(m, p)
-}
-func (m Uint8ListOptionOptionOptionList) Filter(p Uint8ListOptionOptionOptionPredicate) Uint8ListOptionOptionOptionList {
-	return FilterUint8ListOptionOptionOptionList(m, p)
-}
-func (m Uint16ListOptionOptionOptionList) Filter(p Uint16ListOptionOptionOptionPredicate) Uint16ListOptionOptionOptionList {
-	return FilterUint16ListOptionOptionOptionList(m, p)
-}
-func (m Uint32ListOptionOptionOptionList) Filter(p Uint32ListOptionOptionOptionPredicate) Uint32ListOptionOptionOptionList {
-	return FilterUint32ListOptionOptionOptionList(m, p)
-}
-func (m Uint64ListOptionOptionOptionList) Filter(p Uint64ListOptionOptionOptionPredicate) Uint64ListOptionOptionOptionList {
-	return FilterUint64ListOptionOptionOptionList(m, p)
-}
-func (m UintptrListOptionOptionOptionList) Filter(p UintptrListOptionOptionOptionPredicate) UintptrListOptionOptionOptionList {
-	return FilterUintptrListOptionOptionOptionList(m, p)
-}
-func (m ByteListOptionOptionOptionList) Filter(p ByteListOptionOptionOptionPredicate) ByteListOptionOptionOptionList {
-	return FilterByteListOptionOptionOptionList(m, p)
-}
-func (m RuneListOptionOptionOptionList) Filter(p RuneListOptionOptionOptionPredicate) RuneListOptionOptionOptionList {
-	return FilterRuneListOptionOptionOptionList(m, p)
-}
-func (m Float32ListOptionOptionOptionList) Filter(p Float32ListOptionOptionOptionPredicate) Float32ListOptionOptionOptionList {
-	return FilterFloat32ListOptionOptionOptionList(m, p)
-}
-func (m Float64ListOptionOptionOptionList) Filter(p Float64ListOptionOptionOptionPredicate) Float64ListOptionOptionOptionList {
-	return FilterFloat64ListOptionOptionOptionList(m, p)
-}
-func (m Complex64ListOptionOptionOptionList) Filter(p Complex64ListOptionOptionOptionPredicate) Complex64ListOptionOptionOptionList {
-	return FilterComplex64ListOptionOptionOptionList(m, p)
-}
-func (m Complex128ListOptionOptionOptionList) Filter(p Complex128ListOptionOptionOptionPredicate) Complex128ListOptionOptionOptionList {
-	return FilterComplex128ListOptionOptionOptionList(m, p)
-}
-func (m AnyListOptionOptionOptionList) Filter(p AnyListOptionOptionOptionPredicate) AnyListOptionOptionOptionList {
-	return FilterAnyListOptionOptionOptionList(m, p)
-}
-func (m BoolArrList) Filter(p BoolArrPredicate) BoolArrList       { return FilterBoolArrList(m, p) }
-func (m StringArrList) Filter(p StringArrPredicate) StringArrList { return FilterStringArrList(m, p) }
-func (m IntArrList) Filter(p IntArrPredicate) IntArrList          { return FilterIntArrList(m, p) }
-func (m Int8ArrList) Filter(p Int8ArrPredicate) Int8ArrList       { return FilterInt8ArrList(m, p) }
-func (m Int16ArrList) Filter(p Int16ArrPredicate) Int16ArrList    { return FilterInt16ArrList(m, p) }
-func (m Int32ArrList) Filter(p Int32ArrPredicate) Int32ArrList    { return FilterInt32ArrList(m, p) }
-func (m Int64ArrList) Filter(p Int64ArrPredicate) Int64ArrList    { return FilterInt64ArrList(m, p) }
-func (m UintArrList) Filter(p UintArrPredicate) UintArrList       { return FilterUintArrList(m, p) }
-func (m Uint8ArrList) Filter(p Uint8ArrPredicate) Uint8ArrList    { return FilterUint8ArrList(m, p) }
-func (m Uint16ArrList) Filter(p Uint16ArrPredicate) Uint16ArrList { return FilterUint16ArrList(m, p) }
-func (m Uint32ArrList) Filter(p Uint32ArrPredicate) Uint32ArrList { return FilterUint32ArrList(m, p) }
-func (m Uint64ArrList) Filter(p Uint64ArrPredicate) Uint64ArrList { return FilterUint64ArrList(m, p) }
-func (m UintptrArrList) Filter(p UintptrArrPredicate) UintptrArrList {
-	return FilterUintptrArrList(m, p)
-}
-func (m ByteArrList) Filter(p ByteArrPredicate) ByteArrList { return FilterByteArrList(m, p) }
-func (m RuneArrList) Filter(p RuneArrPredicate) RuneArrList { return FilterRuneArrList(m, p) }
-func (m Float32ArrList) Filter(p Float32ArrPredicate) Float32ArrList {
-	return FilterFloat32ArrList(m, p)
-}
-func (m Float64ArrList) Filter(p Float64ArrPredicate) Float64ArrList {
-	return FilterFloat64ArrList(m, p)
-}
-func (m Complex64ArrList) Filter(p Complex64ArrPredicate) Complex64ArrList {
-	return FilterComplex64ArrList(m, p)
-}
-func (m Complex128ArrList) Filter(p Complex128ArrPredicate) Complex128ArrList {
-	return FilterComplex128ArrList(m, p)
-}
-func (m AnyArrList) Filter(p AnyArrPredicate) AnyArrList { return FilterAnyArrList(m, p) }
-func (m BoolArrArrList) Filter(p BoolArrArrPredicate) BoolArrArrList {
-	return FilterBoolArrArrList(m, p)
-}
-func (m StringArrArrList) Filter(p StringArrArrPredicate) StringArrArrList {
-	return FilterStringArrArrList(m, p)
-}
-func (m IntArrArrList) Filter(p IntArrArrPredicate) IntArrArrList { return FilterIntArrArrList(m, p) }
-func (m Int8ArrArrList) Filter(p Int8ArrArrPredicate) Int8ArrArrList {
-	return FilterInt8ArrArrList(m, p)
-}
-func (m Int16ArrArrList) Filter(p Int16ArrArrPredicate) Int16ArrArrList {
-	return FilterInt16ArrArrList(m, p)
-}
-func (m Int32ArrArrList) Filter(p Int32ArrArrPredicate) Int32ArrArrList {
-	return FilterInt32ArrArrList(m, p)
-}
-func (m Int64ArrArrList) Filter(p Int64ArrArrPredicate) Int64ArrArrList {
-	return FilterInt64ArrArrList(m, p)
-}
-func (m UintArrArrList) Filter(p UintArrArrPredicate) UintArrArrList {
-	return FilterUintArrArrList(m, p)
-}
-func (m Uint8ArrArrList) Filter(p Uint8ArrArrPredicate) Uint8ArrArrList {
-	return FilterUint8ArrArrList(m, p)
-}
-func (m Uint16ArrArrList) Filter(p Uint16ArrArrPredicate) Uint16ArrArrList {
-	return FilterUint16ArrArrList(m, p)
-}
-func (m Uint32ArrArrList) Filter(p Uint32ArrArrPredicate) Uint32ArrArrList {
-	return FilterUint32ArrArrList(m, p)
-}
-func (m Uint64ArrArrList) Filter(p Uint64ArrArrPredicate) Uint64ArrArrList {
-	return FilterUint64ArrArrList(m, p)
-}
-func (m UintptrArrArrList) Filter(p UintptrArrArrPredicate) UintptrArrArrList {
-	return FilterUintptrArrArrList(m, p)
-}
-func (m ByteArrArrList) Filter(p ByteArrArrPredicate) ByteArrArrList {
-	return FilterByteArrArrList(m, p)
-}
-func (m RuneArrArrList) Filter(p RuneArrArrPredicate) RuneArrArrList {
-	return FilterRuneArrArrList(m, p)
-}
-func (m Float32ArrArrList) Filter(p Float32ArrArrPredicate) Float32ArrArrList {
-	return FilterFloat32ArrArrList(m, p)
-}
-func (m Float64ArrArrList) Filter(p Float64ArrArrPredicate) Float64ArrArrList {
-	return FilterFloat64ArrArrList(m, p)
-}
-func (m Complex64ArrArrList) Filter(p Complex64ArrArrPredicate) Complex64ArrArrList {
-	return FilterComplex64ArrArrList(m, p)
-}
-func (m Complex128ArrArrList) Filter(p Complex128ArrArrPredicate) Complex128ArrArrList {
-	return FilterComplex128ArrArrList(m, p)
-}
-func (m AnyArrArrList) Filter(p AnyArrArrPredicate) AnyArrArrList { return FilterAnyArrArrList(m, p) }
-func (m BoolOptionArrList) Filter(p BoolOptionArrPredicate) BoolOptionArrList {
-	return FilterBoolOptionArrList(m, p)
-}
-func (m StringOptionArrList) Filter(p StringOptionArrPredicate) StringOptionArrList {
-	return FilterStringOptionArrList(m, p)
-}
-func (m IntOptionArrList) Filter(p IntOptionArrPredicate) IntOptionArrList {
-	return FilterIntOptionArrList(m, p)
-}
-func (m Int8OptionArrList) Filter(p Int8OptionArrPredicate) Int8OptionArrList {
-	return FilterInt8OptionArrList(m, p)
-}
-func (m Int16OptionArrList) Filter(p Int16OptionArrPredicate) Int16OptionArrList {
-	return FilterInt16OptionArrList(m, p)
-}
-func (m Int32OptionArrList) Filter(p Int32OptionArrPredicate) Int32OptionArrList {
-	return FilterInt32OptionArrList(m, p)
-}
-func (m Int64OptionArrList) Filter(p Int64OptionArrPredicate) Int64OptionArrList {
-	return FilterInt64OptionArrList(m, p)
-}
-func (m UintOptionArrList) Filter(p UintOptionArrPredicate) UintOptionArrList {
-	return FilterUintOptionArrList(m, p)
-}
-func (m Uint8OptionArrList) Filter(p Uint8OptionArrPredicate) Uint8OptionArrList {
-	return FilterUint8OptionArrList(m, p)
-}
-func (m Uint16OptionArrList) Filter(p Uint16OptionArrPredicate) Uint16OptionArrList {
-	return FilterUint16OptionArrList(m, p)
-}
-func (m Uint32OptionArrList) Filter(p Uint32OptionArrPredicate) Uint32OptionArrList {
-	return FilterUint32OptionArrList(m, p)
-}
-func (m Uint64OptionArrList) Filter(p Uint64OptionArrPredicate) Uint64OptionArrList {
-	return FilterUint64OptionArrList(m, p)
-}
-func (m UintptrOptionArrList) Filter(p UintptrOptionArrPredicate) UintptrOptionArrList {
-	return FilterUintptrOptionArrList(m, p)
-}
-func (m ByteOptionArrList) Filter(p ByteOptionArrPredicate) ByteOptionArrList {
-	return FilterByteOptionArrList(m, p)
-}
-func (m RuneOptionArrList) Filter(p RuneOptionArrPredicate) RuneOptionArrList {
-	return FilterRuneOptionArrList(m, p)
-}
-func (m Float32OptionArrList) Filter(p Float32OptionArrPredicate) Float32OptionArrList {
-	return FilterFloat32OptionArrList(m, p)
-}
-func (m Float64OptionArrList) Filter(p Float64OptionArrPredicate) Float64OptionArrList {
-	return FilterFloat64OptionArrList(m, p)
-}
-func (m Complex64OptionArrList) Filter(p Complex64OptionArrPredicate) Complex64OptionArrList {
-	return FilterComplex64OptionArrList(m, p)
-}
-func (m Complex128OptionArrList) Filter(p Complex128OptionArrPredicate) Complex128OptionArrList {
-	return FilterComplex128OptionArrList(m, p)
-}
-func (m AnyOptionArrList) Filter(p AnyOptionArrPredicate) AnyOptionArrList {
-	return FilterAnyOptionArrList(m, p)
-}
-func (m BoolListList) Filter(p BoolListPredicate) BoolListList { return FilterBoolListList(m, p) }
-func (m StringListList) Filter(p StringListPredicate) StringListList {
-	return FilterStringListList(m, p)
-}
-func (m IntListList) Filter(p IntListPredicate) IntListList       { return FilterIntListList(m, p) }
-func (m Int8ListList) Filter(p Int8ListPredicate) Int8ListList    { return FilterInt8ListList(m, p) }
-func (m Int16ListList) Filter(p Int16ListPredicate) Int16ListList { return FilterInt16ListList(m, p) }
-func (m Int32ListList) Filter(p Int32ListPredicate) Int32ListList { return FilterInt32ListList(m, p) }
-func (m Int64ListList) Filter(p Int64ListPredicate) Int64ListList { return FilterInt64ListList(m, p) }
-func (m UintListList) Filter(p UintListPredicate) UintListList    { return FilterUintListList(m, p) }
-func (m Uint8ListList) Filter(p Uint8ListPredicate) Uint8ListList { return FilterUint8ListList(m, p) }
-func (m Uint16ListList) Filter(p Uint16ListPredicate) Uint16ListList {
-	return FilterUint16ListList(m, p)
-}
-func (m Uint32ListList) Filter(p Uint32ListPredicate) Uint32ListList {
-	return FilterUint32ListList(m, p)
-}
-func (m Uint64ListList) Filter(p Uint64ListPredicate) Uint64ListList {
-	return FilterUint64ListList(m, p)
-}
-func (m UintptrListList) Filter(p UintptrListPredicate) UintptrListList {
-	return FilterUintptrListList(m, p)
-}
-func (m ByteListList) Filter(p ByteListPredicate) ByteListList { return FilterByteListList(m, p) }
-func (m RuneListList) Filter(p RuneListPredicate) RuneListList { return FilterRuneListList(m, p) }
-func (m Float32ListList) Filter(p Float32ListPredicate) Float32ListList {
-	return FilterFloat32ListList(m, p)
-}
-func (m Float64ListList) Filter(p Float64ListPredicate) Float64ListList {
-	return FilterFloat64ListList(m, p)
-}
-func (m Complex64ListList) Filter(p Complex64ListPredicate) Complex64ListList {
-	return FilterComplex64ListList(m, p)
-}
-func (m Complex128ListList) Filter(p Complex128ListPredicate) Complex128ListList {
-	return FilterComplex128ListList(m, p)
-}
-func (m AnyListList) Filter(p AnyListPredicate) AnyListList { return FilterAnyListList(m, p) }

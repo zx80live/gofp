@@ -3,831 +3,2103 @@
 
 package fp
 
-func (m BoolOption) Filter(p BoolPredicate) BoolOption          { return FilterBoolOption(m, p) }
-func (m StringOption) Filter(p StringPredicate) StringOption    { return FilterStringOption(m, p) }
-func (m IntOption) Filter(p IntPredicate) IntOption             { return FilterIntOption(m, p) }
-func (m Int8Option) Filter(p Int8Predicate) Int8Option          { return FilterInt8Option(m, p) }
-func (m Int16Option) Filter(p Int16Predicate) Int16Option       { return FilterInt16Option(m, p) }
-func (m Int32Option) Filter(p Int32Predicate) Int32Option       { return FilterInt32Option(m, p) }
-func (m Int64Option) Filter(p Int64Predicate) Int64Option       { return FilterInt64Option(m, p) }
-func (m UintOption) Filter(p UintPredicate) UintOption          { return FilterUintOption(m, p) }
-func (m Uint8Option) Filter(p Uint8Predicate) Uint8Option       { return FilterUint8Option(m, p) }
-func (m Uint16Option) Filter(p Uint16Predicate) Uint16Option    { return FilterUint16Option(m, p) }
-func (m Uint32Option) Filter(p Uint32Predicate) Uint32Option    { return FilterUint32Option(m, p) }
-func (m Uint64Option) Filter(p Uint64Predicate) Uint64Option    { return FilterUint64Option(m, p) }
-func (m UintptrOption) Filter(p UintptrPredicate) UintptrOption { return FilterUintptrOption(m, p) }
-func (m ByteOption) Filter(p BytePredicate) ByteOption          { return FilterByteOption(m, p) }
-func (m RuneOption) Filter(p RunePredicate) RuneOption          { return FilterRuneOption(m, p) }
-func (m Float32Option) Filter(p Float32Predicate) Float32Option { return FilterFloat32Option(m, p) }
-func (m Float64Option) Filter(p Float64Predicate) Float64Option { return FilterFloat64Option(m, p) }
+func (m BoolOption) Filter(p BoolPredicate) BoolOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBool
+	}
+}
+func (m StringOption) Filter(p StringPredicate) StringOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneString
+	}
+}
+func (m IntOption) Filter(p IntPredicate) IntOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt
+	}
+}
+func (m Int8Option) Filter(p Int8Predicate) Int8Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8
+	}
+}
+func (m Int16Option) Filter(p Int16Predicate) Int16Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16
+	}
+}
+func (m Int32Option) Filter(p Int32Predicate) Int32Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32
+	}
+}
+func (m Int64Option) Filter(p Int64Predicate) Int64Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64
+	}
+}
+func (m UintOption) Filter(p UintPredicate) UintOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint
+	}
+}
+func (m Uint8Option) Filter(p Uint8Predicate) Uint8Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8
+	}
+}
+func (m Uint16Option) Filter(p Uint16Predicate) Uint16Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16
+	}
+}
+func (m Uint32Option) Filter(p Uint32Predicate) Uint32Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32
+	}
+}
+func (m Uint64Option) Filter(p Uint64Predicate) Uint64Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64
+	}
+}
+func (m UintptrOption) Filter(p UintptrPredicate) UintptrOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptr
+	}
+}
+func (m ByteOption) Filter(p BytePredicate) ByteOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByte
+	}
+}
+func (m RuneOption) Filter(p RunePredicate) RuneOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRune
+	}
+}
+func (m Float32Option) Filter(p Float32Predicate) Float32Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Float64Option) Filter(p Float64Predicate) Float64Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64
+	}
+}
 func (m Complex64Option) Filter(p Complex64Predicate) Complex64Option {
-	return FilterComplex64Option(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64
+	}
 }
 func (m Complex128Option) Filter(p Complex128Predicate) Complex128Option {
-	return FilterComplex128Option(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128
+	}
 }
-func (m AnyOption) Filter(p AnyPredicate) AnyOption             { return FilterAnyOption(m, p) }
-func (m BoolArrOption) Filter(p BoolArrPredicate) BoolArrOption { return FilterBoolArrOption(m, p) }
-func (m StringArrOption) Filter(p StringArrPredicate) StringArrOption {
-	return FilterStringArrOption(m, p)
+func (m AnyOption) Filter(p AnyPredicate) AnyOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAny
+	}
 }
-func (m IntArrOption) Filter(p IntArrPredicate) IntArrOption       { return FilterIntArrOption(m, p) }
-func (m Int8ArrOption) Filter(p Int8ArrPredicate) Int8ArrOption    { return FilterInt8ArrOption(m, p) }
-func (m Int16ArrOption) Filter(p Int16ArrPredicate) Int16ArrOption { return FilterInt16ArrOption(m, p) }
-func (m Int32ArrOption) Filter(p Int32ArrPredicate) Int32ArrOption { return FilterInt32ArrOption(m, p) }
-func (m Int64ArrOption) Filter(p Int64ArrPredicate) Int64ArrOption { return FilterInt64ArrOption(m, p) }
-func (m UintArrOption) Filter(p UintArrPredicate) UintArrOption    { return FilterUintArrOption(m, p) }
-func (m Uint8ArrOption) Filter(p Uint8ArrPredicate) Uint8ArrOption { return FilterUint8ArrOption(m, p) }
-func (m Uint16ArrOption) Filter(p Uint16ArrPredicate) Uint16ArrOption {
-	return FilterUint16ArrOption(m, p)
+func (m BoolArrayOption) Filter(p BoolArrayPredicate) BoolArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolArray
+	}
 }
-func (m Uint32ArrOption) Filter(p Uint32ArrPredicate) Uint32ArrOption {
-	return FilterUint32ArrOption(m, p)
+func (m StringArrayOption) Filter(p StringArrayPredicate) StringArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringArray
+	}
 }
-func (m Uint64ArrOption) Filter(p Uint64ArrPredicate) Uint64ArrOption {
-	return FilterUint64ArrOption(m, p)
+func (m IntArrayOption) Filter(p IntArrayPredicate) IntArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntArray
+	}
 }
-func (m UintptrArrOption) Filter(p UintptrArrPredicate) UintptrArrOption {
-	return FilterUintptrArrOption(m, p)
+func (m Int8ArrayOption) Filter(p Int8ArrayPredicate) Int8ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8Array
+	}
 }
-func (m ByteArrOption) Filter(p ByteArrPredicate) ByteArrOption { return FilterByteArrOption(m, p) }
-func (m RuneArrOption) Filter(p RuneArrPredicate) RuneArrOption { return FilterRuneArrOption(m, p) }
-func (m Float32ArrOption) Filter(p Float32ArrPredicate) Float32ArrOption {
-	return FilterFloat32ArrOption(m, p)
+func (m Int16ArrayOption) Filter(p Int16ArrayPredicate) Int16ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16Array
+	}
 }
-func (m Float64ArrOption) Filter(p Float64ArrPredicate) Float64ArrOption {
-	return FilterFloat64ArrOption(m, p)
+func (m Int32ArrayOption) Filter(p Int32ArrayPredicate) Int32ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32Array
+	}
 }
-func (m Complex64ArrOption) Filter(p Complex64ArrPredicate) Complex64ArrOption {
-	return FilterComplex64ArrOption(m, p)
+func (m Int64ArrayOption) Filter(p Int64ArrayPredicate) Int64ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64Array
+	}
 }
-func (m Complex128ArrOption) Filter(p Complex128ArrPredicate) Complex128ArrOption {
-	return FilterComplex128ArrOption(m, p)
+func (m UintArrayOption) Filter(p UintArrayPredicate) UintArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintArray
+	}
 }
-func (m AnyArrOption) Filter(p AnyArrPredicate) AnyArrOption { return FilterAnyArrOption(m, p) }
-func (m BoolArrArrOption) Filter(p BoolArrArrPredicate) BoolArrArrOption {
-	return FilterBoolArrArrOption(m, p)
+func (m Uint8ArrayOption) Filter(p Uint8ArrayPredicate) Uint8ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8Array
+	}
 }
-func (m StringArrArrOption) Filter(p StringArrArrPredicate) StringArrArrOption {
-	return FilterStringArrArrOption(m, p)
+func (m Uint16ArrayOption) Filter(p Uint16ArrayPredicate) Uint16ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16Array
+	}
 }
-func (m IntArrArrOption) Filter(p IntArrArrPredicate) IntArrArrOption {
-	return FilterIntArrArrOption(m, p)
+func (m Uint32ArrayOption) Filter(p Uint32ArrayPredicate) Uint32ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32Array
+	}
 }
-func (m Int8ArrArrOption) Filter(p Int8ArrArrPredicate) Int8ArrArrOption {
-	return FilterInt8ArrArrOption(m, p)
+func (m Uint64ArrayOption) Filter(p Uint64ArrayPredicate) Uint64ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64Array
+	}
 }
-func (m Int16ArrArrOption) Filter(p Int16ArrArrPredicate) Int16ArrArrOption {
-	return FilterInt16ArrArrOption(m, p)
+func (m UintptrArrayOption) Filter(p UintptrArrayPredicate) UintptrArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrArray
+	}
 }
-func (m Int32ArrArrOption) Filter(p Int32ArrArrPredicate) Int32ArrArrOption {
-	return FilterInt32ArrArrOption(m, p)
+func (m ByteArrayOption) Filter(p ByteArrayPredicate) ByteArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteArray
+	}
 }
-func (m Int64ArrArrOption) Filter(p Int64ArrArrPredicate) Int64ArrArrOption {
-	return FilterInt64ArrArrOption(m, p)
+func (m RuneArrayOption) Filter(p RuneArrayPredicate) RuneArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneArray
+	}
 }
-func (m UintArrArrOption) Filter(p UintArrArrPredicate) UintArrArrOption {
-	return FilterUintArrArrOption(m, p)
+func (m Float32ArrayOption) Filter(p Float32ArrayPredicate) Float32ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32Array
+	}
 }
-func (m Uint8ArrArrOption) Filter(p Uint8ArrArrPredicate) Uint8ArrArrOption {
-	return FilterUint8ArrArrOption(m, p)
+func (m Float64ArrayOption) Filter(p Float64ArrayPredicate) Float64ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64Array
+	}
 }
-func (m Uint16ArrArrOption) Filter(p Uint16ArrArrPredicate) Uint16ArrArrOption {
-	return FilterUint16ArrArrOption(m, p)
+func (m Complex64ArrayOption) Filter(p Complex64ArrayPredicate) Complex64ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64Array
+	}
 }
-func (m Uint32ArrArrOption) Filter(p Uint32ArrArrPredicate) Uint32ArrArrOption {
-	return FilterUint32ArrArrOption(m, p)
+func (m Complex128ArrayOption) Filter(p Complex128ArrayPredicate) Complex128ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128Array
+	}
 }
-func (m Uint64ArrArrOption) Filter(p Uint64ArrArrPredicate) Uint64ArrArrOption {
-	return FilterUint64ArrArrOption(m, p)
+func (m AnyArrayOption) Filter(p AnyArrayPredicate) AnyArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyArray
+	}
 }
-func (m UintptrArrArrOption) Filter(p UintptrArrArrPredicate) UintptrArrArrOption {
-	return FilterUintptrArrArrOption(m, p)
+func (m BoolArrayArrayOption) Filter(p BoolArrayArrayPredicate) BoolArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolArrayArray
+	}
 }
-func (m ByteArrArrOption) Filter(p ByteArrArrPredicate) ByteArrArrOption {
-	return FilterByteArrArrOption(m, p)
+func (m StringArrayArrayOption) Filter(p StringArrayArrayPredicate) StringArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringArrayArray
+	}
 }
-func (m RuneArrArrOption) Filter(p RuneArrArrPredicate) RuneArrArrOption {
-	return FilterRuneArrArrOption(m, p)
+func (m IntArrayArrayOption) Filter(p IntArrayArrayPredicate) IntArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntArrayArray
+	}
 }
-func (m Float32ArrArrOption) Filter(p Float32ArrArrPredicate) Float32ArrArrOption {
-	return FilterFloat32ArrArrOption(m, p)
+func (m Int8ArrayArrayOption) Filter(p Int8ArrayArrayPredicate) Int8ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ArrayArray
+	}
 }
-func (m Float64ArrArrOption) Filter(p Float64ArrArrPredicate) Float64ArrArrOption {
-	return FilterFloat64ArrArrOption(m, p)
+func (m Int16ArrayArrayOption) Filter(p Int16ArrayArrayPredicate) Int16ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ArrayArray
+	}
 }
-func (m Complex64ArrArrOption) Filter(p Complex64ArrArrPredicate) Complex64ArrArrOption {
-	return FilterComplex64ArrArrOption(m, p)
+func (m Int32ArrayArrayOption) Filter(p Int32ArrayArrayPredicate) Int32ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ArrayArray
+	}
 }
-func (m Complex128ArrArrOption) Filter(p Complex128ArrArrPredicate) Complex128ArrArrOption {
-	return FilterComplex128ArrArrOption(m, p)
+func (m Int64ArrayArrayOption) Filter(p Int64ArrayArrayPredicate) Int64ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ArrayArray
+	}
 }
-func (m AnyArrArrOption) Filter(p AnyArrArrPredicate) AnyArrArrOption {
-	return FilterAnyArrArrOption(m, p)
+func (m UintArrayArrayOption) Filter(p UintArrayArrayPredicate) UintArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintArrayArray
+	}
 }
-func (m BoolOptionArrOption) Filter(p BoolOptionArrPredicate) BoolOptionArrOption {
-	return FilterBoolOptionArrOption(m, p)
+func (m Uint8ArrayArrayOption) Filter(p Uint8ArrayArrayPredicate) Uint8ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ArrayArray
+	}
 }
-func (m StringOptionArrOption) Filter(p StringOptionArrPredicate) StringOptionArrOption {
-	return FilterStringOptionArrOption(m, p)
+func (m Uint16ArrayArrayOption) Filter(p Uint16ArrayArrayPredicate) Uint16ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ArrayArray
+	}
 }
-func (m IntOptionArrOption) Filter(p IntOptionArrPredicate) IntOptionArrOption {
-	return FilterIntOptionArrOption(m, p)
+func (m Uint32ArrayArrayOption) Filter(p Uint32ArrayArrayPredicate) Uint32ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ArrayArray
+	}
 }
-func (m Int8OptionArrOption) Filter(p Int8OptionArrPredicate) Int8OptionArrOption {
-	return FilterInt8OptionArrOption(m, p)
+func (m Uint64ArrayArrayOption) Filter(p Uint64ArrayArrayPredicate) Uint64ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ArrayArray
+	}
 }
-func (m Int16OptionArrOption) Filter(p Int16OptionArrPredicate) Int16OptionArrOption {
-	return FilterInt16OptionArrOption(m, p)
+func (m UintptrArrayArrayOption) Filter(p UintptrArrayArrayPredicate) UintptrArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrArrayArray
+	}
 }
-func (m Int32OptionArrOption) Filter(p Int32OptionArrPredicate) Int32OptionArrOption {
-	return FilterInt32OptionArrOption(m, p)
+func (m ByteArrayArrayOption) Filter(p ByteArrayArrayPredicate) ByteArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteArrayArray
+	}
 }
-func (m Int64OptionArrOption) Filter(p Int64OptionArrPredicate) Int64OptionArrOption {
-	return FilterInt64OptionArrOption(m, p)
+func (m RuneArrayArrayOption) Filter(p RuneArrayArrayPredicate) RuneArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneArrayArray
+	}
 }
-func (m UintOptionArrOption) Filter(p UintOptionArrPredicate) UintOptionArrOption {
-	return FilterUintOptionArrOption(m, p)
+func (m Float32ArrayArrayOption) Filter(p Float32ArrayArrayPredicate) Float32ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ArrayArray
+	}
 }
-func (m Uint8OptionArrOption) Filter(p Uint8OptionArrPredicate) Uint8OptionArrOption {
-	return FilterUint8OptionArrOption(m, p)
+func (m Float64ArrayArrayOption) Filter(p Float64ArrayArrayPredicate) Float64ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ArrayArray
+	}
 }
-func (m Uint16OptionArrOption) Filter(p Uint16OptionArrPredicate) Uint16OptionArrOption {
-	return FilterUint16OptionArrOption(m, p)
+func (m Complex64ArrayArrayOption) Filter(p Complex64ArrayArrayPredicate) Complex64ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ArrayArray
+	}
 }
-func (m Uint32OptionArrOption) Filter(p Uint32OptionArrPredicate) Uint32OptionArrOption {
-	return FilterUint32OptionArrOption(m, p)
+func (m Complex128ArrayArrayOption) Filter(p Complex128ArrayArrayPredicate) Complex128ArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ArrayArray
+	}
 }
-func (m Uint64OptionArrOption) Filter(p Uint64OptionArrPredicate) Uint64OptionArrOption {
-	return FilterUint64OptionArrOption(m, p)
+func (m AnyArrayArrayOption) Filter(p AnyArrayArrayPredicate) AnyArrayArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyArrayArray
+	}
 }
-func (m UintptrOptionArrOption) Filter(p UintptrOptionArrPredicate) UintptrOptionArrOption {
-	return FilterUintptrOptionArrOption(m, p)
+func (m BoolOptionArrayOption) Filter(p BoolOptionArrayPredicate) BoolOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolOptionArray
+	}
 }
-func (m ByteOptionArrOption) Filter(p ByteOptionArrPredicate) ByteOptionArrOption {
-	return FilterByteOptionArrOption(m, p)
+func (m StringOptionArrayOption) Filter(p StringOptionArrayPredicate) StringOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringOptionArray
+	}
 }
-func (m RuneOptionArrOption) Filter(p RuneOptionArrPredicate) RuneOptionArrOption {
-	return FilterRuneOptionArrOption(m, p)
+func (m IntOptionArrayOption) Filter(p IntOptionArrayPredicate) IntOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntOptionArray
+	}
 }
-func (m Float32OptionArrOption) Filter(p Float32OptionArrPredicate) Float32OptionArrOption {
-	return FilterFloat32OptionArrOption(m, p)
+func (m Int8OptionArrayOption) Filter(p Int8OptionArrayPredicate) Int8OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8OptionArray
+	}
 }
-func (m Float64OptionArrOption) Filter(p Float64OptionArrPredicate) Float64OptionArrOption {
-	return FilterFloat64OptionArrOption(m, p)
+func (m Int16OptionArrayOption) Filter(p Int16OptionArrayPredicate) Int16OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16OptionArray
+	}
 }
-func (m Complex64OptionArrOption) Filter(p Complex64OptionArrPredicate) Complex64OptionArrOption {
-	return FilterComplex64OptionArrOption(m, p)
+func (m Int32OptionArrayOption) Filter(p Int32OptionArrayPredicate) Int32OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32OptionArray
+	}
 }
-func (m Complex128OptionArrOption) Filter(p Complex128OptionArrPredicate) Complex128OptionArrOption {
-	return FilterComplex128OptionArrOption(m, p)
+func (m Int64OptionArrayOption) Filter(p Int64OptionArrayPredicate) Int64OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64OptionArray
+	}
 }
-func (m AnyOptionArrOption) Filter(p AnyOptionArrPredicate) AnyOptionArrOption {
-	return FilterAnyOptionArrOption(m, p)
+func (m UintOptionArrayOption) Filter(p UintOptionArrayPredicate) UintOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintOptionArray
+	}
 }
-func (m BoolListOption) Filter(p BoolListPredicate) BoolListOption { return FilterBoolListOption(m, p) }
+func (m Uint8OptionArrayOption) Filter(p Uint8OptionArrayPredicate) Uint8OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8OptionArray
+	}
+}
+func (m Uint16OptionArrayOption) Filter(p Uint16OptionArrayPredicate) Uint16OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16OptionArray
+	}
+}
+func (m Uint32OptionArrayOption) Filter(p Uint32OptionArrayPredicate) Uint32OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32OptionArray
+	}
+}
+func (m Uint64OptionArrayOption) Filter(p Uint64OptionArrayPredicate) Uint64OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64OptionArray
+	}
+}
+func (m UintptrOptionArrayOption) Filter(p UintptrOptionArrayPredicate) UintptrOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrOptionArray
+	}
+}
+func (m ByteOptionArrayOption) Filter(p ByteOptionArrayPredicate) ByteOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteOptionArray
+	}
+}
+func (m RuneOptionArrayOption) Filter(p RuneOptionArrayPredicate) RuneOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneOptionArray
+	}
+}
+func (m Float32OptionArrayOption) Filter(p Float32OptionArrayPredicate) Float32OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32OptionArray
+	}
+}
+func (m Float64OptionArrayOption) Filter(p Float64OptionArrayPredicate) Float64OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64OptionArray
+	}
+}
+func (m Complex64OptionArrayOption) Filter(p Complex64OptionArrayPredicate) Complex64OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64OptionArray
+	}
+}
+func (m Complex128OptionArrayOption) Filter(p Complex128OptionArrayPredicate) Complex128OptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128OptionArray
+	}
+}
+func (m AnyOptionArrayOption) Filter(p AnyOptionArrayPredicate) AnyOptionArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyOptionArray
+	}
+}
+func (m BoolListOption) Filter(p BoolListPredicate) BoolListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolList
+	}
+}
 func (m StringListOption) Filter(p StringListPredicate) StringListOption {
-	return FilterStringListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringList
+	}
 }
-func (m IntListOption) Filter(p IntListPredicate) IntListOption    { return FilterIntListOption(m, p) }
-func (m Int8ListOption) Filter(p Int8ListPredicate) Int8ListOption { return FilterInt8ListOption(m, p) }
+func (m IntListOption) Filter(p IntListPredicate) IntListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntList
+	}
+}
+func (m Int8ListOption) Filter(p Int8ListPredicate) Int8ListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8List
+	}
+}
 func (m Int16ListOption) Filter(p Int16ListPredicate) Int16ListOption {
-	return FilterInt16ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16List
+	}
 }
 func (m Int32ListOption) Filter(p Int32ListPredicate) Int32ListOption {
-	return FilterInt32ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32List
+	}
 }
 func (m Int64ListOption) Filter(p Int64ListPredicate) Int64ListOption {
-	return FilterInt64ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64List
+	}
 }
-func (m UintListOption) Filter(p UintListPredicate) UintListOption { return FilterUintListOption(m, p) }
+func (m UintListOption) Filter(p UintListPredicate) UintListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintList
+	}
+}
 func (m Uint8ListOption) Filter(p Uint8ListPredicate) Uint8ListOption {
-	return FilterUint8ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8List
+	}
 }
 func (m Uint16ListOption) Filter(p Uint16ListPredicate) Uint16ListOption {
-	return FilterUint16ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16List
+	}
 }
 func (m Uint32ListOption) Filter(p Uint32ListPredicate) Uint32ListOption {
-	return FilterUint32ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32List
+	}
 }
 func (m Uint64ListOption) Filter(p Uint64ListPredicate) Uint64ListOption {
-	return FilterUint64ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64List
+	}
 }
 func (m UintptrListOption) Filter(p UintptrListPredicate) UintptrListOption {
-	return FilterUintptrListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrList
+	}
 }
-func (m ByteListOption) Filter(p ByteListPredicate) ByteListOption { return FilterByteListOption(m, p) }
-func (m RuneListOption) Filter(p RuneListPredicate) RuneListOption { return FilterRuneListOption(m, p) }
+func (m ByteListOption) Filter(p ByteListPredicate) ByteListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteList
+	}
+}
+func (m RuneListOption) Filter(p RuneListPredicate) RuneListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneList
+	}
+}
 func (m Float32ListOption) Filter(p Float32ListPredicate) Float32ListOption {
-	return FilterFloat32ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32List
+	}
 }
 func (m Float64ListOption) Filter(p Float64ListPredicate) Float64ListOption {
-	return FilterFloat64ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64List
+	}
 }
 func (m Complex64ListOption) Filter(p Complex64ListPredicate) Complex64ListOption {
-	return FilterComplex64ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64List
+	}
 }
 func (m Complex128ListOption) Filter(p Complex128ListPredicate) Complex128ListOption {
-	return FilterComplex128ListOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128List
+	}
 }
-func (m AnyListOption) Filter(p AnyListPredicate) AnyListOption { return FilterAnyListOption(m, p) }
+func (m AnyListOption) Filter(p AnyListPredicate) AnyListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyList
+	}
+}
 func (m BoolOptionOption) Filter(p BoolOptionPredicate) BoolOptionOption {
-	return FilterBoolOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolOption
+	}
 }
 func (m StringOptionOption) Filter(p StringOptionPredicate) StringOptionOption {
-	return FilterStringOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringOption
+	}
 }
 func (m IntOptionOption) Filter(p IntOptionPredicate) IntOptionOption {
-	return FilterIntOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntOption
+	}
 }
 func (m Int8OptionOption) Filter(p Int8OptionPredicate) Int8OptionOption {
-	return FilterInt8OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8Option
+	}
 }
 func (m Int16OptionOption) Filter(p Int16OptionPredicate) Int16OptionOption {
-	return FilterInt16OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16Option
+	}
 }
 func (m Int32OptionOption) Filter(p Int32OptionPredicate) Int32OptionOption {
-	return FilterInt32OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32Option
+	}
 }
 func (m Int64OptionOption) Filter(p Int64OptionPredicate) Int64OptionOption {
-	return FilterInt64OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64Option
+	}
 }
 func (m UintOptionOption) Filter(p UintOptionPredicate) UintOptionOption {
-	return FilterUintOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintOption
+	}
 }
 func (m Uint8OptionOption) Filter(p Uint8OptionPredicate) Uint8OptionOption {
-	return FilterUint8OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8Option
+	}
 }
 func (m Uint16OptionOption) Filter(p Uint16OptionPredicate) Uint16OptionOption {
-	return FilterUint16OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16Option
+	}
 }
 func (m Uint32OptionOption) Filter(p Uint32OptionPredicate) Uint32OptionOption {
-	return FilterUint32OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32Option
+	}
 }
 func (m Uint64OptionOption) Filter(p Uint64OptionPredicate) Uint64OptionOption {
-	return FilterUint64OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64Option
+	}
 }
 func (m UintptrOptionOption) Filter(p UintptrOptionPredicate) UintptrOptionOption {
-	return FilterUintptrOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrOption
+	}
 }
 func (m ByteOptionOption) Filter(p ByteOptionPredicate) ByteOptionOption {
-	return FilterByteOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteOption
+	}
 }
 func (m RuneOptionOption) Filter(p RuneOptionPredicate) RuneOptionOption {
-	return FilterRuneOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneOption
+	}
 }
 func (m Float32OptionOption) Filter(p Float32OptionPredicate) Float32OptionOption {
-	return FilterFloat32OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32Option
+	}
 }
 func (m Float64OptionOption) Filter(p Float64OptionPredicate) Float64OptionOption {
-	return FilterFloat64OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64Option
+	}
 }
 func (m Complex64OptionOption) Filter(p Complex64OptionPredicate) Complex64OptionOption {
-	return FilterComplex64OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64Option
+	}
 }
 func (m Complex128OptionOption) Filter(p Complex128OptionPredicate) Complex128OptionOption {
-	return FilterComplex128OptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128Option
+	}
 }
 func (m AnyOptionOption) Filter(p AnyOptionPredicate) AnyOptionOption {
-	return FilterAnyOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyOption
+	}
 }
-func (m BoolArrOptionOption) Filter(p BoolArrOptionPredicate) BoolArrOptionOption {
-	return FilterBoolArrOptionOption(m, p)
+func (m BoolArrayOptionOption) Filter(p BoolArrayOptionPredicate) BoolArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolArrayOption
+	}
 }
-func (m StringArrOptionOption) Filter(p StringArrOptionPredicate) StringArrOptionOption {
-	return FilterStringArrOptionOption(m, p)
+func (m StringArrayOptionOption) Filter(p StringArrayOptionPredicate) StringArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringArrayOption
+	}
 }
-func (m IntArrOptionOption) Filter(p IntArrOptionPredicate) IntArrOptionOption {
-	return FilterIntArrOptionOption(m, p)
+func (m IntArrayOptionOption) Filter(p IntArrayOptionPredicate) IntArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntArrayOption
+	}
 }
-func (m Int8ArrOptionOption) Filter(p Int8ArrOptionPredicate) Int8ArrOptionOption {
-	return FilterInt8ArrOptionOption(m, p)
+func (m Int8ArrayOptionOption) Filter(p Int8ArrayOptionPredicate) Int8ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ArrayOption
+	}
 }
-func (m Int16ArrOptionOption) Filter(p Int16ArrOptionPredicate) Int16ArrOptionOption {
-	return FilterInt16ArrOptionOption(m, p)
+func (m Int16ArrayOptionOption) Filter(p Int16ArrayOptionPredicate) Int16ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ArrayOption
+	}
 }
-func (m Int32ArrOptionOption) Filter(p Int32ArrOptionPredicate) Int32ArrOptionOption {
-	return FilterInt32ArrOptionOption(m, p)
+func (m Int32ArrayOptionOption) Filter(p Int32ArrayOptionPredicate) Int32ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ArrayOption
+	}
 }
-func (m Int64ArrOptionOption) Filter(p Int64ArrOptionPredicate) Int64ArrOptionOption {
-	return FilterInt64ArrOptionOption(m, p)
+func (m Int64ArrayOptionOption) Filter(p Int64ArrayOptionPredicate) Int64ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ArrayOption
+	}
 }
-func (m UintArrOptionOption) Filter(p UintArrOptionPredicate) UintArrOptionOption {
-	return FilterUintArrOptionOption(m, p)
+func (m UintArrayOptionOption) Filter(p UintArrayOptionPredicate) UintArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintArrayOption
+	}
 }
-func (m Uint8ArrOptionOption) Filter(p Uint8ArrOptionPredicate) Uint8ArrOptionOption {
-	return FilterUint8ArrOptionOption(m, p)
+func (m Uint8ArrayOptionOption) Filter(p Uint8ArrayOptionPredicate) Uint8ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ArrayOption
+	}
 }
-func (m Uint16ArrOptionOption) Filter(p Uint16ArrOptionPredicate) Uint16ArrOptionOption {
-	return FilterUint16ArrOptionOption(m, p)
+func (m Uint16ArrayOptionOption) Filter(p Uint16ArrayOptionPredicate) Uint16ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ArrayOption
+	}
 }
-func (m Uint32ArrOptionOption) Filter(p Uint32ArrOptionPredicate) Uint32ArrOptionOption {
-	return FilterUint32ArrOptionOption(m, p)
+func (m Uint32ArrayOptionOption) Filter(p Uint32ArrayOptionPredicate) Uint32ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ArrayOption
+	}
 }
-func (m Uint64ArrOptionOption) Filter(p Uint64ArrOptionPredicate) Uint64ArrOptionOption {
-	return FilterUint64ArrOptionOption(m, p)
+func (m Uint64ArrayOptionOption) Filter(p Uint64ArrayOptionPredicate) Uint64ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ArrayOption
+	}
 }
-func (m UintptrArrOptionOption) Filter(p UintptrArrOptionPredicate) UintptrArrOptionOption {
-	return FilterUintptrArrOptionOption(m, p)
+func (m UintptrArrayOptionOption) Filter(p UintptrArrayOptionPredicate) UintptrArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrArrayOption
+	}
 }
-func (m ByteArrOptionOption) Filter(p ByteArrOptionPredicate) ByteArrOptionOption {
-	return FilterByteArrOptionOption(m, p)
+func (m ByteArrayOptionOption) Filter(p ByteArrayOptionPredicate) ByteArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteArrayOption
+	}
 }
-func (m RuneArrOptionOption) Filter(p RuneArrOptionPredicate) RuneArrOptionOption {
-	return FilterRuneArrOptionOption(m, p)
+func (m RuneArrayOptionOption) Filter(p RuneArrayOptionPredicate) RuneArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneArrayOption
+	}
 }
-func (m Float32ArrOptionOption) Filter(p Float32ArrOptionPredicate) Float32ArrOptionOption {
-	return FilterFloat32ArrOptionOption(m, p)
+func (m Float32ArrayOptionOption) Filter(p Float32ArrayOptionPredicate) Float32ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ArrayOption
+	}
 }
-func (m Float64ArrOptionOption) Filter(p Float64ArrOptionPredicate) Float64ArrOptionOption {
-	return FilterFloat64ArrOptionOption(m, p)
+func (m Float64ArrayOptionOption) Filter(p Float64ArrayOptionPredicate) Float64ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ArrayOption
+	}
 }
-func (m Complex64ArrOptionOption) Filter(p Complex64ArrOptionPredicate) Complex64ArrOptionOption {
-	return FilterComplex64ArrOptionOption(m, p)
+func (m Complex64ArrayOptionOption) Filter(p Complex64ArrayOptionPredicate) Complex64ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ArrayOption
+	}
 }
-func (m Complex128ArrOptionOption) Filter(p Complex128ArrOptionPredicate) Complex128ArrOptionOption {
-	return FilterComplex128ArrOptionOption(m, p)
+func (m Complex128ArrayOptionOption) Filter(p Complex128ArrayOptionPredicate) Complex128ArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ArrayOption
+	}
 }
-func (m AnyArrOptionOption) Filter(p AnyArrOptionPredicate) AnyArrOptionOption {
-	return FilterAnyArrOptionOption(m, p)
+func (m AnyArrayOptionOption) Filter(p AnyArrayOptionPredicate) AnyArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyArrayOption
+	}
 }
-func (m BoolArrArrOptionOption) Filter(p BoolArrArrOptionPredicate) BoolArrArrOptionOption {
-	return FilterBoolArrArrOptionOption(m, p)
+func (m BoolArrayArrayOptionOption) Filter(p BoolArrayArrayOptionPredicate) BoolArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolArrayArrayOption
+	}
 }
-func (m StringArrArrOptionOption) Filter(p StringArrArrOptionPredicate) StringArrArrOptionOption {
-	return FilterStringArrArrOptionOption(m, p)
+func (m StringArrayArrayOptionOption) Filter(p StringArrayArrayOptionPredicate) StringArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringArrayArrayOption
+	}
 }
-func (m IntArrArrOptionOption) Filter(p IntArrArrOptionPredicate) IntArrArrOptionOption {
-	return FilterIntArrArrOptionOption(m, p)
+func (m IntArrayArrayOptionOption) Filter(p IntArrayArrayOptionPredicate) IntArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntArrayArrayOption
+	}
 }
-func (m Int8ArrArrOptionOption) Filter(p Int8ArrArrOptionPredicate) Int8ArrArrOptionOption {
-	return FilterInt8ArrArrOptionOption(m, p)
+func (m Int8ArrayArrayOptionOption) Filter(p Int8ArrayArrayOptionPredicate) Int8ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ArrayArrayOption
+	}
 }
-func (m Int16ArrArrOptionOption) Filter(p Int16ArrArrOptionPredicate) Int16ArrArrOptionOption {
-	return FilterInt16ArrArrOptionOption(m, p)
+func (m Int16ArrayArrayOptionOption) Filter(p Int16ArrayArrayOptionPredicate) Int16ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ArrayArrayOption
+	}
 }
-func (m Int32ArrArrOptionOption) Filter(p Int32ArrArrOptionPredicate) Int32ArrArrOptionOption {
-	return FilterInt32ArrArrOptionOption(m, p)
+func (m Int32ArrayArrayOptionOption) Filter(p Int32ArrayArrayOptionPredicate) Int32ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ArrayArrayOption
+	}
 }
-func (m Int64ArrArrOptionOption) Filter(p Int64ArrArrOptionPredicate) Int64ArrArrOptionOption {
-	return FilterInt64ArrArrOptionOption(m, p)
+func (m Int64ArrayArrayOptionOption) Filter(p Int64ArrayArrayOptionPredicate) Int64ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ArrayArrayOption
+	}
 }
-func (m UintArrArrOptionOption) Filter(p UintArrArrOptionPredicate) UintArrArrOptionOption {
-	return FilterUintArrArrOptionOption(m, p)
+func (m UintArrayArrayOptionOption) Filter(p UintArrayArrayOptionPredicate) UintArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintArrayArrayOption
+	}
 }
-func (m Uint8ArrArrOptionOption) Filter(p Uint8ArrArrOptionPredicate) Uint8ArrArrOptionOption {
-	return FilterUint8ArrArrOptionOption(m, p)
+func (m Uint8ArrayArrayOptionOption) Filter(p Uint8ArrayArrayOptionPredicate) Uint8ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ArrayArrayOption
+	}
 }
-func (m Uint16ArrArrOptionOption) Filter(p Uint16ArrArrOptionPredicate) Uint16ArrArrOptionOption {
-	return FilterUint16ArrArrOptionOption(m, p)
+func (m Uint16ArrayArrayOptionOption) Filter(p Uint16ArrayArrayOptionPredicate) Uint16ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ArrayArrayOption
+	}
 }
-func (m Uint32ArrArrOptionOption) Filter(p Uint32ArrArrOptionPredicate) Uint32ArrArrOptionOption {
-	return FilterUint32ArrArrOptionOption(m, p)
+func (m Uint32ArrayArrayOptionOption) Filter(p Uint32ArrayArrayOptionPredicate) Uint32ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ArrayArrayOption
+	}
 }
-func (m Uint64ArrArrOptionOption) Filter(p Uint64ArrArrOptionPredicate) Uint64ArrArrOptionOption {
-	return FilterUint64ArrArrOptionOption(m, p)
+func (m Uint64ArrayArrayOptionOption) Filter(p Uint64ArrayArrayOptionPredicate) Uint64ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ArrayArrayOption
+	}
 }
-func (m UintptrArrArrOptionOption) Filter(p UintptrArrArrOptionPredicate) UintptrArrArrOptionOption {
-	return FilterUintptrArrArrOptionOption(m, p)
+func (m UintptrArrayArrayOptionOption) Filter(p UintptrArrayArrayOptionPredicate) UintptrArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrArrayArrayOption
+	}
 }
-func (m ByteArrArrOptionOption) Filter(p ByteArrArrOptionPredicate) ByteArrArrOptionOption {
-	return FilterByteArrArrOptionOption(m, p)
+func (m ByteArrayArrayOptionOption) Filter(p ByteArrayArrayOptionPredicate) ByteArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteArrayArrayOption
+	}
 }
-func (m RuneArrArrOptionOption) Filter(p RuneArrArrOptionPredicate) RuneArrArrOptionOption {
-	return FilterRuneArrArrOptionOption(m, p)
+func (m RuneArrayArrayOptionOption) Filter(p RuneArrayArrayOptionPredicate) RuneArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneArrayArrayOption
+	}
 }
-func (m Float32ArrArrOptionOption) Filter(p Float32ArrArrOptionPredicate) Float32ArrArrOptionOption {
-	return FilterFloat32ArrArrOptionOption(m, p)
+func (m Float32ArrayArrayOptionOption) Filter(p Float32ArrayArrayOptionPredicate) Float32ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ArrayArrayOption
+	}
 }
-func (m Float64ArrArrOptionOption) Filter(p Float64ArrArrOptionPredicate) Float64ArrArrOptionOption {
-	return FilterFloat64ArrArrOptionOption(m, p)
+func (m Float64ArrayArrayOptionOption) Filter(p Float64ArrayArrayOptionPredicate) Float64ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ArrayArrayOption
+	}
 }
-func (m Complex64ArrArrOptionOption) Filter(p Complex64ArrArrOptionPredicate) Complex64ArrArrOptionOption {
-	return FilterComplex64ArrArrOptionOption(m, p)
+func (m Complex64ArrayArrayOptionOption) Filter(p Complex64ArrayArrayOptionPredicate) Complex64ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ArrayArrayOption
+	}
 }
-func (m Complex128ArrArrOptionOption) Filter(p Complex128ArrArrOptionPredicate) Complex128ArrArrOptionOption {
-	return FilterComplex128ArrArrOptionOption(m, p)
+func (m Complex128ArrayArrayOptionOption) Filter(p Complex128ArrayArrayOptionPredicate) Complex128ArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ArrayArrayOption
+	}
 }
-func (m AnyArrArrOptionOption) Filter(p AnyArrArrOptionPredicate) AnyArrArrOptionOption {
-	return FilterAnyArrArrOptionOption(m, p)
+func (m AnyArrayArrayOptionOption) Filter(p AnyArrayArrayOptionPredicate) AnyArrayArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyArrayArrayOption
+	}
 }
-func (m BoolOptionArrOptionOption) Filter(p BoolOptionArrOptionPredicate) BoolOptionArrOptionOption {
-	return FilterBoolOptionArrOptionOption(m, p)
+func (m BoolOptionArrayOptionOption) Filter(p BoolOptionArrayOptionPredicate) BoolOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolOptionArrayOption
+	}
 }
-func (m StringOptionArrOptionOption) Filter(p StringOptionArrOptionPredicate) StringOptionArrOptionOption {
-	return FilterStringOptionArrOptionOption(m, p)
+func (m StringOptionArrayOptionOption) Filter(p StringOptionArrayOptionPredicate) StringOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringOptionArrayOption
+	}
 }
-func (m IntOptionArrOptionOption) Filter(p IntOptionArrOptionPredicate) IntOptionArrOptionOption {
-	return FilterIntOptionArrOptionOption(m, p)
+func (m IntOptionArrayOptionOption) Filter(p IntOptionArrayOptionPredicate) IntOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntOptionArrayOption
+	}
 }
-func (m Int8OptionArrOptionOption) Filter(p Int8OptionArrOptionPredicate) Int8OptionArrOptionOption {
-	return FilterInt8OptionArrOptionOption(m, p)
+func (m Int8OptionArrayOptionOption) Filter(p Int8OptionArrayOptionPredicate) Int8OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8OptionArrayOption
+	}
 }
-func (m Int16OptionArrOptionOption) Filter(p Int16OptionArrOptionPredicate) Int16OptionArrOptionOption {
-	return FilterInt16OptionArrOptionOption(m, p)
+func (m Int16OptionArrayOptionOption) Filter(p Int16OptionArrayOptionPredicate) Int16OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16OptionArrayOption
+	}
 }
-func (m Int32OptionArrOptionOption) Filter(p Int32OptionArrOptionPredicate) Int32OptionArrOptionOption {
-	return FilterInt32OptionArrOptionOption(m, p)
+func (m Int32OptionArrayOptionOption) Filter(p Int32OptionArrayOptionPredicate) Int32OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32OptionArrayOption
+	}
 }
-func (m Int64OptionArrOptionOption) Filter(p Int64OptionArrOptionPredicate) Int64OptionArrOptionOption {
-	return FilterInt64OptionArrOptionOption(m, p)
+func (m Int64OptionArrayOptionOption) Filter(p Int64OptionArrayOptionPredicate) Int64OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64OptionArrayOption
+	}
 }
-func (m UintOptionArrOptionOption) Filter(p UintOptionArrOptionPredicate) UintOptionArrOptionOption {
-	return FilterUintOptionArrOptionOption(m, p)
+func (m UintOptionArrayOptionOption) Filter(p UintOptionArrayOptionPredicate) UintOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintOptionArrayOption
+	}
 }
-func (m Uint8OptionArrOptionOption) Filter(p Uint8OptionArrOptionPredicate) Uint8OptionArrOptionOption {
-	return FilterUint8OptionArrOptionOption(m, p)
+func (m Uint8OptionArrayOptionOption) Filter(p Uint8OptionArrayOptionPredicate) Uint8OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8OptionArrayOption
+	}
 }
-func (m Uint16OptionArrOptionOption) Filter(p Uint16OptionArrOptionPredicate) Uint16OptionArrOptionOption {
-	return FilterUint16OptionArrOptionOption(m, p)
+func (m Uint16OptionArrayOptionOption) Filter(p Uint16OptionArrayOptionPredicate) Uint16OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16OptionArrayOption
+	}
 }
-func (m Uint32OptionArrOptionOption) Filter(p Uint32OptionArrOptionPredicate) Uint32OptionArrOptionOption {
-	return FilterUint32OptionArrOptionOption(m, p)
+func (m Uint32OptionArrayOptionOption) Filter(p Uint32OptionArrayOptionPredicate) Uint32OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32OptionArrayOption
+	}
 }
-func (m Uint64OptionArrOptionOption) Filter(p Uint64OptionArrOptionPredicate) Uint64OptionArrOptionOption {
-	return FilterUint64OptionArrOptionOption(m, p)
+func (m Uint64OptionArrayOptionOption) Filter(p Uint64OptionArrayOptionPredicate) Uint64OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64OptionArrayOption
+	}
 }
-func (m UintptrOptionArrOptionOption) Filter(p UintptrOptionArrOptionPredicate) UintptrOptionArrOptionOption {
-	return FilterUintptrOptionArrOptionOption(m, p)
+func (m UintptrOptionArrayOptionOption) Filter(p UintptrOptionArrayOptionPredicate) UintptrOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrOptionArrayOption
+	}
 }
-func (m ByteOptionArrOptionOption) Filter(p ByteOptionArrOptionPredicate) ByteOptionArrOptionOption {
-	return FilterByteOptionArrOptionOption(m, p)
+func (m ByteOptionArrayOptionOption) Filter(p ByteOptionArrayOptionPredicate) ByteOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteOptionArrayOption
+	}
 }
-func (m RuneOptionArrOptionOption) Filter(p RuneOptionArrOptionPredicate) RuneOptionArrOptionOption {
-	return FilterRuneOptionArrOptionOption(m, p)
+func (m RuneOptionArrayOptionOption) Filter(p RuneOptionArrayOptionPredicate) RuneOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneOptionArrayOption
+	}
 }
-func (m Float32OptionArrOptionOption) Filter(p Float32OptionArrOptionPredicate) Float32OptionArrOptionOption {
-	return FilterFloat32OptionArrOptionOption(m, p)
+func (m Float32OptionArrayOptionOption) Filter(p Float32OptionArrayOptionPredicate) Float32OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32OptionArrayOption
+	}
 }
-func (m Float64OptionArrOptionOption) Filter(p Float64OptionArrOptionPredicate) Float64OptionArrOptionOption {
-	return FilterFloat64OptionArrOptionOption(m, p)
+func (m Float64OptionArrayOptionOption) Filter(p Float64OptionArrayOptionPredicate) Float64OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64OptionArrayOption
+	}
 }
-func (m Complex64OptionArrOptionOption) Filter(p Complex64OptionArrOptionPredicate) Complex64OptionArrOptionOption {
-	return FilterComplex64OptionArrOptionOption(m, p)
+func (m Complex64OptionArrayOptionOption) Filter(p Complex64OptionArrayOptionPredicate) Complex64OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64OptionArrayOption
+	}
 }
-func (m Complex128OptionArrOptionOption) Filter(p Complex128OptionArrOptionPredicate) Complex128OptionArrOptionOption {
-	return FilterComplex128OptionArrOptionOption(m, p)
+func (m Complex128OptionArrayOptionOption) Filter(p Complex128OptionArrayOptionPredicate) Complex128OptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128OptionArrayOption
+	}
 }
-func (m AnyOptionArrOptionOption) Filter(p AnyOptionArrOptionPredicate) AnyOptionArrOptionOption {
-	return FilterAnyOptionArrOptionOption(m, p)
+func (m AnyOptionArrayOptionOption) Filter(p AnyOptionArrayOptionPredicate) AnyOptionArrayOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyOptionArrayOption
+	}
 }
 func (m BoolListOptionOption) Filter(p BoolListOptionPredicate) BoolListOptionOption {
-	return FilterBoolListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolListOption
+	}
 }
 func (m StringListOptionOption) Filter(p StringListOptionPredicate) StringListOptionOption {
-	return FilterStringListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringListOption
+	}
 }
 func (m IntListOptionOption) Filter(p IntListOptionPredicate) IntListOptionOption {
-	return FilterIntListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntListOption
+	}
 }
 func (m Int8ListOptionOption) Filter(p Int8ListOptionPredicate) Int8ListOptionOption {
-	return FilterInt8ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ListOption
+	}
 }
 func (m Int16ListOptionOption) Filter(p Int16ListOptionPredicate) Int16ListOptionOption {
-	return FilterInt16ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ListOption
+	}
 }
 func (m Int32ListOptionOption) Filter(p Int32ListOptionPredicate) Int32ListOptionOption {
-	return FilterInt32ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ListOption
+	}
 }
 func (m Int64ListOptionOption) Filter(p Int64ListOptionPredicate) Int64ListOptionOption {
-	return FilterInt64ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ListOption
+	}
 }
 func (m UintListOptionOption) Filter(p UintListOptionPredicate) UintListOptionOption {
-	return FilterUintListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintListOption
+	}
 }
 func (m Uint8ListOptionOption) Filter(p Uint8ListOptionPredicate) Uint8ListOptionOption {
-	return FilterUint8ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ListOption
+	}
 }
 func (m Uint16ListOptionOption) Filter(p Uint16ListOptionPredicate) Uint16ListOptionOption {
-	return FilterUint16ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ListOption
+	}
 }
 func (m Uint32ListOptionOption) Filter(p Uint32ListOptionPredicate) Uint32ListOptionOption {
-	return FilterUint32ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ListOption
+	}
 }
 func (m Uint64ListOptionOption) Filter(p Uint64ListOptionPredicate) Uint64ListOptionOption {
-	return FilterUint64ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ListOption
+	}
 }
 func (m UintptrListOptionOption) Filter(p UintptrListOptionPredicate) UintptrListOptionOption {
-	return FilterUintptrListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrListOption
+	}
 }
 func (m ByteListOptionOption) Filter(p ByteListOptionPredicate) ByteListOptionOption {
-	return FilterByteListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteListOption
+	}
 }
 func (m RuneListOptionOption) Filter(p RuneListOptionPredicate) RuneListOptionOption {
-	return FilterRuneListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneListOption
+	}
 }
 func (m Float32ListOptionOption) Filter(p Float32ListOptionPredicate) Float32ListOptionOption {
-	return FilterFloat32ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ListOption
+	}
 }
 func (m Float64ListOptionOption) Filter(p Float64ListOptionPredicate) Float64ListOptionOption {
-	return FilterFloat64ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ListOption
+	}
 }
 func (m Complex64ListOptionOption) Filter(p Complex64ListOptionPredicate) Complex64ListOptionOption {
-	return FilterComplex64ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ListOption
+	}
 }
 func (m Complex128ListOptionOption) Filter(p Complex128ListOptionPredicate) Complex128ListOptionOption {
-	return FilterComplex128ListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ListOption
+	}
 }
 func (m AnyListOptionOption) Filter(p AnyListOptionPredicate) AnyListOptionOption {
-	return FilterAnyListOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyListOption
+	}
 }
 func (m BoolOptionOptionOption) Filter(p BoolOptionOptionPredicate) BoolOptionOptionOption {
-	return FilterBoolOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolOptionOption
+	}
 }
 func (m StringOptionOptionOption) Filter(p StringOptionOptionPredicate) StringOptionOptionOption {
-	return FilterStringOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringOptionOption
+	}
 }
 func (m IntOptionOptionOption) Filter(p IntOptionOptionPredicate) IntOptionOptionOption {
-	return FilterIntOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntOptionOption
+	}
 }
 func (m Int8OptionOptionOption) Filter(p Int8OptionOptionPredicate) Int8OptionOptionOption {
-	return FilterInt8OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8OptionOption
+	}
 }
 func (m Int16OptionOptionOption) Filter(p Int16OptionOptionPredicate) Int16OptionOptionOption {
-	return FilterInt16OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16OptionOption
+	}
 }
 func (m Int32OptionOptionOption) Filter(p Int32OptionOptionPredicate) Int32OptionOptionOption {
-	return FilterInt32OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32OptionOption
+	}
 }
 func (m Int64OptionOptionOption) Filter(p Int64OptionOptionPredicate) Int64OptionOptionOption {
-	return FilterInt64OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64OptionOption
+	}
 }
 func (m UintOptionOptionOption) Filter(p UintOptionOptionPredicate) UintOptionOptionOption {
-	return FilterUintOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintOptionOption
+	}
 }
 func (m Uint8OptionOptionOption) Filter(p Uint8OptionOptionPredicate) Uint8OptionOptionOption {
-	return FilterUint8OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8OptionOption
+	}
 }
 func (m Uint16OptionOptionOption) Filter(p Uint16OptionOptionPredicate) Uint16OptionOptionOption {
-	return FilterUint16OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16OptionOption
+	}
 }
 func (m Uint32OptionOptionOption) Filter(p Uint32OptionOptionPredicate) Uint32OptionOptionOption {
-	return FilterUint32OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32OptionOption
+	}
 }
 func (m Uint64OptionOptionOption) Filter(p Uint64OptionOptionPredicate) Uint64OptionOptionOption {
-	return FilterUint64OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64OptionOption
+	}
 }
 func (m UintptrOptionOptionOption) Filter(p UintptrOptionOptionPredicate) UintptrOptionOptionOption {
-	return FilterUintptrOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrOptionOption
+	}
 }
 func (m ByteOptionOptionOption) Filter(p ByteOptionOptionPredicate) ByteOptionOptionOption {
-	return FilterByteOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteOptionOption
+	}
 }
 func (m RuneOptionOptionOption) Filter(p RuneOptionOptionPredicate) RuneOptionOptionOption {
-	return FilterRuneOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneOptionOption
+	}
 }
 func (m Float32OptionOptionOption) Filter(p Float32OptionOptionPredicate) Float32OptionOptionOption {
-	return FilterFloat32OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32OptionOption
+	}
 }
 func (m Float64OptionOptionOption) Filter(p Float64OptionOptionPredicate) Float64OptionOptionOption {
-	return FilterFloat64OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64OptionOption
+	}
 }
 func (m Complex64OptionOptionOption) Filter(p Complex64OptionOptionPredicate) Complex64OptionOptionOption {
-	return FilterComplex64OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64OptionOption
+	}
 }
 func (m Complex128OptionOptionOption) Filter(p Complex128OptionOptionPredicate) Complex128OptionOptionOption {
-	return FilterComplex128OptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128OptionOption
+	}
 }
 func (m AnyOptionOptionOption) Filter(p AnyOptionOptionPredicate) AnyOptionOptionOption {
-	return FilterAnyOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyOptionOption
+	}
 }
-func (m BoolArrOptionOptionOption) Filter(p BoolArrOptionOptionPredicate) BoolArrOptionOptionOption {
-	return FilterBoolArrOptionOptionOption(m, p)
+func (m BoolArrayOptionOptionOption) Filter(p BoolArrayOptionOptionPredicate) BoolArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolArrayOptionOption
+	}
 }
-func (m StringArrOptionOptionOption) Filter(p StringArrOptionOptionPredicate) StringArrOptionOptionOption {
-	return FilterStringArrOptionOptionOption(m, p)
+func (m StringArrayOptionOptionOption) Filter(p StringArrayOptionOptionPredicate) StringArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringArrayOptionOption
+	}
 }
-func (m IntArrOptionOptionOption) Filter(p IntArrOptionOptionPredicate) IntArrOptionOptionOption {
-	return FilterIntArrOptionOptionOption(m, p)
+func (m IntArrayOptionOptionOption) Filter(p IntArrayOptionOptionPredicate) IntArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntArrayOptionOption
+	}
 }
-func (m Int8ArrOptionOptionOption) Filter(p Int8ArrOptionOptionPredicate) Int8ArrOptionOptionOption {
-	return FilterInt8ArrOptionOptionOption(m, p)
+func (m Int8ArrayOptionOptionOption) Filter(p Int8ArrayOptionOptionPredicate) Int8ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ArrayOptionOption
+	}
 }
-func (m Int16ArrOptionOptionOption) Filter(p Int16ArrOptionOptionPredicate) Int16ArrOptionOptionOption {
-	return FilterInt16ArrOptionOptionOption(m, p)
+func (m Int16ArrayOptionOptionOption) Filter(p Int16ArrayOptionOptionPredicate) Int16ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ArrayOptionOption
+	}
 }
-func (m Int32ArrOptionOptionOption) Filter(p Int32ArrOptionOptionPredicate) Int32ArrOptionOptionOption {
-	return FilterInt32ArrOptionOptionOption(m, p)
+func (m Int32ArrayOptionOptionOption) Filter(p Int32ArrayOptionOptionPredicate) Int32ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ArrayOptionOption
+	}
 }
-func (m Int64ArrOptionOptionOption) Filter(p Int64ArrOptionOptionPredicate) Int64ArrOptionOptionOption {
-	return FilterInt64ArrOptionOptionOption(m, p)
+func (m Int64ArrayOptionOptionOption) Filter(p Int64ArrayOptionOptionPredicate) Int64ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ArrayOptionOption
+	}
 }
-func (m UintArrOptionOptionOption) Filter(p UintArrOptionOptionPredicate) UintArrOptionOptionOption {
-	return FilterUintArrOptionOptionOption(m, p)
+func (m UintArrayOptionOptionOption) Filter(p UintArrayOptionOptionPredicate) UintArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintArrayOptionOption
+	}
 }
-func (m Uint8ArrOptionOptionOption) Filter(p Uint8ArrOptionOptionPredicate) Uint8ArrOptionOptionOption {
-	return FilterUint8ArrOptionOptionOption(m, p)
+func (m Uint8ArrayOptionOptionOption) Filter(p Uint8ArrayOptionOptionPredicate) Uint8ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ArrayOptionOption
+	}
 }
-func (m Uint16ArrOptionOptionOption) Filter(p Uint16ArrOptionOptionPredicate) Uint16ArrOptionOptionOption {
-	return FilterUint16ArrOptionOptionOption(m, p)
+func (m Uint16ArrayOptionOptionOption) Filter(p Uint16ArrayOptionOptionPredicate) Uint16ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ArrayOptionOption
+	}
 }
-func (m Uint32ArrOptionOptionOption) Filter(p Uint32ArrOptionOptionPredicate) Uint32ArrOptionOptionOption {
-	return FilterUint32ArrOptionOptionOption(m, p)
+func (m Uint32ArrayOptionOptionOption) Filter(p Uint32ArrayOptionOptionPredicate) Uint32ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ArrayOptionOption
+	}
 }
-func (m Uint64ArrOptionOptionOption) Filter(p Uint64ArrOptionOptionPredicate) Uint64ArrOptionOptionOption {
-	return FilterUint64ArrOptionOptionOption(m, p)
+func (m Uint64ArrayOptionOptionOption) Filter(p Uint64ArrayOptionOptionPredicate) Uint64ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ArrayOptionOption
+	}
 }
-func (m UintptrArrOptionOptionOption) Filter(p UintptrArrOptionOptionPredicate) UintptrArrOptionOptionOption {
-	return FilterUintptrArrOptionOptionOption(m, p)
+func (m UintptrArrayOptionOptionOption) Filter(p UintptrArrayOptionOptionPredicate) UintptrArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrArrayOptionOption
+	}
 }
-func (m ByteArrOptionOptionOption) Filter(p ByteArrOptionOptionPredicate) ByteArrOptionOptionOption {
-	return FilterByteArrOptionOptionOption(m, p)
+func (m ByteArrayOptionOptionOption) Filter(p ByteArrayOptionOptionPredicate) ByteArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteArrayOptionOption
+	}
 }
-func (m RuneArrOptionOptionOption) Filter(p RuneArrOptionOptionPredicate) RuneArrOptionOptionOption {
-	return FilterRuneArrOptionOptionOption(m, p)
+func (m RuneArrayOptionOptionOption) Filter(p RuneArrayOptionOptionPredicate) RuneArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneArrayOptionOption
+	}
 }
-func (m Float32ArrOptionOptionOption) Filter(p Float32ArrOptionOptionPredicate) Float32ArrOptionOptionOption {
-	return FilterFloat32ArrOptionOptionOption(m, p)
+func (m Float32ArrayOptionOptionOption) Filter(p Float32ArrayOptionOptionPredicate) Float32ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ArrayOptionOption
+	}
 }
-func (m Float64ArrOptionOptionOption) Filter(p Float64ArrOptionOptionPredicate) Float64ArrOptionOptionOption {
-	return FilterFloat64ArrOptionOptionOption(m, p)
+func (m Float64ArrayOptionOptionOption) Filter(p Float64ArrayOptionOptionPredicate) Float64ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ArrayOptionOption
+	}
 }
-func (m Complex64ArrOptionOptionOption) Filter(p Complex64ArrOptionOptionPredicate) Complex64ArrOptionOptionOption {
-	return FilterComplex64ArrOptionOptionOption(m, p)
+func (m Complex64ArrayOptionOptionOption) Filter(p Complex64ArrayOptionOptionPredicate) Complex64ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ArrayOptionOption
+	}
 }
-func (m Complex128ArrOptionOptionOption) Filter(p Complex128ArrOptionOptionPredicate) Complex128ArrOptionOptionOption {
-	return FilterComplex128ArrOptionOptionOption(m, p)
+func (m Complex128ArrayOptionOptionOption) Filter(p Complex128ArrayOptionOptionPredicate) Complex128ArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ArrayOptionOption
+	}
 }
-func (m AnyArrOptionOptionOption) Filter(p AnyArrOptionOptionPredicate) AnyArrOptionOptionOption {
-	return FilterAnyArrOptionOptionOption(m, p)
+func (m AnyArrayOptionOptionOption) Filter(p AnyArrayOptionOptionPredicate) AnyArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyArrayOptionOption
+	}
 }
-func (m BoolArrArrOptionOptionOption) Filter(p BoolArrArrOptionOptionPredicate) BoolArrArrOptionOptionOption {
-	return FilterBoolArrArrOptionOptionOption(m, p)
+func (m BoolArrayArrayOptionOptionOption) Filter(p BoolArrayArrayOptionOptionPredicate) BoolArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolArrayArrayOptionOption
+	}
 }
-func (m StringArrArrOptionOptionOption) Filter(p StringArrArrOptionOptionPredicate) StringArrArrOptionOptionOption {
-	return FilterStringArrArrOptionOptionOption(m, p)
+func (m StringArrayArrayOptionOptionOption) Filter(p StringArrayArrayOptionOptionPredicate) StringArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringArrayArrayOptionOption
+	}
 }
-func (m IntArrArrOptionOptionOption) Filter(p IntArrArrOptionOptionPredicate) IntArrArrOptionOptionOption {
-	return FilterIntArrArrOptionOptionOption(m, p)
+func (m IntArrayArrayOptionOptionOption) Filter(p IntArrayArrayOptionOptionPredicate) IntArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntArrayArrayOptionOption
+	}
 }
-func (m Int8ArrArrOptionOptionOption) Filter(p Int8ArrArrOptionOptionPredicate) Int8ArrArrOptionOptionOption {
-	return FilterInt8ArrArrOptionOptionOption(m, p)
+func (m Int8ArrayArrayOptionOptionOption) Filter(p Int8ArrayArrayOptionOptionPredicate) Int8ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ArrayArrayOptionOption
+	}
 }
-func (m Int16ArrArrOptionOptionOption) Filter(p Int16ArrArrOptionOptionPredicate) Int16ArrArrOptionOptionOption {
-	return FilterInt16ArrArrOptionOptionOption(m, p)
+func (m Int16ArrayArrayOptionOptionOption) Filter(p Int16ArrayArrayOptionOptionPredicate) Int16ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ArrayArrayOptionOption
+	}
 }
-func (m Int32ArrArrOptionOptionOption) Filter(p Int32ArrArrOptionOptionPredicate) Int32ArrArrOptionOptionOption {
-	return FilterInt32ArrArrOptionOptionOption(m, p)
+func (m Int32ArrayArrayOptionOptionOption) Filter(p Int32ArrayArrayOptionOptionPredicate) Int32ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ArrayArrayOptionOption
+	}
 }
-func (m Int64ArrArrOptionOptionOption) Filter(p Int64ArrArrOptionOptionPredicate) Int64ArrArrOptionOptionOption {
-	return FilterInt64ArrArrOptionOptionOption(m, p)
+func (m Int64ArrayArrayOptionOptionOption) Filter(p Int64ArrayArrayOptionOptionPredicate) Int64ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ArrayArrayOptionOption
+	}
 }
-func (m UintArrArrOptionOptionOption) Filter(p UintArrArrOptionOptionPredicate) UintArrArrOptionOptionOption {
-	return FilterUintArrArrOptionOptionOption(m, p)
+func (m UintArrayArrayOptionOptionOption) Filter(p UintArrayArrayOptionOptionPredicate) UintArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintArrayArrayOptionOption
+	}
 }
-func (m Uint8ArrArrOptionOptionOption) Filter(p Uint8ArrArrOptionOptionPredicate) Uint8ArrArrOptionOptionOption {
-	return FilterUint8ArrArrOptionOptionOption(m, p)
+func (m Uint8ArrayArrayOptionOptionOption) Filter(p Uint8ArrayArrayOptionOptionPredicate) Uint8ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ArrayArrayOptionOption
+	}
 }
-func (m Uint16ArrArrOptionOptionOption) Filter(p Uint16ArrArrOptionOptionPredicate) Uint16ArrArrOptionOptionOption {
-	return FilterUint16ArrArrOptionOptionOption(m, p)
+func (m Uint16ArrayArrayOptionOptionOption) Filter(p Uint16ArrayArrayOptionOptionPredicate) Uint16ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ArrayArrayOptionOption
+	}
 }
-func (m Uint32ArrArrOptionOptionOption) Filter(p Uint32ArrArrOptionOptionPredicate) Uint32ArrArrOptionOptionOption {
-	return FilterUint32ArrArrOptionOptionOption(m, p)
+func (m Uint32ArrayArrayOptionOptionOption) Filter(p Uint32ArrayArrayOptionOptionPredicate) Uint32ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ArrayArrayOptionOption
+	}
 }
-func (m Uint64ArrArrOptionOptionOption) Filter(p Uint64ArrArrOptionOptionPredicate) Uint64ArrArrOptionOptionOption {
-	return FilterUint64ArrArrOptionOptionOption(m, p)
+func (m Uint64ArrayArrayOptionOptionOption) Filter(p Uint64ArrayArrayOptionOptionPredicate) Uint64ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ArrayArrayOptionOption
+	}
 }
-func (m UintptrArrArrOptionOptionOption) Filter(p UintptrArrArrOptionOptionPredicate) UintptrArrArrOptionOptionOption {
-	return FilterUintptrArrArrOptionOptionOption(m, p)
+func (m UintptrArrayArrayOptionOptionOption) Filter(p UintptrArrayArrayOptionOptionPredicate) UintptrArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrArrayArrayOptionOption
+	}
 }
-func (m ByteArrArrOptionOptionOption) Filter(p ByteArrArrOptionOptionPredicate) ByteArrArrOptionOptionOption {
-	return FilterByteArrArrOptionOptionOption(m, p)
+func (m ByteArrayArrayOptionOptionOption) Filter(p ByteArrayArrayOptionOptionPredicate) ByteArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteArrayArrayOptionOption
+	}
 }
-func (m RuneArrArrOptionOptionOption) Filter(p RuneArrArrOptionOptionPredicate) RuneArrArrOptionOptionOption {
-	return FilterRuneArrArrOptionOptionOption(m, p)
+func (m RuneArrayArrayOptionOptionOption) Filter(p RuneArrayArrayOptionOptionPredicate) RuneArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneArrayArrayOptionOption
+	}
 }
-func (m Float32ArrArrOptionOptionOption) Filter(p Float32ArrArrOptionOptionPredicate) Float32ArrArrOptionOptionOption {
-	return FilterFloat32ArrArrOptionOptionOption(m, p)
+func (m Float32ArrayArrayOptionOptionOption) Filter(p Float32ArrayArrayOptionOptionPredicate) Float32ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ArrayArrayOptionOption
+	}
 }
-func (m Float64ArrArrOptionOptionOption) Filter(p Float64ArrArrOptionOptionPredicate) Float64ArrArrOptionOptionOption {
-	return FilterFloat64ArrArrOptionOptionOption(m, p)
+func (m Float64ArrayArrayOptionOptionOption) Filter(p Float64ArrayArrayOptionOptionPredicate) Float64ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ArrayArrayOptionOption
+	}
 }
-func (m Complex64ArrArrOptionOptionOption) Filter(p Complex64ArrArrOptionOptionPredicate) Complex64ArrArrOptionOptionOption {
-	return FilterComplex64ArrArrOptionOptionOption(m, p)
+func (m Complex64ArrayArrayOptionOptionOption) Filter(p Complex64ArrayArrayOptionOptionPredicate) Complex64ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ArrayArrayOptionOption
+	}
 }
-func (m Complex128ArrArrOptionOptionOption) Filter(p Complex128ArrArrOptionOptionPredicate) Complex128ArrArrOptionOptionOption {
-	return FilterComplex128ArrArrOptionOptionOption(m, p)
+func (m Complex128ArrayArrayOptionOptionOption) Filter(p Complex128ArrayArrayOptionOptionPredicate) Complex128ArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ArrayArrayOptionOption
+	}
 }
-func (m AnyArrArrOptionOptionOption) Filter(p AnyArrArrOptionOptionPredicate) AnyArrArrOptionOptionOption {
-	return FilterAnyArrArrOptionOptionOption(m, p)
+func (m AnyArrayArrayOptionOptionOption) Filter(p AnyArrayArrayOptionOptionPredicate) AnyArrayArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyArrayArrayOptionOption
+	}
 }
-func (m BoolOptionArrOptionOptionOption) Filter(p BoolOptionArrOptionOptionPredicate) BoolOptionArrOptionOptionOption {
-	return FilterBoolOptionArrOptionOptionOption(m, p)
+func (m BoolOptionArrayOptionOptionOption) Filter(p BoolOptionArrayOptionOptionPredicate) BoolOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolOptionArrayOptionOption
+	}
 }
-func (m StringOptionArrOptionOptionOption) Filter(p StringOptionArrOptionOptionPredicate) StringOptionArrOptionOptionOption {
-	return FilterStringOptionArrOptionOptionOption(m, p)
+func (m StringOptionArrayOptionOptionOption) Filter(p StringOptionArrayOptionOptionPredicate) StringOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringOptionArrayOptionOption
+	}
 }
-func (m IntOptionArrOptionOptionOption) Filter(p IntOptionArrOptionOptionPredicate) IntOptionArrOptionOptionOption {
-	return FilterIntOptionArrOptionOptionOption(m, p)
+func (m IntOptionArrayOptionOptionOption) Filter(p IntOptionArrayOptionOptionPredicate) IntOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntOptionArrayOptionOption
+	}
 }
-func (m Int8OptionArrOptionOptionOption) Filter(p Int8OptionArrOptionOptionPredicate) Int8OptionArrOptionOptionOption {
-	return FilterInt8OptionArrOptionOptionOption(m, p)
+func (m Int8OptionArrayOptionOptionOption) Filter(p Int8OptionArrayOptionOptionPredicate) Int8OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8OptionArrayOptionOption
+	}
 }
-func (m Int16OptionArrOptionOptionOption) Filter(p Int16OptionArrOptionOptionPredicate) Int16OptionArrOptionOptionOption {
-	return FilterInt16OptionArrOptionOptionOption(m, p)
+func (m Int16OptionArrayOptionOptionOption) Filter(p Int16OptionArrayOptionOptionPredicate) Int16OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16OptionArrayOptionOption
+	}
 }
-func (m Int32OptionArrOptionOptionOption) Filter(p Int32OptionArrOptionOptionPredicate) Int32OptionArrOptionOptionOption {
-	return FilterInt32OptionArrOptionOptionOption(m, p)
+func (m Int32OptionArrayOptionOptionOption) Filter(p Int32OptionArrayOptionOptionPredicate) Int32OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32OptionArrayOptionOption
+	}
 }
-func (m Int64OptionArrOptionOptionOption) Filter(p Int64OptionArrOptionOptionPredicate) Int64OptionArrOptionOptionOption {
-	return FilterInt64OptionArrOptionOptionOption(m, p)
+func (m Int64OptionArrayOptionOptionOption) Filter(p Int64OptionArrayOptionOptionPredicate) Int64OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64OptionArrayOptionOption
+	}
 }
-func (m UintOptionArrOptionOptionOption) Filter(p UintOptionArrOptionOptionPredicate) UintOptionArrOptionOptionOption {
-	return FilterUintOptionArrOptionOptionOption(m, p)
+func (m UintOptionArrayOptionOptionOption) Filter(p UintOptionArrayOptionOptionPredicate) UintOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintOptionArrayOptionOption
+	}
 }
-func (m Uint8OptionArrOptionOptionOption) Filter(p Uint8OptionArrOptionOptionPredicate) Uint8OptionArrOptionOptionOption {
-	return FilterUint8OptionArrOptionOptionOption(m, p)
+func (m Uint8OptionArrayOptionOptionOption) Filter(p Uint8OptionArrayOptionOptionPredicate) Uint8OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8OptionArrayOptionOption
+	}
 }
-func (m Uint16OptionArrOptionOptionOption) Filter(p Uint16OptionArrOptionOptionPredicate) Uint16OptionArrOptionOptionOption {
-	return FilterUint16OptionArrOptionOptionOption(m, p)
+func (m Uint16OptionArrayOptionOptionOption) Filter(p Uint16OptionArrayOptionOptionPredicate) Uint16OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16OptionArrayOptionOption
+	}
 }
-func (m Uint32OptionArrOptionOptionOption) Filter(p Uint32OptionArrOptionOptionPredicate) Uint32OptionArrOptionOptionOption {
-	return FilterUint32OptionArrOptionOptionOption(m, p)
+func (m Uint32OptionArrayOptionOptionOption) Filter(p Uint32OptionArrayOptionOptionPredicate) Uint32OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32OptionArrayOptionOption
+	}
 }
-func (m Uint64OptionArrOptionOptionOption) Filter(p Uint64OptionArrOptionOptionPredicate) Uint64OptionArrOptionOptionOption {
-	return FilterUint64OptionArrOptionOptionOption(m, p)
+func (m Uint64OptionArrayOptionOptionOption) Filter(p Uint64OptionArrayOptionOptionPredicate) Uint64OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64OptionArrayOptionOption
+	}
 }
-func (m UintptrOptionArrOptionOptionOption) Filter(p UintptrOptionArrOptionOptionPredicate) UintptrOptionArrOptionOptionOption {
-	return FilterUintptrOptionArrOptionOptionOption(m, p)
+func (m UintptrOptionArrayOptionOptionOption) Filter(p UintptrOptionArrayOptionOptionPredicate) UintptrOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrOptionArrayOptionOption
+	}
 }
-func (m ByteOptionArrOptionOptionOption) Filter(p ByteOptionArrOptionOptionPredicate) ByteOptionArrOptionOptionOption {
-	return FilterByteOptionArrOptionOptionOption(m, p)
+func (m ByteOptionArrayOptionOptionOption) Filter(p ByteOptionArrayOptionOptionPredicate) ByteOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteOptionArrayOptionOption
+	}
 }
-func (m RuneOptionArrOptionOptionOption) Filter(p RuneOptionArrOptionOptionPredicate) RuneOptionArrOptionOptionOption {
-	return FilterRuneOptionArrOptionOptionOption(m, p)
+func (m RuneOptionArrayOptionOptionOption) Filter(p RuneOptionArrayOptionOptionPredicate) RuneOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneOptionArrayOptionOption
+	}
 }
-func (m Float32OptionArrOptionOptionOption) Filter(p Float32OptionArrOptionOptionPredicate) Float32OptionArrOptionOptionOption {
-	return FilterFloat32OptionArrOptionOptionOption(m, p)
+func (m Float32OptionArrayOptionOptionOption) Filter(p Float32OptionArrayOptionOptionPredicate) Float32OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32OptionArrayOptionOption
+	}
 }
-func (m Float64OptionArrOptionOptionOption) Filter(p Float64OptionArrOptionOptionPredicate) Float64OptionArrOptionOptionOption {
-	return FilterFloat64OptionArrOptionOptionOption(m, p)
+func (m Float64OptionArrayOptionOptionOption) Filter(p Float64OptionArrayOptionOptionPredicate) Float64OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64OptionArrayOptionOption
+	}
 }
-func (m Complex64OptionArrOptionOptionOption) Filter(p Complex64OptionArrOptionOptionPredicate) Complex64OptionArrOptionOptionOption {
-	return FilterComplex64OptionArrOptionOptionOption(m, p)
+func (m Complex64OptionArrayOptionOptionOption) Filter(p Complex64OptionArrayOptionOptionPredicate) Complex64OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64OptionArrayOptionOption
+	}
 }
-func (m Complex128OptionArrOptionOptionOption) Filter(p Complex128OptionArrOptionOptionPredicate) Complex128OptionArrOptionOptionOption {
-	return FilterComplex128OptionArrOptionOptionOption(m, p)
+func (m Complex128OptionArrayOptionOptionOption) Filter(p Complex128OptionArrayOptionOptionPredicate) Complex128OptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128OptionArrayOptionOption
+	}
 }
-func (m AnyOptionArrOptionOptionOption) Filter(p AnyOptionArrOptionOptionPredicate) AnyOptionArrOptionOptionOption {
-	return FilterAnyOptionArrOptionOptionOption(m, p)
+func (m AnyOptionArrayOptionOptionOption) Filter(p AnyOptionArrayOptionOptionPredicate) AnyOptionArrayOptionOptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyOptionArrayOptionOption
+	}
 }
 func (m BoolListOptionOptionOption) Filter(p BoolListOptionOptionPredicate) BoolListOptionOptionOption {
-	return FilterBoolListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneBoolListOptionOption
+	}
 }
 func (m StringListOptionOptionOption) Filter(p StringListOptionOptionPredicate) StringListOptionOptionOption {
-	return FilterStringListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneStringListOptionOption
+	}
 }
 func (m IntListOptionOptionOption) Filter(p IntListOptionOptionPredicate) IntListOptionOptionOption {
-	return FilterIntListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneIntListOptionOption
+	}
 }
 func (m Int8ListOptionOptionOption) Filter(p Int8ListOptionOptionPredicate) Int8ListOptionOptionOption {
-	return FilterInt8ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt8ListOptionOption
+	}
 }
 func (m Int16ListOptionOptionOption) Filter(p Int16ListOptionOptionPredicate) Int16ListOptionOptionOption {
-	return FilterInt16ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt16ListOptionOption
+	}
 }
 func (m Int32ListOptionOptionOption) Filter(p Int32ListOptionOptionPredicate) Int32ListOptionOptionOption {
-	return FilterInt32ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt32ListOptionOption
+	}
 }
 func (m Int64ListOptionOptionOption) Filter(p Int64ListOptionOptionPredicate) Int64ListOptionOptionOption {
-	return FilterInt64ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneInt64ListOptionOption
+	}
 }
 func (m UintListOptionOptionOption) Filter(p UintListOptionOptionPredicate) UintListOptionOptionOption {
-	return FilterUintListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintListOptionOption
+	}
 }
 func (m Uint8ListOptionOptionOption) Filter(p Uint8ListOptionOptionPredicate) Uint8ListOptionOptionOption {
-	return FilterUint8ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint8ListOptionOption
+	}
 }
 func (m Uint16ListOptionOptionOption) Filter(p Uint16ListOptionOptionPredicate) Uint16ListOptionOptionOption {
-	return FilterUint16ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint16ListOptionOption
+	}
 }
 func (m Uint32ListOptionOptionOption) Filter(p Uint32ListOptionOptionPredicate) Uint32ListOptionOptionOption {
-	return FilterUint32ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint32ListOptionOption
+	}
 }
 func (m Uint64ListOptionOptionOption) Filter(p Uint64ListOptionOptionPredicate) Uint64ListOptionOptionOption {
-	return FilterUint64ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUint64ListOptionOption
+	}
 }
 func (m UintptrListOptionOptionOption) Filter(p UintptrListOptionOptionPredicate) UintptrListOptionOptionOption {
-	return FilterUintptrListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneUintptrListOptionOption
+	}
 }
 func (m ByteListOptionOptionOption) Filter(p ByteListOptionOptionPredicate) ByteListOptionOptionOption {
-	return FilterByteListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneByteListOptionOption
+	}
 }
 func (m RuneListOptionOptionOption) Filter(p RuneListOptionOptionPredicate) RuneListOptionOptionOption {
-	return FilterRuneListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneRuneListOptionOption
+	}
 }
 func (m Float32ListOptionOptionOption) Filter(p Float32ListOptionOptionPredicate) Float32ListOptionOptionOption {
-	return FilterFloat32ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat32ListOptionOption
+	}
 }
 func (m Float64ListOptionOptionOption) Filter(p Float64ListOptionOptionPredicate) Float64ListOptionOptionOption {
-	return FilterFloat64ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneFloat64ListOptionOption
+	}
 }
 func (m Complex64ListOptionOptionOption) Filter(p Complex64ListOptionOptionPredicate) Complex64ListOptionOptionOption {
-	return FilterComplex64ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex64ListOptionOption
+	}
 }
 func (m Complex128ListOptionOptionOption) Filter(p Complex128ListOptionOptionPredicate) Complex128ListOptionOptionOption {
-	return FilterComplex128ListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneComplex128ListOptionOption
+	}
 }
 func (m AnyListOptionOptionOption) Filter(p AnyListOptionOptionPredicate) AnyListOptionOptionOption {
-	return FilterAnyListOptionOptionOption(m, p)
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneAnyListOptionOption
+	}
 }

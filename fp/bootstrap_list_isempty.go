@@ -3,553 +3,539 @@
 
 package fp
 
-func (l BoolList) IsEmpty() bool                      { return l == NilBoolList }
-func (l StringList) IsEmpty() bool                    { return l == NilStringList }
-func (l IntList) IsEmpty() bool                       { return l == NilIntList }
-func (l Int8List) IsEmpty() bool                      { return l == NilInt8List }
-func (l Int16List) IsEmpty() bool                     { return l == NilInt16List }
-func (l Int32List) IsEmpty() bool                     { return l == NilInt32List }
-func (l Int64List) IsEmpty() bool                     { return l == NilInt64List }
-func (l UintList) IsEmpty() bool                      { return l == NilUintList }
-func (l Uint8List) IsEmpty() bool                     { return l == NilUint8List }
-func (l Uint16List) IsEmpty() bool                    { return l == NilUint16List }
-func (l Uint32List) IsEmpty() bool                    { return l == NilUint32List }
-func (l Uint64List) IsEmpty() bool                    { return l == NilUint64List }
-func (l UintptrList) IsEmpty() bool                   { return l == NilUintptrList }
-func (l ByteList) IsEmpty() bool                      { return l == NilByteList }
-func (l RuneList) IsEmpty() bool                      { return l == NilRuneList }
-func (l Float32List) IsEmpty() bool                   { return l == NilFloat32List }
-func (l Float64List) IsEmpty() bool                   { return l == NilFloat64List }
-func (l Complex64List) IsEmpty() bool                 { return l == NilComplex64List }
-func (l Complex128List) IsEmpty() bool                { return l == NilComplex128List }
-func (l AnyList) IsEmpty() bool                       { return l == NilAnyList }
-func (l BoolOptionList) IsEmpty() bool                { return l == NilBoolOptionList }
-func (l StringOptionList) IsEmpty() bool              { return l == NilStringOptionList }
-func (l IntOptionList) IsEmpty() bool                 { return l == NilIntOptionList }
-func (l Int8OptionList) IsEmpty() bool                { return l == NilInt8OptionList }
-func (l Int16OptionList) IsEmpty() bool               { return l == NilInt16OptionList }
-func (l Int32OptionList) IsEmpty() bool               { return l == NilInt32OptionList }
-func (l Int64OptionList) IsEmpty() bool               { return l == NilInt64OptionList }
-func (l UintOptionList) IsEmpty() bool                { return l == NilUintOptionList }
-func (l Uint8OptionList) IsEmpty() bool               { return l == NilUint8OptionList }
-func (l Uint16OptionList) IsEmpty() bool              { return l == NilUint16OptionList }
-func (l Uint32OptionList) IsEmpty() bool              { return l == NilUint32OptionList }
-func (l Uint64OptionList) IsEmpty() bool              { return l == NilUint64OptionList }
-func (l UintptrOptionList) IsEmpty() bool             { return l == NilUintptrOptionList }
-func (l ByteOptionList) IsEmpty() bool                { return l == NilByteOptionList }
-func (l RuneOptionList) IsEmpty() bool                { return l == NilRuneOptionList }
-func (l Float32OptionList) IsEmpty() bool             { return l == NilFloat32OptionList }
-func (l Float64OptionList) IsEmpty() bool             { return l == NilFloat64OptionList }
-func (l Complex64OptionList) IsEmpty() bool           { return l == NilComplex64OptionList }
-func (l Complex128OptionList) IsEmpty() bool          { return l == NilComplex128OptionList }
-func (l AnyOptionList) IsEmpty() bool                 { return l == NilAnyOptionList }
-func (l BoolArrOptionList) IsEmpty() bool             { return l == NilBoolArrOptionList }
-func (l StringArrOptionList) IsEmpty() bool           { return l == NilStringArrOptionList }
-func (l IntArrOptionList) IsEmpty() bool              { return l == NilIntArrOptionList }
-func (l Int8ArrOptionList) IsEmpty() bool             { return l == NilInt8ArrOptionList }
-func (l Int16ArrOptionList) IsEmpty() bool            { return l == NilInt16ArrOptionList }
-func (l Int32ArrOptionList) IsEmpty() bool            { return l == NilInt32ArrOptionList }
-func (l Int64ArrOptionList) IsEmpty() bool            { return l == NilInt64ArrOptionList }
-func (l UintArrOptionList) IsEmpty() bool             { return l == NilUintArrOptionList }
-func (l Uint8ArrOptionList) IsEmpty() bool            { return l == NilUint8ArrOptionList }
-func (l Uint16ArrOptionList) IsEmpty() bool           { return l == NilUint16ArrOptionList }
-func (l Uint32ArrOptionList) IsEmpty() bool           { return l == NilUint32ArrOptionList }
-func (l Uint64ArrOptionList) IsEmpty() bool           { return l == NilUint64ArrOptionList }
-func (l UintptrArrOptionList) IsEmpty() bool          { return l == NilUintptrArrOptionList }
-func (l ByteArrOptionList) IsEmpty() bool             { return l == NilByteArrOptionList }
-func (l RuneArrOptionList) IsEmpty() bool             { return l == NilRuneArrOptionList }
-func (l Float32ArrOptionList) IsEmpty() bool          { return l == NilFloat32ArrOptionList }
-func (l Float64ArrOptionList) IsEmpty() bool          { return l == NilFloat64ArrOptionList }
-func (l Complex64ArrOptionList) IsEmpty() bool        { return l == NilComplex64ArrOptionList }
-func (l Complex128ArrOptionList) IsEmpty() bool       { return l == NilComplex128ArrOptionList }
-func (l AnyArrOptionList) IsEmpty() bool              { return l == NilAnyArrOptionList }
-func (l BoolArrArrOptionList) IsEmpty() bool          { return l == NilBoolArrArrOptionList }
-func (l StringArrArrOptionList) IsEmpty() bool        { return l == NilStringArrArrOptionList }
-func (l IntArrArrOptionList) IsEmpty() bool           { return l == NilIntArrArrOptionList }
-func (l Int8ArrArrOptionList) IsEmpty() bool          { return l == NilInt8ArrArrOptionList }
-func (l Int16ArrArrOptionList) IsEmpty() bool         { return l == NilInt16ArrArrOptionList }
-func (l Int32ArrArrOptionList) IsEmpty() bool         { return l == NilInt32ArrArrOptionList }
-func (l Int64ArrArrOptionList) IsEmpty() bool         { return l == NilInt64ArrArrOptionList }
-func (l UintArrArrOptionList) IsEmpty() bool          { return l == NilUintArrArrOptionList }
-func (l Uint8ArrArrOptionList) IsEmpty() bool         { return l == NilUint8ArrArrOptionList }
-func (l Uint16ArrArrOptionList) IsEmpty() bool        { return l == NilUint16ArrArrOptionList }
-func (l Uint32ArrArrOptionList) IsEmpty() bool        { return l == NilUint32ArrArrOptionList }
-func (l Uint64ArrArrOptionList) IsEmpty() bool        { return l == NilUint64ArrArrOptionList }
-func (l UintptrArrArrOptionList) IsEmpty() bool       { return l == NilUintptrArrArrOptionList }
-func (l ByteArrArrOptionList) IsEmpty() bool          { return l == NilByteArrArrOptionList }
-func (l RuneArrArrOptionList) IsEmpty() bool          { return l == NilRuneArrArrOptionList }
-func (l Float32ArrArrOptionList) IsEmpty() bool       { return l == NilFloat32ArrArrOptionList }
-func (l Float64ArrArrOptionList) IsEmpty() bool       { return l == NilFloat64ArrArrOptionList }
-func (l Complex64ArrArrOptionList) IsEmpty() bool     { return l == NilComplex64ArrArrOptionList }
-func (l Complex128ArrArrOptionList) IsEmpty() bool    { return l == NilComplex128ArrArrOptionList }
-func (l AnyArrArrOptionList) IsEmpty() bool           { return l == NilAnyArrArrOptionList }
-func (l BoolOptionArrOptionList) IsEmpty() bool       { return l == NilBoolOptionArrOptionList }
-func (l StringOptionArrOptionList) IsEmpty() bool     { return l == NilStringOptionArrOptionList }
-func (l IntOptionArrOptionList) IsEmpty() bool        { return l == NilIntOptionArrOptionList }
-func (l Int8OptionArrOptionList) IsEmpty() bool       { return l == NilInt8OptionArrOptionList }
-func (l Int16OptionArrOptionList) IsEmpty() bool      { return l == NilInt16OptionArrOptionList }
-func (l Int32OptionArrOptionList) IsEmpty() bool      { return l == NilInt32OptionArrOptionList }
-func (l Int64OptionArrOptionList) IsEmpty() bool      { return l == NilInt64OptionArrOptionList }
-func (l UintOptionArrOptionList) IsEmpty() bool       { return l == NilUintOptionArrOptionList }
-func (l Uint8OptionArrOptionList) IsEmpty() bool      { return l == NilUint8OptionArrOptionList }
-func (l Uint16OptionArrOptionList) IsEmpty() bool     { return l == NilUint16OptionArrOptionList }
-func (l Uint32OptionArrOptionList) IsEmpty() bool     { return l == NilUint32OptionArrOptionList }
-func (l Uint64OptionArrOptionList) IsEmpty() bool     { return l == NilUint64OptionArrOptionList }
-func (l UintptrOptionArrOptionList) IsEmpty() bool    { return l == NilUintptrOptionArrOptionList }
-func (l ByteOptionArrOptionList) IsEmpty() bool       { return l == NilByteOptionArrOptionList }
-func (l RuneOptionArrOptionList) IsEmpty() bool       { return l == NilRuneOptionArrOptionList }
-func (l Float32OptionArrOptionList) IsEmpty() bool    { return l == NilFloat32OptionArrOptionList }
-func (l Float64OptionArrOptionList) IsEmpty() bool    { return l == NilFloat64OptionArrOptionList }
-func (l Complex64OptionArrOptionList) IsEmpty() bool  { return l == NilComplex64OptionArrOptionList }
-func (l Complex128OptionArrOptionList) IsEmpty() bool { return l == NilComplex128OptionArrOptionList }
-func (l AnyOptionArrOptionList) IsEmpty() bool        { return l == NilAnyOptionArrOptionList }
-func (l BoolListOptionList) IsEmpty() bool            { return l == NilBoolListOptionList }
-func (l StringListOptionList) IsEmpty() bool          { return l == NilStringListOptionList }
-func (l IntListOptionList) IsEmpty() bool             { return l == NilIntListOptionList }
-func (l Int8ListOptionList) IsEmpty() bool            { return l == NilInt8ListOptionList }
-func (l Int16ListOptionList) IsEmpty() bool           { return l == NilInt16ListOptionList }
-func (l Int32ListOptionList) IsEmpty() bool           { return l == NilInt32ListOptionList }
-func (l Int64ListOptionList) IsEmpty() bool           { return l == NilInt64ListOptionList }
-func (l UintListOptionList) IsEmpty() bool            { return l == NilUintListOptionList }
-func (l Uint8ListOptionList) IsEmpty() bool           { return l == NilUint8ListOptionList }
-func (l Uint16ListOptionList) IsEmpty() bool          { return l == NilUint16ListOptionList }
-func (l Uint32ListOptionList) IsEmpty() bool          { return l == NilUint32ListOptionList }
-func (l Uint64ListOptionList) IsEmpty() bool          { return l == NilUint64ListOptionList }
-func (l UintptrListOptionList) IsEmpty() bool         { return l == NilUintptrListOptionList }
-func (l ByteListOptionList) IsEmpty() bool            { return l == NilByteListOptionList }
-func (l RuneListOptionList) IsEmpty() bool            { return l == NilRuneListOptionList }
-func (l Float32ListOptionList) IsEmpty() bool         { return l == NilFloat32ListOptionList }
-func (l Float64ListOptionList) IsEmpty() bool         { return l == NilFloat64ListOptionList }
-func (l Complex64ListOptionList) IsEmpty() bool       { return l == NilComplex64ListOptionList }
-func (l Complex128ListOptionList) IsEmpty() bool      { return l == NilComplex128ListOptionList }
-func (l AnyListOptionList) IsEmpty() bool             { return l == NilAnyListOptionList }
-func (l BoolOptionOptionList) IsEmpty() bool          { return l == NilBoolOptionOptionList }
-func (l StringOptionOptionList) IsEmpty() bool        { return l == NilStringOptionOptionList }
-func (l IntOptionOptionList) IsEmpty() bool           { return l == NilIntOptionOptionList }
-func (l Int8OptionOptionList) IsEmpty() bool          { return l == NilInt8OptionOptionList }
-func (l Int16OptionOptionList) IsEmpty() bool         { return l == NilInt16OptionOptionList }
-func (l Int32OptionOptionList) IsEmpty() bool         { return l == NilInt32OptionOptionList }
-func (l Int64OptionOptionList) IsEmpty() bool         { return l == NilInt64OptionOptionList }
-func (l UintOptionOptionList) IsEmpty() bool          { return l == NilUintOptionOptionList }
-func (l Uint8OptionOptionList) IsEmpty() bool         { return l == NilUint8OptionOptionList }
-func (l Uint16OptionOptionList) IsEmpty() bool        { return l == NilUint16OptionOptionList }
-func (l Uint32OptionOptionList) IsEmpty() bool        { return l == NilUint32OptionOptionList }
-func (l Uint64OptionOptionList) IsEmpty() bool        { return l == NilUint64OptionOptionList }
-func (l UintptrOptionOptionList) IsEmpty() bool       { return l == NilUintptrOptionOptionList }
-func (l ByteOptionOptionList) IsEmpty() bool          { return l == NilByteOptionOptionList }
-func (l RuneOptionOptionList) IsEmpty() bool          { return l == NilRuneOptionOptionList }
-func (l Float32OptionOptionList) IsEmpty() bool       { return l == NilFloat32OptionOptionList }
-func (l Float64OptionOptionList) IsEmpty() bool       { return l == NilFloat64OptionOptionList }
-func (l Complex64OptionOptionList) IsEmpty() bool     { return l == NilComplex64OptionOptionList }
-func (l Complex128OptionOptionList) IsEmpty() bool    { return l == NilComplex128OptionOptionList }
-func (l AnyOptionOptionList) IsEmpty() bool           { return l == NilAnyOptionOptionList }
-func (l BoolArrOptionOptionList) IsEmpty() bool       { return l == NilBoolArrOptionOptionList }
-func (l StringArrOptionOptionList) IsEmpty() bool     { return l == NilStringArrOptionOptionList }
-func (l IntArrOptionOptionList) IsEmpty() bool        { return l == NilIntArrOptionOptionList }
-func (l Int8ArrOptionOptionList) IsEmpty() bool       { return l == NilInt8ArrOptionOptionList }
-func (l Int16ArrOptionOptionList) IsEmpty() bool      { return l == NilInt16ArrOptionOptionList }
-func (l Int32ArrOptionOptionList) IsEmpty() bool      { return l == NilInt32ArrOptionOptionList }
-func (l Int64ArrOptionOptionList) IsEmpty() bool      { return l == NilInt64ArrOptionOptionList }
-func (l UintArrOptionOptionList) IsEmpty() bool       { return l == NilUintArrOptionOptionList }
-func (l Uint8ArrOptionOptionList) IsEmpty() bool      { return l == NilUint8ArrOptionOptionList }
-func (l Uint16ArrOptionOptionList) IsEmpty() bool     { return l == NilUint16ArrOptionOptionList }
-func (l Uint32ArrOptionOptionList) IsEmpty() bool     { return l == NilUint32ArrOptionOptionList }
-func (l Uint64ArrOptionOptionList) IsEmpty() bool     { return l == NilUint64ArrOptionOptionList }
-func (l UintptrArrOptionOptionList) IsEmpty() bool    { return l == NilUintptrArrOptionOptionList }
-func (l ByteArrOptionOptionList) IsEmpty() bool       { return l == NilByteArrOptionOptionList }
-func (l RuneArrOptionOptionList) IsEmpty() bool       { return l == NilRuneArrOptionOptionList }
-func (l Float32ArrOptionOptionList) IsEmpty() bool    { return l == NilFloat32ArrOptionOptionList }
-func (l Float64ArrOptionOptionList) IsEmpty() bool    { return l == NilFloat64ArrOptionOptionList }
-func (l Complex64ArrOptionOptionList) IsEmpty() bool  { return l == NilComplex64ArrOptionOptionList }
-func (l Complex128ArrOptionOptionList) IsEmpty() bool { return l == NilComplex128ArrOptionOptionList }
-func (l AnyArrOptionOptionList) IsEmpty() bool        { return l == NilAnyArrOptionOptionList }
-func (l BoolArrArrOptionOptionList) IsEmpty() bool    { return l == NilBoolArrArrOptionOptionList }
-func (l StringArrArrOptionOptionList) IsEmpty() bool  { return l == NilStringArrArrOptionOptionList }
-func (l IntArrArrOptionOptionList) IsEmpty() bool     { return l == NilIntArrArrOptionOptionList }
-func (l Int8ArrArrOptionOptionList) IsEmpty() bool    { return l == NilInt8ArrArrOptionOptionList }
-func (l Int16ArrArrOptionOptionList) IsEmpty() bool   { return l == NilInt16ArrArrOptionOptionList }
-func (l Int32ArrArrOptionOptionList) IsEmpty() bool   { return l == NilInt32ArrArrOptionOptionList }
-func (l Int64ArrArrOptionOptionList) IsEmpty() bool   { return l == NilInt64ArrArrOptionOptionList }
-func (l UintArrArrOptionOptionList) IsEmpty() bool    { return l == NilUintArrArrOptionOptionList }
-func (l Uint8ArrArrOptionOptionList) IsEmpty() bool   { return l == NilUint8ArrArrOptionOptionList }
-func (l Uint16ArrArrOptionOptionList) IsEmpty() bool  { return l == NilUint16ArrArrOptionOptionList }
-func (l Uint32ArrArrOptionOptionList) IsEmpty() bool  { return l == NilUint32ArrArrOptionOptionList }
-func (l Uint64ArrArrOptionOptionList) IsEmpty() bool  { return l == NilUint64ArrArrOptionOptionList }
-func (l UintptrArrArrOptionOptionList) IsEmpty() bool { return l == NilUintptrArrArrOptionOptionList }
-func (l ByteArrArrOptionOptionList) IsEmpty() bool    { return l == NilByteArrArrOptionOptionList }
-func (l RuneArrArrOptionOptionList) IsEmpty() bool    { return l == NilRuneArrArrOptionOptionList }
-func (l Float32ArrArrOptionOptionList) IsEmpty() bool { return l == NilFloat32ArrArrOptionOptionList }
-func (l Float64ArrArrOptionOptionList) IsEmpty() bool { return l == NilFloat64ArrArrOptionOptionList }
-func (l Complex64ArrArrOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64ArrArrOptionOptionList
-}
-func (l Complex128ArrArrOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128ArrArrOptionOptionList
-}
-func (l AnyArrArrOptionOptionList) IsEmpty() bool     { return l == NilAnyArrArrOptionOptionList }
-func (l BoolOptionArrOptionOptionList) IsEmpty() bool { return l == NilBoolOptionArrOptionOptionList }
-func (l StringOptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilStringOptionArrOptionOptionList
-}
-func (l IntOptionArrOptionOptionList) IsEmpty() bool   { return l == NilIntOptionArrOptionOptionList }
-func (l Int8OptionArrOptionOptionList) IsEmpty() bool  { return l == NilInt8OptionArrOptionOptionList }
-func (l Int16OptionArrOptionOptionList) IsEmpty() bool { return l == NilInt16OptionArrOptionOptionList }
-func (l Int32OptionArrOptionOptionList) IsEmpty() bool { return l == NilInt32OptionArrOptionOptionList }
-func (l Int64OptionArrOptionOptionList) IsEmpty() bool { return l == NilInt64OptionArrOptionOptionList }
-func (l UintOptionArrOptionOptionList) IsEmpty() bool  { return l == NilUintOptionArrOptionOptionList }
-func (l Uint8OptionArrOptionOptionList) IsEmpty() bool { return l == NilUint8OptionArrOptionOptionList }
-func (l Uint16OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilUint16OptionArrOptionOptionList
-}
-func (l Uint32OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilUint32OptionArrOptionOptionList
-}
-func (l Uint64OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilUint64OptionArrOptionOptionList
-}
-func (l UintptrOptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilUintptrOptionArrOptionOptionList
-}
-func (l ByteOptionArrOptionOptionList) IsEmpty() bool { return l == NilByteOptionArrOptionOptionList }
-func (l RuneOptionArrOptionOptionList) IsEmpty() bool { return l == NilRuneOptionArrOptionOptionList }
-func (l Float32OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilFloat32OptionArrOptionOptionList
-}
-func (l Float64OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilFloat64OptionArrOptionOptionList
-}
-func (l Complex64OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64OptionArrOptionOptionList
-}
-func (l Complex128OptionArrOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128OptionArrOptionOptionList
-}
-func (l AnyOptionArrOptionOptionList) IsEmpty() bool   { return l == NilAnyOptionArrOptionOptionList }
-func (l BoolListOptionOptionList) IsEmpty() bool       { return l == NilBoolListOptionOptionList }
-func (l StringListOptionOptionList) IsEmpty() bool     { return l == NilStringListOptionOptionList }
-func (l IntListOptionOptionList) IsEmpty() bool        { return l == NilIntListOptionOptionList }
-func (l Int8ListOptionOptionList) IsEmpty() bool       { return l == NilInt8ListOptionOptionList }
-func (l Int16ListOptionOptionList) IsEmpty() bool      { return l == NilInt16ListOptionOptionList }
-func (l Int32ListOptionOptionList) IsEmpty() bool      { return l == NilInt32ListOptionOptionList }
-func (l Int64ListOptionOptionList) IsEmpty() bool      { return l == NilInt64ListOptionOptionList }
-func (l UintListOptionOptionList) IsEmpty() bool       { return l == NilUintListOptionOptionList }
-func (l Uint8ListOptionOptionList) IsEmpty() bool      { return l == NilUint8ListOptionOptionList }
-func (l Uint16ListOptionOptionList) IsEmpty() bool     { return l == NilUint16ListOptionOptionList }
-func (l Uint32ListOptionOptionList) IsEmpty() bool     { return l == NilUint32ListOptionOptionList }
-func (l Uint64ListOptionOptionList) IsEmpty() bool     { return l == NilUint64ListOptionOptionList }
-func (l UintptrListOptionOptionList) IsEmpty() bool    { return l == NilUintptrListOptionOptionList }
-func (l ByteListOptionOptionList) IsEmpty() bool       { return l == NilByteListOptionOptionList }
-func (l RuneListOptionOptionList) IsEmpty() bool       { return l == NilRuneListOptionOptionList }
-func (l Float32ListOptionOptionList) IsEmpty() bool    { return l == NilFloat32ListOptionOptionList }
-func (l Float64ListOptionOptionList) IsEmpty() bool    { return l == NilFloat64ListOptionOptionList }
-func (l Complex64ListOptionOptionList) IsEmpty() bool  { return l == NilComplex64ListOptionOptionList }
-func (l Complex128ListOptionOptionList) IsEmpty() bool { return l == NilComplex128ListOptionOptionList }
-func (l AnyListOptionOptionList) IsEmpty() bool        { return l == NilAnyListOptionOptionList }
-func (l BoolOptionOptionOptionList) IsEmpty() bool     { return l == NilBoolOptionOptionOptionList }
-func (l StringOptionOptionOptionList) IsEmpty() bool   { return l == NilStringOptionOptionOptionList }
-func (l IntOptionOptionOptionList) IsEmpty() bool      { return l == NilIntOptionOptionOptionList }
-func (l Int8OptionOptionOptionList) IsEmpty() bool     { return l == NilInt8OptionOptionOptionList }
-func (l Int16OptionOptionOptionList) IsEmpty() bool    { return l == NilInt16OptionOptionOptionList }
-func (l Int32OptionOptionOptionList) IsEmpty() bool    { return l == NilInt32OptionOptionOptionList }
-func (l Int64OptionOptionOptionList) IsEmpty() bool    { return l == NilInt64OptionOptionOptionList }
-func (l UintOptionOptionOptionList) IsEmpty() bool     { return l == NilUintOptionOptionOptionList }
-func (l Uint8OptionOptionOptionList) IsEmpty() bool    { return l == NilUint8OptionOptionOptionList }
-func (l Uint16OptionOptionOptionList) IsEmpty() bool   { return l == NilUint16OptionOptionOptionList }
-func (l Uint32OptionOptionOptionList) IsEmpty() bool   { return l == NilUint32OptionOptionOptionList }
-func (l Uint64OptionOptionOptionList) IsEmpty() bool   { return l == NilUint64OptionOptionOptionList }
-func (l UintptrOptionOptionOptionList) IsEmpty() bool  { return l == NilUintptrOptionOptionOptionList }
-func (l ByteOptionOptionOptionList) IsEmpty() bool     { return l == NilByteOptionOptionOptionList }
-func (l RuneOptionOptionOptionList) IsEmpty() bool     { return l == NilRuneOptionOptionOptionList }
-func (l Float32OptionOptionOptionList) IsEmpty() bool  { return l == NilFloat32OptionOptionOptionList }
-func (l Float64OptionOptionOptionList) IsEmpty() bool  { return l == NilFloat64OptionOptionOptionList }
-func (l Complex64OptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64OptionOptionOptionList
-}
-func (l Complex128OptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128OptionOptionOptionList
-}
-func (l AnyOptionOptionOptionList) IsEmpty() bool     { return l == NilAnyOptionOptionOptionList }
-func (l BoolArrOptionOptionOptionList) IsEmpty() bool { return l == NilBoolArrOptionOptionOptionList }
-func (l StringArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilStringArrOptionOptionOptionList
-}
-func (l IntArrOptionOptionOptionList) IsEmpty() bool   { return l == NilIntArrOptionOptionOptionList }
-func (l Int8ArrOptionOptionOptionList) IsEmpty() bool  { return l == NilInt8ArrOptionOptionOptionList }
-func (l Int16ArrOptionOptionOptionList) IsEmpty() bool { return l == NilInt16ArrOptionOptionOptionList }
-func (l Int32ArrOptionOptionOptionList) IsEmpty() bool { return l == NilInt32ArrOptionOptionOptionList }
-func (l Int64ArrOptionOptionOptionList) IsEmpty() bool { return l == NilInt64ArrOptionOptionOptionList }
-func (l UintArrOptionOptionOptionList) IsEmpty() bool  { return l == NilUintArrOptionOptionOptionList }
-func (l Uint8ArrOptionOptionOptionList) IsEmpty() bool { return l == NilUint8ArrOptionOptionOptionList }
-func (l Uint16ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint16ArrOptionOptionOptionList
-}
-func (l Uint32ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint32ArrOptionOptionOptionList
-}
-func (l Uint64ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint64ArrOptionOptionOptionList
-}
-func (l UintptrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUintptrArrOptionOptionOptionList
-}
-func (l ByteArrOptionOptionOptionList) IsEmpty() bool { return l == NilByteArrOptionOptionOptionList }
-func (l RuneArrOptionOptionOptionList) IsEmpty() bool { return l == NilRuneArrOptionOptionOptionList }
-func (l Float32ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat32ArrOptionOptionOptionList
-}
-func (l Float64ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat64ArrOptionOptionOptionList
-}
-func (l Complex64ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64ArrOptionOptionOptionList
-}
-func (l Complex128ArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128ArrOptionOptionOptionList
-}
-func (l AnyArrOptionOptionOptionList) IsEmpty() bool { return l == NilAnyArrOptionOptionOptionList }
-func (l BoolArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilBoolArrArrOptionOptionOptionList
-}
-func (l StringArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilStringArrArrOptionOptionOptionList
-}
-func (l IntArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilIntArrArrOptionOptionOptionList
-}
-func (l Int8ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt8ArrArrOptionOptionOptionList
-}
-func (l Int16ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt16ArrArrOptionOptionOptionList
-}
-func (l Int32ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt32ArrArrOptionOptionOptionList
-}
-func (l Int64ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt64ArrArrOptionOptionOptionList
-}
-func (l UintArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUintArrArrOptionOptionOptionList
-}
-func (l Uint8ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint8ArrArrOptionOptionOptionList
-}
-func (l Uint16ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint16ArrArrOptionOptionOptionList
-}
-func (l Uint32ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint32ArrArrOptionOptionOptionList
-}
-func (l Uint64ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint64ArrArrOptionOptionOptionList
-}
-func (l UintptrArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUintptrArrArrOptionOptionOptionList
-}
-func (l ByteArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilByteArrArrOptionOptionOptionList
-}
-func (l RuneArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilRuneArrArrOptionOptionOptionList
-}
-func (l Float32ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat32ArrArrOptionOptionOptionList
-}
-func (l Float64ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat64ArrArrOptionOptionOptionList
-}
-func (l Complex64ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64ArrArrOptionOptionOptionList
-}
-func (l Complex128ArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128ArrArrOptionOptionOptionList
-}
-func (l AnyArrArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilAnyArrArrOptionOptionOptionList
-}
-func (l BoolOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilBoolOptionArrOptionOptionOptionList
-}
-func (l StringOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilStringOptionArrOptionOptionOptionList
-}
-func (l IntOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilIntOptionArrOptionOptionOptionList
-}
-func (l Int8OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt8OptionArrOptionOptionOptionList
-}
-func (l Int16OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt16OptionArrOptionOptionOptionList
-}
-func (l Int32OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt32OptionArrOptionOptionOptionList
-}
-func (l Int64OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt64OptionArrOptionOptionOptionList
-}
-func (l UintOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUintOptionArrOptionOptionOptionList
-}
-func (l Uint8OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint8OptionArrOptionOptionOptionList
-}
-func (l Uint16OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint16OptionArrOptionOptionOptionList
-}
-func (l Uint32OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint32OptionArrOptionOptionOptionList
-}
-func (l Uint64OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint64OptionArrOptionOptionOptionList
-}
-func (l UintptrOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUintptrOptionArrOptionOptionOptionList
-}
-func (l ByteOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilByteOptionArrOptionOptionOptionList
-}
-func (l RuneOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilRuneOptionArrOptionOptionOptionList
-}
-func (l Float32OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat32OptionArrOptionOptionOptionList
-}
-func (l Float64OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat64OptionArrOptionOptionOptionList
-}
-func (l Complex64OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64OptionArrOptionOptionOptionList
-}
-func (l Complex128OptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128OptionArrOptionOptionOptionList
-}
-func (l AnyOptionArrOptionOptionOptionList) IsEmpty() bool {
-	return l == NilAnyOptionArrOptionOptionOptionList
-}
-func (l BoolListOptionOptionOptionList) IsEmpty() bool { return l == NilBoolListOptionOptionOptionList }
-func (l StringListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilStringListOptionOptionOptionList
-}
-func (l IntListOptionOptionOptionList) IsEmpty() bool  { return l == NilIntListOptionOptionOptionList }
-func (l Int8ListOptionOptionOptionList) IsEmpty() bool { return l == NilInt8ListOptionOptionOptionList }
-func (l Int16ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt16ListOptionOptionOptionList
-}
-func (l Int32ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt32ListOptionOptionOptionList
-}
-func (l Int64ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilInt64ListOptionOptionOptionList
-}
-func (l UintListOptionOptionOptionList) IsEmpty() bool { return l == NilUintListOptionOptionOptionList }
-func (l Uint8ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint8ListOptionOptionOptionList
-}
-func (l Uint16ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint16ListOptionOptionOptionList
-}
-func (l Uint32ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint32ListOptionOptionOptionList
-}
-func (l Uint64ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUint64ListOptionOptionOptionList
-}
+func (l BoolList) IsEmpty() bool                         { return l == NilBool }
+func (l StringList) IsEmpty() bool                       { return l == NilString }
+func (l IntList) IsEmpty() bool                          { return l == NilInt }
+func (l Int8List) IsEmpty() bool                         { return l == NilInt8 }
+func (l Int16List) IsEmpty() bool                        { return l == NilInt16 }
+func (l Int32List) IsEmpty() bool                        { return l == NilInt32 }
+func (l Int64List) IsEmpty() bool                        { return l == NilInt64 }
+func (l UintList) IsEmpty() bool                         { return l == NilUint }
+func (l Uint8List) IsEmpty() bool                        { return l == NilUint8 }
+func (l Uint16List) IsEmpty() bool                       { return l == NilUint16 }
+func (l Uint32List) IsEmpty() bool                       { return l == NilUint32 }
+func (l Uint64List) IsEmpty() bool                       { return l == NilUint64 }
+func (l UintptrList) IsEmpty() bool                      { return l == NilUintptr }
+func (l ByteList) IsEmpty() bool                         { return l == NilByte }
+func (l RuneList) IsEmpty() bool                         { return l == NilRune }
+func (l Float32List) IsEmpty() bool                      { return l == NilFloat32 }
+func (l Float64List) IsEmpty() bool                      { return l == NilFloat64 }
+func (l Complex64List) IsEmpty() bool                    { return l == NilComplex64 }
+func (l Complex128List) IsEmpty() bool                   { return l == NilComplex128 }
+func (l AnyList) IsEmpty() bool                          { return l == NilAny }
+func (l BoolOptionList) IsEmpty() bool                   { return l == NilBoolOption }
+func (l StringOptionList) IsEmpty() bool                 { return l == NilStringOption }
+func (l IntOptionList) IsEmpty() bool                    { return l == NilIntOption }
+func (l Int8OptionList) IsEmpty() bool                   { return l == NilInt8Option }
+func (l Int16OptionList) IsEmpty() bool                  { return l == NilInt16Option }
+func (l Int32OptionList) IsEmpty() bool                  { return l == NilInt32Option }
+func (l Int64OptionList) IsEmpty() bool                  { return l == NilInt64Option }
+func (l UintOptionList) IsEmpty() bool                   { return l == NilUintOption }
+func (l Uint8OptionList) IsEmpty() bool                  { return l == NilUint8Option }
+func (l Uint16OptionList) IsEmpty() bool                 { return l == NilUint16Option }
+func (l Uint32OptionList) IsEmpty() bool                 { return l == NilUint32Option }
+func (l Uint64OptionList) IsEmpty() bool                 { return l == NilUint64Option }
+func (l UintptrOptionList) IsEmpty() bool                { return l == NilUintptrOption }
+func (l ByteOptionList) IsEmpty() bool                   { return l == NilByteOption }
+func (l RuneOptionList) IsEmpty() bool                   { return l == NilRuneOption }
+func (l Float32OptionList) IsEmpty() bool                { return l == NilFloat32Option }
+func (l Float64OptionList) IsEmpty() bool                { return l == NilFloat64Option }
+func (l Complex64OptionList) IsEmpty() bool              { return l == NilComplex64Option }
+func (l Complex128OptionList) IsEmpty() bool             { return l == NilComplex128Option }
+func (l AnyOptionList) IsEmpty() bool                    { return l == NilAnyOption }
+func (l BoolArrayOptionList) IsEmpty() bool              { return l == NilBoolArrayOption }
+func (l StringArrayOptionList) IsEmpty() bool            { return l == NilStringArrayOption }
+func (l IntArrayOptionList) IsEmpty() bool               { return l == NilIntArrayOption }
+func (l Int8ArrayOptionList) IsEmpty() bool              { return l == NilInt8ArrayOption }
+func (l Int16ArrayOptionList) IsEmpty() bool             { return l == NilInt16ArrayOption }
+func (l Int32ArrayOptionList) IsEmpty() bool             { return l == NilInt32ArrayOption }
+func (l Int64ArrayOptionList) IsEmpty() bool             { return l == NilInt64ArrayOption }
+func (l UintArrayOptionList) IsEmpty() bool              { return l == NilUintArrayOption }
+func (l Uint8ArrayOptionList) IsEmpty() bool             { return l == NilUint8ArrayOption }
+func (l Uint16ArrayOptionList) IsEmpty() bool            { return l == NilUint16ArrayOption }
+func (l Uint32ArrayOptionList) IsEmpty() bool            { return l == NilUint32ArrayOption }
+func (l Uint64ArrayOptionList) IsEmpty() bool            { return l == NilUint64ArrayOption }
+func (l UintptrArrayOptionList) IsEmpty() bool           { return l == NilUintptrArrayOption }
+func (l ByteArrayOptionList) IsEmpty() bool              { return l == NilByteArrayOption }
+func (l RuneArrayOptionList) IsEmpty() bool              { return l == NilRuneArrayOption }
+func (l Float32ArrayOptionList) IsEmpty() bool           { return l == NilFloat32ArrayOption }
+func (l Float64ArrayOptionList) IsEmpty() bool           { return l == NilFloat64ArrayOption }
+func (l Complex64ArrayOptionList) IsEmpty() bool         { return l == NilComplex64ArrayOption }
+func (l Complex128ArrayOptionList) IsEmpty() bool        { return l == NilComplex128ArrayOption }
+func (l AnyArrayOptionList) IsEmpty() bool               { return l == NilAnyArrayOption }
+func (l BoolArrayArrayOptionList) IsEmpty() bool         { return l == NilBoolArrayArrayOption }
+func (l StringArrayArrayOptionList) IsEmpty() bool       { return l == NilStringArrayArrayOption }
+func (l IntArrayArrayOptionList) IsEmpty() bool          { return l == NilIntArrayArrayOption }
+func (l Int8ArrayArrayOptionList) IsEmpty() bool         { return l == NilInt8ArrayArrayOption }
+func (l Int16ArrayArrayOptionList) IsEmpty() bool        { return l == NilInt16ArrayArrayOption }
+func (l Int32ArrayArrayOptionList) IsEmpty() bool        { return l == NilInt32ArrayArrayOption }
+func (l Int64ArrayArrayOptionList) IsEmpty() bool        { return l == NilInt64ArrayArrayOption }
+func (l UintArrayArrayOptionList) IsEmpty() bool         { return l == NilUintArrayArrayOption }
+func (l Uint8ArrayArrayOptionList) IsEmpty() bool        { return l == NilUint8ArrayArrayOption }
+func (l Uint16ArrayArrayOptionList) IsEmpty() bool       { return l == NilUint16ArrayArrayOption }
+func (l Uint32ArrayArrayOptionList) IsEmpty() bool       { return l == NilUint32ArrayArrayOption }
+func (l Uint64ArrayArrayOptionList) IsEmpty() bool       { return l == NilUint64ArrayArrayOption }
+func (l UintptrArrayArrayOptionList) IsEmpty() bool      { return l == NilUintptrArrayArrayOption }
+func (l ByteArrayArrayOptionList) IsEmpty() bool         { return l == NilByteArrayArrayOption }
+func (l RuneArrayArrayOptionList) IsEmpty() bool         { return l == NilRuneArrayArrayOption }
+func (l Float32ArrayArrayOptionList) IsEmpty() bool      { return l == NilFloat32ArrayArrayOption }
+func (l Float64ArrayArrayOptionList) IsEmpty() bool      { return l == NilFloat64ArrayArrayOption }
+func (l Complex64ArrayArrayOptionList) IsEmpty() bool    { return l == NilComplex64ArrayArrayOption }
+func (l Complex128ArrayArrayOptionList) IsEmpty() bool   { return l == NilComplex128ArrayArrayOption }
+func (l AnyArrayArrayOptionList) IsEmpty() bool          { return l == NilAnyArrayArrayOption }
+func (l BoolOptionArrayOptionList) IsEmpty() bool        { return l == NilBoolOptionArrayOption }
+func (l StringOptionArrayOptionList) IsEmpty() bool      { return l == NilStringOptionArrayOption }
+func (l IntOptionArrayOptionList) IsEmpty() bool         { return l == NilIntOptionArrayOption }
+func (l Int8OptionArrayOptionList) IsEmpty() bool        { return l == NilInt8OptionArrayOption }
+func (l Int16OptionArrayOptionList) IsEmpty() bool       { return l == NilInt16OptionArrayOption }
+func (l Int32OptionArrayOptionList) IsEmpty() bool       { return l == NilInt32OptionArrayOption }
+func (l Int64OptionArrayOptionList) IsEmpty() bool       { return l == NilInt64OptionArrayOption }
+func (l UintOptionArrayOptionList) IsEmpty() bool        { return l == NilUintOptionArrayOption }
+func (l Uint8OptionArrayOptionList) IsEmpty() bool       { return l == NilUint8OptionArrayOption }
+func (l Uint16OptionArrayOptionList) IsEmpty() bool      { return l == NilUint16OptionArrayOption }
+func (l Uint32OptionArrayOptionList) IsEmpty() bool      { return l == NilUint32OptionArrayOption }
+func (l Uint64OptionArrayOptionList) IsEmpty() bool      { return l == NilUint64OptionArrayOption }
+func (l UintptrOptionArrayOptionList) IsEmpty() bool     { return l == NilUintptrOptionArrayOption }
+func (l ByteOptionArrayOptionList) IsEmpty() bool        { return l == NilByteOptionArrayOption }
+func (l RuneOptionArrayOptionList) IsEmpty() bool        { return l == NilRuneOptionArrayOption }
+func (l Float32OptionArrayOptionList) IsEmpty() bool     { return l == NilFloat32OptionArrayOption }
+func (l Float64OptionArrayOptionList) IsEmpty() bool     { return l == NilFloat64OptionArrayOption }
+func (l Complex64OptionArrayOptionList) IsEmpty() bool   { return l == NilComplex64OptionArrayOption }
+func (l Complex128OptionArrayOptionList) IsEmpty() bool  { return l == NilComplex128OptionArrayOption }
+func (l AnyOptionArrayOptionList) IsEmpty() bool         { return l == NilAnyOptionArrayOption }
+func (l BoolListOptionList) IsEmpty() bool               { return l == NilBoolListOption }
+func (l StringListOptionList) IsEmpty() bool             { return l == NilStringListOption }
+func (l IntListOptionList) IsEmpty() bool                { return l == NilIntListOption }
+func (l Int8ListOptionList) IsEmpty() bool               { return l == NilInt8ListOption }
+func (l Int16ListOptionList) IsEmpty() bool              { return l == NilInt16ListOption }
+func (l Int32ListOptionList) IsEmpty() bool              { return l == NilInt32ListOption }
+func (l Int64ListOptionList) IsEmpty() bool              { return l == NilInt64ListOption }
+func (l UintListOptionList) IsEmpty() bool               { return l == NilUintListOption }
+func (l Uint8ListOptionList) IsEmpty() bool              { return l == NilUint8ListOption }
+func (l Uint16ListOptionList) IsEmpty() bool             { return l == NilUint16ListOption }
+func (l Uint32ListOptionList) IsEmpty() bool             { return l == NilUint32ListOption }
+func (l Uint64ListOptionList) IsEmpty() bool             { return l == NilUint64ListOption }
+func (l UintptrListOptionList) IsEmpty() bool            { return l == NilUintptrListOption }
+func (l ByteListOptionList) IsEmpty() bool               { return l == NilByteListOption }
+func (l RuneListOptionList) IsEmpty() bool               { return l == NilRuneListOption }
+func (l Float32ListOptionList) IsEmpty() bool            { return l == NilFloat32ListOption }
+func (l Float64ListOptionList) IsEmpty() bool            { return l == NilFloat64ListOption }
+func (l Complex64ListOptionList) IsEmpty() bool          { return l == NilComplex64ListOption }
+func (l Complex128ListOptionList) IsEmpty() bool         { return l == NilComplex128ListOption }
+func (l AnyListOptionList) IsEmpty() bool                { return l == NilAnyListOption }
+func (l BoolOptionOptionList) IsEmpty() bool             { return l == NilBoolOptionOption }
+func (l StringOptionOptionList) IsEmpty() bool           { return l == NilStringOptionOption }
+func (l IntOptionOptionList) IsEmpty() bool              { return l == NilIntOptionOption }
+func (l Int8OptionOptionList) IsEmpty() bool             { return l == NilInt8OptionOption }
+func (l Int16OptionOptionList) IsEmpty() bool            { return l == NilInt16OptionOption }
+func (l Int32OptionOptionList) IsEmpty() bool            { return l == NilInt32OptionOption }
+func (l Int64OptionOptionList) IsEmpty() bool            { return l == NilInt64OptionOption }
+func (l UintOptionOptionList) IsEmpty() bool             { return l == NilUintOptionOption }
+func (l Uint8OptionOptionList) IsEmpty() bool            { return l == NilUint8OptionOption }
+func (l Uint16OptionOptionList) IsEmpty() bool           { return l == NilUint16OptionOption }
+func (l Uint32OptionOptionList) IsEmpty() bool           { return l == NilUint32OptionOption }
+func (l Uint64OptionOptionList) IsEmpty() bool           { return l == NilUint64OptionOption }
+func (l UintptrOptionOptionList) IsEmpty() bool          { return l == NilUintptrOptionOption }
+func (l ByteOptionOptionList) IsEmpty() bool             { return l == NilByteOptionOption }
+func (l RuneOptionOptionList) IsEmpty() bool             { return l == NilRuneOptionOption }
+func (l Float32OptionOptionList) IsEmpty() bool          { return l == NilFloat32OptionOption }
+func (l Float64OptionOptionList) IsEmpty() bool          { return l == NilFloat64OptionOption }
+func (l Complex64OptionOptionList) IsEmpty() bool        { return l == NilComplex64OptionOption }
+func (l Complex128OptionOptionList) IsEmpty() bool       { return l == NilComplex128OptionOption }
+func (l AnyOptionOptionList) IsEmpty() bool              { return l == NilAnyOptionOption }
+func (l BoolArrayOptionOptionList) IsEmpty() bool        { return l == NilBoolArrayOptionOption }
+func (l StringArrayOptionOptionList) IsEmpty() bool      { return l == NilStringArrayOptionOption }
+func (l IntArrayOptionOptionList) IsEmpty() bool         { return l == NilIntArrayOptionOption }
+func (l Int8ArrayOptionOptionList) IsEmpty() bool        { return l == NilInt8ArrayOptionOption }
+func (l Int16ArrayOptionOptionList) IsEmpty() bool       { return l == NilInt16ArrayOptionOption }
+func (l Int32ArrayOptionOptionList) IsEmpty() bool       { return l == NilInt32ArrayOptionOption }
+func (l Int64ArrayOptionOptionList) IsEmpty() bool       { return l == NilInt64ArrayOptionOption }
+func (l UintArrayOptionOptionList) IsEmpty() bool        { return l == NilUintArrayOptionOption }
+func (l Uint8ArrayOptionOptionList) IsEmpty() bool       { return l == NilUint8ArrayOptionOption }
+func (l Uint16ArrayOptionOptionList) IsEmpty() bool      { return l == NilUint16ArrayOptionOption }
+func (l Uint32ArrayOptionOptionList) IsEmpty() bool      { return l == NilUint32ArrayOptionOption }
+func (l Uint64ArrayOptionOptionList) IsEmpty() bool      { return l == NilUint64ArrayOptionOption }
+func (l UintptrArrayOptionOptionList) IsEmpty() bool     { return l == NilUintptrArrayOptionOption }
+func (l ByteArrayOptionOptionList) IsEmpty() bool        { return l == NilByteArrayOptionOption }
+func (l RuneArrayOptionOptionList) IsEmpty() bool        { return l == NilRuneArrayOptionOption }
+func (l Float32ArrayOptionOptionList) IsEmpty() bool     { return l == NilFloat32ArrayOptionOption }
+func (l Float64ArrayOptionOptionList) IsEmpty() bool     { return l == NilFloat64ArrayOptionOption }
+func (l Complex64ArrayOptionOptionList) IsEmpty() bool   { return l == NilComplex64ArrayOptionOption }
+func (l Complex128ArrayOptionOptionList) IsEmpty() bool  { return l == NilComplex128ArrayOptionOption }
+func (l AnyArrayOptionOptionList) IsEmpty() bool         { return l == NilAnyArrayOptionOption }
+func (l BoolArrayArrayOptionOptionList) IsEmpty() bool   { return l == NilBoolArrayArrayOptionOption }
+func (l StringArrayArrayOptionOptionList) IsEmpty() bool { return l == NilStringArrayArrayOptionOption }
+func (l IntArrayArrayOptionOptionList) IsEmpty() bool    { return l == NilIntArrayArrayOptionOption }
+func (l Int8ArrayArrayOptionOptionList) IsEmpty() bool   { return l == NilInt8ArrayArrayOptionOption }
+func (l Int16ArrayArrayOptionOptionList) IsEmpty() bool  { return l == NilInt16ArrayArrayOptionOption }
+func (l Int32ArrayArrayOptionOptionList) IsEmpty() bool  { return l == NilInt32ArrayArrayOptionOption }
+func (l Int64ArrayArrayOptionOptionList) IsEmpty() bool  { return l == NilInt64ArrayArrayOptionOption }
+func (l UintArrayArrayOptionOptionList) IsEmpty() bool   { return l == NilUintArrayArrayOptionOption }
+func (l Uint8ArrayArrayOptionOptionList) IsEmpty() bool  { return l == NilUint8ArrayArrayOptionOption }
+func (l Uint16ArrayArrayOptionOptionList) IsEmpty() bool { return l == NilUint16ArrayArrayOptionOption }
+func (l Uint32ArrayArrayOptionOptionList) IsEmpty() bool { return l == NilUint32ArrayArrayOptionOption }
+func (l Uint64ArrayArrayOptionOptionList) IsEmpty() bool { return l == NilUint64ArrayArrayOptionOption }
+func (l UintptrArrayArrayOptionOptionList) IsEmpty() bool {
+	return l == NilUintptrArrayArrayOptionOption
+}
+func (l ByteArrayArrayOptionOptionList) IsEmpty() bool { return l == NilByteArrayArrayOptionOption }
+func (l RuneArrayArrayOptionOptionList) IsEmpty() bool { return l == NilRuneArrayArrayOptionOption }
+func (l Float32ArrayArrayOptionOptionList) IsEmpty() bool {
+	return l == NilFloat32ArrayArrayOptionOption
+}
+func (l Float64ArrayArrayOptionOptionList) IsEmpty() bool {
+	return l == NilFloat64ArrayArrayOptionOption
+}
+func (l Complex64ArrayArrayOptionOptionList) IsEmpty() bool {
+	return l == NilComplex64ArrayArrayOptionOption
+}
+func (l Complex128ArrayArrayOptionOptionList) IsEmpty() bool {
+	return l == NilComplex128ArrayArrayOptionOption
+}
+func (l AnyArrayArrayOptionOptionList) IsEmpty() bool   { return l == NilAnyArrayArrayOptionOption }
+func (l BoolOptionArrayOptionOptionList) IsEmpty() bool { return l == NilBoolOptionArrayOptionOption }
+func (l StringOptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilStringOptionArrayOptionOption
+}
+func (l IntOptionArrayOptionOptionList) IsEmpty() bool   { return l == NilIntOptionArrayOptionOption }
+func (l Int8OptionArrayOptionOptionList) IsEmpty() bool  { return l == NilInt8OptionArrayOptionOption }
+func (l Int16OptionArrayOptionOptionList) IsEmpty() bool { return l == NilInt16OptionArrayOptionOption }
+func (l Int32OptionArrayOptionOptionList) IsEmpty() bool { return l == NilInt32OptionArrayOptionOption }
+func (l Int64OptionArrayOptionOptionList) IsEmpty() bool { return l == NilInt64OptionArrayOptionOption }
+func (l UintOptionArrayOptionOptionList) IsEmpty() bool  { return l == NilUintOptionArrayOptionOption }
+func (l Uint8OptionArrayOptionOptionList) IsEmpty() bool { return l == NilUint8OptionArrayOptionOption }
+func (l Uint16OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilUint16OptionArrayOptionOption
+}
+func (l Uint32OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilUint32OptionArrayOptionOption
+}
+func (l Uint64OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilUint64OptionArrayOptionOption
+}
+func (l UintptrOptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilUintptrOptionArrayOptionOption
+}
+func (l ByteOptionArrayOptionOptionList) IsEmpty() bool { return l == NilByteOptionArrayOptionOption }
+func (l RuneOptionArrayOptionOptionList) IsEmpty() bool { return l == NilRuneOptionArrayOptionOption }
+func (l Float32OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilFloat32OptionArrayOptionOption
+}
+func (l Float64OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilFloat64OptionArrayOptionOption
+}
+func (l Complex64OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilComplex64OptionArrayOptionOption
+}
+func (l Complex128OptionArrayOptionOptionList) IsEmpty() bool {
+	return l == NilComplex128OptionArrayOptionOption
+}
+func (l AnyOptionArrayOptionOptionList) IsEmpty() bool   { return l == NilAnyOptionArrayOptionOption }
+func (l BoolListOptionOptionList) IsEmpty() bool         { return l == NilBoolListOptionOption }
+func (l StringListOptionOptionList) IsEmpty() bool       { return l == NilStringListOptionOption }
+func (l IntListOptionOptionList) IsEmpty() bool          { return l == NilIntListOptionOption }
+func (l Int8ListOptionOptionList) IsEmpty() bool         { return l == NilInt8ListOptionOption }
+func (l Int16ListOptionOptionList) IsEmpty() bool        { return l == NilInt16ListOptionOption }
+func (l Int32ListOptionOptionList) IsEmpty() bool        { return l == NilInt32ListOptionOption }
+func (l Int64ListOptionOptionList) IsEmpty() bool        { return l == NilInt64ListOptionOption }
+func (l UintListOptionOptionList) IsEmpty() bool         { return l == NilUintListOptionOption }
+func (l Uint8ListOptionOptionList) IsEmpty() bool        { return l == NilUint8ListOptionOption }
+func (l Uint16ListOptionOptionList) IsEmpty() bool       { return l == NilUint16ListOptionOption }
+func (l Uint32ListOptionOptionList) IsEmpty() bool       { return l == NilUint32ListOptionOption }
+func (l Uint64ListOptionOptionList) IsEmpty() bool       { return l == NilUint64ListOptionOption }
+func (l UintptrListOptionOptionList) IsEmpty() bool      { return l == NilUintptrListOptionOption }
+func (l ByteListOptionOptionList) IsEmpty() bool         { return l == NilByteListOptionOption }
+func (l RuneListOptionOptionList) IsEmpty() bool         { return l == NilRuneListOptionOption }
+func (l Float32ListOptionOptionList) IsEmpty() bool      { return l == NilFloat32ListOptionOption }
+func (l Float64ListOptionOptionList) IsEmpty() bool      { return l == NilFloat64ListOptionOption }
+func (l Complex64ListOptionOptionList) IsEmpty() bool    { return l == NilComplex64ListOptionOption }
+func (l Complex128ListOptionOptionList) IsEmpty() bool   { return l == NilComplex128ListOptionOption }
+func (l AnyListOptionOptionList) IsEmpty() bool          { return l == NilAnyListOptionOption }
+func (l BoolOptionOptionOptionList) IsEmpty() bool       { return l == NilBoolOptionOptionOption }
+func (l StringOptionOptionOptionList) IsEmpty() bool     { return l == NilStringOptionOptionOption }
+func (l IntOptionOptionOptionList) IsEmpty() bool        { return l == NilIntOptionOptionOption }
+func (l Int8OptionOptionOptionList) IsEmpty() bool       { return l == NilInt8OptionOptionOption }
+func (l Int16OptionOptionOptionList) IsEmpty() bool      { return l == NilInt16OptionOptionOption }
+func (l Int32OptionOptionOptionList) IsEmpty() bool      { return l == NilInt32OptionOptionOption }
+func (l Int64OptionOptionOptionList) IsEmpty() bool      { return l == NilInt64OptionOptionOption }
+func (l UintOptionOptionOptionList) IsEmpty() bool       { return l == NilUintOptionOptionOption }
+func (l Uint8OptionOptionOptionList) IsEmpty() bool      { return l == NilUint8OptionOptionOption }
+func (l Uint16OptionOptionOptionList) IsEmpty() bool     { return l == NilUint16OptionOptionOption }
+func (l Uint32OptionOptionOptionList) IsEmpty() bool     { return l == NilUint32OptionOptionOption }
+func (l Uint64OptionOptionOptionList) IsEmpty() bool     { return l == NilUint64OptionOptionOption }
+func (l UintptrOptionOptionOptionList) IsEmpty() bool    { return l == NilUintptrOptionOptionOption }
+func (l ByteOptionOptionOptionList) IsEmpty() bool       { return l == NilByteOptionOptionOption }
+func (l RuneOptionOptionOptionList) IsEmpty() bool       { return l == NilRuneOptionOptionOption }
+func (l Float32OptionOptionOptionList) IsEmpty() bool    { return l == NilFloat32OptionOptionOption }
+func (l Float64OptionOptionOptionList) IsEmpty() bool    { return l == NilFloat64OptionOptionOption }
+func (l Complex64OptionOptionOptionList) IsEmpty() bool  { return l == NilComplex64OptionOptionOption }
+func (l Complex128OptionOptionOptionList) IsEmpty() bool { return l == NilComplex128OptionOptionOption }
+func (l AnyOptionOptionOptionList) IsEmpty() bool        { return l == NilAnyOptionOptionOption }
+func (l BoolArrayOptionOptionOptionList) IsEmpty() bool  { return l == NilBoolArrayOptionOptionOption }
+func (l StringArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilStringArrayOptionOptionOption
+}
+func (l IntArrayOptionOptionOptionList) IsEmpty() bool   { return l == NilIntArrayOptionOptionOption }
+func (l Int8ArrayOptionOptionOptionList) IsEmpty() bool  { return l == NilInt8ArrayOptionOptionOption }
+func (l Int16ArrayOptionOptionOptionList) IsEmpty() bool { return l == NilInt16ArrayOptionOptionOption }
+func (l Int32ArrayOptionOptionOptionList) IsEmpty() bool { return l == NilInt32ArrayOptionOptionOption }
+func (l Int64ArrayOptionOptionOptionList) IsEmpty() bool { return l == NilInt64ArrayOptionOptionOption }
+func (l UintArrayOptionOptionOptionList) IsEmpty() bool  { return l == NilUintArrayOptionOptionOption }
+func (l Uint8ArrayOptionOptionOptionList) IsEmpty() bool { return l == NilUint8ArrayOptionOptionOption }
+func (l Uint16ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint16ArrayOptionOptionOption
+}
+func (l Uint32ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint32ArrayOptionOptionOption
+}
+func (l Uint64ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint64ArrayOptionOptionOption
+}
+func (l UintptrArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUintptrArrayOptionOptionOption
+}
+func (l ByteArrayOptionOptionOptionList) IsEmpty() bool { return l == NilByteArrayOptionOptionOption }
+func (l RuneArrayOptionOptionOptionList) IsEmpty() bool { return l == NilRuneArrayOptionOptionOption }
+func (l Float32ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilFloat32ArrayOptionOptionOption
+}
+func (l Float64ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilFloat64ArrayOptionOptionOption
+}
+func (l Complex64ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilComplex64ArrayOptionOptionOption
+}
+func (l Complex128ArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilComplex128ArrayOptionOptionOption
+}
+func (l AnyArrayOptionOptionOptionList) IsEmpty() bool { return l == NilAnyArrayOptionOptionOption }
+func (l BoolArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilBoolArrayArrayOptionOptionOption
+}
+func (l StringArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilStringArrayArrayOptionOptionOption
+}
+func (l IntArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilIntArrayArrayOptionOptionOption
+}
+func (l Int8ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt8ArrayArrayOptionOptionOption
+}
+func (l Int16ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt16ArrayArrayOptionOptionOption
+}
+func (l Int32ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt32ArrayArrayOptionOptionOption
+}
+func (l Int64ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt64ArrayArrayOptionOptionOption
+}
+func (l UintArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUintArrayArrayOptionOptionOption
+}
+func (l Uint8ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint8ArrayArrayOptionOptionOption
+}
+func (l Uint16ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint16ArrayArrayOptionOptionOption
+}
+func (l Uint32ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint32ArrayArrayOptionOptionOption
+}
+func (l Uint64ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint64ArrayArrayOptionOptionOption
+}
+func (l UintptrArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUintptrArrayArrayOptionOptionOption
+}
+func (l ByteArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilByteArrayArrayOptionOptionOption
+}
+func (l RuneArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilRuneArrayArrayOptionOptionOption
+}
+func (l Float32ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilFloat32ArrayArrayOptionOptionOption
+}
+func (l Float64ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilFloat64ArrayArrayOptionOptionOption
+}
+func (l Complex64ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilComplex64ArrayArrayOptionOptionOption
+}
+func (l Complex128ArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilComplex128ArrayArrayOptionOptionOption
+}
+func (l AnyArrayArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilAnyArrayArrayOptionOptionOption
+}
+func (l BoolOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilBoolOptionArrayOptionOptionOption
+}
+func (l StringOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilStringOptionArrayOptionOptionOption
+}
+func (l IntOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilIntOptionArrayOptionOptionOption
+}
+func (l Int8OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt8OptionArrayOptionOptionOption
+}
+func (l Int16OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt16OptionArrayOptionOptionOption
+}
+func (l Int32OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt32OptionArrayOptionOptionOption
+}
+func (l Int64OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilInt64OptionArrayOptionOptionOption
+}
+func (l UintOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUintOptionArrayOptionOptionOption
+}
+func (l Uint8OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint8OptionArrayOptionOptionOption
+}
+func (l Uint16OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint16OptionArrayOptionOptionOption
+}
+func (l Uint32OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint32OptionArrayOptionOptionOption
+}
+func (l Uint64OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUint64OptionArrayOptionOptionOption
+}
+func (l UintptrOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilUintptrOptionArrayOptionOptionOption
+}
+func (l ByteOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilByteOptionArrayOptionOptionOption
+}
+func (l RuneOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilRuneOptionArrayOptionOptionOption
+}
+func (l Float32OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilFloat32OptionArrayOptionOptionOption
+}
+func (l Float64OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilFloat64OptionArrayOptionOptionOption
+}
+func (l Complex64OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilComplex64OptionArrayOptionOptionOption
+}
+func (l Complex128OptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilComplex128OptionArrayOptionOptionOption
+}
+func (l AnyOptionArrayOptionOptionOptionList) IsEmpty() bool {
+	return l == NilAnyOptionArrayOptionOptionOption
+}
+func (l BoolListOptionOptionOptionList) IsEmpty() bool   { return l == NilBoolListOptionOptionOption }
+func (l StringListOptionOptionOptionList) IsEmpty() bool { return l == NilStringListOptionOptionOption }
+func (l IntListOptionOptionOptionList) IsEmpty() bool    { return l == NilIntListOptionOptionOption }
+func (l Int8ListOptionOptionOptionList) IsEmpty() bool   { return l == NilInt8ListOptionOptionOption }
+func (l Int16ListOptionOptionOptionList) IsEmpty() bool  { return l == NilInt16ListOptionOptionOption }
+func (l Int32ListOptionOptionOptionList) IsEmpty() bool  { return l == NilInt32ListOptionOptionOption }
+func (l Int64ListOptionOptionOptionList) IsEmpty() bool  { return l == NilInt64ListOptionOptionOption }
+func (l UintListOptionOptionOptionList) IsEmpty() bool   { return l == NilUintListOptionOptionOption }
+func (l Uint8ListOptionOptionOptionList) IsEmpty() bool  { return l == NilUint8ListOptionOptionOption }
+func (l Uint16ListOptionOptionOptionList) IsEmpty() bool { return l == NilUint16ListOptionOptionOption }
+func (l Uint32ListOptionOptionOptionList) IsEmpty() bool { return l == NilUint32ListOptionOptionOption }
+func (l Uint64ListOptionOptionOptionList) IsEmpty() bool { return l == NilUint64ListOptionOptionOption }
 func (l UintptrListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilUintptrListOptionOptionOptionList
+	return l == NilUintptrListOptionOptionOption
 }
-func (l ByteListOptionOptionOptionList) IsEmpty() bool { return l == NilByteListOptionOptionOptionList }
-func (l RuneListOptionOptionOptionList) IsEmpty() bool { return l == NilRuneListOptionOptionOptionList }
+func (l ByteListOptionOptionOptionList) IsEmpty() bool { return l == NilByteListOptionOptionOption }
+func (l RuneListOptionOptionOptionList) IsEmpty() bool { return l == NilRuneListOptionOptionOption }
 func (l Float32ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat32ListOptionOptionOptionList
+	return l == NilFloat32ListOptionOptionOption
 }
 func (l Float64ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilFloat64ListOptionOptionOptionList
+	return l == NilFloat64ListOptionOptionOption
 }
 func (l Complex64ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex64ListOptionOptionOptionList
+	return l == NilComplex64ListOptionOptionOption
 }
 func (l Complex128ListOptionOptionOptionList) IsEmpty() bool {
-	return l == NilComplex128ListOptionOptionOptionList
+	return l == NilComplex128ListOptionOptionOption
 }
-func (l AnyListOptionOptionOptionList) IsEmpty() bool { return l == NilAnyListOptionOptionOptionList }
-func (l BoolArrList) IsEmpty() bool                   { return l == NilBoolArrList }
-func (l StringArrList) IsEmpty() bool                 { return l == NilStringArrList }
-func (l IntArrList) IsEmpty() bool                    { return l == NilIntArrList }
-func (l Int8ArrList) IsEmpty() bool                   { return l == NilInt8ArrList }
-func (l Int16ArrList) IsEmpty() bool                  { return l == NilInt16ArrList }
-func (l Int32ArrList) IsEmpty() bool                  { return l == NilInt32ArrList }
-func (l Int64ArrList) IsEmpty() bool                  { return l == NilInt64ArrList }
-func (l UintArrList) IsEmpty() bool                   { return l == NilUintArrList }
-func (l Uint8ArrList) IsEmpty() bool                  { return l == NilUint8ArrList }
-func (l Uint16ArrList) IsEmpty() bool                 { return l == NilUint16ArrList }
-func (l Uint32ArrList) IsEmpty() bool                 { return l == NilUint32ArrList }
-func (l Uint64ArrList) IsEmpty() bool                 { return l == NilUint64ArrList }
-func (l UintptrArrList) IsEmpty() bool                { return l == NilUintptrArrList }
-func (l ByteArrList) IsEmpty() bool                   { return l == NilByteArrList }
-func (l RuneArrList) IsEmpty() bool                   { return l == NilRuneArrList }
-func (l Float32ArrList) IsEmpty() bool                { return l == NilFloat32ArrList }
-func (l Float64ArrList) IsEmpty() bool                { return l == NilFloat64ArrList }
-func (l Complex64ArrList) IsEmpty() bool              { return l == NilComplex64ArrList }
-func (l Complex128ArrList) IsEmpty() bool             { return l == NilComplex128ArrList }
-func (l AnyArrList) IsEmpty() bool                    { return l == NilAnyArrList }
-func (l BoolArrArrList) IsEmpty() bool                { return l == NilBoolArrArrList }
-func (l StringArrArrList) IsEmpty() bool              { return l == NilStringArrArrList }
-func (l IntArrArrList) IsEmpty() bool                 { return l == NilIntArrArrList }
-func (l Int8ArrArrList) IsEmpty() bool                { return l == NilInt8ArrArrList }
-func (l Int16ArrArrList) IsEmpty() bool               { return l == NilInt16ArrArrList }
-func (l Int32ArrArrList) IsEmpty() bool               { return l == NilInt32ArrArrList }
-func (l Int64ArrArrList) IsEmpty() bool               { return l == NilInt64ArrArrList }
-func (l UintArrArrList) IsEmpty() bool                { return l == NilUintArrArrList }
-func (l Uint8ArrArrList) IsEmpty() bool               { return l == NilUint8ArrArrList }
-func (l Uint16ArrArrList) IsEmpty() bool              { return l == NilUint16ArrArrList }
-func (l Uint32ArrArrList) IsEmpty() bool              { return l == NilUint32ArrArrList }
-func (l Uint64ArrArrList) IsEmpty() bool              { return l == NilUint64ArrArrList }
-func (l UintptrArrArrList) IsEmpty() bool             { return l == NilUintptrArrArrList }
-func (l ByteArrArrList) IsEmpty() bool                { return l == NilByteArrArrList }
-func (l RuneArrArrList) IsEmpty() bool                { return l == NilRuneArrArrList }
-func (l Float32ArrArrList) IsEmpty() bool             { return l == NilFloat32ArrArrList }
-func (l Float64ArrArrList) IsEmpty() bool             { return l == NilFloat64ArrArrList }
-func (l Complex64ArrArrList) IsEmpty() bool           { return l == NilComplex64ArrArrList }
-func (l Complex128ArrArrList) IsEmpty() bool          { return l == NilComplex128ArrArrList }
-func (l AnyArrArrList) IsEmpty() bool                 { return l == NilAnyArrArrList }
-func (l BoolOptionArrList) IsEmpty() bool             { return l == NilBoolOptionArrList }
-func (l StringOptionArrList) IsEmpty() bool           { return l == NilStringOptionArrList }
-func (l IntOptionArrList) IsEmpty() bool              { return l == NilIntOptionArrList }
-func (l Int8OptionArrList) IsEmpty() bool             { return l == NilInt8OptionArrList }
-func (l Int16OptionArrList) IsEmpty() bool            { return l == NilInt16OptionArrList }
-func (l Int32OptionArrList) IsEmpty() bool            { return l == NilInt32OptionArrList }
-func (l Int64OptionArrList) IsEmpty() bool            { return l == NilInt64OptionArrList }
-func (l UintOptionArrList) IsEmpty() bool             { return l == NilUintOptionArrList }
-func (l Uint8OptionArrList) IsEmpty() bool            { return l == NilUint8OptionArrList }
-func (l Uint16OptionArrList) IsEmpty() bool           { return l == NilUint16OptionArrList }
-func (l Uint32OptionArrList) IsEmpty() bool           { return l == NilUint32OptionArrList }
-func (l Uint64OptionArrList) IsEmpty() bool           { return l == NilUint64OptionArrList }
-func (l UintptrOptionArrList) IsEmpty() bool          { return l == NilUintptrOptionArrList }
-func (l ByteOptionArrList) IsEmpty() bool             { return l == NilByteOptionArrList }
-func (l RuneOptionArrList) IsEmpty() bool             { return l == NilRuneOptionArrList }
-func (l Float32OptionArrList) IsEmpty() bool          { return l == NilFloat32OptionArrList }
-func (l Float64OptionArrList) IsEmpty() bool          { return l == NilFloat64OptionArrList }
-func (l Complex64OptionArrList) IsEmpty() bool        { return l == NilComplex64OptionArrList }
-func (l Complex128OptionArrList) IsEmpty() bool       { return l == NilComplex128OptionArrList }
-func (l AnyOptionArrList) IsEmpty() bool              { return l == NilAnyOptionArrList }
-func (l BoolListList) IsEmpty() bool                  { return l == NilBoolListList }
-func (l StringListList) IsEmpty() bool                { return l == NilStringListList }
-func (l IntListList) IsEmpty() bool                   { return l == NilIntListList }
-func (l Int8ListList) IsEmpty() bool                  { return l == NilInt8ListList }
-func (l Int16ListList) IsEmpty() bool                 { return l == NilInt16ListList }
-func (l Int32ListList) IsEmpty() bool                 { return l == NilInt32ListList }
-func (l Int64ListList) IsEmpty() bool                 { return l == NilInt64ListList }
-func (l UintListList) IsEmpty() bool                  { return l == NilUintListList }
-func (l Uint8ListList) IsEmpty() bool                 { return l == NilUint8ListList }
-func (l Uint16ListList) IsEmpty() bool                { return l == NilUint16ListList }
-func (l Uint32ListList) IsEmpty() bool                { return l == NilUint32ListList }
-func (l Uint64ListList) IsEmpty() bool                { return l == NilUint64ListList }
-func (l UintptrListList) IsEmpty() bool               { return l == NilUintptrListList }
-func (l ByteListList) IsEmpty() bool                  { return l == NilByteListList }
-func (l RuneListList) IsEmpty() bool                  { return l == NilRuneListList }
-func (l Float32ListList) IsEmpty() bool               { return l == NilFloat32ListList }
-func (l Float64ListList) IsEmpty() bool               { return l == NilFloat64ListList }
-func (l Complex64ListList) IsEmpty() bool             { return l == NilComplex64ListList }
-func (l Complex128ListList) IsEmpty() bool            { return l == NilComplex128ListList }
-func (l AnyListList) IsEmpty() bool                   { return l == NilAnyListList }
+func (l AnyListOptionOptionOptionList) IsEmpty() bool { return l == NilAnyListOptionOptionOption }
+func (l BoolArrayList) IsEmpty() bool                 { return l == NilBoolArray }
+func (l StringArrayList) IsEmpty() bool               { return l == NilStringArray }
+func (l IntArrayList) IsEmpty() bool                  { return l == NilIntArray }
+func (l Int8ArrayList) IsEmpty() bool                 { return l == NilInt8Array }
+func (l Int16ArrayList) IsEmpty() bool                { return l == NilInt16Array }
+func (l Int32ArrayList) IsEmpty() bool                { return l == NilInt32Array }
+func (l Int64ArrayList) IsEmpty() bool                { return l == NilInt64Array }
+func (l UintArrayList) IsEmpty() bool                 { return l == NilUintArray }
+func (l Uint8ArrayList) IsEmpty() bool                { return l == NilUint8Array }
+func (l Uint16ArrayList) IsEmpty() bool               { return l == NilUint16Array }
+func (l Uint32ArrayList) IsEmpty() bool               { return l == NilUint32Array }
+func (l Uint64ArrayList) IsEmpty() bool               { return l == NilUint64Array }
+func (l UintptrArrayList) IsEmpty() bool              { return l == NilUintptrArray }
+func (l ByteArrayList) IsEmpty() bool                 { return l == NilByteArray }
+func (l RuneArrayList) IsEmpty() bool                 { return l == NilRuneArray }
+func (l Float32ArrayList) IsEmpty() bool              { return l == NilFloat32Array }
+func (l Float64ArrayList) IsEmpty() bool              { return l == NilFloat64Array }
+func (l Complex64ArrayList) IsEmpty() bool            { return l == NilComplex64Array }
+func (l Complex128ArrayList) IsEmpty() bool           { return l == NilComplex128Array }
+func (l AnyArrayList) IsEmpty() bool                  { return l == NilAnyArray }
+func (l BoolArrayArrayList) IsEmpty() bool            { return l == NilBoolArrayArray }
+func (l StringArrayArrayList) IsEmpty() bool          { return l == NilStringArrayArray }
+func (l IntArrayArrayList) IsEmpty() bool             { return l == NilIntArrayArray }
+func (l Int8ArrayArrayList) IsEmpty() bool            { return l == NilInt8ArrayArray }
+func (l Int16ArrayArrayList) IsEmpty() bool           { return l == NilInt16ArrayArray }
+func (l Int32ArrayArrayList) IsEmpty() bool           { return l == NilInt32ArrayArray }
+func (l Int64ArrayArrayList) IsEmpty() bool           { return l == NilInt64ArrayArray }
+func (l UintArrayArrayList) IsEmpty() bool            { return l == NilUintArrayArray }
+func (l Uint8ArrayArrayList) IsEmpty() bool           { return l == NilUint8ArrayArray }
+func (l Uint16ArrayArrayList) IsEmpty() bool          { return l == NilUint16ArrayArray }
+func (l Uint32ArrayArrayList) IsEmpty() bool          { return l == NilUint32ArrayArray }
+func (l Uint64ArrayArrayList) IsEmpty() bool          { return l == NilUint64ArrayArray }
+func (l UintptrArrayArrayList) IsEmpty() bool         { return l == NilUintptrArrayArray }
+func (l ByteArrayArrayList) IsEmpty() bool            { return l == NilByteArrayArray }
+func (l RuneArrayArrayList) IsEmpty() bool            { return l == NilRuneArrayArray }
+func (l Float32ArrayArrayList) IsEmpty() bool         { return l == NilFloat32ArrayArray }
+func (l Float64ArrayArrayList) IsEmpty() bool         { return l == NilFloat64ArrayArray }
+func (l Complex64ArrayArrayList) IsEmpty() bool       { return l == NilComplex64ArrayArray }
+func (l Complex128ArrayArrayList) IsEmpty() bool      { return l == NilComplex128ArrayArray }
+func (l AnyArrayArrayList) IsEmpty() bool             { return l == NilAnyArrayArray }
+func (l BoolOptionArrayList) IsEmpty() bool           { return l == NilBoolOptionArray }
+func (l StringOptionArrayList) IsEmpty() bool         { return l == NilStringOptionArray }
+func (l IntOptionArrayList) IsEmpty() bool            { return l == NilIntOptionArray }
+func (l Int8OptionArrayList) IsEmpty() bool           { return l == NilInt8OptionArray }
+func (l Int16OptionArrayList) IsEmpty() bool          { return l == NilInt16OptionArray }
+func (l Int32OptionArrayList) IsEmpty() bool          { return l == NilInt32OptionArray }
+func (l Int64OptionArrayList) IsEmpty() bool          { return l == NilInt64OptionArray }
+func (l UintOptionArrayList) IsEmpty() bool           { return l == NilUintOptionArray }
+func (l Uint8OptionArrayList) IsEmpty() bool          { return l == NilUint8OptionArray }
+func (l Uint16OptionArrayList) IsEmpty() bool         { return l == NilUint16OptionArray }
+func (l Uint32OptionArrayList) IsEmpty() bool         { return l == NilUint32OptionArray }
+func (l Uint64OptionArrayList) IsEmpty() bool         { return l == NilUint64OptionArray }
+func (l UintptrOptionArrayList) IsEmpty() bool        { return l == NilUintptrOptionArray }
+func (l ByteOptionArrayList) IsEmpty() bool           { return l == NilByteOptionArray }
+func (l RuneOptionArrayList) IsEmpty() bool           { return l == NilRuneOptionArray }
+func (l Float32OptionArrayList) IsEmpty() bool        { return l == NilFloat32OptionArray }
+func (l Float64OptionArrayList) IsEmpty() bool        { return l == NilFloat64OptionArray }
+func (l Complex64OptionArrayList) IsEmpty() bool      { return l == NilComplex64OptionArray }
+func (l Complex128OptionArrayList) IsEmpty() bool     { return l == NilComplex128OptionArray }
+func (l AnyOptionArrayList) IsEmpty() bool            { return l == NilAnyOptionArray }
+func (l BoolListList) IsEmpty() bool                  { return l == NilBoolList }
+func (l StringListList) IsEmpty() bool                { return l == NilStringList }
+func (l IntListList) IsEmpty() bool                   { return l == NilIntList }
+func (l Int8ListList) IsEmpty() bool                  { return l == NilInt8List }
+func (l Int16ListList) IsEmpty() bool                 { return l == NilInt16List }
+func (l Int32ListList) IsEmpty() bool                 { return l == NilInt32List }
+func (l Int64ListList) IsEmpty() bool                 { return l == NilInt64List }
+func (l UintListList) IsEmpty() bool                  { return l == NilUintList }
+func (l Uint8ListList) IsEmpty() bool                 { return l == NilUint8List }
+func (l Uint16ListList) IsEmpty() bool                { return l == NilUint16List }
+func (l Uint32ListList) IsEmpty() bool                { return l == NilUint32List }
+func (l Uint64ListList) IsEmpty() bool                { return l == NilUint64List }
+func (l UintptrListList) IsEmpty() bool               { return l == NilUintptrList }
+func (l ByteListList) IsEmpty() bool                  { return l == NilByteList }
+func (l RuneListList) IsEmpty() bool                  { return l == NilRuneList }
+func (l Float32ListList) IsEmpty() bool               { return l == NilFloat32List }
+func (l Float64ListList) IsEmpty() bool               { return l == NilFloat64List }
+func (l Complex64ListList) IsEmpty() bool             { return l == NilComplex64List }
+func (l Complex128ListList) IsEmpty() bool            { return l == NilComplex128List }
+func (l AnyListList) IsEmpty() bool                   { return l == NilAnyList }

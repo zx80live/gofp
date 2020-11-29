@@ -7,1259 +7,1259 @@ func (l BoolList) HeadOption() BoolOption {
 	if l.NonEmpty() {
 		return Bool(*l.head)
 	} else {
-		return NoneBoolOption
+		return NoneBool
 	}
 }
 func (l StringList) HeadOption() StringOption {
 	if l.NonEmpty() {
 		return String(*l.head)
 	} else {
-		return NoneStringOption
+		return NoneString
 	}
 }
 func (l IntList) HeadOption() IntOption {
 	if l.NonEmpty() {
 		return Int(*l.head)
 	} else {
-		return NoneIntOption
+		return NoneInt
 	}
 }
 func (l Int8List) HeadOption() Int8Option {
 	if l.NonEmpty() {
 		return Int8(*l.head)
 	} else {
-		return NoneInt8Option
+		return NoneInt8
 	}
 }
 func (l Int16List) HeadOption() Int16Option {
 	if l.NonEmpty() {
 		return Int16(*l.head)
 	} else {
-		return NoneInt16Option
+		return NoneInt16
 	}
 }
 func (l Int32List) HeadOption() Int32Option {
 	if l.NonEmpty() {
 		return Int32(*l.head)
 	} else {
-		return NoneInt32Option
+		return NoneInt32
 	}
 }
 func (l Int64List) HeadOption() Int64Option {
 	if l.NonEmpty() {
 		return Int64(*l.head)
 	} else {
-		return NoneInt64Option
+		return NoneInt64
 	}
 }
 func (l UintList) HeadOption() UintOption {
 	if l.NonEmpty() {
 		return Uint(*l.head)
 	} else {
-		return NoneUintOption
+		return NoneUint
 	}
 }
 func (l Uint8List) HeadOption() Uint8Option {
 	if l.NonEmpty() {
 		return Uint8(*l.head)
 	} else {
-		return NoneUint8Option
+		return NoneUint8
 	}
 }
 func (l Uint16List) HeadOption() Uint16Option {
 	if l.NonEmpty() {
 		return Uint16(*l.head)
 	} else {
-		return NoneUint16Option
+		return NoneUint16
 	}
 }
 func (l Uint32List) HeadOption() Uint32Option {
 	if l.NonEmpty() {
 		return Uint32(*l.head)
 	} else {
-		return NoneUint32Option
+		return NoneUint32
 	}
 }
 func (l Uint64List) HeadOption() Uint64Option {
 	if l.NonEmpty() {
 		return Uint64(*l.head)
 	} else {
-		return NoneUint64Option
+		return NoneUint64
 	}
 }
 func (l UintptrList) HeadOption() UintptrOption {
 	if l.NonEmpty() {
 		return Uintptr(*l.head)
 	} else {
-		return NoneUintptrOption
+		return NoneUintptr
 	}
 }
 func (l ByteList) HeadOption() ByteOption {
 	if l.NonEmpty() {
 		return Byte(*l.head)
 	} else {
-		return NoneByteOption
+		return NoneByte
 	}
 }
 func (l RuneList) HeadOption() RuneOption {
 	if l.NonEmpty() {
 		return Rune(*l.head)
 	} else {
-		return NoneRuneOption
+		return NoneRune
 	}
 }
 func (l Float32List) HeadOption() Float32Option {
 	if l.NonEmpty() {
 		return Float32(*l.head)
 	} else {
-		return NoneFloat32Option
+		return NoneFloat32
 	}
 }
 func (l Float64List) HeadOption() Float64Option {
 	if l.NonEmpty() {
 		return Float64(*l.head)
 	} else {
-		return NoneFloat64Option
+		return NoneFloat64
 	}
 }
 func (l Complex64List) HeadOption() Complex64Option {
 	if l.NonEmpty() {
 		return Complex64(*l.head)
 	} else {
-		return NoneComplex64Option
+		return NoneComplex64
 	}
 }
 func (l Complex128List) HeadOption() Complex128Option {
 	if l.NonEmpty() {
 		return Complex128(*l.head)
 	} else {
-		return NoneComplex128Option
+		return NoneComplex128
 	}
 }
 func (l AnyList) HeadOption() AnyOption {
 	if l.NonEmpty() {
 		return AnyOpt(*l.head)
 	} else {
-		return NoneAnyOption
+		return NoneAny
 	}
 }
 func (l BoolOptionList) HeadOption() BoolOptionOption {
 	if l.NonEmpty() {
-		return BoolBool(*l.head)
+		return BoolBoolOption(*l.head)
 	} else {
-		return NoneBoolOptionOption
+		return NoneBoolOption
 	}
 }
 func (l StringOptionList) HeadOption() StringOptionOption {
 	if l.NonEmpty() {
-		return StringString(*l.head)
+		return StringStringOption(*l.head)
 	} else {
-		return NoneStringOptionOption
+		return NoneStringOption
 	}
 }
 func (l IntOptionList) HeadOption() IntOptionOption {
 	if l.NonEmpty() {
-		return IntInt(*l.head)
+		return IntIntOption(*l.head)
 	} else {
-		return NoneIntOptionOption
+		return NoneIntOption
 	}
 }
 func (l Int8OptionList) HeadOption() Int8OptionOption {
 	if l.NonEmpty() {
-		return Int8Int8(*l.head)
+		return Int8Int8Option(*l.head)
 	} else {
-		return NoneInt8OptionOption
+		return NoneInt8Option
 	}
 }
 func (l Int16OptionList) HeadOption() Int16OptionOption {
 	if l.NonEmpty() {
-		return Int16Int16(*l.head)
+		return Int16Int16Option(*l.head)
 	} else {
-		return NoneInt16OptionOption
+		return NoneInt16Option
 	}
 }
 func (l Int32OptionList) HeadOption() Int32OptionOption {
 	if l.NonEmpty() {
-		return Int32Int32(*l.head)
+		return Int32Int32Option(*l.head)
 	} else {
-		return NoneInt32OptionOption
+		return NoneInt32Option
 	}
 }
 func (l Int64OptionList) HeadOption() Int64OptionOption {
 	if l.NonEmpty() {
-		return Int64Int64(*l.head)
+		return Int64Int64Option(*l.head)
 	} else {
-		return NoneInt64OptionOption
+		return NoneInt64Option
 	}
 }
 func (l UintOptionList) HeadOption() UintOptionOption {
 	if l.NonEmpty() {
-		return UintUint(*l.head)
+		return UintUintOption(*l.head)
 	} else {
-		return NoneUintOptionOption
+		return NoneUintOption
 	}
 }
 func (l Uint8OptionList) HeadOption() Uint8OptionOption {
 	if l.NonEmpty() {
-		return Uint8Uint8(*l.head)
+		return Uint8Uint8Option(*l.head)
 	} else {
-		return NoneUint8OptionOption
+		return NoneUint8Option
 	}
 }
 func (l Uint16OptionList) HeadOption() Uint16OptionOption {
 	if l.NonEmpty() {
-		return Uint16Uint16(*l.head)
+		return Uint16Uint16Option(*l.head)
 	} else {
-		return NoneUint16OptionOption
+		return NoneUint16Option
 	}
 }
 func (l Uint32OptionList) HeadOption() Uint32OptionOption {
 	if l.NonEmpty() {
-		return Uint32Uint32(*l.head)
+		return Uint32Uint32Option(*l.head)
 	} else {
-		return NoneUint32OptionOption
+		return NoneUint32Option
 	}
 }
 func (l Uint64OptionList) HeadOption() Uint64OptionOption {
 	if l.NonEmpty() {
-		return Uint64Uint64(*l.head)
+		return Uint64Uint64Option(*l.head)
 	} else {
-		return NoneUint64OptionOption
+		return NoneUint64Option
 	}
 }
 func (l UintptrOptionList) HeadOption() UintptrOptionOption {
 	if l.NonEmpty() {
-		return UintptrUintptr(*l.head)
+		return UintptrUintptrOption(*l.head)
 	} else {
-		return NoneUintptrOptionOption
+		return NoneUintptrOption
 	}
 }
 func (l ByteOptionList) HeadOption() ByteOptionOption {
 	if l.NonEmpty() {
-		return ByteByte(*l.head)
+		return ByteByteOption(*l.head)
 	} else {
-		return NoneByteOptionOption
+		return NoneByteOption
 	}
 }
 func (l RuneOptionList) HeadOption() RuneOptionOption {
 	if l.NonEmpty() {
-		return RuneRune(*l.head)
+		return RuneRuneOption(*l.head)
 	} else {
-		return NoneRuneOptionOption
+		return NoneRuneOption
 	}
 }
 func (l Float32OptionList) HeadOption() Float32OptionOption {
 	if l.NonEmpty() {
-		return Float32Float32(*l.head)
+		return Float32Float32Option(*l.head)
 	} else {
-		return NoneFloat32OptionOption
+		return NoneFloat32Option
 	}
 }
 func (l Float64OptionList) HeadOption() Float64OptionOption {
 	if l.NonEmpty() {
-		return Float64Float64(*l.head)
+		return Float64Float64Option(*l.head)
 	} else {
-		return NoneFloat64OptionOption
+		return NoneFloat64Option
 	}
 }
 func (l Complex64OptionList) HeadOption() Complex64OptionOption {
 	if l.NonEmpty() {
-		return Complex64Complex64(*l.head)
+		return Complex64Complex64Option(*l.head)
 	} else {
-		return NoneComplex64OptionOption
+		return NoneComplex64Option
 	}
 }
 func (l Complex128OptionList) HeadOption() Complex128OptionOption {
 	if l.NonEmpty() {
-		return Complex128Complex128(*l.head)
+		return Complex128Complex128Option(*l.head)
 	} else {
-		return NoneComplex128OptionOption
+		return NoneComplex128Option
 	}
 }
 func (l AnyOptionList) HeadOption() AnyOptionOption {
 	if l.NonEmpty() {
-		return AnyOptAny(*l.head)
+		return AnyOptAnyOption(*l.head)
 	} else {
-		return NoneAnyOptionOption
+		return NoneAnyOption
 	}
 }
-func (l BoolArrOptionList) HeadOption() BoolArrOptionOption {
+func (l BoolArrayOptionList) HeadOption() BoolArrayOptionOption {
 	if l.NonEmpty() {
-		return BoolArrOptBool(*l.head)
+		return BoolArrayOptBoolArray(*l.head)
 	} else {
-		return NoneBoolArrOptionOption
+		return NoneBoolArrayOption
 	}
 }
-func (l StringArrOptionList) HeadOption() StringArrOptionOption {
+func (l StringArrayOptionList) HeadOption() StringArrayOptionOption {
 	if l.NonEmpty() {
-		return StringArrOptString(*l.head)
+		return StringArrayOptStringArray(*l.head)
 	} else {
-		return NoneStringArrOptionOption
+		return NoneStringArrayOption
 	}
 }
-func (l IntArrOptionList) HeadOption() IntArrOptionOption {
+func (l IntArrayOptionList) HeadOption() IntArrayOptionOption {
 	if l.NonEmpty() {
-		return IntArrOptInt(*l.head)
+		return IntArrayOptIntArray(*l.head)
 	} else {
-		return NoneIntArrOptionOption
+		return NoneIntArrayOption
 	}
 }
-func (l Int8ArrOptionList) HeadOption() Int8ArrOptionOption {
+func (l Int8ArrayOptionList) HeadOption() Int8ArrayOptionOption {
 	if l.NonEmpty() {
-		return Int8ArrOptInt8(*l.head)
+		return Int8ArrayOptInt8Array(*l.head)
 	} else {
-		return NoneInt8ArrOptionOption
+		return NoneInt8ArrayOption
 	}
 }
-func (l Int16ArrOptionList) HeadOption() Int16ArrOptionOption {
+func (l Int16ArrayOptionList) HeadOption() Int16ArrayOptionOption {
 	if l.NonEmpty() {
-		return Int16ArrOptInt16(*l.head)
+		return Int16ArrayOptInt16Array(*l.head)
 	} else {
-		return NoneInt16ArrOptionOption
+		return NoneInt16ArrayOption
 	}
 }
-func (l Int32ArrOptionList) HeadOption() Int32ArrOptionOption {
+func (l Int32ArrayOptionList) HeadOption() Int32ArrayOptionOption {
 	if l.NonEmpty() {
-		return Int32ArrOptInt32(*l.head)
+		return Int32ArrayOptInt32Array(*l.head)
 	} else {
-		return NoneInt32ArrOptionOption
+		return NoneInt32ArrayOption
 	}
 }
-func (l Int64ArrOptionList) HeadOption() Int64ArrOptionOption {
+func (l Int64ArrayOptionList) HeadOption() Int64ArrayOptionOption {
 	if l.NonEmpty() {
-		return Int64ArrOptInt64(*l.head)
+		return Int64ArrayOptInt64Array(*l.head)
 	} else {
-		return NoneInt64ArrOptionOption
+		return NoneInt64ArrayOption
 	}
 }
-func (l UintArrOptionList) HeadOption() UintArrOptionOption {
+func (l UintArrayOptionList) HeadOption() UintArrayOptionOption {
 	if l.NonEmpty() {
-		return UintArrOptUint(*l.head)
+		return UintArrayOptUintArray(*l.head)
 	} else {
-		return NoneUintArrOptionOption
+		return NoneUintArrayOption
 	}
 }
-func (l Uint8ArrOptionList) HeadOption() Uint8ArrOptionOption {
+func (l Uint8ArrayOptionList) HeadOption() Uint8ArrayOptionOption {
 	if l.NonEmpty() {
-		return Uint8ArrOptUint8(*l.head)
+		return Uint8ArrayOptUint8Array(*l.head)
 	} else {
-		return NoneUint8ArrOptionOption
+		return NoneUint8ArrayOption
 	}
 }
-func (l Uint16ArrOptionList) HeadOption() Uint16ArrOptionOption {
+func (l Uint16ArrayOptionList) HeadOption() Uint16ArrayOptionOption {
 	if l.NonEmpty() {
-		return Uint16ArrOptUint16(*l.head)
+		return Uint16ArrayOptUint16Array(*l.head)
 	} else {
-		return NoneUint16ArrOptionOption
+		return NoneUint16ArrayOption
 	}
 }
-func (l Uint32ArrOptionList) HeadOption() Uint32ArrOptionOption {
+func (l Uint32ArrayOptionList) HeadOption() Uint32ArrayOptionOption {
 	if l.NonEmpty() {
-		return Uint32ArrOptUint32(*l.head)
+		return Uint32ArrayOptUint32Array(*l.head)
 	} else {
-		return NoneUint32ArrOptionOption
+		return NoneUint32ArrayOption
 	}
 }
-func (l Uint64ArrOptionList) HeadOption() Uint64ArrOptionOption {
+func (l Uint64ArrayOptionList) HeadOption() Uint64ArrayOptionOption {
 	if l.NonEmpty() {
-		return Uint64ArrOptUint64(*l.head)
+		return Uint64ArrayOptUint64Array(*l.head)
 	} else {
-		return NoneUint64ArrOptionOption
+		return NoneUint64ArrayOption
 	}
 }
-func (l UintptrArrOptionList) HeadOption() UintptrArrOptionOption {
+func (l UintptrArrayOptionList) HeadOption() UintptrArrayOptionOption {
 	if l.NonEmpty() {
-		return UintptrArrOptUintptr(*l.head)
+		return UintptrArrayOptUintptrArray(*l.head)
 	} else {
-		return NoneUintptrArrOptionOption
+		return NoneUintptrArrayOption
 	}
 }
-func (l ByteArrOptionList) HeadOption() ByteArrOptionOption {
+func (l ByteArrayOptionList) HeadOption() ByteArrayOptionOption {
 	if l.NonEmpty() {
-		return ByteArrOptByte(*l.head)
+		return ByteArrayOptByteArray(*l.head)
 	} else {
-		return NoneByteArrOptionOption
+		return NoneByteArrayOption
 	}
 }
-func (l RuneArrOptionList) HeadOption() RuneArrOptionOption {
+func (l RuneArrayOptionList) HeadOption() RuneArrayOptionOption {
 	if l.NonEmpty() {
-		return RuneArrOptRune(*l.head)
+		return RuneArrayOptRuneArray(*l.head)
 	} else {
-		return NoneRuneArrOptionOption
+		return NoneRuneArrayOption
 	}
 }
-func (l Float32ArrOptionList) HeadOption() Float32ArrOptionOption {
+func (l Float32ArrayOptionList) HeadOption() Float32ArrayOptionOption {
 	if l.NonEmpty() {
-		return Float32ArrOptFloat32(*l.head)
+		return Float32ArrayOptFloat32Array(*l.head)
 	} else {
-		return NoneFloat32ArrOptionOption
+		return NoneFloat32ArrayOption
 	}
 }
-func (l Float64ArrOptionList) HeadOption() Float64ArrOptionOption {
+func (l Float64ArrayOptionList) HeadOption() Float64ArrayOptionOption {
 	if l.NonEmpty() {
-		return Float64ArrOptFloat64(*l.head)
+		return Float64ArrayOptFloat64Array(*l.head)
 	} else {
-		return NoneFloat64ArrOptionOption
+		return NoneFloat64ArrayOption
 	}
 }
-func (l Complex64ArrOptionList) HeadOption() Complex64ArrOptionOption {
+func (l Complex64ArrayOptionList) HeadOption() Complex64ArrayOptionOption {
 	if l.NonEmpty() {
-		return Complex64ArrOptComplex64(*l.head)
+		return Complex64ArrayOptComplex64Array(*l.head)
 	} else {
-		return NoneComplex64ArrOptionOption
+		return NoneComplex64ArrayOption
 	}
 }
-func (l Complex128ArrOptionList) HeadOption() Complex128ArrOptionOption {
+func (l Complex128ArrayOptionList) HeadOption() Complex128ArrayOptionOption {
 	if l.NonEmpty() {
-		return Complex128ArrOptComplex128(*l.head)
+		return Complex128ArrayOptComplex128Array(*l.head)
 	} else {
-		return NoneComplex128ArrOptionOption
+		return NoneComplex128ArrayOption
 	}
 }
-func (l AnyArrOptionList) HeadOption() AnyArrOptionOption {
+func (l AnyArrayOptionList) HeadOption() AnyArrayOptionOption {
 	if l.NonEmpty() {
-		return AnyArrOptAny(*l.head)
+		return AnyArrayOptAnyArray(*l.head)
 	} else {
-		return NoneAnyArrOptionOption
+		return NoneAnyArrayOption
 	}
 }
 func (l BoolListOptionList) HeadOption() BoolListOptionOption {
 	if l.NonEmpty() {
-		return BoolListOptBool(*l.head)
+		return BoolListOptBoolList(*l.head)
 	} else {
-		return NoneBoolListOptionOption
+		return NoneBoolListOption
 	}
 }
 func (l StringListOptionList) HeadOption() StringListOptionOption {
 	if l.NonEmpty() {
-		return StringListOptString(*l.head)
+		return StringListOptStringList(*l.head)
 	} else {
-		return NoneStringListOptionOption
+		return NoneStringListOption
 	}
 }
 func (l IntListOptionList) HeadOption() IntListOptionOption {
 	if l.NonEmpty() {
-		return IntListOptInt(*l.head)
+		return IntListOptIntList(*l.head)
 	} else {
-		return NoneIntListOptionOption
+		return NoneIntListOption
 	}
 }
 func (l Int8ListOptionList) HeadOption() Int8ListOptionOption {
 	if l.NonEmpty() {
-		return Int8ListOptInt8(*l.head)
+		return Int8ListOptInt8List(*l.head)
 	} else {
-		return NoneInt8ListOptionOption
+		return NoneInt8ListOption
 	}
 }
 func (l Int16ListOptionList) HeadOption() Int16ListOptionOption {
 	if l.NonEmpty() {
-		return Int16ListOptInt16(*l.head)
+		return Int16ListOptInt16List(*l.head)
 	} else {
-		return NoneInt16ListOptionOption
+		return NoneInt16ListOption
 	}
 }
 func (l Int32ListOptionList) HeadOption() Int32ListOptionOption {
 	if l.NonEmpty() {
-		return Int32ListOptInt32(*l.head)
+		return Int32ListOptInt32List(*l.head)
 	} else {
-		return NoneInt32ListOptionOption
+		return NoneInt32ListOption
 	}
 }
 func (l Int64ListOptionList) HeadOption() Int64ListOptionOption {
 	if l.NonEmpty() {
-		return Int64ListOptInt64(*l.head)
+		return Int64ListOptInt64List(*l.head)
 	} else {
-		return NoneInt64ListOptionOption
+		return NoneInt64ListOption
 	}
 }
 func (l UintListOptionList) HeadOption() UintListOptionOption {
 	if l.NonEmpty() {
-		return UintListOptUint(*l.head)
+		return UintListOptUintList(*l.head)
 	} else {
-		return NoneUintListOptionOption
+		return NoneUintListOption
 	}
 }
 func (l Uint8ListOptionList) HeadOption() Uint8ListOptionOption {
 	if l.NonEmpty() {
-		return Uint8ListOptUint8(*l.head)
+		return Uint8ListOptUint8List(*l.head)
 	} else {
-		return NoneUint8ListOptionOption
+		return NoneUint8ListOption
 	}
 }
 func (l Uint16ListOptionList) HeadOption() Uint16ListOptionOption {
 	if l.NonEmpty() {
-		return Uint16ListOptUint16(*l.head)
+		return Uint16ListOptUint16List(*l.head)
 	} else {
-		return NoneUint16ListOptionOption
+		return NoneUint16ListOption
 	}
 }
 func (l Uint32ListOptionList) HeadOption() Uint32ListOptionOption {
 	if l.NonEmpty() {
-		return Uint32ListOptUint32(*l.head)
+		return Uint32ListOptUint32List(*l.head)
 	} else {
-		return NoneUint32ListOptionOption
+		return NoneUint32ListOption
 	}
 }
 func (l Uint64ListOptionList) HeadOption() Uint64ListOptionOption {
 	if l.NonEmpty() {
-		return Uint64ListOptUint64(*l.head)
+		return Uint64ListOptUint64List(*l.head)
 	} else {
-		return NoneUint64ListOptionOption
+		return NoneUint64ListOption
 	}
 }
 func (l UintptrListOptionList) HeadOption() UintptrListOptionOption {
 	if l.NonEmpty() {
-		return UintptrListOptUintptr(*l.head)
+		return UintptrListOptUintptrList(*l.head)
 	} else {
-		return NoneUintptrListOptionOption
+		return NoneUintptrListOption
 	}
 }
 func (l ByteListOptionList) HeadOption() ByteListOptionOption {
 	if l.NonEmpty() {
-		return ByteListOptByte(*l.head)
+		return ByteListOptByteList(*l.head)
 	} else {
-		return NoneByteListOptionOption
+		return NoneByteListOption
 	}
 }
 func (l RuneListOptionList) HeadOption() RuneListOptionOption {
 	if l.NonEmpty() {
-		return RuneListOptRune(*l.head)
+		return RuneListOptRuneList(*l.head)
 	} else {
-		return NoneRuneListOptionOption
+		return NoneRuneListOption
 	}
 }
 func (l Float32ListOptionList) HeadOption() Float32ListOptionOption {
 	if l.NonEmpty() {
-		return Float32ListOptFloat32(*l.head)
+		return Float32ListOptFloat32List(*l.head)
 	} else {
-		return NoneFloat32ListOptionOption
+		return NoneFloat32ListOption
 	}
 }
 func (l Float64ListOptionList) HeadOption() Float64ListOptionOption {
 	if l.NonEmpty() {
-		return Float64ListOptFloat64(*l.head)
+		return Float64ListOptFloat64List(*l.head)
 	} else {
-		return NoneFloat64ListOptionOption
+		return NoneFloat64ListOption
 	}
 }
 func (l Complex64ListOptionList) HeadOption() Complex64ListOptionOption {
 	if l.NonEmpty() {
-		return Complex64ListOptComplex64(*l.head)
+		return Complex64ListOptComplex64List(*l.head)
 	} else {
-		return NoneComplex64ListOptionOption
+		return NoneComplex64ListOption
 	}
 }
 func (l Complex128ListOptionList) HeadOption() Complex128ListOptionOption {
 	if l.NonEmpty() {
-		return Complex128ListOptComplex128(*l.head)
+		return Complex128ListOptComplex128List(*l.head)
 	} else {
-		return NoneComplex128ListOptionOption
+		return NoneComplex128ListOption
 	}
 }
 func (l AnyListOptionList) HeadOption() AnyListOptionOption {
 	if l.NonEmpty() {
-		return AnyListOptAny(*l.head)
+		return AnyListOptAnyList(*l.head)
 	} else {
-		return NoneAnyListOptionOption
+		return NoneAnyListOption
 	}
 }
 func (l BoolOptionOptionList) HeadOption() BoolOptionOptionOption {
 	if l.NonEmpty() {
-		return BoolBoolBool(*l.head)
+		return BoolBoolOptionBoolOption(*l.head)
 	} else {
-		return NoneBoolOptionOptionOption
+		return NoneBoolOptionOption
 	}
 }
 func (l StringOptionOptionList) HeadOption() StringOptionOptionOption {
 	if l.NonEmpty() {
-		return StringStringString(*l.head)
+		return StringStringOptionStringOption(*l.head)
 	} else {
-		return NoneStringOptionOptionOption
+		return NoneStringOptionOption
 	}
 }
 func (l IntOptionOptionList) HeadOption() IntOptionOptionOption {
 	if l.NonEmpty() {
-		return IntIntInt(*l.head)
+		return IntIntOptionIntOption(*l.head)
 	} else {
-		return NoneIntOptionOptionOption
+		return NoneIntOptionOption
 	}
 }
 func (l Int8OptionOptionList) HeadOption() Int8OptionOptionOption {
 	if l.NonEmpty() {
-		return Int8Int8Int8(*l.head)
+		return Int8Int8OptionInt8Option(*l.head)
 	} else {
-		return NoneInt8OptionOptionOption
+		return NoneInt8OptionOption
 	}
 }
 func (l Int16OptionOptionList) HeadOption() Int16OptionOptionOption {
 	if l.NonEmpty() {
-		return Int16Int16Int16(*l.head)
+		return Int16Int16OptionInt16Option(*l.head)
 	} else {
-		return NoneInt16OptionOptionOption
+		return NoneInt16OptionOption
 	}
 }
 func (l Int32OptionOptionList) HeadOption() Int32OptionOptionOption {
 	if l.NonEmpty() {
-		return Int32Int32Int32(*l.head)
+		return Int32Int32OptionInt32Option(*l.head)
 	} else {
-		return NoneInt32OptionOptionOption
+		return NoneInt32OptionOption
 	}
 }
 func (l Int64OptionOptionList) HeadOption() Int64OptionOptionOption {
 	if l.NonEmpty() {
-		return Int64Int64Int64(*l.head)
+		return Int64Int64OptionInt64Option(*l.head)
 	} else {
-		return NoneInt64OptionOptionOption
+		return NoneInt64OptionOption
 	}
 }
 func (l UintOptionOptionList) HeadOption() UintOptionOptionOption {
 	if l.NonEmpty() {
-		return UintUintUint(*l.head)
+		return UintUintOptionUintOption(*l.head)
 	} else {
-		return NoneUintOptionOptionOption
+		return NoneUintOptionOption
 	}
 }
 func (l Uint8OptionOptionList) HeadOption() Uint8OptionOptionOption {
 	if l.NonEmpty() {
-		return Uint8Uint8Uint8(*l.head)
+		return Uint8Uint8OptionUint8Option(*l.head)
 	} else {
-		return NoneUint8OptionOptionOption
+		return NoneUint8OptionOption
 	}
 }
 func (l Uint16OptionOptionList) HeadOption() Uint16OptionOptionOption {
 	if l.NonEmpty() {
-		return Uint16Uint16Uint16(*l.head)
+		return Uint16Uint16OptionUint16Option(*l.head)
 	} else {
-		return NoneUint16OptionOptionOption
+		return NoneUint16OptionOption
 	}
 }
 func (l Uint32OptionOptionList) HeadOption() Uint32OptionOptionOption {
 	if l.NonEmpty() {
-		return Uint32Uint32Uint32(*l.head)
+		return Uint32Uint32OptionUint32Option(*l.head)
 	} else {
-		return NoneUint32OptionOptionOption
+		return NoneUint32OptionOption
 	}
 }
 func (l Uint64OptionOptionList) HeadOption() Uint64OptionOptionOption {
 	if l.NonEmpty() {
-		return Uint64Uint64Uint64(*l.head)
+		return Uint64Uint64OptionUint64Option(*l.head)
 	} else {
-		return NoneUint64OptionOptionOption
+		return NoneUint64OptionOption
 	}
 }
 func (l UintptrOptionOptionList) HeadOption() UintptrOptionOptionOption {
 	if l.NonEmpty() {
-		return UintptrUintptrUintptr(*l.head)
+		return UintptrUintptrOptionUintptrOption(*l.head)
 	} else {
-		return NoneUintptrOptionOptionOption
+		return NoneUintptrOptionOption
 	}
 }
 func (l ByteOptionOptionList) HeadOption() ByteOptionOptionOption {
 	if l.NonEmpty() {
-		return ByteByteByte(*l.head)
+		return ByteByteOptionByteOption(*l.head)
 	} else {
-		return NoneByteOptionOptionOption
+		return NoneByteOptionOption
 	}
 }
 func (l RuneOptionOptionList) HeadOption() RuneOptionOptionOption {
 	if l.NonEmpty() {
-		return RuneRuneRune(*l.head)
+		return RuneRuneOptionRuneOption(*l.head)
 	} else {
-		return NoneRuneOptionOptionOption
+		return NoneRuneOptionOption
 	}
 }
 func (l Float32OptionOptionList) HeadOption() Float32OptionOptionOption {
 	if l.NonEmpty() {
-		return Float32Float32Float32(*l.head)
+		return Float32Float32OptionFloat32Option(*l.head)
 	} else {
-		return NoneFloat32OptionOptionOption
+		return NoneFloat32OptionOption
 	}
 }
 func (l Float64OptionOptionList) HeadOption() Float64OptionOptionOption {
 	if l.NonEmpty() {
-		return Float64Float64Float64(*l.head)
+		return Float64Float64OptionFloat64Option(*l.head)
 	} else {
-		return NoneFloat64OptionOptionOption
+		return NoneFloat64OptionOption
 	}
 }
 func (l Complex64OptionOptionList) HeadOption() Complex64OptionOptionOption {
 	if l.NonEmpty() {
-		return Complex64Complex64Complex64(*l.head)
+		return Complex64Complex64OptionComplex64Option(*l.head)
 	} else {
-		return NoneComplex64OptionOptionOption
+		return NoneComplex64OptionOption
 	}
 }
 func (l Complex128OptionOptionList) HeadOption() Complex128OptionOptionOption {
 	if l.NonEmpty() {
-		return Complex128Complex128Complex128(*l.head)
+		return Complex128Complex128OptionComplex128Option(*l.head)
 	} else {
-		return NoneComplex128OptionOptionOption
+		return NoneComplex128OptionOption
 	}
 }
 func (l AnyOptionOptionList) HeadOption() AnyOptionOptionOption {
 	if l.NonEmpty() {
-		return AnyOptAnyAny(*l.head)
+		return AnyOptAnyOptionAnyOption(*l.head)
 	} else {
-		return NoneAnyOptionOptionOption
+		return NoneAnyOptionOption
 	}
 }
-func (l BoolArrList) HeadOption() BoolArrOption {
+func (l BoolArrayList) HeadOption() BoolArrayOption {
 	if l.NonEmpty() {
-		return BoolArrOpt(*l.head)
+		return BoolArrayOpt(*l.head)
 	} else {
-		return NoneBoolArrOption
+		return NoneBoolArray
 	}
 }
-func (l StringArrList) HeadOption() StringArrOption {
+func (l StringArrayList) HeadOption() StringArrayOption {
 	if l.NonEmpty() {
-		return StringArrOpt(*l.head)
+		return StringArrayOpt(*l.head)
 	} else {
-		return NoneStringArrOption
+		return NoneStringArray
 	}
 }
-func (l IntArrList) HeadOption() IntArrOption {
+func (l IntArrayList) HeadOption() IntArrayOption {
 	if l.NonEmpty() {
-		return IntArrOpt(*l.head)
+		return IntArrayOpt(*l.head)
 	} else {
-		return NoneIntArrOption
+		return NoneIntArray
 	}
 }
-func (l Int8ArrList) HeadOption() Int8ArrOption {
+func (l Int8ArrayList) HeadOption() Int8ArrayOption {
 	if l.NonEmpty() {
-		return Int8ArrOpt(*l.head)
+		return Int8ArrayOpt(*l.head)
 	} else {
-		return NoneInt8ArrOption
+		return NoneInt8Array
 	}
 }
-func (l Int16ArrList) HeadOption() Int16ArrOption {
+func (l Int16ArrayList) HeadOption() Int16ArrayOption {
 	if l.NonEmpty() {
-		return Int16ArrOpt(*l.head)
+		return Int16ArrayOpt(*l.head)
 	} else {
-		return NoneInt16ArrOption
+		return NoneInt16Array
 	}
 }
-func (l Int32ArrList) HeadOption() Int32ArrOption {
+func (l Int32ArrayList) HeadOption() Int32ArrayOption {
 	if l.NonEmpty() {
-		return Int32ArrOpt(*l.head)
+		return Int32ArrayOpt(*l.head)
 	} else {
-		return NoneInt32ArrOption
+		return NoneInt32Array
 	}
 }
-func (l Int64ArrList) HeadOption() Int64ArrOption {
+func (l Int64ArrayList) HeadOption() Int64ArrayOption {
 	if l.NonEmpty() {
-		return Int64ArrOpt(*l.head)
+		return Int64ArrayOpt(*l.head)
 	} else {
-		return NoneInt64ArrOption
+		return NoneInt64Array
 	}
 }
-func (l UintArrList) HeadOption() UintArrOption {
+func (l UintArrayList) HeadOption() UintArrayOption {
 	if l.NonEmpty() {
-		return UintArrOpt(*l.head)
+		return UintArrayOpt(*l.head)
 	} else {
-		return NoneUintArrOption
+		return NoneUintArray
 	}
 }
-func (l Uint8ArrList) HeadOption() Uint8ArrOption {
+func (l Uint8ArrayList) HeadOption() Uint8ArrayOption {
 	if l.NonEmpty() {
-		return Uint8ArrOpt(*l.head)
+		return Uint8ArrayOpt(*l.head)
 	} else {
-		return NoneUint8ArrOption
+		return NoneUint8Array
 	}
 }
-func (l Uint16ArrList) HeadOption() Uint16ArrOption {
+func (l Uint16ArrayList) HeadOption() Uint16ArrayOption {
 	if l.NonEmpty() {
-		return Uint16ArrOpt(*l.head)
+		return Uint16ArrayOpt(*l.head)
 	} else {
-		return NoneUint16ArrOption
+		return NoneUint16Array
 	}
 }
-func (l Uint32ArrList) HeadOption() Uint32ArrOption {
+func (l Uint32ArrayList) HeadOption() Uint32ArrayOption {
 	if l.NonEmpty() {
-		return Uint32ArrOpt(*l.head)
+		return Uint32ArrayOpt(*l.head)
 	} else {
-		return NoneUint32ArrOption
+		return NoneUint32Array
 	}
 }
-func (l Uint64ArrList) HeadOption() Uint64ArrOption {
+func (l Uint64ArrayList) HeadOption() Uint64ArrayOption {
 	if l.NonEmpty() {
-		return Uint64ArrOpt(*l.head)
+		return Uint64ArrayOpt(*l.head)
 	} else {
-		return NoneUint64ArrOption
+		return NoneUint64Array
 	}
 }
-func (l UintptrArrList) HeadOption() UintptrArrOption {
+func (l UintptrArrayList) HeadOption() UintptrArrayOption {
 	if l.NonEmpty() {
-		return UintptrArrOpt(*l.head)
+		return UintptrArrayOpt(*l.head)
 	} else {
-		return NoneUintptrArrOption
+		return NoneUintptrArray
 	}
 }
-func (l ByteArrList) HeadOption() ByteArrOption {
+func (l ByteArrayList) HeadOption() ByteArrayOption {
 	if l.NonEmpty() {
-		return ByteArrOpt(*l.head)
+		return ByteArrayOpt(*l.head)
 	} else {
-		return NoneByteArrOption
+		return NoneByteArray
 	}
 }
-func (l RuneArrList) HeadOption() RuneArrOption {
+func (l RuneArrayList) HeadOption() RuneArrayOption {
 	if l.NonEmpty() {
-		return RuneArrOpt(*l.head)
+		return RuneArrayOpt(*l.head)
 	} else {
-		return NoneRuneArrOption
+		return NoneRuneArray
 	}
 }
-func (l Float32ArrList) HeadOption() Float32ArrOption {
+func (l Float32ArrayList) HeadOption() Float32ArrayOption {
 	if l.NonEmpty() {
-		return Float32ArrOpt(*l.head)
+		return Float32ArrayOpt(*l.head)
 	} else {
-		return NoneFloat32ArrOption
+		return NoneFloat32Array
 	}
 }
-func (l Float64ArrList) HeadOption() Float64ArrOption {
+func (l Float64ArrayList) HeadOption() Float64ArrayOption {
 	if l.NonEmpty() {
-		return Float64ArrOpt(*l.head)
+		return Float64ArrayOpt(*l.head)
 	} else {
-		return NoneFloat64ArrOption
+		return NoneFloat64Array
 	}
 }
-func (l Complex64ArrList) HeadOption() Complex64ArrOption {
+func (l Complex64ArrayList) HeadOption() Complex64ArrayOption {
 	if l.NonEmpty() {
-		return Complex64ArrOpt(*l.head)
+		return Complex64ArrayOpt(*l.head)
 	} else {
-		return NoneComplex64ArrOption
+		return NoneComplex64Array
 	}
 }
-func (l Complex128ArrList) HeadOption() Complex128ArrOption {
+func (l Complex128ArrayList) HeadOption() Complex128ArrayOption {
 	if l.NonEmpty() {
-		return Complex128ArrOpt(*l.head)
+		return Complex128ArrayOpt(*l.head)
 	} else {
-		return NoneComplex128ArrOption
+		return NoneComplex128Array
 	}
 }
-func (l AnyArrList) HeadOption() AnyArrOption {
+func (l AnyArrayList) HeadOption() AnyArrayOption {
 	if l.NonEmpty() {
-		return AnyArrOpt(*l.head)
+		return AnyArrayOpt(*l.head)
 	} else {
-		return NoneAnyArrOption
+		return NoneAnyArray
 	}
 }
-func (l BoolArrArrList) HeadOption() BoolArrArrOption {
+func (l BoolArrayArrayList) HeadOption() BoolArrayArrayOption {
 	if l.NonEmpty() {
-		return BoolArrArrOpt(*l.head)
+		return BoolArrayArrayOpt(*l.head)
 	} else {
-		return NoneBoolArrArrOption
+		return NoneBoolArrayArray
 	}
 }
-func (l StringArrArrList) HeadOption() StringArrArrOption {
+func (l StringArrayArrayList) HeadOption() StringArrayArrayOption {
 	if l.NonEmpty() {
-		return StringArrArrOpt(*l.head)
+		return StringArrayArrayOpt(*l.head)
 	} else {
-		return NoneStringArrArrOption
+		return NoneStringArrayArray
 	}
 }
-func (l IntArrArrList) HeadOption() IntArrArrOption {
+func (l IntArrayArrayList) HeadOption() IntArrayArrayOption {
 	if l.NonEmpty() {
-		return IntArrArrOpt(*l.head)
+		return IntArrayArrayOpt(*l.head)
 	} else {
-		return NoneIntArrArrOption
+		return NoneIntArrayArray
 	}
 }
-func (l Int8ArrArrList) HeadOption() Int8ArrArrOption {
+func (l Int8ArrayArrayList) HeadOption() Int8ArrayArrayOption {
 	if l.NonEmpty() {
-		return Int8ArrArrOpt(*l.head)
+		return Int8ArrayArrayOpt(*l.head)
 	} else {
-		return NoneInt8ArrArrOption
+		return NoneInt8ArrayArray
 	}
 }
-func (l Int16ArrArrList) HeadOption() Int16ArrArrOption {
+func (l Int16ArrayArrayList) HeadOption() Int16ArrayArrayOption {
 	if l.NonEmpty() {
-		return Int16ArrArrOpt(*l.head)
+		return Int16ArrayArrayOpt(*l.head)
 	} else {
-		return NoneInt16ArrArrOption
+		return NoneInt16ArrayArray
 	}
 }
-func (l Int32ArrArrList) HeadOption() Int32ArrArrOption {
+func (l Int32ArrayArrayList) HeadOption() Int32ArrayArrayOption {
 	if l.NonEmpty() {
-		return Int32ArrArrOpt(*l.head)
+		return Int32ArrayArrayOpt(*l.head)
 	} else {
-		return NoneInt32ArrArrOption
+		return NoneInt32ArrayArray
 	}
 }
-func (l Int64ArrArrList) HeadOption() Int64ArrArrOption {
+func (l Int64ArrayArrayList) HeadOption() Int64ArrayArrayOption {
 	if l.NonEmpty() {
-		return Int64ArrArrOpt(*l.head)
+		return Int64ArrayArrayOpt(*l.head)
 	} else {
-		return NoneInt64ArrArrOption
+		return NoneInt64ArrayArray
 	}
 }
-func (l UintArrArrList) HeadOption() UintArrArrOption {
+func (l UintArrayArrayList) HeadOption() UintArrayArrayOption {
 	if l.NonEmpty() {
-		return UintArrArrOpt(*l.head)
+		return UintArrayArrayOpt(*l.head)
 	} else {
-		return NoneUintArrArrOption
+		return NoneUintArrayArray
 	}
 }
-func (l Uint8ArrArrList) HeadOption() Uint8ArrArrOption {
+func (l Uint8ArrayArrayList) HeadOption() Uint8ArrayArrayOption {
 	if l.NonEmpty() {
-		return Uint8ArrArrOpt(*l.head)
+		return Uint8ArrayArrayOpt(*l.head)
 	} else {
-		return NoneUint8ArrArrOption
+		return NoneUint8ArrayArray
 	}
 }
-func (l Uint16ArrArrList) HeadOption() Uint16ArrArrOption {
+func (l Uint16ArrayArrayList) HeadOption() Uint16ArrayArrayOption {
 	if l.NonEmpty() {
-		return Uint16ArrArrOpt(*l.head)
+		return Uint16ArrayArrayOpt(*l.head)
 	} else {
-		return NoneUint16ArrArrOption
+		return NoneUint16ArrayArray
 	}
 }
-func (l Uint32ArrArrList) HeadOption() Uint32ArrArrOption {
+func (l Uint32ArrayArrayList) HeadOption() Uint32ArrayArrayOption {
 	if l.NonEmpty() {
-		return Uint32ArrArrOpt(*l.head)
+		return Uint32ArrayArrayOpt(*l.head)
 	} else {
-		return NoneUint32ArrArrOption
+		return NoneUint32ArrayArray
 	}
 }
-func (l Uint64ArrArrList) HeadOption() Uint64ArrArrOption {
+func (l Uint64ArrayArrayList) HeadOption() Uint64ArrayArrayOption {
 	if l.NonEmpty() {
-		return Uint64ArrArrOpt(*l.head)
+		return Uint64ArrayArrayOpt(*l.head)
 	} else {
-		return NoneUint64ArrArrOption
+		return NoneUint64ArrayArray
 	}
 }
-func (l UintptrArrArrList) HeadOption() UintptrArrArrOption {
+func (l UintptrArrayArrayList) HeadOption() UintptrArrayArrayOption {
 	if l.NonEmpty() {
-		return UintptrArrArrOpt(*l.head)
+		return UintptrArrayArrayOpt(*l.head)
 	} else {
-		return NoneUintptrArrArrOption
+		return NoneUintptrArrayArray
 	}
 }
-func (l ByteArrArrList) HeadOption() ByteArrArrOption {
+func (l ByteArrayArrayList) HeadOption() ByteArrayArrayOption {
 	if l.NonEmpty() {
-		return ByteArrArrOpt(*l.head)
+		return ByteArrayArrayOpt(*l.head)
 	} else {
-		return NoneByteArrArrOption
+		return NoneByteArrayArray
 	}
 }
-func (l RuneArrArrList) HeadOption() RuneArrArrOption {
+func (l RuneArrayArrayList) HeadOption() RuneArrayArrayOption {
 	if l.NonEmpty() {
-		return RuneArrArrOpt(*l.head)
+		return RuneArrayArrayOpt(*l.head)
 	} else {
-		return NoneRuneArrArrOption
+		return NoneRuneArrayArray
 	}
 }
-func (l Float32ArrArrList) HeadOption() Float32ArrArrOption {
+func (l Float32ArrayArrayList) HeadOption() Float32ArrayArrayOption {
 	if l.NonEmpty() {
-		return Float32ArrArrOpt(*l.head)
+		return Float32ArrayArrayOpt(*l.head)
 	} else {
-		return NoneFloat32ArrArrOption
+		return NoneFloat32ArrayArray
 	}
 }
-func (l Float64ArrArrList) HeadOption() Float64ArrArrOption {
+func (l Float64ArrayArrayList) HeadOption() Float64ArrayArrayOption {
 	if l.NonEmpty() {
-		return Float64ArrArrOpt(*l.head)
+		return Float64ArrayArrayOpt(*l.head)
 	} else {
-		return NoneFloat64ArrArrOption
+		return NoneFloat64ArrayArray
 	}
 }
-func (l Complex64ArrArrList) HeadOption() Complex64ArrArrOption {
+func (l Complex64ArrayArrayList) HeadOption() Complex64ArrayArrayOption {
 	if l.NonEmpty() {
-		return Complex64ArrArrOpt(*l.head)
+		return Complex64ArrayArrayOpt(*l.head)
 	} else {
-		return NoneComplex64ArrArrOption
+		return NoneComplex64ArrayArray
 	}
 }
-func (l Complex128ArrArrList) HeadOption() Complex128ArrArrOption {
+func (l Complex128ArrayArrayList) HeadOption() Complex128ArrayArrayOption {
 	if l.NonEmpty() {
-		return Complex128ArrArrOpt(*l.head)
+		return Complex128ArrayArrayOpt(*l.head)
 	} else {
-		return NoneComplex128ArrArrOption
+		return NoneComplex128ArrayArray
 	}
 }
-func (l AnyArrArrList) HeadOption() AnyArrArrOption {
+func (l AnyArrayArrayList) HeadOption() AnyArrayArrayOption {
 	if l.NonEmpty() {
-		return AnyArrArrOpt(*l.head)
+		return AnyArrayArrayOpt(*l.head)
 	} else {
-		return NoneAnyArrArrOption
+		return NoneAnyArrayArray
 	}
 }
-func (l BoolOptionArrList) HeadOption() BoolOptionArrOption {
+func (l BoolOptionArrayList) HeadOption() BoolOptionArrayOption {
 	if l.NonEmpty() {
-		return BoolOptionArrOpt(*l.head)
+		return BoolOptionArrayOpt(*l.head)
 	} else {
-		return NoneBoolOptionArrOption
+		return NoneBoolOptionArray
 	}
 }
-func (l StringOptionArrList) HeadOption() StringOptionArrOption {
+func (l StringOptionArrayList) HeadOption() StringOptionArrayOption {
 	if l.NonEmpty() {
-		return StringOptionArrOpt(*l.head)
+		return StringOptionArrayOpt(*l.head)
 	} else {
-		return NoneStringOptionArrOption
+		return NoneStringOptionArray
 	}
 }
-func (l IntOptionArrList) HeadOption() IntOptionArrOption {
+func (l IntOptionArrayList) HeadOption() IntOptionArrayOption {
 	if l.NonEmpty() {
-		return IntOptionArrOpt(*l.head)
+		return IntOptionArrayOpt(*l.head)
 	} else {
-		return NoneIntOptionArrOption
+		return NoneIntOptionArray
 	}
 }
-func (l Int8OptionArrList) HeadOption() Int8OptionArrOption {
+func (l Int8OptionArrayList) HeadOption() Int8OptionArrayOption {
 	if l.NonEmpty() {
-		return Int8OptionArrOpt(*l.head)
+		return Int8OptionArrayOpt(*l.head)
 	} else {
-		return NoneInt8OptionArrOption
+		return NoneInt8OptionArray
 	}
 }
-func (l Int16OptionArrList) HeadOption() Int16OptionArrOption {
+func (l Int16OptionArrayList) HeadOption() Int16OptionArrayOption {
 	if l.NonEmpty() {
-		return Int16OptionArrOpt(*l.head)
+		return Int16OptionArrayOpt(*l.head)
 	} else {
-		return NoneInt16OptionArrOption
+		return NoneInt16OptionArray
 	}
 }
-func (l Int32OptionArrList) HeadOption() Int32OptionArrOption {
+func (l Int32OptionArrayList) HeadOption() Int32OptionArrayOption {
 	if l.NonEmpty() {
-		return Int32OptionArrOpt(*l.head)
+		return Int32OptionArrayOpt(*l.head)
 	} else {
-		return NoneInt32OptionArrOption
+		return NoneInt32OptionArray
 	}
 }
-func (l Int64OptionArrList) HeadOption() Int64OptionArrOption {
+func (l Int64OptionArrayList) HeadOption() Int64OptionArrayOption {
 	if l.NonEmpty() {
-		return Int64OptionArrOpt(*l.head)
+		return Int64OptionArrayOpt(*l.head)
 	} else {
-		return NoneInt64OptionArrOption
+		return NoneInt64OptionArray
 	}
 }
-func (l UintOptionArrList) HeadOption() UintOptionArrOption {
+func (l UintOptionArrayList) HeadOption() UintOptionArrayOption {
 	if l.NonEmpty() {
-		return UintOptionArrOpt(*l.head)
+		return UintOptionArrayOpt(*l.head)
 	} else {
-		return NoneUintOptionArrOption
+		return NoneUintOptionArray
 	}
 }
-func (l Uint8OptionArrList) HeadOption() Uint8OptionArrOption {
+func (l Uint8OptionArrayList) HeadOption() Uint8OptionArrayOption {
 	if l.NonEmpty() {
-		return Uint8OptionArrOpt(*l.head)
+		return Uint8OptionArrayOpt(*l.head)
 	} else {
-		return NoneUint8OptionArrOption
+		return NoneUint8OptionArray
 	}
 }
-func (l Uint16OptionArrList) HeadOption() Uint16OptionArrOption {
+func (l Uint16OptionArrayList) HeadOption() Uint16OptionArrayOption {
 	if l.NonEmpty() {
-		return Uint16OptionArrOpt(*l.head)
+		return Uint16OptionArrayOpt(*l.head)
 	} else {
-		return NoneUint16OptionArrOption
+		return NoneUint16OptionArray
 	}
 }
-func (l Uint32OptionArrList) HeadOption() Uint32OptionArrOption {
+func (l Uint32OptionArrayList) HeadOption() Uint32OptionArrayOption {
 	if l.NonEmpty() {
-		return Uint32OptionArrOpt(*l.head)
+		return Uint32OptionArrayOpt(*l.head)
 	} else {
-		return NoneUint32OptionArrOption
+		return NoneUint32OptionArray
 	}
 }
-func (l Uint64OptionArrList) HeadOption() Uint64OptionArrOption {
+func (l Uint64OptionArrayList) HeadOption() Uint64OptionArrayOption {
 	if l.NonEmpty() {
-		return Uint64OptionArrOpt(*l.head)
+		return Uint64OptionArrayOpt(*l.head)
 	} else {
-		return NoneUint64OptionArrOption
+		return NoneUint64OptionArray
 	}
 }
-func (l UintptrOptionArrList) HeadOption() UintptrOptionArrOption {
+func (l UintptrOptionArrayList) HeadOption() UintptrOptionArrayOption {
 	if l.NonEmpty() {
-		return UintptrOptionArrOpt(*l.head)
+		return UintptrOptionArrayOpt(*l.head)
 	} else {
-		return NoneUintptrOptionArrOption
+		return NoneUintptrOptionArray
 	}
 }
-func (l ByteOptionArrList) HeadOption() ByteOptionArrOption {
+func (l ByteOptionArrayList) HeadOption() ByteOptionArrayOption {
 	if l.NonEmpty() {
-		return ByteOptionArrOpt(*l.head)
+		return ByteOptionArrayOpt(*l.head)
 	} else {
-		return NoneByteOptionArrOption
+		return NoneByteOptionArray
 	}
 }
-func (l RuneOptionArrList) HeadOption() RuneOptionArrOption {
+func (l RuneOptionArrayList) HeadOption() RuneOptionArrayOption {
 	if l.NonEmpty() {
-		return RuneOptionArrOpt(*l.head)
+		return RuneOptionArrayOpt(*l.head)
 	} else {
-		return NoneRuneOptionArrOption
+		return NoneRuneOptionArray
 	}
 }
-func (l Float32OptionArrList) HeadOption() Float32OptionArrOption {
+func (l Float32OptionArrayList) HeadOption() Float32OptionArrayOption {
 	if l.NonEmpty() {
-		return Float32OptionArrOpt(*l.head)
+		return Float32OptionArrayOpt(*l.head)
 	} else {
-		return NoneFloat32OptionArrOption
+		return NoneFloat32OptionArray
 	}
 }
-func (l Float64OptionArrList) HeadOption() Float64OptionArrOption {
+func (l Float64OptionArrayList) HeadOption() Float64OptionArrayOption {
 	if l.NonEmpty() {
-		return Float64OptionArrOpt(*l.head)
+		return Float64OptionArrayOpt(*l.head)
 	} else {
-		return NoneFloat64OptionArrOption
+		return NoneFloat64OptionArray
 	}
 }
-func (l Complex64OptionArrList) HeadOption() Complex64OptionArrOption {
+func (l Complex64OptionArrayList) HeadOption() Complex64OptionArrayOption {
 	if l.NonEmpty() {
-		return Complex64OptionArrOpt(*l.head)
+		return Complex64OptionArrayOpt(*l.head)
 	} else {
-		return NoneComplex64OptionArrOption
+		return NoneComplex64OptionArray
 	}
 }
-func (l Complex128OptionArrList) HeadOption() Complex128OptionArrOption {
+func (l Complex128OptionArrayList) HeadOption() Complex128OptionArrayOption {
 	if l.NonEmpty() {
-		return Complex128OptionArrOpt(*l.head)
+		return Complex128OptionArrayOpt(*l.head)
 	} else {
-		return NoneComplex128OptionArrOption
+		return NoneComplex128OptionArray
 	}
 }
-func (l AnyOptionArrList) HeadOption() AnyOptionArrOption {
+func (l AnyOptionArrayList) HeadOption() AnyOptionArrayOption {
 	if l.NonEmpty() {
-		return AnyOptionArrOpt(*l.head)
+		return AnyOptionArrayOpt(*l.head)
 	} else {
-		return NoneAnyOptionArrOption
+		return NoneAnyOptionArray
 	}
 }
 func (l BoolListList) HeadOption() BoolListOption {
 	if l.NonEmpty() {
 		return BoolListOpt(*l.head)
 	} else {
-		return NoneBoolListOption
+		return NoneBoolList
 	}
 }
 func (l StringListList) HeadOption() StringListOption {
 	if l.NonEmpty() {
 		return StringListOpt(*l.head)
 	} else {
-		return NoneStringListOption
+		return NoneStringList
 	}
 }
 func (l IntListList) HeadOption() IntListOption {
 	if l.NonEmpty() {
 		return IntListOpt(*l.head)
 	} else {
-		return NoneIntListOption
+		return NoneIntList
 	}
 }
 func (l Int8ListList) HeadOption() Int8ListOption {
 	if l.NonEmpty() {
 		return Int8ListOpt(*l.head)
 	} else {
-		return NoneInt8ListOption
+		return NoneInt8List
 	}
 }
 func (l Int16ListList) HeadOption() Int16ListOption {
 	if l.NonEmpty() {
 		return Int16ListOpt(*l.head)
 	} else {
-		return NoneInt16ListOption
+		return NoneInt16List
 	}
 }
 func (l Int32ListList) HeadOption() Int32ListOption {
 	if l.NonEmpty() {
 		return Int32ListOpt(*l.head)
 	} else {
-		return NoneInt32ListOption
+		return NoneInt32List
 	}
 }
 func (l Int64ListList) HeadOption() Int64ListOption {
 	if l.NonEmpty() {
 		return Int64ListOpt(*l.head)
 	} else {
-		return NoneInt64ListOption
+		return NoneInt64List
 	}
 }
 func (l UintListList) HeadOption() UintListOption {
 	if l.NonEmpty() {
 		return UintListOpt(*l.head)
 	} else {
-		return NoneUintListOption
+		return NoneUintList
 	}
 }
 func (l Uint8ListList) HeadOption() Uint8ListOption {
 	if l.NonEmpty() {
 		return Uint8ListOpt(*l.head)
 	} else {
-		return NoneUint8ListOption
+		return NoneUint8List
 	}
 }
 func (l Uint16ListList) HeadOption() Uint16ListOption {
 	if l.NonEmpty() {
 		return Uint16ListOpt(*l.head)
 	} else {
-		return NoneUint16ListOption
+		return NoneUint16List
 	}
 }
 func (l Uint32ListList) HeadOption() Uint32ListOption {
 	if l.NonEmpty() {
 		return Uint32ListOpt(*l.head)
 	} else {
-		return NoneUint32ListOption
+		return NoneUint32List
 	}
 }
 func (l Uint64ListList) HeadOption() Uint64ListOption {
 	if l.NonEmpty() {
 		return Uint64ListOpt(*l.head)
 	} else {
-		return NoneUint64ListOption
+		return NoneUint64List
 	}
 }
 func (l UintptrListList) HeadOption() UintptrListOption {
 	if l.NonEmpty() {
 		return UintptrListOpt(*l.head)
 	} else {
-		return NoneUintptrListOption
+		return NoneUintptrList
 	}
 }
 func (l ByteListList) HeadOption() ByteListOption {
 	if l.NonEmpty() {
 		return ByteListOpt(*l.head)
 	} else {
-		return NoneByteListOption
+		return NoneByteList
 	}
 }
 func (l RuneListList) HeadOption() RuneListOption {
 	if l.NonEmpty() {
 		return RuneListOpt(*l.head)
 	} else {
-		return NoneRuneListOption
+		return NoneRuneList
 	}
 }
 func (l Float32ListList) HeadOption() Float32ListOption {
 	if l.NonEmpty() {
 		return Float32ListOpt(*l.head)
 	} else {
-		return NoneFloat32ListOption
+		return NoneFloat32List
 	}
 }
 func (l Float64ListList) HeadOption() Float64ListOption {
 	if l.NonEmpty() {
 		return Float64ListOpt(*l.head)
 	} else {
-		return NoneFloat64ListOption
+		return NoneFloat64List
 	}
 }
 func (l Complex64ListList) HeadOption() Complex64ListOption {
 	if l.NonEmpty() {
 		return Complex64ListOpt(*l.head)
 	} else {
-		return NoneComplex64ListOption
+		return NoneComplex64List
 	}
 }
 func (l Complex128ListList) HeadOption() Complex128ListOption {
 	if l.NonEmpty() {
 		return Complex128ListOpt(*l.head)
 	} else {
-		return NoneComplex128ListOption
+		return NoneComplex128List
 	}
 }
 func (l AnyListList) HeadOption() AnyListOption {
 	if l.NonEmpty() {
 		return AnyListOpt(*l.head)
 	} else {
-		return NoneAnyListOption
+		return NoneAnyList
 	}
 }

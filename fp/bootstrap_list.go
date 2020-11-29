@@ -163,245 +163,245 @@ type AnyOptionList struct {
 	head *AnyOption
 	tail *AnyOptionList
 }
-type BoolArrOptionList struct {
-	head *BoolArrOption
-	tail *BoolArrOptionList
+type BoolArrayOptionList struct {
+	head *BoolArrayOption
+	tail *BoolArrayOptionList
 }
-type StringArrOptionList struct {
-	head *StringArrOption
-	tail *StringArrOptionList
+type StringArrayOptionList struct {
+	head *StringArrayOption
+	tail *StringArrayOptionList
 }
-type IntArrOptionList struct {
-	head *IntArrOption
-	tail *IntArrOptionList
+type IntArrayOptionList struct {
+	head *IntArrayOption
+	tail *IntArrayOptionList
 }
-type Int8ArrOptionList struct {
-	head *Int8ArrOption
-	tail *Int8ArrOptionList
+type Int8ArrayOptionList struct {
+	head *Int8ArrayOption
+	tail *Int8ArrayOptionList
 }
-type Int16ArrOptionList struct {
-	head *Int16ArrOption
-	tail *Int16ArrOptionList
+type Int16ArrayOptionList struct {
+	head *Int16ArrayOption
+	tail *Int16ArrayOptionList
 }
-type Int32ArrOptionList struct {
-	head *Int32ArrOption
-	tail *Int32ArrOptionList
+type Int32ArrayOptionList struct {
+	head *Int32ArrayOption
+	tail *Int32ArrayOptionList
 }
-type Int64ArrOptionList struct {
-	head *Int64ArrOption
-	tail *Int64ArrOptionList
+type Int64ArrayOptionList struct {
+	head *Int64ArrayOption
+	tail *Int64ArrayOptionList
 }
-type UintArrOptionList struct {
-	head *UintArrOption
-	tail *UintArrOptionList
+type UintArrayOptionList struct {
+	head *UintArrayOption
+	tail *UintArrayOptionList
 }
-type Uint8ArrOptionList struct {
-	head *Uint8ArrOption
-	tail *Uint8ArrOptionList
+type Uint8ArrayOptionList struct {
+	head *Uint8ArrayOption
+	tail *Uint8ArrayOptionList
 }
-type Uint16ArrOptionList struct {
-	head *Uint16ArrOption
-	tail *Uint16ArrOptionList
+type Uint16ArrayOptionList struct {
+	head *Uint16ArrayOption
+	tail *Uint16ArrayOptionList
 }
-type Uint32ArrOptionList struct {
-	head *Uint32ArrOption
-	tail *Uint32ArrOptionList
+type Uint32ArrayOptionList struct {
+	head *Uint32ArrayOption
+	tail *Uint32ArrayOptionList
 }
-type Uint64ArrOptionList struct {
-	head *Uint64ArrOption
-	tail *Uint64ArrOptionList
+type Uint64ArrayOptionList struct {
+	head *Uint64ArrayOption
+	tail *Uint64ArrayOptionList
 }
-type UintptrArrOptionList struct {
-	head *UintptrArrOption
-	tail *UintptrArrOptionList
+type UintptrArrayOptionList struct {
+	head *UintptrArrayOption
+	tail *UintptrArrayOptionList
 }
-type ByteArrOptionList struct {
-	head *ByteArrOption
-	tail *ByteArrOptionList
+type ByteArrayOptionList struct {
+	head *ByteArrayOption
+	tail *ByteArrayOptionList
 }
-type RuneArrOptionList struct {
-	head *RuneArrOption
-	tail *RuneArrOptionList
+type RuneArrayOptionList struct {
+	head *RuneArrayOption
+	tail *RuneArrayOptionList
 }
-type Float32ArrOptionList struct {
-	head *Float32ArrOption
-	tail *Float32ArrOptionList
+type Float32ArrayOptionList struct {
+	head *Float32ArrayOption
+	tail *Float32ArrayOptionList
 }
-type Float64ArrOptionList struct {
-	head *Float64ArrOption
-	tail *Float64ArrOptionList
+type Float64ArrayOptionList struct {
+	head *Float64ArrayOption
+	tail *Float64ArrayOptionList
 }
-type Complex64ArrOptionList struct {
-	head *Complex64ArrOption
-	tail *Complex64ArrOptionList
+type Complex64ArrayOptionList struct {
+	head *Complex64ArrayOption
+	tail *Complex64ArrayOptionList
 }
-type Complex128ArrOptionList struct {
-	head *Complex128ArrOption
-	tail *Complex128ArrOptionList
+type Complex128ArrayOptionList struct {
+	head *Complex128ArrayOption
+	tail *Complex128ArrayOptionList
 }
-type AnyArrOptionList struct {
-	head *AnyArrOption
-	tail *AnyArrOptionList
+type AnyArrayOptionList struct {
+	head *AnyArrayOption
+	tail *AnyArrayOptionList
 }
-type BoolArrArrOptionList struct {
-	head *BoolArrArrOption
-	tail *BoolArrArrOptionList
+type BoolArrayArrayOptionList struct {
+	head *BoolArrayArrayOption
+	tail *BoolArrayArrayOptionList
 }
-type StringArrArrOptionList struct {
-	head *StringArrArrOption
-	tail *StringArrArrOptionList
+type StringArrayArrayOptionList struct {
+	head *StringArrayArrayOption
+	tail *StringArrayArrayOptionList
 }
-type IntArrArrOptionList struct {
-	head *IntArrArrOption
-	tail *IntArrArrOptionList
+type IntArrayArrayOptionList struct {
+	head *IntArrayArrayOption
+	tail *IntArrayArrayOptionList
 }
-type Int8ArrArrOptionList struct {
-	head *Int8ArrArrOption
-	tail *Int8ArrArrOptionList
+type Int8ArrayArrayOptionList struct {
+	head *Int8ArrayArrayOption
+	tail *Int8ArrayArrayOptionList
 }
-type Int16ArrArrOptionList struct {
-	head *Int16ArrArrOption
-	tail *Int16ArrArrOptionList
+type Int16ArrayArrayOptionList struct {
+	head *Int16ArrayArrayOption
+	tail *Int16ArrayArrayOptionList
 }
-type Int32ArrArrOptionList struct {
-	head *Int32ArrArrOption
-	tail *Int32ArrArrOptionList
+type Int32ArrayArrayOptionList struct {
+	head *Int32ArrayArrayOption
+	tail *Int32ArrayArrayOptionList
 }
-type Int64ArrArrOptionList struct {
-	head *Int64ArrArrOption
-	tail *Int64ArrArrOptionList
+type Int64ArrayArrayOptionList struct {
+	head *Int64ArrayArrayOption
+	tail *Int64ArrayArrayOptionList
 }
-type UintArrArrOptionList struct {
-	head *UintArrArrOption
-	tail *UintArrArrOptionList
+type UintArrayArrayOptionList struct {
+	head *UintArrayArrayOption
+	tail *UintArrayArrayOptionList
 }
-type Uint8ArrArrOptionList struct {
-	head *Uint8ArrArrOption
-	tail *Uint8ArrArrOptionList
+type Uint8ArrayArrayOptionList struct {
+	head *Uint8ArrayArrayOption
+	tail *Uint8ArrayArrayOptionList
 }
-type Uint16ArrArrOptionList struct {
-	head *Uint16ArrArrOption
-	tail *Uint16ArrArrOptionList
+type Uint16ArrayArrayOptionList struct {
+	head *Uint16ArrayArrayOption
+	tail *Uint16ArrayArrayOptionList
 }
-type Uint32ArrArrOptionList struct {
-	head *Uint32ArrArrOption
-	tail *Uint32ArrArrOptionList
+type Uint32ArrayArrayOptionList struct {
+	head *Uint32ArrayArrayOption
+	tail *Uint32ArrayArrayOptionList
 }
-type Uint64ArrArrOptionList struct {
-	head *Uint64ArrArrOption
-	tail *Uint64ArrArrOptionList
+type Uint64ArrayArrayOptionList struct {
+	head *Uint64ArrayArrayOption
+	tail *Uint64ArrayArrayOptionList
 }
-type UintptrArrArrOptionList struct {
-	head *UintptrArrArrOption
-	tail *UintptrArrArrOptionList
+type UintptrArrayArrayOptionList struct {
+	head *UintptrArrayArrayOption
+	tail *UintptrArrayArrayOptionList
 }
-type ByteArrArrOptionList struct {
-	head *ByteArrArrOption
-	tail *ByteArrArrOptionList
+type ByteArrayArrayOptionList struct {
+	head *ByteArrayArrayOption
+	tail *ByteArrayArrayOptionList
 }
-type RuneArrArrOptionList struct {
-	head *RuneArrArrOption
-	tail *RuneArrArrOptionList
+type RuneArrayArrayOptionList struct {
+	head *RuneArrayArrayOption
+	tail *RuneArrayArrayOptionList
 }
-type Float32ArrArrOptionList struct {
-	head *Float32ArrArrOption
-	tail *Float32ArrArrOptionList
+type Float32ArrayArrayOptionList struct {
+	head *Float32ArrayArrayOption
+	tail *Float32ArrayArrayOptionList
 }
-type Float64ArrArrOptionList struct {
-	head *Float64ArrArrOption
-	tail *Float64ArrArrOptionList
+type Float64ArrayArrayOptionList struct {
+	head *Float64ArrayArrayOption
+	tail *Float64ArrayArrayOptionList
 }
-type Complex64ArrArrOptionList struct {
-	head *Complex64ArrArrOption
-	tail *Complex64ArrArrOptionList
+type Complex64ArrayArrayOptionList struct {
+	head *Complex64ArrayArrayOption
+	tail *Complex64ArrayArrayOptionList
 }
-type Complex128ArrArrOptionList struct {
-	head *Complex128ArrArrOption
-	tail *Complex128ArrArrOptionList
+type Complex128ArrayArrayOptionList struct {
+	head *Complex128ArrayArrayOption
+	tail *Complex128ArrayArrayOptionList
 }
-type AnyArrArrOptionList struct {
-	head *AnyArrArrOption
-	tail *AnyArrArrOptionList
+type AnyArrayArrayOptionList struct {
+	head *AnyArrayArrayOption
+	tail *AnyArrayArrayOptionList
 }
-type BoolOptionArrOptionList struct {
-	head *BoolOptionArrOption
-	tail *BoolOptionArrOptionList
+type BoolOptionArrayOptionList struct {
+	head *BoolOptionArrayOption
+	tail *BoolOptionArrayOptionList
 }
-type StringOptionArrOptionList struct {
-	head *StringOptionArrOption
-	tail *StringOptionArrOptionList
+type StringOptionArrayOptionList struct {
+	head *StringOptionArrayOption
+	tail *StringOptionArrayOptionList
 }
-type IntOptionArrOptionList struct {
-	head *IntOptionArrOption
-	tail *IntOptionArrOptionList
+type IntOptionArrayOptionList struct {
+	head *IntOptionArrayOption
+	tail *IntOptionArrayOptionList
 }
-type Int8OptionArrOptionList struct {
-	head *Int8OptionArrOption
-	tail *Int8OptionArrOptionList
+type Int8OptionArrayOptionList struct {
+	head *Int8OptionArrayOption
+	tail *Int8OptionArrayOptionList
 }
-type Int16OptionArrOptionList struct {
-	head *Int16OptionArrOption
-	tail *Int16OptionArrOptionList
+type Int16OptionArrayOptionList struct {
+	head *Int16OptionArrayOption
+	tail *Int16OptionArrayOptionList
 }
-type Int32OptionArrOptionList struct {
-	head *Int32OptionArrOption
-	tail *Int32OptionArrOptionList
+type Int32OptionArrayOptionList struct {
+	head *Int32OptionArrayOption
+	tail *Int32OptionArrayOptionList
 }
-type Int64OptionArrOptionList struct {
-	head *Int64OptionArrOption
-	tail *Int64OptionArrOptionList
+type Int64OptionArrayOptionList struct {
+	head *Int64OptionArrayOption
+	tail *Int64OptionArrayOptionList
 }
-type UintOptionArrOptionList struct {
-	head *UintOptionArrOption
-	tail *UintOptionArrOptionList
+type UintOptionArrayOptionList struct {
+	head *UintOptionArrayOption
+	tail *UintOptionArrayOptionList
 }
-type Uint8OptionArrOptionList struct {
-	head *Uint8OptionArrOption
-	tail *Uint8OptionArrOptionList
+type Uint8OptionArrayOptionList struct {
+	head *Uint8OptionArrayOption
+	tail *Uint8OptionArrayOptionList
 }
-type Uint16OptionArrOptionList struct {
-	head *Uint16OptionArrOption
-	tail *Uint16OptionArrOptionList
+type Uint16OptionArrayOptionList struct {
+	head *Uint16OptionArrayOption
+	tail *Uint16OptionArrayOptionList
 }
-type Uint32OptionArrOptionList struct {
-	head *Uint32OptionArrOption
-	tail *Uint32OptionArrOptionList
+type Uint32OptionArrayOptionList struct {
+	head *Uint32OptionArrayOption
+	tail *Uint32OptionArrayOptionList
 }
-type Uint64OptionArrOptionList struct {
-	head *Uint64OptionArrOption
-	tail *Uint64OptionArrOptionList
+type Uint64OptionArrayOptionList struct {
+	head *Uint64OptionArrayOption
+	tail *Uint64OptionArrayOptionList
 }
-type UintptrOptionArrOptionList struct {
-	head *UintptrOptionArrOption
-	tail *UintptrOptionArrOptionList
+type UintptrOptionArrayOptionList struct {
+	head *UintptrOptionArrayOption
+	tail *UintptrOptionArrayOptionList
 }
-type ByteOptionArrOptionList struct {
-	head *ByteOptionArrOption
-	tail *ByteOptionArrOptionList
+type ByteOptionArrayOptionList struct {
+	head *ByteOptionArrayOption
+	tail *ByteOptionArrayOptionList
 }
-type RuneOptionArrOptionList struct {
-	head *RuneOptionArrOption
-	tail *RuneOptionArrOptionList
+type RuneOptionArrayOptionList struct {
+	head *RuneOptionArrayOption
+	tail *RuneOptionArrayOptionList
 }
-type Float32OptionArrOptionList struct {
-	head *Float32OptionArrOption
-	tail *Float32OptionArrOptionList
+type Float32OptionArrayOptionList struct {
+	head *Float32OptionArrayOption
+	tail *Float32OptionArrayOptionList
 }
-type Float64OptionArrOptionList struct {
-	head *Float64OptionArrOption
-	tail *Float64OptionArrOptionList
+type Float64OptionArrayOptionList struct {
+	head *Float64OptionArrayOption
+	tail *Float64OptionArrayOptionList
 }
-type Complex64OptionArrOptionList struct {
-	head *Complex64OptionArrOption
-	tail *Complex64OptionArrOptionList
+type Complex64OptionArrayOptionList struct {
+	head *Complex64OptionArrayOption
+	tail *Complex64OptionArrayOptionList
 }
-type Complex128OptionArrOptionList struct {
-	head *Complex128OptionArrOption
-	tail *Complex128OptionArrOptionList
+type Complex128OptionArrayOptionList struct {
+	head *Complex128OptionArrayOption
+	tail *Complex128OptionArrayOptionList
 }
-type AnyOptionArrOptionList struct {
-	head *AnyOptionArrOption
-	tail *AnyOptionArrOptionList
+type AnyOptionArrayOptionList struct {
+	head *AnyOptionArrayOption
+	tail *AnyOptionArrayOptionList
 }
 type BoolListOptionList struct {
 	head *BoolListOption
@@ -563,245 +563,245 @@ type AnyOptionOptionList struct {
 	head *AnyOptionOption
 	tail *AnyOptionOptionList
 }
-type BoolArrOptionOptionList struct {
-	head *BoolArrOptionOption
-	tail *BoolArrOptionOptionList
+type BoolArrayOptionOptionList struct {
+	head *BoolArrayOptionOption
+	tail *BoolArrayOptionOptionList
 }
-type StringArrOptionOptionList struct {
-	head *StringArrOptionOption
-	tail *StringArrOptionOptionList
+type StringArrayOptionOptionList struct {
+	head *StringArrayOptionOption
+	tail *StringArrayOptionOptionList
 }
-type IntArrOptionOptionList struct {
-	head *IntArrOptionOption
-	tail *IntArrOptionOptionList
+type IntArrayOptionOptionList struct {
+	head *IntArrayOptionOption
+	tail *IntArrayOptionOptionList
 }
-type Int8ArrOptionOptionList struct {
-	head *Int8ArrOptionOption
-	tail *Int8ArrOptionOptionList
+type Int8ArrayOptionOptionList struct {
+	head *Int8ArrayOptionOption
+	tail *Int8ArrayOptionOptionList
 }
-type Int16ArrOptionOptionList struct {
-	head *Int16ArrOptionOption
-	tail *Int16ArrOptionOptionList
+type Int16ArrayOptionOptionList struct {
+	head *Int16ArrayOptionOption
+	tail *Int16ArrayOptionOptionList
 }
-type Int32ArrOptionOptionList struct {
-	head *Int32ArrOptionOption
-	tail *Int32ArrOptionOptionList
+type Int32ArrayOptionOptionList struct {
+	head *Int32ArrayOptionOption
+	tail *Int32ArrayOptionOptionList
 }
-type Int64ArrOptionOptionList struct {
-	head *Int64ArrOptionOption
-	tail *Int64ArrOptionOptionList
+type Int64ArrayOptionOptionList struct {
+	head *Int64ArrayOptionOption
+	tail *Int64ArrayOptionOptionList
 }
-type UintArrOptionOptionList struct {
-	head *UintArrOptionOption
-	tail *UintArrOptionOptionList
+type UintArrayOptionOptionList struct {
+	head *UintArrayOptionOption
+	tail *UintArrayOptionOptionList
 }
-type Uint8ArrOptionOptionList struct {
-	head *Uint8ArrOptionOption
-	tail *Uint8ArrOptionOptionList
+type Uint8ArrayOptionOptionList struct {
+	head *Uint8ArrayOptionOption
+	tail *Uint8ArrayOptionOptionList
 }
-type Uint16ArrOptionOptionList struct {
-	head *Uint16ArrOptionOption
-	tail *Uint16ArrOptionOptionList
+type Uint16ArrayOptionOptionList struct {
+	head *Uint16ArrayOptionOption
+	tail *Uint16ArrayOptionOptionList
 }
-type Uint32ArrOptionOptionList struct {
-	head *Uint32ArrOptionOption
-	tail *Uint32ArrOptionOptionList
+type Uint32ArrayOptionOptionList struct {
+	head *Uint32ArrayOptionOption
+	tail *Uint32ArrayOptionOptionList
 }
-type Uint64ArrOptionOptionList struct {
-	head *Uint64ArrOptionOption
-	tail *Uint64ArrOptionOptionList
+type Uint64ArrayOptionOptionList struct {
+	head *Uint64ArrayOptionOption
+	tail *Uint64ArrayOptionOptionList
 }
-type UintptrArrOptionOptionList struct {
-	head *UintptrArrOptionOption
-	tail *UintptrArrOptionOptionList
+type UintptrArrayOptionOptionList struct {
+	head *UintptrArrayOptionOption
+	tail *UintptrArrayOptionOptionList
 }
-type ByteArrOptionOptionList struct {
-	head *ByteArrOptionOption
-	tail *ByteArrOptionOptionList
+type ByteArrayOptionOptionList struct {
+	head *ByteArrayOptionOption
+	tail *ByteArrayOptionOptionList
 }
-type RuneArrOptionOptionList struct {
-	head *RuneArrOptionOption
-	tail *RuneArrOptionOptionList
+type RuneArrayOptionOptionList struct {
+	head *RuneArrayOptionOption
+	tail *RuneArrayOptionOptionList
 }
-type Float32ArrOptionOptionList struct {
-	head *Float32ArrOptionOption
-	tail *Float32ArrOptionOptionList
+type Float32ArrayOptionOptionList struct {
+	head *Float32ArrayOptionOption
+	tail *Float32ArrayOptionOptionList
 }
-type Float64ArrOptionOptionList struct {
-	head *Float64ArrOptionOption
-	tail *Float64ArrOptionOptionList
+type Float64ArrayOptionOptionList struct {
+	head *Float64ArrayOptionOption
+	tail *Float64ArrayOptionOptionList
 }
-type Complex64ArrOptionOptionList struct {
-	head *Complex64ArrOptionOption
-	tail *Complex64ArrOptionOptionList
+type Complex64ArrayOptionOptionList struct {
+	head *Complex64ArrayOptionOption
+	tail *Complex64ArrayOptionOptionList
 }
-type Complex128ArrOptionOptionList struct {
-	head *Complex128ArrOptionOption
-	tail *Complex128ArrOptionOptionList
+type Complex128ArrayOptionOptionList struct {
+	head *Complex128ArrayOptionOption
+	tail *Complex128ArrayOptionOptionList
 }
-type AnyArrOptionOptionList struct {
-	head *AnyArrOptionOption
-	tail *AnyArrOptionOptionList
+type AnyArrayOptionOptionList struct {
+	head *AnyArrayOptionOption
+	tail *AnyArrayOptionOptionList
 }
-type BoolArrArrOptionOptionList struct {
-	head *BoolArrArrOptionOption
-	tail *BoolArrArrOptionOptionList
+type BoolArrayArrayOptionOptionList struct {
+	head *BoolArrayArrayOptionOption
+	tail *BoolArrayArrayOptionOptionList
 }
-type StringArrArrOptionOptionList struct {
-	head *StringArrArrOptionOption
-	tail *StringArrArrOptionOptionList
+type StringArrayArrayOptionOptionList struct {
+	head *StringArrayArrayOptionOption
+	tail *StringArrayArrayOptionOptionList
 }
-type IntArrArrOptionOptionList struct {
-	head *IntArrArrOptionOption
-	tail *IntArrArrOptionOptionList
+type IntArrayArrayOptionOptionList struct {
+	head *IntArrayArrayOptionOption
+	tail *IntArrayArrayOptionOptionList
 }
-type Int8ArrArrOptionOptionList struct {
-	head *Int8ArrArrOptionOption
-	tail *Int8ArrArrOptionOptionList
+type Int8ArrayArrayOptionOptionList struct {
+	head *Int8ArrayArrayOptionOption
+	tail *Int8ArrayArrayOptionOptionList
 }
-type Int16ArrArrOptionOptionList struct {
-	head *Int16ArrArrOptionOption
-	tail *Int16ArrArrOptionOptionList
+type Int16ArrayArrayOptionOptionList struct {
+	head *Int16ArrayArrayOptionOption
+	tail *Int16ArrayArrayOptionOptionList
 }
-type Int32ArrArrOptionOptionList struct {
-	head *Int32ArrArrOptionOption
-	tail *Int32ArrArrOptionOptionList
+type Int32ArrayArrayOptionOptionList struct {
+	head *Int32ArrayArrayOptionOption
+	tail *Int32ArrayArrayOptionOptionList
 }
-type Int64ArrArrOptionOptionList struct {
-	head *Int64ArrArrOptionOption
-	tail *Int64ArrArrOptionOptionList
+type Int64ArrayArrayOptionOptionList struct {
+	head *Int64ArrayArrayOptionOption
+	tail *Int64ArrayArrayOptionOptionList
 }
-type UintArrArrOptionOptionList struct {
-	head *UintArrArrOptionOption
-	tail *UintArrArrOptionOptionList
+type UintArrayArrayOptionOptionList struct {
+	head *UintArrayArrayOptionOption
+	tail *UintArrayArrayOptionOptionList
 }
-type Uint8ArrArrOptionOptionList struct {
-	head *Uint8ArrArrOptionOption
-	tail *Uint8ArrArrOptionOptionList
+type Uint8ArrayArrayOptionOptionList struct {
+	head *Uint8ArrayArrayOptionOption
+	tail *Uint8ArrayArrayOptionOptionList
 }
-type Uint16ArrArrOptionOptionList struct {
-	head *Uint16ArrArrOptionOption
-	tail *Uint16ArrArrOptionOptionList
+type Uint16ArrayArrayOptionOptionList struct {
+	head *Uint16ArrayArrayOptionOption
+	tail *Uint16ArrayArrayOptionOptionList
 }
-type Uint32ArrArrOptionOptionList struct {
-	head *Uint32ArrArrOptionOption
-	tail *Uint32ArrArrOptionOptionList
+type Uint32ArrayArrayOptionOptionList struct {
+	head *Uint32ArrayArrayOptionOption
+	tail *Uint32ArrayArrayOptionOptionList
 }
-type Uint64ArrArrOptionOptionList struct {
-	head *Uint64ArrArrOptionOption
-	tail *Uint64ArrArrOptionOptionList
+type Uint64ArrayArrayOptionOptionList struct {
+	head *Uint64ArrayArrayOptionOption
+	tail *Uint64ArrayArrayOptionOptionList
 }
-type UintptrArrArrOptionOptionList struct {
-	head *UintptrArrArrOptionOption
-	tail *UintptrArrArrOptionOptionList
+type UintptrArrayArrayOptionOptionList struct {
+	head *UintptrArrayArrayOptionOption
+	tail *UintptrArrayArrayOptionOptionList
 }
-type ByteArrArrOptionOptionList struct {
-	head *ByteArrArrOptionOption
-	tail *ByteArrArrOptionOptionList
+type ByteArrayArrayOptionOptionList struct {
+	head *ByteArrayArrayOptionOption
+	tail *ByteArrayArrayOptionOptionList
 }
-type RuneArrArrOptionOptionList struct {
-	head *RuneArrArrOptionOption
-	tail *RuneArrArrOptionOptionList
+type RuneArrayArrayOptionOptionList struct {
+	head *RuneArrayArrayOptionOption
+	tail *RuneArrayArrayOptionOptionList
 }
-type Float32ArrArrOptionOptionList struct {
-	head *Float32ArrArrOptionOption
-	tail *Float32ArrArrOptionOptionList
+type Float32ArrayArrayOptionOptionList struct {
+	head *Float32ArrayArrayOptionOption
+	tail *Float32ArrayArrayOptionOptionList
 }
-type Float64ArrArrOptionOptionList struct {
-	head *Float64ArrArrOptionOption
-	tail *Float64ArrArrOptionOptionList
+type Float64ArrayArrayOptionOptionList struct {
+	head *Float64ArrayArrayOptionOption
+	tail *Float64ArrayArrayOptionOptionList
 }
-type Complex64ArrArrOptionOptionList struct {
-	head *Complex64ArrArrOptionOption
-	tail *Complex64ArrArrOptionOptionList
+type Complex64ArrayArrayOptionOptionList struct {
+	head *Complex64ArrayArrayOptionOption
+	tail *Complex64ArrayArrayOptionOptionList
 }
-type Complex128ArrArrOptionOptionList struct {
-	head *Complex128ArrArrOptionOption
-	tail *Complex128ArrArrOptionOptionList
+type Complex128ArrayArrayOptionOptionList struct {
+	head *Complex128ArrayArrayOptionOption
+	tail *Complex128ArrayArrayOptionOptionList
 }
-type AnyArrArrOptionOptionList struct {
-	head *AnyArrArrOptionOption
-	tail *AnyArrArrOptionOptionList
+type AnyArrayArrayOptionOptionList struct {
+	head *AnyArrayArrayOptionOption
+	tail *AnyArrayArrayOptionOptionList
 }
-type BoolOptionArrOptionOptionList struct {
-	head *BoolOptionArrOptionOption
-	tail *BoolOptionArrOptionOptionList
+type BoolOptionArrayOptionOptionList struct {
+	head *BoolOptionArrayOptionOption
+	tail *BoolOptionArrayOptionOptionList
 }
-type StringOptionArrOptionOptionList struct {
-	head *StringOptionArrOptionOption
-	tail *StringOptionArrOptionOptionList
+type StringOptionArrayOptionOptionList struct {
+	head *StringOptionArrayOptionOption
+	tail *StringOptionArrayOptionOptionList
 }
-type IntOptionArrOptionOptionList struct {
-	head *IntOptionArrOptionOption
-	tail *IntOptionArrOptionOptionList
+type IntOptionArrayOptionOptionList struct {
+	head *IntOptionArrayOptionOption
+	tail *IntOptionArrayOptionOptionList
 }
-type Int8OptionArrOptionOptionList struct {
-	head *Int8OptionArrOptionOption
-	tail *Int8OptionArrOptionOptionList
+type Int8OptionArrayOptionOptionList struct {
+	head *Int8OptionArrayOptionOption
+	tail *Int8OptionArrayOptionOptionList
 }
-type Int16OptionArrOptionOptionList struct {
-	head *Int16OptionArrOptionOption
-	tail *Int16OptionArrOptionOptionList
+type Int16OptionArrayOptionOptionList struct {
+	head *Int16OptionArrayOptionOption
+	tail *Int16OptionArrayOptionOptionList
 }
-type Int32OptionArrOptionOptionList struct {
-	head *Int32OptionArrOptionOption
-	tail *Int32OptionArrOptionOptionList
+type Int32OptionArrayOptionOptionList struct {
+	head *Int32OptionArrayOptionOption
+	tail *Int32OptionArrayOptionOptionList
 }
-type Int64OptionArrOptionOptionList struct {
-	head *Int64OptionArrOptionOption
-	tail *Int64OptionArrOptionOptionList
+type Int64OptionArrayOptionOptionList struct {
+	head *Int64OptionArrayOptionOption
+	tail *Int64OptionArrayOptionOptionList
 }
-type UintOptionArrOptionOptionList struct {
-	head *UintOptionArrOptionOption
-	tail *UintOptionArrOptionOptionList
+type UintOptionArrayOptionOptionList struct {
+	head *UintOptionArrayOptionOption
+	tail *UintOptionArrayOptionOptionList
 }
-type Uint8OptionArrOptionOptionList struct {
-	head *Uint8OptionArrOptionOption
-	tail *Uint8OptionArrOptionOptionList
+type Uint8OptionArrayOptionOptionList struct {
+	head *Uint8OptionArrayOptionOption
+	tail *Uint8OptionArrayOptionOptionList
 }
-type Uint16OptionArrOptionOptionList struct {
-	head *Uint16OptionArrOptionOption
-	tail *Uint16OptionArrOptionOptionList
+type Uint16OptionArrayOptionOptionList struct {
+	head *Uint16OptionArrayOptionOption
+	tail *Uint16OptionArrayOptionOptionList
 }
-type Uint32OptionArrOptionOptionList struct {
-	head *Uint32OptionArrOptionOption
-	tail *Uint32OptionArrOptionOptionList
+type Uint32OptionArrayOptionOptionList struct {
+	head *Uint32OptionArrayOptionOption
+	tail *Uint32OptionArrayOptionOptionList
 }
-type Uint64OptionArrOptionOptionList struct {
-	head *Uint64OptionArrOptionOption
-	tail *Uint64OptionArrOptionOptionList
+type Uint64OptionArrayOptionOptionList struct {
+	head *Uint64OptionArrayOptionOption
+	tail *Uint64OptionArrayOptionOptionList
 }
-type UintptrOptionArrOptionOptionList struct {
-	head *UintptrOptionArrOptionOption
-	tail *UintptrOptionArrOptionOptionList
+type UintptrOptionArrayOptionOptionList struct {
+	head *UintptrOptionArrayOptionOption
+	tail *UintptrOptionArrayOptionOptionList
 }
-type ByteOptionArrOptionOptionList struct {
-	head *ByteOptionArrOptionOption
-	tail *ByteOptionArrOptionOptionList
+type ByteOptionArrayOptionOptionList struct {
+	head *ByteOptionArrayOptionOption
+	tail *ByteOptionArrayOptionOptionList
 }
-type RuneOptionArrOptionOptionList struct {
-	head *RuneOptionArrOptionOption
-	tail *RuneOptionArrOptionOptionList
+type RuneOptionArrayOptionOptionList struct {
+	head *RuneOptionArrayOptionOption
+	tail *RuneOptionArrayOptionOptionList
 }
-type Float32OptionArrOptionOptionList struct {
-	head *Float32OptionArrOptionOption
-	tail *Float32OptionArrOptionOptionList
+type Float32OptionArrayOptionOptionList struct {
+	head *Float32OptionArrayOptionOption
+	tail *Float32OptionArrayOptionOptionList
 }
-type Float64OptionArrOptionOptionList struct {
-	head *Float64OptionArrOptionOption
-	tail *Float64OptionArrOptionOptionList
+type Float64OptionArrayOptionOptionList struct {
+	head *Float64OptionArrayOptionOption
+	tail *Float64OptionArrayOptionOptionList
 }
-type Complex64OptionArrOptionOptionList struct {
-	head *Complex64OptionArrOptionOption
-	tail *Complex64OptionArrOptionOptionList
+type Complex64OptionArrayOptionOptionList struct {
+	head *Complex64OptionArrayOptionOption
+	tail *Complex64OptionArrayOptionOptionList
 }
-type Complex128OptionArrOptionOptionList struct {
-	head *Complex128OptionArrOptionOption
-	tail *Complex128OptionArrOptionOptionList
+type Complex128OptionArrayOptionOptionList struct {
+	head *Complex128OptionArrayOptionOption
+	tail *Complex128OptionArrayOptionOptionList
 }
-type AnyOptionArrOptionOptionList struct {
-	head *AnyOptionArrOptionOption
-	tail *AnyOptionArrOptionOptionList
+type AnyOptionArrayOptionOptionList struct {
+	head *AnyOptionArrayOptionOption
+	tail *AnyOptionArrayOptionOptionList
 }
 type BoolListOptionOptionList struct {
 	head *BoolListOptionOption
@@ -963,245 +963,245 @@ type AnyOptionOptionOptionList struct {
 	head *AnyOptionOptionOption
 	tail *AnyOptionOptionOptionList
 }
-type BoolArrOptionOptionOptionList struct {
-	head *BoolArrOptionOptionOption
-	tail *BoolArrOptionOptionOptionList
+type BoolArrayOptionOptionOptionList struct {
+	head *BoolArrayOptionOptionOption
+	tail *BoolArrayOptionOptionOptionList
 }
-type StringArrOptionOptionOptionList struct {
-	head *StringArrOptionOptionOption
-	tail *StringArrOptionOptionOptionList
+type StringArrayOptionOptionOptionList struct {
+	head *StringArrayOptionOptionOption
+	tail *StringArrayOptionOptionOptionList
 }
-type IntArrOptionOptionOptionList struct {
-	head *IntArrOptionOptionOption
-	tail *IntArrOptionOptionOptionList
+type IntArrayOptionOptionOptionList struct {
+	head *IntArrayOptionOptionOption
+	tail *IntArrayOptionOptionOptionList
 }
-type Int8ArrOptionOptionOptionList struct {
-	head *Int8ArrOptionOptionOption
-	tail *Int8ArrOptionOptionOptionList
+type Int8ArrayOptionOptionOptionList struct {
+	head *Int8ArrayOptionOptionOption
+	tail *Int8ArrayOptionOptionOptionList
 }
-type Int16ArrOptionOptionOptionList struct {
-	head *Int16ArrOptionOptionOption
-	tail *Int16ArrOptionOptionOptionList
+type Int16ArrayOptionOptionOptionList struct {
+	head *Int16ArrayOptionOptionOption
+	tail *Int16ArrayOptionOptionOptionList
 }
-type Int32ArrOptionOptionOptionList struct {
-	head *Int32ArrOptionOptionOption
-	tail *Int32ArrOptionOptionOptionList
+type Int32ArrayOptionOptionOptionList struct {
+	head *Int32ArrayOptionOptionOption
+	tail *Int32ArrayOptionOptionOptionList
 }
-type Int64ArrOptionOptionOptionList struct {
-	head *Int64ArrOptionOptionOption
-	tail *Int64ArrOptionOptionOptionList
+type Int64ArrayOptionOptionOptionList struct {
+	head *Int64ArrayOptionOptionOption
+	tail *Int64ArrayOptionOptionOptionList
 }
-type UintArrOptionOptionOptionList struct {
-	head *UintArrOptionOptionOption
-	tail *UintArrOptionOptionOptionList
+type UintArrayOptionOptionOptionList struct {
+	head *UintArrayOptionOptionOption
+	tail *UintArrayOptionOptionOptionList
 }
-type Uint8ArrOptionOptionOptionList struct {
-	head *Uint8ArrOptionOptionOption
-	tail *Uint8ArrOptionOptionOptionList
+type Uint8ArrayOptionOptionOptionList struct {
+	head *Uint8ArrayOptionOptionOption
+	tail *Uint8ArrayOptionOptionOptionList
 }
-type Uint16ArrOptionOptionOptionList struct {
-	head *Uint16ArrOptionOptionOption
-	tail *Uint16ArrOptionOptionOptionList
+type Uint16ArrayOptionOptionOptionList struct {
+	head *Uint16ArrayOptionOptionOption
+	tail *Uint16ArrayOptionOptionOptionList
 }
-type Uint32ArrOptionOptionOptionList struct {
-	head *Uint32ArrOptionOptionOption
-	tail *Uint32ArrOptionOptionOptionList
+type Uint32ArrayOptionOptionOptionList struct {
+	head *Uint32ArrayOptionOptionOption
+	tail *Uint32ArrayOptionOptionOptionList
 }
-type Uint64ArrOptionOptionOptionList struct {
-	head *Uint64ArrOptionOptionOption
-	tail *Uint64ArrOptionOptionOptionList
+type Uint64ArrayOptionOptionOptionList struct {
+	head *Uint64ArrayOptionOptionOption
+	tail *Uint64ArrayOptionOptionOptionList
 }
-type UintptrArrOptionOptionOptionList struct {
-	head *UintptrArrOptionOptionOption
-	tail *UintptrArrOptionOptionOptionList
+type UintptrArrayOptionOptionOptionList struct {
+	head *UintptrArrayOptionOptionOption
+	tail *UintptrArrayOptionOptionOptionList
 }
-type ByteArrOptionOptionOptionList struct {
-	head *ByteArrOptionOptionOption
-	tail *ByteArrOptionOptionOptionList
+type ByteArrayOptionOptionOptionList struct {
+	head *ByteArrayOptionOptionOption
+	tail *ByteArrayOptionOptionOptionList
 }
-type RuneArrOptionOptionOptionList struct {
-	head *RuneArrOptionOptionOption
-	tail *RuneArrOptionOptionOptionList
+type RuneArrayOptionOptionOptionList struct {
+	head *RuneArrayOptionOptionOption
+	tail *RuneArrayOptionOptionOptionList
 }
-type Float32ArrOptionOptionOptionList struct {
-	head *Float32ArrOptionOptionOption
-	tail *Float32ArrOptionOptionOptionList
+type Float32ArrayOptionOptionOptionList struct {
+	head *Float32ArrayOptionOptionOption
+	tail *Float32ArrayOptionOptionOptionList
 }
-type Float64ArrOptionOptionOptionList struct {
-	head *Float64ArrOptionOptionOption
-	tail *Float64ArrOptionOptionOptionList
+type Float64ArrayOptionOptionOptionList struct {
+	head *Float64ArrayOptionOptionOption
+	tail *Float64ArrayOptionOptionOptionList
 }
-type Complex64ArrOptionOptionOptionList struct {
-	head *Complex64ArrOptionOptionOption
-	tail *Complex64ArrOptionOptionOptionList
+type Complex64ArrayOptionOptionOptionList struct {
+	head *Complex64ArrayOptionOptionOption
+	tail *Complex64ArrayOptionOptionOptionList
 }
-type Complex128ArrOptionOptionOptionList struct {
-	head *Complex128ArrOptionOptionOption
-	tail *Complex128ArrOptionOptionOptionList
+type Complex128ArrayOptionOptionOptionList struct {
+	head *Complex128ArrayOptionOptionOption
+	tail *Complex128ArrayOptionOptionOptionList
 }
-type AnyArrOptionOptionOptionList struct {
-	head *AnyArrOptionOptionOption
-	tail *AnyArrOptionOptionOptionList
+type AnyArrayOptionOptionOptionList struct {
+	head *AnyArrayOptionOptionOption
+	tail *AnyArrayOptionOptionOptionList
 }
-type BoolArrArrOptionOptionOptionList struct {
-	head *BoolArrArrOptionOptionOption
-	tail *BoolArrArrOptionOptionOptionList
+type BoolArrayArrayOptionOptionOptionList struct {
+	head *BoolArrayArrayOptionOptionOption
+	tail *BoolArrayArrayOptionOptionOptionList
 }
-type StringArrArrOptionOptionOptionList struct {
-	head *StringArrArrOptionOptionOption
-	tail *StringArrArrOptionOptionOptionList
+type StringArrayArrayOptionOptionOptionList struct {
+	head *StringArrayArrayOptionOptionOption
+	tail *StringArrayArrayOptionOptionOptionList
 }
-type IntArrArrOptionOptionOptionList struct {
-	head *IntArrArrOptionOptionOption
-	tail *IntArrArrOptionOptionOptionList
+type IntArrayArrayOptionOptionOptionList struct {
+	head *IntArrayArrayOptionOptionOption
+	tail *IntArrayArrayOptionOptionOptionList
 }
-type Int8ArrArrOptionOptionOptionList struct {
-	head *Int8ArrArrOptionOptionOption
-	tail *Int8ArrArrOptionOptionOptionList
+type Int8ArrayArrayOptionOptionOptionList struct {
+	head *Int8ArrayArrayOptionOptionOption
+	tail *Int8ArrayArrayOptionOptionOptionList
 }
-type Int16ArrArrOptionOptionOptionList struct {
-	head *Int16ArrArrOptionOptionOption
-	tail *Int16ArrArrOptionOptionOptionList
+type Int16ArrayArrayOptionOptionOptionList struct {
+	head *Int16ArrayArrayOptionOptionOption
+	tail *Int16ArrayArrayOptionOptionOptionList
 }
-type Int32ArrArrOptionOptionOptionList struct {
-	head *Int32ArrArrOptionOptionOption
-	tail *Int32ArrArrOptionOptionOptionList
+type Int32ArrayArrayOptionOptionOptionList struct {
+	head *Int32ArrayArrayOptionOptionOption
+	tail *Int32ArrayArrayOptionOptionOptionList
 }
-type Int64ArrArrOptionOptionOptionList struct {
-	head *Int64ArrArrOptionOptionOption
-	tail *Int64ArrArrOptionOptionOptionList
+type Int64ArrayArrayOptionOptionOptionList struct {
+	head *Int64ArrayArrayOptionOptionOption
+	tail *Int64ArrayArrayOptionOptionOptionList
 }
-type UintArrArrOptionOptionOptionList struct {
-	head *UintArrArrOptionOptionOption
-	tail *UintArrArrOptionOptionOptionList
+type UintArrayArrayOptionOptionOptionList struct {
+	head *UintArrayArrayOptionOptionOption
+	tail *UintArrayArrayOptionOptionOptionList
 }
-type Uint8ArrArrOptionOptionOptionList struct {
-	head *Uint8ArrArrOptionOptionOption
-	tail *Uint8ArrArrOptionOptionOptionList
+type Uint8ArrayArrayOptionOptionOptionList struct {
+	head *Uint8ArrayArrayOptionOptionOption
+	tail *Uint8ArrayArrayOptionOptionOptionList
 }
-type Uint16ArrArrOptionOptionOptionList struct {
-	head *Uint16ArrArrOptionOptionOption
-	tail *Uint16ArrArrOptionOptionOptionList
+type Uint16ArrayArrayOptionOptionOptionList struct {
+	head *Uint16ArrayArrayOptionOptionOption
+	tail *Uint16ArrayArrayOptionOptionOptionList
 }
-type Uint32ArrArrOptionOptionOptionList struct {
-	head *Uint32ArrArrOptionOptionOption
-	tail *Uint32ArrArrOptionOptionOptionList
+type Uint32ArrayArrayOptionOptionOptionList struct {
+	head *Uint32ArrayArrayOptionOptionOption
+	tail *Uint32ArrayArrayOptionOptionOptionList
 }
-type Uint64ArrArrOptionOptionOptionList struct {
-	head *Uint64ArrArrOptionOptionOption
-	tail *Uint64ArrArrOptionOptionOptionList
+type Uint64ArrayArrayOptionOptionOptionList struct {
+	head *Uint64ArrayArrayOptionOptionOption
+	tail *Uint64ArrayArrayOptionOptionOptionList
 }
-type UintptrArrArrOptionOptionOptionList struct {
-	head *UintptrArrArrOptionOptionOption
-	tail *UintptrArrArrOptionOptionOptionList
+type UintptrArrayArrayOptionOptionOptionList struct {
+	head *UintptrArrayArrayOptionOptionOption
+	tail *UintptrArrayArrayOptionOptionOptionList
 }
-type ByteArrArrOptionOptionOptionList struct {
-	head *ByteArrArrOptionOptionOption
-	tail *ByteArrArrOptionOptionOptionList
+type ByteArrayArrayOptionOptionOptionList struct {
+	head *ByteArrayArrayOptionOptionOption
+	tail *ByteArrayArrayOptionOptionOptionList
 }
-type RuneArrArrOptionOptionOptionList struct {
-	head *RuneArrArrOptionOptionOption
-	tail *RuneArrArrOptionOptionOptionList
+type RuneArrayArrayOptionOptionOptionList struct {
+	head *RuneArrayArrayOptionOptionOption
+	tail *RuneArrayArrayOptionOptionOptionList
 }
-type Float32ArrArrOptionOptionOptionList struct {
-	head *Float32ArrArrOptionOptionOption
-	tail *Float32ArrArrOptionOptionOptionList
+type Float32ArrayArrayOptionOptionOptionList struct {
+	head *Float32ArrayArrayOptionOptionOption
+	tail *Float32ArrayArrayOptionOptionOptionList
 }
-type Float64ArrArrOptionOptionOptionList struct {
-	head *Float64ArrArrOptionOptionOption
-	tail *Float64ArrArrOptionOptionOptionList
+type Float64ArrayArrayOptionOptionOptionList struct {
+	head *Float64ArrayArrayOptionOptionOption
+	tail *Float64ArrayArrayOptionOptionOptionList
 }
-type Complex64ArrArrOptionOptionOptionList struct {
-	head *Complex64ArrArrOptionOptionOption
-	tail *Complex64ArrArrOptionOptionOptionList
+type Complex64ArrayArrayOptionOptionOptionList struct {
+	head *Complex64ArrayArrayOptionOptionOption
+	tail *Complex64ArrayArrayOptionOptionOptionList
 }
-type Complex128ArrArrOptionOptionOptionList struct {
-	head *Complex128ArrArrOptionOptionOption
-	tail *Complex128ArrArrOptionOptionOptionList
+type Complex128ArrayArrayOptionOptionOptionList struct {
+	head *Complex128ArrayArrayOptionOptionOption
+	tail *Complex128ArrayArrayOptionOptionOptionList
 }
-type AnyArrArrOptionOptionOptionList struct {
-	head *AnyArrArrOptionOptionOption
-	tail *AnyArrArrOptionOptionOptionList
+type AnyArrayArrayOptionOptionOptionList struct {
+	head *AnyArrayArrayOptionOptionOption
+	tail *AnyArrayArrayOptionOptionOptionList
 }
-type BoolOptionArrOptionOptionOptionList struct {
-	head *BoolOptionArrOptionOptionOption
-	tail *BoolOptionArrOptionOptionOptionList
+type BoolOptionArrayOptionOptionOptionList struct {
+	head *BoolOptionArrayOptionOptionOption
+	tail *BoolOptionArrayOptionOptionOptionList
 }
-type StringOptionArrOptionOptionOptionList struct {
-	head *StringOptionArrOptionOptionOption
-	tail *StringOptionArrOptionOptionOptionList
+type StringOptionArrayOptionOptionOptionList struct {
+	head *StringOptionArrayOptionOptionOption
+	tail *StringOptionArrayOptionOptionOptionList
 }
-type IntOptionArrOptionOptionOptionList struct {
-	head *IntOptionArrOptionOptionOption
-	tail *IntOptionArrOptionOptionOptionList
+type IntOptionArrayOptionOptionOptionList struct {
+	head *IntOptionArrayOptionOptionOption
+	tail *IntOptionArrayOptionOptionOptionList
 }
-type Int8OptionArrOptionOptionOptionList struct {
-	head *Int8OptionArrOptionOptionOption
-	tail *Int8OptionArrOptionOptionOptionList
+type Int8OptionArrayOptionOptionOptionList struct {
+	head *Int8OptionArrayOptionOptionOption
+	tail *Int8OptionArrayOptionOptionOptionList
 }
-type Int16OptionArrOptionOptionOptionList struct {
-	head *Int16OptionArrOptionOptionOption
-	tail *Int16OptionArrOptionOptionOptionList
+type Int16OptionArrayOptionOptionOptionList struct {
+	head *Int16OptionArrayOptionOptionOption
+	tail *Int16OptionArrayOptionOptionOptionList
 }
-type Int32OptionArrOptionOptionOptionList struct {
-	head *Int32OptionArrOptionOptionOption
-	tail *Int32OptionArrOptionOptionOptionList
+type Int32OptionArrayOptionOptionOptionList struct {
+	head *Int32OptionArrayOptionOptionOption
+	tail *Int32OptionArrayOptionOptionOptionList
 }
-type Int64OptionArrOptionOptionOptionList struct {
-	head *Int64OptionArrOptionOptionOption
-	tail *Int64OptionArrOptionOptionOptionList
+type Int64OptionArrayOptionOptionOptionList struct {
+	head *Int64OptionArrayOptionOptionOption
+	tail *Int64OptionArrayOptionOptionOptionList
 }
-type UintOptionArrOptionOptionOptionList struct {
-	head *UintOptionArrOptionOptionOption
-	tail *UintOptionArrOptionOptionOptionList
+type UintOptionArrayOptionOptionOptionList struct {
+	head *UintOptionArrayOptionOptionOption
+	tail *UintOptionArrayOptionOptionOptionList
 }
-type Uint8OptionArrOptionOptionOptionList struct {
-	head *Uint8OptionArrOptionOptionOption
-	tail *Uint8OptionArrOptionOptionOptionList
+type Uint8OptionArrayOptionOptionOptionList struct {
+	head *Uint8OptionArrayOptionOptionOption
+	tail *Uint8OptionArrayOptionOptionOptionList
 }
-type Uint16OptionArrOptionOptionOptionList struct {
-	head *Uint16OptionArrOptionOptionOption
-	tail *Uint16OptionArrOptionOptionOptionList
+type Uint16OptionArrayOptionOptionOptionList struct {
+	head *Uint16OptionArrayOptionOptionOption
+	tail *Uint16OptionArrayOptionOptionOptionList
 }
-type Uint32OptionArrOptionOptionOptionList struct {
-	head *Uint32OptionArrOptionOptionOption
-	tail *Uint32OptionArrOptionOptionOptionList
+type Uint32OptionArrayOptionOptionOptionList struct {
+	head *Uint32OptionArrayOptionOptionOption
+	tail *Uint32OptionArrayOptionOptionOptionList
 }
-type Uint64OptionArrOptionOptionOptionList struct {
-	head *Uint64OptionArrOptionOptionOption
-	tail *Uint64OptionArrOptionOptionOptionList
+type Uint64OptionArrayOptionOptionOptionList struct {
+	head *Uint64OptionArrayOptionOptionOption
+	tail *Uint64OptionArrayOptionOptionOptionList
 }
-type UintptrOptionArrOptionOptionOptionList struct {
-	head *UintptrOptionArrOptionOptionOption
-	tail *UintptrOptionArrOptionOptionOptionList
+type UintptrOptionArrayOptionOptionOptionList struct {
+	head *UintptrOptionArrayOptionOptionOption
+	tail *UintptrOptionArrayOptionOptionOptionList
 }
-type ByteOptionArrOptionOptionOptionList struct {
-	head *ByteOptionArrOptionOptionOption
-	tail *ByteOptionArrOptionOptionOptionList
+type ByteOptionArrayOptionOptionOptionList struct {
+	head *ByteOptionArrayOptionOptionOption
+	tail *ByteOptionArrayOptionOptionOptionList
 }
-type RuneOptionArrOptionOptionOptionList struct {
-	head *RuneOptionArrOptionOptionOption
-	tail *RuneOptionArrOptionOptionOptionList
+type RuneOptionArrayOptionOptionOptionList struct {
+	head *RuneOptionArrayOptionOptionOption
+	tail *RuneOptionArrayOptionOptionOptionList
 }
-type Float32OptionArrOptionOptionOptionList struct {
-	head *Float32OptionArrOptionOptionOption
-	tail *Float32OptionArrOptionOptionOptionList
+type Float32OptionArrayOptionOptionOptionList struct {
+	head *Float32OptionArrayOptionOptionOption
+	tail *Float32OptionArrayOptionOptionOptionList
 }
-type Float64OptionArrOptionOptionOptionList struct {
-	head *Float64OptionArrOptionOptionOption
-	tail *Float64OptionArrOptionOptionOptionList
+type Float64OptionArrayOptionOptionOptionList struct {
+	head *Float64OptionArrayOptionOptionOption
+	tail *Float64OptionArrayOptionOptionOptionList
 }
-type Complex64OptionArrOptionOptionOptionList struct {
-	head *Complex64OptionArrOptionOptionOption
-	tail *Complex64OptionArrOptionOptionOptionList
+type Complex64OptionArrayOptionOptionOptionList struct {
+	head *Complex64OptionArrayOptionOptionOption
+	tail *Complex64OptionArrayOptionOptionOptionList
 }
-type Complex128OptionArrOptionOptionOptionList struct {
-	head *Complex128OptionArrOptionOptionOption
-	tail *Complex128OptionArrOptionOptionOptionList
+type Complex128OptionArrayOptionOptionOptionList struct {
+	head *Complex128OptionArrayOptionOptionOption
+	tail *Complex128OptionArrayOptionOptionOptionList
 }
-type AnyOptionArrOptionOptionOptionList struct {
-	head *AnyOptionArrOptionOptionOption
-	tail *AnyOptionArrOptionOptionOptionList
+type AnyOptionArrayOptionOptionOptionList struct {
+	head *AnyOptionArrayOptionOptionOption
+	tail *AnyOptionArrayOptionOptionOptionList
 }
 type BoolListOptionOptionOptionList struct {
 	head *BoolListOptionOptionOption
@@ -1283,245 +1283,245 @@ type AnyListOptionOptionOptionList struct {
 	head *AnyListOptionOptionOption
 	tail *AnyListOptionOptionOptionList
 }
-type BoolArrList struct {
+type BoolArrayList struct {
 	head *[]bool
-	tail *BoolArrList
+	tail *BoolArrayList
 }
-type StringArrList struct {
+type StringArrayList struct {
 	head *[]string
-	tail *StringArrList
+	tail *StringArrayList
 }
-type IntArrList struct {
+type IntArrayList struct {
 	head *[]int
-	tail *IntArrList
+	tail *IntArrayList
 }
-type Int8ArrList struct {
+type Int8ArrayList struct {
 	head *[]int8
-	tail *Int8ArrList
+	tail *Int8ArrayList
 }
-type Int16ArrList struct {
+type Int16ArrayList struct {
 	head *[]int16
-	tail *Int16ArrList
+	tail *Int16ArrayList
 }
-type Int32ArrList struct {
+type Int32ArrayList struct {
 	head *[]int32
-	tail *Int32ArrList
+	tail *Int32ArrayList
 }
-type Int64ArrList struct {
+type Int64ArrayList struct {
 	head *[]int64
-	tail *Int64ArrList
+	tail *Int64ArrayList
 }
-type UintArrList struct {
+type UintArrayList struct {
 	head *[]uint
-	tail *UintArrList
+	tail *UintArrayList
 }
-type Uint8ArrList struct {
+type Uint8ArrayList struct {
 	head *[]uint8
-	tail *Uint8ArrList
+	tail *Uint8ArrayList
 }
-type Uint16ArrList struct {
+type Uint16ArrayList struct {
 	head *[]uint16
-	tail *Uint16ArrList
+	tail *Uint16ArrayList
 }
-type Uint32ArrList struct {
+type Uint32ArrayList struct {
 	head *[]uint32
-	tail *Uint32ArrList
+	tail *Uint32ArrayList
 }
-type Uint64ArrList struct {
+type Uint64ArrayList struct {
 	head *[]uint64
-	tail *Uint64ArrList
+	tail *Uint64ArrayList
 }
-type UintptrArrList struct {
+type UintptrArrayList struct {
 	head *[]uintptr
-	tail *UintptrArrList
+	tail *UintptrArrayList
 }
-type ByteArrList struct {
+type ByteArrayList struct {
 	head *[]byte
-	tail *ByteArrList
+	tail *ByteArrayList
 }
-type RuneArrList struct {
+type RuneArrayList struct {
 	head *[]rune
-	tail *RuneArrList
+	tail *RuneArrayList
 }
-type Float32ArrList struct {
+type Float32ArrayList struct {
 	head *[]float32
-	tail *Float32ArrList
+	tail *Float32ArrayList
 }
-type Float64ArrList struct {
+type Float64ArrayList struct {
 	head *[]float64
-	tail *Float64ArrList
+	tail *Float64ArrayList
 }
-type Complex64ArrList struct {
+type Complex64ArrayList struct {
 	head *[]complex64
-	tail *Complex64ArrList
+	tail *Complex64ArrayList
 }
-type Complex128ArrList struct {
+type Complex128ArrayList struct {
 	head *[]complex128
-	tail *Complex128ArrList
+	tail *Complex128ArrayList
 }
-type AnyArrList struct {
+type AnyArrayList struct {
 	head *[]Any
-	tail *AnyArrList
+	tail *AnyArrayList
 }
-type BoolArrArrList struct {
+type BoolArrayArrayList struct {
 	head *[][]bool
-	tail *BoolArrArrList
+	tail *BoolArrayArrayList
 }
-type StringArrArrList struct {
+type StringArrayArrayList struct {
 	head *[][]string
-	tail *StringArrArrList
+	tail *StringArrayArrayList
 }
-type IntArrArrList struct {
+type IntArrayArrayList struct {
 	head *[][]int
-	tail *IntArrArrList
+	tail *IntArrayArrayList
 }
-type Int8ArrArrList struct {
+type Int8ArrayArrayList struct {
 	head *[][]int8
-	tail *Int8ArrArrList
+	tail *Int8ArrayArrayList
 }
-type Int16ArrArrList struct {
+type Int16ArrayArrayList struct {
 	head *[][]int16
-	tail *Int16ArrArrList
+	tail *Int16ArrayArrayList
 }
-type Int32ArrArrList struct {
+type Int32ArrayArrayList struct {
 	head *[][]int32
-	tail *Int32ArrArrList
+	tail *Int32ArrayArrayList
 }
-type Int64ArrArrList struct {
+type Int64ArrayArrayList struct {
 	head *[][]int64
-	tail *Int64ArrArrList
+	tail *Int64ArrayArrayList
 }
-type UintArrArrList struct {
+type UintArrayArrayList struct {
 	head *[][]uint
-	tail *UintArrArrList
+	tail *UintArrayArrayList
 }
-type Uint8ArrArrList struct {
+type Uint8ArrayArrayList struct {
 	head *[][]uint8
-	tail *Uint8ArrArrList
+	tail *Uint8ArrayArrayList
 }
-type Uint16ArrArrList struct {
+type Uint16ArrayArrayList struct {
 	head *[][]uint16
-	tail *Uint16ArrArrList
+	tail *Uint16ArrayArrayList
 }
-type Uint32ArrArrList struct {
+type Uint32ArrayArrayList struct {
 	head *[][]uint32
-	tail *Uint32ArrArrList
+	tail *Uint32ArrayArrayList
 }
-type Uint64ArrArrList struct {
+type Uint64ArrayArrayList struct {
 	head *[][]uint64
-	tail *Uint64ArrArrList
+	tail *Uint64ArrayArrayList
 }
-type UintptrArrArrList struct {
+type UintptrArrayArrayList struct {
 	head *[][]uintptr
-	tail *UintptrArrArrList
+	tail *UintptrArrayArrayList
 }
-type ByteArrArrList struct {
+type ByteArrayArrayList struct {
 	head *[][]byte
-	tail *ByteArrArrList
+	tail *ByteArrayArrayList
 }
-type RuneArrArrList struct {
+type RuneArrayArrayList struct {
 	head *[][]rune
-	tail *RuneArrArrList
+	tail *RuneArrayArrayList
 }
-type Float32ArrArrList struct {
+type Float32ArrayArrayList struct {
 	head *[][]float32
-	tail *Float32ArrArrList
+	tail *Float32ArrayArrayList
 }
-type Float64ArrArrList struct {
+type Float64ArrayArrayList struct {
 	head *[][]float64
-	tail *Float64ArrArrList
+	tail *Float64ArrayArrayList
 }
-type Complex64ArrArrList struct {
+type Complex64ArrayArrayList struct {
 	head *[][]complex64
-	tail *Complex64ArrArrList
+	tail *Complex64ArrayArrayList
 }
-type Complex128ArrArrList struct {
+type Complex128ArrayArrayList struct {
 	head *[][]complex128
-	tail *Complex128ArrArrList
+	tail *Complex128ArrayArrayList
 }
-type AnyArrArrList struct {
+type AnyArrayArrayList struct {
 	head *[][]Any
-	tail *AnyArrArrList
+	tail *AnyArrayArrayList
 }
-type BoolOptionArrList struct {
+type BoolOptionArrayList struct {
 	head *[]BoolOption
-	tail *BoolOptionArrList
+	tail *BoolOptionArrayList
 }
-type StringOptionArrList struct {
+type StringOptionArrayList struct {
 	head *[]StringOption
-	tail *StringOptionArrList
+	tail *StringOptionArrayList
 }
-type IntOptionArrList struct {
+type IntOptionArrayList struct {
 	head *[]IntOption
-	tail *IntOptionArrList
+	tail *IntOptionArrayList
 }
-type Int8OptionArrList struct {
+type Int8OptionArrayList struct {
 	head *[]Int8Option
-	tail *Int8OptionArrList
+	tail *Int8OptionArrayList
 }
-type Int16OptionArrList struct {
+type Int16OptionArrayList struct {
 	head *[]Int16Option
-	tail *Int16OptionArrList
+	tail *Int16OptionArrayList
 }
-type Int32OptionArrList struct {
+type Int32OptionArrayList struct {
 	head *[]Int32Option
-	tail *Int32OptionArrList
+	tail *Int32OptionArrayList
 }
-type Int64OptionArrList struct {
+type Int64OptionArrayList struct {
 	head *[]Int64Option
-	tail *Int64OptionArrList
+	tail *Int64OptionArrayList
 }
-type UintOptionArrList struct {
+type UintOptionArrayList struct {
 	head *[]UintOption
-	tail *UintOptionArrList
+	tail *UintOptionArrayList
 }
-type Uint8OptionArrList struct {
+type Uint8OptionArrayList struct {
 	head *[]Uint8Option
-	tail *Uint8OptionArrList
+	tail *Uint8OptionArrayList
 }
-type Uint16OptionArrList struct {
+type Uint16OptionArrayList struct {
 	head *[]Uint16Option
-	tail *Uint16OptionArrList
+	tail *Uint16OptionArrayList
 }
-type Uint32OptionArrList struct {
+type Uint32OptionArrayList struct {
 	head *[]Uint32Option
-	tail *Uint32OptionArrList
+	tail *Uint32OptionArrayList
 }
-type Uint64OptionArrList struct {
+type Uint64OptionArrayList struct {
 	head *[]Uint64Option
-	tail *Uint64OptionArrList
+	tail *Uint64OptionArrayList
 }
-type UintptrOptionArrList struct {
+type UintptrOptionArrayList struct {
 	head *[]UintptrOption
-	tail *UintptrOptionArrList
+	tail *UintptrOptionArrayList
 }
-type ByteOptionArrList struct {
+type ByteOptionArrayList struct {
 	head *[]ByteOption
-	tail *ByteOptionArrList
+	tail *ByteOptionArrayList
 }
-type RuneOptionArrList struct {
+type RuneOptionArrayList struct {
 	head *[]RuneOption
-	tail *RuneOptionArrList
+	tail *RuneOptionArrayList
 }
-type Float32OptionArrList struct {
+type Float32OptionArrayList struct {
 	head *[]Float32Option
-	tail *Float32OptionArrList
+	tail *Float32OptionArrayList
 }
-type Float64OptionArrList struct {
+type Float64OptionArrayList struct {
 	head *[]Float64Option
-	tail *Float64OptionArrList
+	tail *Float64OptionArrayList
 }
-type Complex64OptionArrList struct {
+type Complex64OptionArrayList struct {
 	head *[]Complex64Option
-	tail *Complex64OptionArrList
+	tail *Complex64OptionArrayList
 }
-type Complex128OptionArrList struct {
+type Complex128OptionArrayList struct {
 	head *[]Complex128Option
-	tail *Complex128OptionArrList
+	tail *Complex128OptionArrayList
 }
-type AnyOptionArrList struct {
+type AnyOptionArrayList struct {
 	head *[]AnyOption
-	tail *AnyOptionArrList
+	tail *AnyOptionArrayList
 }
 type BoolListList struct {
 	head *BoolList
@@ -1603,404 +1603,3 @@ type AnyListList struct {
 	head *AnyList
 	tail *AnyListList
 }
-
-var NilBoolList BoolList = BoolList{nil, nil}
-var NilStringList StringList = StringList{nil, nil}
-var NilIntList IntList = IntList{nil, nil}
-var NilInt8List Int8List = Int8List{nil, nil}
-var NilInt16List Int16List = Int16List{nil, nil}
-var NilInt32List Int32List = Int32List{nil, nil}
-var NilInt64List Int64List = Int64List{nil, nil}
-var NilUintList UintList = UintList{nil, nil}
-var NilUint8List Uint8List = Uint8List{nil, nil}
-var NilUint16List Uint16List = Uint16List{nil, nil}
-var NilUint32List Uint32List = Uint32List{nil, nil}
-var NilUint64List Uint64List = Uint64List{nil, nil}
-var NilUintptrList UintptrList = UintptrList{nil, nil}
-var NilByteList ByteList = ByteList{nil, nil}
-var NilRuneList RuneList = RuneList{nil, nil}
-var NilFloat32List Float32List = Float32List{nil, nil}
-var NilFloat64List Float64List = Float64List{nil, nil}
-var NilComplex64List Complex64List = Complex64List{nil, nil}
-var NilComplex128List Complex128List = Complex128List{nil, nil}
-var NilAnyList AnyList = AnyList{nil, nil}
-var NilBoolOptionList BoolOptionList = BoolOptionList{nil, nil}
-var NilStringOptionList StringOptionList = StringOptionList{nil, nil}
-var NilIntOptionList IntOptionList = IntOptionList{nil, nil}
-var NilInt8OptionList Int8OptionList = Int8OptionList{nil, nil}
-var NilInt16OptionList Int16OptionList = Int16OptionList{nil, nil}
-var NilInt32OptionList Int32OptionList = Int32OptionList{nil, nil}
-var NilInt64OptionList Int64OptionList = Int64OptionList{nil, nil}
-var NilUintOptionList UintOptionList = UintOptionList{nil, nil}
-var NilUint8OptionList Uint8OptionList = Uint8OptionList{nil, nil}
-var NilUint16OptionList Uint16OptionList = Uint16OptionList{nil, nil}
-var NilUint32OptionList Uint32OptionList = Uint32OptionList{nil, nil}
-var NilUint64OptionList Uint64OptionList = Uint64OptionList{nil, nil}
-var NilUintptrOptionList UintptrOptionList = UintptrOptionList{nil, nil}
-var NilByteOptionList ByteOptionList = ByteOptionList{nil, nil}
-var NilRuneOptionList RuneOptionList = RuneOptionList{nil, nil}
-var NilFloat32OptionList Float32OptionList = Float32OptionList{nil, nil}
-var NilFloat64OptionList Float64OptionList = Float64OptionList{nil, nil}
-var NilComplex64OptionList Complex64OptionList = Complex64OptionList{nil, nil}
-var NilComplex128OptionList Complex128OptionList = Complex128OptionList{nil, nil}
-var NilAnyOptionList AnyOptionList = AnyOptionList{nil, nil}
-var NilBoolArrOptionList BoolArrOptionList = BoolArrOptionList{nil, nil}
-var NilStringArrOptionList StringArrOptionList = StringArrOptionList{nil, nil}
-var NilIntArrOptionList IntArrOptionList = IntArrOptionList{nil, nil}
-var NilInt8ArrOptionList Int8ArrOptionList = Int8ArrOptionList{nil, nil}
-var NilInt16ArrOptionList Int16ArrOptionList = Int16ArrOptionList{nil, nil}
-var NilInt32ArrOptionList Int32ArrOptionList = Int32ArrOptionList{nil, nil}
-var NilInt64ArrOptionList Int64ArrOptionList = Int64ArrOptionList{nil, nil}
-var NilUintArrOptionList UintArrOptionList = UintArrOptionList{nil, nil}
-var NilUint8ArrOptionList Uint8ArrOptionList = Uint8ArrOptionList{nil, nil}
-var NilUint16ArrOptionList Uint16ArrOptionList = Uint16ArrOptionList{nil, nil}
-var NilUint32ArrOptionList Uint32ArrOptionList = Uint32ArrOptionList{nil, nil}
-var NilUint64ArrOptionList Uint64ArrOptionList = Uint64ArrOptionList{nil, nil}
-var NilUintptrArrOptionList UintptrArrOptionList = UintptrArrOptionList{nil, nil}
-var NilByteArrOptionList ByteArrOptionList = ByteArrOptionList{nil, nil}
-var NilRuneArrOptionList RuneArrOptionList = RuneArrOptionList{nil, nil}
-var NilFloat32ArrOptionList Float32ArrOptionList = Float32ArrOptionList{nil, nil}
-var NilFloat64ArrOptionList Float64ArrOptionList = Float64ArrOptionList{nil, nil}
-var NilComplex64ArrOptionList Complex64ArrOptionList = Complex64ArrOptionList{nil, nil}
-var NilComplex128ArrOptionList Complex128ArrOptionList = Complex128ArrOptionList{nil, nil}
-var NilAnyArrOptionList AnyArrOptionList = AnyArrOptionList{nil, nil}
-var NilBoolArrArrOptionList BoolArrArrOptionList = BoolArrArrOptionList{nil, nil}
-var NilStringArrArrOptionList StringArrArrOptionList = StringArrArrOptionList{nil, nil}
-var NilIntArrArrOptionList IntArrArrOptionList = IntArrArrOptionList{nil, nil}
-var NilInt8ArrArrOptionList Int8ArrArrOptionList = Int8ArrArrOptionList{nil, nil}
-var NilInt16ArrArrOptionList Int16ArrArrOptionList = Int16ArrArrOptionList{nil, nil}
-var NilInt32ArrArrOptionList Int32ArrArrOptionList = Int32ArrArrOptionList{nil, nil}
-var NilInt64ArrArrOptionList Int64ArrArrOptionList = Int64ArrArrOptionList{nil, nil}
-var NilUintArrArrOptionList UintArrArrOptionList = UintArrArrOptionList{nil, nil}
-var NilUint8ArrArrOptionList Uint8ArrArrOptionList = Uint8ArrArrOptionList{nil, nil}
-var NilUint16ArrArrOptionList Uint16ArrArrOptionList = Uint16ArrArrOptionList{nil, nil}
-var NilUint32ArrArrOptionList Uint32ArrArrOptionList = Uint32ArrArrOptionList{nil, nil}
-var NilUint64ArrArrOptionList Uint64ArrArrOptionList = Uint64ArrArrOptionList{nil, nil}
-var NilUintptrArrArrOptionList UintptrArrArrOptionList = UintptrArrArrOptionList{nil, nil}
-var NilByteArrArrOptionList ByteArrArrOptionList = ByteArrArrOptionList{nil, nil}
-var NilRuneArrArrOptionList RuneArrArrOptionList = RuneArrArrOptionList{nil, nil}
-var NilFloat32ArrArrOptionList Float32ArrArrOptionList = Float32ArrArrOptionList{nil, nil}
-var NilFloat64ArrArrOptionList Float64ArrArrOptionList = Float64ArrArrOptionList{nil, nil}
-var NilComplex64ArrArrOptionList Complex64ArrArrOptionList = Complex64ArrArrOptionList{nil, nil}
-var NilComplex128ArrArrOptionList Complex128ArrArrOptionList = Complex128ArrArrOptionList{nil, nil}
-var NilAnyArrArrOptionList AnyArrArrOptionList = AnyArrArrOptionList{nil, nil}
-var NilBoolOptionArrOptionList BoolOptionArrOptionList = BoolOptionArrOptionList{nil, nil}
-var NilStringOptionArrOptionList StringOptionArrOptionList = StringOptionArrOptionList{nil, nil}
-var NilIntOptionArrOptionList IntOptionArrOptionList = IntOptionArrOptionList{nil, nil}
-var NilInt8OptionArrOptionList Int8OptionArrOptionList = Int8OptionArrOptionList{nil, nil}
-var NilInt16OptionArrOptionList Int16OptionArrOptionList = Int16OptionArrOptionList{nil, nil}
-var NilInt32OptionArrOptionList Int32OptionArrOptionList = Int32OptionArrOptionList{nil, nil}
-var NilInt64OptionArrOptionList Int64OptionArrOptionList = Int64OptionArrOptionList{nil, nil}
-var NilUintOptionArrOptionList UintOptionArrOptionList = UintOptionArrOptionList{nil, nil}
-var NilUint8OptionArrOptionList Uint8OptionArrOptionList = Uint8OptionArrOptionList{nil, nil}
-var NilUint16OptionArrOptionList Uint16OptionArrOptionList = Uint16OptionArrOptionList{nil, nil}
-var NilUint32OptionArrOptionList Uint32OptionArrOptionList = Uint32OptionArrOptionList{nil, nil}
-var NilUint64OptionArrOptionList Uint64OptionArrOptionList = Uint64OptionArrOptionList{nil, nil}
-var NilUintptrOptionArrOptionList UintptrOptionArrOptionList = UintptrOptionArrOptionList{nil, nil}
-var NilByteOptionArrOptionList ByteOptionArrOptionList = ByteOptionArrOptionList{nil, nil}
-var NilRuneOptionArrOptionList RuneOptionArrOptionList = RuneOptionArrOptionList{nil, nil}
-var NilFloat32OptionArrOptionList Float32OptionArrOptionList = Float32OptionArrOptionList{nil, nil}
-var NilFloat64OptionArrOptionList Float64OptionArrOptionList = Float64OptionArrOptionList{nil, nil}
-var NilComplex64OptionArrOptionList Complex64OptionArrOptionList = Complex64OptionArrOptionList{nil, nil}
-var NilComplex128OptionArrOptionList Complex128OptionArrOptionList = Complex128OptionArrOptionList{nil, nil}
-var NilAnyOptionArrOptionList AnyOptionArrOptionList = AnyOptionArrOptionList{nil, nil}
-var NilBoolListOptionList BoolListOptionList = BoolListOptionList{nil, nil}
-var NilStringListOptionList StringListOptionList = StringListOptionList{nil, nil}
-var NilIntListOptionList IntListOptionList = IntListOptionList{nil, nil}
-var NilInt8ListOptionList Int8ListOptionList = Int8ListOptionList{nil, nil}
-var NilInt16ListOptionList Int16ListOptionList = Int16ListOptionList{nil, nil}
-var NilInt32ListOptionList Int32ListOptionList = Int32ListOptionList{nil, nil}
-var NilInt64ListOptionList Int64ListOptionList = Int64ListOptionList{nil, nil}
-var NilUintListOptionList UintListOptionList = UintListOptionList{nil, nil}
-var NilUint8ListOptionList Uint8ListOptionList = Uint8ListOptionList{nil, nil}
-var NilUint16ListOptionList Uint16ListOptionList = Uint16ListOptionList{nil, nil}
-var NilUint32ListOptionList Uint32ListOptionList = Uint32ListOptionList{nil, nil}
-var NilUint64ListOptionList Uint64ListOptionList = Uint64ListOptionList{nil, nil}
-var NilUintptrListOptionList UintptrListOptionList = UintptrListOptionList{nil, nil}
-var NilByteListOptionList ByteListOptionList = ByteListOptionList{nil, nil}
-var NilRuneListOptionList RuneListOptionList = RuneListOptionList{nil, nil}
-var NilFloat32ListOptionList Float32ListOptionList = Float32ListOptionList{nil, nil}
-var NilFloat64ListOptionList Float64ListOptionList = Float64ListOptionList{nil, nil}
-var NilComplex64ListOptionList Complex64ListOptionList = Complex64ListOptionList{nil, nil}
-var NilComplex128ListOptionList Complex128ListOptionList = Complex128ListOptionList{nil, nil}
-var NilAnyListOptionList AnyListOptionList = AnyListOptionList{nil, nil}
-var NilBoolOptionOptionList BoolOptionOptionList = BoolOptionOptionList{nil, nil}
-var NilStringOptionOptionList StringOptionOptionList = StringOptionOptionList{nil, nil}
-var NilIntOptionOptionList IntOptionOptionList = IntOptionOptionList{nil, nil}
-var NilInt8OptionOptionList Int8OptionOptionList = Int8OptionOptionList{nil, nil}
-var NilInt16OptionOptionList Int16OptionOptionList = Int16OptionOptionList{nil, nil}
-var NilInt32OptionOptionList Int32OptionOptionList = Int32OptionOptionList{nil, nil}
-var NilInt64OptionOptionList Int64OptionOptionList = Int64OptionOptionList{nil, nil}
-var NilUintOptionOptionList UintOptionOptionList = UintOptionOptionList{nil, nil}
-var NilUint8OptionOptionList Uint8OptionOptionList = Uint8OptionOptionList{nil, nil}
-var NilUint16OptionOptionList Uint16OptionOptionList = Uint16OptionOptionList{nil, nil}
-var NilUint32OptionOptionList Uint32OptionOptionList = Uint32OptionOptionList{nil, nil}
-var NilUint64OptionOptionList Uint64OptionOptionList = Uint64OptionOptionList{nil, nil}
-var NilUintptrOptionOptionList UintptrOptionOptionList = UintptrOptionOptionList{nil, nil}
-var NilByteOptionOptionList ByteOptionOptionList = ByteOptionOptionList{nil, nil}
-var NilRuneOptionOptionList RuneOptionOptionList = RuneOptionOptionList{nil, nil}
-var NilFloat32OptionOptionList Float32OptionOptionList = Float32OptionOptionList{nil, nil}
-var NilFloat64OptionOptionList Float64OptionOptionList = Float64OptionOptionList{nil, nil}
-var NilComplex64OptionOptionList Complex64OptionOptionList = Complex64OptionOptionList{nil, nil}
-var NilComplex128OptionOptionList Complex128OptionOptionList = Complex128OptionOptionList{nil, nil}
-var NilAnyOptionOptionList AnyOptionOptionList = AnyOptionOptionList{nil, nil}
-var NilBoolArrOptionOptionList BoolArrOptionOptionList = BoolArrOptionOptionList{nil, nil}
-var NilStringArrOptionOptionList StringArrOptionOptionList = StringArrOptionOptionList{nil, nil}
-var NilIntArrOptionOptionList IntArrOptionOptionList = IntArrOptionOptionList{nil, nil}
-var NilInt8ArrOptionOptionList Int8ArrOptionOptionList = Int8ArrOptionOptionList{nil, nil}
-var NilInt16ArrOptionOptionList Int16ArrOptionOptionList = Int16ArrOptionOptionList{nil, nil}
-var NilInt32ArrOptionOptionList Int32ArrOptionOptionList = Int32ArrOptionOptionList{nil, nil}
-var NilInt64ArrOptionOptionList Int64ArrOptionOptionList = Int64ArrOptionOptionList{nil, nil}
-var NilUintArrOptionOptionList UintArrOptionOptionList = UintArrOptionOptionList{nil, nil}
-var NilUint8ArrOptionOptionList Uint8ArrOptionOptionList = Uint8ArrOptionOptionList{nil, nil}
-var NilUint16ArrOptionOptionList Uint16ArrOptionOptionList = Uint16ArrOptionOptionList{nil, nil}
-var NilUint32ArrOptionOptionList Uint32ArrOptionOptionList = Uint32ArrOptionOptionList{nil, nil}
-var NilUint64ArrOptionOptionList Uint64ArrOptionOptionList = Uint64ArrOptionOptionList{nil, nil}
-var NilUintptrArrOptionOptionList UintptrArrOptionOptionList = UintptrArrOptionOptionList{nil, nil}
-var NilByteArrOptionOptionList ByteArrOptionOptionList = ByteArrOptionOptionList{nil, nil}
-var NilRuneArrOptionOptionList RuneArrOptionOptionList = RuneArrOptionOptionList{nil, nil}
-var NilFloat32ArrOptionOptionList Float32ArrOptionOptionList = Float32ArrOptionOptionList{nil, nil}
-var NilFloat64ArrOptionOptionList Float64ArrOptionOptionList = Float64ArrOptionOptionList{nil, nil}
-var NilComplex64ArrOptionOptionList Complex64ArrOptionOptionList = Complex64ArrOptionOptionList{nil, nil}
-var NilComplex128ArrOptionOptionList Complex128ArrOptionOptionList = Complex128ArrOptionOptionList{nil, nil}
-var NilAnyArrOptionOptionList AnyArrOptionOptionList = AnyArrOptionOptionList{nil, nil}
-var NilBoolArrArrOptionOptionList BoolArrArrOptionOptionList = BoolArrArrOptionOptionList{nil, nil}
-var NilStringArrArrOptionOptionList StringArrArrOptionOptionList = StringArrArrOptionOptionList{nil, nil}
-var NilIntArrArrOptionOptionList IntArrArrOptionOptionList = IntArrArrOptionOptionList{nil, nil}
-var NilInt8ArrArrOptionOptionList Int8ArrArrOptionOptionList = Int8ArrArrOptionOptionList{nil, nil}
-var NilInt16ArrArrOptionOptionList Int16ArrArrOptionOptionList = Int16ArrArrOptionOptionList{nil, nil}
-var NilInt32ArrArrOptionOptionList Int32ArrArrOptionOptionList = Int32ArrArrOptionOptionList{nil, nil}
-var NilInt64ArrArrOptionOptionList Int64ArrArrOptionOptionList = Int64ArrArrOptionOptionList{nil, nil}
-var NilUintArrArrOptionOptionList UintArrArrOptionOptionList = UintArrArrOptionOptionList{nil, nil}
-var NilUint8ArrArrOptionOptionList Uint8ArrArrOptionOptionList = Uint8ArrArrOptionOptionList{nil, nil}
-var NilUint16ArrArrOptionOptionList Uint16ArrArrOptionOptionList = Uint16ArrArrOptionOptionList{nil, nil}
-var NilUint32ArrArrOptionOptionList Uint32ArrArrOptionOptionList = Uint32ArrArrOptionOptionList{nil, nil}
-var NilUint64ArrArrOptionOptionList Uint64ArrArrOptionOptionList = Uint64ArrArrOptionOptionList{nil, nil}
-var NilUintptrArrArrOptionOptionList UintptrArrArrOptionOptionList = UintptrArrArrOptionOptionList{nil, nil}
-var NilByteArrArrOptionOptionList ByteArrArrOptionOptionList = ByteArrArrOptionOptionList{nil, nil}
-var NilRuneArrArrOptionOptionList RuneArrArrOptionOptionList = RuneArrArrOptionOptionList{nil, nil}
-var NilFloat32ArrArrOptionOptionList Float32ArrArrOptionOptionList = Float32ArrArrOptionOptionList{nil, nil}
-var NilFloat64ArrArrOptionOptionList Float64ArrArrOptionOptionList = Float64ArrArrOptionOptionList{nil, nil}
-var NilComplex64ArrArrOptionOptionList Complex64ArrArrOptionOptionList = Complex64ArrArrOptionOptionList{nil, nil}
-var NilComplex128ArrArrOptionOptionList Complex128ArrArrOptionOptionList = Complex128ArrArrOptionOptionList{nil, nil}
-var NilAnyArrArrOptionOptionList AnyArrArrOptionOptionList = AnyArrArrOptionOptionList{nil, nil}
-var NilBoolOptionArrOptionOptionList BoolOptionArrOptionOptionList = BoolOptionArrOptionOptionList{nil, nil}
-var NilStringOptionArrOptionOptionList StringOptionArrOptionOptionList = StringOptionArrOptionOptionList{nil, nil}
-var NilIntOptionArrOptionOptionList IntOptionArrOptionOptionList = IntOptionArrOptionOptionList{nil, nil}
-var NilInt8OptionArrOptionOptionList Int8OptionArrOptionOptionList = Int8OptionArrOptionOptionList{nil, nil}
-var NilInt16OptionArrOptionOptionList Int16OptionArrOptionOptionList = Int16OptionArrOptionOptionList{nil, nil}
-var NilInt32OptionArrOptionOptionList Int32OptionArrOptionOptionList = Int32OptionArrOptionOptionList{nil, nil}
-var NilInt64OptionArrOptionOptionList Int64OptionArrOptionOptionList = Int64OptionArrOptionOptionList{nil, nil}
-var NilUintOptionArrOptionOptionList UintOptionArrOptionOptionList = UintOptionArrOptionOptionList{nil, nil}
-var NilUint8OptionArrOptionOptionList Uint8OptionArrOptionOptionList = Uint8OptionArrOptionOptionList{nil, nil}
-var NilUint16OptionArrOptionOptionList Uint16OptionArrOptionOptionList = Uint16OptionArrOptionOptionList{nil, nil}
-var NilUint32OptionArrOptionOptionList Uint32OptionArrOptionOptionList = Uint32OptionArrOptionOptionList{nil, nil}
-var NilUint64OptionArrOptionOptionList Uint64OptionArrOptionOptionList = Uint64OptionArrOptionOptionList{nil, nil}
-var NilUintptrOptionArrOptionOptionList UintptrOptionArrOptionOptionList = UintptrOptionArrOptionOptionList{nil, nil}
-var NilByteOptionArrOptionOptionList ByteOptionArrOptionOptionList = ByteOptionArrOptionOptionList{nil, nil}
-var NilRuneOptionArrOptionOptionList RuneOptionArrOptionOptionList = RuneOptionArrOptionOptionList{nil, nil}
-var NilFloat32OptionArrOptionOptionList Float32OptionArrOptionOptionList = Float32OptionArrOptionOptionList{nil, nil}
-var NilFloat64OptionArrOptionOptionList Float64OptionArrOptionOptionList = Float64OptionArrOptionOptionList{nil, nil}
-var NilComplex64OptionArrOptionOptionList Complex64OptionArrOptionOptionList = Complex64OptionArrOptionOptionList{nil, nil}
-var NilComplex128OptionArrOptionOptionList Complex128OptionArrOptionOptionList = Complex128OptionArrOptionOptionList{nil, nil}
-var NilAnyOptionArrOptionOptionList AnyOptionArrOptionOptionList = AnyOptionArrOptionOptionList{nil, nil}
-var NilBoolListOptionOptionList BoolListOptionOptionList = BoolListOptionOptionList{nil, nil}
-var NilStringListOptionOptionList StringListOptionOptionList = StringListOptionOptionList{nil, nil}
-var NilIntListOptionOptionList IntListOptionOptionList = IntListOptionOptionList{nil, nil}
-var NilInt8ListOptionOptionList Int8ListOptionOptionList = Int8ListOptionOptionList{nil, nil}
-var NilInt16ListOptionOptionList Int16ListOptionOptionList = Int16ListOptionOptionList{nil, nil}
-var NilInt32ListOptionOptionList Int32ListOptionOptionList = Int32ListOptionOptionList{nil, nil}
-var NilInt64ListOptionOptionList Int64ListOptionOptionList = Int64ListOptionOptionList{nil, nil}
-var NilUintListOptionOptionList UintListOptionOptionList = UintListOptionOptionList{nil, nil}
-var NilUint8ListOptionOptionList Uint8ListOptionOptionList = Uint8ListOptionOptionList{nil, nil}
-var NilUint16ListOptionOptionList Uint16ListOptionOptionList = Uint16ListOptionOptionList{nil, nil}
-var NilUint32ListOptionOptionList Uint32ListOptionOptionList = Uint32ListOptionOptionList{nil, nil}
-var NilUint64ListOptionOptionList Uint64ListOptionOptionList = Uint64ListOptionOptionList{nil, nil}
-var NilUintptrListOptionOptionList UintptrListOptionOptionList = UintptrListOptionOptionList{nil, nil}
-var NilByteListOptionOptionList ByteListOptionOptionList = ByteListOptionOptionList{nil, nil}
-var NilRuneListOptionOptionList RuneListOptionOptionList = RuneListOptionOptionList{nil, nil}
-var NilFloat32ListOptionOptionList Float32ListOptionOptionList = Float32ListOptionOptionList{nil, nil}
-var NilFloat64ListOptionOptionList Float64ListOptionOptionList = Float64ListOptionOptionList{nil, nil}
-var NilComplex64ListOptionOptionList Complex64ListOptionOptionList = Complex64ListOptionOptionList{nil, nil}
-var NilComplex128ListOptionOptionList Complex128ListOptionOptionList = Complex128ListOptionOptionList{nil, nil}
-var NilAnyListOptionOptionList AnyListOptionOptionList = AnyListOptionOptionList{nil, nil}
-var NilBoolOptionOptionOptionList BoolOptionOptionOptionList = BoolOptionOptionOptionList{nil, nil}
-var NilStringOptionOptionOptionList StringOptionOptionOptionList = StringOptionOptionOptionList{nil, nil}
-var NilIntOptionOptionOptionList IntOptionOptionOptionList = IntOptionOptionOptionList{nil, nil}
-var NilInt8OptionOptionOptionList Int8OptionOptionOptionList = Int8OptionOptionOptionList{nil, nil}
-var NilInt16OptionOptionOptionList Int16OptionOptionOptionList = Int16OptionOptionOptionList{nil, nil}
-var NilInt32OptionOptionOptionList Int32OptionOptionOptionList = Int32OptionOptionOptionList{nil, nil}
-var NilInt64OptionOptionOptionList Int64OptionOptionOptionList = Int64OptionOptionOptionList{nil, nil}
-var NilUintOptionOptionOptionList UintOptionOptionOptionList = UintOptionOptionOptionList{nil, nil}
-var NilUint8OptionOptionOptionList Uint8OptionOptionOptionList = Uint8OptionOptionOptionList{nil, nil}
-var NilUint16OptionOptionOptionList Uint16OptionOptionOptionList = Uint16OptionOptionOptionList{nil, nil}
-var NilUint32OptionOptionOptionList Uint32OptionOptionOptionList = Uint32OptionOptionOptionList{nil, nil}
-var NilUint64OptionOptionOptionList Uint64OptionOptionOptionList = Uint64OptionOptionOptionList{nil, nil}
-var NilUintptrOptionOptionOptionList UintptrOptionOptionOptionList = UintptrOptionOptionOptionList{nil, nil}
-var NilByteOptionOptionOptionList ByteOptionOptionOptionList = ByteOptionOptionOptionList{nil, nil}
-var NilRuneOptionOptionOptionList RuneOptionOptionOptionList = RuneOptionOptionOptionList{nil, nil}
-var NilFloat32OptionOptionOptionList Float32OptionOptionOptionList = Float32OptionOptionOptionList{nil, nil}
-var NilFloat64OptionOptionOptionList Float64OptionOptionOptionList = Float64OptionOptionOptionList{nil, nil}
-var NilComplex64OptionOptionOptionList Complex64OptionOptionOptionList = Complex64OptionOptionOptionList{nil, nil}
-var NilComplex128OptionOptionOptionList Complex128OptionOptionOptionList = Complex128OptionOptionOptionList{nil, nil}
-var NilAnyOptionOptionOptionList AnyOptionOptionOptionList = AnyOptionOptionOptionList{nil, nil}
-var NilBoolArrOptionOptionOptionList BoolArrOptionOptionOptionList = BoolArrOptionOptionOptionList{nil, nil}
-var NilStringArrOptionOptionOptionList StringArrOptionOptionOptionList = StringArrOptionOptionOptionList{nil, nil}
-var NilIntArrOptionOptionOptionList IntArrOptionOptionOptionList = IntArrOptionOptionOptionList{nil, nil}
-var NilInt8ArrOptionOptionOptionList Int8ArrOptionOptionOptionList = Int8ArrOptionOptionOptionList{nil, nil}
-var NilInt16ArrOptionOptionOptionList Int16ArrOptionOptionOptionList = Int16ArrOptionOptionOptionList{nil, nil}
-var NilInt32ArrOptionOptionOptionList Int32ArrOptionOptionOptionList = Int32ArrOptionOptionOptionList{nil, nil}
-var NilInt64ArrOptionOptionOptionList Int64ArrOptionOptionOptionList = Int64ArrOptionOptionOptionList{nil, nil}
-var NilUintArrOptionOptionOptionList UintArrOptionOptionOptionList = UintArrOptionOptionOptionList{nil, nil}
-var NilUint8ArrOptionOptionOptionList Uint8ArrOptionOptionOptionList = Uint8ArrOptionOptionOptionList{nil, nil}
-var NilUint16ArrOptionOptionOptionList Uint16ArrOptionOptionOptionList = Uint16ArrOptionOptionOptionList{nil, nil}
-var NilUint32ArrOptionOptionOptionList Uint32ArrOptionOptionOptionList = Uint32ArrOptionOptionOptionList{nil, nil}
-var NilUint64ArrOptionOptionOptionList Uint64ArrOptionOptionOptionList = Uint64ArrOptionOptionOptionList{nil, nil}
-var NilUintptrArrOptionOptionOptionList UintptrArrOptionOptionOptionList = UintptrArrOptionOptionOptionList{nil, nil}
-var NilByteArrOptionOptionOptionList ByteArrOptionOptionOptionList = ByteArrOptionOptionOptionList{nil, nil}
-var NilRuneArrOptionOptionOptionList RuneArrOptionOptionOptionList = RuneArrOptionOptionOptionList{nil, nil}
-var NilFloat32ArrOptionOptionOptionList Float32ArrOptionOptionOptionList = Float32ArrOptionOptionOptionList{nil, nil}
-var NilFloat64ArrOptionOptionOptionList Float64ArrOptionOptionOptionList = Float64ArrOptionOptionOptionList{nil, nil}
-var NilComplex64ArrOptionOptionOptionList Complex64ArrOptionOptionOptionList = Complex64ArrOptionOptionOptionList{nil, nil}
-var NilComplex128ArrOptionOptionOptionList Complex128ArrOptionOptionOptionList = Complex128ArrOptionOptionOptionList{nil, nil}
-var NilAnyArrOptionOptionOptionList AnyArrOptionOptionOptionList = AnyArrOptionOptionOptionList{nil, nil}
-var NilBoolArrArrOptionOptionOptionList BoolArrArrOptionOptionOptionList = BoolArrArrOptionOptionOptionList{nil, nil}
-var NilStringArrArrOptionOptionOptionList StringArrArrOptionOptionOptionList = StringArrArrOptionOptionOptionList{nil, nil}
-var NilIntArrArrOptionOptionOptionList IntArrArrOptionOptionOptionList = IntArrArrOptionOptionOptionList{nil, nil}
-var NilInt8ArrArrOptionOptionOptionList Int8ArrArrOptionOptionOptionList = Int8ArrArrOptionOptionOptionList{nil, nil}
-var NilInt16ArrArrOptionOptionOptionList Int16ArrArrOptionOptionOptionList = Int16ArrArrOptionOptionOptionList{nil, nil}
-var NilInt32ArrArrOptionOptionOptionList Int32ArrArrOptionOptionOptionList = Int32ArrArrOptionOptionOptionList{nil, nil}
-var NilInt64ArrArrOptionOptionOptionList Int64ArrArrOptionOptionOptionList = Int64ArrArrOptionOptionOptionList{nil, nil}
-var NilUintArrArrOptionOptionOptionList UintArrArrOptionOptionOptionList = UintArrArrOptionOptionOptionList{nil, nil}
-var NilUint8ArrArrOptionOptionOptionList Uint8ArrArrOptionOptionOptionList = Uint8ArrArrOptionOptionOptionList{nil, nil}
-var NilUint16ArrArrOptionOptionOptionList Uint16ArrArrOptionOptionOptionList = Uint16ArrArrOptionOptionOptionList{nil, nil}
-var NilUint32ArrArrOptionOptionOptionList Uint32ArrArrOptionOptionOptionList = Uint32ArrArrOptionOptionOptionList{nil, nil}
-var NilUint64ArrArrOptionOptionOptionList Uint64ArrArrOptionOptionOptionList = Uint64ArrArrOptionOptionOptionList{nil, nil}
-var NilUintptrArrArrOptionOptionOptionList UintptrArrArrOptionOptionOptionList = UintptrArrArrOptionOptionOptionList{nil, nil}
-var NilByteArrArrOptionOptionOptionList ByteArrArrOptionOptionOptionList = ByteArrArrOptionOptionOptionList{nil, nil}
-var NilRuneArrArrOptionOptionOptionList RuneArrArrOptionOptionOptionList = RuneArrArrOptionOptionOptionList{nil, nil}
-var NilFloat32ArrArrOptionOptionOptionList Float32ArrArrOptionOptionOptionList = Float32ArrArrOptionOptionOptionList{nil, nil}
-var NilFloat64ArrArrOptionOptionOptionList Float64ArrArrOptionOptionOptionList = Float64ArrArrOptionOptionOptionList{nil, nil}
-var NilComplex64ArrArrOptionOptionOptionList Complex64ArrArrOptionOptionOptionList = Complex64ArrArrOptionOptionOptionList{nil, nil}
-var NilComplex128ArrArrOptionOptionOptionList Complex128ArrArrOptionOptionOptionList = Complex128ArrArrOptionOptionOptionList{nil, nil}
-var NilAnyArrArrOptionOptionOptionList AnyArrArrOptionOptionOptionList = AnyArrArrOptionOptionOptionList{nil, nil}
-var NilBoolOptionArrOptionOptionOptionList BoolOptionArrOptionOptionOptionList = BoolOptionArrOptionOptionOptionList{nil, nil}
-var NilStringOptionArrOptionOptionOptionList StringOptionArrOptionOptionOptionList = StringOptionArrOptionOptionOptionList{nil, nil}
-var NilIntOptionArrOptionOptionOptionList IntOptionArrOptionOptionOptionList = IntOptionArrOptionOptionOptionList{nil, nil}
-var NilInt8OptionArrOptionOptionOptionList Int8OptionArrOptionOptionOptionList = Int8OptionArrOptionOptionOptionList{nil, nil}
-var NilInt16OptionArrOptionOptionOptionList Int16OptionArrOptionOptionOptionList = Int16OptionArrOptionOptionOptionList{nil, nil}
-var NilInt32OptionArrOptionOptionOptionList Int32OptionArrOptionOptionOptionList = Int32OptionArrOptionOptionOptionList{nil, nil}
-var NilInt64OptionArrOptionOptionOptionList Int64OptionArrOptionOptionOptionList = Int64OptionArrOptionOptionOptionList{nil, nil}
-var NilUintOptionArrOptionOptionOptionList UintOptionArrOptionOptionOptionList = UintOptionArrOptionOptionOptionList{nil, nil}
-var NilUint8OptionArrOptionOptionOptionList Uint8OptionArrOptionOptionOptionList = Uint8OptionArrOptionOptionOptionList{nil, nil}
-var NilUint16OptionArrOptionOptionOptionList Uint16OptionArrOptionOptionOptionList = Uint16OptionArrOptionOptionOptionList{nil, nil}
-var NilUint32OptionArrOptionOptionOptionList Uint32OptionArrOptionOptionOptionList = Uint32OptionArrOptionOptionOptionList{nil, nil}
-var NilUint64OptionArrOptionOptionOptionList Uint64OptionArrOptionOptionOptionList = Uint64OptionArrOptionOptionOptionList{nil, nil}
-var NilUintptrOptionArrOptionOptionOptionList UintptrOptionArrOptionOptionOptionList = UintptrOptionArrOptionOptionOptionList{nil, nil}
-var NilByteOptionArrOptionOptionOptionList ByteOptionArrOptionOptionOptionList = ByteOptionArrOptionOptionOptionList{nil, nil}
-var NilRuneOptionArrOptionOptionOptionList RuneOptionArrOptionOptionOptionList = RuneOptionArrOptionOptionOptionList{nil, nil}
-var NilFloat32OptionArrOptionOptionOptionList Float32OptionArrOptionOptionOptionList = Float32OptionArrOptionOptionOptionList{nil, nil}
-var NilFloat64OptionArrOptionOptionOptionList Float64OptionArrOptionOptionOptionList = Float64OptionArrOptionOptionOptionList{nil, nil}
-var NilComplex64OptionArrOptionOptionOptionList Complex64OptionArrOptionOptionOptionList = Complex64OptionArrOptionOptionOptionList{nil, nil}
-var NilComplex128OptionArrOptionOptionOptionList Complex128OptionArrOptionOptionOptionList = Complex128OptionArrOptionOptionOptionList{nil, nil}
-var NilAnyOptionArrOptionOptionOptionList AnyOptionArrOptionOptionOptionList = AnyOptionArrOptionOptionOptionList{nil, nil}
-var NilBoolListOptionOptionOptionList BoolListOptionOptionOptionList = BoolListOptionOptionOptionList{nil, nil}
-var NilStringListOptionOptionOptionList StringListOptionOptionOptionList = StringListOptionOptionOptionList{nil, nil}
-var NilIntListOptionOptionOptionList IntListOptionOptionOptionList = IntListOptionOptionOptionList{nil, nil}
-var NilInt8ListOptionOptionOptionList Int8ListOptionOptionOptionList = Int8ListOptionOptionOptionList{nil, nil}
-var NilInt16ListOptionOptionOptionList Int16ListOptionOptionOptionList = Int16ListOptionOptionOptionList{nil, nil}
-var NilInt32ListOptionOptionOptionList Int32ListOptionOptionOptionList = Int32ListOptionOptionOptionList{nil, nil}
-var NilInt64ListOptionOptionOptionList Int64ListOptionOptionOptionList = Int64ListOptionOptionOptionList{nil, nil}
-var NilUintListOptionOptionOptionList UintListOptionOptionOptionList = UintListOptionOptionOptionList{nil, nil}
-var NilUint8ListOptionOptionOptionList Uint8ListOptionOptionOptionList = Uint8ListOptionOptionOptionList{nil, nil}
-var NilUint16ListOptionOptionOptionList Uint16ListOptionOptionOptionList = Uint16ListOptionOptionOptionList{nil, nil}
-var NilUint32ListOptionOptionOptionList Uint32ListOptionOptionOptionList = Uint32ListOptionOptionOptionList{nil, nil}
-var NilUint64ListOptionOptionOptionList Uint64ListOptionOptionOptionList = Uint64ListOptionOptionOptionList{nil, nil}
-var NilUintptrListOptionOptionOptionList UintptrListOptionOptionOptionList = UintptrListOptionOptionOptionList{nil, nil}
-var NilByteListOptionOptionOptionList ByteListOptionOptionOptionList = ByteListOptionOptionOptionList{nil, nil}
-var NilRuneListOptionOptionOptionList RuneListOptionOptionOptionList = RuneListOptionOptionOptionList{nil, nil}
-var NilFloat32ListOptionOptionOptionList Float32ListOptionOptionOptionList = Float32ListOptionOptionOptionList{nil, nil}
-var NilFloat64ListOptionOptionOptionList Float64ListOptionOptionOptionList = Float64ListOptionOptionOptionList{nil, nil}
-var NilComplex64ListOptionOptionOptionList Complex64ListOptionOptionOptionList = Complex64ListOptionOptionOptionList{nil, nil}
-var NilComplex128ListOptionOptionOptionList Complex128ListOptionOptionOptionList = Complex128ListOptionOptionOptionList{nil, nil}
-var NilAnyListOptionOptionOptionList AnyListOptionOptionOptionList = AnyListOptionOptionOptionList{nil, nil}
-var NilBoolArrList BoolArrList = BoolArrList{nil, nil}
-var NilStringArrList StringArrList = StringArrList{nil, nil}
-var NilIntArrList IntArrList = IntArrList{nil, nil}
-var NilInt8ArrList Int8ArrList = Int8ArrList{nil, nil}
-var NilInt16ArrList Int16ArrList = Int16ArrList{nil, nil}
-var NilInt32ArrList Int32ArrList = Int32ArrList{nil, nil}
-var NilInt64ArrList Int64ArrList = Int64ArrList{nil, nil}
-var NilUintArrList UintArrList = UintArrList{nil, nil}
-var NilUint8ArrList Uint8ArrList = Uint8ArrList{nil, nil}
-var NilUint16ArrList Uint16ArrList = Uint16ArrList{nil, nil}
-var NilUint32ArrList Uint32ArrList = Uint32ArrList{nil, nil}
-var NilUint64ArrList Uint64ArrList = Uint64ArrList{nil, nil}
-var NilUintptrArrList UintptrArrList = UintptrArrList{nil, nil}
-var NilByteArrList ByteArrList = ByteArrList{nil, nil}
-var NilRuneArrList RuneArrList = RuneArrList{nil, nil}
-var NilFloat32ArrList Float32ArrList = Float32ArrList{nil, nil}
-var NilFloat64ArrList Float64ArrList = Float64ArrList{nil, nil}
-var NilComplex64ArrList Complex64ArrList = Complex64ArrList{nil, nil}
-var NilComplex128ArrList Complex128ArrList = Complex128ArrList{nil, nil}
-var NilAnyArrList AnyArrList = AnyArrList{nil, nil}
-var NilBoolArrArrList BoolArrArrList = BoolArrArrList{nil, nil}
-var NilStringArrArrList StringArrArrList = StringArrArrList{nil, nil}
-var NilIntArrArrList IntArrArrList = IntArrArrList{nil, nil}
-var NilInt8ArrArrList Int8ArrArrList = Int8ArrArrList{nil, nil}
-var NilInt16ArrArrList Int16ArrArrList = Int16ArrArrList{nil, nil}
-var NilInt32ArrArrList Int32ArrArrList = Int32ArrArrList{nil, nil}
-var NilInt64ArrArrList Int64ArrArrList = Int64ArrArrList{nil, nil}
-var NilUintArrArrList UintArrArrList = UintArrArrList{nil, nil}
-var NilUint8ArrArrList Uint8ArrArrList = Uint8ArrArrList{nil, nil}
-var NilUint16ArrArrList Uint16ArrArrList = Uint16ArrArrList{nil, nil}
-var NilUint32ArrArrList Uint32ArrArrList = Uint32ArrArrList{nil, nil}
-var NilUint64ArrArrList Uint64ArrArrList = Uint64ArrArrList{nil, nil}
-var NilUintptrArrArrList UintptrArrArrList = UintptrArrArrList{nil, nil}
-var NilByteArrArrList ByteArrArrList = ByteArrArrList{nil, nil}
-var NilRuneArrArrList RuneArrArrList = RuneArrArrList{nil, nil}
-var NilFloat32ArrArrList Float32ArrArrList = Float32ArrArrList{nil, nil}
-var NilFloat64ArrArrList Float64ArrArrList = Float64ArrArrList{nil, nil}
-var NilComplex64ArrArrList Complex64ArrArrList = Complex64ArrArrList{nil, nil}
-var NilComplex128ArrArrList Complex128ArrArrList = Complex128ArrArrList{nil, nil}
-var NilAnyArrArrList AnyArrArrList = AnyArrArrList{nil, nil}
-var NilBoolOptionArrList BoolOptionArrList = BoolOptionArrList{nil, nil}
-var NilStringOptionArrList StringOptionArrList = StringOptionArrList{nil, nil}
-var NilIntOptionArrList IntOptionArrList = IntOptionArrList{nil, nil}
-var NilInt8OptionArrList Int8OptionArrList = Int8OptionArrList{nil, nil}
-var NilInt16OptionArrList Int16OptionArrList = Int16OptionArrList{nil, nil}
-var NilInt32OptionArrList Int32OptionArrList = Int32OptionArrList{nil, nil}
-var NilInt64OptionArrList Int64OptionArrList = Int64OptionArrList{nil, nil}
-var NilUintOptionArrList UintOptionArrList = UintOptionArrList{nil, nil}
-var NilUint8OptionArrList Uint8OptionArrList = Uint8OptionArrList{nil, nil}
-var NilUint16OptionArrList Uint16OptionArrList = Uint16OptionArrList{nil, nil}
-var NilUint32OptionArrList Uint32OptionArrList = Uint32OptionArrList{nil, nil}
-var NilUint64OptionArrList Uint64OptionArrList = Uint64OptionArrList{nil, nil}
-var NilUintptrOptionArrList UintptrOptionArrList = UintptrOptionArrList{nil, nil}
-var NilByteOptionArrList ByteOptionArrList = ByteOptionArrList{nil, nil}
-var NilRuneOptionArrList RuneOptionArrList = RuneOptionArrList{nil, nil}
-var NilFloat32OptionArrList Float32OptionArrList = Float32OptionArrList{nil, nil}
-var NilFloat64OptionArrList Float64OptionArrList = Float64OptionArrList{nil, nil}
-var NilComplex64OptionArrList Complex64OptionArrList = Complex64OptionArrList{nil, nil}
-var NilComplex128OptionArrList Complex128OptionArrList = Complex128OptionArrList{nil, nil}
-var NilAnyOptionArrList AnyOptionArrList = AnyOptionArrList{nil, nil}
-var NilBoolListList BoolListList = BoolListList{nil, nil}
-var NilStringListList StringListList = StringListList{nil, nil}
-var NilIntListList IntListList = IntListList{nil, nil}
-var NilInt8ListList Int8ListList = Int8ListList{nil, nil}
-var NilInt16ListList Int16ListList = Int16ListList{nil, nil}
-var NilInt32ListList Int32ListList = Int32ListList{nil, nil}
-var NilInt64ListList Int64ListList = Int64ListList{nil, nil}
-var NilUintListList UintListList = UintListList{nil, nil}
-var NilUint8ListList Uint8ListList = Uint8ListList{nil, nil}
-var NilUint16ListList Uint16ListList = Uint16ListList{nil, nil}
-var NilUint32ListList Uint32ListList = Uint32ListList{nil, nil}
-var NilUint64ListList Uint64ListList = Uint64ListList{nil, nil}
-var NilUintptrListList UintptrListList = UintptrListList{nil, nil}
-var NilByteListList ByteListList = ByteListList{nil, nil}
-var NilRuneListList RuneListList = RuneListList{nil, nil}
-var NilFloat32ListList Float32ListList = Float32ListList{nil, nil}
-var NilFloat64ListList Float64ListList = Float64ListList{nil, nil}
-var NilComplex64ListList Complex64ListList = Complex64ListList{nil, nil}
-var NilComplex128ListList Complex128ListList = Complex128ListList{nil, nil}
-var NilAnyListList AnyListList = AnyListList{nil, nil}

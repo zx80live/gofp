@@ -43,66 +43,66 @@ func (l Float64OptionList) Tail() Float64OptionList                             
 func (l Complex64OptionList) Tail() Complex64OptionList                         { return l.tail.Copy() }
 func (l Complex128OptionList) Tail() Complex128OptionList                       { return l.tail.Copy() }
 func (l AnyOptionList) Tail() AnyOptionList                                     { return l.tail.Copy() }
-func (l BoolArrOptionList) Tail() BoolArrOptionList                             { return l.tail.Copy() }
-func (l StringArrOptionList) Tail() StringArrOptionList                         { return l.tail.Copy() }
-func (l IntArrOptionList) Tail() IntArrOptionList                               { return l.tail.Copy() }
-func (l Int8ArrOptionList) Tail() Int8ArrOptionList                             { return l.tail.Copy() }
-func (l Int16ArrOptionList) Tail() Int16ArrOptionList                           { return l.tail.Copy() }
-func (l Int32ArrOptionList) Tail() Int32ArrOptionList                           { return l.tail.Copy() }
-func (l Int64ArrOptionList) Tail() Int64ArrOptionList                           { return l.tail.Copy() }
-func (l UintArrOptionList) Tail() UintArrOptionList                             { return l.tail.Copy() }
-func (l Uint8ArrOptionList) Tail() Uint8ArrOptionList                           { return l.tail.Copy() }
-func (l Uint16ArrOptionList) Tail() Uint16ArrOptionList                         { return l.tail.Copy() }
-func (l Uint32ArrOptionList) Tail() Uint32ArrOptionList                         { return l.tail.Copy() }
-func (l Uint64ArrOptionList) Tail() Uint64ArrOptionList                         { return l.tail.Copy() }
-func (l UintptrArrOptionList) Tail() UintptrArrOptionList                       { return l.tail.Copy() }
-func (l ByteArrOptionList) Tail() ByteArrOptionList                             { return l.tail.Copy() }
-func (l RuneArrOptionList) Tail() RuneArrOptionList                             { return l.tail.Copy() }
-func (l Float32ArrOptionList) Tail() Float32ArrOptionList                       { return l.tail.Copy() }
-func (l Float64ArrOptionList) Tail() Float64ArrOptionList                       { return l.tail.Copy() }
-func (l Complex64ArrOptionList) Tail() Complex64ArrOptionList                   { return l.tail.Copy() }
-func (l Complex128ArrOptionList) Tail() Complex128ArrOptionList                 { return l.tail.Copy() }
-func (l AnyArrOptionList) Tail() AnyArrOptionList                               { return l.tail.Copy() }
-func (l BoolArrArrOptionList) Tail() BoolArrArrOptionList                       { return l.tail.Copy() }
-func (l StringArrArrOptionList) Tail() StringArrArrOptionList                   { return l.tail.Copy() }
-func (l IntArrArrOptionList) Tail() IntArrArrOptionList                         { return l.tail.Copy() }
-func (l Int8ArrArrOptionList) Tail() Int8ArrArrOptionList                       { return l.tail.Copy() }
-func (l Int16ArrArrOptionList) Tail() Int16ArrArrOptionList                     { return l.tail.Copy() }
-func (l Int32ArrArrOptionList) Tail() Int32ArrArrOptionList                     { return l.tail.Copy() }
-func (l Int64ArrArrOptionList) Tail() Int64ArrArrOptionList                     { return l.tail.Copy() }
-func (l UintArrArrOptionList) Tail() UintArrArrOptionList                       { return l.tail.Copy() }
-func (l Uint8ArrArrOptionList) Tail() Uint8ArrArrOptionList                     { return l.tail.Copy() }
-func (l Uint16ArrArrOptionList) Tail() Uint16ArrArrOptionList                   { return l.tail.Copy() }
-func (l Uint32ArrArrOptionList) Tail() Uint32ArrArrOptionList                   { return l.tail.Copy() }
-func (l Uint64ArrArrOptionList) Tail() Uint64ArrArrOptionList                   { return l.tail.Copy() }
-func (l UintptrArrArrOptionList) Tail() UintptrArrArrOptionList                 { return l.tail.Copy() }
-func (l ByteArrArrOptionList) Tail() ByteArrArrOptionList                       { return l.tail.Copy() }
-func (l RuneArrArrOptionList) Tail() RuneArrArrOptionList                       { return l.tail.Copy() }
-func (l Float32ArrArrOptionList) Tail() Float32ArrArrOptionList                 { return l.tail.Copy() }
-func (l Float64ArrArrOptionList) Tail() Float64ArrArrOptionList                 { return l.tail.Copy() }
-func (l Complex64ArrArrOptionList) Tail() Complex64ArrArrOptionList             { return l.tail.Copy() }
-func (l Complex128ArrArrOptionList) Tail() Complex128ArrArrOptionList           { return l.tail.Copy() }
-func (l AnyArrArrOptionList) Tail() AnyArrArrOptionList                         { return l.tail.Copy() }
-func (l BoolOptionArrOptionList) Tail() BoolOptionArrOptionList                 { return l.tail.Copy() }
-func (l StringOptionArrOptionList) Tail() StringOptionArrOptionList             { return l.tail.Copy() }
-func (l IntOptionArrOptionList) Tail() IntOptionArrOptionList                   { return l.tail.Copy() }
-func (l Int8OptionArrOptionList) Tail() Int8OptionArrOptionList                 { return l.tail.Copy() }
-func (l Int16OptionArrOptionList) Tail() Int16OptionArrOptionList               { return l.tail.Copy() }
-func (l Int32OptionArrOptionList) Tail() Int32OptionArrOptionList               { return l.tail.Copy() }
-func (l Int64OptionArrOptionList) Tail() Int64OptionArrOptionList               { return l.tail.Copy() }
-func (l UintOptionArrOptionList) Tail() UintOptionArrOptionList                 { return l.tail.Copy() }
-func (l Uint8OptionArrOptionList) Tail() Uint8OptionArrOptionList               { return l.tail.Copy() }
-func (l Uint16OptionArrOptionList) Tail() Uint16OptionArrOptionList             { return l.tail.Copy() }
-func (l Uint32OptionArrOptionList) Tail() Uint32OptionArrOptionList             { return l.tail.Copy() }
-func (l Uint64OptionArrOptionList) Tail() Uint64OptionArrOptionList             { return l.tail.Copy() }
-func (l UintptrOptionArrOptionList) Tail() UintptrOptionArrOptionList           { return l.tail.Copy() }
-func (l ByteOptionArrOptionList) Tail() ByteOptionArrOptionList                 { return l.tail.Copy() }
-func (l RuneOptionArrOptionList) Tail() RuneOptionArrOptionList                 { return l.tail.Copy() }
-func (l Float32OptionArrOptionList) Tail() Float32OptionArrOptionList           { return l.tail.Copy() }
-func (l Float64OptionArrOptionList) Tail() Float64OptionArrOptionList           { return l.tail.Copy() }
-func (l Complex64OptionArrOptionList) Tail() Complex64OptionArrOptionList       { return l.tail.Copy() }
-func (l Complex128OptionArrOptionList) Tail() Complex128OptionArrOptionList     { return l.tail.Copy() }
-func (l AnyOptionArrOptionList) Tail() AnyOptionArrOptionList                   { return l.tail.Copy() }
+func (l BoolArrayOptionList) Tail() BoolArrayOptionList                         { return l.tail.Copy() }
+func (l StringArrayOptionList) Tail() StringArrayOptionList                     { return l.tail.Copy() }
+func (l IntArrayOptionList) Tail() IntArrayOptionList                           { return l.tail.Copy() }
+func (l Int8ArrayOptionList) Tail() Int8ArrayOptionList                         { return l.tail.Copy() }
+func (l Int16ArrayOptionList) Tail() Int16ArrayOptionList                       { return l.tail.Copy() }
+func (l Int32ArrayOptionList) Tail() Int32ArrayOptionList                       { return l.tail.Copy() }
+func (l Int64ArrayOptionList) Tail() Int64ArrayOptionList                       { return l.tail.Copy() }
+func (l UintArrayOptionList) Tail() UintArrayOptionList                         { return l.tail.Copy() }
+func (l Uint8ArrayOptionList) Tail() Uint8ArrayOptionList                       { return l.tail.Copy() }
+func (l Uint16ArrayOptionList) Tail() Uint16ArrayOptionList                     { return l.tail.Copy() }
+func (l Uint32ArrayOptionList) Tail() Uint32ArrayOptionList                     { return l.tail.Copy() }
+func (l Uint64ArrayOptionList) Tail() Uint64ArrayOptionList                     { return l.tail.Copy() }
+func (l UintptrArrayOptionList) Tail() UintptrArrayOptionList                   { return l.tail.Copy() }
+func (l ByteArrayOptionList) Tail() ByteArrayOptionList                         { return l.tail.Copy() }
+func (l RuneArrayOptionList) Tail() RuneArrayOptionList                         { return l.tail.Copy() }
+func (l Float32ArrayOptionList) Tail() Float32ArrayOptionList                   { return l.tail.Copy() }
+func (l Float64ArrayOptionList) Tail() Float64ArrayOptionList                   { return l.tail.Copy() }
+func (l Complex64ArrayOptionList) Tail() Complex64ArrayOptionList               { return l.tail.Copy() }
+func (l Complex128ArrayOptionList) Tail() Complex128ArrayOptionList             { return l.tail.Copy() }
+func (l AnyArrayOptionList) Tail() AnyArrayOptionList                           { return l.tail.Copy() }
+func (l BoolArrayArrayOptionList) Tail() BoolArrayArrayOptionList               { return l.tail.Copy() }
+func (l StringArrayArrayOptionList) Tail() StringArrayArrayOptionList           { return l.tail.Copy() }
+func (l IntArrayArrayOptionList) Tail() IntArrayArrayOptionList                 { return l.tail.Copy() }
+func (l Int8ArrayArrayOptionList) Tail() Int8ArrayArrayOptionList               { return l.tail.Copy() }
+func (l Int16ArrayArrayOptionList) Tail() Int16ArrayArrayOptionList             { return l.tail.Copy() }
+func (l Int32ArrayArrayOptionList) Tail() Int32ArrayArrayOptionList             { return l.tail.Copy() }
+func (l Int64ArrayArrayOptionList) Tail() Int64ArrayArrayOptionList             { return l.tail.Copy() }
+func (l UintArrayArrayOptionList) Tail() UintArrayArrayOptionList               { return l.tail.Copy() }
+func (l Uint8ArrayArrayOptionList) Tail() Uint8ArrayArrayOptionList             { return l.tail.Copy() }
+func (l Uint16ArrayArrayOptionList) Tail() Uint16ArrayArrayOptionList           { return l.tail.Copy() }
+func (l Uint32ArrayArrayOptionList) Tail() Uint32ArrayArrayOptionList           { return l.tail.Copy() }
+func (l Uint64ArrayArrayOptionList) Tail() Uint64ArrayArrayOptionList           { return l.tail.Copy() }
+func (l UintptrArrayArrayOptionList) Tail() UintptrArrayArrayOptionList         { return l.tail.Copy() }
+func (l ByteArrayArrayOptionList) Tail() ByteArrayArrayOptionList               { return l.tail.Copy() }
+func (l RuneArrayArrayOptionList) Tail() RuneArrayArrayOptionList               { return l.tail.Copy() }
+func (l Float32ArrayArrayOptionList) Tail() Float32ArrayArrayOptionList         { return l.tail.Copy() }
+func (l Float64ArrayArrayOptionList) Tail() Float64ArrayArrayOptionList         { return l.tail.Copy() }
+func (l Complex64ArrayArrayOptionList) Tail() Complex64ArrayArrayOptionList     { return l.tail.Copy() }
+func (l Complex128ArrayArrayOptionList) Tail() Complex128ArrayArrayOptionList   { return l.tail.Copy() }
+func (l AnyArrayArrayOptionList) Tail() AnyArrayArrayOptionList                 { return l.tail.Copy() }
+func (l BoolOptionArrayOptionList) Tail() BoolOptionArrayOptionList             { return l.tail.Copy() }
+func (l StringOptionArrayOptionList) Tail() StringOptionArrayOptionList         { return l.tail.Copy() }
+func (l IntOptionArrayOptionList) Tail() IntOptionArrayOptionList               { return l.tail.Copy() }
+func (l Int8OptionArrayOptionList) Tail() Int8OptionArrayOptionList             { return l.tail.Copy() }
+func (l Int16OptionArrayOptionList) Tail() Int16OptionArrayOptionList           { return l.tail.Copy() }
+func (l Int32OptionArrayOptionList) Tail() Int32OptionArrayOptionList           { return l.tail.Copy() }
+func (l Int64OptionArrayOptionList) Tail() Int64OptionArrayOptionList           { return l.tail.Copy() }
+func (l UintOptionArrayOptionList) Tail() UintOptionArrayOptionList             { return l.tail.Copy() }
+func (l Uint8OptionArrayOptionList) Tail() Uint8OptionArrayOptionList           { return l.tail.Copy() }
+func (l Uint16OptionArrayOptionList) Tail() Uint16OptionArrayOptionList         { return l.tail.Copy() }
+func (l Uint32OptionArrayOptionList) Tail() Uint32OptionArrayOptionList         { return l.tail.Copy() }
+func (l Uint64OptionArrayOptionList) Tail() Uint64OptionArrayOptionList         { return l.tail.Copy() }
+func (l UintptrOptionArrayOptionList) Tail() UintptrOptionArrayOptionList       { return l.tail.Copy() }
+func (l ByteOptionArrayOptionList) Tail() ByteOptionArrayOptionList             { return l.tail.Copy() }
+func (l RuneOptionArrayOptionList) Tail() RuneOptionArrayOptionList             { return l.tail.Copy() }
+func (l Float32OptionArrayOptionList) Tail() Float32OptionArrayOptionList       { return l.tail.Copy() }
+func (l Float64OptionArrayOptionList) Tail() Float64OptionArrayOptionList       { return l.tail.Copy() }
+func (l Complex64OptionArrayOptionList) Tail() Complex64OptionArrayOptionList   { return l.tail.Copy() }
+func (l Complex128OptionArrayOptionList) Tail() Complex128OptionArrayOptionList { return l.tail.Copy() }
+func (l AnyOptionArrayOptionList) Tail() AnyOptionArrayOptionList               { return l.tail.Copy() }
 func (l BoolListOptionList) Tail() BoolListOptionList                           { return l.tail.Copy() }
 func (l StringListOptionList) Tail() StringListOptionList                       { return l.tail.Copy() }
 func (l IntListOptionList) Tail() IntListOptionList                             { return l.tail.Copy() }
@@ -143,78 +143,110 @@ func (l Float64OptionOptionList) Tail() Float64OptionOptionList                 
 func (l Complex64OptionOptionList) Tail() Complex64OptionOptionList             { return l.tail.Copy() }
 func (l Complex128OptionOptionList) Tail() Complex128OptionOptionList           { return l.tail.Copy() }
 func (l AnyOptionOptionList) Tail() AnyOptionOptionList                         { return l.tail.Copy() }
-func (l BoolArrOptionOptionList) Tail() BoolArrOptionOptionList                 { return l.tail.Copy() }
-func (l StringArrOptionOptionList) Tail() StringArrOptionOptionList             { return l.tail.Copy() }
-func (l IntArrOptionOptionList) Tail() IntArrOptionOptionList                   { return l.tail.Copy() }
-func (l Int8ArrOptionOptionList) Tail() Int8ArrOptionOptionList                 { return l.tail.Copy() }
-func (l Int16ArrOptionOptionList) Tail() Int16ArrOptionOptionList               { return l.tail.Copy() }
-func (l Int32ArrOptionOptionList) Tail() Int32ArrOptionOptionList               { return l.tail.Copy() }
-func (l Int64ArrOptionOptionList) Tail() Int64ArrOptionOptionList               { return l.tail.Copy() }
-func (l UintArrOptionOptionList) Tail() UintArrOptionOptionList                 { return l.tail.Copy() }
-func (l Uint8ArrOptionOptionList) Tail() Uint8ArrOptionOptionList               { return l.tail.Copy() }
-func (l Uint16ArrOptionOptionList) Tail() Uint16ArrOptionOptionList             { return l.tail.Copy() }
-func (l Uint32ArrOptionOptionList) Tail() Uint32ArrOptionOptionList             { return l.tail.Copy() }
-func (l Uint64ArrOptionOptionList) Tail() Uint64ArrOptionOptionList             { return l.tail.Copy() }
-func (l UintptrArrOptionOptionList) Tail() UintptrArrOptionOptionList           { return l.tail.Copy() }
-func (l ByteArrOptionOptionList) Tail() ByteArrOptionOptionList                 { return l.tail.Copy() }
-func (l RuneArrOptionOptionList) Tail() RuneArrOptionOptionList                 { return l.tail.Copy() }
-func (l Float32ArrOptionOptionList) Tail() Float32ArrOptionOptionList           { return l.tail.Copy() }
-func (l Float64ArrOptionOptionList) Tail() Float64ArrOptionOptionList           { return l.tail.Copy() }
-func (l Complex64ArrOptionOptionList) Tail() Complex64ArrOptionOptionList       { return l.tail.Copy() }
-func (l Complex128ArrOptionOptionList) Tail() Complex128ArrOptionOptionList     { return l.tail.Copy() }
-func (l AnyArrOptionOptionList) Tail() AnyArrOptionOptionList                   { return l.tail.Copy() }
-func (l BoolArrArrOptionOptionList) Tail() BoolArrArrOptionOptionList           { return l.tail.Copy() }
-func (l StringArrArrOptionOptionList) Tail() StringArrArrOptionOptionList       { return l.tail.Copy() }
-func (l IntArrArrOptionOptionList) Tail() IntArrArrOptionOptionList             { return l.tail.Copy() }
-func (l Int8ArrArrOptionOptionList) Tail() Int8ArrArrOptionOptionList           { return l.tail.Copy() }
-func (l Int16ArrArrOptionOptionList) Tail() Int16ArrArrOptionOptionList         { return l.tail.Copy() }
-func (l Int32ArrArrOptionOptionList) Tail() Int32ArrArrOptionOptionList         { return l.tail.Copy() }
-func (l Int64ArrArrOptionOptionList) Tail() Int64ArrArrOptionOptionList         { return l.tail.Copy() }
-func (l UintArrArrOptionOptionList) Tail() UintArrArrOptionOptionList           { return l.tail.Copy() }
-func (l Uint8ArrArrOptionOptionList) Tail() Uint8ArrArrOptionOptionList         { return l.tail.Copy() }
-func (l Uint16ArrArrOptionOptionList) Tail() Uint16ArrArrOptionOptionList       { return l.tail.Copy() }
-func (l Uint32ArrArrOptionOptionList) Tail() Uint32ArrArrOptionOptionList       { return l.tail.Copy() }
-func (l Uint64ArrArrOptionOptionList) Tail() Uint64ArrArrOptionOptionList       { return l.tail.Copy() }
-func (l UintptrArrArrOptionOptionList) Tail() UintptrArrArrOptionOptionList     { return l.tail.Copy() }
-func (l ByteArrArrOptionOptionList) Tail() ByteArrArrOptionOptionList           { return l.tail.Copy() }
-func (l RuneArrArrOptionOptionList) Tail() RuneArrArrOptionOptionList           { return l.tail.Copy() }
-func (l Float32ArrArrOptionOptionList) Tail() Float32ArrArrOptionOptionList     { return l.tail.Copy() }
-func (l Float64ArrArrOptionOptionList) Tail() Float64ArrArrOptionOptionList     { return l.tail.Copy() }
-func (l Complex64ArrArrOptionOptionList) Tail() Complex64ArrArrOptionOptionList { return l.tail.Copy() }
-func (l Complex128ArrArrOptionOptionList) Tail() Complex128ArrArrOptionOptionList {
+func (l BoolArrayOptionOptionList) Tail() BoolArrayOptionOptionList             { return l.tail.Copy() }
+func (l StringArrayOptionOptionList) Tail() StringArrayOptionOptionList         { return l.tail.Copy() }
+func (l IntArrayOptionOptionList) Tail() IntArrayOptionOptionList               { return l.tail.Copy() }
+func (l Int8ArrayOptionOptionList) Tail() Int8ArrayOptionOptionList             { return l.tail.Copy() }
+func (l Int16ArrayOptionOptionList) Tail() Int16ArrayOptionOptionList           { return l.tail.Copy() }
+func (l Int32ArrayOptionOptionList) Tail() Int32ArrayOptionOptionList           { return l.tail.Copy() }
+func (l Int64ArrayOptionOptionList) Tail() Int64ArrayOptionOptionList           { return l.tail.Copy() }
+func (l UintArrayOptionOptionList) Tail() UintArrayOptionOptionList             { return l.tail.Copy() }
+func (l Uint8ArrayOptionOptionList) Tail() Uint8ArrayOptionOptionList           { return l.tail.Copy() }
+func (l Uint16ArrayOptionOptionList) Tail() Uint16ArrayOptionOptionList         { return l.tail.Copy() }
+func (l Uint32ArrayOptionOptionList) Tail() Uint32ArrayOptionOptionList         { return l.tail.Copy() }
+func (l Uint64ArrayOptionOptionList) Tail() Uint64ArrayOptionOptionList         { return l.tail.Copy() }
+func (l UintptrArrayOptionOptionList) Tail() UintptrArrayOptionOptionList       { return l.tail.Copy() }
+func (l ByteArrayOptionOptionList) Tail() ByteArrayOptionOptionList             { return l.tail.Copy() }
+func (l RuneArrayOptionOptionList) Tail() RuneArrayOptionOptionList             { return l.tail.Copy() }
+func (l Float32ArrayOptionOptionList) Tail() Float32ArrayOptionOptionList       { return l.tail.Copy() }
+func (l Float64ArrayOptionOptionList) Tail() Float64ArrayOptionOptionList       { return l.tail.Copy() }
+func (l Complex64ArrayOptionOptionList) Tail() Complex64ArrayOptionOptionList   { return l.tail.Copy() }
+func (l Complex128ArrayOptionOptionList) Tail() Complex128ArrayOptionOptionList { return l.tail.Copy() }
+func (l AnyArrayOptionOptionList) Tail() AnyArrayOptionOptionList               { return l.tail.Copy() }
+func (l BoolArrayArrayOptionOptionList) Tail() BoolArrayArrayOptionOptionList   { return l.tail.Copy() }
+func (l StringArrayArrayOptionOptionList) Tail() StringArrayArrayOptionOptionList {
 	return l.tail.Copy()
 }
-func (l AnyArrArrOptionOptionList) Tail() AnyArrArrOptionOptionList             { return l.tail.Copy() }
-func (l BoolOptionArrOptionOptionList) Tail() BoolOptionArrOptionOptionList     { return l.tail.Copy() }
-func (l StringOptionArrOptionOptionList) Tail() StringOptionArrOptionOptionList { return l.tail.Copy() }
-func (l IntOptionArrOptionOptionList) Tail() IntOptionArrOptionOptionList       { return l.tail.Copy() }
-func (l Int8OptionArrOptionOptionList) Tail() Int8OptionArrOptionOptionList     { return l.tail.Copy() }
-func (l Int16OptionArrOptionOptionList) Tail() Int16OptionArrOptionOptionList   { return l.tail.Copy() }
-func (l Int32OptionArrOptionOptionList) Tail() Int32OptionArrOptionOptionList   { return l.tail.Copy() }
-func (l Int64OptionArrOptionOptionList) Tail() Int64OptionArrOptionOptionList   { return l.tail.Copy() }
-func (l UintOptionArrOptionOptionList) Tail() UintOptionArrOptionOptionList     { return l.tail.Copy() }
-func (l Uint8OptionArrOptionOptionList) Tail() Uint8OptionArrOptionOptionList   { return l.tail.Copy() }
-func (l Uint16OptionArrOptionOptionList) Tail() Uint16OptionArrOptionOptionList { return l.tail.Copy() }
-func (l Uint32OptionArrOptionOptionList) Tail() Uint32OptionArrOptionOptionList { return l.tail.Copy() }
-func (l Uint64OptionArrOptionOptionList) Tail() Uint64OptionArrOptionOptionList { return l.tail.Copy() }
-func (l UintptrOptionArrOptionOptionList) Tail() UintptrOptionArrOptionOptionList {
+func (l IntArrayArrayOptionOptionList) Tail() IntArrayArrayOptionOptionList     { return l.tail.Copy() }
+func (l Int8ArrayArrayOptionOptionList) Tail() Int8ArrayArrayOptionOptionList   { return l.tail.Copy() }
+func (l Int16ArrayArrayOptionOptionList) Tail() Int16ArrayArrayOptionOptionList { return l.tail.Copy() }
+func (l Int32ArrayArrayOptionOptionList) Tail() Int32ArrayArrayOptionOptionList { return l.tail.Copy() }
+func (l Int64ArrayArrayOptionOptionList) Tail() Int64ArrayArrayOptionOptionList { return l.tail.Copy() }
+func (l UintArrayArrayOptionOptionList) Tail() UintArrayArrayOptionOptionList   { return l.tail.Copy() }
+func (l Uint8ArrayArrayOptionOptionList) Tail() Uint8ArrayArrayOptionOptionList { return l.tail.Copy() }
+func (l Uint16ArrayArrayOptionOptionList) Tail() Uint16ArrayArrayOptionOptionList {
 	return l.tail.Copy()
 }
-func (l ByteOptionArrOptionOptionList) Tail() ByteOptionArrOptionOptionList { return l.tail.Copy() }
-func (l RuneOptionArrOptionOptionList) Tail() RuneOptionArrOptionOptionList { return l.tail.Copy() }
-func (l Float32OptionArrOptionOptionList) Tail() Float32OptionArrOptionOptionList {
+func (l Uint32ArrayArrayOptionOptionList) Tail() Uint32ArrayArrayOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Float64OptionArrOptionOptionList) Tail() Float64OptionArrOptionOptionList {
+func (l Uint64ArrayArrayOptionOptionList) Tail() Uint64ArrayArrayOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex64OptionArrOptionOptionList) Tail() Complex64OptionArrOptionOptionList {
+func (l UintptrArrayArrayOptionOptionList) Tail() UintptrArrayArrayOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex128OptionArrOptionOptionList) Tail() Complex128OptionArrOptionOptionList {
+func (l ByteArrayArrayOptionOptionList) Tail() ByteArrayArrayOptionOptionList { return l.tail.Copy() }
+func (l RuneArrayArrayOptionOptionList) Tail() RuneArrayArrayOptionOptionList { return l.tail.Copy() }
+func (l Float32ArrayArrayOptionOptionList) Tail() Float32ArrayArrayOptionOptionList {
 	return l.tail.Copy()
 }
-func (l AnyOptionArrOptionOptionList) Tail() AnyOptionArrOptionOptionList       { return l.tail.Copy() }
+func (l Float64ArrayArrayOptionOptionList) Tail() Float64ArrayArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Complex64ArrayArrayOptionOptionList) Tail() Complex64ArrayArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Complex128ArrayArrayOptionOptionList) Tail() Complex128ArrayArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l AnyArrayArrayOptionOptionList) Tail() AnyArrayArrayOptionOptionList     { return l.tail.Copy() }
+func (l BoolOptionArrayOptionOptionList) Tail() BoolOptionArrayOptionOptionList { return l.tail.Copy() }
+func (l StringOptionArrayOptionOptionList) Tail() StringOptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l IntOptionArrayOptionOptionList) Tail() IntOptionArrayOptionOptionList   { return l.tail.Copy() }
+func (l Int8OptionArrayOptionOptionList) Tail() Int8OptionArrayOptionOptionList { return l.tail.Copy() }
+func (l Int16OptionArrayOptionOptionList) Tail() Int16OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Int32OptionArrayOptionOptionList) Tail() Int32OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Int64OptionArrayOptionOptionList) Tail() Int64OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l UintOptionArrayOptionOptionList) Tail() UintOptionArrayOptionOptionList { return l.tail.Copy() }
+func (l Uint8OptionArrayOptionOptionList) Tail() Uint8OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Uint16OptionArrayOptionOptionList) Tail() Uint16OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Uint32OptionArrayOptionOptionList) Tail() Uint32OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Uint64OptionArrayOptionOptionList) Tail() Uint64OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l UintptrOptionArrayOptionOptionList) Tail() UintptrOptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l ByteOptionArrayOptionOptionList) Tail() ByteOptionArrayOptionOptionList { return l.tail.Copy() }
+func (l RuneOptionArrayOptionOptionList) Tail() RuneOptionArrayOptionOptionList { return l.tail.Copy() }
+func (l Float32OptionArrayOptionOptionList) Tail() Float32OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Float64OptionArrayOptionOptionList) Tail() Float64OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Complex64OptionArrayOptionOptionList) Tail() Complex64OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Complex128OptionArrayOptionOptionList) Tail() Complex128OptionArrayOptionOptionList {
+	return l.tail.Copy()
+}
+func (l AnyOptionArrayOptionOptionList) Tail() AnyOptionArrayOptionOptionList   { return l.tail.Copy() }
 func (l BoolListOptionOptionList) Tail() BoolListOptionOptionList               { return l.tail.Copy() }
 func (l StringListOptionOptionList) Tail() StringListOptionOptionList           { return l.tail.Copy() }
 func (l IntListOptionOptionList) Tail() IntListOptionOptionList                 { return l.tail.Copy() }
@@ -257,150 +289,170 @@ func (l Complex128OptionOptionOptionList) Tail() Complex128OptionOptionOptionLis
 	return l.tail.Copy()
 }
 func (l AnyOptionOptionOptionList) Tail() AnyOptionOptionOptionList             { return l.tail.Copy() }
-func (l BoolArrOptionOptionOptionList) Tail() BoolArrOptionOptionOptionList     { return l.tail.Copy() }
-func (l StringArrOptionOptionOptionList) Tail() StringArrOptionOptionOptionList { return l.tail.Copy() }
-func (l IntArrOptionOptionOptionList) Tail() IntArrOptionOptionOptionList       { return l.tail.Copy() }
-func (l Int8ArrOptionOptionOptionList) Tail() Int8ArrOptionOptionOptionList     { return l.tail.Copy() }
-func (l Int16ArrOptionOptionOptionList) Tail() Int16ArrOptionOptionOptionList   { return l.tail.Copy() }
-func (l Int32ArrOptionOptionOptionList) Tail() Int32ArrOptionOptionOptionList   { return l.tail.Copy() }
-func (l Int64ArrOptionOptionOptionList) Tail() Int64ArrOptionOptionOptionList   { return l.tail.Copy() }
-func (l UintArrOptionOptionOptionList) Tail() UintArrOptionOptionOptionList     { return l.tail.Copy() }
-func (l Uint8ArrOptionOptionOptionList) Tail() Uint8ArrOptionOptionOptionList   { return l.tail.Copy() }
-func (l Uint16ArrOptionOptionOptionList) Tail() Uint16ArrOptionOptionOptionList { return l.tail.Copy() }
-func (l Uint32ArrOptionOptionOptionList) Tail() Uint32ArrOptionOptionOptionList { return l.tail.Copy() }
-func (l Uint64ArrOptionOptionOptionList) Tail() Uint64ArrOptionOptionOptionList { return l.tail.Copy() }
-func (l UintptrArrOptionOptionOptionList) Tail() UintptrArrOptionOptionOptionList {
+func (l BoolArrayOptionOptionOptionList) Tail() BoolArrayOptionOptionOptionList { return l.tail.Copy() }
+func (l StringArrayOptionOptionOptionList) Tail() StringArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l ByteArrOptionOptionOptionList) Tail() ByteArrOptionOptionOptionList { return l.tail.Copy() }
-func (l RuneArrOptionOptionOptionList) Tail() RuneArrOptionOptionOptionList { return l.tail.Copy() }
-func (l Float32ArrOptionOptionOptionList) Tail() Float32ArrOptionOptionOptionList {
+func (l IntArrayOptionOptionOptionList) Tail() IntArrayOptionOptionOptionList   { return l.tail.Copy() }
+func (l Int8ArrayOptionOptionOptionList) Tail() Int8ArrayOptionOptionOptionList { return l.tail.Copy() }
+func (l Int16ArrayOptionOptionOptionList) Tail() Int16ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Float64ArrOptionOptionOptionList) Tail() Float64ArrOptionOptionOptionList {
+func (l Int32ArrayOptionOptionOptionList) Tail() Int32ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex64ArrOptionOptionOptionList) Tail() Complex64ArrOptionOptionOptionList {
+func (l Int64ArrayOptionOptionOptionList) Tail() Int64ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex128ArrOptionOptionOptionList) Tail() Complex128ArrOptionOptionOptionList {
+func (l UintArrayOptionOptionOptionList) Tail() UintArrayOptionOptionOptionList { return l.tail.Copy() }
+func (l Uint8ArrayOptionOptionOptionList) Tail() Uint8ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l AnyArrOptionOptionOptionList) Tail() AnyArrOptionOptionOptionList { return l.tail.Copy() }
-func (l BoolArrArrOptionOptionOptionList) Tail() BoolArrArrOptionOptionOptionList {
+func (l Uint16ArrayOptionOptionOptionList) Tail() Uint16ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l StringArrArrOptionOptionOptionList) Tail() StringArrArrOptionOptionOptionList {
+func (l Uint32ArrayOptionOptionOptionList) Tail() Uint32ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l IntArrArrOptionOptionOptionList) Tail() IntArrArrOptionOptionOptionList { return l.tail.Copy() }
-func (l Int8ArrArrOptionOptionOptionList) Tail() Int8ArrArrOptionOptionOptionList {
+func (l Uint64ArrayOptionOptionOptionList) Tail() Uint64ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int16ArrArrOptionOptionOptionList) Tail() Int16ArrArrOptionOptionOptionList {
+func (l UintptrArrayOptionOptionOptionList) Tail() UintptrArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int32ArrArrOptionOptionOptionList) Tail() Int32ArrArrOptionOptionOptionList {
+func (l ByteArrayOptionOptionOptionList) Tail() ByteArrayOptionOptionOptionList { return l.tail.Copy() }
+func (l RuneArrayOptionOptionOptionList) Tail() RuneArrayOptionOptionOptionList { return l.tail.Copy() }
+func (l Float32ArrayOptionOptionOptionList) Tail() Float32ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int64ArrArrOptionOptionOptionList) Tail() Int64ArrArrOptionOptionOptionList {
+func (l Float64ArrayOptionOptionOptionList) Tail() Float64ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l UintArrArrOptionOptionOptionList) Tail() UintArrArrOptionOptionOptionList {
+func (l Complex64ArrayOptionOptionOptionList) Tail() Complex64ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint8ArrArrOptionOptionOptionList) Tail() Uint8ArrArrOptionOptionOptionList {
+func (l Complex128ArrayOptionOptionOptionList) Tail() Complex128ArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint16ArrArrOptionOptionOptionList) Tail() Uint16ArrArrOptionOptionOptionList {
+func (l AnyArrayOptionOptionOptionList) Tail() AnyArrayOptionOptionOptionList { return l.tail.Copy() }
+func (l BoolArrayArrayOptionOptionOptionList) Tail() BoolArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint32ArrArrOptionOptionOptionList) Tail() Uint32ArrArrOptionOptionOptionList {
+func (l StringArrayArrayOptionOptionOptionList) Tail() StringArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint64ArrArrOptionOptionOptionList) Tail() Uint64ArrArrOptionOptionOptionList {
+func (l IntArrayArrayOptionOptionOptionList) Tail() IntArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l UintptrArrArrOptionOptionOptionList) Tail() UintptrArrArrOptionOptionOptionList {
+func (l Int8ArrayArrayOptionOptionOptionList) Tail() Int8ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l ByteArrArrOptionOptionOptionList) Tail() ByteArrArrOptionOptionOptionList {
+func (l Int16ArrayArrayOptionOptionOptionList) Tail() Int16ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l RuneArrArrOptionOptionOptionList) Tail() RuneArrArrOptionOptionOptionList {
+func (l Int32ArrayArrayOptionOptionOptionList) Tail() Int32ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Float32ArrArrOptionOptionOptionList) Tail() Float32ArrArrOptionOptionOptionList {
+func (l Int64ArrayArrayOptionOptionOptionList) Tail() Int64ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Float64ArrArrOptionOptionOptionList) Tail() Float64ArrArrOptionOptionOptionList {
+func (l UintArrayArrayOptionOptionOptionList) Tail() UintArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex64ArrArrOptionOptionOptionList) Tail() Complex64ArrArrOptionOptionOptionList {
+func (l Uint8ArrayArrayOptionOptionOptionList) Tail() Uint8ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex128ArrArrOptionOptionOptionList) Tail() Complex128ArrArrOptionOptionOptionList {
+func (l Uint16ArrayArrayOptionOptionOptionList) Tail() Uint16ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l AnyArrArrOptionOptionOptionList) Tail() AnyArrArrOptionOptionOptionList { return l.tail.Copy() }
-func (l BoolOptionArrOptionOptionOptionList) Tail() BoolOptionArrOptionOptionOptionList {
+func (l Uint32ArrayArrayOptionOptionOptionList) Tail() Uint32ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l StringOptionArrOptionOptionOptionList) Tail() StringOptionArrOptionOptionOptionList {
+func (l Uint64ArrayArrayOptionOptionOptionList) Tail() Uint64ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l IntOptionArrOptionOptionOptionList) Tail() IntOptionArrOptionOptionOptionList {
+func (l UintptrArrayArrayOptionOptionOptionList) Tail() UintptrArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int8OptionArrOptionOptionOptionList) Tail() Int8OptionArrOptionOptionOptionList {
+func (l ByteArrayArrayOptionOptionOptionList) Tail() ByteArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int16OptionArrOptionOptionOptionList) Tail() Int16OptionArrOptionOptionOptionList {
+func (l RuneArrayArrayOptionOptionOptionList) Tail() RuneArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int32OptionArrOptionOptionOptionList) Tail() Int32OptionArrOptionOptionOptionList {
+func (l Float32ArrayArrayOptionOptionOptionList) Tail() Float32ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Int64OptionArrOptionOptionOptionList) Tail() Int64OptionArrOptionOptionOptionList {
+func (l Float64ArrayArrayOptionOptionOptionList) Tail() Float64ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l UintOptionArrOptionOptionOptionList) Tail() UintOptionArrOptionOptionOptionList {
+func (l Complex64ArrayArrayOptionOptionOptionList) Tail() Complex64ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint8OptionArrOptionOptionOptionList) Tail() Uint8OptionArrOptionOptionOptionList {
+func (l Complex128ArrayArrayOptionOptionOptionList) Tail() Complex128ArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint16OptionArrOptionOptionOptionList) Tail() Uint16OptionArrOptionOptionOptionList {
+func (l AnyArrayArrayOptionOptionOptionList) Tail() AnyArrayArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint32OptionArrOptionOptionOptionList) Tail() Uint32OptionArrOptionOptionOptionList {
+func (l BoolOptionArrayOptionOptionOptionList) Tail() BoolOptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Uint64OptionArrOptionOptionOptionList) Tail() Uint64OptionArrOptionOptionOptionList {
+func (l StringOptionArrayOptionOptionOptionList) Tail() StringOptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l UintptrOptionArrOptionOptionOptionList) Tail() UintptrOptionArrOptionOptionOptionList {
+func (l IntOptionArrayOptionOptionOptionList) Tail() IntOptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l ByteOptionArrOptionOptionOptionList) Tail() ByteOptionArrOptionOptionOptionList {
+func (l Int8OptionArrayOptionOptionOptionList) Tail() Int8OptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l RuneOptionArrOptionOptionOptionList) Tail() RuneOptionArrOptionOptionOptionList {
+func (l Int16OptionArrayOptionOptionOptionList) Tail() Int16OptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Float32OptionArrOptionOptionOptionList) Tail() Float32OptionArrOptionOptionOptionList {
+func (l Int32OptionArrayOptionOptionOptionList) Tail() Int32OptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Float64OptionArrOptionOptionOptionList) Tail() Float64OptionArrOptionOptionOptionList {
+func (l Int64OptionArrayOptionOptionOptionList) Tail() Int64OptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex64OptionArrOptionOptionOptionList) Tail() Complex64OptionArrOptionOptionOptionList {
+func (l UintOptionArrayOptionOptionOptionList) Tail() UintOptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l Complex128OptionArrOptionOptionOptionList) Tail() Complex128OptionArrOptionOptionOptionList {
+func (l Uint8OptionArrayOptionOptionOptionList) Tail() Uint8OptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
-func (l AnyOptionArrOptionOptionOptionList) Tail() AnyOptionArrOptionOptionOptionList {
+func (l Uint16OptionArrayOptionOptionOptionList) Tail() Uint16OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Uint32OptionArrayOptionOptionOptionList) Tail() Uint32OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Uint64OptionArrayOptionOptionOptionList) Tail() Uint64OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l UintptrOptionArrayOptionOptionOptionList) Tail() UintptrOptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l ByteOptionArrayOptionOptionOptionList) Tail() ByteOptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l RuneOptionArrayOptionOptionOptionList) Tail() RuneOptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Float32OptionArrayOptionOptionOptionList) Tail() Float32OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Float64OptionArrayOptionOptionOptionList) Tail() Float64OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Complex64OptionArrayOptionOptionOptionList) Tail() Complex64OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l Complex128OptionArrayOptionOptionOptionList) Tail() Complex128OptionArrayOptionOptionOptionList {
+	return l.tail.Copy()
+}
+func (l AnyOptionArrayOptionOptionOptionList) Tail() AnyOptionArrayOptionOptionOptionList {
 	return l.tail.Copy()
 }
 func (l BoolListOptionOptionOptionList) Tail() BoolListOptionOptionOptionList { return l.tail.Copy() }
@@ -441,66 +493,66 @@ func (l Complex128ListOptionOptionOptionList) Tail() Complex128ListOptionOptionO
 	return l.tail.Copy()
 }
 func (l AnyListOptionOptionOptionList) Tail() AnyListOptionOptionOptionList { return l.tail.Copy() }
-func (l BoolArrList) Tail() BoolArrList                                     { return l.tail.Copy() }
-func (l StringArrList) Tail() StringArrList                                 { return l.tail.Copy() }
-func (l IntArrList) Tail() IntArrList                                       { return l.tail.Copy() }
-func (l Int8ArrList) Tail() Int8ArrList                                     { return l.tail.Copy() }
-func (l Int16ArrList) Tail() Int16ArrList                                   { return l.tail.Copy() }
-func (l Int32ArrList) Tail() Int32ArrList                                   { return l.tail.Copy() }
-func (l Int64ArrList) Tail() Int64ArrList                                   { return l.tail.Copy() }
-func (l UintArrList) Tail() UintArrList                                     { return l.tail.Copy() }
-func (l Uint8ArrList) Tail() Uint8ArrList                                   { return l.tail.Copy() }
-func (l Uint16ArrList) Tail() Uint16ArrList                                 { return l.tail.Copy() }
-func (l Uint32ArrList) Tail() Uint32ArrList                                 { return l.tail.Copy() }
-func (l Uint64ArrList) Tail() Uint64ArrList                                 { return l.tail.Copy() }
-func (l UintptrArrList) Tail() UintptrArrList                               { return l.tail.Copy() }
-func (l ByteArrList) Tail() ByteArrList                                     { return l.tail.Copy() }
-func (l RuneArrList) Tail() RuneArrList                                     { return l.tail.Copy() }
-func (l Float32ArrList) Tail() Float32ArrList                               { return l.tail.Copy() }
-func (l Float64ArrList) Tail() Float64ArrList                               { return l.tail.Copy() }
-func (l Complex64ArrList) Tail() Complex64ArrList                           { return l.tail.Copy() }
-func (l Complex128ArrList) Tail() Complex128ArrList                         { return l.tail.Copy() }
-func (l AnyArrList) Tail() AnyArrList                                       { return l.tail.Copy() }
-func (l BoolArrArrList) Tail() BoolArrArrList                               { return l.tail.Copy() }
-func (l StringArrArrList) Tail() StringArrArrList                           { return l.tail.Copy() }
-func (l IntArrArrList) Tail() IntArrArrList                                 { return l.tail.Copy() }
-func (l Int8ArrArrList) Tail() Int8ArrArrList                               { return l.tail.Copy() }
-func (l Int16ArrArrList) Tail() Int16ArrArrList                             { return l.tail.Copy() }
-func (l Int32ArrArrList) Tail() Int32ArrArrList                             { return l.tail.Copy() }
-func (l Int64ArrArrList) Tail() Int64ArrArrList                             { return l.tail.Copy() }
-func (l UintArrArrList) Tail() UintArrArrList                               { return l.tail.Copy() }
-func (l Uint8ArrArrList) Tail() Uint8ArrArrList                             { return l.tail.Copy() }
-func (l Uint16ArrArrList) Tail() Uint16ArrArrList                           { return l.tail.Copy() }
-func (l Uint32ArrArrList) Tail() Uint32ArrArrList                           { return l.tail.Copy() }
-func (l Uint64ArrArrList) Tail() Uint64ArrArrList                           { return l.tail.Copy() }
-func (l UintptrArrArrList) Tail() UintptrArrArrList                         { return l.tail.Copy() }
-func (l ByteArrArrList) Tail() ByteArrArrList                               { return l.tail.Copy() }
-func (l RuneArrArrList) Tail() RuneArrArrList                               { return l.tail.Copy() }
-func (l Float32ArrArrList) Tail() Float32ArrArrList                         { return l.tail.Copy() }
-func (l Float64ArrArrList) Tail() Float64ArrArrList                         { return l.tail.Copy() }
-func (l Complex64ArrArrList) Tail() Complex64ArrArrList                     { return l.tail.Copy() }
-func (l Complex128ArrArrList) Tail() Complex128ArrArrList                   { return l.tail.Copy() }
-func (l AnyArrArrList) Tail() AnyArrArrList                                 { return l.tail.Copy() }
-func (l BoolOptionArrList) Tail() BoolOptionArrList                         { return l.tail.Copy() }
-func (l StringOptionArrList) Tail() StringOptionArrList                     { return l.tail.Copy() }
-func (l IntOptionArrList) Tail() IntOptionArrList                           { return l.tail.Copy() }
-func (l Int8OptionArrList) Tail() Int8OptionArrList                         { return l.tail.Copy() }
-func (l Int16OptionArrList) Tail() Int16OptionArrList                       { return l.tail.Copy() }
-func (l Int32OptionArrList) Tail() Int32OptionArrList                       { return l.tail.Copy() }
-func (l Int64OptionArrList) Tail() Int64OptionArrList                       { return l.tail.Copy() }
-func (l UintOptionArrList) Tail() UintOptionArrList                         { return l.tail.Copy() }
-func (l Uint8OptionArrList) Tail() Uint8OptionArrList                       { return l.tail.Copy() }
-func (l Uint16OptionArrList) Tail() Uint16OptionArrList                     { return l.tail.Copy() }
-func (l Uint32OptionArrList) Tail() Uint32OptionArrList                     { return l.tail.Copy() }
-func (l Uint64OptionArrList) Tail() Uint64OptionArrList                     { return l.tail.Copy() }
-func (l UintptrOptionArrList) Tail() UintptrOptionArrList                   { return l.tail.Copy() }
-func (l ByteOptionArrList) Tail() ByteOptionArrList                         { return l.tail.Copy() }
-func (l RuneOptionArrList) Tail() RuneOptionArrList                         { return l.tail.Copy() }
-func (l Float32OptionArrList) Tail() Float32OptionArrList                   { return l.tail.Copy() }
-func (l Float64OptionArrList) Tail() Float64OptionArrList                   { return l.tail.Copy() }
-func (l Complex64OptionArrList) Tail() Complex64OptionArrList               { return l.tail.Copy() }
-func (l Complex128OptionArrList) Tail() Complex128OptionArrList             { return l.tail.Copy() }
-func (l AnyOptionArrList) Tail() AnyOptionArrList                           { return l.tail.Copy() }
+func (l BoolArrayList) Tail() BoolArrayList                                 { return l.tail.Copy() }
+func (l StringArrayList) Tail() StringArrayList                             { return l.tail.Copy() }
+func (l IntArrayList) Tail() IntArrayList                                   { return l.tail.Copy() }
+func (l Int8ArrayList) Tail() Int8ArrayList                                 { return l.tail.Copy() }
+func (l Int16ArrayList) Tail() Int16ArrayList                               { return l.tail.Copy() }
+func (l Int32ArrayList) Tail() Int32ArrayList                               { return l.tail.Copy() }
+func (l Int64ArrayList) Tail() Int64ArrayList                               { return l.tail.Copy() }
+func (l UintArrayList) Tail() UintArrayList                                 { return l.tail.Copy() }
+func (l Uint8ArrayList) Tail() Uint8ArrayList                               { return l.tail.Copy() }
+func (l Uint16ArrayList) Tail() Uint16ArrayList                             { return l.tail.Copy() }
+func (l Uint32ArrayList) Tail() Uint32ArrayList                             { return l.tail.Copy() }
+func (l Uint64ArrayList) Tail() Uint64ArrayList                             { return l.tail.Copy() }
+func (l UintptrArrayList) Tail() UintptrArrayList                           { return l.tail.Copy() }
+func (l ByteArrayList) Tail() ByteArrayList                                 { return l.tail.Copy() }
+func (l RuneArrayList) Tail() RuneArrayList                                 { return l.tail.Copy() }
+func (l Float32ArrayList) Tail() Float32ArrayList                           { return l.tail.Copy() }
+func (l Float64ArrayList) Tail() Float64ArrayList                           { return l.tail.Copy() }
+func (l Complex64ArrayList) Tail() Complex64ArrayList                       { return l.tail.Copy() }
+func (l Complex128ArrayList) Tail() Complex128ArrayList                     { return l.tail.Copy() }
+func (l AnyArrayList) Tail() AnyArrayList                                   { return l.tail.Copy() }
+func (l BoolArrayArrayList) Tail() BoolArrayArrayList                       { return l.tail.Copy() }
+func (l StringArrayArrayList) Tail() StringArrayArrayList                   { return l.tail.Copy() }
+func (l IntArrayArrayList) Tail() IntArrayArrayList                         { return l.tail.Copy() }
+func (l Int8ArrayArrayList) Tail() Int8ArrayArrayList                       { return l.tail.Copy() }
+func (l Int16ArrayArrayList) Tail() Int16ArrayArrayList                     { return l.tail.Copy() }
+func (l Int32ArrayArrayList) Tail() Int32ArrayArrayList                     { return l.tail.Copy() }
+func (l Int64ArrayArrayList) Tail() Int64ArrayArrayList                     { return l.tail.Copy() }
+func (l UintArrayArrayList) Tail() UintArrayArrayList                       { return l.tail.Copy() }
+func (l Uint8ArrayArrayList) Tail() Uint8ArrayArrayList                     { return l.tail.Copy() }
+func (l Uint16ArrayArrayList) Tail() Uint16ArrayArrayList                   { return l.tail.Copy() }
+func (l Uint32ArrayArrayList) Tail() Uint32ArrayArrayList                   { return l.tail.Copy() }
+func (l Uint64ArrayArrayList) Tail() Uint64ArrayArrayList                   { return l.tail.Copy() }
+func (l UintptrArrayArrayList) Tail() UintptrArrayArrayList                 { return l.tail.Copy() }
+func (l ByteArrayArrayList) Tail() ByteArrayArrayList                       { return l.tail.Copy() }
+func (l RuneArrayArrayList) Tail() RuneArrayArrayList                       { return l.tail.Copy() }
+func (l Float32ArrayArrayList) Tail() Float32ArrayArrayList                 { return l.tail.Copy() }
+func (l Float64ArrayArrayList) Tail() Float64ArrayArrayList                 { return l.tail.Copy() }
+func (l Complex64ArrayArrayList) Tail() Complex64ArrayArrayList             { return l.tail.Copy() }
+func (l Complex128ArrayArrayList) Tail() Complex128ArrayArrayList           { return l.tail.Copy() }
+func (l AnyArrayArrayList) Tail() AnyArrayArrayList                         { return l.tail.Copy() }
+func (l BoolOptionArrayList) Tail() BoolOptionArrayList                     { return l.tail.Copy() }
+func (l StringOptionArrayList) Tail() StringOptionArrayList                 { return l.tail.Copy() }
+func (l IntOptionArrayList) Tail() IntOptionArrayList                       { return l.tail.Copy() }
+func (l Int8OptionArrayList) Tail() Int8OptionArrayList                     { return l.tail.Copy() }
+func (l Int16OptionArrayList) Tail() Int16OptionArrayList                   { return l.tail.Copy() }
+func (l Int32OptionArrayList) Tail() Int32OptionArrayList                   { return l.tail.Copy() }
+func (l Int64OptionArrayList) Tail() Int64OptionArrayList                   { return l.tail.Copy() }
+func (l UintOptionArrayList) Tail() UintOptionArrayList                     { return l.tail.Copy() }
+func (l Uint8OptionArrayList) Tail() Uint8OptionArrayList                   { return l.tail.Copy() }
+func (l Uint16OptionArrayList) Tail() Uint16OptionArrayList                 { return l.tail.Copy() }
+func (l Uint32OptionArrayList) Tail() Uint32OptionArrayList                 { return l.tail.Copy() }
+func (l Uint64OptionArrayList) Tail() Uint64OptionArrayList                 { return l.tail.Copy() }
+func (l UintptrOptionArrayList) Tail() UintptrOptionArrayList               { return l.tail.Copy() }
+func (l ByteOptionArrayList) Tail() ByteOptionArrayList                     { return l.tail.Copy() }
+func (l RuneOptionArrayList) Tail() RuneOptionArrayList                     { return l.tail.Copy() }
+func (l Float32OptionArrayList) Tail() Float32OptionArrayList               { return l.tail.Copy() }
+func (l Float64OptionArrayList) Tail() Float64OptionArrayList               { return l.tail.Copy() }
+func (l Complex64OptionArrayList) Tail() Complex64OptionArrayList           { return l.tail.Copy() }
+func (l Complex128OptionArrayList) Tail() Complex128OptionArrayList         { return l.tail.Copy() }
+func (l AnyOptionArrayList) Tail() AnyOptionArrayList                       { return l.tail.Copy() }
 func (l BoolListList) Tail() BoolListList                                   { return l.tail.Copy() }
 func (l StringListList) Tail() StringListList                               { return l.tail.Copy() }
 func (l IntListList) Tail() IntListList                                     { return l.tail.Copy() }

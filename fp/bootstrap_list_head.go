@@ -3,328 +3,372 @@
 
 package fp
 
-func (l BoolList) Head() bool                                                       { return *l.head }
-func (l StringList) Head() string                                                   { return *l.head }
-func (l IntList) Head() int                                                         { return *l.head }
-func (l Int8List) Head() int8                                                       { return *l.head }
-func (l Int16List) Head() int16                                                     { return *l.head }
-func (l Int32List) Head() int32                                                     { return *l.head }
-func (l Int64List) Head() int64                                                     { return *l.head }
-func (l UintList) Head() uint                                                       { return *l.head }
-func (l Uint8List) Head() uint8                                                     { return *l.head }
-func (l Uint16List) Head() uint16                                                   { return *l.head }
-func (l Uint32List) Head() uint32                                                   { return *l.head }
-func (l Uint64List) Head() uint64                                                   { return *l.head }
-func (l UintptrList) Head() uintptr                                                 { return *l.head }
-func (l ByteList) Head() byte                                                       { return *l.head }
-func (l RuneList) Head() rune                                                       { return *l.head }
-func (l Float32List) Head() float32                                                 { return *l.head }
-func (l Float64List) Head() float64                                                 { return *l.head }
-func (l Complex64List) Head() complex64                                             { return *l.head }
-func (l Complex128List) Head() complex128                                           { return *l.head }
-func (l AnyList) Head() Any                                                         { return *l.head }
-func (l BoolOptionList) Head() BoolOption                                           { return *l.head }
-func (l StringOptionList) Head() StringOption                                       { return *l.head }
-func (l IntOptionList) Head() IntOption                                             { return *l.head }
-func (l Int8OptionList) Head() Int8Option                                           { return *l.head }
-func (l Int16OptionList) Head() Int16Option                                         { return *l.head }
-func (l Int32OptionList) Head() Int32Option                                         { return *l.head }
-func (l Int64OptionList) Head() Int64Option                                         { return *l.head }
-func (l UintOptionList) Head() UintOption                                           { return *l.head }
-func (l Uint8OptionList) Head() Uint8Option                                         { return *l.head }
-func (l Uint16OptionList) Head() Uint16Option                                       { return *l.head }
-func (l Uint32OptionList) Head() Uint32Option                                       { return *l.head }
-func (l Uint64OptionList) Head() Uint64Option                                       { return *l.head }
-func (l UintptrOptionList) Head() UintptrOption                                     { return *l.head }
-func (l ByteOptionList) Head() ByteOption                                           { return *l.head }
-func (l RuneOptionList) Head() RuneOption                                           { return *l.head }
-func (l Float32OptionList) Head() Float32Option                                     { return *l.head }
-func (l Float64OptionList) Head() Float64Option                                     { return *l.head }
-func (l Complex64OptionList) Head() Complex64Option                                 { return *l.head }
-func (l Complex128OptionList) Head() Complex128Option                               { return *l.head }
-func (l AnyOptionList) Head() AnyOption                                             { return *l.head }
-func (l BoolArrOptionList) Head() BoolArrOption                                     { return *l.head }
-func (l StringArrOptionList) Head() StringArrOption                                 { return *l.head }
-func (l IntArrOptionList) Head() IntArrOption                                       { return *l.head }
-func (l Int8ArrOptionList) Head() Int8ArrOption                                     { return *l.head }
-func (l Int16ArrOptionList) Head() Int16ArrOption                                   { return *l.head }
-func (l Int32ArrOptionList) Head() Int32ArrOption                                   { return *l.head }
-func (l Int64ArrOptionList) Head() Int64ArrOption                                   { return *l.head }
-func (l UintArrOptionList) Head() UintArrOption                                     { return *l.head }
-func (l Uint8ArrOptionList) Head() Uint8ArrOption                                   { return *l.head }
-func (l Uint16ArrOptionList) Head() Uint16ArrOption                                 { return *l.head }
-func (l Uint32ArrOptionList) Head() Uint32ArrOption                                 { return *l.head }
-func (l Uint64ArrOptionList) Head() Uint64ArrOption                                 { return *l.head }
-func (l UintptrArrOptionList) Head() UintptrArrOption                               { return *l.head }
-func (l ByteArrOptionList) Head() ByteArrOption                                     { return *l.head }
-func (l RuneArrOptionList) Head() RuneArrOption                                     { return *l.head }
-func (l Float32ArrOptionList) Head() Float32ArrOption                               { return *l.head }
-func (l Float64ArrOptionList) Head() Float64ArrOption                               { return *l.head }
-func (l Complex64ArrOptionList) Head() Complex64ArrOption                           { return *l.head }
-func (l Complex128ArrOptionList) Head() Complex128ArrOption                         { return *l.head }
-func (l AnyArrOptionList) Head() AnyArrOption                                       { return *l.head }
-func (l BoolArrArrOptionList) Head() BoolArrArrOption                               { return *l.head }
-func (l StringArrArrOptionList) Head() StringArrArrOption                           { return *l.head }
-func (l IntArrArrOptionList) Head() IntArrArrOption                                 { return *l.head }
-func (l Int8ArrArrOptionList) Head() Int8ArrArrOption                               { return *l.head }
-func (l Int16ArrArrOptionList) Head() Int16ArrArrOption                             { return *l.head }
-func (l Int32ArrArrOptionList) Head() Int32ArrArrOption                             { return *l.head }
-func (l Int64ArrArrOptionList) Head() Int64ArrArrOption                             { return *l.head }
-func (l UintArrArrOptionList) Head() UintArrArrOption                               { return *l.head }
-func (l Uint8ArrArrOptionList) Head() Uint8ArrArrOption                             { return *l.head }
-func (l Uint16ArrArrOptionList) Head() Uint16ArrArrOption                           { return *l.head }
-func (l Uint32ArrArrOptionList) Head() Uint32ArrArrOption                           { return *l.head }
-func (l Uint64ArrArrOptionList) Head() Uint64ArrArrOption                           { return *l.head }
-func (l UintptrArrArrOptionList) Head() UintptrArrArrOption                         { return *l.head }
-func (l ByteArrArrOptionList) Head() ByteArrArrOption                               { return *l.head }
-func (l RuneArrArrOptionList) Head() RuneArrArrOption                               { return *l.head }
-func (l Float32ArrArrOptionList) Head() Float32ArrArrOption                         { return *l.head }
-func (l Float64ArrArrOptionList) Head() Float64ArrArrOption                         { return *l.head }
-func (l Complex64ArrArrOptionList) Head() Complex64ArrArrOption                     { return *l.head }
-func (l Complex128ArrArrOptionList) Head() Complex128ArrArrOption                   { return *l.head }
-func (l AnyArrArrOptionList) Head() AnyArrArrOption                                 { return *l.head }
-func (l BoolOptionArrOptionList) Head() BoolOptionArrOption                         { return *l.head }
-func (l StringOptionArrOptionList) Head() StringOptionArrOption                     { return *l.head }
-func (l IntOptionArrOptionList) Head() IntOptionArrOption                           { return *l.head }
-func (l Int8OptionArrOptionList) Head() Int8OptionArrOption                         { return *l.head }
-func (l Int16OptionArrOptionList) Head() Int16OptionArrOption                       { return *l.head }
-func (l Int32OptionArrOptionList) Head() Int32OptionArrOption                       { return *l.head }
-func (l Int64OptionArrOptionList) Head() Int64OptionArrOption                       { return *l.head }
-func (l UintOptionArrOptionList) Head() UintOptionArrOption                         { return *l.head }
-func (l Uint8OptionArrOptionList) Head() Uint8OptionArrOption                       { return *l.head }
-func (l Uint16OptionArrOptionList) Head() Uint16OptionArrOption                     { return *l.head }
-func (l Uint32OptionArrOptionList) Head() Uint32OptionArrOption                     { return *l.head }
-func (l Uint64OptionArrOptionList) Head() Uint64OptionArrOption                     { return *l.head }
-func (l UintptrOptionArrOptionList) Head() UintptrOptionArrOption                   { return *l.head }
-func (l ByteOptionArrOptionList) Head() ByteOptionArrOption                         { return *l.head }
-func (l RuneOptionArrOptionList) Head() RuneOptionArrOption                         { return *l.head }
-func (l Float32OptionArrOptionList) Head() Float32OptionArrOption                   { return *l.head }
-func (l Float64OptionArrOptionList) Head() Float64OptionArrOption                   { return *l.head }
-func (l Complex64OptionArrOptionList) Head() Complex64OptionArrOption               { return *l.head }
-func (l Complex128OptionArrOptionList) Head() Complex128OptionArrOption             { return *l.head }
-func (l AnyOptionArrOptionList) Head() AnyOptionArrOption                           { return *l.head }
-func (l BoolListOptionList) Head() BoolListOption                                   { return *l.head }
-func (l StringListOptionList) Head() StringListOption                               { return *l.head }
-func (l IntListOptionList) Head() IntListOption                                     { return *l.head }
-func (l Int8ListOptionList) Head() Int8ListOption                                   { return *l.head }
-func (l Int16ListOptionList) Head() Int16ListOption                                 { return *l.head }
-func (l Int32ListOptionList) Head() Int32ListOption                                 { return *l.head }
-func (l Int64ListOptionList) Head() Int64ListOption                                 { return *l.head }
-func (l UintListOptionList) Head() UintListOption                                   { return *l.head }
-func (l Uint8ListOptionList) Head() Uint8ListOption                                 { return *l.head }
-func (l Uint16ListOptionList) Head() Uint16ListOption                               { return *l.head }
-func (l Uint32ListOptionList) Head() Uint32ListOption                               { return *l.head }
-func (l Uint64ListOptionList) Head() Uint64ListOption                               { return *l.head }
-func (l UintptrListOptionList) Head() UintptrListOption                             { return *l.head }
-func (l ByteListOptionList) Head() ByteListOption                                   { return *l.head }
-func (l RuneListOptionList) Head() RuneListOption                                   { return *l.head }
-func (l Float32ListOptionList) Head() Float32ListOption                             { return *l.head }
-func (l Float64ListOptionList) Head() Float64ListOption                             { return *l.head }
-func (l Complex64ListOptionList) Head() Complex64ListOption                         { return *l.head }
-func (l Complex128ListOptionList) Head() Complex128ListOption                       { return *l.head }
-func (l AnyListOptionList) Head() AnyListOption                                     { return *l.head }
-func (l BoolOptionOptionList) Head() BoolOptionOption                               { return *l.head }
-func (l StringOptionOptionList) Head() StringOptionOption                           { return *l.head }
-func (l IntOptionOptionList) Head() IntOptionOption                                 { return *l.head }
-func (l Int8OptionOptionList) Head() Int8OptionOption                               { return *l.head }
-func (l Int16OptionOptionList) Head() Int16OptionOption                             { return *l.head }
-func (l Int32OptionOptionList) Head() Int32OptionOption                             { return *l.head }
-func (l Int64OptionOptionList) Head() Int64OptionOption                             { return *l.head }
-func (l UintOptionOptionList) Head() UintOptionOption                               { return *l.head }
-func (l Uint8OptionOptionList) Head() Uint8OptionOption                             { return *l.head }
-func (l Uint16OptionOptionList) Head() Uint16OptionOption                           { return *l.head }
-func (l Uint32OptionOptionList) Head() Uint32OptionOption                           { return *l.head }
-func (l Uint64OptionOptionList) Head() Uint64OptionOption                           { return *l.head }
-func (l UintptrOptionOptionList) Head() UintptrOptionOption                         { return *l.head }
-func (l ByteOptionOptionList) Head() ByteOptionOption                               { return *l.head }
-func (l RuneOptionOptionList) Head() RuneOptionOption                               { return *l.head }
-func (l Float32OptionOptionList) Head() Float32OptionOption                         { return *l.head }
-func (l Float64OptionOptionList) Head() Float64OptionOption                         { return *l.head }
-func (l Complex64OptionOptionList) Head() Complex64OptionOption                     { return *l.head }
-func (l Complex128OptionOptionList) Head() Complex128OptionOption                   { return *l.head }
-func (l AnyOptionOptionList) Head() AnyOptionOption                                 { return *l.head }
-func (l BoolArrOptionOptionList) Head() BoolArrOptionOption                         { return *l.head }
-func (l StringArrOptionOptionList) Head() StringArrOptionOption                     { return *l.head }
-func (l IntArrOptionOptionList) Head() IntArrOptionOption                           { return *l.head }
-func (l Int8ArrOptionOptionList) Head() Int8ArrOptionOption                         { return *l.head }
-func (l Int16ArrOptionOptionList) Head() Int16ArrOptionOption                       { return *l.head }
-func (l Int32ArrOptionOptionList) Head() Int32ArrOptionOption                       { return *l.head }
-func (l Int64ArrOptionOptionList) Head() Int64ArrOptionOption                       { return *l.head }
-func (l UintArrOptionOptionList) Head() UintArrOptionOption                         { return *l.head }
-func (l Uint8ArrOptionOptionList) Head() Uint8ArrOptionOption                       { return *l.head }
-func (l Uint16ArrOptionOptionList) Head() Uint16ArrOptionOption                     { return *l.head }
-func (l Uint32ArrOptionOptionList) Head() Uint32ArrOptionOption                     { return *l.head }
-func (l Uint64ArrOptionOptionList) Head() Uint64ArrOptionOption                     { return *l.head }
-func (l UintptrArrOptionOptionList) Head() UintptrArrOptionOption                   { return *l.head }
-func (l ByteArrOptionOptionList) Head() ByteArrOptionOption                         { return *l.head }
-func (l RuneArrOptionOptionList) Head() RuneArrOptionOption                         { return *l.head }
-func (l Float32ArrOptionOptionList) Head() Float32ArrOptionOption                   { return *l.head }
-func (l Float64ArrOptionOptionList) Head() Float64ArrOptionOption                   { return *l.head }
-func (l Complex64ArrOptionOptionList) Head() Complex64ArrOptionOption               { return *l.head }
-func (l Complex128ArrOptionOptionList) Head() Complex128ArrOptionOption             { return *l.head }
-func (l AnyArrOptionOptionList) Head() AnyArrOptionOption                           { return *l.head }
-func (l BoolArrArrOptionOptionList) Head() BoolArrArrOptionOption                   { return *l.head }
-func (l StringArrArrOptionOptionList) Head() StringArrArrOptionOption               { return *l.head }
-func (l IntArrArrOptionOptionList) Head() IntArrArrOptionOption                     { return *l.head }
-func (l Int8ArrArrOptionOptionList) Head() Int8ArrArrOptionOption                   { return *l.head }
-func (l Int16ArrArrOptionOptionList) Head() Int16ArrArrOptionOption                 { return *l.head }
-func (l Int32ArrArrOptionOptionList) Head() Int32ArrArrOptionOption                 { return *l.head }
-func (l Int64ArrArrOptionOptionList) Head() Int64ArrArrOptionOption                 { return *l.head }
-func (l UintArrArrOptionOptionList) Head() UintArrArrOptionOption                   { return *l.head }
-func (l Uint8ArrArrOptionOptionList) Head() Uint8ArrArrOptionOption                 { return *l.head }
-func (l Uint16ArrArrOptionOptionList) Head() Uint16ArrArrOptionOption               { return *l.head }
-func (l Uint32ArrArrOptionOptionList) Head() Uint32ArrArrOptionOption               { return *l.head }
-func (l Uint64ArrArrOptionOptionList) Head() Uint64ArrArrOptionOption               { return *l.head }
-func (l UintptrArrArrOptionOptionList) Head() UintptrArrArrOptionOption             { return *l.head }
-func (l ByteArrArrOptionOptionList) Head() ByteArrArrOptionOption                   { return *l.head }
-func (l RuneArrArrOptionOptionList) Head() RuneArrArrOptionOption                   { return *l.head }
-func (l Float32ArrArrOptionOptionList) Head() Float32ArrArrOptionOption             { return *l.head }
-func (l Float64ArrArrOptionOptionList) Head() Float64ArrArrOptionOption             { return *l.head }
-func (l Complex64ArrArrOptionOptionList) Head() Complex64ArrArrOptionOption         { return *l.head }
-func (l Complex128ArrArrOptionOptionList) Head() Complex128ArrArrOptionOption       { return *l.head }
-func (l AnyArrArrOptionOptionList) Head() AnyArrArrOptionOption                     { return *l.head }
-func (l BoolOptionArrOptionOptionList) Head() BoolOptionArrOptionOption             { return *l.head }
-func (l StringOptionArrOptionOptionList) Head() StringOptionArrOptionOption         { return *l.head }
-func (l IntOptionArrOptionOptionList) Head() IntOptionArrOptionOption               { return *l.head }
-func (l Int8OptionArrOptionOptionList) Head() Int8OptionArrOptionOption             { return *l.head }
-func (l Int16OptionArrOptionOptionList) Head() Int16OptionArrOptionOption           { return *l.head }
-func (l Int32OptionArrOptionOptionList) Head() Int32OptionArrOptionOption           { return *l.head }
-func (l Int64OptionArrOptionOptionList) Head() Int64OptionArrOptionOption           { return *l.head }
-func (l UintOptionArrOptionOptionList) Head() UintOptionArrOptionOption             { return *l.head }
-func (l Uint8OptionArrOptionOptionList) Head() Uint8OptionArrOptionOption           { return *l.head }
-func (l Uint16OptionArrOptionOptionList) Head() Uint16OptionArrOptionOption         { return *l.head }
-func (l Uint32OptionArrOptionOptionList) Head() Uint32OptionArrOptionOption         { return *l.head }
-func (l Uint64OptionArrOptionOptionList) Head() Uint64OptionArrOptionOption         { return *l.head }
-func (l UintptrOptionArrOptionOptionList) Head() UintptrOptionArrOptionOption       { return *l.head }
-func (l ByteOptionArrOptionOptionList) Head() ByteOptionArrOptionOption             { return *l.head }
-func (l RuneOptionArrOptionOptionList) Head() RuneOptionArrOptionOption             { return *l.head }
-func (l Float32OptionArrOptionOptionList) Head() Float32OptionArrOptionOption       { return *l.head }
-func (l Float64OptionArrOptionOptionList) Head() Float64OptionArrOptionOption       { return *l.head }
-func (l Complex64OptionArrOptionOptionList) Head() Complex64OptionArrOptionOption   { return *l.head }
-func (l Complex128OptionArrOptionOptionList) Head() Complex128OptionArrOptionOption { return *l.head }
-func (l AnyOptionArrOptionOptionList) Head() AnyOptionArrOptionOption               { return *l.head }
-func (l BoolListOptionOptionList) Head() BoolListOptionOption                       { return *l.head }
-func (l StringListOptionOptionList) Head() StringListOptionOption                   { return *l.head }
-func (l IntListOptionOptionList) Head() IntListOptionOption                         { return *l.head }
-func (l Int8ListOptionOptionList) Head() Int8ListOptionOption                       { return *l.head }
-func (l Int16ListOptionOptionList) Head() Int16ListOptionOption                     { return *l.head }
-func (l Int32ListOptionOptionList) Head() Int32ListOptionOption                     { return *l.head }
-func (l Int64ListOptionOptionList) Head() Int64ListOptionOption                     { return *l.head }
-func (l UintListOptionOptionList) Head() UintListOptionOption                       { return *l.head }
-func (l Uint8ListOptionOptionList) Head() Uint8ListOptionOption                     { return *l.head }
-func (l Uint16ListOptionOptionList) Head() Uint16ListOptionOption                   { return *l.head }
-func (l Uint32ListOptionOptionList) Head() Uint32ListOptionOption                   { return *l.head }
-func (l Uint64ListOptionOptionList) Head() Uint64ListOptionOption                   { return *l.head }
-func (l UintptrListOptionOptionList) Head() UintptrListOptionOption                 { return *l.head }
-func (l ByteListOptionOptionList) Head() ByteListOptionOption                       { return *l.head }
-func (l RuneListOptionOptionList) Head() RuneListOptionOption                       { return *l.head }
-func (l Float32ListOptionOptionList) Head() Float32ListOptionOption                 { return *l.head }
-func (l Float64ListOptionOptionList) Head() Float64ListOptionOption                 { return *l.head }
-func (l Complex64ListOptionOptionList) Head() Complex64ListOptionOption             { return *l.head }
-func (l Complex128ListOptionOptionList) Head() Complex128ListOptionOption           { return *l.head }
-func (l AnyListOptionOptionList) Head() AnyListOptionOption                         { return *l.head }
-func (l BoolOptionOptionOptionList) Head() BoolOptionOptionOption                   { return *l.head }
-func (l StringOptionOptionOptionList) Head() StringOptionOptionOption               { return *l.head }
-func (l IntOptionOptionOptionList) Head() IntOptionOptionOption                     { return *l.head }
-func (l Int8OptionOptionOptionList) Head() Int8OptionOptionOption                   { return *l.head }
-func (l Int16OptionOptionOptionList) Head() Int16OptionOptionOption                 { return *l.head }
-func (l Int32OptionOptionOptionList) Head() Int32OptionOptionOption                 { return *l.head }
-func (l Int64OptionOptionOptionList) Head() Int64OptionOptionOption                 { return *l.head }
-func (l UintOptionOptionOptionList) Head() UintOptionOptionOption                   { return *l.head }
-func (l Uint8OptionOptionOptionList) Head() Uint8OptionOptionOption                 { return *l.head }
-func (l Uint16OptionOptionOptionList) Head() Uint16OptionOptionOption               { return *l.head }
-func (l Uint32OptionOptionOptionList) Head() Uint32OptionOptionOption               { return *l.head }
-func (l Uint64OptionOptionOptionList) Head() Uint64OptionOptionOption               { return *l.head }
-func (l UintptrOptionOptionOptionList) Head() UintptrOptionOptionOption             { return *l.head }
-func (l ByteOptionOptionOptionList) Head() ByteOptionOptionOption                   { return *l.head }
-func (l RuneOptionOptionOptionList) Head() RuneOptionOptionOption                   { return *l.head }
-func (l Float32OptionOptionOptionList) Head() Float32OptionOptionOption             { return *l.head }
-func (l Float64OptionOptionOptionList) Head() Float64OptionOptionOption             { return *l.head }
-func (l Complex64OptionOptionOptionList) Head() Complex64OptionOptionOption         { return *l.head }
-func (l Complex128OptionOptionOptionList) Head() Complex128OptionOptionOption       { return *l.head }
-func (l AnyOptionOptionOptionList) Head() AnyOptionOptionOption                     { return *l.head }
-func (l BoolArrOptionOptionOptionList) Head() BoolArrOptionOptionOption             { return *l.head }
-func (l StringArrOptionOptionOptionList) Head() StringArrOptionOptionOption         { return *l.head }
-func (l IntArrOptionOptionOptionList) Head() IntArrOptionOptionOption               { return *l.head }
-func (l Int8ArrOptionOptionOptionList) Head() Int8ArrOptionOptionOption             { return *l.head }
-func (l Int16ArrOptionOptionOptionList) Head() Int16ArrOptionOptionOption           { return *l.head }
-func (l Int32ArrOptionOptionOptionList) Head() Int32ArrOptionOptionOption           { return *l.head }
-func (l Int64ArrOptionOptionOptionList) Head() Int64ArrOptionOptionOption           { return *l.head }
-func (l UintArrOptionOptionOptionList) Head() UintArrOptionOptionOption             { return *l.head }
-func (l Uint8ArrOptionOptionOptionList) Head() Uint8ArrOptionOptionOption           { return *l.head }
-func (l Uint16ArrOptionOptionOptionList) Head() Uint16ArrOptionOptionOption         { return *l.head }
-func (l Uint32ArrOptionOptionOptionList) Head() Uint32ArrOptionOptionOption         { return *l.head }
-func (l Uint64ArrOptionOptionOptionList) Head() Uint64ArrOptionOptionOption         { return *l.head }
-func (l UintptrArrOptionOptionOptionList) Head() UintptrArrOptionOptionOption       { return *l.head }
-func (l ByteArrOptionOptionOptionList) Head() ByteArrOptionOptionOption             { return *l.head }
-func (l RuneArrOptionOptionOptionList) Head() RuneArrOptionOptionOption             { return *l.head }
-func (l Float32ArrOptionOptionOptionList) Head() Float32ArrOptionOptionOption       { return *l.head }
-func (l Float64ArrOptionOptionOptionList) Head() Float64ArrOptionOptionOption       { return *l.head }
-func (l Complex64ArrOptionOptionOptionList) Head() Complex64ArrOptionOptionOption   { return *l.head }
-func (l Complex128ArrOptionOptionOptionList) Head() Complex128ArrOptionOptionOption { return *l.head }
-func (l AnyArrOptionOptionOptionList) Head() AnyArrOptionOptionOption               { return *l.head }
-func (l BoolArrArrOptionOptionOptionList) Head() BoolArrArrOptionOptionOption       { return *l.head }
-func (l StringArrArrOptionOptionOptionList) Head() StringArrArrOptionOptionOption   { return *l.head }
-func (l IntArrArrOptionOptionOptionList) Head() IntArrArrOptionOptionOption         { return *l.head }
-func (l Int8ArrArrOptionOptionOptionList) Head() Int8ArrArrOptionOptionOption       { return *l.head }
-func (l Int16ArrArrOptionOptionOptionList) Head() Int16ArrArrOptionOptionOption     { return *l.head }
-func (l Int32ArrArrOptionOptionOptionList) Head() Int32ArrArrOptionOptionOption     { return *l.head }
-func (l Int64ArrArrOptionOptionOptionList) Head() Int64ArrArrOptionOptionOption     { return *l.head }
-func (l UintArrArrOptionOptionOptionList) Head() UintArrArrOptionOptionOption       { return *l.head }
-func (l Uint8ArrArrOptionOptionOptionList) Head() Uint8ArrArrOptionOptionOption     { return *l.head }
-func (l Uint16ArrArrOptionOptionOptionList) Head() Uint16ArrArrOptionOptionOption   { return *l.head }
-func (l Uint32ArrArrOptionOptionOptionList) Head() Uint32ArrArrOptionOptionOption   { return *l.head }
-func (l Uint64ArrArrOptionOptionOptionList) Head() Uint64ArrArrOptionOptionOption   { return *l.head }
-func (l UintptrArrArrOptionOptionOptionList) Head() UintptrArrArrOptionOptionOption { return *l.head }
-func (l ByteArrArrOptionOptionOptionList) Head() ByteArrArrOptionOptionOption       { return *l.head }
-func (l RuneArrArrOptionOptionOptionList) Head() RuneArrArrOptionOptionOption       { return *l.head }
-func (l Float32ArrArrOptionOptionOptionList) Head() Float32ArrArrOptionOptionOption { return *l.head }
-func (l Float64ArrArrOptionOptionOptionList) Head() Float64ArrArrOptionOptionOption { return *l.head }
-func (l Complex64ArrArrOptionOptionOptionList) Head() Complex64ArrArrOptionOptionOption {
+func (l BoolList) Head() bool                                                         { return *l.head }
+func (l StringList) Head() string                                                     { return *l.head }
+func (l IntList) Head() int                                                           { return *l.head }
+func (l Int8List) Head() int8                                                         { return *l.head }
+func (l Int16List) Head() int16                                                       { return *l.head }
+func (l Int32List) Head() int32                                                       { return *l.head }
+func (l Int64List) Head() int64                                                       { return *l.head }
+func (l UintList) Head() uint                                                         { return *l.head }
+func (l Uint8List) Head() uint8                                                       { return *l.head }
+func (l Uint16List) Head() uint16                                                     { return *l.head }
+func (l Uint32List) Head() uint32                                                     { return *l.head }
+func (l Uint64List) Head() uint64                                                     { return *l.head }
+func (l UintptrList) Head() uintptr                                                   { return *l.head }
+func (l ByteList) Head() byte                                                         { return *l.head }
+func (l RuneList) Head() rune                                                         { return *l.head }
+func (l Float32List) Head() float32                                                   { return *l.head }
+func (l Float64List) Head() float64                                                   { return *l.head }
+func (l Complex64List) Head() complex64                                               { return *l.head }
+func (l Complex128List) Head() complex128                                             { return *l.head }
+func (l AnyList) Head() Any                                                           { return *l.head }
+func (l BoolOptionList) Head() BoolOption                                             { return *l.head }
+func (l StringOptionList) Head() StringOption                                         { return *l.head }
+func (l IntOptionList) Head() IntOption                                               { return *l.head }
+func (l Int8OptionList) Head() Int8Option                                             { return *l.head }
+func (l Int16OptionList) Head() Int16Option                                           { return *l.head }
+func (l Int32OptionList) Head() Int32Option                                           { return *l.head }
+func (l Int64OptionList) Head() Int64Option                                           { return *l.head }
+func (l UintOptionList) Head() UintOption                                             { return *l.head }
+func (l Uint8OptionList) Head() Uint8Option                                           { return *l.head }
+func (l Uint16OptionList) Head() Uint16Option                                         { return *l.head }
+func (l Uint32OptionList) Head() Uint32Option                                         { return *l.head }
+func (l Uint64OptionList) Head() Uint64Option                                         { return *l.head }
+func (l UintptrOptionList) Head() UintptrOption                                       { return *l.head }
+func (l ByteOptionList) Head() ByteOption                                             { return *l.head }
+func (l RuneOptionList) Head() RuneOption                                             { return *l.head }
+func (l Float32OptionList) Head() Float32Option                                       { return *l.head }
+func (l Float64OptionList) Head() Float64Option                                       { return *l.head }
+func (l Complex64OptionList) Head() Complex64Option                                   { return *l.head }
+func (l Complex128OptionList) Head() Complex128Option                                 { return *l.head }
+func (l AnyOptionList) Head() AnyOption                                               { return *l.head }
+func (l BoolArrayOptionList) Head() BoolArrayOption                                   { return *l.head }
+func (l StringArrayOptionList) Head() StringArrayOption                               { return *l.head }
+func (l IntArrayOptionList) Head() IntArrayOption                                     { return *l.head }
+func (l Int8ArrayOptionList) Head() Int8ArrayOption                                   { return *l.head }
+func (l Int16ArrayOptionList) Head() Int16ArrayOption                                 { return *l.head }
+func (l Int32ArrayOptionList) Head() Int32ArrayOption                                 { return *l.head }
+func (l Int64ArrayOptionList) Head() Int64ArrayOption                                 { return *l.head }
+func (l UintArrayOptionList) Head() UintArrayOption                                   { return *l.head }
+func (l Uint8ArrayOptionList) Head() Uint8ArrayOption                                 { return *l.head }
+func (l Uint16ArrayOptionList) Head() Uint16ArrayOption                               { return *l.head }
+func (l Uint32ArrayOptionList) Head() Uint32ArrayOption                               { return *l.head }
+func (l Uint64ArrayOptionList) Head() Uint64ArrayOption                               { return *l.head }
+func (l UintptrArrayOptionList) Head() UintptrArrayOption                             { return *l.head }
+func (l ByteArrayOptionList) Head() ByteArrayOption                                   { return *l.head }
+func (l RuneArrayOptionList) Head() RuneArrayOption                                   { return *l.head }
+func (l Float32ArrayOptionList) Head() Float32ArrayOption                             { return *l.head }
+func (l Float64ArrayOptionList) Head() Float64ArrayOption                             { return *l.head }
+func (l Complex64ArrayOptionList) Head() Complex64ArrayOption                         { return *l.head }
+func (l Complex128ArrayOptionList) Head() Complex128ArrayOption                       { return *l.head }
+func (l AnyArrayOptionList) Head() AnyArrayOption                                     { return *l.head }
+func (l BoolArrayArrayOptionList) Head() BoolArrayArrayOption                         { return *l.head }
+func (l StringArrayArrayOptionList) Head() StringArrayArrayOption                     { return *l.head }
+func (l IntArrayArrayOptionList) Head() IntArrayArrayOption                           { return *l.head }
+func (l Int8ArrayArrayOptionList) Head() Int8ArrayArrayOption                         { return *l.head }
+func (l Int16ArrayArrayOptionList) Head() Int16ArrayArrayOption                       { return *l.head }
+func (l Int32ArrayArrayOptionList) Head() Int32ArrayArrayOption                       { return *l.head }
+func (l Int64ArrayArrayOptionList) Head() Int64ArrayArrayOption                       { return *l.head }
+func (l UintArrayArrayOptionList) Head() UintArrayArrayOption                         { return *l.head }
+func (l Uint8ArrayArrayOptionList) Head() Uint8ArrayArrayOption                       { return *l.head }
+func (l Uint16ArrayArrayOptionList) Head() Uint16ArrayArrayOption                     { return *l.head }
+func (l Uint32ArrayArrayOptionList) Head() Uint32ArrayArrayOption                     { return *l.head }
+func (l Uint64ArrayArrayOptionList) Head() Uint64ArrayArrayOption                     { return *l.head }
+func (l UintptrArrayArrayOptionList) Head() UintptrArrayArrayOption                   { return *l.head }
+func (l ByteArrayArrayOptionList) Head() ByteArrayArrayOption                         { return *l.head }
+func (l RuneArrayArrayOptionList) Head() RuneArrayArrayOption                         { return *l.head }
+func (l Float32ArrayArrayOptionList) Head() Float32ArrayArrayOption                   { return *l.head }
+func (l Float64ArrayArrayOptionList) Head() Float64ArrayArrayOption                   { return *l.head }
+func (l Complex64ArrayArrayOptionList) Head() Complex64ArrayArrayOption               { return *l.head }
+func (l Complex128ArrayArrayOptionList) Head() Complex128ArrayArrayOption             { return *l.head }
+func (l AnyArrayArrayOptionList) Head() AnyArrayArrayOption                           { return *l.head }
+func (l BoolOptionArrayOptionList) Head() BoolOptionArrayOption                       { return *l.head }
+func (l StringOptionArrayOptionList) Head() StringOptionArrayOption                   { return *l.head }
+func (l IntOptionArrayOptionList) Head() IntOptionArrayOption                         { return *l.head }
+func (l Int8OptionArrayOptionList) Head() Int8OptionArrayOption                       { return *l.head }
+func (l Int16OptionArrayOptionList) Head() Int16OptionArrayOption                     { return *l.head }
+func (l Int32OptionArrayOptionList) Head() Int32OptionArrayOption                     { return *l.head }
+func (l Int64OptionArrayOptionList) Head() Int64OptionArrayOption                     { return *l.head }
+func (l UintOptionArrayOptionList) Head() UintOptionArrayOption                       { return *l.head }
+func (l Uint8OptionArrayOptionList) Head() Uint8OptionArrayOption                     { return *l.head }
+func (l Uint16OptionArrayOptionList) Head() Uint16OptionArrayOption                   { return *l.head }
+func (l Uint32OptionArrayOptionList) Head() Uint32OptionArrayOption                   { return *l.head }
+func (l Uint64OptionArrayOptionList) Head() Uint64OptionArrayOption                   { return *l.head }
+func (l UintptrOptionArrayOptionList) Head() UintptrOptionArrayOption                 { return *l.head }
+func (l ByteOptionArrayOptionList) Head() ByteOptionArrayOption                       { return *l.head }
+func (l RuneOptionArrayOptionList) Head() RuneOptionArrayOption                       { return *l.head }
+func (l Float32OptionArrayOptionList) Head() Float32OptionArrayOption                 { return *l.head }
+func (l Float64OptionArrayOptionList) Head() Float64OptionArrayOption                 { return *l.head }
+func (l Complex64OptionArrayOptionList) Head() Complex64OptionArrayOption             { return *l.head }
+func (l Complex128OptionArrayOptionList) Head() Complex128OptionArrayOption           { return *l.head }
+func (l AnyOptionArrayOptionList) Head() AnyOptionArrayOption                         { return *l.head }
+func (l BoolListOptionList) Head() BoolListOption                                     { return *l.head }
+func (l StringListOptionList) Head() StringListOption                                 { return *l.head }
+func (l IntListOptionList) Head() IntListOption                                       { return *l.head }
+func (l Int8ListOptionList) Head() Int8ListOption                                     { return *l.head }
+func (l Int16ListOptionList) Head() Int16ListOption                                   { return *l.head }
+func (l Int32ListOptionList) Head() Int32ListOption                                   { return *l.head }
+func (l Int64ListOptionList) Head() Int64ListOption                                   { return *l.head }
+func (l UintListOptionList) Head() UintListOption                                     { return *l.head }
+func (l Uint8ListOptionList) Head() Uint8ListOption                                   { return *l.head }
+func (l Uint16ListOptionList) Head() Uint16ListOption                                 { return *l.head }
+func (l Uint32ListOptionList) Head() Uint32ListOption                                 { return *l.head }
+func (l Uint64ListOptionList) Head() Uint64ListOption                                 { return *l.head }
+func (l UintptrListOptionList) Head() UintptrListOption                               { return *l.head }
+func (l ByteListOptionList) Head() ByteListOption                                     { return *l.head }
+func (l RuneListOptionList) Head() RuneListOption                                     { return *l.head }
+func (l Float32ListOptionList) Head() Float32ListOption                               { return *l.head }
+func (l Float64ListOptionList) Head() Float64ListOption                               { return *l.head }
+func (l Complex64ListOptionList) Head() Complex64ListOption                           { return *l.head }
+func (l Complex128ListOptionList) Head() Complex128ListOption                         { return *l.head }
+func (l AnyListOptionList) Head() AnyListOption                                       { return *l.head }
+func (l BoolOptionOptionList) Head() BoolOptionOption                                 { return *l.head }
+func (l StringOptionOptionList) Head() StringOptionOption                             { return *l.head }
+func (l IntOptionOptionList) Head() IntOptionOption                                   { return *l.head }
+func (l Int8OptionOptionList) Head() Int8OptionOption                                 { return *l.head }
+func (l Int16OptionOptionList) Head() Int16OptionOption                               { return *l.head }
+func (l Int32OptionOptionList) Head() Int32OptionOption                               { return *l.head }
+func (l Int64OptionOptionList) Head() Int64OptionOption                               { return *l.head }
+func (l UintOptionOptionList) Head() UintOptionOption                                 { return *l.head }
+func (l Uint8OptionOptionList) Head() Uint8OptionOption                               { return *l.head }
+func (l Uint16OptionOptionList) Head() Uint16OptionOption                             { return *l.head }
+func (l Uint32OptionOptionList) Head() Uint32OptionOption                             { return *l.head }
+func (l Uint64OptionOptionList) Head() Uint64OptionOption                             { return *l.head }
+func (l UintptrOptionOptionList) Head() UintptrOptionOption                           { return *l.head }
+func (l ByteOptionOptionList) Head() ByteOptionOption                                 { return *l.head }
+func (l RuneOptionOptionList) Head() RuneOptionOption                                 { return *l.head }
+func (l Float32OptionOptionList) Head() Float32OptionOption                           { return *l.head }
+func (l Float64OptionOptionList) Head() Float64OptionOption                           { return *l.head }
+func (l Complex64OptionOptionList) Head() Complex64OptionOption                       { return *l.head }
+func (l Complex128OptionOptionList) Head() Complex128OptionOption                     { return *l.head }
+func (l AnyOptionOptionList) Head() AnyOptionOption                                   { return *l.head }
+func (l BoolArrayOptionOptionList) Head() BoolArrayOptionOption                       { return *l.head }
+func (l StringArrayOptionOptionList) Head() StringArrayOptionOption                   { return *l.head }
+func (l IntArrayOptionOptionList) Head() IntArrayOptionOption                         { return *l.head }
+func (l Int8ArrayOptionOptionList) Head() Int8ArrayOptionOption                       { return *l.head }
+func (l Int16ArrayOptionOptionList) Head() Int16ArrayOptionOption                     { return *l.head }
+func (l Int32ArrayOptionOptionList) Head() Int32ArrayOptionOption                     { return *l.head }
+func (l Int64ArrayOptionOptionList) Head() Int64ArrayOptionOption                     { return *l.head }
+func (l UintArrayOptionOptionList) Head() UintArrayOptionOption                       { return *l.head }
+func (l Uint8ArrayOptionOptionList) Head() Uint8ArrayOptionOption                     { return *l.head }
+func (l Uint16ArrayOptionOptionList) Head() Uint16ArrayOptionOption                   { return *l.head }
+func (l Uint32ArrayOptionOptionList) Head() Uint32ArrayOptionOption                   { return *l.head }
+func (l Uint64ArrayOptionOptionList) Head() Uint64ArrayOptionOption                   { return *l.head }
+func (l UintptrArrayOptionOptionList) Head() UintptrArrayOptionOption                 { return *l.head }
+func (l ByteArrayOptionOptionList) Head() ByteArrayOptionOption                       { return *l.head }
+func (l RuneArrayOptionOptionList) Head() RuneArrayOptionOption                       { return *l.head }
+func (l Float32ArrayOptionOptionList) Head() Float32ArrayOptionOption                 { return *l.head }
+func (l Float64ArrayOptionOptionList) Head() Float64ArrayOptionOption                 { return *l.head }
+func (l Complex64ArrayOptionOptionList) Head() Complex64ArrayOptionOption             { return *l.head }
+func (l Complex128ArrayOptionOptionList) Head() Complex128ArrayOptionOption           { return *l.head }
+func (l AnyArrayOptionOptionList) Head() AnyArrayOptionOption                         { return *l.head }
+func (l BoolArrayArrayOptionOptionList) Head() BoolArrayArrayOptionOption             { return *l.head }
+func (l StringArrayArrayOptionOptionList) Head() StringArrayArrayOptionOption         { return *l.head }
+func (l IntArrayArrayOptionOptionList) Head() IntArrayArrayOptionOption               { return *l.head }
+func (l Int8ArrayArrayOptionOptionList) Head() Int8ArrayArrayOptionOption             { return *l.head }
+func (l Int16ArrayArrayOptionOptionList) Head() Int16ArrayArrayOptionOption           { return *l.head }
+func (l Int32ArrayArrayOptionOptionList) Head() Int32ArrayArrayOptionOption           { return *l.head }
+func (l Int64ArrayArrayOptionOptionList) Head() Int64ArrayArrayOptionOption           { return *l.head }
+func (l UintArrayArrayOptionOptionList) Head() UintArrayArrayOptionOption             { return *l.head }
+func (l Uint8ArrayArrayOptionOptionList) Head() Uint8ArrayArrayOptionOption           { return *l.head }
+func (l Uint16ArrayArrayOptionOptionList) Head() Uint16ArrayArrayOptionOption         { return *l.head }
+func (l Uint32ArrayArrayOptionOptionList) Head() Uint32ArrayArrayOptionOption         { return *l.head }
+func (l Uint64ArrayArrayOptionOptionList) Head() Uint64ArrayArrayOptionOption         { return *l.head }
+func (l UintptrArrayArrayOptionOptionList) Head() UintptrArrayArrayOptionOption       { return *l.head }
+func (l ByteArrayArrayOptionOptionList) Head() ByteArrayArrayOptionOption             { return *l.head }
+func (l RuneArrayArrayOptionOptionList) Head() RuneArrayArrayOptionOption             { return *l.head }
+func (l Float32ArrayArrayOptionOptionList) Head() Float32ArrayArrayOptionOption       { return *l.head }
+func (l Float64ArrayArrayOptionOptionList) Head() Float64ArrayArrayOptionOption       { return *l.head }
+func (l Complex64ArrayArrayOptionOptionList) Head() Complex64ArrayArrayOptionOption   { return *l.head }
+func (l Complex128ArrayArrayOptionOptionList) Head() Complex128ArrayArrayOptionOption { return *l.head }
+func (l AnyArrayArrayOptionOptionList) Head() AnyArrayArrayOptionOption               { return *l.head }
+func (l BoolOptionArrayOptionOptionList) Head() BoolOptionArrayOptionOption           { return *l.head }
+func (l StringOptionArrayOptionOptionList) Head() StringOptionArrayOptionOption       { return *l.head }
+func (l IntOptionArrayOptionOptionList) Head() IntOptionArrayOptionOption             { return *l.head }
+func (l Int8OptionArrayOptionOptionList) Head() Int8OptionArrayOptionOption           { return *l.head }
+func (l Int16OptionArrayOptionOptionList) Head() Int16OptionArrayOptionOption         { return *l.head }
+func (l Int32OptionArrayOptionOptionList) Head() Int32OptionArrayOptionOption         { return *l.head }
+func (l Int64OptionArrayOptionOptionList) Head() Int64OptionArrayOptionOption         { return *l.head }
+func (l UintOptionArrayOptionOptionList) Head() UintOptionArrayOptionOption           { return *l.head }
+func (l Uint8OptionArrayOptionOptionList) Head() Uint8OptionArrayOptionOption         { return *l.head }
+func (l Uint16OptionArrayOptionOptionList) Head() Uint16OptionArrayOptionOption       { return *l.head }
+func (l Uint32OptionArrayOptionOptionList) Head() Uint32OptionArrayOptionOption       { return *l.head }
+func (l Uint64OptionArrayOptionOptionList) Head() Uint64OptionArrayOptionOption       { return *l.head }
+func (l UintptrOptionArrayOptionOptionList) Head() UintptrOptionArrayOptionOption     { return *l.head }
+func (l ByteOptionArrayOptionOptionList) Head() ByteOptionArrayOptionOption           { return *l.head }
+func (l RuneOptionArrayOptionOptionList) Head() RuneOptionArrayOptionOption           { return *l.head }
+func (l Float32OptionArrayOptionOptionList) Head() Float32OptionArrayOptionOption     { return *l.head }
+func (l Float64OptionArrayOptionOptionList) Head() Float64OptionArrayOptionOption     { return *l.head }
+func (l Complex64OptionArrayOptionOptionList) Head() Complex64OptionArrayOptionOption { return *l.head }
+func (l Complex128OptionArrayOptionOptionList) Head() Complex128OptionArrayOptionOption {
 	return *l.head
 }
-func (l Complex128ArrArrOptionOptionOptionList) Head() Complex128ArrArrOptionOptionOption {
+func (l AnyOptionArrayOptionOptionList) Head() AnyOptionArrayOptionOption             { return *l.head }
+func (l BoolListOptionOptionList) Head() BoolListOptionOption                         { return *l.head }
+func (l StringListOptionOptionList) Head() StringListOptionOption                     { return *l.head }
+func (l IntListOptionOptionList) Head() IntListOptionOption                           { return *l.head }
+func (l Int8ListOptionOptionList) Head() Int8ListOptionOption                         { return *l.head }
+func (l Int16ListOptionOptionList) Head() Int16ListOptionOption                       { return *l.head }
+func (l Int32ListOptionOptionList) Head() Int32ListOptionOption                       { return *l.head }
+func (l Int64ListOptionOptionList) Head() Int64ListOptionOption                       { return *l.head }
+func (l UintListOptionOptionList) Head() UintListOptionOption                         { return *l.head }
+func (l Uint8ListOptionOptionList) Head() Uint8ListOptionOption                       { return *l.head }
+func (l Uint16ListOptionOptionList) Head() Uint16ListOptionOption                     { return *l.head }
+func (l Uint32ListOptionOptionList) Head() Uint32ListOptionOption                     { return *l.head }
+func (l Uint64ListOptionOptionList) Head() Uint64ListOptionOption                     { return *l.head }
+func (l UintptrListOptionOptionList) Head() UintptrListOptionOption                   { return *l.head }
+func (l ByteListOptionOptionList) Head() ByteListOptionOption                         { return *l.head }
+func (l RuneListOptionOptionList) Head() RuneListOptionOption                         { return *l.head }
+func (l Float32ListOptionOptionList) Head() Float32ListOptionOption                   { return *l.head }
+func (l Float64ListOptionOptionList) Head() Float64ListOptionOption                   { return *l.head }
+func (l Complex64ListOptionOptionList) Head() Complex64ListOptionOption               { return *l.head }
+func (l Complex128ListOptionOptionList) Head() Complex128ListOptionOption             { return *l.head }
+func (l AnyListOptionOptionList) Head() AnyListOptionOption                           { return *l.head }
+func (l BoolOptionOptionOptionList) Head() BoolOptionOptionOption                     { return *l.head }
+func (l StringOptionOptionOptionList) Head() StringOptionOptionOption                 { return *l.head }
+func (l IntOptionOptionOptionList) Head() IntOptionOptionOption                       { return *l.head }
+func (l Int8OptionOptionOptionList) Head() Int8OptionOptionOption                     { return *l.head }
+func (l Int16OptionOptionOptionList) Head() Int16OptionOptionOption                   { return *l.head }
+func (l Int32OptionOptionOptionList) Head() Int32OptionOptionOption                   { return *l.head }
+func (l Int64OptionOptionOptionList) Head() Int64OptionOptionOption                   { return *l.head }
+func (l UintOptionOptionOptionList) Head() UintOptionOptionOption                     { return *l.head }
+func (l Uint8OptionOptionOptionList) Head() Uint8OptionOptionOption                   { return *l.head }
+func (l Uint16OptionOptionOptionList) Head() Uint16OptionOptionOption                 { return *l.head }
+func (l Uint32OptionOptionOptionList) Head() Uint32OptionOptionOption                 { return *l.head }
+func (l Uint64OptionOptionOptionList) Head() Uint64OptionOptionOption                 { return *l.head }
+func (l UintptrOptionOptionOptionList) Head() UintptrOptionOptionOption               { return *l.head }
+func (l ByteOptionOptionOptionList) Head() ByteOptionOptionOption                     { return *l.head }
+func (l RuneOptionOptionOptionList) Head() RuneOptionOptionOption                     { return *l.head }
+func (l Float32OptionOptionOptionList) Head() Float32OptionOptionOption               { return *l.head }
+func (l Float64OptionOptionOptionList) Head() Float64OptionOptionOption               { return *l.head }
+func (l Complex64OptionOptionOptionList) Head() Complex64OptionOptionOption           { return *l.head }
+func (l Complex128OptionOptionOptionList) Head() Complex128OptionOptionOption         { return *l.head }
+func (l AnyOptionOptionOptionList) Head() AnyOptionOptionOption                       { return *l.head }
+func (l BoolArrayOptionOptionOptionList) Head() BoolArrayOptionOptionOption           { return *l.head }
+func (l StringArrayOptionOptionOptionList) Head() StringArrayOptionOptionOption       { return *l.head }
+func (l IntArrayOptionOptionOptionList) Head() IntArrayOptionOptionOption             { return *l.head }
+func (l Int8ArrayOptionOptionOptionList) Head() Int8ArrayOptionOptionOption           { return *l.head }
+func (l Int16ArrayOptionOptionOptionList) Head() Int16ArrayOptionOptionOption         { return *l.head }
+func (l Int32ArrayOptionOptionOptionList) Head() Int32ArrayOptionOptionOption         { return *l.head }
+func (l Int64ArrayOptionOptionOptionList) Head() Int64ArrayOptionOptionOption         { return *l.head }
+func (l UintArrayOptionOptionOptionList) Head() UintArrayOptionOptionOption           { return *l.head }
+func (l Uint8ArrayOptionOptionOptionList) Head() Uint8ArrayOptionOptionOption         { return *l.head }
+func (l Uint16ArrayOptionOptionOptionList) Head() Uint16ArrayOptionOptionOption       { return *l.head }
+func (l Uint32ArrayOptionOptionOptionList) Head() Uint32ArrayOptionOptionOption       { return *l.head }
+func (l Uint64ArrayOptionOptionOptionList) Head() Uint64ArrayOptionOptionOption       { return *l.head }
+func (l UintptrArrayOptionOptionOptionList) Head() UintptrArrayOptionOptionOption     { return *l.head }
+func (l ByteArrayOptionOptionOptionList) Head() ByteArrayOptionOptionOption           { return *l.head }
+func (l RuneArrayOptionOptionOptionList) Head() RuneArrayOptionOptionOption           { return *l.head }
+func (l Float32ArrayOptionOptionOptionList) Head() Float32ArrayOptionOptionOption     { return *l.head }
+func (l Float64ArrayOptionOptionOptionList) Head() Float64ArrayOptionOptionOption     { return *l.head }
+func (l Complex64ArrayOptionOptionOptionList) Head() Complex64ArrayOptionOptionOption { return *l.head }
+func (l Complex128ArrayOptionOptionOptionList) Head() Complex128ArrayOptionOptionOption {
 	return *l.head
 }
-func (l AnyArrArrOptionOptionOptionList) Head() AnyArrArrOptionOptionOption         { return *l.head }
-func (l BoolOptionArrOptionOptionOptionList) Head() BoolOptionArrOptionOptionOption { return *l.head }
-func (l StringOptionArrOptionOptionOptionList) Head() StringOptionArrOptionOptionOption {
+func (l AnyArrayOptionOptionOptionList) Head() AnyArrayOptionOptionOption             { return *l.head }
+func (l BoolArrayArrayOptionOptionOptionList) Head() BoolArrayArrayOptionOptionOption { return *l.head }
+func (l StringArrayArrayOptionOptionOptionList) Head() StringArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l IntOptionArrOptionOptionOptionList) Head() IntOptionArrOptionOptionOption     { return *l.head }
-func (l Int8OptionArrOptionOptionOptionList) Head() Int8OptionArrOptionOptionOption   { return *l.head }
-func (l Int16OptionArrOptionOptionOptionList) Head() Int16OptionArrOptionOptionOption { return *l.head }
-func (l Int32OptionArrOptionOptionOptionList) Head() Int32OptionArrOptionOptionOption { return *l.head }
-func (l Int64OptionArrOptionOptionOptionList) Head() Int64OptionArrOptionOptionOption { return *l.head }
-func (l UintOptionArrOptionOptionOptionList) Head() UintOptionArrOptionOptionOption   { return *l.head }
-func (l Uint8OptionArrOptionOptionOptionList) Head() Uint8OptionArrOptionOptionOption { return *l.head }
-func (l Uint16OptionArrOptionOptionOptionList) Head() Uint16OptionArrOptionOptionOption {
+func (l IntArrayArrayOptionOptionOptionList) Head() IntArrayArrayOptionOptionOption   { return *l.head }
+func (l Int8ArrayArrayOptionOptionOptionList) Head() Int8ArrayArrayOptionOptionOption { return *l.head }
+func (l Int16ArrayArrayOptionOptionOptionList) Head() Int16ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l Uint32OptionArrOptionOptionOptionList) Head() Uint32OptionArrOptionOptionOption {
+func (l Int32ArrayArrayOptionOptionOptionList) Head() Int32ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l Uint64OptionArrOptionOptionOptionList) Head() Uint64OptionArrOptionOptionOption {
+func (l Int64ArrayArrayOptionOptionOptionList) Head() Int64ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l UintptrOptionArrOptionOptionOptionList) Head() UintptrOptionArrOptionOptionOption {
+func (l UintArrayArrayOptionOptionOptionList) Head() UintArrayArrayOptionOptionOption { return *l.head }
+func (l Uint8ArrayArrayOptionOptionOptionList) Head() Uint8ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l ByteOptionArrOptionOptionOptionList) Head() ByteOptionArrOptionOptionOption { return *l.head }
-func (l RuneOptionArrOptionOptionOptionList) Head() RuneOptionArrOptionOptionOption { return *l.head }
-func (l Float32OptionArrOptionOptionOptionList) Head() Float32OptionArrOptionOptionOption {
+func (l Uint16ArrayArrayOptionOptionOptionList) Head() Uint16ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l Float64OptionArrOptionOptionOptionList) Head() Float64OptionArrOptionOptionOption {
+func (l Uint32ArrayArrayOptionOptionOptionList) Head() Uint32ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l Complex64OptionArrOptionOptionOptionList) Head() Complex64OptionArrOptionOptionOption {
+func (l Uint64ArrayArrayOptionOptionOptionList) Head() Uint64ArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l Complex128OptionArrOptionOptionOptionList) Head() Complex128OptionArrOptionOptionOption {
+func (l UintptrArrayArrayOptionOptionOptionList) Head() UintptrArrayArrayOptionOptionOption {
 	return *l.head
 }
-func (l AnyOptionArrOptionOptionOptionList) Head() AnyOptionArrOptionOptionOption     { return *l.head }
+func (l ByteArrayArrayOptionOptionOptionList) Head() ByteArrayArrayOptionOptionOption { return *l.head }
+func (l RuneArrayArrayOptionOptionOptionList) Head() RuneArrayArrayOptionOptionOption { return *l.head }
+func (l Float32ArrayArrayOptionOptionOptionList) Head() Float32ArrayArrayOptionOptionOption {
+	return *l.head
+}
+func (l Float64ArrayArrayOptionOptionOptionList) Head() Float64ArrayArrayOptionOptionOption {
+	return *l.head
+}
+func (l Complex64ArrayArrayOptionOptionOptionList) Head() Complex64ArrayArrayOptionOptionOption {
+	return *l.head
+}
+func (l Complex128ArrayArrayOptionOptionOptionList) Head() Complex128ArrayArrayOptionOptionOption {
+	return *l.head
+}
+func (l AnyArrayArrayOptionOptionOptionList) Head() AnyArrayArrayOptionOptionOption { return *l.head }
+func (l BoolOptionArrayOptionOptionOptionList) Head() BoolOptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l StringOptionArrayOptionOptionOptionList) Head() StringOptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l IntOptionArrayOptionOptionOptionList) Head() IntOptionArrayOptionOptionOption { return *l.head }
+func (l Int8OptionArrayOptionOptionOptionList) Head() Int8OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Int16OptionArrayOptionOptionOptionList) Head() Int16OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Int32OptionArrayOptionOptionOptionList) Head() Int32OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Int64OptionArrayOptionOptionOptionList) Head() Int64OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l UintOptionArrayOptionOptionOptionList) Head() UintOptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Uint8OptionArrayOptionOptionOptionList) Head() Uint8OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Uint16OptionArrayOptionOptionOptionList) Head() Uint16OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Uint32OptionArrayOptionOptionOptionList) Head() Uint32OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Uint64OptionArrayOptionOptionOptionList) Head() Uint64OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l UintptrOptionArrayOptionOptionOptionList) Head() UintptrOptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l ByteOptionArrayOptionOptionOptionList) Head() ByteOptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l RuneOptionArrayOptionOptionOptionList) Head() RuneOptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Float32OptionArrayOptionOptionOptionList) Head() Float32OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Float64OptionArrayOptionOptionOptionList) Head() Float64OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Complex64OptionArrayOptionOptionOptionList) Head() Complex64OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l Complex128OptionArrayOptionOptionOptionList) Head() Complex128OptionArrayOptionOptionOption {
+	return *l.head
+}
+func (l AnyOptionArrayOptionOptionOptionList) Head() AnyOptionArrayOptionOptionOption { return *l.head }
 func (l BoolListOptionOptionOptionList) Head() BoolListOptionOptionOption             { return *l.head }
 func (l StringListOptionOptionOptionList) Head() StringListOptionOptionOption         { return *l.head }
 func (l IntListOptionOptionOptionList) Head() IntListOptionOptionOption               { return *l.head }
@@ -345,66 +389,66 @@ func (l Float64ListOptionOptionOptionList) Head() Float64ListOptionOptionOption 
 func (l Complex64ListOptionOptionOptionList) Head() Complex64ListOptionOptionOption   { return *l.head }
 func (l Complex128ListOptionOptionOptionList) Head() Complex128ListOptionOptionOption { return *l.head }
 func (l AnyListOptionOptionOptionList) Head() AnyListOptionOptionOption               { return *l.head }
-func (l BoolArrList) Head() []bool                                                    { return *l.head }
-func (l StringArrList) Head() []string                                                { return *l.head }
-func (l IntArrList) Head() []int                                                      { return *l.head }
-func (l Int8ArrList) Head() []int8                                                    { return *l.head }
-func (l Int16ArrList) Head() []int16                                                  { return *l.head }
-func (l Int32ArrList) Head() []int32                                                  { return *l.head }
-func (l Int64ArrList) Head() []int64                                                  { return *l.head }
-func (l UintArrList) Head() []uint                                                    { return *l.head }
-func (l Uint8ArrList) Head() []uint8                                                  { return *l.head }
-func (l Uint16ArrList) Head() []uint16                                                { return *l.head }
-func (l Uint32ArrList) Head() []uint32                                                { return *l.head }
-func (l Uint64ArrList) Head() []uint64                                                { return *l.head }
-func (l UintptrArrList) Head() []uintptr                                              { return *l.head }
-func (l ByteArrList) Head() []byte                                                    { return *l.head }
-func (l RuneArrList) Head() []rune                                                    { return *l.head }
-func (l Float32ArrList) Head() []float32                                              { return *l.head }
-func (l Float64ArrList) Head() []float64                                              { return *l.head }
-func (l Complex64ArrList) Head() []complex64                                          { return *l.head }
-func (l Complex128ArrList) Head() []complex128                                        { return *l.head }
-func (l AnyArrList) Head() []Any                                                      { return *l.head }
-func (l BoolArrArrList) Head() [][]bool                                               { return *l.head }
-func (l StringArrArrList) Head() [][]string                                           { return *l.head }
-func (l IntArrArrList) Head() [][]int                                                 { return *l.head }
-func (l Int8ArrArrList) Head() [][]int8                                               { return *l.head }
-func (l Int16ArrArrList) Head() [][]int16                                             { return *l.head }
-func (l Int32ArrArrList) Head() [][]int32                                             { return *l.head }
-func (l Int64ArrArrList) Head() [][]int64                                             { return *l.head }
-func (l UintArrArrList) Head() [][]uint                                               { return *l.head }
-func (l Uint8ArrArrList) Head() [][]uint8                                             { return *l.head }
-func (l Uint16ArrArrList) Head() [][]uint16                                           { return *l.head }
-func (l Uint32ArrArrList) Head() [][]uint32                                           { return *l.head }
-func (l Uint64ArrArrList) Head() [][]uint64                                           { return *l.head }
-func (l UintptrArrArrList) Head() [][]uintptr                                         { return *l.head }
-func (l ByteArrArrList) Head() [][]byte                                               { return *l.head }
-func (l RuneArrArrList) Head() [][]rune                                               { return *l.head }
-func (l Float32ArrArrList) Head() [][]float32                                         { return *l.head }
-func (l Float64ArrArrList) Head() [][]float64                                         { return *l.head }
-func (l Complex64ArrArrList) Head() [][]complex64                                     { return *l.head }
-func (l Complex128ArrArrList) Head() [][]complex128                                   { return *l.head }
-func (l AnyArrArrList) Head() [][]Any                                                 { return *l.head }
-func (l BoolOptionArrList) Head() []BoolOption                                        { return *l.head }
-func (l StringOptionArrList) Head() []StringOption                                    { return *l.head }
-func (l IntOptionArrList) Head() []IntOption                                          { return *l.head }
-func (l Int8OptionArrList) Head() []Int8Option                                        { return *l.head }
-func (l Int16OptionArrList) Head() []Int16Option                                      { return *l.head }
-func (l Int32OptionArrList) Head() []Int32Option                                      { return *l.head }
-func (l Int64OptionArrList) Head() []Int64Option                                      { return *l.head }
-func (l UintOptionArrList) Head() []UintOption                                        { return *l.head }
-func (l Uint8OptionArrList) Head() []Uint8Option                                      { return *l.head }
-func (l Uint16OptionArrList) Head() []Uint16Option                                    { return *l.head }
-func (l Uint32OptionArrList) Head() []Uint32Option                                    { return *l.head }
-func (l Uint64OptionArrList) Head() []Uint64Option                                    { return *l.head }
-func (l UintptrOptionArrList) Head() []UintptrOption                                  { return *l.head }
-func (l ByteOptionArrList) Head() []ByteOption                                        { return *l.head }
-func (l RuneOptionArrList) Head() []RuneOption                                        { return *l.head }
-func (l Float32OptionArrList) Head() []Float32Option                                  { return *l.head }
-func (l Float64OptionArrList) Head() []Float64Option                                  { return *l.head }
-func (l Complex64OptionArrList) Head() []Complex64Option                              { return *l.head }
-func (l Complex128OptionArrList) Head() []Complex128Option                            { return *l.head }
-func (l AnyOptionArrList) Head() []AnyOption                                          { return *l.head }
+func (l BoolArrayList) Head() []bool                                                  { return *l.head }
+func (l StringArrayList) Head() []string                                              { return *l.head }
+func (l IntArrayList) Head() []int                                                    { return *l.head }
+func (l Int8ArrayList) Head() []int8                                                  { return *l.head }
+func (l Int16ArrayList) Head() []int16                                                { return *l.head }
+func (l Int32ArrayList) Head() []int32                                                { return *l.head }
+func (l Int64ArrayList) Head() []int64                                                { return *l.head }
+func (l UintArrayList) Head() []uint                                                  { return *l.head }
+func (l Uint8ArrayList) Head() []uint8                                                { return *l.head }
+func (l Uint16ArrayList) Head() []uint16                                              { return *l.head }
+func (l Uint32ArrayList) Head() []uint32                                              { return *l.head }
+func (l Uint64ArrayList) Head() []uint64                                              { return *l.head }
+func (l UintptrArrayList) Head() []uintptr                                            { return *l.head }
+func (l ByteArrayList) Head() []byte                                                  { return *l.head }
+func (l RuneArrayList) Head() []rune                                                  { return *l.head }
+func (l Float32ArrayList) Head() []float32                                            { return *l.head }
+func (l Float64ArrayList) Head() []float64                                            { return *l.head }
+func (l Complex64ArrayList) Head() []complex64                                        { return *l.head }
+func (l Complex128ArrayList) Head() []complex128                                      { return *l.head }
+func (l AnyArrayList) Head() []Any                                                    { return *l.head }
+func (l BoolArrayArrayList) Head() [][]bool                                           { return *l.head }
+func (l StringArrayArrayList) Head() [][]string                                       { return *l.head }
+func (l IntArrayArrayList) Head() [][]int                                             { return *l.head }
+func (l Int8ArrayArrayList) Head() [][]int8                                           { return *l.head }
+func (l Int16ArrayArrayList) Head() [][]int16                                         { return *l.head }
+func (l Int32ArrayArrayList) Head() [][]int32                                         { return *l.head }
+func (l Int64ArrayArrayList) Head() [][]int64                                         { return *l.head }
+func (l UintArrayArrayList) Head() [][]uint                                           { return *l.head }
+func (l Uint8ArrayArrayList) Head() [][]uint8                                         { return *l.head }
+func (l Uint16ArrayArrayList) Head() [][]uint16                                       { return *l.head }
+func (l Uint32ArrayArrayList) Head() [][]uint32                                       { return *l.head }
+func (l Uint64ArrayArrayList) Head() [][]uint64                                       { return *l.head }
+func (l UintptrArrayArrayList) Head() [][]uintptr                                     { return *l.head }
+func (l ByteArrayArrayList) Head() [][]byte                                           { return *l.head }
+func (l RuneArrayArrayList) Head() [][]rune                                           { return *l.head }
+func (l Float32ArrayArrayList) Head() [][]float32                                     { return *l.head }
+func (l Float64ArrayArrayList) Head() [][]float64                                     { return *l.head }
+func (l Complex64ArrayArrayList) Head() [][]complex64                                 { return *l.head }
+func (l Complex128ArrayArrayList) Head() [][]complex128                               { return *l.head }
+func (l AnyArrayArrayList) Head() [][]Any                                             { return *l.head }
+func (l BoolOptionArrayList) Head() []BoolOption                                      { return *l.head }
+func (l StringOptionArrayList) Head() []StringOption                                  { return *l.head }
+func (l IntOptionArrayList) Head() []IntOption                                        { return *l.head }
+func (l Int8OptionArrayList) Head() []Int8Option                                      { return *l.head }
+func (l Int16OptionArrayList) Head() []Int16Option                                    { return *l.head }
+func (l Int32OptionArrayList) Head() []Int32Option                                    { return *l.head }
+func (l Int64OptionArrayList) Head() []Int64Option                                    { return *l.head }
+func (l UintOptionArrayList) Head() []UintOption                                      { return *l.head }
+func (l Uint8OptionArrayList) Head() []Uint8Option                                    { return *l.head }
+func (l Uint16OptionArrayList) Head() []Uint16Option                                  { return *l.head }
+func (l Uint32OptionArrayList) Head() []Uint32Option                                  { return *l.head }
+func (l Uint64OptionArrayList) Head() []Uint64Option                                  { return *l.head }
+func (l UintptrOptionArrayList) Head() []UintptrOption                                { return *l.head }
+func (l ByteOptionArrayList) Head() []ByteOption                                      { return *l.head }
+func (l RuneOptionArrayList) Head() []RuneOption                                      { return *l.head }
+func (l Float32OptionArrayList) Head() []Float32Option                                { return *l.head }
+func (l Float64OptionArrayList) Head() []Float64Option                                { return *l.head }
+func (l Complex64OptionArrayList) Head() []Complex64Option                            { return *l.head }
+func (l Complex128OptionArrayList) Head() []Complex128Option                          { return *l.head }
+func (l AnyOptionArrayList) Head() []AnyOption                                        { return *l.head }
 func (l BoolListList) Head() BoolList                                                 { return *l.head }
 func (l StringListList) Head() StringList                                             { return *l.head }
 func (l IntListList) Head() IntList                                                   { return *l.head }

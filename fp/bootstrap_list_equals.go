@@ -3,981 +3,6803 @@
 
 package fp
 
-func (m1 BoolList) Equals(m2 BoolList) bool                   { return BoolListEquals(m1, m2) }
-func (m1 StringList) Equals(m2 StringList) bool               { return StringListEquals(m1, m2) }
-func (m1 IntList) Equals(m2 IntList) bool                     { return IntListEquals(m1, m2) }
-func (m1 Int8List) Equals(m2 Int8List) bool                   { return Int8ListEquals(m1, m2) }
-func (m1 Int16List) Equals(m2 Int16List) bool                 { return Int16ListEquals(m1, m2) }
-func (m1 Int32List) Equals(m2 Int32List) bool                 { return Int32ListEquals(m1, m2) }
-func (m1 Int64List) Equals(m2 Int64List) bool                 { return Int64ListEquals(m1, m2) }
-func (m1 UintList) Equals(m2 UintList) bool                   { return UintListEquals(m1, m2) }
-func (m1 Uint8List) Equals(m2 Uint8List) bool                 { return Uint8ListEquals(m1, m2) }
-func (m1 Uint16List) Equals(m2 Uint16List) bool               { return Uint16ListEquals(m1, m2) }
-func (m1 Uint32List) Equals(m2 Uint32List) bool               { return Uint32ListEquals(m1, m2) }
-func (m1 Uint64List) Equals(m2 Uint64List) bool               { return Uint64ListEquals(m1, m2) }
-func (m1 UintptrList) Equals(m2 UintptrList) bool             { return UintptrListEquals(m1, m2) }
-func (m1 ByteList) Equals(m2 ByteList) bool                   { return ByteListEquals(m1, m2) }
-func (m1 RuneList) Equals(m2 RuneList) bool                   { return RuneListEquals(m1, m2) }
-func (m1 Float32List) Equals(m2 Float32List) bool             { return Float32ListEquals(m1, m2) }
-func (m1 Float64List) Equals(m2 Float64List) bool             { return Float64ListEquals(m1, m2) }
-func (m1 Complex64List) Equals(m2 Complex64List) bool         { return Complex64ListEquals(m1, m2) }
-func (m1 Complex128List) Equals(m2 Complex128List) bool       { return Complex128ListEquals(m1, m2) }
-func (m1 AnyList) Equals(m2 AnyList) bool                     { return AnyListEquals(m1, m2) }
-func (m1 BoolOptionList) Equals(m2 BoolOptionList) bool       { return BoolOptionListEquals(m1, m2) }
-func (m1 StringOptionList) Equals(m2 StringOptionList) bool   { return StringOptionListEquals(m1, m2) }
-func (m1 IntOptionList) Equals(m2 IntOptionList) bool         { return IntOptionListEquals(m1, m2) }
-func (m1 Int8OptionList) Equals(m2 Int8OptionList) bool       { return Int8OptionListEquals(m1, m2) }
-func (m1 Int16OptionList) Equals(m2 Int16OptionList) bool     { return Int16OptionListEquals(m1, m2) }
-func (m1 Int32OptionList) Equals(m2 Int32OptionList) bool     { return Int32OptionListEquals(m1, m2) }
-func (m1 Int64OptionList) Equals(m2 Int64OptionList) bool     { return Int64OptionListEquals(m1, m2) }
-func (m1 UintOptionList) Equals(m2 UintOptionList) bool       { return UintOptionListEquals(m1, m2) }
-func (m1 Uint8OptionList) Equals(m2 Uint8OptionList) bool     { return Uint8OptionListEquals(m1, m2) }
-func (m1 Uint16OptionList) Equals(m2 Uint16OptionList) bool   { return Uint16OptionListEquals(m1, m2) }
-func (m1 Uint32OptionList) Equals(m2 Uint32OptionList) bool   { return Uint32OptionListEquals(m1, m2) }
-func (m1 Uint64OptionList) Equals(m2 Uint64OptionList) bool   { return Uint64OptionListEquals(m1, m2) }
-func (m1 UintptrOptionList) Equals(m2 UintptrOptionList) bool { return UintptrOptionListEquals(m1, m2) }
-func (m1 ByteOptionList) Equals(m2 ByteOptionList) bool       { return ByteOptionListEquals(m1, m2) }
-func (m1 RuneOptionList) Equals(m2 RuneOptionList) bool       { return RuneOptionListEquals(m1, m2) }
-func (m1 Float32OptionList) Equals(m2 Float32OptionList) bool { return Float32OptionListEquals(m1, m2) }
-func (m1 Float64OptionList) Equals(m2 Float64OptionList) bool { return Float64OptionListEquals(m1, m2) }
-func (m1 Complex64OptionList) Equals(m2 Complex64OptionList) bool {
-	return Complex64OptionListEquals(m1, m2)
-}
-func (m1 Complex128OptionList) Equals(m2 Complex128OptionList) bool {
-	return Complex128OptionListEquals(m1, m2)
-}
-func (m1 AnyOptionList) Equals(m2 AnyOptionList) bool         { return AnyOptionListEquals(m1, m2) }
-func (m1 BoolArrOptionList) Equals(m2 BoolArrOptionList) bool { return BoolArrOptionListEquals(m1, m2) }
-func (m1 StringArrOptionList) Equals(m2 StringArrOptionList) bool {
-	return StringArrOptionListEquals(m1, m2)
-}
-func (m1 IntArrOptionList) Equals(m2 IntArrOptionList) bool   { return IntArrOptionListEquals(m1, m2) }
-func (m1 Int8ArrOptionList) Equals(m2 Int8ArrOptionList) bool { return Int8ArrOptionListEquals(m1, m2) }
-func (m1 Int16ArrOptionList) Equals(m2 Int16ArrOptionList) bool {
-	return Int16ArrOptionListEquals(m1, m2)
-}
-func (m1 Int32ArrOptionList) Equals(m2 Int32ArrOptionList) bool {
-	return Int32ArrOptionListEquals(m1, m2)
-}
-func (m1 Int64ArrOptionList) Equals(m2 Int64ArrOptionList) bool {
-	return Int64ArrOptionListEquals(m1, m2)
-}
-func (m1 UintArrOptionList) Equals(m2 UintArrOptionList) bool { return UintArrOptionListEquals(m1, m2) }
-func (m1 Uint8ArrOptionList) Equals(m2 Uint8ArrOptionList) bool {
-	return Uint8ArrOptionListEquals(m1, m2)
-}
-func (m1 Uint16ArrOptionList) Equals(m2 Uint16ArrOptionList) bool {
-	return Uint16ArrOptionListEquals(m1, m2)
-}
-func (m1 Uint32ArrOptionList) Equals(m2 Uint32ArrOptionList) bool {
-	return Uint32ArrOptionListEquals(m1, m2)
-}
-func (m1 Uint64ArrOptionList) Equals(m2 Uint64ArrOptionList) bool {
-	return Uint64ArrOptionListEquals(m1, m2)
-}
-func (m1 UintptrArrOptionList) Equals(m2 UintptrArrOptionList) bool {
-	return UintptrArrOptionListEquals(m1, m2)
-}
-func (m1 ByteArrOptionList) Equals(m2 ByteArrOptionList) bool { return ByteArrOptionListEquals(m1, m2) }
-func (m1 RuneArrOptionList) Equals(m2 RuneArrOptionList) bool { return RuneArrOptionListEquals(m1, m2) }
-func (m1 Float32ArrOptionList) Equals(m2 Float32ArrOptionList) bool {
-	return Float32ArrOptionListEquals(m1, m2)
-}
-func (m1 Float64ArrOptionList) Equals(m2 Float64ArrOptionList) bool {
-	return Float64ArrOptionListEquals(m1, m2)
-}
-func (m1 Complex64ArrOptionList) Equals(m2 Complex64ArrOptionList) bool {
-	return Complex64ArrOptionListEquals(m1, m2)
-}
-func (m1 Complex128ArrOptionList) Equals(m2 Complex128ArrOptionList) bool {
-	return Complex128ArrOptionListEquals(m1, m2)
+func (a BoolList) Equals(b BoolList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringList) Equals(b StringList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntList) Equals(b IntList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8List) Equals(b Int8List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16List) Equals(b Int16List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32List) Equals(b Int32List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64List) Equals(b Int64List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintList) Equals(b UintList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8List) Equals(b Uint8List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16List) Equals(b Uint16List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32List) Equals(b Uint32List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64List) Equals(b Uint64List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrList) Equals(b UintptrList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteList) Equals(b ByteList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneList) Equals(b RuneList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32List) Equals(b Float32List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64List) Equals(b Float64List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64List) Equals(b Complex64List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128List) Equals(b Complex128List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128Equals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyList) Equals(b AnyList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionList) Equals(b BoolOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionList) Equals(b StringOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionList) Equals(b IntOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionList) Equals(b Int8OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionList) Equals(b Int16OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionList) Equals(b Int32OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionList) Equals(b Int64OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionList) Equals(b UintOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionList) Equals(b Uint8OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionList) Equals(b Uint16OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionList) Equals(b Uint32OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionList) Equals(b Uint64OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionList) Equals(b UintptrOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionList) Equals(b ByteOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionList) Equals(b RuneOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionList) Equals(b Float32OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionList) Equals(b Float64OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionList) Equals(b Complex64OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionList) Equals(b Complex128OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionList) Equals(b AnyOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayOptionList) Equals(b BoolArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayOptionList) Equals(b StringArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayOptionList) Equals(b IntArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayOptionList) Equals(b Int8ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayOptionList) Equals(b Int16ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayOptionList) Equals(b Int32ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayOptionList) Equals(b Int64ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayOptionList) Equals(b UintArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayOptionList) Equals(b Uint8ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayOptionList) Equals(b Uint16ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayOptionList) Equals(b Uint32ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayOptionList) Equals(b Uint64ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayOptionList) Equals(b UintptrArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayOptionList) Equals(b ByteArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayOptionList) Equals(b RuneArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayOptionList) Equals(b Float32ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayOptionList) Equals(b Float64ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayOptionList) Equals(b Complex64ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayOptionList) Equals(b Complex128ArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayOptionList) Equals(b AnyArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayArrayOptionList) Equals(b BoolArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayArrayOptionList) Equals(b StringArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayArrayOptionList) Equals(b IntArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayArrayOptionList) Equals(b Int8ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayArrayOptionList) Equals(b Int16ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayArrayOptionList) Equals(b Int32ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayArrayOptionList) Equals(b Int64ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayArrayOptionList) Equals(b UintArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayArrayOptionList) Equals(b Uint8ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayArrayOptionList) Equals(b Uint16ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayArrayOptionList) Equals(b Uint32ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayArrayOptionList) Equals(b Uint64ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayArrayOptionList) Equals(b UintptrArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayArrayOptionList) Equals(b ByteArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayArrayOptionList) Equals(b RuneArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayArrayOptionList) Equals(b Float32ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayArrayOptionList) Equals(b Float64ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayArrayOptionList) Equals(b Complex64ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayArrayOptionList) Equals(b Complex128ArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayArrayOptionList) Equals(b AnyArrayArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionArrayOptionList) Equals(b BoolOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionArrayOptionList) Equals(b StringOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionArrayOptionList) Equals(b IntOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionArrayOptionList) Equals(b Int8OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionArrayOptionList) Equals(b Int16OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionArrayOptionList) Equals(b Int32OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionArrayOptionList) Equals(b Int64OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionArrayOptionList) Equals(b UintOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionArrayOptionList) Equals(b Uint8OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionArrayOptionList) Equals(b Uint16OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionArrayOptionList) Equals(b Uint32OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionArrayOptionList) Equals(b Uint64OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionArrayOptionList) Equals(b UintptrOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionArrayOptionList) Equals(b ByteOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionArrayOptionList) Equals(b RuneOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionArrayOptionList) Equals(b Float32OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionArrayOptionList) Equals(b Float64OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionArrayOptionList) Equals(b Complex64OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionArrayOptionList) Equals(b Complex128OptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionArrayOptionList) Equals(b AnyOptionArrayOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionArrayOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolListOptionList) Equals(b BoolListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringListOptionList) Equals(b StringListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntListOptionList) Equals(b IntListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ListOptionList) Equals(b Int8ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ListOptionList) Equals(b Int16ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ListOptionList) Equals(b Int32ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ListOptionList) Equals(b Int64ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintListOptionList) Equals(b UintListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ListOptionList) Equals(b Uint8ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ListOptionList) Equals(b Uint16ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ListOptionList) Equals(b Uint32ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ListOptionList) Equals(b Uint64ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrListOptionList) Equals(b UintptrListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteListOptionList) Equals(b ByteListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneListOptionList) Equals(b RuneListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ListOptionList) Equals(b Float32ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ListOptionList) Equals(b Float64ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ListOptionList) Equals(b Complex64ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ListOptionList) Equals(b Complex128ListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyListOptionList) Equals(b AnyListOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyListOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionOptionList) Equals(b BoolOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionOptionList) Equals(b StringOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionOptionList) Equals(b IntOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionOptionList) Equals(b Int8OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionOptionList) Equals(b Int16OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionOptionList) Equals(b Int32OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionOptionList) Equals(b Int64OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionOptionList) Equals(b UintOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionOptionList) Equals(b Uint8OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionOptionList) Equals(b Uint16OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionOptionList) Equals(b Uint32OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionOptionList) Equals(b Uint64OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionOptionList) Equals(b UintptrOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionOptionList) Equals(b ByteOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionOptionList) Equals(b RuneOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionOptionList) Equals(b Float32OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionOptionList) Equals(b Float64OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionOptionList) Equals(b Complex64OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionOptionList) Equals(b Complex128OptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionOptionList) Equals(b AnyOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayOptionOptionList) Equals(b BoolArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayOptionOptionList) Equals(b StringArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayOptionOptionList) Equals(b IntArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayOptionOptionList) Equals(b Int8ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayOptionOptionList) Equals(b Int16ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayOptionOptionList) Equals(b Int32ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayOptionOptionList) Equals(b Int64ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayOptionOptionList) Equals(b UintArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayOptionOptionList) Equals(b Uint8ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayOptionOptionList) Equals(b Uint16ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayOptionOptionList) Equals(b Uint32ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayOptionOptionList) Equals(b Uint64ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayOptionOptionList) Equals(b UintptrArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayOptionOptionList) Equals(b ByteArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayOptionOptionList) Equals(b RuneArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayOptionOptionList) Equals(b Float32ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayOptionOptionList) Equals(b Float64ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayOptionOptionList) Equals(b Complex64ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayOptionOptionList) Equals(b Complex128ArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayOptionOptionList) Equals(b AnyArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayArrayOptionOptionList) Equals(b BoolArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayArrayOptionOptionList) Equals(b StringArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayArrayOptionOptionList) Equals(b IntArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayArrayOptionOptionList) Equals(b Int8ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayArrayOptionOptionList) Equals(b Int16ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayArrayOptionOptionList) Equals(b Int32ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayArrayOptionOptionList) Equals(b Int64ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayArrayOptionOptionList) Equals(b UintArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayArrayOptionOptionList) Equals(b Uint8ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayArrayOptionOptionList) Equals(b Uint16ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayArrayOptionOptionList) Equals(b Uint32ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayArrayOptionOptionList) Equals(b Uint64ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayArrayOptionOptionList) Equals(b UintptrArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayArrayOptionOptionList) Equals(b ByteArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayArrayOptionOptionList) Equals(b RuneArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayArrayOptionOptionList) Equals(b Float32ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayArrayOptionOptionList) Equals(b Float64ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayArrayOptionOptionList) Equals(b Complex64ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayArrayOptionOptionList) Equals(b Complex128ArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayArrayOptionOptionList) Equals(b AnyArrayArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionArrayOptionOptionList) Equals(b BoolOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionArrayOptionOptionList) Equals(b StringOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionArrayOptionOptionList) Equals(b IntOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionArrayOptionOptionList) Equals(b Int8OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionArrayOptionOptionList) Equals(b Int16OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionArrayOptionOptionList) Equals(b Int32OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionArrayOptionOptionList) Equals(b Int64OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionArrayOptionOptionList) Equals(b UintOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionArrayOptionOptionList) Equals(b Uint8OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionArrayOptionOptionList) Equals(b Uint16OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionArrayOptionOptionList) Equals(b Uint32OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionArrayOptionOptionList) Equals(b Uint64OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionArrayOptionOptionList) Equals(b UintptrOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionArrayOptionOptionList) Equals(b ByteOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionArrayOptionOptionList) Equals(b RuneOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionArrayOptionOptionList) Equals(b Float32OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionArrayOptionOptionList) Equals(b Float64OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionArrayOptionOptionList) Equals(b Complex64OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionArrayOptionOptionList) Equals(b Complex128OptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionArrayOptionOptionList) Equals(b AnyOptionArrayOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionArrayOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolListOptionOptionList) Equals(b BoolListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringListOptionOptionList) Equals(b StringListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntListOptionOptionList) Equals(b IntListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ListOptionOptionList) Equals(b Int8ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ListOptionOptionList) Equals(b Int16ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ListOptionOptionList) Equals(b Int32ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ListOptionOptionList) Equals(b Int64ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintListOptionOptionList) Equals(b UintListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ListOptionOptionList) Equals(b Uint8ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ListOptionOptionList) Equals(b Uint16ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ListOptionOptionList) Equals(b Uint32ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ListOptionOptionList) Equals(b Uint64ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrListOptionOptionList) Equals(b UintptrListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteListOptionOptionList) Equals(b ByteListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneListOptionOptionList) Equals(b RuneListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ListOptionOptionList) Equals(b Float32ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ListOptionOptionList) Equals(b Float64ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ListOptionOptionList) Equals(b Complex64ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ListOptionOptionList) Equals(b Complex128ListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyListOptionOptionList) Equals(b AnyListOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyListOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionOptionOptionList) Equals(b BoolOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionOptionOptionList) Equals(b StringOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionOptionOptionList) Equals(b IntOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionOptionOptionList) Equals(b Int8OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionOptionOptionList) Equals(b Int16OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionOptionOptionList) Equals(b Int32OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionOptionOptionList) Equals(b Int64OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionOptionOptionList) Equals(b UintOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionOptionOptionList) Equals(b Uint8OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionOptionOptionList) Equals(b Uint16OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionOptionOptionList) Equals(b Uint32OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionOptionOptionList) Equals(b Uint64OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionOptionOptionList) Equals(b UintptrOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionOptionOptionList) Equals(b ByteOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionOptionOptionList) Equals(b RuneOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionOptionOptionList) Equals(b Float32OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionOptionOptionList) Equals(b Float64OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionOptionOptionList) Equals(b Complex64OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionOptionOptionList) Equals(b Complex128OptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionOptionOptionList) Equals(b AnyOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayOptionOptionOptionList) Equals(b BoolArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayOptionOptionOptionList) Equals(b StringArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayOptionOptionOptionList) Equals(b IntArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayOptionOptionOptionList) Equals(b Int8ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayOptionOptionOptionList) Equals(b Int16ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayOptionOptionOptionList) Equals(b Int32ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayOptionOptionOptionList) Equals(b Int64ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayOptionOptionOptionList) Equals(b UintArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayOptionOptionOptionList) Equals(b Uint8ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayOptionOptionOptionList) Equals(b Uint16ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayOptionOptionOptionList) Equals(b Uint32ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayOptionOptionOptionList) Equals(b Uint64ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayOptionOptionOptionList) Equals(b UintptrArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayOptionOptionOptionList) Equals(b ByteArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayOptionOptionOptionList) Equals(b RuneArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayOptionOptionOptionList) Equals(b Float32ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayOptionOptionOptionList) Equals(b Float64ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayOptionOptionOptionList) Equals(b Complex64ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayOptionOptionOptionList) Equals(b Complex128ArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayOptionOptionOptionList) Equals(b AnyArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayArrayOptionOptionOptionList) Equals(b BoolArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayArrayOptionOptionOptionList) Equals(b StringArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayArrayOptionOptionOptionList) Equals(b IntArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayArrayOptionOptionOptionList) Equals(b Int8ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayArrayOptionOptionOptionList) Equals(b Int16ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayArrayOptionOptionOptionList) Equals(b Int32ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayArrayOptionOptionOptionList) Equals(b Int64ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayArrayOptionOptionOptionList) Equals(b UintArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayArrayOptionOptionOptionList) Equals(b Uint8ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayArrayOptionOptionOptionList) Equals(b Uint16ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayArrayOptionOptionOptionList) Equals(b Uint32ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayArrayOptionOptionOptionList) Equals(b Uint64ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayArrayOptionOptionOptionList) Equals(b UintptrArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayArrayOptionOptionOptionList) Equals(b ByteArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayArrayOptionOptionOptionList) Equals(b RuneArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayArrayOptionOptionOptionList) Equals(b Float32ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayArrayOptionOptionOptionList) Equals(b Float64ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayArrayOptionOptionOptionList) Equals(b Complex64ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayArrayOptionOptionOptionList) Equals(b Complex128ArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayArrayOptionOptionOptionList) Equals(b AnyArrayArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionArrayOptionOptionOptionList) Equals(b BoolOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionArrayOptionOptionOptionList) Equals(b StringOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionArrayOptionOptionOptionList) Equals(b IntOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionArrayOptionOptionOptionList) Equals(b Int8OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionArrayOptionOptionOptionList) Equals(b Int16OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionArrayOptionOptionOptionList) Equals(b Int32OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionArrayOptionOptionOptionList) Equals(b Int64OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionArrayOptionOptionOptionList) Equals(b UintOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionArrayOptionOptionOptionList) Equals(b Uint8OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionArrayOptionOptionOptionList) Equals(b Uint16OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionArrayOptionOptionOptionList) Equals(b Uint32OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionArrayOptionOptionOptionList) Equals(b Uint64OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionArrayOptionOptionOptionList) Equals(b UintptrOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionArrayOptionOptionOptionList) Equals(b ByteOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionArrayOptionOptionOptionList) Equals(b RuneOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionArrayOptionOptionOptionList) Equals(b Float32OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionArrayOptionOptionOptionList) Equals(b Float64OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionArrayOptionOptionOptionList) Equals(b Complex64OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionArrayOptionOptionOptionList) Equals(b Complex128OptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionArrayOptionOptionOptionList) Equals(b AnyOptionArrayOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionArrayOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolListOptionOptionOptionList) Equals(b BoolListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringListOptionOptionOptionList) Equals(b StringListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntListOptionOptionOptionList) Equals(b IntListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ListOptionOptionOptionList) Equals(b Int8ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ListOptionOptionOptionList) Equals(b Int16ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ListOptionOptionOptionList) Equals(b Int32ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ListOptionOptionOptionList) Equals(b Int64ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintListOptionOptionOptionList) Equals(b UintListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ListOptionOptionOptionList) Equals(b Uint8ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ListOptionOptionOptionList) Equals(b Uint16ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ListOptionOptionOptionList) Equals(b Uint32ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ListOptionOptionOptionList) Equals(b Uint64ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrListOptionOptionOptionList) Equals(b UintptrListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteListOptionOptionOptionList) Equals(b ByteListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneListOptionOptionOptionList) Equals(b RuneListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ListOptionOptionOptionList) Equals(b Float32ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ListOptionOptionOptionList) Equals(b Float64ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ListOptionOptionOptionList) Equals(b Complex64ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ListOptionOptionOptionList) Equals(b Complex128ListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyListOptionOptionOptionList) Equals(b AnyListOptionOptionOptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyListOptionOptionOptionEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayList) Equals(b BoolArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayList) Equals(b StringArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayList) Equals(b IntArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayList) Equals(b Int8ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayList) Equals(b Int16ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayList) Equals(b Int32ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayList) Equals(b Int64ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayList) Equals(b UintArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayList) Equals(b Uint8ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayList) Equals(b Uint16ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayList) Equals(b Uint32ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayList) Equals(b Uint64ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayList) Equals(b UintptrArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayList) Equals(b ByteArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayList) Equals(b RuneArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayList) Equals(b Float32ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayList) Equals(b Float64ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayList) Equals(b Complex64ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayList) Equals(b Complex128ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayList) Equals(b AnyArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolArrayArrayList) Equals(b BoolArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringArrayArrayList) Equals(b StringArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntArrayArrayList) Equals(b IntArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ArrayArrayList) Equals(b Int8ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ArrayArrayList) Equals(b Int16ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ArrayArrayList) Equals(b Int32ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ArrayArrayList) Equals(b Int64ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintArrayArrayList) Equals(b UintArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ArrayArrayList) Equals(b Uint8ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ArrayArrayList) Equals(b Uint16ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ArrayArrayList) Equals(b Uint32ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ArrayArrayList) Equals(b Uint64ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrArrayArrayList) Equals(b UintptrArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteArrayArrayList) Equals(b ByteArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneArrayArrayList) Equals(b RuneArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ArrayArrayList) Equals(b Float32ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ArrayArrayList) Equals(b Float64ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ArrayArrayList) Equals(b Complex64ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ArrayArrayList) Equals(b Complex128ArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyArrayArrayList) Equals(b AnyArrayArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyArrayArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolOptionArrayList) Equals(b BoolOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringOptionArrayList) Equals(b StringOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntOptionArrayList) Equals(b IntOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8OptionArrayList) Equals(b Int8OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16OptionArrayList) Equals(b Int16OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32OptionArrayList) Equals(b Int32OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64OptionArrayList) Equals(b Int64OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintOptionArrayList) Equals(b UintOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8OptionArrayList) Equals(b Uint8OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16OptionArrayList) Equals(b Uint16OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32OptionArrayList) Equals(b Uint32OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64OptionArrayList) Equals(b Uint64OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrOptionArrayList) Equals(b UintptrOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteOptionArrayList) Equals(b ByteOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneOptionArrayList) Equals(b RuneOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32OptionArrayList) Equals(b Float32OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64OptionArrayList) Equals(b Float64OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64OptionArrayList) Equals(b Complex64OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128OptionArrayList) Equals(b Complex128OptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128OptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyOptionArrayList) Equals(b AnyOptionArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyOptionArrayEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a BoolListList) Equals(b BoolListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !BoolListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a StringListList) Equals(b StringListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !StringListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a IntListList) Equals(b IntListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !IntListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int8ListList) Equals(b Int8ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int8ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int16ListList) Equals(b Int16ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int16ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int32ListList) Equals(b Int32ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int32ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Int64ListList) Equals(b Int64ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Int64ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintListList) Equals(b UintListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint8ListList) Equals(b Uint8ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint8ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint16ListList) Equals(b Uint16ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint16ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint32ListList) Equals(b Uint32ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint32ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Uint64ListList) Equals(b Uint64ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Uint64ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a UintptrListList) Equals(b UintptrListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !UintptrListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a ByteListList) Equals(b ByteListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !ByteListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a RuneListList) Equals(b RuneListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !RuneListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float32ListList) Equals(b Float32ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float32ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Float64ListList) Equals(b Float64ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Float64ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex64ListList) Equals(b Complex64ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex64ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Complex128ListList) Equals(b Complex128ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Complex128ListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a AnyListList) Equals(b AnyListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !AnyListEquals(*xs1.head, *xs2.head) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
 }
-func (m1 AnyArrOptionList) Equals(m2 AnyArrOptionList) bool { return AnyArrOptionListEquals(m1, m2) }
-func (m1 BoolArrArrOptionList) Equals(m2 BoolArrArrOptionList) bool {
-	return BoolArrArrOptionListEquals(m1, m2)
-}
-func (m1 StringArrArrOptionList) Equals(m2 StringArrArrOptionList) bool {
-	return StringArrArrOptionListEquals(m1, m2)
-}
-func (m1 IntArrArrOptionList) Equals(m2 IntArrArrOptionList) bool {
-	return IntArrArrOptionListEquals(m1, m2)
-}
-func (m1 Int8ArrArrOptionList) Equals(m2 Int8ArrArrOptionList) bool {
-	return Int8ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Int16ArrArrOptionList) Equals(m2 Int16ArrArrOptionList) bool {
-	return Int16ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Int32ArrArrOptionList) Equals(m2 Int32ArrArrOptionList) bool {
-	return Int32ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Int64ArrArrOptionList) Equals(m2 Int64ArrArrOptionList) bool {
-	return Int64ArrArrOptionListEquals(m1, m2)
-}
-func (m1 UintArrArrOptionList) Equals(m2 UintArrArrOptionList) bool {
-	return UintArrArrOptionListEquals(m1, m2)
-}
-func (m1 Uint8ArrArrOptionList) Equals(m2 Uint8ArrArrOptionList) bool {
-	return Uint8ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Uint16ArrArrOptionList) Equals(m2 Uint16ArrArrOptionList) bool {
-	return Uint16ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Uint32ArrArrOptionList) Equals(m2 Uint32ArrArrOptionList) bool {
-	return Uint32ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Uint64ArrArrOptionList) Equals(m2 Uint64ArrArrOptionList) bool {
-	return Uint64ArrArrOptionListEquals(m1, m2)
-}
-func (m1 UintptrArrArrOptionList) Equals(m2 UintptrArrArrOptionList) bool {
-	return UintptrArrArrOptionListEquals(m1, m2)
-}
-func (m1 ByteArrArrOptionList) Equals(m2 ByteArrArrOptionList) bool {
-	return ByteArrArrOptionListEquals(m1, m2)
-}
-func (m1 RuneArrArrOptionList) Equals(m2 RuneArrArrOptionList) bool {
-	return RuneArrArrOptionListEquals(m1, m2)
-}
-func (m1 Float32ArrArrOptionList) Equals(m2 Float32ArrArrOptionList) bool {
-	return Float32ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Float64ArrArrOptionList) Equals(m2 Float64ArrArrOptionList) bool {
-	return Float64ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Complex64ArrArrOptionList) Equals(m2 Complex64ArrArrOptionList) bool {
-	return Complex64ArrArrOptionListEquals(m1, m2)
-}
-func (m1 Complex128ArrArrOptionList) Equals(m2 Complex128ArrArrOptionList) bool {
-	return Complex128ArrArrOptionListEquals(m1, m2)
-}
-func (m1 AnyArrArrOptionList) Equals(m2 AnyArrArrOptionList) bool {
-	return AnyArrArrOptionListEquals(m1, m2)
-}
-func (m1 BoolOptionArrOptionList) Equals(m2 BoolOptionArrOptionList) bool {
-	return BoolOptionArrOptionListEquals(m1, m2)
-}
-func (m1 StringOptionArrOptionList) Equals(m2 StringOptionArrOptionList) bool {
-	return StringOptionArrOptionListEquals(m1, m2)
-}
-func (m1 IntOptionArrOptionList) Equals(m2 IntOptionArrOptionList) bool {
-	return IntOptionArrOptionListEquals(m1, m2)
-}
-func (m1 Int8OptionArrOptionList) Equals(m2 Int8OptionArrOptionList) bool {
-	return Int8OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Int16OptionArrOptionList) Equals(m2 Int16OptionArrOptionList) bool {
-	return Int16OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Int32OptionArrOptionList) Equals(m2 Int32OptionArrOptionList) bool {
-	return Int32OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Int64OptionArrOptionList) Equals(m2 Int64OptionArrOptionList) bool {
-	return Int64OptionArrOptionListEquals(m1, m2)
-}
-func (m1 UintOptionArrOptionList) Equals(m2 UintOptionArrOptionList) bool {
-	return UintOptionArrOptionListEquals(m1, m2)
-}
-func (m1 Uint8OptionArrOptionList) Equals(m2 Uint8OptionArrOptionList) bool {
-	return Uint8OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Uint16OptionArrOptionList) Equals(m2 Uint16OptionArrOptionList) bool {
-	return Uint16OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Uint32OptionArrOptionList) Equals(m2 Uint32OptionArrOptionList) bool {
-	return Uint32OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Uint64OptionArrOptionList) Equals(m2 Uint64OptionArrOptionList) bool {
-	return Uint64OptionArrOptionListEquals(m1, m2)
-}
-func (m1 UintptrOptionArrOptionList) Equals(m2 UintptrOptionArrOptionList) bool {
-	return UintptrOptionArrOptionListEquals(m1, m2)
-}
-func (m1 ByteOptionArrOptionList) Equals(m2 ByteOptionArrOptionList) bool {
-	return ByteOptionArrOptionListEquals(m1, m2)
-}
-func (m1 RuneOptionArrOptionList) Equals(m2 RuneOptionArrOptionList) bool {
-	return RuneOptionArrOptionListEquals(m1, m2)
-}
-func (m1 Float32OptionArrOptionList) Equals(m2 Float32OptionArrOptionList) bool {
-	return Float32OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Float64OptionArrOptionList) Equals(m2 Float64OptionArrOptionList) bool {
-	return Float64OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Complex64OptionArrOptionList) Equals(m2 Complex64OptionArrOptionList) bool {
-	return Complex64OptionArrOptionListEquals(m1, m2)
-}
-func (m1 Complex128OptionArrOptionList) Equals(m2 Complex128OptionArrOptionList) bool {
-	return Complex128OptionArrOptionListEquals(m1, m2)
-}
-func (m1 AnyOptionArrOptionList) Equals(m2 AnyOptionArrOptionList) bool {
-	return AnyOptionArrOptionListEquals(m1, m2)
-}
-func (m1 BoolListOptionList) Equals(m2 BoolListOptionList) bool {
-	return BoolListOptionListEquals(m1, m2)
-}
-func (m1 StringListOptionList) Equals(m2 StringListOptionList) bool {
-	return StringListOptionListEquals(m1, m2)
-}
-func (m1 IntListOptionList) Equals(m2 IntListOptionList) bool { return IntListOptionListEquals(m1, m2) }
-func (m1 Int8ListOptionList) Equals(m2 Int8ListOptionList) bool {
-	return Int8ListOptionListEquals(m1, m2)
-}
-func (m1 Int16ListOptionList) Equals(m2 Int16ListOptionList) bool {
-	return Int16ListOptionListEquals(m1, m2)
-}
-func (m1 Int32ListOptionList) Equals(m2 Int32ListOptionList) bool {
-	return Int32ListOptionListEquals(m1, m2)
-}
-func (m1 Int64ListOptionList) Equals(m2 Int64ListOptionList) bool {
-	return Int64ListOptionListEquals(m1, m2)
-}
-func (m1 UintListOptionList) Equals(m2 UintListOptionList) bool {
-	return UintListOptionListEquals(m1, m2)
-}
-func (m1 Uint8ListOptionList) Equals(m2 Uint8ListOptionList) bool {
-	return Uint8ListOptionListEquals(m1, m2)
-}
-func (m1 Uint16ListOptionList) Equals(m2 Uint16ListOptionList) bool {
-	return Uint16ListOptionListEquals(m1, m2)
-}
-func (m1 Uint32ListOptionList) Equals(m2 Uint32ListOptionList) bool {
-	return Uint32ListOptionListEquals(m1, m2)
-}
-func (m1 Uint64ListOptionList) Equals(m2 Uint64ListOptionList) bool {
-	return Uint64ListOptionListEquals(m1, m2)
-}
-func (m1 UintptrListOptionList) Equals(m2 UintptrListOptionList) bool {
-	return UintptrListOptionListEquals(m1, m2)
-}
-func (m1 ByteListOptionList) Equals(m2 ByteListOptionList) bool {
-	return ByteListOptionListEquals(m1, m2)
-}
-func (m1 RuneListOptionList) Equals(m2 RuneListOptionList) bool {
-	return RuneListOptionListEquals(m1, m2)
-}
-func (m1 Float32ListOptionList) Equals(m2 Float32ListOptionList) bool {
-	return Float32ListOptionListEquals(m1, m2)
-}
-func (m1 Float64ListOptionList) Equals(m2 Float64ListOptionList) bool {
-	return Float64ListOptionListEquals(m1, m2)
-}
-func (m1 Complex64ListOptionList) Equals(m2 Complex64ListOptionList) bool {
-	return Complex64ListOptionListEquals(m1, m2)
-}
-func (m1 Complex128ListOptionList) Equals(m2 Complex128ListOptionList) bool {
-	return Complex128ListOptionListEquals(m1, m2)
-}
-func (m1 AnyListOptionList) Equals(m2 AnyListOptionList) bool { return AnyListOptionListEquals(m1, m2) }
-func (m1 BoolOptionOptionList) Equals(m2 BoolOptionOptionList) bool {
-	return BoolOptionOptionListEquals(m1, m2)
-}
-func (m1 StringOptionOptionList) Equals(m2 StringOptionOptionList) bool {
-	return StringOptionOptionListEquals(m1, m2)
-}
-func (m1 IntOptionOptionList) Equals(m2 IntOptionOptionList) bool {
-	return IntOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8OptionOptionList) Equals(m2 Int8OptionOptionList) bool {
-	return Int8OptionOptionListEquals(m1, m2)
-}
-func (m1 Int16OptionOptionList) Equals(m2 Int16OptionOptionList) bool {
-	return Int16OptionOptionListEquals(m1, m2)
-}
-func (m1 Int32OptionOptionList) Equals(m2 Int32OptionOptionList) bool {
-	return Int32OptionOptionListEquals(m1, m2)
-}
-func (m1 Int64OptionOptionList) Equals(m2 Int64OptionOptionList) bool {
-	return Int64OptionOptionListEquals(m1, m2)
-}
-func (m1 UintOptionOptionList) Equals(m2 UintOptionOptionList) bool {
-	return UintOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8OptionOptionList) Equals(m2 Uint8OptionOptionList) bool {
-	return Uint8OptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16OptionOptionList) Equals(m2 Uint16OptionOptionList) bool {
-	return Uint16OptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32OptionOptionList) Equals(m2 Uint32OptionOptionList) bool {
-	return Uint32OptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64OptionOptionList) Equals(m2 Uint64OptionOptionList) bool {
-	return Uint64OptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrOptionOptionList) Equals(m2 UintptrOptionOptionList) bool {
-	return UintptrOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteOptionOptionList) Equals(m2 ByteOptionOptionList) bool {
-	return ByteOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneOptionOptionList) Equals(m2 RuneOptionOptionList) bool {
-	return RuneOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32OptionOptionList) Equals(m2 Float32OptionOptionList) bool {
-	return Float32OptionOptionListEquals(m1, m2)
-}
-func (m1 Float64OptionOptionList) Equals(m2 Float64OptionOptionList) bool {
-	return Float64OptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64OptionOptionList) Equals(m2 Complex64OptionOptionList) bool {
-	return Complex64OptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128OptionOptionList) Equals(m2 Complex128OptionOptionList) bool {
-	return Complex128OptionOptionListEquals(m1, m2)
-}
-func (m1 AnyOptionOptionList) Equals(m2 AnyOptionOptionList) bool {
-	return AnyOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolArrOptionOptionList) Equals(m2 BoolArrOptionOptionList) bool {
-	return BoolArrOptionOptionListEquals(m1, m2)
-}
-func (m1 StringArrOptionOptionList) Equals(m2 StringArrOptionOptionList) bool {
-	return StringArrOptionOptionListEquals(m1, m2)
-}
-func (m1 IntArrOptionOptionList) Equals(m2 IntArrOptionOptionList) bool {
-	return IntArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8ArrOptionOptionList) Equals(m2 Int8ArrOptionOptionList) bool {
-	return Int8ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16ArrOptionOptionList) Equals(m2 Int16ArrOptionOptionList) bool {
-	return Int16ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32ArrOptionOptionList) Equals(m2 Int32ArrOptionOptionList) bool {
-	return Int32ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64ArrOptionOptionList) Equals(m2 Int64ArrOptionOptionList) bool {
-	return Int64ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 UintArrOptionOptionList) Equals(m2 UintArrOptionOptionList) bool {
-	return UintArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8ArrOptionOptionList) Equals(m2 Uint8ArrOptionOptionList) bool {
-	return Uint8ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16ArrOptionOptionList) Equals(m2 Uint16ArrOptionOptionList) bool {
-	return Uint16ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32ArrOptionOptionList) Equals(m2 Uint32ArrOptionOptionList) bool {
-	return Uint32ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64ArrOptionOptionList) Equals(m2 Uint64ArrOptionOptionList) bool {
-	return Uint64ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrArrOptionOptionList) Equals(m2 UintptrArrOptionOptionList) bool {
-	return UintptrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteArrOptionOptionList) Equals(m2 ByteArrOptionOptionList) bool {
-	return ByteArrOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneArrOptionOptionList) Equals(m2 RuneArrOptionOptionList) bool {
-	return RuneArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32ArrOptionOptionList) Equals(m2 Float32ArrOptionOptionList) bool {
-	return Float32ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64ArrOptionOptionList) Equals(m2 Float64ArrOptionOptionList) bool {
-	return Float64ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64ArrOptionOptionList) Equals(m2 Complex64ArrOptionOptionList) bool {
-	return Complex64ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128ArrOptionOptionList) Equals(m2 Complex128ArrOptionOptionList) bool {
-	return Complex128ArrOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyArrOptionOptionList) Equals(m2 AnyArrOptionOptionList) bool {
-	return AnyArrOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolArrArrOptionOptionList) Equals(m2 BoolArrArrOptionOptionList) bool {
-	return BoolArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 StringArrArrOptionOptionList) Equals(m2 StringArrArrOptionOptionList) bool {
-	return StringArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 IntArrArrOptionOptionList) Equals(m2 IntArrArrOptionOptionList) bool {
-	return IntArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8ArrArrOptionOptionList) Equals(m2 Int8ArrArrOptionOptionList) bool {
-	return Int8ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16ArrArrOptionOptionList) Equals(m2 Int16ArrArrOptionOptionList) bool {
-	return Int16ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32ArrArrOptionOptionList) Equals(m2 Int32ArrArrOptionOptionList) bool {
-	return Int32ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64ArrArrOptionOptionList) Equals(m2 Int64ArrArrOptionOptionList) bool {
-	return Int64ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 UintArrArrOptionOptionList) Equals(m2 UintArrArrOptionOptionList) bool {
-	return UintArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8ArrArrOptionOptionList) Equals(m2 Uint8ArrArrOptionOptionList) bool {
-	return Uint8ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16ArrArrOptionOptionList) Equals(m2 Uint16ArrArrOptionOptionList) bool {
-	return Uint16ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32ArrArrOptionOptionList) Equals(m2 Uint32ArrArrOptionOptionList) bool {
-	return Uint32ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64ArrArrOptionOptionList) Equals(m2 Uint64ArrArrOptionOptionList) bool {
-	return Uint64ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrArrArrOptionOptionList) Equals(m2 UintptrArrArrOptionOptionList) bool {
-	return UintptrArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteArrArrOptionOptionList) Equals(m2 ByteArrArrOptionOptionList) bool {
-	return ByteArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneArrArrOptionOptionList) Equals(m2 RuneArrArrOptionOptionList) bool {
-	return RuneArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32ArrArrOptionOptionList) Equals(m2 Float32ArrArrOptionOptionList) bool {
-	return Float32ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64ArrArrOptionOptionList) Equals(m2 Float64ArrArrOptionOptionList) bool {
-	return Float64ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64ArrArrOptionOptionList) Equals(m2 Complex64ArrArrOptionOptionList) bool {
-	return Complex64ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128ArrArrOptionOptionList) Equals(m2 Complex128ArrArrOptionOptionList) bool {
-	return Complex128ArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyArrArrOptionOptionList) Equals(m2 AnyArrArrOptionOptionList) bool {
-	return AnyArrArrOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolOptionArrOptionOptionList) Equals(m2 BoolOptionArrOptionOptionList) bool {
-	return BoolOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 StringOptionArrOptionOptionList) Equals(m2 StringOptionArrOptionOptionList) bool {
-	return StringOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 IntOptionArrOptionOptionList) Equals(m2 IntOptionArrOptionOptionList) bool {
-	return IntOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8OptionArrOptionOptionList) Equals(m2 Int8OptionArrOptionOptionList) bool {
-	return Int8OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16OptionArrOptionOptionList) Equals(m2 Int16OptionArrOptionOptionList) bool {
-	return Int16OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32OptionArrOptionOptionList) Equals(m2 Int32OptionArrOptionOptionList) bool {
-	return Int32OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64OptionArrOptionOptionList) Equals(m2 Int64OptionArrOptionOptionList) bool {
-	return Int64OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 UintOptionArrOptionOptionList) Equals(m2 UintOptionArrOptionOptionList) bool {
-	return UintOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8OptionArrOptionOptionList) Equals(m2 Uint8OptionArrOptionOptionList) bool {
-	return Uint8OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16OptionArrOptionOptionList) Equals(m2 Uint16OptionArrOptionOptionList) bool {
-	return Uint16OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32OptionArrOptionOptionList) Equals(m2 Uint32OptionArrOptionOptionList) bool {
-	return Uint32OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64OptionArrOptionOptionList) Equals(m2 Uint64OptionArrOptionOptionList) bool {
-	return Uint64OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrOptionArrOptionOptionList) Equals(m2 UintptrOptionArrOptionOptionList) bool {
-	return UintptrOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteOptionArrOptionOptionList) Equals(m2 ByteOptionArrOptionOptionList) bool {
-	return ByteOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneOptionArrOptionOptionList) Equals(m2 RuneOptionArrOptionOptionList) bool {
-	return RuneOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32OptionArrOptionOptionList) Equals(m2 Float32OptionArrOptionOptionList) bool {
-	return Float32OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64OptionArrOptionOptionList) Equals(m2 Float64OptionArrOptionOptionList) bool {
-	return Float64OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64OptionArrOptionOptionList) Equals(m2 Complex64OptionArrOptionOptionList) bool {
-	return Complex64OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128OptionArrOptionOptionList) Equals(m2 Complex128OptionArrOptionOptionList) bool {
-	return Complex128OptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyOptionArrOptionOptionList) Equals(m2 AnyOptionArrOptionOptionList) bool {
-	return AnyOptionArrOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolListOptionOptionList) Equals(m2 BoolListOptionOptionList) bool {
-	return BoolListOptionOptionListEquals(m1, m2)
-}
-func (m1 StringListOptionOptionList) Equals(m2 StringListOptionOptionList) bool {
-	return StringListOptionOptionListEquals(m1, m2)
-}
-func (m1 IntListOptionOptionList) Equals(m2 IntListOptionOptionList) bool {
-	return IntListOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8ListOptionOptionList) Equals(m2 Int8ListOptionOptionList) bool {
-	return Int8ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16ListOptionOptionList) Equals(m2 Int16ListOptionOptionList) bool {
-	return Int16ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32ListOptionOptionList) Equals(m2 Int32ListOptionOptionList) bool {
-	return Int32ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64ListOptionOptionList) Equals(m2 Int64ListOptionOptionList) bool {
-	return Int64ListOptionOptionListEquals(m1, m2)
-}
-func (m1 UintListOptionOptionList) Equals(m2 UintListOptionOptionList) bool {
-	return UintListOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8ListOptionOptionList) Equals(m2 Uint8ListOptionOptionList) bool {
-	return Uint8ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16ListOptionOptionList) Equals(m2 Uint16ListOptionOptionList) bool {
-	return Uint16ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32ListOptionOptionList) Equals(m2 Uint32ListOptionOptionList) bool {
-	return Uint32ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64ListOptionOptionList) Equals(m2 Uint64ListOptionOptionList) bool {
-	return Uint64ListOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrListOptionOptionList) Equals(m2 UintptrListOptionOptionList) bool {
-	return UintptrListOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteListOptionOptionList) Equals(m2 ByteListOptionOptionList) bool {
-	return ByteListOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneListOptionOptionList) Equals(m2 RuneListOptionOptionList) bool {
-	return RuneListOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32ListOptionOptionList) Equals(m2 Float32ListOptionOptionList) bool {
-	return Float32ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64ListOptionOptionList) Equals(m2 Float64ListOptionOptionList) bool {
-	return Float64ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64ListOptionOptionList) Equals(m2 Complex64ListOptionOptionList) bool {
-	return Complex64ListOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128ListOptionOptionList) Equals(m2 Complex128ListOptionOptionList) bool {
-	return Complex128ListOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyListOptionOptionList) Equals(m2 AnyListOptionOptionList) bool {
-	return AnyListOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolOptionOptionOptionList) Equals(m2 BoolOptionOptionOptionList) bool {
-	return BoolOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 StringOptionOptionOptionList) Equals(m2 StringOptionOptionOptionList) bool {
-	return StringOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 IntOptionOptionOptionList) Equals(m2 IntOptionOptionOptionList) bool {
-	return IntOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8OptionOptionOptionList) Equals(m2 Int8OptionOptionOptionList) bool {
-	return Int8OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16OptionOptionOptionList) Equals(m2 Int16OptionOptionOptionList) bool {
-	return Int16OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32OptionOptionOptionList) Equals(m2 Int32OptionOptionOptionList) bool {
-	return Int32OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64OptionOptionOptionList) Equals(m2 Int64OptionOptionOptionList) bool {
-	return Int64OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintOptionOptionOptionList) Equals(m2 UintOptionOptionOptionList) bool {
-	return UintOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8OptionOptionOptionList) Equals(m2 Uint8OptionOptionOptionList) bool {
-	return Uint8OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16OptionOptionOptionList) Equals(m2 Uint16OptionOptionOptionList) bool {
-	return Uint16OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32OptionOptionOptionList) Equals(m2 Uint32OptionOptionOptionList) bool {
-	return Uint32OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64OptionOptionOptionList) Equals(m2 Uint64OptionOptionOptionList) bool {
-	return Uint64OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrOptionOptionOptionList) Equals(m2 UintptrOptionOptionOptionList) bool {
-	return UintptrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteOptionOptionOptionList) Equals(m2 ByteOptionOptionOptionList) bool {
-	return ByteOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneOptionOptionOptionList) Equals(m2 RuneOptionOptionOptionList) bool {
-	return RuneOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32OptionOptionOptionList) Equals(m2 Float32OptionOptionOptionList) bool {
-	return Float32OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64OptionOptionOptionList) Equals(m2 Float64OptionOptionOptionList) bool {
-	return Float64OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64OptionOptionOptionList) Equals(m2 Complex64OptionOptionOptionList) bool {
-	return Complex64OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128OptionOptionOptionList) Equals(m2 Complex128OptionOptionOptionList) bool {
-	return Complex128OptionOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyOptionOptionOptionList) Equals(m2 AnyOptionOptionOptionList) bool {
-	return AnyOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolArrOptionOptionOptionList) Equals(m2 BoolArrOptionOptionOptionList) bool {
-	return BoolArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 StringArrOptionOptionOptionList) Equals(m2 StringArrOptionOptionOptionList) bool {
-	return StringArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 IntArrOptionOptionOptionList) Equals(m2 IntArrOptionOptionOptionList) bool {
-	return IntArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8ArrOptionOptionOptionList) Equals(m2 Int8ArrOptionOptionOptionList) bool {
-	return Int8ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16ArrOptionOptionOptionList) Equals(m2 Int16ArrOptionOptionOptionList) bool {
-	return Int16ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32ArrOptionOptionOptionList) Equals(m2 Int32ArrOptionOptionOptionList) bool {
-	return Int32ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64ArrOptionOptionOptionList) Equals(m2 Int64ArrOptionOptionOptionList) bool {
-	return Int64ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintArrOptionOptionOptionList) Equals(m2 UintArrOptionOptionOptionList) bool {
-	return UintArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8ArrOptionOptionOptionList) Equals(m2 Uint8ArrOptionOptionOptionList) bool {
-	return Uint8ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16ArrOptionOptionOptionList) Equals(m2 Uint16ArrOptionOptionOptionList) bool {
-	return Uint16ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32ArrOptionOptionOptionList) Equals(m2 Uint32ArrOptionOptionOptionList) bool {
-	return Uint32ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64ArrOptionOptionOptionList) Equals(m2 Uint64ArrOptionOptionOptionList) bool {
-	return Uint64ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrArrOptionOptionOptionList) Equals(m2 UintptrArrOptionOptionOptionList) bool {
-	return UintptrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteArrOptionOptionOptionList) Equals(m2 ByteArrOptionOptionOptionList) bool {
-	return ByteArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneArrOptionOptionOptionList) Equals(m2 RuneArrOptionOptionOptionList) bool {
-	return RuneArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32ArrOptionOptionOptionList) Equals(m2 Float32ArrOptionOptionOptionList) bool {
-	return Float32ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64ArrOptionOptionOptionList) Equals(m2 Float64ArrOptionOptionOptionList) bool {
-	return Float64ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64ArrOptionOptionOptionList) Equals(m2 Complex64ArrOptionOptionOptionList) bool {
-	return Complex64ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128ArrOptionOptionOptionList) Equals(m2 Complex128ArrOptionOptionOptionList) bool {
-	return Complex128ArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyArrOptionOptionOptionList) Equals(m2 AnyArrOptionOptionOptionList) bool {
-	return AnyArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolArrArrOptionOptionOptionList) Equals(m2 BoolArrArrOptionOptionOptionList) bool {
-	return BoolArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 StringArrArrOptionOptionOptionList) Equals(m2 StringArrArrOptionOptionOptionList) bool {
-	return StringArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 IntArrArrOptionOptionOptionList) Equals(m2 IntArrArrOptionOptionOptionList) bool {
-	return IntArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8ArrArrOptionOptionOptionList) Equals(m2 Int8ArrArrOptionOptionOptionList) bool {
-	return Int8ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16ArrArrOptionOptionOptionList) Equals(m2 Int16ArrArrOptionOptionOptionList) bool {
-	return Int16ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32ArrArrOptionOptionOptionList) Equals(m2 Int32ArrArrOptionOptionOptionList) bool {
-	return Int32ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64ArrArrOptionOptionOptionList) Equals(m2 Int64ArrArrOptionOptionOptionList) bool {
-	return Int64ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintArrArrOptionOptionOptionList) Equals(m2 UintArrArrOptionOptionOptionList) bool {
-	return UintArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8ArrArrOptionOptionOptionList) Equals(m2 Uint8ArrArrOptionOptionOptionList) bool {
-	return Uint8ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16ArrArrOptionOptionOptionList) Equals(m2 Uint16ArrArrOptionOptionOptionList) bool {
-	return Uint16ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32ArrArrOptionOptionOptionList) Equals(m2 Uint32ArrArrOptionOptionOptionList) bool {
-	return Uint32ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64ArrArrOptionOptionOptionList) Equals(m2 Uint64ArrArrOptionOptionOptionList) bool {
-	return Uint64ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrArrArrOptionOptionOptionList) Equals(m2 UintptrArrArrOptionOptionOptionList) bool {
-	return UintptrArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteArrArrOptionOptionOptionList) Equals(m2 ByteArrArrOptionOptionOptionList) bool {
-	return ByteArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneArrArrOptionOptionOptionList) Equals(m2 RuneArrArrOptionOptionOptionList) bool {
-	return RuneArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32ArrArrOptionOptionOptionList) Equals(m2 Float32ArrArrOptionOptionOptionList) bool {
-	return Float32ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64ArrArrOptionOptionOptionList) Equals(m2 Float64ArrArrOptionOptionOptionList) bool {
-	return Float64ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64ArrArrOptionOptionOptionList) Equals(m2 Complex64ArrArrOptionOptionOptionList) bool {
-	return Complex64ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128ArrArrOptionOptionOptionList) Equals(m2 Complex128ArrArrOptionOptionOptionList) bool {
-	return Complex128ArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyArrArrOptionOptionOptionList) Equals(m2 AnyArrArrOptionOptionOptionList) bool {
-	return AnyArrArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolOptionArrOptionOptionOptionList) Equals(m2 BoolOptionArrOptionOptionOptionList) bool {
-	return BoolOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 StringOptionArrOptionOptionOptionList) Equals(m2 StringOptionArrOptionOptionOptionList) bool {
-	return StringOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 IntOptionArrOptionOptionOptionList) Equals(m2 IntOptionArrOptionOptionOptionList) bool {
-	return IntOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8OptionArrOptionOptionOptionList) Equals(m2 Int8OptionArrOptionOptionOptionList) bool {
-	return Int8OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16OptionArrOptionOptionOptionList) Equals(m2 Int16OptionArrOptionOptionOptionList) bool {
-	return Int16OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32OptionArrOptionOptionOptionList) Equals(m2 Int32OptionArrOptionOptionOptionList) bool {
-	return Int32OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64OptionArrOptionOptionOptionList) Equals(m2 Int64OptionArrOptionOptionOptionList) bool {
-	return Int64OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintOptionArrOptionOptionOptionList) Equals(m2 UintOptionArrOptionOptionOptionList) bool {
-	return UintOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8OptionArrOptionOptionOptionList) Equals(m2 Uint8OptionArrOptionOptionOptionList) bool {
-	return Uint8OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16OptionArrOptionOptionOptionList) Equals(m2 Uint16OptionArrOptionOptionOptionList) bool {
-	return Uint16OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32OptionArrOptionOptionOptionList) Equals(m2 Uint32OptionArrOptionOptionOptionList) bool {
-	return Uint32OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64OptionArrOptionOptionOptionList) Equals(m2 Uint64OptionArrOptionOptionOptionList) bool {
-	return Uint64OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrOptionArrOptionOptionOptionList) Equals(m2 UintptrOptionArrOptionOptionOptionList) bool {
-	return UintptrOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteOptionArrOptionOptionOptionList) Equals(m2 ByteOptionArrOptionOptionOptionList) bool {
-	return ByteOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneOptionArrOptionOptionOptionList) Equals(m2 RuneOptionArrOptionOptionOptionList) bool {
-	return RuneOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32OptionArrOptionOptionOptionList) Equals(m2 Float32OptionArrOptionOptionOptionList) bool {
-	return Float32OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64OptionArrOptionOptionOptionList) Equals(m2 Float64OptionArrOptionOptionOptionList) bool {
-	return Float64OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64OptionArrOptionOptionOptionList) Equals(m2 Complex64OptionArrOptionOptionOptionList) bool {
-	return Complex64OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128OptionArrOptionOptionOptionList) Equals(m2 Complex128OptionArrOptionOptionOptionList) bool {
-	return Complex128OptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyOptionArrOptionOptionOptionList) Equals(m2 AnyOptionArrOptionOptionOptionList) bool {
-	return AnyOptionArrOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolListOptionOptionOptionList) Equals(m2 BoolListOptionOptionOptionList) bool {
-	return BoolListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 StringListOptionOptionOptionList) Equals(m2 StringListOptionOptionOptionList) bool {
-	return StringListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 IntListOptionOptionOptionList) Equals(m2 IntListOptionOptionOptionList) bool {
-	return IntListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int8ListOptionOptionOptionList) Equals(m2 Int8ListOptionOptionOptionList) bool {
-	return Int8ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int16ListOptionOptionOptionList) Equals(m2 Int16ListOptionOptionOptionList) bool {
-	return Int16ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int32ListOptionOptionOptionList) Equals(m2 Int32ListOptionOptionOptionList) bool {
-	return Int32ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Int64ListOptionOptionOptionList) Equals(m2 Int64ListOptionOptionOptionList) bool {
-	return Int64ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintListOptionOptionOptionList) Equals(m2 UintListOptionOptionOptionList) bool {
-	return UintListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint8ListOptionOptionOptionList) Equals(m2 Uint8ListOptionOptionOptionList) bool {
-	return Uint8ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint16ListOptionOptionOptionList) Equals(m2 Uint16ListOptionOptionOptionList) bool {
-	return Uint16ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint32ListOptionOptionOptionList) Equals(m2 Uint32ListOptionOptionOptionList) bool {
-	return Uint32ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Uint64ListOptionOptionOptionList) Equals(m2 Uint64ListOptionOptionOptionList) bool {
-	return Uint64ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 UintptrListOptionOptionOptionList) Equals(m2 UintptrListOptionOptionOptionList) bool {
-	return UintptrListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 ByteListOptionOptionOptionList) Equals(m2 ByteListOptionOptionOptionList) bool {
-	return ByteListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 RuneListOptionOptionOptionList) Equals(m2 RuneListOptionOptionOptionList) bool {
-	return RuneListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float32ListOptionOptionOptionList) Equals(m2 Float32ListOptionOptionOptionList) bool {
-	return Float32ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Float64ListOptionOptionOptionList) Equals(m2 Float64ListOptionOptionOptionList) bool {
-	return Float64ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex64ListOptionOptionOptionList) Equals(m2 Complex64ListOptionOptionOptionList) bool {
-	return Complex64ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 Complex128ListOptionOptionOptionList) Equals(m2 Complex128ListOptionOptionOptionList) bool {
-	return Complex128ListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 AnyListOptionOptionOptionList) Equals(m2 AnyListOptionOptionOptionList) bool {
-	return AnyListOptionOptionOptionListEquals(m1, m2)
-}
-func (m1 BoolArrList) Equals(m2 BoolArrList) bool             { return BoolArrListEquals(m1, m2) }
-func (m1 StringArrList) Equals(m2 StringArrList) bool         { return StringArrListEquals(m1, m2) }
-func (m1 IntArrList) Equals(m2 IntArrList) bool               { return IntArrListEquals(m1, m2) }
-func (m1 Int8ArrList) Equals(m2 Int8ArrList) bool             { return Int8ArrListEquals(m1, m2) }
-func (m1 Int16ArrList) Equals(m2 Int16ArrList) bool           { return Int16ArrListEquals(m1, m2) }
-func (m1 Int32ArrList) Equals(m2 Int32ArrList) bool           { return Int32ArrListEquals(m1, m2) }
-func (m1 Int64ArrList) Equals(m2 Int64ArrList) bool           { return Int64ArrListEquals(m1, m2) }
-func (m1 UintArrList) Equals(m2 UintArrList) bool             { return UintArrListEquals(m1, m2) }
-func (m1 Uint8ArrList) Equals(m2 Uint8ArrList) bool           { return Uint8ArrListEquals(m1, m2) }
-func (m1 Uint16ArrList) Equals(m2 Uint16ArrList) bool         { return Uint16ArrListEquals(m1, m2) }
-func (m1 Uint32ArrList) Equals(m2 Uint32ArrList) bool         { return Uint32ArrListEquals(m1, m2) }
-func (m1 Uint64ArrList) Equals(m2 Uint64ArrList) bool         { return Uint64ArrListEquals(m1, m2) }
-func (m1 UintptrArrList) Equals(m2 UintptrArrList) bool       { return UintptrArrListEquals(m1, m2) }
-func (m1 ByteArrList) Equals(m2 ByteArrList) bool             { return ByteArrListEquals(m1, m2) }
-func (m1 RuneArrList) Equals(m2 RuneArrList) bool             { return RuneArrListEquals(m1, m2) }
-func (m1 Float32ArrList) Equals(m2 Float32ArrList) bool       { return Float32ArrListEquals(m1, m2) }
-func (m1 Float64ArrList) Equals(m2 Float64ArrList) bool       { return Float64ArrListEquals(m1, m2) }
-func (m1 Complex64ArrList) Equals(m2 Complex64ArrList) bool   { return Complex64ArrListEquals(m1, m2) }
-func (m1 Complex128ArrList) Equals(m2 Complex128ArrList) bool { return Complex128ArrListEquals(m1, m2) }
-func (m1 AnyArrList) Equals(m2 AnyArrList) bool               { return AnyArrListEquals(m1, m2) }
-func (m1 BoolArrArrList) Equals(m2 BoolArrArrList) bool       { return BoolArrArrListEquals(m1, m2) }
-func (m1 StringArrArrList) Equals(m2 StringArrArrList) bool   { return StringArrArrListEquals(m1, m2) }
-func (m1 IntArrArrList) Equals(m2 IntArrArrList) bool         { return IntArrArrListEquals(m1, m2) }
-func (m1 Int8ArrArrList) Equals(m2 Int8ArrArrList) bool       { return Int8ArrArrListEquals(m1, m2) }
-func (m1 Int16ArrArrList) Equals(m2 Int16ArrArrList) bool     { return Int16ArrArrListEquals(m1, m2) }
-func (m1 Int32ArrArrList) Equals(m2 Int32ArrArrList) bool     { return Int32ArrArrListEquals(m1, m2) }
-func (m1 Int64ArrArrList) Equals(m2 Int64ArrArrList) bool     { return Int64ArrArrListEquals(m1, m2) }
-func (m1 UintArrArrList) Equals(m2 UintArrArrList) bool       { return UintArrArrListEquals(m1, m2) }
-func (m1 Uint8ArrArrList) Equals(m2 Uint8ArrArrList) bool     { return Uint8ArrArrListEquals(m1, m2) }
-func (m1 Uint16ArrArrList) Equals(m2 Uint16ArrArrList) bool   { return Uint16ArrArrListEquals(m1, m2) }
-func (m1 Uint32ArrArrList) Equals(m2 Uint32ArrArrList) bool   { return Uint32ArrArrListEquals(m1, m2) }
-func (m1 Uint64ArrArrList) Equals(m2 Uint64ArrArrList) bool   { return Uint64ArrArrListEquals(m1, m2) }
-func (m1 UintptrArrArrList) Equals(m2 UintptrArrArrList) bool { return UintptrArrArrListEquals(m1, m2) }
-func (m1 ByteArrArrList) Equals(m2 ByteArrArrList) bool       { return ByteArrArrListEquals(m1, m2) }
-func (m1 RuneArrArrList) Equals(m2 RuneArrArrList) bool       { return RuneArrArrListEquals(m1, m2) }
-func (m1 Float32ArrArrList) Equals(m2 Float32ArrArrList) bool { return Float32ArrArrListEquals(m1, m2) }
-func (m1 Float64ArrArrList) Equals(m2 Float64ArrArrList) bool { return Float64ArrArrListEquals(m1, m2) }
-func (m1 Complex64ArrArrList) Equals(m2 Complex64ArrArrList) bool {
-	return Complex64ArrArrListEquals(m1, m2)
-}
-func (m1 Complex128ArrArrList) Equals(m2 Complex128ArrArrList) bool {
-	return Complex128ArrArrListEquals(m1, m2)
-}
-func (m1 AnyArrArrList) Equals(m2 AnyArrArrList) bool         { return AnyArrArrListEquals(m1, m2) }
-func (m1 BoolOptionArrList) Equals(m2 BoolOptionArrList) bool { return BoolOptionArrListEquals(m1, m2) }
-func (m1 StringOptionArrList) Equals(m2 StringOptionArrList) bool {
-	return StringOptionArrListEquals(m1, m2)
-}
-func (m1 IntOptionArrList) Equals(m2 IntOptionArrList) bool   { return IntOptionArrListEquals(m1, m2) }
-func (m1 Int8OptionArrList) Equals(m2 Int8OptionArrList) bool { return Int8OptionArrListEquals(m1, m2) }
-func (m1 Int16OptionArrList) Equals(m2 Int16OptionArrList) bool {
-	return Int16OptionArrListEquals(m1, m2)
-}
-func (m1 Int32OptionArrList) Equals(m2 Int32OptionArrList) bool {
-	return Int32OptionArrListEquals(m1, m2)
-}
-func (m1 Int64OptionArrList) Equals(m2 Int64OptionArrList) bool {
-	return Int64OptionArrListEquals(m1, m2)
-}
-func (m1 UintOptionArrList) Equals(m2 UintOptionArrList) bool { return UintOptionArrListEquals(m1, m2) }
-func (m1 Uint8OptionArrList) Equals(m2 Uint8OptionArrList) bool {
-	return Uint8OptionArrListEquals(m1, m2)
-}
-func (m1 Uint16OptionArrList) Equals(m2 Uint16OptionArrList) bool {
-	return Uint16OptionArrListEquals(m1, m2)
-}
-func (m1 Uint32OptionArrList) Equals(m2 Uint32OptionArrList) bool {
-	return Uint32OptionArrListEquals(m1, m2)
-}
-func (m1 Uint64OptionArrList) Equals(m2 Uint64OptionArrList) bool {
-	return Uint64OptionArrListEquals(m1, m2)
-}
-func (m1 UintptrOptionArrList) Equals(m2 UintptrOptionArrList) bool {
-	return UintptrOptionArrListEquals(m1, m2)
-}
-func (m1 ByteOptionArrList) Equals(m2 ByteOptionArrList) bool { return ByteOptionArrListEquals(m1, m2) }
-func (m1 RuneOptionArrList) Equals(m2 RuneOptionArrList) bool { return RuneOptionArrListEquals(m1, m2) }
-func (m1 Float32OptionArrList) Equals(m2 Float32OptionArrList) bool {
-	return Float32OptionArrListEquals(m1, m2)
-}
-func (m1 Float64OptionArrList) Equals(m2 Float64OptionArrList) bool {
-	return Float64OptionArrListEquals(m1, m2)
-}
-func (m1 Complex64OptionArrList) Equals(m2 Complex64OptionArrList) bool {
-	return Complex64OptionArrListEquals(m1, m2)
-}
-func (m1 Complex128OptionArrList) Equals(m2 Complex128OptionArrList) bool {
-	return Complex128OptionArrListEquals(m1, m2)
-}
-func (m1 AnyOptionArrList) Equals(m2 AnyOptionArrList) bool   { return AnyOptionArrListEquals(m1, m2) }
-func (m1 BoolListList) Equals(m2 BoolListList) bool           { return BoolListListEquals(m1, m2) }
-func (m1 StringListList) Equals(m2 StringListList) bool       { return StringListListEquals(m1, m2) }
-func (m1 IntListList) Equals(m2 IntListList) bool             { return IntListListEquals(m1, m2) }
-func (m1 Int8ListList) Equals(m2 Int8ListList) bool           { return Int8ListListEquals(m1, m2) }
-func (m1 Int16ListList) Equals(m2 Int16ListList) bool         { return Int16ListListEquals(m1, m2) }
-func (m1 Int32ListList) Equals(m2 Int32ListList) bool         { return Int32ListListEquals(m1, m2) }
-func (m1 Int64ListList) Equals(m2 Int64ListList) bool         { return Int64ListListEquals(m1, m2) }
-func (m1 UintListList) Equals(m2 UintListList) bool           { return UintListListEquals(m1, m2) }
-func (m1 Uint8ListList) Equals(m2 Uint8ListList) bool         { return Uint8ListListEquals(m1, m2) }
-func (m1 Uint16ListList) Equals(m2 Uint16ListList) bool       { return Uint16ListListEquals(m1, m2) }
-func (m1 Uint32ListList) Equals(m2 Uint32ListList) bool       { return Uint32ListListEquals(m1, m2) }
-func (m1 Uint64ListList) Equals(m2 Uint64ListList) bool       { return Uint64ListListEquals(m1, m2) }
-func (m1 UintptrListList) Equals(m2 UintptrListList) bool     { return UintptrListListEquals(m1, m2) }
-func (m1 ByteListList) Equals(m2 ByteListList) bool           { return ByteListListEquals(m1, m2) }
-func (m1 RuneListList) Equals(m2 RuneListList) bool           { return RuneListListEquals(m1, m2) }
-func (m1 Float32ListList) Equals(m2 Float32ListList) bool     { return Float32ListListEquals(m1, m2) }
-func (m1 Float64ListList) Equals(m2 Float64ListList) bool     { return Float64ListListEquals(m1, m2) }
-func (m1 Complex64ListList) Equals(m2 Complex64ListList) bool { return Complex64ListListEquals(m1, m2) }
-func (m1 Complex128ListList) Equals(m2 Complex128ListList) bool {
-	return Complex128ListListEquals(m1, m2)
-}
-func (m1 AnyListList) Equals(m2 AnyListList) bool { return AnyListListEquals(m1, m2) }

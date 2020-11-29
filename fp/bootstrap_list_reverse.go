@@ -4,7 +4,7 @@
 package fp
 
 func (l BoolList) Reverse() BoolList {
-	acc := NilBoolList
+	acc := NilBool
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -13,7 +13,7 @@ func (l BoolList) Reverse() BoolList {
 	return acc
 }
 func (l StringList) Reverse() StringList {
-	acc := NilStringList
+	acc := NilString
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -22,7 +22,7 @@ func (l StringList) Reverse() StringList {
 	return acc
 }
 func (l IntList) Reverse() IntList {
-	acc := NilIntList
+	acc := NilInt
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -31,7 +31,7 @@ func (l IntList) Reverse() IntList {
 	return acc
 }
 func (l Int8List) Reverse() Int8List {
-	acc := NilInt8List
+	acc := NilInt8
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -40,7 +40,7 @@ func (l Int8List) Reverse() Int8List {
 	return acc
 }
 func (l Int16List) Reverse() Int16List {
-	acc := NilInt16List
+	acc := NilInt16
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -49,7 +49,7 @@ func (l Int16List) Reverse() Int16List {
 	return acc
 }
 func (l Int32List) Reverse() Int32List {
-	acc := NilInt32List
+	acc := NilInt32
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -58,7 +58,7 @@ func (l Int32List) Reverse() Int32List {
 	return acc
 }
 func (l Int64List) Reverse() Int64List {
-	acc := NilInt64List
+	acc := NilInt64
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -67,7 +67,7 @@ func (l Int64List) Reverse() Int64List {
 	return acc
 }
 func (l UintList) Reverse() UintList {
-	acc := NilUintList
+	acc := NilUint
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -76,7 +76,7 @@ func (l UintList) Reverse() UintList {
 	return acc
 }
 func (l Uint8List) Reverse() Uint8List {
-	acc := NilUint8List
+	acc := NilUint8
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -85,7 +85,7 @@ func (l Uint8List) Reverse() Uint8List {
 	return acc
 }
 func (l Uint16List) Reverse() Uint16List {
-	acc := NilUint16List
+	acc := NilUint16
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -94,7 +94,7 @@ func (l Uint16List) Reverse() Uint16List {
 	return acc
 }
 func (l Uint32List) Reverse() Uint32List {
-	acc := NilUint32List
+	acc := NilUint32
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -103,7 +103,7 @@ func (l Uint32List) Reverse() Uint32List {
 	return acc
 }
 func (l Uint64List) Reverse() Uint64List {
-	acc := NilUint64List
+	acc := NilUint64
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -112,7 +112,7 @@ func (l Uint64List) Reverse() Uint64List {
 	return acc
 }
 func (l UintptrList) Reverse() UintptrList {
-	acc := NilUintptrList
+	acc := NilUintptr
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -121,7 +121,7 @@ func (l UintptrList) Reverse() UintptrList {
 	return acc
 }
 func (l ByteList) Reverse() ByteList {
-	acc := NilByteList
+	acc := NilByte
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -130,7 +130,7 @@ func (l ByteList) Reverse() ByteList {
 	return acc
 }
 func (l RuneList) Reverse() RuneList {
-	acc := NilRuneList
+	acc := NilRune
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -139,7 +139,7 @@ func (l RuneList) Reverse() RuneList {
 	return acc
 }
 func (l Float32List) Reverse() Float32List {
-	acc := NilFloat32List
+	acc := NilFloat32
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -148,7 +148,7 @@ func (l Float32List) Reverse() Float32List {
 	return acc
 }
 func (l Float64List) Reverse() Float64List {
-	acc := NilFloat64List
+	acc := NilFloat64
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -157,7 +157,7 @@ func (l Float64List) Reverse() Float64List {
 	return acc
 }
 func (l Complex64List) Reverse() Complex64List {
-	acc := NilComplex64List
+	acc := NilComplex64
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -166,7 +166,7 @@ func (l Complex64List) Reverse() Complex64List {
 	return acc
 }
 func (l Complex128List) Reverse() Complex128List {
-	acc := NilComplex128List
+	acc := NilComplex128
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -175,7 +175,7 @@ func (l Complex128List) Reverse() Complex128List {
 	return acc
 }
 func (l AnyList) Reverse() AnyList {
-	acc := NilAnyList
+	acc := NilAny
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -184,7 +184,7 @@ func (l AnyList) Reverse() AnyList {
 	return acc
 }
 func (l BoolOptionList) Reverse() BoolOptionList {
-	acc := NilBoolOptionList
+	acc := NilBoolOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -193,7 +193,7 @@ func (l BoolOptionList) Reverse() BoolOptionList {
 	return acc
 }
 func (l StringOptionList) Reverse() StringOptionList {
-	acc := NilStringOptionList
+	acc := NilStringOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -202,7 +202,7 @@ func (l StringOptionList) Reverse() StringOptionList {
 	return acc
 }
 func (l IntOptionList) Reverse() IntOptionList {
-	acc := NilIntOptionList
+	acc := NilIntOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -211,7 +211,7 @@ func (l IntOptionList) Reverse() IntOptionList {
 	return acc
 }
 func (l Int8OptionList) Reverse() Int8OptionList {
-	acc := NilInt8OptionList
+	acc := NilInt8Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -220,7 +220,7 @@ func (l Int8OptionList) Reverse() Int8OptionList {
 	return acc
 }
 func (l Int16OptionList) Reverse() Int16OptionList {
-	acc := NilInt16OptionList
+	acc := NilInt16Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -229,7 +229,7 @@ func (l Int16OptionList) Reverse() Int16OptionList {
 	return acc
 }
 func (l Int32OptionList) Reverse() Int32OptionList {
-	acc := NilInt32OptionList
+	acc := NilInt32Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -238,7 +238,7 @@ func (l Int32OptionList) Reverse() Int32OptionList {
 	return acc
 }
 func (l Int64OptionList) Reverse() Int64OptionList {
-	acc := NilInt64OptionList
+	acc := NilInt64Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -247,7 +247,7 @@ func (l Int64OptionList) Reverse() Int64OptionList {
 	return acc
 }
 func (l UintOptionList) Reverse() UintOptionList {
-	acc := NilUintOptionList
+	acc := NilUintOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -256,7 +256,7 @@ func (l UintOptionList) Reverse() UintOptionList {
 	return acc
 }
 func (l Uint8OptionList) Reverse() Uint8OptionList {
-	acc := NilUint8OptionList
+	acc := NilUint8Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -265,7 +265,7 @@ func (l Uint8OptionList) Reverse() Uint8OptionList {
 	return acc
 }
 func (l Uint16OptionList) Reverse() Uint16OptionList {
-	acc := NilUint16OptionList
+	acc := NilUint16Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -274,7 +274,7 @@ func (l Uint16OptionList) Reverse() Uint16OptionList {
 	return acc
 }
 func (l Uint32OptionList) Reverse() Uint32OptionList {
-	acc := NilUint32OptionList
+	acc := NilUint32Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -283,7 +283,7 @@ func (l Uint32OptionList) Reverse() Uint32OptionList {
 	return acc
 }
 func (l Uint64OptionList) Reverse() Uint64OptionList {
-	acc := NilUint64OptionList
+	acc := NilUint64Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -292,7 +292,7 @@ func (l Uint64OptionList) Reverse() Uint64OptionList {
 	return acc
 }
 func (l UintptrOptionList) Reverse() UintptrOptionList {
-	acc := NilUintptrOptionList
+	acc := NilUintptrOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -301,7 +301,7 @@ func (l UintptrOptionList) Reverse() UintptrOptionList {
 	return acc
 }
 func (l ByteOptionList) Reverse() ByteOptionList {
-	acc := NilByteOptionList
+	acc := NilByteOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -310,7 +310,7 @@ func (l ByteOptionList) Reverse() ByteOptionList {
 	return acc
 }
 func (l RuneOptionList) Reverse() RuneOptionList {
-	acc := NilRuneOptionList
+	acc := NilRuneOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -319,7 +319,7 @@ func (l RuneOptionList) Reverse() RuneOptionList {
 	return acc
 }
 func (l Float32OptionList) Reverse() Float32OptionList {
-	acc := NilFloat32OptionList
+	acc := NilFloat32Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -328,7 +328,7 @@ func (l Float32OptionList) Reverse() Float32OptionList {
 	return acc
 }
 func (l Float64OptionList) Reverse() Float64OptionList {
-	acc := NilFloat64OptionList
+	acc := NilFloat64Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -337,7 +337,7 @@ func (l Float64OptionList) Reverse() Float64OptionList {
 	return acc
 }
 func (l Complex64OptionList) Reverse() Complex64OptionList {
-	acc := NilComplex64OptionList
+	acc := NilComplex64Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -346,7 +346,7 @@ func (l Complex64OptionList) Reverse() Complex64OptionList {
 	return acc
 }
 func (l Complex128OptionList) Reverse() Complex128OptionList {
-	acc := NilComplex128OptionList
+	acc := NilComplex128Option
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -355,7 +355,7 @@ func (l Complex128OptionList) Reverse() Complex128OptionList {
 	return acc
 }
 func (l AnyOptionList) Reverse() AnyOptionList {
-	acc := NilAnyOptionList
+	acc := NilAnyOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -363,8 +363,8 @@ func (l AnyOptionList) Reverse() AnyOptionList {
 	}
 	return acc
 }
-func (l BoolArrOptionList) Reverse() BoolArrOptionList {
-	acc := NilBoolArrOptionList
+func (l BoolArrayOptionList) Reverse() BoolArrayOptionList {
+	acc := NilBoolArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -372,8 +372,8 @@ func (l BoolArrOptionList) Reverse() BoolArrOptionList {
 	}
 	return acc
 }
-func (l StringArrOptionList) Reverse() StringArrOptionList {
-	acc := NilStringArrOptionList
+func (l StringArrayOptionList) Reverse() StringArrayOptionList {
+	acc := NilStringArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -381,8 +381,8 @@ func (l StringArrOptionList) Reverse() StringArrOptionList {
 	}
 	return acc
 }
-func (l IntArrOptionList) Reverse() IntArrOptionList {
-	acc := NilIntArrOptionList
+func (l IntArrayOptionList) Reverse() IntArrayOptionList {
+	acc := NilIntArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -390,8 +390,8 @@ func (l IntArrOptionList) Reverse() IntArrOptionList {
 	}
 	return acc
 }
-func (l Int8ArrOptionList) Reverse() Int8ArrOptionList {
-	acc := NilInt8ArrOptionList
+func (l Int8ArrayOptionList) Reverse() Int8ArrayOptionList {
+	acc := NilInt8ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -399,8 +399,8 @@ func (l Int8ArrOptionList) Reverse() Int8ArrOptionList {
 	}
 	return acc
 }
-func (l Int16ArrOptionList) Reverse() Int16ArrOptionList {
-	acc := NilInt16ArrOptionList
+func (l Int16ArrayOptionList) Reverse() Int16ArrayOptionList {
+	acc := NilInt16ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -408,8 +408,8 @@ func (l Int16ArrOptionList) Reverse() Int16ArrOptionList {
 	}
 	return acc
 }
-func (l Int32ArrOptionList) Reverse() Int32ArrOptionList {
-	acc := NilInt32ArrOptionList
+func (l Int32ArrayOptionList) Reverse() Int32ArrayOptionList {
+	acc := NilInt32ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -417,8 +417,8 @@ func (l Int32ArrOptionList) Reverse() Int32ArrOptionList {
 	}
 	return acc
 }
-func (l Int64ArrOptionList) Reverse() Int64ArrOptionList {
-	acc := NilInt64ArrOptionList
+func (l Int64ArrayOptionList) Reverse() Int64ArrayOptionList {
+	acc := NilInt64ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -426,8 +426,8 @@ func (l Int64ArrOptionList) Reverse() Int64ArrOptionList {
 	}
 	return acc
 }
-func (l UintArrOptionList) Reverse() UintArrOptionList {
-	acc := NilUintArrOptionList
+func (l UintArrayOptionList) Reverse() UintArrayOptionList {
+	acc := NilUintArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -435,8 +435,8 @@ func (l UintArrOptionList) Reverse() UintArrOptionList {
 	}
 	return acc
 }
-func (l Uint8ArrOptionList) Reverse() Uint8ArrOptionList {
-	acc := NilUint8ArrOptionList
+func (l Uint8ArrayOptionList) Reverse() Uint8ArrayOptionList {
+	acc := NilUint8ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -444,8 +444,8 @@ func (l Uint8ArrOptionList) Reverse() Uint8ArrOptionList {
 	}
 	return acc
 }
-func (l Uint16ArrOptionList) Reverse() Uint16ArrOptionList {
-	acc := NilUint16ArrOptionList
+func (l Uint16ArrayOptionList) Reverse() Uint16ArrayOptionList {
+	acc := NilUint16ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -453,8 +453,8 @@ func (l Uint16ArrOptionList) Reverse() Uint16ArrOptionList {
 	}
 	return acc
 }
-func (l Uint32ArrOptionList) Reverse() Uint32ArrOptionList {
-	acc := NilUint32ArrOptionList
+func (l Uint32ArrayOptionList) Reverse() Uint32ArrayOptionList {
+	acc := NilUint32ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -462,8 +462,8 @@ func (l Uint32ArrOptionList) Reverse() Uint32ArrOptionList {
 	}
 	return acc
 }
-func (l Uint64ArrOptionList) Reverse() Uint64ArrOptionList {
-	acc := NilUint64ArrOptionList
+func (l Uint64ArrayOptionList) Reverse() Uint64ArrayOptionList {
+	acc := NilUint64ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -471,8 +471,8 @@ func (l Uint64ArrOptionList) Reverse() Uint64ArrOptionList {
 	}
 	return acc
 }
-func (l UintptrArrOptionList) Reverse() UintptrArrOptionList {
-	acc := NilUintptrArrOptionList
+func (l UintptrArrayOptionList) Reverse() UintptrArrayOptionList {
+	acc := NilUintptrArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -480,8 +480,8 @@ func (l UintptrArrOptionList) Reverse() UintptrArrOptionList {
 	}
 	return acc
 }
-func (l ByteArrOptionList) Reverse() ByteArrOptionList {
-	acc := NilByteArrOptionList
+func (l ByteArrayOptionList) Reverse() ByteArrayOptionList {
+	acc := NilByteArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -489,8 +489,8 @@ func (l ByteArrOptionList) Reverse() ByteArrOptionList {
 	}
 	return acc
 }
-func (l RuneArrOptionList) Reverse() RuneArrOptionList {
-	acc := NilRuneArrOptionList
+func (l RuneArrayOptionList) Reverse() RuneArrayOptionList {
+	acc := NilRuneArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -498,8 +498,8 @@ func (l RuneArrOptionList) Reverse() RuneArrOptionList {
 	}
 	return acc
 }
-func (l Float32ArrOptionList) Reverse() Float32ArrOptionList {
-	acc := NilFloat32ArrOptionList
+func (l Float32ArrayOptionList) Reverse() Float32ArrayOptionList {
+	acc := NilFloat32ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -507,8 +507,8 @@ func (l Float32ArrOptionList) Reverse() Float32ArrOptionList {
 	}
 	return acc
 }
-func (l Float64ArrOptionList) Reverse() Float64ArrOptionList {
-	acc := NilFloat64ArrOptionList
+func (l Float64ArrayOptionList) Reverse() Float64ArrayOptionList {
+	acc := NilFloat64ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -516,8 +516,8 @@ func (l Float64ArrOptionList) Reverse() Float64ArrOptionList {
 	}
 	return acc
 }
-func (l Complex64ArrOptionList) Reverse() Complex64ArrOptionList {
-	acc := NilComplex64ArrOptionList
+func (l Complex64ArrayOptionList) Reverse() Complex64ArrayOptionList {
+	acc := NilComplex64ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -525,8 +525,8 @@ func (l Complex64ArrOptionList) Reverse() Complex64ArrOptionList {
 	}
 	return acc
 }
-func (l Complex128ArrOptionList) Reverse() Complex128ArrOptionList {
-	acc := NilComplex128ArrOptionList
+func (l Complex128ArrayOptionList) Reverse() Complex128ArrayOptionList {
+	acc := NilComplex128ArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -534,8 +534,8 @@ func (l Complex128ArrOptionList) Reverse() Complex128ArrOptionList {
 	}
 	return acc
 }
-func (l AnyArrOptionList) Reverse() AnyArrOptionList {
-	acc := NilAnyArrOptionList
+func (l AnyArrayOptionList) Reverse() AnyArrayOptionList {
+	acc := NilAnyArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -543,8 +543,8 @@ func (l AnyArrOptionList) Reverse() AnyArrOptionList {
 	}
 	return acc
 }
-func (l BoolArrArrOptionList) Reverse() BoolArrArrOptionList {
-	acc := NilBoolArrArrOptionList
+func (l BoolArrayArrayOptionList) Reverse() BoolArrayArrayOptionList {
+	acc := NilBoolArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -552,8 +552,8 @@ func (l BoolArrArrOptionList) Reverse() BoolArrArrOptionList {
 	}
 	return acc
 }
-func (l StringArrArrOptionList) Reverse() StringArrArrOptionList {
-	acc := NilStringArrArrOptionList
+func (l StringArrayArrayOptionList) Reverse() StringArrayArrayOptionList {
+	acc := NilStringArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -561,8 +561,8 @@ func (l StringArrArrOptionList) Reverse() StringArrArrOptionList {
 	}
 	return acc
 }
-func (l IntArrArrOptionList) Reverse() IntArrArrOptionList {
-	acc := NilIntArrArrOptionList
+func (l IntArrayArrayOptionList) Reverse() IntArrayArrayOptionList {
+	acc := NilIntArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -570,8 +570,8 @@ func (l IntArrArrOptionList) Reverse() IntArrArrOptionList {
 	}
 	return acc
 }
-func (l Int8ArrArrOptionList) Reverse() Int8ArrArrOptionList {
-	acc := NilInt8ArrArrOptionList
+func (l Int8ArrayArrayOptionList) Reverse() Int8ArrayArrayOptionList {
+	acc := NilInt8ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -579,8 +579,8 @@ func (l Int8ArrArrOptionList) Reverse() Int8ArrArrOptionList {
 	}
 	return acc
 }
-func (l Int16ArrArrOptionList) Reverse() Int16ArrArrOptionList {
-	acc := NilInt16ArrArrOptionList
+func (l Int16ArrayArrayOptionList) Reverse() Int16ArrayArrayOptionList {
+	acc := NilInt16ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -588,8 +588,8 @@ func (l Int16ArrArrOptionList) Reverse() Int16ArrArrOptionList {
 	}
 	return acc
 }
-func (l Int32ArrArrOptionList) Reverse() Int32ArrArrOptionList {
-	acc := NilInt32ArrArrOptionList
+func (l Int32ArrayArrayOptionList) Reverse() Int32ArrayArrayOptionList {
+	acc := NilInt32ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -597,8 +597,8 @@ func (l Int32ArrArrOptionList) Reverse() Int32ArrArrOptionList {
 	}
 	return acc
 }
-func (l Int64ArrArrOptionList) Reverse() Int64ArrArrOptionList {
-	acc := NilInt64ArrArrOptionList
+func (l Int64ArrayArrayOptionList) Reverse() Int64ArrayArrayOptionList {
+	acc := NilInt64ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -606,8 +606,8 @@ func (l Int64ArrArrOptionList) Reverse() Int64ArrArrOptionList {
 	}
 	return acc
 }
-func (l UintArrArrOptionList) Reverse() UintArrArrOptionList {
-	acc := NilUintArrArrOptionList
+func (l UintArrayArrayOptionList) Reverse() UintArrayArrayOptionList {
+	acc := NilUintArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -615,8 +615,8 @@ func (l UintArrArrOptionList) Reverse() UintArrArrOptionList {
 	}
 	return acc
 }
-func (l Uint8ArrArrOptionList) Reverse() Uint8ArrArrOptionList {
-	acc := NilUint8ArrArrOptionList
+func (l Uint8ArrayArrayOptionList) Reverse() Uint8ArrayArrayOptionList {
+	acc := NilUint8ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -624,8 +624,8 @@ func (l Uint8ArrArrOptionList) Reverse() Uint8ArrArrOptionList {
 	}
 	return acc
 }
-func (l Uint16ArrArrOptionList) Reverse() Uint16ArrArrOptionList {
-	acc := NilUint16ArrArrOptionList
+func (l Uint16ArrayArrayOptionList) Reverse() Uint16ArrayArrayOptionList {
+	acc := NilUint16ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -633,8 +633,8 @@ func (l Uint16ArrArrOptionList) Reverse() Uint16ArrArrOptionList {
 	}
 	return acc
 }
-func (l Uint32ArrArrOptionList) Reverse() Uint32ArrArrOptionList {
-	acc := NilUint32ArrArrOptionList
+func (l Uint32ArrayArrayOptionList) Reverse() Uint32ArrayArrayOptionList {
+	acc := NilUint32ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -642,8 +642,8 @@ func (l Uint32ArrArrOptionList) Reverse() Uint32ArrArrOptionList {
 	}
 	return acc
 }
-func (l Uint64ArrArrOptionList) Reverse() Uint64ArrArrOptionList {
-	acc := NilUint64ArrArrOptionList
+func (l Uint64ArrayArrayOptionList) Reverse() Uint64ArrayArrayOptionList {
+	acc := NilUint64ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -651,8 +651,8 @@ func (l Uint64ArrArrOptionList) Reverse() Uint64ArrArrOptionList {
 	}
 	return acc
 }
-func (l UintptrArrArrOptionList) Reverse() UintptrArrArrOptionList {
-	acc := NilUintptrArrArrOptionList
+func (l UintptrArrayArrayOptionList) Reverse() UintptrArrayArrayOptionList {
+	acc := NilUintptrArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -660,8 +660,8 @@ func (l UintptrArrArrOptionList) Reverse() UintptrArrArrOptionList {
 	}
 	return acc
 }
-func (l ByteArrArrOptionList) Reverse() ByteArrArrOptionList {
-	acc := NilByteArrArrOptionList
+func (l ByteArrayArrayOptionList) Reverse() ByteArrayArrayOptionList {
+	acc := NilByteArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -669,8 +669,8 @@ func (l ByteArrArrOptionList) Reverse() ByteArrArrOptionList {
 	}
 	return acc
 }
-func (l RuneArrArrOptionList) Reverse() RuneArrArrOptionList {
-	acc := NilRuneArrArrOptionList
+func (l RuneArrayArrayOptionList) Reverse() RuneArrayArrayOptionList {
+	acc := NilRuneArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -678,8 +678,8 @@ func (l RuneArrArrOptionList) Reverse() RuneArrArrOptionList {
 	}
 	return acc
 }
-func (l Float32ArrArrOptionList) Reverse() Float32ArrArrOptionList {
-	acc := NilFloat32ArrArrOptionList
+func (l Float32ArrayArrayOptionList) Reverse() Float32ArrayArrayOptionList {
+	acc := NilFloat32ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -687,8 +687,8 @@ func (l Float32ArrArrOptionList) Reverse() Float32ArrArrOptionList {
 	}
 	return acc
 }
-func (l Float64ArrArrOptionList) Reverse() Float64ArrArrOptionList {
-	acc := NilFloat64ArrArrOptionList
+func (l Float64ArrayArrayOptionList) Reverse() Float64ArrayArrayOptionList {
+	acc := NilFloat64ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -696,8 +696,8 @@ func (l Float64ArrArrOptionList) Reverse() Float64ArrArrOptionList {
 	}
 	return acc
 }
-func (l Complex64ArrArrOptionList) Reverse() Complex64ArrArrOptionList {
-	acc := NilComplex64ArrArrOptionList
+func (l Complex64ArrayArrayOptionList) Reverse() Complex64ArrayArrayOptionList {
+	acc := NilComplex64ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -705,8 +705,8 @@ func (l Complex64ArrArrOptionList) Reverse() Complex64ArrArrOptionList {
 	}
 	return acc
 }
-func (l Complex128ArrArrOptionList) Reverse() Complex128ArrArrOptionList {
-	acc := NilComplex128ArrArrOptionList
+func (l Complex128ArrayArrayOptionList) Reverse() Complex128ArrayArrayOptionList {
+	acc := NilComplex128ArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -714,8 +714,8 @@ func (l Complex128ArrArrOptionList) Reverse() Complex128ArrArrOptionList {
 	}
 	return acc
 }
-func (l AnyArrArrOptionList) Reverse() AnyArrArrOptionList {
-	acc := NilAnyArrArrOptionList
+func (l AnyArrayArrayOptionList) Reverse() AnyArrayArrayOptionList {
+	acc := NilAnyArrayArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -723,8 +723,8 @@ func (l AnyArrArrOptionList) Reverse() AnyArrArrOptionList {
 	}
 	return acc
 }
-func (l BoolOptionArrOptionList) Reverse() BoolOptionArrOptionList {
-	acc := NilBoolOptionArrOptionList
+func (l BoolOptionArrayOptionList) Reverse() BoolOptionArrayOptionList {
+	acc := NilBoolOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -732,8 +732,8 @@ func (l BoolOptionArrOptionList) Reverse() BoolOptionArrOptionList {
 	}
 	return acc
 }
-func (l StringOptionArrOptionList) Reverse() StringOptionArrOptionList {
-	acc := NilStringOptionArrOptionList
+func (l StringOptionArrayOptionList) Reverse() StringOptionArrayOptionList {
+	acc := NilStringOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -741,8 +741,8 @@ func (l StringOptionArrOptionList) Reverse() StringOptionArrOptionList {
 	}
 	return acc
 }
-func (l IntOptionArrOptionList) Reverse() IntOptionArrOptionList {
-	acc := NilIntOptionArrOptionList
+func (l IntOptionArrayOptionList) Reverse() IntOptionArrayOptionList {
+	acc := NilIntOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -750,8 +750,8 @@ func (l IntOptionArrOptionList) Reverse() IntOptionArrOptionList {
 	}
 	return acc
 }
-func (l Int8OptionArrOptionList) Reverse() Int8OptionArrOptionList {
-	acc := NilInt8OptionArrOptionList
+func (l Int8OptionArrayOptionList) Reverse() Int8OptionArrayOptionList {
+	acc := NilInt8OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -759,8 +759,8 @@ func (l Int8OptionArrOptionList) Reverse() Int8OptionArrOptionList {
 	}
 	return acc
 }
-func (l Int16OptionArrOptionList) Reverse() Int16OptionArrOptionList {
-	acc := NilInt16OptionArrOptionList
+func (l Int16OptionArrayOptionList) Reverse() Int16OptionArrayOptionList {
+	acc := NilInt16OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -768,8 +768,8 @@ func (l Int16OptionArrOptionList) Reverse() Int16OptionArrOptionList {
 	}
 	return acc
 }
-func (l Int32OptionArrOptionList) Reverse() Int32OptionArrOptionList {
-	acc := NilInt32OptionArrOptionList
+func (l Int32OptionArrayOptionList) Reverse() Int32OptionArrayOptionList {
+	acc := NilInt32OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -777,8 +777,8 @@ func (l Int32OptionArrOptionList) Reverse() Int32OptionArrOptionList {
 	}
 	return acc
 }
-func (l Int64OptionArrOptionList) Reverse() Int64OptionArrOptionList {
-	acc := NilInt64OptionArrOptionList
+func (l Int64OptionArrayOptionList) Reverse() Int64OptionArrayOptionList {
+	acc := NilInt64OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -786,8 +786,8 @@ func (l Int64OptionArrOptionList) Reverse() Int64OptionArrOptionList {
 	}
 	return acc
 }
-func (l UintOptionArrOptionList) Reverse() UintOptionArrOptionList {
-	acc := NilUintOptionArrOptionList
+func (l UintOptionArrayOptionList) Reverse() UintOptionArrayOptionList {
+	acc := NilUintOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -795,8 +795,8 @@ func (l UintOptionArrOptionList) Reverse() UintOptionArrOptionList {
 	}
 	return acc
 }
-func (l Uint8OptionArrOptionList) Reverse() Uint8OptionArrOptionList {
-	acc := NilUint8OptionArrOptionList
+func (l Uint8OptionArrayOptionList) Reverse() Uint8OptionArrayOptionList {
+	acc := NilUint8OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -804,8 +804,8 @@ func (l Uint8OptionArrOptionList) Reverse() Uint8OptionArrOptionList {
 	}
 	return acc
 }
-func (l Uint16OptionArrOptionList) Reverse() Uint16OptionArrOptionList {
-	acc := NilUint16OptionArrOptionList
+func (l Uint16OptionArrayOptionList) Reverse() Uint16OptionArrayOptionList {
+	acc := NilUint16OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -813,8 +813,8 @@ func (l Uint16OptionArrOptionList) Reverse() Uint16OptionArrOptionList {
 	}
 	return acc
 }
-func (l Uint32OptionArrOptionList) Reverse() Uint32OptionArrOptionList {
-	acc := NilUint32OptionArrOptionList
+func (l Uint32OptionArrayOptionList) Reverse() Uint32OptionArrayOptionList {
+	acc := NilUint32OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -822,8 +822,8 @@ func (l Uint32OptionArrOptionList) Reverse() Uint32OptionArrOptionList {
 	}
 	return acc
 }
-func (l Uint64OptionArrOptionList) Reverse() Uint64OptionArrOptionList {
-	acc := NilUint64OptionArrOptionList
+func (l Uint64OptionArrayOptionList) Reverse() Uint64OptionArrayOptionList {
+	acc := NilUint64OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -831,8 +831,8 @@ func (l Uint64OptionArrOptionList) Reverse() Uint64OptionArrOptionList {
 	}
 	return acc
 }
-func (l UintptrOptionArrOptionList) Reverse() UintptrOptionArrOptionList {
-	acc := NilUintptrOptionArrOptionList
+func (l UintptrOptionArrayOptionList) Reverse() UintptrOptionArrayOptionList {
+	acc := NilUintptrOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -840,8 +840,8 @@ func (l UintptrOptionArrOptionList) Reverse() UintptrOptionArrOptionList {
 	}
 	return acc
 }
-func (l ByteOptionArrOptionList) Reverse() ByteOptionArrOptionList {
-	acc := NilByteOptionArrOptionList
+func (l ByteOptionArrayOptionList) Reverse() ByteOptionArrayOptionList {
+	acc := NilByteOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -849,8 +849,8 @@ func (l ByteOptionArrOptionList) Reverse() ByteOptionArrOptionList {
 	}
 	return acc
 }
-func (l RuneOptionArrOptionList) Reverse() RuneOptionArrOptionList {
-	acc := NilRuneOptionArrOptionList
+func (l RuneOptionArrayOptionList) Reverse() RuneOptionArrayOptionList {
+	acc := NilRuneOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -858,8 +858,8 @@ func (l RuneOptionArrOptionList) Reverse() RuneOptionArrOptionList {
 	}
 	return acc
 }
-func (l Float32OptionArrOptionList) Reverse() Float32OptionArrOptionList {
-	acc := NilFloat32OptionArrOptionList
+func (l Float32OptionArrayOptionList) Reverse() Float32OptionArrayOptionList {
+	acc := NilFloat32OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -867,8 +867,8 @@ func (l Float32OptionArrOptionList) Reverse() Float32OptionArrOptionList {
 	}
 	return acc
 }
-func (l Float64OptionArrOptionList) Reverse() Float64OptionArrOptionList {
-	acc := NilFloat64OptionArrOptionList
+func (l Float64OptionArrayOptionList) Reverse() Float64OptionArrayOptionList {
+	acc := NilFloat64OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -876,8 +876,8 @@ func (l Float64OptionArrOptionList) Reverse() Float64OptionArrOptionList {
 	}
 	return acc
 }
-func (l Complex64OptionArrOptionList) Reverse() Complex64OptionArrOptionList {
-	acc := NilComplex64OptionArrOptionList
+func (l Complex64OptionArrayOptionList) Reverse() Complex64OptionArrayOptionList {
+	acc := NilComplex64OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -885,8 +885,8 @@ func (l Complex64OptionArrOptionList) Reverse() Complex64OptionArrOptionList {
 	}
 	return acc
 }
-func (l Complex128OptionArrOptionList) Reverse() Complex128OptionArrOptionList {
-	acc := NilComplex128OptionArrOptionList
+func (l Complex128OptionArrayOptionList) Reverse() Complex128OptionArrayOptionList {
+	acc := NilComplex128OptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -894,8 +894,8 @@ func (l Complex128OptionArrOptionList) Reverse() Complex128OptionArrOptionList {
 	}
 	return acc
 }
-func (l AnyOptionArrOptionList) Reverse() AnyOptionArrOptionList {
-	acc := NilAnyOptionArrOptionList
+func (l AnyOptionArrayOptionList) Reverse() AnyOptionArrayOptionList {
+	acc := NilAnyOptionArrayOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -904,7 +904,7 @@ func (l AnyOptionArrOptionList) Reverse() AnyOptionArrOptionList {
 	return acc
 }
 func (l BoolListOptionList) Reverse() BoolListOptionList {
-	acc := NilBoolListOptionList
+	acc := NilBoolListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -913,7 +913,7 @@ func (l BoolListOptionList) Reverse() BoolListOptionList {
 	return acc
 }
 func (l StringListOptionList) Reverse() StringListOptionList {
-	acc := NilStringListOptionList
+	acc := NilStringListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -922,7 +922,7 @@ func (l StringListOptionList) Reverse() StringListOptionList {
 	return acc
 }
 func (l IntListOptionList) Reverse() IntListOptionList {
-	acc := NilIntListOptionList
+	acc := NilIntListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -931,7 +931,7 @@ func (l IntListOptionList) Reverse() IntListOptionList {
 	return acc
 }
 func (l Int8ListOptionList) Reverse() Int8ListOptionList {
-	acc := NilInt8ListOptionList
+	acc := NilInt8ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -940,7 +940,7 @@ func (l Int8ListOptionList) Reverse() Int8ListOptionList {
 	return acc
 }
 func (l Int16ListOptionList) Reverse() Int16ListOptionList {
-	acc := NilInt16ListOptionList
+	acc := NilInt16ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -949,7 +949,7 @@ func (l Int16ListOptionList) Reverse() Int16ListOptionList {
 	return acc
 }
 func (l Int32ListOptionList) Reverse() Int32ListOptionList {
-	acc := NilInt32ListOptionList
+	acc := NilInt32ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -958,7 +958,7 @@ func (l Int32ListOptionList) Reverse() Int32ListOptionList {
 	return acc
 }
 func (l Int64ListOptionList) Reverse() Int64ListOptionList {
-	acc := NilInt64ListOptionList
+	acc := NilInt64ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -967,7 +967,7 @@ func (l Int64ListOptionList) Reverse() Int64ListOptionList {
 	return acc
 }
 func (l UintListOptionList) Reverse() UintListOptionList {
-	acc := NilUintListOptionList
+	acc := NilUintListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -976,7 +976,7 @@ func (l UintListOptionList) Reverse() UintListOptionList {
 	return acc
 }
 func (l Uint8ListOptionList) Reverse() Uint8ListOptionList {
-	acc := NilUint8ListOptionList
+	acc := NilUint8ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -985,7 +985,7 @@ func (l Uint8ListOptionList) Reverse() Uint8ListOptionList {
 	return acc
 }
 func (l Uint16ListOptionList) Reverse() Uint16ListOptionList {
-	acc := NilUint16ListOptionList
+	acc := NilUint16ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -994,7 +994,7 @@ func (l Uint16ListOptionList) Reverse() Uint16ListOptionList {
 	return acc
 }
 func (l Uint32ListOptionList) Reverse() Uint32ListOptionList {
-	acc := NilUint32ListOptionList
+	acc := NilUint32ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1003,7 +1003,7 @@ func (l Uint32ListOptionList) Reverse() Uint32ListOptionList {
 	return acc
 }
 func (l Uint64ListOptionList) Reverse() Uint64ListOptionList {
-	acc := NilUint64ListOptionList
+	acc := NilUint64ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1012,7 +1012,7 @@ func (l Uint64ListOptionList) Reverse() Uint64ListOptionList {
 	return acc
 }
 func (l UintptrListOptionList) Reverse() UintptrListOptionList {
-	acc := NilUintptrListOptionList
+	acc := NilUintptrListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1021,7 +1021,7 @@ func (l UintptrListOptionList) Reverse() UintptrListOptionList {
 	return acc
 }
 func (l ByteListOptionList) Reverse() ByteListOptionList {
-	acc := NilByteListOptionList
+	acc := NilByteListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1030,7 +1030,7 @@ func (l ByteListOptionList) Reverse() ByteListOptionList {
 	return acc
 }
 func (l RuneListOptionList) Reverse() RuneListOptionList {
-	acc := NilRuneListOptionList
+	acc := NilRuneListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1039,7 +1039,7 @@ func (l RuneListOptionList) Reverse() RuneListOptionList {
 	return acc
 }
 func (l Float32ListOptionList) Reverse() Float32ListOptionList {
-	acc := NilFloat32ListOptionList
+	acc := NilFloat32ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1048,7 +1048,7 @@ func (l Float32ListOptionList) Reverse() Float32ListOptionList {
 	return acc
 }
 func (l Float64ListOptionList) Reverse() Float64ListOptionList {
-	acc := NilFloat64ListOptionList
+	acc := NilFloat64ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1057,7 +1057,7 @@ func (l Float64ListOptionList) Reverse() Float64ListOptionList {
 	return acc
 }
 func (l Complex64ListOptionList) Reverse() Complex64ListOptionList {
-	acc := NilComplex64ListOptionList
+	acc := NilComplex64ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1066,7 +1066,7 @@ func (l Complex64ListOptionList) Reverse() Complex64ListOptionList {
 	return acc
 }
 func (l Complex128ListOptionList) Reverse() Complex128ListOptionList {
-	acc := NilComplex128ListOptionList
+	acc := NilComplex128ListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1075,7 +1075,7 @@ func (l Complex128ListOptionList) Reverse() Complex128ListOptionList {
 	return acc
 }
 func (l AnyListOptionList) Reverse() AnyListOptionList {
-	acc := NilAnyListOptionList
+	acc := NilAnyListOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1084,7 +1084,7 @@ func (l AnyListOptionList) Reverse() AnyListOptionList {
 	return acc
 }
 func (l BoolOptionOptionList) Reverse() BoolOptionOptionList {
-	acc := NilBoolOptionOptionList
+	acc := NilBoolOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1093,7 +1093,7 @@ func (l BoolOptionOptionList) Reverse() BoolOptionOptionList {
 	return acc
 }
 func (l StringOptionOptionList) Reverse() StringOptionOptionList {
-	acc := NilStringOptionOptionList
+	acc := NilStringOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1102,7 +1102,7 @@ func (l StringOptionOptionList) Reverse() StringOptionOptionList {
 	return acc
 }
 func (l IntOptionOptionList) Reverse() IntOptionOptionList {
-	acc := NilIntOptionOptionList
+	acc := NilIntOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1111,7 +1111,7 @@ func (l IntOptionOptionList) Reverse() IntOptionOptionList {
 	return acc
 }
 func (l Int8OptionOptionList) Reverse() Int8OptionOptionList {
-	acc := NilInt8OptionOptionList
+	acc := NilInt8OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1120,7 +1120,7 @@ func (l Int8OptionOptionList) Reverse() Int8OptionOptionList {
 	return acc
 }
 func (l Int16OptionOptionList) Reverse() Int16OptionOptionList {
-	acc := NilInt16OptionOptionList
+	acc := NilInt16OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1129,7 +1129,7 @@ func (l Int16OptionOptionList) Reverse() Int16OptionOptionList {
 	return acc
 }
 func (l Int32OptionOptionList) Reverse() Int32OptionOptionList {
-	acc := NilInt32OptionOptionList
+	acc := NilInt32OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1138,7 +1138,7 @@ func (l Int32OptionOptionList) Reverse() Int32OptionOptionList {
 	return acc
 }
 func (l Int64OptionOptionList) Reverse() Int64OptionOptionList {
-	acc := NilInt64OptionOptionList
+	acc := NilInt64OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1147,7 +1147,7 @@ func (l Int64OptionOptionList) Reverse() Int64OptionOptionList {
 	return acc
 }
 func (l UintOptionOptionList) Reverse() UintOptionOptionList {
-	acc := NilUintOptionOptionList
+	acc := NilUintOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1156,7 +1156,7 @@ func (l UintOptionOptionList) Reverse() UintOptionOptionList {
 	return acc
 }
 func (l Uint8OptionOptionList) Reverse() Uint8OptionOptionList {
-	acc := NilUint8OptionOptionList
+	acc := NilUint8OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1165,7 +1165,7 @@ func (l Uint8OptionOptionList) Reverse() Uint8OptionOptionList {
 	return acc
 }
 func (l Uint16OptionOptionList) Reverse() Uint16OptionOptionList {
-	acc := NilUint16OptionOptionList
+	acc := NilUint16OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1174,7 +1174,7 @@ func (l Uint16OptionOptionList) Reverse() Uint16OptionOptionList {
 	return acc
 }
 func (l Uint32OptionOptionList) Reverse() Uint32OptionOptionList {
-	acc := NilUint32OptionOptionList
+	acc := NilUint32OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1183,7 +1183,7 @@ func (l Uint32OptionOptionList) Reverse() Uint32OptionOptionList {
 	return acc
 }
 func (l Uint64OptionOptionList) Reverse() Uint64OptionOptionList {
-	acc := NilUint64OptionOptionList
+	acc := NilUint64OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1192,7 +1192,7 @@ func (l Uint64OptionOptionList) Reverse() Uint64OptionOptionList {
 	return acc
 }
 func (l UintptrOptionOptionList) Reverse() UintptrOptionOptionList {
-	acc := NilUintptrOptionOptionList
+	acc := NilUintptrOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1201,7 +1201,7 @@ func (l UintptrOptionOptionList) Reverse() UintptrOptionOptionList {
 	return acc
 }
 func (l ByteOptionOptionList) Reverse() ByteOptionOptionList {
-	acc := NilByteOptionOptionList
+	acc := NilByteOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1210,7 +1210,7 @@ func (l ByteOptionOptionList) Reverse() ByteOptionOptionList {
 	return acc
 }
 func (l RuneOptionOptionList) Reverse() RuneOptionOptionList {
-	acc := NilRuneOptionOptionList
+	acc := NilRuneOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1219,7 +1219,7 @@ func (l RuneOptionOptionList) Reverse() RuneOptionOptionList {
 	return acc
 }
 func (l Float32OptionOptionList) Reverse() Float32OptionOptionList {
-	acc := NilFloat32OptionOptionList
+	acc := NilFloat32OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1228,7 +1228,7 @@ func (l Float32OptionOptionList) Reverse() Float32OptionOptionList {
 	return acc
 }
 func (l Float64OptionOptionList) Reverse() Float64OptionOptionList {
-	acc := NilFloat64OptionOptionList
+	acc := NilFloat64OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1237,7 +1237,7 @@ func (l Float64OptionOptionList) Reverse() Float64OptionOptionList {
 	return acc
 }
 func (l Complex64OptionOptionList) Reverse() Complex64OptionOptionList {
-	acc := NilComplex64OptionOptionList
+	acc := NilComplex64OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1246,7 +1246,7 @@ func (l Complex64OptionOptionList) Reverse() Complex64OptionOptionList {
 	return acc
 }
 func (l Complex128OptionOptionList) Reverse() Complex128OptionOptionList {
-	acc := NilComplex128OptionOptionList
+	acc := NilComplex128OptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1255,7 +1255,7 @@ func (l Complex128OptionOptionList) Reverse() Complex128OptionOptionList {
 	return acc
 }
 func (l AnyOptionOptionList) Reverse() AnyOptionOptionList {
-	acc := NilAnyOptionOptionList
+	acc := NilAnyOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1263,8 +1263,8 @@ func (l AnyOptionOptionList) Reverse() AnyOptionOptionList {
 	}
 	return acc
 }
-func (l BoolArrOptionOptionList) Reverse() BoolArrOptionOptionList {
-	acc := NilBoolArrOptionOptionList
+func (l BoolArrayOptionOptionList) Reverse() BoolArrayOptionOptionList {
+	acc := NilBoolArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1272,8 +1272,8 @@ func (l BoolArrOptionOptionList) Reverse() BoolArrOptionOptionList {
 	}
 	return acc
 }
-func (l StringArrOptionOptionList) Reverse() StringArrOptionOptionList {
-	acc := NilStringArrOptionOptionList
+func (l StringArrayOptionOptionList) Reverse() StringArrayOptionOptionList {
+	acc := NilStringArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1281,8 +1281,8 @@ func (l StringArrOptionOptionList) Reverse() StringArrOptionOptionList {
 	}
 	return acc
 }
-func (l IntArrOptionOptionList) Reverse() IntArrOptionOptionList {
-	acc := NilIntArrOptionOptionList
+func (l IntArrayOptionOptionList) Reverse() IntArrayOptionOptionList {
+	acc := NilIntArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1290,8 +1290,8 @@ func (l IntArrOptionOptionList) Reverse() IntArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int8ArrOptionOptionList) Reverse() Int8ArrOptionOptionList {
-	acc := NilInt8ArrOptionOptionList
+func (l Int8ArrayOptionOptionList) Reverse() Int8ArrayOptionOptionList {
+	acc := NilInt8ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1299,8 +1299,8 @@ func (l Int8ArrOptionOptionList) Reverse() Int8ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int16ArrOptionOptionList) Reverse() Int16ArrOptionOptionList {
-	acc := NilInt16ArrOptionOptionList
+func (l Int16ArrayOptionOptionList) Reverse() Int16ArrayOptionOptionList {
+	acc := NilInt16ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1308,8 +1308,8 @@ func (l Int16ArrOptionOptionList) Reverse() Int16ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int32ArrOptionOptionList) Reverse() Int32ArrOptionOptionList {
-	acc := NilInt32ArrOptionOptionList
+func (l Int32ArrayOptionOptionList) Reverse() Int32ArrayOptionOptionList {
+	acc := NilInt32ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1317,8 +1317,8 @@ func (l Int32ArrOptionOptionList) Reverse() Int32ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int64ArrOptionOptionList) Reverse() Int64ArrOptionOptionList {
-	acc := NilInt64ArrOptionOptionList
+func (l Int64ArrayOptionOptionList) Reverse() Int64ArrayOptionOptionList {
+	acc := NilInt64ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1326,8 +1326,8 @@ func (l Int64ArrOptionOptionList) Reverse() Int64ArrOptionOptionList {
 	}
 	return acc
 }
-func (l UintArrOptionOptionList) Reverse() UintArrOptionOptionList {
-	acc := NilUintArrOptionOptionList
+func (l UintArrayOptionOptionList) Reverse() UintArrayOptionOptionList {
+	acc := NilUintArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1335,8 +1335,8 @@ func (l UintArrOptionOptionList) Reverse() UintArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint8ArrOptionOptionList) Reverse() Uint8ArrOptionOptionList {
-	acc := NilUint8ArrOptionOptionList
+func (l Uint8ArrayOptionOptionList) Reverse() Uint8ArrayOptionOptionList {
+	acc := NilUint8ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1344,8 +1344,8 @@ func (l Uint8ArrOptionOptionList) Reverse() Uint8ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint16ArrOptionOptionList) Reverse() Uint16ArrOptionOptionList {
-	acc := NilUint16ArrOptionOptionList
+func (l Uint16ArrayOptionOptionList) Reverse() Uint16ArrayOptionOptionList {
+	acc := NilUint16ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1353,8 +1353,8 @@ func (l Uint16ArrOptionOptionList) Reverse() Uint16ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint32ArrOptionOptionList) Reverse() Uint32ArrOptionOptionList {
-	acc := NilUint32ArrOptionOptionList
+func (l Uint32ArrayOptionOptionList) Reverse() Uint32ArrayOptionOptionList {
+	acc := NilUint32ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1362,8 +1362,8 @@ func (l Uint32ArrOptionOptionList) Reverse() Uint32ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint64ArrOptionOptionList) Reverse() Uint64ArrOptionOptionList {
-	acc := NilUint64ArrOptionOptionList
+func (l Uint64ArrayOptionOptionList) Reverse() Uint64ArrayOptionOptionList {
+	acc := NilUint64ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1371,8 +1371,8 @@ func (l Uint64ArrOptionOptionList) Reverse() Uint64ArrOptionOptionList {
 	}
 	return acc
 }
-func (l UintptrArrOptionOptionList) Reverse() UintptrArrOptionOptionList {
-	acc := NilUintptrArrOptionOptionList
+func (l UintptrArrayOptionOptionList) Reverse() UintptrArrayOptionOptionList {
+	acc := NilUintptrArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1380,8 +1380,8 @@ func (l UintptrArrOptionOptionList) Reverse() UintptrArrOptionOptionList {
 	}
 	return acc
 }
-func (l ByteArrOptionOptionList) Reverse() ByteArrOptionOptionList {
-	acc := NilByteArrOptionOptionList
+func (l ByteArrayOptionOptionList) Reverse() ByteArrayOptionOptionList {
+	acc := NilByteArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1389,8 +1389,8 @@ func (l ByteArrOptionOptionList) Reverse() ByteArrOptionOptionList {
 	}
 	return acc
 }
-func (l RuneArrOptionOptionList) Reverse() RuneArrOptionOptionList {
-	acc := NilRuneArrOptionOptionList
+func (l RuneArrayOptionOptionList) Reverse() RuneArrayOptionOptionList {
+	acc := NilRuneArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1398,8 +1398,8 @@ func (l RuneArrOptionOptionList) Reverse() RuneArrOptionOptionList {
 	}
 	return acc
 }
-func (l Float32ArrOptionOptionList) Reverse() Float32ArrOptionOptionList {
-	acc := NilFloat32ArrOptionOptionList
+func (l Float32ArrayOptionOptionList) Reverse() Float32ArrayOptionOptionList {
+	acc := NilFloat32ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1407,8 +1407,8 @@ func (l Float32ArrOptionOptionList) Reverse() Float32ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Float64ArrOptionOptionList) Reverse() Float64ArrOptionOptionList {
-	acc := NilFloat64ArrOptionOptionList
+func (l Float64ArrayOptionOptionList) Reverse() Float64ArrayOptionOptionList {
+	acc := NilFloat64ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1416,8 +1416,8 @@ func (l Float64ArrOptionOptionList) Reverse() Float64ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Complex64ArrOptionOptionList) Reverse() Complex64ArrOptionOptionList {
-	acc := NilComplex64ArrOptionOptionList
+func (l Complex64ArrayOptionOptionList) Reverse() Complex64ArrayOptionOptionList {
+	acc := NilComplex64ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1425,8 +1425,8 @@ func (l Complex64ArrOptionOptionList) Reverse() Complex64ArrOptionOptionList {
 	}
 	return acc
 }
-func (l Complex128ArrOptionOptionList) Reverse() Complex128ArrOptionOptionList {
-	acc := NilComplex128ArrOptionOptionList
+func (l Complex128ArrayOptionOptionList) Reverse() Complex128ArrayOptionOptionList {
+	acc := NilComplex128ArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1434,8 +1434,8 @@ func (l Complex128ArrOptionOptionList) Reverse() Complex128ArrOptionOptionList {
 	}
 	return acc
 }
-func (l AnyArrOptionOptionList) Reverse() AnyArrOptionOptionList {
-	acc := NilAnyArrOptionOptionList
+func (l AnyArrayOptionOptionList) Reverse() AnyArrayOptionOptionList {
+	acc := NilAnyArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1443,8 +1443,8 @@ func (l AnyArrOptionOptionList) Reverse() AnyArrOptionOptionList {
 	}
 	return acc
 }
-func (l BoolArrArrOptionOptionList) Reverse() BoolArrArrOptionOptionList {
-	acc := NilBoolArrArrOptionOptionList
+func (l BoolArrayArrayOptionOptionList) Reverse() BoolArrayArrayOptionOptionList {
+	acc := NilBoolArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1452,8 +1452,8 @@ func (l BoolArrArrOptionOptionList) Reverse() BoolArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l StringArrArrOptionOptionList) Reverse() StringArrArrOptionOptionList {
-	acc := NilStringArrArrOptionOptionList
+func (l StringArrayArrayOptionOptionList) Reverse() StringArrayArrayOptionOptionList {
+	acc := NilStringArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1461,8 +1461,8 @@ func (l StringArrArrOptionOptionList) Reverse() StringArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l IntArrArrOptionOptionList) Reverse() IntArrArrOptionOptionList {
-	acc := NilIntArrArrOptionOptionList
+func (l IntArrayArrayOptionOptionList) Reverse() IntArrayArrayOptionOptionList {
+	acc := NilIntArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1470,8 +1470,8 @@ func (l IntArrArrOptionOptionList) Reverse() IntArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int8ArrArrOptionOptionList) Reverse() Int8ArrArrOptionOptionList {
-	acc := NilInt8ArrArrOptionOptionList
+func (l Int8ArrayArrayOptionOptionList) Reverse() Int8ArrayArrayOptionOptionList {
+	acc := NilInt8ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1479,8 +1479,8 @@ func (l Int8ArrArrOptionOptionList) Reverse() Int8ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int16ArrArrOptionOptionList) Reverse() Int16ArrArrOptionOptionList {
-	acc := NilInt16ArrArrOptionOptionList
+func (l Int16ArrayArrayOptionOptionList) Reverse() Int16ArrayArrayOptionOptionList {
+	acc := NilInt16ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1488,8 +1488,8 @@ func (l Int16ArrArrOptionOptionList) Reverse() Int16ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int32ArrArrOptionOptionList) Reverse() Int32ArrArrOptionOptionList {
-	acc := NilInt32ArrArrOptionOptionList
+func (l Int32ArrayArrayOptionOptionList) Reverse() Int32ArrayArrayOptionOptionList {
+	acc := NilInt32ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1497,8 +1497,8 @@ func (l Int32ArrArrOptionOptionList) Reverse() Int32ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int64ArrArrOptionOptionList) Reverse() Int64ArrArrOptionOptionList {
-	acc := NilInt64ArrArrOptionOptionList
+func (l Int64ArrayArrayOptionOptionList) Reverse() Int64ArrayArrayOptionOptionList {
+	acc := NilInt64ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1506,8 +1506,8 @@ func (l Int64ArrArrOptionOptionList) Reverse() Int64ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l UintArrArrOptionOptionList) Reverse() UintArrArrOptionOptionList {
-	acc := NilUintArrArrOptionOptionList
+func (l UintArrayArrayOptionOptionList) Reverse() UintArrayArrayOptionOptionList {
+	acc := NilUintArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1515,8 +1515,8 @@ func (l UintArrArrOptionOptionList) Reverse() UintArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint8ArrArrOptionOptionList) Reverse() Uint8ArrArrOptionOptionList {
-	acc := NilUint8ArrArrOptionOptionList
+func (l Uint8ArrayArrayOptionOptionList) Reverse() Uint8ArrayArrayOptionOptionList {
+	acc := NilUint8ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1524,8 +1524,8 @@ func (l Uint8ArrArrOptionOptionList) Reverse() Uint8ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint16ArrArrOptionOptionList) Reverse() Uint16ArrArrOptionOptionList {
-	acc := NilUint16ArrArrOptionOptionList
+func (l Uint16ArrayArrayOptionOptionList) Reverse() Uint16ArrayArrayOptionOptionList {
+	acc := NilUint16ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1533,8 +1533,8 @@ func (l Uint16ArrArrOptionOptionList) Reverse() Uint16ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint32ArrArrOptionOptionList) Reverse() Uint32ArrArrOptionOptionList {
-	acc := NilUint32ArrArrOptionOptionList
+func (l Uint32ArrayArrayOptionOptionList) Reverse() Uint32ArrayArrayOptionOptionList {
+	acc := NilUint32ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1542,8 +1542,8 @@ func (l Uint32ArrArrOptionOptionList) Reverse() Uint32ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint64ArrArrOptionOptionList) Reverse() Uint64ArrArrOptionOptionList {
-	acc := NilUint64ArrArrOptionOptionList
+func (l Uint64ArrayArrayOptionOptionList) Reverse() Uint64ArrayArrayOptionOptionList {
+	acc := NilUint64ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1551,8 +1551,8 @@ func (l Uint64ArrArrOptionOptionList) Reverse() Uint64ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l UintptrArrArrOptionOptionList) Reverse() UintptrArrArrOptionOptionList {
-	acc := NilUintptrArrArrOptionOptionList
+func (l UintptrArrayArrayOptionOptionList) Reverse() UintptrArrayArrayOptionOptionList {
+	acc := NilUintptrArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1560,8 +1560,8 @@ func (l UintptrArrArrOptionOptionList) Reverse() UintptrArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l ByteArrArrOptionOptionList) Reverse() ByteArrArrOptionOptionList {
-	acc := NilByteArrArrOptionOptionList
+func (l ByteArrayArrayOptionOptionList) Reverse() ByteArrayArrayOptionOptionList {
+	acc := NilByteArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1569,8 +1569,8 @@ func (l ByteArrArrOptionOptionList) Reverse() ByteArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l RuneArrArrOptionOptionList) Reverse() RuneArrArrOptionOptionList {
-	acc := NilRuneArrArrOptionOptionList
+func (l RuneArrayArrayOptionOptionList) Reverse() RuneArrayArrayOptionOptionList {
+	acc := NilRuneArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1578,8 +1578,8 @@ func (l RuneArrArrOptionOptionList) Reverse() RuneArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Float32ArrArrOptionOptionList) Reverse() Float32ArrArrOptionOptionList {
-	acc := NilFloat32ArrArrOptionOptionList
+func (l Float32ArrayArrayOptionOptionList) Reverse() Float32ArrayArrayOptionOptionList {
+	acc := NilFloat32ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1587,8 +1587,8 @@ func (l Float32ArrArrOptionOptionList) Reverse() Float32ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Float64ArrArrOptionOptionList) Reverse() Float64ArrArrOptionOptionList {
-	acc := NilFloat64ArrArrOptionOptionList
+func (l Float64ArrayArrayOptionOptionList) Reverse() Float64ArrayArrayOptionOptionList {
+	acc := NilFloat64ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1596,8 +1596,8 @@ func (l Float64ArrArrOptionOptionList) Reverse() Float64ArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l Complex64ArrArrOptionOptionList) Reverse() Complex64ArrArrOptionOptionList {
-	acc := NilComplex64ArrArrOptionOptionList
+func (l Complex64ArrayArrayOptionOptionList) Reverse() Complex64ArrayArrayOptionOptionList {
+	acc := NilComplex64ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1605,8 +1605,8 @@ func (l Complex64ArrArrOptionOptionList) Reverse() Complex64ArrArrOptionOptionLi
 	}
 	return acc
 }
-func (l Complex128ArrArrOptionOptionList) Reverse() Complex128ArrArrOptionOptionList {
-	acc := NilComplex128ArrArrOptionOptionList
+func (l Complex128ArrayArrayOptionOptionList) Reverse() Complex128ArrayArrayOptionOptionList {
+	acc := NilComplex128ArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1614,8 +1614,8 @@ func (l Complex128ArrArrOptionOptionList) Reverse() Complex128ArrArrOptionOption
 	}
 	return acc
 }
-func (l AnyArrArrOptionOptionList) Reverse() AnyArrArrOptionOptionList {
-	acc := NilAnyArrArrOptionOptionList
+func (l AnyArrayArrayOptionOptionList) Reverse() AnyArrayArrayOptionOptionList {
+	acc := NilAnyArrayArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1623,8 +1623,8 @@ func (l AnyArrArrOptionOptionList) Reverse() AnyArrArrOptionOptionList {
 	}
 	return acc
 }
-func (l BoolOptionArrOptionOptionList) Reverse() BoolOptionArrOptionOptionList {
-	acc := NilBoolOptionArrOptionOptionList
+func (l BoolOptionArrayOptionOptionList) Reverse() BoolOptionArrayOptionOptionList {
+	acc := NilBoolOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1632,8 +1632,8 @@ func (l BoolOptionArrOptionOptionList) Reverse() BoolOptionArrOptionOptionList {
 	}
 	return acc
 }
-func (l StringOptionArrOptionOptionList) Reverse() StringOptionArrOptionOptionList {
-	acc := NilStringOptionArrOptionOptionList
+func (l StringOptionArrayOptionOptionList) Reverse() StringOptionArrayOptionOptionList {
+	acc := NilStringOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1641,8 +1641,8 @@ func (l StringOptionArrOptionOptionList) Reverse() StringOptionArrOptionOptionLi
 	}
 	return acc
 }
-func (l IntOptionArrOptionOptionList) Reverse() IntOptionArrOptionOptionList {
-	acc := NilIntOptionArrOptionOptionList
+func (l IntOptionArrayOptionOptionList) Reverse() IntOptionArrayOptionOptionList {
+	acc := NilIntOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1650,8 +1650,8 @@ func (l IntOptionArrOptionOptionList) Reverse() IntOptionArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int8OptionArrOptionOptionList) Reverse() Int8OptionArrOptionOptionList {
-	acc := NilInt8OptionArrOptionOptionList
+func (l Int8OptionArrayOptionOptionList) Reverse() Int8OptionArrayOptionOptionList {
+	acc := NilInt8OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1659,8 +1659,8 @@ func (l Int8OptionArrOptionOptionList) Reverse() Int8OptionArrOptionOptionList {
 	}
 	return acc
 }
-func (l Int16OptionArrOptionOptionList) Reverse() Int16OptionArrOptionOptionList {
-	acc := NilInt16OptionArrOptionOptionList
+func (l Int16OptionArrayOptionOptionList) Reverse() Int16OptionArrayOptionOptionList {
+	acc := NilInt16OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1668,8 +1668,8 @@ func (l Int16OptionArrOptionOptionList) Reverse() Int16OptionArrOptionOptionList
 	}
 	return acc
 }
-func (l Int32OptionArrOptionOptionList) Reverse() Int32OptionArrOptionOptionList {
-	acc := NilInt32OptionArrOptionOptionList
+func (l Int32OptionArrayOptionOptionList) Reverse() Int32OptionArrayOptionOptionList {
+	acc := NilInt32OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1677,8 +1677,8 @@ func (l Int32OptionArrOptionOptionList) Reverse() Int32OptionArrOptionOptionList
 	}
 	return acc
 }
-func (l Int64OptionArrOptionOptionList) Reverse() Int64OptionArrOptionOptionList {
-	acc := NilInt64OptionArrOptionOptionList
+func (l Int64OptionArrayOptionOptionList) Reverse() Int64OptionArrayOptionOptionList {
+	acc := NilInt64OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1686,8 +1686,8 @@ func (l Int64OptionArrOptionOptionList) Reverse() Int64OptionArrOptionOptionList
 	}
 	return acc
 }
-func (l UintOptionArrOptionOptionList) Reverse() UintOptionArrOptionOptionList {
-	acc := NilUintOptionArrOptionOptionList
+func (l UintOptionArrayOptionOptionList) Reverse() UintOptionArrayOptionOptionList {
+	acc := NilUintOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1695,8 +1695,8 @@ func (l UintOptionArrOptionOptionList) Reverse() UintOptionArrOptionOptionList {
 	}
 	return acc
 }
-func (l Uint8OptionArrOptionOptionList) Reverse() Uint8OptionArrOptionOptionList {
-	acc := NilUint8OptionArrOptionOptionList
+func (l Uint8OptionArrayOptionOptionList) Reverse() Uint8OptionArrayOptionOptionList {
+	acc := NilUint8OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1704,8 +1704,8 @@ func (l Uint8OptionArrOptionOptionList) Reverse() Uint8OptionArrOptionOptionList
 	}
 	return acc
 }
-func (l Uint16OptionArrOptionOptionList) Reverse() Uint16OptionArrOptionOptionList {
-	acc := NilUint16OptionArrOptionOptionList
+func (l Uint16OptionArrayOptionOptionList) Reverse() Uint16OptionArrayOptionOptionList {
+	acc := NilUint16OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1713,8 +1713,8 @@ func (l Uint16OptionArrOptionOptionList) Reverse() Uint16OptionArrOptionOptionLi
 	}
 	return acc
 }
-func (l Uint32OptionArrOptionOptionList) Reverse() Uint32OptionArrOptionOptionList {
-	acc := NilUint32OptionArrOptionOptionList
+func (l Uint32OptionArrayOptionOptionList) Reverse() Uint32OptionArrayOptionOptionList {
+	acc := NilUint32OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1722,8 +1722,8 @@ func (l Uint32OptionArrOptionOptionList) Reverse() Uint32OptionArrOptionOptionLi
 	}
 	return acc
 }
-func (l Uint64OptionArrOptionOptionList) Reverse() Uint64OptionArrOptionOptionList {
-	acc := NilUint64OptionArrOptionOptionList
+func (l Uint64OptionArrayOptionOptionList) Reverse() Uint64OptionArrayOptionOptionList {
+	acc := NilUint64OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1731,8 +1731,8 @@ func (l Uint64OptionArrOptionOptionList) Reverse() Uint64OptionArrOptionOptionLi
 	}
 	return acc
 }
-func (l UintptrOptionArrOptionOptionList) Reverse() UintptrOptionArrOptionOptionList {
-	acc := NilUintptrOptionArrOptionOptionList
+func (l UintptrOptionArrayOptionOptionList) Reverse() UintptrOptionArrayOptionOptionList {
+	acc := NilUintptrOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1740,8 +1740,8 @@ func (l UintptrOptionArrOptionOptionList) Reverse() UintptrOptionArrOptionOption
 	}
 	return acc
 }
-func (l ByteOptionArrOptionOptionList) Reverse() ByteOptionArrOptionOptionList {
-	acc := NilByteOptionArrOptionOptionList
+func (l ByteOptionArrayOptionOptionList) Reverse() ByteOptionArrayOptionOptionList {
+	acc := NilByteOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1749,8 +1749,8 @@ func (l ByteOptionArrOptionOptionList) Reverse() ByteOptionArrOptionOptionList {
 	}
 	return acc
 }
-func (l RuneOptionArrOptionOptionList) Reverse() RuneOptionArrOptionOptionList {
-	acc := NilRuneOptionArrOptionOptionList
+func (l RuneOptionArrayOptionOptionList) Reverse() RuneOptionArrayOptionOptionList {
+	acc := NilRuneOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1758,8 +1758,8 @@ func (l RuneOptionArrOptionOptionList) Reverse() RuneOptionArrOptionOptionList {
 	}
 	return acc
 }
-func (l Float32OptionArrOptionOptionList) Reverse() Float32OptionArrOptionOptionList {
-	acc := NilFloat32OptionArrOptionOptionList
+func (l Float32OptionArrayOptionOptionList) Reverse() Float32OptionArrayOptionOptionList {
+	acc := NilFloat32OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1767,8 +1767,8 @@ func (l Float32OptionArrOptionOptionList) Reverse() Float32OptionArrOptionOption
 	}
 	return acc
 }
-func (l Float64OptionArrOptionOptionList) Reverse() Float64OptionArrOptionOptionList {
-	acc := NilFloat64OptionArrOptionOptionList
+func (l Float64OptionArrayOptionOptionList) Reverse() Float64OptionArrayOptionOptionList {
+	acc := NilFloat64OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1776,8 +1776,8 @@ func (l Float64OptionArrOptionOptionList) Reverse() Float64OptionArrOptionOption
 	}
 	return acc
 }
-func (l Complex64OptionArrOptionOptionList) Reverse() Complex64OptionArrOptionOptionList {
-	acc := NilComplex64OptionArrOptionOptionList
+func (l Complex64OptionArrayOptionOptionList) Reverse() Complex64OptionArrayOptionOptionList {
+	acc := NilComplex64OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1785,8 +1785,8 @@ func (l Complex64OptionArrOptionOptionList) Reverse() Complex64OptionArrOptionOp
 	}
 	return acc
 }
-func (l Complex128OptionArrOptionOptionList) Reverse() Complex128OptionArrOptionOptionList {
-	acc := NilComplex128OptionArrOptionOptionList
+func (l Complex128OptionArrayOptionOptionList) Reverse() Complex128OptionArrayOptionOptionList {
+	acc := NilComplex128OptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1794,8 +1794,8 @@ func (l Complex128OptionArrOptionOptionList) Reverse() Complex128OptionArrOption
 	}
 	return acc
 }
-func (l AnyOptionArrOptionOptionList) Reverse() AnyOptionArrOptionOptionList {
-	acc := NilAnyOptionArrOptionOptionList
+func (l AnyOptionArrayOptionOptionList) Reverse() AnyOptionArrayOptionOptionList {
+	acc := NilAnyOptionArrayOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1804,7 +1804,7 @@ func (l AnyOptionArrOptionOptionList) Reverse() AnyOptionArrOptionOptionList {
 	return acc
 }
 func (l BoolListOptionOptionList) Reverse() BoolListOptionOptionList {
-	acc := NilBoolListOptionOptionList
+	acc := NilBoolListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1813,7 +1813,7 @@ func (l BoolListOptionOptionList) Reverse() BoolListOptionOptionList {
 	return acc
 }
 func (l StringListOptionOptionList) Reverse() StringListOptionOptionList {
-	acc := NilStringListOptionOptionList
+	acc := NilStringListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1822,7 +1822,7 @@ func (l StringListOptionOptionList) Reverse() StringListOptionOptionList {
 	return acc
 }
 func (l IntListOptionOptionList) Reverse() IntListOptionOptionList {
-	acc := NilIntListOptionOptionList
+	acc := NilIntListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1831,7 +1831,7 @@ func (l IntListOptionOptionList) Reverse() IntListOptionOptionList {
 	return acc
 }
 func (l Int8ListOptionOptionList) Reverse() Int8ListOptionOptionList {
-	acc := NilInt8ListOptionOptionList
+	acc := NilInt8ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1840,7 +1840,7 @@ func (l Int8ListOptionOptionList) Reverse() Int8ListOptionOptionList {
 	return acc
 }
 func (l Int16ListOptionOptionList) Reverse() Int16ListOptionOptionList {
-	acc := NilInt16ListOptionOptionList
+	acc := NilInt16ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1849,7 +1849,7 @@ func (l Int16ListOptionOptionList) Reverse() Int16ListOptionOptionList {
 	return acc
 }
 func (l Int32ListOptionOptionList) Reverse() Int32ListOptionOptionList {
-	acc := NilInt32ListOptionOptionList
+	acc := NilInt32ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1858,7 +1858,7 @@ func (l Int32ListOptionOptionList) Reverse() Int32ListOptionOptionList {
 	return acc
 }
 func (l Int64ListOptionOptionList) Reverse() Int64ListOptionOptionList {
-	acc := NilInt64ListOptionOptionList
+	acc := NilInt64ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1867,7 +1867,7 @@ func (l Int64ListOptionOptionList) Reverse() Int64ListOptionOptionList {
 	return acc
 }
 func (l UintListOptionOptionList) Reverse() UintListOptionOptionList {
-	acc := NilUintListOptionOptionList
+	acc := NilUintListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1876,7 +1876,7 @@ func (l UintListOptionOptionList) Reverse() UintListOptionOptionList {
 	return acc
 }
 func (l Uint8ListOptionOptionList) Reverse() Uint8ListOptionOptionList {
-	acc := NilUint8ListOptionOptionList
+	acc := NilUint8ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1885,7 +1885,7 @@ func (l Uint8ListOptionOptionList) Reverse() Uint8ListOptionOptionList {
 	return acc
 }
 func (l Uint16ListOptionOptionList) Reverse() Uint16ListOptionOptionList {
-	acc := NilUint16ListOptionOptionList
+	acc := NilUint16ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1894,7 +1894,7 @@ func (l Uint16ListOptionOptionList) Reverse() Uint16ListOptionOptionList {
 	return acc
 }
 func (l Uint32ListOptionOptionList) Reverse() Uint32ListOptionOptionList {
-	acc := NilUint32ListOptionOptionList
+	acc := NilUint32ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1903,7 +1903,7 @@ func (l Uint32ListOptionOptionList) Reverse() Uint32ListOptionOptionList {
 	return acc
 }
 func (l Uint64ListOptionOptionList) Reverse() Uint64ListOptionOptionList {
-	acc := NilUint64ListOptionOptionList
+	acc := NilUint64ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1912,7 +1912,7 @@ func (l Uint64ListOptionOptionList) Reverse() Uint64ListOptionOptionList {
 	return acc
 }
 func (l UintptrListOptionOptionList) Reverse() UintptrListOptionOptionList {
-	acc := NilUintptrListOptionOptionList
+	acc := NilUintptrListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1921,7 +1921,7 @@ func (l UintptrListOptionOptionList) Reverse() UintptrListOptionOptionList {
 	return acc
 }
 func (l ByteListOptionOptionList) Reverse() ByteListOptionOptionList {
-	acc := NilByteListOptionOptionList
+	acc := NilByteListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1930,7 +1930,7 @@ func (l ByteListOptionOptionList) Reverse() ByteListOptionOptionList {
 	return acc
 }
 func (l RuneListOptionOptionList) Reverse() RuneListOptionOptionList {
-	acc := NilRuneListOptionOptionList
+	acc := NilRuneListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1939,7 +1939,7 @@ func (l RuneListOptionOptionList) Reverse() RuneListOptionOptionList {
 	return acc
 }
 func (l Float32ListOptionOptionList) Reverse() Float32ListOptionOptionList {
-	acc := NilFloat32ListOptionOptionList
+	acc := NilFloat32ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1948,7 +1948,7 @@ func (l Float32ListOptionOptionList) Reverse() Float32ListOptionOptionList {
 	return acc
 }
 func (l Float64ListOptionOptionList) Reverse() Float64ListOptionOptionList {
-	acc := NilFloat64ListOptionOptionList
+	acc := NilFloat64ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1957,7 +1957,7 @@ func (l Float64ListOptionOptionList) Reverse() Float64ListOptionOptionList {
 	return acc
 }
 func (l Complex64ListOptionOptionList) Reverse() Complex64ListOptionOptionList {
-	acc := NilComplex64ListOptionOptionList
+	acc := NilComplex64ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1966,7 +1966,7 @@ func (l Complex64ListOptionOptionList) Reverse() Complex64ListOptionOptionList {
 	return acc
 }
 func (l Complex128ListOptionOptionList) Reverse() Complex128ListOptionOptionList {
-	acc := NilComplex128ListOptionOptionList
+	acc := NilComplex128ListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1975,7 +1975,7 @@ func (l Complex128ListOptionOptionList) Reverse() Complex128ListOptionOptionList
 	return acc
 }
 func (l AnyListOptionOptionList) Reverse() AnyListOptionOptionList {
-	acc := NilAnyListOptionOptionList
+	acc := NilAnyListOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1984,7 +1984,7 @@ func (l AnyListOptionOptionList) Reverse() AnyListOptionOptionList {
 	return acc
 }
 func (l BoolOptionOptionOptionList) Reverse() BoolOptionOptionOptionList {
-	acc := NilBoolOptionOptionOptionList
+	acc := NilBoolOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -1993,7 +1993,7 @@ func (l BoolOptionOptionOptionList) Reverse() BoolOptionOptionOptionList {
 	return acc
 }
 func (l StringOptionOptionOptionList) Reverse() StringOptionOptionOptionList {
-	acc := NilStringOptionOptionOptionList
+	acc := NilStringOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2002,7 +2002,7 @@ func (l StringOptionOptionOptionList) Reverse() StringOptionOptionOptionList {
 	return acc
 }
 func (l IntOptionOptionOptionList) Reverse() IntOptionOptionOptionList {
-	acc := NilIntOptionOptionOptionList
+	acc := NilIntOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2011,7 +2011,7 @@ func (l IntOptionOptionOptionList) Reverse() IntOptionOptionOptionList {
 	return acc
 }
 func (l Int8OptionOptionOptionList) Reverse() Int8OptionOptionOptionList {
-	acc := NilInt8OptionOptionOptionList
+	acc := NilInt8OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2020,7 +2020,7 @@ func (l Int8OptionOptionOptionList) Reverse() Int8OptionOptionOptionList {
 	return acc
 }
 func (l Int16OptionOptionOptionList) Reverse() Int16OptionOptionOptionList {
-	acc := NilInt16OptionOptionOptionList
+	acc := NilInt16OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2029,7 +2029,7 @@ func (l Int16OptionOptionOptionList) Reverse() Int16OptionOptionOptionList {
 	return acc
 }
 func (l Int32OptionOptionOptionList) Reverse() Int32OptionOptionOptionList {
-	acc := NilInt32OptionOptionOptionList
+	acc := NilInt32OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2038,7 +2038,7 @@ func (l Int32OptionOptionOptionList) Reverse() Int32OptionOptionOptionList {
 	return acc
 }
 func (l Int64OptionOptionOptionList) Reverse() Int64OptionOptionOptionList {
-	acc := NilInt64OptionOptionOptionList
+	acc := NilInt64OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2047,7 +2047,7 @@ func (l Int64OptionOptionOptionList) Reverse() Int64OptionOptionOptionList {
 	return acc
 }
 func (l UintOptionOptionOptionList) Reverse() UintOptionOptionOptionList {
-	acc := NilUintOptionOptionOptionList
+	acc := NilUintOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2056,7 +2056,7 @@ func (l UintOptionOptionOptionList) Reverse() UintOptionOptionOptionList {
 	return acc
 }
 func (l Uint8OptionOptionOptionList) Reverse() Uint8OptionOptionOptionList {
-	acc := NilUint8OptionOptionOptionList
+	acc := NilUint8OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2065,7 +2065,7 @@ func (l Uint8OptionOptionOptionList) Reverse() Uint8OptionOptionOptionList {
 	return acc
 }
 func (l Uint16OptionOptionOptionList) Reverse() Uint16OptionOptionOptionList {
-	acc := NilUint16OptionOptionOptionList
+	acc := NilUint16OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2074,7 +2074,7 @@ func (l Uint16OptionOptionOptionList) Reverse() Uint16OptionOptionOptionList {
 	return acc
 }
 func (l Uint32OptionOptionOptionList) Reverse() Uint32OptionOptionOptionList {
-	acc := NilUint32OptionOptionOptionList
+	acc := NilUint32OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2083,7 +2083,7 @@ func (l Uint32OptionOptionOptionList) Reverse() Uint32OptionOptionOptionList {
 	return acc
 }
 func (l Uint64OptionOptionOptionList) Reverse() Uint64OptionOptionOptionList {
-	acc := NilUint64OptionOptionOptionList
+	acc := NilUint64OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2092,7 +2092,7 @@ func (l Uint64OptionOptionOptionList) Reverse() Uint64OptionOptionOptionList {
 	return acc
 }
 func (l UintptrOptionOptionOptionList) Reverse() UintptrOptionOptionOptionList {
-	acc := NilUintptrOptionOptionOptionList
+	acc := NilUintptrOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2101,7 +2101,7 @@ func (l UintptrOptionOptionOptionList) Reverse() UintptrOptionOptionOptionList {
 	return acc
 }
 func (l ByteOptionOptionOptionList) Reverse() ByteOptionOptionOptionList {
-	acc := NilByteOptionOptionOptionList
+	acc := NilByteOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2110,7 +2110,7 @@ func (l ByteOptionOptionOptionList) Reverse() ByteOptionOptionOptionList {
 	return acc
 }
 func (l RuneOptionOptionOptionList) Reverse() RuneOptionOptionOptionList {
-	acc := NilRuneOptionOptionOptionList
+	acc := NilRuneOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2119,7 +2119,7 @@ func (l RuneOptionOptionOptionList) Reverse() RuneOptionOptionOptionList {
 	return acc
 }
 func (l Float32OptionOptionOptionList) Reverse() Float32OptionOptionOptionList {
-	acc := NilFloat32OptionOptionOptionList
+	acc := NilFloat32OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2128,7 +2128,7 @@ func (l Float32OptionOptionOptionList) Reverse() Float32OptionOptionOptionList {
 	return acc
 }
 func (l Float64OptionOptionOptionList) Reverse() Float64OptionOptionOptionList {
-	acc := NilFloat64OptionOptionOptionList
+	acc := NilFloat64OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2137,7 +2137,7 @@ func (l Float64OptionOptionOptionList) Reverse() Float64OptionOptionOptionList {
 	return acc
 }
 func (l Complex64OptionOptionOptionList) Reverse() Complex64OptionOptionOptionList {
-	acc := NilComplex64OptionOptionOptionList
+	acc := NilComplex64OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2146,7 +2146,7 @@ func (l Complex64OptionOptionOptionList) Reverse() Complex64OptionOptionOptionLi
 	return acc
 }
 func (l Complex128OptionOptionOptionList) Reverse() Complex128OptionOptionOptionList {
-	acc := NilComplex128OptionOptionOptionList
+	acc := NilComplex128OptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2155,7 +2155,7 @@ func (l Complex128OptionOptionOptionList) Reverse() Complex128OptionOptionOption
 	return acc
 }
 func (l AnyOptionOptionOptionList) Reverse() AnyOptionOptionOptionList {
-	acc := NilAnyOptionOptionOptionList
+	acc := NilAnyOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2163,8 +2163,8 @@ func (l AnyOptionOptionOptionList) Reverse() AnyOptionOptionOptionList {
 	}
 	return acc
 }
-func (l BoolArrOptionOptionOptionList) Reverse() BoolArrOptionOptionOptionList {
-	acc := NilBoolArrOptionOptionOptionList
+func (l BoolArrayOptionOptionOptionList) Reverse() BoolArrayOptionOptionOptionList {
+	acc := NilBoolArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2172,8 +2172,8 @@ func (l BoolArrOptionOptionOptionList) Reverse() BoolArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l StringArrOptionOptionOptionList) Reverse() StringArrOptionOptionOptionList {
-	acc := NilStringArrOptionOptionOptionList
+func (l StringArrayOptionOptionOptionList) Reverse() StringArrayOptionOptionOptionList {
+	acc := NilStringArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2181,8 +2181,8 @@ func (l StringArrOptionOptionOptionList) Reverse() StringArrOptionOptionOptionLi
 	}
 	return acc
 }
-func (l IntArrOptionOptionOptionList) Reverse() IntArrOptionOptionOptionList {
-	acc := NilIntArrOptionOptionOptionList
+func (l IntArrayOptionOptionOptionList) Reverse() IntArrayOptionOptionOptionList {
+	acc := NilIntArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2190,8 +2190,8 @@ func (l IntArrOptionOptionOptionList) Reverse() IntArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l Int8ArrOptionOptionOptionList) Reverse() Int8ArrOptionOptionOptionList {
-	acc := NilInt8ArrOptionOptionOptionList
+func (l Int8ArrayOptionOptionOptionList) Reverse() Int8ArrayOptionOptionOptionList {
+	acc := NilInt8ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2199,8 +2199,8 @@ func (l Int8ArrOptionOptionOptionList) Reverse() Int8ArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l Int16ArrOptionOptionOptionList) Reverse() Int16ArrOptionOptionOptionList {
-	acc := NilInt16ArrOptionOptionOptionList
+func (l Int16ArrayOptionOptionOptionList) Reverse() Int16ArrayOptionOptionOptionList {
+	acc := NilInt16ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2208,8 +2208,8 @@ func (l Int16ArrOptionOptionOptionList) Reverse() Int16ArrOptionOptionOptionList
 	}
 	return acc
 }
-func (l Int32ArrOptionOptionOptionList) Reverse() Int32ArrOptionOptionOptionList {
-	acc := NilInt32ArrOptionOptionOptionList
+func (l Int32ArrayOptionOptionOptionList) Reverse() Int32ArrayOptionOptionOptionList {
+	acc := NilInt32ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2217,8 +2217,8 @@ func (l Int32ArrOptionOptionOptionList) Reverse() Int32ArrOptionOptionOptionList
 	}
 	return acc
 }
-func (l Int64ArrOptionOptionOptionList) Reverse() Int64ArrOptionOptionOptionList {
-	acc := NilInt64ArrOptionOptionOptionList
+func (l Int64ArrayOptionOptionOptionList) Reverse() Int64ArrayOptionOptionOptionList {
+	acc := NilInt64ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2226,8 +2226,8 @@ func (l Int64ArrOptionOptionOptionList) Reverse() Int64ArrOptionOptionOptionList
 	}
 	return acc
 }
-func (l UintArrOptionOptionOptionList) Reverse() UintArrOptionOptionOptionList {
-	acc := NilUintArrOptionOptionOptionList
+func (l UintArrayOptionOptionOptionList) Reverse() UintArrayOptionOptionOptionList {
+	acc := NilUintArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2235,8 +2235,8 @@ func (l UintArrOptionOptionOptionList) Reverse() UintArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l Uint8ArrOptionOptionOptionList) Reverse() Uint8ArrOptionOptionOptionList {
-	acc := NilUint8ArrOptionOptionOptionList
+func (l Uint8ArrayOptionOptionOptionList) Reverse() Uint8ArrayOptionOptionOptionList {
+	acc := NilUint8ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2244,8 +2244,8 @@ func (l Uint8ArrOptionOptionOptionList) Reverse() Uint8ArrOptionOptionOptionList
 	}
 	return acc
 }
-func (l Uint16ArrOptionOptionOptionList) Reverse() Uint16ArrOptionOptionOptionList {
-	acc := NilUint16ArrOptionOptionOptionList
+func (l Uint16ArrayOptionOptionOptionList) Reverse() Uint16ArrayOptionOptionOptionList {
+	acc := NilUint16ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2253,8 +2253,8 @@ func (l Uint16ArrOptionOptionOptionList) Reverse() Uint16ArrOptionOptionOptionLi
 	}
 	return acc
 }
-func (l Uint32ArrOptionOptionOptionList) Reverse() Uint32ArrOptionOptionOptionList {
-	acc := NilUint32ArrOptionOptionOptionList
+func (l Uint32ArrayOptionOptionOptionList) Reverse() Uint32ArrayOptionOptionOptionList {
+	acc := NilUint32ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2262,8 +2262,8 @@ func (l Uint32ArrOptionOptionOptionList) Reverse() Uint32ArrOptionOptionOptionLi
 	}
 	return acc
 }
-func (l Uint64ArrOptionOptionOptionList) Reverse() Uint64ArrOptionOptionOptionList {
-	acc := NilUint64ArrOptionOptionOptionList
+func (l Uint64ArrayOptionOptionOptionList) Reverse() Uint64ArrayOptionOptionOptionList {
+	acc := NilUint64ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2271,8 +2271,8 @@ func (l Uint64ArrOptionOptionOptionList) Reverse() Uint64ArrOptionOptionOptionLi
 	}
 	return acc
 }
-func (l UintptrArrOptionOptionOptionList) Reverse() UintptrArrOptionOptionOptionList {
-	acc := NilUintptrArrOptionOptionOptionList
+func (l UintptrArrayOptionOptionOptionList) Reverse() UintptrArrayOptionOptionOptionList {
+	acc := NilUintptrArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2280,8 +2280,8 @@ func (l UintptrArrOptionOptionOptionList) Reverse() UintptrArrOptionOptionOption
 	}
 	return acc
 }
-func (l ByteArrOptionOptionOptionList) Reverse() ByteArrOptionOptionOptionList {
-	acc := NilByteArrOptionOptionOptionList
+func (l ByteArrayOptionOptionOptionList) Reverse() ByteArrayOptionOptionOptionList {
+	acc := NilByteArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2289,8 +2289,8 @@ func (l ByteArrOptionOptionOptionList) Reverse() ByteArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l RuneArrOptionOptionOptionList) Reverse() RuneArrOptionOptionOptionList {
-	acc := NilRuneArrOptionOptionOptionList
+func (l RuneArrayOptionOptionOptionList) Reverse() RuneArrayOptionOptionOptionList {
+	acc := NilRuneArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2298,8 +2298,8 @@ func (l RuneArrOptionOptionOptionList) Reverse() RuneArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l Float32ArrOptionOptionOptionList) Reverse() Float32ArrOptionOptionOptionList {
-	acc := NilFloat32ArrOptionOptionOptionList
+func (l Float32ArrayOptionOptionOptionList) Reverse() Float32ArrayOptionOptionOptionList {
+	acc := NilFloat32ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2307,8 +2307,8 @@ func (l Float32ArrOptionOptionOptionList) Reverse() Float32ArrOptionOptionOption
 	}
 	return acc
 }
-func (l Float64ArrOptionOptionOptionList) Reverse() Float64ArrOptionOptionOptionList {
-	acc := NilFloat64ArrOptionOptionOptionList
+func (l Float64ArrayOptionOptionOptionList) Reverse() Float64ArrayOptionOptionOptionList {
+	acc := NilFloat64ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2316,8 +2316,8 @@ func (l Float64ArrOptionOptionOptionList) Reverse() Float64ArrOptionOptionOption
 	}
 	return acc
 }
-func (l Complex64ArrOptionOptionOptionList) Reverse() Complex64ArrOptionOptionOptionList {
-	acc := NilComplex64ArrOptionOptionOptionList
+func (l Complex64ArrayOptionOptionOptionList) Reverse() Complex64ArrayOptionOptionOptionList {
+	acc := NilComplex64ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2325,8 +2325,8 @@ func (l Complex64ArrOptionOptionOptionList) Reverse() Complex64ArrOptionOptionOp
 	}
 	return acc
 }
-func (l Complex128ArrOptionOptionOptionList) Reverse() Complex128ArrOptionOptionOptionList {
-	acc := NilComplex128ArrOptionOptionOptionList
+func (l Complex128ArrayOptionOptionOptionList) Reverse() Complex128ArrayOptionOptionOptionList {
+	acc := NilComplex128ArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2334,8 +2334,8 @@ func (l Complex128ArrOptionOptionOptionList) Reverse() Complex128ArrOptionOption
 	}
 	return acc
 }
-func (l AnyArrOptionOptionOptionList) Reverse() AnyArrOptionOptionOptionList {
-	acc := NilAnyArrOptionOptionOptionList
+func (l AnyArrayOptionOptionOptionList) Reverse() AnyArrayOptionOptionOptionList {
+	acc := NilAnyArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2343,8 +2343,8 @@ func (l AnyArrOptionOptionOptionList) Reverse() AnyArrOptionOptionOptionList {
 	}
 	return acc
 }
-func (l BoolArrArrOptionOptionOptionList) Reverse() BoolArrArrOptionOptionOptionList {
-	acc := NilBoolArrArrOptionOptionOptionList
+func (l BoolArrayArrayOptionOptionOptionList) Reverse() BoolArrayArrayOptionOptionOptionList {
+	acc := NilBoolArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2352,8 +2352,8 @@ func (l BoolArrArrOptionOptionOptionList) Reverse() BoolArrArrOptionOptionOption
 	}
 	return acc
 }
-func (l StringArrArrOptionOptionOptionList) Reverse() StringArrArrOptionOptionOptionList {
-	acc := NilStringArrArrOptionOptionOptionList
+func (l StringArrayArrayOptionOptionOptionList) Reverse() StringArrayArrayOptionOptionOptionList {
+	acc := NilStringArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2361,8 +2361,8 @@ func (l StringArrArrOptionOptionOptionList) Reverse() StringArrArrOptionOptionOp
 	}
 	return acc
 }
-func (l IntArrArrOptionOptionOptionList) Reverse() IntArrArrOptionOptionOptionList {
-	acc := NilIntArrArrOptionOptionOptionList
+func (l IntArrayArrayOptionOptionOptionList) Reverse() IntArrayArrayOptionOptionOptionList {
+	acc := NilIntArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2370,8 +2370,8 @@ func (l IntArrArrOptionOptionOptionList) Reverse() IntArrArrOptionOptionOptionLi
 	}
 	return acc
 }
-func (l Int8ArrArrOptionOptionOptionList) Reverse() Int8ArrArrOptionOptionOptionList {
-	acc := NilInt8ArrArrOptionOptionOptionList
+func (l Int8ArrayArrayOptionOptionOptionList) Reverse() Int8ArrayArrayOptionOptionOptionList {
+	acc := NilInt8ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2379,8 +2379,8 @@ func (l Int8ArrArrOptionOptionOptionList) Reverse() Int8ArrArrOptionOptionOption
 	}
 	return acc
 }
-func (l Int16ArrArrOptionOptionOptionList) Reverse() Int16ArrArrOptionOptionOptionList {
-	acc := NilInt16ArrArrOptionOptionOptionList
+func (l Int16ArrayArrayOptionOptionOptionList) Reverse() Int16ArrayArrayOptionOptionOptionList {
+	acc := NilInt16ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2388,8 +2388,8 @@ func (l Int16ArrArrOptionOptionOptionList) Reverse() Int16ArrArrOptionOptionOpti
 	}
 	return acc
 }
-func (l Int32ArrArrOptionOptionOptionList) Reverse() Int32ArrArrOptionOptionOptionList {
-	acc := NilInt32ArrArrOptionOptionOptionList
+func (l Int32ArrayArrayOptionOptionOptionList) Reverse() Int32ArrayArrayOptionOptionOptionList {
+	acc := NilInt32ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2397,8 +2397,8 @@ func (l Int32ArrArrOptionOptionOptionList) Reverse() Int32ArrArrOptionOptionOpti
 	}
 	return acc
 }
-func (l Int64ArrArrOptionOptionOptionList) Reverse() Int64ArrArrOptionOptionOptionList {
-	acc := NilInt64ArrArrOptionOptionOptionList
+func (l Int64ArrayArrayOptionOptionOptionList) Reverse() Int64ArrayArrayOptionOptionOptionList {
+	acc := NilInt64ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2406,8 +2406,8 @@ func (l Int64ArrArrOptionOptionOptionList) Reverse() Int64ArrArrOptionOptionOpti
 	}
 	return acc
 }
-func (l UintArrArrOptionOptionOptionList) Reverse() UintArrArrOptionOptionOptionList {
-	acc := NilUintArrArrOptionOptionOptionList
+func (l UintArrayArrayOptionOptionOptionList) Reverse() UintArrayArrayOptionOptionOptionList {
+	acc := NilUintArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2415,8 +2415,8 @@ func (l UintArrArrOptionOptionOptionList) Reverse() UintArrArrOptionOptionOption
 	}
 	return acc
 }
-func (l Uint8ArrArrOptionOptionOptionList) Reverse() Uint8ArrArrOptionOptionOptionList {
-	acc := NilUint8ArrArrOptionOptionOptionList
+func (l Uint8ArrayArrayOptionOptionOptionList) Reverse() Uint8ArrayArrayOptionOptionOptionList {
+	acc := NilUint8ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2424,8 +2424,8 @@ func (l Uint8ArrArrOptionOptionOptionList) Reverse() Uint8ArrArrOptionOptionOpti
 	}
 	return acc
 }
-func (l Uint16ArrArrOptionOptionOptionList) Reverse() Uint16ArrArrOptionOptionOptionList {
-	acc := NilUint16ArrArrOptionOptionOptionList
+func (l Uint16ArrayArrayOptionOptionOptionList) Reverse() Uint16ArrayArrayOptionOptionOptionList {
+	acc := NilUint16ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2433,8 +2433,8 @@ func (l Uint16ArrArrOptionOptionOptionList) Reverse() Uint16ArrArrOptionOptionOp
 	}
 	return acc
 }
-func (l Uint32ArrArrOptionOptionOptionList) Reverse() Uint32ArrArrOptionOptionOptionList {
-	acc := NilUint32ArrArrOptionOptionOptionList
+func (l Uint32ArrayArrayOptionOptionOptionList) Reverse() Uint32ArrayArrayOptionOptionOptionList {
+	acc := NilUint32ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2442,8 +2442,8 @@ func (l Uint32ArrArrOptionOptionOptionList) Reverse() Uint32ArrArrOptionOptionOp
 	}
 	return acc
 }
-func (l Uint64ArrArrOptionOptionOptionList) Reverse() Uint64ArrArrOptionOptionOptionList {
-	acc := NilUint64ArrArrOptionOptionOptionList
+func (l Uint64ArrayArrayOptionOptionOptionList) Reverse() Uint64ArrayArrayOptionOptionOptionList {
+	acc := NilUint64ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2451,8 +2451,8 @@ func (l Uint64ArrArrOptionOptionOptionList) Reverse() Uint64ArrArrOptionOptionOp
 	}
 	return acc
 }
-func (l UintptrArrArrOptionOptionOptionList) Reverse() UintptrArrArrOptionOptionOptionList {
-	acc := NilUintptrArrArrOptionOptionOptionList
+func (l UintptrArrayArrayOptionOptionOptionList) Reverse() UintptrArrayArrayOptionOptionOptionList {
+	acc := NilUintptrArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2460,8 +2460,8 @@ func (l UintptrArrArrOptionOptionOptionList) Reverse() UintptrArrArrOptionOption
 	}
 	return acc
 }
-func (l ByteArrArrOptionOptionOptionList) Reverse() ByteArrArrOptionOptionOptionList {
-	acc := NilByteArrArrOptionOptionOptionList
+func (l ByteArrayArrayOptionOptionOptionList) Reverse() ByteArrayArrayOptionOptionOptionList {
+	acc := NilByteArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2469,8 +2469,8 @@ func (l ByteArrArrOptionOptionOptionList) Reverse() ByteArrArrOptionOptionOption
 	}
 	return acc
 }
-func (l RuneArrArrOptionOptionOptionList) Reverse() RuneArrArrOptionOptionOptionList {
-	acc := NilRuneArrArrOptionOptionOptionList
+func (l RuneArrayArrayOptionOptionOptionList) Reverse() RuneArrayArrayOptionOptionOptionList {
+	acc := NilRuneArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2478,8 +2478,8 @@ func (l RuneArrArrOptionOptionOptionList) Reverse() RuneArrArrOptionOptionOption
 	}
 	return acc
 }
-func (l Float32ArrArrOptionOptionOptionList) Reverse() Float32ArrArrOptionOptionOptionList {
-	acc := NilFloat32ArrArrOptionOptionOptionList
+func (l Float32ArrayArrayOptionOptionOptionList) Reverse() Float32ArrayArrayOptionOptionOptionList {
+	acc := NilFloat32ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2487,8 +2487,8 @@ func (l Float32ArrArrOptionOptionOptionList) Reverse() Float32ArrArrOptionOption
 	}
 	return acc
 }
-func (l Float64ArrArrOptionOptionOptionList) Reverse() Float64ArrArrOptionOptionOptionList {
-	acc := NilFloat64ArrArrOptionOptionOptionList
+func (l Float64ArrayArrayOptionOptionOptionList) Reverse() Float64ArrayArrayOptionOptionOptionList {
+	acc := NilFloat64ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2496,8 +2496,8 @@ func (l Float64ArrArrOptionOptionOptionList) Reverse() Float64ArrArrOptionOption
 	}
 	return acc
 }
-func (l Complex64ArrArrOptionOptionOptionList) Reverse() Complex64ArrArrOptionOptionOptionList {
-	acc := NilComplex64ArrArrOptionOptionOptionList
+func (l Complex64ArrayArrayOptionOptionOptionList) Reverse() Complex64ArrayArrayOptionOptionOptionList {
+	acc := NilComplex64ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2505,8 +2505,8 @@ func (l Complex64ArrArrOptionOptionOptionList) Reverse() Complex64ArrArrOptionOp
 	}
 	return acc
 }
-func (l Complex128ArrArrOptionOptionOptionList) Reverse() Complex128ArrArrOptionOptionOptionList {
-	acc := NilComplex128ArrArrOptionOptionOptionList
+func (l Complex128ArrayArrayOptionOptionOptionList) Reverse() Complex128ArrayArrayOptionOptionOptionList {
+	acc := NilComplex128ArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2514,8 +2514,8 @@ func (l Complex128ArrArrOptionOptionOptionList) Reverse() Complex128ArrArrOption
 	}
 	return acc
 }
-func (l AnyArrArrOptionOptionOptionList) Reverse() AnyArrArrOptionOptionOptionList {
-	acc := NilAnyArrArrOptionOptionOptionList
+func (l AnyArrayArrayOptionOptionOptionList) Reverse() AnyArrayArrayOptionOptionOptionList {
+	acc := NilAnyArrayArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2523,8 +2523,8 @@ func (l AnyArrArrOptionOptionOptionList) Reverse() AnyArrArrOptionOptionOptionLi
 	}
 	return acc
 }
-func (l BoolOptionArrOptionOptionOptionList) Reverse() BoolOptionArrOptionOptionOptionList {
-	acc := NilBoolOptionArrOptionOptionOptionList
+func (l BoolOptionArrayOptionOptionOptionList) Reverse() BoolOptionArrayOptionOptionOptionList {
+	acc := NilBoolOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2532,8 +2532,8 @@ func (l BoolOptionArrOptionOptionOptionList) Reverse() BoolOptionArrOptionOption
 	}
 	return acc
 }
-func (l StringOptionArrOptionOptionOptionList) Reverse() StringOptionArrOptionOptionOptionList {
-	acc := NilStringOptionArrOptionOptionOptionList
+func (l StringOptionArrayOptionOptionOptionList) Reverse() StringOptionArrayOptionOptionOptionList {
+	acc := NilStringOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2541,8 +2541,8 @@ func (l StringOptionArrOptionOptionOptionList) Reverse() StringOptionArrOptionOp
 	}
 	return acc
 }
-func (l IntOptionArrOptionOptionOptionList) Reverse() IntOptionArrOptionOptionOptionList {
-	acc := NilIntOptionArrOptionOptionOptionList
+func (l IntOptionArrayOptionOptionOptionList) Reverse() IntOptionArrayOptionOptionOptionList {
+	acc := NilIntOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2550,8 +2550,8 @@ func (l IntOptionArrOptionOptionOptionList) Reverse() IntOptionArrOptionOptionOp
 	}
 	return acc
 }
-func (l Int8OptionArrOptionOptionOptionList) Reverse() Int8OptionArrOptionOptionOptionList {
-	acc := NilInt8OptionArrOptionOptionOptionList
+func (l Int8OptionArrayOptionOptionOptionList) Reverse() Int8OptionArrayOptionOptionOptionList {
+	acc := NilInt8OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2559,8 +2559,8 @@ func (l Int8OptionArrOptionOptionOptionList) Reverse() Int8OptionArrOptionOption
 	}
 	return acc
 }
-func (l Int16OptionArrOptionOptionOptionList) Reverse() Int16OptionArrOptionOptionOptionList {
-	acc := NilInt16OptionArrOptionOptionOptionList
+func (l Int16OptionArrayOptionOptionOptionList) Reverse() Int16OptionArrayOptionOptionOptionList {
+	acc := NilInt16OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2568,8 +2568,8 @@ func (l Int16OptionArrOptionOptionOptionList) Reverse() Int16OptionArrOptionOpti
 	}
 	return acc
 }
-func (l Int32OptionArrOptionOptionOptionList) Reverse() Int32OptionArrOptionOptionOptionList {
-	acc := NilInt32OptionArrOptionOptionOptionList
+func (l Int32OptionArrayOptionOptionOptionList) Reverse() Int32OptionArrayOptionOptionOptionList {
+	acc := NilInt32OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2577,8 +2577,8 @@ func (l Int32OptionArrOptionOptionOptionList) Reverse() Int32OptionArrOptionOpti
 	}
 	return acc
 }
-func (l Int64OptionArrOptionOptionOptionList) Reverse() Int64OptionArrOptionOptionOptionList {
-	acc := NilInt64OptionArrOptionOptionOptionList
+func (l Int64OptionArrayOptionOptionOptionList) Reverse() Int64OptionArrayOptionOptionOptionList {
+	acc := NilInt64OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2586,8 +2586,8 @@ func (l Int64OptionArrOptionOptionOptionList) Reverse() Int64OptionArrOptionOpti
 	}
 	return acc
 }
-func (l UintOptionArrOptionOptionOptionList) Reverse() UintOptionArrOptionOptionOptionList {
-	acc := NilUintOptionArrOptionOptionOptionList
+func (l UintOptionArrayOptionOptionOptionList) Reverse() UintOptionArrayOptionOptionOptionList {
+	acc := NilUintOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2595,8 +2595,8 @@ func (l UintOptionArrOptionOptionOptionList) Reverse() UintOptionArrOptionOption
 	}
 	return acc
 }
-func (l Uint8OptionArrOptionOptionOptionList) Reverse() Uint8OptionArrOptionOptionOptionList {
-	acc := NilUint8OptionArrOptionOptionOptionList
+func (l Uint8OptionArrayOptionOptionOptionList) Reverse() Uint8OptionArrayOptionOptionOptionList {
+	acc := NilUint8OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2604,8 +2604,8 @@ func (l Uint8OptionArrOptionOptionOptionList) Reverse() Uint8OptionArrOptionOpti
 	}
 	return acc
 }
-func (l Uint16OptionArrOptionOptionOptionList) Reverse() Uint16OptionArrOptionOptionOptionList {
-	acc := NilUint16OptionArrOptionOptionOptionList
+func (l Uint16OptionArrayOptionOptionOptionList) Reverse() Uint16OptionArrayOptionOptionOptionList {
+	acc := NilUint16OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2613,8 +2613,8 @@ func (l Uint16OptionArrOptionOptionOptionList) Reverse() Uint16OptionArrOptionOp
 	}
 	return acc
 }
-func (l Uint32OptionArrOptionOptionOptionList) Reverse() Uint32OptionArrOptionOptionOptionList {
-	acc := NilUint32OptionArrOptionOptionOptionList
+func (l Uint32OptionArrayOptionOptionOptionList) Reverse() Uint32OptionArrayOptionOptionOptionList {
+	acc := NilUint32OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2622,8 +2622,8 @@ func (l Uint32OptionArrOptionOptionOptionList) Reverse() Uint32OptionArrOptionOp
 	}
 	return acc
 }
-func (l Uint64OptionArrOptionOptionOptionList) Reverse() Uint64OptionArrOptionOptionOptionList {
-	acc := NilUint64OptionArrOptionOptionOptionList
+func (l Uint64OptionArrayOptionOptionOptionList) Reverse() Uint64OptionArrayOptionOptionOptionList {
+	acc := NilUint64OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2631,8 +2631,8 @@ func (l Uint64OptionArrOptionOptionOptionList) Reverse() Uint64OptionArrOptionOp
 	}
 	return acc
 }
-func (l UintptrOptionArrOptionOptionOptionList) Reverse() UintptrOptionArrOptionOptionOptionList {
-	acc := NilUintptrOptionArrOptionOptionOptionList
+func (l UintptrOptionArrayOptionOptionOptionList) Reverse() UintptrOptionArrayOptionOptionOptionList {
+	acc := NilUintptrOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2640,8 +2640,8 @@ func (l UintptrOptionArrOptionOptionOptionList) Reverse() UintptrOptionArrOption
 	}
 	return acc
 }
-func (l ByteOptionArrOptionOptionOptionList) Reverse() ByteOptionArrOptionOptionOptionList {
-	acc := NilByteOptionArrOptionOptionOptionList
+func (l ByteOptionArrayOptionOptionOptionList) Reverse() ByteOptionArrayOptionOptionOptionList {
+	acc := NilByteOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2649,8 +2649,8 @@ func (l ByteOptionArrOptionOptionOptionList) Reverse() ByteOptionArrOptionOption
 	}
 	return acc
 }
-func (l RuneOptionArrOptionOptionOptionList) Reverse() RuneOptionArrOptionOptionOptionList {
-	acc := NilRuneOptionArrOptionOptionOptionList
+func (l RuneOptionArrayOptionOptionOptionList) Reverse() RuneOptionArrayOptionOptionOptionList {
+	acc := NilRuneOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2658,8 +2658,8 @@ func (l RuneOptionArrOptionOptionOptionList) Reverse() RuneOptionArrOptionOption
 	}
 	return acc
 }
-func (l Float32OptionArrOptionOptionOptionList) Reverse() Float32OptionArrOptionOptionOptionList {
-	acc := NilFloat32OptionArrOptionOptionOptionList
+func (l Float32OptionArrayOptionOptionOptionList) Reverse() Float32OptionArrayOptionOptionOptionList {
+	acc := NilFloat32OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2667,8 +2667,8 @@ func (l Float32OptionArrOptionOptionOptionList) Reverse() Float32OptionArrOption
 	}
 	return acc
 }
-func (l Float64OptionArrOptionOptionOptionList) Reverse() Float64OptionArrOptionOptionOptionList {
-	acc := NilFloat64OptionArrOptionOptionOptionList
+func (l Float64OptionArrayOptionOptionOptionList) Reverse() Float64OptionArrayOptionOptionOptionList {
+	acc := NilFloat64OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2676,8 +2676,8 @@ func (l Float64OptionArrOptionOptionOptionList) Reverse() Float64OptionArrOption
 	}
 	return acc
 }
-func (l Complex64OptionArrOptionOptionOptionList) Reverse() Complex64OptionArrOptionOptionOptionList {
-	acc := NilComplex64OptionArrOptionOptionOptionList
+func (l Complex64OptionArrayOptionOptionOptionList) Reverse() Complex64OptionArrayOptionOptionOptionList {
+	acc := NilComplex64OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2685,8 +2685,8 @@ func (l Complex64OptionArrOptionOptionOptionList) Reverse() Complex64OptionArrOp
 	}
 	return acc
 }
-func (l Complex128OptionArrOptionOptionOptionList) Reverse() Complex128OptionArrOptionOptionOptionList {
-	acc := NilComplex128OptionArrOptionOptionOptionList
+func (l Complex128OptionArrayOptionOptionOptionList) Reverse() Complex128OptionArrayOptionOptionOptionList {
+	acc := NilComplex128OptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2694,8 +2694,8 @@ func (l Complex128OptionArrOptionOptionOptionList) Reverse() Complex128OptionArr
 	}
 	return acc
 }
-func (l AnyOptionArrOptionOptionOptionList) Reverse() AnyOptionArrOptionOptionOptionList {
-	acc := NilAnyOptionArrOptionOptionOptionList
+func (l AnyOptionArrayOptionOptionOptionList) Reverse() AnyOptionArrayOptionOptionOptionList {
+	acc := NilAnyOptionArrayOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2704,7 +2704,7 @@ func (l AnyOptionArrOptionOptionOptionList) Reverse() AnyOptionArrOptionOptionOp
 	return acc
 }
 func (l BoolListOptionOptionOptionList) Reverse() BoolListOptionOptionOptionList {
-	acc := NilBoolListOptionOptionOptionList
+	acc := NilBoolListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2713,7 +2713,7 @@ func (l BoolListOptionOptionOptionList) Reverse() BoolListOptionOptionOptionList
 	return acc
 }
 func (l StringListOptionOptionOptionList) Reverse() StringListOptionOptionOptionList {
-	acc := NilStringListOptionOptionOptionList
+	acc := NilStringListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2722,7 +2722,7 @@ func (l StringListOptionOptionOptionList) Reverse() StringListOptionOptionOption
 	return acc
 }
 func (l IntListOptionOptionOptionList) Reverse() IntListOptionOptionOptionList {
-	acc := NilIntListOptionOptionOptionList
+	acc := NilIntListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2731,7 +2731,7 @@ func (l IntListOptionOptionOptionList) Reverse() IntListOptionOptionOptionList {
 	return acc
 }
 func (l Int8ListOptionOptionOptionList) Reverse() Int8ListOptionOptionOptionList {
-	acc := NilInt8ListOptionOptionOptionList
+	acc := NilInt8ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2740,7 +2740,7 @@ func (l Int8ListOptionOptionOptionList) Reverse() Int8ListOptionOptionOptionList
 	return acc
 }
 func (l Int16ListOptionOptionOptionList) Reverse() Int16ListOptionOptionOptionList {
-	acc := NilInt16ListOptionOptionOptionList
+	acc := NilInt16ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2749,7 +2749,7 @@ func (l Int16ListOptionOptionOptionList) Reverse() Int16ListOptionOptionOptionLi
 	return acc
 }
 func (l Int32ListOptionOptionOptionList) Reverse() Int32ListOptionOptionOptionList {
-	acc := NilInt32ListOptionOptionOptionList
+	acc := NilInt32ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2758,7 +2758,7 @@ func (l Int32ListOptionOptionOptionList) Reverse() Int32ListOptionOptionOptionLi
 	return acc
 }
 func (l Int64ListOptionOptionOptionList) Reverse() Int64ListOptionOptionOptionList {
-	acc := NilInt64ListOptionOptionOptionList
+	acc := NilInt64ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2767,7 +2767,7 @@ func (l Int64ListOptionOptionOptionList) Reverse() Int64ListOptionOptionOptionLi
 	return acc
 }
 func (l UintListOptionOptionOptionList) Reverse() UintListOptionOptionOptionList {
-	acc := NilUintListOptionOptionOptionList
+	acc := NilUintListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2776,7 +2776,7 @@ func (l UintListOptionOptionOptionList) Reverse() UintListOptionOptionOptionList
 	return acc
 }
 func (l Uint8ListOptionOptionOptionList) Reverse() Uint8ListOptionOptionOptionList {
-	acc := NilUint8ListOptionOptionOptionList
+	acc := NilUint8ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2785,7 +2785,7 @@ func (l Uint8ListOptionOptionOptionList) Reverse() Uint8ListOptionOptionOptionLi
 	return acc
 }
 func (l Uint16ListOptionOptionOptionList) Reverse() Uint16ListOptionOptionOptionList {
-	acc := NilUint16ListOptionOptionOptionList
+	acc := NilUint16ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2794,7 +2794,7 @@ func (l Uint16ListOptionOptionOptionList) Reverse() Uint16ListOptionOptionOption
 	return acc
 }
 func (l Uint32ListOptionOptionOptionList) Reverse() Uint32ListOptionOptionOptionList {
-	acc := NilUint32ListOptionOptionOptionList
+	acc := NilUint32ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2803,7 +2803,7 @@ func (l Uint32ListOptionOptionOptionList) Reverse() Uint32ListOptionOptionOption
 	return acc
 }
 func (l Uint64ListOptionOptionOptionList) Reverse() Uint64ListOptionOptionOptionList {
-	acc := NilUint64ListOptionOptionOptionList
+	acc := NilUint64ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2812,7 +2812,7 @@ func (l Uint64ListOptionOptionOptionList) Reverse() Uint64ListOptionOptionOption
 	return acc
 }
 func (l UintptrListOptionOptionOptionList) Reverse() UintptrListOptionOptionOptionList {
-	acc := NilUintptrListOptionOptionOptionList
+	acc := NilUintptrListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2821,7 +2821,7 @@ func (l UintptrListOptionOptionOptionList) Reverse() UintptrListOptionOptionOpti
 	return acc
 }
 func (l ByteListOptionOptionOptionList) Reverse() ByteListOptionOptionOptionList {
-	acc := NilByteListOptionOptionOptionList
+	acc := NilByteListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2830,7 +2830,7 @@ func (l ByteListOptionOptionOptionList) Reverse() ByteListOptionOptionOptionList
 	return acc
 }
 func (l RuneListOptionOptionOptionList) Reverse() RuneListOptionOptionOptionList {
-	acc := NilRuneListOptionOptionOptionList
+	acc := NilRuneListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2839,7 +2839,7 @@ func (l RuneListOptionOptionOptionList) Reverse() RuneListOptionOptionOptionList
 	return acc
 }
 func (l Float32ListOptionOptionOptionList) Reverse() Float32ListOptionOptionOptionList {
-	acc := NilFloat32ListOptionOptionOptionList
+	acc := NilFloat32ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2848,7 +2848,7 @@ func (l Float32ListOptionOptionOptionList) Reverse() Float32ListOptionOptionOpti
 	return acc
 }
 func (l Float64ListOptionOptionOptionList) Reverse() Float64ListOptionOptionOptionList {
-	acc := NilFloat64ListOptionOptionOptionList
+	acc := NilFloat64ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2857,7 +2857,7 @@ func (l Float64ListOptionOptionOptionList) Reverse() Float64ListOptionOptionOpti
 	return acc
 }
 func (l Complex64ListOptionOptionOptionList) Reverse() Complex64ListOptionOptionOptionList {
-	acc := NilComplex64ListOptionOptionOptionList
+	acc := NilComplex64ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2866,7 +2866,7 @@ func (l Complex64ListOptionOptionOptionList) Reverse() Complex64ListOptionOption
 	return acc
 }
 func (l Complex128ListOptionOptionOptionList) Reverse() Complex128ListOptionOptionOptionList {
-	acc := NilComplex128ListOptionOptionOptionList
+	acc := NilComplex128ListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2875,7 +2875,7 @@ func (l Complex128ListOptionOptionOptionList) Reverse() Complex128ListOptionOpti
 	return acc
 }
 func (l AnyListOptionOptionOptionList) Reverse() AnyListOptionOptionOptionList {
-	acc := NilAnyListOptionOptionOptionList
+	acc := NilAnyListOptionOptionOption
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2883,8 +2883,8 @@ func (l AnyListOptionOptionOptionList) Reverse() AnyListOptionOptionOptionList {
 	}
 	return acc
 }
-func (l BoolArrList) Reverse() BoolArrList {
-	acc := NilBoolArrList
+func (l BoolArrayList) Reverse() BoolArrayList {
+	acc := NilBoolArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2892,8 +2892,8 @@ func (l BoolArrList) Reverse() BoolArrList {
 	}
 	return acc
 }
-func (l StringArrList) Reverse() StringArrList {
-	acc := NilStringArrList
+func (l StringArrayList) Reverse() StringArrayList {
+	acc := NilStringArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2901,8 +2901,8 @@ func (l StringArrList) Reverse() StringArrList {
 	}
 	return acc
 }
-func (l IntArrList) Reverse() IntArrList {
-	acc := NilIntArrList
+func (l IntArrayList) Reverse() IntArrayList {
+	acc := NilIntArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2910,8 +2910,8 @@ func (l IntArrList) Reverse() IntArrList {
 	}
 	return acc
 }
-func (l Int8ArrList) Reverse() Int8ArrList {
-	acc := NilInt8ArrList
+func (l Int8ArrayList) Reverse() Int8ArrayList {
+	acc := NilInt8Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2919,8 +2919,8 @@ func (l Int8ArrList) Reverse() Int8ArrList {
 	}
 	return acc
 }
-func (l Int16ArrList) Reverse() Int16ArrList {
-	acc := NilInt16ArrList
+func (l Int16ArrayList) Reverse() Int16ArrayList {
+	acc := NilInt16Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2928,8 +2928,8 @@ func (l Int16ArrList) Reverse() Int16ArrList {
 	}
 	return acc
 }
-func (l Int32ArrList) Reverse() Int32ArrList {
-	acc := NilInt32ArrList
+func (l Int32ArrayList) Reverse() Int32ArrayList {
+	acc := NilInt32Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2937,8 +2937,8 @@ func (l Int32ArrList) Reverse() Int32ArrList {
 	}
 	return acc
 }
-func (l Int64ArrList) Reverse() Int64ArrList {
-	acc := NilInt64ArrList
+func (l Int64ArrayList) Reverse() Int64ArrayList {
+	acc := NilInt64Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2946,8 +2946,8 @@ func (l Int64ArrList) Reverse() Int64ArrList {
 	}
 	return acc
 }
-func (l UintArrList) Reverse() UintArrList {
-	acc := NilUintArrList
+func (l UintArrayList) Reverse() UintArrayList {
+	acc := NilUintArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2955,8 +2955,8 @@ func (l UintArrList) Reverse() UintArrList {
 	}
 	return acc
 }
-func (l Uint8ArrList) Reverse() Uint8ArrList {
-	acc := NilUint8ArrList
+func (l Uint8ArrayList) Reverse() Uint8ArrayList {
+	acc := NilUint8Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2964,8 +2964,8 @@ func (l Uint8ArrList) Reverse() Uint8ArrList {
 	}
 	return acc
 }
-func (l Uint16ArrList) Reverse() Uint16ArrList {
-	acc := NilUint16ArrList
+func (l Uint16ArrayList) Reverse() Uint16ArrayList {
+	acc := NilUint16Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2973,8 +2973,8 @@ func (l Uint16ArrList) Reverse() Uint16ArrList {
 	}
 	return acc
 }
-func (l Uint32ArrList) Reverse() Uint32ArrList {
-	acc := NilUint32ArrList
+func (l Uint32ArrayList) Reverse() Uint32ArrayList {
+	acc := NilUint32Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2982,8 +2982,8 @@ func (l Uint32ArrList) Reverse() Uint32ArrList {
 	}
 	return acc
 }
-func (l Uint64ArrList) Reverse() Uint64ArrList {
-	acc := NilUint64ArrList
+func (l Uint64ArrayList) Reverse() Uint64ArrayList {
+	acc := NilUint64Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -2991,8 +2991,8 @@ func (l Uint64ArrList) Reverse() Uint64ArrList {
 	}
 	return acc
 }
-func (l UintptrArrList) Reverse() UintptrArrList {
-	acc := NilUintptrArrList
+func (l UintptrArrayList) Reverse() UintptrArrayList {
+	acc := NilUintptrArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3000,8 +3000,8 @@ func (l UintptrArrList) Reverse() UintptrArrList {
 	}
 	return acc
 }
-func (l ByteArrList) Reverse() ByteArrList {
-	acc := NilByteArrList
+func (l ByteArrayList) Reverse() ByteArrayList {
+	acc := NilByteArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3009,8 +3009,8 @@ func (l ByteArrList) Reverse() ByteArrList {
 	}
 	return acc
 }
-func (l RuneArrList) Reverse() RuneArrList {
-	acc := NilRuneArrList
+func (l RuneArrayList) Reverse() RuneArrayList {
+	acc := NilRuneArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3018,8 +3018,8 @@ func (l RuneArrList) Reverse() RuneArrList {
 	}
 	return acc
 }
-func (l Float32ArrList) Reverse() Float32ArrList {
-	acc := NilFloat32ArrList
+func (l Float32ArrayList) Reverse() Float32ArrayList {
+	acc := NilFloat32Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3027,8 +3027,8 @@ func (l Float32ArrList) Reverse() Float32ArrList {
 	}
 	return acc
 }
-func (l Float64ArrList) Reverse() Float64ArrList {
-	acc := NilFloat64ArrList
+func (l Float64ArrayList) Reverse() Float64ArrayList {
+	acc := NilFloat64Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3036,8 +3036,8 @@ func (l Float64ArrList) Reverse() Float64ArrList {
 	}
 	return acc
 }
-func (l Complex64ArrList) Reverse() Complex64ArrList {
-	acc := NilComplex64ArrList
+func (l Complex64ArrayList) Reverse() Complex64ArrayList {
+	acc := NilComplex64Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3045,8 +3045,8 @@ func (l Complex64ArrList) Reverse() Complex64ArrList {
 	}
 	return acc
 }
-func (l Complex128ArrList) Reverse() Complex128ArrList {
-	acc := NilComplex128ArrList
+func (l Complex128ArrayList) Reverse() Complex128ArrayList {
+	acc := NilComplex128Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3054,8 +3054,8 @@ func (l Complex128ArrList) Reverse() Complex128ArrList {
 	}
 	return acc
 }
-func (l AnyArrList) Reverse() AnyArrList {
-	acc := NilAnyArrList
+func (l AnyArrayList) Reverse() AnyArrayList {
+	acc := NilAnyArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3063,8 +3063,8 @@ func (l AnyArrList) Reverse() AnyArrList {
 	}
 	return acc
 }
-func (l BoolArrArrList) Reverse() BoolArrArrList {
-	acc := NilBoolArrArrList
+func (l BoolArrayArrayList) Reverse() BoolArrayArrayList {
+	acc := NilBoolArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3072,8 +3072,8 @@ func (l BoolArrArrList) Reverse() BoolArrArrList {
 	}
 	return acc
 }
-func (l StringArrArrList) Reverse() StringArrArrList {
-	acc := NilStringArrArrList
+func (l StringArrayArrayList) Reverse() StringArrayArrayList {
+	acc := NilStringArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3081,8 +3081,8 @@ func (l StringArrArrList) Reverse() StringArrArrList {
 	}
 	return acc
 }
-func (l IntArrArrList) Reverse() IntArrArrList {
-	acc := NilIntArrArrList
+func (l IntArrayArrayList) Reverse() IntArrayArrayList {
+	acc := NilIntArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3090,8 +3090,8 @@ func (l IntArrArrList) Reverse() IntArrArrList {
 	}
 	return acc
 }
-func (l Int8ArrArrList) Reverse() Int8ArrArrList {
-	acc := NilInt8ArrArrList
+func (l Int8ArrayArrayList) Reverse() Int8ArrayArrayList {
+	acc := NilInt8ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3099,8 +3099,8 @@ func (l Int8ArrArrList) Reverse() Int8ArrArrList {
 	}
 	return acc
 }
-func (l Int16ArrArrList) Reverse() Int16ArrArrList {
-	acc := NilInt16ArrArrList
+func (l Int16ArrayArrayList) Reverse() Int16ArrayArrayList {
+	acc := NilInt16ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3108,8 +3108,8 @@ func (l Int16ArrArrList) Reverse() Int16ArrArrList {
 	}
 	return acc
 }
-func (l Int32ArrArrList) Reverse() Int32ArrArrList {
-	acc := NilInt32ArrArrList
+func (l Int32ArrayArrayList) Reverse() Int32ArrayArrayList {
+	acc := NilInt32ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3117,8 +3117,8 @@ func (l Int32ArrArrList) Reverse() Int32ArrArrList {
 	}
 	return acc
 }
-func (l Int64ArrArrList) Reverse() Int64ArrArrList {
-	acc := NilInt64ArrArrList
+func (l Int64ArrayArrayList) Reverse() Int64ArrayArrayList {
+	acc := NilInt64ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3126,8 +3126,8 @@ func (l Int64ArrArrList) Reverse() Int64ArrArrList {
 	}
 	return acc
 }
-func (l UintArrArrList) Reverse() UintArrArrList {
-	acc := NilUintArrArrList
+func (l UintArrayArrayList) Reverse() UintArrayArrayList {
+	acc := NilUintArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3135,8 +3135,8 @@ func (l UintArrArrList) Reverse() UintArrArrList {
 	}
 	return acc
 }
-func (l Uint8ArrArrList) Reverse() Uint8ArrArrList {
-	acc := NilUint8ArrArrList
+func (l Uint8ArrayArrayList) Reverse() Uint8ArrayArrayList {
+	acc := NilUint8ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3144,8 +3144,8 @@ func (l Uint8ArrArrList) Reverse() Uint8ArrArrList {
 	}
 	return acc
 }
-func (l Uint16ArrArrList) Reverse() Uint16ArrArrList {
-	acc := NilUint16ArrArrList
+func (l Uint16ArrayArrayList) Reverse() Uint16ArrayArrayList {
+	acc := NilUint16ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3153,8 +3153,8 @@ func (l Uint16ArrArrList) Reverse() Uint16ArrArrList {
 	}
 	return acc
 }
-func (l Uint32ArrArrList) Reverse() Uint32ArrArrList {
-	acc := NilUint32ArrArrList
+func (l Uint32ArrayArrayList) Reverse() Uint32ArrayArrayList {
+	acc := NilUint32ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3162,8 +3162,8 @@ func (l Uint32ArrArrList) Reverse() Uint32ArrArrList {
 	}
 	return acc
 }
-func (l Uint64ArrArrList) Reverse() Uint64ArrArrList {
-	acc := NilUint64ArrArrList
+func (l Uint64ArrayArrayList) Reverse() Uint64ArrayArrayList {
+	acc := NilUint64ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3171,8 +3171,8 @@ func (l Uint64ArrArrList) Reverse() Uint64ArrArrList {
 	}
 	return acc
 }
-func (l UintptrArrArrList) Reverse() UintptrArrArrList {
-	acc := NilUintptrArrArrList
+func (l UintptrArrayArrayList) Reverse() UintptrArrayArrayList {
+	acc := NilUintptrArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3180,8 +3180,8 @@ func (l UintptrArrArrList) Reverse() UintptrArrArrList {
 	}
 	return acc
 }
-func (l ByteArrArrList) Reverse() ByteArrArrList {
-	acc := NilByteArrArrList
+func (l ByteArrayArrayList) Reverse() ByteArrayArrayList {
+	acc := NilByteArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3189,8 +3189,8 @@ func (l ByteArrArrList) Reverse() ByteArrArrList {
 	}
 	return acc
 }
-func (l RuneArrArrList) Reverse() RuneArrArrList {
-	acc := NilRuneArrArrList
+func (l RuneArrayArrayList) Reverse() RuneArrayArrayList {
+	acc := NilRuneArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3198,8 +3198,8 @@ func (l RuneArrArrList) Reverse() RuneArrArrList {
 	}
 	return acc
 }
-func (l Float32ArrArrList) Reverse() Float32ArrArrList {
-	acc := NilFloat32ArrArrList
+func (l Float32ArrayArrayList) Reverse() Float32ArrayArrayList {
+	acc := NilFloat32ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3207,8 +3207,8 @@ func (l Float32ArrArrList) Reverse() Float32ArrArrList {
 	}
 	return acc
 }
-func (l Float64ArrArrList) Reverse() Float64ArrArrList {
-	acc := NilFloat64ArrArrList
+func (l Float64ArrayArrayList) Reverse() Float64ArrayArrayList {
+	acc := NilFloat64ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3216,8 +3216,8 @@ func (l Float64ArrArrList) Reverse() Float64ArrArrList {
 	}
 	return acc
 }
-func (l Complex64ArrArrList) Reverse() Complex64ArrArrList {
-	acc := NilComplex64ArrArrList
+func (l Complex64ArrayArrayList) Reverse() Complex64ArrayArrayList {
+	acc := NilComplex64ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3225,8 +3225,8 @@ func (l Complex64ArrArrList) Reverse() Complex64ArrArrList {
 	}
 	return acc
 }
-func (l Complex128ArrArrList) Reverse() Complex128ArrArrList {
-	acc := NilComplex128ArrArrList
+func (l Complex128ArrayArrayList) Reverse() Complex128ArrayArrayList {
+	acc := NilComplex128ArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3234,8 +3234,8 @@ func (l Complex128ArrArrList) Reverse() Complex128ArrArrList {
 	}
 	return acc
 }
-func (l AnyArrArrList) Reverse() AnyArrArrList {
-	acc := NilAnyArrArrList
+func (l AnyArrayArrayList) Reverse() AnyArrayArrayList {
+	acc := NilAnyArrayArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3243,8 +3243,8 @@ func (l AnyArrArrList) Reverse() AnyArrArrList {
 	}
 	return acc
 }
-func (l BoolOptionArrList) Reverse() BoolOptionArrList {
-	acc := NilBoolOptionArrList
+func (l BoolOptionArrayList) Reverse() BoolOptionArrayList {
+	acc := NilBoolOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3252,8 +3252,8 @@ func (l BoolOptionArrList) Reverse() BoolOptionArrList {
 	}
 	return acc
 }
-func (l StringOptionArrList) Reverse() StringOptionArrList {
-	acc := NilStringOptionArrList
+func (l StringOptionArrayList) Reverse() StringOptionArrayList {
+	acc := NilStringOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3261,8 +3261,8 @@ func (l StringOptionArrList) Reverse() StringOptionArrList {
 	}
 	return acc
 }
-func (l IntOptionArrList) Reverse() IntOptionArrList {
-	acc := NilIntOptionArrList
+func (l IntOptionArrayList) Reverse() IntOptionArrayList {
+	acc := NilIntOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3270,8 +3270,8 @@ func (l IntOptionArrList) Reverse() IntOptionArrList {
 	}
 	return acc
 }
-func (l Int8OptionArrList) Reverse() Int8OptionArrList {
-	acc := NilInt8OptionArrList
+func (l Int8OptionArrayList) Reverse() Int8OptionArrayList {
+	acc := NilInt8OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3279,8 +3279,8 @@ func (l Int8OptionArrList) Reverse() Int8OptionArrList {
 	}
 	return acc
 }
-func (l Int16OptionArrList) Reverse() Int16OptionArrList {
-	acc := NilInt16OptionArrList
+func (l Int16OptionArrayList) Reverse() Int16OptionArrayList {
+	acc := NilInt16OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3288,8 +3288,8 @@ func (l Int16OptionArrList) Reverse() Int16OptionArrList {
 	}
 	return acc
 }
-func (l Int32OptionArrList) Reverse() Int32OptionArrList {
-	acc := NilInt32OptionArrList
+func (l Int32OptionArrayList) Reverse() Int32OptionArrayList {
+	acc := NilInt32OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3297,8 +3297,8 @@ func (l Int32OptionArrList) Reverse() Int32OptionArrList {
 	}
 	return acc
 }
-func (l Int64OptionArrList) Reverse() Int64OptionArrList {
-	acc := NilInt64OptionArrList
+func (l Int64OptionArrayList) Reverse() Int64OptionArrayList {
+	acc := NilInt64OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3306,8 +3306,8 @@ func (l Int64OptionArrList) Reverse() Int64OptionArrList {
 	}
 	return acc
 }
-func (l UintOptionArrList) Reverse() UintOptionArrList {
-	acc := NilUintOptionArrList
+func (l UintOptionArrayList) Reverse() UintOptionArrayList {
+	acc := NilUintOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3315,8 +3315,8 @@ func (l UintOptionArrList) Reverse() UintOptionArrList {
 	}
 	return acc
 }
-func (l Uint8OptionArrList) Reverse() Uint8OptionArrList {
-	acc := NilUint8OptionArrList
+func (l Uint8OptionArrayList) Reverse() Uint8OptionArrayList {
+	acc := NilUint8OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3324,8 +3324,8 @@ func (l Uint8OptionArrList) Reverse() Uint8OptionArrList {
 	}
 	return acc
 }
-func (l Uint16OptionArrList) Reverse() Uint16OptionArrList {
-	acc := NilUint16OptionArrList
+func (l Uint16OptionArrayList) Reverse() Uint16OptionArrayList {
+	acc := NilUint16OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3333,8 +3333,8 @@ func (l Uint16OptionArrList) Reverse() Uint16OptionArrList {
 	}
 	return acc
 }
-func (l Uint32OptionArrList) Reverse() Uint32OptionArrList {
-	acc := NilUint32OptionArrList
+func (l Uint32OptionArrayList) Reverse() Uint32OptionArrayList {
+	acc := NilUint32OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3342,8 +3342,8 @@ func (l Uint32OptionArrList) Reverse() Uint32OptionArrList {
 	}
 	return acc
 }
-func (l Uint64OptionArrList) Reverse() Uint64OptionArrList {
-	acc := NilUint64OptionArrList
+func (l Uint64OptionArrayList) Reverse() Uint64OptionArrayList {
+	acc := NilUint64OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3351,8 +3351,8 @@ func (l Uint64OptionArrList) Reverse() Uint64OptionArrList {
 	}
 	return acc
 }
-func (l UintptrOptionArrList) Reverse() UintptrOptionArrList {
-	acc := NilUintptrOptionArrList
+func (l UintptrOptionArrayList) Reverse() UintptrOptionArrayList {
+	acc := NilUintptrOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3360,8 +3360,8 @@ func (l UintptrOptionArrList) Reverse() UintptrOptionArrList {
 	}
 	return acc
 }
-func (l ByteOptionArrList) Reverse() ByteOptionArrList {
-	acc := NilByteOptionArrList
+func (l ByteOptionArrayList) Reverse() ByteOptionArrayList {
+	acc := NilByteOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3369,8 +3369,8 @@ func (l ByteOptionArrList) Reverse() ByteOptionArrList {
 	}
 	return acc
 }
-func (l RuneOptionArrList) Reverse() RuneOptionArrList {
-	acc := NilRuneOptionArrList
+func (l RuneOptionArrayList) Reverse() RuneOptionArrayList {
+	acc := NilRuneOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3378,8 +3378,8 @@ func (l RuneOptionArrList) Reverse() RuneOptionArrList {
 	}
 	return acc
 }
-func (l Float32OptionArrList) Reverse() Float32OptionArrList {
-	acc := NilFloat32OptionArrList
+func (l Float32OptionArrayList) Reverse() Float32OptionArrayList {
+	acc := NilFloat32OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3387,8 +3387,8 @@ func (l Float32OptionArrList) Reverse() Float32OptionArrList {
 	}
 	return acc
 }
-func (l Float64OptionArrList) Reverse() Float64OptionArrList {
-	acc := NilFloat64OptionArrList
+func (l Float64OptionArrayList) Reverse() Float64OptionArrayList {
+	acc := NilFloat64OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3396,8 +3396,8 @@ func (l Float64OptionArrList) Reverse() Float64OptionArrList {
 	}
 	return acc
 }
-func (l Complex64OptionArrList) Reverse() Complex64OptionArrList {
-	acc := NilComplex64OptionArrList
+func (l Complex64OptionArrayList) Reverse() Complex64OptionArrayList {
+	acc := NilComplex64OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3405,8 +3405,8 @@ func (l Complex64OptionArrList) Reverse() Complex64OptionArrList {
 	}
 	return acc
 }
-func (l Complex128OptionArrList) Reverse() Complex128OptionArrList {
-	acc := NilComplex128OptionArrList
+func (l Complex128OptionArrayList) Reverse() Complex128OptionArrayList {
+	acc := NilComplex128OptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3414,8 +3414,8 @@ func (l Complex128OptionArrList) Reverse() Complex128OptionArrList {
 	}
 	return acc
 }
-func (l AnyOptionArrList) Reverse() AnyOptionArrList {
-	acc := NilAnyOptionArrList
+func (l AnyOptionArrayList) Reverse() AnyOptionArrayList {
+	acc := NilAnyOptionArray
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3424,7 +3424,7 @@ func (l AnyOptionArrList) Reverse() AnyOptionArrList {
 	return acc
 }
 func (l BoolListList) Reverse() BoolListList {
-	acc := NilBoolListList
+	acc := NilBoolList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3433,7 +3433,7 @@ func (l BoolListList) Reverse() BoolListList {
 	return acc
 }
 func (l StringListList) Reverse() StringListList {
-	acc := NilStringListList
+	acc := NilStringList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3442,7 +3442,7 @@ func (l StringListList) Reverse() StringListList {
 	return acc
 }
 func (l IntListList) Reverse() IntListList {
-	acc := NilIntListList
+	acc := NilIntList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3451,7 +3451,7 @@ func (l IntListList) Reverse() IntListList {
 	return acc
 }
 func (l Int8ListList) Reverse() Int8ListList {
-	acc := NilInt8ListList
+	acc := NilInt8List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3460,7 +3460,7 @@ func (l Int8ListList) Reverse() Int8ListList {
 	return acc
 }
 func (l Int16ListList) Reverse() Int16ListList {
-	acc := NilInt16ListList
+	acc := NilInt16List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3469,7 +3469,7 @@ func (l Int16ListList) Reverse() Int16ListList {
 	return acc
 }
 func (l Int32ListList) Reverse() Int32ListList {
-	acc := NilInt32ListList
+	acc := NilInt32List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3478,7 +3478,7 @@ func (l Int32ListList) Reverse() Int32ListList {
 	return acc
 }
 func (l Int64ListList) Reverse() Int64ListList {
-	acc := NilInt64ListList
+	acc := NilInt64List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3487,7 +3487,7 @@ func (l Int64ListList) Reverse() Int64ListList {
 	return acc
 }
 func (l UintListList) Reverse() UintListList {
-	acc := NilUintListList
+	acc := NilUintList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3496,7 +3496,7 @@ func (l UintListList) Reverse() UintListList {
 	return acc
 }
 func (l Uint8ListList) Reverse() Uint8ListList {
-	acc := NilUint8ListList
+	acc := NilUint8List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3505,7 +3505,7 @@ func (l Uint8ListList) Reverse() Uint8ListList {
 	return acc
 }
 func (l Uint16ListList) Reverse() Uint16ListList {
-	acc := NilUint16ListList
+	acc := NilUint16List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3514,7 +3514,7 @@ func (l Uint16ListList) Reverse() Uint16ListList {
 	return acc
 }
 func (l Uint32ListList) Reverse() Uint32ListList {
-	acc := NilUint32ListList
+	acc := NilUint32List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3523,7 +3523,7 @@ func (l Uint32ListList) Reverse() Uint32ListList {
 	return acc
 }
 func (l Uint64ListList) Reverse() Uint64ListList {
-	acc := NilUint64ListList
+	acc := NilUint64List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3532,7 +3532,7 @@ func (l Uint64ListList) Reverse() Uint64ListList {
 	return acc
 }
 func (l UintptrListList) Reverse() UintptrListList {
-	acc := NilUintptrListList
+	acc := NilUintptrList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3541,7 +3541,7 @@ func (l UintptrListList) Reverse() UintptrListList {
 	return acc
 }
 func (l ByteListList) Reverse() ByteListList {
-	acc := NilByteListList
+	acc := NilByteList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3550,7 +3550,7 @@ func (l ByteListList) Reverse() ByteListList {
 	return acc
 }
 func (l RuneListList) Reverse() RuneListList {
-	acc := NilRuneListList
+	acc := NilRuneList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3559,7 +3559,7 @@ func (l RuneListList) Reverse() RuneListList {
 	return acc
 }
 func (l Float32ListList) Reverse() Float32ListList {
-	acc := NilFloat32ListList
+	acc := NilFloat32List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3568,7 +3568,7 @@ func (l Float32ListList) Reverse() Float32ListList {
 	return acc
 }
 func (l Float64ListList) Reverse() Float64ListList {
-	acc := NilFloat64ListList
+	acc := NilFloat64List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3577,7 +3577,7 @@ func (l Float64ListList) Reverse() Float64ListList {
 	return acc
 }
 func (l Complex64ListList) Reverse() Complex64ListList {
-	acc := NilComplex64ListList
+	acc := NilComplex64List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3586,7 +3586,7 @@ func (l Complex64ListList) Reverse() Complex64ListList {
 	return acc
 }
 func (l Complex128ListList) Reverse() Complex128ListList {
-	acc := NilComplex128ListList
+	acc := NilComplex128List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -3595,7 +3595,7 @@ func (l Complex128ListList) Reverse() Complex128ListList {
 	return acc
 }
 func (l AnyListList) Reverse() AnyListList {
-	acc := NilAnyListList
+	acc := NilAnyList
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)

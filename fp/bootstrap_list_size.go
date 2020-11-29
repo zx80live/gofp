@@ -363,7 +363,7 @@ func (l AnyOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrOptionList) Size() int {
+func (l BoolArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -372,7 +372,7 @@ func (l BoolArrOptionList) Size() int {
 	}
 	return count
 }
-func (l StringArrOptionList) Size() int {
+func (l StringArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -381,7 +381,7 @@ func (l StringArrOptionList) Size() int {
 	}
 	return count
 }
-func (l IntArrOptionList) Size() int {
+func (l IntArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -390,7 +390,7 @@ func (l IntArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrOptionList) Size() int {
+func (l Int8ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -399,7 +399,7 @@ func (l Int8ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrOptionList) Size() int {
+func (l Int16ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -408,7 +408,7 @@ func (l Int16ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrOptionList) Size() int {
+func (l Int32ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -417,7 +417,7 @@ func (l Int32ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrOptionList) Size() int {
+func (l Int64ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -426,7 +426,7 @@ func (l Int64ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l UintArrOptionList) Size() int {
+func (l UintArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -435,7 +435,7 @@ func (l UintArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrOptionList) Size() int {
+func (l Uint8ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -444,7 +444,7 @@ func (l Uint8ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrOptionList) Size() int {
+func (l Uint16ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -453,7 +453,7 @@ func (l Uint16ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrOptionList) Size() int {
+func (l Uint32ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -462,7 +462,7 @@ func (l Uint32ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrOptionList) Size() int {
+func (l Uint64ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -471,7 +471,7 @@ func (l Uint64ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrOptionList) Size() int {
+func (l UintptrArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -480,7 +480,7 @@ func (l UintptrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteArrOptionList) Size() int {
+func (l ByteArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -489,7 +489,7 @@ func (l ByteArrOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneArrOptionList) Size() int {
+func (l RuneArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -498,7 +498,7 @@ func (l RuneArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrOptionList) Size() int {
+func (l Float32ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -507,7 +507,7 @@ func (l Float32ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrOptionList) Size() int {
+func (l Float64ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -516,7 +516,7 @@ func (l Float64ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrOptionList) Size() int {
+func (l Complex64ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -525,7 +525,7 @@ func (l Complex64ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrOptionList) Size() int {
+func (l Complex128ArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -534,7 +534,7 @@ func (l Complex128ArrOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyArrOptionList) Size() int {
+func (l AnyArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -543,7 +543,7 @@ func (l AnyArrOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrArrOptionList) Size() int {
+func (l BoolArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -552,7 +552,7 @@ func (l BoolArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l StringArrArrOptionList) Size() int {
+func (l StringArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -561,7 +561,7 @@ func (l StringArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l IntArrArrOptionList) Size() int {
+func (l IntArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -570,7 +570,7 @@ func (l IntArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrArrOptionList) Size() int {
+func (l Int8ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -579,7 +579,7 @@ func (l Int8ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrArrOptionList) Size() int {
+func (l Int16ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -588,7 +588,7 @@ func (l Int16ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrArrOptionList) Size() int {
+func (l Int32ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -597,7 +597,7 @@ func (l Int32ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrArrOptionList) Size() int {
+func (l Int64ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -606,7 +606,7 @@ func (l Int64ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l UintArrArrOptionList) Size() int {
+func (l UintArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -615,7 +615,7 @@ func (l UintArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrArrOptionList) Size() int {
+func (l Uint8ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -624,7 +624,7 @@ func (l Uint8ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrArrOptionList) Size() int {
+func (l Uint16ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -633,7 +633,7 @@ func (l Uint16ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrArrOptionList) Size() int {
+func (l Uint32ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -642,7 +642,7 @@ func (l Uint32ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrArrOptionList) Size() int {
+func (l Uint64ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -651,7 +651,7 @@ func (l Uint64ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrArrOptionList) Size() int {
+func (l UintptrArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -660,7 +660,7 @@ func (l UintptrArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteArrArrOptionList) Size() int {
+func (l ByteArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -669,7 +669,7 @@ func (l ByteArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneArrArrOptionList) Size() int {
+func (l RuneArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -678,7 +678,7 @@ func (l RuneArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrArrOptionList) Size() int {
+func (l Float32ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -687,7 +687,7 @@ func (l Float32ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrArrOptionList) Size() int {
+func (l Float64ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -696,7 +696,7 @@ func (l Float64ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrArrOptionList) Size() int {
+func (l Complex64ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -705,7 +705,7 @@ func (l Complex64ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrArrOptionList) Size() int {
+func (l Complex128ArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -714,7 +714,7 @@ func (l Complex128ArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyArrArrOptionList) Size() int {
+func (l AnyArrayArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -723,7 +723,7 @@ func (l AnyArrArrOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolOptionArrOptionList) Size() int {
+func (l BoolOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -732,7 +732,7 @@ func (l BoolOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l StringOptionArrOptionList) Size() int {
+func (l StringOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -741,7 +741,7 @@ func (l StringOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l IntOptionArrOptionList) Size() int {
+func (l IntOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -750,7 +750,7 @@ func (l IntOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8OptionArrOptionList) Size() int {
+func (l Int8OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -759,7 +759,7 @@ func (l Int8OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16OptionArrOptionList) Size() int {
+func (l Int16OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -768,7 +768,7 @@ func (l Int16OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32OptionArrOptionList) Size() int {
+func (l Int32OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -777,7 +777,7 @@ func (l Int32OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64OptionArrOptionList) Size() int {
+func (l Int64OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -786,7 +786,7 @@ func (l Int64OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l UintOptionArrOptionList) Size() int {
+func (l UintOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -795,7 +795,7 @@ func (l UintOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8OptionArrOptionList) Size() int {
+func (l Uint8OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -804,7 +804,7 @@ func (l Uint8OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16OptionArrOptionList) Size() int {
+func (l Uint16OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -813,7 +813,7 @@ func (l Uint16OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32OptionArrOptionList) Size() int {
+func (l Uint32OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -822,7 +822,7 @@ func (l Uint32OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64OptionArrOptionList) Size() int {
+func (l Uint64OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -831,7 +831,7 @@ func (l Uint64OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrOptionArrOptionList) Size() int {
+func (l UintptrOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -840,7 +840,7 @@ func (l UintptrOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteOptionArrOptionList) Size() int {
+func (l ByteOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -849,7 +849,7 @@ func (l ByteOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneOptionArrOptionList) Size() int {
+func (l RuneOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -858,7 +858,7 @@ func (l RuneOptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32OptionArrOptionList) Size() int {
+func (l Float32OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -867,7 +867,7 @@ func (l Float32OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64OptionArrOptionList) Size() int {
+func (l Float64OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -876,7 +876,7 @@ func (l Float64OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64OptionArrOptionList) Size() int {
+func (l Complex64OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -885,7 +885,7 @@ func (l Complex64OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128OptionArrOptionList) Size() int {
+func (l Complex128OptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -894,7 +894,7 @@ func (l Complex128OptionArrOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyOptionArrOptionList) Size() int {
+func (l AnyOptionArrayOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1263,7 +1263,7 @@ func (l AnyOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrOptionOptionList) Size() int {
+func (l BoolArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1272,7 +1272,7 @@ func (l BoolArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l StringArrOptionOptionList) Size() int {
+func (l StringArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1281,7 +1281,7 @@ func (l StringArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l IntArrOptionOptionList) Size() int {
+func (l IntArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1290,7 +1290,7 @@ func (l IntArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrOptionOptionList) Size() int {
+func (l Int8ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1299,7 +1299,7 @@ func (l Int8ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrOptionOptionList) Size() int {
+func (l Int16ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1308,7 +1308,7 @@ func (l Int16ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrOptionOptionList) Size() int {
+func (l Int32ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1317,7 +1317,7 @@ func (l Int32ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrOptionOptionList) Size() int {
+func (l Int64ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1326,7 +1326,7 @@ func (l Int64ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintArrOptionOptionList) Size() int {
+func (l UintArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1335,7 +1335,7 @@ func (l UintArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrOptionOptionList) Size() int {
+func (l Uint8ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1344,7 +1344,7 @@ func (l Uint8ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrOptionOptionList) Size() int {
+func (l Uint16ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1353,7 +1353,7 @@ func (l Uint16ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrOptionOptionList) Size() int {
+func (l Uint32ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1362,7 +1362,7 @@ func (l Uint32ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrOptionOptionList) Size() int {
+func (l Uint64ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1371,7 +1371,7 @@ func (l Uint64ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrOptionOptionList) Size() int {
+func (l UintptrArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1380,7 +1380,7 @@ func (l UintptrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteArrOptionOptionList) Size() int {
+func (l ByteArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1389,7 +1389,7 @@ func (l ByteArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneArrOptionOptionList) Size() int {
+func (l RuneArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1398,7 +1398,7 @@ func (l RuneArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrOptionOptionList) Size() int {
+func (l Float32ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1407,7 +1407,7 @@ func (l Float32ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrOptionOptionList) Size() int {
+func (l Float64ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1416,7 +1416,7 @@ func (l Float64ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrOptionOptionList) Size() int {
+func (l Complex64ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1425,7 +1425,7 @@ func (l Complex64ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrOptionOptionList) Size() int {
+func (l Complex128ArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1434,7 +1434,7 @@ func (l Complex128ArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyArrOptionOptionList) Size() int {
+func (l AnyArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1443,7 +1443,7 @@ func (l AnyArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrArrOptionOptionList) Size() int {
+func (l BoolArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1452,7 +1452,7 @@ func (l BoolArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l StringArrArrOptionOptionList) Size() int {
+func (l StringArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1461,7 +1461,7 @@ func (l StringArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l IntArrArrOptionOptionList) Size() int {
+func (l IntArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1470,7 +1470,7 @@ func (l IntArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrArrOptionOptionList) Size() int {
+func (l Int8ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1479,7 +1479,7 @@ func (l Int8ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrArrOptionOptionList) Size() int {
+func (l Int16ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1488,7 +1488,7 @@ func (l Int16ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrArrOptionOptionList) Size() int {
+func (l Int32ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1497,7 +1497,7 @@ func (l Int32ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrArrOptionOptionList) Size() int {
+func (l Int64ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1506,7 +1506,7 @@ func (l Int64ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintArrArrOptionOptionList) Size() int {
+func (l UintArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1515,7 +1515,7 @@ func (l UintArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrArrOptionOptionList) Size() int {
+func (l Uint8ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1524,7 +1524,7 @@ func (l Uint8ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrArrOptionOptionList) Size() int {
+func (l Uint16ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1533,7 +1533,7 @@ func (l Uint16ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrArrOptionOptionList) Size() int {
+func (l Uint32ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1542,7 +1542,7 @@ func (l Uint32ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrArrOptionOptionList) Size() int {
+func (l Uint64ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1551,7 +1551,7 @@ func (l Uint64ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrArrOptionOptionList) Size() int {
+func (l UintptrArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1560,7 +1560,7 @@ func (l UintptrArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteArrArrOptionOptionList) Size() int {
+func (l ByteArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1569,7 +1569,7 @@ func (l ByteArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneArrArrOptionOptionList) Size() int {
+func (l RuneArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1578,7 +1578,7 @@ func (l RuneArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrArrOptionOptionList) Size() int {
+func (l Float32ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1587,7 +1587,7 @@ func (l Float32ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrArrOptionOptionList) Size() int {
+func (l Float64ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1596,7 +1596,7 @@ func (l Float64ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrArrOptionOptionList) Size() int {
+func (l Complex64ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1605,7 +1605,7 @@ func (l Complex64ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrArrOptionOptionList) Size() int {
+func (l Complex128ArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1614,7 +1614,7 @@ func (l Complex128ArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyArrArrOptionOptionList) Size() int {
+func (l AnyArrayArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1623,7 +1623,7 @@ func (l AnyArrArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolOptionArrOptionOptionList) Size() int {
+func (l BoolOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1632,7 +1632,7 @@ func (l BoolOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l StringOptionArrOptionOptionList) Size() int {
+func (l StringOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1641,7 +1641,7 @@ func (l StringOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l IntOptionArrOptionOptionList) Size() int {
+func (l IntOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1650,7 +1650,7 @@ func (l IntOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8OptionArrOptionOptionList) Size() int {
+func (l Int8OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1659,7 +1659,7 @@ func (l Int8OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16OptionArrOptionOptionList) Size() int {
+func (l Int16OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1668,7 +1668,7 @@ func (l Int16OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32OptionArrOptionOptionList) Size() int {
+func (l Int32OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1677,7 +1677,7 @@ func (l Int32OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64OptionArrOptionOptionList) Size() int {
+func (l Int64OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1686,7 +1686,7 @@ func (l Int64OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintOptionArrOptionOptionList) Size() int {
+func (l UintOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1695,7 +1695,7 @@ func (l UintOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8OptionArrOptionOptionList) Size() int {
+func (l Uint8OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1704,7 +1704,7 @@ func (l Uint8OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16OptionArrOptionOptionList) Size() int {
+func (l Uint16OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1713,7 +1713,7 @@ func (l Uint16OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32OptionArrOptionOptionList) Size() int {
+func (l Uint32OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1722,7 +1722,7 @@ func (l Uint32OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64OptionArrOptionOptionList) Size() int {
+func (l Uint64OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1731,7 +1731,7 @@ func (l Uint64OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrOptionArrOptionOptionList) Size() int {
+func (l UintptrOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1740,7 +1740,7 @@ func (l UintptrOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteOptionArrOptionOptionList) Size() int {
+func (l ByteOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1749,7 +1749,7 @@ func (l ByteOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneOptionArrOptionOptionList) Size() int {
+func (l RuneOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1758,7 +1758,7 @@ func (l RuneOptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32OptionArrOptionOptionList) Size() int {
+func (l Float32OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1767,7 +1767,7 @@ func (l Float32OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64OptionArrOptionOptionList) Size() int {
+func (l Float64OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1776,7 +1776,7 @@ func (l Float64OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64OptionArrOptionOptionList) Size() int {
+func (l Complex64OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1785,7 +1785,7 @@ func (l Complex64OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128OptionArrOptionOptionList) Size() int {
+func (l Complex128OptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -1794,7 +1794,7 @@ func (l Complex128OptionArrOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyOptionArrOptionOptionList) Size() int {
+func (l AnyOptionArrayOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2163,7 +2163,7 @@ func (l AnyOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrOptionOptionOptionList) Size() int {
+func (l BoolArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2172,7 +2172,7 @@ func (l BoolArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l StringArrOptionOptionOptionList) Size() int {
+func (l StringArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2181,7 +2181,7 @@ func (l StringArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l IntArrOptionOptionOptionList) Size() int {
+func (l IntArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2190,7 +2190,7 @@ func (l IntArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrOptionOptionOptionList) Size() int {
+func (l Int8ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2199,7 +2199,7 @@ func (l Int8ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrOptionOptionOptionList) Size() int {
+func (l Int16ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2208,7 +2208,7 @@ func (l Int16ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrOptionOptionOptionList) Size() int {
+func (l Int32ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2217,7 +2217,7 @@ func (l Int32ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrOptionOptionOptionList) Size() int {
+func (l Int64ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2226,7 +2226,7 @@ func (l Int64ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintArrOptionOptionOptionList) Size() int {
+func (l UintArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2235,7 +2235,7 @@ func (l UintArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrOptionOptionOptionList) Size() int {
+func (l Uint8ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2244,7 +2244,7 @@ func (l Uint8ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrOptionOptionOptionList) Size() int {
+func (l Uint16ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2253,7 +2253,7 @@ func (l Uint16ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrOptionOptionOptionList) Size() int {
+func (l Uint32ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2262,7 +2262,7 @@ func (l Uint32ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrOptionOptionOptionList) Size() int {
+func (l Uint64ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2271,7 +2271,7 @@ func (l Uint64ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrOptionOptionOptionList) Size() int {
+func (l UintptrArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2280,7 +2280,7 @@ func (l UintptrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteArrOptionOptionOptionList) Size() int {
+func (l ByteArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2289,7 +2289,7 @@ func (l ByteArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneArrOptionOptionOptionList) Size() int {
+func (l RuneArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2298,7 +2298,7 @@ func (l RuneArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrOptionOptionOptionList) Size() int {
+func (l Float32ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2307,7 +2307,7 @@ func (l Float32ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrOptionOptionOptionList) Size() int {
+func (l Float64ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2316,7 +2316,7 @@ func (l Float64ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrOptionOptionOptionList) Size() int {
+func (l Complex64ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2325,7 +2325,7 @@ func (l Complex64ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrOptionOptionOptionList) Size() int {
+func (l Complex128ArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2334,7 +2334,7 @@ func (l Complex128ArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyArrOptionOptionOptionList) Size() int {
+func (l AnyArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2343,7 +2343,7 @@ func (l AnyArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrArrOptionOptionOptionList) Size() int {
+func (l BoolArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2352,7 +2352,7 @@ func (l BoolArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l StringArrArrOptionOptionOptionList) Size() int {
+func (l StringArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2361,7 +2361,7 @@ func (l StringArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l IntArrArrOptionOptionOptionList) Size() int {
+func (l IntArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2370,7 +2370,7 @@ func (l IntArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrArrOptionOptionOptionList) Size() int {
+func (l Int8ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2379,7 +2379,7 @@ func (l Int8ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrArrOptionOptionOptionList) Size() int {
+func (l Int16ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2388,7 +2388,7 @@ func (l Int16ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrArrOptionOptionOptionList) Size() int {
+func (l Int32ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2397,7 +2397,7 @@ func (l Int32ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrArrOptionOptionOptionList) Size() int {
+func (l Int64ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2406,7 +2406,7 @@ func (l Int64ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintArrArrOptionOptionOptionList) Size() int {
+func (l UintArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2415,7 +2415,7 @@ func (l UintArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrArrOptionOptionOptionList) Size() int {
+func (l Uint8ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2424,7 +2424,7 @@ func (l Uint8ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrArrOptionOptionOptionList) Size() int {
+func (l Uint16ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2433,7 +2433,7 @@ func (l Uint16ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrArrOptionOptionOptionList) Size() int {
+func (l Uint32ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2442,7 +2442,7 @@ func (l Uint32ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrArrOptionOptionOptionList) Size() int {
+func (l Uint64ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2451,7 +2451,7 @@ func (l Uint64ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrArrOptionOptionOptionList) Size() int {
+func (l UintptrArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2460,7 +2460,7 @@ func (l UintptrArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteArrArrOptionOptionOptionList) Size() int {
+func (l ByteArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2469,7 +2469,7 @@ func (l ByteArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneArrArrOptionOptionOptionList) Size() int {
+func (l RuneArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2478,7 +2478,7 @@ func (l RuneArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrArrOptionOptionOptionList) Size() int {
+func (l Float32ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2487,7 +2487,7 @@ func (l Float32ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrArrOptionOptionOptionList) Size() int {
+func (l Float64ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2496,7 +2496,7 @@ func (l Float64ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrArrOptionOptionOptionList) Size() int {
+func (l Complex64ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2505,7 +2505,7 @@ func (l Complex64ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrArrOptionOptionOptionList) Size() int {
+func (l Complex128ArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2514,7 +2514,7 @@ func (l Complex128ArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyArrArrOptionOptionOptionList) Size() int {
+func (l AnyArrayArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2523,7 +2523,7 @@ func (l AnyArrArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolOptionArrOptionOptionOptionList) Size() int {
+func (l BoolOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2532,7 +2532,7 @@ func (l BoolOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l StringOptionArrOptionOptionOptionList) Size() int {
+func (l StringOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2541,7 +2541,7 @@ func (l StringOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l IntOptionArrOptionOptionOptionList) Size() int {
+func (l IntOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2550,7 +2550,7 @@ func (l IntOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int8OptionArrOptionOptionOptionList) Size() int {
+func (l Int8OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2559,7 +2559,7 @@ func (l Int8OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int16OptionArrOptionOptionOptionList) Size() int {
+func (l Int16OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2568,7 +2568,7 @@ func (l Int16OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int32OptionArrOptionOptionOptionList) Size() int {
+func (l Int32OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2577,7 +2577,7 @@ func (l Int32OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Int64OptionArrOptionOptionOptionList) Size() int {
+func (l Int64OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2586,7 +2586,7 @@ func (l Int64OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintOptionArrOptionOptionOptionList) Size() int {
+func (l UintOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2595,7 +2595,7 @@ func (l UintOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint8OptionArrOptionOptionOptionList) Size() int {
+func (l Uint8OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2604,7 +2604,7 @@ func (l Uint8OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint16OptionArrOptionOptionOptionList) Size() int {
+func (l Uint16OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2613,7 +2613,7 @@ func (l Uint16OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint32OptionArrOptionOptionOptionList) Size() int {
+func (l Uint32OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2622,7 +2622,7 @@ func (l Uint32OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Uint64OptionArrOptionOptionOptionList) Size() int {
+func (l Uint64OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2631,7 +2631,7 @@ func (l Uint64OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l UintptrOptionArrOptionOptionOptionList) Size() int {
+func (l UintptrOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2640,7 +2640,7 @@ func (l UintptrOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l ByteOptionArrOptionOptionOptionList) Size() int {
+func (l ByteOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2649,7 +2649,7 @@ func (l ByteOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l RuneOptionArrOptionOptionOptionList) Size() int {
+func (l RuneOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2658,7 +2658,7 @@ func (l RuneOptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float32OptionArrOptionOptionOptionList) Size() int {
+func (l Float32OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2667,7 +2667,7 @@ func (l Float32OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Float64OptionArrOptionOptionOptionList) Size() int {
+func (l Float64OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2676,7 +2676,7 @@ func (l Float64OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex64OptionArrOptionOptionOptionList) Size() int {
+func (l Complex64OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2685,7 +2685,7 @@ func (l Complex64OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l Complex128OptionArrOptionOptionOptionList) Size() int {
+func (l Complex128OptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2694,7 +2694,7 @@ func (l Complex128OptionArrOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l AnyOptionArrOptionOptionOptionList) Size() int {
+func (l AnyOptionArrayOptionOptionOptionList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2883,7 +2883,7 @@ func (l AnyListOptionOptionOptionList) Size() int {
 	}
 	return count
 }
-func (l BoolArrList) Size() int {
+func (l BoolArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2892,7 +2892,7 @@ func (l BoolArrList) Size() int {
 	}
 	return count
 }
-func (l StringArrList) Size() int {
+func (l StringArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2901,7 +2901,7 @@ func (l StringArrList) Size() int {
 	}
 	return count
 }
-func (l IntArrList) Size() int {
+func (l IntArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2910,7 +2910,7 @@ func (l IntArrList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrList) Size() int {
+func (l Int8ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2919,7 +2919,7 @@ func (l Int8ArrList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrList) Size() int {
+func (l Int16ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2928,7 +2928,7 @@ func (l Int16ArrList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrList) Size() int {
+func (l Int32ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2937,7 +2937,7 @@ func (l Int32ArrList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrList) Size() int {
+func (l Int64ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2946,7 +2946,7 @@ func (l Int64ArrList) Size() int {
 	}
 	return count
 }
-func (l UintArrList) Size() int {
+func (l UintArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2955,7 +2955,7 @@ func (l UintArrList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrList) Size() int {
+func (l Uint8ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2964,7 +2964,7 @@ func (l Uint8ArrList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrList) Size() int {
+func (l Uint16ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2973,7 +2973,7 @@ func (l Uint16ArrList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrList) Size() int {
+func (l Uint32ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2982,7 +2982,7 @@ func (l Uint32ArrList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrList) Size() int {
+func (l Uint64ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -2991,7 +2991,7 @@ func (l Uint64ArrList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrList) Size() int {
+func (l UintptrArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3000,7 +3000,7 @@ func (l UintptrArrList) Size() int {
 	}
 	return count
 }
-func (l ByteArrList) Size() int {
+func (l ByteArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3009,7 +3009,7 @@ func (l ByteArrList) Size() int {
 	}
 	return count
 }
-func (l RuneArrList) Size() int {
+func (l RuneArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3018,7 +3018,7 @@ func (l RuneArrList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrList) Size() int {
+func (l Float32ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3027,7 +3027,7 @@ func (l Float32ArrList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrList) Size() int {
+func (l Float64ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3036,7 +3036,7 @@ func (l Float64ArrList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrList) Size() int {
+func (l Complex64ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3045,7 +3045,7 @@ func (l Complex64ArrList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrList) Size() int {
+func (l Complex128ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3054,7 +3054,7 @@ func (l Complex128ArrList) Size() int {
 	}
 	return count
 }
-func (l AnyArrList) Size() int {
+func (l AnyArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3063,7 +3063,7 @@ func (l AnyArrList) Size() int {
 	}
 	return count
 }
-func (l BoolArrArrList) Size() int {
+func (l BoolArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3072,7 +3072,7 @@ func (l BoolArrArrList) Size() int {
 	}
 	return count
 }
-func (l StringArrArrList) Size() int {
+func (l StringArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3081,7 +3081,7 @@ func (l StringArrArrList) Size() int {
 	}
 	return count
 }
-func (l IntArrArrList) Size() int {
+func (l IntArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3090,7 +3090,7 @@ func (l IntArrArrList) Size() int {
 	}
 	return count
 }
-func (l Int8ArrArrList) Size() int {
+func (l Int8ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3099,7 +3099,7 @@ func (l Int8ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Int16ArrArrList) Size() int {
+func (l Int16ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3108,7 +3108,7 @@ func (l Int16ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Int32ArrArrList) Size() int {
+func (l Int32ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3117,7 +3117,7 @@ func (l Int32ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Int64ArrArrList) Size() int {
+func (l Int64ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3126,7 +3126,7 @@ func (l Int64ArrArrList) Size() int {
 	}
 	return count
 }
-func (l UintArrArrList) Size() int {
+func (l UintArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3135,7 +3135,7 @@ func (l UintArrArrList) Size() int {
 	}
 	return count
 }
-func (l Uint8ArrArrList) Size() int {
+func (l Uint8ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3144,7 +3144,7 @@ func (l Uint8ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Uint16ArrArrList) Size() int {
+func (l Uint16ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3153,7 +3153,7 @@ func (l Uint16ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Uint32ArrArrList) Size() int {
+func (l Uint32ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3162,7 +3162,7 @@ func (l Uint32ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Uint64ArrArrList) Size() int {
+func (l Uint64ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3171,7 +3171,7 @@ func (l Uint64ArrArrList) Size() int {
 	}
 	return count
 }
-func (l UintptrArrArrList) Size() int {
+func (l UintptrArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3180,7 +3180,7 @@ func (l UintptrArrArrList) Size() int {
 	}
 	return count
 }
-func (l ByteArrArrList) Size() int {
+func (l ByteArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3189,7 +3189,7 @@ func (l ByteArrArrList) Size() int {
 	}
 	return count
 }
-func (l RuneArrArrList) Size() int {
+func (l RuneArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3198,7 +3198,7 @@ func (l RuneArrArrList) Size() int {
 	}
 	return count
 }
-func (l Float32ArrArrList) Size() int {
+func (l Float32ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3207,7 +3207,7 @@ func (l Float32ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Float64ArrArrList) Size() int {
+func (l Float64ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3216,7 +3216,7 @@ func (l Float64ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Complex64ArrArrList) Size() int {
+func (l Complex64ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3225,7 +3225,7 @@ func (l Complex64ArrArrList) Size() int {
 	}
 	return count
 }
-func (l Complex128ArrArrList) Size() int {
+func (l Complex128ArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3234,7 +3234,7 @@ func (l Complex128ArrArrList) Size() int {
 	}
 	return count
 }
-func (l AnyArrArrList) Size() int {
+func (l AnyArrayArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3243,7 +3243,7 @@ func (l AnyArrArrList) Size() int {
 	}
 	return count
 }
-func (l BoolOptionArrList) Size() int {
+func (l BoolOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3252,7 +3252,7 @@ func (l BoolOptionArrList) Size() int {
 	}
 	return count
 }
-func (l StringOptionArrList) Size() int {
+func (l StringOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3261,7 +3261,7 @@ func (l StringOptionArrList) Size() int {
 	}
 	return count
 }
-func (l IntOptionArrList) Size() int {
+func (l IntOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3270,7 +3270,7 @@ func (l IntOptionArrList) Size() int {
 	}
 	return count
 }
-func (l Int8OptionArrList) Size() int {
+func (l Int8OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3279,7 +3279,7 @@ func (l Int8OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Int16OptionArrList) Size() int {
+func (l Int16OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3288,7 +3288,7 @@ func (l Int16OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Int32OptionArrList) Size() int {
+func (l Int32OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3297,7 +3297,7 @@ func (l Int32OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Int64OptionArrList) Size() int {
+func (l Int64OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3306,7 +3306,7 @@ func (l Int64OptionArrList) Size() int {
 	}
 	return count
 }
-func (l UintOptionArrList) Size() int {
+func (l UintOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3315,7 +3315,7 @@ func (l UintOptionArrList) Size() int {
 	}
 	return count
 }
-func (l Uint8OptionArrList) Size() int {
+func (l Uint8OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3324,7 +3324,7 @@ func (l Uint8OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Uint16OptionArrList) Size() int {
+func (l Uint16OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3333,7 +3333,7 @@ func (l Uint16OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Uint32OptionArrList) Size() int {
+func (l Uint32OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3342,7 +3342,7 @@ func (l Uint32OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Uint64OptionArrList) Size() int {
+func (l Uint64OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3351,7 +3351,7 @@ func (l Uint64OptionArrList) Size() int {
 	}
 	return count
 }
-func (l UintptrOptionArrList) Size() int {
+func (l UintptrOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3360,7 +3360,7 @@ func (l UintptrOptionArrList) Size() int {
 	}
 	return count
 }
-func (l ByteOptionArrList) Size() int {
+func (l ByteOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3369,7 +3369,7 @@ func (l ByteOptionArrList) Size() int {
 	}
 	return count
 }
-func (l RuneOptionArrList) Size() int {
+func (l RuneOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3378,7 +3378,7 @@ func (l RuneOptionArrList) Size() int {
 	}
 	return count
 }
-func (l Float32OptionArrList) Size() int {
+func (l Float32OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3387,7 +3387,7 @@ func (l Float32OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Float64OptionArrList) Size() int {
+func (l Float64OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3396,7 +3396,7 @@ func (l Float64OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Complex64OptionArrList) Size() int {
+func (l Complex64OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3405,7 +3405,7 @@ func (l Complex64OptionArrList) Size() int {
 	}
 	return count
 }
-func (l Complex128OptionArrList) Size() int {
+func (l Complex128OptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -3414,7 +3414,7 @@ func (l Complex128OptionArrList) Size() int {
 	}
 	return count
 }
-func (l AnyOptionArrList) Size() int {
+func (l AnyOptionArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
