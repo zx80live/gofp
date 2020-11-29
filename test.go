@@ -71,4 +71,8 @@ func main() {
 		Foreach(func(e int) { fmt.Println(">", e) })
 
 	MakeIntOptionOption(Int(10)).FlatMapInt(func(e IntOption) IntOption { return e }).Foreach(func(e int) { fmt.Println("flatten", e) })
+
+	MakeIntListList(MakeIntList(1, 2, 3), MakeIntList(4, 5), MakeIntList(), MakeIntList(6, 7, 8)).
+		Flatten().
+		Foreach(func(e int) { fmt.Println("flatten", e) })
 }
