@@ -85,4 +85,10 @@ func main() {
 	fmt.Println(String("Hello").ToIntOption().ToString())
 
 	fmt.Println(Int(1).Cons(2).Cons(3).Cons(4).Cons(5).ToString())
+
+	fmt.Println(Int(10).Min(20), Int(10).Min(10), Int(20).Min(10))
+	fmt.Println(Int(10).Max(20), Int(10).Max(10), Int(20).Max(10))
+
+	fmt.Println(Int(0).To(10).ToString())
+	fmt.Println(Int(0).Until(10).ToString())
 }
