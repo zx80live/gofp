@@ -95,4 +95,10 @@ func main() {
 	xsForSearch := MakeIntList(1, -2, 3, 4, -5, 6, -7, 8, 9)
 	fmt.Println(xsForSearch.Find(func(e int) bool { return e == 3 }).ToString())
 	fmt.Println(xsForSearch.Find(func(e int) bool { return e == -3 }).ToString())
+
+	xsForGroup := MakeIntList(1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 1, 3, 3, 4, 5)
+	var groups map[int]IntList = xsForGroup.GroupByInt(IntIdentity)
+	for k, v := range groups {
+		fmt.Println(k, v.ToString())
+	}
 }
