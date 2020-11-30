@@ -75,4 +75,6 @@ func main() {
 	MakeIntListList(MakeIntList(1, 2, 3), MakeIntList(4, 5), MakeIntList(), MakeIntList(6, 7, 8)).
 		Flatten().
 		Foreach(func(e int) { fmt.Println("flatten", e) })
+
+	fmt.Println("reduce list", MakeIntList(10, 20, 30).Reduce(func(a, b int) int { return a + b }))
 }

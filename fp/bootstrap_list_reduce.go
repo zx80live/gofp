@@ -2883,6 +2883,546 @@ func (l AnyListOptionOptionOptionList) Reduce(f func(AnyListOptionOptionOption, 
 		return f(*l.head, l.tail.Reduce(f))
 	}
 }
+func (l BoolArrayList) Reduce(f func([]bool, []bool) []bool) []bool {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l StringArrayList) Reduce(f func([]string, []string) []string) []string {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l IntArrayList) Reduce(f func([]int, []int) []int) []int {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int8ArrayList) Reduce(f func([]int8, []int8) []int8) []int8 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int16ArrayList) Reduce(f func([]int16, []int16) []int16) []int16 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int32ArrayList) Reduce(f func([]int32, []int32) []int32) []int32 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int64ArrayList) Reduce(f func([]int64, []int64) []int64) []int64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l UintArrayList) Reduce(f func([]uint, []uint) []uint) []uint {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint8ArrayList) Reduce(f func([]uint8, []uint8) []uint8) []uint8 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint16ArrayList) Reduce(f func([]uint16, []uint16) []uint16) []uint16 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint32ArrayList) Reduce(f func([]uint32, []uint32) []uint32) []uint32 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint64ArrayList) Reduce(f func([]uint64, []uint64) []uint64) []uint64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l UintptrArrayList) Reduce(f func([]uintptr, []uintptr) []uintptr) []uintptr {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l ByteArrayList) Reduce(f func([]byte, []byte) []byte) []byte {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l RuneArrayList) Reduce(f func([]rune, []rune) []rune) []rune {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Float32ArrayList) Reduce(f func([]float32, []float32) []float32) []float32 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Float64ArrayList) Reduce(f func([]float64, []float64) []float64) []float64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Complex64ArrayList) Reduce(f func([]complex64, []complex64) []complex64) []complex64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Complex128ArrayList) Reduce(f func([]complex128, []complex128) []complex128) []complex128 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l AnyArrayList) Reduce(f func([]Any, []Any) []Any) []Any {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l BoolArrayArrayList) Reduce(f func([][]bool, [][]bool) [][]bool) [][]bool {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l StringArrayArrayList) Reduce(f func([][]string, [][]string) [][]string) [][]string {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l IntArrayArrayList) Reduce(f func([][]int, [][]int) [][]int) [][]int {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int8ArrayArrayList) Reduce(f func([][]int8, [][]int8) [][]int8) [][]int8 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int16ArrayArrayList) Reduce(f func([][]int16, [][]int16) [][]int16) [][]int16 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int32ArrayArrayList) Reduce(f func([][]int32, [][]int32) [][]int32) [][]int32 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int64ArrayArrayList) Reduce(f func([][]int64, [][]int64) [][]int64) [][]int64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l UintArrayArrayList) Reduce(f func([][]uint, [][]uint) [][]uint) [][]uint {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint8ArrayArrayList) Reduce(f func([][]uint8, [][]uint8) [][]uint8) [][]uint8 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint16ArrayArrayList) Reduce(f func([][]uint16, [][]uint16) [][]uint16) [][]uint16 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint32ArrayArrayList) Reduce(f func([][]uint32, [][]uint32) [][]uint32) [][]uint32 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint64ArrayArrayList) Reduce(f func([][]uint64, [][]uint64) [][]uint64) [][]uint64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l UintptrArrayArrayList) Reduce(f func([][]uintptr, [][]uintptr) [][]uintptr) [][]uintptr {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l ByteArrayArrayList) Reduce(f func([][]byte, [][]byte) [][]byte) [][]byte {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l RuneArrayArrayList) Reduce(f func([][]rune, [][]rune) [][]rune) [][]rune {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Float32ArrayArrayList) Reduce(f func([][]float32, [][]float32) [][]float32) [][]float32 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Float64ArrayArrayList) Reduce(f func([][]float64, [][]float64) [][]float64) [][]float64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Complex64ArrayArrayList) Reduce(f func([][]complex64, [][]complex64) [][]complex64) [][]complex64 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Complex128ArrayArrayList) Reduce(f func([][]complex128, [][]complex128) [][]complex128) [][]complex128 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l AnyArrayArrayList) Reduce(f func([][]Any, [][]Any) [][]Any) [][]Any {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l BoolOptionArrayList) Reduce(f func([]BoolOption, []BoolOption) []BoolOption) []BoolOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l StringOptionArrayList) Reduce(f func([]StringOption, []StringOption) []StringOption) []StringOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l IntOptionArrayList) Reduce(f func([]IntOption, []IntOption) []IntOption) []IntOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int8OptionArrayList) Reduce(f func([]Int8Option, []Int8Option) []Int8Option) []Int8Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int16OptionArrayList) Reduce(f func([]Int16Option, []Int16Option) []Int16Option) []Int16Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int32OptionArrayList) Reduce(f func([]Int32Option, []Int32Option) []Int32Option) []Int32Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Int64OptionArrayList) Reduce(f func([]Int64Option, []Int64Option) []Int64Option) []Int64Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l UintOptionArrayList) Reduce(f func([]UintOption, []UintOption) []UintOption) []UintOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint8OptionArrayList) Reduce(f func([]Uint8Option, []Uint8Option) []Uint8Option) []Uint8Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint16OptionArrayList) Reduce(f func([]Uint16Option, []Uint16Option) []Uint16Option) []Uint16Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint32OptionArrayList) Reduce(f func([]Uint32Option, []Uint32Option) []Uint32Option) []Uint32Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Uint64OptionArrayList) Reduce(f func([]Uint64Option, []Uint64Option) []Uint64Option) []Uint64Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l UintptrOptionArrayList) Reduce(f func([]UintptrOption, []UintptrOption) []UintptrOption) []UintptrOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l ByteOptionArrayList) Reduce(f func([]ByteOption, []ByteOption) []ByteOption) []ByteOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l RuneOptionArrayList) Reduce(f func([]RuneOption, []RuneOption) []RuneOption) []RuneOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Float32OptionArrayList) Reduce(f func([]Float32Option, []Float32Option) []Float32Option) []Float32Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Float64OptionArrayList) Reduce(f func([]Float64Option, []Float64Option) []Float64Option) []Float64Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Complex64OptionArrayList) Reduce(f func([]Complex64Option, []Complex64Option) []Complex64Option) []Complex64Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Complex128OptionArrayList) Reduce(f func([]Complex128Option, []Complex128Option) []Complex128Option) []Complex128Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l AnyOptionArrayList) Reduce(f func([]AnyOption, []AnyOption) []AnyOption) []AnyOption {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
 func (l BoolListList) Reduce(f func(BoolList, BoolList) BoolList) BoolList {
 	if l.IsEmpty() {
 		panic("Can't reduce empty list")
