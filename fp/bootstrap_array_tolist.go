@@ -24,71 +24,8 @@ func IntArrayToList(m []int) IntList {
 	}
 	return acc.Reverse()
 }
-func Int8ArrayToList(m []int8) Int8List {
-	acc := NilInt8
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int16ArrayToList(m []int16) Int16List {
-	acc := NilInt16
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int32ArrayToList(m []int32) Int32List {
-	acc := NilInt32
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
 func Int64ArrayToList(m []int64) Int64List {
 	acc := NilInt64
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func UintArrayToList(m []uint) UintList {
-	acc := NilUint
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint8ArrayToList(m []uint8) Uint8List {
-	acc := NilUint8
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint16ArrayToList(m []uint16) Uint16List {
-	acc := NilUint16
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint32ArrayToList(m []uint32) Uint32List {
-	acc := NilUint32
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint64ArrayToList(m []uint64) Uint64List {
-	acc := NilUint64
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func UintptrArrayToList(m []uintptr) UintptrList {
-	acc := NilUintptr
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
@@ -122,20 +59,6 @@ func Float64ArrayToList(m []float64) Float64List {
 	}
 	return acc.Reverse()
 }
-func Complex64ArrayToList(m []complex64) Complex64List {
-	acc := NilComplex64
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Complex128ArrayToList(m []complex128) Complex128List {
-	acc := NilComplex128
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
 func AnyArrayToList(m []Any) AnyList {
 	acc := NilAny
 	for _, e := range m {
@@ -164,71 +87,8 @@ func IntArrayArrayToList(m [][]int) IntArrayList {
 	}
 	return acc.Reverse()
 }
-func Int8ArrayArrayToList(m [][]int8) Int8ArrayList {
-	acc := NilInt8Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int16ArrayArrayToList(m [][]int16) Int16ArrayList {
-	acc := NilInt16Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int32ArrayArrayToList(m [][]int32) Int32ArrayList {
-	acc := NilInt32Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
 func Int64ArrayArrayToList(m [][]int64) Int64ArrayList {
 	acc := NilInt64Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func UintArrayArrayToList(m [][]uint) UintArrayList {
-	acc := NilUintArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint8ArrayArrayToList(m [][]uint8) Uint8ArrayList {
-	acc := NilUint8Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint16ArrayArrayToList(m [][]uint16) Uint16ArrayList {
-	acc := NilUint16Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint32ArrayArrayToList(m [][]uint32) Uint32ArrayList {
-	acc := NilUint32Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint64ArrayArrayToList(m [][]uint64) Uint64ArrayList {
-	acc := NilUint64Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func UintptrArrayArrayToList(m [][]uintptr) UintptrArrayList {
-	acc := NilUintptrArray
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
@@ -262,162 +122,8 @@ func Float64ArrayArrayToList(m [][]float64) Float64ArrayList {
 	}
 	return acc.Reverse()
 }
-func Complex64ArrayArrayToList(m [][]complex64) Complex64ArrayList {
-	acc := NilComplex64Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Complex128ArrayArrayToList(m [][]complex128) Complex128ArrayList {
-	acc := NilComplex128Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
 func AnyArrayArrayToList(m [][]Any) AnyArrayList {
 	acc := NilAnyArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func BoolOptionArrayToList(m []BoolOption) BoolOptionList {
-	acc := NilBoolOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func StringOptionArrayToList(m []StringOption) StringOptionList {
-	acc := NilStringOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func IntOptionArrayToList(m []IntOption) IntOptionList {
-	acc := NilIntOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int8OptionArrayToList(m []Int8Option) Int8OptionList {
-	acc := NilInt8Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int16OptionArrayToList(m []Int16Option) Int16OptionList {
-	acc := NilInt16Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int32OptionArrayToList(m []Int32Option) Int32OptionList {
-	acc := NilInt32Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Int64OptionArrayToList(m []Int64Option) Int64OptionList {
-	acc := NilInt64Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func UintOptionArrayToList(m []UintOption) UintOptionList {
-	acc := NilUintOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint8OptionArrayToList(m []Uint8Option) Uint8OptionList {
-	acc := NilUint8Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint16OptionArrayToList(m []Uint16Option) Uint16OptionList {
-	acc := NilUint16Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint32OptionArrayToList(m []Uint32Option) Uint32OptionList {
-	acc := NilUint32Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Uint64OptionArrayToList(m []Uint64Option) Uint64OptionList {
-	acc := NilUint64Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func UintptrOptionArrayToList(m []UintptrOption) UintptrOptionList {
-	acc := NilUintptrOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func ByteOptionArrayToList(m []ByteOption) ByteOptionList {
-	acc := NilByteOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func RuneOptionArrayToList(m []RuneOption) RuneOptionList {
-	acc := NilRuneOption
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Float32OptionArrayToList(m []Float32Option) Float32OptionList {
-	acc := NilFloat32Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Float64OptionArrayToList(m []Float64Option) Float64OptionList {
-	acc := NilFloat64Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Complex64OptionArrayToList(m []Complex64Option) Complex64OptionList {
-	acc := NilComplex64Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func Complex128OptionArrayToList(m []Complex128Option) Complex128OptionList {
-	acc := NilComplex128Option
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
-}
-func AnyOptionArrayToList(m []AnyOption) AnyOptionList {
-	acc := NilAnyOption
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}

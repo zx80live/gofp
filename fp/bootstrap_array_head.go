@@ -24,74 +24,11 @@ func IntArrayHead(m []int) int {
 		panic("can't get head from empty []int slice")
 	}
 }
-func Int8ArrayHead(m []int8) int8 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []int8 slice")
-	}
-}
-func Int16ArrayHead(m []int16) int16 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []int16 slice")
-	}
-}
-func Int32ArrayHead(m []int32) int32 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []int32 slice")
-	}
-}
 func Int64ArrayHead(m []int64) int64 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []int64 slice")
-	}
-}
-func UintArrayHead(m []uint) uint {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []uint slice")
-	}
-}
-func Uint8ArrayHead(m []uint8) uint8 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []uint8 slice")
-	}
-}
-func Uint16ArrayHead(m []uint16) uint16 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []uint16 slice")
-	}
-}
-func Uint32ArrayHead(m []uint32) uint32 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []uint32 slice")
-	}
-}
-func Uint64ArrayHead(m []uint64) uint64 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []uint64 slice")
-	}
-}
-func UintptrArrayHead(m []uintptr) uintptr {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []uintptr slice")
 	}
 }
 func ByteArrayHead(m []byte) byte {
@@ -122,20 +59,6 @@ func Float64ArrayHead(m []float64) float64 {
 		panic("can't get head from empty []float64 slice")
 	}
 }
-func Complex64ArrayHead(m []complex64) complex64 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []complex64 slice")
-	}
-}
-func Complex128ArrayHead(m []complex128) complex128 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []complex128 slice")
-	}
-}
 func AnyArrayHead(m []Any) Any {
 	if len(m) > 0 {
 		return m[0]
@@ -164,74 +87,11 @@ func IntArrayArrayHead(m [][]int) []int {
 		panic("can't get head from empty [][]int slice")
 	}
 }
-func Int8ArrayArrayHead(m [][]int8) []int8 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]int8 slice")
-	}
-}
-func Int16ArrayArrayHead(m [][]int16) []int16 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]int16 slice")
-	}
-}
-func Int32ArrayArrayHead(m [][]int32) []int32 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]int32 slice")
-	}
-}
 func Int64ArrayArrayHead(m [][]int64) []int64 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]int64 slice")
-	}
-}
-func UintArrayArrayHead(m [][]uint) []uint {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]uint slice")
-	}
-}
-func Uint8ArrayArrayHead(m [][]uint8) []uint8 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]uint8 slice")
-	}
-}
-func Uint16ArrayArrayHead(m [][]uint16) []uint16 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]uint16 slice")
-	}
-}
-func Uint32ArrayArrayHead(m [][]uint32) []uint32 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]uint32 slice")
-	}
-}
-func Uint64ArrayArrayHead(m [][]uint64) []uint64 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]uint64 slice")
-	}
-}
-func UintptrArrayArrayHead(m [][]uintptr) []uintptr {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]uintptr slice")
 	}
 }
 func ByteArrayArrayHead(m [][]byte) []byte {
@@ -262,164 +122,10 @@ func Float64ArrayArrayHead(m [][]float64) []float64 {
 		panic("can't get head from empty [][]float64 slice")
 	}
 }
-func Complex64ArrayArrayHead(m [][]complex64) []complex64 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]complex64 slice")
-	}
-}
-func Complex128ArrayArrayHead(m [][]complex128) []complex128 {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty [][]complex128 slice")
-	}
-}
 func AnyArrayArrayHead(m [][]Any) []Any {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]Any slice")
-	}
-}
-func BoolOptionArrayHead(m []BoolOption) BoolOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []BoolOption slice")
-	}
-}
-func StringOptionArrayHead(m []StringOption) StringOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []StringOption slice")
-	}
-}
-func IntOptionArrayHead(m []IntOption) IntOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []IntOption slice")
-	}
-}
-func Int8OptionArrayHead(m []Int8Option) Int8Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Int8Option slice")
-	}
-}
-func Int16OptionArrayHead(m []Int16Option) Int16Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Int16Option slice")
-	}
-}
-func Int32OptionArrayHead(m []Int32Option) Int32Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Int32Option slice")
-	}
-}
-func Int64OptionArrayHead(m []Int64Option) Int64Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Int64Option slice")
-	}
-}
-func UintOptionArrayHead(m []UintOption) UintOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []UintOption slice")
-	}
-}
-func Uint8OptionArrayHead(m []Uint8Option) Uint8Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Uint8Option slice")
-	}
-}
-func Uint16OptionArrayHead(m []Uint16Option) Uint16Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Uint16Option slice")
-	}
-}
-func Uint32OptionArrayHead(m []Uint32Option) Uint32Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Uint32Option slice")
-	}
-}
-func Uint64OptionArrayHead(m []Uint64Option) Uint64Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Uint64Option slice")
-	}
-}
-func UintptrOptionArrayHead(m []UintptrOption) UintptrOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []UintptrOption slice")
-	}
-}
-func ByteOptionArrayHead(m []ByteOption) ByteOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []ByteOption slice")
-	}
-}
-func RuneOptionArrayHead(m []RuneOption) RuneOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []RuneOption slice")
-	}
-}
-func Float32OptionArrayHead(m []Float32Option) Float32Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Float32Option slice")
-	}
-}
-func Float64OptionArrayHead(m []Float64Option) Float64Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Float64Option slice")
-	}
-}
-func Complex64OptionArrayHead(m []Complex64Option) Complex64Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Complex64Option slice")
-	}
-}
-func Complex128OptionArrayHead(m []Complex128Option) Complex128Option {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []Complex128Option slice")
-	}
-}
-func AnyOptionArrayHead(m []AnyOption) AnyOption {
-	if len(m) > 0 {
-		return m[0]
-	} else {
-		panic("can't get head from empty []AnyOption slice")
 	}
 }

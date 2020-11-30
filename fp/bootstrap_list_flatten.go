@@ -12,35 +12,8 @@ func (m StringListList) Flatten() StringList {
 func (m IntListList) Flatten() IntList {
 	return m.FlatMapInt(func(e IntList) IntList { return e })
 }
-func (m Int8ListList) Flatten() Int8List {
-	return m.FlatMapInt8(func(e Int8List) Int8List { return e })
-}
-func (m Int16ListList) Flatten() Int16List {
-	return m.FlatMapInt16(func(e Int16List) Int16List { return e })
-}
-func (m Int32ListList) Flatten() Int32List {
-	return m.FlatMapInt32(func(e Int32List) Int32List { return e })
-}
 func (m Int64ListList) Flatten() Int64List {
 	return m.FlatMapInt64(func(e Int64List) Int64List { return e })
-}
-func (m UintListList) Flatten() UintList {
-	return m.FlatMapUint(func(e UintList) UintList { return e })
-}
-func (m Uint8ListList) Flatten() Uint8List {
-	return m.FlatMapUint8(func(e Uint8List) Uint8List { return e })
-}
-func (m Uint16ListList) Flatten() Uint16List {
-	return m.FlatMapUint16(func(e Uint16List) Uint16List { return e })
-}
-func (m Uint32ListList) Flatten() Uint32List {
-	return m.FlatMapUint32(func(e Uint32List) Uint32List { return e })
-}
-func (m Uint64ListList) Flatten() Uint64List {
-	return m.FlatMapUint64(func(e Uint64List) Uint64List { return e })
-}
-func (m UintptrListList) Flatten() UintptrList {
-	return m.FlatMapUintptr(func(e UintptrList) UintptrList { return e })
 }
 func (m ByteListList) Flatten() ByteList {
 	return m.FlatMapByte(func(e ByteList) ByteList { return e })
@@ -53,12 +26,6 @@ func (m Float32ListList) Flatten() Float32List {
 }
 func (m Float64ListList) Flatten() Float64List {
 	return m.FlatMapFloat64(func(e Float64List) Float64List { return e })
-}
-func (m Complex64ListList) Flatten() Complex64List {
-	return m.FlatMapComplex64(func(e Complex64List) Complex64List { return e })
-}
-func (m Complex128ListList) Flatten() Complex128List {
-	return m.FlatMapComplex128(func(e Complex128List) Complex128List { return e })
 }
 func (m AnyListList) Flatten() AnyList {
 	return m.FlatMapAny(func(e AnyList) AnyList { return e })

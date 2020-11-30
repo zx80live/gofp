@@ -6,328 +6,36 @@ package fp
 type BoolOption struct{ value *bool }
 type StringOption struct{ value *string }
 type IntOption struct{ value *int }
-type Int8Option struct{ value *int8 }
-type Int16Option struct{ value *int16 }
-type Int32Option struct{ value *int32 }
 type Int64Option struct{ value *int64 }
-type UintOption struct{ value *uint }
-type Uint8Option struct{ value *uint8 }
-type Uint16Option struct{ value *uint16 }
-type Uint32Option struct{ value *uint32 }
-type Uint64Option struct{ value *uint64 }
-type UintptrOption struct{ value *uintptr }
 type ByteOption struct{ value *byte }
 type RuneOption struct{ value *rune }
 type Float32Option struct{ value *float32 }
 type Float64Option struct{ value *float64 }
-type Complex64Option struct{ value *complex64 }
-type Complex128Option struct{ value *complex128 }
 type AnyOption struct{ value *Any }
-type BoolArrayOption struct{ value *[]bool }
-type StringArrayOption struct{ value *[]string }
-type IntArrayOption struct{ value *[]int }
-type Int8ArrayOption struct{ value *[]int8 }
-type Int16ArrayOption struct{ value *[]int16 }
-type Int32ArrayOption struct{ value *[]int32 }
-type Int64ArrayOption struct{ value *[]int64 }
-type UintArrayOption struct{ value *[]uint }
-type Uint8ArrayOption struct{ value *[]uint8 }
-type Uint16ArrayOption struct{ value *[]uint16 }
-type Uint32ArrayOption struct{ value *[]uint32 }
-type Uint64ArrayOption struct{ value *[]uint64 }
-type UintptrArrayOption struct{ value *[]uintptr }
-type ByteArrayOption struct{ value *[]byte }
-type RuneArrayOption struct{ value *[]rune }
-type Float32ArrayOption struct{ value *[]float32 }
-type Float64ArrayOption struct{ value *[]float64 }
-type Complex64ArrayOption struct{ value *[]complex64 }
-type Complex128ArrayOption struct{ value *[]complex128 }
-type AnyArrayOption struct{ value *[]Any }
-type BoolArrayArrayOption struct{ value *[][]bool }
-type StringArrayArrayOption struct{ value *[][]string }
-type IntArrayArrayOption struct{ value *[][]int }
-type Int8ArrayArrayOption struct{ value *[][]int8 }
-type Int16ArrayArrayOption struct{ value *[][]int16 }
-type Int32ArrayArrayOption struct{ value *[][]int32 }
-type Int64ArrayArrayOption struct{ value *[][]int64 }
-type UintArrayArrayOption struct{ value *[][]uint }
-type Uint8ArrayArrayOption struct{ value *[][]uint8 }
-type Uint16ArrayArrayOption struct{ value *[][]uint16 }
-type Uint32ArrayArrayOption struct{ value *[][]uint32 }
-type Uint64ArrayArrayOption struct{ value *[][]uint64 }
-type UintptrArrayArrayOption struct{ value *[][]uintptr }
-type ByteArrayArrayOption struct{ value *[][]byte }
-type RuneArrayArrayOption struct{ value *[][]rune }
-type Float32ArrayArrayOption struct{ value *[][]float32 }
-type Float64ArrayArrayOption struct{ value *[][]float64 }
-type Complex64ArrayArrayOption struct{ value *[][]complex64 }
-type Complex128ArrayArrayOption struct{ value *[][]complex128 }
-type AnyArrayArrayOption struct{ value *[][]Any }
-type BoolOptionArrayOption struct{ value *[]BoolOption }
-type StringOptionArrayOption struct{ value *[]StringOption }
-type IntOptionArrayOption struct{ value *[]IntOption }
-type Int8OptionArrayOption struct{ value *[]Int8Option }
-type Int16OptionArrayOption struct{ value *[]Int16Option }
-type Int32OptionArrayOption struct{ value *[]Int32Option }
-type Int64OptionArrayOption struct{ value *[]Int64Option }
-type UintOptionArrayOption struct{ value *[]UintOption }
-type Uint8OptionArrayOption struct{ value *[]Uint8Option }
-type Uint16OptionArrayOption struct{ value *[]Uint16Option }
-type Uint32OptionArrayOption struct{ value *[]Uint32Option }
-type Uint64OptionArrayOption struct{ value *[]Uint64Option }
-type UintptrOptionArrayOption struct{ value *[]UintptrOption }
-type ByteOptionArrayOption struct{ value *[]ByteOption }
-type RuneOptionArrayOption struct{ value *[]RuneOption }
-type Float32OptionArrayOption struct{ value *[]Float32Option }
-type Float64OptionArrayOption struct{ value *[]Float64Option }
-type Complex64OptionArrayOption struct{ value *[]Complex64Option }
-type Complex128OptionArrayOption struct{ value *[]Complex128Option }
-type AnyOptionArrayOption struct{ value *[]AnyOption }
-type BoolListOption struct{ value *BoolList }
-type StringListOption struct{ value *StringList }
-type IntListOption struct{ value *IntList }
-type Int8ListOption struct{ value *Int8List }
-type Int16ListOption struct{ value *Int16List }
-type Int32ListOption struct{ value *Int32List }
-type Int64ListOption struct{ value *Int64List }
-type UintListOption struct{ value *UintList }
-type Uint8ListOption struct{ value *Uint8List }
-type Uint16ListOption struct{ value *Uint16List }
-type Uint32ListOption struct{ value *Uint32List }
-type Uint64ListOption struct{ value *Uint64List }
-type UintptrListOption struct{ value *UintptrList }
-type ByteListOption struct{ value *ByteList }
-type RuneListOption struct{ value *RuneList }
-type Float32ListOption struct{ value *Float32List }
-type Float64ListOption struct{ value *Float64List }
-type Complex64ListOption struct{ value *Complex64List }
-type Complex128ListOption struct{ value *Complex128List }
-type AnyListOption struct{ value *AnyList }
 type BoolOptionOption struct{ value *BoolOption }
 type StringOptionOption struct{ value *StringOption }
 type IntOptionOption struct{ value *IntOption }
-type Int8OptionOption struct{ value *Int8Option }
-type Int16OptionOption struct{ value *Int16Option }
-type Int32OptionOption struct{ value *Int32Option }
 type Int64OptionOption struct{ value *Int64Option }
-type UintOptionOption struct{ value *UintOption }
-type Uint8OptionOption struct{ value *Uint8Option }
-type Uint16OptionOption struct{ value *Uint16Option }
-type Uint32OptionOption struct{ value *Uint32Option }
-type Uint64OptionOption struct{ value *Uint64Option }
-type UintptrOptionOption struct{ value *UintptrOption }
 type ByteOptionOption struct{ value *ByteOption }
 type RuneOptionOption struct{ value *RuneOption }
 type Float32OptionOption struct{ value *Float32Option }
 type Float64OptionOption struct{ value *Float64Option }
-type Complex64OptionOption struct{ value *Complex64Option }
-type Complex128OptionOption struct{ value *Complex128Option }
 type AnyOptionOption struct{ value *AnyOption }
-type BoolArrayOptionOption struct{ value *BoolArrayOption }
-type StringArrayOptionOption struct{ value *StringArrayOption }
-type IntArrayOptionOption struct{ value *IntArrayOption }
-type Int8ArrayOptionOption struct{ value *Int8ArrayOption }
-type Int16ArrayOptionOption struct{ value *Int16ArrayOption }
-type Int32ArrayOptionOption struct{ value *Int32ArrayOption }
-type Int64ArrayOptionOption struct{ value *Int64ArrayOption }
-type UintArrayOptionOption struct{ value *UintArrayOption }
-type Uint8ArrayOptionOption struct{ value *Uint8ArrayOption }
-type Uint16ArrayOptionOption struct{ value *Uint16ArrayOption }
-type Uint32ArrayOptionOption struct{ value *Uint32ArrayOption }
-type Uint64ArrayOptionOption struct{ value *Uint64ArrayOption }
-type UintptrArrayOptionOption struct{ value *UintptrArrayOption }
-type ByteArrayOptionOption struct{ value *ByteArrayOption }
-type RuneArrayOptionOption struct{ value *RuneArrayOption }
-type Float32ArrayOptionOption struct{ value *Float32ArrayOption }
-type Float64ArrayOptionOption struct{ value *Float64ArrayOption }
-type Complex64ArrayOptionOption struct{ value *Complex64ArrayOption }
-type Complex128ArrayOptionOption struct{ value *Complex128ArrayOption }
-type AnyArrayOptionOption struct{ value *AnyArrayOption }
-type BoolArrayArrayOptionOption struct{ value *BoolArrayArrayOption }
-type StringArrayArrayOptionOption struct{ value *StringArrayArrayOption }
-type IntArrayArrayOptionOption struct{ value *IntArrayArrayOption }
-type Int8ArrayArrayOptionOption struct{ value *Int8ArrayArrayOption }
-type Int16ArrayArrayOptionOption struct{ value *Int16ArrayArrayOption }
-type Int32ArrayArrayOptionOption struct{ value *Int32ArrayArrayOption }
-type Int64ArrayArrayOptionOption struct{ value *Int64ArrayArrayOption }
-type UintArrayArrayOptionOption struct{ value *UintArrayArrayOption }
-type Uint8ArrayArrayOptionOption struct{ value *Uint8ArrayArrayOption }
-type Uint16ArrayArrayOptionOption struct{ value *Uint16ArrayArrayOption }
-type Uint32ArrayArrayOptionOption struct{ value *Uint32ArrayArrayOption }
-type Uint64ArrayArrayOptionOption struct{ value *Uint64ArrayArrayOption }
-type UintptrArrayArrayOptionOption struct{ value *UintptrArrayArrayOption }
-type ByteArrayArrayOptionOption struct{ value *ByteArrayArrayOption }
-type RuneArrayArrayOptionOption struct{ value *RuneArrayArrayOption }
-type Float32ArrayArrayOptionOption struct{ value *Float32ArrayArrayOption }
-type Float64ArrayArrayOptionOption struct{ value *Float64ArrayArrayOption }
-type Complex64ArrayArrayOptionOption struct{ value *Complex64ArrayArrayOption }
-type Complex128ArrayArrayOptionOption struct{ value *Complex128ArrayArrayOption }
-type AnyArrayArrayOptionOption struct{ value *AnyArrayArrayOption }
-type BoolOptionArrayOptionOption struct{ value *BoolOptionArrayOption }
-type StringOptionArrayOptionOption struct{ value *StringOptionArrayOption }
-type IntOptionArrayOptionOption struct{ value *IntOptionArrayOption }
-type Int8OptionArrayOptionOption struct{ value *Int8OptionArrayOption }
-type Int16OptionArrayOptionOption struct{ value *Int16OptionArrayOption }
-type Int32OptionArrayOptionOption struct{ value *Int32OptionArrayOption }
-type Int64OptionArrayOptionOption struct{ value *Int64OptionArrayOption }
-type UintOptionArrayOptionOption struct{ value *UintOptionArrayOption }
-type Uint8OptionArrayOptionOption struct{ value *Uint8OptionArrayOption }
-type Uint16OptionArrayOptionOption struct{ value *Uint16OptionArrayOption }
-type Uint32OptionArrayOptionOption struct{ value *Uint32OptionArrayOption }
-type Uint64OptionArrayOptionOption struct{ value *Uint64OptionArrayOption }
-type UintptrOptionArrayOptionOption struct{ value *UintptrOptionArrayOption }
-type ByteOptionArrayOptionOption struct{ value *ByteOptionArrayOption }
-type RuneOptionArrayOptionOption struct{ value *RuneOptionArrayOption }
-type Float32OptionArrayOptionOption struct{ value *Float32OptionArrayOption }
-type Float64OptionArrayOptionOption struct{ value *Float64OptionArrayOption }
-type Complex64OptionArrayOptionOption struct{ value *Complex64OptionArrayOption }
-type Complex128OptionArrayOptionOption struct{ value *Complex128OptionArrayOption }
-type AnyOptionArrayOptionOption struct{ value *AnyOptionArrayOption }
-type BoolListOptionOption struct{ value *BoolListOption }
-type StringListOptionOption struct{ value *StringListOption }
-type IntListOptionOption struct{ value *IntListOption }
-type Int8ListOptionOption struct{ value *Int8ListOption }
-type Int16ListOptionOption struct{ value *Int16ListOption }
-type Int32ListOptionOption struct{ value *Int32ListOption }
-type Int64ListOptionOption struct{ value *Int64ListOption }
-type UintListOptionOption struct{ value *UintListOption }
-type Uint8ListOptionOption struct{ value *Uint8ListOption }
-type Uint16ListOptionOption struct{ value *Uint16ListOption }
-type Uint32ListOptionOption struct{ value *Uint32ListOption }
-type Uint64ListOptionOption struct{ value *Uint64ListOption }
-type UintptrListOptionOption struct{ value *UintptrListOption }
-type ByteListOptionOption struct{ value *ByteListOption }
-type RuneListOptionOption struct{ value *RuneListOption }
-type Float32ListOptionOption struct{ value *Float32ListOption }
-type Float64ListOptionOption struct{ value *Float64ListOption }
-type Complex64ListOptionOption struct{ value *Complex64ListOption }
-type Complex128ListOptionOption struct{ value *Complex128ListOption }
-type AnyListOptionOption struct{ value *AnyListOption }
-type BoolOptionOptionOption struct{ value *BoolOptionOption }
-type StringOptionOptionOption struct{ value *StringOptionOption }
-type IntOptionOptionOption struct{ value *IntOptionOption }
-type Int8OptionOptionOption struct{ value *Int8OptionOption }
-type Int16OptionOptionOption struct{ value *Int16OptionOption }
-type Int32OptionOptionOption struct{ value *Int32OptionOption }
-type Int64OptionOptionOption struct{ value *Int64OptionOption }
-type UintOptionOptionOption struct{ value *UintOptionOption }
-type Uint8OptionOptionOption struct{ value *Uint8OptionOption }
-type Uint16OptionOptionOption struct{ value *Uint16OptionOption }
-type Uint32OptionOptionOption struct{ value *Uint32OptionOption }
-type Uint64OptionOptionOption struct{ value *Uint64OptionOption }
-type UintptrOptionOptionOption struct{ value *UintptrOptionOption }
-type ByteOptionOptionOption struct{ value *ByteOptionOption }
-type RuneOptionOptionOption struct{ value *RuneOptionOption }
-type Float32OptionOptionOption struct{ value *Float32OptionOption }
-type Float64OptionOptionOption struct{ value *Float64OptionOption }
-type Complex64OptionOptionOption struct{ value *Complex64OptionOption }
-type Complex128OptionOptionOption struct{ value *Complex128OptionOption }
-type AnyOptionOptionOption struct{ value *AnyOptionOption }
-type BoolArrayOptionOptionOption struct{ value *BoolArrayOptionOption }
-type StringArrayOptionOptionOption struct{ value *StringArrayOptionOption }
-type IntArrayOptionOptionOption struct{ value *IntArrayOptionOption }
-type Int8ArrayOptionOptionOption struct{ value *Int8ArrayOptionOption }
-type Int16ArrayOptionOptionOption struct{ value *Int16ArrayOptionOption }
-type Int32ArrayOptionOptionOption struct{ value *Int32ArrayOptionOption }
-type Int64ArrayOptionOptionOption struct{ value *Int64ArrayOptionOption }
-type UintArrayOptionOptionOption struct{ value *UintArrayOptionOption }
-type Uint8ArrayOptionOptionOption struct{ value *Uint8ArrayOptionOption }
-type Uint16ArrayOptionOptionOption struct{ value *Uint16ArrayOptionOption }
-type Uint32ArrayOptionOptionOption struct{ value *Uint32ArrayOptionOption }
-type Uint64ArrayOptionOptionOption struct{ value *Uint64ArrayOptionOption }
-type UintptrArrayOptionOptionOption struct{ value *UintptrArrayOptionOption }
-type ByteArrayOptionOptionOption struct{ value *ByteArrayOptionOption }
-type RuneArrayOptionOptionOption struct{ value *RuneArrayOptionOption }
-type Float32ArrayOptionOptionOption struct{ value *Float32ArrayOptionOption }
-type Float64ArrayOptionOptionOption struct{ value *Float64ArrayOptionOption }
-type Complex64ArrayOptionOptionOption struct{ value *Complex64ArrayOptionOption }
-type Complex128ArrayOptionOptionOption struct{ value *Complex128ArrayOptionOption }
-type AnyArrayOptionOptionOption struct{ value *AnyArrayOptionOption }
-type BoolArrayArrayOptionOptionOption struct{ value *BoolArrayArrayOptionOption }
-type StringArrayArrayOptionOptionOption struct{ value *StringArrayArrayOptionOption }
-type IntArrayArrayOptionOptionOption struct{ value *IntArrayArrayOptionOption }
-type Int8ArrayArrayOptionOptionOption struct{ value *Int8ArrayArrayOptionOption }
-type Int16ArrayArrayOptionOptionOption struct{ value *Int16ArrayArrayOptionOption }
-type Int32ArrayArrayOptionOptionOption struct{ value *Int32ArrayArrayOptionOption }
-type Int64ArrayArrayOptionOptionOption struct{ value *Int64ArrayArrayOptionOption }
-type UintArrayArrayOptionOptionOption struct{ value *UintArrayArrayOptionOption }
-type Uint8ArrayArrayOptionOptionOption struct{ value *Uint8ArrayArrayOptionOption }
-type Uint16ArrayArrayOptionOptionOption struct{ value *Uint16ArrayArrayOptionOption }
-type Uint32ArrayArrayOptionOptionOption struct{ value *Uint32ArrayArrayOptionOption }
-type Uint64ArrayArrayOptionOptionOption struct{ value *Uint64ArrayArrayOptionOption }
-type UintptrArrayArrayOptionOptionOption struct {
-	value *UintptrArrayArrayOptionOption
-}
-type ByteArrayArrayOptionOptionOption struct{ value *ByteArrayArrayOptionOption }
-type RuneArrayArrayOptionOptionOption struct{ value *RuneArrayArrayOptionOption }
-type Float32ArrayArrayOptionOptionOption struct {
-	value *Float32ArrayArrayOptionOption
-}
-type Float64ArrayArrayOptionOptionOption struct {
-	value *Float64ArrayArrayOptionOption
-}
-type Complex64ArrayArrayOptionOptionOption struct {
-	value *Complex64ArrayArrayOptionOption
-}
-type Complex128ArrayArrayOptionOptionOption struct {
-	value *Complex128ArrayArrayOptionOption
-}
-type AnyArrayArrayOptionOptionOption struct{ value *AnyArrayArrayOptionOption }
-type BoolOptionArrayOptionOptionOption struct{ value *BoolOptionArrayOptionOption }
-type StringOptionArrayOptionOptionOption struct {
-	value *StringOptionArrayOptionOption
-}
-type IntOptionArrayOptionOptionOption struct{ value *IntOptionArrayOptionOption }
-type Int8OptionArrayOptionOptionOption struct{ value *Int8OptionArrayOptionOption }
-type Int16OptionArrayOptionOptionOption struct{ value *Int16OptionArrayOptionOption }
-type Int32OptionArrayOptionOptionOption struct{ value *Int32OptionArrayOptionOption }
-type Int64OptionArrayOptionOptionOption struct{ value *Int64OptionArrayOptionOption }
-type UintOptionArrayOptionOptionOption struct{ value *UintOptionArrayOptionOption }
-type Uint8OptionArrayOptionOptionOption struct{ value *Uint8OptionArrayOptionOption }
-type Uint16OptionArrayOptionOptionOption struct {
-	value *Uint16OptionArrayOptionOption
-}
-type Uint32OptionArrayOptionOptionOption struct {
-	value *Uint32OptionArrayOptionOption
-}
-type Uint64OptionArrayOptionOptionOption struct {
-	value *Uint64OptionArrayOptionOption
-}
-type UintptrOptionArrayOptionOptionOption struct {
-	value *UintptrOptionArrayOptionOption
-}
-type ByteOptionArrayOptionOptionOption struct{ value *ByteOptionArrayOptionOption }
-type RuneOptionArrayOptionOptionOption struct{ value *RuneOptionArrayOptionOption }
-type Float32OptionArrayOptionOptionOption struct {
-	value *Float32OptionArrayOptionOption
-}
-type Float64OptionArrayOptionOptionOption struct {
-	value *Float64OptionArrayOptionOption
-}
-type Complex64OptionArrayOptionOptionOption struct {
-	value *Complex64OptionArrayOptionOption
-}
-type Complex128OptionArrayOptionOptionOption struct {
-	value *Complex128OptionArrayOptionOption
-}
-type AnyOptionArrayOptionOptionOption struct{ value *AnyOptionArrayOptionOption }
-type BoolListOptionOptionOption struct{ value *BoolListOptionOption }
-type StringListOptionOptionOption struct{ value *StringListOptionOption }
-type IntListOptionOptionOption struct{ value *IntListOptionOption }
-type Int8ListOptionOptionOption struct{ value *Int8ListOptionOption }
-type Int16ListOptionOptionOption struct{ value *Int16ListOptionOption }
-type Int32ListOptionOptionOption struct{ value *Int32ListOptionOption }
-type Int64ListOptionOptionOption struct{ value *Int64ListOptionOption }
-type UintListOptionOptionOption struct{ value *UintListOptionOption }
-type Uint8ListOptionOptionOption struct{ value *Uint8ListOptionOption }
-type Uint16ListOptionOptionOption struct{ value *Uint16ListOptionOption }
-type Uint32ListOptionOptionOption struct{ value *Uint32ListOptionOption }
-type Uint64ListOptionOptionOption struct{ value *Uint64ListOptionOption }
-type UintptrListOptionOptionOption struct{ value *UintptrListOptionOption }
-type ByteListOptionOptionOption struct{ value *ByteListOptionOption }
-type RuneListOptionOptionOption struct{ value *RuneListOptionOption }
-type Float32ListOptionOptionOption struct{ value *Float32ListOptionOption }
-type Float64ListOptionOptionOption struct{ value *Float64ListOptionOption }
-type Complex64ListOptionOptionOption struct{ value *Complex64ListOptionOption }
-type Complex128ListOptionOptionOption struct{ value *Complex128ListOptionOption }
-type AnyListOptionOptionOption struct{ value *AnyListOptionOption }
+type BoolArrayOption struct{ value *[]bool }
+type StringArrayOption struct{ value *[]string }
+type IntArrayOption struct{ value *[]int }
+type Int64ArrayOption struct{ value *[]int64 }
+type ByteArrayOption struct{ value *[]byte }
+type RuneArrayOption struct{ value *[]rune }
+type Float32ArrayOption struct{ value *[]float32 }
+type Float64ArrayOption struct{ value *[]float64 }
+type AnyArrayOption struct{ value *[]Any }
+type BoolListOption struct{ value *BoolList }
+type StringListOption struct{ value *StringList }
+type IntListOption struct{ value *IntList }
+type Int64ListOption struct{ value *Int64List }
+type ByteListOption struct{ value *ByteList }
+type RuneListOption struct{ value *RuneList }
+type Float32ListOption struct{ value *Float32List }
+type Float64ListOption struct{ value *Float64List }
+type AnyListOption struct{ value *AnyList }

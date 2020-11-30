@@ -12,35 +12,8 @@ func (m StringOptionOption) Flatten() StringOption {
 func (m IntOptionOption) Flatten() IntOption {
 	return m.FlatMapInt(func(e IntOption) IntOption { return e })
 }
-func (m Int8OptionOption) Flatten() Int8Option {
-	return m.FlatMapInt8(func(e Int8Option) Int8Option { return e })
-}
-func (m Int16OptionOption) Flatten() Int16Option {
-	return m.FlatMapInt16(func(e Int16Option) Int16Option { return e })
-}
-func (m Int32OptionOption) Flatten() Int32Option {
-	return m.FlatMapInt32(func(e Int32Option) Int32Option { return e })
-}
 func (m Int64OptionOption) Flatten() Int64Option {
 	return m.FlatMapInt64(func(e Int64Option) Int64Option { return e })
-}
-func (m UintOptionOption) Flatten() UintOption {
-	return m.FlatMapUint(func(e UintOption) UintOption { return e })
-}
-func (m Uint8OptionOption) Flatten() Uint8Option {
-	return m.FlatMapUint8(func(e Uint8Option) Uint8Option { return e })
-}
-func (m Uint16OptionOption) Flatten() Uint16Option {
-	return m.FlatMapUint16(func(e Uint16Option) Uint16Option { return e })
-}
-func (m Uint32OptionOption) Flatten() Uint32Option {
-	return m.FlatMapUint32(func(e Uint32Option) Uint32Option { return e })
-}
-func (m Uint64OptionOption) Flatten() Uint64Option {
-	return m.FlatMapUint64(func(e Uint64Option) Uint64Option { return e })
-}
-func (m UintptrOptionOption) Flatten() UintptrOption {
-	return m.FlatMapUintptr(func(e UintptrOption) UintptrOption { return e })
 }
 func (m ByteOptionOption) Flatten() ByteOption {
 	return m.FlatMapByte(func(e ByteOption) ByteOption { return e })
@@ -53,12 +26,6 @@ func (m Float32OptionOption) Flatten() Float32Option {
 }
 func (m Float64OptionOption) Flatten() Float64Option {
 	return m.FlatMapFloat64(func(e Float64Option) Float64Option { return e })
-}
-func (m Complex64OptionOption) Flatten() Complex64Option {
-	return m.FlatMapComplex64(func(e Complex64Option) Complex64Option { return e })
-}
-func (m Complex128OptionOption) Flatten() Complex128Option {
-	return m.FlatMapComplex128(func(e Complex128Option) Complex128Option { return e })
 }
 func (m AnyOptionOption) Flatten() AnyOption {
 	return m.FlatMapAny(func(e AnyOption) AnyOption { return e })
