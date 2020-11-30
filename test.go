@@ -20,7 +20,7 @@ func main() {
 			fmt.Println(">", e)
 		})
 
-	var i1 IntOption = Int(1)
+	var i1 IntOption = IntOpt(1)
 	var i2 IntOption = NoneInt
 
 	fmt.Println(i1.ToString(), i1.IsDefined(), i1.IsEmpty(), i1.Filter(even).ToString(), i1.Filter(pos).ToString(), i1.MapInt(func(e int) int { return e + 100 }).ToString())
@@ -54,7 +54,7 @@ func main() {
 	})
 	fmt.Println(mapString.ToString())
 
-	fmt.Println(Int(10).ToString())
+	fmt.Println(IntOpt(10).ToString())
 
 	fmt.Println(MakeIntList(1, 2).Tail().Tail().HeadOption().ToString())
 
@@ -67,11 +67,22 @@ func main() {
 		FlatMapInt(func(l IntList) IntList { return l }).
 		Foreach(func(e int) { fmt.Println(">", e) })
 
-	MakeIntOptionOption(Int(10)).FlatMapInt(func(e IntOption) IntOption { return e }).Foreach(func(e int) { fmt.Println("flatten", e) })
+	MakeIntOptionOption(IntOpt(10)).FlatMapInt(func(e IntOption) IntOption { return e }).Foreach(func(e int) { fmt.Println("flatten", e) })
 
 	MakeIntListList(MakeIntList(1, 2, 3), MakeIntList(4, 5), MakeIntList(), MakeIntList(6, 7, 8)).
 		Flatten().
 		Foreach(func(e int) { fmt.Println("flatten", e) })
 
 	fmt.Println("reduce list", MakeIntList(10, 20, 30).Reduce(func(a, b int) int { return a + b }))
+
+	var ii int = Int(10015).Underlined()
+	fmt.Println(ii)
+
+	var parsed Int = String("10015").ToInt()
+	fmt.Println("parsed", parsed, parsed.Underlined())
+
+	fmt.Println(String("10015").ToIntOption().ToString())
+	fmt.Println(String("Hello").ToIntOption().ToString())
+
+	fmt.Println(Int(1).Cons(2).Cons(3).Cons(4).Cons(5).ToString())
 }

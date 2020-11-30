@@ -7,252 +7,252 @@ import "fmt"
 
 func (o BoolOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolToString)
+		return fmt.Sprintf("Some(%v)", BoolToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o StringOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringToString)
+		return fmt.Sprintf("Some(%v)", StringToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o IntOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntToString)
+		return fmt.Sprintf("Some(%v)", IntToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Int64Option) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64ToString)
+		return fmt.Sprintf("Some(%v)", Int64ToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o ByteOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteToString)
+		return fmt.Sprintf("Some(%v)", ByteToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o RuneOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneToString)
+		return fmt.Sprintf("Some(%v)", RuneToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float32Option) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32ToString)
+		return fmt.Sprintf("Some(%v)", Float32ToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float64Option) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64ToString)
+		return fmt.Sprintf("Some(%v)", Float64ToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o AnyOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyToString)
+		return fmt.Sprintf("Some(%v)", AnyToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o BoolOptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolOptionToString)
+		return fmt.Sprintf("Some(%v)", BoolOptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o StringOptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringOptionToString)
+		return fmt.Sprintf("Some(%v)", StringOptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o IntOptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntOptionToString)
+		return fmt.Sprintf("Some(%v)", IntOptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Int64OptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64OptionToString)
+		return fmt.Sprintf("Some(%v)", Int64OptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o ByteOptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteOptionToString)
+		return fmt.Sprintf("Some(%v)", ByteOptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o RuneOptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneOptionToString)
+		return fmt.Sprintf("Some(%v)", RuneOptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float32OptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32OptionToString)
+		return fmt.Sprintf("Some(%v)", Float32OptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float64OptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64OptionToString)
+		return fmt.Sprintf("Some(%v)", Float64OptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o AnyOptionOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyOptionToString)
+		return fmt.Sprintf("Some(%v)", AnyOptionToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o BoolArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolArrayToString)
+		return fmt.Sprintf("Some(%v)", BoolArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o StringArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringArrayToString)
+		return fmt.Sprintf("Some(%v)", StringArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o IntArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntArrayToString)
+		return fmt.Sprintf("Some(%v)", IntArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Int64ArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64ArrayToString)
+		return fmt.Sprintf("Some(%v)", Int64ArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o ByteArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteArrayToString)
+		return fmt.Sprintf("Some(%v)", ByteArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o RuneArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneArrayToString)
+		return fmt.Sprintf("Some(%v)", RuneArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float32ArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32ArrayToString)
+		return fmt.Sprintf("Some(%v)", Float32ArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float64ArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64ArrayToString)
+		return fmt.Sprintf("Some(%v)", Float64ArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o AnyArrayOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyArrayToString)
+		return fmt.Sprintf("Some(%v)", AnyArrayToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o BoolListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolListToString)
+		return fmt.Sprintf("Some(%v)", BoolListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o StringListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringListToString)
+		return fmt.Sprintf("Some(%v)", StringListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o IntListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntListToString)
+		return fmt.Sprintf("Some(%v)", IntListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Int64ListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64ListToString)
+		return fmt.Sprintf("Some(%v)", Int64ListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o ByteListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteListToString)
+		return fmt.Sprintf("Some(%v)", ByteListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o RuneListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneListToString)
+		return fmt.Sprintf("Some(%v)", RuneListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float32ListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32ListToString)
+		return fmt.Sprintf("Some(%v)", Float32ListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o Float64ListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64ListToString)
+		return fmt.Sprintf("Some(%v)", Float64ListToString(*o.value))
 	} else {
 		return "None"
 	}
 }
 func (o AnyListOption) ToString() string {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyListToString)
+		return fmt.Sprintf("Some(%v)", AnyListToString(*o.value))
 	} else {
 		return "None"
 	}
