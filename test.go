@@ -91,4 +91,8 @@ func main() {
 
 	fmt.Println(Int(0).To(10).ToString())
 	fmt.Println(Int(0).Until(10).ToString())
+
+	xsForSearch := MakeIntList(1, -2, 3, 4, -5, 6, -7, 8, 9)
+	fmt.Println(xsForSearch.Find(func(e int) bool { return e == 3 }).ToString())
+	fmt.Println(xsForSearch.Find(func(e int) bool { return e == -3 }).ToString())
 }
