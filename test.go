@@ -101,4 +101,38 @@ func main() {
 	for k, v := range groups {
 		fmt.Println(k, v.ToString())
 	}
+
+	type Shape struct {
+		name  string
+		color string
+		area  int
+	}
+
+	shapes := NilAny.
+		Cons(Shape{"circle", "green", 10}).
+		Cons(Shape{"circle", "red", 20}).
+		Cons(Shape{"circle", "yellow", 30}).
+		Cons(Shape{"triangle", "green", 10}).
+		Cons(Shape{"triangle", "red", 20}).
+		Cons(Shape{"triangle", "yellow", 30}).
+		Cons(Shape{"polygon", "green", 10}).
+		Cons(Shape{"polygon", "red", 20}).
+		Cons(Shape{"polygon", "yellow", 30})
+
+	byShape := func(e Any) Any { return e.(Shape).name }
+	byColor := func(e Any) Any { return e.(Shape).color }
+	byArea := func(e Any) Any { return e.(Shape).area }
+
+	fmt.Println("by shape")
+	for k, v := range shapes.GroupByAny(byShape) {
+		fmt.Println(k, v.ToString())
+	}
+	fmt.Println("by color")
+	for k, v := range shapes.GroupByAny(byColor) {
+		fmt.Println(k, v.ToString())
+	}
+	fmt.Println("by area")
+	for k, v := range shapes.GroupByAny(byArea) {
+		fmt.Println(k, v.ToString())
+	}
 }
