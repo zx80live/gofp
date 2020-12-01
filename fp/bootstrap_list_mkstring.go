@@ -5,471 +5,471 @@ package fp
 
 import "fmt"
 
-func (l BoolList) MkString(start, sep, end string) string {
+func (l BoolList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, BoolToString(Bool(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l StringList) MkString(start, sep, end string) string {
+func (l StringList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, StringToString(String(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l IntList) MkString(start, sep, end string) string {
+func (l IntList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, IntToString(Int(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Int64List) MkString(start, sep, end string) string {
+func (l Int64List) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Int64ToString(Int64(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l ByteList) MkString(start, sep, end string) string {
+func (l ByteList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, ByteToString(Byte(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l RuneList) MkString(start, sep, end string) string {
+func (l RuneList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, RuneToString(Rune(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float32List) MkString(start, sep, end string) string {
+func (l Float32List) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float32ToString(Float32(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float64List) MkString(start, sep, end string) string {
+func (l Float64List) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float64ToString(Float64(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l AnyList) MkString(start, sep, end string) string {
+func (l AnyList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, AnyToString(Any(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l BoolArrayList) MkString(start, sep, end string) string {
+func (l BoolArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, BoolArrayToString(BoolArray(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l StringArrayList) MkString(start, sep, end string) string {
+func (l StringArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, StringArrayToString(StringArray(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l IntArrayList) MkString(start, sep, end string) string {
+func (l IntArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, IntArrayToString(IntArray(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Int64ArrayList) MkString(start, sep, end string) string {
+func (l Int64ArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Int64ArrayToString(Int64Array(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l ByteArrayList) MkString(start, sep, end string) string {
+func (l ByteArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, ByteArrayToString(ByteArray(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l RuneArrayList) MkString(start, sep, end string) string {
+func (l RuneArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, RuneArrayToString(RuneArray(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float32ArrayList) MkString(start, sep, end string) string {
+func (l Float32ArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float32ArrayToString(Float32Array(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float64ArrayList) MkString(start, sep, end string) string {
+func (l Float64ArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float64ArrayToString(Float64Array(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l AnyArrayList) MkString(start, sep, end string) string {
+func (l AnyArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(AnyArray(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l BoolOptionList) MkString(start, sep, end string) string {
+func (l BoolOptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolOptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, BoolOptionToString(BoolOption(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l StringOptionList) MkString(start, sep, end string) string {
+func (l StringOptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringOptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, StringOptionToString(StringOption(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l IntOptionList) MkString(start, sep, end string) string {
+func (l IntOptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntOptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, IntOptionToString(IntOption(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Int64OptionList) MkString(start, sep, end string) string {
+func (l Int64OptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64OptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Int64OptionToString(Int64Option(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l ByteOptionList) MkString(start, sep, end string) string {
+func (l ByteOptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteOptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, ByteOptionToString(ByteOption(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l RuneOptionList) MkString(start, sep, end string) string {
+func (l RuneOptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneOptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, RuneOptionToString(RuneOption(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float32OptionList) MkString(start, sep, end string) string {
+func (l Float32OptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32OptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float32OptionToString(Float32Option(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float64OptionList) MkString(start, sep, end string) string {
+func (l Float64OptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64OptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float64OptionToString(Float64Option(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l AnyOptionList) MkString(start, sep, end string) string {
+func (l AnyOptionList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyOptionToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, AnyOptionToString(AnyOption(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l BoolListList) MkString(start, sep, end string) string {
+func (l BoolListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, BoolListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, BoolListToString(BoolList(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l StringListList) MkString(start, sep, end string) string {
+func (l StringListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, StringListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, StringListToString(StringList(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l IntListList) MkString(start, sep, end string) string {
+func (l IntListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, IntListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, IntListToString(IntList(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Int64ListList) MkString(start, sep, end string) string {
+func (l Int64ListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Int64ListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Int64ListToString(Int64List(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l ByteListList) MkString(start, sep, end string) string {
+func (l ByteListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, ByteListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, ByteListToString(ByteList(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l RuneListList) MkString(start, sep, end string) string {
+func (l RuneListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, RuneListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, RuneListToString(RuneList(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float32ListList) MkString(start, sep, end string) string {
+func (l Float32ListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float32ListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float32ListToString(Float32List(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l Float64ListList) MkString(start, sep, end string) string {
+func (l Float64ListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, Float64ListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float64ListToString(Float64List(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func (l AnyListList) MkString(start, sep, end string) string {
+func (l AnyListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
 	for xs.NonEmpty() {
-		content = fmt.Sprintf("%v%v%v", content, AnyListToString(*xs.head), sep)
+		content = fmt.Sprintf("%v%v%v", content, AnyListToString(AnyList(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
 	if s > 0 {
 		content = content[:s-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }

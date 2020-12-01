@@ -3,7 +3,7 @@
 
 package fp
 
-func BoolArrayDrop(m []bool, i int) []bool {
+func (m BoolArray) Drop(i int) []bool {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -14,7 +14,7 @@ func BoolArrayDrop(m []bool, i int) []bool {
 		return make([]bool, 0)
 	}
 }
-func StringArrayDrop(m []string, i int) []string {
+func (m StringArray) Drop(i int) []string {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -25,7 +25,7 @@ func StringArrayDrop(m []string, i int) []string {
 		return make([]string, 0)
 	}
 }
-func IntArrayDrop(m []int, i int) []int {
+func (m IntArray) Drop(i int) []int {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -36,7 +36,7 @@ func IntArrayDrop(m []int, i int) []int {
 		return make([]int, 0)
 	}
 }
-func Int64ArrayDrop(m []int64, i int) []int64 {
+func (m Int64Array) Drop(i int) []int64 {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -47,7 +47,7 @@ func Int64ArrayDrop(m []int64, i int) []int64 {
 		return make([]int64, 0)
 	}
 }
-func ByteArrayDrop(m []byte, i int) []byte {
+func (m ByteArray) Drop(i int) []byte {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -58,7 +58,7 @@ func ByteArrayDrop(m []byte, i int) []byte {
 		return make([]byte, 0)
 	}
 }
-func RuneArrayDrop(m []rune, i int) []rune {
+func (m RuneArray) Drop(i int) []rune {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -69,7 +69,7 @@ func RuneArrayDrop(m []rune, i int) []rune {
 		return make([]rune, 0)
 	}
 }
-func Float32ArrayDrop(m []float32, i int) []float32 {
+func (m Float32Array) Drop(i int) []float32 {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -80,7 +80,7 @@ func Float32ArrayDrop(m []float32, i int) []float32 {
 		return make([]float32, 0)
 	}
 }
-func Float64ArrayDrop(m []float64, i int) []float64 {
+func (m Float64Array) Drop(i int) []float64 {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -91,7 +91,7 @@ func Float64ArrayDrop(m []float64, i int) []float64 {
 		return make([]float64, 0)
 	}
 }
-func AnyArrayDrop(m []Any, i int) []Any {
+func (m AnyArray) Drop(i int) []Any {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -102,7 +102,7 @@ func AnyArrayDrop(m []Any, i int) []Any {
 		return make([]Any, 0)
 	}
 }
-func BoolArrayArrayDrop(m [][]bool, i int) [][]bool {
+func (m BoolArrayArray) Drop(i int) [][]bool {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -113,7 +113,7 @@ func BoolArrayArrayDrop(m [][]bool, i int) [][]bool {
 		return make([][]bool, 0)
 	}
 }
-func StringArrayArrayDrop(m [][]string, i int) [][]string {
+func (m StringArrayArray) Drop(i int) [][]string {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -124,7 +124,7 @@ func StringArrayArrayDrop(m [][]string, i int) [][]string {
 		return make([][]string, 0)
 	}
 }
-func IntArrayArrayDrop(m [][]int, i int) [][]int {
+func (m IntArrayArray) Drop(i int) [][]int {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -135,7 +135,7 @@ func IntArrayArrayDrop(m [][]int, i int) [][]int {
 		return make([][]int, 0)
 	}
 }
-func Int64ArrayArrayDrop(m [][]int64, i int) [][]int64 {
+func (m Int64ArrayArray) Drop(i int) [][]int64 {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -146,7 +146,7 @@ func Int64ArrayArrayDrop(m [][]int64, i int) [][]int64 {
 		return make([][]int64, 0)
 	}
 }
-func ByteArrayArrayDrop(m [][]byte, i int) [][]byte {
+func (m ByteArrayArray) Drop(i int) [][]byte {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -157,7 +157,7 @@ func ByteArrayArrayDrop(m [][]byte, i int) [][]byte {
 		return make([][]byte, 0)
 	}
 }
-func RuneArrayArrayDrop(m [][]rune, i int) [][]rune {
+func (m RuneArrayArray) Drop(i int) [][]rune {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -168,7 +168,7 @@ func RuneArrayArrayDrop(m [][]rune, i int) [][]rune {
 		return make([][]rune, 0)
 	}
 }
-func Float32ArrayArrayDrop(m [][]float32, i int) [][]float32 {
+func (m Float32ArrayArray) Drop(i int) [][]float32 {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -179,7 +179,7 @@ func Float32ArrayArrayDrop(m [][]float32, i int) [][]float32 {
 		return make([][]float32, 0)
 	}
 }
-func Float64ArrayArrayDrop(m [][]float64, i int) [][]float64 {
+func (m Float64ArrayArray) Drop(i int) [][]float64 {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")
@@ -190,7 +190,7 @@ func Float64ArrayArrayDrop(m [][]float64, i int) [][]float64 {
 		return make([][]float64, 0)
 	}
 }
-func AnyArrayArrayDrop(m [][]Any, i int) [][]Any {
+func (m AnyArrayArray) Drop(i int) [][]Any {
 	s := len(m)
 	if i < 0 || i >= s {
 		panic("index out of bound")

@@ -3,126 +3,126 @@
 
 package fp
 
-func BoolArrayToList(m []bool) BoolList {
+func (m BoolArray) ToList() BoolList {
 	acc := NilBool
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func StringArrayToList(m []string) StringList {
+func (m StringArray) ToList() StringList {
 	acc := NilString
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func IntArrayToList(m []int) IntList {
+func (m IntArray) ToList() IntList {
 	acc := NilInt
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func Int64ArrayToList(m []int64) Int64List {
+func (m Int64Array) ToList() Int64List {
 	acc := NilInt64
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func ByteArrayToList(m []byte) ByteList {
+func (m ByteArray) ToList() ByteList {
 	acc := NilByte
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func RuneArrayToList(m []rune) RuneList {
+func (m RuneArray) ToList() RuneList {
 	acc := NilRune
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func Float32ArrayToList(m []float32) Float32List {
+func (m Float32Array) ToList() Float32List {
 	acc := NilFloat32
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func Float64ArrayToList(m []float64) Float64List {
+func (m Float64Array) ToList() Float64List {
 	acc := NilFloat64
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func AnyArrayToList(m []Any) AnyList {
+func (m AnyArray) ToList() AnyList {
 	acc := NilAny
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func BoolArrayArrayToList(m [][]bool) BoolArrayList {
+func (m BoolArrayArray) ToList() BoolArrayList {
 	acc := NilBoolArray
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func StringArrayArrayToList(m [][]string) StringArrayList {
+func (m StringArrayArray) ToList() StringArrayList {
 	acc := NilStringArray
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func IntArrayArrayToList(m [][]int) IntArrayList {
+func (m IntArrayArray) ToList() IntArrayList {
 	acc := NilIntArray
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func Int64ArrayArrayToList(m [][]int64) Int64ArrayList {
+func (m Int64ArrayArray) ToList() Int64ArrayList {
 	acc := NilInt64Array
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func ByteArrayArrayToList(m [][]byte) ByteArrayList {
+func (m ByteArrayArray) ToList() ByteArrayList {
 	acc := NilByteArray
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func RuneArrayArrayToList(m [][]rune) RuneArrayList {
+func (m RuneArrayArray) ToList() RuneArrayList {
 	acc := NilRuneArray
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func Float32ArrayArrayToList(m [][]float32) Float32ArrayList {
+func (m Float32ArrayArray) ToList() Float32ArrayList {
 	acc := NilFloat32Array
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func Float64ArrayArrayToList(m [][]float64) Float64ArrayList {
+func (m Float64ArrayArray) ToList() Float64ArrayList {
 	acc := NilFloat64Array
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}
 	return acc.Reverse()
 }
-func AnyArrayArrayToList(m [][]Any) AnyArrayList {
+func (m AnyArrayArray) ToList() AnyArrayList {
 	acc := NilAnyArray
 	for _, e := range m {
 		acc = acc.Cons(e)

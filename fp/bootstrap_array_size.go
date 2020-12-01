@@ -3,38 +3,21 @@
 
 package fp
 
-func BoolArraySize(m []bool) int { return len(m) }
-
-func StringArraySize(m []string) int { return len(m) }
-
-func IntArraySize(m []int) int { return len(m) }
-
-func Int64ArraySize(m []int64) int { return len(m) }
-
-func ByteArraySize(m []byte) int { return len(m) }
-
-func RuneArraySize(m []rune) int { return len(m) }
-
-func Float32ArraySize(m []float32) int { return len(m) }
-
-func Float64ArraySize(m []float64) int { return len(m) }
-
-func AnyArraySize(m []Any) int { return len(m) }
-
-func BoolArrayArraySize(m [][]bool) int { return len(m) }
-
-func StringArrayArraySize(m [][]string) int { return len(m) }
-
-func IntArrayArraySize(m [][]int) int { return len(m) }
-
-func Int64ArrayArraySize(m [][]int64) int { return len(m) }
-
-func ByteArrayArraySize(m [][]byte) int { return len(m) }
-
-func RuneArrayArraySize(m [][]rune) int { return len(m) }
-
-func Float32ArrayArraySize(m [][]float32) int { return len(m) }
-
-func Float64ArrayArraySize(m [][]float64) int { return len(m) }
-
-func AnyArrayArraySize(m [][]Any) int { return len(m) }
+func (m BoolArray) Size() Int         { return Int(len([]bool(m))) }
+func (m StringArray) Size() Int       { return Int(len([]string(m))) }
+func (m IntArray) Size() Int          { return Int(len([]int(m))) }
+func (m Int64Array) Size() Int        { return Int(len([]int64(m))) }
+func (m ByteArray) Size() Int         { return Int(len([]byte(m))) }
+func (m RuneArray) Size() Int         { return Int(len([]rune(m))) }
+func (m Float32Array) Size() Int      { return Int(len([]float32(m))) }
+func (m Float64Array) Size() Int      { return Int(len([]float64(m))) }
+func (m AnyArray) Size() Int          { return Int(len([]Any(m))) }
+func (m BoolArrayArray) Size() Int    { return Int(len([][]bool(m))) }
+func (m StringArrayArray) Size() Int  { return Int(len([][]string(m))) }
+func (m IntArrayArray) Size() Int     { return Int(len([][]int(m))) }
+func (m Int64ArrayArray) Size() Int   { return Int(len([][]int64(m))) }
+func (m ByteArrayArray) Size() Int    { return Int(len([][]byte(m))) }
+func (m RuneArrayArray) Size() Int    { return Int(len([][]rune(m))) }
+func (m Float32ArrayArray) Size() Int { return Int(len([][]float32(m))) }
+func (m Float64ArrayArray) Size() Int { return Int(len([][]float64(m))) }
+func (m AnyArrayArray) Size() Int     { return Int(len([][]Any(m))) }

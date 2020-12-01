@@ -3,7 +3,7 @@
 
 package fp
 
-func BoolArrayFilter(m []bool, p BoolPredicate) []bool {
+func (m BoolArray) Filter(p BoolPredicate) BoolArray {
 	l := len(m)
 	acc := make([]bool, l)
 	i := 0
@@ -15,7 +15,7 @@ func BoolArrayFilter(m []bool, p BoolPredicate) []bool {
 	}
 	return acc[0:i]
 }
-func StringArrayFilter(m []string, p StringPredicate) []string {
+func (m StringArray) Filter(p StringPredicate) StringArray {
 	l := len(m)
 	acc := make([]string, l)
 	i := 0
@@ -27,7 +27,7 @@ func StringArrayFilter(m []string, p StringPredicate) []string {
 	}
 	return acc[0:i]
 }
-func IntArrayFilter(m []int, p IntPredicate) []int {
+func (m IntArray) Filter(p IntPredicate) IntArray {
 	l := len(m)
 	acc := make([]int, l)
 	i := 0
@@ -39,7 +39,7 @@ func IntArrayFilter(m []int, p IntPredicate) []int {
 	}
 	return acc[0:i]
 }
-func Int64ArrayFilter(m []int64, p Int64Predicate) []int64 {
+func (m Int64Array) Filter(p Int64Predicate) Int64Array {
 	l := len(m)
 	acc := make([]int64, l)
 	i := 0
@@ -51,7 +51,7 @@ func Int64ArrayFilter(m []int64, p Int64Predicate) []int64 {
 	}
 	return acc[0:i]
 }
-func ByteArrayFilter(m []byte, p BytePredicate) []byte {
+func (m ByteArray) Filter(p BytePredicate) ByteArray {
 	l := len(m)
 	acc := make([]byte, l)
 	i := 0
@@ -63,7 +63,7 @@ func ByteArrayFilter(m []byte, p BytePredicate) []byte {
 	}
 	return acc[0:i]
 }
-func RuneArrayFilter(m []rune, p RunePredicate) []rune {
+func (m RuneArray) Filter(p RunePredicate) RuneArray {
 	l := len(m)
 	acc := make([]rune, l)
 	i := 0
@@ -75,7 +75,7 @@ func RuneArrayFilter(m []rune, p RunePredicate) []rune {
 	}
 	return acc[0:i]
 }
-func Float32ArrayFilter(m []float32, p Float32Predicate) []float32 {
+func (m Float32Array) Filter(p Float32Predicate) Float32Array {
 	l := len(m)
 	acc := make([]float32, l)
 	i := 0
@@ -87,7 +87,7 @@ func Float32ArrayFilter(m []float32, p Float32Predicate) []float32 {
 	}
 	return acc[0:i]
 }
-func Float64ArrayFilter(m []float64, p Float64Predicate) []float64 {
+func (m Float64Array) Filter(p Float64Predicate) Float64Array {
 	l := len(m)
 	acc := make([]float64, l)
 	i := 0
@@ -99,7 +99,7 @@ func Float64ArrayFilter(m []float64, p Float64Predicate) []float64 {
 	}
 	return acc[0:i]
 }
-func AnyArrayFilter(m []Any, p AnyPredicate) []Any {
+func (m AnyArray) Filter(p AnyPredicate) AnyArray {
 	l := len(m)
 	acc := make([]Any, l)
 	i := 0
@@ -111,7 +111,7 @@ func AnyArrayFilter(m []Any, p AnyPredicate) []Any {
 	}
 	return acc[0:i]
 }
-func BoolArrayArrayFilter(m [][]bool, p BoolArrayPredicate) [][]bool {
+func (m BoolArrayArray) Filter(p BoolArrayPredicate) BoolArrayArray {
 	l := len(m)
 	acc := make([][]bool, l)
 	i := 0
@@ -123,7 +123,7 @@ func BoolArrayArrayFilter(m [][]bool, p BoolArrayPredicate) [][]bool {
 	}
 	return acc[0:i]
 }
-func StringArrayArrayFilter(m [][]string, p StringArrayPredicate) [][]string {
+func (m StringArrayArray) Filter(p StringArrayPredicate) StringArrayArray {
 	l := len(m)
 	acc := make([][]string, l)
 	i := 0
@@ -135,7 +135,7 @@ func StringArrayArrayFilter(m [][]string, p StringArrayPredicate) [][]string {
 	}
 	return acc[0:i]
 }
-func IntArrayArrayFilter(m [][]int, p IntArrayPredicate) [][]int {
+func (m IntArrayArray) Filter(p IntArrayPredicate) IntArrayArray {
 	l := len(m)
 	acc := make([][]int, l)
 	i := 0
@@ -147,7 +147,7 @@ func IntArrayArrayFilter(m [][]int, p IntArrayPredicate) [][]int {
 	}
 	return acc[0:i]
 }
-func Int64ArrayArrayFilter(m [][]int64, p Int64ArrayPredicate) [][]int64 {
+func (m Int64ArrayArray) Filter(p Int64ArrayPredicate) Int64ArrayArray {
 	l := len(m)
 	acc := make([][]int64, l)
 	i := 0
@@ -159,7 +159,7 @@ func Int64ArrayArrayFilter(m [][]int64, p Int64ArrayPredicate) [][]int64 {
 	}
 	return acc[0:i]
 }
-func ByteArrayArrayFilter(m [][]byte, p ByteArrayPredicate) [][]byte {
+func (m ByteArrayArray) Filter(p ByteArrayPredicate) ByteArrayArray {
 	l := len(m)
 	acc := make([][]byte, l)
 	i := 0
@@ -171,7 +171,7 @@ func ByteArrayArrayFilter(m [][]byte, p ByteArrayPredicate) [][]byte {
 	}
 	return acc[0:i]
 }
-func RuneArrayArrayFilter(m [][]rune, p RuneArrayPredicate) [][]rune {
+func (m RuneArrayArray) Filter(p RuneArrayPredicate) RuneArrayArray {
 	l := len(m)
 	acc := make([][]rune, l)
 	i := 0
@@ -183,7 +183,7 @@ func RuneArrayArrayFilter(m [][]rune, p RuneArrayPredicate) [][]rune {
 	}
 	return acc[0:i]
 }
-func Float32ArrayArrayFilter(m [][]float32, p Float32ArrayPredicate) [][]float32 {
+func (m Float32ArrayArray) Filter(p Float32ArrayPredicate) Float32ArrayArray {
 	l := len(m)
 	acc := make([][]float32, l)
 	i := 0
@@ -195,7 +195,7 @@ func Float32ArrayArrayFilter(m [][]float32, p Float32ArrayPredicate) [][]float32
 	}
 	return acc[0:i]
 }
-func Float64ArrayArrayFilter(m [][]float64, p Float64ArrayPredicate) [][]float64 {
+func (m Float64ArrayArray) Filter(p Float64ArrayPredicate) Float64ArrayArray {
 	l := len(m)
 	acc := make([][]float64, l)
 	i := 0
@@ -207,7 +207,7 @@ func Float64ArrayArrayFilter(m [][]float64, p Float64ArrayPredicate) [][]float64
 	}
 	return acc[0:i]
 }
-func AnyArrayArrayFilter(m [][]Any, p AnyArrayPredicate) [][]Any {
+func (m AnyArrayArray) Filter(p AnyArrayPredicate) AnyArrayArray {
 	l := len(m)
 	acc := make([][]Any, l)
 	i := 0

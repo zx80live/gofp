@@ -5,201 +5,201 @@ package fp
 
 import "fmt"
 
-func BoolArrayMkString(a []bool, start, sep, end string) string {
+func (a BoolArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, BoolToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, BoolToString(Bool(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func StringArrayMkString(a []string, start, sep, end string) string {
+func (a StringArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, StringToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, StringToString(String(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func IntArrayMkString(a []int, start, sep, end string) string {
+func (a IntArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, IntToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, IntToString(Int(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func Int64ArrayMkString(a []int64, start, sep, end string) string {
+func (a Int64Array) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Int64ToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, Int64ToString(Int64(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func ByteArrayMkString(a []byte, start, sep, end string) string {
+func (a ByteArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, ByteToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, ByteToString(Byte(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func RuneArrayMkString(a []rune, start, sep, end string) string {
+func (a RuneArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, RuneToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, RuneToString(Rune(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func Float32ArrayMkString(a []float32, start, sep, end string) string {
+func (a Float32Array) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float32ToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float32ToString(Float32(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func Float64ArrayMkString(a []float64, start, sep, end string) string {
+func (a Float64Array) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float64ToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float64ToString(Float64(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func AnyArrayMkString(a []Any, start, sep, end string) string {
+func (a AnyArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, AnyToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, AnyToString(Any(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func BoolArrayArrayMkString(a [][]bool, start, sep, end string) string {
+func (a BoolArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, BoolArrayToString(BoolArray(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func StringArrayArrayMkString(a [][]string, start, sep, end string) string {
+func (a StringArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, StringArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, StringArrayToString(StringArray(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func IntArrayArrayMkString(a [][]int, start, sep, end string) string {
+func (a IntArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, IntArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, IntArrayToString(IntArray(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func Int64ArrayArrayMkString(a [][]int64, start, sep, end string) string {
+func (a Int64ArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, Int64ArrayToString(Int64Array(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func ByteArrayArrayMkString(a [][]byte, start, sep, end string) string {
+func (a ByteArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, ByteArrayToString(ByteArray(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func RuneArrayArrayMkString(a [][]rune, start, sep, end string) string {
+func (a RuneArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, RuneArrayToString(RuneArray(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func Float32ArrayArrayMkString(a [][]float32, start, sep, end string) string {
+func (a Float32ArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float32ArrayToString(Float32Array(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func Float64ArrayArrayMkString(a [][]float64, start, sep, end string) string {
+func (a Float64ArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, Float64ArrayToString(Float64Array(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
-func AnyArrayArrayMkString(a [][]Any, start, sep, end string) string {
+func (a AnyArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(e), sep)
+		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(AnyArray(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {
 		content = content[:l-1]
 	}
-	return fmt.Sprintf("%v%v%v", start, content, end)
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }

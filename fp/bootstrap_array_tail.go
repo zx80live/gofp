@@ -3,7 +3,7 @@
 
 package fp
 
-func BoolArrayTail(m []bool) []bool {
+func (m BoolArray) Tail() BoolArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -11,7 +11,7 @@ func BoolArrayTail(m []bool) []bool {
 		return []bool{}
 	}
 }
-func StringArrayTail(m []string) []string {
+func (m StringArray) Tail() StringArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -19,7 +19,7 @@ func StringArrayTail(m []string) []string {
 		return []string{}
 	}
 }
-func IntArrayTail(m []int) []int {
+func (m IntArray) Tail() IntArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -27,7 +27,7 @@ func IntArrayTail(m []int) []int {
 		return []int{}
 	}
 }
-func Int64ArrayTail(m []int64) []int64 {
+func (m Int64Array) Tail() Int64Array {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -35,7 +35,7 @@ func Int64ArrayTail(m []int64) []int64 {
 		return []int64{}
 	}
 }
-func ByteArrayTail(m []byte) []byte {
+func (m ByteArray) Tail() ByteArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -43,7 +43,7 @@ func ByteArrayTail(m []byte) []byte {
 		return []byte{}
 	}
 }
-func RuneArrayTail(m []rune) []rune {
+func (m RuneArray) Tail() RuneArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -51,7 +51,7 @@ func RuneArrayTail(m []rune) []rune {
 		return []rune{}
 	}
 }
-func Float32ArrayTail(m []float32) []float32 {
+func (m Float32Array) Tail() Float32Array {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -59,7 +59,7 @@ func Float32ArrayTail(m []float32) []float32 {
 		return []float32{}
 	}
 }
-func Float64ArrayTail(m []float64) []float64 {
+func (m Float64Array) Tail() Float64Array {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -67,7 +67,7 @@ func Float64ArrayTail(m []float64) []float64 {
 		return []float64{}
 	}
 }
-func AnyArrayTail(m []Any) []Any {
+func (m AnyArray) Tail() AnyArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -75,7 +75,7 @@ func AnyArrayTail(m []Any) []Any {
 		return []Any{}
 	}
 }
-func BoolArrayArrayTail(m [][]bool) [][]bool {
+func (m BoolArrayArray) Tail() BoolArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -83,7 +83,7 @@ func BoolArrayArrayTail(m [][]bool) [][]bool {
 		return [][]bool{}
 	}
 }
-func StringArrayArrayTail(m [][]string) [][]string {
+func (m StringArrayArray) Tail() StringArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -91,7 +91,7 @@ func StringArrayArrayTail(m [][]string) [][]string {
 		return [][]string{}
 	}
 }
-func IntArrayArrayTail(m [][]int) [][]int {
+func (m IntArrayArray) Tail() IntArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -99,7 +99,7 @@ func IntArrayArrayTail(m [][]int) [][]int {
 		return [][]int{}
 	}
 }
-func Int64ArrayArrayTail(m [][]int64) [][]int64 {
+func (m Int64ArrayArray) Tail() Int64ArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -107,7 +107,7 @@ func Int64ArrayArrayTail(m [][]int64) [][]int64 {
 		return [][]int64{}
 	}
 }
-func ByteArrayArrayTail(m [][]byte) [][]byte {
+func (m ByteArrayArray) Tail() ByteArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -115,7 +115,7 @@ func ByteArrayArrayTail(m [][]byte) [][]byte {
 		return [][]byte{}
 	}
 }
-func RuneArrayArrayTail(m [][]rune) [][]rune {
+func (m RuneArrayArray) Tail() RuneArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -123,7 +123,7 @@ func RuneArrayArrayTail(m [][]rune) [][]rune {
 		return [][]rune{}
 	}
 }
-func Float32ArrayArrayTail(m [][]float32) [][]float32 {
+func (m Float32ArrayArray) Tail() Float32ArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -131,7 +131,7 @@ func Float32ArrayArrayTail(m [][]float32) [][]float32 {
 		return [][]float32{}
 	}
 }
-func Float64ArrayArrayTail(m [][]float64) [][]float64 {
+func (m Float64ArrayArray) Tail() Float64ArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]
@@ -139,7 +139,7 @@ func Float64ArrayArrayTail(m [][]float64) [][]float64 {
 		return [][]float64{}
 	}
 }
-func AnyArrayArrayTail(m [][]Any) [][]Any {
+func (m AnyArrayArray) Tail() AnyArrayArray {
 	s := len(m)
 	if s > 0 {
 		return m[1 : s-1]

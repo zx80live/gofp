@@ -3,126 +3,126 @@
 
 package fp
 
-func BoolArrayHead(m []bool) bool {
+func (m BoolArray) Head() bool {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []bool slice")
 	}
 }
-func StringArrayHead(m []string) string {
+func (m StringArray) Head() string {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []string slice")
 	}
 }
-func IntArrayHead(m []int) int {
+func (m IntArray) Head() int {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []int slice")
 	}
 }
-func Int64ArrayHead(m []int64) int64 {
+func (m Int64Array) Head() int64 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []int64 slice")
 	}
 }
-func ByteArrayHead(m []byte) byte {
+func (m ByteArray) Head() byte {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []byte slice")
 	}
 }
-func RuneArrayHead(m []rune) rune {
+func (m RuneArray) Head() rune {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []rune slice")
 	}
 }
-func Float32ArrayHead(m []float32) float32 {
+func (m Float32Array) Head() float32 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []float32 slice")
 	}
 }
-func Float64ArrayHead(m []float64) float64 {
+func (m Float64Array) Head() float64 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []float64 slice")
 	}
 }
-func AnyArrayHead(m []Any) Any {
+func (m AnyArray) Head() Any {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty []Any slice")
 	}
 }
-func BoolArrayArrayHead(m [][]bool) []bool {
+func (m BoolArrayArray) Head() []bool {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]bool slice")
 	}
 }
-func StringArrayArrayHead(m [][]string) []string {
+func (m StringArrayArray) Head() []string {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]string slice")
 	}
 }
-func IntArrayArrayHead(m [][]int) []int {
+func (m IntArrayArray) Head() []int {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]int slice")
 	}
 }
-func Int64ArrayArrayHead(m [][]int64) []int64 {
+func (m Int64ArrayArray) Head() []int64 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]int64 slice")
 	}
 }
-func ByteArrayArrayHead(m [][]byte) []byte {
+func (m ByteArrayArray) Head() []byte {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]byte slice")
 	}
 }
-func RuneArrayArrayHead(m [][]rune) []rune {
+func (m RuneArrayArray) Head() []rune {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]rune slice")
 	}
 }
-func Float32ArrayArrayHead(m [][]float32) []float32 {
+func (m Float32ArrayArray) Head() []float32 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]float32 slice")
 	}
 }
-func Float64ArrayArrayHead(m [][]float64) []float64 {
+func (m Float64ArrayArray) Head() []float64 {
 	if len(m) > 0 {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]float64 slice")
 	}
 }
-func AnyArrayArrayHead(m [][]Any) []Any {
+func (m AnyArrayArray) Head() []Any {
 	if len(m) > 0 {
 		return m[0]
 	} else {

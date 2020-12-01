@@ -3,126 +3,126 @@
 
 package fp
 
-func BoolArrayHeadOption(m []bool) BoolOption {
+func (m BoolArray) HeadOption() BoolOption {
 	if len(m) > 0 {
 		return MakeBoolOption(m[0])
 	} else {
 		return NoneBool
 	}
 }
-func StringArrayHeadOption(m []string) StringOption {
+func (m StringArray) HeadOption() StringOption {
 	if len(m) > 0 {
 		return MakeStringOption(m[0])
 	} else {
 		return NoneString
 	}
 }
-func IntArrayHeadOption(m []int) IntOption {
+func (m IntArray) HeadOption() IntOption {
 	if len(m) > 0 {
 		return MakeIntOption(m[0])
 	} else {
 		return NoneInt
 	}
 }
-func Int64ArrayHeadOption(m []int64) Int64Option {
+func (m Int64Array) HeadOption() Int64Option {
 	if len(m) > 0 {
 		return MakeInt64Option(m[0])
 	} else {
 		return NoneInt64
 	}
 }
-func ByteArrayHeadOption(m []byte) ByteOption {
+func (m ByteArray) HeadOption() ByteOption {
 	if len(m) > 0 {
 		return MakeByteOption(m[0])
 	} else {
 		return NoneByte
 	}
 }
-func RuneArrayHeadOption(m []rune) RuneOption {
+func (m RuneArray) HeadOption() RuneOption {
 	if len(m) > 0 {
 		return MakeRuneOption(m[0])
 	} else {
 		return NoneRune
 	}
 }
-func Float32ArrayHeadOption(m []float32) Float32Option {
+func (m Float32Array) HeadOption() Float32Option {
 	if len(m) > 0 {
 		return MakeFloat32Option(m[0])
 	} else {
 		return NoneFloat32
 	}
 }
-func Float64ArrayHeadOption(m []float64) Float64Option {
+func (m Float64Array) HeadOption() Float64Option {
 	if len(m) > 0 {
 		return MakeFloat64Option(m[0])
 	} else {
 		return NoneFloat64
 	}
 }
-func AnyArrayHeadOption(m []Any) AnyOption {
+func (m AnyArray) HeadOption() AnyOption {
 	if len(m) > 0 {
 		return MakeAnyOption(m[0])
 	} else {
 		return NoneAny
 	}
 }
-func BoolArrayArrayHeadOption(m [][]bool) BoolArrayOption {
+func (m BoolArrayArray) HeadOption() BoolArrayOption {
 	if len(m) > 0 {
 		return MakeBoolArrayOption(m[0])
 	} else {
 		return NoneBoolArray
 	}
 }
-func StringArrayArrayHeadOption(m [][]string) StringArrayOption {
+func (m StringArrayArray) HeadOption() StringArrayOption {
 	if len(m) > 0 {
 		return MakeStringArrayOption(m[0])
 	} else {
 		return NoneStringArray
 	}
 }
-func IntArrayArrayHeadOption(m [][]int) IntArrayOption {
+func (m IntArrayArray) HeadOption() IntArrayOption {
 	if len(m) > 0 {
 		return MakeIntArrayOption(m[0])
 	} else {
 		return NoneIntArray
 	}
 }
-func Int64ArrayArrayHeadOption(m [][]int64) Int64ArrayOption {
+func (m Int64ArrayArray) HeadOption() Int64ArrayOption {
 	if len(m) > 0 {
 		return MakeInt64ArrayOption(m[0])
 	} else {
 		return NoneInt64Array
 	}
 }
-func ByteArrayArrayHeadOption(m [][]byte) ByteArrayOption {
+func (m ByteArrayArray) HeadOption() ByteArrayOption {
 	if len(m) > 0 {
 		return MakeByteArrayOption(m[0])
 	} else {
 		return NoneByteArray
 	}
 }
-func RuneArrayArrayHeadOption(m [][]rune) RuneArrayOption {
+func (m RuneArrayArray) HeadOption() RuneArrayOption {
 	if len(m) > 0 {
 		return MakeRuneArrayOption(m[0])
 	} else {
 		return NoneRuneArray
 	}
 }
-func Float32ArrayArrayHeadOption(m [][]float32) Float32ArrayOption {
+func (m Float32ArrayArray) HeadOption() Float32ArrayOption {
 	if len(m) > 0 {
 		return MakeFloat32ArrayOption(m[0])
 	} else {
 		return NoneFloat32Array
 	}
 }
-func Float64ArrayArrayHeadOption(m [][]float64) Float64ArrayOption {
+func (m Float64ArrayArray) HeadOption() Float64ArrayOption {
 	if len(m) > 0 {
 		return MakeFloat64ArrayOption(m[0])
 	} else {
 		return NoneFloat64Array
 	}
 }
-func AnyArrayArrayHeadOption(m [][]Any) AnyArrayOption {
+func (m AnyArrayArray) HeadOption() AnyArrayOption {
 	if len(m) > 0 {
 		return MakeAnyArrayOption(m[0])
 	} else {

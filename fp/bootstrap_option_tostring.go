@@ -5,254 +5,254 @@ package fp
 
 import "fmt"
 
-func (o BoolOption) ToString() string {
+func (o BoolOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", BoolToString(Bool(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o StringOption) ToString() string {
+func (o StringOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", StringToString(String(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o IntOption) ToString() string {
+func (o IntOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", IntToString(Int(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Int64Option) ToString() string {
+func (o Int64Option) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64ToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Int64ToString(Int64(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o ByteOption) ToString() string {
+func (o ByteOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", ByteToString(Byte(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o RuneOption) ToString() string {
+func (o RuneOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", RuneToString(Rune(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float32Option) ToString() string {
+func (o Float32Option) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32ToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float32ToString(Float32(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float64Option) ToString() string {
+func (o Float64Option) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64ToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float64ToString(Float64(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o AnyOption) ToString() string {
+func (o AnyOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", AnyToString(Any(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o BoolOptionOption) ToString() string {
+func (o BoolOptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolOptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", BoolOptionToString(BoolOption(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o StringOptionOption) ToString() string {
+func (o StringOptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringOptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", StringOptionToString(StringOption(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o IntOptionOption) ToString() string {
+func (o IntOptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntOptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", IntOptionToString(IntOption(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Int64OptionOption) ToString() string {
+func (o Int64OptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64OptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Int64OptionToString(Int64Option(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o ByteOptionOption) ToString() string {
+func (o ByteOptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteOptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", ByteOptionToString(ByteOption(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o RuneOptionOption) ToString() string {
+func (o RuneOptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneOptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", RuneOptionToString(RuneOption(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float32OptionOption) ToString() string {
+func (o Float32OptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32OptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float32OptionToString(Float32Option(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float64OptionOption) ToString() string {
+func (o Float64OptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64OptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float64OptionToString(Float64Option(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o AnyOptionOption) ToString() string {
+func (o AnyOptionOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyOptionToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", AnyOptionToString(AnyOption(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o BoolArrayOption) ToString() string {
+func (o BoolArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", BoolArrayToString(BoolArray(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o StringArrayOption) ToString() string {
+func (o StringArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", StringArrayToString(StringArray(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o IntArrayOption) ToString() string {
+func (o IntArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", IntArrayToString(IntArray(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Int64ArrayOption) ToString() string {
+func (o Int64ArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64ArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Int64ArrayToString(Int64Array(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o ByteArrayOption) ToString() string {
+func (o ByteArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", ByteArrayToString(ByteArray(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o RuneArrayOption) ToString() string {
+func (o RuneArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", RuneArrayToString(RuneArray(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float32ArrayOption) ToString() string {
+func (o Float32ArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32ArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float32ArrayToString(Float32Array(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float64ArrayOption) ToString() string {
+func (o Float64ArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64ArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float64ArrayToString(Float64Array(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o AnyArrayOption) ToString() string {
+func (o AnyArrayOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyArrayToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", AnyArrayToString(AnyArray(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o BoolListOption) ToString() string {
+func (o BoolListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", BoolListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", BoolListToString(BoolList(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o StringListOption) ToString() string {
+func (o StringListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", StringListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", StringListToString(StringList(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o IntListOption) ToString() string {
+func (o IntListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", IntListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", IntListToString(IntList(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Int64ListOption) ToString() string {
+func (o Int64ListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Int64ListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Int64ListToString(Int64List(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o ByteListOption) ToString() string {
+func (o ByteListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", ByteListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", ByteListToString(ByteList(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o RuneListOption) ToString() string {
+func (o RuneListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", RuneListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", RuneListToString(RuneList(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float32ListOption) ToString() string {
+func (o Float32ListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float32ListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float32ListToString(Float32List(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o Float64ListOption) ToString() string {
+func (o Float64ListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", Float64ListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", Float64ListToString(Float64List(*o.value))))
 	} else {
 		return "None"
 	}
 }
-func (o AnyListOption) ToString() string {
+func (o AnyListOption) ToString() String {
 	if o.IsDefined() {
-		return fmt.Sprintf("Some(%v)", AnyListToString(*o.value))
+		return String(fmt.Sprintf("Some(%v)", AnyListToString(AnyList(*o.value))))
 	} else {
 		return "None"
 	}

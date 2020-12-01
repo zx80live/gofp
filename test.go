@@ -5,6 +5,9 @@ import (
 	. "github.com/zx80live/gofp/fp"
 )
 
+type XArr []int
+
+func (a XArr) Foo() {}
 func main() {
 
 	fmt.Println("Hello")
@@ -42,7 +45,7 @@ func main() {
 	arr := MakeIntList(1, 2, 3, 4, 5).ToArray()
 	fmt.Println(len(arr), arr[0], arr[1], arr[2], arr[3], arr[4])
 
-	fmt.Println(IntArrayMkString([]int{1, 2, 3, 4, 5}, "~~", "|", "~~"))
+	fmt.Println(IntArray([]int{1, 2, 3, 4, 5}).MkString("~~", "|", "~~"))
 
 	var x int = 100
 	var isXdefined bool = &x == nil
@@ -135,4 +138,8 @@ func main() {
 	for k, v := range shapes.GroupByAny(byArea) {
 		fmt.Println(k, v.ToString())
 	}
+
+	a2 := IntArray([]int{1, 2, 3})
+	fmt.Println(a2.Head(), a2.HeadOption().ToString(), a2.Tail().MkString("[", "|", "]"))
+	fmt.Println(IntArray([]int{1, 2, 3, 4, 5}).Filter(func(e int) bool { return e%2 == 0 }).ToString())
 }

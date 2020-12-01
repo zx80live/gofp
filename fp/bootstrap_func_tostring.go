@@ -5,351 +5,333 @@ package fp
 
 import "fmt"
 
-func BoolToString(o bool) string {
-	return fmt.Sprintf("%v", o)
+func BoolToString(o Bool) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func StringToString(o string) string {
-	return fmt.Sprintf("%v", o)
+func StringToString(o String) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func IntToString(o int) string {
-	return fmt.Sprintf("%v", o)
+func IntToString(o Int) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Int8ToString(o int8) string {
-	return fmt.Sprintf("%v", o)
+func Int8ToString(o Int8) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Int16ToString(o int16) string {
-	return fmt.Sprintf("%v", o)
+func Int16ToString(o Int16) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Int32ToString(o int32) string {
-	return fmt.Sprintf("%v", o)
+func Int32ToString(o Int32) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Int64ToString(o int64) string {
-	return fmt.Sprintf("%v", o)
+func Int64ToString(o Int64) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func UintToString(o uint) string {
-	return fmt.Sprintf("%v", o)
+func UintToString(o Uint) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Uint8ToString(o uint8) string {
-	return fmt.Sprintf("%v", o)
+func Uint8ToString(o Uint8) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Uint16ToString(o uint16) string {
-	return fmt.Sprintf("%v", o)
+func Uint16ToString(o Uint16) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Uint32ToString(o uint32) string {
-	return fmt.Sprintf("%v", o)
+func Uint32ToString(o Uint32) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Uint64ToString(o uint64) string {
-	return fmt.Sprintf("%v", o)
+func Uint64ToString(o Uint64) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func UintptrToString(o uintptr) string {
-	return fmt.Sprintf("%v", o)
+func UintptrToString(o Uintptr) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func ByteToString(o byte) string {
-	return fmt.Sprintf("%v", o)
+func ByteToString(o Byte) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func RuneToString(o rune) string {
-	return fmt.Sprintf("%v", o)
+func RuneToString(o Rune) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Float32ToString(o float32) string {
-	return fmt.Sprintf("%v", o)
+func Float32ToString(o Float32) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Float64ToString(o float64) string {
-	return fmt.Sprintf("%v", o)
+func Float64ToString(o Float64) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Complex64ToString(o complex64) string {
-	return fmt.Sprintf("%v", o)
+func Complex64ToString(o Complex64) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func Complex128ToString(o complex128) string {
-	return fmt.Sprintf("%v", o)
+func Complex128ToString(o Complex128) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func AnyToString(o Any) string {
-	return fmt.Sprintf("%v", o)
+func AnyToString(o Any) String {
+	return String(fmt.Sprintf("%v", o))
 }
-func BoolOptionToString(o BoolOption) string {
+func BoolOptionToString(o BoolOption) String {
 	return o.ToString()
 }
-func StringOptionToString(o StringOption) string {
+func StringOptionToString(o StringOption) String {
 	return o.ToString()
 }
-func IntOptionToString(o IntOption) string {
+func IntOptionToString(o IntOption) String {
 	return o.ToString()
 }
-func Int64OptionToString(o Int64Option) string {
+func Int64OptionToString(o Int64Option) String {
 	return o.ToString()
 }
-func ByteOptionToString(o ByteOption) string {
+func ByteOptionToString(o ByteOption) String {
 	return o.ToString()
 }
-func RuneOptionToString(o RuneOption) string {
+func RuneOptionToString(o RuneOption) String {
 	return o.ToString()
 }
-func Float32OptionToString(o Float32Option) string {
+func Float32OptionToString(o Float32Option) String {
 	return o.ToString()
 }
-func Float64OptionToString(o Float64Option) string {
+func Float64OptionToString(o Float64Option) String {
 	return o.ToString()
 }
-func AnyOptionToString(o AnyOption) string {
+func AnyOptionToString(o AnyOption) String {
 	return o.ToString()
 }
-func BoolOptionOptionToString(o BoolOptionOption) string {
+func BoolOptionOptionToString(o BoolOptionOption) String {
 	return o.ToString()
 }
-func StringOptionOptionToString(o StringOptionOption) string {
+func StringOptionOptionToString(o StringOptionOption) String {
 	return o.ToString()
 }
-func IntOptionOptionToString(o IntOptionOption) string {
+func IntOptionOptionToString(o IntOptionOption) String {
 	return o.ToString()
 }
-func Int64OptionOptionToString(o Int64OptionOption) string {
+func Int64OptionOptionToString(o Int64OptionOption) String {
 	return o.ToString()
 }
-func ByteOptionOptionToString(o ByteOptionOption) string {
+func ByteOptionOptionToString(o ByteOptionOption) String {
 	return o.ToString()
 }
-func RuneOptionOptionToString(o RuneOptionOption) string {
+func RuneOptionOptionToString(o RuneOptionOption) String {
 	return o.ToString()
 }
-func Float32OptionOptionToString(o Float32OptionOption) string {
+func Float32OptionOptionToString(o Float32OptionOption) String {
 	return o.ToString()
 }
-func Float64OptionOptionToString(o Float64OptionOption) string {
+func Float64OptionOptionToString(o Float64OptionOption) String {
 	return o.ToString()
 }
-func AnyOptionOptionToString(o AnyOptionOption) string {
+func AnyOptionOptionToString(o AnyOptionOption) String {
 	return o.ToString()
 }
-func BoolArrayOptionToString(o BoolArrayOption) string {
+func BoolArrayOptionToString(o BoolArrayOption) String {
 	return o.ToString()
 }
-func StringArrayOptionToString(o StringArrayOption) string {
+func StringArrayOptionToString(o StringArrayOption) String {
 	return o.ToString()
 }
-func IntArrayOptionToString(o IntArrayOption) string {
+func IntArrayOptionToString(o IntArrayOption) String {
 	return o.ToString()
 }
-func Int64ArrayOptionToString(o Int64ArrayOption) string {
+func Int64ArrayOptionToString(o Int64ArrayOption) String {
 	return o.ToString()
 }
-func ByteArrayOptionToString(o ByteArrayOption) string {
+func ByteArrayOptionToString(o ByteArrayOption) String {
 	return o.ToString()
 }
-func RuneArrayOptionToString(o RuneArrayOption) string {
+func RuneArrayOptionToString(o RuneArrayOption) String {
 	return o.ToString()
 }
-func Float32ArrayOptionToString(o Float32ArrayOption) string {
+func Float32ArrayOptionToString(o Float32ArrayOption) String {
 	return o.ToString()
 }
-func Float64ArrayOptionToString(o Float64ArrayOption) string {
+func Float64ArrayOptionToString(o Float64ArrayOption) String {
 	return o.ToString()
 }
-func AnyArrayOptionToString(o AnyArrayOption) string {
+func AnyArrayOptionToString(o AnyArrayOption) String {
 	return o.ToString()
 }
-func BoolListOptionToString(o BoolListOption) string {
+func BoolListOptionToString(o BoolListOption) String {
 	return o.ToString()
 }
-func StringListOptionToString(o StringListOption) string {
+func StringListOptionToString(o StringListOption) String {
 	return o.ToString()
 }
-func IntListOptionToString(o IntListOption) string {
+func IntListOptionToString(o IntListOption) String {
 	return o.ToString()
 }
-func Int64ListOptionToString(o Int64ListOption) string {
+func Int64ListOptionToString(o Int64ListOption) String {
 	return o.ToString()
 }
-func ByteListOptionToString(o ByteListOption) string {
+func ByteListOptionToString(o ByteListOption) String {
 	return o.ToString()
 }
-func RuneListOptionToString(o RuneListOption) string {
+func RuneListOptionToString(o RuneListOption) String {
 	return o.ToString()
 }
-func Float32ListOptionToString(o Float32ListOption) string {
+func Float32ListOptionToString(o Float32ListOption) String {
 	return o.ToString()
 }
-func Float64ListOptionToString(o Float64ListOption) string {
+func Float64ListOptionToString(o Float64ListOption) String {
 	return o.ToString()
 }
-func AnyListOptionToString(o AnyListOption) string {
+func AnyListOptionToString(o AnyListOption) String {
 	return o.ToString()
 }
-func BoolArrayToString(o []bool) string {
-
-	return BoolArrayMkString(o, "[", ",", "]")
+func BoolArrayToString(o BoolArray) String {
+	return o.ToString()
 }
-func StringArrayToString(o []string) string {
-
-	return StringArrayMkString(o, "[", ",", "]")
+func StringArrayToString(o StringArray) String {
+	return o.ToString()
 }
-func IntArrayToString(o []int) string {
-
-	return IntArrayMkString(o, "[", ",", "]")
+func IntArrayToString(o IntArray) String {
+	return o.ToString()
 }
-func Int64ArrayToString(o []int64) string {
-
-	return Int64ArrayMkString(o, "[", ",", "]")
+func Int64ArrayToString(o Int64Array) String {
+	return o.ToString()
 }
-func ByteArrayToString(o []byte) string {
-
-	return ByteArrayMkString(o, "[", ",", "]")
+func ByteArrayToString(o ByteArray) String {
+	return o.ToString()
 }
-func RuneArrayToString(o []rune) string {
-
-	return RuneArrayMkString(o, "[", ",", "]")
+func RuneArrayToString(o RuneArray) String {
+	return o.ToString()
 }
-func Float32ArrayToString(o []float32) string {
-
-	return Float32ArrayMkString(o, "[", ",", "]")
+func Float32ArrayToString(o Float32Array) String {
+	return o.ToString()
 }
-func Float64ArrayToString(o []float64) string {
-
-	return Float64ArrayMkString(o, "[", ",", "]")
+func Float64ArrayToString(o Float64Array) String {
+	return o.ToString()
 }
-func AnyArrayToString(o []Any) string {
-
-	return AnyArrayMkString(o, "[", ",", "]")
+func AnyArrayToString(o AnyArray) String {
+	return o.ToString()
 }
-func BoolArrayArrayToString(o [][]bool) string {
-
-	return BoolArrayArrayMkString(o, "[", ",", "]")
+func BoolArrayArrayToString(o BoolArrayArray) String {
+	return o.ToString()
 }
-func StringArrayArrayToString(o [][]string) string {
-
-	return StringArrayArrayMkString(o, "[", ",", "]")
+func StringArrayArrayToString(o StringArrayArray) String {
+	return o.ToString()
 }
-func IntArrayArrayToString(o [][]int) string {
-
-	return IntArrayArrayMkString(o, "[", ",", "]")
+func IntArrayArrayToString(o IntArrayArray) String {
+	return o.ToString()
 }
-func Int64ArrayArrayToString(o [][]int64) string {
-
-	return Int64ArrayArrayMkString(o, "[", ",", "]")
+func Int64ArrayArrayToString(o Int64ArrayArray) String {
+	return o.ToString()
 }
-func ByteArrayArrayToString(o [][]byte) string {
-
-	return ByteArrayArrayMkString(o, "[", ",", "]")
+func ByteArrayArrayToString(o ByteArrayArray) String {
+	return o.ToString()
 }
-func RuneArrayArrayToString(o [][]rune) string {
-
-	return RuneArrayArrayMkString(o, "[", ",", "]")
+func RuneArrayArrayToString(o RuneArrayArray) String {
+	return o.ToString()
 }
-func Float32ArrayArrayToString(o [][]float32) string {
-
-	return Float32ArrayArrayMkString(o, "[", ",", "]")
+func Float32ArrayArrayToString(o Float32ArrayArray) String {
+	return o.ToString()
 }
-func Float64ArrayArrayToString(o [][]float64) string {
-
-	return Float64ArrayArrayMkString(o, "[", ",", "]")
+func Float64ArrayArrayToString(o Float64ArrayArray) String {
+	return o.ToString()
 }
-func AnyArrayArrayToString(o [][]Any) string {
-
-	return AnyArrayArrayMkString(o, "[", ",", "]")
+func AnyArrayArrayToString(o AnyArrayArray) String {
+	return o.ToString()
 }
-func BoolListToString(o BoolList) string {
+func BoolListToString(o BoolList) String {
 	return o.ToString()
 }
-func StringListToString(o StringList) string {
+func StringListToString(o StringList) String {
 	return o.ToString()
 }
-func IntListToString(o IntList) string {
+func IntListToString(o IntList) String {
 	return o.ToString()
 }
-func Int64ListToString(o Int64List) string {
+func Int64ListToString(o Int64List) String {
 	return o.ToString()
 }
-func ByteListToString(o ByteList) string {
+func ByteListToString(o ByteList) String {
 	return o.ToString()
 }
-func RuneListToString(o RuneList) string {
+func RuneListToString(o RuneList) String {
 	return o.ToString()
 }
-func Float32ListToString(o Float32List) string {
+func Float32ListToString(o Float32List) String {
 	return o.ToString()
 }
-func Float64ListToString(o Float64List) string {
+func Float64ListToString(o Float64List) String {
 	return o.ToString()
 }
-func AnyListToString(o AnyList) string {
+func AnyListToString(o AnyList) String {
 	return o.ToString()
 }
-func BoolArrayListToString(o BoolArrayList) string {
+func BoolArrayListToString(o BoolArrayList) String {
 	return o.ToString()
 }
-func StringArrayListToString(o StringArrayList) string {
+func StringArrayListToString(o StringArrayList) String {
 	return o.ToString()
 }
-func IntArrayListToString(o IntArrayList) string {
+func IntArrayListToString(o IntArrayList) String {
 	return o.ToString()
 }
-func Int64ArrayListToString(o Int64ArrayList) string {
+func Int64ArrayListToString(o Int64ArrayList) String {
 	return o.ToString()
 }
-func ByteArrayListToString(o ByteArrayList) string {
+func ByteArrayListToString(o ByteArrayList) String {
 	return o.ToString()
 }
-func RuneArrayListToString(o RuneArrayList) string {
+func RuneArrayListToString(o RuneArrayList) String {
 	return o.ToString()
 }
-func Float32ArrayListToString(o Float32ArrayList) string {
+func Float32ArrayListToString(o Float32ArrayList) String {
 	return o.ToString()
 }
-func Float64ArrayListToString(o Float64ArrayList) string {
+func Float64ArrayListToString(o Float64ArrayList) String {
 	return o.ToString()
 }
-func AnyArrayListToString(o AnyArrayList) string {
+func AnyArrayListToString(o AnyArrayList) String {
 	return o.ToString()
 }
-func BoolOptionListToString(o BoolOptionList) string {
+func BoolOptionListToString(o BoolOptionList) String {
 	return o.ToString()
 }
-func StringOptionListToString(o StringOptionList) string {
+func StringOptionListToString(o StringOptionList) String {
 	return o.ToString()
 }
-func IntOptionListToString(o IntOptionList) string {
+func IntOptionListToString(o IntOptionList) String {
 	return o.ToString()
 }
-func Int64OptionListToString(o Int64OptionList) string {
+func Int64OptionListToString(o Int64OptionList) String {
 	return o.ToString()
 }
-func ByteOptionListToString(o ByteOptionList) string {
+func ByteOptionListToString(o ByteOptionList) String {
 	return o.ToString()
 }
-func RuneOptionListToString(o RuneOptionList) string {
+func RuneOptionListToString(o RuneOptionList) String {
 	return o.ToString()
 }
-func Float32OptionListToString(o Float32OptionList) string {
+func Float32OptionListToString(o Float32OptionList) String {
 	return o.ToString()
 }
-func Float64OptionListToString(o Float64OptionList) string {
+func Float64OptionListToString(o Float64OptionList) String {
 	return o.ToString()
 }
-func AnyOptionListToString(o AnyOptionList) string {
+func AnyOptionListToString(o AnyOptionList) String {
 	return o.ToString()
 }
-func BoolListListToString(o BoolListList) string {
+func BoolListListToString(o BoolListList) String {
 	return o.ToString()
 }
-func StringListListToString(o StringListList) string {
+func StringListListToString(o StringListList) String {
 	return o.ToString()
 }
-func IntListListToString(o IntListList) string {
+func IntListListToString(o IntListList) String {
 	return o.ToString()
 }
-func Int64ListListToString(o Int64ListList) string {
+func Int64ListListToString(o Int64ListList) String {
 	return o.ToString()
 }
-func ByteListListToString(o ByteListList) string {
+func ByteListListToString(o ByteListList) String {
 	return o.ToString()
 }
-func RuneListListToString(o RuneListList) string {
+func RuneListListToString(o RuneListList) String {
 	return o.ToString()
 }
-func Float32ListListToString(o Float32ListList) string {
+func Float32ListListToString(o Float32ListList) String {
 	return o.ToString()
 }
-func Float64ListListToString(o Float64ListList) string {
+func Float64ListListToString(o Float64ListList) String {
 	return o.ToString()
 }
-func AnyListListToString(o AnyListList) string {
+func AnyListListToString(o AnyListList) String {
 	return o.ToString()
 }

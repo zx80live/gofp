@@ -3,92 +3,92 @@
 
 package fp
 
-func BoolArrayForeach(m []bool, f func(bool)) {
+func (m BoolArray) Foreach(f func(bool)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func StringArrayForeach(m []string, f func(string)) {
+func (m StringArray) Foreach(f func(string)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func IntArrayForeach(m []int, f func(int)) {
+func (m IntArray) Foreach(f func(int)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func Int64ArrayForeach(m []int64, f func(int64)) {
+func (m Int64Array) Foreach(f func(int64)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func ByteArrayForeach(m []byte, f func(byte)) {
+func (m ByteArray) Foreach(f func(byte)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func RuneArrayForeach(m []rune, f func(rune)) {
+func (m RuneArray) Foreach(f func(rune)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func Float32ArrayForeach(m []float32, f func(float32)) {
+func (m Float32Array) Foreach(f func(float32)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func Float64ArrayForeach(m []float64, f func(float64)) {
+func (m Float64Array) Foreach(f func(float64)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func AnyArrayForeach(m []Any, f func(Any)) {
+func (m AnyArray) Foreach(f func(Any)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func BoolArrayArrayForeach(m [][]bool, f func([]bool)) {
+func (m BoolArrayArray) Foreach(f func([]bool)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func StringArrayArrayForeach(m [][]string, f func([]string)) {
+func (m StringArrayArray) Foreach(f func([]string)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func IntArrayArrayForeach(m [][]int, f func([]int)) {
+func (m IntArrayArray) Foreach(f func([]int)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func Int64ArrayArrayForeach(m [][]int64, f func([]int64)) {
+func (m Int64ArrayArray) Foreach(f func([]int64)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func ByteArrayArrayForeach(m [][]byte, f func([]byte)) {
+func (m ByteArrayArray) Foreach(f func([]byte)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func RuneArrayArrayForeach(m [][]rune, f func([]rune)) {
+func (m RuneArrayArray) Foreach(f func([]rune)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func Float32ArrayArrayForeach(m [][]float32, f func([]float32)) {
+func (m Float32ArrayArray) Foreach(f func([]float32)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func Float64ArrayArrayForeach(m [][]float64, f func([]float64)) {
+func (m Float64ArrayArray) Foreach(f func([]float64)) {
 	for _, e := range m {
 		f(e)
 	}
 }
-func AnyArrayArrayForeach(m [][]Any, f func([]Any)) {
+func (m AnyArrayArray) Foreach(f func([]Any)) {
 	for _, e := range m {
 		f(e)
 	}

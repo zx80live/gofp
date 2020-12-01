@@ -12,7 +12,7 @@ func (a BoolList) Equals(b BoolList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !BoolEquals(*xs1.head, *xs2.head) {
+		if !BoolEquals(Bool(*xs1.head), Bool(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -29,7 +29,7 @@ func (a StringList) Equals(b StringList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !StringEquals(*xs1.head, *xs2.head) {
+		if !StringEquals(String(*xs1.head), String(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -46,7 +46,7 @@ func (a IntList) Equals(b IntList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !IntEquals(*xs1.head, *xs2.head) {
+		if !IntEquals(Int(*xs1.head), Int(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -63,7 +63,7 @@ func (a Int64List) Equals(b Int64List) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Int64Equals(*xs1.head, *xs2.head) {
+		if !Int64Equals(Int64(*xs1.head), Int64(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -80,7 +80,7 @@ func (a ByteList) Equals(b ByteList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !ByteEquals(*xs1.head, *xs2.head) {
+		if !ByteEquals(Byte(*xs1.head), Byte(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -97,7 +97,7 @@ func (a RuneList) Equals(b RuneList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !RuneEquals(*xs1.head, *xs2.head) {
+		if !RuneEquals(Rune(*xs1.head), Rune(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -114,7 +114,7 @@ func (a Float32List) Equals(b Float32List) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float32Equals(*xs1.head, *xs2.head) {
+		if !Float32Equals(Float32(*xs1.head), Float32(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -131,7 +131,7 @@ func (a Float64List) Equals(b Float64List) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float64Equals(*xs1.head, *xs2.head) {
+		if !Float64Equals(Float64(*xs1.head), Float64(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -148,7 +148,7 @@ func (a AnyList) Equals(b AnyList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !AnyEquals(*xs1.head, *xs2.head) {
+		if !AnyEquals(Any(*xs1.head), Any(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -165,7 +165,7 @@ func (a BoolArrayList) Equals(b BoolArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !BoolArrayEquals(*xs1.head, *xs2.head) {
+		if !BoolArrayEquals(BoolArray(*xs1.head), BoolArray(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -182,7 +182,7 @@ func (a StringArrayList) Equals(b StringArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !StringArrayEquals(*xs1.head, *xs2.head) {
+		if !StringArrayEquals(StringArray(*xs1.head), StringArray(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -199,7 +199,7 @@ func (a IntArrayList) Equals(b IntArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !IntArrayEquals(*xs1.head, *xs2.head) {
+		if !IntArrayEquals(IntArray(*xs1.head), IntArray(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -216,7 +216,7 @@ func (a Int64ArrayList) Equals(b Int64ArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Int64ArrayEquals(*xs1.head, *xs2.head) {
+		if !Int64ArrayEquals(Int64Array(*xs1.head), Int64Array(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -233,7 +233,7 @@ func (a ByteArrayList) Equals(b ByteArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !ByteArrayEquals(*xs1.head, *xs2.head) {
+		if !ByteArrayEquals(ByteArray(*xs1.head), ByteArray(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -250,7 +250,7 @@ func (a RuneArrayList) Equals(b RuneArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !RuneArrayEquals(*xs1.head, *xs2.head) {
+		if !RuneArrayEquals(RuneArray(*xs1.head), RuneArray(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -267,7 +267,7 @@ func (a Float32ArrayList) Equals(b Float32ArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float32ArrayEquals(*xs1.head, *xs2.head) {
+		if !Float32ArrayEquals(Float32Array(*xs1.head), Float32Array(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -284,7 +284,7 @@ func (a Float64ArrayList) Equals(b Float64ArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float64ArrayEquals(*xs1.head, *xs2.head) {
+		if !Float64ArrayEquals(Float64Array(*xs1.head), Float64Array(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -301,7 +301,7 @@ func (a AnyArrayList) Equals(b AnyArrayList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !AnyArrayEquals(*xs1.head, *xs2.head) {
+		if !AnyArrayEquals(AnyArray(*xs1.head), AnyArray(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -318,7 +318,7 @@ func (a BoolOptionList) Equals(b BoolOptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !BoolOptionEquals(*xs1.head, *xs2.head) {
+		if !BoolOptionEquals(BoolOption(*xs1.head), BoolOption(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -335,7 +335,7 @@ func (a StringOptionList) Equals(b StringOptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !StringOptionEquals(*xs1.head, *xs2.head) {
+		if !StringOptionEquals(StringOption(*xs1.head), StringOption(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -352,7 +352,7 @@ func (a IntOptionList) Equals(b IntOptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !IntOptionEquals(*xs1.head, *xs2.head) {
+		if !IntOptionEquals(IntOption(*xs1.head), IntOption(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -369,7 +369,7 @@ func (a Int64OptionList) Equals(b Int64OptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Int64OptionEquals(*xs1.head, *xs2.head) {
+		if !Int64OptionEquals(Int64Option(*xs1.head), Int64Option(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -386,7 +386,7 @@ func (a ByteOptionList) Equals(b ByteOptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !ByteOptionEquals(*xs1.head, *xs2.head) {
+		if !ByteOptionEquals(ByteOption(*xs1.head), ByteOption(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -403,7 +403,7 @@ func (a RuneOptionList) Equals(b RuneOptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !RuneOptionEquals(*xs1.head, *xs2.head) {
+		if !RuneOptionEquals(RuneOption(*xs1.head), RuneOption(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -420,7 +420,7 @@ func (a Float32OptionList) Equals(b Float32OptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float32OptionEquals(*xs1.head, *xs2.head) {
+		if !Float32OptionEquals(Float32Option(*xs1.head), Float32Option(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -437,7 +437,7 @@ func (a Float64OptionList) Equals(b Float64OptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float64OptionEquals(*xs1.head, *xs2.head) {
+		if !Float64OptionEquals(Float64Option(*xs1.head), Float64Option(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -454,7 +454,7 @@ func (a AnyOptionList) Equals(b AnyOptionList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !AnyOptionEquals(*xs1.head, *xs2.head) {
+		if !AnyOptionEquals(AnyOption(*xs1.head), AnyOption(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -471,7 +471,7 @@ func (a BoolListList) Equals(b BoolListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !BoolListEquals(*xs1.head, *xs2.head) {
+		if !BoolListEquals(BoolList(*xs1.head), BoolList(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -488,7 +488,7 @@ func (a StringListList) Equals(b StringListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !StringListEquals(*xs1.head, *xs2.head) {
+		if !StringListEquals(StringList(*xs1.head), StringList(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -505,7 +505,7 @@ func (a IntListList) Equals(b IntListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !IntListEquals(*xs1.head, *xs2.head) {
+		if !IntListEquals(IntList(*xs1.head), IntList(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -522,7 +522,7 @@ func (a Int64ListList) Equals(b Int64ListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Int64ListEquals(*xs1.head, *xs2.head) {
+		if !Int64ListEquals(Int64List(*xs1.head), Int64List(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -539,7 +539,7 @@ func (a ByteListList) Equals(b ByteListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !ByteListEquals(*xs1.head, *xs2.head) {
+		if !ByteListEquals(ByteList(*xs1.head), ByteList(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -556,7 +556,7 @@ func (a RuneListList) Equals(b RuneListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !RuneListEquals(*xs1.head, *xs2.head) {
+		if !RuneListEquals(RuneList(*xs1.head), RuneList(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -573,7 +573,7 @@ func (a Float32ListList) Equals(b Float32ListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float32ListEquals(*xs1.head, *xs2.head) {
+		if !Float32ListEquals(Float32List(*xs1.head), Float32List(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -590,7 +590,7 @@ func (a Float64ListList) Equals(b Float64ListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !Float64ListEquals(*xs1.head, *xs2.head) {
+		if !Float64ListEquals(Float64List(*xs1.head), Float64List(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -607,7 +607,7 @@ func (a AnyListList) Equals(b AnyListList) bool {
 	xs1 := a
 	xs2 := b
 	for xs1.NonEmpty() {
-		if !AnyListEquals(*xs1.head, *xs2.head) {
+		if !AnyListEquals(AnyList(*xs1.head), AnyList(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
