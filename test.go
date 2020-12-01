@@ -142,4 +142,10 @@ func main() {
 	a2 := IntArray([]int{1, 2, 3})
 	fmt.Println(a2.Head(), a2.HeadOption().ToString(), a2.Tail().MkString("[", "|", "]"))
 	fmt.Println(IntArray([]int{1, 2, -3, -4, 5}).Filter(EvenInt.And(NegInt)).ToString())
+
+	xs := MakeStringList("hello", "world", "10-ten", "20-num")
+	fmt.Println(xs.Filter(MatchRegexpString("[0-9]+\\-[a-z]+")).ToString())
+
+	fmt.Println(String("Hello World!").ToArray().ToString())
+
 }
