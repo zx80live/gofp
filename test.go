@@ -141,5 +141,5 @@ func main() {
 
 	a2 := IntArray([]int{1, 2, 3})
 	fmt.Println(a2.Head(), a2.HeadOption().ToString(), a2.Tail().MkString("[", "|", "]"))
-	fmt.Println(IntArray([]int{1, 2, 3, 4, 5}).Filter(func(e int) bool { return e%2 == 0 }).ToString())
+	fmt.Println(IntArray([]int{1, 2, -3, -4, 5}).Filter(EvenInt.And(NegInt)).ToString())
 }
