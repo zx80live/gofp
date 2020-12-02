@@ -160,4 +160,5 @@ func main() {
 	fmt.Println(arr1.DropRight(100).ToString())
 	fmt.Println(arr1.DropWhile(NegInt).ToString())
 
+	fmt.Println(len("Hello"))
 }

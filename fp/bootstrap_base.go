@@ -22,3 +22,4 @@ type Float32 float32
 type Float64 float64
 type Complex64 complex64
 type Complex128 complex128
+type Any interface{}
