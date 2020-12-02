@@ -148,4 +148,8 @@ func main() {
 
 	fmt.Println(String("Hello World!").ToArray().ToString())
 
+	fmt.Println(MakeIntList().Take(1).ToString())
+	fmt.Println(MakeIntList(1, 2, 3, 4, 5, 6, 7).Count(EvenInt))
+	fmt.Println(MakeIntList(-1, -2, -3, -4, 5, 6, 7, 8, -9).TakeWhile(NegInt).ToString())
+	fmt.Println(MakeIntList(1, 2, 3, 4, 5, 6, 7).TakeRight(2).ToString())
 }
