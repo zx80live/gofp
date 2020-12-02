@@ -5,6 +5,7 @@ package fp
 
 func (m BoolArray) Drop(i int) []bool {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -16,6 +17,7 @@ func (m BoolArray) Drop(i int) []bool {
 }
 func (m StringArray) Drop(i int) []string {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -27,6 +29,7 @@ func (m StringArray) Drop(i int) []string {
 }
 func (m IntArray) Drop(i int) []int {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -38,6 +41,7 @@ func (m IntArray) Drop(i int) []int {
 }
 func (m Int64Array) Drop(i int) []int64 {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -49,6 +53,7 @@ func (m Int64Array) Drop(i int) []int64 {
 }
 func (m ByteArray) Drop(i int) []byte {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -60,6 +65,7 @@ func (m ByteArray) Drop(i int) []byte {
 }
 func (m RuneArray) Drop(i int) []rune {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -71,6 +77,7 @@ func (m RuneArray) Drop(i int) []rune {
 }
 func (m Float32Array) Drop(i int) []float32 {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -82,6 +89,7 @@ func (m Float32Array) Drop(i int) []float32 {
 }
 func (m Float64Array) Drop(i int) []float64 {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -93,6 +101,7 @@ func (m Float64Array) Drop(i int) []float64 {
 }
 func (m AnyArray) Drop(i int) []Any {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -104,6 +113,7 @@ func (m AnyArray) Drop(i int) []Any {
 }
 func (m BoolArrayArray) Drop(i int) [][]bool {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -115,6 +125,7 @@ func (m BoolArrayArray) Drop(i int) [][]bool {
 }
 func (m StringArrayArray) Drop(i int) [][]string {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -126,6 +137,7 @@ func (m StringArrayArray) Drop(i int) [][]string {
 }
 func (m IntArrayArray) Drop(i int) [][]int {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -137,6 +149,7 @@ func (m IntArrayArray) Drop(i int) [][]int {
 }
 func (m Int64ArrayArray) Drop(i int) [][]int64 {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -148,6 +161,7 @@ func (m Int64ArrayArray) Drop(i int) [][]int64 {
 }
 func (m ByteArrayArray) Drop(i int) [][]byte {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -159,6 +173,7 @@ func (m ByteArrayArray) Drop(i int) [][]byte {
 }
 func (m RuneArrayArray) Drop(i int) [][]rune {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -170,6 +185,7 @@ func (m RuneArrayArray) Drop(i int) [][]rune {
 }
 func (m Float32ArrayArray) Drop(i int) [][]float32 {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -181,6 +197,7 @@ func (m Float32ArrayArray) Drop(i int) [][]float32 {
 }
 func (m Float64ArrayArray) Drop(i int) [][]float64 {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}
@@ -192,6 +209,7 @@ func (m Float64ArrayArray) Drop(i int) [][]float64 {
 }
 func (m AnyArrayArray) Drop(i int) [][]Any {
 	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
 	if i < 0 || i >= s {
 		panic("index out of bound")
 	}

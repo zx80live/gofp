@@ -147,9 +147,17 @@ func main() {
 	fmt.Println(xs.Filter(MatchRegexpString("[0-9]+\\-[a-z]+")).ToString())
 
 	fmt.Println(String("Hello World!").ToArray().ToString())
-
 	fmt.Println(MakeIntList().Take(1).ToString())
 	fmt.Println(MakeIntList(1, 2, 3, 4, 5, 6, 7).Count(EvenInt))
 	fmt.Println(MakeIntList(-1, -2, -3, -4, 5, 6, 7, 8, -9).TakeWhile(NegInt).ToString())
 	fmt.Println(MakeIntList(1, 2, 3, 4, 5, 6, 7).TakeRight(2).ToString())
+
+	arr1 := IntArray([]int{1, -2, -3, -4, -5})
+	fmt.Println(arr1.Count(EvenInt))
+	fmt.Println(arr1.Take(2).ToString())
+	fmt.Println(arr1.TakeWhile(NegInt).ToString())
+	fmt.Println(arr1.TakeRight(6).ToString())
+	fmt.Println(arr1.DropRight(100).ToString())
+	fmt.Println(arr1.DropWhile(NegInt).ToString())
+
 }
