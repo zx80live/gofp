@@ -161,4 +161,7 @@ func main() {
 	fmt.Println(arr1.DropWhile(NegInt).ToString())
 
 	fmt.Println(len("Hello"))
+
+	MakeIntList(1, 2, 3, 4, 5).Foreach(PrintlnInt)
+	MakeIntListList(MakeIntList(1, 2, 3), MakeIntList(), MakeIntList(4, 5), MakeIntList(6)).Foreach(PrintlnIntList)
 }
