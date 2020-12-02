@@ -164,4 +164,8 @@ func main() {
 
 	MakeIntList(1, 2, 3, 4, 5).Foreach(PrintlnInt)
 	MakeIntListList(MakeIntList(1, 2, 3), MakeIntList(), MakeIntList(4, 5), MakeIntList(6)).Foreach(PrintlnIntList)
+
+	MakeStringList("10015-one", "10016-two", "10017-three").
+		MapStringArray(StringRegexGroups("([0-9]+)\\-([a-z]+)")).
+		Foreach(PrintlnStringArray)
 }
