@@ -38,7 +38,7 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 
 
 
-###### Create array
+##### Create array
 
 ```go
 type IntArray []int
@@ -52,7 +52,7 @@ arr := IntArray([]int{10, 20, 30})
 
 
 
-###### Traverse array
+##### Traverse array
 
 ```go
 // apply function `f` to each element of array
@@ -81,7 +81,7 @@ for _, e := range arr {
 
 
 
-###### Heads and tails
+##### Heads and tails
 
 ```go
 // returns head of array or throws exeption if array is empty
