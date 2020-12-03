@@ -44,8 +44,6 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 type IntArray []int
 ```
 
-Example:
-
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
@@ -59,8 +57,6 @@ arr := IntArray([]int{10, 20, 30})
 // complexity: O(n)
 func (a IntArray) Foreach(f func(int))
 ```
-
-Example:
 
 ```go
 arr := IntArray([]int{10, 20, 30})
@@ -96,8 +92,6 @@ func (a IntArray) HeadOption() IntOption
 // complexity: O(c)
 func (a IntArray) Tail() IntArray
 ```
-
-Examples:
 
 ```go
 arr := IntArray([]int{10, 20, 30})
