@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This library was inspired by Scala (collection API, functional paradigm and etc). 
+This library was inspired by Scala (collection API, functional paradigm and etc).  
 
 ## Table of contents
 
