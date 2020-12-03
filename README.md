@@ -8,8 +8,13 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 
 ## Table of contents
 
-[TOC]
-
+- [Getting started](#getting-started)
+- [Collection API](#collection-api)
+  * [Lists](#lists)
+  * [Options](#options)
+  * [Arrays](#arrays)
+    + [Create array](#create-array)
+- [Boxed types](#boxed-types)
 
 
 ## Getting started
@@ -29,11 +34,11 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 
 
 ### Lists
-
+TODO describe
 
 
 ### Options
-
+TODO describe
 
 
 ### Arrays
