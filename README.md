@@ -51,13 +51,6 @@ arr := IntArray([]int{10, 20, 30})
 
 
 ##### Traverse array
-
-|                                          |      |
-| ---------------------------------------- | ---- |
-| `func (a IntArray) Foreach(f func(int))` | O(n) |
-
-
-
 ```go
 // apply function `f` to each element of array
 // complexity: O(n)
