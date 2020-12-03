@@ -114,7 +114,7 @@ tail3.Head()                            // panic("there is no heads")
 
 
 
-###### Array Map
+##### Array Map
 
 Contract:
 
@@ -150,7 +150,7 @@ Output:
 
 
 
-###### Array Filter
+##### Array Filter
 
 Contract:
 
@@ -177,7 +177,7 @@ res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 
 
-###### Array Find
+##### Array Find
 
 Contract:
 
@@ -199,7 +199,7 @@ var res3 IntOption = arr.Find(NegInt)                             // None
 
 
 
-###### Array Count
+##### Array Count
 
 Contract:
 
@@ -219,7 +219,7 @@ arr.Count(NegInt)                                         // 0
 
 
 
-###### Array drops
+##### Array drops
 
 Contracts:
 
@@ -248,7 +248,7 @@ res3 := arr.dropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 
 
 
-###### Array takes
+##### Array takes
 
 Contracts:
 
@@ -277,7 +277,7 @@ res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 
 
 
-###### Array Equals
+##### Array Equals
 
 Contract:
 
@@ -300,7 +300,7 @@ arr1.Equals(arr3)   // false
 
 
 
-###### Array ToString
+##### Array ToString
 
 Contract:
 
@@ -322,7 +322,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 
-###### Array MkString
+##### Array MkString
 
 Contract:
 
@@ -341,7 +341,7 @@ fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 
 
 
-###### Array ToList
+##### Array ToList
 
 Contract:
 
@@ -360,7 +360,7 @@ var l IntList = arr.ToList()
 
 
 
-###### Supported array types
+##### Supported array types
 
 | Array type                       | Go analogue   |
 | -------------------------------- | ------------- |
