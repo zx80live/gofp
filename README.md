@@ -1,14 +1,14 @@
 # Functional programming in GO
 
-This library was inspired by Scala (collection API, functional paradigm and etc). 
-
 
 
 ## Introduction
 
+This library was inspired by Scala (collection API, functional paradigm and etc). 
 
 
-## First steps
+
+## Getting started
 
 Before using functional library import the following package:
 
