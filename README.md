@@ -38,7 +38,7 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 
 
 
-##### Create array
+#### Create array
 
 ```go
 type IntArray []int
@@ -50,7 +50,8 @@ arr := IntArray([]int{10, 20, 30})
 
 
 
-##### Traverse array
+#### Traverse array
+
 ```go
 // apply function `f` to each element of array
 // complexity: O(n)
@@ -77,7 +78,7 @@ for _, e := range arr {
 
 
 
-##### Heads and tails
+#### Heads and tails
 
 ```go
 // returns head of array or throws exeption if array is empty
@@ -108,7 +109,7 @@ tail3.Head()                            // panic("there is no heads")
 
 
 
-##### Array Map
+#### Array Map
 
 ```go
 // transform each element of array to new element
@@ -142,7 +143,7 @@ Output:
 
 
 
-##### Array Filter
+#### Array Filter
 
 ```go
 // returns new array with elements which statisfy a predicate
@@ -167,7 +168,7 @@ res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 
 
-##### Array Find
+#### Array Find
 
 ```go
 // returns first element which statisfy a predicate
@@ -187,7 +188,7 @@ var res3 IntOption = arr.Find(NegInt)                             // None
 
 
 
-##### Array Count
+#### Array Count
 
 ```go
 // returns count of elements which satisfy a predicate
@@ -205,7 +206,7 @@ arr.Count(NegInt)                                         // 0
 
 
 
-##### Array drops
+#### Array drops
 
 ```go
 // returns new array without n-first elements
@@ -232,7 +233,7 @@ res3 := arr.dropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 
 
 
-##### Array takes
+#### Array takes
 
 ```go
 // returns first n-elements
@@ -259,7 +260,7 @@ res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 
 
 
-##### Array Equals
+#### Array Equals
 
 ```go
 // returns true if both arrays are equal
@@ -280,7 +281,7 @@ arr1.Equals(arr3)   // false
 
 
 
-##### Array ToString
+#### Array ToString
 
 ```go
 // make string representation of that array
@@ -300,7 +301,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 
-##### Array MkString
+#### Array MkString
 
 ```go
 // make string representation of that array with decorated elements and separatorArray takes
@@ -317,7 +318,7 @@ fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 
 
 
-##### Array ToList
+#### Array ToList
 
 ```go
 // transform array to recursive functional data structure
@@ -334,7 +335,7 @@ var l IntList = arr.ToList()
 
 
 
-##### Supported array types
+#### Supported array types
 
 | Array type                       | Go analogue   |
 | -------------------------------- | ------------- |
