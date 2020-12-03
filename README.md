@@ -52,6 +52,200 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 List is recursive functional data structure which has `head` and `tail` as sublist.
 [🠕](#table-of-contents)
 
+
+
+#### Create list
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Copy list
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+#### Count
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Drops
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Equals
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Filter
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Find
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### FlatMap
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Flatten
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### FoldLeft
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Foreach
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### GroupBy
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Heads and tails
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Emptiness
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Map
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### MkString
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Nil
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Prepend
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Reduce
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Reverse
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### Size
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### List takes
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### ToArray
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+#### ToString
+
+TODO describe
+
+[🠕](#table-of-contents)
+
+
+
+
+
 #### Supported list types
 
 | Array type        | Scala analogue        | Go analogue |
