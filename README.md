@@ -405,26 +405,26 @@ var l IntList = arr.ToList()
 
 #### Supported array types
 
-| Array type                       | Go analogue   |
-| -------------------------------- | ------------- |
-| `BoolArray`                      | `[]bool`      |
-| `StringArray`                    | `[]string`    |
-| `IntArray`                       | `[]int`       |
-| `Int64Array`                     | `[]int64`     |
-| `ByteArray`                      | `[]byte`      |
-| `RuneArray`                      | `[]rune`      |
-| `Float32Array`                   | `[]float32`   |
-| `Float64Array`                   | `[]float64`   |
-| `AnyArray`                       | `[]Any`       |
-| `BoolArrayArray`                 | `[][]bool`    |
-| `StringArrayArrayRuneArrayArray` | `[][]string`  |
-| `IntArrayArray`                  | `[][]int`     |
-| `Int64ArrayArray`                | `[][]int64`   |
-| `ByteArrayArray`                 | `[][]byte`    |
-| `RuneArrayArray`                 | `[][]rune`    |
-| `Float32ArrayArray`              | `[][]float32` |
-| `Float64ArrayArray`              | `[][]float64` |
-| `AnyArrayArray`                  | `[][]Any`     |
+| Array type          | Scala analogue        | Go analogue   |
+| ------------------- | --------------------- | ------------- |
+| `BoolArray`         | Array[Bool]           | `[]bool`      |
+| `StringArray`       | Array[String]         | `[]string`    |
+| `IntArray`          | Array[Int]            | `[]int`       |
+| `Int64Array`        | Array[Long]           | `[]int64`     |
+| `ByteArray`         | Array[Byte]           | `[]byte`      |
+| `RuneArray`         | Array[Rune]           | `[]rune`      |
+| `Float32Array`      | Array[Float]          | `[]float32`   |
+| `Float64Array`      | Array[Long]           | `[]float64`   |
+| `AnyArray`          | Array[Any]            | `[]Any`       |
+| `BoolArrayArray`    | Array[Array[Boolean]] | `[][]bool`    |
+| `StringArrayArray`  | Array[Array[String]]  | `[][]string`  |
+| `IntArrayArray`     | Array[Array[Int]]     | `[][]int`     |
+| `Int64ArrayArray`   | Array[Array[Long]]    | `[][]int64`   |
+| `ByteArrayArray`    | Array[Array[Byte]]    | `[][]byte`    |
+| `RuneArrayArray`    | Array[Array[Char]]    | `[][]rune`    |
+| `Float32ArrayArray` | Array[Array[Float]]   | `[][]float32` |
+| `Float64ArrayArray` | Array[Array[Double]]  | `[][]float64` |
+| `AnyArrayArray`     | Array[Array[Any]]     | `[][]Any`     |
 
 [🠕](#table-of-contents)
 
