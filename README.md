@@ -116,8 +116,6 @@ tail3.Head()                            // panic("there is no heads")
 
 ##### Array Map
 
-Contract:
-
 ```go
 // transform each element of array to new element
 // complexity: O(n)
@@ -152,8 +150,6 @@ Output:
 
 ##### Array Filter
 
-Contract:
-
 ```go
 // returns new array with elements which statisfy a predicate
 // complexity: O(n)
@@ -179,8 +175,6 @@ res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 ##### Array Find
 
-Contract:
-
 ```go
 // returns first element which statisfy a predicate
 // complexity: O(1..n)
@@ -201,8 +195,6 @@ var res3 IntOption = arr.Find(NegInt)                             // None
 
 ##### Array Count
 
-Contract:
-
 ```go
 // returns count of elements which satisfy a predicate
 // complexity: O(n)
@@ -220,8 +212,6 @@ arr.Count(NegInt)                                         // 0
 
 
 ##### Array drops
-
-Contracts:
 
 ```go
 // returns new array without n-first elements
@@ -250,8 +240,6 @@ res3 := arr.dropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 
 ##### Array takes
 
-Contracts:
-
 ```go
 // returns first n-elements
 // complexity: O(1..n)
@@ -279,8 +267,6 @@ res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 
 ##### Array Equals
 
-Contract:
-
 ```go
 // returns true if both arrays are equal
 // complexity: O(n)
@@ -302,8 +288,6 @@ arr1.Equals(arr3)   // false
 
 ##### Array ToString
 
-Contract:
-
 ```go
 // make string representation of that array
 // complexity: O(n)
@@ -324,8 +308,6 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 ##### Array MkString
 
-Contract:
-
 ```go
 // make string representation of that array with decorated elements and separatorArray takes
 // complexity: O(n)
@@ -342,8 +324,6 @@ fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 
 
 ##### Array ToList
-
-Contract:
 
 ```go
 // transform array to recursive functional data structure
