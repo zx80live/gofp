@@ -52,12 +52,13 @@ arr := IntArray([]int{10, 20, 30})
 
 #### Traverse array
 
+Applies function `f` to each element of array
+complexity: O(n)
+
 ```go
-// apply function `f` to each element of array
-// complexity: O(n)
 func (a IntArray) Foreach(f func(int))
 ```
-
+Example:
 
 ```go
 arr := IntArray([]int{10, 20, 30})
