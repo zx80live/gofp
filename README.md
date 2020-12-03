@@ -75,7 +75,7 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 
 #### List structure
 
-List is recursive functional data structure which has `head` and `tail` as sublist. 
+List is recursive functional data structure which has `head` and `tail` as sublist. For example, an `IntList(1,2,3)` will be presented in the following structure: 
 
 ```go
    1 ──▶ ( 2 ──▶ ( 3 ──▶ Nil ) )
