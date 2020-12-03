@@ -60,7 +60,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 Before using functional library import the following package:
 
 ```go
-import . "github.com/zx80live/gofp/fp"
+import . "github.com/zx80live/gofp/fp" 
 ```
 
 
