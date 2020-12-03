@@ -39,11 +39,10 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 
 
 #### Create array
-
 ```go
 type IntArray []int
 ```
-
+Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
@@ -52,13 +51,12 @@ arr := IntArray([]int{10, 20, 30})
 
 #### Traverse array
 
-Applies function `f` to each element of array
-complexity: O(n)
+Applies function `f` to each element of array. Complexity: O(n)
 
 ```go
 func (a IntArray) Foreach(f func(int))
 ```
-Example:
+###### Example:
 
 ```go
 arr := IntArray([]int{10, 20, 30})
