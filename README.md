@@ -13,7 +13,9 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
   * [Lists](#lists)
   * [Options](#options)
   * [Arrays](#arrays)
-    + [Create array](#create-array)
+    + [Create](#create-array)
+    + [Foreach](#foreach)
+    + [Heads and tails](#heads-and-tails)
 - [Boxed types](#boxed-types)
 
 
@@ -47,7 +49,7 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 
 
 
-#### Create array
+#### Create
 ```go
 type IntArray []int
 ```
@@ -58,7 +60,7 @@ arr := IntArray([]int{10, 20, 30})
 
 
 
-#### Traverse array
+#### Foreach
 
 ```go
 // Applies function `f` to each element of array. 
