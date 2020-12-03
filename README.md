@@ -33,7 +33,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.Reduce](#listreduce)
     + [List.Reverse](#listreverse)
     + [List.Size](#listsize)
-    + [List.List takes](#listlist-takes)
+    + [List.Takes](#listtakes)
     + [List.ToArray](#listtoarray)
     + [List.ToString](#listtostring)
     + [Supported list types](#supported-list-types)
@@ -486,7 +486,7 @@ Example:
 
 
 
-#### List.takes
+#### List.Takes
 
 ```go
 
