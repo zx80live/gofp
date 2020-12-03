@@ -118,13 +118,13 @@ Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 
-var h = arr.Head()                      // returns 10
-var hopt IntOption = arr.HeadOption()   // returns Some(10)
-var tail IntArray = arr.Tail()          // returns IntArray(20, 30)
-var tail2 = tail.Tail()                 // returns IntArray(30)
-var tail3 = tail2.Tail()                // returns empty array
+var h = arr.Head()                      // 10
+var hopt IntOption = arr.HeadOption()   // Some(10)
+var tail IntArray = arr.Tail()          // IntArray(20, 30)
+var tail2 = tail.Tail()                 // IntArray(30)
+var tail3 = tail2.Tail()                // empty array
 
-var hopt3 = tail3.HeadOption()          // return NoneInt
+var hopt3 = tail3.HeadOption()          // NoneInt
 tail3.Head()                            // panic("there is no heads")
 ```
 
