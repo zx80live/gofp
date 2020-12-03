@@ -68,7 +68,7 @@ Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
-<div style="text-align: right"><a href="#table-of-contents">[🠕]</a></div>
+<p style="text-align: right"><a href="#table-of-contents">[🠕]</a></p>
 
 
 #### Foreach
