@@ -137,7 +137,7 @@ l1 := MakeIntList(1,2,3,4,5)
 l2 := l1.Copy()
 ```
 
-[arr🠕](#table-of-contents)
+[🠕](#table-of-contents)
 
 #### List.Count
 
