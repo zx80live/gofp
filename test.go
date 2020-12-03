@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	. "github.com/zx80live/gofp/fp"
+	. "github.com/zx80live/gofp/fp/concurrent"
+	"time"
 )
 
 type XArr []int
@@ -168,4 +170,27 @@ func main() {
 	MakeStringList("10015-one", "10016-two", "10017-three").
 		MapStringArray(StringRegexGroups("([0-9]+)\\-([a-z]+)")).
 		Foreach(PrintlnStringArray)
+
+	fmt.Println("------------------------")
+	f1 := MakeIntFuture(func() Int {
+		fmt.Println("f1.invoke")
+		time.Sleep(5 * time.Second)
+		fmt.Println("f1.completed")
+		return 10
+	})
+	f2 := MakeIntFuture(func() Int {
+		fmt.Println("f2.invoke")
+		time.Sleep(4 * time.Second)
+		fmt.Println("f2.completed")
+		return 20
+	})
+
+	res2 := f1.FlatMapInt(func(a Int) IntFuture {
+		return f2.MapInt(func(b Int) Int {
+			return a + b
+		})
+	})
+
+	fmt.Println("result:", f1, f2, res2)
+	fmt.Println(res2.Result())
 }
