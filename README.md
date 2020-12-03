@@ -437,3 +437,24 @@ List is recursive functional data structure which has `head` and `tail` as subli
 
 ## Concurrency API
 
+
+
+----------
+
+## Contributing
+
+TODO describe
+
+## Versioning
+
+TODO describe
+
+## Roadmap
+
+TODO describe
+
+## License
+
+This library is distributed under MIT license found in the LICENSE file.
+
+TODO clarify
