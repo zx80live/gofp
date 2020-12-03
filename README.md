@@ -1,6 +1,6 @@
 # Functional programming in GO
 
-
+Project and documentation in progress.
 
 ## Introduction
 
