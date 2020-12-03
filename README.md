@@ -51,12 +51,12 @@ arr := IntArray([]int{10, 20, 30})
 
 #### Traverse array
 
-Applies function `f` to each element of array. Complexity: O(n)
-
 ```go
+// Applies function `f` to each element of array. 
+// O(n)
 func (a IntArray) Foreach(f func(int))
 ```
-###### Example:
+Example:
 
 ```go
 arr := IntArray([]int{10, 20, 30})
@@ -80,19 +80,19 @@ for _, e := range arr {
 #### Heads and tails
 
 ```go
-// returns head of array or throws exeption if array is empty
-// complexity: O(1)
+// Returns head of array or throws exeption if array is empty
+// O(1)
 func (a IntArray) Head() int
 
-// returns optional head from array
-// complexity: O(1)
+// Returns optional head from array
+// O(1)
 func (a IntArray) HeadOption() IntOption
 
-// returns array without first element
-// complexity: O(c)
+// Returns array without first element
+// O(c)
 func (a IntArray) Tail() IntArray
 ```
-
+Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 
@@ -111,11 +111,10 @@ tail3.Head()                            // panic("there is no heads")
 #### Array Map
 
 ```go
-// transform each element of array to new element
-// complexity: O(n)
+// Transform each element of array to new element
+// O(n)
 func (a IntArray) Map<Type>(transformer func(int) <Type>) <Type>Array
 
-// examples:
 func (a IntArray) MapInt(transformer func(int) int) IntArray
 func (a IntArray) MapString(transformer func(int) string) StringArray
 ...
@@ -145,12 +144,12 @@ Output:
 #### Array Filter
 
 ```go
-// returns new array with elements which statisfy a predicate
-// complexity: O(n)
+// Returns new array with elements which statisfy a predicate
+// O(n)
 func (a IntArray) Filter(predicate func(int) bool) IntArray
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int {1,-2,-3,4,5,-6,7,8,-9,10})
@@ -170,12 +169,12 @@ res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 #### Array Find
 
 ```go
-// returns first element which statisfy a predicate
-// complexity: O(1..n)
+// Returns first element which statisfy a predicate
+// O(1..n)
 func (a IntArray) Find(predicate func(int) bool) IntOption
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int {1,2,3,4,5,6})
@@ -190,8 +189,8 @@ var res3 IntOption = arr.Find(NegInt)                             // None
 #### Array Count
 
 ```go
-// returns count of elements which satisfy a predicate
-// complexity: O(n)
+// Returns count of elements which satisfy a predicate
+// O(n)
 func (a IntArray) Count(predicate func(int) bool) int
 ```
 Example:
@@ -208,20 +207,20 @@ arr.Count(NegInt)                                         // 0
 #### Array drops
 
 ```go
-// returns new array without n-first elements
-// complexity: O(1..n)
+// Returns new array without n-first elements
+// O(1..n)
 func (a IntArray) Drop(n int) IntArray
 
-// returns new array without n-last elements
-// complexity: O(1..n)
+// Returns new array without n-last elements
+// O(1..n)
 func (a IntArray) DropRight(n int) IntArray
 
-// returns new array without first elements which statisfy a predicate
-// complexity: O(1..n)
+// Returns new array without first elements which statisfy a predicate
+// O(1..n)
 func (a IntArray) DropWhile(predicate func(int) bool) IntArray
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int{10,20,30,40,50})
@@ -235,20 +234,20 @@ res3 := arr.dropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 #### Array takes
 
 ```go
-// returns first n-elements
-// complexity: O(1..n)
+// Returns first n-elements
+// O(1..n)
 func (a IntArray) Take(n int) IntArray
 
-// returns last n-elements
-// complexity: O(1..n)
+// Returns last n-elements
+// O(1..n)
 func (a IntArray) TakeRight(n int) IntArray
 
-// returns first elements which statisfy a predicate
-// complexity: O(1..n)
+// Returns first elements which statisfy a predicate
+// O(1..n)
 func (a IntArray) TakeWhile(predicate func(int) bool) IntArray
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int{10,20,30,40,50})
@@ -262,12 +261,12 @@ res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 #### Array Equals
 
 ```go
-// returns true if both arrays are equal
-// complexity: O(n)
+// Returns true if both arrays are equal
+// O(n)
 func (a IntArray) Equals(b IntArray) bool
 ```
 
-Examples:
+Example:
 
 ```go
 arr1 := IntArray([]int{10,20,30,40,50})
@@ -283,12 +282,12 @@ arr1.Equals(arr3)   // false
 #### Array ToString
 
 ```go
-// make string representation of that array
-// complexity: O(n)
+// Make string representation of that array
+// O(n)
 func (a IntArray) ToString() string
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int{1,2,3})
@@ -303,12 +302,12 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 #### Array MkString
 
 ```go
-// make string representation of that array with decorated elements and separatorArray takes
-// complexity: O(n)
+// Make string representation of that array with decorated elements and separatorArray takes
+// O(n)
 func (a IntArray) MkString(start, sep, end string) string
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int{1,2,3})
@@ -320,12 +319,12 @@ fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 #### Array ToList
 
 ```go
-// transform array to recursive functional data structure
-// complexity: O(n)
+// Transform array to recursive functional data structure
+// O(n)
 func (a IntArray) ToList() IntList
 ```
 
-Examples:
+Example:
 
 ```go
 arr := IntArray([]int{1,2,3})
