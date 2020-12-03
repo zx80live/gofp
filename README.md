@@ -12,8 +12,8 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 - [Collection API](#collection-api)
   * [Lists](#lists)
     + [Create list](#create-list)
-    + [Copy list](#copy-list)
-    + [Count](#count)
+    + [Copy list](#list.copy)
+    + [Count](#list.count)
     + [Drops](#drops)
     + [Equals](#equals)
     + [Filter](#filter)
@@ -39,7 +39,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
   * [Options](#options)
   * [Arrays](#arrays)
     + [Create](#create-array)
-    + [Foreach](#foreach)
+    + [Foreach](#array.foreach)
     + [Heads and tails](#heads-and-tails)
     + [Map](#map)
     + [Filter](#filter)
@@ -73,196 +73,461 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 
 ### Lists
 
-List is recursive functional data structure which has `head` and `tail` as sublist.
+#### List structure
+
+List is recursive functional data structure which has `head` and `tail` as sublist. 
+
+```go
+   1 ──▶ ( 2 ──▶ ( 3 ──▶ Nil ) )
+  └─┘    └─────────────────────┘          
+   ↑               ↑
+  head            tail
+```
+
+List is implemented in the following structure:
+
+```go
+type IntList struct {
+  head *int
+  tail *IntList
+}
+```
+
 [🠕](#table-of-contents)
-
-
 
 #### Create list
 
-TODO describe
+```go
+// Create list
+// O(n)
+func MakeIntList(elements ...int) IntList
+
+// Construct list by prepend head
+// O(1)
+func (l IntList) Cons(e int) IntList
+```
+
+Example:
+
+```go
+// create list by factory
+var l IntList = MakeIntList(1,2,3,4,5)
+
+// create list from Nil
+l2 := NilInt.Cons(5).Cons(4).Cons(3).Cons(2).Cons(1)  // equals IntList(1,2,3,4,5)
+```
 
 [🠕](#table-of-contents)
 
 
 
-#### Copy list
+#### List.Copy
 
-TODO describe
+```go
+// Copy references of elements to new list
+// O(2*n)
+func (l IntList) Copy() IntList
+```
 
-[🠕](#table-of-contents)
+Example:
 
-#### Count
+```go
+l1 := MakeIntList(1,2,3,4,5)
+l2 := l1.Copy()
+```
 
-TODO describe
+[arr🠕](#table-of-contents)
 
-[🠕](#table-of-contents)
+#### List.Count
 
+```go
+// Count elements which satisfy a predicate
+// O(1..n)
+func (l IntList) Count(predicate func(int) bool)
+```
 
+Example:
 
-#### Drops
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Equals
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Filter
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Find
-
-TODO describe
+```go
+l := MakeIntList(1,2,3,4,5)
+l.Count(func(e int) bool { return e % 2 == 0})    // 2
+l.Count(EvenInt)                                  // 2
+```
 
 [🠕](#table-of-contents)
 
 
 
-#### FlatMap
+#### List.Drops
 
-TODO describe
+```go
+// Returns new list without n-first elements
+// O(1..n)
+func (l IntList) Drop(n int) IntList
 
-[🠕](#table-of-contents)
+// Returns new list without n-last elements
+// O(1..n)
+func (l IntList) DropRight(n int) IntList
 
+// Returns new list without first elements which statisfy a predicate
+// O(1..n)
+func (l IntList) DropWhile(predicate func(int) bool) IntList
+```
 
+Example:
 
-#### Flatten
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### FoldLeft
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Foreach
-
-TODO describe
+```go
+l := MakeIntList(10,20,30,40,50)
+res1 := l.Drop(2)                                 // IntList(30,40,50)
+res2 := l.DropRight(2)                            // IntList(10,20,30)
+res3 := l.DropWhile(func (e int) bool { e < 40 }) // IntList(40,50)                      
+```
 
 [🠕](#table-of-contents)
 
 
 
-#### GroupBy
+#### List.Equals
 
-TODO describe
+```go
+// Returns true if both lists are equal
+// O(n)
+func (a IntLIst) Equals(b IntList) bool
+```
 
-[🠕](#table-of-contents)
+Example:
 
+```go
+// compare the simple lists
+l1 := MakeIntList(10,20,30,40,50)
+l2 := MakeIntList(10,20,30,40,50)
+l3 := MakeIntList({10,20,30)
 
-
-#### Heads and tails
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Emptiness
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Map
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### MkString
-
-TODO describe
+l1.Equals(l2)   // true
+l1.Equals(l3)   // false
+                   
+// compare the nested lists
+l4 := MakeIntListList(MakeIntList(1,2), MakeIntList(3,4,5))           
+l5 := MakeIntListList(MakeIntList(1,2), MakeIntList(3,4,5)) 
+l6 := MakeIntListList(MakeIntList(1,2,3), MakeIntList(4,5))           
+                 
+l4.Equals(l5)  // true
+l4.Equals(l6)  // false
+```
 
 [🠕](#table-of-contents)
 
 
 
-#### Nil
+#### List.Filter
 
-TODO describe
+```go
+// Returns new list with elements which statisfy a predicate
+// O(n)
+func (l IntList) Filter(predicate func(int) bool) IntList
+```
 
-[🠕](#table-of-contents)
+Example:
 
+```go
+l := MakeIntList(1,-2,-3,4,5,-6,7,8,-9,10)
+res := l.
+         Filter(func (e int) bool { return e % 2 == 0}).   // filter even numbers
+         Filter(func (e int) bool { return e >= 0 })       // filter positive numbers
 
+fmt.Println(res.ToString())    // IntList(4, 8, 10)
 
-#### Prepend
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Reduce
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### Reverse
-
-TODO describe
+res2 := l.Filter(EvenInt).Filter(PosInt)                   // use library predicates O(2*n)
+res3 := l.Filter(EvenInt.And(PosInt))                      // compose predicates     O(n)
+```
 
 [🠕](#table-of-contents)
 
 
 
-#### Size
+#### List.Find
 
-TODO describe
+```go
 
-[🠕](#table-of-contents)
+```
 
+Example:
 
+```go
 
-#### List takes
-
-TODO describe
-
-[🠕](#table-of-contents)
-
-
-
-#### ToArray
-
-TODO describe
+```
 
 [🠕](#table-of-contents)
 
 
 
-#### ToString
+#### List.FlatMap
 
-TODO describe
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Flatten
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.FoldLeft
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Foreach
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.GroupBy
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Heads and tails
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Emptiness
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Map
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.MkString
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Nil
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Prepend
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Reduce
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Reverse
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.Size
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.takes
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.ToArray
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
+
+[🠕](#table-of-contents)
+
+
+
+#### List.ToString
+
+```go
+
+```
+
+Example:
+
+```go
+
+```
 
 [🠕](#table-of-contents)
 
@@ -326,7 +591,7 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 
 
 
-#### Create
+#### Create array
 ```go
 type IntArray []int
 ```
@@ -337,7 +602,7 @@ arr := IntArray([]int{10, 20, 30})
 [🠕](#table-of-contents)
 
 
-#### Foreach
+#### Array.Foreach
 
 ```go
 // Applies function `f` to each element of array. 
@@ -365,7 +630,7 @@ for _, e := range arr {
 [🠕](#table-of-contents)
 
 
-#### Heads and tails
+#### Array.Heads and tails
 
 ```go
 // Returns head of array or throws exeption if array is empty
@@ -396,7 +661,7 @@ tail3.Head()                            // panic("there is no heads")
 [🠕](#table-of-contents)
 
 
-#### Map
+#### Array.Map
 
 ```go
 // Transform each element of array to new element
@@ -429,7 +694,7 @@ Output:
 [🠕](#table-of-contents)
 
 
-#### Filter
+#### Array.Filter
 
 ```go
 // Returns new array with elements which statisfy a predicate
@@ -454,7 +719,7 @@ res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 [🠕](#table-of-contents)
 
 
-#### Find
+#### Array.Find
 
 ```go
 // Returns first element which statisfy a predicate
@@ -474,7 +739,7 @@ var res3 IntOption = arr.Find(NegInt)                             // None
 [🠕](#table-of-contents)
 
 
-#### Count
+#### Array.Count
 
 ```go
 // Returns count of elements which satisfy a predicate
@@ -492,7 +757,7 @@ arr.Count(NegInt)                                         // 0
 [🠕](#table-of-contents)
 
 
-#### Array drops
+#### Array.Array drops
 
 ```go
 // Returns new array without n-first elements
@@ -512,14 +777,14 @@ Example:
 
 ```go
 arr := IntArray([]int{10,20,30,40,50})
-res1 := arr.drop(2)                                 // Array(30,40,50)
-res2 := arr.dropRight(2)                            // Array(10,20,30)
-res3 := arr.dropWhile(func (e int) bool { e < 40 }) // Array(40,50)
+res1 := arr.Drop(2)                                 // Array(30,40,50)
+res2 := arr.DropRight(2)                            // Array(10,20,30)
+res3 := arr.DropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 ```
 [🠕](#table-of-contents)
 
 
-#### Array takes
+#### Array.takes
 
 ```go
 // Returns first n-elements
@@ -539,14 +804,14 @@ Example:
 
 ```go
 arr := IntArray([]int{10,20,30,40,50})
-res1 := arr.take(2)                                 // Array(10,20)
-res2 := arr.takeRight(2)                            // Array(40,50)
-res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
+res1 := arr.Take(2)                                 // Array(10,20)
+res2 := arr.TakeRight(2)                            // Array(40,50)
+res3 := arr.TakeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 ```
 [🠕](#table-of-contents)
 
 
-#### Equals
+#### Array.Equals
 
 ```go
 // Returns true if both arrays are equal
@@ -567,7 +832,7 @@ arr1.Equals(arr3)   // false
 [🠕](#table-of-contents)
 
 
-#### ToString
+#### Array.ToString
 
 ```go
 // Make string representation of that array
@@ -587,7 +852,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 [🠕](#table-of-contents)
 
 
-#### MkString
+#### Array.MkString
 
 ```go
 // Make string representation of that array with decorated elements and separatorArray takes
@@ -604,7 +869,7 @@ fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 [🠕](#table-of-contents)
 
 
-#### ToList
+#### Array.ToList
 
 ```go
 // Transform array to recursive functional data structure
