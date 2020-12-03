@@ -68,7 +68,7 @@ Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
-[▲](#table-of-contents)
+[🠕](#table-of-contents)
 
 
 #### Foreach
