@@ -68,7 +68,7 @@ Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
-<p style="text-align: right"><a href="#table-of-contents">[🠕]</a></p>
+[🠕](#table-of-contents)
 
 
 #### Foreach
@@ -96,7 +96,7 @@ for _, e := range arr {
     fmt.Println(e)
 }
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Heads and tails
@@ -127,7 +127,7 @@ var tail3 = tail2.Tail()                // empty array
 var hopt3 = tail3.HeadOption()          // NoneInt
 tail3.Head()                            // panic("there is no heads")
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Map
@@ -160,7 +160,7 @@ Output:
 ~200~
 ~300~
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Filter
@@ -185,7 +185,7 @@ res2 := arr.Filter(EvenInt).Filter(PosInt)                 // use library predic
 res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Find
@@ -205,7 +205,7 @@ var res1 IntOption = arr.Find(func(e int) bool { return e == 3 }) // Some(3)
 var res2 IntOption = arr.Find(EvenInt)                            // Some(2)
 var res3 IntOption = arr.Find(NegInt)                             // None
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Count
@@ -223,7 +223,7 @@ arr.Count(EvenInt)                                        // 2
 arr.Count(PosInt)                                         // 5
 arr.Count(NegInt)                                         // 0
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Array drops
@@ -250,7 +250,7 @@ res1 := arr.drop(2)                                 // Array(30,40,50)
 res2 := arr.dropRight(2)                            // Array(10,20,30)
 res3 := arr.dropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Array takes
@@ -277,7 +277,7 @@ res1 := arr.take(2)                                 // Array(10,20)
 res2 := arr.takeRight(2)                            // Array(40,50)
 res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Equals
@@ -298,7 +298,7 @@ arr3 := IntArray([]int{10,20,30})
 arr1.Equals(arr2)   // true
 arr1.Equals(arr3)   // false
 ```
-
+[🠕](#table-of-contents)
 
 
 #### ToString
@@ -318,7 +318,7 @@ fmt.Println(arr.ToString())                        // [1,2,3]
 arr2 := IntIntArray([]int{1,2}, []int[]{3,4,5})
 fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]          
 ```
-
+[🠕](#table-of-contents)
 
 
 #### MkString
@@ -335,7 +335,7 @@ Example:
 arr := IntArray([]int{1,2,3})
 fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 ```
-
+[🠕](#table-of-contents)
 
 
 #### ToList
@@ -352,7 +352,7 @@ Example:
 arr := IntArray([]int{1,2,3})
 var l IntList = arr.ToList()
 ```
-
+[🠕](#table-of-contents)
 
 
 #### Supported array types
@@ -378,12 +378,12 @@ var l IntList = arr.ToList()
 | `Float64ArrayArray`              | `[][]float64` |
 | `AnyArrayArray`                  | `[][]Any`     |
 
-
+[🠕](#table-of-contents)
 
 ### Lists
 
 List is recursive functional data structure which has `head` and `tail` as sublist.
-
+[🠕](#table-of-contents)
 
 
 
@@ -415,7 +415,7 @@ List is recursive functional data structure which has `head` and `tail` as subli
 | Complex64  | complex64    |
 | Complex128 | complex128   |
 | Any        | interface {} |
-
+[🠕](#table-of-contents)
 
 
 
@@ -446,3 +446,4 @@ TODO describe
 This library is distributed under MIT license found in the LICENSE file.
 
 TODO clarify
+[🠕](#table-of-contents)
