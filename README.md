@@ -40,8 +40,6 @@ Array is just wrapper for go-arrays which contains convenient functions. All exa
 
 ###### Create array
 
-Contract:
-
 ```go
 type IntArray []int
 ```
@@ -55,8 +53,6 @@ arr := IntArray([]int{10, 20, 30})
 
 
 ###### Traverse array
-
-Contract:
 
 ```go
 // apply function `f` to each element of array
@@ -86,8 +82,6 @@ for _, e := range arr {
 
 
 ###### Heads and tails
-
-Contract:
 
 ```go
 // returns head of array or throws exeption if array is empty
@@ -439,7 +433,6 @@ List is recursive functional data structure which has `head` and `tail` as subli
 
 
 
-----------
 
 ## Contributing
 
