@@ -119,7 +119,7 @@ tail3.Head()                            // panic("there is no heads")
 
 
 
-#### Array Map
+#### Map
 
 ```go
 // Transform each element of array to new element
@@ -152,7 +152,7 @@ Output:
 
 
 
-#### Array Filter
+#### Filter
 
 ```go
 // Returns new array with elements which statisfy a predicate
@@ -177,7 +177,7 @@ res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 
 
-#### Array Find
+#### Find
 
 ```go
 // Returns first element which statisfy a predicate
@@ -197,7 +197,7 @@ var res3 IntOption = arr.Find(NegInt)                             // None
 
 
 
-#### Array Count
+#### Count
 
 ```go
 // Returns count of elements which satisfy a predicate
@@ -269,7 +269,7 @@ res3 := arr.takeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 
 
 
-#### Array Equals
+#### Equals
 
 ```go
 // Returns true if both arrays are equal
@@ -290,7 +290,7 @@ arr1.Equals(arr3)   // false
 
 
 
-#### Array ToString
+#### ToString
 
 ```go
 // Make string representation of that array
@@ -310,7 +310,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 
-#### Array MkString
+#### MkString
 
 ```go
 // Make string representation of that array with decorated elements and separatorArray takes
@@ -327,7 +327,7 @@ fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 
 
 
-#### Array ToList
+#### ToList
 
 ```go
 // Transform array to recursive functional data structure
