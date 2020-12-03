@@ -11,6 +11,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 - [Getting started](#getting-started)
 - [Collection API](#collection-api)
   * [Lists](#lists)
+    + [Supported list types](#supported-list-types)
   * [Options](#options)
   * [Arrays](#arrays)
     + [Create](#create-array)
@@ -47,7 +48,54 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 
 
 ### Lists
-TODO describe
+
+List is recursive functional data structure which has `head` and `tail` as sublist.
+[🠕](#table-of-contents)
+
+#### Supported list types
+
+| Array type        | Scala analogue        | Go analogue |
+| ----------------- | --------------------- | ----------- |
+| BoolList          | List[Boolean]         |             |
+| StringList        | List[String]          |             |
+| IntList           | List[Int]             |             |
+| Int64List         | List[Long]            |             |
+| ByteList          | List[Byte]            |             |
+| RuneList          | List[Char]            |             |
+| Float32List       | List[Float]           |             |
+| Float64List       | List[Double]          |             |
+| AnyList           | List[Any]             |             |
+| BoolArrayList     | List[Array[Bool]]     |             |
+| StringArrayList   | List[Array[String]]   |             |
+| IntArrayList      | List[Array[Int]]      |             |
+| Int64ArrayList    | List[Array[Long]]     |             |
+| ByteArrayList     | List[Array[Byte]]     |             |
+| RuneArrayList     | List[Array[Char]]     |             |
+| Float32ArrayList  | List[Array[Float]]    |             |
+| Float64ArrayList  | List[Array[Double]]   |             |
+| AnyArrayList      | List[Array[Any]]      |             |
+| BoolOptionList    | List[Option[Boolean]] |             |
+| StringOptionList  | List[Option[String]]  |             |
+| IntOptionList     | List[Option[Int]]     |             |
+| Int64OptionList   | List[Option[Long]]    |             |
+| ByteOptionList    | List[Option[Byte]]    |             |
+| RuneOptionList    | List[Option[Char]]    |             |
+| Float32OptionList | List[Option[Float]]   |             |
+| Float64OptionList | List[Option[Double]]  |             |
+| AnyOptionList     | List[Option[Any]]     |             |
+| BoolListList      | List[List[Boolean]]   |             |
+| StringListList    | List[List[String]]    |             |
+| IntListList       | List[List[Int]]       |             |
+| Int64ListList     | List[List[Long]]      |             |
+| ByteListList      | List[List[Byte]]      |             |
+| RuneListList      | List[List[Char]]      |             |
+| Float32ListList   | List[List[Float]]     |             |
+| Float64ListList   | List[List[Double]]    |             |
+| AnyListList       | List[List[Any]]       |             |
+
+[🠕](#table-of-contents)
+
+
 
 
 ### Options
@@ -379,12 +427,6 @@ var l IntList = arr.ToList()
 | `AnyArrayArray`                  | `[][]Any`     |
 
 [🠕](#table-of-contents)
-
-### Lists
-
-List is recursive functional data structure which has `head` and `tail` as sublist.
-[🠕](#table-of-contents)
-
 
 
 
