@@ -249,12 +249,19 @@ res3 := l.Filter(EvenInt.And(PosInt))                      // compose predicates
 #### List.Find
 
 ```go
-
+// Returns first element which statisfy a predicate
+// O(1..n)
+func (l IntList) Find(predicate func(int) bool)
 ```
 
 Example:
 
 ```go
+l := IntList(1,2,3,4,5,6)
+
+var res1 IntOption = l.Find(func(e int) bool { return e == 3 }) // Some(3)
+var res2 IntOption = l.Find(EvenInt)                            // Some(2)
+var res3 IntOption = l.Find(NegInt)                             // None
 
 ```
 
@@ -265,13 +272,24 @@ Example:
 #### List.FlatMap
 
 ```go
+// FlatMap gives the ability to chain operations together
+func (l IntList) FlatMap<Type>(f func(int) <Type>List) <Type>List
 
+// examples
+func (l IntList) FlatMapInt(f func(int) IntList) IntList
+func (l IntList) FlatMapString(f func(int) StringList) StringList
+...
 ```
 
 Example:
 
 ```go
-
+// Example: flatten nested list
+// List(List(1,2), Nil, List(3,4,5), List(6,7))
+l := MakeIntListList(MakeIntList(1,2), NilInt, MakeIntList(3,4,5), MakeIntList(6,7)) 
+l.FlatMapInt(func(e IntList) IntList { return e })        // List(1,2,3,4,5,6,7)
+l.FlatMapInt(func(e IntList) IntList { 
+    return e.MapInt(func(e int) int) { return e * 10 }})  // List(10,20,30,40,50,60,70)
 ```
 
 [🠕](#table-of-contents)
@@ -281,13 +299,21 @@ Example:
 #### List.Flatten
 
 ```go
+// Collapse the nested elements of a collection to flat collection
+func (l <Type>ListList) Flatten() <Type>List
+func (l <Type>OptionList) Flatten() <Type>List
 
+// examples
+func (l IntIntList) Flatten() IntList
+func (l IntOptionList) Flatten() IntList
 ```
 
 Example:
 
 ```go
-
+// List(List(1,2,3), Nil, List(4,5), List(6,7))
+l := MakeIntListList(MakeIntList(1,2,3), Nil, MakeIntList(4,5), MakeIntList(6, 7))
+var res IntList = l.Flatten()   // List(1,2,3,4,5,6,7)
 ```
 
 [🠕](#table-of-contents)
@@ -297,13 +323,24 @@ Example:
 #### List.FoldLeft
 
 ```go
+// Applies binary function to each element of list going left to right
+// O(n)
+// z - initial value
+func (l IntList) FoldLeft<Type>(z <Type>, func(<Type>, int) <Type>) <Type>
+
+// examples
+func (l IntList) FoldLeftInt(z Int, func(int, int) int) int
+func (l IntList) FoldLeftString(z string, func(string, int) string) string
 
 ```
 
 Example:
 
 ```go
+l := MakeIntList(1,2,3,4,5)
 
+var sum int = l.FoldLeftInt(0, func(acc, el) int { return acc + el})  // sum = (((((0 + 1) + 2) + 3) + 4) + 5)
+str = l.FoldLeftString(">", func(acc, el) string { return fmt.Sprintf("%v|%v", acc, el)}) // >1|2|3|4|5
 ```
 
 [🠕](#table-of-contents)
@@ -313,13 +350,18 @@ Example:
 #### List.Foreach
 
 ```go
-
+// Iterate over elements
+// O(n)
+func (l IntList) Foreach(func(int))
 ```
 
 Example:
 
 ```go
-
+l := MakeIntList(1,2,3)
+f.Foreach(func(e int) {
+    fmt.Println("> ", e)
+})
 ```
 
 [🠕](#table-of-contents)
@@ -329,14 +371,77 @@ Example:
 #### List.GroupBy
 
 ```go
+func (l <A>List) GroupBy<K>(func(<A>)<K>) map[<K>]<A>List
 
+// examples
+func (l IntList) GroupByInt(func(int) int) map[int]IntList
+func (l AnyList) GroupByAny(func(Any)Any) map[Any]AnyList
 ```
 
-Example:
+Example: group by identity
 
 ```go
-
+l1 := MakeIntList(1,2,1,1,3,2)
+res1 := l1.GroupByInt(func(e int) int { return e }) /* Map(1 -> List(1,1,1)
+                                                           2 -> List(2,2)
+                                                           3 -> List(3))  */
+res2 := l1.GroutByInt(IntIdentity)                  // the same as res1
 ```
+
+Example: group by different attributes
+
+```go
+type Shape struct {
+  name  string
+  color string
+  area  int
+}
+
+shapes := NilAny.
+  Cons(Shape{"circle", "green", 10}).
+  Cons(Shape{"circle", "red", 20}).
+  Cons(Shape{"circle", "yellow", 30}).
+  Cons(Shape{"triangle", "green", 10}).
+  Cons(Shape{"triangle", "red", 20}).
+  Cons(Shape{"triangle", "yellow", 30}).
+  Cons(Shape{"polygon", "green", 10}).
+  Cons(Shape{"polygon", "red", 20}).
+  Cons(Shape{"polygon", "yellow", 30})
+
+// Group shapes by name
+byShape := func(e Any) Any { return e.(Shape).name }
+res1 := shapes.GroupByAny(byShape)
+/*
+ Map(
+   "polygon"  -> List({"polygon" "green" 10}, {"polygon" "red" 20}, {"polygon" "yellow" 30})
+   "triangle" -> List({"triangle" "green" 10}, {"triangle" "red" 20}, {"triangle" "yellow" 30})
+   "circle"   -> List({"circle" "green" 10}, {"circle" "red" 20}, {"circle" "yellow" 30})
+ )
+ */
+
+// Group shapes by color
+byColor := func(e Any) Any { return e.(Shape).color }
+res2 := shapes.GroupByAny(byColor)
+/*
+ Map(
+   "yellow" -> List({"circle" "yellow" 30}, {"triangle" "yellow" 30}, {"polygon" "yellow" 30})
+   "red"    -> List({"circle" "red" 20}, {"triangle" "red" 20}, {"polygon" "red" 20})
+   "green"  -> List({"circle" "green" 10}, {"triangle" "green" 10}, {"polygon" "green" 10})
+ )
+*/
+
+byArea := func(e Any) Any { return e.(Shape).area }
+res3 := shapes.GroupByAny(byArea)
+/*
+ Map (
+   30 -> List({"circle" "yellow" 30}, {"triangle" "yellow" 30}, {"polygon" "yellow" 30})
+   20 -> List({"circle" "red" 20}, {"triangle" "red" 20}, {"polygon" "red" 20})
+   10 -> List({"circle" "green" 10}, {"triangle" "green" 10}, {"polygon" "green" 10})
+ )
+*/
+```
+
+
 
 [🠕](#table-of-contents)
 
