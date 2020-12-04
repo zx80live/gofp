@@ -339,8 +339,14 @@ Example:
 ```go
 l := MakeIntList(1,2,3,4,5)
 
-var sum int = l.FoldLeftInt(0, func(acc, el) int { return acc + el})  // sum = (((((0 + 1) + 2) + 3) + 4) + 5)
-str = l.FoldLeftString(">", func(acc, el) string { return fmt.Sprintf("%v|%v", acc, el)}) // >1|2|3|4|5
+
+var sum int = l.FoldLeftInt(
+                   0, 
+                   func(acc, el) int { return acc + el})   // sum = (((((0 + 1) + 2) + 3) + 4) + 5)
+
+str := l.FoldLeftString(
+          ">", 
+          func(acc, el) string { return fmt.Sprintf("%v|%v", acc, el)}) // >1|2|3|4|5
 ```
 
 [🠕](#table-of-contents)
