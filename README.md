@@ -4,7 +4,7 @@ Project and documentation in progress.
 
 ## Introduction
 
-This library was inspired by Scala (collection API, functional paradigm and etc).  
+This library was inspired by Scala (collection API, functional paradigm and etc). 
 
 ## Table of contents
 
@@ -79,7 +79,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 Before using functional library import the following package:
 
 ```go
-import . "github.com/zx80live/gofp/fp" 
+import . "github.com/zx80live/gofp/fp"
 ```
 
 
@@ -801,7 +801,7 @@ l2 := MakeIntListList(
 
 ### Option
 
-All examples of  this section use a `IntOption` type. But this API is supported in the other array types also. (See [Supported option types](#supported-option-types) section)
+All examples of  this section use a `IntOption` type. But this API is supported in the other array types also. (See [Supported array types](#supported-array-types) section)
 
 #### Create option
 ```go
