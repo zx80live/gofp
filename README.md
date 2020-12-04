@@ -66,7 +66,12 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Array.ToList](#arraytolist)
     + [Array.ToString](#arraytostring)
     + [Supported array types](#supported-array-types)
-- [Boxed types](#boxed-types)
+- [Boxed types](#boxed-types)<a name="boxed0"></a>
+- [Concurrency API](#concurrency-api)<a name="concurrency0"></a>
+- [Contributing](#contributing)<a name="contributing0"></a>
+- [Versioning](#versioning)<a name="versioning0"></a>
+- [Roadmap](#roadmap)<a name="roadmap0"></a>
+- [License](#license)<a name="license0"></a>
 
 
 ## Getting started
@@ -1275,24 +1280,27 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 ## Boxed types
 
-
+[🠕](#boxed0)
 
 ## Concurrency API
 
-
+[🠕](#concurrency0)
 
 
 ## Contributing
 
 TODO describe
+[🠕](#contributing0)
 
 ## Versioning
 
 TODO describe
+[🠕](#versioning0)
 
 ## Roadmap
 
 TODO describe
+[🠕](#roadmap0)
 
 ## License
 
