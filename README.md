@@ -1,4 +1,4 @@
-#  λ Functional programming in GO
+# Functional programming in GO
 
 Project and documentation in progress.
 
