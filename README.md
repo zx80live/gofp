@@ -38,6 +38,19 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.ToString](#listtostring)
     + [Supported list types](#supported-list-types)
   * [Options](#options)
+    + [Create option](#createoption)
+    + [Option.Equals](#optionequals)
+    + [Option.Filter](#optionfilter)
+    + [Option.FlatMap](#optionflatmap)
+    + [Option.Flatten](#optionflatten)
+    + [Option.FoldLeft](#optionfoldleft)
+    + [Option.Foreach](#optionforeach)
+    + [Option.IsDefined](#optionisdefined)
+    + [Option.IsEmpty](#optionisempty)
+    + [Option.Map](#optionmap)
+    + [Option.None](#optionnone)
+    + [Option.ToString](#optiontostring)
+    + [Supported option types](#supported-option-types)
   * [Arrays](#arrays)
     + [Create array](#create-array)
     + [Array.Count](#arraycount)
@@ -1123,8 +1136,117 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 
-### Optional
+## Options
+### Create options
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
 
+### Option.Equals
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.Filter
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.FlatMap
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.Flatten
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.FoldLeft
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.Foreach
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.IsDefined
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.IsEmpty
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.Map
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.None
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Option.ToString
+```go
+```
+Example:
+```go
+```
+[🠕](#table-of-contents)
+
+
+### Supported option types
+
+[🠕](#table-of-contents)
 
 
 ## Boxed (rich) types
