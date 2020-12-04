@@ -532,8 +532,8 @@ Example:
 
 ```go
 l := MakeIntList(1,2,3)
-res1 := l.MapInt(func(e int) int { return e * 10})                         // List(10,20,30)
-res2 := l.MapString(func (e int) string { return fmt.Sprintf("<%v>", e)})  // List("<1>", "<2>", "<3>")
+res1 := l.MapInt(func(e int) int { return e * 10})                        // List(10,20,30)
+res2 := l.MapString(func (e int) string { return fmt.Sprintf("<%v>", e)}) // List("<1>", "<2>", "<3>")
 ```
 
 [🠕](#table-of-contents)
