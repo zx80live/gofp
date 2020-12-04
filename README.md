@@ -39,19 +39,19 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Supported list types](#supported-list-types)
   * [Options](#options)
   * [Arrays](#arrays)
-    + [Create](#create-array)
-    + [Foreach](#array.foreach)
-    + [Heads and tails](#heads-and-tails)
-    + [Map](#map)
-    + [Filter](#filter)
-    + [Find](#find)
-    + [Count](#count)
-    + [Array drops](#array-drops)
-    + [Array takes](#array-takes)
-    + [Equals](#equals)
-    + [ToString](#tostring)
-    + [MkString](#mkstring)
-    + [ToList](#tolist)
+    + [Array.Create](#arraycreate-array)
+    + [Array.Count](#arraycount)
+    + [Array.Drops](#arraydrops)
+    + [Array.Equals](#arrayequals)
+    + [Array.Filter](#arrayfilter)
+    + [Array.Find](#arrayfind)
+    + [Array.Foreach](#arrayforeach)
+    + [Array.Heads and tails](#arrayheads-and-tails)
+    + [Array.Map](#arraymap)
+    + [Array.MkString](#arraymkstring)
+    + [Array.Takes](#arraytakes)
+    + [Array.ToList](#arraytolist)
+    + [Array.ToString](#arraytostring)
     + [Supported array types](#supported-array-types)
 - [Boxed types](#boxed-types)
 
@@ -806,6 +806,120 @@ arr := IntArray([]int{10, 20, 30})
 [🠕](#table-of-contents)
 
 
+#### Array.Count
+
+```go
+// Returns count of elements which satisfy a predicate
+// O(n)
+func (a IntArray) Count(predicate func(int) bool) int
+```
+Example:
+```go
+arr := IntArray([]int{1,2,3,4,5})
+arr.Count(func (e int) bool { return e % 2 == 0})         // 2
+arr.Count(EvenInt)                                        // 2
+arr.Count(PosInt)                                         // 5
+arr.Count(NegInt)                                         // 0
+```
+[🠕](#table-of-contents)
+
+
+#### Array.Array drops
+
+```go
+// Returns new array without n-first elements
+// O(1..n)
+func (a IntArray) Drop(n int) IntArray
+
+// Returns new array without n-last elements
+// O(1..n)
+func (a IntArray) DropRight(n int) IntArray
+
+// Returns new array without first elements which statisfy a predicate
+// O(1..n)
+func (a IntArray) DropWhile(predicate func(int) bool) IntArray
+```
+
+Example:
+
+```go
+arr := IntArray([]int{10,20,30,40,50})
+res1 := arr.Drop(2)                                 // Array(30,40,50)
+res2 := arr.DropRight(2)                            // Array(10,20,30)
+res3 := arr.DropWhile(func (e int) bool { e < 40 }) // Array(40,50)
+```
+[🠕](#table-of-contents)
+
+
+#### Array.Equals
+
+```go
+// Returns true if both arrays are equal
+// O(n)
+func (a IntArray) Equals(b IntArray) bool
+```
+
+Example:
+
+```go
+arr1 := IntArray([]int{10,20,30,40,50})
+arr2 := IntArray([]int{10,20,30,40,50})
+arr3 := IntArray([]int{10,20,30})
+
+arr1.Equals(arr2)   // true
+arr1.Equals(arr3)   // false
+```
+[🠕](#table-of-contents)
+
+
+
+#### Array.Filter
+
+```go
+// Returns new array with elements which statisfy a predicate
+// O(n)
+func (a IntArray) Filter(predicate func(int) bool) IntArray
+```
+
+Example:
+
+```go
+arr := IntArray([]int {1,-2,-3,4,5,-6,7,8,-9,10})
+res := arr.
+         Filter(func (e int) bool { return e % 2 == 0}).   // filter even numbers
+         Filter(func (e int) bool { return e >= 0 })       // filter positive numbers
+
+fmt.Println(res.ToString())    // [4, 8, 10]
+
+res2 := arr.Filter(EvenInt).Filter(PosInt)                 // use library predicates
+res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
+
+```
+[🠕](#table-of-contents)
+
+
+
+#### Array.Find
+
+```go
+// Returns first element which statisfy a predicate
+// O(1..n)
+func (a IntArray) Find(predicate func(int) bool) IntOption
+```
+
+Example:
+
+```go
+arr := IntArray([]int {1,2,3,4,5,6})
+
+var res1 IntOption = arr.Find(func(e int) bool { return e == 3 }) // Some(3)
+var res2 IntOption = arr.Find(EvenInt)                            // Some(2)
+var res3 IntOption = arr.Find(NegInt)                             // None
+```
+[🠕](#table-of-contents)
+
+
+
 #### Array.Foreach
 
 ```go
@@ -898,94 +1012,23 @@ Output:
 [🠕](#table-of-contents)
 
 
-#### Array.Filter
+
+#### Array.MkString
 
 ```go
-// Returns new array with elements which statisfy a predicate
+// Make string representation of that array with decorated elements and separator
 // O(n)
-func (a IntArray) Filter(predicate func(int) bool) IntArray
+func (a IntArray) MkString(start, sep, end string) string
 ```
 
 Example:
 
 ```go
-arr := IntArray([]int {1,-2,-3,4,5,-6,7,8,-9,10})
-res := arr.
-         Filter(func (e int) bool { return e % 2 == 0}).   // filter even numbers
-         Filter(func (e int) bool { return e >= 0 })       // filter positive numbers
-
-fmt.Println(res.ToString())    // [4, 8, 10]
-
-res2 := arr.Filter(EvenInt).Filter(PosInt)                 // use library predicates
-res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
-
+arr := IntArray([]int{1,2,3})
+fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 ```
 [🠕](#table-of-contents)
 
-
-#### Array.Find
-
-```go
-// Returns first element which statisfy a predicate
-// O(1..n)
-func (a IntArray) Find(predicate func(int) bool) IntOption
-```
-
-Example:
-
-```go
-arr := IntArray([]int {1,2,3,4,5,6})
-
-var res1 IntOption = arr.Find(func(e int) bool { return e == 3 }) // Some(3)
-var res2 IntOption = arr.Find(EvenInt)                            // Some(2)
-var res3 IntOption = arr.Find(NegInt)                             // None
-```
-[🠕](#table-of-contents)
-
-
-#### Array.Count
-
-```go
-// Returns count of elements which satisfy a predicate
-// O(n)
-func (a IntArray) Count(predicate func(int) bool) int
-```
-Example:
-```go
-arr := IntArray([]int{1,2,3,4,5})
-arr.Count(func (e int) bool { return e % 2 == 0})         // 2
-arr.Count(EvenInt)                                        // 2
-arr.Count(PosInt)                                         // 5
-arr.Count(NegInt)                                         // 0
-```
-[🠕](#table-of-contents)
-
-
-#### Array.Array drops
-
-```go
-// Returns new array without n-first elements
-// O(1..n)
-func (a IntArray) Drop(n int) IntArray
-
-// Returns new array without n-last elements
-// O(1..n)
-func (a IntArray) DropRight(n int) IntArray
-
-// Returns new array without first elements which statisfy a predicate
-// O(1..n)
-func (a IntArray) DropWhile(predicate func(int) bool) IntArray
-```
-
-Example:
-
-```go
-arr := IntArray([]int{10,20,30,40,50})
-res1 := arr.Drop(2)                                 // Array(30,40,50)
-res2 := arr.DropRight(2)                            // Array(10,20,30)
-res3 := arr.DropWhile(func (e int) bool { e < 40 }) // Array(40,50)
-```
-[🠕](#table-of-contents)
 
 
 #### Array.takes
@@ -1015,23 +1058,20 @@ res3 := arr.TakeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 [🠕](#table-of-contents)
 
 
-#### Array.Equals
+
+#### Array.ToList
 
 ```go
-// Returns true if both arrays are equal
+// Transform array to recursive functional data structure
 // O(n)
-func (a IntArray) Equals(b IntArray) bool
+func (a IntArray) ToList() IntList
 ```
 
 Example:
 
 ```go
-arr1 := IntArray([]int{10,20,30,40,50})
-arr2 := IntArray([]int{10,20,30,40,50})
-arr3 := IntArray([]int{10,20,30})
-
-arr1.Equals(arr2)   // true
-arr1.Equals(arr3)   // false
+arr := IntArray([]int{1,2,3})
+var l IntList = arr.ToList()
 ```
 [🠕](#table-of-contents)
 
@@ -1052,40 +1092,6 @@ fmt.Println(arr.ToString())                        // [1,2,3]
 
 arr2 := IntIntArray([]int{1,2}, []int[]{3,4,5})
 fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]          
-```
-[🠕](#table-of-contents)
-
-
-#### Array.MkString
-
-```go
-// Make string representation of that array with decorated elements and separator
-// O(n)
-func (a IntArray) MkString(start, sep, end string) string
-```
-
-Example:
-
-```go
-arr := IntArray([]int{1,2,3})
-fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
-```
-[🠕](#table-of-contents)
-
-
-#### Array.ToList
-
-```go
-// Transform array to recursive functional data structure
-// O(n)
-func (a IntArray) ToList() IntList
-```
-
-Example:
-
-```go
-arr := IntArray([]int{1,2,3})
-var l IntList = arr.ToList()
 ```
 [🠕](#table-of-contents)
 
