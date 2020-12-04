@@ -29,7 +29,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.Map](#listmap)
     + [List.MkString](#listmkstring)
     + [List.Nil](#listnil)
-    + [List.Prepend](#listprepend)
+    + [List.Cons](#listcons)
     + [List.Reduce](#listreduce)
     + [List.Reverse](#listreverse)
     + [List.Size](#listsize)
@@ -450,13 +450,28 @@ res3 := shapes.GroupByAny(byArea)
 #### List.Heads and tails
 
 ```go
+// Returns head of list or throws exeption if list is empty
+// O(1)
+func (l IntList) Head() int
 
+// Returns optional head from list
+// O(1)
+func (l IntList) HeadOption() IntOption
+
+// Returns tail as list without first element
+// O(1)
+func (l IntList) Tail() IntList
 ```
 
 Example:
 
 ```go
-
+l := MakeIntList(1,2,3)
+h1 := l.Head()                      // 1
+t1 := l.Tail()                      // List(2,3)
+h1Opt := l.HeadOption()             // Some(1)
+h2Opt := l.Tail().Tail().Tail()     // NoneInt
+l.Tail().Tail().Tail().Head()       // panic("there is no heads")
 ```
 
 [🠕](#table-of-contents)
@@ -466,13 +481,28 @@ Example:
 #### List.Emptiness
 
 ```go
+// Returns true if list is empty
+// O(n)
+func (l IntList) IsEmpty() bool
 
+// Returns true if list is not empty
+// O(n)
+func (l IntList) NonEmpty() bool
 ```
 
 Example:
 
 ```go
+l1 := MakeIntList(1,2,3)
+res1 := l1.IsEmpty()      // false
+res2 := l1.NoEmpty()      // true
 
+l2 := MakeIntList()    
+res3 := l2.IsEmpty()      // true
+res4 := l2.NonEmpty()     // fase
+
+res5 := NilInt.IsEmpty()  // true
+res6 := NilInt.NonEmpty() // false
 ```
 
 [🠕](#table-of-contents)
@@ -482,13 +512,22 @@ Example:
 #### List.Map
 
 ```go
+// Transform each element of list to other type
+// O(n)
+func (l IntList) Map<Type>(func (int) <Type>) <Type>List
+
+// examples
+func(l IntList) MapInt(func (int) int) IntList
+func(l IntList) MapString(func (int) string) StringList
 
 ```
 
 Example:
 
 ```go
-
+l := MakeIntList(1,2,3)
+res1 := l.MapInt(func(e int) int { return e * 10})                         // List(10,20,30)
+res2 := l.MapString(func (e int) string { return fmt.Sprintf("<%v>", e)})  // List("<1>", "<2>", "<3>")
 ```
 
 [🠕](#table-of-contents)
@@ -498,13 +537,16 @@ Example:
 #### List.MkString
 
 ```go
-
+// Make string representation of that list with decorated elements and separator
+// O(n)
+func (l IntList) MkString(start, sep, end string) string
 ```
 
 Example:
 
 ```go
-
+l := MakeIntList(1,2,3)
+str := l.MkString("<", "|", ">")      // "<1|2|3>"
 ```
 
 [🠕](#table-of-contents)
@@ -514,29 +556,42 @@ Example:
 #### List.Nil
 
 ```go
+// Empty list, can be used as initial tail before creating
+var Nil<Type> <Type>List
 
+// examples
+var NilInt IntList = ...
+var NilString StringList = ...
+...
 ```
 
 Example:
 
 ```go
-
+// create list from empty tail
+l := NilInt.Cons(3).Cons(2).Cons(1)   // List(1,2,3)
 ```
 
 [🠕](#table-of-contents)
 
 
 
-#### List.Prepend
+#### List.Cons
 
 ```go
-
+// Create new list with new head and tail as current list
+// O(1)
+func (l IntList) Cons(e int) IntList
 ```
 
 Example:
 
 ```go
+// create list from empty tail
+l1 := NilInt.Cons(3).Cons(2).Cons(1)   // List(1,2,3)
 
+l2 := MakeIntList(1,2,3)
+l3 := l2.Cons(4)                       // List(4,1,2,3)
 ```
 
 [🠕](#table-of-contents)
@@ -546,13 +601,16 @@ Example:
 #### List.Reduce
 
 ```go
-
+// Reduces elements of list using associative binary operator
+// O(n)
+func (l IntList) Reduce(func (int, int) int) int
 ```
 
 Example:
 
 ```go
-
+l := MakeIntList(1,2,3)
+sum := l.Reduce(func(acc, el int) int { return acc + el })  // sum = 1 + 2 + 3
 ```
 
 [🠕](#table-of-contents)
@@ -562,13 +620,16 @@ Example:
 #### List.Reverse
 
 ```go
-
+// Reverse order of list elements
+// O(n)
+func (l IntList) Reverse() IntList
 ```
 
 Example:
 
 ```go
-
+l1 := MakeIntList(1,2,3)
+l2 := l1.Reverse()                       // List(3,2,1)
 ```
 
 [🠕](#table-of-contents)
@@ -578,13 +639,20 @@ Example:
 #### List.Size
 
 ```go
-
+// Count elements of list
+// O(n)
+func (l IntList) Size() int
 ```
 
 Example:
 
 ```go
+l1 := MakeIntList(1,2,3)
+l2 := MakeIntList()
 
+res1 := l1.Size()         // 3
+res2 := l2.Size()         // 0
+res3 := NilInt            // 0
 ```
 
 [🠕](#table-of-contents)
@@ -594,13 +662,26 @@ Example:
 #### List.Takes
 
 ```go
+// Returns first n-elements
+// O(1..n)
+func (l IntList) Take(n int) IntList
 
+// Returns last n-elements
+// O(1..n)
+func (l IntList) TakeRight(n int) IntList
+
+// Returns first elements which statisfy a predicate
+// O(1..n)
+func (l IntList) TakeWhile(func(int) bool) IntList
 ```
 
 Example:
 
 ```go
-
+l := IntList(10,20,30,40,50)
+res1 := l.Take(2)                                 // List(10,20)
+res2 := l.TakeRight(2)                            // List(40,50)
+res3 := l.TakeWhile(func (e int) bool { e < 40})  // List(10,20,30)
 ```
 
 [🠕](#table-of-contents)
@@ -610,13 +691,16 @@ Example:
 #### List.ToArray
 
 ```go
-
+// Returns elements of list as array
+// O(n)
+func (l IntList) ToArray() []int
 ```
 
 Example:
 
 ```go
-
+l := MakeIntList(1,2,3)
+a := l.ToArray()          // []int{1,2,3}
 ```
 
 [🠕](#table-of-contents)
@@ -626,13 +710,16 @@ Example:
 #### List.ToString
 
 ```go
-
+// Transform list to string
+func (l IntList) ToString() string
 ```
 
 Example:
 
 ```go
-
+l1 := MakeIntList(1,2,3)
+res1 := l1.ToString()                                              // "List(1,2,3)"
+l2 := MakeIntListList(MakeIntList(1,2), NilInt, MakeIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
 ```
 
 [🠕](#table-of-contents)
@@ -961,7 +1048,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 #### Array.MkString
 
 ```go
-// Make string representation of that array with decorated elements and separatorArray takes
+// Make string representation of that array with decorated elements and separator
 // O(n)
 func (a IntArray) MkString(start, sep, end string) string
 ```
