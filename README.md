@@ -799,8 +799,10 @@ l2 := MakeIntListList(
 
 
 
-
 ### Option
+
+All examples of  this section use a `IntOption` type. But this API is supported in the other array types also. (See [Supported option types](#supported-option-types) section)
+
 #### Create option
 ```go
 
