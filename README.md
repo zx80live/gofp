@@ -39,7 +39,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Supported list types](#supported-list-types)
   * [Options](#options)
   * [Arrays](#arrays)
-    + [Array.Create](#arraycreate-array)
+    + [Create array](#create-array)
     + [Array.Count](#arraycount)
     + [Array.Drops](#arraydrops)
     + [Array.Equals](#arrayequals)
@@ -824,7 +824,7 @@ arr.Count(NegInt)                                         // 0
 [🠕](#table-of-contents)
 
 
-#### Array.Array drops
+#### Array.Drops
 
 ```go
 // Returns new array without n-first elements
