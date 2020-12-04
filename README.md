@@ -38,10 +38,10 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.ToString](#listtostring)
     + [Supported list types](#supported-list-types)
   * [Options](#options)
-    + [Create option](#createoption)
+    + [Create option](#createoption)<a name="createoption0"></a>
     + [Option.Equals](#optionequals)
     + [Option.Filter](#optionfilter)
-    + [Option.FlatMap](#optionflatmap)
+    + [Option.FlatMap](#optionflatmap)createoption0
     + [Option.Flatten](#optionflatten)
     + [Option.FoldLeft](#optionfoldleft)
     + [Option.Foreach](#optionforeach)
@@ -799,13 +799,13 @@ l2 := MakeIntListList(
 
 
 ### Options
-#### Create options
+#### Create option
 ```go
 ```
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#createoption0)
 
 #### Option.Equals
 ```go
