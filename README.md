@@ -803,112 +803,173 @@ l2 := MakeIntListList(
 ### Option
 #### Create option
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 #### Option.Equals
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.Filter
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.FlatMap
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.Flatten
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.FoldLeft
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.Foreach
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.IsDefined
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.IsEmpty
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.Map
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.None
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
 
 #### Option.ToString
 ```go
+
 ```
 Example:
 ```go
+
 ```
 [🠕](#option0)
 
-
 #### Supported option types
+
+| Option type         | Scala analogue          |      |
+| ------------------- | ----------------------- | ---- |
+| BoolOption          | Option[Boolean]         |      |
+| StringOption        | Option[String]          |      |
+| IntOption           | Option[Int]             |      |
+| Int64Option         | Option[Long]            |      |
+| ByteOption          | Option[Byte]            |      |
+| RuneOption          | Option[Char]            |      |
+| Float32Option       | Option[Float]           |      |
+| Float64Option       | Option[Double]          |      |
+| AnyOption           | Option[Any]             |      |
+| BoolOptionOption    | Option[Option[Boolean]] |      |
+| StringOptionOption  | Option[Option[String]]  |      |
+| IntOptionOption     | Option[Option[Int]]     |      |
+| Int64OptionOption   | Option[Option[Long]]    |      |
+| ByteOptionOption    | Option[Option[Byte]]    |      |
+| RuneOptionOption    | Option[Option[Char]]    |      |
+| Float32OptionOption | Option[Option[Float]]   |      |
+| AnyOptionOption     | Option[Option[Double]]  |      |
+| BoolArrayOption     | Option[Array[Boolean]]  |      |
+| StringArrayOption   | Option[Array[String]]   |      |
+| IntArrayOption      | Option[Array[Int]]      |      |
+| Int64ArrayOption    | Option[Array[Long]]     |      |
+| ByteArrayOption     | Option[Array[Byte]]     |      |
+| RuneArrayOption     | Option[Array[Char]]     |      |
+| Float32ArrayOption  | Option[Array[Float]]    |      |
+| Float64ArrayOption  | Option[Array[Double]]   |      |
+| AnyArrayOption      | Option[Array[Any]]      |      |
+| BoolListOption      | Option[List[Boolean]]   |      |
+| StringListOption    | Option[List[String]]    |      |
+| IntListOption       | Option[List[Int]]       |      |
+| Int64ListOption     | Option[List[Long]]      |      |
+| ByteListOption      | Option[List[Byte]]      |      |
+| RuneListOption      | Option[List[Char]]      |      |
+| Float32ListOption   | Option[List[Float]]     |      |
+| Float64ListOption   | Option[List[Double]]    |      |
+| AnyListOption       | Option[List[Any]]       |      |
 
 [🠕](#option0)
 
