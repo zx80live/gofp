@@ -725,7 +725,10 @@ Example:
 ```go
 l1 := MakeIntList(1,2,3)
 res1 := l1.ToString()                                              // "List(1,2,3)"
-l2 := MakeIntListList(MakeIntList(1,2), NilInt, MakeIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
+l2 := MakeIntListList(
+        MakeIntList(1,2), 
+        NilInt, 
+        MakeIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
 ```
 
 [🠕](#table-of-contents)
