@@ -10,7 +10,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 
 - [Getting started](#getting-started)
 - [Collection API](#collection-api)
-  * [Lists](#lists)
+  * [List](#list)<a name="list0"></a>
     + [List structure](#list-structure)
     + [Create list](#create-list)
     + [List.Copy](#listcopy)
@@ -37,11 +37,11 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.ToArray](#listtoarray)
     + [List.ToString](#listtostring)
     + [Supported list types](#supported-list-types)
-  * [Options](#options)
-    + [Create option](#createoption)<a name="createoption0"></a>
+  * [Option](#option)<a name="option0"></a>
+    + [Create option](#createoption)
     + [Option.Equals](#optionequals)
     + [Option.Filter](#optionfilter)
-    + [Option.FlatMap](#optionflatmap)createoption0
+    + [Option.FlatMap](#optionflatmap)
     + [Option.Flatten](#optionflatten)
     + [Option.FoldLeft](#optionfoldleft)
     + [Option.Foreach](#optionforeach)
@@ -51,7 +51,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Option.None](#optionnone)
     + [Option.ToString](#optiontostring)
     + [Supported option types](#supported-option-types)
-  * [Arrays](#arrays)
+  * [Array](#array)<a name="array0"></a>
     + [Create array](#create-array)
     + [Array.Count](#arraycount)
     + [Array.Drops](#arraydrops)
@@ -85,7 +85,7 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 
 
 
-### Lists
+### List
 
 All examples of  this section use a `IntList` type. But this API is supported in the other array types also. (See [Supported list types](#supported-list-types) section)
 
@@ -109,7 +109,7 @@ type IntList struct {
 }
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 #### Create list
 
@@ -133,7 +133,7 @@ var l IntList = MakeIntList(1,2,3,4,5)
 l2 := NilInt.Cons(5).Cons(4).Cons(3).Cons(2).Cons(1)  // equals IntList(1,2,3,4,5)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -152,7 +152,7 @@ l1 := MakeIntList(1,2,3,4,5)
 l2 := l1.Copy()
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 #### List.Count
 
@@ -170,7 +170,7 @@ l.Count(func(e int) bool { return e % 2 == 0})    // 2
 l.Count(EvenInt)                                  // 2
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -199,7 +199,7 @@ res2 := l.DropRight(2)                            // IntList(10,20,30)
 res3 := l.DropWhile(func (e int) bool { e < 40 }) // IntList(40,50)                      
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -231,7 +231,7 @@ l4.Equals(l5)  // true
 l4.Equals(l6)  // false
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -257,7 +257,7 @@ res2 := l.Filter(EvenInt).Filter(PosInt)                   // use library predic
 res3 := l.Filter(EvenInt.And(PosInt))                      // compose predicates     O(n)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -280,7 +280,7 @@ var res3 IntOption = l.Find(NegInt)                             // None
 
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -307,7 +307,7 @@ l.FlatMapInt(func(e IntList) IntList {
     return e.MapInt(func(e int) int) { return e * 10 }})  // List(10,20,30,40,50,60,70)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -331,7 +331,7 @@ l := MakeIntListList(MakeIntList(1,2,3), Nil, MakeIntList(4,5), MakeIntList(6, 7
 var res IntList = l.Flatten()   // List(1,2,3,4,5,6,7)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -364,7 +364,7 @@ str := l.FoldLeftString(
           func(acc, el) string { return fmt.Sprintf("%v|%v", acc, el)}) // >1|2|3|4|5
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -385,7 +385,7 @@ f.Foreach(func(e int) {
 })
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -461,10 +461,7 @@ res3 := shapes.GroupByAny(byArea)
  )
 */
 ```
-
-
-
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -495,7 +492,7 @@ h2Opt := l.Tail().Tail().Tail()     // NoneInt
 l.Tail().Tail().Tail().Head()       // panic("there is no heads")
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -526,7 +523,7 @@ res5 := NilInt.IsEmpty()  // true
 res6 := NilInt.NonEmpty() // false
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -551,7 +548,7 @@ r1 := l.MapInt(func(e int) int { return e * 10})                        // List(
 r2 := l.MapString(func (e int) string { return fmt.Sprintf("<%v>", e)}) // List("<1>","<2>","<3>")
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -570,7 +567,7 @@ l := MakeIntList(1,2,3)
 str := l.MkString("<", "|", ">")      // "<1|2|3>"
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -593,7 +590,7 @@ Example:
 l := NilInt.Cons(3).Cons(2).Cons(1)   // List(1,2,3)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -615,7 +612,7 @@ l2 := MakeIntList(1,2,3)
 l3 := l2.Cons(4)                       // List(4,1,2,3)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -634,7 +631,7 @@ l := MakeIntList(1,2,3)
 sum := l.Reduce(func(acc, el int) int { return acc + el })  // sum = 1 + 2 + 3
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -653,7 +650,7 @@ l1 := MakeIntList(1,2,3)
 l2 := l1.Reverse()                       // List(3,2,1)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -676,7 +673,7 @@ res2 := l2.Size()         // 0
 res3 := NilInt            // 0
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -705,7 +702,7 @@ res2 := l.TakeRight(2)                            // List(40,50)
 res3 := l.TakeWhile(func (e int) bool { e < 40})  // List(10,20,30)
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -724,7 +721,7 @@ l := MakeIntList(1,2,3)
 a := l.ToArray()          // []int{1,2,3}
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -746,7 +743,7 @@ l2 := MakeIntListList(
         MakeIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
 ```
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
@@ -793,19 +790,19 @@ l2 := MakeIntListList(
 | Float64ListList   | List[List[Double]]    |             |
 | AnyListList       | List[List[Any]]       |             |
 
-[🠕](#table-of-contents)
+[🠕](#list0)
 
 
 
 
-### Options
+### Option
 #### Create option
 ```go
 ```
 Example:
 ```go
 ```
-[🠕](#createoption0)
+[🠕](#option0)
 
 #### Option.Equals
 ```go
@@ -813,7 +810,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.Filter
@@ -822,7 +819,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.FlatMap
@@ -831,7 +828,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.Flatten
@@ -840,7 +837,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.FoldLeft
@@ -849,7 +846,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.Foreach
@@ -858,7 +855,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.IsDefined
@@ -867,7 +864,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.IsEmpty
@@ -876,7 +873,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.Map
@@ -885,7 +882,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.None
@@ -894,7 +891,7 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Option.ToString
@@ -903,15 +900,15 @@ Example:
 Example:
 ```go
 ```
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
 #### Supported option types
 
-[🠕](#table-of-contents)
+[🠕](#option0)
 
 
-### Arrays
+### Array
 
 Array is just wrapper for go-arrays which contains convenient functions. All examples of  this section use a `IntArray` type. But this API is supported in the other array types also. (See [Supported array types] section)
 
@@ -925,7 +922,7 @@ Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Array.Count
@@ -943,7 +940,7 @@ arr.Count(EvenInt)                                        // 2
 arr.Count(PosInt)                                         // 5
 arr.Count(NegInt)                                         // 0
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Array.Drops
@@ -970,7 +967,7 @@ res1 := arr.Drop(2)                                 // Array(30,40,50)
 res2 := arr.DropRight(2)                            // Array(10,20,30)
 res3 := arr.DropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Array.Equals
@@ -991,7 +988,7 @@ arr3 := IntArray([]int{10,20,30})
 arr1.Equals(arr2)   // true
 arr1.Equals(arr3)   // false
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
@@ -1017,7 +1014,7 @@ res2 := arr.Filter(EvenInt).Filter(PosInt)                 // use library predic
 res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
@@ -1038,7 +1035,7 @@ var res1 IntOption = arr.Find(func(e int) bool { return e == 3 }) // Some(3)
 var res2 IntOption = arr.Find(EvenInt)                            // Some(2)
 var res3 IntOption = arr.Find(NegInt)                             // None
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
@@ -1067,7 +1064,7 @@ for _, e := range arr {
     fmt.Println(e)
 }
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Array.Heads and tails
@@ -1098,7 +1095,7 @@ var tail3 = tail2.Tail()                // empty array
 var hopt3 = tail3.HeadOption()          // NoneInt
 tail3.Head()                            // panic("there is no heads")
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Array.Map
@@ -1131,7 +1128,7 @@ Output:
 ~200~
 ~300~
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
@@ -1149,7 +1146,7 @@ Example:
 arr := IntArray([]int{1,2,3})
 fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
@@ -1177,7 +1174,7 @@ res1 := arr.Take(2)                                 // Array(10,20)
 res2 := arr.TakeRight(2)                            // Array(40,50)
 res3 := arr.TakeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
@@ -1195,7 +1192,7 @@ Example:
 arr := IntArray([]int{1,2,3})
 var l IntList = arr.ToList()
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Array.ToString
@@ -1215,7 +1212,7 @@ fmt.Println(arr.ToString())                        // [1,2,3]
 arr2 := IntIntArray([]int{1,2}, []int[]{3,4,5})
 fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]          
 ```
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 #### Supported array types
@@ -1241,7 +1238,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 | `Float64ArrayArray` | Array[Array[Double]]  | `[][]float64` |
 | `AnyArrayArray`     | Array[Array[Any]]     | `[][]Any`     |
 
-[🠕](#table-of-contents)
+[🠕](#array0)
 
 
 
