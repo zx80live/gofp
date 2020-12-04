@@ -74,6 +74,8 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 
 ### Lists
 
+All examples of  this section use a `IntList` type. But this API is supported in the other array types also. (See [Supported list types](#supported-list-types) section)
+
 #### List structure
 
 List is recursive functional data structure which has `head` and `tail` as sublist. For example, an `IntList(1,2,3)` will be presented in the following structure: 
