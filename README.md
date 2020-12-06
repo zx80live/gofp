@@ -397,6 +397,7 @@ f.Foreach(func(e int) {
 #### List.GroupBy
 
 ```go
+// Partitions this list into a map of according to some discriminator function
 func (l <A>List) GroupBy<K>(func(<A>)<K>) map[<K>]<A>List
 
 // examples
