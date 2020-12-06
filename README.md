@@ -979,7 +979,7 @@ Example:
 
 ### Array
 
-Array is just wrapper for go-arrays which contains convenient functions. All examples of  this section use a `IntArray` type. But this API is supported in the other array types also. (See [Supported array types] section)
+Array is just wrapper for go-arrays which contains convenient functions. All examples of  this section use a `IntArray` type. But this API is supported in the other array types also. (See [Supported array types](#supported-array-types) section)
 
 
 
