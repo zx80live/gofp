@@ -425,13 +425,13 @@ type Shape struct {
 
 shapes := NilAny.
   Cons(Shape{"circle", "green", 10}).
-  Cons(Shape{"circle", "red", 20}).
-  Cons(Shape{"circle", "yellow", 30}).
-  Cons(Shape{"triangle", "green", 10}).
-  Cons(Shape{"triangle", "red", 20}).
   Cons(Shape{"triangle", "yellow", 30}).
   Cons(Shape{"polygon", "green", 10}).
+  Cons(Shape{"triangle", "green", 10}).
+  Cons(Shape{"circle", "red", 20}).  
   Cons(Shape{"polygon", "red", 20}).
+  Cons(Shape{"circle", "yellow", 30}).
+  Cons(Shape{"triangle", "red", 20}).
   Cons(Shape{"polygon", "yellow", 30})
 
 // Group shapes by name
