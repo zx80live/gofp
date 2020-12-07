@@ -770,7 +770,7 @@ l2 := MakeIntListList(
 
 
 #### Supported list types
-
+<details><summary>Table of supported list types</summary>
 | Array type        | Scala analogue        | Go analogue |
 | ----------------- | --------------------- | ----------- |
 | BoolList          | List[Boolean]         |             |
@@ -809,6 +809,7 @@ l2 := MakeIntListList(
 | Float32ListList   | List[List[Float]]     |             |
 | Float64ListList   | List[List[Double]]    |             |
 | AnyListList       | List[List[Any]]       |             |
+</details>
 
 [🠕](#list0)
 
@@ -1047,7 +1048,7 @@ var str2 string = o2.TOString()      // "None"
 [🠕](#option0)
 
 #### Supported option types
-
+<details><summary>Table of supported option types</summary>
 | Option type         | Scala analogue          |
 | ------------------- | ----------------------- |
 | BoolOption          | Option[Boolean]         |
@@ -1085,6 +1086,7 @@ var str2 string = o2.TOString()      // "None"
 | Float32ListOption   | Option[List[Float]]     |
 | Float64ListOption   | Option[List[Double]]    |
 | AnyListOption       | Option[List[Any]]       |
+</details>
 
 [🠕](#option0)
 
@@ -1398,7 +1400,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 #### Supported array types
-
+<details><summary>Table of supported array types</summary>
 | Array type          | Scala analogue        | Go analogue   |
 | ------------------- | --------------------- | ------------- |
 | `BoolArray`         | Array[Bool]           | `[]bool`      |
@@ -1419,6 +1421,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 | `Float32ArrayArray` | Array[Array[Float]]   | `[][]float32` |
 | `Float64ArrayArray` | Array[Array[Double]]  | `[][]float64` |
 | `AnyArrayArray`     | Array[Array[Any]]     | `[][]Any`     |
+</details>
 
 [🠕](#array0)
 
@@ -1429,6 +1432,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 [🠕](#boxed0)
 
 ### Supported boxed types
+<details><summary>Table of supported boxed types</summary>
 | Boxed type | Go type      |
 | ---------- | ------------ |
 | Bool       | bool         |
@@ -1450,6 +1454,8 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 | Complex64  | complex64    |
 | Complex128 | complex128   |
 | Any        | interface {} |
+</details>
+
 [🠕](#boxed0)
 
 
@@ -1639,7 +1645,7 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 [🠕](#future0)
 
 ### Supported future types
-<details><summary>Table of supported types</summary>
+<details><summary>Table of supported future types</summary>
 
 | Future type              | Scala analogue                |
 | ------------------------ | ----------------------------- |
