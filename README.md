@@ -806,43 +806,93 @@ All examples of  this section use a `IntOption` type. But this API is supported 
 
 #### Create option
 ```go
-
+func MakeIntOption(e int) IntOption
+func IntOpt(e int) IntOption
 ```
 Example:
 ```go
-
+o1 := MakeIntOption(10)     // Some(10)
+o2 := IntOpt(20)            // Some(20)
 ```
 [🠕](#option0)
 
 #### Option.Equals
 ```go
-
+// Returns true if both options are equal
+func (a IntOption) Equals(b IntOption) bool
 ```
 Example:
 ```go
+o1 := IntOpt(10)
+o2 := IntOpt(20)
+o3 := IntOpt(10)
 
+o1.Equals(o2)            // false
+o1.Equals(o3)            // true
+o1.Equals(NoneInt)       // false
+NoneInt.Equals(NoneInt)  // true
 ```
 [🠕](#option0)
 
 
 #### Option.Filter
 ```go
-
+// Filter content of option by predicate
+func (o IntOption) Filter(predicate func(int)bool) IntOption
 ```
 Example:
 ```go
-
+o := IntOption(10)
+res1 := o.Filter(func(e int) bool { return e % 2 == 0})  // Some(10)
+res2 := o.Filter(EvenInt)                                // Some(10)
+res3 := o.Filter(func(e int) bool { return e == 20 })    // None
+res4 := o.Filter(NegInt)                                 // None
 ```
 [🠕](#option0)
 
 
 #### Option.FlatMap
 ```go
+// FlatMap gives the ability to chain operations together
+func (o IntOption) FlatMap<Type>(f func(int) <Type>Option) <Type>Option
 
+// examples
+func (o IntOption) FlatMapInt(f func(int) IntOption) IntOption
+func (o IntOption) FlatMapString(f func(int) StringOption) StringOption
+...
 ```
 Example:
 ```go
+// Task: calculate the sum of elements
+//       if all elements are defined then the sum will be defined too
+//       if one or more elements are not defined then the sum will not be defined too
 
+// implementation of the task
+sumFunc := func(a, b, c IntOption) IntOption {
+    sum := a.FlatMapInt(func (av int) IntOption {
+        return b.FlatMapInt(func bv int) IntOption {
+            return c.MapInt(func cv int) IntOption {
+                return av + bv + cv
+            } 
+        }
+    })
+    return sum
+}
+
+// Case when a, b, c are defined
+a := IntOpt(10)
+b := IntOpt(20)
+c := IntOpt(30)
+
+sumFunc(a, b, c)                                          // Some(60)
+
+
+// Cases when one or more of a, b, c are not defined
+sumFunc(IntOpt(10), NoneInt, IntOpt(30))                  // None
+sumFunc(IntOpt(10), IntOpt(20), NoneInt)                  // None
+sumFunc(NoneInt, IntOpt(20), IntOpt(30))                  // None
+sumFunc(NoneInt, NoneInt, IntOpt(30))                     // None
+...
 ```
 [🠕](#option0)
 
