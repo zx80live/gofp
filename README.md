@@ -1637,6 +1637,33 @@ res2 := Int(10).Max(20)     // 20
 [[🠕]](#predicates0)
 
 ### Empty predicates
+```go
+// Always returns true for all input values
+var EmptyIntPredicate IntPredicate = func(t int) bool { return true }
+...
+```
+Example:
+```go
+
+func getFilter() IntPredicate {
+  var filterType string = config.getProperty("filter")
+  
+  if filterType == "even" {
+     return EvenInt
+  } else if filterType == "odd" {
+     return OddInt
+  } else {
+    return EmptyIntPredicate   // default filter is no-filter
+  }
+}
+
+l := MakeIntList(1,2,3)
+
+res1 := l.Filter(getFilter())  // if config propery does not contain
+                               // filter type then filtering will not use
+
+```
+
 [[🠕]](#predicates0)
 
 ### Numeric predicates
