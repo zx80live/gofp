@@ -2004,7 +2004,7 @@ t3 := time.Now().Unix()
 res1 := f1.Result()
 t4 := time.Now().Unix()
 
-fmt.Println("result ", res1, "at ", t4 - t3)  // result 10 at 2000 milliseconds
+fmt.Println("result ", res1, "at ", t4 - t3)  // result 10 at 2 seconds 
 
 ```
 [[🠕]](#future0)
