@@ -98,14 +98,45 @@ This library was inspired by Scala (collection API, functional paradigm and, con
 
 ## Getting started
 
-Before using functional library import the following package:
+Before using functional library import the following package in your project:
 
 ```go
 import . "github.com/zx80live/gofp/fp"
 ```
 
+Or do the following steps if you want to create empty project:
 
+1. Create new go-module project in your `$WORK_DIR` directory
+```bash
+$ mkdir $WORK_DIR/test-gofp
+$ cd $WORK_DIR/test-gofp
+$ go mod init example.com/username/test-gofp
+$ vim test.go
+```
+2. Write the following code in the `$WORK_DIR/test-gofp/test.go` file:
+```go
+package main
 
+import (
+	"fmt"
+    . "github.com/zx80live/gofp/fp"
+)
+
+func main() {
+	fmt.Println("Hello functional programming in GO!")
+	
+	l := MakeIntList(1,2,3,4,5)
+	res1 := l.Filter(EvenInt)
+	
+	fmt.Println(res1.ToString())
+}
+```
+3. Execute our file:
+```bash
+$ go run test.go
+Hello functional programming in GO!
+List(2,4)
+```
 ## Collection API
 
 Current library supports the following collection types: `Arrays`, `Lists` and `Options`. Each type is monad and supports functions such as `Map`, `FlatMap`, `Filter` and etc.
