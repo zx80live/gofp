@@ -78,7 +78,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [String predicates](#string-predicates)
     + [Predicates composition](#predicates-composition)
     + [Supported predicate types](#supported-predicate-types)
-- [Transformers](#transformers)<a name="traisnformers0"></a>
+- [Transformers](#transformers)<a name="transformers0"></a>
     + [Identity](#identity)
     + [String transformers](#string-transformers)
 - [Predef](#predef)<a name="predef0"></a>
@@ -1635,7 +1635,7 @@ res2 := Int(10).Max(20)     // 20
 [[🠕]](#boxed0)
 
 ## Predicates
-Predicates are used as function's arguments in the following operations on monads: `Filter`, `Find`, ...
+Predicates are used as function's arguments in the following operations on monads: `Filter`, `Find`, `Count`, `Exist` ...
 [[🠕]](#predicates0)
 
 ### Empty predicates
