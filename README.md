@@ -108,12 +108,18 @@ Or do the following steps if you want to create an empty project:
 
 1. Create new go-module project in your `$WORK_DIR` directory
 ```bash
+# create your project dir
 cd $WORK_DIR
 mkdir test-gofp
 cd test-gofp
+
+# create your go-module
 go mod init example.com/username/test-gofp
-vim test.go
+
+# create file in your preferred editor, for example
+vim test.go       
 ```
+
 2. Write the following code in the `$WORK_DIR/test-gofp/test.go` file:
 ```go
 package main
@@ -132,7 +138,8 @@ func main() {
 	fmt.Println(res1.ToString())
 }
 ```
-3. Execute our file:
+
+3. Execute file:
 ```bash
 go run test.go
 
