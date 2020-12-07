@@ -1992,7 +1992,7 @@ t1 := time.Now().Unix()
 // create future
 f1 := IntFuture(func() Int {
     time.Sleep(1 * time.Second)
-    return 10
+    return Int(10)
 })
 t2 := time.Now().Unix()
 fmt.Println("at ", t2 - t1)      // at 0 milliseconds
@@ -2103,9 +2103,9 @@ func (f IntFuture) MapString(t func(Int) String) StringFuture
 ```
 Example:
 ```go
-f1 := MakeIntFuture(func() Int { return 10 })                  // Future(10)
+f1 := MakeIntFuture(func() Int { return Int(10) })             // Future(10)
 
-res1 := f1.MapInt(func(e Int) Int { return e * 10 })           // Future(100)
+res1 := f1.MapInt(func(e Int) Int { return Int(e * 10) })      // Future(100)
 res2 := f1.MapString(func(e Int) String { 
     return String(fmt.Sprintf("<%v>", e)) })                   // Future("<10>")
 ```
@@ -2120,11 +2120,14 @@ func (f IntFuture) Result() Int
 Example:
 ```go
 t1 := time.Now().Unix()
-f1 := MakeIntFuture(func() Int { return 10 })                              // takes ~0 millis
-f2 := MakeIntFuture(func() Int { time.sleep(2 * time.Second); return 20 }) // takes ~2000 millis
+f1 := MakeIntFuture(func() Int { return Int(10) })  
+f2 := MakeIntFuture(func() Int { 
+	time.sleep(2 * time.Second)
+	return Int(20) 
+})                                
 t2 := time.Now().Unix()
 
-fmt.Println("create futures at ", t2 - t1)    // at ~0 milliseconds
+fmt.Println("create futures at ", t2 - t1)          // at ~0 milliseconds
 
 
 t3 := time.Now().Unix()
