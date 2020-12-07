@@ -1,6 +1,5 @@
 # Functional programming in GO
 
-Project and documentation in progress.
 
 ## Introduction
 
@@ -2172,15 +2171,8 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 [[🠕]](#future0)
 
 
-## Contributing
-
-TODO describe
-[[🠕]](#contributing0)
-
-
 ## License
 
 This library is distributed under MIT license found in the LICENSE file.
 
-TODO clarify
 [[🠕]](#table-of-contents)
