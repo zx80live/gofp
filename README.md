@@ -51,7 +51,9 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Option.None](#optionnone)
     + [Option.ToString](#optiontostring)
     + [Supported option types](#supported-option-types)
-  * [Array](#array)<a name="array0"></a>
+<details><summary>  * [Array](#array)<a name="array0"></a> </summary>
+
+  
     + [Create array](#create-array)
     + [Array.Count](#arraycount)
     + [Array.Drops](#arraydrops)
@@ -66,6 +68,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Array.ToList](#arraytolist)
     + [Array.ToString](#arraytostring)
     + [Supported array types](#supported-array-types)
+</details>
 - [Boxed types](#boxed-types)<a name="boxed0"></a>
 - [Concurrency API](#concurrency-api)<a name="concurrency0"></a>
   * [Future](#future)<a name="future0"></a>
