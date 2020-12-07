@@ -209,4 +209,38 @@ func main() {
 	fmt.Println(aav, bbv)
 
 	fmt.Println(String("Hello").ToArray().ToString())
+
+	la2 := MakeStringList("Hello", "abc", "127.0.0.1", "255.255.255.0", "world", "127", "255")
+	var matchIp StringPredicate =
+		MatchRegexpString("[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}")
+	ip := la2.Filter(matchIp)   // List("127.0.0.1", "255.255.255.0")
+
+	fmt.Println(ip.ToString())
+
+	var onlyWords = MatchRegexpString("[a-zA-Z]+")
+	words := la2.Filter(onlyWords) // List("Hello", "abc", "world")
+	fmt.Println(words.ToString())
+
+
+	la3 := MakeIntList(1,-2,3,4,5,-6,7,8,9,0)
+
+	var p1 IntPredicate = func(e int) bool { return e % 2 == 0 }  // even numbers
+	var p2 IntPredicate = func(e int) bool { return e < 0 }  // neg numbers
+
+	p3 := p1.And(p2)
+
+	la3.Filter(p3)     // List(-2,-6)
+	fmt.Println(la3.Filter(p3).ToString())
+
+	l5 := MakeStringList("10015-pav", "10016-ant", "10017-zzz")
+
+
+	regex5 := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
+
+	res5 := l5.MapStringArray(regex5)
+
+	res5.Foreach(func(e []string) {
+		fmt.Println(e)
+	})
+
 }
