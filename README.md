@@ -1079,6 +1079,7 @@ var str2 string = o2.TOString()      // "None"
 ### Array
 
 Array is just wrapper for go-arrays which contains convenient functions. All examples of  this section use a `IntArray` type. But this API is supported in the other array types also. (See [Supported array types](#supported-array-types) section)
+Warning, current implementation of the array wrapper is mutable data structure.
 
 
 
@@ -1455,15 +1456,6 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 TODO describe
 [🠕](#contributing0)
 
-## Versioning
-
-TODO describe
-[🠕](#versioning0)
-
-## Roadmap
-
-TODO describe
-[🠕](#roadmap0)
 
 ## License
 
