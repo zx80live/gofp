@@ -71,6 +71,8 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
   * [Future](#future)<a name="future0"></a>
     + [Create future](#create-future)  
     + [Future.FlatMap](#futureflatmap)
+    + [Future.FlatMap Blocking composition](#futureflatmapblocking-composition)
+    + [Future.FlatMap NON-blocking composition](#futureflatmapnon-blocking-composition)
     + [Future.Map](#futuremap)
     + [Future.Result](#futureresult)
     + [Future.Success](#futuresuccess)
