@@ -2131,7 +2131,7 @@ Example:
 t1 := time.Now().Unix()
 f1 := MakeIntFuture(func() Int { return Int(10) })  
 f2 := MakeIntFuture(func() Int { 
-	time.sleep(2 * time.Second)
+	time.Sleep(2 * time.Second)
 	return Int(20) 
 })                                
 t2 := time.Now().Unix()
@@ -2142,12 +2142,12 @@ fmt.Println("create futures at ", t2 - t1)          // at ~0 milliseconds
 t3 := time.Now().Unix()
 res1 := f1.Result()                
 t4 := time.Now().Unix()
-fmt.Printl("blocks current thread and return result of f1 at", t4 - t3)   // at ~0 millis
+fmt.Println("blocks current thread and return result of f1", res1," at ", res1, t4 - t3)   // at ~0 millis
 
 t5 := time.Now().Unix()
 res2 := f2.Result()                
-t5 := time.Now().Unix()
-fmt.Printl("blocks current thread and return result of f2 at", t6 - t5)   // at ~2000 millis
+t6 := time.Now().Unix()
+fmt.Println("blocks current thread and return result of f2", res2, " at ", t6 - t5)   // at ~2000 millis
 
 ```
 [[🠕]](#future0)
