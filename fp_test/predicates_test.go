@@ -1,8 +1,8 @@
 package fp_test
 
+/*
 import "testing"
 
-/*
 import (
 	. "github.com/zx80live/gofp/fp"
 	. "github.com/zx80live/gofp/gotest"

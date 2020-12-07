@@ -1,8 +1,8 @@
 package fp_test
 
+/*
 import "testing"
 
-/*
 import (
 	"regexp"
 	"testing"
