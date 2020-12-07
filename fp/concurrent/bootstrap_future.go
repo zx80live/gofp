@@ -59,32 +59,32 @@ type Float64OptionFuture struct {
 type AnyOptionFuture struct {
 	ch chan AnyOption
 }
-type BoolOptionOptionFuture struct {
-	ch chan BoolOptionOption
+type BoolListOptionFuture struct {
+	ch chan BoolListOption
 }
-type StringOptionOptionFuture struct {
-	ch chan StringOptionOption
+type StringListOptionFuture struct {
+	ch chan StringListOption
 }
-type IntOptionOptionFuture struct {
-	ch chan IntOptionOption
+type IntListOptionFuture struct {
+	ch chan IntListOption
 }
-type Int64OptionOptionFuture struct {
-	ch chan Int64OptionOption
+type Int64ListOptionFuture struct {
+	ch chan Int64ListOption
 }
-type ByteOptionOptionFuture struct {
-	ch chan ByteOptionOption
+type ByteListOptionFuture struct {
+	ch chan ByteListOption
 }
-type RuneOptionOptionFuture struct {
-	ch chan RuneOptionOption
+type RuneListOptionFuture struct {
+	ch chan RuneListOption
 }
-type Float32OptionOptionFuture struct {
-	ch chan Float32OptionOption
+type Float32ListOptionFuture struct {
+	ch chan Float32ListOption
 }
-type Float64OptionOptionFuture struct {
-	ch chan Float64OptionOption
+type Float64ListOptionFuture struct {
+	ch chan Float64ListOption
 }
-type AnyOptionOptionFuture struct {
-	ch chan AnyOptionOption
+type AnyListOptionFuture struct {
+	ch chan AnyListOption
 }
 type BoolArrayOptionFuture struct {
 	ch chan BoolArrayOption
@@ -113,87 +113,6 @@ type Float64ArrayOptionFuture struct {
 type AnyArrayOptionFuture struct {
 	ch chan AnyArrayOption
 }
-type BoolListOptionFuture struct {
-	ch chan BoolListOption
-}
-type StringListOptionFuture struct {
-	ch chan StringListOption
-}
-type IntListOptionFuture struct {
-	ch chan IntListOption
-}
-type Int64ListOptionFuture struct {
-	ch chan Int64ListOption
-}
-type ByteListOptionFuture struct {
-	ch chan ByteListOption
-}
-type RuneListOptionFuture struct {
-	ch chan RuneListOption
-}
-type Float32ListOptionFuture struct {
-	ch chan Float32ListOption
-}
-type Float64ListOptionFuture struct {
-	ch chan Float64ListOption
-}
-type AnyListOptionFuture struct {
-	ch chan AnyListOption
-}
-type BoolArrayFuture struct {
-	ch chan BoolArray
-}
-type StringArrayFuture struct {
-	ch chan StringArray
-}
-type IntArrayFuture struct {
-	ch chan IntArray
-}
-type Int64ArrayFuture struct {
-	ch chan Int64Array
-}
-type ByteArrayFuture struct {
-	ch chan ByteArray
-}
-type RuneArrayFuture struct {
-	ch chan RuneArray
-}
-type Float32ArrayFuture struct {
-	ch chan Float32Array
-}
-type Float64ArrayFuture struct {
-	ch chan Float64Array
-}
-type AnyArrayFuture struct {
-	ch chan AnyArray
-}
-type BoolArrayArrayFuture struct {
-	ch chan BoolArrayArray
-}
-type StringArrayArrayFuture struct {
-	ch chan StringArrayArray
-}
-type IntArrayArrayFuture struct {
-	ch chan IntArrayArray
-}
-type Int64ArrayArrayFuture struct {
-	ch chan Int64ArrayArray
-}
-type ByteArrayArrayFuture struct {
-	ch chan ByteArrayArray
-}
-type RuneArrayArrayFuture struct {
-	ch chan RuneArrayArray
-}
-type Float32ArrayArrayFuture struct {
-	ch chan Float32ArrayArray
-}
-type Float64ArrayArrayFuture struct {
-	ch chan Float64ArrayArray
-}
-type AnyArrayArrayFuture struct {
-	ch chan AnyArrayArray
-}
 type BoolListFuture struct {
 	ch chan BoolList
 }
@@ -221,84 +140,30 @@ type Float64ListFuture struct {
 type AnyListFuture struct {
 	ch chan AnyList
 }
-type BoolArrayListFuture struct {
-	ch chan BoolArrayList
+type BoolArrayFuture struct {
+	ch chan BoolArray
 }
-type StringArrayListFuture struct {
-	ch chan StringArrayList
+type StringArrayFuture struct {
+	ch chan StringArray
 }
-type IntArrayListFuture struct {
-	ch chan IntArrayList
+type IntArrayFuture struct {
+	ch chan IntArray
 }
-type Int64ArrayListFuture struct {
-	ch chan Int64ArrayList
+type Int64ArrayFuture struct {
+	ch chan Int64Array
 }
-type ByteArrayListFuture struct {
-	ch chan ByteArrayList
+type ByteArrayFuture struct {
+	ch chan ByteArray
 }
-type RuneArrayListFuture struct {
-	ch chan RuneArrayList
+type RuneArrayFuture struct {
+	ch chan RuneArray
 }
-type Float32ArrayListFuture struct {
-	ch chan Float32ArrayList
+type Float32ArrayFuture struct {
+	ch chan Float32Array
 }
-type Float64ArrayListFuture struct {
-	ch chan Float64ArrayList
+type Float64ArrayFuture struct {
+	ch chan Float64Array
 }
-type AnyArrayListFuture struct {
-	ch chan AnyArrayList
-}
-type BoolOptionListFuture struct {
-	ch chan BoolOptionList
-}
-type StringOptionListFuture struct {
-	ch chan StringOptionList
-}
-type IntOptionListFuture struct {
-	ch chan IntOptionList
-}
-type Int64OptionListFuture struct {
-	ch chan Int64OptionList
-}
-type ByteOptionListFuture struct {
-	ch chan ByteOptionList
-}
-type RuneOptionListFuture struct {
-	ch chan RuneOptionList
-}
-type Float32OptionListFuture struct {
-	ch chan Float32OptionList
-}
-type Float64OptionListFuture struct {
-	ch chan Float64OptionList
-}
-type AnyOptionListFuture struct {
-	ch chan AnyOptionList
-}
-type BoolListListFuture struct {
-	ch chan BoolListList
-}
-type StringListListFuture struct {
-	ch chan StringListList
-}
-type IntListListFuture struct {
-	ch chan IntListList
-}
-type Int64ListListFuture struct {
-	ch chan Int64ListList
-}
-type ByteListListFuture struct {
-	ch chan ByteListList
-}
-type RuneListListFuture struct {
-	ch chan RuneListList
-}
-type Float32ListListFuture struct {
-	ch chan Float32ListList
-}
-type Float64ListListFuture struct {
-	ch chan Float64ListList
-}
-type AnyListListFuture struct {
-	ch chan AnyListList
+type AnyArrayFuture struct {
+	ch chan AnyArray
 }

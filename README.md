@@ -1411,11 +1411,11 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 
+## Boxed types
 
+[🠕](#boxed0)
 
-
-## Boxed (rich) types
-
+### Supported boxed types
 | Boxed type | Go type      |
 | ---------- | ------------ |
 | Bool       | bool         |
@@ -1437,16 +1437,126 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 | Complex64  | complex64    |
 | Complex128 | complex128   |
 | Any        | interface {} |
-[🠕](#table-of-contents)
-
-
-
-
-## Boxed types
-
 [🠕](#boxed0)
 
+
 ## Concurrency API
+
+Concurrence API implements a `Future` as abstraction over go routines and channels. It allows to combine async calculations in blocking and non blocking manner.
+All examples of this section use a `IntFuture` type. But this API is supported in the other future types also. (See [Supported future types section](#supported-future-types))
+
+Before using concurrence API library import the following packages:
+```go
+import (
+  . "github.com/zx80live/gofp/fp"
+  . "github.com/zx80live/gofp/fp/concurrent"
+)
+```
+[🠕](#concurrency0)
+
+### Supported future types
+
+| Future type               | Scala analogue   |
+| ------------------------- | ---------------- |
+| BoolFuture                | Future[Boolean]  |
+| StringFuture              | Future[]         |
+| IntFuture                 | Future[]         |
+| Int64Future               | Future[]         |
+| ByteFuture                | Future[]         |
+| RuneFuture                | Future[]         |
+| Float32Future             | Future[]         |
+| Float64Future             | Future[]         |
+| AnyFuture                 | Future[]         |
+| BoolOptionFuture          | Future[]         |
+| StringOptionFuture        | Future[]         |
+| Int64OptionFuture         | Future[]         |
+| ByteOptionFuture          | Future[]         |
+| RuneOptionFuture          | Future[]         |
+| Float32OptionFuture       | Future[]         |
+| Float64OptionFuture       | Future[]         |
+| AnyOptionFuture           | Future[Option[]] |
+| BoolOptionOptionFuture    | Future[Option[]] |
+| StringOptionOptionFuture  | Future[Option[]] |
+| IntOptionOptionFuture     | Future[Option[]] |
+| Int64OptionOptionFuture   | Future[Option[]] |
+| ByteOptionOptionFuture    | Future[Option[]] |
+| RuneOptionOptionFuture    | Future[Option[]] |
+| Float32OptionOptionFuture | Future[Option[]] |
+| Float64OptionOptionFuture | Future[Option[]] |
+| AnyOptionOptionFuture     | Future[Option[]] |
+| BoolArrayOptionFuture     |                  |
+| StringArrayOptionFuture   |                  |
+| IntArrayOptionFuture      |                  |
+| Int64ArrayOptionFuture    |                  |
+| ByteArrayOptionFuture     |                  |
+| RuneArrayOptionFuture     |                  |
+| Float32ArrayOptionFuture  |                  |
+| Float64ArrayOptionFuture  |                  |
+| AnyArrayOptionFuture      |                  |
+| BoolListOptionFuture      |                  |
+| StringListOptionFuture    |                  |
+| IntListOptionFuture       |                  |
+| Int64ListOptionFuture     |                  |
+| ByteListOptionFuture      |                  |
+| RuneListOptionFuture      |                  |
+| Float32ListOptionFuture   |                  |
+| Float64ListOptionFuture   |                  |
+| AnyListOptionFuture       |                  |
+| BoolArrayFuture           |                  |
+| StringArrayFuture         |                  |
+| IntArrayFuture            |                  |
+| Int64ArrayFuture          |                  |
+| ByteArrayFuture           |                  |
+| RuneArrayFuture           |                  |
+| Float32ArrayFuture        |                  |
+| Float64ArrayFuture        |                  |
+| AnyArrayFuture            |                  |
+| BoolArrayArrayFuture      |                  |
+| StringArrayArrayFuture    |                  |
+| IntArrayArrayFuture       |                  |
+| Int64ArrayArrayFuture     |                  |
+| ByteArrayArrayFuture      |                  |
+| RuneArrayArrayFuture      |                  |
+| Float32ArrayArrayFuture   |                  |
+| Float64ArrayArrayFuture   |                  |
+| AnyArrayArrayFuture       |                  |
+| BoolListFuture            |                  |
+| StringListFuture          |                  |
+| IntListFuture             |                  |
+| Int64ListFuture           |                  |
+| ByteListFuture            |                  |
+| RuneListFuture            |                  |
+| Float32ListFuture         |                  |
+| Float64ListFuture         |                  |
+| AnyListFuture             |                  |
+| BoolArrayListFuture       |                  |
+| StringArrayListFuture     |                  |
+| IntArrayListFuture        |                  |
+| Int64ArrayListFuture      |                  |
+| ByteArrayListFuture       |                  |
+| RuneArrayListFuture       |                  |
+| Float32ArrayListFuture    |                  |
+| Float64ArrayListFuture    |                  |
+| AnyArrayListFuture        |                  |
+| BoolOptionListFuture      |                  |
+| StringOptionListFuture    |                  |
+| IntOptionListFuture       |                  |
+| Int64OptionListFuture     |                  |
+| ByteOptionListFuture      |                  |
+| RuneOptionListFuture      |                  |
+| Float32OptionListFuture   |                  |
+| Float64OptionListFuture   |                  |
+| AnyOptionListFuture       |                  |
+| BoolListListFuture        |                  |
+| StringListListFuture      |                  |
+| IntListListFuture         |                  |
+| Int64ListListFuture       |                  |
+| ByteListListFuture        |                  |
+| RuneListListFuture        |                  |
+| Float32ListListFuture     |                  |
+| Float64ListListFuture     |                  |
+| AnyListListFuture         |                  |
+
 
 [🠕](#concurrency0)
 

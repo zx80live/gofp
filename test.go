@@ -193,4 +193,5 @@ func main() {
 
 	fmt.Println("result:", f1, f2, res2)
 	fmt.Println(res2.Result())
+
 }

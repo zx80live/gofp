@@ -95,48 +95,48 @@ func MakeAnyOptionFuture(f func() AnyOption) AnyOptionFuture {
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeBoolOptionOptionFuture(f func() BoolOptionOption) BoolOptionOptionFuture {
-	fut := BoolOptionOptionFuture{make(chan BoolOptionOption, 1)}
+func MakeBoolListOptionFuture(f func() BoolListOption) BoolListOptionFuture {
+	fut := BoolListOptionFuture{make(chan BoolListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeStringOptionOptionFuture(f func() StringOptionOption) StringOptionOptionFuture {
-	fut := StringOptionOptionFuture{make(chan StringOptionOption, 1)}
+func MakeStringListOptionFuture(f func() StringListOption) StringListOptionFuture {
+	fut := StringListOptionFuture{make(chan StringListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeIntOptionOptionFuture(f func() IntOptionOption) IntOptionOptionFuture {
-	fut := IntOptionOptionFuture{make(chan IntOptionOption, 1)}
+func MakeIntListOptionFuture(f func() IntListOption) IntListOptionFuture {
+	fut := IntListOptionFuture{make(chan IntListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeInt64OptionOptionFuture(f func() Int64OptionOption) Int64OptionOptionFuture {
-	fut := Int64OptionOptionFuture{make(chan Int64OptionOption, 1)}
+func MakeInt64ListOptionFuture(f func() Int64ListOption) Int64ListOptionFuture {
+	fut := Int64ListOptionFuture{make(chan Int64ListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeByteOptionOptionFuture(f func() ByteOptionOption) ByteOptionOptionFuture {
-	fut := ByteOptionOptionFuture{make(chan ByteOptionOption, 1)}
+func MakeByteListOptionFuture(f func() ByteListOption) ByteListOptionFuture {
+	fut := ByteListOptionFuture{make(chan ByteListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeRuneOptionOptionFuture(f func() RuneOptionOption) RuneOptionOptionFuture {
-	fut := RuneOptionOptionFuture{make(chan RuneOptionOption, 1)}
+func MakeRuneListOptionFuture(f func() RuneListOption) RuneListOptionFuture {
+	fut := RuneListOptionFuture{make(chan RuneListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeFloat32OptionOptionFuture(f func() Float32OptionOption) Float32OptionOptionFuture {
-	fut := Float32OptionOptionFuture{make(chan Float32OptionOption, 1)}
+func MakeFloat32ListOptionFuture(f func() Float32ListOption) Float32ListOptionFuture {
+	fut := Float32ListOptionFuture{make(chan Float32ListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeFloat64OptionOptionFuture(f func() Float64OptionOption) Float64OptionOptionFuture {
-	fut := Float64OptionOptionFuture{make(chan Float64OptionOption, 1)}
+func MakeFloat64ListOptionFuture(f func() Float64ListOption) Float64ListOptionFuture {
+	fut := Float64ListOptionFuture{make(chan Float64ListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeAnyOptionOptionFuture(f func() AnyOptionOption) AnyOptionOptionFuture {
-	fut := AnyOptionOptionFuture{make(chan AnyOptionOption, 1)}
+func MakeAnyListOptionFuture(f func() AnyListOption) AnyListOptionFuture {
+	fut := AnyListOptionFuture{make(chan AnyListOption, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
@@ -185,141 +185,6 @@ func MakeAnyArrayOptionFuture(f func() AnyArrayOption) AnyArrayOptionFuture {
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeBoolListOptionFuture(f func() BoolListOption) BoolListOptionFuture {
-	fut := BoolListOptionFuture{make(chan BoolListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeStringListOptionFuture(f func() StringListOption) StringListOptionFuture {
-	fut := StringListOptionFuture{make(chan StringListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeIntListOptionFuture(f func() IntListOption) IntListOptionFuture {
-	fut := IntListOptionFuture{make(chan IntListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeInt64ListOptionFuture(f func() Int64ListOption) Int64ListOptionFuture {
-	fut := Int64ListOptionFuture{make(chan Int64ListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeByteListOptionFuture(f func() ByteListOption) ByteListOptionFuture {
-	fut := ByteListOptionFuture{make(chan ByteListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeRuneListOptionFuture(f func() RuneListOption) RuneListOptionFuture {
-	fut := RuneListOptionFuture{make(chan RuneListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat32ListOptionFuture(f func() Float32ListOption) Float32ListOptionFuture {
-	fut := Float32ListOptionFuture{make(chan Float32ListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat64ListOptionFuture(f func() Float64ListOption) Float64ListOptionFuture {
-	fut := Float64ListOptionFuture{make(chan Float64ListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeAnyListOptionFuture(f func() AnyListOption) AnyListOptionFuture {
-	fut := AnyListOptionFuture{make(chan AnyListOption, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeBoolArrayFuture(f func() BoolArray) BoolArrayFuture {
-	fut := BoolArrayFuture{make(chan BoolArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeStringArrayFuture(f func() StringArray) StringArrayFuture {
-	fut := StringArrayFuture{make(chan StringArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeIntArrayFuture(f func() IntArray) IntArrayFuture {
-	fut := IntArrayFuture{make(chan IntArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeInt64ArrayFuture(f func() Int64Array) Int64ArrayFuture {
-	fut := Int64ArrayFuture{make(chan Int64Array, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeByteArrayFuture(f func() ByteArray) ByteArrayFuture {
-	fut := ByteArrayFuture{make(chan ByteArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeRuneArrayFuture(f func() RuneArray) RuneArrayFuture {
-	fut := RuneArrayFuture{make(chan RuneArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat32ArrayFuture(f func() Float32Array) Float32ArrayFuture {
-	fut := Float32ArrayFuture{make(chan Float32Array, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat64ArrayFuture(f func() Float64Array) Float64ArrayFuture {
-	fut := Float64ArrayFuture{make(chan Float64Array, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeAnyArrayFuture(f func() AnyArray) AnyArrayFuture {
-	fut := AnyArrayFuture{make(chan AnyArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeBoolArrayArrayFuture(f func() BoolArrayArray) BoolArrayArrayFuture {
-	fut := BoolArrayArrayFuture{make(chan BoolArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeStringArrayArrayFuture(f func() StringArrayArray) StringArrayArrayFuture {
-	fut := StringArrayArrayFuture{make(chan StringArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeIntArrayArrayFuture(f func() IntArrayArray) IntArrayArrayFuture {
-	fut := IntArrayArrayFuture{make(chan IntArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeInt64ArrayArrayFuture(f func() Int64ArrayArray) Int64ArrayArrayFuture {
-	fut := Int64ArrayArrayFuture{make(chan Int64ArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeByteArrayArrayFuture(f func() ByteArrayArray) ByteArrayArrayFuture {
-	fut := ByteArrayArrayFuture{make(chan ByteArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeRuneArrayArrayFuture(f func() RuneArrayArray) RuneArrayArrayFuture {
-	fut := RuneArrayArrayFuture{make(chan RuneArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat32ArrayArrayFuture(f func() Float32ArrayArray) Float32ArrayArrayFuture {
-	fut := Float32ArrayArrayFuture{make(chan Float32ArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat64ArrayArrayFuture(f func() Float64ArrayArray) Float64ArrayArrayFuture {
-	fut := Float64ArrayArrayFuture{make(chan Float64ArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeAnyArrayArrayFuture(f func() AnyArrayArray) AnyArrayArrayFuture {
-	fut := AnyArrayArrayFuture{make(chan AnyArrayArray, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
 func MakeBoolListFuture(f func() BoolList) BoolListFuture {
 	fut := BoolListFuture{make(chan BoolList, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
@@ -365,138 +230,48 @@ func MakeAnyListFuture(f func() AnyList) AnyListFuture {
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeBoolArrayListFuture(f func() BoolArrayList) BoolArrayListFuture {
-	fut := BoolArrayListFuture{make(chan BoolArrayList, 1)}
+func MakeBoolArrayFuture(f func() BoolArray) BoolArrayFuture {
+	fut := BoolArrayFuture{make(chan BoolArray, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeStringArrayListFuture(f func() StringArrayList) StringArrayListFuture {
-	fut := StringArrayListFuture{make(chan StringArrayList, 1)}
+func MakeStringArrayFuture(f func() StringArray) StringArrayFuture {
+	fut := StringArrayFuture{make(chan StringArray, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeIntArrayListFuture(f func() IntArrayList) IntArrayListFuture {
-	fut := IntArrayListFuture{make(chan IntArrayList, 1)}
+func MakeIntArrayFuture(f func() IntArray) IntArrayFuture {
+	fut := IntArrayFuture{make(chan IntArray, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeInt64ArrayListFuture(f func() Int64ArrayList) Int64ArrayListFuture {
-	fut := Int64ArrayListFuture{make(chan Int64ArrayList, 1)}
+func MakeInt64ArrayFuture(f func() Int64Array) Int64ArrayFuture {
+	fut := Int64ArrayFuture{make(chan Int64Array, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeByteArrayListFuture(f func() ByteArrayList) ByteArrayListFuture {
-	fut := ByteArrayListFuture{make(chan ByteArrayList, 1)}
+func MakeByteArrayFuture(f func() ByteArray) ByteArrayFuture {
+	fut := ByteArrayFuture{make(chan ByteArray, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeRuneArrayListFuture(f func() RuneArrayList) RuneArrayListFuture {
-	fut := RuneArrayListFuture{make(chan RuneArrayList, 1)}
+func MakeRuneArrayFuture(f func() RuneArray) RuneArrayFuture {
+	fut := RuneArrayFuture{make(chan RuneArray, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeFloat32ArrayListFuture(f func() Float32ArrayList) Float32ArrayListFuture {
-	fut := Float32ArrayListFuture{make(chan Float32ArrayList, 1)}
+func MakeFloat32ArrayFuture(f func() Float32Array) Float32ArrayFuture {
+	fut := Float32ArrayFuture{make(chan Float32Array, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeFloat64ArrayListFuture(f func() Float64ArrayList) Float64ArrayListFuture {
-	fut := Float64ArrayListFuture{make(chan Float64ArrayList, 1)}
+func MakeFloat64ArrayFuture(f func() Float64Array) Float64ArrayFuture {
+	fut := Float64ArrayFuture{make(chan Float64Array, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
-func MakeAnyArrayListFuture(f func() AnyArrayList) AnyArrayListFuture {
-	fut := AnyArrayListFuture{make(chan AnyArrayList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeBoolOptionListFuture(f func() BoolOptionList) BoolOptionListFuture {
-	fut := BoolOptionListFuture{make(chan BoolOptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeStringOptionListFuture(f func() StringOptionList) StringOptionListFuture {
-	fut := StringOptionListFuture{make(chan StringOptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeIntOptionListFuture(f func() IntOptionList) IntOptionListFuture {
-	fut := IntOptionListFuture{make(chan IntOptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeInt64OptionListFuture(f func() Int64OptionList) Int64OptionListFuture {
-	fut := Int64OptionListFuture{make(chan Int64OptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeByteOptionListFuture(f func() ByteOptionList) ByteOptionListFuture {
-	fut := ByteOptionListFuture{make(chan ByteOptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeRuneOptionListFuture(f func() RuneOptionList) RuneOptionListFuture {
-	fut := RuneOptionListFuture{make(chan RuneOptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat32OptionListFuture(f func() Float32OptionList) Float32OptionListFuture {
-	fut := Float32OptionListFuture{make(chan Float32OptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat64OptionListFuture(f func() Float64OptionList) Float64OptionListFuture {
-	fut := Float64OptionListFuture{make(chan Float64OptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeAnyOptionListFuture(f func() AnyOptionList) AnyOptionListFuture {
-	fut := AnyOptionListFuture{make(chan AnyOptionList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeBoolListListFuture(f func() BoolListList) BoolListListFuture {
-	fut := BoolListListFuture{make(chan BoolListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeStringListListFuture(f func() StringListList) StringListListFuture {
-	fut := StringListListFuture{make(chan StringListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeIntListListFuture(f func() IntListList) IntListListFuture {
-	fut := IntListListFuture{make(chan IntListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeInt64ListListFuture(f func() Int64ListList) Int64ListListFuture {
-	fut := Int64ListListFuture{make(chan Int64ListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeByteListListFuture(f func() ByteListList) ByteListListFuture {
-	fut := ByteListListFuture{make(chan ByteListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeRuneListListFuture(f func() RuneListList) RuneListListFuture {
-	fut := RuneListListFuture{make(chan RuneListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat32ListListFuture(f func() Float32ListList) Float32ListListFuture {
-	fut := Float32ListListFuture{make(chan Float32ListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeFloat64ListListFuture(f func() Float64ListList) Float64ListListFuture {
-	fut := Float64ListListFuture{make(chan Float64ListList, 1)}
-	go func() { defer close(fut.ch); fut.ch <- f() }()
-	return fut
-}
-func MakeAnyListListFuture(f func() AnyListList) AnyListListFuture {
-	fut := AnyListListFuture{make(chan AnyListList, 1)}
+func MakeAnyArrayFuture(f func() AnyArray) AnyArrayFuture {
+	fut := AnyArrayFuture{make(chan AnyArray, 1)}
 	go func() { defer close(fut.ch); fut.ch <- f() }()
 	return fut
 }
