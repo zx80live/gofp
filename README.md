@@ -1728,6 +1728,26 @@ words := l.Filter(onlyWords)          // List("Hello", "abc", "world")
 [[🠕]](#predicates0)
 
 ### Predicates composition
+```go
+// Apply boolean operator to two predicates
+func (p1 IntPredicate) And(p2 IntPredicate) IntPredicate
+func (p1 IntPredicate) Or(p2 IntPredicate) IntPredicate
+func (p1 IntPredicate) Neg(p2 IntPredicate) IntPredicate
+func (p1 IntPredicate) Xor(p2 IntPredicate) IntPredicate
+...
+```
+Examples:
+```go
+l := MakeIntList(1,-2,3,4,5,-6,7,8,9,0)
+
+var p1 IntPredicate = func(e int) bool { return e % 2 == 0 }  // even numbers
+var p2 IntPredicate = func(e int) bool { return e < 0 }       // neg numbers
+
+p3 := p1.And(p2)
+
+l.Filter(p3)     // List(-2,-6)
+
+```
 [[🠕]](#predicates0)
 
 ### Supported predicate types
