@@ -110,7 +110,7 @@ import . "github.com/zx80live/gofp/fp"
 
 Current library supports the following collection types: `Arrays`, `Lists` and `Options`. Each type is monad and supports functions such as `Map`, `FlatMap`, `Filter` and etc.
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 ### List
 
