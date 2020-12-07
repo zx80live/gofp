@@ -1991,12 +1991,21 @@ Example:
 t1 := time.Now().Unix()
 // create future
 f1 := MakeIntFuture(func() Int {
-        time.Sleep(1 * time.Second)
+        time.Sleep(2 * time.Second)
         return Int(10)
       })
 t2 := time.Now().Unix()
 fmt.Println("at ", t2 - t1)      // at 0 milliseconds
                                  // microbenchmark demonstrates async running of IntFuture
+
+// If you want to wait and get result of future use Result method
+// Warning! But this method blocks current thread (routine)
+t3 := time.Now().Unix()
+res1 := f1.Result()
+t4 := time.Now().Unix()
+
+fmt.Println("result ", res1, "at ", t4 - t3)  // result 10 at 2000 milliseconds
+
 ```
 [[🠕]](#future0)
 
