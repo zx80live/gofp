@@ -1602,8 +1602,8 @@ func (f IntFuture) Result() Int
 Example:
 ```go
 t1 := time.Now().Unix()
-f1 := MakeIntFuture(func() Int { return 10 })                                   // future which takes ~0 milliseconds
-f2 := MakeIntFuture(func() Int { time.sleep(2 * time.Second); return 20 })      // future wich takes ~2000 milliseconds
+f1 := MakeIntFuture(func() Int { return 10 })                                   // takes ~0 milliseconds
+f2 := MakeIntFuture(func() Int { time.sleep(2 * time.Second); return 20 })      // takes ~2000 milliseconds
 t2 := time.Now().Unix()
 
 fmt.Println("create futures at ", t2 - t1)    // at ~0 milliseconds
