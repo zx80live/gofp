@@ -772,6 +772,7 @@ l2 := MakeIntListList(
 #### Supported list types
 
 <details><summary>Supported list types (click to expand)</summary>
+
 | Array type        | Scala analogue        | Go analogue |
 | ----------------- | --------------------- | ----------- |
 | BoolList          | List[Boolean]         |             |
@@ -1050,6 +1051,7 @@ var str2 string = o2.TOString()      // "None"
 
 #### Supported option types
 <details><summary>Supported option types (click to expand)</summary>
+
 | Option type         | Scala analogue          |
 | ------------------- | ----------------------- |
 | BoolOption          | Option[Boolean]         |
@@ -1402,6 +1404,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 #### Supported array types
 <details><summary>Supported array types (click to expand)</summary>
+
 | Array type          | Scala analogue        | Go analogue   |
 | ------------------- | --------------------- | ------------- |
 | `BoolArray`         | Array[Bool]           | `[]bool`      |
@@ -1434,6 +1437,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 ### Supported boxed types
 <details><summary>Supported boxed types (click to expand)</summary>
+
 | Boxed type | Go type      |
 | ---------- | ------------ |
 | Bool       | bool         |
