@@ -144,6 +144,11 @@ var l IntList = MakeIntList(1,2,3,4,5)
 
 // create list from Nil
 l2 := NilInt.Cons(5).Cons(4).Cons(3).Cons(2).Cons(1)  // equals IntList(1,2,3,4,5)
+
+// create list from boxed (rich) types
+l3 := Int(10).Cons(20).Cons(30)               // List(30,20,10)
+l4 := String("one").Cons("two").Cons("three") // List("three", "two", "one")
+
 ```
 
 [🠕](#list0)
