@@ -1484,7 +1484,7 @@ fmt.Println("at ", t2 - t1)      // at 0 milliseconds
 
 ### Future.FlatMap
 ```go
-// Gives the ability to chain operations together in blocking and non-blocking manner
+// Gives the ability to compose async operations together
 func (f IntFuture) FlatMap<Type>(t func(Int) <Type>Future) <Type>Future
 
 // examples
