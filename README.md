@@ -25,7 +25,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.Foreach](#listforeach)
     + [List.GroupBy](#listgroupby)
     + [List.Heads and tails](#listheads-and-tails)
-    + [List.Emptiness](#listemptiness)
+    + [List.Empty NonEmpty](#listempty-nonempty)
     + [List.Map](#listmap)
     + [List.MkString](#listmkstring)
     + [List.Nil](#listnil)
@@ -202,6 +202,37 @@ l := MakeIntList(10,20,30,40,50)
 res1 := l.Drop(2)                                 // IntList(30,40,50)
 res2 := l.DropRight(2)                            // IntList(10,20,30)
 res3 := l.DropWhile(func (e int) bool { e < 40 }) // IntList(40,50)                      
+```
+
+[🠕](#list0)
+
+
+
+#### List.Empty NonEmpty
+
+```go
+// Returns true if list is empty
+// O(n)
+func (l IntList) IsEmpty() bool
+
+// Returns true if list is not empty
+// O(n)
+func (l IntList) NonEmpty() bool
+```
+
+Example:
+
+```go
+l1 := MakeIntList(1,2,3)
+res1 := l1.IsEmpty()      // false
+res2 := l1.NoEmpty()      // true
+
+l2 := MakeIntList()    
+res3 := l2.IsEmpty()      // true
+res4 := l2.NonEmpty()     // fase
+
+res5 := NilInt.IsEmpty()  // true
+res6 := NilInt.NonEmpty() // false
 ```
 
 [🠕](#list0)
@@ -500,36 +531,6 @@ l.Tail().Tail().Tail().Head()       // panic("there is no heads")
 
 [🠕](#list0)
 
-
-
-#### List.Emptiness
-
-```go
-// Returns true if list is empty
-// O(n)
-func (l IntList) IsEmpty() bool
-
-// Returns true if list is not empty
-// O(n)
-func (l IntList) NonEmpty() bool
-```
-
-Example:
-
-```go
-l1 := MakeIntList(1,2,3)
-res1 := l1.IsEmpty()      // false
-res2 := l1.NoEmpty()      // true
-
-l2 := MakeIntList()    
-res3 := l2.IsEmpty()      // true
-res4 := l2.NonEmpty()     // fase
-
-res5 := NilInt.IsEmpty()  // true
-res6 := NilInt.NonEmpty() // false
-```
-
-[🠕](#list0)
 
 
 
@@ -898,89 +899,137 @@ sumFunc(NoneInt, NoneInt, IntOpt(30))                     // None
 
 
 #### Option.Flatten
-```go
-
+```go 
+// Collapse the nested option to flat option
+func (o IntIntOption) IntOption
 ```
 Example:
 ```go
-
+o := MakeIntOptionOption(MakeIntOption(10))    // Some(Some(10))
+flatten := o.Flatten()                         // Some(10)
 ```
 [🠕](#option0)
 
 
 #### Option.FoldLeft
 ```go
+// Applies binary function to element of option
+// z - initial value
+func (l IntOption) FoldLeft<Type>(z <Type>, func(<Type>, int) <Type>) <Type>
 
+// examples
+func (l IntOption) FoldLeftInt(z Int, func(int, int) int) int
+func (l IntOption) FoldLeftString(z string, func(string, int) string) string
+...
 ```
 Example:
 ```go
-
+o := IntOpt(10)
+res1 := l.FoldLeftInt(
+            0, 
+            func(acc, el) int { return acc + el})   // sum = 0 + 10
 ```
 [🠕](#option0)
 
 
 #### Option.Foreach
 ```go
-
+// Iterate over content
+func (l IntOption) Foreach(func(int))
 ```
 Example:
 ```go
-
+l := IntOpt(10)
+f.Foreach(func(e int) {
+    fmt.Println("> ", e)
+})
 ```
 [🠕](#option0)
 
 
 #### Option.IsDefined
 ```go
-
+// Returns true if option contains a value
+func (o IntOption) IsDefined() bool
 ```
 Example:
 ```go
-
+IntOption(10).IsDefined()     // true
+NoneInt.IsDefined()           // false
 ```
 [🠕](#option0)
 
 
 #### Option.IsEmpty
 ```go
-
+// Returns true if option is not defined
+func (o IntOption) IsEmpty() bool
 ```
 Example:
 ```go
-
+NoneInt.IsEmpty()             // true
+IntOpt(10).IsEmpty()          // false
 ```
 [🠕](#option0)
 
 
 #### Option.Map
 ```go
+// Transform element of option to other type
+func (l IntOption) Map<Type>(func (int) <Type>) <Type>Option
 
+// examples
+func(l IntOption) MapInt(func (int) int) IntOption
+func(l IntOption) MapString(func (int) string) StringOption
 ```
 Example:
 ```go
-
+o := IntOpt(10)
+res1 := o.MapInt(func (e int) int { return e * 10 })                       // Some(100)
+res2 := o.MapString(func (e int) string { return fmt.Sprintf("<%v>", e) }) // Some("<10>") 
 ```
 [🠕](#option0)
 
-
 #### Option.None
-```go
 
+There are empty option constants for each supported optional type
+
+```go
+var NoneInt IntOption = ...
+var NoneString IntOption = ...
+...
 ```
 Example:
 ```go
+o1 := NoneInt            // None
+o2 := NoneString         // None
 
+func parseIp(str string) StringOption {
+    if str != "" { 
+        return StringOpt(str) 
+    } else {
+        return NoneString
+    } 
+}
+
+ip1 := parseIp("")           // None
+ip2 := parseIp("127.0.0.1")  // Some("127.0.0.1")
 ```
 [🠕](#option0)
 
 
 #### Option.ToString
 ```go
-
+// Transform option to string
+func (o IntOption) string
 ```
 Example:
 ```go
+var o1 IntOption = IntOption(10)
+var o2 IntOption = NoneInt
 
+var str1 string = o1.ToString()      // "Some(10)"
+var str2 string = o2.TOString()      // "None"
 ```
 [🠕](#option0)
 
