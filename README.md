@@ -67,6 +67,20 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Array.ToString](#arraytostring)
     + [Supported array types](#supported-array-types)
 - [Boxed types](#boxed-types)<a name="boxed0"></a>
+    + [Underlined](#underlined)
+    + [Converters](#converters)
+    + [List constructors](#list-constructors)
+    + [Math and logic operations](#math-and-logic-operations)
+    + [Supported boxed types](#supported-boxed-types)
+- [Predicates](#predicates)<a name="predicates0"></a>
+    + [String predicates](#string-predicates)
+    + [Predicates composition](#predicates-composition)
+    + [Empty predicates](#empty-predicates)
+    + [Numeric predicates](#numeric-predicates)
+    + [Supported predicate types](#supported-predicate-types)
+- [Transformers](#transformers)<a name="traisnformers0"></a>
+    + [Identity](#identity)
+    + [String transformers](#string-transformers)
 - [Concurrency API](#concurrency-api)<a name="concurrency0"></a>
   * [Future](#future)<a name="future0"></a>
     + [Create future](#create-future)  
@@ -77,6 +91,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Future.Result](#futureresult)
     + [Future.Success](#futuresuccess)
     + [Supported future types](#supported-future-types)
+- [Predef](#predef)<a name="predef0"></a>
 - [Contributing](#contributing)<a name="contributing0"></a>
 - [License](#license)<a name="license0"></a>
 
