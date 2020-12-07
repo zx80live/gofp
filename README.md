@@ -1649,9 +1649,9 @@ func getFilter() IntPredicate {
   var filterType string = config.getProperty("filter")
   
   if filterType == "even" {
-     return EvenInt
+     return EvenInt  // func (e int) bool { return e % 2 == 0 }
   } else if filterType == "odd" {
-     return OddInt
+     return OddInt   // func (e int) bool { return e % 2 != 0 }
   } else {
     return EmptyIntPredicate   // default filter is no-filter
   }
