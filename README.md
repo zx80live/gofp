@@ -1495,8 +1495,8 @@ func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
 [🠕](#future0)
 
 #### Future.FlatMap.Blocking composition
-
-Example: compose futures in blocking manner
+`FlatMap` allows to compose two async calculations (which are presented as two futures) in the blocking manner. In other words, the resulting future will be result of sequential calculations of two futures.
+This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
 // Task: implement two async functions.
@@ -1520,7 +1520,8 @@ fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
 
 
 t3 := time.Now().Unix()
-var res1 Int = t1.Result()                                  // 10 * 20
+// block current main-thread and wait and get result of future
+var res1 Int = f.Result()                                  // 10 * 20
 t4 := time.Now().Unix()
 fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseconds
                                                             // SEQUENTIAL execution
@@ -1529,7 +1530,8 @@ fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseco
 [🠕](#future0)
 
 #### Future.FlatMap.NON-blocking composition
-Example: compose futures in NON-blocking manner
+`FlatMap` allows to compose two async calculations (which are presented as two futures) in the non-blocking manner. In other words, the resulting future will be result of parallel calculations of two futures.
+This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
 // Task: implement two async functions.
@@ -1563,7 +1565,8 @@ fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
 
 
 t3 := time.Now().Unix()
-var res1 Int = t1.Result()                                  // 10 * 20
+// block current main-thread and wait and get result of future
+var res1 Int = futureResult.Result()                        // 10 * 20
 t4 := time.Now().Unix()
 fmt.Println("get result of composing futures at", t4 - t3)  // at 2000 milliseconds
                                                             // PARALLEL execution
