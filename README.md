@@ -68,6 +68,12 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Supported array types](#supported-array-types)
 - [Boxed types](#boxed-types)<a name="boxed0"></a>
 - [Concurrency API](#concurrency-api)<a name="concurrency0"></a>
+  * [Future](#future)<a name="future0"></a>
+    + [Create future](#create-future)  
+    + [Future.FlatMap](#futureflatmap)
+    + [Future.Map](#futuremap)
+    + [Future.Result](#futureresult)
+    + [Future.Success](#futuresuccess)
 - [Contributing](#contributing)<a name="contributing0"></a>
 - [Versioning](#versioning)<a name="versioning0"></a>
 - [Roadmap](#roadmap)<a name="roadmap0"></a>
@@ -1455,6 +1461,137 @@ import (
 ```
 [🠕](#concurrency0)
 
+### Create future
+```go
+// Execute go-routine for calculate function
+func MakeIntFuture(f func() Int) IntFuture
+```
+Example:
+```go
+t1 := time.Now().Unix()
+// create future
+f1 := IntFuture(func() Int {
+    time.Sleep(1 * time.Second)
+    return 10
+})
+t2 := time.Now().Unix()
+fmt.Println("at ", t2 - t1)      // at 0 milliseconds
+                                 // microbenchmark demonstrates async running of IntFuture
+```
+[🠕](#future0)
+
+### Future.FlatMap
+```go
+// Gives the ability to chain operations together in blocking and non-blocking manner
+func (f IntFuture) FlatMap<Type>(t func(Int) <Type>Future) <Type>Future
+
+// examples
+func (f IntFuture) FlatMapInt(t func(Int) IntFuture) IntFuture
+func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
+...
+```
+[🠕](#future0) Example: compose futures in blocking manner
+
+```go
+// Task: implement two async functions.
+// Each function takes some time (2 seconds) and return some number.
+// And then we should multiple results of these functions in blocking manner.
+// Full time of execution both futures will be ~4000 milliseconds.
+// Therefore these futures will be executed SEQUENTIALLY
+
+t1 := time.Now().Unix()
+f := MakeIntFuture(func () Int {
+    time.Sleep(2 * time.Second)                             // some payload emulation
+    return 10                             
+}).FlatMapInt(func (a Int) Int {
+    return MakeIntFuture(func () Int {
+        time.Sleep(2 * time.Second)                         // some payload emulation
+        return e * 20                     
+    })
+})
+t2 := time.Now().Unix()
+fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
+
+
+t3 := time.Now().Unix()
+var res1 Int = t1.Result()                                  // 10 * 20
+t4 := time.Now().Unix()
+fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseconds
+                                                            // SEQUENTIAL execution
+
+```
+
+[🠕](#future0) Example: compose futures in NON-blocking manner
+
+```go
+// Task: implement two async functions.
+// Each function takes some time (2 seconds) and return some number.
+// And then we should multiple results of these functions in NON-blocking manner.
+// Full time of executions both futures will be ~2000 milliseconds.
+// Therefore these futures will be executed PARALLEL
+
+t1 := time.Now().Unix()
+f1 := MakeIntFuture(func () Int {
+    time.Sleep(2 * time.Second)                             // some payload emulation
+    return 10
+}).FlatMapInt()
+
+f2 := MakeIntFuture(func (e Int) Int {
+    return MakeIntFuture(func () Int {
+        time.Sleep(2 * time.Second)                         // some payload emulation
+        return e * 20
+    })
+})
+
+// compose futures in NON-blocking manner
+var futureResult IntFuture = f1.FlatMapInt(func (a Int) IntFuture {
+    return f2.MapInt(func (b Int) Int {
+        return a * b
+    })
+})
+
+t2 := time.Now().Unix()
+fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
+
+
+t3 := time.Now().Unix()
+var res1 Int = t1.Result()                                  // 10 * 20
+t4 := time.Now().Unix()
+fmt.Println("get result of composing futures at", t4 - t3)  // at 2000 milliseconds
+                                                            // PARALLEL execution
+```
+[🠕](#future0)
+
+### Future.Map
+```go
+
+```
+Example:
+```go
+
+```
+[🠕](#future0)
+
+### Future.Result
+```go
+
+```
+Example:
+```go
+
+```
+[🠕](#future0)
+
+### Future.Success
+```go
+
+```
+Example:
+```go
+
+```
+[🠕](#future0)
+
 ### Supported future types
 
 | Future type              | Scala analogue                |
@@ -1514,7 +1651,7 @@ import (
 | Float64ArrayFuture       | Future[Array[Double]]         |
 | AnyArrayFuture           | Future[Array[Any]]            |
 
-[🠕](#concurrency0)
+[🠕](#future0)
 
 
 ## Contributing
