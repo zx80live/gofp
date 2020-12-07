@@ -2026,11 +2026,11 @@ This example uses `Future.Result` invocation which is described in [Future.Resul
 t1 := time.Now().Unix()
 f := MakeIntFuture(func () Int {
     time.Sleep(2 * time.Second)                             // some payload emulation
-    return 10                             
+    return Int(10)                             
 }).FlatMapInt(func (a Int) Int {
     return MakeIntFuture(func () Int {
         time.Sleep(2 * time.Second)                         // some payload emulation
-        return e * 20                     
+        return Int(e * 20)                     
     })
 })
 t2 := time.Now().Unix()
