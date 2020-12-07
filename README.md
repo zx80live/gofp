@@ -38,7 +38,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [List.ToString](#listtostring)
     + [Supported list types](#supported-list-types)
   * [Option](#option)<a name="option0"></a>
-    + [Create option](#createoption)
+    + [Create option](#create-option)
     + [Option.Equals](#optionequals)
     + [Option.Filter](#optionfilter)
     + [Option.FlatMap](#optionflatmap)
