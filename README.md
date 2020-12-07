@@ -1648,7 +1648,111 @@ res2 := Int(10).Max(20)     // 20
 ### Predicates composition
 [[🠕]](#predicates0)
 
-### Supported predicates types
+### Supported predicate types
+<details><summary>Supported predicate types</summary>
+
+| Predicate type               |      |
+| ---------------------------- | ---- |
+| BoolPredicate                |      |
+| StringPredicate              |      |
+| IntPredicate                 |      |
+| Int64Predicate               |      |
+| BytePredicate                |      |
+| RunePredicate                |      |
+| Float32Predicate             |      |
+| Float64Predicate             |      |
+| AnyPredicate                 |      |
+| BoolArrayPredicate           |      |
+| StringArrayPredicate         |      |
+| IntArrayPredicate            |      |
+| Int64ArrayPredicate          |      |
+| ByteArrayPredicate           |      |
+| RuneArrayPredicate           |      |
+| Float32ArrayPredicate        |      |
+| Float64ArrayPredicate        |      |
+| AnyArrayPredicate            |      |
+| BoolArrayArrayPredicate      |      |
+| StringArrayArrayPredicate    |      |
+| IntArrayArrayPredicate       |      |
+| Int64ArrayArrayPredicate     |      |
+| ByteArrayArrayPredicate      |      |
+| RuneArrayArrayPredicate      |      |
+| Float32ArrayArrayPredicate   |      |
+| Float64ArrayArrayPredicate   |      |
+| AnyArrayArrayPredicate       |      |
+| BoolOptionPredicate          |      |
+| StringOptionPredicate        |      |
+| IntOptionPredicate           |      |
+| Int64OptionPredicate         |      |
+| ByteOptionPredicate          |      |
+| RuneOptionPredicate          |      |
+| Float64OptionPredicate       |      |
+| AnyOptionPredicate           |      |
+| BoolOptionOptionPredicate    |      |
+| StringOptionOptionPredicate  |      |
+| IntOptionOptionPredicate     |      |
+| Int64OptionOptionPredicate   |      |
+| RuneOptionOptionPredicate    |      |
+| Float32OptionOptionPredicate |      |
+| Float64OptionOptionPredicate |      |
+| AnyOptionOptionPredicate     |      |
+| BoolArrayOptionPredicate     |      |
+| StringArrayOptionPredicate   |      |
+| IntArrayOptionPredicate      |      |
+| Int64ArrayOptionPredicate    |      |
+| ByteArrayOptionPredicate     |      |
+| RuneArrayOptionPredicate     |      |
+| Float32ArrayOptionPredicate  |      |
+| Float64ArrayOptionPredicate  |      |
+| AnyArrayOptionPredicate      |      |
+| BoolListOptionPredicate      |      |
+| StringListOptionPredicate    |      |
+| IntListOptionPredicate       |      |
+| Int64ListOptionPredicate     |      |
+| ByteListOptionPredicate      |      |
+| RuneListOptionPredicate      |      |
+| Float32ListOptionPredicate   |      |
+| Float64ListOptionPredicate   |      |
+| AnyListOptionPredicate       |      |
+| BoolListPredicate            |      |
+| StringListPredicate          |      |
+| IntListPredicate             |      |
+| Int64ListPredicate           |      |
+| ByteListPredicate            |      |
+| RuneListPredicate            |      |
+| Float32ListPredicate         |      |
+| Float64ListPredicate         |      |
+| AnyListPredicate             |      |
+| BoolArrayListPredicate       |      |
+| StringArrayListPredicate     |      |
+| IntArrayListPredicate        |      |
+| Int64ArrayListPredicate      |      |
+| ByteArrayListPredicate       |      |
+| RuneArrayListPredicate       |      |
+| Float32ArrayListPredicate    |      |
+| Float64ArrayListPredicate    |      |
+| AnyArrayListPredicate        |      |
+| BoolOptionListPredicate      |      |
+| StringOptionListPredicate    |      |
+| IntOptionListPredicate       |      |
+| Int64OptionListPredicate     |      |
+| ByteOptionListPredicate      |      |
+| RuneOptionListPredicate      |      |
+| Float32OptionListPredicate   |      |
+| Float64OptionListPredicate   |      |
+| AnyOptionListPredicate       |      |
+| BoolListListPredicate        |      |
+| StringListListPredicate      |      |
+| IntListListPredicate         |      |
+| Int64ListListPredicate       |      |
+| ByteListListPredicate        |      |
+| RuneListListPredicate        |      |
+| Float32ListListPredicate     |      |
+| Float64ListListPredicate     |      |
+| AnyListListPredicate         |      |
+
+</details>
+
 [[🠕]](#predicates0)
 
 ## Concurrency API
