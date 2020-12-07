@@ -1450,6 +1450,18 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 [[🠕]](#boxed0)
 
+### Underlined
+[[🠕]](#boxed0)
+
+### Converters
+[[🠕]](#boxed0)
+
+### List constructors
+[[🠕]](#boxed0)
+
+### Math and logic operations
+[[🠕]](#boxed0)
+
 ### Supported boxed types
 <details><summary>Supported boxed types (click to expand)</summary>
 
