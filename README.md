@@ -138,6 +138,8 @@ go run test.go
 Hello functional programming in GO!
 List(2,4)
 ```
+4. Explore this library by the examples which are presented in the following documentation. Good luck! :)
+
 ## Collection API
 
 Current library supports the following collection types: `Arrays`, `Lists` and `Options`. Each type is monad and supports functions such as `Map`, `FlatMap`, `Filter` and etc.
