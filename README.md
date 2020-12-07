@@ -1495,7 +1495,7 @@ func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
 [🠕](#future0)
 
 #### Future.FlatMap.Blocking composition
-`FlatMap` allows to compose two async calculations (which are presented as two futures) in the blocking manner. In other words, the resulting future will be result of sequential calculations of two futures.
+`FlatMap` allows to compose two async calculations (which are presented as two futures) in the blocking manner. In other words, the resulting future will be result of sequential calculations of two futures. So the inner future which is mapped to outer future will be started when outer future will be completed.
 This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
@@ -1530,7 +1530,7 @@ fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseco
 [🠕](#future0)
 
 #### Future.FlatMap.NON-blocking composition
-`FlatMap` allows to compose two async calculations (which are presented as two futures) in the non-blocking manner. In other words, the resulting future will be result of parallel calculations of two futures.
+`FlatMap` allows to compose two async calculations (which are presented as two futures) in the non-blocking manner. In other words, the resulting future will be result of parallel calculations of two futures. So the both futures should be defined before than they will be composed via `FlatMap`. In this case they will be executed parallely.
 This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
