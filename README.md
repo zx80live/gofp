@@ -1990,7 +1990,7 @@ Example:
 ```go
 t1 := time.Now().Unix()
 // create future
-f1 := IntFuture(func() Int {
+f1 := MakeIntFuture(func() Int {
     time.Sleep(1 * time.Second)
     return Int(10)
 })
