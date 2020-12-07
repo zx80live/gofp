@@ -82,6 +82,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Identity](#identity)
     + [String transformers](#string-transformers)
 - [Predef](#predef)<a name="predef0"></a>
+    + [Require](#require)
 - [Concurrency API](#concurrency-api)<a name="concurrency0"></a>
   * [Future](#future)<a name="future0"></a>
     + [Create future](#create-future)  
