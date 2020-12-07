@@ -1447,16 +1447,68 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 ## Boxed types
+Boxed types are just wrappers under primitive go-types. These wrappers support additional operations which are desrcibed in this section.
 
 [[🠕]](#boxed0)
 
 ### Underlined
+```go
+// Returns underlined value from boxed
+func (e Int) Underlined() int
+func (e String) Underlined() string
+...
+```
+Example:
+```go
+var a Int = Int(10)   // explicit boxing
+var b Int = 20        // implicit boxing
+
+var v1 int = a.Underlined()   // returns underlined value 10
+var v2 int = b.Underlined()   // returns underlined value 20
+
+```
+
 [[🠕]](#boxed0)
 
+
 ### Converters
+
+#### String.ToArray
+```go
+// Converts string to array of runes (character codes)
+func (s String) ToArray() RuneArray
+```
+Example:
+```go
+s := String("Hello")
+arr := s.ToArray()      // RuneArray(72,101,108,108,111)
+```
+[[🠕]](#boxed0)
+
+#### String.ToLetterArray
+```go
+// Coverts string to letter array
+func (s String) ToLetterArray() StringArray
+```
+Example:
+```go
+s := String("Hello")
+arr := s.ToLetterArray()  // StringArray("H", "e", "l", "l", "o")
+```
 [[🠕]](#boxed0)
 
 ### List constructors
+```go
+// Create list from two elements `a` and `b`
+func (a Int) Cons(b Int) IntList
+func (a String) Cons(b String) StringList
+...
+```
+Example:
+```go
+l1 := Int(10).Cons(20)                         // List(20, 10)
+l2 := String("one").Cons("two").Cons("three")  // List("three", "two", "one")
+```
 [[🠕]](#boxed0)
 
 ### Math and logic operations
