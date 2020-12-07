@@ -1719,10 +1719,10 @@ l := MakeStringList("Hello", "abc", "127.0.0.1", "255.255.255.0", "world", "127"
 var matchIp StringPredicate = 
         MatchRegexpString("[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}")
    
-ip := l.Filter(matchIp)         // List("127.0.0.1", "255.255.255.0")
+ipList := l.Filter(matchIp)         // List("127.0.0.1", "255.255.255.0")
 
 var onlyWords = MatchRegexpString("[a-zA-Z]+")
-words := l.Filter(onlyWords)    // List("Hello", "abc", "world")
+words := l.Filter(onlyWords)        // List("Hello", "abc", "world")
 ```
 
 [[🠕]](#predicates0)
