@@ -1860,13 +1860,48 @@ l.Filter(p3)     // List(-2,-6)
 [[🠕]](#predicates0)
 
 ## Transformers
-Transformers are functions which transform one type to other type `A => B`. Transformers are used as function's arguments in the following operations on monads: `Map`, `FlatMap`
+Transformers are functions which transform one type to other type `A => B`. Transformers are used as function's arguments in the following operations on monads: `Map`, `FlatMap`, `GroupBy`
 [[🠕]](#transformers0)
 
 ### Identity
+```go
+// Just return value without transformation
+var IntIdentity func(int) int = func(i int) int { return i }
+...
+```
+Examples:
+```go
+l := MakeIntList(1,2,3,1,3,3,4)
+
+groups := l.GroupBy(IntIdentity)
+/*
+   Map(1 -> List(1,1),
+       2 -> List(2),
+       3 -> List(3,3,3),
+       4 -> List(4))
+*/
+```
+
 [[🠕]](#transformers0)
 
 ### String transformers
+```go
+// Build transformer which transform string to matched regex groups
+func RegexGroups(r *regexp.Regexp) func(string) []string
+func StringRegexGroups(pattern string) func(string) []string
+```
+Example:
+```go
+l := MakeStringList("10015-pav", "10016-ant", "10017-zzz")
+
+
+regex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
+
+res1 := l.MapStringArray(idNameRegex) 
+/* StringArrayList (Array("10015-pav", "10015", "pav"),
+                    Array("10016-ant", "10016", "ant"),
+                    Array("10017-zzz", "10017", "zzz")) */
+```
 [[🠕]](#transformers0)
 
 ## Concurrency API
