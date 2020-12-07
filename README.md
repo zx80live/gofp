@@ -1497,6 +1497,30 @@ arr := s.ToLetterArray()  // StringArray("H", "e", "l", "l", "o")
 ```
 [[🠕]](#boxed0)
 
+#### String.ToInt
+```go
+// Converts string to integer or throws exception for wrong format 
+func (s String) ToInt Int
+```
+Example:
+```go
+var n1 Int = String("10").ToInt()     // Int(10)
+var n2 Int = String("zz").ToInt()     // panic("wrong format")
+```
+[[🠕]](#boxed0)
+
+#### String.ToIntOption
+```go
+// Converts string to Some(int) for correct format and None for wrong format
+func (s String) ToIntOption() IntOption
+```
+Example:
+```go
+var n1 IntOption = String("10").ToIntOption()  // Some(10)
+var n2 IntOption = String("zz").ToIntOption()  // None
+```
+[[🠕]](#boxed0)
+
 ### List constructors
 ```go
 // Create list from two elements `a` and `b`
