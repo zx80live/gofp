@@ -1585,10 +1585,11 @@ func (f IntFuture) MapString(t func(Int) String) StringFuture
 ```
 Example:
 ```go
-f1 := MakeIntFuture(func() Int { return 10 })                                       // Future(10)
+f1 := MakeIntFuture(func() Int { return 10 })                  // Future(10)
 
-res1 := f1.MapInt(func(e Int) Int { return e * 10 })                                // Future(100)
-res2 := f1.MapString(func(e Int) String { return String(fmt.Sprintf("<%v>", e)) })  // Futue("<10>")
+res1 := f1.MapInt(func(e Int) Int { return e * 10 })           // Future(100)
+res2 := f1.MapString(func(e Int) String { 
+    return String(fmt.Sprintf("<%v>", e)) })                   // Futue("<10>")
 ```
 [🠕](#future0)
 
