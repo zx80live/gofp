@@ -1638,8 +1638,8 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 ```
 [🠕](#future0)
 
-### Supported future types
-<details><summary>types</summary>
+
+<details><summary>### Supported future types</summary>
 
 | Future type              | Scala analogue                |
 | ------------------------ | ----------------------------- |
