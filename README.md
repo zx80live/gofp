@@ -115,7 +115,7 @@ Current library supports the following collection types: `Arrays`, `Lists` and `
 ### List
 
 All examples of  this section use a `IntList` type. But this API is supported in the other array types also. (See [Supported list types](#supported-list-types) section)
-[🠕](#list0)
+[[🠕]](#list0)
 
 #### List structure
 
@@ -137,7 +137,7 @@ type IntList struct {
 }
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 #### Create list
 
@@ -166,7 +166,7 @@ l4 := String("one").Cons("two").Cons("three") // List("three", "two", "one")
 
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -185,7 +185,7 @@ l1 := MakeIntList(1,2,3,4,5)
 l2 := l1.Copy()
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 #### List.Count
 
@@ -203,7 +203,7 @@ l.Count(func(e int) bool { return e % 2 == 0})    // 2
 l.Count(EvenInt)                                  // 2
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -232,7 +232,7 @@ res2 := l.DropRight(2)                            // IntList(10,20,30)
 res3 := l.DropWhile(func (e int) bool { e < 40 }) // IntList(40,50)                      
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -263,7 +263,7 @@ res5 := NilInt.IsEmpty()  // true
 res6 := NilInt.NonEmpty() // false
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -295,7 +295,7 @@ l4.Equals(l5)  // true
 l4.Equals(l6)  // false
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -321,7 +321,7 @@ res2 := l.Filter(EvenInt).Filter(PosInt)                   // use library predic
 res3 := l.Filter(EvenInt.And(PosInt))                      // compose predicates     O(n)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -344,7 +344,7 @@ var res3 IntOption = l.Find(NegInt)                             // None
 
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -371,7 +371,7 @@ l.FlatMapInt(func(e IntList) IntList {
     return e.MapInt(func(e int) int) { return e * 10 }})  // List(10,20,30,40,50,60,70)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -395,7 +395,7 @@ l := MakeIntListList(MakeIntList(1,2,3), Nil, MakeIntList(4,5), MakeIntList(6, 7
 var res IntList = l.Flatten()   // List(1,2,3,4,5,6,7)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -428,7 +428,7 @@ str := l.FoldLeftString(
           func(acc, el) string { return fmt.Sprintf("%v|%v", acc, el)}) // >1|2|3|4|5
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -449,7 +449,7 @@ f.Foreach(func(e int) {
 })
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -526,7 +526,7 @@ res3 := shapes.GroupByAny(byArea)
  )
 */
 ```
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -557,7 +557,7 @@ h2Opt := l.Tail().Tail().Tail()     // NoneInt
 l.Tail().Tail().Tail().Head()       // panic("there is no heads")
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -583,7 +583,7 @@ r1 := l.MapInt(func(e int) int { return e * 10})                        // List(
 r2 := l.MapString(func (e int) string { return fmt.Sprintf("<%v>", e)}) // List("<1>","<2>","<3>")
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -602,7 +602,7 @@ l := MakeIntList(1,2,3)
 str := l.MkString("<", "|", ">")      // "<1|2|3>"
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -625,7 +625,7 @@ Example:
 l := NilInt.Cons(3).Cons(2).Cons(1)   // List(1,2,3)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -647,7 +647,7 @@ l2 := MakeIntList(1,2,3)
 l3 := l2.Cons(4)                       // List(4,1,2,3)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -666,7 +666,7 @@ l := MakeIntList(1,2,3)
 sum := l.Reduce(func(acc, el int) int { return acc + el })  // sum = 1 + 2 + 3
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -685,7 +685,7 @@ l1 := MakeIntList(1,2,3)
 l2 := l1.Reverse()                       // List(3,2,1)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -708,7 +708,7 @@ res2 := l2.Size()         // 0
 res3 := NilInt            // 0
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -737,7 +737,7 @@ res2 := l.TakeRight(2)                            // List(40,50)
 res3 := l.TakeWhile(func (e int) bool { e < 40})  // List(10,20,30)
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -756,7 +756,7 @@ l := MakeIntList(1,2,3)
 a := l.ToArray()          // []int{1,2,3}
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -778,7 +778,7 @@ l2 := MakeIntListList(
         MakeIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
 ```
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -828,7 +828,7 @@ l2 := MakeIntListList(
 | AnyListList       | List[List[Any]]       |             |
 </details>
 
-[🠕](#list0)
+[[🠕]](#list0)
 
 
 
@@ -846,7 +846,7 @@ Example:
 o1 := MakeIntOption(10)     // Some(10)
 o2 := IntOpt(20)            // Some(20)
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 #### Option.Equals
 ```go
@@ -864,7 +864,7 @@ o1.Equals(o3)            // true
 o1.Equals(NoneInt)       // false
 NoneInt.Equals(NoneInt)  // true
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.Filter
@@ -880,7 +880,7 @@ res2 := o.Filter(EvenInt)                                // Some(10)
 res3 := o.Filter(func(e int) bool { return e == 20 })    // None
 res4 := o.Filter(NegInt)                                 // None
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.FlatMap
@@ -926,7 +926,7 @@ sumFunc(NoneInt, IntOpt(20), IntOpt(30))                  // None
 sumFunc(NoneInt, NoneInt, IntOpt(30))                     // None
 ...
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.Flatten
@@ -939,7 +939,7 @@ Example:
 o := MakeIntOptionOption(MakeIntOption(10))    // Some(Some(10))
 flatten := o.Flatten()                         // Some(10)
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.FoldLeft
@@ -960,7 +960,7 @@ res1 := l.FoldLeftInt(
             0, 
             func(acc, el) int { return acc + el})   // sum = 0 + 10
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.Foreach
@@ -975,7 +975,7 @@ f.Foreach(func(e int) {
     fmt.Println("> ", e)
 })
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.IsDefined
@@ -988,7 +988,7 @@ Example:
 IntOption(10).IsDefined()     // true
 NoneInt.IsDefined()           // false
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.IsEmpty
@@ -1001,7 +1001,7 @@ Example:
 NoneInt.IsEmpty()             // true
 IntOpt(10).IsEmpty()          // false
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.Map
@@ -1019,7 +1019,7 @@ o := IntOpt(10)
 res1 := o.MapInt(func (e int) int { return e * 10 })                       // Some(100)
 res2 := o.MapString(func (e int) string { return fmt.Sprintf("<%v>", e) }) // Some("<10>") 
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 #### Option.None
 
@@ -1046,7 +1046,7 @@ func parseIp(str string) StringOption {
 ip1 := parseIp("")           // None
 ip2 := parseIp("127.0.0.1")  // Some("127.0.0.1")
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 #### Option.ToString
@@ -1062,7 +1062,7 @@ var o2 IntOption = NoneInt
 var str1 string = o1.ToString()      // "Some(10)"
 var str2 string = o2.TOString()      // "None"
 ```
-[🠕](#option0)
+[[🠕]](#option0)
 
 #### Supported option types
 <details><summary>Supported option types (click to expand)</summary>
@@ -1106,7 +1106,7 @@ var str2 string = o2.TOString()      // "None"
 | AnyListOption       | Option[List[Any]]       |
 </details>
 
-[🠕](#option0)
+[[🠕]](#option0)
 
 
 ### Array
@@ -1124,7 +1124,7 @@ Example:
 ```go
 arr := IntArray([]int{10, 20, 30})
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Array.Count
@@ -1142,7 +1142,7 @@ arr.Count(EvenInt)                                        // 2
 arr.Count(PosInt)                                         // 5
 arr.Count(NegInt)                                         // 0
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Array.Drops
@@ -1169,7 +1169,7 @@ res1 := arr.Drop(2)                                 // Array(30,40,50)
 res2 := arr.DropRight(2)                            // Array(10,20,30)
 res3 := arr.DropWhile(func (e int) bool { e < 40 }) // Array(40,50)
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Array.Equals
@@ -1190,7 +1190,7 @@ arr3 := IntArray([]int{10,20,30})
 arr1.Equals(arr2)   // true
 arr1.Equals(arr3)   // false
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
@@ -1216,7 +1216,7 @@ res2 := arr.Filter(EvenInt).Filter(PosInt)                 // use library predic
 res3 := arr.Filter(EvenInt.And(PosInt))                    // compose predicates
 
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
@@ -1237,7 +1237,7 @@ var res1 IntOption = arr.Find(func(e int) bool { return e == 3 }) // Some(3)
 var res2 IntOption = arr.Find(EvenInt)                            // Some(2)
 var res3 IntOption = arr.Find(NegInt)                             // None
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
@@ -1266,7 +1266,7 @@ for _, e := range arr {
     fmt.Println(e)
 }
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Array.Heads and tails
@@ -1297,7 +1297,7 @@ var tail3 = tail2.Tail()                // empty array
 var hopt3 = tail3.HeadOption()          // NoneInt
 tail3.Head()                            // panic("there is no heads")
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Array.Map
@@ -1330,7 +1330,7 @@ Output:
 ~200~
 ~300~
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
@@ -1348,7 +1348,7 @@ Example:
 arr := IntArray([]int{1,2,3})
 fmt.Println(arr.MkString("(", "|", ")"))  // (1|2|3)
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
@@ -1376,7 +1376,7 @@ res1 := arr.Take(2)                                 // Array(10,20)
 res2 := arr.TakeRight(2)                            // Array(40,50)
 res3 := arr.TakeWhile(func (e int) bool { e < 40})  // Array(10,20,30)
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
@@ -1394,7 +1394,7 @@ Example:
 arr := IntArray([]int{1,2,3})
 var l IntList = arr.ToList()
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Array.ToString
@@ -1414,7 +1414,7 @@ fmt.Println(arr.ToString())                        // [1,2,3]
 arr2 := IntIntArray([]int{1,2}, []int[]{3,4,5})
 fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]          
 ```
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 #### Supported array types
@@ -1442,13 +1442,13 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 | `AnyArrayArray`     | Array[Array[Any]]     | `[][]Any`     |
 </details>
 
-[🠕](#array0)
+[[🠕]](#array0)
 
 
 
 ## Boxed types
 
-[🠕](#boxed0)
+[[🠕]](#boxed0)
 
 ### Supported boxed types
 <details><summary>Supported boxed types (click to expand)</summary>
@@ -1476,7 +1476,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 | Any        | interface {} |
 </details>
 
-[🠕](#boxed0)
+[[🠕]](#boxed0)
 
 
 ## Concurrency API
@@ -1491,7 +1491,7 @@ import (
   . "github.com/zx80live/gofp/fp/concurrent"
 )
 ```
-[🠕](#concurrency0)
+[[🠕]](#concurrency0)
 
 ### Create future
 ```go
@@ -1510,7 +1510,7 @@ t2 := time.Now().Unix()
 fmt.Println("at ", t2 - t1)      // at 0 milliseconds
                                  // microbenchmark demonstrates async running of IntFuture
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 ### Future.FlatMap
 ```go
@@ -1522,7 +1522,7 @@ func (f IntFuture) FlatMapInt(t func(Int) IntFuture) IntFuture
 func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
 ...
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 #### Future.FlatMap.Blocking composition
 `FlatMap` allows to compose two async calculations (which are presented as two futures) in the blocking manner. In other words, the resulting future will be result of sequential calculations of two futures. So the inner future which is mapped to outer future will be started when outer future will be completed.
@@ -1557,7 +1557,7 @@ fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseco
                                                             // SEQUENTIAL execution
 
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 #### Future.FlatMap.NON-blocking composition
 `FlatMap` allows to compose two async calculations (which are presented as two futures) in the non-blocking manner. In other words, the resulting future will be result of parallel calculations of two futures. So the both futures should be defined before than they will be composed via `FlatMap`. In this case they will be executed parallely.
@@ -1601,7 +1601,7 @@ t4 := time.Now().Unix()
 fmt.Println("get result of composing futures at", t4 - t3)  // at 2000 milliseconds
                                                             // PARALLEL execution
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 ### Future.Map
 ```go
@@ -1621,7 +1621,7 @@ res1 := f1.MapInt(func(e Int) Int { return e * 10 })           // Future(100)
 res2 := f1.MapString(func(e Int) String { 
     return String(fmt.Sprintf("<%v>", e)) })                   // Future("<10>")
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 ### Future.Result
 ```go
@@ -1650,7 +1650,7 @@ t5 := time.Now().Unix()
 fmt.Printl("blocks current thread and return result of f2 at", t6 - t5)   // at ~2000 millis
 
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 ### Future.Success
 ```go
@@ -1662,7 +1662,7 @@ Example:
 ```go
 var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 ```
-[🠕](#future0)
+[[🠕]](#future0)
 
 ### Supported future types
 <details><summary>Supported future types (click to expand)</summary>
@@ -1725,13 +1725,13 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 | AnyArrayFuture           | Future[Array[Any]]            |
 </details>
 
-[🠕](#future0)
+[[🠕]](#future0)
 
 
 ## Contributing
 
 TODO describe
-[🠕](#contributing0)
+[[🠕]](#contributing0)
 
 
 ## License
@@ -1739,4 +1739,4 @@ TODO describe
 This library is distributed under MIT license found in the LICENSE file.
 
 TODO clarify
-[🠕](#table-of-contents)
+[[🠕]](#table-of-contents)
