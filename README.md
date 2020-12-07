@@ -110,12 +110,12 @@ import . "github.com/zx80live/gofp/fp"
 
 Current library supports the following collection types: `Arrays`, `Lists` and `Options`. Each type is monad and supports functions such as `Map`, `FlatMap`, `Filter` and etc.
 
-[^](#list0)
+[🠕🠕](#list0)
 
 ### List
 
 All examples of  this section use a `IntList` type. But this API is supported in the other array types also. (See [Supported list types](#supported-list-types) section)
-[^](#list0)
+[🠕](#list0)
 
 #### List structure
 
@@ -137,7 +137,7 @@ type IntList struct {
 }
 ```
 
-[^](#list0)
+[🠕](#list0)
 
 #### Create list
 
