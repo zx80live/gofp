@@ -1575,31 +1575,61 @@ fmt.Println("get result of composing futures at", t4 - t3)  // at 2000 milliseco
 
 ### Future.Map
 ```go
+// Transform content of the future
+func (f IntFuture) Map<Type>(t func(Int) <Type>) <Type>Future
 
+// examples
+func (f IntFuture) MapInt(t func(Int) Int) IntFuture
+func (f IntFuture) MapString(t func(Int) String) StringFuture
+...
 ```
 Example:
 ```go
+f1 := MakeIntFuture(func() Int { return 10 })                                       // Future(10)
 
+res1 := f1.MapInt(func(e Int) Int { return e * 10 })                                // Future(100)
+res2 := f1.MapString(func(e Int) String { return String(fmt.Sprintf("<%v>", e)) })  // Futue("<10>")
 ```
 [🠕](#future0)
 
 ### Future.Result
 ```go
-
+// Await and return the result of future
+// This method blocks the current thread (routine) from which it was invoked
+func (f IntFuture) Result() Int
 ```
 Example:
 ```go
+t1 := time.Now().Unix()
+f1 := MakeIntFuture(func() Int { return 10 })                                   // future which takes ~0 milliseconds
+f2 := MakeIntFuture(func() Int { time.sleep(2 * time.Second); return 20 })      // future wich takes ~2000 milliseconds
+t2 := time.Now().Unix()
+
+fmt.Println("create futures at ", t2 - t1)    // at ~0 milliseconds
+
+
+t3 := time.Now().Unix()
+res1 := f1.Result()                
+t4 := time.Now().Unix()
+fmt.Printl("blocks current thread and return result of f1 at", t4 - t3)   // at ~0 milliseconds
+
+t5 := time.Now().Unix()
+res2 := f2.Result()                
+t5 := time.Now().Unix()
+fmt.Printl("blocks current thread and return result of f2 at", t6 - t5)   // at ~2000 milliseconds
 
 ```
 [🠕](#future0)
 
 ### Future.Success
 ```go
-
+// Create already completed future with specified result
+// Thus, it can be used when known result should be returned as future
+func SuccessIntFuture(v Int) IntFuture
 ```
 Example:
 ```go
-
+var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 ```
 [🠕](#future0)
 
