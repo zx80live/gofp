@@ -108,8 +108,9 @@ Or do the following steps if you want to create an empty project:
 
 1. Create new go-module project in your `$WORK_DIR` directory
 ```bash
-mkdir $WORK_DIR/test-gofp
-cd $WORK_DIR/test-gofp
+cd $WORK_DIR
+mkdir test-gofp
+cd test-gofp
 go mod init example.com/username/test-gofp
 vim test.go
 ```
