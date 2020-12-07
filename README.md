@@ -1751,7 +1751,7 @@ l.Filter(p3)     // List(-2,-6)
 [[🠕]](#predicates0)
 
 ### Supported predicate types
-<details><summary>Supported predicate types</summary>
+<details><summary>Supported predicate types (click to expand)</summary>
 
 | Predicate type               |      |
 | ---------------------------- | ---- |
