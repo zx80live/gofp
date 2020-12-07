@@ -7,7 +7,7 @@ This library was inspired by Scala (collection API, functional paradigm and, con
 
 ## Table of contents
 
-- [Getting started](#getting-started)
+- [Getting started](#getting-started)<a name="toc0"></a>
 - [Collection API](#collection-api)
   * [List](#list)<a name="list0"></a>
     + [List structure](#list-structure)
@@ -138,7 +138,7 @@ go run test.go
 Hello functional programming in GO!
 List(2,4)
 ```
-4. Explore this library by the examples which are presented in the following documentation. Good luck! :)
+4. Explore this library by the examples which are presented in that [documentation](#toc0). Good luck!
 
 ## Collection API
 
