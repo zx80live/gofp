@@ -1490,7 +1490,11 @@ func (f IntFuture) FlatMapInt(t func(Int) IntFuture) IntFuture
 func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
 ...
 ```
-[🠕](#future0) Example: compose futures in blocking manner
+[🠕](#future0)
+
+#### Future.FlatMap.Blocking composition
+
+Example: compose futures in blocking manner
 
 ```go
 // Task: implement two async functions.
@@ -1520,8 +1524,10 @@ fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseco
                                                             // SEQUENTIAL execution
 
 ```
+[🠕](#future0)
 
-[🠕](#future0) Example: compose futures in NON-blocking manner
+#### Future.FlatMap.NON-blocking composition
+Example: compose futures in NON-blocking manner
 
 ```go
 // Task: implement two async functions.
