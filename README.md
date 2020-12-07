@@ -770,7 +770,8 @@ l2 := MakeIntListList(
 
 
 #### Supported list types
-<details><summary>Table of supported list types (click to expand)</summary>
+
+<details><summary>Supported list types (click to expand)</summary>
 | Array type        | Scala analogue        | Go analogue |
 | ----------------- | --------------------- | ----------- |
 | BoolList          | List[Boolean]         |             |
@@ -1048,7 +1049,7 @@ var str2 string = o2.TOString()      // "None"
 [🠕](#option0)
 
 #### Supported option types
-<details><summary>Table of supported option types (click to expand)</summary>
+<details><summary>Supported option types (click to expand)</summary>
 | Option type         | Scala analogue          |
 | ------------------- | ----------------------- |
 | BoolOption          | Option[Boolean]         |
@@ -1400,7 +1401,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 
 
 #### Supported array types
-<details><summary>Table of supported array types (click to expand)</summary>
+<details><summary>Supported array types (click to expand)</summary>
 | Array type          | Scala analogue        | Go analogue   |
 | ------------------- | --------------------- | ------------- |
 | `BoolArray`         | Array[Bool]           | `[]bool`      |
@@ -1432,7 +1433,7 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 [🠕](#boxed0)
 
 ### Supported boxed types
-<details><summary>Table of supported boxed types (click to expand)</summary>
+<details><summary>Supported boxed types (click to expand)</summary>
 | Boxed type | Go type      |
 | ---------- | ------------ |
 | Bool       | bool         |
@@ -1645,7 +1646,7 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 [🠕](#future0)
 
 ### Supported future types
-<details><summary>Table of supported future types (click to expand)</summary>
+<details><summary>Supported future types (click to expand)</summary>
 
 | Future type              | Scala analogue                |
 | ------------------------ | ----------------------------- |
