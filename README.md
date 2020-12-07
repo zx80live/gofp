@@ -1519,7 +1519,7 @@ fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
 
 t3 := time.Now().Unix()
 // block current main-thread and wait and get result of future
-var res1 Int = f.Result()                                  // 10 * 20
+var res1 Int = f.Result()                                   // 10 * 20
 t4 := time.Now().Unix()
 fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseconds
                                                             // SEQUENTIAL execution
