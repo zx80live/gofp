@@ -1905,6 +1905,23 @@ res1 := l.MapStringArray(idNameRegex)
 ```
 [[🠕]](#transformers0)
 
+## Predef
+Contains some convenient utils.
+[[🠕]](#predef0)
+### Require
+```go
+// Throws exception with message if e-condition is false
+// Can be used as validation of public functions argument
+func Require(e bool, msg string)
+```
+Examples:
+```go
+func Div(a, b Int) Float32 {
+  Require(a != 0, "Divide by zero!")
+  ...
+}
+```
+
 ## Concurrency API
 
 Concurrence API implements a `Future` as abstraction over go routines and channels. It allows to combine async calculations in blocking and non blocking manner.
