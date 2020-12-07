@@ -1482,7 +1482,7 @@ fmt.Println("at ", t2 - t1)      // at 0 milliseconds
 ```
 [🠕](#future0)
 
-### Future.FlatMap
+### [🠕](#future0) Future.FlatMap
 ```go
 // Gives the ability to compose async operations together
 func (f IntFuture) FlatMap<Type>(t func(Int) <Type>Future) <Type>Future
