@@ -2062,7 +2062,7 @@ t1 := time.Now().Unix()
 f1 := MakeIntFuture(func () Int {
     time.Sleep(2 * time.Second)                             // some payload emulation
     return 10
-}).FlatMapInt()
+})
 
 f2 := MakeIntFuture(func (e Int) Int {
     return MakeIntFuture(func () Int {
