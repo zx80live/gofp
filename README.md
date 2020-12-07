@@ -73,10 +73,10 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Math and logic operations](#math-and-logic-operations)
     + [Supported boxed types](#supported-boxed-types)
 - [Predicates](#predicates)<a name="predicates0"></a>
-    + [String predicates](#string-predicates)
-    + [Predicates composition](#predicates-composition)
     + [Empty predicates](#empty-predicates)
     + [Numeric predicates](#numeric-predicates)
+    + [String predicates](#string-predicates)
+    + [Predicates composition](#predicates-composition)
     + [Supported predicate types](#supported-predicate-types)
 - [Transformers](#transformers)<a name="traisnformers0"></a>
     + [Identity](#identity)
@@ -1633,6 +1633,23 @@ res2 := Int(10).Max(20)     // 20
 
 [[🠕]](#boxed0)
 
+## Predicates
+[[🠕]](#predicates0)
+
+### Empty predicates
+[[🠕]](#predicates0)
+
+### Numeric predicates
+[[🠕]](#predicates0)
+
+### String predicates
+[[🠕]](#predicates0)
+
+### Predicates composition
+[[🠕]](#predicates0)
+
+### Supported predicates types
+[[🠕]](#predicates0)
 
 ## Concurrency API
 
