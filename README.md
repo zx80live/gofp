@@ -137,7 +137,7 @@ type IntList struct {
 }
 ```
 
-<p dir='rtl' align='right'>[ content](#list0)</p>
+<p style="direction: rtl; text-align: right">[ content](#list0)</p>
 
 #### Create list
 
