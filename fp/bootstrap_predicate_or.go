@@ -12,35 +12,8 @@ func (p1 StringPredicate) Or(p2 StringPredicate) StringPredicate {
 func (p1 IntPredicate) Or(p2 IntPredicate) IntPredicate {
 	return func(e int) bool { return p1(e) || p2(e) }
 }
-func (p1 Int8Predicate) Or(p2 Int8Predicate) Int8Predicate {
-	return func(e int8) bool { return p1(e) || p2(e) }
-}
-func (p1 Int16Predicate) Or(p2 Int16Predicate) Int16Predicate {
-	return func(e int16) bool { return p1(e) || p2(e) }
-}
-func (p1 Int32Predicate) Or(p2 Int32Predicate) Int32Predicate {
-	return func(e int32) bool { return p1(e) || p2(e) }
-}
 func (p1 Int64Predicate) Or(p2 Int64Predicate) Int64Predicate {
 	return func(e int64) bool { return p1(e) || p2(e) }
-}
-func (p1 UintPredicate) Or(p2 UintPredicate) UintPredicate {
-	return func(e uint) bool { return p1(e) || p2(e) }
-}
-func (p1 Uint8Predicate) Or(p2 Uint8Predicate) Uint8Predicate {
-	return func(e uint8) bool { return p1(e) || p2(e) }
-}
-func (p1 Uint16Predicate) Or(p2 Uint16Predicate) Uint16Predicate {
-	return func(e uint16) bool { return p1(e) || p2(e) }
-}
-func (p1 Uint32Predicate) Or(p2 Uint32Predicate) Uint32Predicate {
-	return func(e uint32) bool { return p1(e) || p2(e) }
-}
-func (p1 Uint64Predicate) Or(p2 Uint64Predicate) Uint64Predicate {
-	return func(e uint64) bool { return p1(e) || p2(e) }
-}
-func (p1 UintptrPredicate) Or(p2 UintptrPredicate) UintptrPredicate {
-	return func(e uintptr) bool { return p1(e) || p2(e) }
 }
 func (p1 BytePredicate) Or(p2 BytePredicate) BytePredicate {
 	return func(e byte) bool { return p1(e) || p2(e) }
@@ -53,12 +26,6 @@ func (p1 Float32Predicate) Or(p2 Float32Predicate) Float32Predicate {
 }
 func (p1 Float64Predicate) Or(p2 Float64Predicate) Float64Predicate {
 	return func(e float64) bool { return p1(e) || p2(e) }
-}
-func (p1 Complex64Predicate) Or(p2 Complex64Predicate) Complex64Predicate {
-	return func(e complex64) bool { return p1(e) || p2(e) }
-}
-func (p1 Complex128Predicate) Or(p2 Complex128Predicate) Complex128Predicate {
-	return func(e complex128) bool { return p1(e) || p2(e) }
 }
 func (p1 AnyPredicate) Or(p2 AnyPredicate) AnyPredicate {
 	return func(e Any) bool { return p1(e) || p2(e) }

@@ -172,12 +172,17 @@ func main() {
 		Foreach(PrintlnStringArray)
 
 	fmt.Println("------------------------")
+
+	var t1 time.Time = time.Now()
 	f1 := MakeIntFuture(func() Int {
 		fmt.Println("f1.invoke")
 		time.Sleep(5 * time.Second)
 		fmt.Println("f1.completed")
 		return 10
 	})
+	t2 := time.Now()
+	fmt.Println("time at", t2.Unix()-t1.Unix())
+
 	f2 := MakeIntFuture(func() Int {
 		fmt.Println("f2.invoke")
 		time.Sleep(4 * time.Second)
@@ -194,4 +199,14 @@ func main() {
 	fmt.Println("result:", f1, f2, res2)
 	fmt.Println(res2.Result())
 
+	fmt.Println(Int(10).Cons(20).Cons(30).ToString())
+	var aa Int = Int(10)
+	var bb Int = 20
+
+	var aav int = aa.Underlined()
+	var bbv int = bb.Underlined()
+
+	fmt.Println(aav, bbv)
+
+	fmt.Println(String("Hello").ToArray().ToString())
 }

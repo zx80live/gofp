@@ -6,24 +6,11 @@ package fp
 func (p BoolPredicate) Neg() BoolPredicate           { return func(e bool) bool { return !p(e) } }
 func (p StringPredicate) Neg() StringPredicate       { return func(e string) bool { return !p(e) } }
 func (p IntPredicate) Neg() IntPredicate             { return func(e int) bool { return !p(e) } }
-func (p Int8Predicate) Neg() Int8Predicate           { return func(e int8) bool { return !p(e) } }
-func (p Int16Predicate) Neg() Int16Predicate         { return func(e int16) bool { return !p(e) } }
-func (p Int32Predicate) Neg() Int32Predicate         { return func(e int32) bool { return !p(e) } }
 func (p Int64Predicate) Neg() Int64Predicate         { return func(e int64) bool { return !p(e) } }
-func (p UintPredicate) Neg() UintPredicate           { return func(e uint) bool { return !p(e) } }
-func (p Uint8Predicate) Neg() Uint8Predicate         { return func(e uint8) bool { return !p(e) } }
-func (p Uint16Predicate) Neg() Uint16Predicate       { return func(e uint16) bool { return !p(e) } }
-func (p Uint32Predicate) Neg() Uint32Predicate       { return func(e uint32) bool { return !p(e) } }
-func (p Uint64Predicate) Neg() Uint64Predicate       { return func(e uint64) bool { return !p(e) } }
-func (p UintptrPredicate) Neg() UintptrPredicate     { return func(e uintptr) bool { return !p(e) } }
 func (p BytePredicate) Neg() BytePredicate           { return func(e byte) bool { return !p(e) } }
 func (p RunePredicate) Neg() RunePredicate           { return func(e rune) bool { return !p(e) } }
 func (p Float32Predicate) Neg() Float32Predicate     { return func(e float32) bool { return !p(e) } }
 func (p Float64Predicate) Neg() Float64Predicate     { return func(e float64) bool { return !p(e) } }
-func (p Complex64Predicate) Neg() Complex64Predicate { return func(e complex64) bool { return !p(e) } }
-func (p Complex128Predicate) Neg() Complex128Predicate {
-	return func(e complex128) bool { return !p(e) }
-}
 func (p AnyPredicate) Neg() AnyPredicate             { return func(e Any) bool { return !p(e) } }
 func (p BoolArrayPredicate) Neg() BoolArrayPredicate { return func(e []bool) bool { return !p(e) } }
 func (p StringArrayPredicate) Neg() StringArrayPredicate {

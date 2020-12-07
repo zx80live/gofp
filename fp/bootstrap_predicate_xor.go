@@ -12,35 +12,8 @@ func (p1 StringPredicate) Xor(p2 StringPredicate) StringPredicate {
 func (p1 IntPredicate) Xor(p2 IntPredicate) IntPredicate {
 	return func(e int) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
-func (p1 Int8Predicate) Xor(p2 Int8Predicate) Int8Predicate {
-	return func(e int8) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Int16Predicate) Xor(p2 Int16Predicate) Int16Predicate {
-	return func(e int16) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Int32Predicate) Xor(p2 Int32Predicate) Int32Predicate {
-	return func(e int32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
 func (p1 Int64Predicate) Xor(p2 Int64Predicate) Int64Predicate {
 	return func(e int64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 UintPredicate) Xor(p2 UintPredicate) UintPredicate {
-	return func(e uint) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Uint8Predicate) Xor(p2 Uint8Predicate) Uint8Predicate {
-	return func(e uint8) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Uint16Predicate) Xor(p2 Uint16Predicate) Uint16Predicate {
-	return func(e uint16) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Uint32Predicate) Xor(p2 Uint32Predicate) Uint32Predicate {
-	return func(e uint32) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Uint64Predicate) Xor(p2 Uint64Predicate) Uint64Predicate {
-	return func(e uint64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 UintptrPredicate) Xor(p2 UintptrPredicate) UintptrPredicate {
-	return func(e uintptr) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 func (p1 BytePredicate) Xor(p2 BytePredicate) BytePredicate {
 	return func(e byte) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
@@ -53,12 +26,6 @@ func (p1 Float32Predicate) Xor(p2 Float32Predicate) Float32Predicate {
 }
 func (p1 Float64Predicate) Xor(p2 Float64Predicate) Float64Predicate {
 	return func(e float64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Complex64Predicate) Xor(p2 Complex64Predicate) Complex64Predicate {
-	return func(e complex64) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
-}
-func (p1 Complex128Predicate) Xor(p2 Complex128Predicate) Complex128Predicate {
-	return func(e complex128) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 func (p1 AnyPredicate) Xor(p2 AnyPredicate) AnyPredicate {
 	return func(e Any) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
