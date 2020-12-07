@@ -1638,8 +1638,8 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 ```
 [🠕](#future0)
 
-
-<details><summary>### Supported future types</summary>
+### Supported future types
+<details><summary>Table of supported types</summary>
 
 | Future type              | Scala analogue                |
 | ------------------------ | ----------------------------- |
@@ -1698,6 +1698,7 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 | Float64ArrayFuture       | Future[Array[Double]]         |
 | AnyArrayFuture           | Future[Array[Any]]            |
 </details>
+
 [🠕](#future0)
 
 
