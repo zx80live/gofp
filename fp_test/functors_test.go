@@ -1,5 +1,14 @@
 package fp_test
 
+import "testing"
+
+/*
+import (
+	"regexp"
+	"testing"
+)
+
+
 import (
 	. "github.com/zx80live/gofp/fp"
 	. "github.com/zx80live/gofp/gotest"
@@ -42,3 +51,4 @@ func TestRegexpGroups(t *testing.T) {
 	AssertEqual(groups[8], "color", t)
 	AssertEqual(groups[9], "green", t)
 }
+*/

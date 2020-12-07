@@ -1,5 +1,6 @@
 package fp_test
 
+/*
 import (
 	. "github.com/zx80live/gofp/fp"
 	. "github.com/zx80live/gofp/gotest"
@@ -84,3 +85,4 @@ func TestFunctorMap(t *testing.T) {
 	}
 
 }
+*/
