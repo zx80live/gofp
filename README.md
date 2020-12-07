@@ -1892,7 +1892,7 @@ func StringRegexGroups(pattern string) func(string) []string
 ```
 Example:
 ```go
-l := MakeStringList("10015-pav", "10016-ant", "10017-zzz")
+l := MakeStringList("10015-pav", "10016-ant", "10017-din")
 
 
 regex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
@@ -1900,7 +1900,7 @@ regex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transfor
 res1 := l.MapStringArray(idNameRegex) 
 /* StringArrayList (Array("10015-pav", "10015", "pav"),
                     Array("10016-ant", "10016", "ant"),
-                    Array("10017-zzz", "10017", "zzz")) */
+                    Array("10017-din", "10017", "din")) */
 ```
 [[🠕]](#transformers0)
 
