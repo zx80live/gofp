@@ -81,6 +81,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
 - [Transformers](#transformers)<a name="traisnformers0"></a>
     + [Identity](#identity)
     + [String transformers](#string-transformers)
+- [Predef](#predef)<a name="predef0"></a>
 - [Concurrency API](#concurrency-api)<a name="concurrency0"></a>
   * [Future](#future)<a name="future0"></a>
     + [Create future](#create-future)  
@@ -91,7 +92,7 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Future.Result](#futureresult)
     + [Future.Success](#futuresuccess)
     + [Supported future types](#supported-future-types)
-- [Predef](#predef)<a name="predef0"></a>
+
 - [Contributing](#contributing)<a name="contributing0"></a>
 - [License](#license)<a name="license0"></a>
 
@@ -1634,6 +1635,7 @@ res2 := Int(10).Max(20)     // 20
 [[🠕]](#boxed0)
 
 ## Predicates
+Predicates are used as function's arguments in the following operations on monads: <Filter>, <Find>, ...
 [[🠕]](#predicates0)
 
 ### Empty predicates
@@ -1856,6 +1858,16 @@ l.Filter(p3)     // List(-2,-6)
 </details>
 
 [[🠕]](#predicates0)
+
+## Transformers
+Transformers are functions which transform one type to other type `A => B`. Transformers are used as function's arguments in the following operations on monads: <Map>, <FlatMap>
+[[🠕]](#transformers0)
+
+### Identity
+[[🠕]](#transformers0)
+
+### String transformers
+[[🠕]](#transformers0)
 
 ## Concurrency API
 
