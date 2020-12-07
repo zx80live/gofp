@@ -104,7 +104,7 @@ Before using functional library import the following package in your project:
 import . "github.com/zx80live/gofp/fp"
 ```
 
-Or do the following steps if you want to create empty project:
+Or do the following steps if you want to create an empty project:
 
 1. Create new go-module project in your `$WORK_DIR` directory
 ```bash
