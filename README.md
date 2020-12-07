@@ -108,10 +108,10 @@ Or do the following steps if you want to create empty project:
 
 1. Create new go-module project in your `$WORK_DIR` directory
 ```bash
-$ mkdir $WORK_DIR/test-gofp
-$ cd $WORK_DIR/test-gofp
-$ go mod init example.com/username/test-gofp
-$ vim test.go
+mkdir $WORK_DIR/test-gofp
+cd $WORK_DIR/test-gofp
+go mod init example.com/username/test-gofp
+vim test.go
 ```
 2. Write the following code in the `$WORK_DIR/test-gofp/test.go` file:
 ```go
@@ -133,7 +133,8 @@ func main() {
 ```
 3. Execute our file:
 ```bash
-$ go run test.go
+go run test.go
+
 Hello functional programming in GO!
 List(2,4)
 ```
