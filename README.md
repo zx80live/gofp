@@ -140,7 +140,7 @@ func main() {
 ```
 
 3. Execute file:
-```bash
+```
 go run test.go
 
 Hello functional programming in GO!
