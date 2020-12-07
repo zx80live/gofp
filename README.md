@@ -1705,6 +1705,24 @@ res3 := l.Filter(EvenInt).Filter(NegInt) // List(-4)
 [[🠕]](#predicates0)
 
 ### String predicates
+```go
+// Build string predicate which check if string is matched to regexp
+func MatchRegexp(r *regexp.Regexp) StringPredicate
+
+// Build string predicate which check if string is matched to pattern
+func MatchRegexpString(pattern string) StringPredicate
+```
+Examples:
+```go
+l := List("Hello", "abc", "127.0.0.1", "255.255.255.0", "world", "127", "255")
+
+var matchIp StringPredicate = MatchRegexpString("[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}\\.")
+ip := l.Filter(matchIp)   // List("127.0.0.1", "255.255.255.0")
+
+var onlyWords = MatchRegexpString("[a-zA-Z]+")
+words := l.Filter(onlyWords) // List("Hello", "abc", "world")
+```
+
 [[🠕]](#predicates0)
 
 ### Predicates composition
