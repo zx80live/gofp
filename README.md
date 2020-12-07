@@ -2052,6 +2052,7 @@ fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseco
 This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
+
 // Task: implement two async functions.
 // Each function takes some time (2 seconds) and return some number.
 // And then we should multiple results of these functions in NON-blocking manner.
@@ -2060,23 +2061,21 @@ This example uses `Future.Result` invocation which is described in [Future.Resul
 
 t1 := time.Now().Unix()
 f1 := MakeIntFuture(func () Int {
-    time.Sleep(2 * time.Second)                             // some payload emulation
-    return 10
-})
-
-f2 := MakeIntFuture(func (e Int) Int {
-    return MakeIntFuture(func () Int {
         time.Sleep(2 * time.Second)                         // some payload emulation
-        return e * 20
-    })
-})
+        return Int(10)
+      })
+
+f2 := MakeIntFuture(func () Int {
+        time.Sleep(2 * time.Second)                         // some payload emulation
+        return Int(20)
+      })
 
 // compose futures in NON-blocking manner
 var futureResult IntFuture = f1.FlatMapInt(func (a Int) IntFuture {
-    return f2.MapInt(func (b Int) Int {
-        return a * b
-    })
-})
+                                 return f2.MapInt(func (b Int) Int {
+                                   return Int(a * b)
+                                 })
+                             })
 
 t2 := time.Now().Unix()
 fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
@@ -2088,6 +2087,7 @@ var res1 Int = futureResult.Result()                        // 10 * 20
 t4 := time.Now().Unix()
 fmt.Println("get result of composing futures at", t4 - t3)  // at 2000 milliseconds
                                                             // PARALLEL execution
+                                                            
 ```
 [[🠕]](#future0)
 
