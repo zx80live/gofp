@@ -1456,107 +1456,62 @@ import (
 
 ### Supported future types
 
-| Future type               | Scala analogue   |
-| ------------------------- | ---------------- |
-| BoolFuture                | Future[Boolean]  |
-| StringFuture              | Future[]         |
-| IntFuture                 | Future[]         |
-| Int64Future               | Future[]         |
-| ByteFuture                | Future[]         |
-| RuneFuture                | Future[]         |
-| Float32Future             | Future[]         |
-| Float64Future             | Future[]         |
-| AnyFuture                 | Future[]         |
-| BoolOptionFuture          | Future[]         |
-| StringOptionFuture        | Future[]         |
-| Int64OptionFuture         | Future[]         |
-| ByteOptionFuture          | Future[]         |
-| RuneOptionFuture          | Future[]         |
-| Float32OptionFuture       | Future[]         |
-| Float64OptionFuture       | Future[]         |
-| AnyOptionFuture           | Future[Option[]] |
-| BoolOptionOptionFuture    | Future[Option[]] |
-| StringOptionOptionFuture  | Future[Option[]] |
-| IntOptionOptionFuture     | Future[Option[]] |
-| Int64OptionOptionFuture   | Future[Option[]] |
-| ByteOptionOptionFuture    | Future[Option[]] |
-| RuneOptionOptionFuture    | Future[Option[]] |
-| Float32OptionOptionFuture | Future[Option[]] |
-| Float64OptionOptionFuture | Future[Option[]] |
-| AnyOptionOptionFuture     | Future[Option[]] |
-| BoolArrayOptionFuture     |                  |
-| StringArrayOptionFuture   |                  |
-| IntArrayOptionFuture      |                  |
-| Int64ArrayOptionFuture    |                  |
-| ByteArrayOptionFuture     |                  |
-| RuneArrayOptionFuture     |                  |
-| Float32ArrayOptionFuture  |                  |
-| Float64ArrayOptionFuture  |                  |
-| AnyArrayOptionFuture      |                  |
-| BoolListOptionFuture      |                  |
-| StringListOptionFuture    |                  |
-| IntListOptionFuture       |                  |
-| Int64ListOptionFuture     |                  |
-| ByteListOptionFuture      |                  |
-| RuneListOptionFuture      |                  |
-| Float32ListOptionFuture   |                  |
-| Float64ListOptionFuture   |                  |
-| AnyListOptionFuture       |                  |
-| BoolArrayFuture           |                  |
-| StringArrayFuture         |                  |
-| IntArrayFuture            |                  |
-| Int64ArrayFuture          |                  |
-| ByteArrayFuture           |                  |
-| RuneArrayFuture           |                  |
-| Float32ArrayFuture        |                  |
-| Float64ArrayFuture        |                  |
-| AnyArrayFuture            |                  |
-| BoolArrayArrayFuture      |                  |
-| StringArrayArrayFuture    |                  |
-| IntArrayArrayFuture       |                  |
-| Int64ArrayArrayFuture     |                  |
-| ByteArrayArrayFuture      |                  |
-| RuneArrayArrayFuture      |                  |
-| Float32ArrayArrayFuture   |                  |
-| Float64ArrayArrayFuture   |                  |
-| AnyArrayArrayFuture       |                  |
-| BoolListFuture            |                  |
-| StringListFuture          |                  |
-| IntListFuture             |                  |
-| Int64ListFuture           |                  |
-| ByteListFuture            |                  |
-| RuneListFuture            |                  |
-| Float32ListFuture         |                  |
-| Float64ListFuture         |                  |
-| AnyListFuture             |                  |
-| BoolArrayListFuture       |                  |
-| StringArrayListFuture     |                  |
-| IntArrayListFuture        |                  |
-| Int64ArrayListFuture      |                  |
-| ByteArrayListFuture       |                  |
-| RuneArrayListFuture       |                  |
-| Float32ArrayListFuture    |                  |
-| Float64ArrayListFuture    |                  |
-| AnyArrayListFuture        |                  |
-| BoolOptionListFuture      |                  |
-| StringOptionListFuture    |                  |
-| IntOptionListFuture       |                  |
-| Int64OptionListFuture     |                  |
-| ByteOptionListFuture      |                  |
-| RuneOptionListFuture      |                  |
-| Float32OptionListFuture   |                  |
-| Float64OptionListFuture   |                  |
-| AnyOptionListFuture       |                  |
-| BoolListListFuture        |                  |
-| StringListListFuture      |                  |
-| IntListListFuture         |                  |
-| Int64ListListFuture       |                  |
-| ByteListListFuture        |                  |
-| RuneListListFuture        |                  |
-| Float32ListListFuture     |                  |
-| Float64ListListFuture     |                  |
-| AnyListListFuture         |                  |
-
+| Future type              | Scala analogue                |
+| ------------------------ | ----------------------------- |
+| BoolFuture               | Future[Boolean]               |
+| StringFuture             | Future[String]                |
+| IntFuture                | Future[Int]                   |
+| Int64Future              | Future[Long]                  |
+| ByteFuture               | Future[Byte]                  |
+| RuneFuture               | Future[Char]                  |
+| Float32Future            | Future[Float]                 |
+| Float64Future            | Future[Double]                |
+| AnyFuture                | Future[Any]                   |
+| BoolOptionFuture         | Future[Option[Boolean]]       |
+| StringOptionFuture       | Future[Option[String]]        |
+| IntOptionFuture          | Future[Option[Int]]           |
+| Int64OptionFuture        | Future[Option[Long]]          |
+| ByteOptionFuture         | Future[Option[Byte]]          |
+| RuneOptionFuture         | Future[Option[Char]]          |
+| Float32OptionFuture      | Future[Option[Float]]         |
+| Float64OptionFuture      | Future[Option[Double]]        |
+| AnyOptionFuture          | Future[Option[Any]]           |
+| BoolListOptionFuture     | Future[Option[Boolean]]       |
+| StringListOptionFuture   | Future[Option[List[String]]]  |
+| IntListOptionFuture      | Future[Option[List[Int]]]     |
+| Int64ListOptionFuture    | Future[Option[List[Long]]]    |
+| ByteListOptionFuture     | Future[Option[List[Byte]]]    |
+| RuneListOptionFuture     | Future[Option[List[Char]]]    |
+| Float32ListOptionFuture  | Future[Option[List[Float]]]   |
+| Float64ListOptionFuture  | Future[Option[List[Double]]]  |
+| AnyListOptionFuture      | Future[Option[List[Any]]]     |
+| BoolArrayOptionFuture    | Future[Option[Array[Bool]]]   |
+| StringArrayOptionFuture  | Future[Option[Array[String]]] |
+| IntArrayOptionFuture     | Future[Option[Array[Int]]]    |
+| Int64ArrayOptionFuture   | Future[Option[Array[Long]]]   |
+| ByteArrayOptionFuture    | Future[Option[Array[Byte]]]   |
+| RuneArrayOptionFuture    | Future[Option[Array[Char]]]   |
+| Float32ArrayOptionFuture | Future[Option[Array[Float]]]  |
+| Float64ArrayOptionFuture | Future[Option[Array[Double]]] |
+| AnyArrayOptionFuture     | Future[Option[Array[Any]]]    |
+| BoolListFuture           | Future[List[Boolean]]         |
+| StringListFuture         | Future[List[String]]          |
+| IntListFuture            | Future[List[Int]]             |
+| Int64ListFuture          | Future[List[Long]]            |
+| ByteListFuture           | Future[List[Byte]]            |
+| RuneListFuture           | Future[List[Char]]            |
+| Float32ListFuture        | Future[List[Float]]           |
+| Float64ListFuture        | Future[List[Long]]            |
+| AnyListFuture            | Future[List[Any]]             |
+| BoolArrayFuture          | Future[Array[Boolean]]        |
+| StringArrayFuture        | Future[Array[String]]         |
+| IntArrayFuture           | Future[Array[Int]]            |
+| Int64ArrayFuture         | Future[Array[Long]]           |
+| ByteArrayFuture          | Future[Array[Byte]]           |
+| RuneArrayFuture          | Future[Array[Char]]           |
+| Float32ArrayFuture       | Future[Array[Float]]          |
+| Float64ArrayFuture       | Future[Array[Double]]         |
+| AnyArrayFuture           | Future[Array[Any]]            |
 
 [🠕](#concurrency0)
 
