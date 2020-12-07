@@ -2026,7 +2026,7 @@ func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
 This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
-// Task: implement two async functions.
+  // Task: implement two async functions.
 // Each function takes some time (2 seconds) and return some number.
 // And then we should multiple results of these functions in blocking manner.
 // Full time of execution both futures will be ~4000 milliseconds.
@@ -2034,24 +2034,24 @@ This example uses `Future.Result` invocation which is described in [Future.Resul
 
 t1 := time.Now().Unix()
 f := MakeIntFuture(func () Int {
-    time.Sleep(2 * time.Second)                             // some payload emulation
-    return Int(10)                             
-}).FlatMapInt(func (a Int) Int {
-    return MakeIntFuture(func () Int {
-        time.Sleep(2 * time.Second)                         // some payload emulation
-        return Int(e * 20)                     
-    })
-})
+       time.Sleep(2 * time.Second)                          // some payload emulation
+       return Int(10)
+     }).FlatMapInt(func (a Int) IntFuture  {
+          return MakeIntFuture(func () Int {
+            time.Sleep(2 * time.Second)                     // some payload emulation
+            return Int(a * 20)
+           })
+     })
 t2 := time.Now().Unix()
 fmt.Println("create and compose futures at", t2 - t1)       // at 0 milliseconds
-
 
 t3 := time.Now().Unix()
 // block current main-thread and wait and get result of future
 var res1 Int = f.Result()                                   // 10 * 20
 t4 := time.Now().Unix()
-fmt.Println("get result of composing futures at", t4 - t3)  // at 4000 milliseconds
-                                                            // SEQUENTIAL execution
+fmt.Println("get result of composing futures at", res1, t4 - t3)  // at 4 seconds
+                                                                  // SEQUENTIAL execution
+
 
 ```
 [[🠕]](#future0)
