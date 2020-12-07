@@ -1991,9 +1991,9 @@ Example:
 t1 := time.Now().Unix()
 // create future
 f1 := MakeIntFuture(func() Int {
-    time.Sleep(1 * time.Second)
-    return Int(10)
-})
+        time.Sleep(1 * time.Second)
+        return Int(10)
+      })
 t2 := time.Now().Unix()
 fmt.Println("at ", t2 - t1)      // at 0 milliseconds
                                  // microbenchmark demonstrates async running of IntFuture
