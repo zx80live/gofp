@@ -2026,7 +2026,7 @@ func (f IntFuture) FlatMapString(t func(Int) StringFuture) StringFuture
 This example uses `Future.Result` invocation which is described in [Future.Result](#futureresult) section.
 
 ```go
-  // Task: implement two async functions.
+// Task: implement two async functions.
 // Each function takes some time (2 seconds) and return some number.
 // And then we should multiple results of these functions in blocking manner.
 // Full time of execution both futures will be ~4000 milliseconds.
