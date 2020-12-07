@@ -1635,7 +1635,7 @@ res2 := Int(10).Max(20)     // 20
 [[🠕]](#boxed0)
 
 ## Predicates
-Predicates are used as function's arguments in the following operations on monads: <Filter>, <Find>, ...
+Predicates are used as function's arguments in the following operations on monads: `Filter`, `Find`, ...
 [[🠕]](#predicates0)
 
 ### Empty predicates
@@ -1860,7 +1860,7 @@ l.Filter(p3)     // List(-2,-6)
 [[🠕]](#predicates0)
 
 ## Transformers
-Transformers are functions which transform one type to other type `A => B`. Transformers are used as function's arguments in the following operations on monads: <Map>, <FlatMap>
+Transformers are functions which transform one type to other type `A => B`. Transformers are used as function's arguments in the following operations on monads: `Map`, `FlatMap`
 [[🠕]](#transformers0)
 
 ### Identity
