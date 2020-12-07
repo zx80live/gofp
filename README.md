@@ -140,12 +140,15 @@ func main() {
 ```
 
 3. Execute file:
-```
+```bash
 go run test.go
-
+```
+The result of above command should be:
+```
 Hello functional programming in GO!
 List(2,4)
 ```
+
 4. Explore this library by the examples which are presented in that [documentation](#toc0). Good luck!
 
 ## Collection API
