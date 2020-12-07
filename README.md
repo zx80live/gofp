@@ -1535,7 +1535,75 @@ l2 := String("one").Cons("two").Cons("three")  // List("three", "two", "one")
 ```
 [[🠕]](#boxed0)
 
+### Range constructor
+
+#### To
+```go
+// Creates list with values from range from=n, to=t inclusive
+func (n Int) To(t Int) IntList
+```
+Example:
+```go
+l := Int(0).To(5)     // List(0,1,2,3,4,5)
+```
+[[🠕]](#boxed0)
+
+#### Until
+```go
+// Creates list with values from range from=n, to=(t-1)
+func (n Int) Until(t Int) IntList
+```
+Example:
+```go
+l := Int(0).To(5)     // List(0,1,2,3,4)
+```
+[[🠕]](#boxed0)
+
 ### Math and logic operations
+[[🠕]](#boxed0)
+
+#### IsBetween
+```go
+// check if a number is > left and < right (exclusive)
+func (a Int) IsBetween(left, right int) bool
+```
+Example:
+```go
+Int(10).IsBetween(9, 15)      // true
+Int(10).IsBetween(0, 5)       // false
+Int(10).IsBetween(10, 11)     // false
+```
+[[🠕]](#boxed0)
+
+#### IsBetweenInclusive
+```go
+// check if a number is >= left and <= right (inclusive)
+func (a Int) IsBetweenInclusive(left, right int) bool
+```
+Example:
+```go
+Int(10).IsBetween(10, 15)      // true
+Int(10).IsBetween(0, 5)        // false
+```
+[[🠕]](#boxed0)
+
+#### Min/Max numeric
+```go
+// Returns min value of `a` and `b`
+func (a Int) Min(b Int) Int
+func (a Byte) Min(b Byte) Byte
+...
+
+// Returns max value of `a` and `b`
+func (a Int) Max(b Int) Int
+func (a Byte) Max(b Byte) Byte
+...
+```
+Example:
+```go
+res1 := Int(10).Min(20)     // 10
+res2 := Int(10).Max(20)     // 20
+```
 [[🠕]](#boxed0)
 
 ### Supported boxed types
