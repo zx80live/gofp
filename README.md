@@ -1560,7 +1560,6 @@ l := Int(0).To(5)     // List(0,1,2,3,4)
 [[🠕]](#boxed0)
 
 ### Math and logic operations
-[[🠕]](#boxed0)
 
 #### IsBetween
 ```go
