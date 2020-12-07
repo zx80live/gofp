@@ -77,8 +77,6 @@ This library was inspired by Scala (collection API, functional paradigm and etc)
     + [Future.Result](#futureresult)
     + [Future.Success](#futuresuccess)
 - [Contributing](#contributing)<a name="contributing0"></a>
-- [Versioning](#versioning)<a name="versioning0"></a>
-- [Roadmap](#roadmap)<a name="roadmap0"></a>
 - [License](#license)<a name="license0"></a>
 
 
