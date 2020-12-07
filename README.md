@@ -1920,6 +1920,7 @@ func Div(a, b Int) Float32 {
   ...
 }
 ```
+[[🠕]](#predef0)
 
 ## Concurrency API
 
