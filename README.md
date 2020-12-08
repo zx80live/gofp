@@ -1942,7 +1942,7 @@ l := MakeStringList("10014-dav", "10015-pav", "10016-ant", "10017-din")
 regex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
 
 res1 := l.MapStringArray(idNameRegex) 
-/* StringArrayList (Array("10015-dav", "10014", "dav"),
+/* StringArrayList (Array("10014-dav", "10014", "dav"),
                     Array("10015-pav", "10015", "pav"),
                     Array("10016-ant", "10016", "ant"),
                     Array("10017-din", "10017", "din")) */
