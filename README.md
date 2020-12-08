@@ -1939,7 +1939,7 @@ Example:
 l := MakeStringList("10014-dav", "10015-pav", "10016-ant", "10017-din")
 
 
-regex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
+idNameRegex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
 
 res1 := l.MapStringArray(idNameRegex) 
 /* StringArrayList (Array("10014-dav", "10014", "dav"),
