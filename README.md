@@ -1263,11 +1263,14 @@ var str2 string = o2.TOString()      // "None"
 Example:
 ```go
 t1 := Tuple2 {10, "hello" }  // Tuple(10, "Hello")
+
+// accessing to tuple's fields
 var t1_e1 Any = t1.E1           // Any(10)
 var t2_e2 Any = t2.E2           // Any("Hello")
 
 t2 := Tuple2 {t1, MakeIntList(1,2,3)} 
 /* Tuple(Tuple(10, "hello"), List(1,2,3)) */
+
 var t2_e1 Any = t2.E1   // Any(Tuple(10, "hello"))
 var t2_e2 Any = t2.E2   // Any(List(1,2,3))
 
