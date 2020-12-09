@@ -8,5 +8,5 @@ import (
 func main() {
 	fmt.Println("Hello")
 
-	fmt.Println(IntArray([]int{10, 20, 30}).ZipStringArray(StringArray([]string{"a"})).ToString())
+	fmt.Println(IntArray([]int{10, 20, 30}).ZipAllStringArray(StringArray([]string{"a", "b", "c", "d"}), -100, "NONE").ToString())
 }
