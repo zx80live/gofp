@@ -1256,7 +1256,7 @@ var str2 string = o2.TOString()      // "None"
 [[🠕]](#option0)
 
 ### Tuple2
-`Tuple2` is just a pair of two elements any types.
+`Tuple2` is just a pair of two elements any types. Tuples are used in the `Zip` operations under collections, for example (see [List.Zip](#listzip), [Array.Zip](#arrayzip) sections).
 [[🠕]](#tuple20)
 
 #### Create tuple2
