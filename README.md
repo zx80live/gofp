@@ -1255,6 +1255,59 @@ var str2 string = o2.TOString()      // "None"
 
 [[🠕]](#option0)
 
+### Tuple2
+`Tuple2` is just a pair of two elements any types.
+[[🠕]](#tuple20)
+
+#### Create tuple2
+Example:
+```go
+t1 := Tuple2 {10, "hello" }  // Tuple(10, "Hello")
+var t1_e1 Any = t1.E1           // Any(10)
+var t2_e2 Any = t2.E2           // Any("Hello")
+
+t2 := Tuple2 {t1, MakeIntList(1,2,3)} 
+/* Tuple(Tuple(10, "hello"), List(1,2,3)) */
+var t2_e1 Any = t2.E1   // Any(Tuple(10, "hello"))
+var t2_e2 Any = t2.E2   // Any(List(1,2,3))
+
+```
+[[🠕]](#tuple20)
+
+#### Tuple2.Equals
+```go
+// Deep equality of two tuples
+func (a Tuple2) Equals(b Tuple2) bool
+```
+Example:
+```go
+t1 := Tuple2 {10, "hello" }
+t2 := Tuple2 {10, "hello" }
+t3 := Tuple2 {t1, MakeIntList(1,2,3) }
+t4 := Tuple2 {t1, MakeIntList(1,2,3) }
+
+t1.Equals(t2)                // true
+t1.Equals(t3)                // false
+t3.Equals(t4)                // true
+```
+[[🠕]](#tuple20)
+
+#### Tuple2.ToString
+```go
+// Transform tuple to string representation
+func (t Tuple2) ToString String
+```
+Example:
+```go
+t1 := Tuple2 {10, "hello"}
+t1.ToString()       // "Tuple(10, hello)"
+
+t2 := Tuple2 { t1, MakeIntList(1,2,3) }
+t2.ToString()       // "Tuple(Tuple(10, hello), List(1,2,3))" 
+
+```
+[[🠕]](#tuple20)
+
 
 ### Array
 
