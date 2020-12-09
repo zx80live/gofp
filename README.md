@@ -35,6 +35,9 @@ This library was inspired by Scala (collection API, functional paradigm and, con
     + [List.Takes](#listtakes)
     + [List.ToArray](#listtoarray)
     + [List.ToString](#listtostring)
+    + [List.Zip](#listzip)
+    + [List.ZipAll](#listzipall)
+    + [List.ZipWithIndex](#listzipwithindex)
     + [Supported list types](#supported-list-types)
   * [Option](#option)<a name="option0"></a>
     + [Create option](#create-option)
@@ -50,6 +53,10 @@ This library was inspired by Scala (collection API, functional paradigm and, con
     + [Option.None](#optionnone)
     + [Option.ToString](#optiontostring)
     + [Supported option types](#supported-option-types)
+  * [Tuple2](#tuple2)<a name="tuple20"></a>
+    + [Create tuple2](#create-tuple2)
+    + [Tuple2.Equals](#tuple2equals)
+    + [Tuple2.ToString](#tuple2tostring)
   * [Array](#array)<a name="array0"></a>
     + [Create array](#create-array)
     + [Array.Count](#arraycount)
@@ -64,6 +71,9 @@ This library was inspired by Scala (collection API, functional paradigm and, con
     + [Array.Takes](#arraytakes)
     + [Array.ToList](#arraytolist)
     + [Array.ToString](#arraytostring)
+    + [Array.Zip](#arrayzip)
+    + [Array.ZipAll](#arrayzipall)
+    + [Array.ZipWithIndex](#arrayzipwithindex)
     + [Supported array types](#supported-array-types)
 - [Boxed types](#boxed-types)<a name="boxed0"></a>
     + [Underlined](#underlined)
@@ -826,7 +836,99 @@ l2 := MakeIntListList(
 [[🠕]](#list0)
 
 
+#### List.Zip
+```go
+// Returns a collection of combined corresponding elements in pairs
+// Resulting list will have min-length of input collections
+func (l IntList) ZipIntList(l2 IntList) Tuple2List
+func (l IntList) ZipStringList(l2 StirngList) Tuple2List
+...
+```
+Example:
+```go
+l1 := MakeIntList(1,2,3)
+l2 := MakeStringList("a", "b", "c")
 
+res1 := l1.ZipStringList(l2)  
+/* List(Tuple(1, "a"), 
+        Tuple(2, "b"), 
+        Tuple(3, "b")) */
+                                   
+res2 := l1.ZipStringList(MakeStringList("a", "b"))
+/* List(Tuple(1, "a"), 
+        Tuple(2, "b")) */
+
+res3 := l1.ZipStringList(MakeStringList("a", "b", "c", "d", "e"))
+/* List(Tuple(1, "a"), 
+        Tuple(2, "b"), 
+        Tuple(3, "b")) */
+```
+[[🠕]](#list0)
+
+#### List.ZipAll
+```go
+// Returns a collection of combined corresponding elements in pairs
+// Resulting list will have max-length of input collections
+// If one of corresponding element isn't found then default value will be used
+func (l IntList) ZipAllIntList(l2 IntList, 
+                               thisDefault Int, 
+                               thatDefault Int) Tuple2List
+func (l IntList) ZipAllStringList(l2 StringList, 
+                                  thisDefault Int, 
+                                  thatDefault string) Tuple2List
+...
+```
+Example:
+```go
+l1 := MakeIntList(1,2,3)
+l2 := MakeStringList("a", "b", "c")
+l1Default := -100
+l2Default := "NONE"
+
+res1 := l1.ZipAllStringList(l2, l1Default, l2Default)  
+/* List(Tuple(1, "a"), 
+        Tuple(2, "b"), 
+        Tuple(3, "b")) */
+                                   
+res2 := l1.ZipAllStringList(MakeStringList("a", "b"), 
+                            l1Default, 
+                            l2Default)
+/* List(Tuple(1, "a"), 
+        Tuple(2, "b"),
+        Tuple(3, "NONE")) */
+
+res3 := l1.ZipStringLitst(MakeStringList("a", "b", "c", "d", "e"),
+                          l1Default,
+                          l2Default)
+/* List(Tuple(1, "a"), 
+        Tuple(2, "b"), 
+        Tuple(3, "b"),
+        Tuple(-100, "d"),
+        Tuple(-100, "e")) */
+```
+[[🠕]](#list0)
+
+#### List.ZipWithIndex
+```go
+// Returns list of tuples which contains corresponding elements and its index
+func (l IntList) ZipWithIndex() Tuple2List
+...
+```
+Example:
+```go
+l1 := MakeIntList(1024, 2048, 4096)
+res1 := l1.ZipWithIndex()
+/* List(Tuple(1024, 0),
+        Tuple(2048, 1),
+        Tuple(4096, 2))*/
+        
+l2 := MakeStringList("a", "b", "c")
+res2 := l2.ZipWithIndex()
+/* List(Tuple("a", 0),
+        Tuple("b", 1),
+        Tuple("c", 2))*/
+```
+[[🠕]](#list0)
 
 
 #### Supported list types
@@ -1461,6 +1563,99 @@ fmt.Println(arr2.ToString())                       // [[1,2], [3,4,5]]
 ```
 [[🠕]](#array0)
 
+#### Array.Zip
+```go
+// Returns an array of combined corresponding elements in pairs
+// Resulting array will have min-length of input collections
+func (a IntArray) ZipIntArray(a2 IntArray) Tuple2Array
+func (a IntArray) ZipStrinArray(a2 StirngArray) Tuple2Array
+...
+```
+Example:
+```go
+a1 := IntArray([]int{1,2,3})
+a2 := StringArray([]string{"a", "b", "c"})
+
+res1 := a1.ZipStringArray(a2)  
+/* Array(Tuple(1, "a"), 
+         Tuple(2, "b"), 
+         Tuple(3, "b")) */
+                                   
+res2 := a1.ZipStringArray(StringArray([]string{"a", "b"}))
+/* Array(Tuple(1, "a"), 
+         Tuple(2, "b")) */
+
+res3 := a1.ZipStringArray(StringArray([]string{"a", "b", "c", "d", "e"}))
+/* Array(Tuple(1, "a"), 
+         Tuple(2, "b"), 
+         Tuple(3, "b")) */
+```
+[[🠕]](#array0)
+
+#### Array.ZipAll
+```go
+// Returns an array of combined corresponding elements in pairs
+// Resulting array will have max-length of input collections
+// If one of corresponding element isn't found then default value will be used
+func (a IntArray) ZipAllIntArray(a2 IntArray, 
+                                 thisDefault Int, 
+                                 thatDefault Int) Tuple2Array
+func (a IntArray) ZipAllStringList(a2 StringArray, 
+                                   thisDefault Int, 
+                                   thatDefault string) Tuple2Array
+...
+```
+Example:
+```go
+a1 := IntArray([]int{1,2,3})
+a2 := StringArray([]string{"a", "b", "c"})
+l1Default := -100
+l2Default := "NONE"
+
+res1 := a1.ZipAllStringArray(a2, l1Default, l2Default)  
+/* Array(Tuple(1, "a"), 
+         Tuple(2, "b"), 
+         Tuple(3, "b")) */
+                                   
+res2 := a1.ZipAllStringArray(StringArray([]string{"a", "b"}), 
+                             l1Default, 
+                             l2Default)
+/* Array(Tuple(1, "a"), 
+         Tuple(2, "b"),
+         Tuple(3, "NONE")) */
+
+res3 := a1.ZipStringArray(StringArray([]string{"a", "b", "c", "d", "e"}),
+                          l1Default,
+                          l2Default)
+/* Array(Tuple(1, "a"), 
+         Tuple(2, "b"), 
+         Tuple(3, "b"),
+         Tuple(-100, "d"),
+         Tuple(-100, "e")) */
+```
+[[🠕]](#array0)
+
+#### Array.ZipWithIndex
+```go
+// Returns array of tuples which contains corresponding elements and its index
+func (a IntArray) ZipWithIndex() Tuple2Array
+...
+```
+Example:
+```go
+a1 := IntArray([]int{1024, 2048, 4096})
+res1 := a1.ZipWithIndex()
+/* Array(Tuple(1024, 0),
+         Tuple(2048, 1),
+         Tuple(4096, 2))*/
+        
+a2 := StringArray([]string{"a", "b", "c"})
+res2 := a2.ZipWithIndex()
+/* Array(Tuple("a", 0),
+         Tuple("b", 1),
+         Tuple("c", 2))*/
+```
+[[🠕]](#array0)
 
 #### Supported array types
 <details><summary>Supported array types (click to expand)</summary>
@@ -2231,7 +2426,7 @@ var f1 IntFuture = SuccessIntFuture(10)      // Future(10)
 Almost all code base of this library was generated by code-generator from the project [gofp-bootstrap](https://github.com/zx80live/gofp-bootstrap). That code generator is implemented in Scala language for the following reasons:
  - string interpolations
  - functional programming, etc
- 
+
 But the next generation of code generator can be implemented by the current [gofp](https://github.com/zx80live/gofp) library.
 [[🠕]](#bootstrap0)
 
