@@ -48,6 +48,11 @@ func (l BoolList) FoldLeftAny(z Any, f func(Any, bool) Any) Any {
 	l.Foreach(func(e bool) { acc = f(acc, e) })
 	return acc
 }
+func (l BoolList) FoldLeftTuple2(z Tuple2, f func(Tuple2, bool) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e bool) { acc = f(acc, e) })
+	return acc
+}
 func (l BoolList) FoldLeftBoolList(z BoolList, f func(BoolList, bool) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e bool) { acc = f(acc, e) })
@@ -89,6 +94,11 @@ func (l BoolList) FoldLeftFloat64List(z Float64List, f func(Float64List, bool) F
 	return acc
 }
 func (l BoolList) FoldLeftAnyList(z AnyList, f func(AnyList, bool) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e bool) { acc = f(acc, e) })
+	return acc
+}
+func (l BoolList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, bool) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e bool) { acc = f(acc, e) })
 	return acc
@@ -138,6 +148,11 @@ func (l StringList) FoldLeftAny(z Any, f func(Any, string) Any) Any {
 	l.Foreach(func(e string) { acc = f(acc, e) })
 	return acc
 }
+func (l StringList) FoldLeftTuple2(z Tuple2, f func(Tuple2, string) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e string) { acc = f(acc, e) })
+	return acc
+}
 func (l StringList) FoldLeftBoolList(z BoolList, f func(BoolList, string) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e string) { acc = f(acc, e) })
@@ -179,6 +194,11 @@ func (l StringList) FoldLeftFloat64List(z Float64List, f func(Float64List, strin
 	return acc
 }
 func (l StringList) FoldLeftAnyList(z AnyList, f func(AnyList, string) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e string) { acc = f(acc, e) })
+	return acc
+}
+func (l StringList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, string) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e string) { acc = f(acc, e) })
 	return acc
@@ -228,6 +248,11 @@ func (l IntList) FoldLeftAny(z Any, f func(Any, int) Any) Any {
 	l.Foreach(func(e int) { acc = f(acc, e) })
 	return acc
 }
+func (l IntList) FoldLeftTuple2(z Tuple2, f func(Tuple2, int) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e int) { acc = f(acc, e) })
+	return acc
+}
 func (l IntList) FoldLeftBoolList(z BoolList, f func(BoolList, int) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e int) { acc = f(acc, e) })
@@ -269,6 +294,11 @@ func (l IntList) FoldLeftFloat64List(z Float64List, f func(Float64List, int) Flo
 	return acc
 }
 func (l IntList) FoldLeftAnyList(z AnyList, f func(AnyList, int) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e int) { acc = f(acc, e) })
+	return acc
+}
+func (l IntList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, int) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e int) { acc = f(acc, e) })
 	return acc
@@ -318,6 +348,11 @@ func (l Int64List) FoldLeftAny(z Any, f func(Any, int64) Any) Any {
 	l.Foreach(func(e int64) { acc = f(acc, e) })
 	return acc
 }
+func (l Int64List) FoldLeftTuple2(z Tuple2, f func(Tuple2, int64) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e int64) { acc = f(acc, e) })
+	return acc
+}
 func (l Int64List) FoldLeftBoolList(z BoolList, f func(BoolList, int64) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e int64) { acc = f(acc, e) })
@@ -359,6 +394,11 @@ func (l Int64List) FoldLeftFloat64List(z Float64List, f func(Float64List, int64)
 	return acc
 }
 func (l Int64List) FoldLeftAnyList(z AnyList, f func(AnyList, int64) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e int64) { acc = f(acc, e) })
+	return acc
+}
+func (l Int64List) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, int64) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e int64) { acc = f(acc, e) })
 	return acc
@@ -408,6 +448,11 @@ func (l ByteList) FoldLeftAny(z Any, f func(Any, byte) Any) Any {
 	l.Foreach(func(e byte) { acc = f(acc, e) })
 	return acc
 }
+func (l ByteList) FoldLeftTuple2(z Tuple2, f func(Tuple2, byte) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e byte) { acc = f(acc, e) })
+	return acc
+}
 func (l ByteList) FoldLeftBoolList(z BoolList, f func(BoolList, byte) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e byte) { acc = f(acc, e) })
@@ -449,6 +494,11 @@ func (l ByteList) FoldLeftFloat64List(z Float64List, f func(Float64List, byte) F
 	return acc
 }
 func (l ByteList) FoldLeftAnyList(z AnyList, f func(AnyList, byte) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e byte) { acc = f(acc, e) })
+	return acc
+}
+func (l ByteList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, byte) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e byte) { acc = f(acc, e) })
 	return acc
@@ -498,6 +548,11 @@ func (l RuneList) FoldLeftAny(z Any, f func(Any, rune) Any) Any {
 	l.Foreach(func(e rune) { acc = f(acc, e) })
 	return acc
 }
+func (l RuneList) FoldLeftTuple2(z Tuple2, f func(Tuple2, rune) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e rune) { acc = f(acc, e) })
+	return acc
+}
 func (l RuneList) FoldLeftBoolList(z BoolList, f func(BoolList, rune) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e rune) { acc = f(acc, e) })
@@ -539,6 +594,11 @@ func (l RuneList) FoldLeftFloat64List(z Float64List, f func(Float64List, rune) F
 	return acc
 }
 func (l RuneList) FoldLeftAnyList(z AnyList, f func(AnyList, rune) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e rune) { acc = f(acc, e) })
+	return acc
+}
+func (l RuneList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, rune) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e rune) { acc = f(acc, e) })
 	return acc
@@ -588,6 +648,11 @@ func (l Float32List) FoldLeftAny(z Any, f func(Any, float32) Any) Any {
 	l.Foreach(func(e float32) { acc = f(acc, e) })
 	return acc
 }
+func (l Float32List) FoldLeftTuple2(z Tuple2, f func(Tuple2, float32) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e float32) { acc = f(acc, e) })
+	return acc
+}
 func (l Float32List) FoldLeftBoolList(z BoolList, f func(BoolList, float32) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e float32) { acc = f(acc, e) })
@@ -629,6 +694,11 @@ func (l Float32List) FoldLeftFloat64List(z Float64List, f func(Float64List, floa
 	return acc
 }
 func (l Float32List) FoldLeftAnyList(z AnyList, f func(AnyList, float32) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e float32) { acc = f(acc, e) })
+	return acc
+}
+func (l Float32List) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, float32) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e float32) { acc = f(acc, e) })
 	return acc
@@ -678,6 +748,11 @@ func (l Float64List) FoldLeftAny(z Any, f func(Any, float64) Any) Any {
 	l.Foreach(func(e float64) { acc = f(acc, e) })
 	return acc
 }
+func (l Float64List) FoldLeftTuple2(z Tuple2, f func(Tuple2, float64) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e float64) { acc = f(acc, e) })
+	return acc
+}
 func (l Float64List) FoldLeftBoolList(z BoolList, f func(BoolList, float64) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e float64) { acc = f(acc, e) })
@@ -719,6 +794,11 @@ func (l Float64List) FoldLeftFloat64List(z Float64List, f func(Float64List, floa
 	return acc
 }
 func (l Float64List) FoldLeftAnyList(z AnyList, f func(AnyList, float64) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e float64) { acc = f(acc, e) })
+	return acc
+}
+func (l Float64List) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, float64) Tuple2List) Tuple2List {
 	acc := z
 	l.Foreach(func(e float64) { acc = f(acc, e) })
 	return acc
@@ -768,6 +848,11 @@ func (l AnyList) FoldLeftAny(z Any, f func(Any, Any) Any) Any {
 	l.Foreach(func(e Any) { acc = f(acc, e) })
 	return acc
 }
+func (l AnyList) FoldLeftTuple2(z Tuple2, f func(Tuple2, Any) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e Any) { acc = f(acc, e) })
+	return acc
+}
 func (l AnyList) FoldLeftBoolList(z BoolList, f func(BoolList, Any) BoolList) BoolList {
 	acc := z
 	l.Foreach(func(e Any) { acc = f(acc, e) })
@@ -813,6 +898,111 @@ func (l AnyList) FoldLeftAnyList(z AnyList, f func(AnyList, Any) AnyList) AnyLis
 	l.Foreach(func(e Any) { acc = f(acc, e) })
 	return acc
 }
+func (l AnyList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, Any) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e Any) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftBool(z bool, f func(bool, Tuple2) bool) bool {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftString(z string, f func(string, Tuple2) string) string {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftInt(z int, f func(int, Tuple2) int) int {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftInt64(z int64, f func(int64, Tuple2) int64) int64 {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftByte(z byte, f func(byte, Tuple2) byte) byte {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftRune(z rune, f func(rune, Tuple2) rune) rune {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftFloat32(z float32, f func(float32, Tuple2) float32) float32 {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftFloat64(z float64, f func(float64, Tuple2) float64) float64 {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftAny(z Any, f func(Any, Tuple2) Any) Any {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftTuple2(z Tuple2, f func(Tuple2, Tuple2) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftBoolList(z BoolList, f func(BoolList, Tuple2) BoolList) BoolList {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftStringList(z StringList, f func(StringList, Tuple2) StringList) StringList {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftIntList(z IntList, f func(IntList, Tuple2) IntList) IntList {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftInt64List(z Int64List, f func(Int64List, Tuple2) Int64List) Int64List {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftByteList(z ByteList, f func(ByteList, Tuple2) ByteList) ByteList {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftRuneList(z RuneList, f func(RuneList, Tuple2) RuneList) RuneList {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftFloat32List(z Float32List, f func(Float32List, Tuple2) Float32List) Float32List {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftFloat64List(z Float64List, f func(Float64List, Tuple2) Float64List) Float64List {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftAnyList(z AnyList, f func(AnyList, Tuple2) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2List) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, Tuple2) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e Tuple2) { acc = f(acc, e) })
+	return acc
+}
 func (l BoolOptionList) FoldLeftBool(z bool, f func(bool, BoolOption) bool) bool {
 	acc := z
 	l.Foreach(func(e BoolOption) { acc = f(acc, e) })
@@ -854,6 +1044,11 @@ func (l BoolOptionList) FoldLeftFloat64(z float64, f func(float64, BoolOption) f
 	return acc
 }
 func (l BoolOptionList) FoldLeftAny(z Any, f func(Any, BoolOption) Any) Any {
+	acc := z
+	l.Foreach(func(e BoolOption) { acc = f(acc, e) })
+	return acc
+}
+func (l BoolOptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, BoolOption) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e BoolOption) { acc = f(acc, e) })
 	return acc
@@ -903,6 +1098,11 @@ func (l BoolOptionList) FoldLeftAnyList(z AnyList, f func(AnyList, BoolOption) A
 	l.Foreach(func(e BoolOption) { acc = f(acc, e) })
 	return acc
 }
+func (l BoolOptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, BoolOption) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e BoolOption) { acc = f(acc, e) })
+	return acc
+}
 func (l StringOptionList) FoldLeftBool(z bool, f func(bool, StringOption) bool) bool {
 	acc := z
 	l.Foreach(func(e StringOption) { acc = f(acc, e) })
@@ -944,6 +1144,11 @@ func (l StringOptionList) FoldLeftFloat64(z float64, f func(float64, StringOptio
 	return acc
 }
 func (l StringOptionList) FoldLeftAny(z Any, f func(Any, StringOption) Any) Any {
+	acc := z
+	l.Foreach(func(e StringOption) { acc = f(acc, e) })
+	return acc
+}
+func (l StringOptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, StringOption) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e StringOption) { acc = f(acc, e) })
 	return acc
@@ -993,6 +1198,11 @@ func (l StringOptionList) FoldLeftAnyList(z AnyList, f func(AnyList, StringOptio
 	l.Foreach(func(e StringOption) { acc = f(acc, e) })
 	return acc
 }
+func (l StringOptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, StringOption) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e StringOption) { acc = f(acc, e) })
+	return acc
+}
 func (l IntOptionList) FoldLeftBool(z bool, f func(bool, IntOption) bool) bool {
 	acc := z
 	l.Foreach(func(e IntOption) { acc = f(acc, e) })
@@ -1034,6 +1244,11 @@ func (l IntOptionList) FoldLeftFloat64(z float64, f func(float64, IntOption) flo
 	return acc
 }
 func (l IntOptionList) FoldLeftAny(z Any, f func(Any, IntOption) Any) Any {
+	acc := z
+	l.Foreach(func(e IntOption) { acc = f(acc, e) })
+	return acc
+}
+func (l IntOptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, IntOption) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e IntOption) { acc = f(acc, e) })
 	return acc
@@ -1083,6 +1298,11 @@ func (l IntOptionList) FoldLeftAnyList(z AnyList, f func(AnyList, IntOption) Any
 	l.Foreach(func(e IntOption) { acc = f(acc, e) })
 	return acc
 }
+func (l IntOptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, IntOption) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e IntOption) { acc = f(acc, e) })
+	return acc
+}
 func (l Int64OptionList) FoldLeftBool(z bool, f func(bool, Int64Option) bool) bool {
 	acc := z
 	l.Foreach(func(e Int64Option) { acc = f(acc, e) })
@@ -1124,6 +1344,11 @@ func (l Int64OptionList) FoldLeftFloat64(z float64, f func(float64, Int64Option)
 	return acc
 }
 func (l Int64OptionList) FoldLeftAny(z Any, f func(Any, Int64Option) Any) Any {
+	acc := z
+	l.Foreach(func(e Int64Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Int64OptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, Int64Option) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e Int64Option) { acc = f(acc, e) })
 	return acc
@@ -1173,6 +1398,11 @@ func (l Int64OptionList) FoldLeftAnyList(z AnyList, f func(AnyList, Int64Option)
 	l.Foreach(func(e Int64Option) { acc = f(acc, e) })
 	return acc
 }
+func (l Int64OptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, Int64Option) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e Int64Option) { acc = f(acc, e) })
+	return acc
+}
 func (l ByteOptionList) FoldLeftBool(z bool, f func(bool, ByteOption) bool) bool {
 	acc := z
 	l.Foreach(func(e ByteOption) { acc = f(acc, e) })
@@ -1214,6 +1444,11 @@ func (l ByteOptionList) FoldLeftFloat64(z float64, f func(float64, ByteOption) f
 	return acc
 }
 func (l ByteOptionList) FoldLeftAny(z Any, f func(Any, ByteOption) Any) Any {
+	acc := z
+	l.Foreach(func(e ByteOption) { acc = f(acc, e) })
+	return acc
+}
+func (l ByteOptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, ByteOption) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e ByteOption) { acc = f(acc, e) })
 	return acc
@@ -1263,6 +1498,11 @@ func (l ByteOptionList) FoldLeftAnyList(z AnyList, f func(AnyList, ByteOption) A
 	l.Foreach(func(e ByteOption) { acc = f(acc, e) })
 	return acc
 }
+func (l ByteOptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, ByteOption) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e ByteOption) { acc = f(acc, e) })
+	return acc
+}
 func (l RuneOptionList) FoldLeftBool(z bool, f func(bool, RuneOption) bool) bool {
 	acc := z
 	l.Foreach(func(e RuneOption) { acc = f(acc, e) })
@@ -1304,6 +1544,11 @@ func (l RuneOptionList) FoldLeftFloat64(z float64, f func(float64, RuneOption) f
 	return acc
 }
 func (l RuneOptionList) FoldLeftAny(z Any, f func(Any, RuneOption) Any) Any {
+	acc := z
+	l.Foreach(func(e RuneOption) { acc = f(acc, e) })
+	return acc
+}
+func (l RuneOptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, RuneOption) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e RuneOption) { acc = f(acc, e) })
 	return acc
@@ -1353,6 +1598,11 @@ func (l RuneOptionList) FoldLeftAnyList(z AnyList, f func(AnyList, RuneOption) A
 	l.Foreach(func(e RuneOption) { acc = f(acc, e) })
 	return acc
 }
+func (l RuneOptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, RuneOption) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e RuneOption) { acc = f(acc, e) })
+	return acc
+}
 func (l Float32OptionList) FoldLeftBool(z bool, f func(bool, Float32Option) bool) bool {
 	acc := z
 	l.Foreach(func(e Float32Option) { acc = f(acc, e) })
@@ -1394,6 +1644,11 @@ func (l Float32OptionList) FoldLeftFloat64(z float64, f func(float64, Float32Opt
 	return acc
 }
 func (l Float32OptionList) FoldLeftAny(z Any, f func(Any, Float32Option) Any) Any {
+	acc := z
+	l.Foreach(func(e Float32Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Float32OptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, Float32Option) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e Float32Option) { acc = f(acc, e) })
 	return acc
@@ -1443,6 +1698,11 @@ func (l Float32OptionList) FoldLeftAnyList(z AnyList, f func(AnyList, Float32Opt
 	l.Foreach(func(e Float32Option) { acc = f(acc, e) })
 	return acc
 }
+func (l Float32OptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, Float32Option) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e Float32Option) { acc = f(acc, e) })
+	return acc
+}
 func (l Float64OptionList) FoldLeftBool(z bool, f func(bool, Float64Option) bool) bool {
 	acc := z
 	l.Foreach(func(e Float64Option) { acc = f(acc, e) })
@@ -1484,6 +1744,11 @@ func (l Float64OptionList) FoldLeftFloat64(z float64, f func(float64, Float64Opt
 	return acc
 }
 func (l Float64OptionList) FoldLeftAny(z Any, f func(Any, Float64Option) Any) Any {
+	acc := z
+	l.Foreach(func(e Float64Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Float64OptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, Float64Option) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e Float64Option) { acc = f(acc, e) })
 	return acc
@@ -1533,6 +1798,11 @@ func (l Float64OptionList) FoldLeftAnyList(z AnyList, f func(AnyList, Float64Opt
 	l.Foreach(func(e Float64Option) { acc = f(acc, e) })
 	return acc
 }
+func (l Float64OptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, Float64Option) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e Float64Option) { acc = f(acc, e) })
+	return acc
+}
 func (l AnyOptionList) FoldLeftBool(z bool, f func(bool, AnyOption) bool) bool {
 	acc := z
 	l.Foreach(func(e AnyOption) { acc = f(acc, e) })
@@ -1574,6 +1844,11 @@ func (l AnyOptionList) FoldLeftFloat64(z float64, f func(float64, AnyOption) flo
 	return acc
 }
 func (l AnyOptionList) FoldLeftAny(z Any, f func(Any, AnyOption) Any) Any {
+	acc := z
+	l.Foreach(func(e AnyOption) { acc = f(acc, e) })
+	return acc
+}
+func (l AnyOptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, AnyOption) Tuple2) Tuple2 {
 	acc := z
 	l.Foreach(func(e AnyOption) { acc = f(acc, e) })
 	return acc
@@ -1621,5 +1896,110 @@ func (l AnyOptionList) FoldLeftFloat64List(z Float64List, f func(Float64List, An
 func (l AnyOptionList) FoldLeftAnyList(z AnyList, f func(AnyList, AnyOption) AnyList) AnyList {
 	acc := z
 	l.Foreach(func(e AnyOption) { acc = f(acc, e) })
+	return acc
+}
+func (l AnyOptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, AnyOption) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e AnyOption) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftBool(z bool, f func(bool, Tuple2Option) bool) bool {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftString(z string, f func(string, Tuple2Option) string) string {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftInt(z int, f func(int, Tuple2Option) int) int {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftInt64(z int64, f func(int64, Tuple2Option) int64) int64 {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftByte(z byte, f func(byte, Tuple2Option) byte) byte {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftRune(z rune, f func(rune, Tuple2Option) rune) rune {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftFloat32(z float32, f func(float32, Tuple2Option) float32) float32 {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftFloat64(z float64, f func(float64, Tuple2Option) float64) float64 {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftAny(z Any, f func(Any, Tuple2Option) Any) Any {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftTuple2(z Tuple2, f func(Tuple2, Tuple2Option) Tuple2) Tuple2 {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftBoolList(z BoolList, f func(BoolList, Tuple2Option) BoolList) BoolList {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftStringList(z StringList, f func(StringList, Tuple2Option) StringList) StringList {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftIntList(z IntList, f func(IntList, Tuple2Option) IntList) IntList {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftInt64List(z Int64List, f func(Int64List, Tuple2Option) Int64List) Int64List {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftByteList(z ByteList, f func(ByteList, Tuple2Option) ByteList) ByteList {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftRuneList(z RuneList, f func(RuneList, Tuple2Option) RuneList) RuneList {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftFloat32List(z Float32List, f func(Float32List, Tuple2Option) Float32List) Float32List {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftFloat64List(z Float64List, f func(Float64List, Tuple2Option) Float64List) Float64List {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftAnyList(z AnyList, f func(AnyList, Tuple2Option) AnyList) AnyList {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
+	return acc
+}
+func (l Tuple2OptionList) FoldLeftTuple2List(z Tuple2List, f func(Tuple2List, Tuple2Option) Tuple2List) Tuple2List {
+	acc := z
+	l.Foreach(func(e Tuple2Option) { acc = f(acc, e) })
 	return acc
 }

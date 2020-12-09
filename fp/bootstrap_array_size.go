@@ -12,6 +12,7 @@ func (m RuneArray) Size() Int         { return Int(len([]rune(m))) }
 func (m Float32Array) Size() Int      { return Int(len([]float32(m))) }
 func (m Float64Array) Size() Int      { return Int(len([]float64(m))) }
 func (m AnyArray) Size() Int          { return Int(len([]Any(m))) }
+func (m Tuple2Array) Size() Int       { return Int(len([]Tuple2(m))) }
 func (m BoolArrayArray) Size() Int    { return Int(len([][]bool(m))) }
 func (m StringArrayArray) Size() Int  { return Int(len([][]string(m))) }
 func (m IntArrayArray) Size() Int     { return Int(len([][]int(m))) }
@@ -21,3 +22,4 @@ func (m RuneArrayArray) Size() Int    { return Int(len([][]rune(m))) }
 func (m Float32ArrayArray) Size() Int { return Int(len([][]float32(m))) }
 func (m Float64ArrayArray) Size() Int { return Int(len([][]float64(m))) }
 func (m AnyArrayArray) Size() Int     { return Int(len([][]Any(m))) }
+func (m Tuple2ArrayArray) Size() Int  { return Int(len([][]Tuple2(m))) }

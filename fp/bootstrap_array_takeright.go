@@ -93,6 +93,16 @@ func (l AnyArray) TakeRight(n int) AnyArray {
 	copy(acc, l[size-n:size])
 	return acc
 }
+func (l Tuple2Array) TakeRight(n int) Tuple2Array {
+	size := len(l)
+	Require(n >= 0, "index should be >= 0")
+	if n >= size {
+		n = size
+	}
+	acc := make([]Tuple2, n)
+	copy(acc, l[size-n:size])
+	return acc
+}
 func (l BoolArrayArray) TakeRight(n int) BoolArrayArray {
 	size := len(l)
 	Require(n >= 0, "index should be >= 0")
@@ -180,6 +190,16 @@ func (l AnyArrayArray) TakeRight(n int) AnyArrayArray {
 		n = size
 	}
 	acc := make([][]Any, n)
+	copy(acc, l[size-n:size])
+	return acc
+}
+func (l Tuple2ArrayArray) TakeRight(n int) Tuple2ArrayArray {
+	size := len(l)
+	Require(n >= 0, "index should be >= 0")
+	if n >= size {
+		n = size
+	}
+	acc := make([][]Tuple2, n)
 	copy(acc, l[size-n:size])
 	return acc
 }

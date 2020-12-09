@@ -84,6 +84,15 @@ func (l AnyList) Size() int {
 	}
 	return count
 }
+func (l Tuple2List) Size() int {
+	count := 0
+	xs := l
+	for xs.NonEmpty() {
+		count++
+		xs = *xs.tail
+	}
+	return count
+}
 func (l BoolArrayList) Size() int {
 	count := 0
 	xs := l
@@ -157,6 +166,15 @@ func (l Float64ArrayList) Size() int {
 	return count
 }
 func (l AnyArrayList) Size() int {
+	count := 0
+	xs := l
+	for xs.NonEmpty() {
+		count++
+		xs = *xs.tail
+	}
+	return count
+}
+func (l Tuple2ArrayList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -246,6 +264,15 @@ func (l AnyOptionList) Size() int {
 	}
 	return count
 }
+func (l Tuple2OptionList) Size() int {
+	count := 0
+	xs := l
+	for xs.NonEmpty() {
+		count++
+		xs = *xs.tail
+	}
+	return count
+}
 func (l BoolListList) Size() int {
 	count := 0
 	xs := l
@@ -319,6 +346,15 @@ func (l Float64ListList) Size() int {
 	return count
 }
 func (l AnyListList) Size() int {
+	count := 0
+	xs := l
+	for xs.NonEmpty() {
+		count++
+		xs = *xs.tail
+	}
+	return count
+}
+func (l Tuple2ListList) Size() int {
 	count := 0
 	xs := l
 	for xs.NonEmpty() {

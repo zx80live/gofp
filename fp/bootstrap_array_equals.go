@@ -111,6 +111,18 @@ func (a AnyArray) Equals(b AnyArray) bool {
 	}
 	return true
 }
+func (a Tuple2Array) Equals(b Tuple2Array) bool {
+	len1 := a.Size()
+	if len1 != b.Size() {
+		return false
+	}
+	for i, e := range a {
+		if Tuple2Equals(Tuple2(e), Tuple2(b[i])) {
+			return false
+		}
+	}
+	return true
+}
 func (a BoolArrayArray) Equals(b BoolArrayArray) bool {
 	len1 := a.Size()
 	if len1 != b.Size() {
@@ -214,6 +226,18 @@ func (a AnyArrayArray) Equals(b AnyArrayArray) bool {
 	}
 	for i, e := range a {
 		if AnyArrayEquals(AnyArray(e), AnyArray(b[i])) {
+			return false
+		}
+	}
+	return true
+}
+func (a Tuple2ArrayArray) Equals(b Tuple2ArrayArray) bool {
+	len1 := a.Size()
+	if len1 != b.Size() {
+		return false
+	}
+	for i, e := range a {
+		if Tuple2ArrayEquals(Tuple2Array(e), Tuple2Array(b[i])) {
 			return false
 		}
 	}

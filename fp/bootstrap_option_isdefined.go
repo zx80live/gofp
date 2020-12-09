@@ -21,6 +21,8 @@ func (o Float64Option) IsDefined() bool { return o != NoneFloat64 }
 
 func (o AnyOption) IsDefined() bool { return o != NoneAny }
 
+func (o Tuple2Option) IsDefined() bool { return o != NoneTuple2 }
+
 func (o BoolOptionOption) IsDefined() bool { return o != NoneBoolOption }
 
 func (o StringOptionOption) IsDefined() bool { return o != NoneStringOption }
@@ -38,6 +40,8 @@ func (o Float32OptionOption) IsDefined() bool { return o != NoneFloat32Option }
 func (o Float64OptionOption) IsDefined() bool { return o != NoneFloat64Option }
 
 func (o AnyOptionOption) IsDefined() bool { return o != NoneAnyOption }
+
+func (o Tuple2OptionOption) IsDefined() bool { return o != NoneTuple2Option }
 
 func (o BoolArrayOption) IsDefined() bool { return o != NoneBoolArray }
 
@@ -57,6 +61,8 @@ func (o Float64ArrayOption) IsDefined() bool { return o != NoneFloat64Array }
 
 func (o AnyArrayOption) IsDefined() bool { return o != NoneAnyArray }
 
+func (o Tuple2ArrayOption) IsDefined() bool { return o != NoneTuple2Array }
+
 func (o BoolListOption) IsDefined() bool { return o != NoneBoolList }
 
 func (o StringListOption) IsDefined() bool { return o != NoneStringList }
@@ -74,3 +80,5 @@ func (o Float32ListOption) IsDefined() bool { return o != NoneFloat32List }
 func (o Float64ListOption) IsDefined() bool { return o != NoneFloat64List }
 
 func (o AnyListOption) IsDefined() bool { return o != NoneAnyList }
+
+func (o Tuple2ListOption) IsDefined() bool { return o != NoneTuple2List }

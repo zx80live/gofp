@@ -27,6 +27,9 @@ func (p Float64ArrayPredicate) Neg() Float64ArrayPredicate {
 	return func(e []float64) bool { return !p(e) }
 }
 func (p AnyArrayPredicate) Neg() AnyArrayPredicate { return func(e []Any) bool { return !p(e) } }
+func (p Tuple2ArrayPredicate) Neg() Tuple2ArrayPredicate {
+	return func(e []Tuple2) bool { return !p(e) }
+}
 func (p BoolArrayArrayPredicate) Neg() BoolArrayArrayPredicate {
 	return func(e [][]bool) bool { return !p(e) }
 }
@@ -54,6 +57,9 @@ func (p Float64ArrayArrayPredicate) Neg() Float64ArrayArrayPredicate {
 func (p AnyArrayArrayPredicate) Neg() AnyArrayArrayPredicate {
 	return func(e [][]Any) bool { return !p(e) }
 }
+func (p Tuple2ArrayArrayPredicate) Neg() Tuple2ArrayArrayPredicate {
+	return func(e [][]Tuple2) bool { return !p(e) }
+}
 func (p BoolOptionPredicate) Neg() BoolOptionPredicate {
 	return func(e BoolOption) bool { return !p(e) }
 }
@@ -77,6 +83,9 @@ func (p Float64OptionPredicate) Neg() Float64OptionPredicate {
 	return func(e Float64Option) bool { return !p(e) }
 }
 func (p AnyOptionPredicate) Neg() AnyOptionPredicate { return func(e AnyOption) bool { return !p(e) } }
+func (p Tuple2OptionPredicate) Neg() Tuple2OptionPredicate {
+	return func(e Tuple2Option) bool { return !p(e) }
+}
 func (p BoolOptionOptionPredicate) Neg() BoolOptionOptionPredicate {
 	return func(e BoolOptionOption) bool { return !p(e) }
 }
@@ -103,6 +112,9 @@ func (p Float64OptionOptionPredicate) Neg() Float64OptionOptionPredicate {
 }
 func (p AnyOptionOptionPredicate) Neg() AnyOptionOptionPredicate {
 	return func(e AnyOptionOption) bool { return !p(e) }
+}
+func (p Tuple2OptionOptionPredicate) Neg() Tuple2OptionOptionPredicate {
+	return func(e Tuple2OptionOption) bool { return !p(e) }
 }
 func (p BoolArrayOptionPredicate) Neg() BoolArrayOptionPredicate {
 	return func(e BoolArrayOption) bool { return !p(e) }
@@ -131,6 +143,9 @@ func (p Float64ArrayOptionPredicate) Neg() Float64ArrayOptionPredicate {
 func (p AnyArrayOptionPredicate) Neg() AnyArrayOptionPredicate {
 	return func(e AnyArrayOption) bool { return !p(e) }
 }
+func (p Tuple2ArrayOptionPredicate) Neg() Tuple2ArrayOptionPredicate {
+	return func(e Tuple2ArrayOption) bool { return !p(e) }
+}
 func (p BoolListOptionPredicate) Neg() BoolListOptionPredicate {
 	return func(e BoolListOption) bool { return !p(e) }
 }
@@ -158,6 +173,9 @@ func (p Float64ListOptionPredicate) Neg() Float64ListOptionPredicate {
 func (p AnyListOptionPredicate) Neg() AnyListOptionPredicate {
 	return func(e AnyListOption) bool { return !p(e) }
 }
+func (p Tuple2ListOptionPredicate) Neg() Tuple2ListOptionPredicate {
+	return func(e Tuple2ListOption) bool { return !p(e) }
+}
 func (p BoolListPredicate) Neg() BoolListPredicate { return func(e BoolList) bool { return !p(e) } }
 func (p StringListPredicate) Neg() StringListPredicate {
 	return func(e StringList) bool { return !p(e) }
@@ -173,6 +191,9 @@ func (p Float64ListPredicate) Neg() Float64ListPredicate {
 	return func(e Float64List) bool { return !p(e) }
 }
 func (p AnyListPredicate) Neg() AnyListPredicate { return func(e AnyList) bool { return !p(e) } }
+func (p Tuple2ListPredicate) Neg() Tuple2ListPredicate {
+	return func(e Tuple2List) bool { return !p(e) }
+}
 func (p BoolArrayListPredicate) Neg() BoolArrayListPredicate {
 	return func(e BoolArrayList) bool { return !p(e) }
 }
@@ -199,6 +220,9 @@ func (p Float64ArrayListPredicate) Neg() Float64ArrayListPredicate {
 }
 func (p AnyArrayListPredicate) Neg() AnyArrayListPredicate {
 	return func(e AnyArrayList) bool { return !p(e) }
+}
+func (p Tuple2ArrayListPredicate) Neg() Tuple2ArrayListPredicate {
+	return func(e Tuple2ArrayList) bool { return !p(e) }
 }
 func (p BoolOptionListPredicate) Neg() BoolOptionListPredicate {
 	return func(e BoolOptionList) bool { return !p(e) }
@@ -227,6 +251,9 @@ func (p Float64OptionListPredicate) Neg() Float64OptionListPredicate {
 func (p AnyOptionListPredicate) Neg() AnyOptionListPredicate {
 	return func(e AnyOptionList) bool { return !p(e) }
 }
+func (p Tuple2OptionListPredicate) Neg() Tuple2OptionListPredicate {
+	return func(e Tuple2OptionList) bool { return !p(e) }
+}
 func (p BoolListListPredicate) Neg() BoolListListPredicate {
 	return func(e BoolListList) bool { return !p(e) }
 }
@@ -254,3 +281,7 @@ func (p Float64ListListPredicate) Neg() Float64ListListPredicate {
 func (p AnyListListPredicate) Neg() AnyListListPredicate {
 	return func(e AnyListList) bool { return !p(e) }
 }
+func (p Tuple2ListListPredicate) Neg() Tuple2ListListPredicate {
+	return func(e Tuple2ListList) bool { return !p(e) }
+}
+func (p Tuple2Predicate) Neg() Tuple2Predicate { return func(e Tuple2) bool { return !p(e) } }

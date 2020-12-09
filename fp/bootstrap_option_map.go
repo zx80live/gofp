@@ -66,6 +66,13 @@ func (m BoolOption) MapAny(f func(bool) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m BoolOption) MapTuple2(f func(bool) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolOption) MapBoolOption(f func(bool) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -127,6 +134,13 @@ func (m BoolOption) MapAnyOption(f func(bool) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m BoolOption) MapTuple2Option(f func(bool) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m BoolOption) MapBoolArray(f func(bool) []bool) BoolArrayOption {
@@ -192,6 +206,13 @@ func (m BoolOption) MapAnyArray(f func(bool) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m BoolOption) MapTuple2Array(f func(bool) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m BoolOption) MapBoolList(f func(bool) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -253,6 +274,13 @@ func (m BoolOption) MapAnyList(f func(bool) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m BoolOption) MapTuple2List(f func(bool) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m StringOption) MapBool(f func(string) bool) BoolOption {
@@ -318,6 +346,13 @@ func (m StringOption) MapAny(f func(string) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m StringOption) MapTuple2(f func(string) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m StringOption) MapBoolOption(f func(string) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -379,6 +414,13 @@ func (m StringOption) MapAnyOption(f func(string) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m StringOption) MapTuple2Option(f func(string) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m StringOption) MapBoolArray(f func(string) []bool) BoolArrayOption {
@@ -444,6 +486,13 @@ func (m StringOption) MapAnyArray(f func(string) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m StringOption) MapTuple2Array(f func(string) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m StringOption) MapBoolList(f func(string) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -505,6 +554,13 @@ func (m StringOption) MapAnyList(f func(string) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m StringOption) MapTuple2List(f func(string) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m IntOption) MapBool(f func(int) bool) BoolOption {
@@ -570,6 +626,13 @@ func (m IntOption) MapAny(f func(int) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m IntOption) MapTuple2(f func(int) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m IntOption) MapBoolOption(f func(int) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -631,6 +694,13 @@ func (m IntOption) MapAnyOption(f func(int) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m IntOption) MapTuple2Option(f func(int) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m IntOption) MapBoolArray(f func(int) []bool) BoolArrayOption {
@@ -696,6 +766,13 @@ func (m IntOption) MapAnyArray(f func(int) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m IntOption) MapTuple2Array(f func(int) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m IntOption) MapBoolList(f func(int) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -757,6 +834,13 @@ func (m IntOption) MapAnyList(f func(int) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m IntOption) MapTuple2List(f func(int) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Int64Option) MapBool(f func(int64) bool) BoolOption {
@@ -822,6 +906,13 @@ func (m Int64Option) MapAny(f func(int64) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Int64Option) MapTuple2(f func(int64) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Int64Option) MapBoolOption(f func(int64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -883,6 +974,13 @@ func (m Int64Option) MapAnyOption(f func(int64) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Int64Option) MapTuple2Option(f func(int64) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Int64Option) MapBoolArray(f func(int64) []bool) BoolArrayOption {
@@ -948,6 +1046,13 @@ func (m Int64Option) MapAnyArray(f func(int64) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m Int64Option) MapTuple2Array(f func(int64) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Int64Option) MapBoolList(f func(int64) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -1009,6 +1114,13 @@ func (m Int64Option) MapAnyList(f func(int64) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Int64Option) MapTuple2List(f func(int64) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m ByteOption) MapBool(f func(byte) bool) BoolOption {
@@ -1074,6 +1186,13 @@ func (m ByteOption) MapAny(f func(byte) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m ByteOption) MapTuple2(f func(byte) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m ByteOption) MapBoolOption(f func(byte) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -1135,6 +1254,13 @@ func (m ByteOption) MapAnyOption(f func(byte) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m ByteOption) MapTuple2Option(f func(byte) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m ByteOption) MapBoolArray(f func(byte) []bool) BoolArrayOption {
@@ -1200,6 +1326,13 @@ func (m ByteOption) MapAnyArray(f func(byte) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m ByteOption) MapTuple2Array(f func(byte) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m ByteOption) MapBoolList(f func(byte) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -1261,6 +1394,13 @@ func (m ByteOption) MapAnyList(f func(byte) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m ByteOption) MapTuple2List(f func(byte) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m RuneOption) MapBool(f func(rune) bool) BoolOption {
@@ -1326,6 +1466,13 @@ func (m RuneOption) MapAny(f func(rune) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m RuneOption) MapTuple2(f func(rune) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m RuneOption) MapBoolOption(f func(rune) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -1387,6 +1534,13 @@ func (m RuneOption) MapAnyOption(f func(rune) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m RuneOption) MapTuple2Option(f func(rune) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m RuneOption) MapBoolArray(f func(rune) []bool) BoolArrayOption {
@@ -1452,6 +1606,13 @@ func (m RuneOption) MapAnyArray(f func(rune) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m RuneOption) MapTuple2Array(f func(rune) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m RuneOption) MapBoolList(f func(rune) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -1513,6 +1674,13 @@ func (m RuneOption) MapAnyList(f func(rune) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m RuneOption) MapTuple2List(f func(rune) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float32Option) MapBool(f func(float32) bool) BoolOption {
@@ -1578,6 +1746,13 @@ func (m Float32Option) MapAny(f func(float32) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float32Option) MapTuple2(f func(float32) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float32Option) MapBoolOption(f func(float32) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -1639,6 +1814,13 @@ func (m Float32Option) MapAnyOption(f func(float32) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float32Option) MapTuple2Option(f func(float32) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float32Option) MapBoolArray(f func(float32) []bool) BoolArrayOption {
@@ -1704,6 +1886,13 @@ func (m Float32Option) MapAnyArray(f func(float32) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m Float32Option) MapTuple2Array(f func(float32) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float32Option) MapBoolList(f func(float32) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -1765,6 +1954,13 @@ func (m Float32Option) MapAnyList(f func(float32) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float32Option) MapTuple2List(f func(float32) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float64Option) MapBool(f func(float64) bool) BoolOption {
@@ -1830,6 +2026,13 @@ func (m Float64Option) MapAny(f func(float64) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float64Option) MapTuple2(f func(float64) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float64Option) MapBoolOption(f func(float64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -1891,6 +2094,13 @@ func (m Float64Option) MapAnyOption(f func(float64) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float64Option) MapTuple2Option(f func(float64) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float64Option) MapBoolArray(f func(float64) []bool) BoolArrayOption {
@@ -1956,6 +2166,13 @@ func (m Float64Option) MapAnyArray(f func(float64) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m Float64Option) MapTuple2Array(f func(float64) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float64Option) MapBoolList(f func(float64) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -2017,6 +2234,13 @@ func (m Float64Option) MapAnyList(f func(float64) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float64Option) MapTuple2List(f func(float64) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m AnyOption) MapBool(f func(Any) bool) BoolOption {
@@ -2082,6 +2306,13 @@ func (m AnyOption) MapAny(f func(Any) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m AnyOption) MapTuple2(f func(Any) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m AnyOption) MapBoolOption(f func(Any) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -2143,6 +2374,13 @@ func (m AnyOption) MapAnyOption(f func(Any) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m AnyOption) MapTuple2Option(f func(Any) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m AnyOption) MapBoolArray(f func(Any) []bool) BoolArrayOption {
@@ -2208,6 +2446,13 @@ func (m AnyOption) MapAnyArray(f func(Any) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m AnyOption) MapTuple2Array(f func(Any) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m AnyOption) MapBoolList(f func(Any) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -2269,6 +2514,293 @@ func (m AnyOption) MapAnyList(f func(Any) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m AnyOption) MapTuple2List(f func(Any) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
+	}
+}
+func (m Tuple2Option) MapBool(f func(Tuple2) bool) BoolOption {
+	if m.IsDefined() {
+		return MakeBoolOption(f(*m.value))
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2Option) MapString(f func(Tuple2) string) StringOption {
+	if m.IsDefined() {
+		return MakeStringOption(f(*m.value))
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2Option) MapInt(f func(Tuple2) int) IntOption {
+	if m.IsDefined() {
+		return MakeIntOption(f(*m.value))
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2Option) MapInt64(f func(Tuple2) int64) Int64Option {
+	if m.IsDefined() {
+		return MakeInt64Option(f(*m.value))
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2Option) MapByte(f func(Tuple2) byte) ByteOption {
+	if m.IsDefined() {
+		return MakeByteOption(f(*m.value))
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2Option) MapRune(f func(Tuple2) rune) RuneOption {
+	if m.IsDefined() {
+		return MakeRuneOption(f(*m.value))
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2Option) MapFloat32(f func(Tuple2) float32) Float32Option {
+	if m.IsDefined() {
+		return MakeFloat32Option(f(*m.value))
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2Option) MapFloat64(f func(Tuple2) float64) Float64Option {
+	if m.IsDefined() {
+		return MakeFloat64Option(f(*m.value))
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2Option) MapAny(f func(Tuple2) Any) AnyOption {
+	if m.IsDefined() {
+		return MakeAnyOption(f(*m.value))
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2Option) MapTuple2(f func(Tuple2) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2Option) MapBoolOption(f func(Tuple2) BoolOption) BoolOptionOption {
+	if m.IsDefined() {
+		return MakeBoolOptionOption(f(*m.value))
+	} else {
+		return NoneBoolOption
+	}
+}
+func (m Tuple2Option) MapStringOption(f func(Tuple2) StringOption) StringOptionOption {
+	if m.IsDefined() {
+		return MakeStringOptionOption(f(*m.value))
+	} else {
+		return NoneStringOption
+	}
+}
+func (m Tuple2Option) MapIntOption(f func(Tuple2) IntOption) IntOptionOption {
+	if m.IsDefined() {
+		return MakeIntOptionOption(f(*m.value))
+	} else {
+		return NoneIntOption
+	}
+}
+func (m Tuple2Option) MapInt64Option(f func(Tuple2) Int64Option) Int64OptionOption {
+	if m.IsDefined() {
+		return MakeInt64OptionOption(f(*m.value))
+	} else {
+		return NoneInt64Option
+	}
+}
+func (m Tuple2Option) MapByteOption(f func(Tuple2) ByteOption) ByteOptionOption {
+	if m.IsDefined() {
+		return MakeByteOptionOption(f(*m.value))
+	} else {
+		return NoneByteOption
+	}
+}
+func (m Tuple2Option) MapRuneOption(f func(Tuple2) RuneOption) RuneOptionOption {
+	if m.IsDefined() {
+		return MakeRuneOptionOption(f(*m.value))
+	} else {
+		return NoneRuneOption
+	}
+}
+func (m Tuple2Option) MapFloat32Option(f func(Tuple2) Float32Option) Float32OptionOption {
+	if m.IsDefined() {
+		return MakeFloat32OptionOption(f(*m.value))
+	} else {
+		return NoneFloat32Option
+	}
+}
+func (m Tuple2Option) MapFloat64Option(f func(Tuple2) Float64Option) Float64OptionOption {
+	if m.IsDefined() {
+		return MakeFloat64OptionOption(f(*m.value))
+	} else {
+		return NoneFloat64Option
+	}
+}
+func (m Tuple2Option) MapAnyOption(f func(Tuple2) AnyOption) AnyOptionOption {
+	if m.IsDefined() {
+		return MakeAnyOptionOption(f(*m.value))
+	} else {
+		return NoneAnyOption
+	}
+}
+func (m Tuple2Option) MapTuple2Option(f func(Tuple2) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
+	}
+}
+func (m Tuple2Option) MapBoolArray(f func(Tuple2) []bool) BoolArrayOption {
+	if m.IsDefined() {
+		return MakeBoolArrayOption(f(*m.value))
+	} else {
+		return NoneBoolArray
+	}
+}
+func (m Tuple2Option) MapStringArray(f func(Tuple2) []string) StringArrayOption {
+	if m.IsDefined() {
+		return MakeStringArrayOption(f(*m.value))
+	} else {
+		return NoneStringArray
+	}
+}
+func (m Tuple2Option) MapIntArray(f func(Tuple2) []int) IntArrayOption {
+	if m.IsDefined() {
+		return MakeIntArrayOption(f(*m.value))
+	} else {
+		return NoneIntArray
+	}
+}
+func (m Tuple2Option) MapInt64Array(f func(Tuple2) []int64) Int64ArrayOption {
+	if m.IsDefined() {
+		return MakeInt64ArrayOption(f(*m.value))
+	} else {
+		return NoneInt64Array
+	}
+}
+func (m Tuple2Option) MapByteArray(f func(Tuple2) []byte) ByteArrayOption {
+	if m.IsDefined() {
+		return MakeByteArrayOption(f(*m.value))
+	} else {
+		return NoneByteArray
+	}
+}
+func (m Tuple2Option) MapRuneArray(f func(Tuple2) []rune) RuneArrayOption {
+	if m.IsDefined() {
+		return MakeRuneArrayOption(f(*m.value))
+	} else {
+		return NoneRuneArray
+	}
+}
+func (m Tuple2Option) MapFloat32Array(f func(Tuple2) []float32) Float32ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat32ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat32Array
+	}
+}
+func (m Tuple2Option) MapFloat64Array(f func(Tuple2) []float64) Float64ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat64ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat64Array
+	}
+}
+func (m Tuple2Option) MapAnyArray(f func(Tuple2) []Any) AnyArrayOption {
+	if m.IsDefined() {
+		return MakeAnyArrayOption(f(*m.value))
+	} else {
+		return NoneAnyArray
+	}
+}
+func (m Tuple2Option) MapTuple2Array(f func(Tuple2) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
+func (m Tuple2Option) MapBoolList(f func(Tuple2) BoolList) BoolListOption {
+	if m.IsDefined() {
+		return MakeBoolListOption(f(*m.value))
+	} else {
+		return NoneBoolList
+	}
+}
+func (m Tuple2Option) MapStringList(f func(Tuple2) StringList) StringListOption {
+	if m.IsDefined() {
+		return MakeStringListOption(f(*m.value))
+	} else {
+		return NoneStringList
+	}
+}
+func (m Tuple2Option) MapIntList(f func(Tuple2) IntList) IntListOption {
+	if m.IsDefined() {
+		return MakeIntListOption(f(*m.value))
+	} else {
+		return NoneIntList
+	}
+}
+func (m Tuple2Option) MapInt64List(f func(Tuple2) Int64List) Int64ListOption {
+	if m.IsDefined() {
+		return MakeInt64ListOption(f(*m.value))
+	} else {
+		return NoneInt64List
+	}
+}
+func (m Tuple2Option) MapByteList(f func(Tuple2) ByteList) ByteListOption {
+	if m.IsDefined() {
+		return MakeByteListOption(f(*m.value))
+	} else {
+		return NoneByteList
+	}
+}
+func (m Tuple2Option) MapRuneList(f func(Tuple2) RuneList) RuneListOption {
+	if m.IsDefined() {
+		return MakeRuneListOption(f(*m.value))
+	} else {
+		return NoneRuneList
+	}
+}
+func (m Tuple2Option) MapFloat32List(f func(Tuple2) Float32List) Float32ListOption {
+	if m.IsDefined() {
+		return MakeFloat32ListOption(f(*m.value))
+	} else {
+		return NoneFloat32List
+	}
+}
+func (m Tuple2Option) MapFloat64List(f func(Tuple2) Float64List) Float64ListOption {
+	if m.IsDefined() {
+		return MakeFloat64ListOption(f(*m.value))
+	} else {
+		return NoneFloat64List
+	}
+}
+func (m Tuple2Option) MapAnyList(f func(Tuple2) AnyList) AnyListOption {
+	if m.IsDefined() {
+		return MakeAnyListOption(f(*m.value))
+	} else {
+		return NoneAnyList
+	}
+}
+func (m Tuple2Option) MapTuple2List(f func(Tuple2) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m BoolOptionOption) MapBool(f func(BoolOption) bool) BoolOption {
@@ -2334,6 +2866,13 @@ func (m BoolOptionOption) MapAny(f func(BoolOption) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m BoolOptionOption) MapTuple2(f func(BoolOption) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolOptionOption) MapBoolOption(f func(BoolOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -2395,6 +2934,13 @@ func (m BoolOptionOption) MapAnyOption(f func(BoolOption) AnyOption) AnyOptionOp
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m BoolOptionOption) MapTuple2Option(f func(BoolOption) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m BoolOptionOption) MapBoolArray(f func(BoolOption) []bool) BoolArrayOption {
@@ -2460,6 +3006,13 @@ func (m BoolOptionOption) MapAnyArray(f func(BoolOption) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m BoolOptionOption) MapTuple2Array(f func(BoolOption) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m BoolOptionOption) MapBoolList(f func(BoolOption) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -2521,6 +3074,13 @@ func (m BoolOptionOption) MapAnyList(f func(BoolOption) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m BoolOptionOption) MapTuple2List(f func(BoolOption) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m StringOptionOption) MapBool(f func(StringOption) bool) BoolOption {
@@ -2586,6 +3146,13 @@ func (m StringOptionOption) MapAny(f func(StringOption) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m StringOptionOption) MapTuple2(f func(StringOption) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m StringOptionOption) MapBoolOption(f func(StringOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -2647,6 +3214,13 @@ func (m StringOptionOption) MapAnyOption(f func(StringOption) AnyOption) AnyOpti
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m StringOptionOption) MapTuple2Option(f func(StringOption) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m StringOptionOption) MapBoolArray(f func(StringOption) []bool) BoolArrayOption {
@@ -2712,6 +3286,13 @@ func (m StringOptionOption) MapAnyArray(f func(StringOption) []Any) AnyArrayOpti
 		return NoneAnyArray
 	}
 }
+func (m StringOptionOption) MapTuple2Array(f func(StringOption) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m StringOptionOption) MapBoolList(f func(StringOption) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -2773,6 +3354,13 @@ func (m StringOptionOption) MapAnyList(f func(StringOption) AnyList) AnyListOpti
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m StringOptionOption) MapTuple2List(f func(StringOption) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m IntOptionOption) MapBool(f func(IntOption) bool) BoolOption {
@@ -2838,6 +3426,13 @@ func (m IntOptionOption) MapAny(f func(IntOption) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m IntOptionOption) MapTuple2(f func(IntOption) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m IntOptionOption) MapBoolOption(f func(IntOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -2899,6 +3494,13 @@ func (m IntOptionOption) MapAnyOption(f func(IntOption) AnyOption) AnyOptionOpti
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m IntOptionOption) MapTuple2Option(f func(IntOption) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m IntOptionOption) MapBoolArray(f func(IntOption) []bool) BoolArrayOption {
@@ -2964,6 +3566,13 @@ func (m IntOptionOption) MapAnyArray(f func(IntOption) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m IntOptionOption) MapTuple2Array(f func(IntOption) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m IntOptionOption) MapBoolList(f func(IntOption) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -3025,6 +3634,13 @@ func (m IntOptionOption) MapAnyList(f func(IntOption) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m IntOptionOption) MapTuple2List(f func(IntOption) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Int64OptionOption) MapBool(f func(Int64Option) bool) BoolOption {
@@ -3090,6 +3706,13 @@ func (m Int64OptionOption) MapAny(f func(Int64Option) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Int64OptionOption) MapTuple2(f func(Int64Option) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Int64OptionOption) MapBoolOption(f func(Int64Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -3151,6 +3774,13 @@ func (m Int64OptionOption) MapAnyOption(f func(Int64Option) AnyOption) AnyOption
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Int64OptionOption) MapTuple2Option(f func(Int64Option) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Int64OptionOption) MapBoolArray(f func(Int64Option) []bool) BoolArrayOption {
@@ -3216,6 +3846,13 @@ func (m Int64OptionOption) MapAnyArray(f func(Int64Option) []Any) AnyArrayOption
 		return NoneAnyArray
 	}
 }
+func (m Int64OptionOption) MapTuple2Array(f func(Int64Option) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Int64OptionOption) MapBoolList(f func(Int64Option) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -3277,6 +3914,13 @@ func (m Int64OptionOption) MapAnyList(f func(Int64Option) AnyList) AnyListOption
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Int64OptionOption) MapTuple2List(f func(Int64Option) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m ByteOptionOption) MapBool(f func(ByteOption) bool) BoolOption {
@@ -3342,6 +3986,13 @@ func (m ByteOptionOption) MapAny(f func(ByteOption) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m ByteOptionOption) MapTuple2(f func(ByteOption) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m ByteOptionOption) MapBoolOption(f func(ByteOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -3403,6 +4054,13 @@ func (m ByteOptionOption) MapAnyOption(f func(ByteOption) AnyOption) AnyOptionOp
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m ByteOptionOption) MapTuple2Option(f func(ByteOption) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m ByteOptionOption) MapBoolArray(f func(ByteOption) []bool) BoolArrayOption {
@@ -3468,6 +4126,13 @@ func (m ByteOptionOption) MapAnyArray(f func(ByteOption) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m ByteOptionOption) MapTuple2Array(f func(ByteOption) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m ByteOptionOption) MapBoolList(f func(ByteOption) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -3529,6 +4194,13 @@ func (m ByteOptionOption) MapAnyList(f func(ByteOption) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m ByteOptionOption) MapTuple2List(f func(ByteOption) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m RuneOptionOption) MapBool(f func(RuneOption) bool) BoolOption {
@@ -3594,6 +4266,13 @@ func (m RuneOptionOption) MapAny(f func(RuneOption) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m RuneOptionOption) MapTuple2(f func(RuneOption) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m RuneOptionOption) MapBoolOption(f func(RuneOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -3655,6 +4334,13 @@ func (m RuneOptionOption) MapAnyOption(f func(RuneOption) AnyOption) AnyOptionOp
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m RuneOptionOption) MapTuple2Option(f func(RuneOption) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m RuneOptionOption) MapBoolArray(f func(RuneOption) []bool) BoolArrayOption {
@@ -3720,6 +4406,13 @@ func (m RuneOptionOption) MapAnyArray(f func(RuneOption) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m RuneOptionOption) MapTuple2Array(f func(RuneOption) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m RuneOptionOption) MapBoolList(f func(RuneOption) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -3781,6 +4474,13 @@ func (m RuneOptionOption) MapAnyList(f func(RuneOption) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m RuneOptionOption) MapTuple2List(f func(RuneOption) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float32OptionOption) MapBool(f func(Float32Option) bool) BoolOption {
@@ -3846,6 +4546,13 @@ func (m Float32OptionOption) MapAny(f func(Float32Option) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float32OptionOption) MapTuple2(f func(Float32Option) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float32OptionOption) MapBoolOption(f func(Float32Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -3907,6 +4614,13 @@ func (m Float32OptionOption) MapAnyOption(f func(Float32Option) AnyOption) AnyOp
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float32OptionOption) MapTuple2Option(f func(Float32Option) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float32OptionOption) MapBoolArray(f func(Float32Option) []bool) BoolArrayOption {
@@ -3972,6 +4686,13 @@ func (m Float32OptionOption) MapAnyArray(f func(Float32Option) []Any) AnyArrayOp
 		return NoneAnyArray
 	}
 }
+func (m Float32OptionOption) MapTuple2Array(f func(Float32Option) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float32OptionOption) MapBoolList(f func(Float32Option) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -4033,6 +4754,13 @@ func (m Float32OptionOption) MapAnyList(f func(Float32Option) AnyList) AnyListOp
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float32OptionOption) MapTuple2List(f func(Float32Option) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float64OptionOption) MapBool(f func(Float64Option) bool) BoolOption {
@@ -4098,6 +4826,13 @@ func (m Float64OptionOption) MapAny(f func(Float64Option) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float64OptionOption) MapTuple2(f func(Float64Option) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float64OptionOption) MapBoolOption(f func(Float64Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -4159,6 +4894,13 @@ func (m Float64OptionOption) MapAnyOption(f func(Float64Option) AnyOption) AnyOp
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float64OptionOption) MapTuple2Option(f func(Float64Option) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float64OptionOption) MapBoolArray(f func(Float64Option) []bool) BoolArrayOption {
@@ -4224,6 +4966,13 @@ func (m Float64OptionOption) MapAnyArray(f func(Float64Option) []Any) AnyArrayOp
 		return NoneAnyArray
 	}
 }
+func (m Float64OptionOption) MapTuple2Array(f func(Float64Option) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float64OptionOption) MapBoolList(f func(Float64Option) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -4285,6 +5034,13 @@ func (m Float64OptionOption) MapAnyList(f func(Float64Option) AnyList) AnyListOp
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float64OptionOption) MapTuple2List(f func(Float64Option) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m AnyOptionOption) MapBool(f func(AnyOption) bool) BoolOption {
@@ -4350,6 +5106,13 @@ func (m AnyOptionOption) MapAny(f func(AnyOption) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m AnyOptionOption) MapTuple2(f func(AnyOption) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m AnyOptionOption) MapBoolOption(f func(AnyOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -4411,6 +5174,13 @@ func (m AnyOptionOption) MapAnyOption(f func(AnyOption) AnyOption) AnyOptionOpti
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m AnyOptionOption) MapTuple2Option(f func(AnyOption) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m AnyOptionOption) MapBoolArray(f func(AnyOption) []bool) BoolArrayOption {
@@ -4476,6 +5246,13 @@ func (m AnyOptionOption) MapAnyArray(f func(AnyOption) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m AnyOptionOption) MapTuple2Array(f func(AnyOption) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m AnyOptionOption) MapBoolList(f func(AnyOption) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -4537,6 +5314,293 @@ func (m AnyOptionOption) MapAnyList(f func(AnyOption) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m AnyOptionOption) MapTuple2List(f func(AnyOption) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
+	}
+}
+func (m Tuple2OptionOption) MapBool(f func(Tuple2Option) bool) BoolOption {
+	if m.IsDefined() {
+		return MakeBoolOption(f(*m.value))
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2OptionOption) MapString(f func(Tuple2Option) string) StringOption {
+	if m.IsDefined() {
+		return MakeStringOption(f(*m.value))
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2OptionOption) MapInt(f func(Tuple2Option) int) IntOption {
+	if m.IsDefined() {
+		return MakeIntOption(f(*m.value))
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2OptionOption) MapInt64(f func(Tuple2Option) int64) Int64Option {
+	if m.IsDefined() {
+		return MakeInt64Option(f(*m.value))
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2OptionOption) MapByte(f func(Tuple2Option) byte) ByteOption {
+	if m.IsDefined() {
+		return MakeByteOption(f(*m.value))
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2OptionOption) MapRune(f func(Tuple2Option) rune) RuneOption {
+	if m.IsDefined() {
+		return MakeRuneOption(f(*m.value))
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2OptionOption) MapFloat32(f func(Tuple2Option) float32) Float32Option {
+	if m.IsDefined() {
+		return MakeFloat32Option(f(*m.value))
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2OptionOption) MapFloat64(f func(Tuple2Option) float64) Float64Option {
+	if m.IsDefined() {
+		return MakeFloat64Option(f(*m.value))
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2OptionOption) MapAny(f func(Tuple2Option) Any) AnyOption {
+	if m.IsDefined() {
+		return MakeAnyOption(f(*m.value))
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2OptionOption) MapTuple2(f func(Tuple2Option) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2OptionOption) MapBoolOption(f func(Tuple2Option) BoolOption) BoolOptionOption {
+	if m.IsDefined() {
+		return MakeBoolOptionOption(f(*m.value))
+	} else {
+		return NoneBoolOption
+	}
+}
+func (m Tuple2OptionOption) MapStringOption(f func(Tuple2Option) StringOption) StringOptionOption {
+	if m.IsDefined() {
+		return MakeStringOptionOption(f(*m.value))
+	} else {
+		return NoneStringOption
+	}
+}
+func (m Tuple2OptionOption) MapIntOption(f func(Tuple2Option) IntOption) IntOptionOption {
+	if m.IsDefined() {
+		return MakeIntOptionOption(f(*m.value))
+	} else {
+		return NoneIntOption
+	}
+}
+func (m Tuple2OptionOption) MapInt64Option(f func(Tuple2Option) Int64Option) Int64OptionOption {
+	if m.IsDefined() {
+		return MakeInt64OptionOption(f(*m.value))
+	} else {
+		return NoneInt64Option
+	}
+}
+func (m Tuple2OptionOption) MapByteOption(f func(Tuple2Option) ByteOption) ByteOptionOption {
+	if m.IsDefined() {
+		return MakeByteOptionOption(f(*m.value))
+	} else {
+		return NoneByteOption
+	}
+}
+func (m Tuple2OptionOption) MapRuneOption(f func(Tuple2Option) RuneOption) RuneOptionOption {
+	if m.IsDefined() {
+		return MakeRuneOptionOption(f(*m.value))
+	} else {
+		return NoneRuneOption
+	}
+}
+func (m Tuple2OptionOption) MapFloat32Option(f func(Tuple2Option) Float32Option) Float32OptionOption {
+	if m.IsDefined() {
+		return MakeFloat32OptionOption(f(*m.value))
+	} else {
+		return NoneFloat32Option
+	}
+}
+func (m Tuple2OptionOption) MapFloat64Option(f func(Tuple2Option) Float64Option) Float64OptionOption {
+	if m.IsDefined() {
+		return MakeFloat64OptionOption(f(*m.value))
+	} else {
+		return NoneFloat64Option
+	}
+}
+func (m Tuple2OptionOption) MapAnyOption(f func(Tuple2Option) AnyOption) AnyOptionOption {
+	if m.IsDefined() {
+		return MakeAnyOptionOption(f(*m.value))
+	} else {
+		return NoneAnyOption
+	}
+}
+func (m Tuple2OptionOption) MapTuple2Option(f func(Tuple2Option) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
+	}
+}
+func (m Tuple2OptionOption) MapBoolArray(f func(Tuple2Option) []bool) BoolArrayOption {
+	if m.IsDefined() {
+		return MakeBoolArrayOption(f(*m.value))
+	} else {
+		return NoneBoolArray
+	}
+}
+func (m Tuple2OptionOption) MapStringArray(f func(Tuple2Option) []string) StringArrayOption {
+	if m.IsDefined() {
+		return MakeStringArrayOption(f(*m.value))
+	} else {
+		return NoneStringArray
+	}
+}
+func (m Tuple2OptionOption) MapIntArray(f func(Tuple2Option) []int) IntArrayOption {
+	if m.IsDefined() {
+		return MakeIntArrayOption(f(*m.value))
+	} else {
+		return NoneIntArray
+	}
+}
+func (m Tuple2OptionOption) MapInt64Array(f func(Tuple2Option) []int64) Int64ArrayOption {
+	if m.IsDefined() {
+		return MakeInt64ArrayOption(f(*m.value))
+	} else {
+		return NoneInt64Array
+	}
+}
+func (m Tuple2OptionOption) MapByteArray(f func(Tuple2Option) []byte) ByteArrayOption {
+	if m.IsDefined() {
+		return MakeByteArrayOption(f(*m.value))
+	} else {
+		return NoneByteArray
+	}
+}
+func (m Tuple2OptionOption) MapRuneArray(f func(Tuple2Option) []rune) RuneArrayOption {
+	if m.IsDefined() {
+		return MakeRuneArrayOption(f(*m.value))
+	} else {
+		return NoneRuneArray
+	}
+}
+func (m Tuple2OptionOption) MapFloat32Array(f func(Tuple2Option) []float32) Float32ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat32ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat32Array
+	}
+}
+func (m Tuple2OptionOption) MapFloat64Array(f func(Tuple2Option) []float64) Float64ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat64ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat64Array
+	}
+}
+func (m Tuple2OptionOption) MapAnyArray(f func(Tuple2Option) []Any) AnyArrayOption {
+	if m.IsDefined() {
+		return MakeAnyArrayOption(f(*m.value))
+	} else {
+		return NoneAnyArray
+	}
+}
+func (m Tuple2OptionOption) MapTuple2Array(f func(Tuple2Option) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
+func (m Tuple2OptionOption) MapBoolList(f func(Tuple2Option) BoolList) BoolListOption {
+	if m.IsDefined() {
+		return MakeBoolListOption(f(*m.value))
+	} else {
+		return NoneBoolList
+	}
+}
+func (m Tuple2OptionOption) MapStringList(f func(Tuple2Option) StringList) StringListOption {
+	if m.IsDefined() {
+		return MakeStringListOption(f(*m.value))
+	} else {
+		return NoneStringList
+	}
+}
+func (m Tuple2OptionOption) MapIntList(f func(Tuple2Option) IntList) IntListOption {
+	if m.IsDefined() {
+		return MakeIntListOption(f(*m.value))
+	} else {
+		return NoneIntList
+	}
+}
+func (m Tuple2OptionOption) MapInt64List(f func(Tuple2Option) Int64List) Int64ListOption {
+	if m.IsDefined() {
+		return MakeInt64ListOption(f(*m.value))
+	} else {
+		return NoneInt64List
+	}
+}
+func (m Tuple2OptionOption) MapByteList(f func(Tuple2Option) ByteList) ByteListOption {
+	if m.IsDefined() {
+		return MakeByteListOption(f(*m.value))
+	} else {
+		return NoneByteList
+	}
+}
+func (m Tuple2OptionOption) MapRuneList(f func(Tuple2Option) RuneList) RuneListOption {
+	if m.IsDefined() {
+		return MakeRuneListOption(f(*m.value))
+	} else {
+		return NoneRuneList
+	}
+}
+func (m Tuple2OptionOption) MapFloat32List(f func(Tuple2Option) Float32List) Float32ListOption {
+	if m.IsDefined() {
+		return MakeFloat32ListOption(f(*m.value))
+	} else {
+		return NoneFloat32List
+	}
+}
+func (m Tuple2OptionOption) MapFloat64List(f func(Tuple2Option) Float64List) Float64ListOption {
+	if m.IsDefined() {
+		return MakeFloat64ListOption(f(*m.value))
+	} else {
+		return NoneFloat64List
+	}
+}
+func (m Tuple2OptionOption) MapAnyList(f func(Tuple2Option) AnyList) AnyListOption {
+	if m.IsDefined() {
+		return MakeAnyListOption(f(*m.value))
+	} else {
+		return NoneAnyList
+	}
+}
+func (m Tuple2OptionOption) MapTuple2List(f func(Tuple2Option) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m BoolArrayOption) MapBool(f func([]bool) bool) BoolOption {
@@ -4602,6 +5666,13 @@ func (m BoolArrayOption) MapAny(f func([]bool) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m BoolArrayOption) MapTuple2(f func([]bool) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolArrayOption) MapBoolOption(f func([]bool) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -4663,6 +5734,13 @@ func (m BoolArrayOption) MapAnyOption(f func([]bool) AnyOption) AnyOptionOption 
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m BoolArrayOption) MapTuple2Option(f func([]bool) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m BoolArrayOption) MapBoolArray(f func([]bool) []bool) BoolArrayOption {
@@ -4728,6 +5806,13 @@ func (m BoolArrayOption) MapAnyArray(f func([]bool) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m BoolArrayOption) MapTuple2Array(f func([]bool) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m BoolArrayOption) MapBoolList(f func([]bool) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -4789,6 +5874,13 @@ func (m BoolArrayOption) MapAnyList(f func([]bool) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m BoolArrayOption) MapTuple2List(f func([]bool) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m StringArrayOption) MapBool(f func([]string) bool) BoolOption {
@@ -4854,6 +5946,13 @@ func (m StringArrayOption) MapAny(f func([]string) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m StringArrayOption) MapTuple2(f func([]string) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m StringArrayOption) MapBoolOption(f func([]string) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -4915,6 +6014,13 @@ func (m StringArrayOption) MapAnyOption(f func([]string) AnyOption) AnyOptionOpt
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m StringArrayOption) MapTuple2Option(f func([]string) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m StringArrayOption) MapBoolArray(f func([]string) []bool) BoolArrayOption {
@@ -4980,6 +6086,13 @@ func (m StringArrayOption) MapAnyArray(f func([]string) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m StringArrayOption) MapTuple2Array(f func([]string) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m StringArrayOption) MapBoolList(f func([]string) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -5041,6 +6154,13 @@ func (m StringArrayOption) MapAnyList(f func([]string) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m StringArrayOption) MapTuple2List(f func([]string) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m IntArrayOption) MapBool(f func([]int) bool) BoolOption {
@@ -5106,6 +6226,13 @@ func (m IntArrayOption) MapAny(f func([]int) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m IntArrayOption) MapTuple2(f func([]int) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m IntArrayOption) MapBoolOption(f func([]int) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -5167,6 +6294,13 @@ func (m IntArrayOption) MapAnyOption(f func([]int) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m IntArrayOption) MapTuple2Option(f func([]int) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m IntArrayOption) MapBoolArray(f func([]int) []bool) BoolArrayOption {
@@ -5232,6 +6366,13 @@ func (m IntArrayOption) MapAnyArray(f func([]int) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m IntArrayOption) MapTuple2Array(f func([]int) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m IntArrayOption) MapBoolList(f func([]int) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -5293,6 +6434,13 @@ func (m IntArrayOption) MapAnyList(f func([]int) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m IntArrayOption) MapTuple2List(f func([]int) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Int64ArrayOption) MapBool(f func([]int64) bool) BoolOption {
@@ -5358,6 +6506,13 @@ func (m Int64ArrayOption) MapAny(f func([]int64) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Int64ArrayOption) MapTuple2(f func([]int64) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Int64ArrayOption) MapBoolOption(f func([]int64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -5419,6 +6574,13 @@ func (m Int64ArrayOption) MapAnyOption(f func([]int64) AnyOption) AnyOptionOptio
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Int64ArrayOption) MapTuple2Option(f func([]int64) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Int64ArrayOption) MapBoolArray(f func([]int64) []bool) BoolArrayOption {
@@ -5484,6 +6646,13 @@ func (m Int64ArrayOption) MapAnyArray(f func([]int64) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m Int64ArrayOption) MapTuple2Array(f func([]int64) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Int64ArrayOption) MapBoolList(f func([]int64) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -5545,6 +6714,13 @@ func (m Int64ArrayOption) MapAnyList(f func([]int64) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Int64ArrayOption) MapTuple2List(f func([]int64) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m ByteArrayOption) MapBool(f func([]byte) bool) BoolOption {
@@ -5610,6 +6786,13 @@ func (m ByteArrayOption) MapAny(f func([]byte) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m ByteArrayOption) MapTuple2(f func([]byte) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m ByteArrayOption) MapBoolOption(f func([]byte) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -5671,6 +6854,13 @@ func (m ByteArrayOption) MapAnyOption(f func([]byte) AnyOption) AnyOptionOption 
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m ByteArrayOption) MapTuple2Option(f func([]byte) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m ByteArrayOption) MapBoolArray(f func([]byte) []bool) BoolArrayOption {
@@ -5736,6 +6926,13 @@ func (m ByteArrayOption) MapAnyArray(f func([]byte) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m ByteArrayOption) MapTuple2Array(f func([]byte) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m ByteArrayOption) MapBoolList(f func([]byte) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -5797,6 +6994,13 @@ func (m ByteArrayOption) MapAnyList(f func([]byte) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m ByteArrayOption) MapTuple2List(f func([]byte) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m RuneArrayOption) MapBool(f func([]rune) bool) BoolOption {
@@ -5862,6 +7066,13 @@ func (m RuneArrayOption) MapAny(f func([]rune) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m RuneArrayOption) MapTuple2(f func([]rune) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m RuneArrayOption) MapBoolOption(f func([]rune) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -5923,6 +7134,13 @@ func (m RuneArrayOption) MapAnyOption(f func([]rune) AnyOption) AnyOptionOption 
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m RuneArrayOption) MapTuple2Option(f func([]rune) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m RuneArrayOption) MapBoolArray(f func([]rune) []bool) BoolArrayOption {
@@ -5988,6 +7206,13 @@ func (m RuneArrayOption) MapAnyArray(f func([]rune) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m RuneArrayOption) MapTuple2Array(f func([]rune) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m RuneArrayOption) MapBoolList(f func([]rune) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -6049,6 +7274,13 @@ func (m RuneArrayOption) MapAnyList(f func([]rune) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m RuneArrayOption) MapTuple2List(f func([]rune) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float32ArrayOption) MapBool(f func([]float32) bool) BoolOption {
@@ -6114,6 +7346,13 @@ func (m Float32ArrayOption) MapAny(f func([]float32) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float32ArrayOption) MapTuple2(f func([]float32) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float32ArrayOption) MapBoolOption(f func([]float32) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -6175,6 +7414,13 @@ func (m Float32ArrayOption) MapAnyOption(f func([]float32) AnyOption) AnyOptionO
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float32ArrayOption) MapTuple2Option(f func([]float32) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float32ArrayOption) MapBoolArray(f func([]float32) []bool) BoolArrayOption {
@@ -6240,6 +7486,13 @@ func (m Float32ArrayOption) MapAnyArray(f func([]float32) []Any) AnyArrayOption 
 		return NoneAnyArray
 	}
 }
+func (m Float32ArrayOption) MapTuple2Array(f func([]float32) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float32ArrayOption) MapBoolList(f func([]float32) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -6301,6 +7554,13 @@ func (m Float32ArrayOption) MapAnyList(f func([]float32) AnyList) AnyListOption 
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float32ArrayOption) MapTuple2List(f func([]float32) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float64ArrayOption) MapBool(f func([]float64) bool) BoolOption {
@@ -6366,6 +7626,13 @@ func (m Float64ArrayOption) MapAny(f func([]float64) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float64ArrayOption) MapTuple2(f func([]float64) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float64ArrayOption) MapBoolOption(f func([]float64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -6427,6 +7694,13 @@ func (m Float64ArrayOption) MapAnyOption(f func([]float64) AnyOption) AnyOptionO
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float64ArrayOption) MapTuple2Option(f func([]float64) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float64ArrayOption) MapBoolArray(f func([]float64) []bool) BoolArrayOption {
@@ -6492,6 +7766,13 @@ func (m Float64ArrayOption) MapAnyArray(f func([]float64) []Any) AnyArrayOption 
 		return NoneAnyArray
 	}
 }
+func (m Float64ArrayOption) MapTuple2Array(f func([]float64) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float64ArrayOption) MapBoolList(f func([]float64) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -6553,6 +7834,13 @@ func (m Float64ArrayOption) MapAnyList(f func([]float64) AnyList) AnyListOption 
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float64ArrayOption) MapTuple2List(f func([]float64) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m AnyArrayOption) MapBool(f func([]Any) bool) BoolOption {
@@ -6618,6 +7906,13 @@ func (m AnyArrayOption) MapAny(f func([]Any) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m AnyArrayOption) MapTuple2(f func([]Any) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m AnyArrayOption) MapBoolOption(f func([]Any) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -6679,6 +7974,13 @@ func (m AnyArrayOption) MapAnyOption(f func([]Any) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m AnyArrayOption) MapTuple2Option(f func([]Any) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m AnyArrayOption) MapBoolArray(f func([]Any) []bool) BoolArrayOption {
@@ -6744,6 +8046,13 @@ func (m AnyArrayOption) MapAnyArray(f func([]Any) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m AnyArrayOption) MapTuple2Array(f func([]Any) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m AnyArrayOption) MapBoolList(f func([]Any) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -6805,6 +8114,293 @@ func (m AnyArrayOption) MapAnyList(f func([]Any) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m AnyArrayOption) MapTuple2List(f func([]Any) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
+	}
+}
+func (m Tuple2ArrayOption) MapBool(f func([]Tuple2) bool) BoolOption {
+	if m.IsDefined() {
+		return MakeBoolOption(f(*m.value))
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2ArrayOption) MapString(f func([]Tuple2) string) StringOption {
+	if m.IsDefined() {
+		return MakeStringOption(f(*m.value))
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2ArrayOption) MapInt(f func([]Tuple2) int) IntOption {
+	if m.IsDefined() {
+		return MakeIntOption(f(*m.value))
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2ArrayOption) MapInt64(f func([]Tuple2) int64) Int64Option {
+	if m.IsDefined() {
+		return MakeInt64Option(f(*m.value))
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2ArrayOption) MapByte(f func([]Tuple2) byte) ByteOption {
+	if m.IsDefined() {
+		return MakeByteOption(f(*m.value))
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2ArrayOption) MapRune(f func([]Tuple2) rune) RuneOption {
+	if m.IsDefined() {
+		return MakeRuneOption(f(*m.value))
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2ArrayOption) MapFloat32(f func([]Tuple2) float32) Float32Option {
+	if m.IsDefined() {
+		return MakeFloat32Option(f(*m.value))
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2ArrayOption) MapFloat64(f func([]Tuple2) float64) Float64Option {
+	if m.IsDefined() {
+		return MakeFloat64Option(f(*m.value))
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2ArrayOption) MapAny(f func([]Tuple2) Any) AnyOption {
+	if m.IsDefined() {
+		return MakeAnyOption(f(*m.value))
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2ArrayOption) MapTuple2(f func([]Tuple2) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2ArrayOption) MapBoolOption(f func([]Tuple2) BoolOption) BoolOptionOption {
+	if m.IsDefined() {
+		return MakeBoolOptionOption(f(*m.value))
+	} else {
+		return NoneBoolOption
+	}
+}
+func (m Tuple2ArrayOption) MapStringOption(f func([]Tuple2) StringOption) StringOptionOption {
+	if m.IsDefined() {
+		return MakeStringOptionOption(f(*m.value))
+	} else {
+		return NoneStringOption
+	}
+}
+func (m Tuple2ArrayOption) MapIntOption(f func([]Tuple2) IntOption) IntOptionOption {
+	if m.IsDefined() {
+		return MakeIntOptionOption(f(*m.value))
+	} else {
+		return NoneIntOption
+	}
+}
+func (m Tuple2ArrayOption) MapInt64Option(f func([]Tuple2) Int64Option) Int64OptionOption {
+	if m.IsDefined() {
+		return MakeInt64OptionOption(f(*m.value))
+	} else {
+		return NoneInt64Option
+	}
+}
+func (m Tuple2ArrayOption) MapByteOption(f func([]Tuple2) ByteOption) ByteOptionOption {
+	if m.IsDefined() {
+		return MakeByteOptionOption(f(*m.value))
+	} else {
+		return NoneByteOption
+	}
+}
+func (m Tuple2ArrayOption) MapRuneOption(f func([]Tuple2) RuneOption) RuneOptionOption {
+	if m.IsDefined() {
+		return MakeRuneOptionOption(f(*m.value))
+	} else {
+		return NoneRuneOption
+	}
+}
+func (m Tuple2ArrayOption) MapFloat32Option(f func([]Tuple2) Float32Option) Float32OptionOption {
+	if m.IsDefined() {
+		return MakeFloat32OptionOption(f(*m.value))
+	} else {
+		return NoneFloat32Option
+	}
+}
+func (m Tuple2ArrayOption) MapFloat64Option(f func([]Tuple2) Float64Option) Float64OptionOption {
+	if m.IsDefined() {
+		return MakeFloat64OptionOption(f(*m.value))
+	} else {
+		return NoneFloat64Option
+	}
+}
+func (m Tuple2ArrayOption) MapAnyOption(f func([]Tuple2) AnyOption) AnyOptionOption {
+	if m.IsDefined() {
+		return MakeAnyOptionOption(f(*m.value))
+	} else {
+		return NoneAnyOption
+	}
+}
+func (m Tuple2ArrayOption) MapTuple2Option(f func([]Tuple2) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
+	}
+}
+func (m Tuple2ArrayOption) MapBoolArray(f func([]Tuple2) []bool) BoolArrayOption {
+	if m.IsDefined() {
+		return MakeBoolArrayOption(f(*m.value))
+	} else {
+		return NoneBoolArray
+	}
+}
+func (m Tuple2ArrayOption) MapStringArray(f func([]Tuple2) []string) StringArrayOption {
+	if m.IsDefined() {
+		return MakeStringArrayOption(f(*m.value))
+	} else {
+		return NoneStringArray
+	}
+}
+func (m Tuple2ArrayOption) MapIntArray(f func([]Tuple2) []int) IntArrayOption {
+	if m.IsDefined() {
+		return MakeIntArrayOption(f(*m.value))
+	} else {
+		return NoneIntArray
+	}
+}
+func (m Tuple2ArrayOption) MapInt64Array(f func([]Tuple2) []int64) Int64ArrayOption {
+	if m.IsDefined() {
+		return MakeInt64ArrayOption(f(*m.value))
+	} else {
+		return NoneInt64Array
+	}
+}
+func (m Tuple2ArrayOption) MapByteArray(f func([]Tuple2) []byte) ByteArrayOption {
+	if m.IsDefined() {
+		return MakeByteArrayOption(f(*m.value))
+	} else {
+		return NoneByteArray
+	}
+}
+func (m Tuple2ArrayOption) MapRuneArray(f func([]Tuple2) []rune) RuneArrayOption {
+	if m.IsDefined() {
+		return MakeRuneArrayOption(f(*m.value))
+	} else {
+		return NoneRuneArray
+	}
+}
+func (m Tuple2ArrayOption) MapFloat32Array(f func([]Tuple2) []float32) Float32ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat32ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat32Array
+	}
+}
+func (m Tuple2ArrayOption) MapFloat64Array(f func([]Tuple2) []float64) Float64ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat64ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat64Array
+	}
+}
+func (m Tuple2ArrayOption) MapAnyArray(f func([]Tuple2) []Any) AnyArrayOption {
+	if m.IsDefined() {
+		return MakeAnyArrayOption(f(*m.value))
+	} else {
+		return NoneAnyArray
+	}
+}
+func (m Tuple2ArrayOption) MapTuple2Array(f func([]Tuple2) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
+func (m Tuple2ArrayOption) MapBoolList(f func([]Tuple2) BoolList) BoolListOption {
+	if m.IsDefined() {
+		return MakeBoolListOption(f(*m.value))
+	} else {
+		return NoneBoolList
+	}
+}
+func (m Tuple2ArrayOption) MapStringList(f func([]Tuple2) StringList) StringListOption {
+	if m.IsDefined() {
+		return MakeStringListOption(f(*m.value))
+	} else {
+		return NoneStringList
+	}
+}
+func (m Tuple2ArrayOption) MapIntList(f func([]Tuple2) IntList) IntListOption {
+	if m.IsDefined() {
+		return MakeIntListOption(f(*m.value))
+	} else {
+		return NoneIntList
+	}
+}
+func (m Tuple2ArrayOption) MapInt64List(f func([]Tuple2) Int64List) Int64ListOption {
+	if m.IsDefined() {
+		return MakeInt64ListOption(f(*m.value))
+	} else {
+		return NoneInt64List
+	}
+}
+func (m Tuple2ArrayOption) MapByteList(f func([]Tuple2) ByteList) ByteListOption {
+	if m.IsDefined() {
+		return MakeByteListOption(f(*m.value))
+	} else {
+		return NoneByteList
+	}
+}
+func (m Tuple2ArrayOption) MapRuneList(f func([]Tuple2) RuneList) RuneListOption {
+	if m.IsDefined() {
+		return MakeRuneListOption(f(*m.value))
+	} else {
+		return NoneRuneList
+	}
+}
+func (m Tuple2ArrayOption) MapFloat32List(f func([]Tuple2) Float32List) Float32ListOption {
+	if m.IsDefined() {
+		return MakeFloat32ListOption(f(*m.value))
+	} else {
+		return NoneFloat32List
+	}
+}
+func (m Tuple2ArrayOption) MapFloat64List(f func([]Tuple2) Float64List) Float64ListOption {
+	if m.IsDefined() {
+		return MakeFloat64ListOption(f(*m.value))
+	} else {
+		return NoneFloat64List
+	}
+}
+func (m Tuple2ArrayOption) MapAnyList(f func([]Tuple2) AnyList) AnyListOption {
+	if m.IsDefined() {
+		return MakeAnyListOption(f(*m.value))
+	} else {
+		return NoneAnyList
+	}
+}
+func (m Tuple2ArrayOption) MapTuple2List(f func([]Tuple2) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m BoolListOption) MapBool(f func(BoolList) bool) BoolOption {
@@ -6870,6 +8466,13 @@ func (m BoolListOption) MapAny(f func(BoolList) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m BoolListOption) MapTuple2(f func(BoolList) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolListOption) MapBoolOption(f func(BoolList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -6931,6 +8534,13 @@ func (m BoolListOption) MapAnyOption(f func(BoolList) AnyOption) AnyOptionOption
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m BoolListOption) MapTuple2Option(f func(BoolList) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m BoolListOption) MapBoolArray(f func(BoolList) []bool) BoolArrayOption {
@@ -6996,6 +8606,13 @@ func (m BoolListOption) MapAnyArray(f func(BoolList) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m BoolListOption) MapTuple2Array(f func(BoolList) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m BoolListOption) MapBoolList(f func(BoolList) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -7057,6 +8674,13 @@ func (m BoolListOption) MapAnyList(f func(BoolList) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m BoolListOption) MapTuple2List(f func(BoolList) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m StringListOption) MapBool(f func(StringList) bool) BoolOption {
@@ -7122,6 +8746,13 @@ func (m StringListOption) MapAny(f func(StringList) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m StringListOption) MapTuple2(f func(StringList) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m StringListOption) MapBoolOption(f func(StringList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -7183,6 +8814,13 @@ func (m StringListOption) MapAnyOption(f func(StringList) AnyOption) AnyOptionOp
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m StringListOption) MapTuple2Option(f func(StringList) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m StringListOption) MapBoolArray(f func(StringList) []bool) BoolArrayOption {
@@ -7248,6 +8886,13 @@ func (m StringListOption) MapAnyArray(f func(StringList) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m StringListOption) MapTuple2Array(f func(StringList) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m StringListOption) MapBoolList(f func(StringList) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -7309,6 +8954,13 @@ func (m StringListOption) MapAnyList(f func(StringList) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m StringListOption) MapTuple2List(f func(StringList) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m IntListOption) MapBool(f func(IntList) bool) BoolOption {
@@ -7374,6 +9026,13 @@ func (m IntListOption) MapAny(f func(IntList) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m IntListOption) MapTuple2(f func(IntList) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m IntListOption) MapBoolOption(f func(IntList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -7435,6 +9094,13 @@ func (m IntListOption) MapAnyOption(f func(IntList) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m IntListOption) MapTuple2Option(f func(IntList) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m IntListOption) MapBoolArray(f func(IntList) []bool) BoolArrayOption {
@@ -7500,6 +9166,13 @@ func (m IntListOption) MapAnyArray(f func(IntList) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m IntListOption) MapTuple2Array(f func(IntList) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m IntListOption) MapBoolList(f func(IntList) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -7561,6 +9234,13 @@ func (m IntListOption) MapAnyList(f func(IntList) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m IntListOption) MapTuple2List(f func(IntList) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Int64ListOption) MapBool(f func(Int64List) bool) BoolOption {
@@ -7626,6 +9306,13 @@ func (m Int64ListOption) MapAny(f func(Int64List) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Int64ListOption) MapTuple2(f func(Int64List) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Int64ListOption) MapBoolOption(f func(Int64List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -7687,6 +9374,13 @@ func (m Int64ListOption) MapAnyOption(f func(Int64List) AnyOption) AnyOptionOpti
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Int64ListOption) MapTuple2Option(f func(Int64List) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Int64ListOption) MapBoolArray(f func(Int64List) []bool) BoolArrayOption {
@@ -7752,6 +9446,13 @@ func (m Int64ListOption) MapAnyArray(f func(Int64List) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m Int64ListOption) MapTuple2Array(f func(Int64List) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Int64ListOption) MapBoolList(f func(Int64List) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -7813,6 +9514,13 @@ func (m Int64ListOption) MapAnyList(f func(Int64List) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Int64ListOption) MapTuple2List(f func(Int64List) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m ByteListOption) MapBool(f func(ByteList) bool) BoolOption {
@@ -7878,6 +9586,13 @@ func (m ByteListOption) MapAny(f func(ByteList) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m ByteListOption) MapTuple2(f func(ByteList) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m ByteListOption) MapBoolOption(f func(ByteList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -7939,6 +9654,13 @@ func (m ByteListOption) MapAnyOption(f func(ByteList) AnyOption) AnyOptionOption
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m ByteListOption) MapTuple2Option(f func(ByteList) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m ByteListOption) MapBoolArray(f func(ByteList) []bool) BoolArrayOption {
@@ -8004,6 +9726,13 @@ func (m ByteListOption) MapAnyArray(f func(ByteList) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m ByteListOption) MapTuple2Array(f func(ByteList) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m ByteListOption) MapBoolList(f func(ByteList) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -8065,6 +9794,13 @@ func (m ByteListOption) MapAnyList(f func(ByteList) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m ByteListOption) MapTuple2List(f func(ByteList) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m RuneListOption) MapBool(f func(RuneList) bool) BoolOption {
@@ -8130,6 +9866,13 @@ func (m RuneListOption) MapAny(f func(RuneList) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m RuneListOption) MapTuple2(f func(RuneList) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m RuneListOption) MapBoolOption(f func(RuneList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -8191,6 +9934,13 @@ func (m RuneListOption) MapAnyOption(f func(RuneList) AnyOption) AnyOptionOption
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m RuneListOption) MapTuple2Option(f func(RuneList) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m RuneListOption) MapBoolArray(f func(RuneList) []bool) BoolArrayOption {
@@ -8256,6 +10006,13 @@ func (m RuneListOption) MapAnyArray(f func(RuneList) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m RuneListOption) MapTuple2Array(f func(RuneList) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m RuneListOption) MapBoolList(f func(RuneList) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -8317,6 +10074,13 @@ func (m RuneListOption) MapAnyList(f func(RuneList) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m RuneListOption) MapTuple2List(f func(RuneList) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float32ListOption) MapBool(f func(Float32List) bool) BoolOption {
@@ -8382,6 +10146,13 @@ func (m Float32ListOption) MapAny(f func(Float32List) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float32ListOption) MapTuple2(f func(Float32List) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float32ListOption) MapBoolOption(f func(Float32List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -8443,6 +10214,13 @@ func (m Float32ListOption) MapAnyOption(f func(Float32List) AnyOption) AnyOption
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float32ListOption) MapTuple2Option(f func(Float32List) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float32ListOption) MapBoolArray(f func(Float32List) []bool) BoolArrayOption {
@@ -8508,6 +10286,13 @@ func (m Float32ListOption) MapAnyArray(f func(Float32List) []Any) AnyArrayOption
 		return NoneAnyArray
 	}
 }
+func (m Float32ListOption) MapTuple2Array(f func(Float32List) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float32ListOption) MapBoolList(f func(Float32List) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -8569,6 +10354,13 @@ func (m Float32ListOption) MapAnyList(f func(Float32List) AnyList) AnyListOption
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float32ListOption) MapTuple2List(f func(Float32List) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m Float64ListOption) MapBool(f func(Float64List) bool) BoolOption {
@@ -8634,6 +10426,13 @@ func (m Float64ListOption) MapAny(f func(Float64List) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float64ListOption) MapTuple2(f func(Float64List) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float64ListOption) MapBoolOption(f func(Float64List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -8695,6 +10494,13 @@ func (m Float64ListOption) MapAnyOption(f func(Float64List) AnyOption) AnyOption
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Float64ListOption) MapTuple2Option(f func(Float64List) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m Float64ListOption) MapBoolArray(f func(Float64List) []bool) BoolArrayOption {
@@ -8760,6 +10566,13 @@ func (m Float64ListOption) MapAnyArray(f func(Float64List) []Any) AnyArrayOption
 		return NoneAnyArray
 	}
 }
+func (m Float64ListOption) MapTuple2Array(f func(Float64List) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m Float64ListOption) MapBoolList(f func(Float64List) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -8821,6 +10634,13 @@ func (m Float64ListOption) MapAnyList(f func(Float64List) AnyList) AnyListOption
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Float64ListOption) MapTuple2List(f func(Float64List) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }
 func (m AnyListOption) MapBool(f func(AnyList) bool) BoolOption {
@@ -8886,6 +10706,13 @@ func (m AnyListOption) MapAny(f func(AnyList) Any) AnyOption {
 		return NoneAny
 	}
 }
+func (m AnyListOption) MapTuple2(f func(AnyList) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
 func (m AnyListOption) MapBoolOption(f func(AnyList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
 		return MakeBoolOptionOption(f(*m.value))
@@ -8947,6 +10774,13 @@ func (m AnyListOption) MapAnyOption(f func(AnyList) AnyOption) AnyOptionOption {
 		return MakeAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m AnyListOption) MapTuple2Option(f func(AnyList) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m AnyListOption) MapBoolArray(f func(AnyList) []bool) BoolArrayOption {
@@ -9012,6 +10846,13 @@ func (m AnyListOption) MapAnyArray(f func(AnyList) []Any) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m AnyListOption) MapTuple2Array(f func(AnyList) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m AnyListOption) MapBoolList(f func(AnyList) BoolList) BoolListOption {
 	if m.IsDefined() {
 		return MakeBoolListOption(f(*m.value))
@@ -9073,5 +10914,292 @@ func (m AnyListOption) MapAnyList(f func(AnyList) AnyList) AnyListOption {
 		return MakeAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
+	}
+}
+func (m AnyListOption) MapTuple2List(f func(AnyList) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
+	}
+}
+func (m Tuple2ListOption) MapBool(f func(Tuple2List) bool) BoolOption {
+	if m.IsDefined() {
+		return MakeBoolOption(f(*m.value))
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2ListOption) MapString(f func(Tuple2List) string) StringOption {
+	if m.IsDefined() {
+		return MakeStringOption(f(*m.value))
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2ListOption) MapInt(f func(Tuple2List) int) IntOption {
+	if m.IsDefined() {
+		return MakeIntOption(f(*m.value))
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2ListOption) MapInt64(f func(Tuple2List) int64) Int64Option {
+	if m.IsDefined() {
+		return MakeInt64Option(f(*m.value))
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2ListOption) MapByte(f func(Tuple2List) byte) ByteOption {
+	if m.IsDefined() {
+		return MakeByteOption(f(*m.value))
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2ListOption) MapRune(f func(Tuple2List) rune) RuneOption {
+	if m.IsDefined() {
+		return MakeRuneOption(f(*m.value))
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2ListOption) MapFloat32(f func(Tuple2List) float32) Float32Option {
+	if m.IsDefined() {
+		return MakeFloat32Option(f(*m.value))
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2ListOption) MapFloat64(f func(Tuple2List) float64) Float64Option {
+	if m.IsDefined() {
+		return MakeFloat64Option(f(*m.value))
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2ListOption) MapAny(f func(Tuple2List) Any) AnyOption {
+	if m.IsDefined() {
+		return MakeAnyOption(f(*m.value))
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2ListOption) MapTuple2(f func(Tuple2List) Tuple2) Tuple2Option {
+	if m.IsDefined() {
+		return MakeTuple2Option(f(*m.value))
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2ListOption) MapBoolOption(f func(Tuple2List) BoolOption) BoolOptionOption {
+	if m.IsDefined() {
+		return MakeBoolOptionOption(f(*m.value))
+	} else {
+		return NoneBoolOption
+	}
+}
+func (m Tuple2ListOption) MapStringOption(f func(Tuple2List) StringOption) StringOptionOption {
+	if m.IsDefined() {
+		return MakeStringOptionOption(f(*m.value))
+	} else {
+		return NoneStringOption
+	}
+}
+func (m Tuple2ListOption) MapIntOption(f func(Tuple2List) IntOption) IntOptionOption {
+	if m.IsDefined() {
+		return MakeIntOptionOption(f(*m.value))
+	} else {
+		return NoneIntOption
+	}
+}
+func (m Tuple2ListOption) MapInt64Option(f func(Tuple2List) Int64Option) Int64OptionOption {
+	if m.IsDefined() {
+		return MakeInt64OptionOption(f(*m.value))
+	} else {
+		return NoneInt64Option
+	}
+}
+func (m Tuple2ListOption) MapByteOption(f func(Tuple2List) ByteOption) ByteOptionOption {
+	if m.IsDefined() {
+		return MakeByteOptionOption(f(*m.value))
+	} else {
+		return NoneByteOption
+	}
+}
+func (m Tuple2ListOption) MapRuneOption(f func(Tuple2List) RuneOption) RuneOptionOption {
+	if m.IsDefined() {
+		return MakeRuneOptionOption(f(*m.value))
+	} else {
+		return NoneRuneOption
+	}
+}
+func (m Tuple2ListOption) MapFloat32Option(f func(Tuple2List) Float32Option) Float32OptionOption {
+	if m.IsDefined() {
+		return MakeFloat32OptionOption(f(*m.value))
+	} else {
+		return NoneFloat32Option
+	}
+}
+func (m Tuple2ListOption) MapFloat64Option(f func(Tuple2List) Float64Option) Float64OptionOption {
+	if m.IsDefined() {
+		return MakeFloat64OptionOption(f(*m.value))
+	} else {
+		return NoneFloat64Option
+	}
+}
+func (m Tuple2ListOption) MapAnyOption(f func(Tuple2List) AnyOption) AnyOptionOption {
+	if m.IsDefined() {
+		return MakeAnyOptionOption(f(*m.value))
+	} else {
+		return NoneAnyOption
+	}
+}
+func (m Tuple2ListOption) MapTuple2Option(f func(Tuple2List) Tuple2Option) Tuple2OptionOption {
+	if m.IsDefined() {
+		return MakeTuple2OptionOption(f(*m.value))
+	} else {
+		return NoneTuple2Option
+	}
+}
+func (m Tuple2ListOption) MapBoolArray(f func(Tuple2List) []bool) BoolArrayOption {
+	if m.IsDefined() {
+		return MakeBoolArrayOption(f(*m.value))
+	} else {
+		return NoneBoolArray
+	}
+}
+func (m Tuple2ListOption) MapStringArray(f func(Tuple2List) []string) StringArrayOption {
+	if m.IsDefined() {
+		return MakeStringArrayOption(f(*m.value))
+	} else {
+		return NoneStringArray
+	}
+}
+func (m Tuple2ListOption) MapIntArray(f func(Tuple2List) []int) IntArrayOption {
+	if m.IsDefined() {
+		return MakeIntArrayOption(f(*m.value))
+	} else {
+		return NoneIntArray
+	}
+}
+func (m Tuple2ListOption) MapInt64Array(f func(Tuple2List) []int64) Int64ArrayOption {
+	if m.IsDefined() {
+		return MakeInt64ArrayOption(f(*m.value))
+	} else {
+		return NoneInt64Array
+	}
+}
+func (m Tuple2ListOption) MapByteArray(f func(Tuple2List) []byte) ByteArrayOption {
+	if m.IsDefined() {
+		return MakeByteArrayOption(f(*m.value))
+	} else {
+		return NoneByteArray
+	}
+}
+func (m Tuple2ListOption) MapRuneArray(f func(Tuple2List) []rune) RuneArrayOption {
+	if m.IsDefined() {
+		return MakeRuneArrayOption(f(*m.value))
+	} else {
+		return NoneRuneArray
+	}
+}
+func (m Tuple2ListOption) MapFloat32Array(f func(Tuple2List) []float32) Float32ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat32ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat32Array
+	}
+}
+func (m Tuple2ListOption) MapFloat64Array(f func(Tuple2List) []float64) Float64ArrayOption {
+	if m.IsDefined() {
+		return MakeFloat64ArrayOption(f(*m.value))
+	} else {
+		return NoneFloat64Array
+	}
+}
+func (m Tuple2ListOption) MapAnyArray(f func(Tuple2List) []Any) AnyArrayOption {
+	if m.IsDefined() {
+		return MakeAnyArrayOption(f(*m.value))
+	} else {
+		return NoneAnyArray
+	}
+}
+func (m Tuple2ListOption) MapTuple2Array(f func(Tuple2List) []Tuple2) Tuple2ArrayOption {
+	if m.IsDefined() {
+		return MakeTuple2ArrayOption(f(*m.value))
+	} else {
+		return NoneTuple2Array
+	}
+}
+func (m Tuple2ListOption) MapBoolList(f func(Tuple2List) BoolList) BoolListOption {
+	if m.IsDefined() {
+		return MakeBoolListOption(f(*m.value))
+	} else {
+		return NoneBoolList
+	}
+}
+func (m Tuple2ListOption) MapStringList(f func(Tuple2List) StringList) StringListOption {
+	if m.IsDefined() {
+		return MakeStringListOption(f(*m.value))
+	} else {
+		return NoneStringList
+	}
+}
+func (m Tuple2ListOption) MapIntList(f func(Tuple2List) IntList) IntListOption {
+	if m.IsDefined() {
+		return MakeIntListOption(f(*m.value))
+	} else {
+		return NoneIntList
+	}
+}
+func (m Tuple2ListOption) MapInt64List(f func(Tuple2List) Int64List) Int64ListOption {
+	if m.IsDefined() {
+		return MakeInt64ListOption(f(*m.value))
+	} else {
+		return NoneInt64List
+	}
+}
+func (m Tuple2ListOption) MapByteList(f func(Tuple2List) ByteList) ByteListOption {
+	if m.IsDefined() {
+		return MakeByteListOption(f(*m.value))
+	} else {
+		return NoneByteList
+	}
+}
+func (m Tuple2ListOption) MapRuneList(f func(Tuple2List) RuneList) RuneListOption {
+	if m.IsDefined() {
+		return MakeRuneListOption(f(*m.value))
+	} else {
+		return NoneRuneList
+	}
+}
+func (m Tuple2ListOption) MapFloat32List(f func(Tuple2List) Float32List) Float32ListOption {
+	if m.IsDefined() {
+		return MakeFloat32ListOption(f(*m.value))
+	} else {
+		return NoneFloat32List
+	}
+}
+func (m Tuple2ListOption) MapFloat64List(f func(Tuple2List) Float64List) Float64ListOption {
+	if m.IsDefined() {
+		return MakeFloat64ListOption(f(*m.value))
+	} else {
+		return NoneFloat64List
+	}
+}
+func (m Tuple2ListOption) MapAnyList(f func(Tuple2List) AnyList) AnyListOption {
+	if m.IsDefined() {
+		return MakeAnyListOption(f(*m.value))
+	} else {
+		return NoneAnyList
+	}
+}
+func (m Tuple2ListOption) MapTuple2List(f func(Tuple2List) Tuple2List) Tuple2ListOption {
+	if m.IsDefined() {
+		return MakeTuple2ListOption(f(*m.value))
+	} else {
+		return NoneTuple2List
 	}
 }

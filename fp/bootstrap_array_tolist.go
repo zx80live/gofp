@@ -66,6 +66,13 @@ func (m AnyArray) ToList() AnyList {
 	}
 	return acc.Reverse()
 }
+func (m Tuple2Array) ToList() Tuple2List {
+	acc := NilTuple2
+	for _, e := range m {
+		acc = acc.Cons(e)
+	}
+	return acc.Reverse()
+}
 func (m BoolArrayArray) ToList() BoolArrayList {
 	acc := NilBoolArray
 	for _, e := range m {
@@ -124,6 +131,13 @@ func (m Float64ArrayArray) ToList() Float64ArrayList {
 }
 func (m AnyArrayArray) ToList() AnyArrayList {
 	acc := NilAnyArray
+	for _, e := range m {
+		acc = acc.Cons(e)
+	}
+	return acc.Reverse()
+}
+func (m Tuple2ArrayArray) ToList() Tuple2ArrayList {
+	acc := NilTuple2Array
 	for _, e := range m {
 		acc = acc.Cons(e)
 	}

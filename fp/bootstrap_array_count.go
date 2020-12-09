@@ -84,6 +84,15 @@ func (l AnyArray) Count(p func(Any) bool) int {
 	}
 	return c
 }
+func (l Tuple2Array) Count(p func(Tuple2) bool) int {
+	c := 0
+	for _, e := range l {
+		if p(e) {
+			c++
+		}
+	}
+	return c
+}
 func (l BoolArrayArray) Count(p func([]bool) bool) int {
 	c := 0
 	for _, e := range l {
@@ -157,6 +166,15 @@ func (l Float64ArrayArray) Count(p func([]float64) bool) int {
 	return c
 }
 func (l AnyArrayArray) Count(p func([]Any) bool) int {
+	c := 0
+	for _, e := range l {
+		if p(e) {
+			c++
+		}
+	}
+	return c
+}
+func (l Tuple2ArrayArray) Count(p func([]Tuple2) bool) int {
 	c := 0
 	for _, e := range l {
 		if p(e) {

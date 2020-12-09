@@ -30,3 +30,6 @@ func (m Float64ListList) Flatten() Float64List {
 func (m AnyListList) Flatten() AnyList {
 	return m.FlatMapAny(func(e AnyList) AnyList { return e })
 }
+func (m Tuple2ListList) Flatten() Tuple2List {
+	return m.FlatMapTuple2(func(e Tuple2List) Tuple2List { return e })
+}

@@ -156,6 +156,23 @@ func (m BoolList) FlatMapAny(f func(bool) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m BoolList) FlatMapTuple2(f func(bool) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m StringList) FlatMapBool(f func(string) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -297,6 +314,23 @@ func (m StringList) FlatMapAny(f func(string) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m StringList) FlatMapTuple2(f func(string) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -462,6 +496,23 @@ func (m IntList) FlatMapAny(f func(int) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m IntList) FlatMapTuple2(f func(int) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m Int64List) FlatMapBool(f func(int64) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -603,6 +654,23 @@ func (m Int64List) FlatMapAny(f func(int64) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Int64List) FlatMapTuple2(f func(int64) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -768,6 +836,23 @@ func (m ByteList) FlatMapAny(f func(byte) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m ByteList) FlatMapTuple2(f func(byte) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m RuneList) FlatMapBool(f func(rune) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -909,6 +994,23 @@ func (m RuneList) FlatMapAny(f func(rune) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m RuneList) FlatMapTuple2(f func(rune) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -1074,6 +1176,23 @@ func (m Float32List) FlatMapAny(f func(float32) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m Float32List) FlatMapTuple2(f func(float32) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m Float64List) FlatMapBool(f func(float64) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -1215,6 +1334,23 @@ func (m Float64List) FlatMapAny(f func(float64) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Float64List) FlatMapTuple2(f func(float64) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -1380,6 +1516,193 @@ func (m AnyList) FlatMapAny(f func(Any) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m AnyList) FlatMapTuple2(f func(Any) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapBool(f func(Tuple2) BoolList) BoolList {
+	if m.IsEmpty() {
+		return NilBool
+	} else {
+		acc := NilBool
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapString(f func(Tuple2) StringList) StringList {
+	if m.IsEmpty() {
+		return NilString
+	} else {
+		acc := NilString
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapInt(f func(Tuple2) IntList) IntList {
+	if m.IsEmpty() {
+		return NilInt
+	} else {
+		acc := NilInt
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapInt64(f func(Tuple2) Int64List) Int64List {
+	if m.IsEmpty() {
+		return NilInt64
+	} else {
+		acc := NilInt64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapByte(f func(Tuple2) ByteList) ByteList {
+	if m.IsEmpty() {
+		return NilByte
+	} else {
+		acc := NilByte
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapRune(f func(Tuple2) RuneList) RuneList {
+	if m.IsEmpty() {
+		return NilRune
+	} else {
+		acc := NilRune
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapFloat32(f func(Tuple2) Float32List) Float32List {
+	if m.IsEmpty() {
+		return NilFloat32
+	} else {
+		acc := NilFloat32
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapFloat64(f func(Tuple2) Float64List) Float64List {
+	if m.IsEmpty() {
+		return NilFloat64
+	} else {
+		acc := NilFloat64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapAny(f func(Tuple2) AnyList) AnyList {
+	if m.IsEmpty() {
+		return NilAny
+	} else {
+		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2List) FlatMapTuple2(f func(Tuple2) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m BoolArrayList) FlatMapBool(f func([]bool) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -1521,6 +1844,23 @@ func (m BoolArrayList) FlatMapAny(f func([]bool) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m BoolArrayList) FlatMapTuple2(f func([]bool) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -1686,6 +2026,23 @@ func (m StringArrayList) FlatMapAny(f func([]string) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m StringArrayList) FlatMapTuple2(f func([]string) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m IntArrayList) FlatMapBool(f func([]int) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -1827,6 +2184,23 @@ func (m IntArrayList) FlatMapAny(f func([]int) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m IntArrayList) FlatMapTuple2(f func([]int) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -1992,6 +2366,23 @@ func (m Int64ArrayList) FlatMapAny(f func([]int64) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m Int64ArrayList) FlatMapTuple2(f func([]int64) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m ByteArrayList) FlatMapBool(f func([]byte) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -2133,6 +2524,23 @@ func (m ByteArrayList) FlatMapAny(f func([]byte) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m ByteArrayList) FlatMapTuple2(f func([]byte) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -2298,6 +2706,23 @@ func (m RuneArrayList) FlatMapAny(f func([]rune) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m RuneArrayList) FlatMapTuple2(f func([]rune) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m Float32ArrayList) FlatMapBool(f func([]float32) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -2439,6 +2864,23 @@ func (m Float32ArrayList) FlatMapAny(f func([]float32) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Float32ArrayList) FlatMapTuple2(f func([]float32) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -2604,6 +3046,23 @@ func (m Float64ArrayList) FlatMapAny(f func([]float64) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m Float64ArrayList) FlatMapTuple2(f func([]float64) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m AnyArrayList) FlatMapBool(f func([]Any) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -2745,6 +3204,193 @@ func (m AnyArrayList) FlatMapAny(f func([]Any) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m AnyArrayList) FlatMapTuple2(f func([]Any) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapBool(f func([]Tuple2) BoolList) BoolList {
+	if m.IsEmpty() {
+		return NilBool
+	} else {
+		acc := NilBool
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapString(f func([]Tuple2) StringList) StringList {
+	if m.IsEmpty() {
+		return NilString
+	} else {
+		acc := NilString
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapInt(f func([]Tuple2) IntList) IntList {
+	if m.IsEmpty() {
+		return NilInt
+	} else {
+		acc := NilInt
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapInt64(f func([]Tuple2) Int64List) Int64List {
+	if m.IsEmpty() {
+		return NilInt64
+	} else {
+		acc := NilInt64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapByte(f func([]Tuple2) ByteList) ByteList {
+	if m.IsEmpty() {
+		return NilByte
+	} else {
+		acc := NilByte
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapRune(f func([]Tuple2) RuneList) RuneList {
+	if m.IsEmpty() {
+		return NilRune
+	} else {
+		acc := NilRune
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapFloat32(f func([]Tuple2) Float32List) Float32List {
+	if m.IsEmpty() {
+		return NilFloat32
+	} else {
+		acc := NilFloat32
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapFloat64(f func([]Tuple2) Float64List) Float64List {
+	if m.IsEmpty() {
+		return NilFloat64
+	} else {
+		acc := NilFloat64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapAny(f func([]Tuple2) AnyList) AnyList {
+	if m.IsEmpty() {
+		return NilAny
+	} else {
+		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ArrayList) FlatMapTuple2(f func([]Tuple2) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -2910,6 +3556,23 @@ func (m BoolOptionList) FlatMapAny(f func(BoolOption) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m BoolOptionList) FlatMapTuple2(f func(BoolOption) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m StringOptionList) FlatMapBool(f func(StringOption) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -3051,6 +3714,23 @@ func (m StringOptionList) FlatMapAny(f func(StringOption) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m StringOptionList) FlatMapTuple2(f func(StringOption) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -3216,6 +3896,23 @@ func (m IntOptionList) FlatMapAny(f func(IntOption) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m IntOptionList) FlatMapTuple2(f func(IntOption) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m Int64OptionList) FlatMapBool(f func(Int64Option) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -3357,6 +4054,23 @@ func (m Int64OptionList) FlatMapAny(f func(Int64Option) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Int64OptionList) FlatMapTuple2(f func(Int64Option) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -3522,6 +4236,23 @@ func (m ByteOptionList) FlatMapAny(f func(ByteOption) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m ByteOptionList) FlatMapTuple2(f func(ByteOption) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m RuneOptionList) FlatMapBool(f func(RuneOption) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -3663,6 +4394,23 @@ func (m RuneOptionList) FlatMapAny(f func(RuneOption) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m RuneOptionList) FlatMapTuple2(f func(RuneOption) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -3828,6 +4576,23 @@ func (m Float32OptionList) FlatMapAny(f func(Float32Option) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m Float32OptionList) FlatMapTuple2(f func(Float32Option) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m Float64OptionList) FlatMapBool(f func(Float64Option) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -3969,6 +4734,23 @@ func (m Float64OptionList) FlatMapAny(f func(Float64Option) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Float64OptionList) FlatMapTuple2(f func(Float64Option) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -4134,6 +4916,193 @@ func (m AnyOptionList) FlatMapAny(f func(AnyOption) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m AnyOptionList) FlatMapTuple2(f func(AnyOption) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapBool(f func(Tuple2Option) BoolList) BoolList {
+	if m.IsEmpty() {
+		return NilBool
+	} else {
+		acc := NilBool
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapString(f func(Tuple2Option) StringList) StringList {
+	if m.IsEmpty() {
+		return NilString
+	} else {
+		acc := NilString
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapInt(f func(Tuple2Option) IntList) IntList {
+	if m.IsEmpty() {
+		return NilInt
+	} else {
+		acc := NilInt
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapInt64(f func(Tuple2Option) Int64List) Int64List {
+	if m.IsEmpty() {
+		return NilInt64
+	} else {
+		acc := NilInt64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapByte(f func(Tuple2Option) ByteList) ByteList {
+	if m.IsEmpty() {
+		return NilByte
+	} else {
+		acc := NilByte
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapRune(f func(Tuple2Option) RuneList) RuneList {
+	if m.IsEmpty() {
+		return NilRune
+	} else {
+		acc := NilRune
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapFloat32(f func(Tuple2Option) Float32List) Float32List {
+	if m.IsEmpty() {
+		return NilFloat32
+	} else {
+		acc := NilFloat32
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapFloat64(f func(Tuple2Option) Float64List) Float64List {
+	if m.IsEmpty() {
+		return NilFloat64
+	} else {
+		acc := NilFloat64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapAny(f func(Tuple2Option) AnyList) AnyList {
+	if m.IsEmpty() {
+		return NilAny
+	} else {
+		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2OptionList) FlatMapTuple2(f func(Tuple2Option) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m BoolListList) FlatMapBool(f func(BoolList) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -4275,6 +5244,23 @@ func (m BoolListList) FlatMapAny(f func(BoolList) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m BoolListList) FlatMapTuple2(f func(BoolList) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -4440,6 +5426,23 @@ func (m StringListList) FlatMapAny(f func(StringList) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m StringListList) FlatMapTuple2(f func(StringList) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m IntListList) FlatMapBool(f func(IntList) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -4581,6 +5584,23 @@ func (m IntListList) FlatMapAny(f func(IntList) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m IntListList) FlatMapTuple2(f func(IntList) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -4746,6 +5766,23 @@ func (m Int64ListList) FlatMapAny(f func(Int64List) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m Int64ListList) FlatMapTuple2(f func(Int64List) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m ByteListList) FlatMapBool(f func(ByteList) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -4887,6 +5924,23 @@ func (m ByteListList) FlatMapAny(f func(ByteList) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m ByteListList) FlatMapTuple2(f func(ByteList) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -5052,6 +6106,23 @@ func (m RuneListList) FlatMapAny(f func(RuneList) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m RuneListList) FlatMapTuple2(f func(RuneList) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m Float32ListList) FlatMapBool(f func(Float32List) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -5193,6 +6264,23 @@ func (m Float32ListList) FlatMapAny(f func(Float32List) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Float32ListList) FlatMapTuple2(f func(Float32List) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)
@@ -5358,6 +6446,23 @@ func (m Float64ListList) FlatMapAny(f func(Float64List) AnyList) AnyList {
 		return acc.Reverse()
 	}
 }
+func (m Float64ListList) FlatMapTuple2(f func(Float64List) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
 func (m AnyListList) FlatMapBool(f func(AnyList) BoolList) BoolList {
 	if m.IsEmpty() {
 		return NilBool
@@ -5499,6 +6604,193 @@ func (m AnyListList) FlatMapAny(f func(AnyList) AnyList) AnyList {
 		return NilAny
 	} else {
 		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m AnyListList) FlatMapTuple2(f func(AnyList) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapBool(f func(Tuple2List) BoolList) BoolList {
+	if m.IsEmpty() {
+		return NilBool
+	} else {
+		acc := NilBool
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapString(f func(Tuple2List) StringList) StringList {
+	if m.IsEmpty() {
+		return NilString
+	} else {
+		acc := NilString
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapInt(f func(Tuple2List) IntList) IntList {
+	if m.IsEmpty() {
+		return NilInt
+	} else {
+		acc := NilInt
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapInt64(f func(Tuple2List) Int64List) Int64List {
+	if m.IsEmpty() {
+		return NilInt64
+	} else {
+		acc := NilInt64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapByte(f func(Tuple2List) ByteList) ByteList {
+	if m.IsEmpty() {
+		return NilByte
+	} else {
+		acc := NilByte
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapRune(f func(Tuple2List) RuneList) RuneList {
+	if m.IsEmpty() {
+		return NilRune
+	} else {
+		acc := NilRune
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapFloat32(f func(Tuple2List) Float32List) Float32List {
+	if m.IsEmpty() {
+		return NilFloat32
+	} else {
+		acc := NilFloat32
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapFloat64(f func(Tuple2List) Float64List) Float64List {
+	if m.IsEmpty() {
+		return NilFloat64
+	} else {
+		acc := NilFloat64
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapAny(f func(Tuple2List) AnyList) AnyList {
+	if m.IsEmpty() {
+		return NilAny
+	} else {
+		acc := NilAny
+		xs := m
+		for xs.NonEmpty() {
+			exs := f(*xs.head)
+			for exs.NonEmpty() {
+				acc = acc.Cons(*exs.head)
+				exs = *exs.tail
+			}
+			xs = *xs.tail
+		}
+		return acc.Reverse()
+	}
+}
+func (m Tuple2ListList) FlatMapTuple2(f func(Tuple2List) Tuple2List) Tuple2List {
+	if m.IsEmpty() {
+		return NilTuple2
+	} else {
+		acc := NilTuple2
 		xs := m
 		for xs.NonEmpty() {
 			exs := f(*xs.head)

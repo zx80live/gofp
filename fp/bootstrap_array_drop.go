@@ -111,6 +111,18 @@ func (m AnyArray) Drop(i int) []Any {
 		return make([]Any, 0)
 	}
 }
+func (m Tuple2Array) Drop(i int) []Tuple2 {
+	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
+	if i < 0 || i >= s {
+		panic("index out of bound")
+	}
+	if s > 0 {
+		return m[i : s-1]
+	} else {
+		return make([]Tuple2, 0)
+	}
+}
 func (m BoolArrayArray) Drop(i int) [][]bool {
 	s := len(m)
 	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
@@ -217,5 +229,17 @@ func (m AnyArrayArray) Drop(i int) [][]Any {
 		return m[i : s-1]
 	} else {
 		return make([][]Any, 0)
+	}
+}
+func (m Tuple2ArrayArray) Drop(i int) [][]Tuple2 {
+	s := len(m)
+	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
+	if i < 0 || i >= s {
+		panic("index out of bound")
+	}
+	if s > 0 {
+		return m[i : s-1]
+	} else {
+		return make([][]Tuple2, 0)
 	}
 }

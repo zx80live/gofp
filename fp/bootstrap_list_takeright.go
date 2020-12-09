@@ -12,6 +12,7 @@ func (l RuneList) TakeRight(n int) RuneList                   { return l.Reverse
 func (l Float32List) TakeRight(n int) Float32List             { return l.Reverse().Take(n).Reverse() }
 func (l Float64List) TakeRight(n int) Float64List             { return l.Reverse().Take(n).Reverse() }
 func (l AnyList) TakeRight(n int) AnyList                     { return l.Reverse().Take(n).Reverse() }
+func (l Tuple2List) TakeRight(n int) Tuple2List               { return l.Reverse().Take(n).Reverse() }
 func (l BoolArrayList) TakeRight(n int) BoolArrayList         { return l.Reverse().Take(n).Reverse() }
 func (l StringArrayList) TakeRight(n int) StringArrayList     { return l.Reverse().Take(n).Reverse() }
 func (l IntArrayList) TakeRight(n int) IntArrayList           { return l.Reverse().Take(n).Reverse() }
@@ -21,6 +22,7 @@ func (l RuneArrayList) TakeRight(n int) RuneArrayList         { return l.Reverse
 func (l Float32ArrayList) TakeRight(n int) Float32ArrayList   { return l.Reverse().Take(n).Reverse() }
 func (l Float64ArrayList) TakeRight(n int) Float64ArrayList   { return l.Reverse().Take(n).Reverse() }
 func (l AnyArrayList) TakeRight(n int) AnyArrayList           { return l.Reverse().Take(n).Reverse() }
+func (l Tuple2ArrayList) TakeRight(n int) Tuple2ArrayList     { return l.Reverse().Take(n).Reverse() }
 func (l BoolOptionList) TakeRight(n int) BoolOptionList       { return l.Reverse().Take(n).Reverse() }
 func (l StringOptionList) TakeRight(n int) StringOptionList   { return l.Reverse().Take(n).Reverse() }
 func (l IntOptionList) TakeRight(n int) IntOptionList         { return l.Reverse().Take(n).Reverse() }
@@ -30,6 +32,7 @@ func (l RuneOptionList) TakeRight(n int) RuneOptionList       { return l.Reverse
 func (l Float32OptionList) TakeRight(n int) Float32OptionList { return l.Reverse().Take(n).Reverse() }
 func (l Float64OptionList) TakeRight(n int) Float64OptionList { return l.Reverse().Take(n).Reverse() }
 func (l AnyOptionList) TakeRight(n int) AnyOptionList         { return l.Reverse().Take(n).Reverse() }
+func (l Tuple2OptionList) TakeRight(n int) Tuple2OptionList   { return l.Reverse().Take(n).Reverse() }
 func (l BoolListList) TakeRight(n int) BoolListList           { return l.Reverse().Take(n).Reverse() }
 func (l StringListList) TakeRight(n int) StringListList       { return l.Reverse().Take(n).Reverse() }
 func (l IntListList) TakeRight(n int) IntListList             { return l.Reverse().Take(n).Reverse() }
@@ -39,3 +42,4 @@ func (l RuneListList) TakeRight(n int) RuneListList           { return l.Reverse
 func (l Float32ListList) TakeRight(n int) Float32ListList     { return l.Reverse().Take(n).Reverse() }
 func (l Float64ListList) TakeRight(n int) Float64ListList     { return l.Reverse().Take(n).Reverse() }
 func (l AnyListList) TakeRight(n int) AnyListList             { return l.Reverse().Take(n).Reverse() }
+func (l Tuple2ListList) TakeRight(n int) Tuple2ListList       { return l.Reverse().Take(n).Reverse() }

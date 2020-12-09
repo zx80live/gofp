@@ -32,6 +32,7 @@ func RuneOptionEquals(a, b RuneOption) bool                   { return a.Equals(
 func Float32OptionEquals(a, b Float32Option) bool             { return a.Equals(b) }
 func Float64OptionEquals(a, b Float64Option) bool             { return a.Equals(b) }
 func AnyOptionEquals(a, b AnyOption) bool                     { return a.Equals(b) }
+func Tuple2OptionEquals(a, b Tuple2Option) bool               { return a.Equals(b) }
 func BoolOptionOptionEquals(a, b BoolOptionOption) bool       { return a.Equals(b) }
 func StringOptionOptionEquals(a, b StringOptionOption) bool   { return a.Equals(b) }
 func IntOptionOptionEquals(a, b IntOptionOption) bool         { return a.Equals(b) }
@@ -41,6 +42,7 @@ func RuneOptionOptionEquals(a, b RuneOptionOption) bool       { return a.Equals(
 func Float32OptionOptionEquals(a, b Float32OptionOption) bool { return a.Equals(b) }
 func Float64OptionOptionEquals(a, b Float64OptionOption) bool { return a.Equals(b) }
 func AnyOptionOptionEquals(a, b AnyOptionOption) bool         { return a.Equals(b) }
+func Tuple2OptionOptionEquals(a, b Tuple2OptionOption) bool   { return a.Equals(b) }
 func BoolArrayOptionEquals(a, b BoolArrayOption) bool         { return a.Equals(b) }
 func StringArrayOptionEquals(a, b StringArrayOption) bool     { return a.Equals(b) }
 func IntArrayOptionEquals(a, b IntArrayOption) bool           { return a.Equals(b) }
@@ -50,6 +52,7 @@ func RuneArrayOptionEquals(a, b RuneArrayOption) bool         { return a.Equals(
 func Float32ArrayOptionEquals(a, b Float32ArrayOption) bool   { return a.Equals(b) }
 func Float64ArrayOptionEquals(a, b Float64ArrayOption) bool   { return a.Equals(b) }
 func AnyArrayOptionEquals(a, b AnyArrayOption) bool           { return a.Equals(b) }
+func Tuple2ArrayOptionEquals(a, b Tuple2ArrayOption) bool     { return a.Equals(b) }
 func BoolListOptionEquals(a, b BoolListOption) bool           { return a.Equals(b) }
 func StringListOptionEquals(a, b StringListOption) bool       { return a.Equals(b) }
 func IntListOptionEquals(a, b IntListOption) bool             { return a.Equals(b) }
@@ -59,6 +62,7 @@ func RuneListOptionEquals(a, b RuneListOption) bool           { return a.Equals(
 func Float32ListOptionEquals(a, b Float32ListOption) bool     { return a.Equals(b) }
 func Float64ListOptionEquals(a, b Float64ListOption) bool     { return a.Equals(b) }
 func AnyListOptionEquals(a, b AnyListOption) bool             { return a.Equals(b) }
+func Tuple2ListOptionEquals(a, b Tuple2ListOption) bool       { return a.Equals(b) }
 func BoolArrayEquals(a, b BoolArray) bool                     { return a.Equals(b) }
 func StringArrayEquals(a, b StringArray) bool                 { return a.Equals(b) }
 func IntArrayEquals(a, b IntArray) bool                       { return a.Equals(b) }
@@ -68,6 +72,7 @@ func RuneArrayEquals(a, b RuneArray) bool                     { return a.Equals(
 func Float32ArrayEquals(a, b Float32Array) bool               { return a.Equals(b) }
 func Float64ArrayEquals(a, b Float64Array) bool               { return a.Equals(b) }
 func AnyArrayEquals(a, b AnyArray) bool                       { return a.Equals(b) }
+func Tuple2ArrayEquals(a, b Tuple2Array) bool                 { return a.Equals(b) }
 func BoolArrayArrayEquals(a, b BoolArrayArray) bool           { return a.Equals(b) }
 func StringArrayArrayEquals(a, b StringArrayArray) bool       { return a.Equals(b) }
 func IntArrayArrayEquals(a, b IntArrayArray) bool             { return a.Equals(b) }
@@ -77,6 +82,7 @@ func RuneArrayArrayEquals(a, b RuneArrayArray) bool           { return a.Equals(
 func Float32ArrayArrayEquals(a, b Float32ArrayArray) bool     { return a.Equals(b) }
 func Float64ArrayArrayEquals(a, b Float64ArrayArray) bool     { return a.Equals(b) }
 func AnyArrayArrayEquals(a, b AnyArrayArray) bool             { return a.Equals(b) }
+func Tuple2ArrayArrayEquals(a, b Tuple2ArrayArray) bool       { return a.Equals(b) }
 func BoolListEquals(a, b BoolList) bool                       { return a.Equals(b) }
 func StringListEquals(a, b StringList) bool                   { return a.Equals(b) }
 func IntListEquals(a, b IntList) bool                         { return a.Equals(b) }
@@ -86,6 +92,7 @@ func RuneListEquals(a, b RuneList) bool                       { return a.Equals(
 func Float32ListEquals(a, b Float32List) bool                 { return a.Equals(b) }
 func Float64ListEquals(a, b Float64List) bool                 { return a.Equals(b) }
 func AnyListEquals(a, b AnyList) bool                         { return a.Equals(b) }
+func Tuple2ListEquals(a, b Tuple2List) bool                   { return a.Equals(b) }
 func BoolArrayListEquals(a, b BoolArrayList) bool             { return a.Equals(b) }
 func StringArrayListEquals(a, b StringArrayList) bool         { return a.Equals(b) }
 func IntArrayListEquals(a, b IntArrayList) bool               { return a.Equals(b) }
@@ -95,6 +102,7 @@ func RuneArrayListEquals(a, b RuneArrayList) bool             { return a.Equals(
 func Float32ArrayListEquals(a, b Float32ArrayList) bool       { return a.Equals(b) }
 func Float64ArrayListEquals(a, b Float64ArrayList) bool       { return a.Equals(b) }
 func AnyArrayListEquals(a, b AnyArrayList) bool               { return a.Equals(b) }
+func Tuple2ArrayListEquals(a, b Tuple2ArrayList) bool         { return a.Equals(b) }
 func BoolOptionListEquals(a, b BoolOptionList) bool           { return a.Equals(b) }
 func StringOptionListEquals(a, b StringOptionList) bool       { return a.Equals(b) }
 func IntOptionListEquals(a, b IntOptionList) bool             { return a.Equals(b) }
@@ -104,6 +112,7 @@ func RuneOptionListEquals(a, b RuneOptionList) bool           { return a.Equals(
 func Float32OptionListEquals(a, b Float32OptionList) bool     { return a.Equals(b) }
 func Float64OptionListEquals(a, b Float64OptionList) bool     { return a.Equals(b) }
 func AnyOptionListEquals(a, b AnyOptionList) bool             { return a.Equals(b) }
+func Tuple2OptionListEquals(a, b Tuple2OptionList) bool       { return a.Equals(b) }
 func BoolListListEquals(a, b BoolListList) bool               { return a.Equals(b) }
 func StringListListEquals(a, b StringListList) bool           { return a.Equals(b) }
 func IntListListEquals(a, b IntListList) bool                 { return a.Equals(b) }
@@ -113,3 +122,5 @@ func RuneListListEquals(a, b RuneListList) bool               { return a.Equals(
 func Float32ListListEquals(a, b Float32ListList) bool         { return a.Equals(b) }
 func Float64ListListEquals(a, b Float64ListList) bool         { return a.Equals(b) }
 func AnyListListEquals(a, b AnyListList) bool                 { return a.Equals(b) }
+func Tuple2ListListEquals(a, b Tuple2ListList) bool           { return a.Equals(b) }
+func Tuple2Equals(a, b Tuple2) bool                           { return a.Equals(b) }

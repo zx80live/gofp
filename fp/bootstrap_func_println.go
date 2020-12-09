@@ -23,6 +23,7 @@ func PrintlnRuneOption(e RuneOption)                   { fmt.Println(RuneOptionT
 func PrintlnFloat32Option(e Float32Option)             { fmt.Println(Float32OptionToString(e)) }
 func PrintlnFloat64Option(e Float64Option)             { fmt.Println(Float64OptionToString(e)) }
 func PrintlnAnyOption(e AnyOption)                     { fmt.Println(AnyOptionToString(e)) }
+func PrintlnTuple2Option(e Tuple2Option)               { fmt.Println(Tuple2OptionToString(e)) }
 func PrintlnBoolOptionOption(e BoolOptionOption)       { fmt.Println(BoolOptionOptionToString(e)) }
 func PrintlnStringOptionOption(e StringOptionOption)   { fmt.Println(StringOptionOptionToString(e)) }
 func PrintlnIntOptionOption(e IntOptionOption)         { fmt.Println(IntOptionOptionToString(e)) }
@@ -32,6 +33,7 @@ func PrintlnRuneOptionOption(e RuneOptionOption)       { fmt.Println(RuneOptionO
 func PrintlnFloat32OptionOption(e Float32OptionOption) { fmt.Println(Float32OptionOptionToString(e)) }
 func PrintlnFloat64OptionOption(e Float64OptionOption) { fmt.Println(Float64OptionOptionToString(e)) }
 func PrintlnAnyOptionOption(e AnyOptionOption)         { fmt.Println(AnyOptionOptionToString(e)) }
+func PrintlnTuple2OptionOption(e Tuple2OptionOption)   { fmt.Println(Tuple2OptionOptionToString(e)) }
 func PrintlnBoolArrayOption(e BoolArrayOption)         { fmt.Println(BoolArrayOptionToString(e)) }
 func PrintlnStringArrayOption(e StringArrayOption)     { fmt.Println(StringArrayOptionToString(e)) }
 func PrintlnIntArrayOption(e IntArrayOption)           { fmt.Println(IntArrayOptionToString(e)) }
@@ -41,6 +43,7 @@ func PrintlnRuneArrayOption(e RuneArrayOption)         { fmt.Println(RuneArrayOp
 func PrintlnFloat32ArrayOption(e Float32ArrayOption)   { fmt.Println(Float32ArrayOptionToString(e)) }
 func PrintlnFloat64ArrayOption(e Float64ArrayOption)   { fmt.Println(Float64ArrayOptionToString(e)) }
 func PrintlnAnyArrayOption(e AnyArrayOption)           { fmt.Println(AnyArrayOptionToString(e)) }
+func PrintlnTuple2ArrayOption(e Tuple2ArrayOption)     { fmt.Println(Tuple2ArrayOptionToString(e)) }
 func PrintlnBoolListOption(e BoolListOption)           { fmt.Println(BoolListOptionToString(e)) }
 func PrintlnStringListOption(e StringListOption)       { fmt.Println(StringListOptionToString(e)) }
 func PrintlnIntListOption(e IntListOption)             { fmt.Println(IntListOptionToString(e)) }
@@ -50,6 +53,7 @@ func PrintlnRuneListOption(e RuneListOption)           { fmt.Println(RuneListOpt
 func PrintlnFloat32ListOption(e Float32ListOption)     { fmt.Println(Float32ListOptionToString(e)) }
 func PrintlnFloat64ListOption(e Float64ListOption)     { fmt.Println(Float64ListOptionToString(e)) }
 func PrintlnAnyListOption(e AnyListOption)             { fmt.Println(AnyListOptionToString(e)) }
+func PrintlnTuple2ListOption(e Tuple2ListOption)       { fmt.Println(Tuple2ListOptionToString(e)) }
 func PrintlnBoolArray(e []bool)                        { fmt.Println(BoolArrayToString(e)) }
 func PrintlnStringArray(e []string)                    { fmt.Println(StringArrayToString(e)) }
 func PrintlnIntArray(e []int)                          { fmt.Println(IntArrayToString(e)) }
@@ -59,6 +63,7 @@ func PrintlnRuneArray(e []rune)                        { fmt.Println(RuneArrayTo
 func PrintlnFloat32Array(e []float32)                  { fmt.Println(Float32ArrayToString(e)) }
 func PrintlnFloat64Array(e []float64)                  { fmt.Println(Float64ArrayToString(e)) }
 func PrintlnAnyArray(e []Any)                          { fmt.Println(AnyArrayToString(e)) }
+func PrintlnTuple2Array(e []Tuple2)                    { fmt.Println(Tuple2ArrayToString(e)) }
 func PrintlnBoolArrayArray(e [][]bool)                 { fmt.Println(BoolArrayArrayToString(e)) }
 func PrintlnStringArrayArray(e [][]string)             { fmt.Println(StringArrayArrayToString(e)) }
 func PrintlnIntArrayArray(e [][]int)                   { fmt.Println(IntArrayArrayToString(e)) }
@@ -68,6 +73,7 @@ func PrintlnRuneArrayArray(e [][]rune)                 { fmt.Println(RuneArrayAr
 func PrintlnFloat32ArrayArray(e [][]float32)           { fmt.Println(Float32ArrayArrayToString(e)) }
 func PrintlnFloat64ArrayArray(e [][]float64)           { fmt.Println(Float64ArrayArrayToString(e)) }
 func PrintlnAnyArrayArray(e [][]Any)                   { fmt.Println(AnyArrayArrayToString(e)) }
+func PrintlnTuple2ArrayArray(e [][]Tuple2)             { fmt.Println(Tuple2ArrayArrayToString(e)) }
 func PrintlnBoolList(e BoolList)                       { fmt.Println(BoolListToString(e)) }
 func PrintlnStringList(e StringList)                   { fmt.Println(StringListToString(e)) }
 func PrintlnIntList(e IntList)                         { fmt.Println(IntListToString(e)) }
@@ -77,6 +83,7 @@ func PrintlnRuneList(e RuneList)                       { fmt.Println(RuneListToS
 func PrintlnFloat32List(e Float32List)                 { fmt.Println(Float32ListToString(e)) }
 func PrintlnFloat64List(e Float64List)                 { fmt.Println(Float64ListToString(e)) }
 func PrintlnAnyList(e AnyList)                         { fmt.Println(AnyListToString(e)) }
+func PrintlnTuple2List(e Tuple2List)                   { fmt.Println(Tuple2ListToString(e)) }
 func PrintlnBoolArrayList(e BoolArrayList)             { fmt.Println(BoolArrayListToString(e)) }
 func PrintlnStringArrayList(e StringArrayList)         { fmt.Println(StringArrayListToString(e)) }
 func PrintlnIntArrayList(e IntArrayList)               { fmt.Println(IntArrayListToString(e)) }
@@ -86,6 +93,7 @@ func PrintlnRuneArrayList(e RuneArrayList)             { fmt.Println(RuneArrayLi
 func PrintlnFloat32ArrayList(e Float32ArrayList)       { fmt.Println(Float32ArrayListToString(e)) }
 func PrintlnFloat64ArrayList(e Float64ArrayList)       { fmt.Println(Float64ArrayListToString(e)) }
 func PrintlnAnyArrayList(e AnyArrayList)               { fmt.Println(AnyArrayListToString(e)) }
+func PrintlnTuple2ArrayList(e Tuple2ArrayList)         { fmt.Println(Tuple2ArrayListToString(e)) }
 func PrintlnBoolOptionList(e BoolOptionList)           { fmt.Println(BoolOptionListToString(e)) }
 func PrintlnStringOptionList(e StringOptionList)       { fmt.Println(StringOptionListToString(e)) }
 func PrintlnIntOptionList(e IntOptionList)             { fmt.Println(IntOptionListToString(e)) }
@@ -95,6 +103,7 @@ func PrintlnRuneOptionList(e RuneOptionList)           { fmt.Println(RuneOptionL
 func PrintlnFloat32OptionList(e Float32OptionList)     { fmt.Println(Float32OptionListToString(e)) }
 func PrintlnFloat64OptionList(e Float64OptionList)     { fmt.Println(Float64OptionListToString(e)) }
 func PrintlnAnyOptionList(e AnyOptionList)             { fmt.Println(AnyOptionListToString(e)) }
+func PrintlnTuple2OptionList(e Tuple2OptionList)       { fmt.Println(Tuple2OptionListToString(e)) }
 func PrintlnBoolListList(e BoolListList)               { fmt.Println(BoolListListToString(e)) }
 func PrintlnStringListList(e StringListList)           { fmt.Println(StringListListToString(e)) }
 func PrintlnIntListList(e IntListList)                 { fmt.Println(IntListListToString(e)) }
@@ -104,3 +113,4 @@ func PrintlnRuneListList(e RuneListList)               { fmt.Println(RuneListLis
 func PrintlnFloat32ListList(e Float32ListList)         { fmt.Println(Float32ListListToString(e)) }
 func PrintlnFloat64ListList(e Float64ListList)         { fmt.Println(Float64ListListToString(e)) }
 func PrintlnAnyListList(e AnyListList)                 { fmt.Println(AnyListListToString(e)) }
+func PrintlnTuple2ListList(e Tuple2ListList)           { fmt.Println(Tuple2ListListToString(e)) }

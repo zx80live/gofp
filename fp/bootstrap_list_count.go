@@ -102,6 +102,17 @@ func (l AnyList) Count(p func(Any) bool) int {
 	}
 	return i
 }
+func (l Tuple2List) Count(p func(Tuple2) bool) int {
+	i := 0
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			i++
+		}
+		xs = *xs.tail
+	}
+	return i
+}
 func (l BoolArrayList) Count(p func([]bool) bool) int {
 	i := 0
 	xs := l
@@ -191,6 +202,17 @@ func (l Float64ArrayList) Count(p func([]float64) bool) int {
 	return i
 }
 func (l AnyArrayList) Count(p func([]Any) bool) int {
+	i := 0
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			i++
+		}
+		xs = *xs.tail
+	}
+	return i
+}
+func (l Tuple2ArrayList) Count(p func([]Tuple2) bool) int {
 	i := 0
 	xs := l
 	for xs.NonEmpty() {
@@ -300,6 +322,17 @@ func (l AnyOptionList) Count(p func(AnyOption) bool) int {
 	}
 	return i
 }
+func (l Tuple2OptionList) Count(p func(Tuple2Option) bool) int {
+	i := 0
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			i++
+		}
+		xs = *xs.tail
+	}
+	return i
+}
 func (l BoolListList) Count(p func(BoolList) bool) int {
 	i := 0
 	xs := l
@@ -389,6 +422,17 @@ func (l Float64ListList) Count(p func(Float64List) bool) int {
 	return i
 }
 func (l AnyListList) Count(p func(AnyList) bool) int {
+	i := 0
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			i++
+		}
+		xs = *xs.tail
+	}
+	return i
+}
+func (l Tuple2ListList) Count(p func(Tuple2List) bool) int {
 	i := 0
 	xs := l
 	for xs.NonEmpty() {

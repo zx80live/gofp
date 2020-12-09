@@ -68,6 +68,13 @@ func (o AnyOption) ToString() String {
 		return "None"
 	}
 }
+func (o Tuple2Option) ToString() String {
+	if o.IsDefined() {
+		return String(fmt.Sprintf("Some(%v)", Tuple2ToString(Tuple2(*o.value))))
+	} else {
+		return "None"
+	}
+}
 func (o BoolOptionOption) ToString() String {
 	if o.IsDefined() {
 		return String(fmt.Sprintf("Some(%v)", BoolOptionToString(BoolOption(*o.value))))
@@ -127,6 +134,13 @@ func (o Float64OptionOption) ToString() String {
 func (o AnyOptionOption) ToString() String {
 	if o.IsDefined() {
 		return String(fmt.Sprintf("Some(%v)", AnyOptionToString(AnyOption(*o.value))))
+	} else {
+		return "None"
+	}
+}
+func (o Tuple2OptionOption) ToString() String {
+	if o.IsDefined() {
+		return String(fmt.Sprintf("Some(%v)", Tuple2OptionToString(Tuple2Option(*o.value))))
 	} else {
 		return "None"
 	}
@@ -194,6 +208,13 @@ func (o AnyArrayOption) ToString() String {
 		return "None"
 	}
 }
+func (o Tuple2ArrayOption) ToString() String {
+	if o.IsDefined() {
+		return String(fmt.Sprintf("Some(%v)", Tuple2ArrayToString(Tuple2Array(*o.value))))
+	} else {
+		return "None"
+	}
+}
 func (o BoolListOption) ToString() String {
 	if o.IsDefined() {
 		return String(fmt.Sprintf("Some(%v)", BoolListToString(BoolList(*o.value))))
@@ -253,6 +274,13 @@ func (o Float64ListOption) ToString() String {
 func (o AnyListOption) ToString() String {
 	if o.IsDefined() {
 		return String(fmt.Sprintf("Some(%v)", AnyListToString(AnyList(*o.value))))
+	} else {
+		return "None"
+	}
+}
+func (o Tuple2ListOption) ToString() String {
+	if o.IsDefined() {
+		return String(fmt.Sprintf("Some(%v)", Tuple2ListToString(Tuple2List(*o.value))))
 	} else {
 		return "None"
 	}

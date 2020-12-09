@@ -122,6 +122,19 @@ func (l AnyList) MkString(start, sep, end string) String {
 	}
 	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
+func (l Tuple2List) MkString(start, sep, end string) String {
+	content := ""
+	xs := l
+	for xs.NonEmpty() {
+		content = fmt.Sprintf("%v%v%v", content, Tuple2ToString(Tuple2(*xs.head)), sep)
+		xs = *xs.tail
+	}
+	s := len(content)
+	if s > 0 {
+		content = content[:s-1]
+	}
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
+}
 func (l BoolArrayList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
@@ -231,6 +244,19 @@ func (l AnyArrayList) MkString(start, sep, end string) String {
 	xs := l
 	for xs.NonEmpty() {
 		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(AnyArray(*xs.head)), sep)
+		xs = *xs.tail
+	}
+	s := len(content)
+	if s > 0 {
+		content = content[:s-1]
+	}
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
+}
+func (l Tuple2ArrayList) MkString(start, sep, end string) String {
+	content := ""
+	xs := l
+	for xs.NonEmpty() {
+		content = fmt.Sprintf("%v%v%v", content, Tuple2ArrayToString(Tuple2Array(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)
@@ -356,6 +382,19 @@ func (l AnyOptionList) MkString(start, sep, end string) String {
 	}
 	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
+func (l Tuple2OptionList) MkString(start, sep, end string) String {
+	content := ""
+	xs := l
+	for xs.NonEmpty() {
+		content = fmt.Sprintf("%v%v%v", content, Tuple2OptionToString(Tuple2Option(*xs.head)), sep)
+		xs = *xs.tail
+	}
+	s := len(content)
+	if s > 0 {
+		content = content[:s-1]
+	}
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
+}
 func (l BoolListList) MkString(start, sep, end string) String {
 	content := ""
 	xs := l
@@ -465,6 +504,19 @@ func (l AnyListList) MkString(start, sep, end string) String {
 	xs := l
 	for xs.NonEmpty() {
 		content = fmt.Sprintf("%v%v%v", content, AnyListToString(AnyList(*xs.head)), sep)
+		xs = *xs.tail
+	}
+	s := len(content)
+	if s > 0 {
+		content = content[:s-1]
+	}
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
+}
+func (l Tuple2ListList) MkString(start, sep, end string) String {
+	content := ""
+	xs := l
+	for xs.NonEmpty() {
+		content = fmt.Sprintf("%v%v%v", content, Tuple2ListToString(Tuple2List(*xs.head)), sep)
 		xs = *xs.tail
 	}
 	s := len(content)

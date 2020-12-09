@@ -12,6 +12,7 @@ func (l RuneList) ToString() String          { return l.MkString("List(", ",", "
 func (l Float32List) ToString() String       { return l.MkString("List(", ",", ")") }
 func (l Float64List) ToString() String       { return l.MkString("List(", ",", ")") }
 func (l AnyList) ToString() String           { return l.MkString("List(", ",", ")") }
+func (l Tuple2List) ToString() String        { return l.MkString("List(", ",", ")") }
 func (l BoolArrayList) ToString() String     { return l.MkString("List(", ",", ")") }
 func (l StringArrayList) ToString() String   { return l.MkString("List(", ",", ")") }
 func (l IntArrayList) ToString() String      { return l.MkString("List(", ",", ")") }
@@ -21,6 +22,7 @@ func (l RuneArrayList) ToString() String     { return l.MkString("List(", ",", "
 func (l Float32ArrayList) ToString() String  { return l.MkString("List(", ",", ")") }
 func (l Float64ArrayList) ToString() String  { return l.MkString("List(", ",", ")") }
 func (l AnyArrayList) ToString() String      { return l.MkString("List(", ",", ")") }
+func (l Tuple2ArrayList) ToString() String   { return l.MkString("List(", ",", ")") }
 func (l BoolOptionList) ToString() String    { return l.MkString("List(", ",", ")") }
 func (l StringOptionList) ToString() String  { return l.MkString("List(", ",", ")") }
 func (l IntOptionList) ToString() String     { return l.MkString("List(", ",", ")") }
@@ -30,6 +32,7 @@ func (l RuneOptionList) ToString() String    { return l.MkString("List(", ",", "
 func (l Float32OptionList) ToString() String { return l.MkString("List(", ",", ")") }
 func (l Float64OptionList) ToString() String { return l.MkString("List(", ",", ")") }
 func (l AnyOptionList) ToString() String     { return l.MkString("List(", ",", ")") }
+func (l Tuple2OptionList) ToString() String  { return l.MkString("List(", ",", ")") }
 func (l BoolListList) ToString() String      { return l.MkString("List(", ",", ")") }
 func (l StringListList) ToString() String    { return l.MkString("List(", ",", ")") }
 func (l IntListList) ToString() String       { return l.MkString("List(", ",", ")") }
@@ -39,3 +42,4 @@ func (l RuneListList) ToString() String      { return l.MkString("List(", ",", "
 func (l Float32ListList) ToString() String   { return l.MkString("List(", ",", ")") }
 func (l Float64ListList) ToString() String   { return l.MkString("List(", ",", ")") }
 func (l AnyListList) ToString() String       { return l.MkString("List(", ",", ")") }
+func (l Tuple2ListList) ToString() String    { return l.MkString("List(", ",", ")") }

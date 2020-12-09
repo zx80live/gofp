@@ -111,6 +111,18 @@ func (m AnyArray) Filter(p AnyPredicate) AnyArray {
 	}
 	return acc[0:i]
 }
+func (m Tuple2Array) Filter(p Tuple2Predicate) Tuple2Array {
+	l := len(m)
+	acc := make([]Tuple2, l)
+	i := 0
+	for _, e := range m {
+		if p(e) {
+			acc[i] = e
+			i++
+		}
+	}
+	return acc[0:i]
+}
 func (m BoolArrayArray) Filter(p BoolArrayPredicate) BoolArrayArray {
 	l := len(m)
 	acc := make([][]bool, l)
@@ -210,6 +222,18 @@ func (m Float64ArrayArray) Filter(p Float64ArrayPredicate) Float64ArrayArray {
 func (m AnyArrayArray) Filter(p AnyArrayPredicate) AnyArrayArray {
 	l := len(m)
 	acc := make([][]Any, l)
+	i := 0
+	for _, e := range m {
+		if p(e) {
+			acc[i] = e
+			i++
+		}
+	}
+	return acc[0:i]
+}
+func (m Tuple2ArrayArray) Filter(p Tuple2ArrayPredicate) Tuple2ArrayArray {
+	l := len(m)
+	acc := make([][]Tuple2, l)
 	i := 0
 	for _, e := range m {
 		if p(e) {

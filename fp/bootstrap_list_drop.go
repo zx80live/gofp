@@ -66,6 +66,13 @@ func (l AnyList) Drop(n int) AnyList {
 	}
 	return acc
 }
+func (l Tuple2List) Drop(n int) Tuple2List {
+	acc := l
+	for i := 0; acc.NonEmpty() && i < n; i++ {
+		acc = *acc.tail
+	}
+	return acc
+}
 func (l BoolArrayList) Drop(n int) BoolArrayList {
 	acc := l
 	for i := 0; acc.NonEmpty() && i < n; i++ {
@@ -123,6 +130,13 @@ func (l Float64ArrayList) Drop(n int) Float64ArrayList {
 	return acc
 }
 func (l AnyArrayList) Drop(n int) AnyArrayList {
+	acc := l
+	for i := 0; acc.NonEmpty() && i < n; i++ {
+		acc = *acc.tail
+	}
+	return acc
+}
+func (l Tuple2ArrayList) Drop(n int) Tuple2ArrayList {
 	acc := l
 	for i := 0; acc.NonEmpty() && i < n; i++ {
 		acc = *acc.tail
@@ -192,6 +206,13 @@ func (l AnyOptionList) Drop(n int) AnyOptionList {
 	}
 	return acc
 }
+func (l Tuple2OptionList) Drop(n int) Tuple2OptionList {
+	acc := l
+	for i := 0; acc.NonEmpty() && i < n; i++ {
+		acc = *acc.tail
+	}
+	return acc
+}
 func (l BoolListList) Drop(n int) BoolListList {
 	acc := l
 	for i := 0; acc.NonEmpty() && i < n; i++ {
@@ -249,6 +270,13 @@ func (l Float64ListList) Drop(n int) Float64ListList {
 	return acc
 }
 func (l AnyListList) Drop(n int) AnyListList {
+	acc := l
+	for i := 0; acc.NonEmpty() && i < n; i++ {
+		acc = *acc.tail
+	}
+	return acc
+}
+func (l Tuple2ListList) Drop(n int) Tuple2ListList {
 	acc := l
 	for i := 0; acc.NonEmpty() && i < n; i++ {
 		acc = *acc.tail

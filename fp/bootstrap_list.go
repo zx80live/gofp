@@ -39,6 +39,10 @@ type AnyList struct {
 	head *Any
 	tail *AnyList
 }
+type Tuple2List struct {
+	head *Tuple2
+	tail *Tuple2List
+}
 type BoolArrayList struct {
 	head *[]bool
 	tail *BoolArrayList
@@ -74,6 +78,10 @@ type Float64ArrayList struct {
 type AnyArrayList struct {
 	head *[]Any
 	tail *AnyArrayList
+}
+type Tuple2ArrayList struct {
+	head *[]Tuple2
+	tail *Tuple2ArrayList
 }
 type BoolOptionList struct {
 	head *BoolOption
@@ -111,6 +119,10 @@ type AnyOptionList struct {
 	head *AnyOption
 	tail *AnyOptionList
 }
+type Tuple2OptionList struct {
+	head *Tuple2Option
+	tail *Tuple2OptionList
+}
 type BoolListList struct {
 	head *BoolList
 	tail *BoolListList
@@ -146,4 +158,8 @@ type Float64ListList struct {
 type AnyListList struct {
 	head *AnyList
 	tail *AnyListList
+}
+type Tuple2ListList struct {
+	head *Tuple2List
+	tail *Tuple2ListList
 }

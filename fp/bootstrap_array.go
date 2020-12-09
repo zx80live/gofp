@@ -12,6 +12,7 @@ type RuneArray []rune
 type Float32Array []float32
 type Float64Array []float64
 type AnyArray []Any
+type Tuple2Array []Tuple2
 type BoolArrayArray [][]bool
 type StringArrayArray [][]string
 type IntArrayArray [][]int
@@ -21,3 +22,4 @@ type RuneArrayArray [][]rune
 type Float32ArrayArray [][]float32
 type Float64ArrayArray [][]float64
 type AnyArrayArray [][]Any
+type Tuple2ArrayArray [][]Tuple2

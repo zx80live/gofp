@@ -93,6 +93,16 @@ func (l AnyList) ToArray() []Any {
 	}
 	return acc
 }
+func (l Tuple2List) ToArray() []Tuple2 {
+	acc := make([]Tuple2, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
 func (l BoolArrayList) ToArray() [][]bool {
 	acc := make([][]bool, l.Size())
 	xs := l
@@ -175,6 +185,16 @@ func (l Float64ArrayList) ToArray() [][]float64 {
 }
 func (l AnyArrayList) ToArray() [][]Any {
 	acc := make([][]Any, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Tuple2ArrayList) ToArray() [][]Tuple2 {
+	acc := make([][]Tuple2, l.Size())
 	xs := l
 	i := 0
 	for xs.NonEmpty() {
@@ -273,6 +293,16 @@ func (l AnyOptionList) ToArray() []AnyOption {
 	}
 	return acc
 }
+func (l Tuple2OptionList) ToArray() []Tuple2Option {
+	acc := make([]Tuple2Option, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
 func (l BoolListList) ToArray() []BoolList {
 	acc := make([]BoolList, l.Size())
 	xs := l
@@ -355,6 +385,16 @@ func (l Float64ListList) ToArray() []Float64List {
 }
 func (l AnyListList) ToArray() []AnyList {
 	acc := make([]AnyList, l.Size())
+	xs := l
+	i := 0
+	for xs.NonEmpty() {
+		acc[i] = *xs.head
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Tuple2ListList) ToArray() []Tuple2List {
+	acc := make([]Tuple2List, l.Size())
 	xs := l
 	i := 0
 	for xs.NonEmpty() {

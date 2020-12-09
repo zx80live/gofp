@@ -12,6 +12,7 @@ func RuneOpt(e rune) RuneOption                            { return RuneOption{&
 func Float32Opt(e float32) Float32Option                   { return Float32Option{&e} }
 func Float64Opt(e float64) Float64Option                   { return Float64Option{&e} }
 func AnyOpt(e Any) AnyOption                               { return AnyOption{&e} }
+func Tuple2Opt(e Tuple2) Tuple2Option                      { return Tuple2Option{&e} }
 func BoolOptionOpt(e BoolOption) BoolOptionOption          { return BoolOptionOption{&e} }
 func StringOptionOpt(e StringOption) StringOptionOption    { return StringOptionOption{&e} }
 func IntOptionOpt(e IntOption) IntOptionOption             { return IntOptionOption{&e} }
@@ -21,6 +22,7 @@ func RuneOptionOpt(e RuneOption) RuneOptionOption          { return RuneOptionOp
 func Float32OptionOpt(e Float32Option) Float32OptionOption { return Float32OptionOption{&e} }
 func Float64OptionOpt(e Float64Option) Float64OptionOption { return Float64OptionOption{&e} }
 func AnyOptionOpt(e AnyOption) AnyOptionOption             { return AnyOptionOption{&e} }
+func Tuple2OptionOpt(e Tuple2Option) Tuple2OptionOption    { return Tuple2OptionOption{&e} }
 func BoolArrayOpt(e []bool) BoolArrayOption                { return BoolArrayOption{&e} }
 func StringArrayOpt(e []string) StringArrayOption          { return StringArrayOption{&e} }
 func IntArrayOpt(e []int) IntArrayOption                   { return IntArrayOption{&e} }
@@ -30,6 +32,7 @@ func RuneArrayOpt(e []rune) RuneArrayOption                { return RuneArrayOpt
 func Float32ArrayOpt(e []float32) Float32ArrayOption       { return Float32ArrayOption{&e} }
 func Float64ArrayOpt(e []float64) Float64ArrayOption       { return Float64ArrayOption{&e} }
 func AnyArrayOpt(e []Any) AnyArrayOption                   { return AnyArrayOption{&e} }
+func Tuple2ArrayOpt(e []Tuple2) Tuple2ArrayOption          { return Tuple2ArrayOption{&e} }
 func BoolListOpt(e BoolList) BoolListOption                { return BoolListOption{&e} }
 func StringListOpt(e StringList) StringListOption          { return StringListOption{&e} }
 func IntListOpt(e IntList) IntListOption                   { return IntListOption{&e} }
@@ -39,3 +42,4 @@ func RuneListOpt(e RuneList) RuneListOption                { return RuneListOpti
 func Float32ListOpt(e Float32List) Float32ListOption       { return Float32ListOption{&e} }
 func Float64ListOpt(e Float64List) Float64ListOption       { return Float64ListOption{&e} }
 func AnyListOpt(e AnyList) AnyListOption                   { return AnyListOption{&e} }
+func Tuple2ListOpt(e Tuple2List) Tuple2ListOption          { return Tuple2ListOption{&e} }

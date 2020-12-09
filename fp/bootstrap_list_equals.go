@@ -156,6 +156,23 @@ func (a AnyList) Equals(b AnyList) bool {
 	}
 	return true
 }
+func (a Tuple2List) Equals(b Tuple2List) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Tuple2Equals(Tuple2(*xs1.head), Tuple2(*xs2.head)) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
 func (a BoolArrayList) Equals(b BoolArrayList) bool {
 	len1 := a.Size()
 	len2 := b.Size()
@@ -302,6 +319,23 @@ func (a AnyArrayList) Equals(b AnyArrayList) bool {
 	xs2 := b
 	for xs1.NonEmpty() {
 		if !AnyArrayEquals(AnyArray(*xs1.head), AnyArray(*xs2.head)) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Tuple2ArrayList) Equals(b Tuple2ArrayList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Tuple2ArrayEquals(Tuple2Array(*xs1.head), Tuple2Array(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail
@@ -462,6 +496,23 @@ func (a AnyOptionList) Equals(b AnyOptionList) bool {
 	}
 	return true
 }
+func (a Tuple2OptionList) Equals(b Tuple2OptionList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Tuple2OptionEquals(Tuple2Option(*xs1.head), Tuple2Option(*xs2.head)) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
 func (a BoolListList) Equals(b BoolListList) bool {
 	len1 := a.Size()
 	len2 := b.Size()
@@ -608,6 +659,23 @@ func (a AnyListList) Equals(b AnyListList) bool {
 	xs2 := b
 	for xs1.NonEmpty() {
 		if !AnyListEquals(AnyList(*xs1.head), AnyList(*xs2.head)) {
+			return false
+		}
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return true
+}
+func (a Tuple2ListList) Equals(b Tuple2ListList) bool {
+	len1 := a.Size()
+	len2 := b.Size()
+	if len1 != len2 {
+		return false
+	}
+	xs1 := a
+	xs2 := b
+	for xs1.NonEmpty() {
+		if !Tuple2ListEquals(Tuple2List(*xs1.head), Tuple2List(*xs2.head)) {
 			return false
 		}
 		xs1 = *xs1.tail

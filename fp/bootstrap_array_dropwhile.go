@@ -84,6 +84,15 @@ func (l AnyArray) DropWhile(p func(Any) bool) AnyArray {
 	copy(acc, l[n:size])
 	return acc
 }
+func (l Tuple2Array) DropWhile(p func(Tuple2) bool) Tuple2Array {
+	size := len(l)
+	var n int
+	for n = 0; n < size && p(l[n]); n++ {
+	}
+	acc := make([]Tuple2, size-n)
+	copy(acc, l[n:size])
+	return acc
+}
 func (l BoolArrayArray) DropWhile(p func([]bool) bool) BoolArrayArray {
 	size := len(l)
 	var n int
@@ -162,6 +171,15 @@ func (l AnyArrayArray) DropWhile(p func([]Any) bool) AnyArrayArray {
 	for n = 0; n < size && p(l[n]); n++ {
 	}
 	acc := make([][]Any, size-n)
+	copy(acc, l[n:size])
+	return acc
+}
+func (l Tuple2ArrayArray) DropWhile(p func([]Tuple2) bool) Tuple2ArrayArray {
+	size := len(l)
+	var n int
+	for n = 0; n < size && p(l[n]); n++ {
+	}
+	acc := make([][]Tuple2, size-n)
 	copy(acc, l[n:size])
 	return acc
 }

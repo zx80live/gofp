@@ -165,6 +165,24 @@ func (l AnyList) GroupByAny(f func(Any) Any) map[Any]AnyList {
 
 	return m
 }
+func (l Tuple2List) GroupByTuple2(f func(Tuple2) Tuple2) map[Tuple2]Tuple2List {
+	m := make(map[Tuple2]Tuple2List)
+
+	l.Foreach(func(e Tuple2) {
+		key := f(e)
+		var group Tuple2List
+
+		if value, found := m[key]; found {
+			group = value
+		} else {
+			group = NilTuple2
+		}
+		group = group.Cons(e)
+		m[key] = group
+	})
+
+	return m
+}
 func (l BoolOptionList) GroupByBoolOption(f func(BoolOption) BoolOption) map[BoolOption]BoolOptionList {
 	m := make(map[BoolOption]BoolOptionList)
 
@@ -327,6 +345,24 @@ func (l AnyOptionList) GroupByAnyOption(f func(AnyOption) AnyOption) map[AnyOpti
 
 	return m
 }
+func (l Tuple2OptionList) GroupByTuple2Option(f func(Tuple2Option) Tuple2Option) map[Tuple2Option]Tuple2OptionList {
+	m := make(map[Tuple2Option]Tuple2OptionList)
+
+	l.Foreach(func(e Tuple2Option) {
+		key := f(e)
+		var group Tuple2OptionList
+
+		if value, found := m[key]; found {
+			group = value
+		} else {
+			group = NilTuple2Option
+		}
+		group = group.Cons(e)
+		m[key] = group
+	})
+
+	return m
+}
 func (l BoolListList) GroupByBoolList(f func(BoolList) BoolList) map[BoolList]BoolListList {
 	m := make(map[BoolList]BoolListList)
 
@@ -482,6 +518,24 @@ func (l AnyListList) GroupByAnyList(f func(AnyList) AnyList) map[AnyList]AnyList
 			group = value
 		} else {
 			group = NilAnyList
+		}
+		group = group.Cons(e)
+		m[key] = group
+	})
+
+	return m
+}
+func (l Tuple2ListList) GroupByTuple2List(f func(Tuple2List) Tuple2List) map[Tuple2List]Tuple2ListList {
+	m := make(map[Tuple2List]Tuple2ListList)
+
+	l.Foreach(func(e Tuple2List) {
+		key := f(e)
+		var group Tuple2ListList
+
+		if value, found := m[key]; found {
+			group = value
+		} else {
+			group = NilTuple2List
 		}
 		group = group.Cons(e)
 		m[key] = group

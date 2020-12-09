@@ -120,6 +120,19 @@ func (a AnyOption) Equals(b AnyOption) bool {
 		return true
 	}
 }
+func (a Tuple2Option) Equals(b Tuple2Option) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Tuple2Equals(Tuple2(*a.value), Tuple2(*b.value))
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
 func (a BoolOptionOption) Equals(b BoolOptionOption) bool {
 	if a.IsDefined() {
 		if b.IsDefined() {
@@ -228,6 +241,19 @@ func (a AnyOptionOption) Equals(b AnyOptionOption) bool {
 	if a.IsDefined() {
 		if b.IsDefined() {
 			return AnyOptionEquals(AnyOption(*a.value), AnyOption(*b.value))
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Tuple2OptionOption) Equals(b Tuple2OptionOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Tuple2OptionEquals(Tuple2Option(*a.value), Tuple2Option(*b.value))
 		} else {
 			return false
 		}
@@ -354,6 +380,19 @@ func (a AnyArrayOption) Equals(b AnyArrayOption) bool {
 		return true
 	}
 }
+func (a Tuple2ArrayOption) Equals(b Tuple2ArrayOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Tuple2ArrayEquals(Tuple2Array(*a.value), Tuple2Array(*b.value))
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
 func (a BoolListOption) Equals(b BoolListOption) bool {
 	if a.IsDefined() {
 		if b.IsDefined() {
@@ -462,6 +501,19 @@ func (a AnyListOption) Equals(b AnyListOption) bool {
 	if a.IsDefined() {
 		if b.IsDefined() {
 			return AnyListEquals(AnyList(*a.value), AnyList(*b.value))
+		} else {
+			return false
+		}
+	} else if b.IsDefined() {
+		return false
+	} else {
+		return true
+	}
+}
+func (a Tuple2ListOption) Equals(b Tuple2ListOption) bool {
+	if a.IsDefined() {
+		if b.IsDefined() {
+			return Tuple2ListEquals(Tuple2List(*a.value), Tuple2List(*b.value))
 		} else {
 			return false
 		}

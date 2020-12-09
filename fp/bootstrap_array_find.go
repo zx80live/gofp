@@ -75,6 +75,14 @@ func (a AnyArray) Find(p func(Any) bool) AnyOption {
 	}
 	return NoneAny
 }
+func (a Tuple2Array) Find(p func(Tuple2) bool) Tuple2Option {
+	for _, e := range a {
+		if p(e) {
+			return MakeTuple2Option(e)
+		}
+	}
+	return NoneTuple2
+}
 func (a BoolArrayArray) Find(p func([]bool) bool) BoolArrayOption {
 	for _, e := range a {
 		if p(e) {
@@ -146,4 +154,12 @@ func (a AnyArrayArray) Find(p func([]Any) bool) AnyArrayOption {
 		}
 	}
 	return NoneAnyArray
+}
+func (a Tuple2ArrayArray) Find(p func([]Tuple2) bool) Tuple2ArrayOption {
+	for _, e := range a {
+		if p(e) {
+			return MakeTuple2ArrayOption(e)
+		}
+	}
+	return NoneTuple2Array
 }

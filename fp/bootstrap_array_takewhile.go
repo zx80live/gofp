@@ -84,6 +84,15 @@ func (l AnyArray) TakeWhile(p func(Any) bool) AnyArray {
 	copy(acc, l)
 	return acc
 }
+func (l Tuple2Array) TakeWhile(p func(Tuple2) bool) Tuple2Array {
+	var n int
+	size := len(l)
+	for n = 0; n < size && p(l[n]); n++ {
+	}
+	acc := make([]Tuple2, n)
+	copy(acc, l)
+	return acc
+}
 func (l BoolArrayArray) TakeWhile(p func([]bool) bool) BoolArrayArray {
 	var n int
 	size := len(l)
@@ -162,6 +171,15 @@ func (l AnyArrayArray) TakeWhile(p func([]Any) bool) AnyArrayArray {
 	for n = 0; n < size && p(l[n]); n++ {
 	}
 	acc := make([][]Any, n)
+	copy(acc, l)
+	return acc
+}
+func (l Tuple2ArrayArray) TakeWhile(p func([]Tuple2) bool) Tuple2ArrayArray {
+	var n int
+	size := len(l)
+	for n = 0; n < size && p(l[n]); n++ {
+	}
+	acc := make([][]Tuple2, n)
 	copy(acc, l)
 	return acc
 }

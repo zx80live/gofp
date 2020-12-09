@@ -12,6 +12,7 @@ type RuneOption struct{ value *rune }
 type Float32Option struct{ value *float32 }
 type Float64Option struct{ value *float64 }
 type AnyOption struct{ value *Any }
+type Tuple2Option struct{ value *Tuple2 }
 type BoolOptionOption struct{ value *BoolOption }
 type StringOptionOption struct{ value *StringOption }
 type IntOptionOption struct{ value *IntOption }
@@ -21,6 +22,7 @@ type RuneOptionOption struct{ value *RuneOption }
 type Float32OptionOption struct{ value *Float32Option }
 type Float64OptionOption struct{ value *Float64Option }
 type AnyOptionOption struct{ value *AnyOption }
+type Tuple2OptionOption struct{ value *Tuple2Option }
 type BoolArrayOption struct{ value *[]bool }
 type StringArrayOption struct{ value *[]string }
 type IntArrayOption struct{ value *[]int }
@@ -30,6 +32,7 @@ type RuneArrayOption struct{ value *[]rune }
 type Float32ArrayOption struct{ value *[]float32 }
 type Float64ArrayOption struct{ value *[]float64 }
 type AnyArrayOption struct{ value *[]Any }
+type Tuple2ArrayOption struct{ value *[]Tuple2 }
 type BoolListOption struct{ value *BoolList }
 type StringListOption struct{ value *StringList }
 type IntListOption struct{ value *IntList }
@@ -39,3 +42,4 @@ type RuneListOption struct{ value *RuneList }
 type Float32ListOption struct{ value *Float32List }
 type Float64ListOption struct{ value *Float64List }
 type AnyListOption struct{ value *AnyList }
+type Tuple2ListOption struct{ value *Tuple2List }

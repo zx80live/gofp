@@ -102,6 +102,17 @@ func (l AnyArray) DropRight(n int) AnyArray {
 	copy(acc, l[0:to])
 	return acc
 }
+func (l Tuple2Array) DropRight(n int) Tuple2Array {
+	size := len(l)
+	Require(n >= 0, "index should be >= 0")
+	if n >= size {
+		n = size
+	}
+	to := size - n
+	acc := make([]Tuple2, to)
+	copy(acc, l[0:to])
+	return acc
+}
 func (l BoolArrayArray) DropRight(n int) BoolArrayArray {
 	size := len(l)
 	Require(n >= 0, "index should be >= 0")
@@ -198,6 +209,17 @@ func (l AnyArrayArray) DropRight(n int) AnyArrayArray {
 	}
 	to := size - n
 	acc := make([][]Any, to)
+	copy(acc, l[0:to])
+	return acc
+}
+func (l Tuple2ArrayArray) DropRight(n int) Tuple2ArrayArray {
+	size := len(l)
+	Require(n >= 0, "index should be >= 0")
+	if n >= size {
+		n = size
+	}
+	to := size - n
+	acc := make([][]Tuple2, to)
 	copy(acc, l[0:to])
 	return acc
 }

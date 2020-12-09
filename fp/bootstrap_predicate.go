@@ -21,6 +21,7 @@ type RuneArrayPredicate func(t []rune) bool
 type Float32ArrayPredicate func(t []float32) bool
 type Float64ArrayPredicate func(t []float64) bool
 type AnyArrayPredicate func(t []Any) bool
+type Tuple2ArrayPredicate func(t []Tuple2) bool
 type BoolArrayArrayPredicate func(t [][]bool) bool
 type StringArrayArrayPredicate func(t [][]string) bool
 type IntArrayArrayPredicate func(t [][]int) bool
@@ -30,6 +31,7 @@ type RuneArrayArrayPredicate func(t [][]rune) bool
 type Float32ArrayArrayPredicate func(t [][]float32) bool
 type Float64ArrayArrayPredicate func(t [][]float64) bool
 type AnyArrayArrayPredicate func(t [][]Any) bool
+type Tuple2ArrayArrayPredicate func(t [][]Tuple2) bool
 type BoolOptionPredicate func(t BoolOption) bool
 type StringOptionPredicate func(t StringOption) bool
 type IntOptionPredicate func(t IntOption) bool
@@ -39,6 +41,7 @@ type RuneOptionPredicate func(t RuneOption) bool
 type Float32OptionPredicate func(t Float32Option) bool
 type Float64OptionPredicate func(t Float64Option) bool
 type AnyOptionPredicate func(t AnyOption) bool
+type Tuple2OptionPredicate func(t Tuple2Option) bool
 type BoolOptionOptionPredicate func(t BoolOptionOption) bool
 type StringOptionOptionPredicate func(t StringOptionOption) bool
 type IntOptionOptionPredicate func(t IntOptionOption) bool
@@ -48,6 +51,7 @@ type RuneOptionOptionPredicate func(t RuneOptionOption) bool
 type Float32OptionOptionPredicate func(t Float32OptionOption) bool
 type Float64OptionOptionPredicate func(t Float64OptionOption) bool
 type AnyOptionOptionPredicate func(t AnyOptionOption) bool
+type Tuple2OptionOptionPredicate func(t Tuple2OptionOption) bool
 type BoolArrayOptionPredicate func(t BoolArrayOption) bool
 type StringArrayOptionPredicate func(t StringArrayOption) bool
 type IntArrayOptionPredicate func(t IntArrayOption) bool
@@ -57,6 +61,7 @@ type RuneArrayOptionPredicate func(t RuneArrayOption) bool
 type Float32ArrayOptionPredicate func(t Float32ArrayOption) bool
 type Float64ArrayOptionPredicate func(t Float64ArrayOption) bool
 type AnyArrayOptionPredicate func(t AnyArrayOption) bool
+type Tuple2ArrayOptionPredicate func(t Tuple2ArrayOption) bool
 type BoolListOptionPredicate func(t BoolListOption) bool
 type StringListOptionPredicate func(t StringListOption) bool
 type IntListOptionPredicate func(t IntListOption) bool
@@ -66,6 +71,7 @@ type RuneListOptionPredicate func(t RuneListOption) bool
 type Float32ListOptionPredicate func(t Float32ListOption) bool
 type Float64ListOptionPredicate func(t Float64ListOption) bool
 type AnyListOptionPredicate func(t AnyListOption) bool
+type Tuple2ListOptionPredicate func(t Tuple2ListOption) bool
 type BoolListPredicate func(t BoolList) bool
 type StringListPredicate func(t StringList) bool
 type IntListPredicate func(t IntList) bool
@@ -75,6 +81,7 @@ type RuneListPredicate func(t RuneList) bool
 type Float32ListPredicate func(t Float32List) bool
 type Float64ListPredicate func(t Float64List) bool
 type AnyListPredicate func(t AnyList) bool
+type Tuple2ListPredicate func(t Tuple2List) bool
 type BoolArrayListPredicate func(t BoolArrayList) bool
 type StringArrayListPredicate func(t StringArrayList) bool
 type IntArrayListPredicate func(t IntArrayList) bool
@@ -84,6 +91,7 @@ type RuneArrayListPredicate func(t RuneArrayList) bool
 type Float32ArrayListPredicate func(t Float32ArrayList) bool
 type Float64ArrayListPredicate func(t Float64ArrayList) bool
 type AnyArrayListPredicate func(t AnyArrayList) bool
+type Tuple2ArrayListPredicate func(t Tuple2ArrayList) bool
 type BoolOptionListPredicate func(t BoolOptionList) bool
 type StringOptionListPredicate func(t StringOptionList) bool
 type IntOptionListPredicate func(t IntOptionList) bool
@@ -93,6 +101,7 @@ type RuneOptionListPredicate func(t RuneOptionList) bool
 type Float32OptionListPredicate func(t Float32OptionList) bool
 type Float64OptionListPredicate func(t Float64OptionList) bool
 type AnyOptionListPredicate func(t AnyOptionList) bool
+type Tuple2OptionListPredicate func(t Tuple2OptionList) bool
 type BoolListListPredicate func(t BoolListList) bool
 type StringListListPredicate func(t StringListList) bool
 type IntListListPredicate func(t IntListList) bool
@@ -102,3 +111,5 @@ type RuneListListPredicate func(t RuneListList) bool
 type Float32ListListPredicate func(t Float32ListList) bool
 type Float64ListListPredicate func(t Float64ListList) bool
 type AnyListListPredicate func(t AnyListList) bool
+type Tuple2ListListPredicate func(t Tuple2ListList) bool
+type Tuple2Predicate func(t Tuple2) bool

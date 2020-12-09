@@ -48,6 +48,11 @@ func (o AnyOption) Foreach(f func(Any)) {
 		f(*o.value)
 	}
 }
+func (o Tuple2Option) Foreach(f func(Tuple2)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
 func (o BoolOptionOption) Foreach(f func(BoolOption)) {
 	if o.IsDefined() {
 		f(*o.value)
@@ -89,6 +94,11 @@ func (o Float64OptionOption) Foreach(f func(Float64Option)) {
 	}
 }
 func (o AnyOptionOption) Foreach(f func(AnyOption)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Tuple2OptionOption) Foreach(f func(Tuple2Option)) {
 	if o.IsDefined() {
 		f(*o.value)
 	}
@@ -138,6 +148,11 @@ func (o AnyArrayOption) Foreach(f func([]Any)) {
 		f(*o.value)
 	}
 }
+func (o Tuple2ArrayOption) Foreach(f func([]Tuple2)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
 func (o BoolListOption) Foreach(f func(BoolList)) {
 	if o.IsDefined() {
 		f(*o.value)
@@ -179,6 +194,11 @@ func (o Float64ListOption) Foreach(f func(Float64List)) {
 	}
 }
 func (o AnyListOption) Foreach(f func(AnyList)) {
+	if o.IsDefined() {
+		f(*o.value)
+	}
+}
+func (o Tuple2ListOption) Foreach(f func(Tuple2List)) {
 	if o.IsDefined() {
 		f(*o.value)
 	}

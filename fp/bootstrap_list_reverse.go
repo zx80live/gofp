@@ -84,6 +84,15 @@ func (l AnyList) Reverse() AnyList {
 	}
 	return acc
 }
+func (l Tuple2List) Reverse() Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc
+}
 func (l BoolArrayList) Reverse() BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -158,6 +167,15 @@ func (l Float64ArrayList) Reverse() Float64ArrayList {
 }
 func (l AnyArrayList) Reverse() AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Tuple2ArrayList) Reverse() Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)
@@ -246,6 +264,15 @@ func (l AnyOptionList) Reverse() AnyOptionList {
 	}
 	return acc
 }
+func (l Tuple2OptionList) Reverse() Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc
+}
 func (l BoolListList) Reverse() BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -320,6 +347,15 @@ func (l Float64ListList) Reverse() Float64ListList {
 }
 func (l AnyListList) Reverse() AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc
+}
+func (l Tuple2ListList) Reverse() Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(*xs.head)

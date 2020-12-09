@@ -102,6 +102,17 @@ func (l AnyList) Filter(p AnyPredicate) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Tuple2List) Filter(p Tuple2Predicate) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolArrayList) Filter(p BoolArrayPredicate) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -192,6 +203,17 @@ func (l Float64ArrayList) Filter(p Float64ArrayPredicate) Float64ArrayList {
 }
 func (l AnyArrayList) Filter(p AnyArrayPredicate) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) Filter(p Tuple2ArrayPredicate) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		if p(*xs.head) {
@@ -300,6 +322,17 @@ func (l AnyOptionList) Filter(p AnyOptionPredicate) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l Tuple2OptionList) Filter(p Tuple2OptionPredicate) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolListList) Filter(p BoolListPredicate) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -390,6 +423,17 @@ func (l Float64ListList) Filter(p Float64ListPredicate) Float64ListList {
 }
 func (l AnyListList) Filter(p AnyListPredicate) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			acc = acc.Cons(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) Filter(p Tuple2ListPredicate) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		if p(*xs.head) {

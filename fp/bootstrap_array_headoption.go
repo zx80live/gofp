@@ -66,6 +66,13 @@ func (m AnyArray) HeadOption() AnyOption {
 		return NoneAny
 	}
 }
+func (m Tuple2Array) HeadOption() Tuple2Option {
+	if len(m) > 0 {
+		return MakeTuple2Option(m[0])
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolArrayArray) HeadOption() BoolArrayOption {
 	if len(m) > 0 {
 		return MakeBoolArrayOption(m[0])
@@ -127,5 +134,12 @@ func (m AnyArrayArray) HeadOption() AnyArrayOption {
 		return MakeAnyArrayOption(m[0])
 	} else {
 		return NoneAnyArray
+	}
+}
+func (m Tuple2ArrayArray) HeadOption() Tuple2ArrayOption {
+	if len(m) > 0 {
+		return MakeTuple2ArrayOption(m[0])
+	} else {
+		return NoneTuple2Array
 	}
 }

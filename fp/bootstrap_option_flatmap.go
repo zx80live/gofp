@@ -66,6 +66,13 @@ func (m BoolOption) FlatMapAny(f func(bool) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m BoolOption) FlatMapTuple2(f func(bool) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m StringOption) FlatMapBool(f func(string) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -127,6 +134,13 @@ func (m StringOption) FlatMapAny(f func(string) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m StringOption) FlatMapTuple2(f func(string) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m IntOption) FlatMapBool(f func(int) BoolOption) BoolOption {
@@ -192,6 +206,13 @@ func (m IntOption) FlatMapAny(f func(int) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m IntOption) FlatMapTuple2(f func(int) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Int64Option) FlatMapBool(f func(int64) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -253,6 +274,13 @@ func (m Int64Option) FlatMapAny(f func(int64) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m Int64Option) FlatMapTuple2(f func(int64) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m ByteOption) FlatMapBool(f func(byte) BoolOption) BoolOption {
@@ -318,6 +346,13 @@ func (m ByteOption) FlatMapAny(f func(byte) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m ByteOption) FlatMapTuple2(f func(byte) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m RuneOption) FlatMapBool(f func(rune) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -379,6 +414,13 @@ func (m RuneOption) FlatMapAny(f func(rune) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m RuneOption) FlatMapTuple2(f func(rune) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m Float32Option) FlatMapBool(f func(float32) BoolOption) BoolOption {
@@ -444,6 +486,13 @@ func (m Float32Option) FlatMapAny(f func(float32) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float32Option) FlatMapTuple2(f func(float32) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float64Option) FlatMapBool(f func(float64) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -505,6 +554,13 @@ func (m Float64Option) FlatMapAny(f func(float64) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m Float64Option) FlatMapTuple2(f func(float64) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m AnyOption) FlatMapBool(f func(Any) BoolOption) BoolOption {
@@ -570,6 +626,83 @@ func (m AnyOption) FlatMapAny(f func(Any) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m AnyOption) FlatMapTuple2(f func(Any) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2Option) FlatMapBool(f func(Tuple2) BoolOption) BoolOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2Option) FlatMapString(f func(Tuple2) StringOption) StringOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2Option) FlatMapInt(f func(Tuple2) IntOption) IntOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2Option) FlatMapInt64(f func(Tuple2) Int64Option) Int64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2Option) FlatMapByte(f func(Tuple2) ByteOption) ByteOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2Option) FlatMapRune(f func(Tuple2) RuneOption) RuneOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2Option) FlatMapFloat32(f func(Tuple2) Float32Option) Float32Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2Option) FlatMapFloat64(f func(Tuple2) Float64Option) Float64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2Option) FlatMapAny(f func(Tuple2) AnyOption) AnyOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2Option) FlatMapTuple2(f func(Tuple2) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolOptionOption) FlatMapBool(f func(BoolOption) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -631,6 +764,13 @@ func (m BoolOptionOption) FlatMapAny(f func(BoolOption) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m BoolOptionOption) FlatMapTuple2(f func(BoolOption) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m StringOptionOption) FlatMapBool(f func(StringOption) BoolOption) BoolOption {
@@ -696,6 +836,13 @@ func (m StringOptionOption) FlatMapAny(f func(StringOption) AnyOption) AnyOption
 		return NoneAny
 	}
 }
+func (m StringOptionOption) FlatMapTuple2(f func(StringOption) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m IntOptionOption) FlatMapBool(f func(IntOption) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -757,6 +904,13 @@ func (m IntOptionOption) FlatMapAny(f func(IntOption) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m IntOptionOption) FlatMapTuple2(f func(IntOption) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m Int64OptionOption) FlatMapBool(f func(Int64Option) BoolOption) BoolOption {
@@ -822,6 +976,13 @@ func (m Int64OptionOption) FlatMapAny(f func(Int64Option) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m Int64OptionOption) FlatMapTuple2(f func(Int64Option) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m ByteOptionOption) FlatMapBool(f func(ByteOption) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -883,6 +1044,13 @@ func (m ByteOptionOption) FlatMapAny(f func(ByteOption) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m ByteOptionOption) FlatMapTuple2(f func(ByteOption) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m RuneOptionOption) FlatMapBool(f func(RuneOption) BoolOption) BoolOption {
@@ -948,6 +1116,13 @@ func (m RuneOptionOption) FlatMapAny(f func(RuneOption) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m RuneOptionOption) FlatMapTuple2(f func(RuneOption) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float32OptionOption) FlatMapBool(f func(Float32Option) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1009,6 +1184,13 @@ func (m Float32OptionOption) FlatMapAny(f func(Float32Option) AnyOption) AnyOpti
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m Float32OptionOption) FlatMapTuple2(f func(Float32Option) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m Float64OptionOption) FlatMapBool(f func(Float64Option) BoolOption) BoolOption {
@@ -1074,6 +1256,13 @@ func (m Float64OptionOption) FlatMapAny(f func(Float64Option) AnyOption) AnyOpti
 		return NoneAny
 	}
 }
+func (m Float64OptionOption) FlatMapTuple2(f func(Float64Option) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m AnyOptionOption) FlatMapBool(f func(AnyOption) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1135,6 +1324,83 @@ func (m AnyOptionOption) FlatMapAny(f func(AnyOption) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m AnyOptionOption) FlatMapTuple2(f func(AnyOption) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2OptionOption) FlatMapBool(f func(Tuple2Option) BoolOption) BoolOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2OptionOption) FlatMapString(f func(Tuple2Option) StringOption) StringOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2OptionOption) FlatMapInt(f func(Tuple2Option) IntOption) IntOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2OptionOption) FlatMapInt64(f func(Tuple2Option) Int64Option) Int64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2OptionOption) FlatMapByte(f func(Tuple2Option) ByteOption) ByteOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2OptionOption) FlatMapRune(f func(Tuple2Option) RuneOption) RuneOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2OptionOption) FlatMapFloat32(f func(Tuple2Option) Float32Option) Float32Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2OptionOption) FlatMapFloat64(f func(Tuple2Option) Float64Option) Float64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2OptionOption) FlatMapAny(f func(Tuple2Option) AnyOption) AnyOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2OptionOption) FlatMapTuple2(f func(Tuple2Option) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m BoolArrayOption) FlatMapBool(f func([]bool) BoolOption) BoolOption {
@@ -1200,6 +1466,13 @@ func (m BoolArrayOption) FlatMapAny(f func([]bool) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m BoolArrayOption) FlatMapTuple2(f func([]bool) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m StringArrayOption) FlatMapBool(f func([]string) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1261,6 +1534,13 @@ func (m StringArrayOption) FlatMapAny(f func([]string) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m StringArrayOption) FlatMapTuple2(f func([]string) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m IntArrayOption) FlatMapBool(f func([]int) BoolOption) BoolOption {
@@ -1326,6 +1606,13 @@ func (m IntArrayOption) FlatMapAny(f func([]int) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m IntArrayOption) FlatMapTuple2(f func([]int) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Int64ArrayOption) FlatMapBool(f func([]int64) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1387,6 +1674,13 @@ func (m Int64ArrayOption) FlatMapAny(f func([]int64) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m Int64ArrayOption) FlatMapTuple2(f func([]int64) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m ByteArrayOption) FlatMapBool(f func([]byte) BoolOption) BoolOption {
@@ -1452,6 +1746,13 @@ func (m ByteArrayOption) FlatMapAny(f func([]byte) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m ByteArrayOption) FlatMapTuple2(f func([]byte) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m RuneArrayOption) FlatMapBool(f func([]rune) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1513,6 +1814,13 @@ func (m RuneArrayOption) FlatMapAny(f func([]rune) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m RuneArrayOption) FlatMapTuple2(f func([]rune) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m Float32ArrayOption) FlatMapBool(f func([]float32) BoolOption) BoolOption {
@@ -1578,6 +1886,13 @@ func (m Float32ArrayOption) FlatMapAny(f func([]float32) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float32ArrayOption) FlatMapTuple2(f func([]float32) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float64ArrayOption) FlatMapBool(f func([]float64) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1639,6 +1954,13 @@ func (m Float64ArrayOption) FlatMapAny(f func([]float64) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m Float64ArrayOption) FlatMapTuple2(f func([]float64) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m AnyArrayOption) FlatMapBool(f func([]Any) BoolOption) BoolOption {
@@ -1704,6 +2026,83 @@ func (m AnyArrayOption) FlatMapAny(f func([]Any) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m AnyArrayOption) FlatMapTuple2(f func([]Any) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2ArrayOption) FlatMapBool(f func([]Tuple2) BoolOption) BoolOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2ArrayOption) FlatMapString(f func([]Tuple2) StringOption) StringOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2ArrayOption) FlatMapInt(f func([]Tuple2) IntOption) IntOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2ArrayOption) FlatMapInt64(f func([]Tuple2) Int64Option) Int64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2ArrayOption) FlatMapByte(f func([]Tuple2) ByteOption) ByteOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2ArrayOption) FlatMapRune(f func([]Tuple2) RuneOption) RuneOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2ArrayOption) FlatMapFloat32(f func([]Tuple2) Float32Option) Float32Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2ArrayOption) FlatMapFloat64(f func([]Tuple2) Float64Option) Float64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2ArrayOption) FlatMapAny(f func([]Tuple2) AnyOption) AnyOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2ArrayOption) FlatMapTuple2(f func([]Tuple2) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolListOption) FlatMapBool(f func(BoolList) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1765,6 +2164,13 @@ func (m BoolListOption) FlatMapAny(f func(BoolList) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m BoolListOption) FlatMapTuple2(f func(BoolList) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m StringListOption) FlatMapBool(f func(StringList) BoolOption) BoolOption {
@@ -1830,6 +2236,13 @@ func (m StringListOption) FlatMapAny(f func(StringList) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m StringListOption) FlatMapTuple2(f func(StringList) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m IntListOption) FlatMapBool(f func(IntList) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -1891,6 +2304,13 @@ func (m IntListOption) FlatMapAny(f func(IntList) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m IntListOption) FlatMapTuple2(f func(IntList) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m Int64ListOption) FlatMapBool(f func(Int64List) BoolOption) BoolOption {
@@ -1956,6 +2376,13 @@ func (m Int64ListOption) FlatMapAny(f func(Int64List) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m Int64ListOption) FlatMapTuple2(f func(Int64List) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m ByteListOption) FlatMapBool(f func(ByteList) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -2017,6 +2444,13 @@ func (m ByteListOption) FlatMapAny(f func(ByteList) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m ByteListOption) FlatMapTuple2(f func(ByteList) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m RuneListOption) FlatMapBool(f func(RuneList) BoolOption) BoolOption {
@@ -2082,6 +2516,13 @@ func (m RuneListOption) FlatMapAny(f func(RuneList) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m RuneListOption) FlatMapTuple2(f func(RuneList) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m Float32ListOption) FlatMapBool(f func(Float32List) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -2143,6 +2584,13 @@ func (m Float32ListOption) FlatMapAny(f func(Float32List) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m Float32ListOption) FlatMapTuple2(f func(Float32List) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }
 func (m Float64ListOption) FlatMapBool(f func(Float64List) BoolOption) BoolOption {
@@ -2208,6 +2656,13 @@ func (m Float64ListOption) FlatMapAny(f func(Float64List) AnyOption) AnyOption {
 		return NoneAny
 	}
 }
+func (m Float64ListOption) FlatMapTuple2(f func(Float64List) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
 func (m AnyListOption) FlatMapBool(f func(AnyList) BoolOption) BoolOption {
 	if m.IsDefined() {
 		return f(*m.value)
@@ -2269,5 +2724,82 @@ func (m AnyListOption) FlatMapAny(f func(AnyList) AnyOption) AnyOption {
 		return f(*m.value)
 	} else {
 		return NoneAny
+	}
+}
+func (m AnyListOption) FlatMapTuple2(f func(AnyList) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
+	}
+}
+func (m Tuple2ListOption) FlatMapBool(f func(Tuple2List) BoolOption) BoolOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneBool
+	}
+}
+func (m Tuple2ListOption) FlatMapString(f func(Tuple2List) StringOption) StringOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneString
+	}
+}
+func (m Tuple2ListOption) FlatMapInt(f func(Tuple2List) IntOption) IntOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt
+	}
+}
+func (m Tuple2ListOption) FlatMapInt64(f func(Tuple2List) Int64Option) Int64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneInt64
+	}
+}
+func (m Tuple2ListOption) FlatMapByte(f func(Tuple2List) ByteOption) ByteOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneByte
+	}
+}
+func (m Tuple2ListOption) FlatMapRune(f func(Tuple2List) RuneOption) RuneOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneRune
+	}
+}
+func (m Tuple2ListOption) FlatMapFloat32(f func(Tuple2List) Float32Option) Float32Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat32
+	}
+}
+func (m Tuple2ListOption) FlatMapFloat64(f func(Tuple2List) Float64Option) Float64Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneFloat64
+	}
+}
+func (m Tuple2ListOption) FlatMapAny(f func(Tuple2List) AnyOption) AnyOption {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneAny
+	}
+}
+func (m Tuple2ListOption) FlatMapTuple2(f func(Tuple2List) Tuple2Option) Tuple2Option {
+	if m.IsDefined() {
+		return f(*m.value)
+	} else {
+		return NoneTuple2
 	}
 }

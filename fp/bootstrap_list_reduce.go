@@ -84,6 +84,15 @@ func (l AnyList) Reduce(f func(Any, Any) Any) Any {
 		return f(*l.head, l.tail.Reduce(f))
 	}
 }
+func (l Tuple2List) Reduce(f func(Tuple2, Tuple2) Tuple2) Tuple2 {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
 func (l BoolArrayList) Reduce(f func([]bool, []bool) []bool) []bool {
 	if l.IsEmpty() {
 		panic("Can't reduce empty list")
@@ -157,6 +166,15 @@ func (l Float64ArrayList) Reduce(f func([]float64, []float64) []float64) []float
 	}
 }
 func (l AnyArrayList) Reduce(f func([]Any, []Any) []Any) []Any {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Tuple2ArrayList) Reduce(f func([]Tuple2, []Tuple2) []Tuple2) []Tuple2 {
 	if l.IsEmpty() {
 		panic("Can't reduce empty list")
 	} else if l.tail.IsEmpty() {
@@ -246,6 +264,15 @@ func (l AnyOptionList) Reduce(f func(AnyOption, AnyOption) AnyOption) AnyOption 
 		return f(*l.head, l.tail.Reduce(f))
 	}
 }
+func (l Tuple2OptionList) Reduce(f func(Tuple2Option, Tuple2Option) Tuple2Option) Tuple2Option {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
 func (l BoolListList) Reduce(f func(BoolList, BoolList) BoolList) BoolList {
 	if l.IsEmpty() {
 		panic("Can't reduce empty list")
@@ -319,6 +346,15 @@ func (l Float64ListList) Reduce(f func(Float64List, Float64List) Float64List) Fl
 	}
 }
 func (l AnyListList) Reduce(f func(AnyList, AnyList) AnyList) AnyList {
+	if l.IsEmpty() {
+		panic("Can't reduce empty list")
+	} else if l.tail.IsEmpty() {
+		return *l.head
+	} else {
+		return f(*l.head, l.tail.Reduce(f))
+	}
+}
+func (l Tuple2ListList) Reduce(f func(Tuple2List, Tuple2List) Tuple2List) Tuple2List {
 	if l.IsEmpty() {
 		panic("Can't reduce empty list")
 	} else if l.tail.IsEmpty() {

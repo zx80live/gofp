@@ -30,6 +30,9 @@ func (a Float64Array) ToString() String {
 func (a AnyArray) ToString() String {
 	return a.MkString("[", ",", "]")
 }
+func (a Tuple2Array) ToString() String {
+	return a.MkString("[", ",", "]")
+}
 func (a BoolArrayArray) ToString() String {
 	return a.MkString("[", ",", "]")
 }
@@ -55,5 +58,8 @@ func (a Float64ArrayArray) ToString() String {
 	return a.MkString("[", ",", "]")
 }
 func (a AnyArrayArray) ToString() String {
+	return a.MkString("[", ",", "]")
+}
+func (a Tuple2ArrayArray) ToString() String {
 	return a.MkString("[", ",", "]")
 }

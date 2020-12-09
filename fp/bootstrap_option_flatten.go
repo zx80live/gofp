@@ -30,3 +30,6 @@ func (m Float64OptionOption) Flatten() Float64Option {
 func (m AnyOptionOption) Flatten() AnyOption {
 	return m.FlatMapAny(func(e AnyOption) AnyOption { return e })
 }
+func (m Tuple2OptionOption) Flatten() Tuple2Option {
+	return m.FlatMapTuple2(func(e Tuple2Option) Tuple2Option { return e })
+}

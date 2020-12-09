@@ -57,6 +57,9 @@ func (p1 Float64ArrayPredicate) Xor(p2 Float64ArrayPredicate) Float64ArrayPredic
 func (p1 AnyArrayPredicate) Xor(p2 AnyArrayPredicate) AnyArrayPredicate {
 	return func(e []Any) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
+func (p1 Tuple2ArrayPredicate) Xor(p2 Tuple2ArrayPredicate) Tuple2ArrayPredicate {
+	return func(e []Tuple2) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
 func (p1 BoolArrayArrayPredicate) Xor(p2 BoolArrayArrayPredicate) BoolArrayArrayPredicate {
 	return func(e [][]bool) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
@@ -83,6 +86,9 @@ func (p1 Float64ArrayArrayPredicate) Xor(p2 Float64ArrayArrayPredicate) Float64A
 }
 func (p1 AnyArrayArrayPredicate) Xor(p2 AnyArrayArrayPredicate) AnyArrayArrayPredicate {
 	return func(e [][]Any) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
+func (p1 Tuple2ArrayArrayPredicate) Xor(p2 Tuple2ArrayArrayPredicate) Tuple2ArrayArrayPredicate {
+	return func(e [][]Tuple2) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 func (p1 BoolOptionPredicate) Xor(p2 BoolOptionPredicate) BoolOptionPredicate {
 	return func(e BoolOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
@@ -111,6 +117,9 @@ func (p1 Float64OptionPredicate) Xor(p2 Float64OptionPredicate) Float64OptionPre
 func (p1 AnyOptionPredicate) Xor(p2 AnyOptionPredicate) AnyOptionPredicate {
 	return func(e AnyOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
+func (p1 Tuple2OptionPredicate) Xor(p2 Tuple2OptionPredicate) Tuple2OptionPredicate {
+	return func(e Tuple2Option) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
 func (p1 BoolOptionOptionPredicate) Xor(p2 BoolOptionOptionPredicate) BoolOptionOptionPredicate {
 	return func(e BoolOptionOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
@@ -137,6 +146,9 @@ func (p1 Float64OptionOptionPredicate) Xor(p2 Float64OptionOptionPredicate) Floa
 }
 func (p1 AnyOptionOptionPredicate) Xor(p2 AnyOptionOptionPredicate) AnyOptionOptionPredicate {
 	return func(e AnyOptionOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
+func (p1 Tuple2OptionOptionPredicate) Xor(p2 Tuple2OptionOptionPredicate) Tuple2OptionOptionPredicate {
+	return func(e Tuple2OptionOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 func (p1 BoolArrayOptionPredicate) Xor(p2 BoolArrayOptionPredicate) BoolArrayOptionPredicate {
 	return func(e BoolArrayOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
@@ -165,6 +177,9 @@ func (p1 Float64ArrayOptionPredicate) Xor(p2 Float64ArrayOptionPredicate) Float6
 func (p1 AnyArrayOptionPredicate) Xor(p2 AnyArrayOptionPredicate) AnyArrayOptionPredicate {
 	return func(e AnyArrayOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
+func (p1 Tuple2ArrayOptionPredicate) Xor(p2 Tuple2ArrayOptionPredicate) Tuple2ArrayOptionPredicate {
+	return func(e Tuple2ArrayOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
 func (p1 BoolListOptionPredicate) Xor(p2 BoolListOptionPredicate) BoolListOptionPredicate {
 	return func(e BoolListOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
@@ -191,6 +206,9 @@ func (p1 Float64ListOptionPredicate) Xor(p2 Float64ListOptionPredicate) Float64L
 }
 func (p1 AnyListOptionPredicate) Xor(p2 AnyListOptionPredicate) AnyListOptionPredicate {
 	return func(e AnyListOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
+func (p1 Tuple2ListOptionPredicate) Xor(p2 Tuple2ListOptionPredicate) Tuple2ListOptionPredicate {
+	return func(e Tuple2ListOption) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 func (p1 BoolListPredicate) Xor(p2 BoolListPredicate) BoolListPredicate {
 	return func(e BoolList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
@@ -219,6 +237,9 @@ func (p1 Float64ListPredicate) Xor(p2 Float64ListPredicate) Float64ListPredicate
 func (p1 AnyListPredicate) Xor(p2 AnyListPredicate) AnyListPredicate {
 	return func(e AnyList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
+func (p1 Tuple2ListPredicate) Xor(p2 Tuple2ListPredicate) Tuple2ListPredicate {
+	return func(e Tuple2List) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
 func (p1 BoolArrayListPredicate) Xor(p2 BoolArrayListPredicate) BoolArrayListPredicate {
 	return func(e BoolArrayList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
@@ -245,6 +266,9 @@ func (p1 Float64ArrayListPredicate) Xor(p2 Float64ArrayListPredicate) Float64Arr
 }
 func (p1 AnyArrayListPredicate) Xor(p2 AnyArrayListPredicate) AnyArrayListPredicate {
 	return func(e AnyArrayList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
+func (p1 Tuple2ArrayListPredicate) Xor(p2 Tuple2ArrayListPredicate) Tuple2ArrayListPredicate {
+	return func(e Tuple2ArrayList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
 func (p1 BoolOptionListPredicate) Xor(p2 BoolOptionListPredicate) BoolOptionListPredicate {
 	return func(e BoolOptionList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
@@ -273,6 +297,9 @@ func (p1 Float64OptionListPredicate) Xor(p2 Float64OptionListPredicate) Float64O
 func (p1 AnyOptionListPredicate) Xor(p2 AnyOptionListPredicate) AnyOptionListPredicate {
 	return func(e AnyOptionList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
+func (p1 Tuple2OptionListPredicate) Xor(p2 Tuple2OptionListPredicate) Tuple2OptionListPredicate {
+	return func(e Tuple2OptionList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
 func (p1 BoolListListPredicate) Xor(p2 BoolListListPredicate) BoolListListPredicate {
 	return func(e BoolListList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }
@@ -299,4 +326,10 @@ func (p1 Float64ListListPredicate) Xor(p2 Float64ListListPredicate) Float64ListL
 }
 func (p1 AnyListListPredicate) Xor(p2 AnyListListPredicate) AnyListListPredicate {
 	return func(e AnyListList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
+func (p1 Tuple2ListListPredicate) Xor(p2 Tuple2ListListPredicate) Tuple2ListListPredicate {
+	return func(e Tuple2ListList) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
+}
+func (p1 Tuple2Predicate) Xor(p2 Tuple2Predicate) Tuple2Predicate {
+	return func(e Tuple2) bool { x := p1(e); y := p2(e); return (x || y) && !(x && y) }
 }

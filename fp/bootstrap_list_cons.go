@@ -66,6 +66,13 @@ func MakeAnyList(elements ...Any) AnyList {
 	}
 	return xs.Reverse()
 }
+func MakeTuple2List(elements ...Tuple2) Tuple2List {
+	xs := NilTuple2
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
 func MakeBoolArrayList(elements ...[]bool) BoolArrayList {
 	xs := NilBoolArray
 	for _, e := range elements {
@@ -124,6 +131,13 @@ func MakeFloat64ArrayList(elements ...[]float64) Float64ArrayList {
 }
 func MakeAnyArrayList(elements ...[]Any) AnyArrayList {
 	xs := NilAnyArray
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeTuple2ArrayList(elements ...[]Tuple2) Tuple2ArrayList {
+	xs := NilTuple2Array
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
@@ -192,6 +206,13 @@ func MakeAnyOptionList(elements ...AnyOption) AnyOptionList {
 	}
 	return xs.Reverse()
 }
+func MakeTuple2OptionList(elements ...Tuple2Option) Tuple2OptionList {
+	xs := NilTuple2Option
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
 func MakeBoolListList(elements ...BoolList) BoolListList {
 	xs := NilBoolList
 	for _, e := range elements {
@@ -250,6 +271,13 @@ func MakeFloat64ListList(elements ...Float64List) Float64ListList {
 }
 func MakeAnyListList(elements ...AnyList) AnyListList {
 	xs := NilAnyList
+	for _, e := range elements {
+		xs = xs.Cons(e)
+	}
+	return xs.Reverse()
+}
+func MakeTuple2ListList(elements ...Tuple2List) Tuple2ListList {
+	xs := NilTuple2List
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}

@@ -12,6 +12,7 @@ func (l RuneList) Cons(e rune) RuneList                            { return Rune
 func (l Float32List) Cons(e float32) Float32List                   { return Float32List{&e, &l} }
 func (l Float64List) Cons(e float64) Float64List                   { return Float64List{&e, &l} }
 func (l AnyList) Cons(e Any) AnyList                               { return AnyList{&e, &l} }
+func (l Tuple2List) Cons(e Tuple2) Tuple2List                      { return Tuple2List{&e, &l} }
 func (l BoolArrayList) Cons(e []bool) BoolArrayList                { return BoolArrayList{&e, &l} }
 func (l StringArrayList) Cons(e []string) StringArrayList          { return StringArrayList{&e, &l} }
 func (l IntArrayList) Cons(e []int) IntArrayList                   { return IntArrayList{&e, &l} }
@@ -21,6 +22,7 @@ func (l RuneArrayList) Cons(e []rune) RuneArrayList                { return Rune
 func (l Float32ArrayList) Cons(e []float32) Float32ArrayList       { return Float32ArrayList{&e, &l} }
 func (l Float64ArrayList) Cons(e []float64) Float64ArrayList       { return Float64ArrayList{&e, &l} }
 func (l AnyArrayList) Cons(e []Any) AnyArrayList                   { return AnyArrayList{&e, &l} }
+func (l Tuple2ArrayList) Cons(e []Tuple2) Tuple2ArrayList          { return Tuple2ArrayList{&e, &l} }
 func (l BoolOptionList) Cons(e BoolOption) BoolOptionList          { return BoolOptionList{&e, &l} }
 func (l StringOptionList) Cons(e StringOption) StringOptionList    { return StringOptionList{&e, &l} }
 func (l IntOptionList) Cons(e IntOption) IntOptionList             { return IntOptionList{&e, &l} }
@@ -30,6 +32,7 @@ func (l RuneOptionList) Cons(e RuneOption) RuneOptionList          { return Rune
 func (l Float32OptionList) Cons(e Float32Option) Float32OptionList { return Float32OptionList{&e, &l} }
 func (l Float64OptionList) Cons(e Float64Option) Float64OptionList { return Float64OptionList{&e, &l} }
 func (l AnyOptionList) Cons(e AnyOption) AnyOptionList             { return AnyOptionList{&e, &l} }
+func (l Tuple2OptionList) Cons(e Tuple2Option) Tuple2OptionList    { return Tuple2OptionList{&e, &l} }
 func (l BoolListList) Cons(e BoolList) BoolListList                { return BoolListList{&e, &l} }
 func (l StringListList) Cons(e StringList) StringListList          { return StringListList{&e, &l} }
 func (l IntListList) Cons(e IntList) IntListList                   { return IntListList{&e, &l} }
@@ -39,3 +42,4 @@ func (l RuneListList) Cons(e RuneList) RuneListList                { return Rune
 func (l Float32ListList) Cons(e Float32List) Float32ListList       { return Float32ListList{&e, &l} }
 func (l Float64ListList) Cons(e Float64List) Float64ListList       { return Float64ListList{&e, &l} }
 func (l AnyListList) Cons(e AnyList) AnyListList                   { return AnyListList{&e, &l} }
+func (l Tuple2ListList) Cons(e Tuple2List) Tuple2ListList          { return Tuple2ListList{&e, &l} }

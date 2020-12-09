@@ -104,6 +104,17 @@ func (a AnyArray) MkString(start, sep, end string) String {
 	}
 	return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
+func (a Tuple2Array) MkString(start, sep, end string) String {
+	content := ""
+	for _, e := range a {
+		content = fmt.Sprintf("%v%v%v", content, Tuple2ToString(Tuple2(e)), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
+}
 func (a BoolArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
@@ -196,6 +207,17 @@ func (a AnyArrayArray) MkString(start, sep, end string) String {
 	content := ""
 	for _, e := range a {
 		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(AnyArray(e)), sep)
+	}
+	l := len(content)
+	if l > 0 {
+		content = content[:l-1]
+	}
+	return String(fmt.Sprintf("%v%v%v", start, content, end))
+}
+func (a Tuple2ArrayArray) MkString(start, sep, end string) String {
+	content := ""
+	for _, e := range a {
+		content = fmt.Sprintf("%v%v%v", content, Tuple2ArrayToString(Tuple2Array(e)), sep)
 	}
 	l := len(content)
 	if l > 0 {

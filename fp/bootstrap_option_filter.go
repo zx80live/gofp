@@ -66,6 +66,13 @@ func (m AnyOption) Filter(p AnyPredicate) AnyOption {
 		return NoneAny
 	}
 }
+func (m Tuple2Option) Filter(p Tuple2Predicate) Tuple2Option {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneTuple2
+	}
+}
 func (m BoolOptionOption) Filter(p BoolOptionPredicate) BoolOptionOption {
 	if m.IsDefined() && p(*m.value) {
 		return m
@@ -127,6 +134,13 @@ func (m AnyOptionOption) Filter(p AnyOptionPredicate) AnyOptionOption {
 		return m
 	} else {
 		return NoneAnyOption
+	}
+}
+func (m Tuple2OptionOption) Filter(p Tuple2OptionPredicate) Tuple2OptionOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneTuple2Option
 	}
 }
 func (m BoolArrayOption) Filter(p BoolArrayPredicate) BoolArrayOption {
@@ -192,6 +206,13 @@ func (m AnyArrayOption) Filter(p AnyArrayPredicate) AnyArrayOption {
 		return NoneAnyArray
 	}
 }
+func (m Tuple2ArrayOption) Filter(p Tuple2ArrayPredicate) Tuple2ArrayOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneTuple2Array
+	}
+}
 func (m BoolListOption) Filter(p BoolListPredicate) BoolListOption {
 	if m.IsDefined() && p(*m.value) {
 		return m
@@ -253,5 +274,12 @@ func (m AnyListOption) Filter(p AnyListPredicate) AnyListOption {
 		return m
 	} else {
 		return NoneAnyList
+	}
+}
+func (m Tuple2ListOption) Filter(p Tuple2ListPredicate) Tuple2ListOption {
+	if m.IsDefined() && p(*m.value) {
+		return m
+	} else {
+		return NoneTuple2List
 	}
 }

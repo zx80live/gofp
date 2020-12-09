@@ -84,6 +84,15 @@ func (l BoolList) MapAny(f func(bool) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l BoolList) MapTuple2(f func(bool) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolList) MapBoolArray(f func(bool) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -158,6 +167,15 @@ func (l BoolList) MapFloat64Array(f func(bool) []float64) Float64ArrayList {
 }
 func (l BoolList) MapAnyArray(f func(bool) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolList) MapTuple2Array(f func(bool) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -246,6 +264,15 @@ func (l BoolList) MapAnyOption(f func(bool) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l BoolList) MapTuple2Option(f func(bool) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolList) MapBoolList(f func(bool) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -320,6 +347,15 @@ func (l BoolList) MapFloat64List(f func(bool) Float64List) Float64ListList {
 }
 func (l BoolList) MapAnyList(f func(bool) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolList) MapTuple2List(f func(bool) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -408,6 +444,15 @@ func (l StringList) MapAny(f func(string) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l StringList) MapTuple2(f func(string) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringList) MapBoolArray(f func(string) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -482,6 +527,15 @@ func (l StringList) MapFloat64Array(f func(string) []float64) Float64ArrayList {
 }
 func (l StringList) MapAnyArray(f func(string) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringList) MapTuple2Array(f func(string) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -570,6 +624,15 @@ func (l StringList) MapAnyOption(f func(string) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l StringList) MapTuple2Option(f func(string) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringList) MapBoolList(f func(string) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -644,6 +707,15 @@ func (l StringList) MapFloat64List(f func(string) Float64List) Float64ListList {
 }
 func (l StringList) MapAnyList(f func(string) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringList) MapTuple2List(f func(string) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -732,6 +804,15 @@ func (l IntList) MapAny(f func(int) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l IntList) MapTuple2(f func(int) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntList) MapBoolArray(f func(int) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -806,6 +887,15 @@ func (l IntList) MapFloat64Array(f func(int) []float64) Float64ArrayList {
 }
 func (l IntList) MapAnyArray(f func(int) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntList) MapTuple2Array(f func(int) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -894,6 +984,15 @@ func (l IntList) MapAnyOption(f func(int) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l IntList) MapTuple2Option(f func(int) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntList) MapBoolList(f func(int) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -968,6 +1067,15 @@ func (l IntList) MapFloat64List(f func(int) Float64List) Float64ListList {
 }
 func (l IntList) MapAnyList(f func(int) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntList) MapTuple2List(f func(int) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1056,6 +1164,15 @@ func (l Int64List) MapAny(f func(int64) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Int64List) MapTuple2(f func(int64) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64List) MapBoolArray(f func(int64) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -1130,6 +1247,15 @@ func (l Int64List) MapFloat64Array(f func(int64) []float64) Float64ArrayList {
 }
 func (l Int64List) MapAnyArray(f func(int64) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64List) MapTuple2Array(f func(int64) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1218,6 +1344,15 @@ func (l Int64List) MapAnyOption(f func(int64) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l Int64List) MapTuple2Option(f func(int64) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64List) MapBoolList(f func(int64) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -1292,6 +1427,15 @@ func (l Int64List) MapFloat64List(f func(int64) Float64List) Float64ListList {
 }
 func (l Int64List) MapAnyList(f func(int64) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64List) MapTuple2List(f func(int64) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1380,6 +1524,15 @@ func (l ByteList) MapAny(f func(byte) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l ByteList) MapTuple2(f func(byte) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteList) MapBoolArray(f func(byte) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -1454,6 +1607,15 @@ func (l ByteList) MapFloat64Array(f func(byte) []float64) Float64ArrayList {
 }
 func (l ByteList) MapAnyArray(f func(byte) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteList) MapTuple2Array(f func(byte) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1542,6 +1704,15 @@ func (l ByteList) MapAnyOption(f func(byte) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l ByteList) MapTuple2Option(f func(byte) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteList) MapBoolList(f func(byte) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -1616,6 +1787,15 @@ func (l ByteList) MapFloat64List(f func(byte) Float64List) Float64ListList {
 }
 func (l ByteList) MapAnyList(f func(byte) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteList) MapTuple2List(f func(byte) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1704,6 +1884,15 @@ func (l RuneList) MapAny(f func(rune) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l RuneList) MapTuple2(f func(rune) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneList) MapBoolArray(f func(rune) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -1778,6 +1967,15 @@ func (l RuneList) MapFloat64Array(f func(rune) []float64) Float64ArrayList {
 }
 func (l RuneList) MapAnyArray(f func(rune) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneList) MapTuple2Array(f func(rune) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -1866,6 +2064,15 @@ func (l RuneList) MapAnyOption(f func(rune) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l RuneList) MapTuple2Option(f func(rune) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneList) MapBoolList(f func(rune) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -1940,6 +2147,15 @@ func (l RuneList) MapFloat64List(f func(rune) Float64List) Float64ListList {
 }
 func (l RuneList) MapAnyList(f func(rune) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneList) MapTuple2List(f func(rune) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2028,6 +2244,15 @@ func (l Float32List) MapAny(f func(float32) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float32List) MapTuple2(f func(float32) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32List) MapBoolArray(f func(float32) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -2102,6 +2327,15 @@ func (l Float32List) MapFloat64Array(f func(float32) []float64) Float64ArrayList
 }
 func (l Float32List) MapAnyArray(f func(float32) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32List) MapTuple2Array(f func(float32) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2190,6 +2424,15 @@ func (l Float32List) MapAnyOption(f func(float32) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l Float32List) MapTuple2Option(f func(float32) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32List) MapBoolList(f func(float32) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -2264,6 +2507,15 @@ func (l Float32List) MapFloat64List(f func(float32) Float64List) Float64ListList
 }
 func (l Float32List) MapAnyList(f func(float32) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32List) MapTuple2List(f func(float32) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2352,6 +2604,15 @@ func (l Float64List) MapAny(f func(float64) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float64List) MapTuple2(f func(float64) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64List) MapBoolArray(f func(float64) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -2426,6 +2687,15 @@ func (l Float64List) MapFloat64Array(f func(float64) []float64) Float64ArrayList
 }
 func (l Float64List) MapAnyArray(f func(float64) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64List) MapTuple2Array(f func(float64) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2514,6 +2784,15 @@ func (l Float64List) MapAnyOption(f func(float64) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l Float64List) MapTuple2Option(f func(float64) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64List) MapBoolList(f func(float64) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -2588,6 +2867,15 @@ func (l Float64List) MapFloat64List(f func(float64) Float64List) Float64ListList
 }
 func (l Float64List) MapAnyList(f func(float64) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64List) MapTuple2List(f func(float64) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2676,6 +2964,15 @@ func (l AnyList) MapAny(f func(Any) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l AnyList) MapTuple2(f func(Any) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyList) MapBoolArray(f func(Any) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -2750,6 +3047,15 @@ func (l AnyList) MapFloat64Array(f func(Any) []float64) Float64ArrayList {
 }
 func (l AnyList) MapAnyArray(f func(Any) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyList) MapTuple2Array(f func(Any) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -2838,6 +3144,15 @@ func (l AnyList) MapAnyOption(f func(Any) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l AnyList) MapTuple2Option(f func(Any) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyList) MapBoolList(f func(Any) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -2912,6 +3227,375 @@ func (l AnyList) MapFloat64List(f func(Any) Float64List) Float64ListList {
 }
 func (l AnyList) MapAnyList(f func(Any) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyList) MapTuple2List(f func(Any) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapBool(f func(Tuple2) bool) BoolList {
+	acc := NilBool
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapString(f func(Tuple2) string) StringList {
+	acc := NilString
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapInt(f func(Tuple2) int) IntList {
+	acc := NilInt
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapInt64(f func(Tuple2) int64) Int64List {
+	acc := NilInt64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapByte(f func(Tuple2) byte) ByteList {
+	acc := NilByte
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapRune(f func(Tuple2) rune) RuneList {
+	acc := NilRune
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat32(f func(Tuple2) float32) Float32List {
+	acc := NilFloat32
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat64(f func(Tuple2) float64) Float64List {
+	acc := NilFloat64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapAny(f func(Tuple2) Any) AnyList {
+	acc := NilAny
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapTuple2(f func(Tuple2) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapBoolArray(f func(Tuple2) []bool) BoolArrayList {
+	acc := NilBoolArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapStringArray(f func(Tuple2) []string) StringArrayList {
+	acc := NilStringArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapIntArray(f func(Tuple2) []int) IntArrayList {
+	acc := NilIntArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapInt64Array(f func(Tuple2) []int64) Int64ArrayList {
+	acc := NilInt64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapByteArray(f func(Tuple2) []byte) ByteArrayList {
+	acc := NilByteArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapRuneArray(f func(Tuple2) []rune) RuneArrayList {
+	acc := NilRuneArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat32Array(f func(Tuple2) []float32) Float32ArrayList {
+	acc := NilFloat32Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat64Array(f func(Tuple2) []float64) Float64ArrayList {
+	acc := NilFloat64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapAnyArray(f func(Tuple2) []Any) AnyArrayList {
+	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapTuple2Array(f func(Tuple2) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapBoolOption(f func(Tuple2) BoolOption) BoolOptionList {
+	acc := NilBoolOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapStringOption(f func(Tuple2) StringOption) StringOptionList {
+	acc := NilStringOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapIntOption(f func(Tuple2) IntOption) IntOptionList {
+	acc := NilIntOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapInt64Option(f func(Tuple2) Int64Option) Int64OptionList {
+	acc := NilInt64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapByteOption(f func(Tuple2) ByteOption) ByteOptionList {
+	acc := NilByteOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapRuneOption(f func(Tuple2) RuneOption) RuneOptionList {
+	acc := NilRuneOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat32Option(f func(Tuple2) Float32Option) Float32OptionList {
+	acc := NilFloat32Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat64Option(f func(Tuple2) Float64Option) Float64OptionList {
+	acc := NilFloat64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapAnyOption(f func(Tuple2) AnyOption) AnyOptionList {
+	acc := NilAnyOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapTuple2Option(f func(Tuple2) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapBoolList(f func(Tuple2) BoolList) BoolListList {
+	acc := NilBoolList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapStringList(f func(Tuple2) StringList) StringListList {
+	acc := NilStringList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapIntList(f func(Tuple2) IntList) IntListList {
+	acc := NilIntList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapInt64List(f func(Tuple2) Int64List) Int64ListList {
+	acc := NilInt64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapByteList(f func(Tuple2) ByteList) ByteListList {
+	acc := NilByteList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapRuneList(f func(Tuple2) RuneList) RuneListList {
+	acc := NilRuneList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat32List(f func(Tuple2) Float32List) Float32ListList {
+	acc := NilFloat32List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapFloat64List(f func(Tuple2) Float64List) Float64ListList {
+	acc := NilFloat64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapAnyList(f func(Tuple2) AnyList) AnyListList {
+	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2List) MapTuple2List(f func(Tuple2) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3000,6 +3684,15 @@ func (l BoolArrayList) MapAny(f func([]bool) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l BoolArrayList) MapTuple2(f func([]bool) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolArrayList) MapBoolArray(f func([]bool) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -3074,6 +3767,15 @@ func (l BoolArrayList) MapFloat64Array(f func([]bool) []float64) Float64ArrayLis
 }
 func (l BoolArrayList) MapAnyArray(f func([]bool) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayList) MapTuple2Array(f func([]bool) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3162,6 +3864,15 @@ func (l BoolArrayList) MapAnyOption(f func([]bool) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l BoolArrayList) MapTuple2Option(f func([]bool) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolArrayList) MapBoolList(f func([]bool) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -3236,6 +3947,15 @@ func (l BoolArrayList) MapFloat64List(f func([]bool) Float64List) Float64ListLis
 }
 func (l BoolArrayList) MapAnyList(f func([]bool) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolArrayList) MapTuple2List(f func([]bool) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3324,6 +4044,15 @@ func (l StringArrayList) MapAny(f func([]string) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l StringArrayList) MapTuple2(f func([]string) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringArrayList) MapBoolArray(f func([]string) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -3398,6 +4127,15 @@ func (l StringArrayList) MapFloat64Array(f func([]string) []float64) Float64Arra
 }
 func (l StringArrayList) MapAnyArray(f func([]string) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayList) MapTuple2Array(f func([]string) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3486,6 +4224,15 @@ func (l StringArrayList) MapAnyOption(f func([]string) AnyOption) AnyOptionList 
 	}
 	return acc.Reverse()
 }
+func (l StringArrayList) MapTuple2Option(f func([]string) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringArrayList) MapBoolList(f func([]string) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -3560,6 +4307,15 @@ func (l StringArrayList) MapFloat64List(f func([]string) Float64List) Float64Lis
 }
 func (l StringArrayList) MapAnyList(f func([]string) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringArrayList) MapTuple2List(f func([]string) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3648,6 +4404,15 @@ func (l IntArrayList) MapAny(f func([]int) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l IntArrayList) MapTuple2(f func([]int) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntArrayList) MapBoolArray(f func([]int) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -3722,6 +4487,15 @@ func (l IntArrayList) MapFloat64Array(f func([]int) []float64) Float64ArrayList 
 }
 func (l IntArrayList) MapAnyArray(f func([]int) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayList) MapTuple2Array(f func([]int) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3810,6 +4584,15 @@ func (l IntArrayList) MapAnyOption(f func([]int) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l IntArrayList) MapTuple2Option(f func([]int) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntArrayList) MapBoolList(f func([]int) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -3884,6 +4667,15 @@ func (l IntArrayList) MapFloat64List(f func([]int) Float64List) Float64ListList 
 }
 func (l IntArrayList) MapAnyList(f func([]int) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntArrayList) MapTuple2List(f func([]int) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -3972,6 +4764,15 @@ func (l Int64ArrayList) MapAny(f func([]int64) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Int64ArrayList) MapTuple2(f func([]int64) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64ArrayList) MapBoolArray(f func([]int64) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -4046,6 +4847,15 @@ func (l Int64ArrayList) MapFloat64Array(f func([]int64) []float64) Float64ArrayL
 }
 func (l Int64ArrayList) MapAnyArray(f func([]int64) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayList) MapTuple2Array(f func([]int64) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4134,6 +4944,15 @@ func (l Int64ArrayList) MapAnyOption(f func([]int64) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l Int64ArrayList) MapTuple2Option(f func([]int64) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64ArrayList) MapBoolList(f func([]int64) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -4208,6 +5027,15 @@ func (l Int64ArrayList) MapFloat64List(f func([]int64) Float64List) Float64ListL
 }
 func (l Int64ArrayList) MapAnyList(f func([]int64) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ArrayList) MapTuple2List(f func([]int64) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4296,6 +5124,15 @@ func (l ByteArrayList) MapAny(f func([]byte) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l ByteArrayList) MapTuple2(f func([]byte) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteArrayList) MapBoolArray(f func([]byte) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -4370,6 +5207,15 @@ func (l ByteArrayList) MapFloat64Array(f func([]byte) []float64) Float64ArrayLis
 }
 func (l ByteArrayList) MapAnyArray(f func([]byte) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayList) MapTuple2Array(f func([]byte) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4458,6 +5304,15 @@ func (l ByteArrayList) MapAnyOption(f func([]byte) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l ByteArrayList) MapTuple2Option(f func([]byte) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteArrayList) MapBoolList(f func([]byte) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -4532,6 +5387,15 @@ func (l ByteArrayList) MapFloat64List(f func([]byte) Float64List) Float64ListLis
 }
 func (l ByteArrayList) MapAnyList(f func([]byte) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteArrayList) MapTuple2List(f func([]byte) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4620,6 +5484,15 @@ func (l RuneArrayList) MapAny(f func([]rune) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l RuneArrayList) MapTuple2(f func([]rune) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneArrayList) MapBoolArray(f func([]rune) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -4694,6 +5567,15 @@ func (l RuneArrayList) MapFloat64Array(f func([]rune) []float64) Float64ArrayLis
 }
 func (l RuneArrayList) MapAnyArray(f func([]rune) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayList) MapTuple2Array(f func([]rune) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4782,6 +5664,15 @@ func (l RuneArrayList) MapAnyOption(f func([]rune) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l RuneArrayList) MapTuple2Option(f func([]rune) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneArrayList) MapBoolList(f func([]rune) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -4856,6 +5747,15 @@ func (l RuneArrayList) MapFloat64List(f func([]rune) Float64List) Float64ListLis
 }
 func (l RuneArrayList) MapAnyList(f func([]rune) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneArrayList) MapTuple2List(f func([]rune) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -4944,6 +5844,15 @@ func (l Float32ArrayList) MapAny(f func([]float32) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float32ArrayList) MapTuple2(f func([]float32) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32ArrayList) MapBoolArray(f func([]float32) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -5018,6 +5927,15 @@ func (l Float32ArrayList) MapFloat64Array(f func([]float32) []float64) Float64Ar
 }
 func (l Float32ArrayList) MapAnyArray(f func([]float32) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayList) MapTuple2Array(f func([]float32) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5106,6 +6024,15 @@ func (l Float32ArrayList) MapAnyOption(f func([]float32) AnyOption) AnyOptionLis
 	}
 	return acc.Reverse()
 }
+func (l Float32ArrayList) MapTuple2Option(f func([]float32) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32ArrayList) MapBoolList(f func([]float32) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -5180,6 +6107,15 @@ func (l Float32ArrayList) MapFloat64List(f func([]float32) Float64List) Float64L
 }
 func (l Float32ArrayList) MapAnyList(f func([]float32) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ArrayList) MapTuple2List(f func([]float32) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5268,6 +6204,15 @@ func (l Float64ArrayList) MapAny(f func([]float64) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float64ArrayList) MapTuple2(f func([]float64) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64ArrayList) MapBoolArray(f func([]float64) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -5342,6 +6287,15 @@ func (l Float64ArrayList) MapFloat64Array(f func([]float64) []float64) Float64Ar
 }
 func (l Float64ArrayList) MapAnyArray(f func([]float64) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayList) MapTuple2Array(f func([]float64) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5430,6 +6384,15 @@ func (l Float64ArrayList) MapAnyOption(f func([]float64) AnyOption) AnyOptionLis
 	}
 	return acc.Reverse()
 }
+func (l Float64ArrayList) MapTuple2Option(f func([]float64) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64ArrayList) MapBoolList(f func([]float64) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -5504,6 +6467,15 @@ func (l Float64ArrayList) MapFloat64List(f func([]float64) Float64List) Float64L
 }
 func (l Float64ArrayList) MapAnyList(f func([]float64) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ArrayList) MapTuple2List(f func([]float64) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5592,6 +6564,15 @@ func (l AnyArrayList) MapAny(f func([]Any) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l AnyArrayList) MapTuple2(f func([]Any) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyArrayList) MapBoolArray(f func([]Any) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -5666,6 +6647,15 @@ func (l AnyArrayList) MapFloat64Array(f func([]Any) []float64) Float64ArrayList 
 }
 func (l AnyArrayList) MapAnyArray(f func([]Any) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayList) MapTuple2Array(f func([]Any) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5754,6 +6744,15 @@ func (l AnyArrayList) MapAnyOption(f func([]Any) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l AnyArrayList) MapTuple2Option(f func([]Any) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyArrayList) MapBoolList(f func([]Any) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -5828,6 +6827,375 @@ func (l AnyArrayList) MapFloat64List(f func([]Any) Float64List) Float64ListList 
 }
 func (l AnyArrayList) MapAnyList(f func([]Any) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyArrayList) MapTuple2List(f func([]Any) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapBool(f func([]Tuple2) bool) BoolList {
+	acc := NilBool
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapString(f func([]Tuple2) string) StringList {
+	acc := NilString
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapInt(f func([]Tuple2) int) IntList {
+	acc := NilInt
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapInt64(f func([]Tuple2) int64) Int64List {
+	acc := NilInt64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapByte(f func([]Tuple2) byte) ByteList {
+	acc := NilByte
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapRune(f func([]Tuple2) rune) RuneList {
+	acc := NilRune
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat32(f func([]Tuple2) float32) Float32List {
+	acc := NilFloat32
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat64(f func([]Tuple2) float64) Float64List {
+	acc := NilFloat64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapAny(f func([]Tuple2) Any) AnyList {
+	acc := NilAny
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapTuple2(f func([]Tuple2) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapBoolArray(f func([]Tuple2) []bool) BoolArrayList {
+	acc := NilBoolArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapStringArray(f func([]Tuple2) []string) StringArrayList {
+	acc := NilStringArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapIntArray(f func([]Tuple2) []int) IntArrayList {
+	acc := NilIntArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapInt64Array(f func([]Tuple2) []int64) Int64ArrayList {
+	acc := NilInt64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapByteArray(f func([]Tuple2) []byte) ByteArrayList {
+	acc := NilByteArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapRuneArray(f func([]Tuple2) []rune) RuneArrayList {
+	acc := NilRuneArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat32Array(f func([]Tuple2) []float32) Float32ArrayList {
+	acc := NilFloat32Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat64Array(f func([]Tuple2) []float64) Float64ArrayList {
+	acc := NilFloat64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapAnyArray(f func([]Tuple2) []Any) AnyArrayList {
+	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapTuple2Array(f func([]Tuple2) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapBoolOption(f func([]Tuple2) BoolOption) BoolOptionList {
+	acc := NilBoolOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapStringOption(f func([]Tuple2) StringOption) StringOptionList {
+	acc := NilStringOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapIntOption(f func([]Tuple2) IntOption) IntOptionList {
+	acc := NilIntOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapInt64Option(f func([]Tuple2) Int64Option) Int64OptionList {
+	acc := NilInt64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapByteOption(f func([]Tuple2) ByteOption) ByteOptionList {
+	acc := NilByteOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapRuneOption(f func([]Tuple2) RuneOption) RuneOptionList {
+	acc := NilRuneOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat32Option(f func([]Tuple2) Float32Option) Float32OptionList {
+	acc := NilFloat32Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat64Option(f func([]Tuple2) Float64Option) Float64OptionList {
+	acc := NilFloat64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapAnyOption(f func([]Tuple2) AnyOption) AnyOptionList {
+	acc := NilAnyOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapTuple2Option(f func([]Tuple2) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapBoolList(f func([]Tuple2) BoolList) BoolListList {
+	acc := NilBoolList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapStringList(f func([]Tuple2) StringList) StringListList {
+	acc := NilStringList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapIntList(f func([]Tuple2) IntList) IntListList {
+	acc := NilIntList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapInt64List(f func([]Tuple2) Int64List) Int64ListList {
+	acc := NilInt64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapByteList(f func([]Tuple2) ByteList) ByteListList {
+	acc := NilByteList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapRuneList(f func([]Tuple2) RuneList) RuneListList {
+	acc := NilRuneList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat32List(f func([]Tuple2) Float32List) Float32ListList {
+	acc := NilFloat32List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapFloat64List(f func([]Tuple2) Float64List) Float64ListList {
+	acc := NilFloat64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapAnyList(f func([]Tuple2) AnyList) AnyListList {
+	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ArrayList) MapTuple2List(f func([]Tuple2) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -5916,6 +7284,15 @@ func (l BoolOptionList) MapAny(f func(BoolOption) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l BoolOptionList) MapTuple2(f func(BoolOption) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolOptionList) MapBoolArray(f func(BoolOption) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -5990,6 +7367,15 @@ func (l BoolOptionList) MapFloat64Array(f func(BoolOption) []float64) Float64Arr
 }
 func (l BoolOptionList) MapAnyArray(f func(BoolOption) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionList) MapTuple2Array(f func(BoolOption) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6078,6 +7464,15 @@ func (l BoolOptionList) MapAnyOption(f func(BoolOption) AnyOption) AnyOptionList
 	}
 	return acc.Reverse()
 }
+func (l BoolOptionList) MapTuple2Option(f func(BoolOption) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolOptionList) MapBoolList(f func(BoolOption) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -6152,6 +7547,15 @@ func (l BoolOptionList) MapFloat64List(f func(BoolOption) Float64List) Float64Li
 }
 func (l BoolOptionList) MapAnyList(f func(BoolOption) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolOptionList) MapTuple2List(f func(BoolOption) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6240,6 +7644,15 @@ func (l StringOptionList) MapAny(f func(StringOption) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l StringOptionList) MapTuple2(f func(StringOption) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringOptionList) MapBoolArray(f func(StringOption) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -6314,6 +7727,15 @@ func (l StringOptionList) MapFloat64Array(f func(StringOption) []float64) Float6
 }
 func (l StringOptionList) MapAnyArray(f func(StringOption) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionList) MapTuple2Array(f func(StringOption) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6402,6 +7824,15 @@ func (l StringOptionList) MapAnyOption(f func(StringOption) AnyOption) AnyOption
 	}
 	return acc.Reverse()
 }
+func (l StringOptionList) MapTuple2Option(f func(StringOption) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringOptionList) MapBoolList(f func(StringOption) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -6476,6 +7907,15 @@ func (l StringOptionList) MapFloat64List(f func(StringOption) Float64List) Float
 }
 func (l StringOptionList) MapAnyList(f func(StringOption) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringOptionList) MapTuple2List(f func(StringOption) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6564,6 +8004,15 @@ func (l IntOptionList) MapAny(f func(IntOption) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l IntOptionList) MapTuple2(f func(IntOption) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntOptionList) MapBoolArray(f func(IntOption) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -6638,6 +8087,15 @@ func (l IntOptionList) MapFloat64Array(f func(IntOption) []float64) Float64Array
 }
 func (l IntOptionList) MapAnyArray(f func(IntOption) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionList) MapTuple2Array(f func(IntOption) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6726,6 +8184,15 @@ func (l IntOptionList) MapAnyOption(f func(IntOption) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l IntOptionList) MapTuple2Option(f func(IntOption) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntOptionList) MapBoolList(f func(IntOption) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -6800,6 +8267,15 @@ func (l IntOptionList) MapFloat64List(f func(IntOption) Float64List) Float64List
 }
 func (l IntOptionList) MapAnyList(f func(IntOption) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntOptionList) MapTuple2List(f func(IntOption) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -6888,6 +8364,15 @@ func (l Int64OptionList) MapAny(f func(Int64Option) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Int64OptionList) MapTuple2(f func(Int64Option) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64OptionList) MapBoolArray(f func(Int64Option) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -6962,6 +8447,15 @@ func (l Int64OptionList) MapFloat64Array(f func(Int64Option) []float64) Float64A
 }
 func (l Int64OptionList) MapAnyArray(f func(Int64Option) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionList) MapTuple2Array(f func(Int64Option) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7050,6 +8544,15 @@ func (l Int64OptionList) MapAnyOption(f func(Int64Option) AnyOption) AnyOptionLi
 	}
 	return acc.Reverse()
 }
+func (l Int64OptionList) MapTuple2Option(f func(Int64Option) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64OptionList) MapBoolList(f func(Int64Option) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -7124,6 +8627,15 @@ func (l Int64OptionList) MapFloat64List(f func(Int64Option) Float64List) Float64
 }
 func (l Int64OptionList) MapAnyList(f func(Int64Option) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64OptionList) MapTuple2List(f func(Int64Option) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7212,6 +8724,15 @@ func (l ByteOptionList) MapAny(f func(ByteOption) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l ByteOptionList) MapTuple2(f func(ByteOption) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteOptionList) MapBoolArray(f func(ByteOption) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -7286,6 +8807,15 @@ func (l ByteOptionList) MapFloat64Array(f func(ByteOption) []float64) Float64Arr
 }
 func (l ByteOptionList) MapAnyArray(f func(ByteOption) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionList) MapTuple2Array(f func(ByteOption) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7374,6 +8904,15 @@ func (l ByteOptionList) MapAnyOption(f func(ByteOption) AnyOption) AnyOptionList
 	}
 	return acc.Reverse()
 }
+func (l ByteOptionList) MapTuple2Option(f func(ByteOption) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteOptionList) MapBoolList(f func(ByteOption) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -7448,6 +8987,15 @@ func (l ByteOptionList) MapFloat64List(f func(ByteOption) Float64List) Float64Li
 }
 func (l ByteOptionList) MapAnyList(f func(ByteOption) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteOptionList) MapTuple2List(f func(ByteOption) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7536,6 +9084,15 @@ func (l RuneOptionList) MapAny(f func(RuneOption) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l RuneOptionList) MapTuple2(f func(RuneOption) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneOptionList) MapBoolArray(f func(RuneOption) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -7610,6 +9167,15 @@ func (l RuneOptionList) MapFloat64Array(f func(RuneOption) []float64) Float64Arr
 }
 func (l RuneOptionList) MapAnyArray(f func(RuneOption) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionList) MapTuple2Array(f func(RuneOption) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7698,6 +9264,15 @@ func (l RuneOptionList) MapAnyOption(f func(RuneOption) AnyOption) AnyOptionList
 	}
 	return acc.Reverse()
 }
+func (l RuneOptionList) MapTuple2Option(f func(RuneOption) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneOptionList) MapBoolList(f func(RuneOption) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -7772,6 +9347,15 @@ func (l RuneOptionList) MapFloat64List(f func(RuneOption) Float64List) Float64Li
 }
 func (l RuneOptionList) MapAnyList(f func(RuneOption) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneOptionList) MapTuple2List(f func(RuneOption) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -7860,6 +9444,15 @@ func (l Float32OptionList) MapAny(f func(Float32Option) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float32OptionList) MapTuple2(f func(Float32Option) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32OptionList) MapBoolArray(f func(Float32Option) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -7934,6 +9527,15 @@ func (l Float32OptionList) MapFloat64Array(f func(Float32Option) []float64) Floa
 }
 func (l Float32OptionList) MapAnyArray(f func(Float32Option) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionList) MapTuple2Array(f func(Float32Option) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8022,6 +9624,15 @@ func (l Float32OptionList) MapAnyOption(f func(Float32Option) AnyOption) AnyOpti
 	}
 	return acc.Reverse()
 }
+func (l Float32OptionList) MapTuple2Option(f func(Float32Option) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32OptionList) MapBoolList(f func(Float32Option) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -8096,6 +9707,15 @@ func (l Float32OptionList) MapFloat64List(f func(Float32Option) Float64List) Flo
 }
 func (l Float32OptionList) MapAnyList(f func(Float32Option) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32OptionList) MapTuple2List(f func(Float32Option) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8184,6 +9804,15 @@ func (l Float64OptionList) MapAny(f func(Float64Option) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float64OptionList) MapTuple2(f func(Float64Option) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64OptionList) MapBoolArray(f func(Float64Option) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -8258,6 +9887,15 @@ func (l Float64OptionList) MapFloat64Array(f func(Float64Option) []float64) Floa
 }
 func (l Float64OptionList) MapAnyArray(f func(Float64Option) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionList) MapTuple2Array(f func(Float64Option) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8346,6 +9984,15 @@ func (l Float64OptionList) MapAnyOption(f func(Float64Option) AnyOption) AnyOpti
 	}
 	return acc.Reverse()
 }
+func (l Float64OptionList) MapTuple2Option(f func(Float64Option) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64OptionList) MapBoolList(f func(Float64Option) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -8420,6 +10067,15 @@ func (l Float64OptionList) MapFloat64List(f func(Float64Option) Float64List) Flo
 }
 func (l Float64OptionList) MapAnyList(f func(Float64Option) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64OptionList) MapTuple2List(f func(Float64Option) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8508,6 +10164,15 @@ func (l AnyOptionList) MapAny(f func(AnyOption) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l AnyOptionList) MapTuple2(f func(AnyOption) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyOptionList) MapBoolArray(f func(AnyOption) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -8582,6 +10247,15 @@ func (l AnyOptionList) MapFloat64Array(f func(AnyOption) []float64) Float64Array
 }
 func (l AnyOptionList) MapAnyArray(f func(AnyOption) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionList) MapTuple2Array(f func(AnyOption) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8670,6 +10344,15 @@ func (l AnyOptionList) MapAnyOption(f func(AnyOption) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l AnyOptionList) MapTuple2Option(f func(AnyOption) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyOptionList) MapBoolList(f func(AnyOption) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -8744,6 +10427,375 @@ func (l AnyOptionList) MapFloat64List(f func(AnyOption) Float64List) Float64List
 }
 func (l AnyOptionList) MapAnyList(f func(AnyOption) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyOptionList) MapTuple2List(f func(AnyOption) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapBool(f func(Tuple2Option) bool) BoolList {
+	acc := NilBool
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapString(f func(Tuple2Option) string) StringList {
+	acc := NilString
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapInt(f func(Tuple2Option) int) IntList {
+	acc := NilInt
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapInt64(f func(Tuple2Option) int64) Int64List {
+	acc := NilInt64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapByte(f func(Tuple2Option) byte) ByteList {
+	acc := NilByte
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapRune(f func(Tuple2Option) rune) RuneList {
+	acc := NilRune
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat32(f func(Tuple2Option) float32) Float32List {
+	acc := NilFloat32
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat64(f func(Tuple2Option) float64) Float64List {
+	acc := NilFloat64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapAny(f func(Tuple2Option) Any) AnyList {
+	acc := NilAny
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapTuple2(f func(Tuple2Option) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapBoolArray(f func(Tuple2Option) []bool) BoolArrayList {
+	acc := NilBoolArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapStringArray(f func(Tuple2Option) []string) StringArrayList {
+	acc := NilStringArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapIntArray(f func(Tuple2Option) []int) IntArrayList {
+	acc := NilIntArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapInt64Array(f func(Tuple2Option) []int64) Int64ArrayList {
+	acc := NilInt64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapByteArray(f func(Tuple2Option) []byte) ByteArrayList {
+	acc := NilByteArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapRuneArray(f func(Tuple2Option) []rune) RuneArrayList {
+	acc := NilRuneArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat32Array(f func(Tuple2Option) []float32) Float32ArrayList {
+	acc := NilFloat32Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat64Array(f func(Tuple2Option) []float64) Float64ArrayList {
+	acc := NilFloat64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapAnyArray(f func(Tuple2Option) []Any) AnyArrayList {
+	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapTuple2Array(f func(Tuple2Option) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapBoolOption(f func(Tuple2Option) BoolOption) BoolOptionList {
+	acc := NilBoolOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapStringOption(f func(Tuple2Option) StringOption) StringOptionList {
+	acc := NilStringOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapIntOption(f func(Tuple2Option) IntOption) IntOptionList {
+	acc := NilIntOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapInt64Option(f func(Tuple2Option) Int64Option) Int64OptionList {
+	acc := NilInt64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapByteOption(f func(Tuple2Option) ByteOption) ByteOptionList {
+	acc := NilByteOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapRuneOption(f func(Tuple2Option) RuneOption) RuneOptionList {
+	acc := NilRuneOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat32Option(f func(Tuple2Option) Float32Option) Float32OptionList {
+	acc := NilFloat32Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat64Option(f func(Tuple2Option) Float64Option) Float64OptionList {
+	acc := NilFloat64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapAnyOption(f func(Tuple2Option) AnyOption) AnyOptionList {
+	acc := NilAnyOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapTuple2Option(f func(Tuple2Option) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapBoolList(f func(Tuple2Option) BoolList) BoolListList {
+	acc := NilBoolList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapStringList(f func(Tuple2Option) StringList) StringListList {
+	acc := NilStringList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapIntList(f func(Tuple2Option) IntList) IntListList {
+	acc := NilIntList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapInt64List(f func(Tuple2Option) Int64List) Int64ListList {
+	acc := NilInt64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapByteList(f func(Tuple2Option) ByteList) ByteListList {
+	acc := NilByteList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapRuneList(f func(Tuple2Option) RuneList) RuneListList {
+	acc := NilRuneList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat32List(f func(Tuple2Option) Float32List) Float32ListList {
+	acc := NilFloat32List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapFloat64List(f func(Tuple2Option) Float64List) Float64ListList {
+	acc := NilFloat64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapAnyList(f func(Tuple2Option) AnyList) AnyListList {
+	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2OptionList) MapTuple2List(f func(Tuple2Option) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8832,6 +10884,15 @@ func (l BoolListList) MapAny(f func(BoolList) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l BoolListList) MapTuple2(f func(BoolList) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolListList) MapBoolArray(f func(BoolList) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -8906,6 +10967,15 @@ func (l BoolListList) MapFloat64Array(f func(BoolList) []float64) Float64ArrayLi
 }
 func (l BoolListList) MapAnyArray(f func(BoolList) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolListList) MapTuple2Array(f func(BoolList) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -8994,6 +11064,15 @@ func (l BoolListList) MapAnyOption(f func(BoolList) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l BoolListList) MapTuple2Option(f func(BoolList) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l BoolListList) MapBoolList(f func(BoolList) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -9068,6 +11147,15 @@ func (l BoolListList) MapFloat64List(f func(BoolList) Float64List) Float64ListLi
 }
 func (l BoolListList) MapAnyList(f func(BoolList) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l BoolListList) MapTuple2List(f func(BoolList) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9156,6 +11244,15 @@ func (l StringListList) MapAny(f func(StringList) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l StringListList) MapTuple2(f func(StringList) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringListList) MapBoolArray(f func(StringList) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -9230,6 +11327,15 @@ func (l StringListList) MapFloat64Array(f func(StringList) []float64) Float64Arr
 }
 func (l StringListList) MapAnyArray(f func(StringList) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringListList) MapTuple2Array(f func(StringList) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9318,6 +11424,15 @@ func (l StringListList) MapAnyOption(f func(StringList) AnyOption) AnyOptionList
 	}
 	return acc.Reverse()
 }
+func (l StringListList) MapTuple2Option(f func(StringList) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l StringListList) MapBoolList(f func(StringList) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -9392,6 +11507,15 @@ func (l StringListList) MapFloat64List(f func(StringList) Float64List) Float64Li
 }
 func (l StringListList) MapAnyList(f func(StringList) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l StringListList) MapTuple2List(f func(StringList) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9480,6 +11604,15 @@ func (l IntListList) MapAny(f func(IntList) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l IntListList) MapTuple2(f func(IntList) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntListList) MapBoolArray(f func(IntList) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -9554,6 +11687,15 @@ func (l IntListList) MapFloat64Array(f func(IntList) []float64) Float64ArrayList
 }
 func (l IntListList) MapAnyArray(f func(IntList) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntListList) MapTuple2Array(f func(IntList) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9642,6 +11784,15 @@ func (l IntListList) MapAnyOption(f func(IntList) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l IntListList) MapTuple2Option(f func(IntList) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l IntListList) MapBoolList(f func(IntList) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -9716,6 +11867,15 @@ func (l IntListList) MapFloat64List(f func(IntList) Float64List) Float64ListList
 }
 func (l IntListList) MapAnyList(f func(IntList) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l IntListList) MapTuple2List(f func(IntList) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9804,6 +11964,15 @@ func (l Int64ListList) MapAny(f func(Int64List) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Int64ListList) MapTuple2(f func(Int64List) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64ListList) MapBoolArray(f func(Int64List) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -9878,6 +12047,15 @@ func (l Int64ListList) MapFloat64Array(f func(Int64List) []float64) Float64Array
 }
 func (l Int64ListList) MapAnyArray(f func(Int64List) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ListList) MapTuple2Array(f func(Int64List) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -9966,6 +12144,15 @@ func (l Int64ListList) MapAnyOption(f func(Int64List) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l Int64ListList) MapTuple2Option(f func(Int64List) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Int64ListList) MapBoolList(f func(Int64List) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -10040,6 +12227,15 @@ func (l Int64ListList) MapFloat64List(f func(Int64List) Float64List) Float64List
 }
 func (l Int64ListList) MapAnyList(f func(Int64List) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Int64ListList) MapTuple2List(f func(Int64List) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10128,6 +12324,15 @@ func (l ByteListList) MapAny(f func(ByteList) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l ByteListList) MapTuple2(f func(ByteList) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteListList) MapBoolArray(f func(ByteList) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -10202,6 +12407,15 @@ func (l ByteListList) MapFloat64Array(f func(ByteList) []float64) Float64ArrayLi
 }
 func (l ByteListList) MapAnyArray(f func(ByteList) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteListList) MapTuple2Array(f func(ByteList) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10290,6 +12504,15 @@ func (l ByteListList) MapAnyOption(f func(ByteList) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l ByteListList) MapTuple2Option(f func(ByteList) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l ByteListList) MapBoolList(f func(ByteList) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -10364,6 +12587,15 @@ func (l ByteListList) MapFloat64List(f func(ByteList) Float64List) Float64ListLi
 }
 func (l ByteListList) MapAnyList(f func(ByteList) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l ByteListList) MapTuple2List(f func(ByteList) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10452,6 +12684,15 @@ func (l RuneListList) MapAny(f func(RuneList) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l RuneListList) MapTuple2(f func(RuneList) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneListList) MapBoolArray(f func(RuneList) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -10526,6 +12767,15 @@ func (l RuneListList) MapFloat64Array(f func(RuneList) []float64) Float64ArrayLi
 }
 func (l RuneListList) MapAnyArray(f func(RuneList) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneListList) MapTuple2Array(f func(RuneList) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10614,6 +12864,15 @@ func (l RuneListList) MapAnyOption(f func(RuneList) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l RuneListList) MapTuple2Option(f func(RuneList) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l RuneListList) MapBoolList(f func(RuneList) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -10688,6 +12947,15 @@ func (l RuneListList) MapFloat64List(f func(RuneList) Float64List) Float64ListLi
 }
 func (l RuneListList) MapAnyList(f func(RuneList) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l RuneListList) MapTuple2List(f func(RuneList) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10776,6 +13044,15 @@ func (l Float32ListList) MapAny(f func(Float32List) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float32ListList) MapTuple2(f func(Float32List) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32ListList) MapBoolArray(f func(Float32List) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -10850,6 +13127,15 @@ func (l Float32ListList) MapFloat64Array(f func(Float32List) []float64) Float64A
 }
 func (l Float32ListList) MapAnyArray(f func(Float32List) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ListList) MapTuple2Array(f func(Float32List) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -10938,6 +13224,15 @@ func (l Float32ListList) MapAnyOption(f func(Float32List) AnyOption) AnyOptionLi
 	}
 	return acc.Reverse()
 }
+func (l Float32ListList) MapTuple2Option(f func(Float32List) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float32ListList) MapBoolList(f func(Float32List) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -11012,6 +13307,15 @@ func (l Float32ListList) MapFloat64List(f func(Float32List) Float64List) Float64
 }
 func (l Float32ListList) MapAnyList(f func(Float32List) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float32ListList) MapTuple2List(f func(Float32List) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11100,6 +13404,15 @@ func (l Float64ListList) MapAny(f func(Float64List) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l Float64ListList) MapTuple2(f func(Float64List) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64ListList) MapBoolArray(f func(Float64List) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -11174,6 +13487,15 @@ func (l Float64ListList) MapFloat64Array(f func(Float64List) []float64) Float64A
 }
 func (l Float64ListList) MapAnyArray(f func(Float64List) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ListList) MapTuple2Array(f func(Float64List) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11262,6 +13584,15 @@ func (l Float64ListList) MapAnyOption(f func(Float64List) AnyOption) AnyOptionLi
 	}
 	return acc.Reverse()
 }
+func (l Float64ListList) MapTuple2Option(f func(Float64List) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l Float64ListList) MapBoolList(f func(Float64List) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -11336,6 +13667,15 @@ func (l Float64ListList) MapFloat64List(f func(Float64List) Float64List) Float64
 }
 func (l Float64ListList) MapAnyList(f func(Float64List) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Float64ListList) MapTuple2List(f func(Float64List) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11424,6 +13764,15 @@ func (l AnyListList) MapAny(f func(AnyList) Any) AnyList {
 	}
 	return acc.Reverse()
 }
+func (l AnyListList) MapTuple2(f func(AnyList) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyListList) MapBoolArray(f func(AnyList) []bool) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -11498,6 +13847,15 @@ func (l AnyListList) MapFloat64Array(f func(AnyList) []float64) Float64ArrayList
 }
 func (l AnyListList) MapAnyArray(f func(AnyList) []Any) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyListList) MapTuple2Array(f func(AnyList) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))
@@ -11586,6 +13944,15 @@ func (l AnyListList) MapAnyOption(f func(AnyList) AnyOption) AnyOptionList {
 	}
 	return acc.Reverse()
 }
+func (l AnyListList) MapTuple2Option(f func(AnyList) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 func (l AnyListList) MapBoolList(f func(AnyList) BoolList) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -11660,6 +14027,375 @@ func (l AnyListList) MapFloat64List(f func(AnyList) Float64List) Float64ListList
 }
 func (l AnyListList) MapAnyList(f func(AnyList) AnyList) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l AnyListList) MapTuple2List(f func(AnyList) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapBool(f func(Tuple2List) bool) BoolList {
+	acc := NilBool
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapString(f func(Tuple2List) string) StringList {
+	acc := NilString
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapInt(f func(Tuple2List) int) IntList {
+	acc := NilInt
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapInt64(f func(Tuple2List) int64) Int64List {
+	acc := NilInt64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapByte(f func(Tuple2List) byte) ByteList {
+	acc := NilByte
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapRune(f func(Tuple2List) rune) RuneList {
+	acc := NilRune
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat32(f func(Tuple2List) float32) Float32List {
+	acc := NilFloat32
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat64(f func(Tuple2List) float64) Float64List {
+	acc := NilFloat64
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapAny(f func(Tuple2List) Any) AnyList {
+	acc := NilAny
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapTuple2(f func(Tuple2List) Tuple2) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapBoolArray(f func(Tuple2List) []bool) BoolArrayList {
+	acc := NilBoolArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapStringArray(f func(Tuple2List) []string) StringArrayList {
+	acc := NilStringArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapIntArray(f func(Tuple2List) []int) IntArrayList {
+	acc := NilIntArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapInt64Array(f func(Tuple2List) []int64) Int64ArrayList {
+	acc := NilInt64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapByteArray(f func(Tuple2List) []byte) ByteArrayList {
+	acc := NilByteArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapRuneArray(f func(Tuple2List) []rune) RuneArrayList {
+	acc := NilRuneArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat32Array(f func(Tuple2List) []float32) Float32ArrayList {
+	acc := NilFloat32Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat64Array(f func(Tuple2List) []float64) Float64ArrayList {
+	acc := NilFloat64Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapAnyArray(f func(Tuple2List) []Any) AnyArrayList {
+	acc := NilAnyArray
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapTuple2Array(f func(Tuple2List) []Tuple2) Tuple2ArrayList {
+	acc := NilTuple2Array
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapBoolOption(f func(Tuple2List) BoolOption) BoolOptionList {
+	acc := NilBoolOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapStringOption(f func(Tuple2List) StringOption) StringOptionList {
+	acc := NilStringOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapIntOption(f func(Tuple2List) IntOption) IntOptionList {
+	acc := NilIntOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapInt64Option(f func(Tuple2List) Int64Option) Int64OptionList {
+	acc := NilInt64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapByteOption(f func(Tuple2List) ByteOption) ByteOptionList {
+	acc := NilByteOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapRuneOption(f func(Tuple2List) RuneOption) RuneOptionList {
+	acc := NilRuneOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat32Option(f func(Tuple2List) Float32Option) Float32OptionList {
+	acc := NilFloat32Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat64Option(f func(Tuple2List) Float64Option) Float64OptionList {
+	acc := NilFloat64Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapAnyOption(f func(Tuple2List) AnyOption) AnyOptionList {
+	acc := NilAnyOption
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapTuple2Option(f func(Tuple2List) Tuple2Option) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapBoolList(f func(Tuple2List) BoolList) BoolListList {
+	acc := NilBoolList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapStringList(f func(Tuple2List) StringList) StringListList {
+	acc := NilStringList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapIntList(f func(Tuple2List) IntList) IntListList {
+	acc := NilIntList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapInt64List(f func(Tuple2List) Int64List) Int64ListList {
+	acc := NilInt64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapByteList(f func(Tuple2List) ByteList) ByteListList {
+	acc := NilByteList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapRuneList(f func(Tuple2List) RuneList) RuneListList {
+	acc := NilRuneList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat32List(f func(Tuple2List) Float32List) Float32ListList {
+	acc := NilFloat32List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapFloat64List(f func(Tuple2List) Float64List) Float64ListList {
+	acc := NilFloat64List
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapAnyList(f func(Tuple2List) AnyList) AnyListList {
+	acc := NilAnyList
+	xs := l
+	for xs.NonEmpty() {
+		acc = acc.Cons(f(*xs.head))
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+func (l Tuple2ListList) MapTuple2List(f func(Tuple2List) Tuple2List) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for xs.NonEmpty() {
 		acc = acc.Cons(f(*xs.head))

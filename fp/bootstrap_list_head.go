@@ -12,6 +12,7 @@ func (l RuneList) Head() rune                   { return *l.head }
 func (l Float32List) Head() float32             { return *l.head }
 func (l Float64List) Head() float64             { return *l.head }
 func (l AnyList) Head() Any                     { return *l.head }
+func (l Tuple2List) Head() Tuple2               { return *l.head }
 func (l BoolArrayList) Head() []bool            { return *l.head }
 func (l StringArrayList) Head() []string        { return *l.head }
 func (l IntArrayList) Head() []int              { return *l.head }
@@ -21,6 +22,7 @@ func (l RuneArrayList) Head() []rune            { return *l.head }
 func (l Float32ArrayList) Head() []float32      { return *l.head }
 func (l Float64ArrayList) Head() []float64      { return *l.head }
 func (l AnyArrayList) Head() []Any              { return *l.head }
+func (l Tuple2ArrayList) Head() []Tuple2        { return *l.head }
 func (l BoolOptionList) Head() BoolOption       { return *l.head }
 func (l StringOptionList) Head() StringOption   { return *l.head }
 func (l IntOptionList) Head() IntOption         { return *l.head }
@@ -30,6 +32,7 @@ func (l RuneOptionList) Head() RuneOption       { return *l.head }
 func (l Float32OptionList) Head() Float32Option { return *l.head }
 func (l Float64OptionList) Head() Float64Option { return *l.head }
 func (l AnyOptionList) Head() AnyOption         { return *l.head }
+func (l Tuple2OptionList) Head() Tuple2Option   { return *l.head }
 func (l BoolListList) Head() BoolList           { return *l.head }
 func (l StringListList) Head() StringList       { return *l.head }
 func (l IntListList) Head() IntList             { return *l.head }
@@ -39,3 +42,4 @@ func (l RuneListList) Head() RuneList           { return *l.head }
 func (l Float32ListList) Head() Float32List     { return *l.head }
 func (l Float64ListList) Head() Float64List     { return *l.head }
 func (l AnyListList) Head() AnyList             { return *l.head }
+func (l Tuple2ListList) Head() Tuple2List       { return *l.head }

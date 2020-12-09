@@ -66,6 +66,13 @@ func (l AnyList) DropWhile(p func(Any) bool) AnyList {
 	}
 	return xs
 }
+func (l Tuple2List) DropWhile(p func(Tuple2) bool) Tuple2List {
+	xs := l
+	for xs.NonEmpty() && p(*xs.head) {
+		xs = *xs.tail
+	}
+	return xs
+}
 func (l BoolArrayList) DropWhile(p func([]bool) bool) BoolArrayList {
 	xs := l
 	for xs.NonEmpty() && p(*xs.head) {
@@ -123,6 +130,13 @@ func (l Float64ArrayList) DropWhile(p func([]float64) bool) Float64ArrayList {
 	return xs
 }
 func (l AnyArrayList) DropWhile(p func([]Any) bool) AnyArrayList {
+	xs := l
+	for xs.NonEmpty() && p(*xs.head) {
+		xs = *xs.tail
+	}
+	return xs
+}
+func (l Tuple2ArrayList) DropWhile(p func([]Tuple2) bool) Tuple2ArrayList {
 	xs := l
 	for xs.NonEmpty() && p(*xs.head) {
 		xs = *xs.tail
@@ -192,6 +206,13 @@ func (l AnyOptionList) DropWhile(p func(AnyOption) bool) AnyOptionList {
 	}
 	return xs
 }
+func (l Tuple2OptionList) DropWhile(p func(Tuple2Option) bool) Tuple2OptionList {
+	xs := l
+	for xs.NonEmpty() && p(*xs.head) {
+		xs = *xs.tail
+	}
+	return xs
+}
 func (l BoolListList) DropWhile(p func(BoolList) bool) BoolListList {
 	xs := l
 	for xs.NonEmpty() && p(*xs.head) {
@@ -249,6 +270,13 @@ func (l Float64ListList) DropWhile(p func(Float64List) bool) Float64ListList {
 	return xs
 }
 func (l AnyListList) DropWhile(p func(AnyList) bool) AnyListList {
+	xs := l
+	for xs.NonEmpty() && p(*xs.head) {
+		xs = *xs.tail
+	}
+	return xs
+}
+func (l Tuple2ListList) DropWhile(p func(Tuple2List) bool) Tuple2ListList {
 	xs := l
 	for xs.NonEmpty() && p(*xs.head) {
 		xs = *xs.tail

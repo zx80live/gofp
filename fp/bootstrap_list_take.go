@@ -93,6 +93,16 @@ func (l AnyList) Take(n int) AnyList {
 	return acc.Reverse()
 }
 
+func (l Tuple2List) Take(n int) Tuple2List {
+	acc := NilTuple2
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+
 func (l BoolArrayList) Take(n int) BoolArrayList {
 	acc := NilBoolArray
 	xs := l
@@ -175,6 +185,16 @@ func (l Float64ArrayList) Take(n int) Float64ArrayList {
 
 func (l AnyArrayList) Take(n int) AnyArrayList {
 	acc := NilAnyArray
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+
+func (l Tuple2ArrayList) Take(n int) Tuple2ArrayList {
+	acc := NilTuple2Array
 	xs := l
 	for i := 0; xs.NonEmpty() && i < n; i++ {
 		acc = acc.Cons(*xs.head)
@@ -273,6 +293,16 @@ func (l AnyOptionList) Take(n int) AnyOptionList {
 	return acc.Reverse()
 }
 
+func (l Tuple2OptionList) Take(n int) Tuple2OptionList {
+	acc := NilTuple2Option
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+
 func (l BoolListList) Take(n int) BoolListList {
 	acc := NilBoolList
 	xs := l
@@ -355,6 +385,16 @@ func (l Float64ListList) Take(n int) Float64ListList {
 
 func (l AnyListList) Take(n int) AnyListList {
 	acc := NilAnyList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
+
+func (l Tuple2ListList) Take(n int) Tuple2ListList {
+	acc := NilTuple2List
 	xs := l
 	for i := 0; xs.NonEmpty() && i < n; i++ {
 		acc = acc.Cons(*xs.head)

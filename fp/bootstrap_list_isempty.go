@@ -12,6 +12,7 @@ func (l RuneList) IsEmpty() bool          { return l == NilRune }
 func (l Float32List) IsEmpty() bool       { return l == NilFloat32 }
 func (l Float64List) IsEmpty() bool       { return l == NilFloat64 }
 func (l AnyList) IsEmpty() bool           { return l == NilAny }
+func (l Tuple2List) IsEmpty() bool        { return l == NilTuple2 }
 func (l BoolArrayList) IsEmpty() bool     { return l == NilBoolArray }
 func (l StringArrayList) IsEmpty() bool   { return l == NilStringArray }
 func (l IntArrayList) IsEmpty() bool      { return l == NilIntArray }
@@ -21,6 +22,7 @@ func (l RuneArrayList) IsEmpty() bool     { return l == NilRuneArray }
 func (l Float32ArrayList) IsEmpty() bool  { return l == NilFloat32Array }
 func (l Float64ArrayList) IsEmpty() bool  { return l == NilFloat64Array }
 func (l AnyArrayList) IsEmpty() bool      { return l == NilAnyArray }
+func (l Tuple2ArrayList) IsEmpty() bool   { return l == NilTuple2Array }
 func (l BoolOptionList) IsEmpty() bool    { return l == NilBoolOption }
 func (l StringOptionList) IsEmpty() bool  { return l == NilStringOption }
 func (l IntOptionList) IsEmpty() bool     { return l == NilIntOption }
@@ -30,6 +32,7 @@ func (l RuneOptionList) IsEmpty() bool    { return l == NilRuneOption }
 func (l Float32OptionList) IsEmpty() bool { return l == NilFloat32Option }
 func (l Float64OptionList) IsEmpty() bool { return l == NilFloat64Option }
 func (l AnyOptionList) IsEmpty() bool     { return l == NilAnyOption }
+func (l Tuple2OptionList) IsEmpty() bool  { return l == NilTuple2Option }
 func (l BoolListList) IsEmpty() bool      { return l == NilBoolList }
 func (l StringListList) IsEmpty() bool    { return l == NilStringList }
 func (l IntListList) IsEmpty() bool       { return l == NilIntList }
@@ -39,3 +42,4 @@ func (l RuneListList) IsEmpty() bool      { return l == NilRuneList }
 func (l Float32ListList) IsEmpty() bool   { return l == NilFloat32List }
 func (l Float64ListList) IsEmpty() bool   { return l == NilFloat64List }
 func (l AnyListList) IsEmpty() bool       { return l == NilAnyList }
+func (l Tuple2ListList) IsEmpty() bool    { return l == NilTuple2List }

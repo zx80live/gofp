@@ -57,6 +57,9 @@ func (p1 Float64ArrayPredicate) Or(p2 Float64ArrayPredicate) Float64ArrayPredica
 func (p1 AnyArrayPredicate) Or(p2 AnyArrayPredicate) AnyArrayPredicate {
 	return func(e []Any) bool { return p1(e) || p2(e) }
 }
+func (p1 Tuple2ArrayPredicate) Or(p2 Tuple2ArrayPredicate) Tuple2ArrayPredicate {
+	return func(e []Tuple2) bool { return p1(e) || p2(e) }
+}
 func (p1 BoolArrayArrayPredicate) Or(p2 BoolArrayArrayPredicate) BoolArrayArrayPredicate {
 	return func(e [][]bool) bool { return p1(e) || p2(e) }
 }
@@ -83,6 +86,9 @@ func (p1 Float64ArrayArrayPredicate) Or(p2 Float64ArrayArrayPredicate) Float64Ar
 }
 func (p1 AnyArrayArrayPredicate) Or(p2 AnyArrayArrayPredicate) AnyArrayArrayPredicate {
 	return func(e [][]Any) bool { return p1(e) || p2(e) }
+}
+func (p1 Tuple2ArrayArrayPredicate) Or(p2 Tuple2ArrayArrayPredicate) Tuple2ArrayArrayPredicate {
+	return func(e [][]Tuple2) bool { return p1(e) || p2(e) }
 }
 func (p1 BoolOptionPredicate) Or(p2 BoolOptionPredicate) BoolOptionPredicate {
 	return func(e BoolOption) bool { return p1(e) || p2(e) }
@@ -111,6 +117,9 @@ func (p1 Float64OptionPredicate) Or(p2 Float64OptionPredicate) Float64OptionPred
 func (p1 AnyOptionPredicate) Or(p2 AnyOptionPredicate) AnyOptionPredicate {
 	return func(e AnyOption) bool { return p1(e) || p2(e) }
 }
+func (p1 Tuple2OptionPredicate) Or(p2 Tuple2OptionPredicate) Tuple2OptionPredicate {
+	return func(e Tuple2Option) bool { return p1(e) || p2(e) }
+}
 func (p1 BoolOptionOptionPredicate) Or(p2 BoolOptionOptionPredicate) BoolOptionOptionPredicate {
 	return func(e BoolOptionOption) bool { return p1(e) || p2(e) }
 }
@@ -137,6 +146,9 @@ func (p1 Float64OptionOptionPredicate) Or(p2 Float64OptionOptionPredicate) Float
 }
 func (p1 AnyOptionOptionPredicate) Or(p2 AnyOptionOptionPredicate) AnyOptionOptionPredicate {
 	return func(e AnyOptionOption) bool { return p1(e) || p2(e) }
+}
+func (p1 Tuple2OptionOptionPredicate) Or(p2 Tuple2OptionOptionPredicate) Tuple2OptionOptionPredicate {
+	return func(e Tuple2OptionOption) bool { return p1(e) || p2(e) }
 }
 func (p1 BoolArrayOptionPredicate) Or(p2 BoolArrayOptionPredicate) BoolArrayOptionPredicate {
 	return func(e BoolArrayOption) bool { return p1(e) || p2(e) }
@@ -165,6 +177,9 @@ func (p1 Float64ArrayOptionPredicate) Or(p2 Float64ArrayOptionPredicate) Float64
 func (p1 AnyArrayOptionPredicate) Or(p2 AnyArrayOptionPredicate) AnyArrayOptionPredicate {
 	return func(e AnyArrayOption) bool { return p1(e) || p2(e) }
 }
+func (p1 Tuple2ArrayOptionPredicate) Or(p2 Tuple2ArrayOptionPredicate) Tuple2ArrayOptionPredicate {
+	return func(e Tuple2ArrayOption) bool { return p1(e) || p2(e) }
+}
 func (p1 BoolListOptionPredicate) Or(p2 BoolListOptionPredicate) BoolListOptionPredicate {
 	return func(e BoolListOption) bool { return p1(e) || p2(e) }
 }
@@ -191,6 +206,9 @@ func (p1 Float64ListOptionPredicate) Or(p2 Float64ListOptionPredicate) Float64Li
 }
 func (p1 AnyListOptionPredicate) Or(p2 AnyListOptionPredicate) AnyListOptionPredicate {
 	return func(e AnyListOption) bool { return p1(e) || p2(e) }
+}
+func (p1 Tuple2ListOptionPredicate) Or(p2 Tuple2ListOptionPredicate) Tuple2ListOptionPredicate {
+	return func(e Tuple2ListOption) bool { return p1(e) || p2(e) }
 }
 func (p1 BoolListPredicate) Or(p2 BoolListPredicate) BoolListPredicate {
 	return func(e BoolList) bool { return p1(e) || p2(e) }
@@ -219,6 +237,9 @@ func (p1 Float64ListPredicate) Or(p2 Float64ListPredicate) Float64ListPredicate 
 func (p1 AnyListPredicate) Or(p2 AnyListPredicate) AnyListPredicate {
 	return func(e AnyList) bool { return p1(e) || p2(e) }
 }
+func (p1 Tuple2ListPredicate) Or(p2 Tuple2ListPredicate) Tuple2ListPredicate {
+	return func(e Tuple2List) bool { return p1(e) || p2(e) }
+}
 func (p1 BoolArrayListPredicate) Or(p2 BoolArrayListPredicate) BoolArrayListPredicate {
 	return func(e BoolArrayList) bool { return p1(e) || p2(e) }
 }
@@ -245,6 +266,9 @@ func (p1 Float64ArrayListPredicate) Or(p2 Float64ArrayListPredicate) Float64Arra
 }
 func (p1 AnyArrayListPredicate) Or(p2 AnyArrayListPredicate) AnyArrayListPredicate {
 	return func(e AnyArrayList) bool { return p1(e) || p2(e) }
+}
+func (p1 Tuple2ArrayListPredicate) Or(p2 Tuple2ArrayListPredicate) Tuple2ArrayListPredicate {
+	return func(e Tuple2ArrayList) bool { return p1(e) || p2(e) }
 }
 func (p1 BoolOptionListPredicate) Or(p2 BoolOptionListPredicate) BoolOptionListPredicate {
 	return func(e BoolOptionList) bool { return p1(e) || p2(e) }
@@ -273,6 +297,9 @@ func (p1 Float64OptionListPredicate) Or(p2 Float64OptionListPredicate) Float64Op
 func (p1 AnyOptionListPredicate) Or(p2 AnyOptionListPredicate) AnyOptionListPredicate {
 	return func(e AnyOptionList) bool { return p1(e) || p2(e) }
 }
+func (p1 Tuple2OptionListPredicate) Or(p2 Tuple2OptionListPredicate) Tuple2OptionListPredicate {
+	return func(e Tuple2OptionList) bool { return p1(e) || p2(e) }
+}
 func (p1 BoolListListPredicate) Or(p2 BoolListListPredicate) BoolListListPredicate {
 	return func(e BoolListList) bool { return p1(e) || p2(e) }
 }
@@ -299,4 +326,10 @@ func (p1 Float64ListListPredicate) Or(p2 Float64ListListPredicate) Float64ListLi
 }
 func (p1 AnyListListPredicate) Or(p2 AnyListListPredicate) AnyListListPredicate {
 	return func(e AnyListList) bool { return p1(e) || p2(e) }
+}
+func (p1 Tuple2ListListPredicate) Or(p2 Tuple2ListListPredicate) Tuple2ListListPredicate {
+	return func(e Tuple2ListList) bool { return p1(e) || p2(e) }
+}
+func (p1 Tuple2Predicate) Or(p2 Tuple2Predicate) Tuple2Predicate {
+	return func(e Tuple2) bool { return p1(e) || p2(e) }
 }

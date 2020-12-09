@@ -93,6 +93,16 @@ func (l AnyList) Find(p func(Any) bool) AnyOption {
 	}
 	return NoneAny
 }
+func (l Tuple2List) Find(p func(Tuple2) bool) Tuple2Option {
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			return MakeTuple2Option(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return NoneTuple2
+}
 func (l BoolArrayList) Find(p func([]bool) bool) BoolArrayOption {
 	xs := l
 	for xs.NonEmpty() {
@@ -182,6 +192,16 @@ func (l AnyArrayList) Find(p func([]Any) bool) AnyArrayOption {
 		xs = *xs.tail
 	}
 	return NoneAnyArray
+}
+func (l Tuple2ArrayList) Find(p func([]Tuple2) bool) Tuple2ArrayOption {
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			return MakeTuple2ArrayOption(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return NoneTuple2Array
 }
 func (l BoolOptionList) Find(p func(BoolOption) bool) BoolOptionOption {
 	xs := l
@@ -273,6 +293,16 @@ func (l AnyOptionList) Find(p func(AnyOption) bool) AnyOptionOption {
 	}
 	return NoneAnyOption
 }
+func (l Tuple2OptionList) Find(p func(Tuple2Option) bool) Tuple2OptionOption {
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			return MakeTuple2OptionOption(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return NoneTuple2Option
+}
 func (l BoolListList) Find(p func(BoolList) bool) BoolListOption {
 	xs := l
 	for xs.NonEmpty() {
@@ -362,4 +392,14 @@ func (l AnyListList) Find(p func(AnyList) bool) AnyListOption {
 		xs = *xs.tail
 	}
 	return NoneAnyList
+}
+func (l Tuple2ListList) Find(p func(Tuple2List) bool) Tuple2ListOption {
+	xs := l
+	for xs.NonEmpty() {
+		if p(*xs.head) {
+			return MakeTuple2ListOption(*xs.head)
+		}
+		xs = *xs.tail
+	}
+	return NoneTuple2List
 }

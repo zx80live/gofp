@@ -48,6 +48,11 @@ func (m AnyArray) Foreach(f func(Any)) {
 		f(e)
 	}
 }
+func (m Tuple2Array) Foreach(f func(Tuple2)) {
+	for _, e := range m {
+		f(e)
+	}
+}
 func (m BoolArrayArray) Foreach(f func([]bool)) {
 	for _, e := range m {
 		f(e)
@@ -89,6 +94,11 @@ func (m Float64ArrayArray) Foreach(f func([]float64)) {
 	}
 }
 func (m AnyArrayArray) Foreach(f func([]Any)) {
+	for _, e := range m {
+		f(e)
+	}
+}
+func (m Tuple2ArrayArray) Foreach(f func([]Tuple2)) {
 	for _, e := range m {
 		f(e)
 	}

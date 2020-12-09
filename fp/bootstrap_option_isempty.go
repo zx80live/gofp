@@ -21,6 +21,8 @@ func (o Float64Option) IsEmpty() bool { return o == NoneFloat64 }
 
 func (o AnyOption) IsEmpty() bool { return o == NoneAny }
 
+func (o Tuple2Option) IsEmpty() bool { return o == NoneTuple2 }
+
 func (o BoolOptionOption) IsEmpty() bool { return o == NoneBoolOption }
 
 func (o StringOptionOption) IsEmpty() bool { return o == NoneStringOption }
@@ -38,6 +40,8 @@ func (o Float32OptionOption) IsEmpty() bool { return o == NoneFloat32Option }
 func (o Float64OptionOption) IsEmpty() bool { return o == NoneFloat64Option }
 
 func (o AnyOptionOption) IsEmpty() bool { return o == NoneAnyOption }
+
+func (o Tuple2OptionOption) IsEmpty() bool { return o == NoneTuple2Option }
 
 func (o BoolArrayOption) IsEmpty() bool { return o == NoneBoolArray }
 
@@ -57,6 +61,8 @@ func (o Float64ArrayOption) IsEmpty() bool { return o == NoneFloat64Array }
 
 func (o AnyArrayOption) IsEmpty() bool { return o == NoneAnyArray }
 
+func (o Tuple2ArrayOption) IsEmpty() bool { return o == NoneTuple2Array }
+
 func (o BoolListOption) IsEmpty() bool { return o == NoneBoolList }
 
 func (o StringListOption) IsEmpty() bool { return o == NoneStringList }
@@ -74,3 +80,5 @@ func (o Float32ListOption) IsEmpty() bool { return o == NoneFloat32List }
 func (o Float64ListOption) IsEmpty() bool { return o == NoneFloat64List }
 
 func (o AnyListOption) IsEmpty() bool { return o == NoneAnyList }
+
+func (o Tuple2ListOption) IsEmpty() bool { return o == NoneTuple2List }

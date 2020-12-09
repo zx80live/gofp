@@ -66,6 +66,13 @@ func (m AnyArray) Head() Any {
 		panic("can't get head from empty []Any slice")
 	}
 }
+func (m Tuple2Array) Head() Tuple2 {
+	if len(m) > 0 {
+		return m[0]
+	} else {
+		panic("can't get head from empty []Tuple2 slice")
+	}
+}
 func (m BoolArrayArray) Head() []bool {
 	if len(m) > 0 {
 		return m[0]
@@ -127,5 +134,12 @@ func (m AnyArrayArray) Head() []Any {
 		return m[0]
 	} else {
 		panic("can't get head from empty [][]Any slice")
+	}
+}
+func (m Tuple2ArrayArray) Head() []Tuple2 {
+	if len(m) > 0 {
+		return m[0]
+	} else {
+		panic("can't get head from empty [][]Tuple2 slice")
 	}
 }

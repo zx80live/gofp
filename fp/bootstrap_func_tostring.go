@@ -4,6 +4,7 @@
 package fp
 
 import "fmt"
+import "reflect"
 
 func BoolToString(o Bool) String {
 	return String(fmt.Sprintf("%v", o))
@@ -63,7 +64,234 @@ func Complex128ToString(o Complex128) String {
 	return String(fmt.Sprintf("%v", o))
 }
 func AnyToString(o Any) String {
-	return String(fmt.Sprintf("%v", o))
+
+	var s1 String
+
+	if reflect.TypeOf(o) == BoolReflectType {
+		s1 = BoolToString(o.(Bool))
+	} else if reflect.TypeOf(o) == StringReflectType {
+		s1 = StringToString(o.(String))
+	} else if reflect.TypeOf(o) == IntReflectType {
+		s1 = IntToString(o.(Int))
+	} else if reflect.TypeOf(o) == Int64ReflectType {
+		s1 = Int64ToString(o.(Int64))
+	} else if reflect.TypeOf(o) == ByteReflectType {
+		s1 = ByteToString(o.(Byte))
+	} else if reflect.TypeOf(o) == RuneReflectType {
+		s1 = RuneToString(o.(Rune))
+	} else if reflect.TypeOf(o) == Float32ReflectType {
+		s1 = Float32ToString(o.(Float32))
+	} else if reflect.TypeOf(o) == Float64ReflectType {
+		s1 = Float64ToString(o.(Float64))
+	} else if reflect.TypeOf(o) == AnyReflectType {
+		s1 = AnyToString(o.(Any))
+	} else if reflect.TypeOf(o) == BoolOptionReflectType {
+		s1 = BoolOptionToString(o.(BoolOption))
+	} else if reflect.TypeOf(o) == StringOptionReflectType {
+		s1 = StringOptionToString(o.(StringOption))
+	} else if reflect.TypeOf(o) == IntOptionReflectType {
+		s1 = IntOptionToString(o.(IntOption))
+	} else if reflect.TypeOf(o) == Int64OptionReflectType {
+		s1 = Int64OptionToString(o.(Int64Option))
+	} else if reflect.TypeOf(o) == ByteOptionReflectType {
+		s1 = ByteOptionToString(o.(ByteOption))
+	} else if reflect.TypeOf(o) == RuneOptionReflectType {
+		s1 = RuneOptionToString(o.(RuneOption))
+	} else if reflect.TypeOf(o) == Float32OptionReflectType {
+		s1 = Float32OptionToString(o.(Float32Option))
+	} else if reflect.TypeOf(o) == Float64OptionReflectType {
+		s1 = Float64OptionToString(o.(Float64Option))
+	} else if reflect.TypeOf(o) == AnyOptionReflectType {
+		s1 = AnyOptionToString(o.(AnyOption))
+	} else if reflect.TypeOf(o) == Tuple2OptionReflectType {
+		s1 = Tuple2OptionToString(o.(Tuple2Option))
+	} else if reflect.TypeOf(o) == BoolOptionOptionReflectType {
+		s1 = BoolOptionOptionToString(o.(BoolOptionOption))
+	} else if reflect.TypeOf(o) == StringOptionOptionReflectType {
+		s1 = StringOptionOptionToString(o.(StringOptionOption))
+	} else if reflect.TypeOf(o) == IntOptionOptionReflectType {
+		s1 = IntOptionOptionToString(o.(IntOptionOption))
+	} else if reflect.TypeOf(o) == Int64OptionOptionReflectType {
+		s1 = Int64OptionOptionToString(o.(Int64OptionOption))
+	} else if reflect.TypeOf(o) == ByteOptionOptionReflectType {
+		s1 = ByteOptionOptionToString(o.(ByteOptionOption))
+	} else if reflect.TypeOf(o) == RuneOptionOptionReflectType {
+		s1 = RuneOptionOptionToString(o.(RuneOptionOption))
+	} else if reflect.TypeOf(o) == Float32OptionOptionReflectType {
+		s1 = Float32OptionOptionToString(o.(Float32OptionOption))
+	} else if reflect.TypeOf(o) == Float64OptionOptionReflectType {
+		s1 = Float64OptionOptionToString(o.(Float64OptionOption))
+	} else if reflect.TypeOf(o) == AnyOptionOptionReflectType {
+		s1 = AnyOptionOptionToString(o.(AnyOptionOption))
+	} else if reflect.TypeOf(o) == Tuple2OptionOptionReflectType {
+		s1 = Tuple2OptionOptionToString(o.(Tuple2OptionOption))
+	} else if reflect.TypeOf(o) == BoolArrayOptionReflectType {
+		s1 = BoolArrayOptionToString(o.(BoolArrayOption))
+	} else if reflect.TypeOf(o) == StringArrayOptionReflectType {
+		s1 = StringArrayOptionToString(o.(StringArrayOption))
+	} else if reflect.TypeOf(o) == IntArrayOptionReflectType {
+		s1 = IntArrayOptionToString(o.(IntArrayOption))
+	} else if reflect.TypeOf(o) == Int64ArrayOptionReflectType {
+		s1 = Int64ArrayOptionToString(o.(Int64ArrayOption))
+	} else if reflect.TypeOf(o) == ByteArrayOptionReflectType {
+		s1 = ByteArrayOptionToString(o.(ByteArrayOption))
+	} else if reflect.TypeOf(o) == RuneArrayOptionReflectType {
+		s1 = RuneArrayOptionToString(o.(RuneArrayOption))
+	} else if reflect.TypeOf(o) == Float32ArrayOptionReflectType {
+		s1 = Float32ArrayOptionToString(o.(Float32ArrayOption))
+	} else if reflect.TypeOf(o) == Float64ArrayOptionReflectType {
+		s1 = Float64ArrayOptionToString(o.(Float64ArrayOption))
+	} else if reflect.TypeOf(o) == AnyArrayOptionReflectType {
+		s1 = AnyArrayOptionToString(o.(AnyArrayOption))
+	} else if reflect.TypeOf(o) == Tuple2ArrayOptionReflectType {
+		s1 = Tuple2ArrayOptionToString(o.(Tuple2ArrayOption))
+	} else if reflect.TypeOf(o) == BoolListOptionReflectType {
+		s1 = BoolListOptionToString(o.(BoolListOption))
+	} else if reflect.TypeOf(o) == StringListOptionReflectType {
+		s1 = StringListOptionToString(o.(StringListOption))
+	} else if reflect.TypeOf(o) == IntListOptionReflectType {
+		s1 = IntListOptionToString(o.(IntListOption))
+	} else if reflect.TypeOf(o) == Int64ListOptionReflectType {
+		s1 = Int64ListOptionToString(o.(Int64ListOption))
+	} else if reflect.TypeOf(o) == ByteListOptionReflectType {
+		s1 = ByteListOptionToString(o.(ByteListOption))
+	} else if reflect.TypeOf(o) == RuneListOptionReflectType {
+		s1 = RuneListOptionToString(o.(RuneListOption))
+	} else if reflect.TypeOf(o) == Float32ListOptionReflectType {
+		s1 = Float32ListOptionToString(o.(Float32ListOption))
+	} else if reflect.TypeOf(o) == Float64ListOptionReflectType {
+		s1 = Float64ListOptionToString(o.(Float64ListOption))
+	} else if reflect.TypeOf(o) == AnyListOptionReflectType {
+		s1 = AnyListOptionToString(o.(AnyListOption))
+	} else if reflect.TypeOf(o) == Tuple2ListOptionReflectType {
+		s1 = Tuple2ListOptionToString(o.(Tuple2ListOption))
+	} else if reflect.TypeOf(o) == BoolListReflectType {
+		s1 = BoolListToString(o.(BoolList))
+	} else if reflect.TypeOf(o) == StringListReflectType {
+		s1 = StringListToString(o.(StringList))
+	} else if reflect.TypeOf(o) == IntListReflectType {
+		s1 = IntListToString(o.(IntList))
+	} else if reflect.TypeOf(o) == Int64ListReflectType {
+		s1 = Int64ListToString(o.(Int64List))
+	} else if reflect.TypeOf(o) == ByteListReflectType {
+		s1 = ByteListToString(o.(ByteList))
+	} else if reflect.TypeOf(o) == RuneListReflectType {
+		s1 = RuneListToString(o.(RuneList))
+	} else if reflect.TypeOf(o) == Float32ListReflectType {
+		s1 = Float32ListToString(o.(Float32List))
+	} else if reflect.TypeOf(o) == Float64ListReflectType {
+		s1 = Float64ListToString(o.(Float64List))
+	} else if reflect.TypeOf(o) == AnyListReflectType {
+		s1 = AnyListToString(o.(AnyList))
+	} else if reflect.TypeOf(o) == Tuple2ListReflectType {
+		s1 = Tuple2ListToString(o.(Tuple2List))
+	} else if reflect.TypeOf(o) == BoolArrayListReflectType {
+		s1 = BoolArrayListToString(o.(BoolArrayList))
+	} else if reflect.TypeOf(o) == StringArrayListReflectType {
+		s1 = StringArrayListToString(o.(StringArrayList))
+	} else if reflect.TypeOf(o) == IntArrayListReflectType {
+		s1 = IntArrayListToString(o.(IntArrayList))
+	} else if reflect.TypeOf(o) == Int64ArrayListReflectType {
+		s1 = Int64ArrayListToString(o.(Int64ArrayList))
+	} else if reflect.TypeOf(o) == ByteArrayListReflectType {
+		s1 = ByteArrayListToString(o.(ByteArrayList))
+	} else if reflect.TypeOf(o) == RuneArrayListReflectType {
+		s1 = RuneArrayListToString(o.(RuneArrayList))
+	} else if reflect.TypeOf(o) == Float32ArrayListReflectType {
+		s1 = Float32ArrayListToString(o.(Float32ArrayList))
+	} else if reflect.TypeOf(o) == Float64ArrayListReflectType {
+		s1 = Float64ArrayListToString(o.(Float64ArrayList))
+	} else if reflect.TypeOf(o) == AnyArrayListReflectType {
+		s1 = AnyArrayListToString(o.(AnyArrayList))
+	} else if reflect.TypeOf(o) == Tuple2ArrayListReflectType {
+		s1 = Tuple2ArrayListToString(o.(Tuple2ArrayList))
+	} else if reflect.TypeOf(o) == BoolOptionListReflectType {
+		s1 = BoolOptionListToString(o.(BoolOptionList))
+	} else if reflect.TypeOf(o) == StringOptionListReflectType {
+		s1 = StringOptionListToString(o.(StringOptionList))
+	} else if reflect.TypeOf(o) == IntOptionListReflectType {
+		s1 = IntOptionListToString(o.(IntOptionList))
+	} else if reflect.TypeOf(o) == Int64OptionListReflectType {
+		s1 = Int64OptionListToString(o.(Int64OptionList))
+	} else if reflect.TypeOf(o) == ByteOptionListReflectType {
+		s1 = ByteOptionListToString(o.(ByteOptionList))
+	} else if reflect.TypeOf(o) == RuneOptionListReflectType {
+		s1 = RuneOptionListToString(o.(RuneOptionList))
+	} else if reflect.TypeOf(o) == Float32OptionListReflectType {
+		s1 = Float32OptionListToString(o.(Float32OptionList))
+	} else if reflect.TypeOf(o) == Float64OptionListReflectType {
+		s1 = Float64OptionListToString(o.(Float64OptionList))
+	} else if reflect.TypeOf(o) == AnyOptionListReflectType {
+		s1 = AnyOptionListToString(o.(AnyOptionList))
+	} else if reflect.TypeOf(o) == Tuple2OptionListReflectType {
+		s1 = Tuple2OptionListToString(o.(Tuple2OptionList))
+	} else if reflect.TypeOf(o) == BoolListListReflectType {
+		s1 = BoolListListToString(o.(BoolListList))
+	} else if reflect.TypeOf(o) == StringListListReflectType {
+		s1 = StringListListToString(o.(StringListList))
+	} else if reflect.TypeOf(o) == IntListListReflectType {
+		s1 = IntListListToString(o.(IntListList))
+	} else if reflect.TypeOf(o) == Int64ListListReflectType {
+		s1 = Int64ListListToString(o.(Int64ListList))
+	} else if reflect.TypeOf(o) == ByteListListReflectType {
+		s1 = ByteListListToString(o.(ByteListList))
+	} else if reflect.TypeOf(o) == RuneListListReflectType {
+		s1 = RuneListListToString(o.(RuneListList))
+	} else if reflect.TypeOf(o) == Float32ListListReflectType {
+		s1 = Float32ListListToString(o.(Float32ListList))
+	} else if reflect.TypeOf(o) == Float64ListListReflectType {
+		s1 = Float64ListListToString(o.(Float64ListList))
+	} else if reflect.TypeOf(o) == AnyListListReflectType {
+		s1 = AnyListListToString(o.(AnyListList))
+	} else if reflect.TypeOf(o) == Tuple2ListListReflectType {
+		s1 = Tuple2ListListToString(o.(Tuple2ListList))
+	} else if reflect.TypeOf(o) == BoolArrayReflectType {
+		s1 = BoolArrayToString(o.(BoolArray))
+	} else if reflect.TypeOf(o) == StringArrayReflectType {
+		s1 = StringArrayToString(o.(StringArray))
+	} else if reflect.TypeOf(o) == IntArrayReflectType {
+		s1 = IntArrayToString(o.(IntArray))
+	} else if reflect.TypeOf(o) == Int64ArrayReflectType {
+		s1 = Int64ArrayToString(o.(Int64Array))
+	} else if reflect.TypeOf(o) == ByteArrayReflectType {
+		s1 = ByteArrayToString(o.(ByteArray))
+	} else if reflect.TypeOf(o) == RuneArrayReflectType {
+		s1 = RuneArrayToString(o.(RuneArray))
+	} else if reflect.TypeOf(o) == Float32ArrayReflectType {
+		s1 = Float32ArrayToString(o.(Float32Array))
+	} else if reflect.TypeOf(o) == Float64ArrayReflectType {
+		s1 = Float64ArrayToString(o.(Float64Array))
+	} else if reflect.TypeOf(o) == AnyArrayReflectType {
+		s1 = AnyArrayToString(o.(AnyArray))
+	} else if reflect.TypeOf(o) == Tuple2ArrayReflectType {
+		s1 = Tuple2ArrayToString(o.(Tuple2Array))
+	} else if reflect.TypeOf(o) == BoolArrayArrayReflectType {
+		s1 = BoolArrayArrayToString(o.(BoolArrayArray))
+	} else if reflect.TypeOf(o) == StringArrayArrayReflectType {
+		s1 = StringArrayArrayToString(o.(StringArrayArray))
+	} else if reflect.TypeOf(o) == IntArrayArrayReflectType {
+		s1 = IntArrayArrayToString(o.(IntArrayArray))
+	} else if reflect.TypeOf(o) == Int64ArrayArrayReflectType {
+		s1 = Int64ArrayArrayToString(o.(Int64ArrayArray))
+	} else if reflect.TypeOf(o) == ByteArrayArrayReflectType {
+		s1 = ByteArrayArrayToString(o.(ByteArrayArray))
+	} else if reflect.TypeOf(o) == RuneArrayArrayReflectType {
+		s1 = RuneArrayArrayToString(o.(RuneArrayArray))
+	} else if reflect.TypeOf(o) == Float32ArrayArrayReflectType {
+		s1 = Float32ArrayArrayToString(o.(Float32ArrayArray))
+	} else if reflect.TypeOf(o) == Float64ArrayArrayReflectType {
+		s1 = Float64ArrayArrayToString(o.(Float64ArrayArray))
+	} else if reflect.TypeOf(o) == AnyArrayArrayReflectType {
+		s1 = AnyArrayArrayToString(o.(AnyArrayArray))
+	} else if reflect.TypeOf(o) == Tuple2ArrayArrayReflectType {
+		s1 = Tuple2ArrayArrayToString(o.(Tuple2ArrayArray))
+	} else if reflect.TypeOf(o) == Tuple2ReflectType {
+		s1 = Tuple2ToString(o.(Tuple2))
+	} else {
+		s1 = String(fmt.Sprintf("%v", o))
+	}
+	return String(s1)
+
 }
 func BoolOptionToString(o BoolOption) String {
 	return o.ToString()
@@ -90,6 +318,9 @@ func Float64OptionToString(o Float64Option) String {
 	return o.ToString()
 }
 func AnyOptionToString(o AnyOption) String {
+	return o.ToString()
+}
+func Tuple2OptionToString(o Tuple2Option) String {
 	return o.ToString()
 }
 func BoolOptionOptionToString(o BoolOptionOption) String {
@@ -119,6 +350,9 @@ func Float64OptionOptionToString(o Float64OptionOption) String {
 func AnyOptionOptionToString(o AnyOptionOption) String {
 	return o.ToString()
 }
+func Tuple2OptionOptionToString(o Tuple2OptionOption) String {
+	return o.ToString()
+}
 func BoolArrayOptionToString(o BoolArrayOption) String {
 	return o.ToString()
 }
@@ -144,6 +378,9 @@ func Float64ArrayOptionToString(o Float64ArrayOption) String {
 	return o.ToString()
 }
 func AnyArrayOptionToString(o AnyArrayOption) String {
+	return o.ToString()
+}
+func Tuple2ArrayOptionToString(o Tuple2ArrayOption) String {
 	return o.ToString()
 }
 func BoolListOptionToString(o BoolListOption) String {
@@ -173,6 +410,9 @@ func Float64ListOptionToString(o Float64ListOption) String {
 func AnyListOptionToString(o AnyListOption) String {
 	return o.ToString()
 }
+func Tuple2ListOptionToString(o Tuple2ListOption) String {
+	return o.ToString()
+}
 func BoolArrayToString(o BoolArray) String {
 	return o.ToString()
 }
@@ -198,6 +438,9 @@ func Float64ArrayToString(o Float64Array) String {
 	return o.ToString()
 }
 func AnyArrayToString(o AnyArray) String {
+	return o.ToString()
+}
+func Tuple2ArrayToString(o Tuple2Array) String {
 	return o.ToString()
 }
 func BoolArrayArrayToString(o BoolArrayArray) String {
@@ -227,6 +470,9 @@ func Float64ArrayArrayToString(o Float64ArrayArray) String {
 func AnyArrayArrayToString(o AnyArrayArray) String {
 	return o.ToString()
 }
+func Tuple2ArrayArrayToString(o Tuple2ArrayArray) String {
+	return o.ToString()
+}
 func BoolListToString(o BoolList) String {
 	return o.ToString()
 }
@@ -252,6 +498,9 @@ func Float64ListToString(o Float64List) String {
 	return o.ToString()
 }
 func AnyListToString(o AnyList) String {
+	return o.ToString()
+}
+func Tuple2ListToString(o Tuple2List) String {
 	return o.ToString()
 }
 func BoolArrayListToString(o BoolArrayList) String {
@@ -281,6 +530,9 @@ func Float64ArrayListToString(o Float64ArrayList) String {
 func AnyArrayListToString(o AnyArrayList) String {
 	return o.ToString()
 }
+func Tuple2ArrayListToString(o Tuple2ArrayList) String {
+	return o.ToString()
+}
 func BoolOptionListToString(o BoolOptionList) String {
 	return o.ToString()
 }
@@ -308,6 +560,9 @@ func Float64OptionListToString(o Float64OptionList) String {
 func AnyOptionListToString(o AnyOptionList) String {
 	return o.ToString()
 }
+func Tuple2OptionListToString(o Tuple2OptionList) String {
+	return o.ToString()
+}
 func BoolListListToString(o BoolListList) String {
 	return o.ToString()
 }
@@ -333,5 +588,11 @@ func Float64ListListToString(o Float64ListList) String {
 	return o.ToString()
 }
 func AnyListListToString(o AnyListList) String {
+	return o.ToString()
+}
+func Tuple2ListListToString(o Tuple2ListList) String {
+	return o.ToString()
+}
+func Tuple2ToString(o Tuple2) String {
 	return o.ToString()
 }

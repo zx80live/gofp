@@ -75,6 +75,14 @@ func (m AnyArray) Tail() AnyArray {
 		return []Any{}
 	}
 }
+func (m Tuple2Array) Tail() Tuple2Array {
+	s := len(m)
+	if s > 0 {
+		return m[1 : s-1]
+	} else {
+		return []Tuple2{}
+	}
+}
 func (m BoolArrayArray) Tail() BoolArrayArray {
 	s := len(m)
 	if s > 0 {
@@ -145,5 +153,13 @@ func (m AnyArrayArray) Tail() AnyArrayArray {
 		return m[1 : s-1]
 	} else {
 		return [][]Any{}
+	}
+}
+func (m Tuple2ArrayArray) Tail() Tuple2ArrayArray {
+	s := len(m)
+	if s > 0 {
+		return m[1 : s-1]
+	} else {
+		return [][]Tuple2{}
 	}
 }

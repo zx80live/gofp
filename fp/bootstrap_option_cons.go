@@ -12,6 +12,7 @@ func MakeRuneOption(e rune) RuneOption                            { return RuneO
 func MakeFloat32Option(e float32) Float32Option                   { return Float32Option{&e} }
 func MakeFloat64Option(e float64) Float64Option                   { return Float64Option{&e} }
 func MakeAnyOption(e Any) AnyOption                               { return AnyOption{&e} }
+func MakeTuple2Option(e Tuple2) Tuple2Option                      { return Tuple2Option{&e} }
 func MakeBoolOptionOption(e BoolOption) BoolOptionOption          { return BoolOptionOption{&e} }
 func MakeStringOptionOption(e StringOption) StringOptionOption    { return StringOptionOption{&e} }
 func MakeIntOptionOption(e IntOption) IntOptionOption             { return IntOptionOption{&e} }
@@ -21,6 +22,7 @@ func MakeRuneOptionOption(e RuneOption) RuneOptionOption          { return RuneO
 func MakeFloat32OptionOption(e Float32Option) Float32OptionOption { return Float32OptionOption{&e} }
 func MakeFloat64OptionOption(e Float64Option) Float64OptionOption { return Float64OptionOption{&e} }
 func MakeAnyOptionOption(e AnyOption) AnyOptionOption             { return AnyOptionOption{&e} }
+func MakeTuple2OptionOption(e Tuple2Option) Tuple2OptionOption    { return Tuple2OptionOption{&e} }
 func MakeBoolArrayOption(e []bool) BoolArrayOption                { return BoolArrayOption{&e} }
 func MakeStringArrayOption(e []string) StringArrayOption          { return StringArrayOption{&e} }
 func MakeIntArrayOption(e []int) IntArrayOption                   { return IntArrayOption{&e} }
@@ -30,6 +32,7 @@ func MakeRuneArrayOption(e []rune) RuneArrayOption                { return RuneA
 func MakeFloat32ArrayOption(e []float32) Float32ArrayOption       { return Float32ArrayOption{&e} }
 func MakeFloat64ArrayOption(e []float64) Float64ArrayOption       { return Float64ArrayOption{&e} }
 func MakeAnyArrayOption(e []Any) AnyArrayOption                   { return AnyArrayOption{&e} }
+func MakeTuple2ArrayOption(e []Tuple2) Tuple2ArrayOption          { return Tuple2ArrayOption{&e} }
 func MakeBoolListOption(e BoolList) BoolListOption                { return BoolListOption{&e} }
 func MakeStringListOption(e StringList) StringListOption          { return StringListOption{&e} }
 func MakeIntListOption(e IntList) IntListOption                   { return IntListOption{&e} }
@@ -39,3 +42,4 @@ func MakeRuneListOption(e RuneList) RuneListOption                { return RuneL
 func MakeFloat32ListOption(e Float32List) Float32ListOption       { return Float32ListOption{&e} }
 func MakeFloat64ListOption(e Float64List) Float64ListOption       { return Float64ListOption{&e} }
 func MakeAnyListOption(e AnyList) AnyListOption                   { return AnyListOption{&e} }
+func MakeTuple2ListOption(e Tuple2List) Tuple2ListOption          { return Tuple2ListOption{&e} }

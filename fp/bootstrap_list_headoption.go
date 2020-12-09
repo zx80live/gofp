@@ -66,6 +66,13 @@ func (l AnyList) HeadOption() AnyOption {
 		return NoneAny
 	}
 }
+func (l Tuple2List) HeadOption() Tuple2Option {
+	if l.NonEmpty() {
+		return MakeTuple2Option(*l.head)
+	} else {
+		return NoneTuple2
+	}
+}
 func (l BoolArrayList) HeadOption() BoolArrayOption {
 	if l.NonEmpty() {
 		return MakeBoolArrayOption(*l.head)
@@ -127,6 +134,13 @@ func (l AnyArrayList) HeadOption() AnyArrayOption {
 		return MakeAnyArrayOption(*l.head)
 	} else {
 		return NoneAnyArray
+	}
+}
+func (l Tuple2ArrayList) HeadOption() Tuple2ArrayOption {
+	if l.NonEmpty() {
+		return MakeTuple2ArrayOption(*l.head)
+	} else {
+		return NoneTuple2Array
 	}
 }
 func (l BoolOptionList) HeadOption() BoolOptionOption {
@@ -192,6 +206,13 @@ func (l AnyOptionList) HeadOption() AnyOptionOption {
 		return NoneAnyOption
 	}
 }
+func (l Tuple2OptionList) HeadOption() Tuple2OptionOption {
+	if l.NonEmpty() {
+		return MakeTuple2OptionOption(*l.head)
+	} else {
+		return NoneTuple2Option
+	}
+}
 func (l BoolListList) HeadOption() BoolListOption {
 	if l.NonEmpty() {
 		return MakeBoolListOption(*l.head)
@@ -253,5 +274,12 @@ func (l AnyListList) HeadOption() AnyListOption {
 		return MakeAnyListOption(*l.head)
 	} else {
 		return NoneAnyList
+	}
+}
+func (l Tuple2ListList) HeadOption() Tuple2ListOption {
+	if l.NonEmpty() {
+		return MakeTuple2ListOption(*l.head)
+	} else {
+		return NoneTuple2List
 	}
 }
