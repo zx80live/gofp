@@ -13,4 +13,10 @@ func main() {
 	l3 := Float32Array([]float32{0.5, 0.7, 0.9})
 
 	fmt.Println(l1.ZipStringList(l2).ZipFloat32Array(l3).ToString())
+
+	fmt.Println(
+		MakeIntList(1, 2, 3).
+			ZipAllStringList(
+				MakeStringList("a", "b", "c", "d"), -100, "NONE").
+			ToString())
 }
