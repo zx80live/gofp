@@ -17,4 +17,8 @@ func main() {
 	fmt.Println(t2.ToString())
 	fmt.Println(t3.ToString())
 
+	fmt.Println(t1.Equals(t2))
+	fmt.Println(t2.Equals(MkTuple2(20, l)))
+
+	fmt.Println(l.ZipWithIndex().ToString())
 }
