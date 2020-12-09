@@ -7,18 +7,10 @@ import (
 
 func main() {
 	fmt.Println("Hello")
-	l := MakeIntList(1, 2, 3)
-	t1 := MkTuple2(10, "Hello")
-	t2 := MkTuple2(20, l)
-	t3 := MkTuple2(t1, t2)
 
-	fmt.Println(l.ToString())
-	fmt.Println(t1.ToString())
-	fmt.Println(t2.ToString())
-	fmt.Println(t3.ToString())
+	l1 := MakeIntList(1, 2, 3)
+	l2 := MakeStringList("a", "b", "c")
+	l3 := Float32Array([]float32{0.5, 0.7, 0.9})
 
-	fmt.Println(t1.Equals(t2))
-	fmt.Println(t2.Equals(MkTuple2(20, l)))
-
-	fmt.Println(l.ZipWithIndex().ToString())
+	fmt.Println(l1.ZipStringList(l2).ZipFloat32Array(l3).ToString())
 }
