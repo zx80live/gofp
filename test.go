@@ -19,4 +19,6 @@ func main() {
 			ZipAllStringList(
 				MakeStringList("a", "b", "c", "d"), -100, "NONE").
 			ToString())
+
+	fmt.Println(StringArray([]string{"a", "b", "c"}).ZipWithIndex().ToString())
 }
