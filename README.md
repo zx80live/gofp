@@ -142,7 +142,7 @@ import (
 func main() {
 	fmt.Println("Hello functional programming in GO!")
 	
-	l := MakeIntList(1,2,3,4,5)
+	l := MkIntList(1,2,3,4,5)
 	res1 := l.Filter(EvenInt)
 	
 	fmt.Println(res1.ToString())
@@ -199,7 +199,7 @@ type IntList struct {
 ```go
 // Create list
 // O(n)
-func MakeIntList(elements ...int) IntList
+func MkIntList(elements ...int) IntList
 
 // Construct list by prepend head
 // O(1)
@@ -210,7 +210,7 @@ Example:
 
 ```go
 // create list by factory
-var l IntList = MakeIntList(1,2,3,4,5)
+var l IntList = MkIntList(1,2,3,4,5)
 
 // create list from Nil
 l2 := NilInt.Cons(5).Cons(4).Cons(3).Cons(2).Cons(1)  // equals IntList(1,2,3,4,5)
@@ -236,7 +236,7 @@ func (l IntList) Copy() IntList
 Example:
 
 ```go
-l1 := MakeIntList(1,2,3,4,5)
+l1 := MkIntList(1,2,3,4,5)
 l2 := l1.Copy()
 ```
 
@@ -253,7 +253,7 @@ func (l IntList) Count(predicate func(int) bool)
 Example:
 
 ```go
-l := MakeIntList(1,2,3,4,5)
+l := MkIntList(1,2,3,4,5)
 l.Count(func(e int) bool { return e % 2 == 0})    // 2
 l.Count(EvenInt)                                  // 2
 ```
@@ -281,7 +281,7 @@ func (l IntList) DropWhile(predicate func(int) bool) IntList
 Example:
 
 ```go
-l := MakeIntList(10,20,30,40,50)
+l := MkIntList(10,20,30,40,50)
 res1 := l.Drop(2)                                 // IntList(30,40,50)
 res2 := l.DropRight(2)                            // IntList(10,20,30)
 res3 := l.DropWhile(func (e int) bool { e < 40 }) // IntList(40,50)                      
@@ -306,11 +306,11 @@ func (l IntList) NonEmpty() bool
 Example:
 
 ```go
-l1 := MakeIntList(1,2,3)
+l1 := MkIntList(1,2,3)
 res1 := l1.IsEmpty()      // false
 res2 := l1.NoEmpty()      // true
 
-l2 := MakeIntList()    
+l2 := MkIntList()    
 res3 := l2.IsEmpty()      // true
 res4 := l2.NonEmpty()     // fase
 
@@ -334,17 +334,17 @@ Example:
 
 ```go
 // compare the simple lists
-l1 := MakeIntList(10,20,30,40,50)
-l2 := MakeIntList(10,20,30,40,50)
-l3 := MakeIntList({10,20,30)
+l1 := MkIntList(10,20,30,40,50)
+l2 := MkIntList(10,20,30,40,50)
+l3 := MkIntList({10,20,30)
 
 l1.Equals(l2)   // true
 l1.Equals(l3)   // false
                    
 // compare the nested lists
-l4 := MakeIntListList(MakeIntList(1,2), MakeIntList(3,4,5))           
-l5 := MakeIntListList(MakeIntList(1,2), MakeIntList(3,4,5)) 
-l6 := MakeIntListList(MakeIntList(1,2,3), MakeIntList(4,5))           
+l4 := MkIntListList(MkIntList(1,2), MkIntList(3,4,5))           
+l5 := MkIntListList(MkIntList(1,2), MkIntList(3,4,5)) 
+l6 := MkIntListList(MkIntList(1,2,3), MkIntList(4,5))           
                  
 l4.Equals(l5)  // true
 l4.Equals(l6)  // false
@@ -365,7 +365,7 @@ func (l IntList) Filter(predicate func(int) bool) IntList
 Example:
 
 ```go
-l := MakeIntList(1,-2,-3,4,5,-6,7,8,-9,10)
+l := MkIntList(1,-2,-3,4,5,-6,7,8,-9,10)
 res := l.
          Filter(func (e int) bool { return e % 2 == 0}).   // filter even numbers
          Filter(func (e int) bool { return e >= 0 })       // filter positive numbers
@@ -420,7 +420,7 @@ Example:
 ```go
 // Example: flatten nested list
 // List(List(1,2), Nil, List(3,4,5), List(6,7))
-l := MakeIntListList(MakeIntList(1,2), NilInt, MakeIntList(3,4,5), MakeIntList(6,7)) 
+l := MkIntListList(MkIntList(1,2), NilInt, MkIntList(3,4,5), MkIntList(6,7)) 
 l.FlatMapInt(func(e IntList) IntList { return e })        // List(1,2,3,4,5,6,7)
 l.FlatMapInt(func(e IntList) IntList { 
     return e.MapInt(func(e int) int) { return e * 10 }})  // List(10,20,30,40,50,60,70)
@@ -446,7 +446,7 @@ Example:
 
 ```go
 // List(List(1,2,3), Nil, List(4,5), List(6,7))
-l := MakeIntListList(MakeIntList(1,2,3), Nil, MakeIntList(4,5), MakeIntList(6, 7))
+l := MkIntListList(MkIntList(1,2,3), Nil, MkIntList(4,5), MkIntList(6, 7))
 var res IntList = l.Flatten()   // List(1,2,3,4,5,6,7)
 ```
 
@@ -471,7 +471,7 @@ func (l IntList) FoldLeftString(z string, func(string, int) string) string
 Example:
 
 ```go
-l := MakeIntList(1,2,3,4,5)
+l := MkIntList(1,2,3,4,5)
 
 
 sum := l.FoldLeftInt(
@@ -498,7 +498,7 @@ func (l IntList) Foreach(func(int))
 Example:
 
 ```go
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 f.Foreach(func(e int) {
     fmt.Println("> ", e)
 })
@@ -522,7 +522,7 @@ func (l AnyList) GroupByAny(func(Any)Any) map[Any]AnyList
 Example: group by identity
 
 ```go
-l1 := MakeIntList(1,2,1,1,3,2)
+l1 := MkIntList(1,2,1,1,3,2)
 res1 := l1.GroupByInt(func(e int) int { return e }) /* Map(1 -> List(1,1,1)
                                                            2 -> List(2,2)
                                                            3 -> List(3))  */
@@ -604,7 +604,7 @@ func (l IntList) Tail() IntList
 Example:
 
 ```go
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 h1 := l.Head()                      // 1
 t1 := l.Tail()                      // List(2,3)
 h1Opt := l.HeadOption()             // Some(1)
@@ -633,7 +633,7 @@ func(l IntList) MapString(func (int) string) StringList
 Example:
 
 ```go
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 r1 := l.MapInt(func(e int) int { return e * 10})                        // List(10,20,30)
 r2 := l.MapString(func (e int) string { return fmt.Sprintf("<%v>", e)}) // List("<1>","<2>","<3>")
 ```
@@ -653,7 +653,7 @@ func (l IntList) MkString(start, sep, end string) string
 Example:
 
 ```go
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 str := l.MkString("<", "|", ">")      // "<1|2|3>"
 ```
 
@@ -698,7 +698,7 @@ Example:
 // create list from empty tail
 l1 := NilInt.Cons(3).Cons(2).Cons(1)   // List(1,2,3)
 
-l2 := MakeIntList(1,2,3)
+l2 := MkIntList(1,2,3)
 l3 := l2.Cons(4)                       // List(4,1,2,3)
 ```
 
@@ -717,7 +717,7 @@ func (l IntList) Reduce(func (int, int) int) int
 Example:
 
 ```go
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 sum := l.Reduce(func(acc, el int) int { return acc + el })  // sum = 1 + 2 + 3
 ```
 
@@ -736,7 +736,7 @@ func (l IntList) Reverse() IntList
 Example:
 
 ```go
-l1 := MakeIntList(1,2,3)
+l1 := MkIntList(1,2,3)
 l2 := l1.Reverse()                       // List(3,2,1)
 ```
 
@@ -755,8 +755,8 @@ func (l IntList) Size() int
 Example:
 
 ```go
-l1 := MakeIntList(1,2,3)
-l2 := MakeIntList()
+l1 := MkIntList(1,2,3)
+l2 := MkIntList()
 
 res1 := l1.Size()         // 3
 res2 := l2.Size()         // 0
@@ -807,7 +807,7 @@ func (l IntList) ToArray() []int
 Example:
 
 ```go
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 a := l.ToArray()          // []int{1,2,3}
 ```
 
@@ -825,12 +825,12 @@ func (l IntList) ToString() string
 Example:
 
 ```go
-l1 := MakeIntList(1,2,3)
+l1 := MkIntList(1,2,3)
 res1 := l1.ToString()                                              // "List(1,2,3)"
-l2 := MakeIntListList(
-        MakeIntList(1,2), 
+l2 := MkIntListList(
+        MkIntList(1,2), 
         NilInt, 
-        MakeIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
+        MkIntList(3,4))  // "List(List(1,2), List(), List(3,4))"
 ```
 
 [[🠕]](#list0)
@@ -846,19 +846,19 @@ func (l IntList) ZipStringList(l2 StirngList) Tuple2List
 ```
 Example:
 ```go
-l1 := MakeIntList(1,2,3)
-l2 := MakeStringList("a", "b", "c")
+l1 := MkIntList(1,2,3)
+l2 := MkStringList("a", "b", "c")
 
 res1 := l1.ZipStringList(l2)  
 /* List(Tuple(1, "a"), 
         Tuple(2, "b"), 
         Tuple(3, "b")) */
                                    
-res2 := l1.ZipStringList(MakeStringList("a", "b"))
+res2 := l1.ZipStringList(MkStringList("a", "b"))
 /* List(Tuple(1, "a"), 
         Tuple(2, "b")) */
 
-res3 := l1.ZipStringList(MakeStringList("a", "b", "c", "d", "e"))
+res3 := l1.ZipStringList(MkStringList("a", "b", "c", "d", "e"))
 /* List(Tuple(1, "a"), 
         Tuple(2, "b"), 
         Tuple(3, "b")) */
@@ -880,8 +880,8 @@ func (l IntList) ZipAllStringList(l2 StringList,
 ```
 Example:
 ```go
-l1 := MakeIntList(1,2,3)
-l2 := MakeStringList("a", "b", "c")
+l1 := MkIntList(1,2,3)
+l2 := MkStringList("a", "b", "c")
 l1Default := -100
 l2Default := "NONE"
 
@@ -890,14 +890,14 @@ res1 := l1.ZipAllStringList(l2, l1Default, l2Default)
         Tuple(2, "b"), 
         Tuple(3, "b")) */
                                    
-res2 := l1.ZipAllStringList(MakeStringList("a", "b"), 
+res2 := l1.ZipAllStringList(MkStringList("a", "b"), 
                             l1Default, 
                             l2Default)
 /* List(Tuple(1, "a"), 
         Tuple(2, "b"),
         Tuple(3, "NONE")) */
 
-res3 := l1.ZipStringLitst(MakeStringList("a", "b", "c", "d", "e"),
+res3 := l1.ZipStringLitst(MkStringList("a", "b", "c", "d", "e"),
                           l1Default,
                           l2Default)
 /* List(Tuple(1, "a"), 
@@ -916,13 +916,13 @@ func (l IntList) ZipWithIndex() Tuple2List
 ```
 Example:
 ```go
-l1 := MakeIntList(1024, 2048, 4096)
+l1 := MkIntList(1024, 2048, 4096)
 res1 := l1.ZipWithIndex()
 /* List(Tuple(1024, 0),
         Tuple(2048, 1),
         Tuple(4096, 2))*/
         
-l2 := MakeStringList("a", "b", "c")
+l2 := MkStringList("a", "b", "c")
 res2 := l2.ZipWithIndex()
 /* List(Tuple("a", 0),
         Tuple("b", 1),
@@ -985,12 +985,12 @@ All examples of  this section use a `IntOption` type. But this API is supported 
 
 #### Create option
 ```go
-func MakeIntOption(e int) IntOption
+func MkIntOption(e int) IntOption
 func IntOpt(e int) IntOption
 ```
 Example:
 ```go
-o1 := MakeIntOption(10)     // Some(10)
+o1 := MkIntOption(10)     // Some(10)
 o2 := IntOpt(20)            // Some(20)
 ```
 [[🠕]](#option0)
@@ -1083,7 +1083,7 @@ func (o IntIntOption) IntOption
 ```
 Example:
 ```go
-o := MakeIntOptionOption(MakeIntOption(10))    // Some(Some(10))
+o := MkIntOptionOption(MkIntOption(10))    // Some(Some(10))
 flatten := o.Flatten()                         // Some(10)
 ```
 [[🠕]](#option0)
@@ -1268,7 +1268,7 @@ t1 := Tuple2 {10, "hello" }  // Tuple(10, "Hello")
 var t1_e1 Any = t1.E1           // Any(10)
 var t2_e2 Any = t2.E2           // Any("Hello")
 
-t2 := Tuple2 {t1, MakeIntList(1,2,3)} 
+t2 := Tuple2 {t1, MkIntList(1,2,3)} 
 /* Tuple(Tuple(10, "hello"), List(1,2,3)) */
 
 var t2_e1 Any = t2.E1   // Any(Tuple(10, "hello"))
@@ -1286,8 +1286,8 @@ Example:
 ```go
 t1 := Tuple2 {10, "hello" }
 t2 := Tuple2 {10, "hello" }
-t3 := Tuple2 {t1, MakeIntList(1,2,3) }
-t4 := Tuple2 {t1, MakeIntList(1,2,3) }
+t3 := Tuple2 {t1, MkIntList(1,2,3) }
+t4 := Tuple2 {t1, MkIntList(1,2,3) }
 
 t1.Equals(t2)                // true
 t1.Equals(t3)                // false
@@ -1305,7 +1305,7 @@ Example:
 t1 := Tuple2 {10, "hello"}
 t1.ToString()       // "Tuple(10, hello)"
 
-t2 := Tuple2 { t1, MakeIntList(1,2,3) }
+t2 := Tuple2 { t1, MkIntList(1,2,3) }
 t2.ToString()       // "Tuple(Tuple(10, hello), List(1,2,3))" 
 
 ```
@@ -1954,7 +1954,7 @@ func getFilter() IntPredicate {
   }
 }
 
-l := MakeIntList(1,2,3)
+l := MkIntList(1,2,3)
 
 res1 := l.Filter(getFilter())  // if config propery does not contain
                                // filter type then filtering will not use
@@ -1993,7 +1993,7 @@ var OneInt IntPredicate = ...
 ```
 Examples:
 ```go
-l := MakeIntList(1,2,-3,-4,5,6,-7,8,9,0)
+l := MkIntList(1,2,-3,-4,5,6,-7,8,9,0)
 
 res1 := l.Filter(EvenInt)                // List(2,-4,6,8,0)
 res2 := l.Filter(NegInt)                 // List(-3,-4,-7)
@@ -2011,7 +2011,7 @@ func MatchRegexpString(pattern string) StringPredicate
 ```
 Examples:
 ```go
-l := MakeStringList("Hello", "abc", "127.0.0.1", "255.255.255.0", "world", "127", "255")
+l := MkStringList("Hello", "abc", "127.0.0.1", "255.255.255.0", "world", "127", "255")
 
 var matchIp StringPredicate = 
         MatchRegexpString("[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}\\.[\\d]{1,3}")
@@ -2035,7 +2035,7 @@ func (p1 IntPredicate) Xor(p2 IntPredicate) IntPredicate
 ```
 Examples:
 ```go
-l := MakeIntList(1,-2,3,4,5,-6,7,8,9,0)
+l := MkIntList(1,-2,3,4,5,-6,7,8,9,0)
 
 var p1 IntPredicate = func(e int) bool { return e % 2 == 0 }  // even numbers
 var p2 IntPredicate = func(e int) bool { return e < 0 }       // neg numbers
@@ -2166,7 +2166,7 @@ var IntIdentity func(int) int = func(i int) int { return i }
 ```
 Examples:
 ```go
-l := MakeIntList(1,2,3,1,3,3,4)
+l := MkIntList(1,2,3,1,3,3,4)
 
 groups := l.GroupBy(IntIdentity)
 /*
@@ -2187,7 +2187,7 @@ func StringRegexGroups(pattern string) func(string) []string
 ```
 Example:
 ```go
-l := MakeStringList("10014-dav", "10015-pav", "10016-ant", "10017-din")
+l := MkStringList("10014-dav", "10015-pav", "10016-ant", "10017-din")
 
 
 idNameRegex := StringRegexGroups("([0-9]+)\\-([a-z]+)") // string => []string transformer
@@ -2235,13 +2235,13 @@ import (
 ### Create future
 ```go
 // Execute go-routine for calculate function
-func MakeIntFuture(f func() Int) IntFuture
+func MkIntFuture(f func() Int) IntFuture
 ```
 Example:
 ```go
 t1 := time.Now().Unix()
 // create future
-f1 := MakeIntFuture(func() Int {
+f1 := MkIntFuture(func() Int {
         time.Sleep(2 * time.Second)
         return Int(10)
       })
@@ -2284,11 +2284,11 @@ This example uses `Future.Result` invocation which is described in [Future.Resul
 // Therefore these futures will be executed SEQUENTIALLY
 
 t1 := time.Now().Unix()
-f := MakeIntFuture(func () Int {
+f := MkIntFuture(func () Int {
        time.Sleep(2 * time.Second)                          // some payload emulation
        return Int(10)
      }).FlatMapInt(func (a Int) IntFuture  {
-          return MakeIntFuture(func () Int {
+          return MkIntFuture(func () Int {
             time.Sleep(2 * time.Second)                     // some payload emulation
             return Int(a * 20)
            })
@@ -2320,12 +2320,12 @@ This example uses `Future.Result` invocation which is described in [Future.Resul
 // Therefore these futures will be executed PARALLEL
 
 t1 := time.Now().Unix()
-f1 := MakeIntFuture(func () Int {
+f1 := MkIntFuture(func () Int {
         time.Sleep(2 * time.Second)                         // some payload emulation
         return Int(10)
       })
 
-f2 := MakeIntFuture(func () Int {
+f2 := MkIntFuture(func () Int {
         time.Sleep(2 * time.Second)                         // some payload emulation
         return Int(20)
       })
@@ -2363,7 +2363,7 @@ func (f IntFuture) MapString(t func(Int) String) StringFuture
 ```
 Example:
 ```go
-f1 := MakeIntFuture(func() Int { return Int(10) })             // Future(10)
+f1 := MkIntFuture(func() Int { return Int(10) })             // Future(10)
 
 res1 := f1.MapInt(func(e Int) Int { return Int(e * 10) })      // Future(100)
 res2 := f1.MapString(func(e Int) String { 
@@ -2380,8 +2380,8 @@ func (f IntFuture) Result() Int
 Example:
 ```go
 t1 := time.Now().Unix()
-f1 := MakeIntFuture(func() Int { return Int(10) })  
-f2 := MakeIntFuture(func() Int { 
+f1 := MkIntFuture(func() Int { return Int(10) })  
+f2 := MkIntFuture(func() Int { 
 	time.Sleep(2 * time.Second)
 	return Int(20) 
 })                                
