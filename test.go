@@ -11,6 +11,6 @@ func main() {
 	fmt.Println(IntArray([]int{10, 20, 30}).ZipAllStringArray(StringArray([]string{"a", "b", "c", "d"}), -100, "NONE").ToString())
 
 	t1 := Tuple2{10, "hello"}
-	t2 := Tuple2{t1, MakeIntList(1, 2, 3)}
+	t2 := Tuple2{t1, MkIntList(1, 2, 3)}
 	fmt.Println(t2.ToString())
 }

@@ -3,280 +3,280 @@
 
 package fp
 
-func MakeBoolList(elements ...bool) BoolList {
+func MkBoolList(elements ...bool) BoolList {
 	xs := NilBool
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeStringList(elements ...string) StringList {
+func MkStringList(elements ...string) StringList {
 	xs := NilString
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeIntList(elements ...int) IntList {
+func MkIntList(elements ...int) IntList {
 	xs := NilInt
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeInt64List(elements ...int64) Int64List {
+func MkInt64List(elements ...int64) Int64List {
 	xs := NilInt64
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeByteList(elements ...byte) ByteList {
+func MkByteList(elements ...byte) ByteList {
 	xs := NilByte
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeRuneList(elements ...rune) RuneList {
+func MkRuneList(elements ...rune) RuneList {
 	xs := NilRune
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat32List(elements ...float32) Float32List {
+func MkFloat32List(elements ...float32) Float32List {
 	xs := NilFloat32
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat64List(elements ...float64) Float64List {
+func MkFloat64List(elements ...float64) Float64List {
 	xs := NilFloat64
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeAnyList(elements ...Any) AnyList {
+func MkAnyList(elements ...Any) AnyList {
 	xs := NilAny
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeTuple2List(elements ...Tuple2) Tuple2List {
+func MkTuple2List(elements ...Tuple2) Tuple2List {
 	xs := NilTuple2
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeBoolArrayList(elements ...[]bool) BoolArrayList {
+func MkBoolArrayList(elements ...[]bool) BoolArrayList {
 	xs := NilBoolArray
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeStringArrayList(elements ...[]string) StringArrayList {
+func MkStringArrayList(elements ...[]string) StringArrayList {
 	xs := NilStringArray
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeIntArrayList(elements ...[]int) IntArrayList {
+func MkIntArrayList(elements ...[]int) IntArrayList {
 	xs := NilIntArray
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeInt64ArrayList(elements ...[]int64) Int64ArrayList {
+func MkInt64ArrayList(elements ...[]int64) Int64ArrayList {
 	xs := NilInt64Array
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeByteArrayList(elements ...[]byte) ByteArrayList {
+func MkByteArrayList(elements ...[]byte) ByteArrayList {
 	xs := NilByteArray
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeRuneArrayList(elements ...[]rune) RuneArrayList {
+func MkRuneArrayList(elements ...[]rune) RuneArrayList {
 	xs := NilRuneArray
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat32ArrayList(elements ...[]float32) Float32ArrayList {
+func MkFloat32ArrayList(elements ...[]float32) Float32ArrayList {
 	xs := NilFloat32Array
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat64ArrayList(elements ...[]float64) Float64ArrayList {
+func MkFloat64ArrayList(elements ...[]float64) Float64ArrayList {
 	xs := NilFloat64Array
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeAnyArrayList(elements ...[]Any) AnyArrayList {
+func MkAnyArrayList(elements ...[]Any) AnyArrayList {
 	xs := NilAnyArray
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeTuple2ArrayList(elements ...[]Tuple2) Tuple2ArrayList {
+func MkTuple2ArrayList(elements ...[]Tuple2) Tuple2ArrayList {
 	xs := NilTuple2Array
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeBoolOptionList(elements ...BoolOption) BoolOptionList {
+func MkBoolOptionList(elements ...BoolOption) BoolOptionList {
 	xs := NilBoolOption
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeStringOptionList(elements ...StringOption) StringOptionList {
+func MkStringOptionList(elements ...StringOption) StringOptionList {
 	xs := NilStringOption
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeIntOptionList(elements ...IntOption) IntOptionList {
+func MkIntOptionList(elements ...IntOption) IntOptionList {
 	xs := NilIntOption
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeInt64OptionList(elements ...Int64Option) Int64OptionList {
+func MkInt64OptionList(elements ...Int64Option) Int64OptionList {
 	xs := NilInt64Option
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeByteOptionList(elements ...ByteOption) ByteOptionList {
+func MkByteOptionList(elements ...ByteOption) ByteOptionList {
 	xs := NilByteOption
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeRuneOptionList(elements ...RuneOption) RuneOptionList {
+func MkRuneOptionList(elements ...RuneOption) RuneOptionList {
 	xs := NilRuneOption
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat32OptionList(elements ...Float32Option) Float32OptionList {
+func MkFloat32OptionList(elements ...Float32Option) Float32OptionList {
 	xs := NilFloat32Option
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat64OptionList(elements ...Float64Option) Float64OptionList {
+func MkFloat64OptionList(elements ...Float64Option) Float64OptionList {
 	xs := NilFloat64Option
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeAnyOptionList(elements ...AnyOption) AnyOptionList {
+func MkAnyOptionList(elements ...AnyOption) AnyOptionList {
 	xs := NilAnyOption
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeTuple2OptionList(elements ...Tuple2Option) Tuple2OptionList {
+func MkTuple2OptionList(elements ...Tuple2Option) Tuple2OptionList {
 	xs := NilTuple2Option
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeBoolListList(elements ...BoolList) BoolListList {
+func MkBoolListList(elements ...BoolList) BoolListList {
 	xs := NilBoolList
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeStringListList(elements ...StringList) StringListList {
+func MkStringListList(elements ...StringList) StringListList {
 	xs := NilStringList
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeIntListList(elements ...IntList) IntListList {
+func MkIntListList(elements ...IntList) IntListList {
 	xs := NilIntList
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeInt64ListList(elements ...Int64List) Int64ListList {
+func MkInt64ListList(elements ...Int64List) Int64ListList {
 	xs := NilInt64List
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeByteListList(elements ...ByteList) ByteListList {
+func MkByteListList(elements ...ByteList) ByteListList {
 	xs := NilByteList
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeRuneListList(elements ...RuneList) RuneListList {
+func MkRuneListList(elements ...RuneList) RuneListList {
 	xs := NilRuneList
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat32ListList(elements ...Float32List) Float32ListList {
+func MkFloat32ListList(elements ...Float32List) Float32ListList {
 	xs := NilFloat32List
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeFloat64ListList(elements ...Float64List) Float64ListList {
+func MkFloat64ListList(elements ...Float64List) Float64ListList {
 	xs := NilFloat64List
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeAnyListList(elements ...AnyList) AnyListList {
+func MkAnyListList(elements ...AnyList) AnyListList {
 	xs := NilAnyList
 	for _, e := range elements {
 		xs = xs.Cons(e)
 	}
 	return xs.Reverse()
 }
-func MakeTuple2ListList(elements ...Tuple2List) Tuple2ListList {
+func MkTuple2ListList(elements ...Tuple2List) Tuple2ListList {
 	xs := NilTuple2List
 	for _, e := range elements {
 		xs = xs.Cons(e)

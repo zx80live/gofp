@@ -5,11200 +5,11200 @@ package fp
 
 func (m BoolOption) MapBool(f func(bool) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m BoolOption) MapString(f func(bool) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m BoolOption) MapInt(f func(bool) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m BoolOption) MapInt64(f func(bool) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m BoolOption) MapByte(f func(bool) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m BoolOption) MapRune(f func(bool) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m BoolOption) MapFloat32(f func(bool) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m BoolOption) MapFloat64(f func(bool) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m BoolOption) MapAny(f func(bool) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m BoolOption) MapTuple2(f func(bool) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m BoolOption) MapBoolOption(f func(bool) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m BoolOption) MapStringOption(f func(bool) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m BoolOption) MapIntOption(f func(bool) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m BoolOption) MapInt64Option(f func(bool) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m BoolOption) MapByteOption(f func(bool) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m BoolOption) MapRuneOption(f func(bool) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m BoolOption) MapFloat32Option(f func(bool) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m BoolOption) MapFloat64Option(f func(bool) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m BoolOption) MapAnyOption(f func(bool) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m BoolOption) MapTuple2Option(f func(bool) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m BoolOption) MapBoolArray(f func(bool) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m BoolOption) MapStringArray(f func(bool) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m BoolOption) MapIntArray(f func(bool) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m BoolOption) MapInt64Array(f func(bool) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m BoolOption) MapByteArray(f func(bool) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m BoolOption) MapRuneArray(f func(bool) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m BoolOption) MapFloat32Array(f func(bool) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m BoolOption) MapFloat64Array(f func(bool) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m BoolOption) MapAnyArray(f func(bool) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m BoolOption) MapTuple2Array(f func(bool) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m BoolOption) MapBoolList(f func(bool) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m BoolOption) MapStringList(f func(bool) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m BoolOption) MapIntList(f func(bool) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m BoolOption) MapInt64List(f func(bool) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m BoolOption) MapByteList(f func(bool) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m BoolOption) MapRuneList(f func(bool) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m BoolOption) MapFloat32List(f func(bool) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m BoolOption) MapFloat64List(f func(bool) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m BoolOption) MapAnyList(f func(bool) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m BoolOption) MapTuple2List(f func(bool) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m StringOption) MapBool(f func(string) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m StringOption) MapString(f func(string) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m StringOption) MapInt(f func(string) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m StringOption) MapInt64(f func(string) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m StringOption) MapByte(f func(string) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m StringOption) MapRune(f func(string) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m StringOption) MapFloat32(f func(string) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m StringOption) MapFloat64(f func(string) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m StringOption) MapAny(f func(string) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m StringOption) MapTuple2(f func(string) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m StringOption) MapBoolOption(f func(string) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m StringOption) MapStringOption(f func(string) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m StringOption) MapIntOption(f func(string) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m StringOption) MapInt64Option(f func(string) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m StringOption) MapByteOption(f func(string) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m StringOption) MapRuneOption(f func(string) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m StringOption) MapFloat32Option(f func(string) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m StringOption) MapFloat64Option(f func(string) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m StringOption) MapAnyOption(f func(string) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m StringOption) MapTuple2Option(f func(string) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m StringOption) MapBoolArray(f func(string) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m StringOption) MapStringArray(f func(string) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m StringOption) MapIntArray(f func(string) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m StringOption) MapInt64Array(f func(string) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m StringOption) MapByteArray(f func(string) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m StringOption) MapRuneArray(f func(string) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m StringOption) MapFloat32Array(f func(string) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m StringOption) MapFloat64Array(f func(string) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m StringOption) MapAnyArray(f func(string) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m StringOption) MapTuple2Array(f func(string) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m StringOption) MapBoolList(f func(string) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m StringOption) MapStringList(f func(string) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m StringOption) MapIntList(f func(string) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m StringOption) MapInt64List(f func(string) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m StringOption) MapByteList(f func(string) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m StringOption) MapRuneList(f func(string) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m StringOption) MapFloat32List(f func(string) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m StringOption) MapFloat64List(f func(string) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m StringOption) MapAnyList(f func(string) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m StringOption) MapTuple2List(f func(string) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m IntOption) MapBool(f func(int) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m IntOption) MapString(f func(int) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m IntOption) MapInt(f func(int) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m IntOption) MapInt64(f func(int) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m IntOption) MapByte(f func(int) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m IntOption) MapRune(f func(int) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m IntOption) MapFloat32(f func(int) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m IntOption) MapFloat64(f func(int) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m IntOption) MapAny(f func(int) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m IntOption) MapTuple2(f func(int) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m IntOption) MapBoolOption(f func(int) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m IntOption) MapStringOption(f func(int) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m IntOption) MapIntOption(f func(int) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m IntOption) MapInt64Option(f func(int) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m IntOption) MapByteOption(f func(int) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m IntOption) MapRuneOption(f func(int) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m IntOption) MapFloat32Option(f func(int) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m IntOption) MapFloat64Option(f func(int) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m IntOption) MapAnyOption(f func(int) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m IntOption) MapTuple2Option(f func(int) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m IntOption) MapBoolArray(f func(int) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m IntOption) MapStringArray(f func(int) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m IntOption) MapIntArray(f func(int) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m IntOption) MapInt64Array(f func(int) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m IntOption) MapByteArray(f func(int) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m IntOption) MapRuneArray(f func(int) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m IntOption) MapFloat32Array(f func(int) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m IntOption) MapFloat64Array(f func(int) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m IntOption) MapAnyArray(f func(int) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m IntOption) MapTuple2Array(f func(int) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m IntOption) MapBoolList(f func(int) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m IntOption) MapStringList(f func(int) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m IntOption) MapIntList(f func(int) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m IntOption) MapInt64List(f func(int) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m IntOption) MapByteList(f func(int) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m IntOption) MapRuneList(f func(int) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m IntOption) MapFloat32List(f func(int) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m IntOption) MapFloat64List(f func(int) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m IntOption) MapAnyList(f func(int) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m IntOption) MapTuple2List(f func(int) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Int64Option) MapBool(f func(int64) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Int64Option) MapString(f func(int64) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Int64Option) MapInt(f func(int64) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Int64Option) MapInt64(f func(int64) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Int64Option) MapByte(f func(int64) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Int64Option) MapRune(f func(int64) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Int64Option) MapFloat32(f func(int64) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Int64Option) MapFloat64(f func(int64) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Int64Option) MapAny(f func(int64) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Int64Option) MapTuple2(f func(int64) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Int64Option) MapBoolOption(f func(int64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Int64Option) MapStringOption(f func(int64) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Int64Option) MapIntOption(f func(int64) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Int64Option) MapInt64Option(f func(int64) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Int64Option) MapByteOption(f func(int64) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Int64Option) MapRuneOption(f func(int64) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Int64Option) MapFloat32Option(f func(int64) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Int64Option) MapFloat64Option(f func(int64) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Int64Option) MapAnyOption(f func(int64) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Int64Option) MapTuple2Option(f func(int64) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Int64Option) MapBoolArray(f func(int64) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Int64Option) MapStringArray(f func(int64) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Int64Option) MapIntArray(f func(int64) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Int64Option) MapInt64Array(f func(int64) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Int64Option) MapByteArray(f func(int64) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Int64Option) MapRuneArray(f func(int64) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Int64Option) MapFloat32Array(f func(int64) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Int64Option) MapFloat64Array(f func(int64) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Int64Option) MapAnyArray(f func(int64) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Int64Option) MapTuple2Array(f func(int64) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Int64Option) MapBoolList(f func(int64) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Int64Option) MapStringList(f func(int64) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Int64Option) MapIntList(f func(int64) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Int64Option) MapInt64List(f func(int64) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Int64Option) MapByteList(f func(int64) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Int64Option) MapRuneList(f func(int64) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Int64Option) MapFloat32List(f func(int64) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Int64Option) MapFloat64List(f func(int64) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Int64Option) MapAnyList(f func(int64) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Int64Option) MapTuple2List(f func(int64) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m ByteOption) MapBool(f func(byte) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m ByteOption) MapString(f func(byte) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m ByteOption) MapInt(f func(byte) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m ByteOption) MapInt64(f func(byte) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m ByteOption) MapByte(f func(byte) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m ByteOption) MapRune(f func(byte) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m ByteOption) MapFloat32(f func(byte) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m ByteOption) MapFloat64(f func(byte) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m ByteOption) MapAny(f func(byte) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m ByteOption) MapTuple2(f func(byte) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m ByteOption) MapBoolOption(f func(byte) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m ByteOption) MapStringOption(f func(byte) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m ByteOption) MapIntOption(f func(byte) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m ByteOption) MapInt64Option(f func(byte) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m ByteOption) MapByteOption(f func(byte) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m ByteOption) MapRuneOption(f func(byte) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m ByteOption) MapFloat32Option(f func(byte) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m ByteOption) MapFloat64Option(f func(byte) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m ByteOption) MapAnyOption(f func(byte) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m ByteOption) MapTuple2Option(f func(byte) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m ByteOption) MapBoolArray(f func(byte) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m ByteOption) MapStringArray(f func(byte) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m ByteOption) MapIntArray(f func(byte) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m ByteOption) MapInt64Array(f func(byte) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m ByteOption) MapByteArray(f func(byte) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m ByteOption) MapRuneArray(f func(byte) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m ByteOption) MapFloat32Array(f func(byte) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m ByteOption) MapFloat64Array(f func(byte) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m ByteOption) MapAnyArray(f func(byte) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m ByteOption) MapTuple2Array(f func(byte) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m ByteOption) MapBoolList(f func(byte) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m ByteOption) MapStringList(f func(byte) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m ByteOption) MapIntList(f func(byte) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m ByteOption) MapInt64List(f func(byte) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m ByteOption) MapByteList(f func(byte) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m ByteOption) MapRuneList(f func(byte) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m ByteOption) MapFloat32List(f func(byte) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m ByteOption) MapFloat64List(f func(byte) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m ByteOption) MapAnyList(f func(byte) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m ByteOption) MapTuple2List(f func(byte) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m RuneOption) MapBool(f func(rune) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m RuneOption) MapString(f func(rune) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m RuneOption) MapInt(f func(rune) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m RuneOption) MapInt64(f func(rune) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m RuneOption) MapByte(f func(rune) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m RuneOption) MapRune(f func(rune) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m RuneOption) MapFloat32(f func(rune) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m RuneOption) MapFloat64(f func(rune) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m RuneOption) MapAny(f func(rune) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m RuneOption) MapTuple2(f func(rune) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m RuneOption) MapBoolOption(f func(rune) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m RuneOption) MapStringOption(f func(rune) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m RuneOption) MapIntOption(f func(rune) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m RuneOption) MapInt64Option(f func(rune) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m RuneOption) MapByteOption(f func(rune) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m RuneOption) MapRuneOption(f func(rune) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m RuneOption) MapFloat32Option(f func(rune) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m RuneOption) MapFloat64Option(f func(rune) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m RuneOption) MapAnyOption(f func(rune) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m RuneOption) MapTuple2Option(f func(rune) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m RuneOption) MapBoolArray(f func(rune) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m RuneOption) MapStringArray(f func(rune) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m RuneOption) MapIntArray(f func(rune) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m RuneOption) MapInt64Array(f func(rune) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m RuneOption) MapByteArray(f func(rune) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m RuneOption) MapRuneArray(f func(rune) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m RuneOption) MapFloat32Array(f func(rune) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m RuneOption) MapFloat64Array(f func(rune) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m RuneOption) MapAnyArray(f func(rune) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m RuneOption) MapTuple2Array(f func(rune) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m RuneOption) MapBoolList(f func(rune) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m RuneOption) MapStringList(f func(rune) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m RuneOption) MapIntList(f func(rune) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m RuneOption) MapInt64List(f func(rune) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m RuneOption) MapByteList(f func(rune) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m RuneOption) MapRuneList(f func(rune) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m RuneOption) MapFloat32List(f func(rune) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m RuneOption) MapFloat64List(f func(rune) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m RuneOption) MapAnyList(f func(rune) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m RuneOption) MapTuple2List(f func(rune) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float32Option) MapBool(f func(float32) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float32Option) MapString(f func(float32) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float32Option) MapInt(f func(float32) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float32Option) MapInt64(f func(float32) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float32Option) MapByte(f func(float32) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float32Option) MapRune(f func(float32) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float32Option) MapFloat32(f func(float32) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float32Option) MapFloat64(f func(float32) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float32Option) MapAny(f func(float32) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float32Option) MapTuple2(f func(float32) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float32Option) MapBoolOption(f func(float32) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float32Option) MapStringOption(f func(float32) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float32Option) MapIntOption(f func(float32) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float32Option) MapInt64Option(f func(float32) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float32Option) MapByteOption(f func(float32) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float32Option) MapRuneOption(f func(float32) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float32Option) MapFloat32Option(f func(float32) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float32Option) MapFloat64Option(f func(float32) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float32Option) MapAnyOption(f func(float32) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float32Option) MapTuple2Option(f func(float32) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float32Option) MapBoolArray(f func(float32) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float32Option) MapStringArray(f func(float32) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float32Option) MapIntArray(f func(float32) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float32Option) MapInt64Array(f func(float32) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float32Option) MapByteArray(f func(float32) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float32Option) MapRuneArray(f func(float32) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float32Option) MapFloat32Array(f func(float32) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float32Option) MapFloat64Array(f func(float32) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float32Option) MapAnyArray(f func(float32) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float32Option) MapTuple2Array(f func(float32) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float32Option) MapBoolList(f func(float32) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float32Option) MapStringList(f func(float32) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float32Option) MapIntList(f func(float32) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float32Option) MapInt64List(f func(float32) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float32Option) MapByteList(f func(float32) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float32Option) MapRuneList(f func(float32) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float32Option) MapFloat32List(f func(float32) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float32Option) MapFloat64List(f func(float32) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float32Option) MapAnyList(f func(float32) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float32Option) MapTuple2List(f func(float32) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float64Option) MapBool(f func(float64) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float64Option) MapString(f func(float64) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float64Option) MapInt(f func(float64) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float64Option) MapInt64(f func(float64) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float64Option) MapByte(f func(float64) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float64Option) MapRune(f func(float64) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float64Option) MapFloat32(f func(float64) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float64Option) MapFloat64(f func(float64) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float64Option) MapAny(f func(float64) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float64Option) MapTuple2(f func(float64) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float64Option) MapBoolOption(f func(float64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float64Option) MapStringOption(f func(float64) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float64Option) MapIntOption(f func(float64) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float64Option) MapInt64Option(f func(float64) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float64Option) MapByteOption(f func(float64) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float64Option) MapRuneOption(f func(float64) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float64Option) MapFloat32Option(f func(float64) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float64Option) MapFloat64Option(f func(float64) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float64Option) MapAnyOption(f func(float64) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float64Option) MapTuple2Option(f func(float64) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float64Option) MapBoolArray(f func(float64) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float64Option) MapStringArray(f func(float64) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float64Option) MapIntArray(f func(float64) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float64Option) MapInt64Array(f func(float64) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float64Option) MapByteArray(f func(float64) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float64Option) MapRuneArray(f func(float64) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float64Option) MapFloat32Array(f func(float64) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float64Option) MapFloat64Array(f func(float64) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float64Option) MapAnyArray(f func(float64) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float64Option) MapTuple2Array(f func(float64) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float64Option) MapBoolList(f func(float64) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float64Option) MapStringList(f func(float64) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float64Option) MapIntList(f func(float64) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float64Option) MapInt64List(f func(float64) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float64Option) MapByteList(f func(float64) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float64Option) MapRuneList(f func(float64) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float64Option) MapFloat32List(f func(float64) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float64Option) MapFloat64List(f func(float64) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float64Option) MapAnyList(f func(float64) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float64Option) MapTuple2List(f func(float64) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m AnyOption) MapBool(f func(Any) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m AnyOption) MapString(f func(Any) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m AnyOption) MapInt(f func(Any) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m AnyOption) MapInt64(f func(Any) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m AnyOption) MapByte(f func(Any) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m AnyOption) MapRune(f func(Any) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m AnyOption) MapFloat32(f func(Any) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m AnyOption) MapFloat64(f func(Any) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m AnyOption) MapAny(f func(Any) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m AnyOption) MapTuple2(f func(Any) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m AnyOption) MapBoolOption(f func(Any) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m AnyOption) MapStringOption(f func(Any) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m AnyOption) MapIntOption(f func(Any) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m AnyOption) MapInt64Option(f func(Any) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m AnyOption) MapByteOption(f func(Any) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m AnyOption) MapRuneOption(f func(Any) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m AnyOption) MapFloat32Option(f func(Any) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m AnyOption) MapFloat64Option(f func(Any) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m AnyOption) MapAnyOption(f func(Any) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m AnyOption) MapTuple2Option(f func(Any) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m AnyOption) MapBoolArray(f func(Any) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m AnyOption) MapStringArray(f func(Any) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m AnyOption) MapIntArray(f func(Any) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m AnyOption) MapInt64Array(f func(Any) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m AnyOption) MapByteArray(f func(Any) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m AnyOption) MapRuneArray(f func(Any) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m AnyOption) MapFloat32Array(f func(Any) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m AnyOption) MapFloat64Array(f func(Any) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m AnyOption) MapAnyArray(f func(Any) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m AnyOption) MapTuple2Array(f func(Any) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m AnyOption) MapBoolList(f func(Any) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m AnyOption) MapStringList(f func(Any) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m AnyOption) MapIntList(f func(Any) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m AnyOption) MapInt64List(f func(Any) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m AnyOption) MapByteList(f func(Any) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m AnyOption) MapRuneList(f func(Any) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m AnyOption) MapFloat32List(f func(Any) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m AnyOption) MapFloat64List(f func(Any) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m AnyOption) MapAnyList(f func(Any) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m AnyOption) MapTuple2List(f func(Any) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Tuple2Option) MapBool(f func(Tuple2) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Tuple2Option) MapString(f func(Tuple2) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Tuple2Option) MapInt(f func(Tuple2) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Tuple2Option) MapInt64(f func(Tuple2) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Tuple2Option) MapByte(f func(Tuple2) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Tuple2Option) MapRune(f func(Tuple2) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Tuple2Option) MapFloat32(f func(Tuple2) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Tuple2Option) MapFloat64(f func(Tuple2) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Tuple2Option) MapAny(f func(Tuple2) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Tuple2Option) MapTuple2(f func(Tuple2) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Tuple2Option) MapBoolOption(f func(Tuple2) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Tuple2Option) MapStringOption(f func(Tuple2) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Tuple2Option) MapIntOption(f func(Tuple2) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Tuple2Option) MapInt64Option(f func(Tuple2) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Tuple2Option) MapByteOption(f func(Tuple2) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Tuple2Option) MapRuneOption(f func(Tuple2) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Tuple2Option) MapFloat32Option(f func(Tuple2) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Tuple2Option) MapFloat64Option(f func(Tuple2) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Tuple2Option) MapAnyOption(f func(Tuple2) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Tuple2Option) MapTuple2Option(f func(Tuple2) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Tuple2Option) MapBoolArray(f func(Tuple2) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Tuple2Option) MapStringArray(f func(Tuple2) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Tuple2Option) MapIntArray(f func(Tuple2) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Tuple2Option) MapInt64Array(f func(Tuple2) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Tuple2Option) MapByteArray(f func(Tuple2) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Tuple2Option) MapRuneArray(f func(Tuple2) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Tuple2Option) MapFloat32Array(f func(Tuple2) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Tuple2Option) MapFloat64Array(f func(Tuple2) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Tuple2Option) MapAnyArray(f func(Tuple2) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Tuple2Option) MapTuple2Array(f func(Tuple2) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Tuple2Option) MapBoolList(f func(Tuple2) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Tuple2Option) MapStringList(f func(Tuple2) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Tuple2Option) MapIntList(f func(Tuple2) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Tuple2Option) MapInt64List(f func(Tuple2) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Tuple2Option) MapByteList(f func(Tuple2) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Tuple2Option) MapRuneList(f func(Tuple2) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Tuple2Option) MapFloat32List(f func(Tuple2) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Tuple2Option) MapFloat64List(f func(Tuple2) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Tuple2Option) MapAnyList(f func(Tuple2) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Tuple2Option) MapTuple2List(f func(Tuple2) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m BoolOptionOption) MapBool(f func(BoolOption) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m BoolOptionOption) MapString(f func(BoolOption) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m BoolOptionOption) MapInt(f func(BoolOption) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m BoolOptionOption) MapInt64(f func(BoolOption) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m BoolOptionOption) MapByte(f func(BoolOption) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m BoolOptionOption) MapRune(f func(BoolOption) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m BoolOptionOption) MapFloat32(f func(BoolOption) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m BoolOptionOption) MapFloat64(f func(BoolOption) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m BoolOptionOption) MapAny(f func(BoolOption) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m BoolOptionOption) MapTuple2(f func(BoolOption) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m BoolOptionOption) MapBoolOption(f func(BoolOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m BoolOptionOption) MapStringOption(f func(BoolOption) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m BoolOptionOption) MapIntOption(f func(BoolOption) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m BoolOptionOption) MapInt64Option(f func(BoolOption) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m BoolOptionOption) MapByteOption(f func(BoolOption) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m BoolOptionOption) MapRuneOption(f func(BoolOption) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m BoolOptionOption) MapFloat32Option(f func(BoolOption) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m BoolOptionOption) MapFloat64Option(f func(BoolOption) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m BoolOptionOption) MapAnyOption(f func(BoolOption) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m BoolOptionOption) MapTuple2Option(f func(BoolOption) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m BoolOptionOption) MapBoolArray(f func(BoolOption) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m BoolOptionOption) MapStringArray(f func(BoolOption) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m BoolOptionOption) MapIntArray(f func(BoolOption) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m BoolOptionOption) MapInt64Array(f func(BoolOption) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m BoolOptionOption) MapByteArray(f func(BoolOption) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m BoolOptionOption) MapRuneArray(f func(BoolOption) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m BoolOptionOption) MapFloat32Array(f func(BoolOption) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m BoolOptionOption) MapFloat64Array(f func(BoolOption) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m BoolOptionOption) MapAnyArray(f func(BoolOption) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m BoolOptionOption) MapTuple2Array(f func(BoolOption) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m BoolOptionOption) MapBoolList(f func(BoolOption) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m BoolOptionOption) MapStringList(f func(BoolOption) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m BoolOptionOption) MapIntList(f func(BoolOption) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m BoolOptionOption) MapInt64List(f func(BoolOption) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m BoolOptionOption) MapByteList(f func(BoolOption) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m BoolOptionOption) MapRuneList(f func(BoolOption) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m BoolOptionOption) MapFloat32List(f func(BoolOption) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m BoolOptionOption) MapFloat64List(f func(BoolOption) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m BoolOptionOption) MapAnyList(f func(BoolOption) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m BoolOptionOption) MapTuple2List(f func(BoolOption) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m StringOptionOption) MapBool(f func(StringOption) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m StringOptionOption) MapString(f func(StringOption) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m StringOptionOption) MapInt(f func(StringOption) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m StringOptionOption) MapInt64(f func(StringOption) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m StringOptionOption) MapByte(f func(StringOption) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m StringOptionOption) MapRune(f func(StringOption) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m StringOptionOption) MapFloat32(f func(StringOption) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m StringOptionOption) MapFloat64(f func(StringOption) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m StringOptionOption) MapAny(f func(StringOption) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m StringOptionOption) MapTuple2(f func(StringOption) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m StringOptionOption) MapBoolOption(f func(StringOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m StringOptionOption) MapStringOption(f func(StringOption) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m StringOptionOption) MapIntOption(f func(StringOption) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m StringOptionOption) MapInt64Option(f func(StringOption) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m StringOptionOption) MapByteOption(f func(StringOption) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m StringOptionOption) MapRuneOption(f func(StringOption) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m StringOptionOption) MapFloat32Option(f func(StringOption) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m StringOptionOption) MapFloat64Option(f func(StringOption) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m StringOptionOption) MapAnyOption(f func(StringOption) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m StringOptionOption) MapTuple2Option(f func(StringOption) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m StringOptionOption) MapBoolArray(f func(StringOption) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m StringOptionOption) MapStringArray(f func(StringOption) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m StringOptionOption) MapIntArray(f func(StringOption) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m StringOptionOption) MapInt64Array(f func(StringOption) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m StringOptionOption) MapByteArray(f func(StringOption) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m StringOptionOption) MapRuneArray(f func(StringOption) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m StringOptionOption) MapFloat32Array(f func(StringOption) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m StringOptionOption) MapFloat64Array(f func(StringOption) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m StringOptionOption) MapAnyArray(f func(StringOption) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m StringOptionOption) MapTuple2Array(f func(StringOption) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m StringOptionOption) MapBoolList(f func(StringOption) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m StringOptionOption) MapStringList(f func(StringOption) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m StringOptionOption) MapIntList(f func(StringOption) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m StringOptionOption) MapInt64List(f func(StringOption) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m StringOptionOption) MapByteList(f func(StringOption) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m StringOptionOption) MapRuneList(f func(StringOption) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m StringOptionOption) MapFloat32List(f func(StringOption) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m StringOptionOption) MapFloat64List(f func(StringOption) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m StringOptionOption) MapAnyList(f func(StringOption) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m StringOptionOption) MapTuple2List(f func(StringOption) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m IntOptionOption) MapBool(f func(IntOption) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m IntOptionOption) MapString(f func(IntOption) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m IntOptionOption) MapInt(f func(IntOption) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m IntOptionOption) MapInt64(f func(IntOption) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m IntOptionOption) MapByte(f func(IntOption) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m IntOptionOption) MapRune(f func(IntOption) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m IntOptionOption) MapFloat32(f func(IntOption) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m IntOptionOption) MapFloat64(f func(IntOption) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m IntOptionOption) MapAny(f func(IntOption) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m IntOptionOption) MapTuple2(f func(IntOption) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m IntOptionOption) MapBoolOption(f func(IntOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m IntOptionOption) MapStringOption(f func(IntOption) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m IntOptionOption) MapIntOption(f func(IntOption) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m IntOptionOption) MapInt64Option(f func(IntOption) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m IntOptionOption) MapByteOption(f func(IntOption) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m IntOptionOption) MapRuneOption(f func(IntOption) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m IntOptionOption) MapFloat32Option(f func(IntOption) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m IntOptionOption) MapFloat64Option(f func(IntOption) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m IntOptionOption) MapAnyOption(f func(IntOption) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m IntOptionOption) MapTuple2Option(f func(IntOption) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m IntOptionOption) MapBoolArray(f func(IntOption) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m IntOptionOption) MapStringArray(f func(IntOption) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m IntOptionOption) MapIntArray(f func(IntOption) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m IntOptionOption) MapInt64Array(f func(IntOption) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m IntOptionOption) MapByteArray(f func(IntOption) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m IntOptionOption) MapRuneArray(f func(IntOption) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m IntOptionOption) MapFloat32Array(f func(IntOption) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m IntOptionOption) MapFloat64Array(f func(IntOption) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m IntOptionOption) MapAnyArray(f func(IntOption) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m IntOptionOption) MapTuple2Array(f func(IntOption) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m IntOptionOption) MapBoolList(f func(IntOption) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m IntOptionOption) MapStringList(f func(IntOption) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m IntOptionOption) MapIntList(f func(IntOption) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m IntOptionOption) MapInt64List(f func(IntOption) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m IntOptionOption) MapByteList(f func(IntOption) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m IntOptionOption) MapRuneList(f func(IntOption) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m IntOptionOption) MapFloat32List(f func(IntOption) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m IntOptionOption) MapFloat64List(f func(IntOption) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m IntOptionOption) MapAnyList(f func(IntOption) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m IntOptionOption) MapTuple2List(f func(IntOption) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Int64OptionOption) MapBool(f func(Int64Option) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Int64OptionOption) MapString(f func(Int64Option) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Int64OptionOption) MapInt(f func(Int64Option) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Int64OptionOption) MapInt64(f func(Int64Option) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Int64OptionOption) MapByte(f func(Int64Option) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Int64OptionOption) MapRune(f func(Int64Option) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Int64OptionOption) MapFloat32(f func(Int64Option) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Int64OptionOption) MapFloat64(f func(Int64Option) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Int64OptionOption) MapAny(f func(Int64Option) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Int64OptionOption) MapTuple2(f func(Int64Option) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Int64OptionOption) MapBoolOption(f func(Int64Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Int64OptionOption) MapStringOption(f func(Int64Option) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Int64OptionOption) MapIntOption(f func(Int64Option) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Int64OptionOption) MapInt64Option(f func(Int64Option) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Int64OptionOption) MapByteOption(f func(Int64Option) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Int64OptionOption) MapRuneOption(f func(Int64Option) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Int64OptionOption) MapFloat32Option(f func(Int64Option) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Int64OptionOption) MapFloat64Option(f func(Int64Option) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Int64OptionOption) MapAnyOption(f func(Int64Option) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Int64OptionOption) MapTuple2Option(f func(Int64Option) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Int64OptionOption) MapBoolArray(f func(Int64Option) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Int64OptionOption) MapStringArray(f func(Int64Option) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Int64OptionOption) MapIntArray(f func(Int64Option) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Int64OptionOption) MapInt64Array(f func(Int64Option) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Int64OptionOption) MapByteArray(f func(Int64Option) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Int64OptionOption) MapRuneArray(f func(Int64Option) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Int64OptionOption) MapFloat32Array(f func(Int64Option) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Int64OptionOption) MapFloat64Array(f func(Int64Option) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Int64OptionOption) MapAnyArray(f func(Int64Option) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Int64OptionOption) MapTuple2Array(f func(Int64Option) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Int64OptionOption) MapBoolList(f func(Int64Option) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Int64OptionOption) MapStringList(f func(Int64Option) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Int64OptionOption) MapIntList(f func(Int64Option) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Int64OptionOption) MapInt64List(f func(Int64Option) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Int64OptionOption) MapByteList(f func(Int64Option) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Int64OptionOption) MapRuneList(f func(Int64Option) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Int64OptionOption) MapFloat32List(f func(Int64Option) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Int64OptionOption) MapFloat64List(f func(Int64Option) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Int64OptionOption) MapAnyList(f func(Int64Option) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Int64OptionOption) MapTuple2List(f func(Int64Option) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m ByteOptionOption) MapBool(f func(ByteOption) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m ByteOptionOption) MapString(f func(ByteOption) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m ByteOptionOption) MapInt(f func(ByteOption) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m ByteOptionOption) MapInt64(f func(ByteOption) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m ByteOptionOption) MapByte(f func(ByteOption) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m ByteOptionOption) MapRune(f func(ByteOption) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m ByteOptionOption) MapFloat32(f func(ByteOption) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m ByteOptionOption) MapFloat64(f func(ByteOption) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m ByteOptionOption) MapAny(f func(ByteOption) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m ByteOptionOption) MapTuple2(f func(ByteOption) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m ByteOptionOption) MapBoolOption(f func(ByteOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m ByteOptionOption) MapStringOption(f func(ByteOption) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m ByteOptionOption) MapIntOption(f func(ByteOption) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m ByteOptionOption) MapInt64Option(f func(ByteOption) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m ByteOptionOption) MapByteOption(f func(ByteOption) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m ByteOptionOption) MapRuneOption(f func(ByteOption) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m ByteOptionOption) MapFloat32Option(f func(ByteOption) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m ByteOptionOption) MapFloat64Option(f func(ByteOption) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m ByteOptionOption) MapAnyOption(f func(ByteOption) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m ByteOptionOption) MapTuple2Option(f func(ByteOption) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m ByteOptionOption) MapBoolArray(f func(ByteOption) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m ByteOptionOption) MapStringArray(f func(ByteOption) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m ByteOptionOption) MapIntArray(f func(ByteOption) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m ByteOptionOption) MapInt64Array(f func(ByteOption) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m ByteOptionOption) MapByteArray(f func(ByteOption) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m ByteOptionOption) MapRuneArray(f func(ByteOption) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m ByteOptionOption) MapFloat32Array(f func(ByteOption) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m ByteOptionOption) MapFloat64Array(f func(ByteOption) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m ByteOptionOption) MapAnyArray(f func(ByteOption) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m ByteOptionOption) MapTuple2Array(f func(ByteOption) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m ByteOptionOption) MapBoolList(f func(ByteOption) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m ByteOptionOption) MapStringList(f func(ByteOption) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m ByteOptionOption) MapIntList(f func(ByteOption) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m ByteOptionOption) MapInt64List(f func(ByteOption) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m ByteOptionOption) MapByteList(f func(ByteOption) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m ByteOptionOption) MapRuneList(f func(ByteOption) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m ByteOptionOption) MapFloat32List(f func(ByteOption) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m ByteOptionOption) MapFloat64List(f func(ByteOption) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m ByteOptionOption) MapAnyList(f func(ByteOption) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m ByteOptionOption) MapTuple2List(f func(ByteOption) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m RuneOptionOption) MapBool(f func(RuneOption) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m RuneOptionOption) MapString(f func(RuneOption) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m RuneOptionOption) MapInt(f func(RuneOption) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m RuneOptionOption) MapInt64(f func(RuneOption) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m RuneOptionOption) MapByte(f func(RuneOption) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m RuneOptionOption) MapRune(f func(RuneOption) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m RuneOptionOption) MapFloat32(f func(RuneOption) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m RuneOptionOption) MapFloat64(f func(RuneOption) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m RuneOptionOption) MapAny(f func(RuneOption) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m RuneOptionOption) MapTuple2(f func(RuneOption) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m RuneOptionOption) MapBoolOption(f func(RuneOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m RuneOptionOption) MapStringOption(f func(RuneOption) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m RuneOptionOption) MapIntOption(f func(RuneOption) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m RuneOptionOption) MapInt64Option(f func(RuneOption) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m RuneOptionOption) MapByteOption(f func(RuneOption) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m RuneOptionOption) MapRuneOption(f func(RuneOption) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m RuneOptionOption) MapFloat32Option(f func(RuneOption) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m RuneOptionOption) MapFloat64Option(f func(RuneOption) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m RuneOptionOption) MapAnyOption(f func(RuneOption) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m RuneOptionOption) MapTuple2Option(f func(RuneOption) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m RuneOptionOption) MapBoolArray(f func(RuneOption) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m RuneOptionOption) MapStringArray(f func(RuneOption) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m RuneOptionOption) MapIntArray(f func(RuneOption) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m RuneOptionOption) MapInt64Array(f func(RuneOption) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m RuneOptionOption) MapByteArray(f func(RuneOption) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m RuneOptionOption) MapRuneArray(f func(RuneOption) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m RuneOptionOption) MapFloat32Array(f func(RuneOption) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m RuneOptionOption) MapFloat64Array(f func(RuneOption) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m RuneOptionOption) MapAnyArray(f func(RuneOption) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m RuneOptionOption) MapTuple2Array(f func(RuneOption) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m RuneOptionOption) MapBoolList(f func(RuneOption) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m RuneOptionOption) MapStringList(f func(RuneOption) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m RuneOptionOption) MapIntList(f func(RuneOption) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m RuneOptionOption) MapInt64List(f func(RuneOption) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m RuneOptionOption) MapByteList(f func(RuneOption) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m RuneOptionOption) MapRuneList(f func(RuneOption) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m RuneOptionOption) MapFloat32List(f func(RuneOption) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m RuneOptionOption) MapFloat64List(f func(RuneOption) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m RuneOptionOption) MapAnyList(f func(RuneOption) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m RuneOptionOption) MapTuple2List(f func(RuneOption) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float32OptionOption) MapBool(f func(Float32Option) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float32OptionOption) MapString(f func(Float32Option) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float32OptionOption) MapInt(f func(Float32Option) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float32OptionOption) MapInt64(f func(Float32Option) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float32OptionOption) MapByte(f func(Float32Option) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float32OptionOption) MapRune(f func(Float32Option) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float32OptionOption) MapFloat32(f func(Float32Option) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float32OptionOption) MapFloat64(f func(Float32Option) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float32OptionOption) MapAny(f func(Float32Option) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float32OptionOption) MapTuple2(f func(Float32Option) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float32OptionOption) MapBoolOption(f func(Float32Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float32OptionOption) MapStringOption(f func(Float32Option) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float32OptionOption) MapIntOption(f func(Float32Option) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float32OptionOption) MapInt64Option(f func(Float32Option) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float32OptionOption) MapByteOption(f func(Float32Option) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float32OptionOption) MapRuneOption(f func(Float32Option) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float32OptionOption) MapFloat32Option(f func(Float32Option) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float32OptionOption) MapFloat64Option(f func(Float32Option) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float32OptionOption) MapAnyOption(f func(Float32Option) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float32OptionOption) MapTuple2Option(f func(Float32Option) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float32OptionOption) MapBoolArray(f func(Float32Option) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float32OptionOption) MapStringArray(f func(Float32Option) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float32OptionOption) MapIntArray(f func(Float32Option) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float32OptionOption) MapInt64Array(f func(Float32Option) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float32OptionOption) MapByteArray(f func(Float32Option) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float32OptionOption) MapRuneArray(f func(Float32Option) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float32OptionOption) MapFloat32Array(f func(Float32Option) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float32OptionOption) MapFloat64Array(f func(Float32Option) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float32OptionOption) MapAnyArray(f func(Float32Option) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float32OptionOption) MapTuple2Array(f func(Float32Option) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float32OptionOption) MapBoolList(f func(Float32Option) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float32OptionOption) MapStringList(f func(Float32Option) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float32OptionOption) MapIntList(f func(Float32Option) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float32OptionOption) MapInt64List(f func(Float32Option) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float32OptionOption) MapByteList(f func(Float32Option) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float32OptionOption) MapRuneList(f func(Float32Option) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float32OptionOption) MapFloat32List(f func(Float32Option) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float32OptionOption) MapFloat64List(f func(Float32Option) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float32OptionOption) MapAnyList(f func(Float32Option) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float32OptionOption) MapTuple2List(f func(Float32Option) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float64OptionOption) MapBool(f func(Float64Option) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float64OptionOption) MapString(f func(Float64Option) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float64OptionOption) MapInt(f func(Float64Option) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float64OptionOption) MapInt64(f func(Float64Option) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float64OptionOption) MapByte(f func(Float64Option) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float64OptionOption) MapRune(f func(Float64Option) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float64OptionOption) MapFloat32(f func(Float64Option) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float64OptionOption) MapFloat64(f func(Float64Option) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float64OptionOption) MapAny(f func(Float64Option) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float64OptionOption) MapTuple2(f func(Float64Option) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float64OptionOption) MapBoolOption(f func(Float64Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float64OptionOption) MapStringOption(f func(Float64Option) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float64OptionOption) MapIntOption(f func(Float64Option) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float64OptionOption) MapInt64Option(f func(Float64Option) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float64OptionOption) MapByteOption(f func(Float64Option) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float64OptionOption) MapRuneOption(f func(Float64Option) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float64OptionOption) MapFloat32Option(f func(Float64Option) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float64OptionOption) MapFloat64Option(f func(Float64Option) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float64OptionOption) MapAnyOption(f func(Float64Option) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float64OptionOption) MapTuple2Option(f func(Float64Option) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float64OptionOption) MapBoolArray(f func(Float64Option) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float64OptionOption) MapStringArray(f func(Float64Option) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float64OptionOption) MapIntArray(f func(Float64Option) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float64OptionOption) MapInt64Array(f func(Float64Option) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float64OptionOption) MapByteArray(f func(Float64Option) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float64OptionOption) MapRuneArray(f func(Float64Option) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float64OptionOption) MapFloat32Array(f func(Float64Option) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float64OptionOption) MapFloat64Array(f func(Float64Option) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float64OptionOption) MapAnyArray(f func(Float64Option) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float64OptionOption) MapTuple2Array(f func(Float64Option) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float64OptionOption) MapBoolList(f func(Float64Option) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float64OptionOption) MapStringList(f func(Float64Option) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float64OptionOption) MapIntList(f func(Float64Option) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float64OptionOption) MapInt64List(f func(Float64Option) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float64OptionOption) MapByteList(f func(Float64Option) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float64OptionOption) MapRuneList(f func(Float64Option) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float64OptionOption) MapFloat32List(f func(Float64Option) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float64OptionOption) MapFloat64List(f func(Float64Option) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float64OptionOption) MapAnyList(f func(Float64Option) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float64OptionOption) MapTuple2List(f func(Float64Option) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m AnyOptionOption) MapBool(f func(AnyOption) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m AnyOptionOption) MapString(f func(AnyOption) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m AnyOptionOption) MapInt(f func(AnyOption) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m AnyOptionOption) MapInt64(f func(AnyOption) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m AnyOptionOption) MapByte(f func(AnyOption) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m AnyOptionOption) MapRune(f func(AnyOption) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m AnyOptionOption) MapFloat32(f func(AnyOption) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m AnyOptionOption) MapFloat64(f func(AnyOption) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m AnyOptionOption) MapAny(f func(AnyOption) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m AnyOptionOption) MapTuple2(f func(AnyOption) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m AnyOptionOption) MapBoolOption(f func(AnyOption) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m AnyOptionOption) MapStringOption(f func(AnyOption) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m AnyOptionOption) MapIntOption(f func(AnyOption) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m AnyOptionOption) MapInt64Option(f func(AnyOption) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m AnyOptionOption) MapByteOption(f func(AnyOption) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m AnyOptionOption) MapRuneOption(f func(AnyOption) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m AnyOptionOption) MapFloat32Option(f func(AnyOption) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m AnyOptionOption) MapFloat64Option(f func(AnyOption) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m AnyOptionOption) MapAnyOption(f func(AnyOption) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m AnyOptionOption) MapTuple2Option(f func(AnyOption) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m AnyOptionOption) MapBoolArray(f func(AnyOption) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m AnyOptionOption) MapStringArray(f func(AnyOption) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m AnyOptionOption) MapIntArray(f func(AnyOption) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m AnyOptionOption) MapInt64Array(f func(AnyOption) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m AnyOptionOption) MapByteArray(f func(AnyOption) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m AnyOptionOption) MapRuneArray(f func(AnyOption) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m AnyOptionOption) MapFloat32Array(f func(AnyOption) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m AnyOptionOption) MapFloat64Array(f func(AnyOption) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m AnyOptionOption) MapAnyArray(f func(AnyOption) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m AnyOptionOption) MapTuple2Array(f func(AnyOption) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m AnyOptionOption) MapBoolList(f func(AnyOption) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m AnyOptionOption) MapStringList(f func(AnyOption) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m AnyOptionOption) MapIntList(f func(AnyOption) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m AnyOptionOption) MapInt64List(f func(AnyOption) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m AnyOptionOption) MapByteList(f func(AnyOption) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m AnyOptionOption) MapRuneList(f func(AnyOption) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m AnyOptionOption) MapFloat32List(f func(AnyOption) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m AnyOptionOption) MapFloat64List(f func(AnyOption) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m AnyOptionOption) MapAnyList(f func(AnyOption) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m AnyOptionOption) MapTuple2List(f func(AnyOption) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Tuple2OptionOption) MapBool(f func(Tuple2Option) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Tuple2OptionOption) MapString(f func(Tuple2Option) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Tuple2OptionOption) MapInt(f func(Tuple2Option) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Tuple2OptionOption) MapInt64(f func(Tuple2Option) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Tuple2OptionOption) MapByte(f func(Tuple2Option) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Tuple2OptionOption) MapRune(f func(Tuple2Option) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Tuple2OptionOption) MapFloat32(f func(Tuple2Option) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Tuple2OptionOption) MapFloat64(f func(Tuple2Option) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Tuple2OptionOption) MapAny(f func(Tuple2Option) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Tuple2OptionOption) MapTuple2(f func(Tuple2Option) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Tuple2OptionOption) MapBoolOption(f func(Tuple2Option) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Tuple2OptionOption) MapStringOption(f func(Tuple2Option) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Tuple2OptionOption) MapIntOption(f func(Tuple2Option) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Tuple2OptionOption) MapInt64Option(f func(Tuple2Option) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Tuple2OptionOption) MapByteOption(f func(Tuple2Option) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Tuple2OptionOption) MapRuneOption(f func(Tuple2Option) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Tuple2OptionOption) MapFloat32Option(f func(Tuple2Option) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Tuple2OptionOption) MapFloat64Option(f func(Tuple2Option) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Tuple2OptionOption) MapAnyOption(f func(Tuple2Option) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Tuple2OptionOption) MapTuple2Option(f func(Tuple2Option) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Tuple2OptionOption) MapBoolArray(f func(Tuple2Option) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Tuple2OptionOption) MapStringArray(f func(Tuple2Option) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Tuple2OptionOption) MapIntArray(f func(Tuple2Option) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Tuple2OptionOption) MapInt64Array(f func(Tuple2Option) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Tuple2OptionOption) MapByteArray(f func(Tuple2Option) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Tuple2OptionOption) MapRuneArray(f func(Tuple2Option) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Tuple2OptionOption) MapFloat32Array(f func(Tuple2Option) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Tuple2OptionOption) MapFloat64Array(f func(Tuple2Option) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Tuple2OptionOption) MapAnyArray(f func(Tuple2Option) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Tuple2OptionOption) MapTuple2Array(f func(Tuple2Option) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Tuple2OptionOption) MapBoolList(f func(Tuple2Option) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Tuple2OptionOption) MapStringList(f func(Tuple2Option) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Tuple2OptionOption) MapIntList(f func(Tuple2Option) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Tuple2OptionOption) MapInt64List(f func(Tuple2Option) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Tuple2OptionOption) MapByteList(f func(Tuple2Option) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Tuple2OptionOption) MapRuneList(f func(Tuple2Option) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Tuple2OptionOption) MapFloat32List(f func(Tuple2Option) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Tuple2OptionOption) MapFloat64List(f func(Tuple2Option) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Tuple2OptionOption) MapAnyList(f func(Tuple2Option) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Tuple2OptionOption) MapTuple2List(f func(Tuple2Option) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m BoolArrayOption) MapBool(f func([]bool) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m BoolArrayOption) MapString(f func([]bool) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m BoolArrayOption) MapInt(f func([]bool) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m BoolArrayOption) MapInt64(f func([]bool) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m BoolArrayOption) MapByte(f func([]bool) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m BoolArrayOption) MapRune(f func([]bool) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m BoolArrayOption) MapFloat32(f func([]bool) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m BoolArrayOption) MapFloat64(f func([]bool) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m BoolArrayOption) MapAny(f func([]bool) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m BoolArrayOption) MapTuple2(f func([]bool) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m BoolArrayOption) MapBoolOption(f func([]bool) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m BoolArrayOption) MapStringOption(f func([]bool) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m BoolArrayOption) MapIntOption(f func([]bool) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m BoolArrayOption) MapInt64Option(f func([]bool) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m BoolArrayOption) MapByteOption(f func([]bool) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m BoolArrayOption) MapRuneOption(f func([]bool) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m BoolArrayOption) MapFloat32Option(f func([]bool) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m BoolArrayOption) MapFloat64Option(f func([]bool) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m BoolArrayOption) MapAnyOption(f func([]bool) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m BoolArrayOption) MapTuple2Option(f func([]bool) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m BoolArrayOption) MapBoolArray(f func([]bool) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m BoolArrayOption) MapStringArray(f func([]bool) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m BoolArrayOption) MapIntArray(f func([]bool) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m BoolArrayOption) MapInt64Array(f func([]bool) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m BoolArrayOption) MapByteArray(f func([]bool) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m BoolArrayOption) MapRuneArray(f func([]bool) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m BoolArrayOption) MapFloat32Array(f func([]bool) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m BoolArrayOption) MapFloat64Array(f func([]bool) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m BoolArrayOption) MapAnyArray(f func([]bool) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m BoolArrayOption) MapTuple2Array(f func([]bool) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m BoolArrayOption) MapBoolList(f func([]bool) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m BoolArrayOption) MapStringList(f func([]bool) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m BoolArrayOption) MapIntList(f func([]bool) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m BoolArrayOption) MapInt64List(f func([]bool) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m BoolArrayOption) MapByteList(f func([]bool) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m BoolArrayOption) MapRuneList(f func([]bool) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m BoolArrayOption) MapFloat32List(f func([]bool) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m BoolArrayOption) MapFloat64List(f func([]bool) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m BoolArrayOption) MapAnyList(f func([]bool) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m BoolArrayOption) MapTuple2List(f func([]bool) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m StringArrayOption) MapBool(f func([]string) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m StringArrayOption) MapString(f func([]string) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m StringArrayOption) MapInt(f func([]string) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m StringArrayOption) MapInt64(f func([]string) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m StringArrayOption) MapByte(f func([]string) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m StringArrayOption) MapRune(f func([]string) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m StringArrayOption) MapFloat32(f func([]string) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m StringArrayOption) MapFloat64(f func([]string) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m StringArrayOption) MapAny(f func([]string) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m StringArrayOption) MapTuple2(f func([]string) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m StringArrayOption) MapBoolOption(f func([]string) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m StringArrayOption) MapStringOption(f func([]string) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m StringArrayOption) MapIntOption(f func([]string) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m StringArrayOption) MapInt64Option(f func([]string) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m StringArrayOption) MapByteOption(f func([]string) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m StringArrayOption) MapRuneOption(f func([]string) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m StringArrayOption) MapFloat32Option(f func([]string) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m StringArrayOption) MapFloat64Option(f func([]string) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m StringArrayOption) MapAnyOption(f func([]string) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m StringArrayOption) MapTuple2Option(f func([]string) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m StringArrayOption) MapBoolArray(f func([]string) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m StringArrayOption) MapStringArray(f func([]string) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m StringArrayOption) MapIntArray(f func([]string) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m StringArrayOption) MapInt64Array(f func([]string) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m StringArrayOption) MapByteArray(f func([]string) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m StringArrayOption) MapRuneArray(f func([]string) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m StringArrayOption) MapFloat32Array(f func([]string) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m StringArrayOption) MapFloat64Array(f func([]string) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m StringArrayOption) MapAnyArray(f func([]string) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m StringArrayOption) MapTuple2Array(f func([]string) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m StringArrayOption) MapBoolList(f func([]string) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m StringArrayOption) MapStringList(f func([]string) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m StringArrayOption) MapIntList(f func([]string) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m StringArrayOption) MapInt64List(f func([]string) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m StringArrayOption) MapByteList(f func([]string) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m StringArrayOption) MapRuneList(f func([]string) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m StringArrayOption) MapFloat32List(f func([]string) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m StringArrayOption) MapFloat64List(f func([]string) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m StringArrayOption) MapAnyList(f func([]string) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m StringArrayOption) MapTuple2List(f func([]string) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m IntArrayOption) MapBool(f func([]int) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m IntArrayOption) MapString(f func([]int) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m IntArrayOption) MapInt(f func([]int) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m IntArrayOption) MapInt64(f func([]int) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m IntArrayOption) MapByte(f func([]int) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m IntArrayOption) MapRune(f func([]int) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m IntArrayOption) MapFloat32(f func([]int) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m IntArrayOption) MapFloat64(f func([]int) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m IntArrayOption) MapAny(f func([]int) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m IntArrayOption) MapTuple2(f func([]int) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m IntArrayOption) MapBoolOption(f func([]int) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m IntArrayOption) MapStringOption(f func([]int) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m IntArrayOption) MapIntOption(f func([]int) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m IntArrayOption) MapInt64Option(f func([]int) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m IntArrayOption) MapByteOption(f func([]int) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m IntArrayOption) MapRuneOption(f func([]int) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m IntArrayOption) MapFloat32Option(f func([]int) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m IntArrayOption) MapFloat64Option(f func([]int) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m IntArrayOption) MapAnyOption(f func([]int) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m IntArrayOption) MapTuple2Option(f func([]int) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m IntArrayOption) MapBoolArray(f func([]int) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m IntArrayOption) MapStringArray(f func([]int) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m IntArrayOption) MapIntArray(f func([]int) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m IntArrayOption) MapInt64Array(f func([]int) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m IntArrayOption) MapByteArray(f func([]int) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m IntArrayOption) MapRuneArray(f func([]int) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m IntArrayOption) MapFloat32Array(f func([]int) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m IntArrayOption) MapFloat64Array(f func([]int) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m IntArrayOption) MapAnyArray(f func([]int) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m IntArrayOption) MapTuple2Array(f func([]int) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m IntArrayOption) MapBoolList(f func([]int) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m IntArrayOption) MapStringList(f func([]int) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m IntArrayOption) MapIntList(f func([]int) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m IntArrayOption) MapInt64List(f func([]int) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m IntArrayOption) MapByteList(f func([]int) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m IntArrayOption) MapRuneList(f func([]int) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m IntArrayOption) MapFloat32List(f func([]int) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m IntArrayOption) MapFloat64List(f func([]int) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m IntArrayOption) MapAnyList(f func([]int) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m IntArrayOption) MapTuple2List(f func([]int) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Int64ArrayOption) MapBool(f func([]int64) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Int64ArrayOption) MapString(f func([]int64) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Int64ArrayOption) MapInt(f func([]int64) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Int64ArrayOption) MapInt64(f func([]int64) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Int64ArrayOption) MapByte(f func([]int64) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Int64ArrayOption) MapRune(f func([]int64) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Int64ArrayOption) MapFloat32(f func([]int64) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Int64ArrayOption) MapFloat64(f func([]int64) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Int64ArrayOption) MapAny(f func([]int64) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Int64ArrayOption) MapTuple2(f func([]int64) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Int64ArrayOption) MapBoolOption(f func([]int64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Int64ArrayOption) MapStringOption(f func([]int64) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Int64ArrayOption) MapIntOption(f func([]int64) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Int64ArrayOption) MapInt64Option(f func([]int64) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Int64ArrayOption) MapByteOption(f func([]int64) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Int64ArrayOption) MapRuneOption(f func([]int64) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Int64ArrayOption) MapFloat32Option(f func([]int64) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Int64ArrayOption) MapFloat64Option(f func([]int64) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Int64ArrayOption) MapAnyOption(f func([]int64) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Int64ArrayOption) MapTuple2Option(f func([]int64) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Int64ArrayOption) MapBoolArray(f func([]int64) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Int64ArrayOption) MapStringArray(f func([]int64) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Int64ArrayOption) MapIntArray(f func([]int64) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Int64ArrayOption) MapInt64Array(f func([]int64) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Int64ArrayOption) MapByteArray(f func([]int64) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Int64ArrayOption) MapRuneArray(f func([]int64) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Int64ArrayOption) MapFloat32Array(f func([]int64) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Int64ArrayOption) MapFloat64Array(f func([]int64) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Int64ArrayOption) MapAnyArray(f func([]int64) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Int64ArrayOption) MapTuple2Array(f func([]int64) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Int64ArrayOption) MapBoolList(f func([]int64) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Int64ArrayOption) MapStringList(f func([]int64) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Int64ArrayOption) MapIntList(f func([]int64) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Int64ArrayOption) MapInt64List(f func([]int64) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Int64ArrayOption) MapByteList(f func([]int64) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Int64ArrayOption) MapRuneList(f func([]int64) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Int64ArrayOption) MapFloat32List(f func([]int64) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Int64ArrayOption) MapFloat64List(f func([]int64) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Int64ArrayOption) MapAnyList(f func([]int64) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Int64ArrayOption) MapTuple2List(f func([]int64) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m ByteArrayOption) MapBool(f func([]byte) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m ByteArrayOption) MapString(f func([]byte) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m ByteArrayOption) MapInt(f func([]byte) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m ByteArrayOption) MapInt64(f func([]byte) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m ByteArrayOption) MapByte(f func([]byte) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m ByteArrayOption) MapRune(f func([]byte) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m ByteArrayOption) MapFloat32(f func([]byte) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m ByteArrayOption) MapFloat64(f func([]byte) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m ByteArrayOption) MapAny(f func([]byte) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m ByteArrayOption) MapTuple2(f func([]byte) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m ByteArrayOption) MapBoolOption(f func([]byte) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m ByteArrayOption) MapStringOption(f func([]byte) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m ByteArrayOption) MapIntOption(f func([]byte) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m ByteArrayOption) MapInt64Option(f func([]byte) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m ByteArrayOption) MapByteOption(f func([]byte) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m ByteArrayOption) MapRuneOption(f func([]byte) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m ByteArrayOption) MapFloat32Option(f func([]byte) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m ByteArrayOption) MapFloat64Option(f func([]byte) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m ByteArrayOption) MapAnyOption(f func([]byte) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m ByteArrayOption) MapTuple2Option(f func([]byte) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m ByteArrayOption) MapBoolArray(f func([]byte) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m ByteArrayOption) MapStringArray(f func([]byte) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m ByteArrayOption) MapIntArray(f func([]byte) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m ByteArrayOption) MapInt64Array(f func([]byte) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m ByteArrayOption) MapByteArray(f func([]byte) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m ByteArrayOption) MapRuneArray(f func([]byte) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m ByteArrayOption) MapFloat32Array(f func([]byte) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m ByteArrayOption) MapFloat64Array(f func([]byte) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m ByteArrayOption) MapAnyArray(f func([]byte) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m ByteArrayOption) MapTuple2Array(f func([]byte) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m ByteArrayOption) MapBoolList(f func([]byte) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m ByteArrayOption) MapStringList(f func([]byte) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m ByteArrayOption) MapIntList(f func([]byte) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m ByteArrayOption) MapInt64List(f func([]byte) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m ByteArrayOption) MapByteList(f func([]byte) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m ByteArrayOption) MapRuneList(f func([]byte) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m ByteArrayOption) MapFloat32List(f func([]byte) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m ByteArrayOption) MapFloat64List(f func([]byte) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m ByteArrayOption) MapAnyList(f func([]byte) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m ByteArrayOption) MapTuple2List(f func([]byte) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m RuneArrayOption) MapBool(f func([]rune) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m RuneArrayOption) MapString(f func([]rune) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m RuneArrayOption) MapInt(f func([]rune) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m RuneArrayOption) MapInt64(f func([]rune) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m RuneArrayOption) MapByte(f func([]rune) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m RuneArrayOption) MapRune(f func([]rune) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m RuneArrayOption) MapFloat32(f func([]rune) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m RuneArrayOption) MapFloat64(f func([]rune) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m RuneArrayOption) MapAny(f func([]rune) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m RuneArrayOption) MapTuple2(f func([]rune) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m RuneArrayOption) MapBoolOption(f func([]rune) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m RuneArrayOption) MapStringOption(f func([]rune) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m RuneArrayOption) MapIntOption(f func([]rune) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m RuneArrayOption) MapInt64Option(f func([]rune) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m RuneArrayOption) MapByteOption(f func([]rune) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m RuneArrayOption) MapRuneOption(f func([]rune) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m RuneArrayOption) MapFloat32Option(f func([]rune) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m RuneArrayOption) MapFloat64Option(f func([]rune) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m RuneArrayOption) MapAnyOption(f func([]rune) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m RuneArrayOption) MapTuple2Option(f func([]rune) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m RuneArrayOption) MapBoolArray(f func([]rune) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m RuneArrayOption) MapStringArray(f func([]rune) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m RuneArrayOption) MapIntArray(f func([]rune) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m RuneArrayOption) MapInt64Array(f func([]rune) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m RuneArrayOption) MapByteArray(f func([]rune) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m RuneArrayOption) MapRuneArray(f func([]rune) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m RuneArrayOption) MapFloat32Array(f func([]rune) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m RuneArrayOption) MapFloat64Array(f func([]rune) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m RuneArrayOption) MapAnyArray(f func([]rune) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m RuneArrayOption) MapTuple2Array(f func([]rune) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m RuneArrayOption) MapBoolList(f func([]rune) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m RuneArrayOption) MapStringList(f func([]rune) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m RuneArrayOption) MapIntList(f func([]rune) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m RuneArrayOption) MapInt64List(f func([]rune) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m RuneArrayOption) MapByteList(f func([]rune) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m RuneArrayOption) MapRuneList(f func([]rune) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m RuneArrayOption) MapFloat32List(f func([]rune) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m RuneArrayOption) MapFloat64List(f func([]rune) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m RuneArrayOption) MapAnyList(f func([]rune) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m RuneArrayOption) MapTuple2List(f func([]rune) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float32ArrayOption) MapBool(f func([]float32) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float32ArrayOption) MapString(f func([]float32) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float32ArrayOption) MapInt(f func([]float32) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float32ArrayOption) MapInt64(f func([]float32) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float32ArrayOption) MapByte(f func([]float32) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float32ArrayOption) MapRune(f func([]float32) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float32ArrayOption) MapFloat32(f func([]float32) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float32ArrayOption) MapFloat64(f func([]float32) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float32ArrayOption) MapAny(f func([]float32) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float32ArrayOption) MapTuple2(f func([]float32) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float32ArrayOption) MapBoolOption(f func([]float32) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float32ArrayOption) MapStringOption(f func([]float32) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float32ArrayOption) MapIntOption(f func([]float32) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float32ArrayOption) MapInt64Option(f func([]float32) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float32ArrayOption) MapByteOption(f func([]float32) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float32ArrayOption) MapRuneOption(f func([]float32) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float32ArrayOption) MapFloat32Option(f func([]float32) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float32ArrayOption) MapFloat64Option(f func([]float32) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float32ArrayOption) MapAnyOption(f func([]float32) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float32ArrayOption) MapTuple2Option(f func([]float32) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float32ArrayOption) MapBoolArray(f func([]float32) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float32ArrayOption) MapStringArray(f func([]float32) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float32ArrayOption) MapIntArray(f func([]float32) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float32ArrayOption) MapInt64Array(f func([]float32) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float32ArrayOption) MapByteArray(f func([]float32) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float32ArrayOption) MapRuneArray(f func([]float32) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float32ArrayOption) MapFloat32Array(f func([]float32) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float32ArrayOption) MapFloat64Array(f func([]float32) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float32ArrayOption) MapAnyArray(f func([]float32) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float32ArrayOption) MapTuple2Array(f func([]float32) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float32ArrayOption) MapBoolList(f func([]float32) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float32ArrayOption) MapStringList(f func([]float32) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float32ArrayOption) MapIntList(f func([]float32) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float32ArrayOption) MapInt64List(f func([]float32) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float32ArrayOption) MapByteList(f func([]float32) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float32ArrayOption) MapRuneList(f func([]float32) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float32ArrayOption) MapFloat32List(f func([]float32) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float32ArrayOption) MapFloat64List(f func([]float32) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float32ArrayOption) MapAnyList(f func([]float32) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float32ArrayOption) MapTuple2List(f func([]float32) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float64ArrayOption) MapBool(f func([]float64) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float64ArrayOption) MapString(f func([]float64) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float64ArrayOption) MapInt(f func([]float64) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float64ArrayOption) MapInt64(f func([]float64) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float64ArrayOption) MapByte(f func([]float64) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float64ArrayOption) MapRune(f func([]float64) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float64ArrayOption) MapFloat32(f func([]float64) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float64ArrayOption) MapFloat64(f func([]float64) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float64ArrayOption) MapAny(f func([]float64) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float64ArrayOption) MapTuple2(f func([]float64) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float64ArrayOption) MapBoolOption(f func([]float64) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float64ArrayOption) MapStringOption(f func([]float64) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float64ArrayOption) MapIntOption(f func([]float64) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float64ArrayOption) MapInt64Option(f func([]float64) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float64ArrayOption) MapByteOption(f func([]float64) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float64ArrayOption) MapRuneOption(f func([]float64) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float64ArrayOption) MapFloat32Option(f func([]float64) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float64ArrayOption) MapFloat64Option(f func([]float64) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float64ArrayOption) MapAnyOption(f func([]float64) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float64ArrayOption) MapTuple2Option(f func([]float64) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float64ArrayOption) MapBoolArray(f func([]float64) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float64ArrayOption) MapStringArray(f func([]float64) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float64ArrayOption) MapIntArray(f func([]float64) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float64ArrayOption) MapInt64Array(f func([]float64) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float64ArrayOption) MapByteArray(f func([]float64) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float64ArrayOption) MapRuneArray(f func([]float64) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float64ArrayOption) MapFloat32Array(f func([]float64) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float64ArrayOption) MapFloat64Array(f func([]float64) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float64ArrayOption) MapAnyArray(f func([]float64) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float64ArrayOption) MapTuple2Array(f func([]float64) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float64ArrayOption) MapBoolList(f func([]float64) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float64ArrayOption) MapStringList(f func([]float64) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float64ArrayOption) MapIntList(f func([]float64) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float64ArrayOption) MapInt64List(f func([]float64) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float64ArrayOption) MapByteList(f func([]float64) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float64ArrayOption) MapRuneList(f func([]float64) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float64ArrayOption) MapFloat32List(f func([]float64) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float64ArrayOption) MapFloat64List(f func([]float64) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float64ArrayOption) MapAnyList(f func([]float64) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float64ArrayOption) MapTuple2List(f func([]float64) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m AnyArrayOption) MapBool(f func([]Any) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m AnyArrayOption) MapString(f func([]Any) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m AnyArrayOption) MapInt(f func([]Any) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m AnyArrayOption) MapInt64(f func([]Any) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m AnyArrayOption) MapByte(f func([]Any) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m AnyArrayOption) MapRune(f func([]Any) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m AnyArrayOption) MapFloat32(f func([]Any) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m AnyArrayOption) MapFloat64(f func([]Any) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m AnyArrayOption) MapAny(f func([]Any) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m AnyArrayOption) MapTuple2(f func([]Any) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m AnyArrayOption) MapBoolOption(f func([]Any) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m AnyArrayOption) MapStringOption(f func([]Any) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m AnyArrayOption) MapIntOption(f func([]Any) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m AnyArrayOption) MapInt64Option(f func([]Any) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m AnyArrayOption) MapByteOption(f func([]Any) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m AnyArrayOption) MapRuneOption(f func([]Any) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m AnyArrayOption) MapFloat32Option(f func([]Any) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m AnyArrayOption) MapFloat64Option(f func([]Any) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m AnyArrayOption) MapAnyOption(f func([]Any) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m AnyArrayOption) MapTuple2Option(f func([]Any) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m AnyArrayOption) MapBoolArray(f func([]Any) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m AnyArrayOption) MapStringArray(f func([]Any) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m AnyArrayOption) MapIntArray(f func([]Any) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m AnyArrayOption) MapInt64Array(f func([]Any) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m AnyArrayOption) MapByteArray(f func([]Any) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m AnyArrayOption) MapRuneArray(f func([]Any) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m AnyArrayOption) MapFloat32Array(f func([]Any) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m AnyArrayOption) MapFloat64Array(f func([]Any) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m AnyArrayOption) MapAnyArray(f func([]Any) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m AnyArrayOption) MapTuple2Array(f func([]Any) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m AnyArrayOption) MapBoolList(f func([]Any) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m AnyArrayOption) MapStringList(f func([]Any) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m AnyArrayOption) MapIntList(f func([]Any) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m AnyArrayOption) MapInt64List(f func([]Any) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m AnyArrayOption) MapByteList(f func([]Any) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m AnyArrayOption) MapRuneList(f func([]Any) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m AnyArrayOption) MapFloat32List(f func([]Any) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m AnyArrayOption) MapFloat64List(f func([]Any) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m AnyArrayOption) MapAnyList(f func([]Any) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m AnyArrayOption) MapTuple2List(f func([]Any) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Tuple2ArrayOption) MapBool(f func([]Tuple2) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Tuple2ArrayOption) MapString(f func([]Tuple2) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Tuple2ArrayOption) MapInt(f func([]Tuple2) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Tuple2ArrayOption) MapInt64(f func([]Tuple2) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Tuple2ArrayOption) MapByte(f func([]Tuple2) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Tuple2ArrayOption) MapRune(f func([]Tuple2) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Tuple2ArrayOption) MapFloat32(f func([]Tuple2) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Tuple2ArrayOption) MapFloat64(f func([]Tuple2) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Tuple2ArrayOption) MapAny(f func([]Tuple2) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Tuple2ArrayOption) MapTuple2(f func([]Tuple2) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Tuple2ArrayOption) MapBoolOption(f func([]Tuple2) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Tuple2ArrayOption) MapStringOption(f func([]Tuple2) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Tuple2ArrayOption) MapIntOption(f func([]Tuple2) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Tuple2ArrayOption) MapInt64Option(f func([]Tuple2) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Tuple2ArrayOption) MapByteOption(f func([]Tuple2) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Tuple2ArrayOption) MapRuneOption(f func([]Tuple2) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Tuple2ArrayOption) MapFloat32Option(f func([]Tuple2) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Tuple2ArrayOption) MapFloat64Option(f func([]Tuple2) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Tuple2ArrayOption) MapAnyOption(f func([]Tuple2) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Tuple2ArrayOption) MapTuple2Option(f func([]Tuple2) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Tuple2ArrayOption) MapBoolArray(f func([]Tuple2) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Tuple2ArrayOption) MapStringArray(f func([]Tuple2) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Tuple2ArrayOption) MapIntArray(f func([]Tuple2) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Tuple2ArrayOption) MapInt64Array(f func([]Tuple2) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Tuple2ArrayOption) MapByteArray(f func([]Tuple2) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Tuple2ArrayOption) MapRuneArray(f func([]Tuple2) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Tuple2ArrayOption) MapFloat32Array(f func([]Tuple2) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Tuple2ArrayOption) MapFloat64Array(f func([]Tuple2) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Tuple2ArrayOption) MapAnyArray(f func([]Tuple2) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Tuple2ArrayOption) MapTuple2Array(f func([]Tuple2) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Tuple2ArrayOption) MapBoolList(f func([]Tuple2) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Tuple2ArrayOption) MapStringList(f func([]Tuple2) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Tuple2ArrayOption) MapIntList(f func([]Tuple2) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Tuple2ArrayOption) MapInt64List(f func([]Tuple2) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Tuple2ArrayOption) MapByteList(f func([]Tuple2) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Tuple2ArrayOption) MapRuneList(f func([]Tuple2) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Tuple2ArrayOption) MapFloat32List(f func([]Tuple2) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Tuple2ArrayOption) MapFloat64List(f func([]Tuple2) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Tuple2ArrayOption) MapAnyList(f func([]Tuple2) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Tuple2ArrayOption) MapTuple2List(f func([]Tuple2) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m BoolListOption) MapBool(f func(BoolList) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m BoolListOption) MapString(f func(BoolList) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m BoolListOption) MapInt(f func(BoolList) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m BoolListOption) MapInt64(f func(BoolList) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m BoolListOption) MapByte(f func(BoolList) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m BoolListOption) MapRune(f func(BoolList) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m BoolListOption) MapFloat32(f func(BoolList) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m BoolListOption) MapFloat64(f func(BoolList) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m BoolListOption) MapAny(f func(BoolList) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m BoolListOption) MapTuple2(f func(BoolList) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m BoolListOption) MapBoolOption(f func(BoolList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m BoolListOption) MapStringOption(f func(BoolList) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m BoolListOption) MapIntOption(f func(BoolList) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m BoolListOption) MapInt64Option(f func(BoolList) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m BoolListOption) MapByteOption(f func(BoolList) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m BoolListOption) MapRuneOption(f func(BoolList) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m BoolListOption) MapFloat32Option(f func(BoolList) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m BoolListOption) MapFloat64Option(f func(BoolList) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m BoolListOption) MapAnyOption(f func(BoolList) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m BoolListOption) MapTuple2Option(f func(BoolList) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m BoolListOption) MapBoolArray(f func(BoolList) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m BoolListOption) MapStringArray(f func(BoolList) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m BoolListOption) MapIntArray(f func(BoolList) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m BoolListOption) MapInt64Array(f func(BoolList) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m BoolListOption) MapByteArray(f func(BoolList) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m BoolListOption) MapRuneArray(f func(BoolList) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m BoolListOption) MapFloat32Array(f func(BoolList) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m BoolListOption) MapFloat64Array(f func(BoolList) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m BoolListOption) MapAnyArray(f func(BoolList) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m BoolListOption) MapTuple2Array(f func(BoolList) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m BoolListOption) MapBoolList(f func(BoolList) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m BoolListOption) MapStringList(f func(BoolList) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m BoolListOption) MapIntList(f func(BoolList) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m BoolListOption) MapInt64List(f func(BoolList) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m BoolListOption) MapByteList(f func(BoolList) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m BoolListOption) MapRuneList(f func(BoolList) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m BoolListOption) MapFloat32List(f func(BoolList) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m BoolListOption) MapFloat64List(f func(BoolList) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m BoolListOption) MapAnyList(f func(BoolList) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m BoolListOption) MapTuple2List(f func(BoolList) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m StringListOption) MapBool(f func(StringList) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m StringListOption) MapString(f func(StringList) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m StringListOption) MapInt(f func(StringList) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m StringListOption) MapInt64(f func(StringList) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m StringListOption) MapByte(f func(StringList) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m StringListOption) MapRune(f func(StringList) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m StringListOption) MapFloat32(f func(StringList) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m StringListOption) MapFloat64(f func(StringList) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m StringListOption) MapAny(f func(StringList) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m StringListOption) MapTuple2(f func(StringList) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m StringListOption) MapBoolOption(f func(StringList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m StringListOption) MapStringOption(f func(StringList) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m StringListOption) MapIntOption(f func(StringList) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m StringListOption) MapInt64Option(f func(StringList) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m StringListOption) MapByteOption(f func(StringList) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m StringListOption) MapRuneOption(f func(StringList) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m StringListOption) MapFloat32Option(f func(StringList) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m StringListOption) MapFloat64Option(f func(StringList) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m StringListOption) MapAnyOption(f func(StringList) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m StringListOption) MapTuple2Option(f func(StringList) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m StringListOption) MapBoolArray(f func(StringList) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m StringListOption) MapStringArray(f func(StringList) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m StringListOption) MapIntArray(f func(StringList) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m StringListOption) MapInt64Array(f func(StringList) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m StringListOption) MapByteArray(f func(StringList) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m StringListOption) MapRuneArray(f func(StringList) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m StringListOption) MapFloat32Array(f func(StringList) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m StringListOption) MapFloat64Array(f func(StringList) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m StringListOption) MapAnyArray(f func(StringList) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m StringListOption) MapTuple2Array(f func(StringList) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m StringListOption) MapBoolList(f func(StringList) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m StringListOption) MapStringList(f func(StringList) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m StringListOption) MapIntList(f func(StringList) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m StringListOption) MapInt64List(f func(StringList) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m StringListOption) MapByteList(f func(StringList) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m StringListOption) MapRuneList(f func(StringList) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m StringListOption) MapFloat32List(f func(StringList) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m StringListOption) MapFloat64List(f func(StringList) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m StringListOption) MapAnyList(f func(StringList) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m StringListOption) MapTuple2List(f func(StringList) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m IntListOption) MapBool(f func(IntList) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m IntListOption) MapString(f func(IntList) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m IntListOption) MapInt(f func(IntList) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m IntListOption) MapInt64(f func(IntList) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m IntListOption) MapByte(f func(IntList) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m IntListOption) MapRune(f func(IntList) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m IntListOption) MapFloat32(f func(IntList) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m IntListOption) MapFloat64(f func(IntList) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m IntListOption) MapAny(f func(IntList) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m IntListOption) MapTuple2(f func(IntList) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m IntListOption) MapBoolOption(f func(IntList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m IntListOption) MapStringOption(f func(IntList) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m IntListOption) MapIntOption(f func(IntList) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m IntListOption) MapInt64Option(f func(IntList) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m IntListOption) MapByteOption(f func(IntList) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m IntListOption) MapRuneOption(f func(IntList) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m IntListOption) MapFloat32Option(f func(IntList) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m IntListOption) MapFloat64Option(f func(IntList) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m IntListOption) MapAnyOption(f func(IntList) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m IntListOption) MapTuple2Option(f func(IntList) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m IntListOption) MapBoolArray(f func(IntList) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m IntListOption) MapStringArray(f func(IntList) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m IntListOption) MapIntArray(f func(IntList) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m IntListOption) MapInt64Array(f func(IntList) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m IntListOption) MapByteArray(f func(IntList) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m IntListOption) MapRuneArray(f func(IntList) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m IntListOption) MapFloat32Array(f func(IntList) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m IntListOption) MapFloat64Array(f func(IntList) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m IntListOption) MapAnyArray(f func(IntList) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m IntListOption) MapTuple2Array(f func(IntList) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m IntListOption) MapBoolList(f func(IntList) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m IntListOption) MapStringList(f func(IntList) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m IntListOption) MapIntList(f func(IntList) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m IntListOption) MapInt64List(f func(IntList) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m IntListOption) MapByteList(f func(IntList) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m IntListOption) MapRuneList(f func(IntList) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m IntListOption) MapFloat32List(f func(IntList) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m IntListOption) MapFloat64List(f func(IntList) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m IntListOption) MapAnyList(f func(IntList) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m IntListOption) MapTuple2List(f func(IntList) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Int64ListOption) MapBool(f func(Int64List) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Int64ListOption) MapString(f func(Int64List) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Int64ListOption) MapInt(f func(Int64List) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Int64ListOption) MapInt64(f func(Int64List) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Int64ListOption) MapByte(f func(Int64List) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Int64ListOption) MapRune(f func(Int64List) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Int64ListOption) MapFloat32(f func(Int64List) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Int64ListOption) MapFloat64(f func(Int64List) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Int64ListOption) MapAny(f func(Int64List) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Int64ListOption) MapTuple2(f func(Int64List) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Int64ListOption) MapBoolOption(f func(Int64List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Int64ListOption) MapStringOption(f func(Int64List) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Int64ListOption) MapIntOption(f func(Int64List) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Int64ListOption) MapInt64Option(f func(Int64List) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Int64ListOption) MapByteOption(f func(Int64List) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Int64ListOption) MapRuneOption(f func(Int64List) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Int64ListOption) MapFloat32Option(f func(Int64List) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Int64ListOption) MapFloat64Option(f func(Int64List) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Int64ListOption) MapAnyOption(f func(Int64List) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Int64ListOption) MapTuple2Option(f func(Int64List) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Int64ListOption) MapBoolArray(f func(Int64List) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Int64ListOption) MapStringArray(f func(Int64List) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Int64ListOption) MapIntArray(f func(Int64List) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Int64ListOption) MapInt64Array(f func(Int64List) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Int64ListOption) MapByteArray(f func(Int64List) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Int64ListOption) MapRuneArray(f func(Int64List) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Int64ListOption) MapFloat32Array(f func(Int64List) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Int64ListOption) MapFloat64Array(f func(Int64List) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Int64ListOption) MapAnyArray(f func(Int64List) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Int64ListOption) MapTuple2Array(f func(Int64List) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Int64ListOption) MapBoolList(f func(Int64List) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Int64ListOption) MapStringList(f func(Int64List) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Int64ListOption) MapIntList(f func(Int64List) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Int64ListOption) MapInt64List(f func(Int64List) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Int64ListOption) MapByteList(f func(Int64List) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Int64ListOption) MapRuneList(f func(Int64List) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Int64ListOption) MapFloat32List(f func(Int64List) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Int64ListOption) MapFloat64List(f func(Int64List) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Int64ListOption) MapAnyList(f func(Int64List) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Int64ListOption) MapTuple2List(f func(Int64List) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m ByteListOption) MapBool(f func(ByteList) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m ByteListOption) MapString(f func(ByteList) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m ByteListOption) MapInt(f func(ByteList) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m ByteListOption) MapInt64(f func(ByteList) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m ByteListOption) MapByte(f func(ByteList) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m ByteListOption) MapRune(f func(ByteList) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m ByteListOption) MapFloat32(f func(ByteList) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m ByteListOption) MapFloat64(f func(ByteList) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m ByteListOption) MapAny(f func(ByteList) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m ByteListOption) MapTuple2(f func(ByteList) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m ByteListOption) MapBoolOption(f func(ByteList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m ByteListOption) MapStringOption(f func(ByteList) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m ByteListOption) MapIntOption(f func(ByteList) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m ByteListOption) MapInt64Option(f func(ByteList) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m ByteListOption) MapByteOption(f func(ByteList) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m ByteListOption) MapRuneOption(f func(ByteList) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m ByteListOption) MapFloat32Option(f func(ByteList) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m ByteListOption) MapFloat64Option(f func(ByteList) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m ByteListOption) MapAnyOption(f func(ByteList) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m ByteListOption) MapTuple2Option(f func(ByteList) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m ByteListOption) MapBoolArray(f func(ByteList) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m ByteListOption) MapStringArray(f func(ByteList) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m ByteListOption) MapIntArray(f func(ByteList) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m ByteListOption) MapInt64Array(f func(ByteList) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m ByteListOption) MapByteArray(f func(ByteList) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m ByteListOption) MapRuneArray(f func(ByteList) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m ByteListOption) MapFloat32Array(f func(ByteList) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m ByteListOption) MapFloat64Array(f func(ByteList) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m ByteListOption) MapAnyArray(f func(ByteList) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m ByteListOption) MapTuple2Array(f func(ByteList) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m ByteListOption) MapBoolList(f func(ByteList) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m ByteListOption) MapStringList(f func(ByteList) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m ByteListOption) MapIntList(f func(ByteList) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m ByteListOption) MapInt64List(f func(ByteList) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m ByteListOption) MapByteList(f func(ByteList) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m ByteListOption) MapRuneList(f func(ByteList) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m ByteListOption) MapFloat32List(f func(ByteList) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m ByteListOption) MapFloat64List(f func(ByteList) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m ByteListOption) MapAnyList(f func(ByteList) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m ByteListOption) MapTuple2List(f func(ByteList) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m RuneListOption) MapBool(f func(RuneList) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m RuneListOption) MapString(f func(RuneList) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m RuneListOption) MapInt(f func(RuneList) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m RuneListOption) MapInt64(f func(RuneList) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m RuneListOption) MapByte(f func(RuneList) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m RuneListOption) MapRune(f func(RuneList) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m RuneListOption) MapFloat32(f func(RuneList) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m RuneListOption) MapFloat64(f func(RuneList) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m RuneListOption) MapAny(f func(RuneList) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m RuneListOption) MapTuple2(f func(RuneList) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m RuneListOption) MapBoolOption(f func(RuneList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m RuneListOption) MapStringOption(f func(RuneList) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m RuneListOption) MapIntOption(f func(RuneList) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m RuneListOption) MapInt64Option(f func(RuneList) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m RuneListOption) MapByteOption(f func(RuneList) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m RuneListOption) MapRuneOption(f func(RuneList) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m RuneListOption) MapFloat32Option(f func(RuneList) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m RuneListOption) MapFloat64Option(f func(RuneList) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m RuneListOption) MapAnyOption(f func(RuneList) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m RuneListOption) MapTuple2Option(f func(RuneList) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m RuneListOption) MapBoolArray(f func(RuneList) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m RuneListOption) MapStringArray(f func(RuneList) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m RuneListOption) MapIntArray(f func(RuneList) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m RuneListOption) MapInt64Array(f func(RuneList) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m RuneListOption) MapByteArray(f func(RuneList) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m RuneListOption) MapRuneArray(f func(RuneList) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m RuneListOption) MapFloat32Array(f func(RuneList) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m RuneListOption) MapFloat64Array(f func(RuneList) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m RuneListOption) MapAnyArray(f func(RuneList) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m RuneListOption) MapTuple2Array(f func(RuneList) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m RuneListOption) MapBoolList(f func(RuneList) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m RuneListOption) MapStringList(f func(RuneList) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m RuneListOption) MapIntList(f func(RuneList) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m RuneListOption) MapInt64List(f func(RuneList) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m RuneListOption) MapByteList(f func(RuneList) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m RuneListOption) MapRuneList(f func(RuneList) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m RuneListOption) MapFloat32List(f func(RuneList) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m RuneListOption) MapFloat64List(f func(RuneList) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m RuneListOption) MapAnyList(f func(RuneList) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m RuneListOption) MapTuple2List(f func(RuneList) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float32ListOption) MapBool(f func(Float32List) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float32ListOption) MapString(f func(Float32List) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float32ListOption) MapInt(f func(Float32List) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float32ListOption) MapInt64(f func(Float32List) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float32ListOption) MapByte(f func(Float32List) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float32ListOption) MapRune(f func(Float32List) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float32ListOption) MapFloat32(f func(Float32List) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float32ListOption) MapFloat64(f func(Float32List) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float32ListOption) MapAny(f func(Float32List) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float32ListOption) MapTuple2(f func(Float32List) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float32ListOption) MapBoolOption(f func(Float32List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float32ListOption) MapStringOption(f func(Float32List) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float32ListOption) MapIntOption(f func(Float32List) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float32ListOption) MapInt64Option(f func(Float32List) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float32ListOption) MapByteOption(f func(Float32List) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float32ListOption) MapRuneOption(f func(Float32List) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float32ListOption) MapFloat32Option(f func(Float32List) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float32ListOption) MapFloat64Option(f func(Float32List) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float32ListOption) MapAnyOption(f func(Float32List) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float32ListOption) MapTuple2Option(f func(Float32List) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float32ListOption) MapBoolArray(f func(Float32List) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float32ListOption) MapStringArray(f func(Float32List) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float32ListOption) MapIntArray(f func(Float32List) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float32ListOption) MapInt64Array(f func(Float32List) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float32ListOption) MapByteArray(f func(Float32List) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float32ListOption) MapRuneArray(f func(Float32List) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float32ListOption) MapFloat32Array(f func(Float32List) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float32ListOption) MapFloat64Array(f func(Float32List) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float32ListOption) MapAnyArray(f func(Float32List) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float32ListOption) MapTuple2Array(f func(Float32List) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float32ListOption) MapBoolList(f func(Float32List) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float32ListOption) MapStringList(f func(Float32List) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float32ListOption) MapIntList(f func(Float32List) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float32ListOption) MapInt64List(f func(Float32List) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float32ListOption) MapByteList(f func(Float32List) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float32ListOption) MapRuneList(f func(Float32List) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float32ListOption) MapFloat32List(f func(Float32List) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float32ListOption) MapFloat64List(f func(Float32List) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float32ListOption) MapAnyList(f func(Float32List) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float32ListOption) MapTuple2List(f func(Float32List) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Float64ListOption) MapBool(f func(Float64List) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Float64ListOption) MapString(f func(Float64List) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Float64ListOption) MapInt(f func(Float64List) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Float64ListOption) MapInt64(f func(Float64List) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Float64ListOption) MapByte(f func(Float64List) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Float64ListOption) MapRune(f func(Float64List) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Float64ListOption) MapFloat32(f func(Float64List) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Float64ListOption) MapFloat64(f func(Float64List) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Float64ListOption) MapAny(f func(Float64List) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Float64ListOption) MapTuple2(f func(Float64List) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Float64ListOption) MapBoolOption(f func(Float64List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Float64ListOption) MapStringOption(f func(Float64List) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Float64ListOption) MapIntOption(f func(Float64List) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Float64ListOption) MapInt64Option(f func(Float64List) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Float64ListOption) MapByteOption(f func(Float64List) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Float64ListOption) MapRuneOption(f func(Float64List) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Float64ListOption) MapFloat32Option(f func(Float64List) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Float64ListOption) MapFloat64Option(f func(Float64List) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Float64ListOption) MapAnyOption(f func(Float64List) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Float64ListOption) MapTuple2Option(f func(Float64List) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Float64ListOption) MapBoolArray(f func(Float64List) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Float64ListOption) MapStringArray(f func(Float64List) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Float64ListOption) MapIntArray(f func(Float64List) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Float64ListOption) MapInt64Array(f func(Float64List) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Float64ListOption) MapByteArray(f func(Float64List) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Float64ListOption) MapRuneArray(f func(Float64List) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Float64ListOption) MapFloat32Array(f func(Float64List) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Float64ListOption) MapFloat64Array(f func(Float64List) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Float64ListOption) MapAnyArray(f func(Float64List) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Float64ListOption) MapTuple2Array(f func(Float64List) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Float64ListOption) MapBoolList(f func(Float64List) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Float64ListOption) MapStringList(f func(Float64List) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Float64ListOption) MapIntList(f func(Float64List) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Float64ListOption) MapInt64List(f func(Float64List) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Float64ListOption) MapByteList(f func(Float64List) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Float64ListOption) MapRuneList(f func(Float64List) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Float64ListOption) MapFloat32List(f func(Float64List) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Float64ListOption) MapFloat64List(f func(Float64List) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Float64ListOption) MapAnyList(f func(Float64List) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Float64ListOption) MapTuple2List(f func(Float64List) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m AnyListOption) MapBool(f func(AnyList) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m AnyListOption) MapString(f func(AnyList) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m AnyListOption) MapInt(f func(AnyList) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m AnyListOption) MapInt64(f func(AnyList) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m AnyListOption) MapByte(f func(AnyList) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m AnyListOption) MapRune(f func(AnyList) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m AnyListOption) MapFloat32(f func(AnyList) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m AnyListOption) MapFloat64(f func(AnyList) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m AnyListOption) MapAny(f func(AnyList) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m AnyListOption) MapTuple2(f func(AnyList) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m AnyListOption) MapBoolOption(f func(AnyList) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m AnyListOption) MapStringOption(f func(AnyList) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m AnyListOption) MapIntOption(f func(AnyList) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m AnyListOption) MapInt64Option(f func(AnyList) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m AnyListOption) MapByteOption(f func(AnyList) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m AnyListOption) MapRuneOption(f func(AnyList) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m AnyListOption) MapFloat32Option(f func(AnyList) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m AnyListOption) MapFloat64Option(f func(AnyList) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m AnyListOption) MapAnyOption(f func(AnyList) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m AnyListOption) MapTuple2Option(f func(AnyList) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m AnyListOption) MapBoolArray(f func(AnyList) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m AnyListOption) MapStringArray(f func(AnyList) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m AnyListOption) MapIntArray(f func(AnyList) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m AnyListOption) MapInt64Array(f func(AnyList) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m AnyListOption) MapByteArray(f func(AnyList) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m AnyListOption) MapRuneArray(f func(AnyList) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m AnyListOption) MapFloat32Array(f func(AnyList) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m AnyListOption) MapFloat64Array(f func(AnyList) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m AnyListOption) MapAnyArray(f func(AnyList) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m AnyListOption) MapTuple2Array(f func(AnyList) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m AnyListOption) MapBoolList(f func(AnyList) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m AnyListOption) MapStringList(f func(AnyList) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m AnyListOption) MapIntList(f func(AnyList) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m AnyListOption) MapInt64List(f func(AnyList) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m AnyListOption) MapByteList(f func(AnyList) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m AnyListOption) MapRuneList(f func(AnyList) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m AnyListOption) MapFloat32List(f func(AnyList) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m AnyListOption) MapFloat64List(f func(AnyList) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m AnyListOption) MapAnyList(f func(AnyList) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m AnyListOption) MapTuple2List(f func(AnyList) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
 }
 func (m Tuple2ListOption) MapBool(f func(Tuple2List) bool) BoolOption {
 	if m.IsDefined() {
-		return MakeBoolOption(f(*m.value))
+		return MkBoolOption(f(*m.value))
 	} else {
 		return NoneBool
 	}
 }
 func (m Tuple2ListOption) MapString(f func(Tuple2List) string) StringOption {
 	if m.IsDefined() {
-		return MakeStringOption(f(*m.value))
+		return MkStringOption(f(*m.value))
 	} else {
 		return NoneString
 	}
 }
 func (m Tuple2ListOption) MapInt(f func(Tuple2List) int) IntOption {
 	if m.IsDefined() {
-		return MakeIntOption(f(*m.value))
+		return MkIntOption(f(*m.value))
 	} else {
 		return NoneInt
 	}
 }
 func (m Tuple2ListOption) MapInt64(f func(Tuple2List) int64) Int64Option {
 	if m.IsDefined() {
-		return MakeInt64Option(f(*m.value))
+		return MkInt64Option(f(*m.value))
 	} else {
 		return NoneInt64
 	}
 }
 func (m Tuple2ListOption) MapByte(f func(Tuple2List) byte) ByteOption {
 	if m.IsDefined() {
-		return MakeByteOption(f(*m.value))
+		return MkByteOption(f(*m.value))
 	} else {
 		return NoneByte
 	}
 }
 func (m Tuple2ListOption) MapRune(f func(Tuple2List) rune) RuneOption {
 	if m.IsDefined() {
-		return MakeRuneOption(f(*m.value))
+		return MkRuneOption(f(*m.value))
 	} else {
 		return NoneRune
 	}
 }
 func (m Tuple2ListOption) MapFloat32(f func(Tuple2List) float32) Float32Option {
 	if m.IsDefined() {
-		return MakeFloat32Option(f(*m.value))
+		return MkFloat32Option(f(*m.value))
 	} else {
 		return NoneFloat32
 	}
 }
 func (m Tuple2ListOption) MapFloat64(f func(Tuple2List) float64) Float64Option {
 	if m.IsDefined() {
-		return MakeFloat64Option(f(*m.value))
+		return MkFloat64Option(f(*m.value))
 	} else {
 		return NoneFloat64
 	}
 }
 func (m Tuple2ListOption) MapAny(f func(Tuple2List) Any) AnyOption {
 	if m.IsDefined() {
-		return MakeAnyOption(f(*m.value))
+		return MkAnyOption(f(*m.value))
 	} else {
 		return NoneAny
 	}
 }
 func (m Tuple2ListOption) MapTuple2(f func(Tuple2List) Tuple2) Tuple2Option {
 	if m.IsDefined() {
-		return MakeTuple2Option(f(*m.value))
+		return MkTuple2Option(f(*m.value))
 	} else {
 		return NoneTuple2
 	}
 }
 func (m Tuple2ListOption) MapBoolOption(f func(Tuple2List) BoolOption) BoolOptionOption {
 	if m.IsDefined() {
-		return MakeBoolOptionOption(f(*m.value))
+		return MkBoolOptionOption(f(*m.value))
 	} else {
 		return NoneBoolOption
 	}
 }
 func (m Tuple2ListOption) MapStringOption(f func(Tuple2List) StringOption) StringOptionOption {
 	if m.IsDefined() {
-		return MakeStringOptionOption(f(*m.value))
+		return MkStringOptionOption(f(*m.value))
 	} else {
 		return NoneStringOption
 	}
 }
 func (m Tuple2ListOption) MapIntOption(f func(Tuple2List) IntOption) IntOptionOption {
 	if m.IsDefined() {
-		return MakeIntOptionOption(f(*m.value))
+		return MkIntOptionOption(f(*m.value))
 	} else {
 		return NoneIntOption
 	}
 }
 func (m Tuple2ListOption) MapInt64Option(f func(Tuple2List) Int64Option) Int64OptionOption {
 	if m.IsDefined() {
-		return MakeInt64OptionOption(f(*m.value))
+		return MkInt64OptionOption(f(*m.value))
 	} else {
 		return NoneInt64Option
 	}
 }
 func (m Tuple2ListOption) MapByteOption(f func(Tuple2List) ByteOption) ByteOptionOption {
 	if m.IsDefined() {
-		return MakeByteOptionOption(f(*m.value))
+		return MkByteOptionOption(f(*m.value))
 	} else {
 		return NoneByteOption
 	}
 }
 func (m Tuple2ListOption) MapRuneOption(f func(Tuple2List) RuneOption) RuneOptionOption {
 	if m.IsDefined() {
-		return MakeRuneOptionOption(f(*m.value))
+		return MkRuneOptionOption(f(*m.value))
 	} else {
 		return NoneRuneOption
 	}
 }
 func (m Tuple2ListOption) MapFloat32Option(f func(Tuple2List) Float32Option) Float32OptionOption {
 	if m.IsDefined() {
-		return MakeFloat32OptionOption(f(*m.value))
+		return MkFloat32OptionOption(f(*m.value))
 	} else {
 		return NoneFloat32Option
 	}
 }
 func (m Tuple2ListOption) MapFloat64Option(f func(Tuple2List) Float64Option) Float64OptionOption {
 	if m.IsDefined() {
-		return MakeFloat64OptionOption(f(*m.value))
+		return MkFloat64OptionOption(f(*m.value))
 	} else {
 		return NoneFloat64Option
 	}
 }
 func (m Tuple2ListOption) MapAnyOption(f func(Tuple2List) AnyOption) AnyOptionOption {
 	if m.IsDefined() {
-		return MakeAnyOptionOption(f(*m.value))
+		return MkAnyOptionOption(f(*m.value))
 	} else {
 		return NoneAnyOption
 	}
 }
 func (m Tuple2ListOption) MapTuple2Option(f func(Tuple2List) Tuple2Option) Tuple2OptionOption {
 	if m.IsDefined() {
-		return MakeTuple2OptionOption(f(*m.value))
+		return MkTuple2OptionOption(f(*m.value))
 	} else {
 		return NoneTuple2Option
 	}
 }
 func (m Tuple2ListOption) MapBoolArray(f func(Tuple2List) []bool) BoolArrayOption {
 	if m.IsDefined() {
-		return MakeBoolArrayOption(f(*m.value))
+		return MkBoolArrayOption(f(*m.value))
 	} else {
 		return NoneBoolArray
 	}
 }
 func (m Tuple2ListOption) MapStringArray(f func(Tuple2List) []string) StringArrayOption {
 	if m.IsDefined() {
-		return MakeStringArrayOption(f(*m.value))
+		return MkStringArrayOption(f(*m.value))
 	} else {
 		return NoneStringArray
 	}
 }
 func (m Tuple2ListOption) MapIntArray(f func(Tuple2List) []int) IntArrayOption {
 	if m.IsDefined() {
-		return MakeIntArrayOption(f(*m.value))
+		return MkIntArrayOption(f(*m.value))
 	} else {
 		return NoneIntArray
 	}
 }
 func (m Tuple2ListOption) MapInt64Array(f func(Tuple2List) []int64) Int64ArrayOption {
 	if m.IsDefined() {
-		return MakeInt64ArrayOption(f(*m.value))
+		return MkInt64ArrayOption(f(*m.value))
 	} else {
 		return NoneInt64Array
 	}
 }
 func (m Tuple2ListOption) MapByteArray(f func(Tuple2List) []byte) ByteArrayOption {
 	if m.IsDefined() {
-		return MakeByteArrayOption(f(*m.value))
+		return MkByteArrayOption(f(*m.value))
 	} else {
 		return NoneByteArray
 	}
 }
 func (m Tuple2ListOption) MapRuneArray(f func(Tuple2List) []rune) RuneArrayOption {
 	if m.IsDefined() {
-		return MakeRuneArrayOption(f(*m.value))
+		return MkRuneArrayOption(f(*m.value))
 	} else {
 		return NoneRuneArray
 	}
 }
 func (m Tuple2ListOption) MapFloat32Array(f func(Tuple2List) []float32) Float32ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat32ArrayOption(f(*m.value))
+		return MkFloat32ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat32Array
 	}
 }
 func (m Tuple2ListOption) MapFloat64Array(f func(Tuple2List) []float64) Float64ArrayOption {
 	if m.IsDefined() {
-		return MakeFloat64ArrayOption(f(*m.value))
+		return MkFloat64ArrayOption(f(*m.value))
 	} else {
 		return NoneFloat64Array
 	}
 }
 func (m Tuple2ListOption) MapAnyArray(f func(Tuple2List) []Any) AnyArrayOption {
 	if m.IsDefined() {
-		return MakeAnyArrayOption(f(*m.value))
+		return MkAnyArrayOption(f(*m.value))
 	} else {
 		return NoneAnyArray
 	}
 }
 func (m Tuple2ListOption) MapTuple2Array(f func(Tuple2List) []Tuple2) Tuple2ArrayOption {
 	if m.IsDefined() {
-		return MakeTuple2ArrayOption(f(*m.value))
+		return MkTuple2ArrayOption(f(*m.value))
 	} else {
 		return NoneTuple2Array
 	}
 }
 func (m Tuple2ListOption) MapBoolList(f func(Tuple2List) BoolList) BoolListOption {
 	if m.IsDefined() {
-		return MakeBoolListOption(f(*m.value))
+		return MkBoolListOption(f(*m.value))
 	} else {
 		return NoneBoolList
 	}
 }
 func (m Tuple2ListOption) MapStringList(f func(Tuple2List) StringList) StringListOption {
 	if m.IsDefined() {
-		return MakeStringListOption(f(*m.value))
+		return MkStringListOption(f(*m.value))
 	} else {
 		return NoneStringList
 	}
 }
 func (m Tuple2ListOption) MapIntList(f func(Tuple2List) IntList) IntListOption {
 	if m.IsDefined() {
-		return MakeIntListOption(f(*m.value))
+		return MkIntListOption(f(*m.value))
 	} else {
 		return NoneIntList
 	}
 }
 func (m Tuple2ListOption) MapInt64List(f func(Tuple2List) Int64List) Int64ListOption {
 	if m.IsDefined() {
-		return MakeInt64ListOption(f(*m.value))
+		return MkInt64ListOption(f(*m.value))
 	} else {
 		return NoneInt64List
 	}
 }
 func (m Tuple2ListOption) MapByteList(f func(Tuple2List) ByteList) ByteListOption {
 	if m.IsDefined() {
-		return MakeByteListOption(f(*m.value))
+		return MkByteListOption(f(*m.value))
 	} else {
 		return NoneByteList
 	}
 }
 func (m Tuple2ListOption) MapRuneList(f func(Tuple2List) RuneList) RuneListOption {
 	if m.IsDefined() {
-		return MakeRuneListOption(f(*m.value))
+		return MkRuneListOption(f(*m.value))
 	} else {
 		return NoneRuneList
 	}
 }
 func (m Tuple2ListOption) MapFloat32List(f func(Tuple2List) Float32List) Float32ListOption {
 	if m.IsDefined() {
-		return MakeFloat32ListOption(f(*m.value))
+		return MkFloat32ListOption(f(*m.value))
 	} else {
 		return NoneFloat32List
 	}
 }
 func (m Tuple2ListOption) MapFloat64List(f func(Tuple2List) Float64List) Float64ListOption {
 	if m.IsDefined() {
-		return MakeFloat64ListOption(f(*m.value))
+		return MkFloat64ListOption(f(*m.value))
 	} else {
 		return NoneFloat64List
 	}
 }
 func (m Tuple2ListOption) MapAnyList(f func(Tuple2List) AnyList) AnyListOption {
 	if m.IsDefined() {
-		return MakeAnyListOption(f(*m.value))
+		return MkAnyListOption(f(*m.value))
 	} else {
 		return NoneAnyList
 	}
 }
 func (m Tuple2ListOption) MapTuple2List(f func(Tuple2List) Tuple2List) Tuple2ListOption {
 	if m.IsDefined() {
-		return MakeTuple2ListOption(f(*m.value))
+		return MkTuple2ListOption(f(*m.value))
 	} else {
 		return NoneTuple2List
 	}
