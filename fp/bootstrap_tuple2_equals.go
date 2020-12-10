@@ -3,6 +3,7 @@
 
 package fp
 
+
 func (a Tuple2) Equals(b Tuple2) bool {
-	return AnyEquals(a.E1, b.E1) && AnyEquals(a.E2, b.E2)
+  return AnyEquals(a.E1, b.E1) && AnyEquals(a.E2, b.E2)
 }

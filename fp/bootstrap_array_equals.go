@@ -3,243 +3,144 @@
 
 package fp
 
+
 func (a BoolArray) Equals(b BoolArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if BoolEquals(Bool(e), Bool(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if BoolEquals(Bool(e), Bool(b[i])) { return false }
+  }
+  return true}
 func (a StringArray) Equals(b StringArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if StringEquals(String(e), String(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if StringEquals(String(e), String(b[i])) { return false }
+  }
+  return true}
 func (a IntArray) Equals(b IntArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if IntEquals(Int(e), Int(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if IntEquals(Int(e), Int(b[i])) { return false }
+  }
+  return true}
 func (a Int64Array) Equals(b Int64Array) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Int64Equals(Int64(e), Int64(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Int64Equals(Int64(e), Int64(b[i])) { return false }
+  }
+  return true}
 func (a ByteArray) Equals(b ByteArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if ByteEquals(Byte(e), Byte(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if ByteEquals(Byte(e), Byte(b[i])) { return false }
+  }
+  return true}
 func (a RuneArray) Equals(b RuneArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if RuneEquals(Rune(e), Rune(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if RuneEquals(Rune(e), Rune(b[i])) { return false }
+  }
+  return true}
 func (a Float32Array) Equals(b Float32Array) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Float32Equals(Float32(e), Float32(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Float32Equals(Float32(e), Float32(b[i])) { return false }
+  }
+  return true}
 func (a Float64Array) Equals(b Float64Array) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Float64Equals(Float64(e), Float64(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Float64Equals(Float64(e), Float64(b[i])) { return false }
+  }
+  return true}
 func (a AnyArray) Equals(b AnyArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if AnyEquals(Any(e), Any(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if AnyEquals(Any(e), Any(b[i])) { return false }
+  }
+  return true}
 func (a Tuple2Array) Equals(b Tuple2Array) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Tuple2Equals(Tuple2(e), Tuple2(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Tuple2Equals(Tuple2(e), Tuple2(b[i])) { return false }
+  }
+  return true}
 func (a BoolArrayArray) Equals(b BoolArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if BoolArrayEquals(BoolArray(e), BoolArray(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if BoolArrayEquals(BoolArray(e), BoolArray(b[i])) { return false }
+  }
+  return true}
 func (a StringArrayArray) Equals(b StringArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if StringArrayEquals(StringArray(e), StringArray(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if StringArrayEquals(StringArray(e), StringArray(b[i])) { return false }
+  }
+  return true}
 func (a IntArrayArray) Equals(b IntArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if IntArrayEquals(IntArray(e), IntArray(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if IntArrayEquals(IntArray(e), IntArray(b[i])) { return false }
+  }
+  return true}
 func (a Int64ArrayArray) Equals(b Int64ArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Int64ArrayEquals(Int64Array(e), Int64Array(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Int64ArrayEquals(Int64Array(e), Int64Array(b[i])) { return false }
+  }
+  return true}
 func (a ByteArrayArray) Equals(b ByteArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if ByteArrayEquals(ByteArray(e), ByteArray(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if ByteArrayEquals(ByteArray(e), ByteArray(b[i])) { return false }
+  }
+  return true}
 func (a RuneArrayArray) Equals(b RuneArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if RuneArrayEquals(RuneArray(e), RuneArray(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if RuneArrayEquals(RuneArray(e), RuneArray(b[i])) { return false }
+  }
+  return true}
 func (a Float32ArrayArray) Equals(b Float32ArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Float32ArrayEquals(Float32Array(e), Float32Array(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Float32ArrayEquals(Float32Array(e), Float32Array(b[i])) { return false }
+  }
+  return true}
 func (a Float64ArrayArray) Equals(b Float64ArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Float64ArrayEquals(Float64Array(e), Float64Array(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Float64ArrayEquals(Float64Array(e), Float64Array(b[i])) { return false }
+  }
+  return true}
 func (a AnyArrayArray) Equals(b AnyArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if AnyArrayEquals(AnyArray(e), AnyArray(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if AnyArrayEquals(AnyArray(e), AnyArray(b[i])) { return false }
+  }
+  return true}
 func (a Tuple2ArrayArray) Equals(b Tuple2ArrayArray) bool {
-	len1 := a.Size()
-	if len1 != b.Size() {
-		return false
-	}
-	for i, e := range a {
-		if Tuple2ArrayEquals(Tuple2Array(e), Tuple2Array(b[i])) {
-			return false
-		}
-	}
-	return true
-}
+  len1 := a.Size()
+  if len1 != b.Size() { return false }
+  for i, e := range a {
+    if Tuple2ArrayEquals(Tuple2Array(e), Tuple2Array(b[i])) { return false }
+  }
+  return true}

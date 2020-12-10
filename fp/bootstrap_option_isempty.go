@@ -3,6 +3,7 @@
 
 package fp
 
+
 func (o BoolOption) IsEmpty() bool { return o == NoneBool }
 
 func (o StringOption) IsEmpty() bool { return o == NoneString }

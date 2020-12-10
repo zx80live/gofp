@@ -3,6 +3,7 @@
 
 package fp
 
+
 func (o BoolOption) IsDefined() bool { return o != NoneBool }
 
 func (o StringOption) IsDefined() bool { return o != NoneString }

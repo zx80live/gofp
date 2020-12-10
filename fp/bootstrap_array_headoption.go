@@ -3,143 +3,24 @@
 
 package fp
 
-func (m BoolArray) HeadOption() BoolOption {
-	if len(m) > 0 {
-		return MkBoolOption(m[0])
-	} else {
-		return NoneBool
-	}
-}
-func (m StringArray) HeadOption() StringOption {
-	if len(m) > 0 {
-		return MkStringOption(m[0])
-	} else {
-		return NoneString
-	}
-}
-func (m IntArray) HeadOption() IntOption {
-	if len(m) > 0 {
-		return MkIntOption(m[0])
-	} else {
-		return NoneInt
-	}
-}
-func (m Int64Array) HeadOption() Int64Option {
-	if len(m) > 0 {
-		return MkInt64Option(m[0])
-	} else {
-		return NoneInt64
-	}
-}
-func (m ByteArray) HeadOption() ByteOption {
-	if len(m) > 0 {
-		return MkByteOption(m[0])
-	} else {
-		return NoneByte
-	}
-}
-func (m RuneArray) HeadOption() RuneOption {
-	if len(m) > 0 {
-		return MkRuneOption(m[0])
-	} else {
-		return NoneRune
-	}
-}
-func (m Float32Array) HeadOption() Float32Option {
-	if len(m) > 0 {
-		return MkFloat32Option(m[0])
-	} else {
-		return NoneFloat32
-	}
-}
-func (m Float64Array) HeadOption() Float64Option {
-	if len(m) > 0 {
-		return MkFloat64Option(m[0])
-	} else {
-		return NoneFloat64
-	}
-}
-func (m AnyArray) HeadOption() AnyOption {
-	if len(m) > 0 {
-		return MkAnyOption(m[0])
-	} else {
-		return NoneAny
-	}
-}
-func (m Tuple2Array) HeadOption() Tuple2Option {
-	if len(m) > 0 {
-		return MkTuple2Option(m[0])
-	} else {
-		return NoneTuple2
-	}
-}
-func (m BoolArrayArray) HeadOption() BoolArrayOption {
-	if len(m) > 0 {
-		return MkBoolArrayOption(m[0])
-	} else {
-		return NoneBoolArray
-	}
-}
-func (m StringArrayArray) HeadOption() StringArrayOption {
-	if len(m) > 0 {
-		return MkStringArrayOption(m[0])
-	} else {
-		return NoneStringArray
-	}
-}
-func (m IntArrayArray) HeadOption() IntArrayOption {
-	if len(m) > 0 {
-		return MkIntArrayOption(m[0])
-	} else {
-		return NoneIntArray
-	}
-}
-func (m Int64ArrayArray) HeadOption() Int64ArrayOption {
-	if len(m) > 0 {
-		return MkInt64ArrayOption(m[0])
-	} else {
-		return NoneInt64Array
-	}
-}
-func (m ByteArrayArray) HeadOption() ByteArrayOption {
-	if len(m) > 0 {
-		return MkByteArrayOption(m[0])
-	} else {
-		return NoneByteArray
-	}
-}
-func (m RuneArrayArray) HeadOption() RuneArrayOption {
-	if len(m) > 0 {
-		return MkRuneArrayOption(m[0])
-	} else {
-		return NoneRuneArray
-	}
-}
-func (m Float32ArrayArray) HeadOption() Float32ArrayOption {
-	if len(m) > 0 {
-		return MkFloat32ArrayOption(m[0])
-	} else {
-		return NoneFloat32Array
-	}
-}
-func (m Float64ArrayArray) HeadOption() Float64ArrayOption {
-	if len(m) > 0 {
-		return MkFloat64ArrayOption(m[0])
-	} else {
-		return NoneFloat64Array
-	}
-}
-func (m AnyArrayArray) HeadOption() AnyArrayOption {
-	if len(m) > 0 {
-		return MkAnyArrayOption(m[0])
-	} else {
-		return NoneAnyArray
-	}
-}
-func (m Tuple2ArrayArray) HeadOption() Tuple2ArrayOption {
-	if len(m) > 0 {
-		return MkTuple2ArrayOption(m[0])
-	} else {
-		return NoneTuple2Array
-	}
-}
+
+func (m BoolArray) HeadOption() BoolOption { if len(m) > 0 { return MkBoolOption(m[0]) } else { return NoneBool } }
+func (m StringArray) HeadOption() StringOption { if len(m) > 0 { return MkStringOption(m[0]) } else { return NoneString } }
+func (m IntArray) HeadOption() IntOption { if len(m) > 0 { return MkIntOption(m[0]) } else { return NoneInt } }
+func (m Int64Array) HeadOption() Int64Option { if len(m) > 0 { return MkInt64Option(m[0]) } else { return NoneInt64 } }
+func (m ByteArray) HeadOption() ByteOption { if len(m) > 0 { return MkByteOption(m[0]) } else { return NoneByte } }
+func (m RuneArray) HeadOption() RuneOption { if len(m) > 0 { return MkRuneOption(m[0]) } else { return NoneRune } }
+func (m Float32Array) HeadOption() Float32Option { if len(m) > 0 { return MkFloat32Option(m[0]) } else { return NoneFloat32 } }
+func (m Float64Array) HeadOption() Float64Option { if len(m) > 0 { return MkFloat64Option(m[0]) } else { return NoneFloat64 } }
+func (m AnyArray) HeadOption() AnyOption { if len(m) > 0 { return MkAnyOption(m[0]) } else { return NoneAny } }
+func (m Tuple2Array) HeadOption() Tuple2Option { if len(m) > 0 { return MkTuple2Option(m[0]) } else { return NoneTuple2 } }
+func (m BoolArrayArray) HeadOption() BoolArrayOption { if len(m) > 0 { return MkBoolArrayOption(m[0]) } else { return NoneBoolArray } }
+func (m StringArrayArray) HeadOption() StringArrayOption { if len(m) > 0 { return MkStringArrayOption(m[0]) } else { return NoneStringArray } }
+func (m IntArrayArray) HeadOption() IntArrayOption { if len(m) > 0 { return MkIntArrayOption(m[0]) } else { return NoneIntArray } }
+func (m Int64ArrayArray) HeadOption() Int64ArrayOption { if len(m) > 0 { return MkInt64ArrayOption(m[0]) } else { return NoneInt64Array } }
+func (m ByteArrayArray) HeadOption() ByteArrayOption { if len(m) > 0 { return MkByteArrayOption(m[0]) } else { return NoneByteArray } }
+func (m RuneArrayArray) HeadOption() RuneArrayOption { if len(m) > 0 { return MkRuneArrayOption(m[0]) } else { return NoneRuneArray } }
+func (m Float32ArrayArray) HeadOption() Float32ArrayOption { if len(m) > 0 { return MkFloat32ArrayOption(m[0]) } else { return NoneFloat32Array } }
+func (m Float64ArrayArray) HeadOption() Float64ArrayOption { if len(m) > 0 { return MkFloat64ArrayOption(m[0]) } else { return NoneFloat64Array } }
+func (m AnyArrayArray) HeadOption() AnyArrayOption { if len(m) > 0 { return MkAnyArrayOption(m[0]) } else { return NoneAnyArray } }
+func (m Tuple2ArrayArray) HeadOption() Tuple2ArrayOption { if len(m) > 0 { return MkTuple2ArrayOption(m[0]) } else { return NoneTuple2Array } }

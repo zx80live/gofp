@@ -3,6 +3,7 @@
 
 package fp
 
+
 var BoolIdentity func(bool) bool = func(in bool) bool { return in }
 var StringIdentity func(string) string = func(in string) string { return in }
 var IntIdentity func(int) int = func(in int) int { return in }

@@ -4,9 +4,6 @@
 package fp
 
 import "fmt"
-
 func (s String) ToArray() RuneArray { return RuneArray([]rune(s)) }
 
-func (s String) ToLetterArray() StringArray {
-	return RuneArray([]rune(s)).MapString(func(r rune) string { return fmt.Sprintf("%c", r) })
-}
+func (s String) ToLetterArray() StringArray { return RuneArray([]rune(s)).MapString(func(r rune) string { return fmt.Sprintf("%c", r) } ) }

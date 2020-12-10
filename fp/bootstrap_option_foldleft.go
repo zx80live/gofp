@@ -3,703 +3,204 @@
 
 package fp
 
+
 func (o BoolOption) FoldLeftBool(z bool, f func(bool, bool) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftString(z string, f func(string, bool) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftInt(z int, f func(int, bool) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftInt64(z int64, f func(int64, bool) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftByte(z byte, f func(byte, bool) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftRune(z rune, f func(rune, bool) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftFloat32(z float32, f func(float32, bool) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftFloat64(z float64, f func(float64, bool) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftAny(z Any, f func(Any, bool) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o BoolOption) FoldLeftTuple2(z Tuple2, f func(Tuple2, bool) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftBool(z bool, f func(bool, string) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftString(z string, f func(string, string) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftInt(z int, f func(int, string) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftInt64(z int64, f func(int64, string) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftByte(z byte, f func(byte, string) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftRune(z rune, f func(rune, string) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftFloat32(z float32, f func(float32, string) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftFloat64(z float64, f func(float64, string) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftAny(z Any, f func(Any, string) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o StringOption) FoldLeftTuple2(z Tuple2, f func(Tuple2, string) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftBool(z bool, f func(bool, int) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftString(z string, f func(string, int) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftInt(z int, f func(int, int) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftInt64(z int64, f func(int64, int) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftByte(z byte, f func(byte, int) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftRune(z rune, f func(rune, int) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftFloat32(z float32, f func(float32, int) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftFloat64(z float64, f func(float64, int) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftAny(z Any, f func(Any, int) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o IntOption) FoldLeftTuple2(z Tuple2, f func(Tuple2, int) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftBool(z bool, f func(bool, int64) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftString(z string, f func(string, int64) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftInt(z int, f func(int, int64) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftInt64(z int64, f func(int64, int64) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftByte(z byte, f func(byte, int64) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftRune(z rune, f func(rune, int64) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftFloat32(z float32, f func(float32, int64) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftFloat64(z float64, f func(float64, int64) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftAny(z Any, f func(Any, int64) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Int64Option) FoldLeftTuple2(z Tuple2, f func(Tuple2, int64) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftBool(z bool, f func(bool, byte) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftString(z string, f func(string, byte) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftInt(z int, f func(int, byte) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftInt64(z int64, f func(int64, byte) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftByte(z byte, f func(byte, byte) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftRune(z rune, f func(rune, byte) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftFloat32(z float32, f func(float32, byte) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftFloat64(z float64, f func(float64, byte) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftAny(z Any, f func(Any, byte) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o ByteOption) FoldLeftTuple2(z Tuple2, f func(Tuple2, byte) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftBool(z bool, f func(bool, rune) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftString(z string, f func(string, rune) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftInt(z int, f func(int, rune) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftInt64(z int64, f func(int64, rune) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftByte(z byte, f func(byte, rune) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftRune(z rune, f func(rune, rune) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftFloat32(z float32, f func(float32, rune) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftFloat64(z float64, f func(float64, rune) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftAny(z Any, f func(Any, rune) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o RuneOption) FoldLeftTuple2(z Tuple2, f func(Tuple2, rune) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftBool(z bool, f func(bool, float32) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftString(z string, f func(string, float32) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftInt(z int, f func(int, float32) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftInt64(z int64, f func(int64, float32) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftByte(z byte, f func(byte, float32) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftRune(z rune, f func(rune, float32) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftFloat32(z float32, f func(float32, float32) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftFloat64(z float64, f func(float64, float32) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftAny(z Any, f func(Any, float32) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float32Option) FoldLeftTuple2(z Tuple2, f func(Tuple2, float32) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftBool(z bool, f func(bool, float64) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftString(z string, f func(string, float64) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftInt(z int, f func(int, float64) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftInt64(z int64, f func(int64, float64) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftByte(z byte, f func(byte, float64) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftRune(z rune, f func(rune, float64) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftFloat32(z float32, f func(float32, float64) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftFloat64(z float64, f func(float64, float64) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftAny(z Any, f func(Any, float64) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Float64Option) FoldLeftTuple2(z Tuple2, f func(Tuple2, float64) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftBool(z bool, f func(bool, Any) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftString(z string, f func(string, Any) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftInt(z int, f func(int, Any) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftInt64(z int64, f func(int64, Any) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftByte(z byte, f func(byte, Any) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftRune(z rune, f func(rune, Any) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftFloat32(z float32, f func(float32, Any) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftFloat64(z float64, f func(float64, Any) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftAny(z Any, f func(Any, Any) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o AnyOption) FoldLeftTuple2(z Tuple2, f func(Tuple2, Any) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftBool(z bool, f func(bool, Tuple2) bool) bool {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftString(z string, f func(string, Tuple2) string) string {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftInt(z int, f func(int, Tuple2) int) int {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftInt64(z int64, f func(int64, Tuple2) int64) int64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftByte(z byte, f func(byte, Tuple2) byte) byte {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftRune(z rune, f func(rune, Tuple2) rune) rune {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftFloat32(z float32, f func(float32, Tuple2) float32) float32 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftFloat64(z float64, f func(float64, Tuple2) float64) float64 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftAny(z Any, f func(Any, Tuple2) Any) Any {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}
 func (o Tuple2Option) FoldLeftTuple2(z Tuple2, f func(Tuple2, Tuple2) Tuple2) Tuple2 {
-	if o.IsDefined() {
-		return f(z, *o.value)
-	} else {
-		return z
-	}
-}
+  if o.IsDefined() { return f(z, *o.value) } else { return z }}

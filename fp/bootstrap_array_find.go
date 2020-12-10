@@ -3,163 +3,104 @@
 
 package fp
 
+
 func (a BoolArray) Find(p func(bool) bool) BoolOption {
-	for _, e := range a {
-		if p(e) {
-			return MkBoolOption(e)
-		}
-	}
-	return NoneBool
-}
+  for _, e := range a {
+    if p(e) { return MkBoolOption(e) }
+  }
+  return NoneBool}
 func (a StringArray) Find(p func(string) bool) StringOption {
-	for _, e := range a {
-		if p(e) {
-			return MkStringOption(e)
-		}
-	}
-	return NoneString
-}
+  for _, e := range a {
+    if p(e) { return MkStringOption(e) }
+  }
+  return NoneString}
 func (a IntArray) Find(p func(int) bool) IntOption {
-	for _, e := range a {
-		if p(e) {
-			return MkIntOption(e)
-		}
-	}
-	return NoneInt
-}
+  for _, e := range a {
+    if p(e) { return MkIntOption(e) }
+  }
+  return NoneInt}
 func (a Int64Array) Find(p func(int64) bool) Int64Option {
-	for _, e := range a {
-		if p(e) {
-			return MkInt64Option(e)
-		}
-	}
-	return NoneInt64
-}
+  for _, e := range a {
+    if p(e) { return MkInt64Option(e) }
+  }
+  return NoneInt64}
 func (a ByteArray) Find(p func(byte) bool) ByteOption {
-	for _, e := range a {
-		if p(e) {
-			return MkByteOption(e)
-		}
-	}
-	return NoneByte
-}
+  for _, e := range a {
+    if p(e) { return MkByteOption(e) }
+  }
+  return NoneByte}
 func (a RuneArray) Find(p func(rune) bool) RuneOption {
-	for _, e := range a {
-		if p(e) {
-			return MkRuneOption(e)
-		}
-	}
-	return NoneRune
-}
+  for _, e := range a {
+    if p(e) { return MkRuneOption(e) }
+  }
+  return NoneRune}
 func (a Float32Array) Find(p func(float32) bool) Float32Option {
-	for _, e := range a {
-		if p(e) {
-			return MkFloat32Option(e)
-		}
-	}
-	return NoneFloat32
-}
+  for _, e := range a {
+    if p(e) { return MkFloat32Option(e) }
+  }
+  return NoneFloat32}
 func (a Float64Array) Find(p func(float64) bool) Float64Option {
-	for _, e := range a {
-		if p(e) {
-			return MkFloat64Option(e)
-		}
-	}
-	return NoneFloat64
-}
+  for _, e := range a {
+    if p(e) { return MkFloat64Option(e) }
+  }
+  return NoneFloat64}
 func (a AnyArray) Find(p func(Any) bool) AnyOption {
-	for _, e := range a {
-		if p(e) {
-			return MkAnyOption(e)
-		}
-	}
-	return NoneAny
-}
+  for _, e := range a {
+    if p(e) { return MkAnyOption(e) }
+  }
+  return NoneAny}
 func (a Tuple2Array) Find(p func(Tuple2) bool) Tuple2Option {
-	for _, e := range a {
-		if p(e) {
-			return MkTuple2Option(e)
-		}
-	}
-	return NoneTuple2
-}
+  for _, e := range a {
+    if p(e) { return MkTuple2Option(e) }
+  }
+  return NoneTuple2}
 func (a BoolArrayArray) Find(p func([]bool) bool) BoolArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkBoolArrayOption(e)
-		}
-	}
-	return NoneBoolArray
-}
+  for _, e := range a {
+    if p(e) { return MkBoolArrayOption(e) }
+  }
+  return NoneBoolArray}
 func (a StringArrayArray) Find(p func([]string) bool) StringArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkStringArrayOption(e)
-		}
-	}
-	return NoneStringArray
-}
+  for _, e := range a {
+    if p(e) { return MkStringArrayOption(e) }
+  }
+  return NoneStringArray}
 func (a IntArrayArray) Find(p func([]int) bool) IntArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkIntArrayOption(e)
-		}
-	}
-	return NoneIntArray
-}
+  for _, e := range a {
+    if p(e) { return MkIntArrayOption(e) }
+  }
+  return NoneIntArray}
 func (a Int64ArrayArray) Find(p func([]int64) bool) Int64ArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkInt64ArrayOption(e)
-		}
-	}
-	return NoneInt64Array
-}
+  for _, e := range a {
+    if p(e) { return MkInt64ArrayOption(e) }
+  }
+  return NoneInt64Array}
 func (a ByteArrayArray) Find(p func([]byte) bool) ByteArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkByteArrayOption(e)
-		}
-	}
-	return NoneByteArray
-}
+  for _, e := range a {
+    if p(e) { return MkByteArrayOption(e) }
+  }
+  return NoneByteArray}
 func (a RuneArrayArray) Find(p func([]rune) bool) RuneArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkRuneArrayOption(e)
-		}
-	}
-	return NoneRuneArray
-}
+  for _, e := range a {
+    if p(e) { return MkRuneArrayOption(e) }
+  }
+  return NoneRuneArray}
 func (a Float32ArrayArray) Find(p func([]float32) bool) Float32ArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkFloat32ArrayOption(e)
-		}
-	}
-	return NoneFloat32Array
-}
+  for _, e := range a {
+    if p(e) { return MkFloat32ArrayOption(e) }
+  }
+  return NoneFloat32Array}
 func (a Float64ArrayArray) Find(p func([]float64) bool) Float64ArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkFloat64ArrayOption(e)
-		}
-	}
-	return NoneFloat64Array
-}
+  for _, e := range a {
+    if p(e) { return MkFloat64ArrayOption(e) }
+  }
+  return NoneFloat64Array}
 func (a AnyArrayArray) Find(p func([]Any) bool) AnyArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkAnyArrayOption(e)
-		}
-	}
-	return NoneAnyArray
-}
+  for _, e := range a {
+    if p(e) { return MkAnyArrayOption(e) }
+  }
+  return NoneAnyArray}
 func (a Tuple2ArrayArray) Find(p func([]Tuple2) bool) Tuple2ArrayOption {
-	for _, e := range a {
-		if p(e) {
-			return MkTuple2ArrayOption(e)
-		}
-	}
-	return NoneTuple2Array
-}
+  for _, e := range a {
+    if p(e) { return MkTuple2ArrayOption(e) }
+  }
+  return NoneTuple2Array}

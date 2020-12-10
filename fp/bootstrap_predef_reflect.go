@@ -4,7 +4,6 @@
 package fp
 
 import "reflect"
-
 var BoolReflectType reflect.Type = reflect.TypeOf((*Bool)(nil)).Elem()
 var StringReflectType reflect.Type = reflect.TypeOf((*String)(nil)).Elem()
 var IntReflectType reflect.Type = reflect.TypeOf((*Int)(nil)).Elem()

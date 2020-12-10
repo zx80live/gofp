@@ -3,243 +3,104 @@
 
 package fp
 
+
 func (m BoolArray) Drop(i int) []bool {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]bool, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]bool, 0) } }
 func (m StringArray) Drop(i int) []string {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]string, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]string, 0) } }
 func (m IntArray) Drop(i int) []int {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]int, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]int, 0) } }
 func (m Int64Array) Drop(i int) []int64 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]int64, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]int64, 0) } }
 func (m ByteArray) Drop(i int) []byte {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]byte, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]byte, 0) } }
 func (m RuneArray) Drop(i int) []rune {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]rune, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]rune, 0) } }
 func (m Float32Array) Drop(i int) []float32 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]float32, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]float32, 0) } }
 func (m Float64Array) Drop(i int) []float64 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]float64, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]float64, 0) } }
 func (m AnyArray) Drop(i int) []Any {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]Any, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]Any, 0) } }
 func (m Tuple2Array) Drop(i int) []Tuple2 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([]Tuple2, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([]Tuple2, 0) } }
 func (m BoolArrayArray) Drop(i int) [][]bool {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]bool, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]bool, 0) } }
 func (m StringArrayArray) Drop(i int) [][]string {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]string, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]string, 0) } }
 func (m IntArrayArray) Drop(i int) [][]int {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]int, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]int, 0) } }
 func (m Int64ArrayArray) Drop(i int) [][]int64 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]int64, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]int64, 0) } }
 func (m ByteArrayArray) Drop(i int) [][]byte {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]byte, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]byte, 0) } }
 func (m RuneArrayArray) Drop(i int) [][]rune {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]rune, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]rune, 0) } }
 func (m Float32ArrayArray) Drop(i int) [][]float32 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]float32, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]float32, 0) } }
 func (m Float64ArrayArray) Drop(i int) [][]float64 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]float64, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]float64, 0) } }
 func (m AnyArrayArray) Drop(i int) [][]Any {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]Any, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]Any, 0) } }
 func (m Tuple2ArrayArray) Drop(i int) [][]Tuple2 {
-	s := len(m)
-	Require(Int(i).IsBetweenInclusive(0, s-1), "index out of bound")
-	if i < 0 || i >= s {
-		panic("index out of bound")
-	}
-	if s > 0 {
-		return m[i : s-1]
-	} else {
-		return make([][]Tuple2, 0)
-	}
-}
+  s := len(m)
+  Require(Int(i).IsBetweenInclusive(0, s - 1), "index out of bound")
+  if i < 0 || i >= s { panic ("index out of bound") }
+  if s > 0 { return m[i:s-1] } else { return make([][]Tuple2, 0) } }

@@ -3,3203 +3,3204 @@
 
 package fp
 
+
 func (m BoolArray) MapBool(f func(bool) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapString(f func(bool) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapInt(f func(bool) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapInt64(f func(bool) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapByte(f func(bool) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapRune(f func(bool) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapFloat32(f func(bool) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapFloat64(f func(bool) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapAny(f func(bool) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapTuple2(f func(bool) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapBoolArray(f func(bool) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapStringArray(f func(bool) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapIntArray(f func(bool) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapInt64Array(f func(bool) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapByteArray(f func(bool) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapRuneArray(f func(bool) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapFloat32Array(f func(bool) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapFloat64Array(f func(bool) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapAnyArray(f func(bool) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArray) MapTuple2Array(f func(bool) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapBool(f func(string) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapString(f func(string) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapInt(f func(string) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapInt64(f func(string) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapByte(f func(string) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapRune(f func(string) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapFloat32(f func(string) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapFloat64(f func(string) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapAny(f func(string) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapTuple2(f func(string) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapBoolArray(f func(string) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapStringArray(f func(string) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapIntArray(f func(string) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapInt64Array(f func(string) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapByteArray(f func(string) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapRuneArray(f func(string) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapFloat32Array(f func(string) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapFloat64Array(f func(string) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapAnyArray(f func(string) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArray) MapTuple2Array(f func(string) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapBool(f func(int) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapString(f func(int) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapInt(f func(int) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapInt64(f func(int) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapByte(f func(int) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapRune(f func(int) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapFloat32(f func(int) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapFloat64(f func(int) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapAny(f func(int) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapTuple2(f func(int) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapBoolArray(f func(int) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapStringArray(f func(int) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapIntArray(f func(int) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapInt64Array(f func(int) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapByteArray(f func(int) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapRuneArray(f func(int) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapFloat32Array(f func(int) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapFloat64Array(f func(int) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapAnyArray(f func(int) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArray) MapTuple2Array(f func(int) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapBool(f func(int64) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapString(f func(int64) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapInt(f func(int64) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapInt64(f func(int64) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapByte(f func(int64) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapRune(f func(int64) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapFloat32(f func(int64) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapFloat64(f func(int64) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapAny(f func(int64) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapTuple2(f func(int64) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapBoolArray(f func(int64) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapStringArray(f func(int64) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapIntArray(f func(int64) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapInt64Array(f func(int64) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapByteArray(f func(int64) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapRuneArray(f func(int64) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapFloat32Array(f func(int64) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapFloat64Array(f func(int64) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapAnyArray(f func(int64) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64Array) MapTuple2Array(f func(int64) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapBool(f func(byte) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapString(f func(byte) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapInt(f func(byte) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapInt64(f func(byte) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapByte(f func(byte) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapRune(f func(byte) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapFloat32(f func(byte) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapFloat64(f func(byte) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapAny(f func(byte) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapTuple2(f func(byte) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapBoolArray(f func(byte) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapStringArray(f func(byte) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapIntArray(f func(byte) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapInt64Array(f func(byte) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapByteArray(f func(byte) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapRuneArray(f func(byte) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapFloat32Array(f func(byte) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapFloat64Array(f func(byte) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapAnyArray(f func(byte) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArray) MapTuple2Array(f func(byte) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapBool(f func(rune) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapString(f func(rune) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapInt(f func(rune) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapInt64(f func(rune) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapByte(f func(rune) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapRune(f func(rune) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapFloat32(f func(rune) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapFloat64(f func(rune) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapAny(f func(rune) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapTuple2(f func(rune) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapBoolArray(f func(rune) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapStringArray(f func(rune) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapIntArray(f func(rune) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapInt64Array(f func(rune) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapByteArray(f func(rune) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapRuneArray(f func(rune) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapFloat32Array(f func(rune) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapFloat64Array(f func(rune) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapAnyArray(f func(rune) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArray) MapTuple2Array(f func(rune) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapBool(f func(float32) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapString(f func(float32) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapInt(f func(float32) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapInt64(f func(float32) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapByte(f func(float32) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapRune(f func(float32) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapFloat32(f func(float32) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapFloat64(f func(float32) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapAny(f func(float32) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapTuple2(f func(float32) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapBoolArray(f func(float32) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapStringArray(f func(float32) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapIntArray(f func(float32) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapInt64Array(f func(float32) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapByteArray(f func(float32) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapRuneArray(f func(float32) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapFloat32Array(f func(float32) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapFloat64Array(f func(float32) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapAnyArray(f func(float32) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32Array) MapTuple2Array(f func(float32) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapBool(f func(float64) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapString(f func(float64) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapInt(f func(float64) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapInt64(f func(float64) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapByte(f func(float64) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapRune(f func(float64) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapFloat32(f func(float64) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapFloat64(f func(float64) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapAny(f func(float64) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapTuple2(f func(float64) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapBoolArray(f func(float64) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapStringArray(f func(float64) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapIntArray(f func(float64) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapInt64Array(f func(float64) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapByteArray(f func(float64) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapRuneArray(f func(float64) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapFloat32Array(f func(float64) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapFloat64Array(f func(float64) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapAnyArray(f func(float64) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64Array) MapTuple2Array(f func(float64) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapBool(f func(Any) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapString(f func(Any) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapInt(f func(Any) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapInt64(f func(Any) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapByte(f func(Any) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapRune(f func(Any) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapFloat32(f func(Any) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapFloat64(f func(Any) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapAny(f func(Any) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapTuple2(f func(Any) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapBoolArray(f func(Any) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapStringArray(f func(Any) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapIntArray(f func(Any) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapInt64Array(f func(Any) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapByteArray(f func(Any) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapRuneArray(f func(Any) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapFloat32Array(f func(Any) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapFloat64Array(f func(Any) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapAnyArray(f func(Any) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArray) MapTuple2Array(f func(Any) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapBool(f func(Tuple2) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapString(f func(Tuple2) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapInt(f func(Tuple2) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapInt64(f func(Tuple2) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapByte(f func(Tuple2) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapRune(f func(Tuple2) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapFloat32(f func(Tuple2) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapFloat64(f func(Tuple2) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapAny(f func(Tuple2) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapTuple2(f func(Tuple2) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapBoolArray(f func(Tuple2) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapStringArray(f func(Tuple2) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapIntArray(f func(Tuple2) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapInt64Array(f func(Tuple2) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapByteArray(f func(Tuple2) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapRuneArray(f func(Tuple2) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapFloat32Array(f func(Tuple2) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapFloat64Array(f func(Tuple2) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapAnyArray(f func(Tuple2) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2Array) MapTuple2Array(f func(Tuple2) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapBool(f func([]bool) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapString(f func([]bool) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapInt(f func([]bool) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapInt64(f func([]bool) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapByte(f func([]bool) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapRune(f func([]bool) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapFloat32(f func([]bool) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapFloat64(f func([]bool) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapAny(f func([]bool) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapTuple2(f func([]bool) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapBoolArray(f func([]bool) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapStringArray(f func([]bool) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapIntArray(f func([]bool) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapInt64Array(f func([]bool) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapByteArray(f func([]bool) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapRuneArray(f func([]bool) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapFloat32Array(f func([]bool) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapFloat64Array(f func([]bool) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapAnyArray(f func([]bool) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m BoolArrayArray) MapTuple2Array(f func([]bool) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapBool(f func([]string) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapString(f func([]string) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapInt(f func([]string) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapInt64(f func([]string) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapByte(f func([]string) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapRune(f func([]string) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapFloat32(f func([]string) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapFloat64(f func([]string) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapAny(f func([]string) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapTuple2(f func([]string) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapBoolArray(f func([]string) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapStringArray(f func([]string) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapIntArray(f func([]string) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapInt64Array(f func([]string) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapByteArray(f func([]string) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapRuneArray(f func([]string) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapFloat32Array(f func([]string) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapFloat64Array(f func([]string) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapAnyArray(f func([]string) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m StringArrayArray) MapTuple2Array(f func([]string) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapBool(f func([]int) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapString(f func([]int) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapInt(f func([]int) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapInt64(f func([]int) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapByte(f func([]int) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapRune(f func([]int) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapFloat32(f func([]int) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapFloat64(f func([]int) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapAny(f func([]int) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapTuple2(f func([]int) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapBoolArray(f func([]int) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapStringArray(f func([]int) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapIntArray(f func([]int) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapInt64Array(f func([]int) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapByteArray(f func([]int) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapRuneArray(f func([]int) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapFloat32Array(f func([]int) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapFloat64Array(f func([]int) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapAnyArray(f func([]int) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m IntArrayArray) MapTuple2Array(f func([]int) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapBool(f func([]int64) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapString(f func([]int64) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapInt(f func([]int64) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapInt64(f func([]int64) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapByte(f func([]int64) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapRune(f func([]int64) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapFloat32(f func([]int64) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapFloat64(f func([]int64) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapAny(f func([]int64) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapTuple2(f func([]int64) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapBoolArray(f func([]int64) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapStringArray(f func([]int64) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapIntArray(f func([]int64) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapInt64Array(f func([]int64) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapByteArray(f func([]int64) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapRuneArray(f func([]int64) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapFloat32Array(f func([]int64) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapFloat64Array(f func([]int64) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapAnyArray(f func([]int64) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Int64ArrayArray) MapTuple2Array(f func([]int64) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapBool(f func([]byte) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapString(f func([]byte) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapInt(f func([]byte) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapInt64(f func([]byte) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapByte(f func([]byte) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapRune(f func([]byte) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapFloat32(f func([]byte) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapFloat64(f func([]byte) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapAny(f func([]byte) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapTuple2(f func([]byte) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapBoolArray(f func([]byte) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapStringArray(f func([]byte) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapIntArray(f func([]byte) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapInt64Array(f func([]byte) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapByteArray(f func([]byte) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapRuneArray(f func([]byte) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapFloat32Array(f func([]byte) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapFloat64Array(f func([]byte) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapAnyArray(f func([]byte) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m ByteArrayArray) MapTuple2Array(f func([]byte) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapBool(f func([]rune) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapString(f func([]rune) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapInt(f func([]rune) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapInt64(f func([]rune) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapByte(f func([]rune) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapRune(f func([]rune) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapFloat32(f func([]rune) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapFloat64(f func([]rune) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapAny(f func([]rune) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapTuple2(f func([]rune) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapBoolArray(f func([]rune) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapStringArray(f func([]rune) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapIntArray(f func([]rune) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapInt64Array(f func([]rune) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapByteArray(f func([]rune) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapRuneArray(f func([]rune) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapFloat32Array(f func([]rune) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapFloat64Array(f func([]rune) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapAnyArray(f func([]rune) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m RuneArrayArray) MapTuple2Array(f func([]rune) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapBool(f func([]float32) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapString(f func([]float32) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapInt(f func([]float32) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapInt64(f func([]float32) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapByte(f func([]float32) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapRune(f func([]float32) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapFloat32(f func([]float32) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapFloat64(f func([]float32) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapAny(f func([]float32) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapTuple2(f func([]float32) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapBoolArray(f func([]float32) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapStringArray(f func([]float32) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapIntArray(f func([]float32) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapInt64Array(f func([]float32) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapByteArray(f func([]float32) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapRuneArray(f func([]float32) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapFloat32Array(f func([]float32) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapFloat64Array(f func([]float32) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapAnyArray(f func([]float32) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float32ArrayArray) MapTuple2Array(f func([]float32) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapBool(f func([]float64) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapString(f func([]float64) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapInt(f func([]float64) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapInt64(f func([]float64) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapByte(f func([]float64) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapRune(f func([]float64) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapFloat32(f func([]float64) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapFloat64(f func([]float64) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapAny(f func([]float64) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapTuple2(f func([]float64) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapBoolArray(f func([]float64) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapStringArray(f func([]float64) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapIntArray(f func([]float64) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapInt64Array(f func([]float64) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapByteArray(f func([]float64) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapRuneArray(f func([]float64) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapFloat32Array(f func([]float64) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapFloat64Array(f func([]float64) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapAnyArray(f func([]float64) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Float64ArrayArray) MapTuple2Array(f func([]float64) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapBool(f func([]Any) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapString(f func([]Any) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapInt(f func([]Any) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapInt64(f func([]Any) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapByte(f func([]Any) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapRune(f func([]Any) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapFloat32(f func([]Any) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapFloat64(f func([]Any) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapAny(f func([]Any) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapTuple2(f func([]Any) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapBoolArray(f func([]Any) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapStringArray(f func([]Any) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapIntArray(f func([]Any) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapInt64Array(f func([]Any) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapByteArray(f func([]Any) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapRuneArray(f func([]Any) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapFloat32Array(f func([]Any) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapFloat64Array(f func([]Any) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapAnyArray(f func([]Any) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m AnyArrayArray) MapTuple2Array(f func([]Any) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapBool(f func([]Tuple2) bool) []bool {
-	l := len(m)
-	acc := make([]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapString(f func([]Tuple2) string) []string {
-	l := len(m)
-	acc := make([]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapInt(f func([]Tuple2) int) []int {
-	l := len(m)
-	acc := make([]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapInt64(f func([]Tuple2) int64) []int64 {
-	l := len(m)
-	acc := make([]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapByte(f func([]Tuple2) byte) []byte {
-	l := len(m)
-	acc := make([]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapRune(f func([]Tuple2) rune) []rune {
-	l := len(m)
-	acc := make([]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapFloat32(f func([]Tuple2) float32) []float32 {
-	l := len(m)
-	acc := make([]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapFloat64(f func([]Tuple2) float64) []float64 {
-	l := len(m)
-	acc := make([]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapAny(f func([]Tuple2) Any) []Any {
-	l := len(m)
-	acc := make([]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapTuple2(f func([]Tuple2) Tuple2) []Tuple2 {
-	l := len(m)
-	acc := make([]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapBoolArray(f func([]Tuple2) []bool) [][]bool {
-	l := len(m)
-	acc := make([][]bool, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]bool, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapStringArray(f func([]Tuple2) []string) [][]string {
-	l := len(m)
-	acc := make([][]string, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]string, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapIntArray(f func([]Tuple2) []int) [][]int {
-	l := len(m)
-	acc := make([][]int, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapInt64Array(f func([]Tuple2) []int64) [][]int64 {
-	l := len(m)
-	acc := make([][]int64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]int64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapByteArray(f func([]Tuple2) []byte) [][]byte {
-	l := len(m)
-	acc := make([][]byte, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]byte, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapRuneArray(f func([]Tuple2) []rune) [][]rune {
-	l := len(m)
-	acc := make([][]rune, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]rune, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapFloat32Array(f func([]Tuple2) []float32) [][]float32 {
-	l := len(m)
-	acc := make([][]float32, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float32, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapFloat64Array(f func([]Tuple2) []float64) [][]float64 {
-	l := len(m)
-	acc := make([][]float64, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]float64, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapAnyArray(f func([]Tuple2) []Any) [][]Any {
-	l := len(m)
-	acc := make([][]Any, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Any, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }
 func (m Tuple2ArrayArray) MapTuple2Array(f func([]Tuple2) []Tuple2) [][]Tuple2 {
-	l := len(m)
-	acc := make([][]Tuple2, l)
-	for i, e := range m {
-		acc[i] = f(e)
-	}
-	return acc
+  l := len(m)
+  acc := make([][]Tuple2, l)
+  for i, e := range m {
+    acc[i] = f(e)
+  }
+  return acc
 }

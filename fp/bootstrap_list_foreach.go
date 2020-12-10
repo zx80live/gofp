@@ -3,283 +3,284 @@
 
 package fp
 
+
 func (l BoolList) Foreach(f func(bool)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l StringList) Foreach(f func(string)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l IntList) Foreach(f func(int)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Int64List) Foreach(f func(int64)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l ByteList) Foreach(f func(byte)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l RuneList) Foreach(f func(rune)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float32List) Foreach(f func(float32)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float64List) Foreach(f func(float64)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l AnyList) Foreach(f func(Any)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Tuple2List) Foreach(f func(Tuple2)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l BoolArrayList) Foreach(f func([]bool)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l StringArrayList) Foreach(f func([]string)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l IntArrayList) Foreach(f func([]int)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Int64ArrayList) Foreach(f func([]int64)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l ByteArrayList) Foreach(f func([]byte)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l RuneArrayList) Foreach(f func([]rune)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float32ArrayList) Foreach(f func([]float32)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float64ArrayList) Foreach(f func([]float64)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l AnyArrayList) Foreach(f func([]Any)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Tuple2ArrayList) Foreach(f func([]Tuple2)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l BoolOptionList) Foreach(f func(BoolOption)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l StringOptionList) Foreach(f func(StringOption)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l IntOptionList) Foreach(f func(IntOption)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Int64OptionList) Foreach(f func(Int64Option)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l ByteOptionList) Foreach(f func(ByteOption)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l RuneOptionList) Foreach(f func(RuneOption)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float32OptionList) Foreach(f func(Float32Option)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float64OptionList) Foreach(f func(Float64Option)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l AnyOptionList) Foreach(f func(AnyOption)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Tuple2OptionList) Foreach(f func(Tuple2Option)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l BoolListList) Foreach(f func(BoolList)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l StringListList) Foreach(f func(StringList)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l IntListList) Foreach(f func(IntList)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Int64ListList) Foreach(f func(Int64List)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l ByteListList) Foreach(f func(ByteList)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l RuneListList) Foreach(f func(RuneList)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float32ListList) Foreach(f func(Float32List)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Float64ListList) Foreach(f func(Float64List)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l AnyListList) Foreach(f func(AnyList)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }
 func (l Tuple2ListList) Foreach(f func(Tuple2List)) {
-	xs := l
-	for xs.NonEmpty() {
-		f(*xs.head)
-		xs = *xs.tail
-	}
+  xs := l
+  for xs.NonEmpty() {
+    f(*xs.head)
+    xs = *xs.tail
+  }
 }

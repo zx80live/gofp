@@ -3,283 +3,44 @@
 
 package fp
 
-func (m BoolOption) Filter(p BoolPredicate) BoolOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneBool
-	}
-}
-func (m StringOption) Filter(p StringPredicate) StringOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneString
-	}
-}
-func (m IntOption) Filter(p IntPredicate) IntOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneInt
-	}
-}
-func (m Int64Option) Filter(p Int64Predicate) Int64Option {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneInt64
-	}
-}
-func (m ByteOption) Filter(p BytePredicate) ByteOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneByte
-	}
-}
-func (m RuneOption) Filter(p RunePredicate) RuneOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneRune
-	}
-}
-func (m Float32Option) Filter(p Float32Predicate) Float32Option {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat32
-	}
-}
-func (m Float64Option) Filter(p Float64Predicate) Float64Option {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat64
-	}
-}
-func (m AnyOption) Filter(p AnyPredicate) AnyOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneAny
-	}
-}
-func (m Tuple2Option) Filter(p Tuple2Predicate) Tuple2Option {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneTuple2
-	}
-}
-func (m BoolOptionOption) Filter(p BoolOptionPredicate) BoolOptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneBoolOption
-	}
-}
-func (m StringOptionOption) Filter(p StringOptionPredicate) StringOptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneStringOption
-	}
-}
-func (m IntOptionOption) Filter(p IntOptionPredicate) IntOptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneIntOption
-	}
-}
-func (m Int64OptionOption) Filter(p Int64OptionPredicate) Int64OptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneInt64Option
-	}
-}
-func (m ByteOptionOption) Filter(p ByteOptionPredicate) ByteOptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneByteOption
-	}
-}
-func (m RuneOptionOption) Filter(p RuneOptionPredicate) RuneOptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneRuneOption
-	}
-}
-func (m Float32OptionOption) Filter(p Float32OptionPredicate) Float32OptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat32Option
-	}
-}
-func (m Float64OptionOption) Filter(p Float64OptionPredicate) Float64OptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat64Option
-	}
-}
-func (m AnyOptionOption) Filter(p AnyOptionPredicate) AnyOptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneAnyOption
-	}
-}
-func (m Tuple2OptionOption) Filter(p Tuple2OptionPredicate) Tuple2OptionOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneTuple2Option
-	}
-}
-func (m BoolArrayOption) Filter(p BoolArrayPredicate) BoolArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneBoolArray
-	}
-}
-func (m StringArrayOption) Filter(p StringArrayPredicate) StringArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneStringArray
-	}
-}
-func (m IntArrayOption) Filter(p IntArrayPredicate) IntArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneIntArray
-	}
-}
-func (m Int64ArrayOption) Filter(p Int64ArrayPredicate) Int64ArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneInt64Array
-	}
-}
-func (m ByteArrayOption) Filter(p ByteArrayPredicate) ByteArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneByteArray
-	}
-}
-func (m RuneArrayOption) Filter(p RuneArrayPredicate) RuneArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneRuneArray
-	}
-}
-func (m Float32ArrayOption) Filter(p Float32ArrayPredicate) Float32ArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat32Array
-	}
-}
-func (m Float64ArrayOption) Filter(p Float64ArrayPredicate) Float64ArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat64Array
-	}
-}
-func (m AnyArrayOption) Filter(p AnyArrayPredicate) AnyArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneAnyArray
-	}
-}
-func (m Tuple2ArrayOption) Filter(p Tuple2ArrayPredicate) Tuple2ArrayOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneTuple2Array
-	}
-}
-func (m BoolListOption) Filter(p BoolListPredicate) BoolListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneBoolList
-	}
-}
-func (m StringListOption) Filter(p StringListPredicate) StringListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneStringList
-	}
-}
-func (m IntListOption) Filter(p IntListPredicate) IntListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneIntList
-	}
-}
-func (m Int64ListOption) Filter(p Int64ListPredicate) Int64ListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneInt64List
-	}
-}
-func (m ByteListOption) Filter(p ByteListPredicate) ByteListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneByteList
-	}
-}
-func (m RuneListOption) Filter(p RuneListPredicate) RuneListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneRuneList
-	}
-}
-func (m Float32ListOption) Filter(p Float32ListPredicate) Float32ListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat32List
-	}
-}
-func (m Float64ListOption) Filter(p Float64ListPredicate) Float64ListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneFloat64List
-	}
-}
-func (m AnyListOption) Filter(p AnyListPredicate) AnyListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneAnyList
-	}
-}
-func (m Tuple2ListOption) Filter(p Tuple2ListPredicate) Tuple2ListOption {
-	if m.IsDefined() && p(*m.value) {
-		return m
-	} else {
-		return NoneTuple2List
-	}
-}
+
+func (m BoolOption) Filter(p BoolPredicate) BoolOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneBool } }
+func (m StringOption) Filter(p StringPredicate) StringOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneString } }
+func (m IntOption) Filter(p IntPredicate) IntOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneInt } }
+func (m Int64Option) Filter(p Int64Predicate) Int64Option { if m.IsDefined() && p(*m.value) { return m } else { return NoneInt64 } }
+func (m ByteOption) Filter(p BytePredicate) ByteOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneByte } }
+func (m RuneOption) Filter(p RunePredicate) RuneOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneRune } }
+func (m Float32Option) Filter(p Float32Predicate) Float32Option { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat32 } }
+func (m Float64Option) Filter(p Float64Predicate) Float64Option { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat64 } }
+func (m AnyOption) Filter(p AnyPredicate) AnyOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneAny } }
+func (m Tuple2Option) Filter(p Tuple2Predicate) Tuple2Option { if m.IsDefined() && p(*m.value) { return m } else { return NoneTuple2 } }
+func (m BoolOptionOption) Filter(p BoolOptionPredicate) BoolOptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneBoolOption } }
+func (m StringOptionOption) Filter(p StringOptionPredicate) StringOptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneStringOption } }
+func (m IntOptionOption) Filter(p IntOptionPredicate) IntOptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneIntOption } }
+func (m Int64OptionOption) Filter(p Int64OptionPredicate) Int64OptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneInt64Option } }
+func (m ByteOptionOption) Filter(p ByteOptionPredicate) ByteOptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneByteOption } }
+func (m RuneOptionOption) Filter(p RuneOptionPredicate) RuneOptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneRuneOption } }
+func (m Float32OptionOption) Filter(p Float32OptionPredicate) Float32OptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat32Option } }
+func (m Float64OptionOption) Filter(p Float64OptionPredicate) Float64OptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat64Option } }
+func (m AnyOptionOption) Filter(p AnyOptionPredicate) AnyOptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneAnyOption } }
+func (m Tuple2OptionOption) Filter(p Tuple2OptionPredicate) Tuple2OptionOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneTuple2Option } }
+func (m BoolArrayOption) Filter(p BoolArrayPredicate) BoolArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneBoolArray } }
+func (m StringArrayOption) Filter(p StringArrayPredicate) StringArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneStringArray } }
+func (m IntArrayOption) Filter(p IntArrayPredicate) IntArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneIntArray } }
+func (m Int64ArrayOption) Filter(p Int64ArrayPredicate) Int64ArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneInt64Array } }
+func (m ByteArrayOption) Filter(p ByteArrayPredicate) ByteArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneByteArray } }
+func (m RuneArrayOption) Filter(p RuneArrayPredicate) RuneArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneRuneArray } }
+func (m Float32ArrayOption) Filter(p Float32ArrayPredicate) Float32ArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat32Array } }
+func (m Float64ArrayOption) Filter(p Float64ArrayPredicate) Float64ArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat64Array } }
+func (m AnyArrayOption) Filter(p AnyArrayPredicate) AnyArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneAnyArray } }
+func (m Tuple2ArrayOption) Filter(p Tuple2ArrayPredicate) Tuple2ArrayOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneTuple2Array } }
+func (m BoolListOption) Filter(p BoolListPredicate) BoolListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneBoolList } }
+func (m StringListOption) Filter(p StringListPredicate) StringListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneStringList } }
+func (m IntListOption) Filter(p IntListPredicate) IntListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneIntList } }
+func (m Int64ListOption) Filter(p Int64ListPredicate) Int64ListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneInt64List } }
+func (m ByteListOption) Filter(p ByteListPredicate) ByteListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneByteList } }
+func (m RuneListOption) Filter(p RuneListPredicate) RuneListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneRuneList } }
+func (m Float32ListOption) Filter(p Float32ListPredicate) Float32ListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat32List } }
+func (m Float64ListOption) Filter(p Float64ListPredicate) Float64ListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneFloat64List } }
+func (m AnyListOption) Filter(p AnyListPredicate) AnyListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneAnyList } }
+func (m Tuple2ListOption) Filter(p Tuple2ListPredicate) Tuple2ListOption { if m.IsDefined() && p(*m.value) { return m } else { return NoneTuple2List } }

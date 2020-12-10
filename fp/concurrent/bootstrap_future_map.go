@@ -3,8583 +3,2920 @@
 
 package concurrent
 
-import . "github.com/zx80live/gofp/fp"
-
+import . "github.com/zx80live/gofp/fp" 
 func (f BoolFuture) MapBool(t func(Bool) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f BoolFuture) MapString(t func(Bool) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapInt(t func(Bool) Int) IntFuture       { return SuccessIntFuture(t(<-f.ch)) }
+func (f BoolFuture) MapString(t func(Bool) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f BoolFuture) MapInt(t func(Bool) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
 func (f BoolFuture) MapInt64(t func(Bool) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
-func (f BoolFuture) MapByte(t func(Bool) Byte) ByteFuture    { return SuccessByteFuture(t(<-f.ch)) }
-func (f BoolFuture) MapRune(t func(Bool) Rune) RuneFuture    { return SuccessRuneFuture(t(<-f.ch)) }
-func (f BoolFuture) MapFloat32(t func(Bool) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat64(t func(Bool) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f BoolFuture) MapByte(t func(Bool) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f BoolFuture) MapRune(t func(Bool) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat32(t func(Bool) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f BoolFuture) MapFloat64(t func(Bool) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f BoolFuture) MapAny(t func(Bool) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f BoolFuture) MapBoolOption(t func(Bool) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapStringOption(t func(Bool) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapIntOption(t func(Bool) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapInt64Option(t func(Bool) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapByteOption(t func(Bool) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapRuneOption(t func(Bool) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat32Option(t func(Bool) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat64Option(t func(Bool) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapAnyOption(t func(Bool) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapBoolListOption(t func(Bool) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapStringListOption(t func(Bool) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapIntListOption(t func(Bool) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapInt64ListOption(t func(Bool) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapByteListOption(t func(Bool) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapRuneListOption(t func(Bool) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat32ListOption(t func(Bool) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat64ListOption(t func(Bool) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapAnyListOption(t func(Bool) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapBoolArrayOption(t func(Bool) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapStringArrayOption(t func(Bool) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapIntArrayOption(t func(Bool) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapInt64ArrayOption(t func(Bool) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapByteArrayOption(t func(Bool) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapRuneArrayOption(t func(Bool) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat32ArrayOption(t func(Bool) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat64ArrayOption(t func(Bool) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapAnyArrayOption(t func(Bool) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapBoolList(t func(Bool) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapStringList(t func(Bool) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapIntList(t func(Bool) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapInt64List(t func(Bool) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapByteList(t func(Bool) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapRuneList(t func(Bool) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat32List(t func(Bool) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat64List(t func(Bool) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapAnyList(t func(Bool) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapBoolArray(t func(Bool) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapStringArray(t func(Bool) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapIntArray(t func(Bool) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapInt64Array(t func(Bool) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapByteArray(t func(Bool) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapRuneArray(t func(Bool) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat32Array(t func(Bool) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapFloat64Array(t func(Bool) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f BoolFuture) MapAnyArray(t func(Bool) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f BoolFuture) MapBoolOption(t func(Bool) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapStringOption(t func(Bool) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapIntOption(t func(Bool) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapInt64Option(t func(Bool) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapByteOption(t func(Bool) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapRuneOption(t func(Bool) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat32Option(t func(Bool) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat64Option(t func(Bool) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapAnyOption(t func(Bool) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapBoolListOption(t func(Bool) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapStringListOption(t func(Bool) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapIntListOption(t func(Bool) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapInt64ListOption(t func(Bool) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapByteListOption(t func(Bool) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapRuneListOption(t func(Bool) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat32ListOption(t func(Bool) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat64ListOption(t func(Bool) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapAnyListOption(t func(Bool) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapBoolArrayOption(t func(Bool) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapStringArrayOption(t func(Bool) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapIntArrayOption(t func(Bool) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapInt64ArrayOption(t func(Bool) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapByteArrayOption(t func(Bool) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapRuneArrayOption(t func(Bool) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat32ArrayOption(t func(Bool) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat64ArrayOption(t func(Bool) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapAnyArrayOption(t func(Bool) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f BoolFuture) MapBoolList(t func(Bool) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapStringList(t func(Bool) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapIntList(t func(Bool) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapInt64List(t func(Bool) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapByteList(t func(Bool) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapRuneList(t func(Bool) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat32List(t func(Bool) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat64List(t func(Bool) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapAnyList(t func(Bool) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f BoolFuture) MapBoolArray(t func(Bool) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapStringArray(t func(Bool) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapIntArray(t func(Bool) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapInt64Array(t func(Bool) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapByteArray(t func(Bool) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapRuneArray(t func(Bool) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat32Array(t func(Bool) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapFloat64Array(t func(Bool) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f BoolFuture) MapAnyArray(t func(Bool) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f StringFuture) MapBool(t func(String) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f StringFuture) MapString(t func(String) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f StringFuture) MapString(t func(String) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f StringFuture) MapInt(t func(String) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f StringFuture) MapInt64(t func(String) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
+func (f StringFuture) MapInt64(t func(String) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
 func (f StringFuture) MapByte(t func(String) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
 func (f StringFuture) MapRune(t func(String) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
-func (f StringFuture) MapFloat32(t func(String) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f StringFuture) MapFloat64(t func(String) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f StringFuture) MapFloat32(t func(String) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f StringFuture) MapFloat64(t func(String) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f StringFuture) MapAny(t func(String) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f StringFuture) MapBoolOption(t func(String) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapStringOption(t func(String) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapIntOption(t func(String) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapInt64Option(t func(String) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapByteOption(t func(String) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapRuneOption(t func(String) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat32Option(t func(String) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat64Option(t func(String) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapAnyOption(t func(String) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapBoolListOption(t func(String) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapStringListOption(t func(String) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapIntListOption(t func(String) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapInt64ListOption(t func(String) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapByteListOption(t func(String) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapRuneListOption(t func(String) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat32ListOption(t func(String) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat64ListOption(t func(String) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapAnyListOption(t func(String) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapBoolArrayOption(t func(String) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapStringArrayOption(t func(String) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapIntArrayOption(t func(String) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapInt64ArrayOption(t func(String) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapByteArrayOption(t func(String) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapRuneArrayOption(t func(String) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat32ArrayOption(t func(String) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat64ArrayOption(t func(String) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapAnyArrayOption(t func(String) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f StringFuture) MapBoolList(t func(String) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapStringList(t func(String) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapIntList(t func(String) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapInt64List(t func(String) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapByteList(t func(String) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapRuneList(t func(String) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat32List(t func(String) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat64List(t func(String) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapAnyList(t func(String) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f StringFuture) MapBoolArray(t func(String) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapStringArray(t func(String) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapIntArray(t func(String) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapInt64Array(t func(String) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapByteArray(t func(String) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapRuneArray(t func(String) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat32Array(t func(String) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapFloat64Array(t func(String) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f StringFuture) MapAnyArray(t func(String) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapBool(t func(Int) Bool) BoolFuture       { return SuccessBoolFuture(t(<-f.ch)) }
+func (f StringFuture) MapBoolOption(t func(String) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapStringOption(t func(String) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapIntOption(t func(String) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapInt64Option(t func(String) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapByteOption(t func(String) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapRuneOption(t func(String) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat32Option(t func(String) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat64Option(t func(String) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapAnyOption(t func(String) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapBoolListOption(t func(String) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapStringListOption(t func(String) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapIntListOption(t func(String) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapInt64ListOption(t func(String) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapByteListOption(t func(String) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapRuneListOption(t func(String) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat32ListOption(t func(String) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat64ListOption(t func(String) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapAnyListOption(t func(String) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapBoolArrayOption(t func(String) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapStringArrayOption(t func(String) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapIntArrayOption(t func(String) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapInt64ArrayOption(t func(String) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapByteArrayOption(t func(String) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapRuneArrayOption(t func(String) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat32ArrayOption(t func(String) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat64ArrayOption(t func(String) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapAnyArrayOption(t func(String) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f StringFuture) MapBoolList(t func(String) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f StringFuture) MapStringList(t func(String) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f StringFuture) MapIntList(t func(String) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f StringFuture) MapInt64List(t func(String) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f StringFuture) MapByteList(t func(String) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f StringFuture) MapRuneList(t func(String) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat32List(t func(String) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat64List(t func(String) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f StringFuture) MapAnyList(t func(String) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f StringFuture) MapBoolArray(t func(String) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapStringArray(t func(String) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapIntArray(t func(String) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapInt64Array(t func(String) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapByteArray(t func(String) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapRuneArray(t func(String) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat32Array(t func(String) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapFloat64Array(t func(String) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f StringFuture) MapAnyArray(t func(String) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapBool(t func(Int) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
 func (f IntFuture) MapString(t func(Int) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
-func (f IntFuture) MapInt(t func(Int) Int) IntFuture          { return SuccessIntFuture(t(<-f.ch)) }
-func (f IntFuture) MapInt64(t func(Int) Int64) Int64Future    { return SuccessInt64Future(t(<-f.ch)) }
-func (f IntFuture) MapByte(t func(Int) Byte) ByteFuture       { return SuccessByteFuture(t(<-f.ch)) }
-func (f IntFuture) MapRune(t func(Int) Rune) RuneFuture       { return SuccessRuneFuture(t(<-f.ch)) }
-func (f IntFuture) MapFloat32(t func(Int) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f IntFuture) MapFloat64(t func(Int) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f IntFuture) MapInt(t func(Int) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f IntFuture) MapInt64(t func(Int) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f IntFuture) MapByte(t func(Int) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f IntFuture) MapRune(t func(Int) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat32(t func(Int) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f IntFuture) MapFloat64(t func(Int) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f IntFuture) MapAny(t func(Int) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f IntFuture) MapBoolOption(t func(Int) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapStringOption(t func(Int) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapIntOption(t func(Int) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapInt64Option(t func(Int) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapByteOption(t func(Int) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapRuneOption(t func(Int) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat32Option(t func(Int) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat64Option(t func(Int) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapAnyOption(t func(Int) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapBoolListOption(t func(Int) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapStringListOption(t func(Int) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapIntListOption(t func(Int) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapInt64ListOption(t func(Int) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapByteListOption(t func(Int) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapRuneListOption(t func(Int) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat32ListOption(t func(Int) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat64ListOption(t func(Int) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapAnyListOption(t func(Int) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapBoolArrayOption(t func(Int) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapStringArrayOption(t func(Int) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapIntArrayOption(t func(Int) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapInt64ArrayOption(t func(Int) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapByteArrayOption(t func(Int) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapRuneArrayOption(t func(Int) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat32ArrayOption(t func(Int) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat64ArrayOption(t func(Int) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapAnyArrayOption(t func(Int) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f IntFuture) MapBoolList(t func(Int) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapStringList(t func(Int) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapIntList(t func(Int) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapInt64List(t func(Int) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapByteList(t func(Int) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapRuneList(t func(Int) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat32List(t func(Int) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat64List(t func(Int) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapAnyList(t func(Int) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f IntFuture) MapBoolArray(t func(Int) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapStringArray(t func(Int) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapIntArray(t func(Int) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapInt64Array(t func(Int) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapByteArray(t func(Int) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapRuneArray(t func(Int) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat32Array(t func(Int) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapFloat64Array(t func(Int) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f IntFuture) MapAnyArray(t func(Int) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f IntFuture) MapBoolOption(t func(Int) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapStringOption(t func(Int) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapIntOption(t func(Int) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapInt64Option(t func(Int) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapByteOption(t func(Int) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapRuneOption(t func(Int) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat32Option(t func(Int) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat64Option(t func(Int) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapAnyOption(t func(Int) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapBoolListOption(t func(Int) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapStringListOption(t func(Int) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapIntListOption(t func(Int) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapInt64ListOption(t func(Int) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapByteListOption(t func(Int) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapRuneListOption(t func(Int) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat32ListOption(t func(Int) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat64ListOption(t func(Int) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapAnyListOption(t func(Int) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapBoolArrayOption(t func(Int) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapStringArrayOption(t func(Int) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapIntArrayOption(t func(Int) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapInt64ArrayOption(t func(Int) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapByteArrayOption(t func(Int) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapRuneArrayOption(t func(Int) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat32ArrayOption(t func(Int) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat64ArrayOption(t func(Int) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapAnyArrayOption(t func(Int) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f IntFuture) MapBoolList(t func(Int) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f IntFuture) MapStringList(t func(Int) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f IntFuture) MapIntList(t func(Int) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f IntFuture) MapInt64List(t func(Int) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f IntFuture) MapByteList(t func(Int) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f IntFuture) MapRuneList(t func(Int) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat32List(t func(Int) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat64List(t func(Int) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f IntFuture) MapAnyList(t func(Int) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f IntFuture) MapBoolArray(t func(Int) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapStringArray(t func(Int) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapIntArray(t func(Int) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapInt64Array(t func(Int) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapByteArray(t func(Int) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapRuneArray(t func(Int) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat32Array(t func(Int) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapFloat64Array(t func(Int) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f IntFuture) MapAnyArray(t func(Int) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f Int64Future) MapBool(t func(Int64) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f Int64Future) MapString(t func(Int64) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Int64Future) MapInt(t func(Int64) Int) IntFuture       { return SuccessIntFuture(t(<-f.ch)) }
+func (f Int64Future) MapString(t func(Int64) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Int64Future) MapInt(t func(Int64) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
 func (f Int64Future) MapInt64(t func(Int64) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
-func (f Int64Future) MapByte(t func(Int64) Byte) ByteFuture    { return SuccessByteFuture(t(<-f.ch)) }
-func (f Int64Future) MapRune(t func(Int64) Rune) RuneFuture    { return SuccessRuneFuture(t(<-f.ch)) }
-func (f Int64Future) MapFloat32(t func(Int64) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Int64Future) MapFloat64(t func(Int64) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f Int64Future) MapByte(t func(Int64) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Int64Future) MapRune(t func(Int64) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat32(t func(Int64) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Int64Future) MapFloat64(t func(Int64) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f Int64Future) MapAny(t func(Int64) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f Int64Future) MapBoolOption(t func(Int64) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapStringOption(t func(Int64) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapIntOption(t func(Int64) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapInt64Option(t func(Int64) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapByteOption(t func(Int64) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapRuneOption(t func(Int64) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat32Option(t func(Int64) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat64Option(t func(Int64) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapAnyOption(t func(Int64) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapBoolListOption(t func(Int64) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapStringListOption(t func(Int64) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapIntListOption(t func(Int64) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapInt64ListOption(t func(Int64) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapByteListOption(t func(Int64) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapRuneListOption(t func(Int64) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat32ListOption(t func(Int64) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat64ListOption(t func(Int64) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapAnyListOption(t func(Int64) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapBoolArrayOption(t func(Int64) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapStringArrayOption(t func(Int64) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapIntArrayOption(t func(Int64) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapInt64ArrayOption(t func(Int64) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapByteArrayOption(t func(Int64) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapRuneArrayOption(t func(Int64) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat32ArrayOption(t func(Int64) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat64ArrayOption(t func(Int64) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapAnyArrayOption(t func(Int64) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64Future) MapBoolList(t func(Int64) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapStringList(t func(Int64) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapIntList(t func(Int64) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapInt64List(t func(Int64) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapByteList(t func(Int64) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapRuneList(t func(Int64) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat32List(t func(Int64) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat64List(t func(Int64) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapAnyList(t func(Int64) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Int64Future) MapBoolArray(t func(Int64) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapStringArray(t func(Int64) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapIntArray(t func(Int64) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapInt64Array(t func(Int64) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapByteArray(t func(Int64) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapRuneArray(t func(Int64) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat32Array(t func(Int64) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapFloat64Array(t func(Int64) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Int64Future) MapAnyArray(t func(Int64) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f Int64Future) MapBoolOption(t func(Int64) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapStringOption(t func(Int64) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapIntOption(t func(Int64) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapInt64Option(t func(Int64) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapByteOption(t func(Int64) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapRuneOption(t func(Int64) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat32Option(t func(Int64) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat64Option(t func(Int64) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapAnyOption(t func(Int64) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapBoolListOption(t func(Int64) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapStringListOption(t func(Int64) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapIntListOption(t func(Int64) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapInt64ListOption(t func(Int64) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapByteListOption(t func(Int64) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapRuneListOption(t func(Int64) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat32ListOption(t func(Int64) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat64ListOption(t func(Int64) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapAnyListOption(t func(Int64) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapBoolArrayOption(t func(Int64) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapStringArrayOption(t func(Int64) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapIntArrayOption(t func(Int64) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapInt64ArrayOption(t func(Int64) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapByteArrayOption(t func(Int64) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapRuneArrayOption(t func(Int64) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat32ArrayOption(t func(Int64) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat64ArrayOption(t func(Int64) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapAnyArrayOption(t func(Int64) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Int64Future) MapBoolList(t func(Int64) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Int64Future) MapStringList(t func(Int64) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Int64Future) MapIntList(t func(Int64) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Int64Future) MapInt64List(t func(Int64) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Int64Future) MapByteList(t func(Int64) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Int64Future) MapRuneList(t func(Int64) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat32List(t func(Int64) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat64List(t func(Int64) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Int64Future) MapAnyList(t func(Int64) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Int64Future) MapBoolArray(t func(Int64) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapStringArray(t func(Int64) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapIntArray(t func(Int64) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapInt64Array(t func(Int64) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapByteArray(t func(Int64) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapRuneArray(t func(Int64) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat32Array(t func(Int64) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapFloat64Array(t func(Int64) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Int64Future) MapAnyArray(t func(Int64) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f ByteFuture) MapBool(t func(Byte) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f ByteFuture) MapString(t func(Byte) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapInt(t func(Byte) Int) IntFuture       { return SuccessIntFuture(t(<-f.ch)) }
+func (f ByteFuture) MapString(t func(Byte) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f ByteFuture) MapInt(t func(Byte) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
 func (f ByteFuture) MapInt64(t func(Byte) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
-func (f ByteFuture) MapByte(t func(Byte) Byte) ByteFuture    { return SuccessByteFuture(t(<-f.ch)) }
-func (f ByteFuture) MapRune(t func(Byte) Rune) RuneFuture    { return SuccessRuneFuture(t(<-f.ch)) }
-func (f ByteFuture) MapFloat32(t func(Byte) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat64(t func(Byte) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f ByteFuture) MapByte(t func(Byte) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f ByteFuture) MapRune(t func(Byte) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat32(t func(Byte) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f ByteFuture) MapFloat64(t func(Byte) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f ByteFuture) MapAny(t func(Byte) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f ByteFuture) MapBoolOption(t func(Byte) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapStringOption(t func(Byte) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapIntOption(t func(Byte) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapInt64Option(t func(Byte) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapByteOption(t func(Byte) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapRuneOption(t func(Byte) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat32Option(t func(Byte) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat64Option(t func(Byte) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapAnyOption(t func(Byte) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapBoolListOption(t func(Byte) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapStringListOption(t func(Byte) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapIntListOption(t func(Byte) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapInt64ListOption(t func(Byte) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapByteListOption(t func(Byte) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapRuneListOption(t func(Byte) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat32ListOption(t func(Byte) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat64ListOption(t func(Byte) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapAnyListOption(t func(Byte) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapBoolArrayOption(t func(Byte) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapStringArrayOption(t func(Byte) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapIntArrayOption(t func(Byte) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapInt64ArrayOption(t func(Byte) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapByteArrayOption(t func(Byte) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapRuneArrayOption(t func(Byte) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat32ArrayOption(t func(Byte) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat64ArrayOption(t func(Byte) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapAnyArrayOption(t func(Byte) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapBoolList(t func(Byte) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapStringList(t func(Byte) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapIntList(t func(Byte) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapInt64List(t func(Byte) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapByteList(t func(Byte) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapRuneList(t func(Byte) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat32List(t func(Byte) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat64List(t func(Byte) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapAnyList(t func(Byte) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapBoolArray(t func(Byte) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapStringArray(t func(Byte) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapIntArray(t func(Byte) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapInt64Array(t func(Byte) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapByteArray(t func(Byte) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapRuneArray(t func(Byte) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat32Array(t func(Byte) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapFloat64Array(t func(Byte) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f ByteFuture) MapAnyArray(t func(Byte) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f ByteFuture) MapBoolOption(t func(Byte) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapStringOption(t func(Byte) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapIntOption(t func(Byte) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapInt64Option(t func(Byte) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapByteOption(t func(Byte) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapRuneOption(t func(Byte) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat32Option(t func(Byte) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat64Option(t func(Byte) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapAnyOption(t func(Byte) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapBoolListOption(t func(Byte) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapStringListOption(t func(Byte) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapIntListOption(t func(Byte) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapInt64ListOption(t func(Byte) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapByteListOption(t func(Byte) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapRuneListOption(t func(Byte) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat32ListOption(t func(Byte) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat64ListOption(t func(Byte) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapAnyListOption(t func(Byte) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapBoolArrayOption(t func(Byte) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapStringArrayOption(t func(Byte) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapIntArrayOption(t func(Byte) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapInt64ArrayOption(t func(Byte) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapByteArrayOption(t func(Byte) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapRuneArrayOption(t func(Byte) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat32ArrayOption(t func(Byte) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat64ArrayOption(t func(Byte) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapAnyArrayOption(t func(Byte) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f ByteFuture) MapBoolList(t func(Byte) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapStringList(t func(Byte) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapIntList(t func(Byte) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapInt64List(t func(Byte) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapByteList(t func(Byte) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapRuneList(t func(Byte) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat32List(t func(Byte) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat64List(t func(Byte) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapAnyList(t func(Byte) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f ByteFuture) MapBoolArray(t func(Byte) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapStringArray(t func(Byte) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapIntArray(t func(Byte) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapInt64Array(t func(Byte) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapByteArray(t func(Byte) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapRuneArray(t func(Byte) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat32Array(t func(Byte) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapFloat64Array(t func(Byte) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f ByteFuture) MapAnyArray(t func(Byte) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f RuneFuture) MapBool(t func(Rune) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f RuneFuture) MapString(t func(Rune) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapInt(t func(Rune) Int) IntFuture       { return SuccessIntFuture(t(<-f.ch)) }
+func (f RuneFuture) MapString(t func(Rune) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f RuneFuture) MapInt(t func(Rune) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
 func (f RuneFuture) MapInt64(t func(Rune) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
-func (f RuneFuture) MapByte(t func(Rune) Byte) ByteFuture    { return SuccessByteFuture(t(<-f.ch)) }
-func (f RuneFuture) MapRune(t func(Rune) Rune) RuneFuture    { return SuccessRuneFuture(t(<-f.ch)) }
-func (f RuneFuture) MapFloat32(t func(Rune) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat64(t func(Rune) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f RuneFuture) MapByte(t func(Rune) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f RuneFuture) MapRune(t func(Rune) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat32(t func(Rune) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f RuneFuture) MapFloat64(t func(Rune) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f RuneFuture) MapAny(t func(Rune) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f RuneFuture) MapBoolOption(t func(Rune) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapStringOption(t func(Rune) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapIntOption(t func(Rune) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapInt64Option(t func(Rune) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapByteOption(t func(Rune) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapRuneOption(t func(Rune) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat32Option(t func(Rune) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat64Option(t func(Rune) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapAnyOption(t func(Rune) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapBoolListOption(t func(Rune) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapStringListOption(t func(Rune) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapIntListOption(t func(Rune) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapInt64ListOption(t func(Rune) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapByteListOption(t func(Rune) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapRuneListOption(t func(Rune) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat32ListOption(t func(Rune) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat64ListOption(t func(Rune) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapAnyListOption(t func(Rune) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapBoolArrayOption(t func(Rune) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapStringArrayOption(t func(Rune) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapIntArrayOption(t func(Rune) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapInt64ArrayOption(t func(Rune) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapByteArrayOption(t func(Rune) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapRuneArrayOption(t func(Rune) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat32ArrayOption(t func(Rune) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat64ArrayOption(t func(Rune) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapAnyArrayOption(t func(Rune) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapBoolList(t func(Rune) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapStringList(t func(Rune) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapIntList(t func(Rune) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapInt64List(t func(Rune) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapByteList(t func(Rune) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapRuneList(t func(Rune) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat32List(t func(Rune) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat64List(t func(Rune) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapAnyList(t func(Rune) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapBoolArray(t func(Rune) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapStringArray(t func(Rune) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapIntArray(t func(Rune) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapInt64Array(t func(Rune) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapByteArray(t func(Rune) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapRuneArray(t func(Rune) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat32Array(t func(Rune) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapFloat64Array(t func(Rune) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f RuneFuture) MapAnyArray(t func(Rune) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f RuneFuture) MapBoolOption(t func(Rune) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapStringOption(t func(Rune) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapIntOption(t func(Rune) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapInt64Option(t func(Rune) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapByteOption(t func(Rune) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapRuneOption(t func(Rune) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat32Option(t func(Rune) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat64Option(t func(Rune) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapAnyOption(t func(Rune) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapBoolListOption(t func(Rune) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapStringListOption(t func(Rune) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapIntListOption(t func(Rune) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapInt64ListOption(t func(Rune) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapByteListOption(t func(Rune) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapRuneListOption(t func(Rune) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat32ListOption(t func(Rune) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat64ListOption(t func(Rune) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapAnyListOption(t func(Rune) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapBoolArrayOption(t func(Rune) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapStringArrayOption(t func(Rune) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapIntArrayOption(t func(Rune) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapInt64ArrayOption(t func(Rune) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapByteArrayOption(t func(Rune) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapRuneArrayOption(t func(Rune) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat32ArrayOption(t func(Rune) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat64ArrayOption(t func(Rune) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapAnyArrayOption(t func(Rune) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f RuneFuture) MapBoolList(t func(Rune) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapStringList(t func(Rune) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapIntList(t func(Rune) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapInt64List(t func(Rune) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapByteList(t func(Rune) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapRuneList(t func(Rune) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat32List(t func(Rune) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat64List(t func(Rune) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapAnyList(t func(Rune) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f RuneFuture) MapBoolArray(t func(Rune) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapStringArray(t func(Rune) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapIntArray(t func(Rune) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapInt64Array(t func(Rune) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapByteArray(t func(Rune) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapRuneArray(t func(Rune) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat32Array(t func(Rune) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapFloat64Array(t func(Rune) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f RuneFuture) MapAnyArray(t func(Rune) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f Float32Future) MapBool(t func(Float32) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f Float32Future) MapString(t func(Float32) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f Float32Future) MapString(t func(Float32) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f Float32Future) MapInt(t func(Float32) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f Float32Future) MapInt64(t func(Float32) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
+func (f Float32Future) MapInt64(t func(Float32) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
 func (f Float32Future) MapByte(t func(Float32) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
 func (f Float32Future) MapRune(t func(Float32) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
-func (f Float32Future) MapFloat32(t func(Float32) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float32Future) MapFloat64(t func(Float32) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f Float32Future) MapFloat32(t func(Float32) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float32Future) MapFloat64(t func(Float32) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f Float32Future) MapAny(t func(Float32) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f Float32Future) MapBoolOption(t func(Float32) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapStringOption(t func(Float32) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapIntOption(t func(Float32) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapInt64Option(t func(Float32) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapByteOption(t func(Float32) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapRuneOption(t func(Float32) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat32Option(t func(Float32) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat64Option(t func(Float32) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapAnyOption(t func(Float32) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapBoolListOption(t func(Float32) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapStringListOption(t func(Float32) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapIntListOption(t func(Float32) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapInt64ListOption(t func(Float32) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapByteListOption(t func(Float32) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapRuneListOption(t func(Float32) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat32ListOption(t func(Float32) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat64ListOption(t func(Float32) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapAnyListOption(t func(Float32) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapBoolArrayOption(t func(Float32) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapStringArrayOption(t func(Float32) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapIntArrayOption(t func(Float32) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapInt64ArrayOption(t func(Float32) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapByteArrayOption(t func(Float32) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapRuneArrayOption(t func(Float32) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat32ArrayOption(t func(Float32) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat64ArrayOption(t func(Float32) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapAnyArrayOption(t func(Float32) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32Future) MapBoolList(t func(Float32) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapStringList(t func(Float32) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapIntList(t func(Float32) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapInt64List(t func(Float32) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapByteList(t func(Float32) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapRuneList(t func(Float32) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat32List(t func(Float32) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat64List(t func(Float32) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapAnyList(t func(Float32) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float32Future) MapBoolArray(t func(Float32) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapStringArray(t func(Float32) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapIntArray(t func(Float32) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapInt64Array(t func(Float32) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapByteArray(t func(Float32) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapRuneArray(t func(Float32) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat32Array(t func(Float32) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapFloat64Array(t func(Float32) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float32Future) MapAnyArray(t func(Float32) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f Float32Future) MapBoolOption(t func(Float32) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapStringOption(t func(Float32) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapIntOption(t func(Float32) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapInt64Option(t func(Float32) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapByteOption(t func(Float32) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapRuneOption(t func(Float32) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat32Option(t func(Float32) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat64Option(t func(Float32) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapAnyOption(t func(Float32) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapBoolListOption(t func(Float32) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapStringListOption(t func(Float32) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapIntListOption(t func(Float32) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapInt64ListOption(t func(Float32) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapByteListOption(t func(Float32) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapRuneListOption(t func(Float32) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat32ListOption(t func(Float32) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat64ListOption(t func(Float32) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapAnyListOption(t func(Float32) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapBoolArrayOption(t func(Float32) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapStringArrayOption(t func(Float32) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapIntArrayOption(t func(Float32) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapInt64ArrayOption(t func(Float32) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapByteArrayOption(t func(Float32) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapRuneArrayOption(t func(Float32) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat32ArrayOption(t func(Float32) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat64ArrayOption(t func(Float32) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapAnyArrayOption(t func(Float32) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float32Future) MapBoolList(t func(Float32) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float32Future) MapStringList(t func(Float32) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float32Future) MapIntList(t func(Float32) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float32Future) MapInt64List(t func(Float32) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float32Future) MapByteList(t func(Float32) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float32Future) MapRuneList(t func(Float32) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat32List(t func(Float32) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat64List(t func(Float32) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float32Future) MapAnyList(t func(Float32) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float32Future) MapBoolArray(t func(Float32) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapStringArray(t func(Float32) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapIntArray(t func(Float32) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapInt64Array(t func(Float32) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapByteArray(t func(Float32) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapRuneArray(t func(Float32) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat32Array(t func(Float32) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapFloat64Array(t func(Float32) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float32Future) MapAnyArray(t func(Float32) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f Float64Future) MapBool(t func(Float64) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f Float64Future) MapString(t func(Float64) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f Float64Future) MapString(t func(Float64) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f Float64Future) MapInt(t func(Float64) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f Float64Future) MapInt64(t func(Float64) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
+func (f Float64Future) MapInt64(t func(Float64) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
 func (f Float64Future) MapByte(t func(Float64) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
 func (f Float64Future) MapRune(t func(Float64) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
-func (f Float64Future) MapFloat32(t func(Float64) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float64Future) MapFloat64(t func(Float64) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f Float64Future) MapFloat32(t func(Float64) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float64Future) MapFloat64(t func(Float64) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f Float64Future) MapAny(t func(Float64) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f Float64Future) MapBoolOption(t func(Float64) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapStringOption(t func(Float64) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapIntOption(t func(Float64) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapInt64Option(t func(Float64) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapByteOption(t func(Float64) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapRuneOption(t func(Float64) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat32Option(t func(Float64) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat64Option(t func(Float64) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapAnyOption(t func(Float64) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapBoolListOption(t func(Float64) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapStringListOption(t func(Float64) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapIntListOption(t func(Float64) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapInt64ListOption(t func(Float64) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapByteListOption(t func(Float64) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapRuneListOption(t func(Float64) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat32ListOption(t func(Float64) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat64ListOption(t func(Float64) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapAnyListOption(t func(Float64) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapBoolArrayOption(t func(Float64) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapStringArrayOption(t func(Float64) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapIntArrayOption(t func(Float64) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapInt64ArrayOption(t func(Float64) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapByteArrayOption(t func(Float64) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapRuneArrayOption(t func(Float64) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat32ArrayOption(t func(Float64) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat64ArrayOption(t func(Float64) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapAnyArrayOption(t func(Float64) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64Future) MapBoolList(t func(Float64) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapStringList(t func(Float64) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapIntList(t func(Float64) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapInt64List(t func(Float64) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapByteList(t func(Float64) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapRuneList(t func(Float64) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat32List(t func(Float64) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat64List(t func(Float64) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapAnyList(t func(Float64) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float64Future) MapBoolArray(t func(Float64) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapStringArray(t func(Float64) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapIntArray(t func(Float64) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapInt64Array(t func(Float64) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapByteArray(t func(Float64) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapRuneArray(t func(Float64) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat32Array(t func(Float64) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapFloat64Array(t func(Float64) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float64Future) MapAnyArray(t func(Float64) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapBool(t func(Any) Bool) BoolFuture       { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float64Future) MapBoolOption(t func(Float64) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapStringOption(t func(Float64) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapIntOption(t func(Float64) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapInt64Option(t func(Float64) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapByteOption(t func(Float64) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapRuneOption(t func(Float64) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat32Option(t func(Float64) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat64Option(t func(Float64) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapAnyOption(t func(Float64) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapBoolListOption(t func(Float64) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapStringListOption(t func(Float64) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapIntListOption(t func(Float64) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapInt64ListOption(t func(Float64) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapByteListOption(t func(Float64) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapRuneListOption(t func(Float64) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat32ListOption(t func(Float64) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat64ListOption(t func(Float64) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapAnyListOption(t func(Float64) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapBoolArrayOption(t func(Float64) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapStringArrayOption(t func(Float64) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapIntArrayOption(t func(Float64) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapInt64ArrayOption(t func(Float64) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapByteArrayOption(t func(Float64) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapRuneArrayOption(t func(Float64) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat32ArrayOption(t func(Float64) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat64ArrayOption(t func(Float64) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapAnyArrayOption(t func(Float64) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float64Future) MapBoolList(t func(Float64) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float64Future) MapStringList(t func(Float64) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float64Future) MapIntList(t func(Float64) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float64Future) MapInt64List(t func(Float64) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float64Future) MapByteList(t func(Float64) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float64Future) MapRuneList(t func(Float64) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat32List(t func(Float64) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat64List(t func(Float64) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float64Future) MapAnyList(t func(Float64) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float64Future) MapBoolArray(t func(Float64) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapStringArray(t func(Float64) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapIntArray(t func(Float64) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapInt64Array(t func(Float64) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapByteArray(t func(Float64) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapRuneArray(t func(Float64) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat32Array(t func(Float64) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapFloat64Array(t func(Float64) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float64Future) MapAnyArray(t func(Float64) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapBool(t func(Any) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
 func (f AnyFuture) MapString(t func(Any) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
-func (f AnyFuture) MapInt(t func(Any) Int) IntFuture          { return SuccessIntFuture(t(<-f.ch)) }
-func (f AnyFuture) MapInt64(t func(Any) Int64) Int64Future    { return SuccessInt64Future(t(<-f.ch)) }
-func (f AnyFuture) MapByte(t func(Any) Byte) ByteFuture       { return SuccessByteFuture(t(<-f.ch)) }
-func (f AnyFuture) MapRune(t func(Any) Rune) RuneFuture       { return SuccessRuneFuture(t(<-f.ch)) }
-func (f AnyFuture) MapFloat32(t func(Any) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat64(t func(Any) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f AnyFuture) MapInt(t func(Any) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f AnyFuture) MapInt64(t func(Any) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f AnyFuture) MapByte(t func(Any) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f AnyFuture) MapRune(t func(Any) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat32(t func(Any) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f AnyFuture) MapFloat64(t func(Any) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f AnyFuture) MapAny(t func(Any) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f AnyFuture) MapBoolOption(t func(Any) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapStringOption(t func(Any) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapIntOption(t func(Any) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapInt64Option(t func(Any) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapByteOption(t func(Any) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapRuneOption(t func(Any) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat32Option(t func(Any) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat64Option(t func(Any) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapAnyOption(t func(Any) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapBoolListOption(t func(Any) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapStringListOption(t func(Any) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapIntListOption(t func(Any) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapInt64ListOption(t func(Any) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapByteListOption(t func(Any) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapRuneListOption(t func(Any) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat32ListOption(t func(Any) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat64ListOption(t func(Any) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapAnyListOption(t func(Any) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapBoolArrayOption(t func(Any) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapStringArrayOption(t func(Any) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapIntArrayOption(t func(Any) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapInt64ArrayOption(t func(Any) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapByteArrayOption(t func(Any) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapRuneArrayOption(t func(Any) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat32ArrayOption(t func(Any) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat64ArrayOption(t func(Any) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapAnyArrayOption(t func(Any) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapBoolList(t func(Any) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapStringList(t func(Any) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapIntList(t func(Any) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapInt64List(t func(Any) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapByteList(t func(Any) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapRuneList(t func(Any) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat32List(t func(Any) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat64List(t func(Any) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapAnyList(t func(Any) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapBoolArray(t func(Any) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapStringArray(t func(Any) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapIntArray(t func(Any) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapInt64Array(t func(Any) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapByteArray(t func(Any) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapRuneArray(t func(Any) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat32Array(t func(Any) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapFloat64Array(t func(Any) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f AnyFuture) MapAnyArray(t func(Any) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapBool(t func(BoolOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapString(t func(BoolOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt(t func(BoolOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt64(t func(BoolOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapByte(t func(BoolOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapRune(t func(BoolOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat32(t func(BoolOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat64(t func(BoolOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapAny(t func(BoolOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapBoolOption(t func(BoolOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapStringOption(t func(BoolOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapIntOption(t func(BoolOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt64Option(t func(BoolOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapByteOption(t func(BoolOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapRuneOption(t func(BoolOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat32Option(t func(BoolOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat64Option(t func(BoolOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapAnyOption(t func(BoolOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapBoolListOption(t func(BoolOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapStringListOption(t func(BoolOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapIntListOption(t func(BoolOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt64ListOption(t func(BoolOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapByteListOption(t func(BoolOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapRuneListOption(t func(BoolOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat32ListOption(t func(BoolOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat64ListOption(t func(BoolOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapAnyListOption(t func(BoolOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapBoolArrayOption(t func(BoolOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapStringArrayOption(t func(BoolOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapIntArrayOption(t func(BoolOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt64ArrayOption(t func(BoolOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapByteArrayOption(t func(BoolOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapRuneArrayOption(t func(BoolOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat32ArrayOption(t func(BoolOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat64ArrayOption(t func(BoolOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapAnyArrayOption(t func(BoolOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapBoolList(t func(BoolOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapStringList(t func(BoolOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapIntList(t func(BoolOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt64List(t func(BoolOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapByteList(t func(BoolOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapRuneList(t func(BoolOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat32List(t func(BoolOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat64List(t func(BoolOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapAnyList(t func(BoolOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapBoolArray(t func(BoolOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapStringArray(t func(BoolOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapIntArray(t func(BoolOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapInt64Array(t func(BoolOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapByteArray(t func(BoolOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapRuneArray(t func(BoolOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat32Array(t func(BoolOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapFloat64Array(t func(BoolOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f BoolOptionFuture) MapAnyArray(t func(BoolOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapBool(t func(StringOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapString(t func(StringOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt(t func(StringOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt64(t func(StringOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f StringOptionFuture) MapByte(t func(StringOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapRune(t func(StringOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat32(t func(StringOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat64(t func(StringOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f StringOptionFuture) MapAny(t func(StringOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapBoolOption(t func(StringOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapStringOption(t func(StringOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapIntOption(t func(StringOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt64Option(t func(StringOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapByteOption(t func(StringOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapRuneOption(t func(StringOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat32Option(t func(StringOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat64Option(t func(StringOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapAnyOption(t func(StringOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapBoolListOption(t func(StringOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapStringListOption(t func(StringOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapIntListOption(t func(StringOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt64ListOption(t func(StringOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapByteListOption(t func(StringOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapRuneListOption(t func(StringOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat32ListOption(t func(StringOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat64ListOption(t func(StringOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapAnyListOption(t func(StringOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapBoolArrayOption(t func(StringOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapStringArrayOption(t func(StringOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapIntArrayOption(t func(StringOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt64ArrayOption(t func(StringOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapByteArrayOption(t func(StringOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapRuneArrayOption(t func(StringOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat32ArrayOption(t func(StringOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat64ArrayOption(t func(StringOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapAnyArrayOption(t func(StringOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapBoolList(t func(StringOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapStringList(t func(StringOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapIntList(t func(StringOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt64List(t func(StringOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapByteList(t func(StringOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapRuneList(t func(StringOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat32List(t func(StringOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat64List(t func(StringOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapAnyList(t func(StringOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapBoolArray(t func(StringOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapStringArray(t func(StringOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapIntArray(t func(StringOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapInt64Array(t func(StringOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapByteArray(t func(StringOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapRuneArray(t func(StringOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat32Array(t func(StringOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapFloat64Array(t func(StringOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f StringOptionFuture) MapAnyArray(t func(StringOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapBool(t func(IntOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapString(t func(IntOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f AnyFuture) MapBoolOption(t func(Any) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapStringOption(t func(Any) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapIntOption(t func(Any) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapInt64Option(t func(Any) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapByteOption(t func(Any) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapRuneOption(t func(Any) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat32Option(t func(Any) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat64Option(t func(Any) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapAnyOption(t func(Any) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapBoolListOption(t func(Any) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapStringListOption(t func(Any) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapIntListOption(t func(Any) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapInt64ListOption(t func(Any) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapByteListOption(t func(Any) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapRuneListOption(t func(Any) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat32ListOption(t func(Any) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat64ListOption(t func(Any) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapAnyListOption(t func(Any) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapBoolArrayOption(t func(Any) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapStringArrayOption(t func(Any) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapIntArrayOption(t func(Any) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapInt64ArrayOption(t func(Any) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapByteArrayOption(t func(Any) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapRuneArrayOption(t func(Any) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat32ArrayOption(t func(Any) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat64ArrayOption(t func(Any) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapAnyArrayOption(t func(Any) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f AnyFuture) MapBoolList(t func(Any) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapStringList(t func(Any) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapIntList(t func(Any) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapInt64List(t func(Any) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapByteList(t func(Any) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapRuneList(t func(Any) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat32List(t func(Any) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat64List(t func(Any) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapAnyList(t func(Any) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f AnyFuture) MapBoolArray(t func(Any) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapStringArray(t func(Any) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapIntArray(t func(Any) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapInt64Array(t func(Any) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapByteArray(t func(Any) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapRuneArray(t func(Any) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat32Array(t func(Any) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapFloat64Array(t func(Any) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f AnyFuture) MapAnyArray(t func(Any) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapBool(t func(BoolOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapString(t func(BoolOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt(t func(BoolOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt64(t func(BoolOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f BoolOptionFuture) MapByte(t func(BoolOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapRune(t func(BoolOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat32(t func(BoolOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat64(t func(BoolOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f BoolOptionFuture) MapAny(t func(BoolOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapBoolOption(t func(BoolOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapStringOption(t func(BoolOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapIntOption(t func(BoolOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt64Option(t func(BoolOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapByteOption(t func(BoolOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapRuneOption(t func(BoolOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat32Option(t func(BoolOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat64Option(t func(BoolOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapAnyOption(t func(BoolOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapBoolListOption(t func(BoolOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapStringListOption(t func(BoolOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapIntListOption(t func(BoolOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt64ListOption(t func(BoolOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapByteListOption(t func(BoolOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapRuneListOption(t func(BoolOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat32ListOption(t func(BoolOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat64ListOption(t func(BoolOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapAnyListOption(t func(BoolOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapBoolArrayOption(t func(BoolOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapStringArrayOption(t func(BoolOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapIntArrayOption(t func(BoolOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt64ArrayOption(t func(BoolOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapByteArrayOption(t func(BoolOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapRuneArrayOption(t func(BoolOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat32ArrayOption(t func(BoolOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat64ArrayOption(t func(BoolOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapAnyArrayOption(t func(BoolOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapBoolList(t func(BoolOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapStringList(t func(BoolOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapIntList(t func(BoolOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt64List(t func(BoolOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapByteList(t func(BoolOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapRuneList(t func(BoolOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat32List(t func(BoolOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat64List(t func(BoolOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapAnyList(t func(BoolOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapBoolArray(t func(BoolOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapStringArray(t func(BoolOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapIntArray(t func(BoolOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapInt64Array(t func(BoolOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapByteArray(t func(BoolOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapRuneArray(t func(BoolOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat32Array(t func(BoolOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapFloat64Array(t func(BoolOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f BoolOptionFuture) MapAnyArray(t func(BoolOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapBool(t func(StringOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapString(t func(StringOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt(t func(StringOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt64(t func(StringOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f StringOptionFuture) MapByte(t func(StringOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapRune(t func(StringOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat32(t func(StringOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat64(t func(StringOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f StringOptionFuture) MapAny(t func(StringOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapBoolOption(t func(StringOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapStringOption(t func(StringOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapIntOption(t func(StringOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt64Option(t func(StringOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapByteOption(t func(StringOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapRuneOption(t func(StringOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat32Option(t func(StringOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat64Option(t func(StringOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapAnyOption(t func(StringOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapBoolListOption(t func(StringOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapStringListOption(t func(StringOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapIntListOption(t func(StringOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt64ListOption(t func(StringOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapByteListOption(t func(StringOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapRuneListOption(t func(StringOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat32ListOption(t func(StringOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat64ListOption(t func(StringOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapAnyListOption(t func(StringOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapBoolArrayOption(t func(StringOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapStringArrayOption(t func(StringOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapIntArrayOption(t func(StringOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt64ArrayOption(t func(StringOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapByteArrayOption(t func(StringOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapRuneArrayOption(t func(StringOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat32ArrayOption(t func(StringOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat64ArrayOption(t func(StringOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapAnyArrayOption(t func(StringOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapBoolList(t func(StringOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapStringList(t func(StringOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapIntList(t func(StringOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt64List(t func(StringOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapByteList(t func(StringOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapRuneList(t func(StringOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat32List(t func(StringOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat64List(t func(StringOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapAnyList(t func(StringOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapBoolArray(t func(StringOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapStringArray(t func(StringOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapIntArray(t func(StringOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapInt64Array(t func(StringOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapByteArray(t func(StringOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapRuneArray(t func(StringOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat32Array(t func(StringOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapFloat64Array(t func(StringOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f StringOptionFuture) MapAnyArray(t func(StringOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapBool(t func(IntOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapString(t func(IntOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f IntOptionFuture) MapInt(t func(IntOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f IntOptionFuture) MapInt64(t func(IntOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f IntOptionFuture) MapByte(t func(IntOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapRune(t func(IntOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat32(t func(IntOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat64(t func(IntOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f IntOptionFuture) MapInt64(t func(IntOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f IntOptionFuture) MapByte(t func(IntOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapRune(t func(IntOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat32(t func(IntOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat64(t func(IntOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f IntOptionFuture) MapAny(t func(IntOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f IntOptionFuture) MapBoolOption(t func(IntOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapStringOption(t func(IntOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapIntOption(t func(IntOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapInt64Option(t func(IntOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapByteOption(t func(IntOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapRuneOption(t func(IntOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat32Option(t func(IntOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat64Option(t func(IntOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapAnyOption(t func(IntOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapBoolListOption(t func(IntOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapStringListOption(t func(IntOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapIntListOption(t func(IntOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapInt64ListOption(t func(IntOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapByteListOption(t func(IntOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapRuneListOption(t func(IntOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat32ListOption(t func(IntOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat64ListOption(t func(IntOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapAnyListOption(t func(IntOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapBoolArrayOption(t func(IntOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapStringArrayOption(t func(IntOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapIntArrayOption(t func(IntOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapInt64ArrayOption(t func(IntOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapByteArrayOption(t func(IntOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapRuneArrayOption(t func(IntOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat32ArrayOption(t func(IntOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat64ArrayOption(t func(IntOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapAnyArrayOption(t func(IntOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapBoolList(t func(IntOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapStringList(t func(IntOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapIntList(t func(IntOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapInt64List(t func(IntOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapByteList(t func(IntOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapRuneList(t func(IntOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat32List(t func(IntOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat64List(t func(IntOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapAnyList(t func(IntOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapBoolArray(t func(IntOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapStringArray(t func(IntOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapIntArray(t func(IntOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapInt64Array(t func(IntOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapByteArray(t func(IntOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapRuneArray(t func(IntOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat32Array(t func(IntOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapFloat64Array(t func(IntOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f IntOptionFuture) MapAnyArray(t func(IntOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapBool(t func(Int64Option) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapString(t func(Int64Option) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt(t func(Int64Option) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt64(t func(Int64Option) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapByte(t func(Int64Option) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapRune(t func(Int64Option) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat32(t func(Int64Option) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat64(t func(Int64Option) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapAny(t func(Int64Option) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapBoolOption(t func(Int64Option) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapStringOption(t func(Int64Option) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapIntOption(t func(Int64Option) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt64Option(t func(Int64Option) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapByteOption(t func(Int64Option) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapRuneOption(t func(Int64Option) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat32Option(t func(Int64Option) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat64Option(t func(Int64Option) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapAnyOption(t func(Int64Option) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapBoolListOption(t func(Int64Option) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapStringListOption(t func(Int64Option) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapIntListOption(t func(Int64Option) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt64ListOption(t func(Int64Option) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapByteListOption(t func(Int64Option) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapRuneListOption(t func(Int64Option) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat32ListOption(t func(Int64Option) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat64ListOption(t func(Int64Option) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapAnyListOption(t func(Int64Option) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapBoolArrayOption(t func(Int64Option) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapStringArrayOption(t func(Int64Option) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapIntArrayOption(t func(Int64Option) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt64ArrayOption(t func(Int64Option) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapByteArrayOption(t func(Int64Option) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapRuneArrayOption(t func(Int64Option) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat32ArrayOption(t func(Int64Option) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat64ArrayOption(t func(Int64Option) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapAnyArrayOption(t func(Int64Option) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapBoolList(t func(Int64Option) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapStringList(t func(Int64Option) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapIntList(t func(Int64Option) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt64List(t func(Int64Option) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapByteList(t func(Int64Option) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapRuneList(t func(Int64Option) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat32List(t func(Int64Option) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat64List(t func(Int64Option) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapAnyList(t func(Int64Option) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapBoolArray(t func(Int64Option) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapStringArray(t func(Int64Option) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapIntArray(t func(Int64Option) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapInt64Array(t func(Int64Option) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapByteArray(t func(Int64Option) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapRuneArray(t func(Int64Option) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat32Array(t func(Int64Option) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapFloat64Array(t func(Int64Option) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Int64OptionFuture) MapAnyArray(t func(Int64Option) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapBool(t func(ByteOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapString(t func(ByteOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt(t func(ByteOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt64(t func(ByteOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapByte(t func(ByteOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapRune(t func(ByteOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat32(t func(ByteOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat64(t func(ByteOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapAny(t func(ByteOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapBoolOption(t func(ByteOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapStringOption(t func(ByteOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapIntOption(t func(ByteOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt64Option(t func(ByteOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapByteOption(t func(ByteOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapRuneOption(t func(ByteOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat32Option(t func(ByteOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat64Option(t func(ByteOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapAnyOption(t func(ByteOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapBoolListOption(t func(ByteOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapStringListOption(t func(ByteOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapIntListOption(t func(ByteOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt64ListOption(t func(ByteOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapByteListOption(t func(ByteOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapRuneListOption(t func(ByteOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat32ListOption(t func(ByteOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat64ListOption(t func(ByteOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapAnyListOption(t func(ByteOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapBoolArrayOption(t func(ByteOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapStringArrayOption(t func(ByteOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapIntArrayOption(t func(ByteOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt64ArrayOption(t func(ByteOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapByteArrayOption(t func(ByteOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapRuneArrayOption(t func(ByteOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat32ArrayOption(t func(ByteOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat64ArrayOption(t func(ByteOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapAnyArrayOption(t func(ByteOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapBoolList(t func(ByteOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapStringList(t func(ByteOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapIntList(t func(ByteOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt64List(t func(ByteOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapByteList(t func(ByteOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapRuneList(t func(ByteOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat32List(t func(ByteOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat64List(t func(ByteOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapAnyList(t func(ByteOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapBoolArray(t func(ByteOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapStringArray(t func(ByteOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapIntArray(t func(ByteOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapInt64Array(t func(ByteOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapByteArray(t func(ByteOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapRuneArray(t func(ByteOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat32Array(t func(ByteOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapFloat64Array(t func(ByteOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f ByteOptionFuture) MapAnyArray(t func(ByteOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapBool(t func(RuneOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapString(t func(RuneOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt(t func(RuneOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt64(t func(RuneOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapByte(t func(RuneOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapRune(t func(RuneOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat32(t func(RuneOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat64(t func(RuneOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapAny(t func(RuneOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapBoolOption(t func(RuneOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapStringOption(t func(RuneOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapIntOption(t func(RuneOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt64Option(t func(RuneOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapByteOption(t func(RuneOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapRuneOption(t func(RuneOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat32Option(t func(RuneOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat64Option(t func(RuneOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapAnyOption(t func(RuneOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapBoolListOption(t func(RuneOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapStringListOption(t func(RuneOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapIntListOption(t func(RuneOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt64ListOption(t func(RuneOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapByteListOption(t func(RuneOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapRuneListOption(t func(RuneOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat32ListOption(t func(RuneOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat64ListOption(t func(RuneOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapAnyListOption(t func(RuneOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapBoolArrayOption(t func(RuneOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapStringArrayOption(t func(RuneOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapIntArrayOption(t func(RuneOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt64ArrayOption(t func(RuneOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapByteArrayOption(t func(RuneOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapRuneArrayOption(t func(RuneOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat32ArrayOption(t func(RuneOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat64ArrayOption(t func(RuneOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapAnyArrayOption(t func(RuneOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapBoolList(t func(RuneOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapStringList(t func(RuneOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapIntList(t func(RuneOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt64List(t func(RuneOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapByteList(t func(RuneOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapRuneList(t func(RuneOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat32List(t func(RuneOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat64List(t func(RuneOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapAnyList(t func(RuneOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapBoolArray(t func(RuneOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapStringArray(t func(RuneOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapIntArray(t func(RuneOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapInt64Array(t func(RuneOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapByteArray(t func(RuneOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapRuneArray(t func(RuneOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat32Array(t func(RuneOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapFloat64Array(t func(RuneOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f RuneOptionFuture) MapAnyArray(t func(RuneOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapBool(t func(Float32Option) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapString(t func(Float32Option) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt(t func(Float32Option) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt64(t func(Float32Option) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapByte(t func(Float32Option) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapRune(t func(Float32Option) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat32(t func(Float32Option) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat64(t func(Float32Option) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapAny(t func(Float32Option) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapBoolOption(t func(Float32Option) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapStringOption(t func(Float32Option) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapIntOption(t func(Float32Option) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt64Option(t func(Float32Option) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapByteOption(t func(Float32Option) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapRuneOption(t func(Float32Option) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat32Option(t func(Float32Option) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat64Option(t func(Float32Option) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapAnyOption(t func(Float32Option) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapBoolListOption(t func(Float32Option) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapStringListOption(t func(Float32Option) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapIntListOption(t func(Float32Option) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt64ListOption(t func(Float32Option) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapByteListOption(t func(Float32Option) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapRuneListOption(t func(Float32Option) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat32ListOption(t func(Float32Option) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat64ListOption(t func(Float32Option) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapAnyListOption(t func(Float32Option) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapBoolArrayOption(t func(Float32Option) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapStringArrayOption(t func(Float32Option) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapIntArrayOption(t func(Float32Option) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt64ArrayOption(t func(Float32Option) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapByteArrayOption(t func(Float32Option) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapRuneArrayOption(t func(Float32Option) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat32ArrayOption(t func(Float32Option) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat64ArrayOption(t func(Float32Option) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapAnyArrayOption(t func(Float32Option) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapBoolList(t func(Float32Option) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapStringList(t func(Float32Option) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapIntList(t func(Float32Option) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt64List(t func(Float32Option) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapByteList(t func(Float32Option) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapRuneList(t func(Float32Option) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat32List(t func(Float32Option) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat64List(t func(Float32Option) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapAnyList(t func(Float32Option) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapBoolArray(t func(Float32Option) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapStringArray(t func(Float32Option) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapIntArray(t func(Float32Option) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapInt64Array(t func(Float32Option) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapByteArray(t func(Float32Option) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapRuneArray(t func(Float32Option) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat32Array(t func(Float32Option) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapFloat64Array(t func(Float32Option) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float32OptionFuture) MapAnyArray(t func(Float32Option) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapBool(t func(Float64Option) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapString(t func(Float64Option) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt(t func(Float64Option) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt64(t func(Float64Option) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapByte(t func(Float64Option) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapRune(t func(Float64Option) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat32(t func(Float64Option) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat64(t func(Float64Option) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapAny(t func(Float64Option) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapBoolOption(t func(Float64Option) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapStringOption(t func(Float64Option) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapIntOption(t func(Float64Option) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt64Option(t func(Float64Option) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapByteOption(t func(Float64Option) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapRuneOption(t func(Float64Option) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat32Option(t func(Float64Option) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat64Option(t func(Float64Option) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapAnyOption(t func(Float64Option) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapBoolListOption(t func(Float64Option) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapStringListOption(t func(Float64Option) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapIntListOption(t func(Float64Option) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt64ListOption(t func(Float64Option) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapByteListOption(t func(Float64Option) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapRuneListOption(t func(Float64Option) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat32ListOption(t func(Float64Option) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat64ListOption(t func(Float64Option) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapAnyListOption(t func(Float64Option) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapBoolArrayOption(t func(Float64Option) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapStringArrayOption(t func(Float64Option) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapIntArrayOption(t func(Float64Option) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt64ArrayOption(t func(Float64Option) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapByteArrayOption(t func(Float64Option) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapRuneArrayOption(t func(Float64Option) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat32ArrayOption(t func(Float64Option) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat64ArrayOption(t func(Float64Option) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapAnyArrayOption(t func(Float64Option) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapBoolList(t func(Float64Option) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapStringList(t func(Float64Option) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapIntList(t func(Float64Option) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt64List(t func(Float64Option) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapByteList(t func(Float64Option) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapRuneList(t func(Float64Option) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat32List(t func(Float64Option) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat64List(t func(Float64Option) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapAnyList(t func(Float64Option) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapBoolArray(t func(Float64Option) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapStringArray(t func(Float64Option) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapIntArray(t func(Float64Option) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapInt64Array(t func(Float64Option) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapByteArray(t func(Float64Option) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapRuneArray(t func(Float64Option) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat32Array(t func(Float64Option) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapFloat64Array(t func(Float64Option) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float64OptionFuture) MapAnyArray(t func(Float64Option) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapBool(t func(AnyOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapString(t func(AnyOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f IntOptionFuture) MapBoolOption(t func(IntOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapStringOption(t func(IntOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapIntOption(t func(IntOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapInt64Option(t func(IntOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapByteOption(t func(IntOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapRuneOption(t func(IntOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat32Option(t func(IntOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat64Option(t func(IntOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapAnyOption(t func(IntOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapBoolListOption(t func(IntOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapStringListOption(t func(IntOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapIntListOption(t func(IntOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapInt64ListOption(t func(IntOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapByteListOption(t func(IntOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapRuneListOption(t func(IntOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat32ListOption(t func(IntOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat64ListOption(t func(IntOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapAnyListOption(t func(IntOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapBoolArrayOption(t func(IntOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapStringArrayOption(t func(IntOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapIntArrayOption(t func(IntOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapInt64ArrayOption(t func(IntOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapByteArrayOption(t func(IntOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapRuneArrayOption(t func(IntOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat32ArrayOption(t func(IntOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat64ArrayOption(t func(IntOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapAnyArrayOption(t func(IntOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapBoolList(t func(IntOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapStringList(t func(IntOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapIntList(t func(IntOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapInt64List(t func(IntOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapByteList(t func(IntOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapRuneList(t func(IntOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat32List(t func(IntOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat64List(t func(IntOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapAnyList(t func(IntOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapBoolArray(t func(IntOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapStringArray(t func(IntOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapIntArray(t func(IntOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapInt64Array(t func(IntOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapByteArray(t func(IntOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapRuneArray(t func(IntOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat32Array(t func(IntOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapFloat64Array(t func(IntOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f IntOptionFuture) MapAnyArray(t func(IntOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapBool(t func(Int64Option) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapString(t func(Int64Option) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt(t func(Int64Option) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt64(t func(Int64Option) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Int64OptionFuture) MapByte(t func(Int64Option) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapRune(t func(Int64Option) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat32(t func(Int64Option) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat64(t func(Int64Option) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Int64OptionFuture) MapAny(t func(Int64Option) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapBoolOption(t func(Int64Option) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapStringOption(t func(Int64Option) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapIntOption(t func(Int64Option) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt64Option(t func(Int64Option) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapByteOption(t func(Int64Option) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapRuneOption(t func(Int64Option) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat32Option(t func(Int64Option) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat64Option(t func(Int64Option) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapAnyOption(t func(Int64Option) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapBoolListOption(t func(Int64Option) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapStringListOption(t func(Int64Option) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapIntListOption(t func(Int64Option) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt64ListOption(t func(Int64Option) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapByteListOption(t func(Int64Option) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapRuneListOption(t func(Int64Option) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat32ListOption(t func(Int64Option) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat64ListOption(t func(Int64Option) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapAnyListOption(t func(Int64Option) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapBoolArrayOption(t func(Int64Option) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapStringArrayOption(t func(Int64Option) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapIntArrayOption(t func(Int64Option) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt64ArrayOption(t func(Int64Option) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapByteArrayOption(t func(Int64Option) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapRuneArrayOption(t func(Int64Option) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat32ArrayOption(t func(Int64Option) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat64ArrayOption(t func(Int64Option) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapAnyArrayOption(t func(Int64Option) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapBoolList(t func(Int64Option) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapStringList(t func(Int64Option) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapIntList(t func(Int64Option) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt64List(t func(Int64Option) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapByteList(t func(Int64Option) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapRuneList(t func(Int64Option) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat32List(t func(Int64Option) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat64List(t func(Int64Option) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapAnyList(t func(Int64Option) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapBoolArray(t func(Int64Option) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapStringArray(t func(Int64Option) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapIntArray(t func(Int64Option) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapInt64Array(t func(Int64Option) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapByteArray(t func(Int64Option) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapRuneArray(t func(Int64Option) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat32Array(t func(Int64Option) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapFloat64Array(t func(Int64Option) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Int64OptionFuture) MapAnyArray(t func(Int64Option) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapBool(t func(ByteOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapString(t func(ByteOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt(t func(ByteOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt64(t func(ByteOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f ByteOptionFuture) MapByte(t func(ByteOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapRune(t func(ByteOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat32(t func(ByteOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat64(t func(ByteOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f ByteOptionFuture) MapAny(t func(ByteOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapBoolOption(t func(ByteOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapStringOption(t func(ByteOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapIntOption(t func(ByteOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt64Option(t func(ByteOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapByteOption(t func(ByteOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapRuneOption(t func(ByteOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat32Option(t func(ByteOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat64Option(t func(ByteOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapAnyOption(t func(ByteOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapBoolListOption(t func(ByteOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapStringListOption(t func(ByteOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapIntListOption(t func(ByteOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt64ListOption(t func(ByteOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapByteListOption(t func(ByteOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapRuneListOption(t func(ByteOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat32ListOption(t func(ByteOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat64ListOption(t func(ByteOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapAnyListOption(t func(ByteOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapBoolArrayOption(t func(ByteOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapStringArrayOption(t func(ByteOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapIntArrayOption(t func(ByteOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt64ArrayOption(t func(ByteOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapByteArrayOption(t func(ByteOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapRuneArrayOption(t func(ByteOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat32ArrayOption(t func(ByteOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat64ArrayOption(t func(ByteOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapAnyArrayOption(t func(ByteOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapBoolList(t func(ByteOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapStringList(t func(ByteOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapIntList(t func(ByteOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt64List(t func(ByteOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapByteList(t func(ByteOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapRuneList(t func(ByteOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat32List(t func(ByteOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat64List(t func(ByteOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapAnyList(t func(ByteOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapBoolArray(t func(ByteOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapStringArray(t func(ByteOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapIntArray(t func(ByteOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapInt64Array(t func(ByteOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapByteArray(t func(ByteOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapRuneArray(t func(ByteOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat32Array(t func(ByteOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapFloat64Array(t func(ByteOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f ByteOptionFuture) MapAnyArray(t func(ByteOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapBool(t func(RuneOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapString(t func(RuneOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt(t func(RuneOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt64(t func(RuneOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f RuneOptionFuture) MapByte(t func(RuneOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapRune(t func(RuneOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat32(t func(RuneOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat64(t func(RuneOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f RuneOptionFuture) MapAny(t func(RuneOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapBoolOption(t func(RuneOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapStringOption(t func(RuneOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapIntOption(t func(RuneOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt64Option(t func(RuneOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapByteOption(t func(RuneOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapRuneOption(t func(RuneOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat32Option(t func(RuneOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat64Option(t func(RuneOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapAnyOption(t func(RuneOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapBoolListOption(t func(RuneOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapStringListOption(t func(RuneOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapIntListOption(t func(RuneOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt64ListOption(t func(RuneOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapByteListOption(t func(RuneOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapRuneListOption(t func(RuneOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat32ListOption(t func(RuneOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat64ListOption(t func(RuneOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapAnyListOption(t func(RuneOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapBoolArrayOption(t func(RuneOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapStringArrayOption(t func(RuneOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapIntArrayOption(t func(RuneOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt64ArrayOption(t func(RuneOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapByteArrayOption(t func(RuneOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapRuneArrayOption(t func(RuneOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat32ArrayOption(t func(RuneOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat64ArrayOption(t func(RuneOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapAnyArrayOption(t func(RuneOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapBoolList(t func(RuneOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapStringList(t func(RuneOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapIntList(t func(RuneOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt64List(t func(RuneOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapByteList(t func(RuneOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapRuneList(t func(RuneOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat32List(t func(RuneOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat64List(t func(RuneOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapAnyList(t func(RuneOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapBoolArray(t func(RuneOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapStringArray(t func(RuneOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapIntArray(t func(RuneOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapInt64Array(t func(RuneOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapByteArray(t func(RuneOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapRuneArray(t func(RuneOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat32Array(t func(RuneOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapFloat64Array(t func(RuneOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f RuneOptionFuture) MapAnyArray(t func(RuneOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapBool(t func(Float32Option) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapString(t func(Float32Option) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt(t func(Float32Option) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt64(t func(Float32Option) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float32OptionFuture) MapByte(t func(Float32Option) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapRune(t func(Float32Option) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat32(t func(Float32Option) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat64(t func(Float32Option) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float32OptionFuture) MapAny(t func(Float32Option) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapBoolOption(t func(Float32Option) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapStringOption(t func(Float32Option) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapIntOption(t func(Float32Option) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt64Option(t func(Float32Option) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapByteOption(t func(Float32Option) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapRuneOption(t func(Float32Option) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat32Option(t func(Float32Option) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat64Option(t func(Float32Option) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapAnyOption(t func(Float32Option) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapBoolListOption(t func(Float32Option) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapStringListOption(t func(Float32Option) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapIntListOption(t func(Float32Option) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt64ListOption(t func(Float32Option) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapByteListOption(t func(Float32Option) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapRuneListOption(t func(Float32Option) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat32ListOption(t func(Float32Option) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat64ListOption(t func(Float32Option) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapAnyListOption(t func(Float32Option) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapBoolArrayOption(t func(Float32Option) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapStringArrayOption(t func(Float32Option) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapIntArrayOption(t func(Float32Option) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt64ArrayOption(t func(Float32Option) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapByteArrayOption(t func(Float32Option) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapRuneArrayOption(t func(Float32Option) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat32ArrayOption(t func(Float32Option) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat64ArrayOption(t func(Float32Option) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapAnyArrayOption(t func(Float32Option) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapBoolList(t func(Float32Option) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapStringList(t func(Float32Option) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapIntList(t func(Float32Option) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt64List(t func(Float32Option) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapByteList(t func(Float32Option) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapRuneList(t func(Float32Option) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat32List(t func(Float32Option) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat64List(t func(Float32Option) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapAnyList(t func(Float32Option) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapBoolArray(t func(Float32Option) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapStringArray(t func(Float32Option) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapIntArray(t func(Float32Option) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapInt64Array(t func(Float32Option) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapByteArray(t func(Float32Option) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapRuneArray(t func(Float32Option) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat32Array(t func(Float32Option) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapFloat64Array(t func(Float32Option) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float32OptionFuture) MapAnyArray(t func(Float32Option) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapBool(t func(Float64Option) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapString(t func(Float64Option) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt(t func(Float64Option) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt64(t func(Float64Option) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float64OptionFuture) MapByte(t func(Float64Option) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapRune(t func(Float64Option) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat32(t func(Float64Option) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat64(t func(Float64Option) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float64OptionFuture) MapAny(t func(Float64Option) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapBoolOption(t func(Float64Option) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapStringOption(t func(Float64Option) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapIntOption(t func(Float64Option) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt64Option(t func(Float64Option) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapByteOption(t func(Float64Option) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapRuneOption(t func(Float64Option) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat32Option(t func(Float64Option) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat64Option(t func(Float64Option) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapAnyOption(t func(Float64Option) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapBoolListOption(t func(Float64Option) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapStringListOption(t func(Float64Option) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapIntListOption(t func(Float64Option) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt64ListOption(t func(Float64Option) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapByteListOption(t func(Float64Option) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapRuneListOption(t func(Float64Option) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat32ListOption(t func(Float64Option) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat64ListOption(t func(Float64Option) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapAnyListOption(t func(Float64Option) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapBoolArrayOption(t func(Float64Option) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapStringArrayOption(t func(Float64Option) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapIntArrayOption(t func(Float64Option) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt64ArrayOption(t func(Float64Option) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapByteArrayOption(t func(Float64Option) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapRuneArrayOption(t func(Float64Option) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat32ArrayOption(t func(Float64Option) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat64ArrayOption(t func(Float64Option) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapAnyArrayOption(t func(Float64Option) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapBoolList(t func(Float64Option) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapStringList(t func(Float64Option) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapIntList(t func(Float64Option) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt64List(t func(Float64Option) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapByteList(t func(Float64Option) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapRuneList(t func(Float64Option) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat32List(t func(Float64Option) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat64List(t func(Float64Option) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapAnyList(t func(Float64Option) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapBoolArray(t func(Float64Option) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapStringArray(t func(Float64Option) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapIntArray(t func(Float64Option) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapInt64Array(t func(Float64Option) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapByteArray(t func(Float64Option) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapRuneArray(t func(Float64Option) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat32Array(t func(Float64Option) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapFloat64Array(t func(Float64Option) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float64OptionFuture) MapAnyArray(t func(Float64Option) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapBool(t func(AnyOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapString(t func(AnyOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f AnyOptionFuture) MapInt(t func(AnyOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f AnyOptionFuture) MapInt64(t func(AnyOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapByte(t func(AnyOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapRune(t func(AnyOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat32(t func(AnyOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat64(t func(AnyOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f AnyOptionFuture) MapInt64(t func(AnyOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f AnyOptionFuture) MapByte(t func(AnyOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapRune(t func(AnyOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat32(t func(AnyOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat64(t func(AnyOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f AnyOptionFuture) MapAny(t func(AnyOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f AnyOptionFuture) MapBoolOption(t func(AnyOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapStringOption(t func(AnyOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapIntOption(t func(AnyOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapInt64Option(t func(AnyOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapByteOption(t func(AnyOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapRuneOption(t func(AnyOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat32Option(t func(AnyOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat64Option(t func(AnyOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapAnyOption(t func(AnyOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapBoolListOption(t func(AnyOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapStringListOption(t func(AnyOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapIntListOption(t func(AnyOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapInt64ListOption(t func(AnyOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapByteListOption(t func(AnyOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapRuneListOption(t func(AnyOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat32ListOption(t func(AnyOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat64ListOption(t func(AnyOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapAnyListOption(t func(AnyOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapBoolArrayOption(t func(AnyOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapStringArrayOption(t func(AnyOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapIntArrayOption(t func(AnyOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapInt64ArrayOption(t func(AnyOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapByteArrayOption(t func(AnyOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapRuneArrayOption(t func(AnyOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat32ArrayOption(t func(AnyOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat64ArrayOption(t func(AnyOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapAnyArrayOption(t func(AnyOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapBoolList(t func(AnyOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapStringList(t func(AnyOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapIntList(t func(AnyOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapInt64List(t func(AnyOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapByteList(t func(AnyOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapRuneList(t func(AnyOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat32List(t func(AnyOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat64List(t func(AnyOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapAnyList(t func(AnyOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapBoolArray(t func(AnyOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapStringArray(t func(AnyOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapIntArray(t func(AnyOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapInt64Array(t func(AnyOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapByteArray(t func(AnyOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapRuneArray(t func(AnyOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat32Array(t func(AnyOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapFloat64Array(t func(AnyOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f AnyOptionFuture) MapAnyArray(t func(AnyOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapBool(t func(BoolListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapString(t func(BoolListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt(t func(BoolListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt64(t func(BoolListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapByte(t func(BoolListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapRune(t func(BoolListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat32(t func(BoolListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat64(t func(BoolListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapAny(t func(BoolListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapBoolOption(t func(BoolListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapStringOption(t func(BoolListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapIntOption(t func(BoolListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt64Option(t func(BoolListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapByteOption(t func(BoolListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapRuneOption(t func(BoolListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat32Option(t func(BoolListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat64Option(t func(BoolListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapAnyOption(t func(BoolListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapBoolListOption(t func(BoolListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapStringListOption(t func(BoolListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapIntListOption(t func(BoolListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt64ListOption(t func(BoolListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapByteListOption(t func(BoolListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapRuneListOption(t func(BoolListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat32ListOption(t func(BoolListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat64ListOption(t func(BoolListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapAnyListOption(t func(BoolListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapBoolArrayOption(t func(BoolListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapStringArrayOption(t func(BoolListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapIntArrayOption(t func(BoolListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt64ArrayOption(t func(BoolListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapByteArrayOption(t func(BoolListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapRuneArrayOption(t func(BoolListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat32ArrayOption(t func(BoolListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat64ArrayOption(t func(BoolListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapAnyArrayOption(t func(BoolListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapBoolList(t func(BoolListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapStringList(t func(BoolListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapIntList(t func(BoolListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt64List(t func(BoolListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapByteList(t func(BoolListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapRuneList(t func(BoolListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat32List(t func(BoolListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat64List(t func(BoolListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapAnyList(t func(BoolListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapBoolArray(t func(BoolListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapStringArray(t func(BoolListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapIntArray(t func(BoolListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapInt64Array(t func(BoolListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapByteArray(t func(BoolListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapRuneArray(t func(BoolListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat32Array(t func(BoolListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapFloat64Array(t func(BoolListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f BoolListOptionFuture) MapAnyArray(t func(BoolListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapBool(t func(StringListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapString(t func(StringListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt(t func(StringListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt64(t func(StringListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapByte(t func(StringListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapRune(t func(StringListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat32(t func(StringListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat64(t func(StringListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapAny(t func(StringListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapBoolOption(t func(StringListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapStringOption(t func(StringListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapIntOption(t func(StringListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt64Option(t func(StringListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapByteOption(t func(StringListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapRuneOption(t func(StringListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat32Option(t func(StringListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat64Option(t func(StringListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapAnyOption(t func(StringListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapBoolListOption(t func(StringListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapStringListOption(t func(StringListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapIntListOption(t func(StringListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt64ListOption(t func(StringListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapByteListOption(t func(StringListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapRuneListOption(t func(StringListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat32ListOption(t func(StringListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat64ListOption(t func(StringListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapAnyListOption(t func(StringListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapBoolArrayOption(t func(StringListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapStringArrayOption(t func(StringListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapIntArrayOption(t func(StringListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt64ArrayOption(t func(StringListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapByteArrayOption(t func(StringListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapRuneArrayOption(t func(StringListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat32ArrayOption(t func(StringListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat64ArrayOption(t func(StringListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapAnyArrayOption(t func(StringListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapBoolList(t func(StringListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapStringList(t func(StringListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapIntList(t func(StringListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt64List(t func(StringListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapByteList(t func(StringListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapRuneList(t func(StringListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat32List(t func(StringListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat64List(t func(StringListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapAnyList(t func(StringListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapBoolArray(t func(StringListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapStringArray(t func(StringListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapIntArray(t func(StringListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapInt64Array(t func(StringListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapByteArray(t func(StringListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapRuneArray(t func(StringListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat32Array(t func(StringListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapFloat64Array(t func(StringListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f StringListOptionFuture) MapAnyArray(t func(StringListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapBool(t func(IntListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapString(t func(IntListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt(t func(IntListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt64(t func(IntListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapByte(t func(IntListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapRune(t func(IntListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat32(t func(IntListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat64(t func(IntListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapAny(t func(IntListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapBoolOption(t func(IntListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapStringOption(t func(IntListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapIntOption(t func(IntListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt64Option(t func(IntListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapByteOption(t func(IntListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapRuneOption(t func(IntListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat32Option(t func(IntListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat64Option(t func(IntListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapAnyOption(t func(IntListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapBoolListOption(t func(IntListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapStringListOption(t func(IntListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapIntListOption(t func(IntListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt64ListOption(t func(IntListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapByteListOption(t func(IntListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapRuneListOption(t func(IntListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat32ListOption(t func(IntListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat64ListOption(t func(IntListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapAnyListOption(t func(IntListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapBoolArrayOption(t func(IntListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapStringArrayOption(t func(IntListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapIntArrayOption(t func(IntListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt64ArrayOption(t func(IntListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapByteArrayOption(t func(IntListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapRuneArrayOption(t func(IntListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat32ArrayOption(t func(IntListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat64ArrayOption(t func(IntListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapAnyArrayOption(t func(IntListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapBoolList(t func(IntListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapStringList(t func(IntListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapIntList(t func(IntListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt64List(t func(IntListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapByteList(t func(IntListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapRuneList(t func(IntListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat32List(t func(IntListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat64List(t func(IntListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapAnyList(t func(IntListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapBoolArray(t func(IntListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapStringArray(t func(IntListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapIntArray(t func(IntListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapInt64Array(t func(IntListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapByteArray(t func(IntListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapRuneArray(t func(IntListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat32Array(t func(IntListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapFloat64Array(t func(IntListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f IntListOptionFuture) MapAnyArray(t func(IntListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapBool(t func(Int64ListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapString(t func(Int64ListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt(t func(Int64ListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt64(t func(Int64ListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapByte(t func(Int64ListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapRune(t func(Int64ListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat32(t func(Int64ListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat64(t func(Int64ListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapAny(t func(Int64ListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapBoolOption(t func(Int64ListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapStringOption(t func(Int64ListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapIntOption(t func(Int64ListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt64Option(t func(Int64ListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapByteOption(t func(Int64ListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapRuneOption(t func(Int64ListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat32Option(t func(Int64ListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat64Option(t func(Int64ListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapAnyOption(t func(Int64ListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapBoolListOption(t func(Int64ListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapStringListOption(t func(Int64ListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapIntListOption(t func(Int64ListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt64ListOption(t func(Int64ListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapByteListOption(t func(Int64ListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapRuneListOption(t func(Int64ListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat32ListOption(t func(Int64ListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat64ListOption(t func(Int64ListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapAnyListOption(t func(Int64ListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapBoolArrayOption(t func(Int64ListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapStringArrayOption(t func(Int64ListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapIntArrayOption(t func(Int64ListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt64ArrayOption(t func(Int64ListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapByteArrayOption(t func(Int64ListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapRuneArrayOption(t func(Int64ListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat32ArrayOption(t func(Int64ListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat64ArrayOption(t func(Int64ListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapAnyArrayOption(t func(Int64ListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapBoolList(t func(Int64ListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapStringList(t func(Int64ListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapIntList(t func(Int64ListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt64List(t func(Int64ListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapByteList(t func(Int64ListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapRuneList(t func(Int64ListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat32List(t func(Int64ListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat64List(t func(Int64ListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapAnyList(t func(Int64ListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapBoolArray(t func(Int64ListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapStringArray(t func(Int64ListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapIntArray(t func(Int64ListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapInt64Array(t func(Int64ListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapByteArray(t func(Int64ListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapRuneArray(t func(Int64ListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat32Array(t func(Int64ListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapFloat64Array(t func(Int64ListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ListOptionFuture) MapAnyArray(t func(Int64ListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapBool(t func(ByteListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapString(t func(ByteListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt(t func(ByteListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt64(t func(ByteListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapByte(t func(ByteListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapRune(t func(ByteListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat32(t func(ByteListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat64(t func(ByteListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapAny(t func(ByteListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapBoolOption(t func(ByteListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapStringOption(t func(ByteListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapIntOption(t func(ByteListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt64Option(t func(ByteListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapByteOption(t func(ByteListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapRuneOption(t func(ByteListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat32Option(t func(ByteListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat64Option(t func(ByteListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapAnyOption(t func(ByteListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapBoolListOption(t func(ByteListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapStringListOption(t func(ByteListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapIntListOption(t func(ByteListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt64ListOption(t func(ByteListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapByteListOption(t func(ByteListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapRuneListOption(t func(ByteListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat32ListOption(t func(ByteListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat64ListOption(t func(ByteListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapAnyListOption(t func(ByteListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapBoolArrayOption(t func(ByteListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapStringArrayOption(t func(ByteListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapIntArrayOption(t func(ByteListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt64ArrayOption(t func(ByteListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapByteArrayOption(t func(ByteListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapRuneArrayOption(t func(ByteListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat32ArrayOption(t func(ByteListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat64ArrayOption(t func(ByteListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapAnyArrayOption(t func(ByteListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapBoolList(t func(ByteListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapStringList(t func(ByteListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapIntList(t func(ByteListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt64List(t func(ByteListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapByteList(t func(ByteListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapRuneList(t func(ByteListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat32List(t func(ByteListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat64List(t func(ByteListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapAnyList(t func(ByteListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapBoolArray(t func(ByteListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapStringArray(t func(ByteListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapIntArray(t func(ByteListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapInt64Array(t func(ByteListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapByteArray(t func(ByteListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapRuneArray(t func(ByteListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat32Array(t func(ByteListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapFloat64Array(t func(ByteListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f ByteListOptionFuture) MapAnyArray(t func(ByteListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapBool(t func(RuneListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapString(t func(RuneListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt(t func(RuneListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt64(t func(RuneListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapByte(t func(RuneListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapRune(t func(RuneListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat32(t func(RuneListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat64(t func(RuneListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapAny(t func(RuneListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapBoolOption(t func(RuneListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapStringOption(t func(RuneListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapIntOption(t func(RuneListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt64Option(t func(RuneListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapByteOption(t func(RuneListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapRuneOption(t func(RuneListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat32Option(t func(RuneListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat64Option(t func(RuneListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapAnyOption(t func(RuneListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapBoolListOption(t func(RuneListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapStringListOption(t func(RuneListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapIntListOption(t func(RuneListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt64ListOption(t func(RuneListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapByteListOption(t func(RuneListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapRuneListOption(t func(RuneListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat32ListOption(t func(RuneListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat64ListOption(t func(RuneListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapAnyListOption(t func(RuneListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapBoolArrayOption(t func(RuneListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapStringArrayOption(t func(RuneListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapIntArrayOption(t func(RuneListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt64ArrayOption(t func(RuneListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapByteArrayOption(t func(RuneListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapRuneArrayOption(t func(RuneListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat32ArrayOption(t func(RuneListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat64ArrayOption(t func(RuneListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapAnyArrayOption(t func(RuneListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapBoolList(t func(RuneListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapStringList(t func(RuneListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapIntList(t func(RuneListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt64List(t func(RuneListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapByteList(t func(RuneListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapRuneList(t func(RuneListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat32List(t func(RuneListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat64List(t func(RuneListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapAnyList(t func(RuneListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapBoolArray(t func(RuneListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapStringArray(t func(RuneListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapIntArray(t func(RuneListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapInt64Array(t func(RuneListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapByteArray(t func(RuneListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapRuneArray(t func(RuneListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat32Array(t func(RuneListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapFloat64Array(t func(RuneListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f RuneListOptionFuture) MapAnyArray(t func(RuneListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapBool(t func(Float32ListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapString(t func(Float32ListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt(t func(Float32ListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt64(t func(Float32ListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapByte(t func(Float32ListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapRune(t func(Float32ListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat32(t func(Float32ListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat64(t func(Float32ListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapAny(t func(Float32ListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapBoolOption(t func(Float32ListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapStringOption(t func(Float32ListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapIntOption(t func(Float32ListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt64Option(t func(Float32ListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapByteOption(t func(Float32ListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapRuneOption(t func(Float32ListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat32Option(t func(Float32ListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat64Option(t func(Float32ListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapAnyOption(t func(Float32ListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapBoolListOption(t func(Float32ListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapStringListOption(t func(Float32ListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapIntListOption(t func(Float32ListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt64ListOption(t func(Float32ListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapByteListOption(t func(Float32ListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapRuneListOption(t func(Float32ListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat32ListOption(t func(Float32ListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat64ListOption(t func(Float32ListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapAnyListOption(t func(Float32ListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapBoolArrayOption(t func(Float32ListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapStringArrayOption(t func(Float32ListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapIntArrayOption(t func(Float32ListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt64ArrayOption(t func(Float32ListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapByteArrayOption(t func(Float32ListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapRuneArrayOption(t func(Float32ListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat32ArrayOption(t func(Float32ListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat64ArrayOption(t func(Float32ListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapAnyArrayOption(t func(Float32ListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapBoolList(t func(Float32ListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapStringList(t func(Float32ListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapIntList(t func(Float32ListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt64List(t func(Float32ListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapByteList(t func(Float32ListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapRuneList(t func(Float32ListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat32List(t func(Float32ListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat64List(t func(Float32ListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapAnyList(t func(Float32ListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapBoolArray(t func(Float32ListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapStringArray(t func(Float32ListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapIntArray(t func(Float32ListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapInt64Array(t func(Float32ListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapByteArray(t func(Float32ListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapRuneArray(t func(Float32ListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat32Array(t func(Float32ListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapFloat64Array(t func(Float32ListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ListOptionFuture) MapAnyArray(t func(Float32ListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapBool(t func(Float64ListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapString(t func(Float64ListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt(t func(Float64ListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt64(t func(Float64ListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapByte(t func(Float64ListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapRune(t func(Float64ListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat32(t func(Float64ListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat64(t func(Float64ListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapAny(t func(Float64ListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapBoolOption(t func(Float64ListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapStringOption(t func(Float64ListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapIntOption(t func(Float64ListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt64Option(t func(Float64ListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapByteOption(t func(Float64ListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapRuneOption(t func(Float64ListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat32Option(t func(Float64ListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat64Option(t func(Float64ListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapAnyOption(t func(Float64ListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapBoolListOption(t func(Float64ListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapStringListOption(t func(Float64ListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapIntListOption(t func(Float64ListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt64ListOption(t func(Float64ListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapByteListOption(t func(Float64ListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapRuneListOption(t func(Float64ListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat32ListOption(t func(Float64ListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat64ListOption(t func(Float64ListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapAnyListOption(t func(Float64ListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapBoolArrayOption(t func(Float64ListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapStringArrayOption(t func(Float64ListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapIntArrayOption(t func(Float64ListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt64ArrayOption(t func(Float64ListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapByteArrayOption(t func(Float64ListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapRuneArrayOption(t func(Float64ListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat32ArrayOption(t func(Float64ListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat64ArrayOption(t func(Float64ListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapAnyArrayOption(t func(Float64ListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapBoolList(t func(Float64ListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapStringList(t func(Float64ListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapIntList(t func(Float64ListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt64List(t func(Float64ListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapByteList(t func(Float64ListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapRuneList(t func(Float64ListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat32List(t func(Float64ListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat64List(t func(Float64ListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapAnyList(t func(Float64ListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapBoolArray(t func(Float64ListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapStringArray(t func(Float64ListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapIntArray(t func(Float64ListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapInt64Array(t func(Float64ListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapByteArray(t func(Float64ListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapRuneArray(t func(Float64ListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat32Array(t func(Float64ListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapFloat64Array(t func(Float64ListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ListOptionFuture) MapAnyArray(t func(Float64ListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapBool(t func(AnyListOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapString(t func(AnyListOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt(t func(AnyListOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt64(t func(AnyListOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapByte(t func(AnyListOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapRune(t func(AnyListOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat32(t func(AnyListOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat64(t func(AnyListOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapAny(t func(AnyListOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapBoolOption(t func(AnyListOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapStringOption(t func(AnyListOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapIntOption(t func(AnyListOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt64Option(t func(AnyListOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapByteOption(t func(AnyListOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapRuneOption(t func(AnyListOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat32Option(t func(AnyListOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat64Option(t func(AnyListOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapAnyOption(t func(AnyListOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapBoolListOption(t func(AnyListOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapStringListOption(t func(AnyListOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapIntListOption(t func(AnyListOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt64ListOption(t func(AnyListOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapByteListOption(t func(AnyListOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapRuneListOption(t func(AnyListOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat32ListOption(t func(AnyListOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat64ListOption(t func(AnyListOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapAnyListOption(t func(AnyListOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapBoolArrayOption(t func(AnyListOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapStringArrayOption(t func(AnyListOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapIntArrayOption(t func(AnyListOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt64ArrayOption(t func(AnyListOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapByteArrayOption(t func(AnyListOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapRuneArrayOption(t func(AnyListOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat32ArrayOption(t func(AnyListOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat64ArrayOption(t func(AnyListOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapAnyArrayOption(t func(AnyListOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapBoolList(t func(AnyListOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapStringList(t func(AnyListOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapIntList(t func(AnyListOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt64List(t func(AnyListOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapByteList(t func(AnyListOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapRuneList(t func(AnyListOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat32List(t func(AnyListOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat64List(t func(AnyListOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapAnyList(t func(AnyListOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapBoolArray(t func(AnyListOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapStringArray(t func(AnyListOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapIntArray(t func(AnyListOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapInt64Array(t func(AnyListOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapByteArray(t func(AnyListOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapRuneArray(t func(AnyListOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat32Array(t func(AnyListOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapFloat64Array(t func(AnyListOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f AnyListOptionFuture) MapAnyArray(t func(AnyListOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapBool(t func(BoolArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapString(t func(BoolArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt(t func(BoolArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt64(t func(BoolArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapByte(t func(BoolArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapRune(t func(BoolArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat32(t func(BoolArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat64(t func(BoolArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapAny(t func(BoolArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapBoolOption(t func(BoolArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapStringOption(t func(BoolArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapIntOption(t func(BoolArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt64Option(t func(BoolArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapByteOption(t func(BoolArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapRuneOption(t func(BoolArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat32Option(t func(BoolArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat64Option(t func(BoolArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapAnyOption(t func(BoolArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapBoolListOption(t func(BoolArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapStringListOption(t func(BoolArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapIntListOption(t func(BoolArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt64ListOption(t func(BoolArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapByteListOption(t func(BoolArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapRuneListOption(t func(BoolArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat32ListOption(t func(BoolArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat64ListOption(t func(BoolArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapAnyListOption(t func(BoolArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapBoolArrayOption(t func(BoolArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapStringArrayOption(t func(BoolArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapIntArrayOption(t func(BoolArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt64ArrayOption(t func(BoolArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapByteArrayOption(t func(BoolArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapRuneArrayOption(t func(BoolArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat32ArrayOption(t func(BoolArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat64ArrayOption(t func(BoolArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapAnyArrayOption(t func(BoolArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapBoolList(t func(BoolArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapStringList(t func(BoolArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapIntList(t func(BoolArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt64List(t func(BoolArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapByteList(t func(BoolArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapRuneList(t func(BoolArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat32List(t func(BoolArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat64List(t func(BoolArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapAnyList(t func(BoolArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapBoolArray(t func(BoolArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapStringArray(t func(BoolArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapIntArray(t func(BoolArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapInt64Array(t func(BoolArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapByteArray(t func(BoolArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapRuneArray(t func(BoolArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat32Array(t func(BoolArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapFloat64Array(t func(BoolArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayOptionFuture) MapAnyArray(t func(BoolArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapBool(t func(StringArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapString(t func(StringArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt(t func(StringArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt64(t func(StringArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapByte(t func(StringArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapRune(t func(StringArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat32(t func(StringArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat64(t func(StringArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapAny(t func(StringArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapBoolOption(t func(StringArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapStringOption(t func(StringArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapIntOption(t func(StringArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt64Option(t func(StringArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapByteOption(t func(StringArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapRuneOption(t func(StringArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat32Option(t func(StringArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat64Option(t func(StringArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapAnyOption(t func(StringArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapBoolListOption(t func(StringArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapStringListOption(t func(StringArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapIntListOption(t func(StringArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt64ListOption(t func(StringArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapByteListOption(t func(StringArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapRuneListOption(t func(StringArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat32ListOption(t func(StringArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat64ListOption(t func(StringArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapAnyListOption(t func(StringArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapBoolArrayOption(t func(StringArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapStringArrayOption(t func(StringArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapIntArrayOption(t func(StringArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt64ArrayOption(t func(StringArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapByteArrayOption(t func(StringArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapRuneArrayOption(t func(StringArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat32ArrayOption(t func(StringArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat64ArrayOption(t func(StringArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapAnyArrayOption(t func(StringArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapBoolList(t func(StringArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapStringList(t func(StringArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapIntList(t func(StringArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt64List(t func(StringArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapByteList(t func(StringArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapRuneList(t func(StringArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat32List(t func(StringArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat64List(t func(StringArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapAnyList(t func(StringArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapBoolArray(t func(StringArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapStringArray(t func(StringArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapIntArray(t func(StringArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapInt64Array(t func(StringArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapByteArray(t func(StringArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapRuneArray(t func(StringArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat32Array(t func(StringArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapFloat64Array(t func(StringArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f StringArrayOptionFuture) MapAnyArray(t func(StringArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapBool(t func(IntArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapString(t func(IntArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt(t func(IntArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt64(t func(IntArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapByte(t func(IntArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapRune(t func(IntArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat32(t func(IntArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat64(t func(IntArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapAny(t func(IntArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapBoolOption(t func(IntArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapStringOption(t func(IntArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapIntOption(t func(IntArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt64Option(t func(IntArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapByteOption(t func(IntArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapRuneOption(t func(IntArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat32Option(t func(IntArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat64Option(t func(IntArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapAnyOption(t func(IntArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapBoolListOption(t func(IntArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapStringListOption(t func(IntArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapIntListOption(t func(IntArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt64ListOption(t func(IntArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapByteListOption(t func(IntArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapRuneListOption(t func(IntArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat32ListOption(t func(IntArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat64ListOption(t func(IntArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapAnyListOption(t func(IntArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapBoolArrayOption(t func(IntArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapStringArrayOption(t func(IntArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapIntArrayOption(t func(IntArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt64ArrayOption(t func(IntArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapByteArrayOption(t func(IntArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapRuneArrayOption(t func(IntArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat32ArrayOption(t func(IntArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat64ArrayOption(t func(IntArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapAnyArrayOption(t func(IntArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapBoolList(t func(IntArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapStringList(t func(IntArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapIntList(t func(IntArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt64List(t func(IntArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapByteList(t func(IntArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapRuneList(t func(IntArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat32List(t func(IntArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat64List(t func(IntArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapAnyList(t func(IntArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapBoolArray(t func(IntArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapStringArray(t func(IntArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapIntArray(t func(IntArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapInt64Array(t func(IntArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapByteArray(t func(IntArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapRuneArray(t func(IntArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat32Array(t func(IntArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapFloat64Array(t func(IntArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f IntArrayOptionFuture) MapAnyArray(t func(IntArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapBool(t func(Int64ArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapString(t func(Int64ArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt(t func(Int64ArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt64(t func(Int64ArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapByte(t func(Int64ArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapRune(t func(Int64ArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat32(t func(Int64ArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat64(t func(Int64ArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapAny(t func(Int64ArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapBoolOption(t func(Int64ArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapStringOption(t func(Int64ArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapIntOption(t func(Int64ArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt64Option(t func(Int64ArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapByteOption(t func(Int64ArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapRuneOption(t func(Int64ArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat32Option(t func(Int64ArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat64Option(t func(Int64ArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapAnyOption(t func(Int64ArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapBoolListOption(t func(Int64ArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapStringListOption(t func(Int64ArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapIntListOption(t func(Int64ArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt64ListOption(t func(Int64ArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapByteListOption(t func(Int64ArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapRuneListOption(t func(Int64ArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat32ListOption(t func(Int64ArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat64ListOption(t func(Int64ArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapAnyListOption(t func(Int64ArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapBoolArrayOption(t func(Int64ArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapStringArrayOption(t func(Int64ArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapIntArrayOption(t func(Int64ArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt64ArrayOption(t func(Int64ArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapByteArrayOption(t func(Int64ArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapRuneArrayOption(t func(Int64ArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat32ArrayOption(t func(Int64ArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat64ArrayOption(t func(Int64ArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapAnyArrayOption(t func(Int64ArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapBoolList(t func(Int64ArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapStringList(t func(Int64ArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapIntList(t func(Int64ArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt64List(t func(Int64ArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapByteList(t func(Int64ArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapRuneList(t func(Int64ArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat32List(t func(Int64ArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat64List(t func(Int64ArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapAnyList(t func(Int64ArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapBoolArray(t func(Int64ArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapStringArray(t func(Int64ArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapIntArray(t func(Int64ArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapInt64Array(t func(Int64ArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapByteArray(t func(Int64ArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapRuneArray(t func(Int64ArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat32Array(t func(Int64ArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapFloat64Array(t func(Int64ArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayOptionFuture) MapAnyArray(t func(Int64ArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapBool(t func(ByteArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapString(t func(ByteArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt(t func(ByteArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt64(t func(ByteArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapByte(t func(ByteArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapRune(t func(ByteArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat32(t func(ByteArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat64(t func(ByteArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapAny(t func(ByteArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapBoolOption(t func(ByteArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapStringOption(t func(ByteArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapIntOption(t func(ByteArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt64Option(t func(ByteArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapByteOption(t func(ByteArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapRuneOption(t func(ByteArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat32Option(t func(ByteArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat64Option(t func(ByteArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapAnyOption(t func(ByteArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapBoolListOption(t func(ByteArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapStringListOption(t func(ByteArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapIntListOption(t func(ByteArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt64ListOption(t func(ByteArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapByteListOption(t func(ByteArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapRuneListOption(t func(ByteArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat32ListOption(t func(ByteArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat64ListOption(t func(ByteArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapAnyListOption(t func(ByteArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapBoolArrayOption(t func(ByteArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapStringArrayOption(t func(ByteArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapIntArrayOption(t func(ByteArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt64ArrayOption(t func(ByteArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapByteArrayOption(t func(ByteArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapRuneArrayOption(t func(ByteArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat32ArrayOption(t func(ByteArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat64ArrayOption(t func(ByteArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapAnyArrayOption(t func(ByteArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapBoolList(t func(ByteArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapStringList(t func(ByteArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapIntList(t func(ByteArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt64List(t func(ByteArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapByteList(t func(ByteArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapRuneList(t func(ByteArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat32List(t func(ByteArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat64List(t func(ByteArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapAnyList(t func(ByteArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapBoolArray(t func(ByteArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapStringArray(t func(ByteArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapIntArray(t func(ByteArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapInt64Array(t func(ByteArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapByteArray(t func(ByteArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapRuneArray(t func(ByteArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat32Array(t func(ByteArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapFloat64Array(t func(ByteArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayOptionFuture) MapAnyArray(t func(ByteArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapBool(t func(RuneArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapString(t func(RuneArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt(t func(RuneArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt64(t func(RuneArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapByte(t func(RuneArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapRune(t func(RuneArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat32(t func(RuneArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat64(t func(RuneArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapAny(t func(RuneArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapBoolOption(t func(RuneArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapStringOption(t func(RuneArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapIntOption(t func(RuneArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt64Option(t func(RuneArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapByteOption(t func(RuneArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapRuneOption(t func(RuneArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat32Option(t func(RuneArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat64Option(t func(RuneArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapAnyOption(t func(RuneArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapBoolListOption(t func(RuneArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapStringListOption(t func(RuneArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapIntListOption(t func(RuneArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt64ListOption(t func(RuneArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapByteListOption(t func(RuneArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapRuneListOption(t func(RuneArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat32ListOption(t func(RuneArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat64ListOption(t func(RuneArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapAnyListOption(t func(RuneArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapBoolArrayOption(t func(RuneArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapStringArrayOption(t func(RuneArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapIntArrayOption(t func(RuneArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt64ArrayOption(t func(RuneArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapByteArrayOption(t func(RuneArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapRuneArrayOption(t func(RuneArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat32ArrayOption(t func(RuneArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat64ArrayOption(t func(RuneArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapAnyArrayOption(t func(RuneArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapBoolList(t func(RuneArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapStringList(t func(RuneArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapIntList(t func(RuneArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt64List(t func(RuneArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapByteList(t func(RuneArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapRuneList(t func(RuneArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat32List(t func(RuneArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat64List(t func(RuneArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapAnyList(t func(RuneArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapBoolArray(t func(RuneArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapStringArray(t func(RuneArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapIntArray(t func(RuneArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapInt64Array(t func(RuneArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapByteArray(t func(RuneArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapRuneArray(t func(RuneArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat32Array(t func(RuneArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapFloat64Array(t func(RuneArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayOptionFuture) MapAnyArray(t func(RuneArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapBool(t func(Float32ArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapString(t func(Float32ArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt(t func(Float32ArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt64(t func(Float32ArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapByte(t func(Float32ArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapRune(t func(Float32ArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat32(t func(Float32ArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat64(t func(Float32ArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapAny(t func(Float32ArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapBoolOption(t func(Float32ArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapStringOption(t func(Float32ArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapIntOption(t func(Float32ArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt64Option(t func(Float32ArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapByteOption(t func(Float32ArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapRuneOption(t func(Float32ArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat32Option(t func(Float32ArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat64Option(t func(Float32ArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapAnyOption(t func(Float32ArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapBoolListOption(t func(Float32ArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapStringListOption(t func(Float32ArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapIntListOption(t func(Float32ArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt64ListOption(t func(Float32ArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapByteListOption(t func(Float32ArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapRuneListOption(t func(Float32ArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat32ListOption(t func(Float32ArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat64ListOption(t func(Float32ArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapAnyListOption(t func(Float32ArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapBoolArrayOption(t func(Float32ArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapStringArrayOption(t func(Float32ArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapIntArrayOption(t func(Float32ArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt64ArrayOption(t func(Float32ArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapByteArrayOption(t func(Float32ArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapRuneArrayOption(t func(Float32ArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat32ArrayOption(t func(Float32ArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat64ArrayOption(t func(Float32ArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapAnyArrayOption(t func(Float32ArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapBoolList(t func(Float32ArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapStringList(t func(Float32ArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapIntList(t func(Float32ArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt64List(t func(Float32ArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapByteList(t func(Float32ArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapRuneList(t func(Float32ArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat32List(t func(Float32ArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat64List(t func(Float32ArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapAnyList(t func(Float32ArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapBoolArray(t func(Float32ArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapStringArray(t func(Float32ArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapIntArray(t func(Float32ArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapInt64Array(t func(Float32ArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapByteArray(t func(Float32ArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapRuneArray(t func(Float32ArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat32Array(t func(Float32ArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapFloat64Array(t func(Float32ArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayOptionFuture) MapAnyArray(t func(Float32ArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapBool(t func(Float64ArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapString(t func(Float64ArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt(t func(Float64ArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt64(t func(Float64ArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapByte(t func(Float64ArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapRune(t func(Float64ArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat32(t func(Float64ArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat64(t func(Float64ArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapAny(t func(Float64ArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapBoolOption(t func(Float64ArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapStringOption(t func(Float64ArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapIntOption(t func(Float64ArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt64Option(t func(Float64ArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapByteOption(t func(Float64ArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapRuneOption(t func(Float64ArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat32Option(t func(Float64ArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat64Option(t func(Float64ArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapAnyOption(t func(Float64ArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapBoolListOption(t func(Float64ArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapStringListOption(t func(Float64ArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapIntListOption(t func(Float64ArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt64ListOption(t func(Float64ArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapByteListOption(t func(Float64ArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapRuneListOption(t func(Float64ArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat32ListOption(t func(Float64ArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat64ListOption(t func(Float64ArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapAnyListOption(t func(Float64ArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapBoolArrayOption(t func(Float64ArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapStringArrayOption(t func(Float64ArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapIntArrayOption(t func(Float64ArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt64ArrayOption(t func(Float64ArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapByteArrayOption(t func(Float64ArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapRuneArrayOption(t func(Float64ArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat32ArrayOption(t func(Float64ArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat64ArrayOption(t func(Float64ArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapAnyArrayOption(t func(Float64ArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapBoolList(t func(Float64ArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapStringList(t func(Float64ArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapIntList(t func(Float64ArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt64List(t func(Float64ArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapByteList(t func(Float64ArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapRuneList(t func(Float64ArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat32List(t func(Float64ArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat64List(t func(Float64ArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapAnyList(t func(Float64ArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapBoolArray(t func(Float64ArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapStringArray(t func(Float64ArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapIntArray(t func(Float64ArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapInt64Array(t func(Float64ArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapByteArray(t func(Float64ArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapRuneArray(t func(Float64ArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat32Array(t func(Float64ArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapFloat64Array(t func(Float64ArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayOptionFuture) MapAnyArray(t func(Float64ArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapBool(t func(AnyArrayOption) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapString(t func(AnyArrayOption) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt(t func(AnyArrayOption) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt64(t func(AnyArrayOption) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapByte(t func(AnyArrayOption) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapRune(t func(AnyArrayOption) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat32(t func(AnyArrayOption) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat64(t func(AnyArrayOption) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapAny(t func(AnyArrayOption) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapBoolOption(t func(AnyArrayOption) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapStringOption(t func(AnyArrayOption) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapIntOption(t func(AnyArrayOption) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt64Option(t func(AnyArrayOption) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapByteOption(t func(AnyArrayOption) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapRuneOption(t func(AnyArrayOption) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat32Option(t func(AnyArrayOption) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat64Option(t func(AnyArrayOption) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapAnyOption(t func(AnyArrayOption) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapBoolListOption(t func(AnyArrayOption) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapStringListOption(t func(AnyArrayOption) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapIntListOption(t func(AnyArrayOption) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt64ListOption(t func(AnyArrayOption) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapByteListOption(t func(AnyArrayOption) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapRuneListOption(t func(AnyArrayOption) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat32ListOption(t func(AnyArrayOption) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat64ListOption(t func(AnyArrayOption) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapAnyListOption(t func(AnyArrayOption) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapBoolArrayOption(t func(AnyArrayOption) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapStringArrayOption(t func(AnyArrayOption) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapIntArrayOption(t func(AnyArrayOption) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt64ArrayOption(t func(AnyArrayOption) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapByteArrayOption(t func(AnyArrayOption) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapRuneArrayOption(t func(AnyArrayOption) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat32ArrayOption(t func(AnyArrayOption) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat64ArrayOption(t func(AnyArrayOption) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapAnyArrayOption(t func(AnyArrayOption) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapBoolList(t func(AnyArrayOption) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapStringList(t func(AnyArrayOption) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapIntList(t func(AnyArrayOption) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt64List(t func(AnyArrayOption) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapByteList(t func(AnyArrayOption) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapRuneList(t func(AnyArrayOption) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat32List(t func(AnyArrayOption) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat64List(t func(AnyArrayOption) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapAnyList(t func(AnyArrayOption) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapBoolArray(t func(AnyArrayOption) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapStringArray(t func(AnyArrayOption) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapIntArray(t func(AnyArrayOption) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapInt64Array(t func(AnyArrayOption) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapByteArray(t func(AnyArrayOption) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapRuneArray(t func(AnyArrayOption) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat32Array(t func(AnyArrayOption) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapFloat64Array(t func(AnyArrayOption) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayOptionFuture) MapAnyArray(t func(AnyArrayOption) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapBool(t func(BoolList) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapString(t func(BoolList) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f AnyOptionFuture) MapBoolOption(t func(AnyOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapStringOption(t func(AnyOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapIntOption(t func(AnyOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapInt64Option(t func(AnyOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapByteOption(t func(AnyOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapRuneOption(t func(AnyOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat32Option(t func(AnyOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat64Option(t func(AnyOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapAnyOption(t func(AnyOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapBoolListOption(t func(AnyOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapStringListOption(t func(AnyOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapIntListOption(t func(AnyOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapInt64ListOption(t func(AnyOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapByteListOption(t func(AnyOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapRuneListOption(t func(AnyOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat32ListOption(t func(AnyOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat64ListOption(t func(AnyOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapAnyListOption(t func(AnyOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapBoolArrayOption(t func(AnyOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapStringArrayOption(t func(AnyOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapIntArrayOption(t func(AnyOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapInt64ArrayOption(t func(AnyOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapByteArrayOption(t func(AnyOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapRuneArrayOption(t func(AnyOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat32ArrayOption(t func(AnyOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat64ArrayOption(t func(AnyOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapAnyArrayOption(t func(AnyOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapBoolList(t func(AnyOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapStringList(t func(AnyOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapIntList(t func(AnyOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapInt64List(t func(AnyOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapByteList(t func(AnyOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapRuneList(t func(AnyOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat32List(t func(AnyOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat64List(t func(AnyOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapAnyList(t func(AnyOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapBoolArray(t func(AnyOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapStringArray(t func(AnyOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapIntArray(t func(AnyOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapInt64Array(t func(AnyOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapByteArray(t func(AnyOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapRuneArray(t func(AnyOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat32Array(t func(AnyOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapFloat64Array(t func(AnyOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f AnyOptionFuture) MapAnyArray(t func(AnyOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapBool(t func(BoolListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapString(t func(BoolListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt(t func(BoolListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt64(t func(BoolListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapByte(t func(BoolListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapRune(t func(BoolListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat32(t func(BoolListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat64(t func(BoolListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapAny(t func(BoolListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapBoolOption(t func(BoolListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapStringOption(t func(BoolListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapIntOption(t func(BoolListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt64Option(t func(BoolListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapByteOption(t func(BoolListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapRuneOption(t func(BoolListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat32Option(t func(BoolListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat64Option(t func(BoolListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapAnyOption(t func(BoolListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapBoolListOption(t func(BoolListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapStringListOption(t func(BoolListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapIntListOption(t func(BoolListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt64ListOption(t func(BoolListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapByteListOption(t func(BoolListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapRuneListOption(t func(BoolListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat32ListOption(t func(BoolListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat64ListOption(t func(BoolListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapAnyListOption(t func(BoolListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapBoolArrayOption(t func(BoolListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapStringArrayOption(t func(BoolListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapIntArrayOption(t func(BoolListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt64ArrayOption(t func(BoolListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapByteArrayOption(t func(BoolListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapRuneArrayOption(t func(BoolListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat32ArrayOption(t func(BoolListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat64ArrayOption(t func(BoolListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapAnyArrayOption(t func(BoolListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapBoolList(t func(BoolListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapStringList(t func(BoolListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapIntList(t func(BoolListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt64List(t func(BoolListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapByteList(t func(BoolListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapRuneList(t func(BoolListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat32List(t func(BoolListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat64List(t func(BoolListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapAnyList(t func(BoolListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapBoolArray(t func(BoolListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapStringArray(t func(BoolListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapIntArray(t func(BoolListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapInt64Array(t func(BoolListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapByteArray(t func(BoolListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapRuneArray(t func(BoolListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat32Array(t func(BoolListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapFloat64Array(t func(BoolListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f BoolListOptionFuture) MapAnyArray(t func(BoolListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapBool(t func(StringListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapString(t func(StringListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt(t func(StringListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt64(t func(StringListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f StringListOptionFuture) MapByte(t func(StringListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapRune(t func(StringListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat32(t func(StringListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat64(t func(StringListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f StringListOptionFuture) MapAny(t func(StringListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapBoolOption(t func(StringListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapStringOption(t func(StringListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapIntOption(t func(StringListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt64Option(t func(StringListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapByteOption(t func(StringListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapRuneOption(t func(StringListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat32Option(t func(StringListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat64Option(t func(StringListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapAnyOption(t func(StringListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapBoolListOption(t func(StringListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapStringListOption(t func(StringListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapIntListOption(t func(StringListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt64ListOption(t func(StringListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapByteListOption(t func(StringListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapRuneListOption(t func(StringListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat32ListOption(t func(StringListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat64ListOption(t func(StringListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapAnyListOption(t func(StringListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapBoolArrayOption(t func(StringListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapStringArrayOption(t func(StringListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapIntArrayOption(t func(StringListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt64ArrayOption(t func(StringListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapByteArrayOption(t func(StringListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapRuneArrayOption(t func(StringListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat32ArrayOption(t func(StringListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat64ArrayOption(t func(StringListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapAnyArrayOption(t func(StringListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapBoolList(t func(StringListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapStringList(t func(StringListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapIntList(t func(StringListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt64List(t func(StringListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapByteList(t func(StringListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapRuneList(t func(StringListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat32List(t func(StringListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat64List(t func(StringListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapAnyList(t func(StringListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapBoolArray(t func(StringListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapStringArray(t func(StringListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapIntArray(t func(StringListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapInt64Array(t func(StringListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapByteArray(t func(StringListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapRuneArray(t func(StringListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat32Array(t func(StringListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapFloat64Array(t func(StringListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f StringListOptionFuture) MapAnyArray(t func(StringListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapBool(t func(IntListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapString(t func(IntListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt(t func(IntListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt64(t func(IntListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f IntListOptionFuture) MapByte(t func(IntListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapRune(t func(IntListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat32(t func(IntListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat64(t func(IntListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f IntListOptionFuture) MapAny(t func(IntListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapBoolOption(t func(IntListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapStringOption(t func(IntListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapIntOption(t func(IntListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt64Option(t func(IntListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapByteOption(t func(IntListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapRuneOption(t func(IntListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat32Option(t func(IntListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat64Option(t func(IntListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapAnyOption(t func(IntListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapBoolListOption(t func(IntListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapStringListOption(t func(IntListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapIntListOption(t func(IntListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt64ListOption(t func(IntListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapByteListOption(t func(IntListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapRuneListOption(t func(IntListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat32ListOption(t func(IntListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat64ListOption(t func(IntListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapAnyListOption(t func(IntListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapBoolArrayOption(t func(IntListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapStringArrayOption(t func(IntListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapIntArrayOption(t func(IntListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt64ArrayOption(t func(IntListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapByteArrayOption(t func(IntListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapRuneArrayOption(t func(IntListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat32ArrayOption(t func(IntListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat64ArrayOption(t func(IntListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapAnyArrayOption(t func(IntListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapBoolList(t func(IntListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapStringList(t func(IntListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapIntList(t func(IntListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt64List(t func(IntListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapByteList(t func(IntListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapRuneList(t func(IntListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat32List(t func(IntListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat64List(t func(IntListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapAnyList(t func(IntListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapBoolArray(t func(IntListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapStringArray(t func(IntListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapIntArray(t func(IntListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapInt64Array(t func(IntListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapByteArray(t func(IntListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapRuneArray(t func(IntListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat32Array(t func(IntListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapFloat64Array(t func(IntListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f IntListOptionFuture) MapAnyArray(t func(IntListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapBool(t func(Int64ListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapString(t func(Int64ListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt(t func(Int64ListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt64(t func(Int64ListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapByte(t func(Int64ListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapRune(t func(Int64ListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat32(t func(Int64ListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat64(t func(Int64ListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapAny(t func(Int64ListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapBoolOption(t func(Int64ListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapStringOption(t func(Int64ListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapIntOption(t func(Int64ListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt64Option(t func(Int64ListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapByteOption(t func(Int64ListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapRuneOption(t func(Int64ListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat32Option(t func(Int64ListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat64Option(t func(Int64ListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapAnyOption(t func(Int64ListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapBoolListOption(t func(Int64ListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapStringListOption(t func(Int64ListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapIntListOption(t func(Int64ListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt64ListOption(t func(Int64ListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapByteListOption(t func(Int64ListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapRuneListOption(t func(Int64ListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat32ListOption(t func(Int64ListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat64ListOption(t func(Int64ListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapAnyListOption(t func(Int64ListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapBoolArrayOption(t func(Int64ListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapStringArrayOption(t func(Int64ListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapIntArrayOption(t func(Int64ListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt64ArrayOption(t func(Int64ListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapByteArrayOption(t func(Int64ListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapRuneArrayOption(t func(Int64ListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat32ArrayOption(t func(Int64ListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat64ArrayOption(t func(Int64ListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapAnyArrayOption(t func(Int64ListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapBoolList(t func(Int64ListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapStringList(t func(Int64ListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapIntList(t func(Int64ListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt64List(t func(Int64ListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapByteList(t func(Int64ListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapRuneList(t func(Int64ListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat32List(t func(Int64ListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat64List(t func(Int64ListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapAnyList(t func(Int64ListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapBoolArray(t func(Int64ListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapStringArray(t func(Int64ListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapIntArray(t func(Int64ListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapInt64Array(t func(Int64ListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapByteArray(t func(Int64ListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapRuneArray(t func(Int64ListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat32Array(t func(Int64ListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapFloat64Array(t func(Int64ListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Int64ListOptionFuture) MapAnyArray(t func(Int64ListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapBool(t func(ByteListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapString(t func(ByteListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt(t func(ByteListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt64(t func(ByteListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapByte(t func(ByteListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapRune(t func(ByteListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat32(t func(ByteListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat64(t func(ByteListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapAny(t func(ByteListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapBoolOption(t func(ByteListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapStringOption(t func(ByteListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapIntOption(t func(ByteListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt64Option(t func(ByteListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapByteOption(t func(ByteListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapRuneOption(t func(ByteListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat32Option(t func(ByteListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat64Option(t func(ByteListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapAnyOption(t func(ByteListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapBoolListOption(t func(ByteListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapStringListOption(t func(ByteListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapIntListOption(t func(ByteListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt64ListOption(t func(ByteListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapByteListOption(t func(ByteListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapRuneListOption(t func(ByteListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat32ListOption(t func(ByteListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat64ListOption(t func(ByteListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapAnyListOption(t func(ByteListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapBoolArrayOption(t func(ByteListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapStringArrayOption(t func(ByteListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapIntArrayOption(t func(ByteListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt64ArrayOption(t func(ByteListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapByteArrayOption(t func(ByteListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapRuneArrayOption(t func(ByteListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat32ArrayOption(t func(ByteListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat64ArrayOption(t func(ByteListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapAnyArrayOption(t func(ByteListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapBoolList(t func(ByteListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapStringList(t func(ByteListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapIntList(t func(ByteListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt64List(t func(ByteListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapByteList(t func(ByteListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapRuneList(t func(ByteListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat32List(t func(ByteListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat64List(t func(ByteListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapAnyList(t func(ByteListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapBoolArray(t func(ByteListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapStringArray(t func(ByteListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapIntArray(t func(ByteListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapInt64Array(t func(ByteListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapByteArray(t func(ByteListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapRuneArray(t func(ByteListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat32Array(t func(ByteListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapFloat64Array(t func(ByteListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f ByteListOptionFuture) MapAnyArray(t func(ByteListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapBool(t func(RuneListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapString(t func(RuneListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt(t func(RuneListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt64(t func(RuneListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapByte(t func(RuneListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapRune(t func(RuneListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat32(t func(RuneListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat64(t func(RuneListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapAny(t func(RuneListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapBoolOption(t func(RuneListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapStringOption(t func(RuneListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapIntOption(t func(RuneListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt64Option(t func(RuneListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapByteOption(t func(RuneListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapRuneOption(t func(RuneListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat32Option(t func(RuneListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat64Option(t func(RuneListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapAnyOption(t func(RuneListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapBoolListOption(t func(RuneListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapStringListOption(t func(RuneListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapIntListOption(t func(RuneListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt64ListOption(t func(RuneListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapByteListOption(t func(RuneListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapRuneListOption(t func(RuneListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat32ListOption(t func(RuneListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat64ListOption(t func(RuneListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapAnyListOption(t func(RuneListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapBoolArrayOption(t func(RuneListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapStringArrayOption(t func(RuneListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapIntArrayOption(t func(RuneListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt64ArrayOption(t func(RuneListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapByteArrayOption(t func(RuneListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapRuneArrayOption(t func(RuneListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat32ArrayOption(t func(RuneListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat64ArrayOption(t func(RuneListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapAnyArrayOption(t func(RuneListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapBoolList(t func(RuneListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapStringList(t func(RuneListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapIntList(t func(RuneListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt64List(t func(RuneListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapByteList(t func(RuneListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapRuneList(t func(RuneListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat32List(t func(RuneListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat64List(t func(RuneListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapAnyList(t func(RuneListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapBoolArray(t func(RuneListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapStringArray(t func(RuneListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapIntArray(t func(RuneListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapInt64Array(t func(RuneListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapByteArray(t func(RuneListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapRuneArray(t func(RuneListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat32Array(t func(RuneListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapFloat64Array(t func(RuneListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f RuneListOptionFuture) MapAnyArray(t func(RuneListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapBool(t func(Float32ListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapString(t func(Float32ListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt(t func(Float32ListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt64(t func(Float32ListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapByte(t func(Float32ListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapRune(t func(Float32ListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat32(t func(Float32ListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat64(t func(Float32ListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapAny(t func(Float32ListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapBoolOption(t func(Float32ListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapStringOption(t func(Float32ListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapIntOption(t func(Float32ListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt64Option(t func(Float32ListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapByteOption(t func(Float32ListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapRuneOption(t func(Float32ListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat32Option(t func(Float32ListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat64Option(t func(Float32ListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapAnyOption(t func(Float32ListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapBoolListOption(t func(Float32ListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapStringListOption(t func(Float32ListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapIntListOption(t func(Float32ListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt64ListOption(t func(Float32ListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapByteListOption(t func(Float32ListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapRuneListOption(t func(Float32ListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat32ListOption(t func(Float32ListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat64ListOption(t func(Float32ListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapAnyListOption(t func(Float32ListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapBoolArrayOption(t func(Float32ListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapStringArrayOption(t func(Float32ListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapIntArrayOption(t func(Float32ListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt64ArrayOption(t func(Float32ListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapByteArrayOption(t func(Float32ListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapRuneArrayOption(t func(Float32ListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat32ArrayOption(t func(Float32ListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat64ArrayOption(t func(Float32ListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapAnyArrayOption(t func(Float32ListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapBoolList(t func(Float32ListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapStringList(t func(Float32ListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapIntList(t func(Float32ListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt64List(t func(Float32ListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapByteList(t func(Float32ListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapRuneList(t func(Float32ListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat32List(t func(Float32ListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat64List(t func(Float32ListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapAnyList(t func(Float32ListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapBoolArray(t func(Float32ListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapStringArray(t func(Float32ListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapIntArray(t func(Float32ListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapInt64Array(t func(Float32ListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapByteArray(t func(Float32ListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapRuneArray(t func(Float32ListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat32Array(t func(Float32ListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapFloat64Array(t func(Float32ListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float32ListOptionFuture) MapAnyArray(t func(Float32ListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapBool(t func(Float64ListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapString(t func(Float64ListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt(t func(Float64ListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt64(t func(Float64ListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapByte(t func(Float64ListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapRune(t func(Float64ListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat32(t func(Float64ListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat64(t func(Float64ListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapAny(t func(Float64ListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapBoolOption(t func(Float64ListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapStringOption(t func(Float64ListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapIntOption(t func(Float64ListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt64Option(t func(Float64ListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapByteOption(t func(Float64ListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapRuneOption(t func(Float64ListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat32Option(t func(Float64ListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat64Option(t func(Float64ListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapAnyOption(t func(Float64ListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapBoolListOption(t func(Float64ListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapStringListOption(t func(Float64ListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapIntListOption(t func(Float64ListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt64ListOption(t func(Float64ListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapByteListOption(t func(Float64ListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapRuneListOption(t func(Float64ListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat32ListOption(t func(Float64ListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat64ListOption(t func(Float64ListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapAnyListOption(t func(Float64ListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapBoolArrayOption(t func(Float64ListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapStringArrayOption(t func(Float64ListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapIntArrayOption(t func(Float64ListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt64ArrayOption(t func(Float64ListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapByteArrayOption(t func(Float64ListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapRuneArrayOption(t func(Float64ListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat32ArrayOption(t func(Float64ListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat64ArrayOption(t func(Float64ListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapAnyArrayOption(t func(Float64ListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapBoolList(t func(Float64ListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapStringList(t func(Float64ListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapIntList(t func(Float64ListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt64List(t func(Float64ListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapByteList(t func(Float64ListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapRuneList(t func(Float64ListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat32List(t func(Float64ListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat64List(t func(Float64ListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapAnyList(t func(Float64ListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapBoolArray(t func(Float64ListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapStringArray(t func(Float64ListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapIntArray(t func(Float64ListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapInt64Array(t func(Float64ListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapByteArray(t func(Float64ListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapRuneArray(t func(Float64ListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat32Array(t func(Float64ListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapFloat64Array(t func(Float64ListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float64ListOptionFuture) MapAnyArray(t func(Float64ListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapBool(t func(AnyListOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapString(t func(AnyListOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt(t func(AnyListOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt64(t func(AnyListOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapByte(t func(AnyListOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapRune(t func(AnyListOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat32(t func(AnyListOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat64(t func(AnyListOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapAny(t func(AnyListOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapBoolOption(t func(AnyListOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapStringOption(t func(AnyListOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapIntOption(t func(AnyListOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt64Option(t func(AnyListOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapByteOption(t func(AnyListOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapRuneOption(t func(AnyListOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat32Option(t func(AnyListOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat64Option(t func(AnyListOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapAnyOption(t func(AnyListOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapBoolListOption(t func(AnyListOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapStringListOption(t func(AnyListOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapIntListOption(t func(AnyListOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt64ListOption(t func(AnyListOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapByteListOption(t func(AnyListOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapRuneListOption(t func(AnyListOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat32ListOption(t func(AnyListOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat64ListOption(t func(AnyListOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapAnyListOption(t func(AnyListOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapBoolArrayOption(t func(AnyListOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapStringArrayOption(t func(AnyListOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapIntArrayOption(t func(AnyListOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt64ArrayOption(t func(AnyListOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapByteArrayOption(t func(AnyListOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapRuneArrayOption(t func(AnyListOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat32ArrayOption(t func(AnyListOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat64ArrayOption(t func(AnyListOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapAnyArrayOption(t func(AnyListOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapBoolList(t func(AnyListOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapStringList(t func(AnyListOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapIntList(t func(AnyListOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt64List(t func(AnyListOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapByteList(t func(AnyListOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapRuneList(t func(AnyListOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat32List(t func(AnyListOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat64List(t func(AnyListOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapAnyList(t func(AnyListOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapBoolArray(t func(AnyListOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapStringArray(t func(AnyListOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapIntArray(t func(AnyListOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapInt64Array(t func(AnyListOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapByteArray(t func(AnyListOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapRuneArray(t func(AnyListOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat32Array(t func(AnyListOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapFloat64Array(t func(AnyListOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f AnyListOptionFuture) MapAnyArray(t func(AnyListOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapBool(t func(BoolArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapString(t func(BoolArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt(t func(BoolArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt64(t func(BoolArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapByte(t func(BoolArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapRune(t func(BoolArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat32(t func(BoolArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat64(t func(BoolArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapAny(t func(BoolArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapBoolOption(t func(BoolArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapStringOption(t func(BoolArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapIntOption(t func(BoolArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt64Option(t func(BoolArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapByteOption(t func(BoolArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapRuneOption(t func(BoolArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat32Option(t func(BoolArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat64Option(t func(BoolArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapAnyOption(t func(BoolArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapBoolListOption(t func(BoolArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapStringListOption(t func(BoolArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapIntListOption(t func(BoolArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt64ListOption(t func(BoolArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapByteListOption(t func(BoolArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapRuneListOption(t func(BoolArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat32ListOption(t func(BoolArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat64ListOption(t func(BoolArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapAnyListOption(t func(BoolArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapBoolArrayOption(t func(BoolArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapStringArrayOption(t func(BoolArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapIntArrayOption(t func(BoolArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt64ArrayOption(t func(BoolArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapByteArrayOption(t func(BoolArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapRuneArrayOption(t func(BoolArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat32ArrayOption(t func(BoolArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat64ArrayOption(t func(BoolArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapAnyArrayOption(t func(BoolArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapBoolList(t func(BoolArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapStringList(t func(BoolArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapIntList(t func(BoolArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt64List(t func(BoolArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapByteList(t func(BoolArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapRuneList(t func(BoolArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat32List(t func(BoolArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat64List(t func(BoolArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapAnyList(t func(BoolArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapBoolArray(t func(BoolArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapStringArray(t func(BoolArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapIntArray(t func(BoolArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapInt64Array(t func(BoolArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapByteArray(t func(BoolArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapRuneArray(t func(BoolArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat32Array(t func(BoolArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapFloat64Array(t func(BoolArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f BoolArrayOptionFuture) MapAnyArray(t func(BoolArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapBool(t func(StringArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapString(t func(StringArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt(t func(StringArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt64(t func(StringArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapByte(t func(StringArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapRune(t func(StringArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat32(t func(StringArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat64(t func(StringArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapAny(t func(StringArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapBoolOption(t func(StringArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapStringOption(t func(StringArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapIntOption(t func(StringArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt64Option(t func(StringArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapByteOption(t func(StringArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapRuneOption(t func(StringArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat32Option(t func(StringArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat64Option(t func(StringArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapAnyOption(t func(StringArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapBoolListOption(t func(StringArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapStringListOption(t func(StringArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapIntListOption(t func(StringArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt64ListOption(t func(StringArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapByteListOption(t func(StringArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapRuneListOption(t func(StringArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat32ListOption(t func(StringArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat64ListOption(t func(StringArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapAnyListOption(t func(StringArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapBoolArrayOption(t func(StringArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapStringArrayOption(t func(StringArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapIntArrayOption(t func(StringArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt64ArrayOption(t func(StringArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapByteArrayOption(t func(StringArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapRuneArrayOption(t func(StringArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat32ArrayOption(t func(StringArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat64ArrayOption(t func(StringArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapAnyArrayOption(t func(StringArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapBoolList(t func(StringArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapStringList(t func(StringArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapIntList(t func(StringArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt64List(t func(StringArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapByteList(t func(StringArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapRuneList(t func(StringArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat32List(t func(StringArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat64List(t func(StringArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapAnyList(t func(StringArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapBoolArray(t func(StringArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapStringArray(t func(StringArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapIntArray(t func(StringArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapInt64Array(t func(StringArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapByteArray(t func(StringArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapRuneArray(t func(StringArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat32Array(t func(StringArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapFloat64Array(t func(StringArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f StringArrayOptionFuture) MapAnyArray(t func(StringArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapBool(t func(IntArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapString(t func(IntArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt(t func(IntArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt64(t func(IntArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapByte(t func(IntArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapRune(t func(IntArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat32(t func(IntArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat64(t func(IntArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapAny(t func(IntArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapBoolOption(t func(IntArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapStringOption(t func(IntArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapIntOption(t func(IntArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt64Option(t func(IntArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapByteOption(t func(IntArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapRuneOption(t func(IntArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat32Option(t func(IntArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat64Option(t func(IntArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapAnyOption(t func(IntArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapBoolListOption(t func(IntArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapStringListOption(t func(IntArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapIntListOption(t func(IntArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt64ListOption(t func(IntArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapByteListOption(t func(IntArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapRuneListOption(t func(IntArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat32ListOption(t func(IntArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat64ListOption(t func(IntArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapAnyListOption(t func(IntArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapBoolArrayOption(t func(IntArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapStringArrayOption(t func(IntArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapIntArrayOption(t func(IntArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt64ArrayOption(t func(IntArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapByteArrayOption(t func(IntArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapRuneArrayOption(t func(IntArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat32ArrayOption(t func(IntArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat64ArrayOption(t func(IntArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapAnyArrayOption(t func(IntArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapBoolList(t func(IntArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapStringList(t func(IntArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapIntList(t func(IntArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt64List(t func(IntArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapByteList(t func(IntArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapRuneList(t func(IntArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat32List(t func(IntArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat64List(t func(IntArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapAnyList(t func(IntArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapBoolArray(t func(IntArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapStringArray(t func(IntArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapIntArray(t func(IntArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapInt64Array(t func(IntArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapByteArray(t func(IntArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapRuneArray(t func(IntArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat32Array(t func(IntArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapFloat64Array(t func(IntArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f IntArrayOptionFuture) MapAnyArray(t func(IntArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapBool(t func(Int64ArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapString(t func(Int64ArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt(t func(Int64ArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt64(t func(Int64ArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapByte(t func(Int64ArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapRune(t func(Int64ArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat32(t func(Int64ArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat64(t func(Int64ArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapAny(t func(Int64ArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapBoolOption(t func(Int64ArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapStringOption(t func(Int64ArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapIntOption(t func(Int64ArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt64Option(t func(Int64ArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapByteOption(t func(Int64ArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapRuneOption(t func(Int64ArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat32Option(t func(Int64ArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat64Option(t func(Int64ArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapAnyOption(t func(Int64ArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapBoolListOption(t func(Int64ArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapStringListOption(t func(Int64ArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapIntListOption(t func(Int64ArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt64ListOption(t func(Int64ArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapByteListOption(t func(Int64ArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapRuneListOption(t func(Int64ArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat32ListOption(t func(Int64ArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat64ListOption(t func(Int64ArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapAnyListOption(t func(Int64ArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapBoolArrayOption(t func(Int64ArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapStringArrayOption(t func(Int64ArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapIntArrayOption(t func(Int64ArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt64ArrayOption(t func(Int64ArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapByteArrayOption(t func(Int64ArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapRuneArrayOption(t func(Int64ArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat32ArrayOption(t func(Int64ArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat64ArrayOption(t func(Int64ArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapAnyArrayOption(t func(Int64ArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapBoolList(t func(Int64ArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapStringList(t func(Int64ArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapIntList(t func(Int64ArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt64List(t func(Int64ArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapByteList(t func(Int64ArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapRuneList(t func(Int64ArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat32List(t func(Int64ArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat64List(t func(Int64ArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapAnyList(t func(Int64ArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapBoolArray(t func(Int64ArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapStringArray(t func(Int64ArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapIntArray(t func(Int64ArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapInt64Array(t func(Int64ArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapByteArray(t func(Int64ArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapRuneArray(t func(Int64ArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat32Array(t func(Int64ArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapFloat64Array(t func(Int64ArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayOptionFuture) MapAnyArray(t func(Int64ArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapBool(t func(ByteArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapString(t func(ByteArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt(t func(ByteArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt64(t func(ByteArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapByte(t func(ByteArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapRune(t func(ByteArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat32(t func(ByteArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat64(t func(ByteArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapAny(t func(ByteArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapBoolOption(t func(ByteArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapStringOption(t func(ByteArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapIntOption(t func(ByteArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt64Option(t func(ByteArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapByteOption(t func(ByteArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapRuneOption(t func(ByteArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat32Option(t func(ByteArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat64Option(t func(ByteArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapAnyOption(t func(ByteArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapBoolListOption(t func(ByteArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapStringListOption(t func(ByteArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapIntListOption(t func(ByteArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt64ListOption(t func(ByteArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapByteListOption(t func(ByteArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapRuneListOption(t func(ByteArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat32ListOption(t func(ByteArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat64ListOption(t func(ByteArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapAnyListOption(t func(ByteArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapBoolArrayOption(t func(ByteArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapStringArrayOption(t func(ByteArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapIntArrayOption(t func(ByteArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt64ArrayOption(t func(ByteArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapByteArrayOption(t func(ByteArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapRuneArrayOption(t func(ByteArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat32ArrayOption(t func(ByteArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat64ArrayOption(t func(ByteArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapAnyArrayOption(t func(ByteArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapBoolList(t func(ByteArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapStringList(t func(ByteArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapIntList(t func(ByteArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt64List(t func(ByteArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapByteList(t func(ByteArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapRuneList(t func(ByteArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat32List(t func(ByteArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat64List(t func(ByteArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapAnyList(t func(ByteArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapBoolArray(t func(ByteArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapStringArray(t func(ByteArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapIntArray(t func(ByteArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapInt64Array(t func(ByteArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapByteArray(t func(ByteArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapRuneArray(t func(ByteArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat32Array(t func(ByteArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapFloat64Array(t func(ByteArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f ByteArrayOptionFuture) MapAnyArray(t func(ByteArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapBool(t func(RuneArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapString(t func(RuneArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt(t func(RuneArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt64(t func(RuneArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapByte(t func(RuneArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapRune(t func(RuneArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat32(t func(RuneArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat64(t func(RuneArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapAny(t func(RuneArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapBoolOption(t func(RuneArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapStringOption(t func(RuneArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapIntOption(t func(RuneArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt64Option(t func(RuneArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapByteOption(t func(RuneArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapRuneOption(t func(RuneArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat32Option(t func(RuneArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat64Option(t func(RuneArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapAnyOption(t func(RuneArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapBoolListOption(t func(RuneArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapStringListOption(t func(RuneArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapIntListOption(t func(RuneArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt64ListOption(t func(RuneArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapByteListOption(t func(RuneArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapRuneListOption(t func(RuneArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat32ListOption(t func(RuneArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat64ListOption(t func(RuneArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapAnyListOption(t func(RuneArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapBoolArrayOption(t func(RuneArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapStringArrayOption(t func(RuneArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapIntArrayOption(t func(RuneArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt64ArrayOption(t func(RuneArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapByteArrayOption(t func(RuneArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapRuneArrayOption(t func(RuneArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat32ArrayOption(t func(RuneArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat64ArrayOption(t func(RuneArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapAnyArrayOption(t func(RuneArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapBoolList(t func(RuneArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapStringList(t func(RuneArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapIntList(t func(RuneArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt64List(t func(RuneArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapByteList(t func(RuneArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapRuneList(t func(RuneArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat32List(t func(RuneArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat64List(t func(RuneArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapAnyList(t func(RuneArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapBoolArray(t func(RuneArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapStringArray(t func(RuneArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapIntArray(t func(RuneArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapInt64Array(t func(RuneArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapByteArray(t func(RuneArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapRuneArray(t func(RuneArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat32Array(t func(RuneArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapFloat64Array(t func(RuneArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f RuneArrayOptionFuture) MapAnyArray(t func(RuneArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapBool(t func(Float32ArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapString(t func(Float32ArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt(t func(Float32ArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt64(t func(Float32ArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapByte(t func(Float32ArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapRune(t func(Float32ArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat32(t func(Float32ArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat64(t func(Float32ArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapAny(t func(Float32ArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapBoolOption(t func(Float32ArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapStringOption(t func(Float32ArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapIntOption(t func(Float32ArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt64Option(t func(Float32ArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapByteOption(t func(Float32ArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapRuneOption(t func(Float32ArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat32Option(t func(Float32ArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat64Option(t func(Float32ArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapAnyOption(t func(Float32ArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapBoolListOption(t func(Float32ArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapStringListOption(t func(Float32ArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapIntListOption(t func(Float32ArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt64ListOption(t func(Float32ArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapByteListOption(t func(Float32ArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapRuneListOption(t func(Float32ArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat32ListOption(t func(Float32ArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat64ListOption(t func(Float32ArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapAnyListOption(t func(Float32ArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapBoolArrayOption(t func(Float32ArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapStringArrayOption(t func(Float32ArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapIntArrayOption(t func(Float32ArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt64ArrayOption(t func(Float32ArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapByteArrayOption(t func(Float32ArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapRuneArrayOption(t func(Float32ArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat32ArrayOption(t func(Float32ArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat64ArrayOption(t func(Float32ArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapAnyArrayOption(t func(Float32ArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapBoolList(t func(Float32ArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapStringList(t func(Float32ArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapIntList(t func(Float32ArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt64List(t func(Float32ArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapByteList(t func(Float32ArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapRuneList(t func(Float32ArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat32List(t func(Float32ArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat64List(t func(Float32ArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapAnyList(t func(Float32ArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapBoolArray(t func(Float32ArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapStringArray(t func(Float32ArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapIntArray(t func(Float32ArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapInt64Array(t func(Float32ArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapByteArray(t func(Float32ArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapRuneArray(t func(Float32ArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat32Array(t func(Float32ArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapFloat64Array(t func(Float32ArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayOptionFuture) MapAnyArray(t func(Float32ArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapBool(t func(Float64ArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapString(t func(Float64ArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt(t func(Float64ArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt64(t func(Float64ArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapByte(t func(Float64ArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapRune(t func(Float64ArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat32(t func(Float64ArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat64(t func(Float64ArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapAny(t func(Float64ArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapBoolOption(t func(Float64ArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapStringOption(t func(Float64ArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapIntOption(t func(Float64ArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt64Option(t func(Float64ArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapByteOption(t func(Float64ArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapRuneOption(t func(Float64ArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat32Option(t func(Float64ArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat64Option(t func(Float64ArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapAnyOption(t func(Float64ArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapBoolListOption(t func(Float64ArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapStringListOption(t func(Float64ArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapIntListOption(t func(Float64ArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt64ListOption(t func(Float64ArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapByteListOption(t func(Float64ArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapRuneListOption(t func(Float64ArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat32ListOption(t func(Float64ArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat64ListOption(t func(Float64ArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapAnyListOption(t func(Float64ArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapBoolArrayOption(t func(Float64ArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapStringArrayOption(t func(Float64ArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapIntArrayOption(t func(Float64ArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt64ArrayOption(t func(Float64ArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapByteArrayOption(t func(Float64ArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapRuneArrayOption(t func(Float64ArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat32ArrayOption(t func(Float64ArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat64ArrayOption(t func(Float64ArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapAnyArrayOption(t func(Float64ArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapBoolList(t func(Float64ArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapStringList(t func(Float64ArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapIntList(t func(Float64ArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt64List(t func(Float64ArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapByteList(t func(Float64ArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapRuneList(t func(Float64ArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat32List(t func(Float64ArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat64List(t func(Float64ArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapAnyList(t func(Float64ArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapBoolArray(t func(Float64ArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapStringArray(t func(Float64ArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapIntArray(t func(Float64ArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapInt64Array(t func(Float64ArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapByteArray(t func(Float64ArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapRuneArray(t func(Float64ArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat32Array(t func(Float64ArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapFloat64Array(t func(Float64ArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayOptionFuture) MapAnyArray(t func(Float64ArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapBool(t func(AnyArrayOption) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapString(t func(AnyArrayOption) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt(t func(AnyArrayOption) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt64(t func(AnyArrayOption) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapByte(t func(AnyArrayOption) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapRune(t func(AnyArrayOption) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat32(t func(AnyArrayOption) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat64(t func(AnyArrayOption) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapAny(t func(AnyArrayOption) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapBoolOption(t func(AnyArrayOption) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapStringOption(t func(AnyArrayOption) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapIntOption(t func(AnyArrayOption) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt64Option(t func(AnyArrayOption) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapByteOption(t func(AnyArrayOption) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapRuneOption(t func(AnyArrayOption) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat32Option(t func(AnyArrayOption) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat64Option(t func(AnyArrayOption) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapAnyOption(t func(AnyArrayOption) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapBoolListOption(t func(AnyArrayOption) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapStringListOption(t func(AnyArrayOption) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapIntListOption(t func(AnyArrayOption) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt64ListOption(t func(AnyArrayOption) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapByteListOption(t func(AnyArrayOption) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapRuneListOption(t func(AnyArrayOption) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat32ListOption(t func(AnyArrayOption) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat64ListOption(t func(AnyArrayOption) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapAnyListOption(t func(AnyArrayOption) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapBoolArrayOption(t func(AnyArrayOption) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapStringArrayOption(t func(AnyArrayOption) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapIntArrayOption(t func(AnyArrayOption) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt64ArrayOption(t func(AnyArrayOption) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapByteArrayOption(t func(AnyArrayOption) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapRuneArrayOption(t func(AnyArrayOption) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat32ArrayOption(t func(AnyArrayOption) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat64ArrayOption(t func(AnyArrayOption) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapAnyArrayOption(t func(AnyArrayOption) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapBoolList(t func(AnyArrayOption) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapStringList(t func(AnyArrayOption) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapIntList(t func(AnyArrayOption) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt64List(t func(AnyArrayOption) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapByteList(t func(AnyArrayOption) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapRuneList(t func(AnyArrayOption) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat32List(t func(AnyArrayOption) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat64List(t func(AnyArrayOption) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapAnyList(t func(AnyArrayOption) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapBoolArray(t func(AnyArrayOption) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapStringArray(t func(AnyArrayOption) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapIntArray(t func(AnyArrayOption) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapInt64Array(t func(AnyArrayOption) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapByteArray(t func(AnyArrayOption) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapRuneArray(t func(AnyArrayOption) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat32Array(t func(AnyArrayOption) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapFloat64Array(t func(AnyArrayOption) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f AnyArrayOptionFuture) MapAnyArray(t func(AnyArrayOption) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapBool(t func(BoolList) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapString(t func(BoolList) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f BoolListFuture) MapInt(t func(BoolList) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f BoolListFuture) MapInt64(t func(BoolList) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f BoolListFuture) MapByte(t func(BoolList) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapRune(t func(BoolList) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat32(t func(BoolList) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat64(t func(BoolList) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f BoolListFuture) MapInt64(t func(BoolList) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f BoolListFuture) MapByte(t func(BoolList) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapRune(t func(BoolList) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat32(t func(BoolList) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat64(t func(BoolList) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f BoolListFuture) MapAny(t func(BoolList) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f BoolListFuture) MapBoolOption(t func(BoolList) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapStringOption(t func(BoolList) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapIntOption(t func(BoolList) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapInt64Option(t func(BoolList) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapByteOption(t func(BoolList) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapRuneOption(t func(BoolList) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat32Option(t func(BoolList) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat64Option(t func(BoolList) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapAnyOption(t func(BoolList) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapBoolListOption(t func(BoolList) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapStringListOption(t func(BoolList) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapIntListOption(t func(BoolList) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapInt64ListOption(t func(BoolList) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapByteListOption(t func(BoolList) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapRuneListOption(t func(BoolList) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat32ListOption(t func(BoolList) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat64ListOption(t func(BoolList) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapAnyListOption(t func(BoolList) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapBoolArrayOption(t func(BoolList) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapStringArrayOption(t func(BoolList) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapIntArrayOption(t func(BoolList) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapInt64ArrayOption(t func(BoolList) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapByteArrayOption(t func(BoolList) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapRuneArrayOption(t func(BoolList) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat32ArrayOption(t func(BoolList) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat64ArrayOption(t func(BoolList) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapAnyArrayOption(t func(BoolList) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapBoolList(t func(BoolList) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapStringList(t func(BoolList) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapIntList(t func(BoolList) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapInt64List(t func(BoolList) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapByteList(t func(BoolList) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapRuneList(t func(BoolList) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat32List(t func(BoolList) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat64List(t func(BoolList) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapAnyList(t func(BoolList) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapBoolArray(t func(BoolList) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapStringArray(t func(BoolList) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapIntArray(t func(BoolList) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapInt64Array(t func(BoolList) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapByteArray(t func(BoolList) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapRuneArray(t func(BoolList) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat32Array(t func(BoolList) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapFloat64Array(t func(BoolList) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f BoolListFuture) MapAnyArray(t func(BoolList) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapBool(t func(StringList) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapString(t func(StringList) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt(t func(StringList) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt64(t func(StringList) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f StringListFuture) MapByte(t func(StringList) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapRune(t func(StringList) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat32(t func(StringList) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat64(t func(StringList) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f StringListFuture) MapAny(t func(StringList) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapBoolOption(t func(StringList) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapStringOption(t func(StringList) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapIntOption(t func(StringList) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt64Option(t func(StringList) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapByteOption(t func(StringList) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapRuneOption(t func(StringList) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat32Option(t func(StringList) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat64Option(t func(StringList) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapAnyOption(t func(StringList) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapBoolListOption(t func(StringList) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapStringListOption(t func(StringList) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapIntListOption(t func(StringList) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt64ListOption(t func(StringList) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapByteListOption(t func(StringList) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapRuneListOption(t func(StringList) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat32ListOption(t func(StringList) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat64ListOption(t func(StringList) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapAnyListOption(t func(StringList) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapBoolArrayOption(t func(StringList) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapStringArrayOption(t func(StringList) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapIntArrayOption(t func(StringList) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt64ArrayOption(t func(StringList) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapByteArrayOption(t func(StringList) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapRuneArrayOption(t func(StringList) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat32ArrayOption(t func(StringList) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat64ArrayOption(t func(StringList) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapAnyArrayOption(t func(StringList) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapBoolList(t func(StringList) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapStringList(t func(StringList) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapIntList(t func(StringList) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt64List(t func(StringList) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapByteList(t func(StringList) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapRuneList(t func(StringList) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat32List(t func(StringList) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat64List(t func(StringList) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapAnyList(t func(StringList) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapBoolArray(t func(StringList) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapStringArray(t func(StringList) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapIntArray(t func(StringList) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapInt64Array(t func(StringList) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapByteArray(t func(StringList) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapRuneArray(t func(StringList) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat32Array(t func(StringList) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapFloat64Array(t func(StringList) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f StringListFuture) MapAnyArray(t func(StringList) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f BoolListFuture) MapBoolOption(t func(BoolList) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapStringOption(t func(BoolList) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapIntOption(t func(BoolList) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapInt64Option(t func(BoolList) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapByteOption(t func(BoolList) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapRuneOption(t func(BoolList) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat32Option(t func(BoolList) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat64Option(t func(BoolList) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapAnyOption(t func(BoolList) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapBoolListOption(t func(BoolList) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapStringListOption(t func(BoolList) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapIntListOption(t func(BoolList) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapInt64ListOption(t func(BoolList) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapByteListOption(t func(BoolList) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapRuneListOption(t func(BoolList) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat32ListOption(t func(BoolList) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat64ListOption(t func(BoolList) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapAnyListOption(t func(BoolList) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapBoolArrayOption(t func(BoolList) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapStringArrayOption(t func(BoolList) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapIntArrayOption(t func(BoolList) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapInt64ArrayOption(t func(BoolList) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapByteArrayOption(t func(BoolList) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapRuneArrayOption(t func(BoolList) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat32ArrayOption(t func(BoolList) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat64ArrayOption(t func(BoolList) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapAnyArrayOption(t func(BoolList) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapBoolList(t func(BoolList) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapStringList(t func(BoolList) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapIntList(t func(BoolList) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapInt64List(t func(BoolList) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapByteList(t func(BoolList) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapRuneList(t func(BoolList) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat32List(t func(BoolList) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat64List(t func(BoolList) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapAnyList(t func(BoolList) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapBoolArray(t func(BoolList) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapStringArray(t func(BoolList) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapIntArray(t func(BoolList) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapInt64Array(t func(BoolList) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapByteArray(t func(BoolList) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapRuneArray(t func(BoolList) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat32Array(t func(BoolList) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapFloat64Array(t func(BoolList) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f BoolListFuture) MapAnyArray(t func(BoolList) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapBool(t func(StringList) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f StringListFuture) MapString(t func(StringList) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt(t func(StringList) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt64(t func(StringList) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f StringListFuture) MapByte(t func(StringList) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f StringListFuture) MapRune(t func(StringList) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat32(t func(StringList) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f StringListFuture) MapFloat64(t func(StringList) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f StringListFuture) MapAny(t func(StringList) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f StringListFuture) MapBoolOption(t func(StringList) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapStringOption(t func(StringList) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapIntOption(t func(StringList) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt64Option(t func(StringList) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapByteOption(t func(StringList) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapRuneOption(t func(StringList) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat32Option(t func(StringList) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat64Option(t func(StringList) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapAnyOption(t func(StringList) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapBoolListOption(t func(StringList) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapStringListOption(t func(StringList) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapIntListOption(t func(StringList) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt64ListOption(t func(StringList) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapByteListOption(t func(StringList) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapRuneListOption(t func(StringList) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat32ListOption(t func(StringList) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat64ListOption(t func(StringList) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapAnyListOption(t func(StringList) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapBoolArrayOption(t func(StringList) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapStringArrayOption(t func(StringList) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapIntArrayOption(t func(StringList) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt64ArrayOption(t func(StringList) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapByteArrayOption(t func(StringList) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapRuneArrayOption(t func(StringList) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat32ArrayOption(t func(StringList) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat64ArrayOption(t func(StringList) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapAnyArrayOption(t func(StringList) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f StringListFuture) MapBoolList(t func(StringList) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapStringList(t func(StringList) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapIntList(t func(StringList) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt64List(t func(StringList) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapByteList(t func(StringList) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapRuneList(t func(StringList) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat32List(t func(StringList) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat64List(t func(StringList) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapAnyList(t func(StringList) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f StringListFuture) MapBoolArray(t func(StringList) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapStringArray(t func(StringList) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapIntArray(t func(StringList) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapInt64Array(t func(StringList) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapByteArray(t func(StringList) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapRuneArray(t func(StringList) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat32Array(t func(StringList) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapFloat64Array(t func(StringList) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f StringListFuture) MapAnyArray(t func(StringList) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f IntListFuture) MapBool(t func(IntList) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f IntListFuture) MapString(t func(IntList) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f IntListFuture) MapString(t func(IntList) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f IntListFuture) MapInt(t func(IntList) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f IntListFuture) MapInt64(t func(IntList) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
+func (f IntListFuture) MapInt64(t func(IntList) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
 func (f IntListFuture) MapByte(t func(IntList) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
 func (f IntListFuture) MapRune(t func(IntList) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
-func (f IntListFuture) MapFloat32(t func(IntList) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat64(t func(IntList) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f IntListFuture) MapFloat32(t func(IntList) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f IntListFuture) MapFloat64(t func(IntList) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f IntListFuture) MapAny(t func(IntList) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f IntListFuture) MapBoolOption(t func(IntList) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapStringOption(t func(IntList) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapIntOption(t func(IntList) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapInt64Option(t func(IntList) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapByteOption(t func(IntList) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapRuneOption(t func(IntList) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat32Option(t func(IntList) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat64Option(t func(IntList) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapAnyOption(t func(IntList) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapBoolListOption(t func(IntList) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapStringListOption(t func(IntList) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapIntListOption(t func(IntList) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapInt64ListOption(t func(IntList) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapByteListOption(t func(IntList) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapRuneListOption(t func(IntList) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat32ListOption(t func(IntList) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat64ListOption(t func(IntList) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapAnyListOption(t func(IntList) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapBoolArrayOption(t func(IntList) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapStringArrayOption(t func(IntList) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapIntArrayOption(t func(IntList) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapInt64ArrayOption(t func(IntList) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapByteArrayOption(t func(IntList) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapRuneArrayOption(t func(IntList) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat32ArrayOption(t func(IntList) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat64ArrayOption(t func(IntList) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapAnyArrayOption(t func(IntList) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapBoolList(t func(IntList) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapStringList(t func(IntList) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapIntList(t func(IntList) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapInt64List(t func(IntList) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapByteList(t func(IntList) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapRuneList(t func(IntList) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat32List(t func(IntList) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat64List(t func(IntList) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapAnyList(t func(IntList) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapBoolArray(t func(IntList) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapStringArray(t func(IntList) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapIntArray(t func(IntList) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapInt64Array(t func(IntList) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapByteArray(t func(IntList) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapRuneArray(t func(IntList) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat32Array(t func(IntList) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapFloat64Array(t func(IntList) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f IntListFuture) MapAnyArray(t func(IntList) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapBool(t func(Int64List) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapString(t func(Int64List) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f IntListFuture) MapBoolOption(t func(IntList) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapStringOption(t func(IntList) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapIntOption(t func(IntList) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapInt64Option(t func(IntList) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapByteOption(t func(IntList) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapRuneOption(t func(IntList) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat32Option(t func(IntList) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat64Option(t func(IntList) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapAnyOption(t func(IntList) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapBoolListOption(t func(IntList) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapStringListOption(t func(IntList) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapIntListOption(t func(IntList) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapInt64ListOption(t func(IntList) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapByteListOption(t func(IntList) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapRuneListOption(t func(IntList) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat32ListOption(t func(IntList) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat64ListOption(t func(IntList) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapAnyListOption(t func(IntList) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapBoolArrayOption(t func(IntList) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapStringArrayOption(t func(IntList) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapIntArrayOption(t func(IntList) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapInt64ArrayOption(t func(IntList) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapByteArrayOption(t func(IntList) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapRuneArrayOption(t func(IntList) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat32ArrayOption(t func(IntList) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat64ArrayOption(t func(IntList) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapAnyArrayOption(t func(IntList) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f IntListFuture) MapBoolList(t func(IntList) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapStringList(t func(IntList) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapIntList(t func(IntList) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapInt64List(t func(IntList) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapByteList(t func(IntList) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapRuneList(t func(IntList) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat32List(t func(IntList) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat64List(t func(IntList) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapAnyList(t func(IntList) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f IntListFuture) MapBoolArray(t func(IntList) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapStringArray(t func(IntList) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapIntArray(t func(IntList) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapInt64Array(t func(IntList) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapByteArray(t func(IntList) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapRuneArray(t func(IntList) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat32Array(t func(IntList) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapFloat64Array(t func(IntList) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f IntListFuture) MapAnyArray(t func(IntList) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapBool(t func(Int64List) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapString(t func(Int64List) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f Int64ListFuture) MapInt(t func(Int64List) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f Int64ListFuture) MapInt64(t func(Int64List) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Int64ListFuture) MapByte(t func(Int64List) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapRune(t func(Int64List) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat32(t func(Int64List) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat64(t func(Int64List) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f Int64ListFuture) MapInt64(t func(Int64List) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Int64ListFuture) MapByte(t func(Int64List) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapRune(t func(Int64List) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat32(t func(Int64List) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat64(t func(Int64List) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f Int64ListFuture) MapAny(t func(Int64List) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f Int64ListFuture) MapBoolOption(t func(Int64List) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapStringOption(t func(Int64List) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapIntOption(t func(Int64List) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapInt64Option(t func(Int64List) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapByteOption(t func(Int64List) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapRuneOption(t func(Int64List) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat32Option(t func(Int64List) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat64Option(t func(Int64List) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapAnyOption(t func(Int64List) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapBoolListOption(t func(Int64List) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapStringListOption(t func(Int64List) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapIntListOption(t func(Int64List) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapInt64ListOption(t func(Int64List) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapByteListOption(t func(Int64List) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapRuneListOption(t func(Int64List) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat32ListOption(t func(Int64List) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat64ListOption(t func(Int64List) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapAnyListOption(t func(Int64List) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapBoolArrayOption(t func(Int64List) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapStringArrayOption(t func(Int64List) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapIntArrayOption(t func(Int64List) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapInt64ArrayOption(t func(Int64List) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapByteArrayOption(t func(Int64List) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapRuneArrayOption(t func(Int64List) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat32ArrayOption(t func(Int64List) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat64ArrayOption(t func(Int64List) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapAnyArrayOption(t func(Int64List) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapBoolList(t func(Int64List) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapStringList(t func(Int64List) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapIntList(t func(Int64List) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapInt64List(t func(Int64List) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapByteList(t func(Int64List) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapRuneList(t func(Int64List) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat32List(t func(Int64List) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat64List(t func(Int64List) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapAnyList(t func(Int64List) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapBoolArray(t func(Int64List) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapStringArray(t func(Int64List) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapIntArray(t func(Int64List) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapInt64Array(t func(Int64List) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapByteArray(t func(Int64List) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapRuneArray(t func(Int64List) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat32Array(t func(Int64List) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapFloat64Array(t func(Int64List) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ListFuture) MapAnyArray(t func(Int64List) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapBool(t func(ByteList) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapString(t func(ByteList) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f Int64ListFuture) MapBoolOption(t func(Int64List) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapStringOption(t func(Int64List) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapIntOption(t func(Int64List) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapInt64Option(t func(Int64List) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapByteOption(t func(Int64List) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapRuneOption(t func(Int64List) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat32Option(t func(Int64List) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat64Option(t func(Int64List) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapAnyOption(t func(Int64List) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapBoolListOption(t func(Int64List) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapStringListOption(t func(Int64List) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapIntListOption(t func(Int64List) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapInt64ListOption(t func(Int64List) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapByteListOption(t func(Int64List) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapRuneListOption(t func(Int64List) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat32ListOption(t func(Int64List) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat64ListOption(t func(Int64List) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapAnyListOption(t func(Int64List) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapBoolArrayOption(t func(Int64List) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapStringArrayOption(t func(Int64List) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapIntArrayOption(t func(Int64List) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapInt64ArrayOption(t func(Int64List) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapByteArrayOption(t func(Int64List) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapRuneArrayOption(t func(Int64List) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat32ArrayOption(t func(Int64List) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat64ArrayOption(t func(Int64List) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapAnyArrayOption(t func(Int64List) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapBoolList(t func(Int64List) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapStringList(t func(Int64List) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapIntList(t func(Int64List) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapInt64List(t func(Int64List) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapByteList(t func(Int64List) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapRuneList(t func(Int64List) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat32List(t func(Int64List) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat64List(t func(Int64List) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapAnyList(t func(Int64List) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapBoolArray(t func(Int64List) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapStringArray(t func(Int64List) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapIntArray(t func(Int64List) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapInt64Array(t func(Int64List) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapByteArray(t func(Int64List) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapRuneArray(t func(Int64List) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat32Array(t func(Int64List) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapFloat64Array(t func(Int64List) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Int64ListFuture) MapAnyArray(t func(Int64List) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapBool(t func(ByteList) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapString(t func(ByteList) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f ByteListFuture) MapInt(t func(ByteList) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f ByteListFuture) MapInt64(t func(ByteList) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f ByteListFuture) MapByte(t func(ByteList) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapRune(t func(ByteList) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat32(t func(ByteList) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat64(t func(ByteList) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f ByteListFuture) MapInt64(t func(ByteList) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f ByteListFuture) MapByte(t func(ByteList) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapRune(t func(ByteList) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat32(t func(ByteList) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat64(t func(ByteList) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f ByteListFuture) MapAny(t func(ByteList) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f ByteListFuture) MapBoolOption(t func(ByteList) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapStringOption(t func(ByteList) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapIntOption(t func(ByteList) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapInt64Option(t func(ByteList) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapByteOption(t func(ByteList) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapRuneOption(t func(ByteList) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat32Option(t func(ByteList) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat64Option(t func(ByteList) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapAnyOption(t func(ByteList) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapBoolListOption(t func(ByteList) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapStringListOption(t func(ByteList) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapIntListOption(t func(ByteList) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapInt64ListOption(t func(ByteList) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapByteListOption(t func(ByteList) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapRuneListOption(t func(ByteList) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat32ListOption(t func(ByteList) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat64ListOption(t func(ByteList) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapAnyListOption(t func(ByteList) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapBoolArrayOption(t func(ByteList) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapStringArrayOption(t func(ByteList) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapIntArrayOption(t func(ByteList) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapInt64ArrayOption(t func(ByteList) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapByteArrayOption(t func(ByteList) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapRuneArrayOption(t func(ByteList) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat32ArrayOption(t func(ByteList) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat64ArrayOption(t func(ByteList) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapAnyArrayOption(t func(ByteList) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapBoolList(t func(ByteList) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapStringList(t func(ByteList) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapIntList(t func(ByteList) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapInt64List(t func(ByteList) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapByteList(t func(ByteList) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapRuneList(t func(ByteList) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat32List(t func(ByteList) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat64List(t func(ByteList) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapAnyList(t func(ByteList) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapBoolArray(t func(ByteList) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapStringArray(t func(ByteList) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapIntArray(t func(ByteList) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapInt64Array(t func(ByteList) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapByteArray(t func(ByteList) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapRuneArray(t func(ByteList) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat32Array(t func(ByteList) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapFloat64Array(t func(ByteList) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f ByteListFuture) MapAnyArray(t func(ByteList) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapBool(t func(RuneList) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapString(t func(RuneList) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f ByteListFuture) MapBoolOption(t func(ByteList) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapStringOption(t func(ByteList) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapIntOption(t func(ByteList) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapInt64Option(t func(ByteList) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapByteOption(t func(ByteList) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapRuneOption(t func(ByteList) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat32Option(t func(ByteList) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat64Option(t func(ByteList) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapAnyOption(t func(ByteList) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapBoolListOption(t func(ByteList) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapStringListOption(t func(ByteList) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapIntListOption(t func(ByteList) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapInt64ListOption(t func(ByteList) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapByteListOption(t func(ByteList) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapRuneListOption(t func(ByteList) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat32ListOption(t func(ByteList) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat64ListOption(t func(ByteList) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapAnyListOption(t func(ByteList) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapBoolArrayOption(t func(ByteList) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapStringArrayOption(t func(ByteList) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapIntArrayOption(t func(ByteList) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapInt64ArrayOption(t func(ByteList) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapByteArrayOption(t func(ByteList) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapRuneArrayOption(t func(ByteList) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat32ArrayOption(t func(ByteList) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat64ArrayOption(t func(ByteList) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapAnyArrayOption(t func(ByteList) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapBoolList(t func(ByteList) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapStringList(t func(ByteList) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapIntList(t func(ByteList) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapInt64List(t func(ByteList) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapByteList(t func(ByteList) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapRuneList(t func(ByteList) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat32List(t func(ByteList) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat64List(t func(ByteList) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapAnyList(t func(ByteList) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapBoolArray(t func(ByteList) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapStringArray(t func(ByteList) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapIntArray(t func(ByteList) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapInt64Array(t func(ByteList) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapByteArray(t func(ByteList) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapRuneArray(t func(ByteList) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat32Array(t func(ByteList) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapFloat64Array(t func(ByteList) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f ByteListFuture) MapAnyArray(t func(ByteList) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapBool(t func(RuneList) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapString(t func(RuneList) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f RuneListFuture) MapInt(t func(RuneList) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f RuneListFuture) MapInt64(t func(RuneList) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f RuneListFuture) MapByte(t func(RuneList) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapRune(t func(RuneList) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat32(t func(RuneList) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat64(t func(RuneList) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f RuneListFuture) MapInt64(t func(RuneList) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f RuneListFuture) MapByte(t func(RuneList) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapRune(t func(RuneList) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat32(t func(RuneList) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat64(t func(RuneList) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f RuneListFuture) MapAny(t func(RuneList) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f RuneListFuture) MapBoolOption(t func(RuneList) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapStringOption(t func(RuneList) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapIntOption(t func(RuneList) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapInt64Option(t func(RuneList) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapByteOption(t func(RuneList) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapRuneOption(t func(RuneList) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat32Option(t func(RuneList) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat64Option(t func(RuneList) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapAnyOption(t func(RuneList) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapBoolListOption(t func(RuneList) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapStringListOption(t func(RuneList) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapIntListOption(t func(RuneList) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapInt64ListOption(t func(RuneList) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapByteListOption(t func(RuneList) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapRuneListOption(t func(RuneList) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat32ListOption(t func(RuneList) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat64ListOption(t func(RuneList) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapAnyListOption(t func(RuneList) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapBoolArrayOption(t func(RuneList) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapStringArrayOption(t func(RuneList) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapIntArrayOption(t func(RuneList) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapInt64ArrayOption(t func(RuneList) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapByteArrayOption(t func(RuneList) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapRuneArrayOption(t func(RuneList) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat32ArrayOption(t func(RuneList) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat64ArrayOption(t func(RuneList) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapAnyArrayOption(t func(RuneList) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapBoolList(t func(RuneList) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapStringList(t func(RuneList) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapIntList(t func(RuneList) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapInt64List(t func(RuneList) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapByteList(t func(RuneList) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapRuneList(t func(RuneList) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat32List(t func(RuneList) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat64List(t func(RuneList) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapAnyList(t func(RuneList) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapBoolArray(t func(RuneList) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapStringArray(t func(RuneList) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapIntArray(t func(RuneList) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapInt64Array(t func(RuneList) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapByteArray(t func(RuneList) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapRuneArray(t func(RuneList) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat32Array(t func(RuneList) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapFloat64Array(t func(RuneList) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f RuneListFuture) MapAnyArray(t func(RuneList) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapBool(t func(Float32List) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapString(t func(Float32List) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt(t func(Float32List) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt64(t func(Float32List) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float32ListFuture) MapByte(t func(Float32List) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapRune(t func(Float32List) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat32(t func(Float32List) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat64(t func(Float32List) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float32ListFuture) MapAny(t func(Float32List) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapBoolOption(t func(Float32List) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapStringOption(t func(Float32List) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapIntOption(t func(Float32List) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt64Option(t func(Float32List) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapByteOption(t func(Float32List) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapRuneOption(t func(Float32List) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat32Option(t func(Float32List) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat64Option(t func(Float32List) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapAnyOption(t func(Float32List) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapBoolListOption(t func(Float32List) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapStringListOption(t func(Float32List) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapIntListOption(t func(Float32List) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt64ListOption(t func(Float32List) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapByteListOption(t func(Float32List) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapRuneListOption(t func(Float32List) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat32ListOption(t func(Float32List) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat64ListOption(t func(Float32List) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapAnyListOption(t func(Float32List) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapBoolArrayOption(t func(Float32List) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapStringArrayOption(t func(Float32List) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapIntArrayOption(t func(Float32List) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt64ArrayOption(t func(Float32List) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapByteArrayOption(t func(Float32List) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapRuneArrayOption(t func(Float32List) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat32ArrayOption(t func(Float32List) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat64ArrayOption(t func(Float32List) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapAnyArrayOption(t func(Float32List) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapBoolList(t func(Float32List) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapStringList(t func(Float32List) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapIntList(t func(Float32List) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt64List(t func(Float32List) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapByteList(t func(Float32List) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapRuneList(t func(Float32List) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat32List(t func(Float32List) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat64List(t func(Float32List) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapAnyList(t func(Float32List) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapBoolArray(t func(Float32List) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapStringArray(t func(Float32List) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapIntArray(t func(Float32List) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapInt64Array(t func(Float32List) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapByteArray(t func(Float32List) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapRuneArray(t func(Float32List) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat32Array(t func(Float32List) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapFloat64Array(t func(Float32List) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ListFuture) MapAnyArray(t func(Float32List) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapBool(t func(Float64List) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapString(t func(Float64List) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt(t func(Float64List) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt64(t func(Float64List) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float64ListFuture) MapByte(t func(Float64List) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapRune(t func(Float64List) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat32(t func(Float64List) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat64(t func(Float64List) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float64ListFuture) MapAny(t func(Float64List) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapBoolOption(t func(Float64List) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapStringOption(t func(Float64List) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapIntOption(t func(Float64List) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt64Option(t func(Float64List) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapByteOption(t func(Float64List) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapRuneOption(t func(Float64List) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat32Option(t func(Float64List) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat64Option(t func(Float64List) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapAnyOption(t func(Float64List) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapBoolListOption(t func(Float64List) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapStringListOption(t func(Float64List) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapIntListOption(t func(Float64List) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt64ListOption(t func(Float64List) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapByteListOption(t func(Float64List) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapRuneListOption(t func(Float64List) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat32ListOption(t func(Float64List) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat64ListOption(t func(Float64List) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapAnyListOption(t func(Float64List) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapBoolArrayOption(t func(Float64List) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapStringArrayOption(t func(Float64List) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapIntArrayOption(t func(Float64List) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt64ArrayOption(t func(Float64List) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapByteArrayOption(t func(Float64List) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapRuneArrayOption(t func(Float64List) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat32ArrayOption(t func(Float64List) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat64ArrayOption(t func(Float64List) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapAnyArrayOption(t func(Float64List) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapBoolList(t func(Float64List) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapStringList(t func(Float64List) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapIntList(t func(Float64List) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt64List(t func(Float64List) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapByteList(t func(Float64List) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapRuneList(t func(Float64List) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat32List(t func(Float64List) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat64List(t func(Float64List) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapAnyList(t func(Float64List) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapBoolArray(t func(Float64List) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapStringArray(t func(Float64List) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapIntArray(t func(Float64List) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapInt64Array(t func(Float64List) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapByteArray(t func(Float64List) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapRuneArray(t func(Float64List) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat32Array(t func(Float64List) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapFloat64Array(t func(Float64List) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ListFuture) MapAnyArray(t func(Float64List) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f RuneListFuture) MapBoolOption(t func(RuneList) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapStringOption(t func(RuneList) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapIntOption(t func(RuneList) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapInt64Option(t func(RuneList) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapByteOption(t func(RuneList) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapRuneOption(t func(RuneList) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat32Option(t func(RuneList) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat64Option(t func(RuneList) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapAnyOption(t func(RuneList) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapBoolListOption(t func(RuneList) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapStringListOption(t func(RuneList) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapIntListOption(t func(RuneList) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapInt64ListOption(t func(RuneList) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapByteListOption(t func(RuneList) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapRuneListOption(t func(RuneList) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat32ListOption(t func(RuneList) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat64ListOption(t func(RuneList) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapAnyListOption(t func(RuneList) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapBoolArrayOption(t func(RuneList) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapStringArrayOption(t func(RuneList) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapIntArrayOption(t func(RuneList) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapInt64ArrayOption(t func(RuneList) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapByteArrayOption(t func(RuneList) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapRuneArrayOption(t func(RuneList) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat32ArrayOption(t func(RuneList) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat64ArrayOption(t func(RuneList) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapAnyArrayOption(t func(RuneList) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapBoolList(t func(RuneList) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapStringList(t func(RuneList) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapIntList(t func(RuneList) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapInt64List(t func(RuneList) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapByteList(t func(RuneList) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapRuneList(t func(RuneList) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat32List(t func(RuneList) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat64List(t func(RuneList) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapAnyList(t func(RuneList) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapBoolArray(t func(RuneList) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapStringArray(t func(RuneList) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapIntArray(t func(RuneList) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapInt64Array(t func(RuneList) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapByteArray(t func(RuneList) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapRuneArray(t func(RuneList) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat32Array(t func(RuneList) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapFloat64Array(t func(RuneList) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f RuneListFuture) MapAnyArray(t func(RuneList) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapBool(t func(Float32List) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapString(t func(Float32List) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt(t func(Float32List) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt64(t func(Float32List) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float32ListFuture) MapByte(t func(Float32List) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapRune(t func(Float32List) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat32(t func(Float32List) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat64(t func(Float32List) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float32ListFuture) MapAny(t func(Float32List) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapBoolOption(t func(Float32List) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapStringOption(t func(Float32List) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapIntOption(t func(Float32List) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt64Option(t func(Float32List) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapByteOption(t func(Float32List) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapRuneOption(t func(Float32List) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat32Option(t func(Float32List) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat64Option(t func(Float32List) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapAnyOption(t func(Float32List) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapBoolListOption(t func(Float32List) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapStringListOption(t func(Float32List) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapIntListOption(t func(Float32List) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt64ListOption(t func(Float32List) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapByteListOption(t func(Float32List) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapRuneListOption(t func(Float32List) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat32ListOption(t func(Float32List) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat64ListOption(t func(Float32List) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapAnyListOption(t func(Float32List) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapBoolArrayOption(t func(Float32List) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapStringArrayOption(t func(Float32List) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapIntArrayOption(t func(Float32List) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt64ArrayOption(t func(Float32List) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapByteArrayOption(t func(Float32List) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapRuneArrayOption(t func(Float32List) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat32ArrayOption(t func(Float32List) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat64ArrayOption(t func(Float32List) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapAnyArrayOption(t func(Float32List) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapBoolList(t func(Float32List) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapStringList(t func(Float32List) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapIntList(t func(Float32List) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt64List(t func(Float32List) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapByteList(t func(Float32List) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapRuneList(t func(Float32List) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat32List(t func(Float32List) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat64List(t func(Float32List) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapAnyList(t func(Float32List) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapBoolArray(t func(Float32List) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapStringArray(t func(Float32List) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapIntArray(t func(Float32List) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapInt64Array(t func(Float32List) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapByteArray(t func(Float32List) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapRuneArray(t func(Float32List) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat32Array(t func(Float32List) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapFloat64Array(t func(Float32List) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float32ListFuture) MapAnyArray(t func(Float32List) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapBool(t func(Float64List) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapString(t func(Float64List) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt(t func(Float64List) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt64(t func(Float64List) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float64ListFuture) MapByte(t func(Float64List) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapRune(t func(Float64List) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat32(t func(Float64List) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat64(t func(Float64List) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float64ListFuture) MapAny(t func(Float64List) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapBoolOption(t func(Float64List) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapStringOption(t func(Float64List) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapIntOption(t func(Float64List) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt64Option(t func(Float64List) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapByteOption(t func(Float64List) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapRuneOption(t func(Float64List) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat32Option(t func(Float64List) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat64Option(t func(Float64List) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapAnyOption(t func(Float64List) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapBoolListOption(t func(Float64List) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapStringListOption(t func(Float64List) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapIntListOption(t func(Float64List) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt64ListOption(t func(Float64List) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapByteListOption(t func(Float64List) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapRuneListOption(t func(Float64List) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat32ListOption(t func(Float64List) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat64ListOption(t func(Float64List) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapAnyListOption(t func(Float64List) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapBoolArrayOption(t func(Float64List) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapStringArrayOption(t func(Float64List) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapIntArrayOption(t func(Float64List) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt64ArrayOption(t func(Float64List) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapByteArrayOption(t func(Float64List) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapRuneArrayOption(t func(Float64List) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat32ArrayOption(t func(Float64List) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat64ArrayOption(t func(Float64List) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapAnyArrayOption(t func(Float64List) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapBoolList(t func(Float64List) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapStringList(t func(Float64List) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapIntList(t func(Float64List) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt64List(t func(Float64List) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapByteList(t func(Float64List) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapRuneList(t func(Float64List) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat32List(t func(Float64List) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat64List(t func(Float64List) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapAnyList(t func(Float64List) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapBoolArray(t func(Float64List) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapStringArray(t func(Float64List) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapIntArray(t func(Float64List) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapInt64Array(t func(Float64List) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapByteArray(t func(Float64List) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapRuneArray(t func(Float64List) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat32Array(t func(Float64List) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapFloat64Array(t func(Float64List) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float64ListFuture) MapAnyArray(t func(Float64List) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
 func (f AnyListFuture) MapBool(t func(AnyList) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
-func (f AnyListFuture) MapString(t func(AnyList) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f AnyListFuture) MapString(t func(AnyList) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f AnyListFuture) MapInt(t func(AnyList) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f AnyListFuture) MapInt64(t func(AnyList) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
+func (f AnyListFuture) MapInt64(t func(AnyList) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
 func (f AnyListFuture) MapByte(t func(AnyList) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
 func (f AnyListFuture) MapRune(t func(AnyList) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
-func (f AnyListFuture) MapFloat32(t func(AnyList) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat64(t func(AnyList) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f AnyListFuture) MapFloat32(t func(AnyList) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat64(t func(AnyList) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f AnyListFuture) MapAny(t func(AnyList) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f AnyListFuture) MapBoolOption(t func(AnyList) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapStringOption(t func(AnyList) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapIntOption(t func(AnyList) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapInt64Option(t func(AnyList) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapByteOption(t func(AnyList) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapRuneOption(t func(AnyList) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat32Option(t func(AnyList) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat64Option(t func(AnyList) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapAnyOption(t func(AnyList) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapBoolListOption(t func(AnyList) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapStringListOption(t func(AnyList) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapIntListOption(t func(AnyList) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapInt64ListOption(t func(AnyList) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapByteListOption(t func(AnyList) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapRuneListOption(t func(AnyList) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat32ListOption(t func(AnyList) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat64ListOption(t func(AnyList) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapAnyListOption(t func(AnyList) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapBoolArrayOption(t func(AnyList) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapStringArrayOption(t func(AnyList) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapIntArrayOption(t func(AnyList) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapInt64ArrayOption(t func(AnyList) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapByteArrayOption(t func(AnyList) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapRuneArrayOption(t func(AnyList) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat32ArrayOption(t func(AnyList) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat64ArrayOption(t func(AnyList) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapAnyArrayOption(t func(AnyList) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapBoolList(t func(AnyList) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapStringList(t func(AnyList) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapIntList(t func(AnyList) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapInt64List(t func(AnyList) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapByteList(t func(AnyList) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapRuneList(t func(AnyList) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat32List(t func(AnyList) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat64List(t func(AnyList) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapAnyList(t func(AnyList) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapBoolArray(t func(AnyList) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapStringArray(t func(AnyList) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapIntArray(t func(AnyList) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapInt64Array(t func(AnyList) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapByteArray(t func(AnyList) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapRuneArray(t func(AnyList) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat32Array(t func(AnyList) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapFloat64Array(t func(AnyList) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f AnyListFuture) MapAnyArray(t func(AnyList) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapBool(t func(BoolArray) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapString(t func(BoolArray) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f AnyListFuture) MapBoolOption(t func(AnyList) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapStringOption(t func(AnyList) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapIntOption(t func(AnyList) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapInt64Option(t func(AnyList) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapByteOption(t func(AnyList) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapRuneOption(t func(AnyList) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat32Option(t func(AnyList) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat64Option(t func(AnyList) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapAnyOption(t func(AnyList) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapBoolListOption(t func(AnyList) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapStringListOption(t func(AnyList) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapIntListOption(t func(AnyList) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapInt64ListOption(t func(AnyList) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapByteListOption(t func(AnyList) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapRuneListOption(t func(AnyList) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat32ListOption(t func(AnyList) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat64ListOption(t func(AnyList) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapAnyListOption(t func(AnyList) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapBoolArrayOption(t func(AnyList) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapStringArrayOption(t func(AnyList) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapIntArrayOption(t func(AnyList) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapInt64ArrayOption(t func(AnyList) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapByteArrayOption(t func(AnyList) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapRuneArrayOption(t func(AnyList) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat32ArrayOption(t func(AnyList) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat64ArrayOption(t func(AnyList) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapAnyArrayOption(t func(AnyList) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapBoolList(t func(AnyList) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapStringList(t func(AnyList) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapIntList(t func(AnyList) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapInt64List(t func(AnyList) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapByteList(t func(AnyList) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapRuneList(t func(AnyList) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat32List(t func(AnyList) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat64List(t func(AnyList) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapAnyList(t func(AnyList) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapBoolArray(t func(AnyList) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapStringArray(t func(AnyList) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapIntArray(t func(AnyList) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapInt64Array(t func(AnyList) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapByteArray(t func(AnyList) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapRuneArray(t func(AnyList) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat32Array(t func(AnyList) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapFloat64Array(t func(AnyList) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f AnyListFuture) MapAnyArray(t func(AnyList) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapBool(t func(BoolArray) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapString(t func(BoolArray) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f BoolArrayFuture) MapInt(t func(BoolArray) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f BoolArrayFuture) MapInt64(t func(BoolArray) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapByte(t func(BoolArray) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapRune(t func(BoolArray) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat32(t func(BoolArray) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat64(t func(BoolArray) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f BoolArrayFuture) MapInt64(t func(BoolArray) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f BoolArrayFuture) MapByte(t func(BoolArray) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapRune(t func(BoolArray) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat32(t func(BoolArray) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat64(t func(BoolArray) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f BoolArrayFuture) MapAny(t func(BoolArray) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f BoolArrayFuture) MapBoolOption(t func(BoolArray) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapStringOption(t func(BoolArray) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapIntOption(t func(BoolArray) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapInt64Option(t func(BoolArray) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapByteOption(t func(BoolArray) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapRuneOption(t func(BoolArray) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat32Option(t func(BoolArray) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat64Option(t func(BoolArray) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapAnyOption(t func(BoolArray) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapBoolListOption(t func(BoolArray) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapStringListOption(t func(BoolArray) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapIntListOption(t func(BoolArray) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapInt64ListOption(t func(BoolArray) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapByteListOption(t func(BoolArray) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapRuneListOption(t func(BoolArray) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat32ListOption(t func(BoolArray) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat64ListOption(t func(BoolArray) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapAnyListOption(t func(BoolArray) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapBoolArrayOption(t func(BoolArray) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapStringArrayOption(t func(BoolArray) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapIntArrayOption(t func(BoolArray) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapInt64ArrayOption(t func(BoolArray) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapByteArrayOption(t func(BoolArray) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapRuneArrayOption(t func(BoolArray) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat32ArrayOption(t func(BoolArray) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat64ArrayOption(t func(BoolArray) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapAnyArrayOption(t func(BoolArray) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapBoolList(t func(BoolArray) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapStringList(t func(BoolArray) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapIntList(t func(BoolArray) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapInt64List(t func(BoolArray) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapByteList(t func(BoolArray) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapRuneList(t func(BoolArray) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat32List(t func(BoolArray) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat64List(t func(BoolArray) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapAnyList(t func(BoolArray) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapBoolArray(t func(BoolArray) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapStringArray(t func(BoolArray) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapIntArray(t func(BoolArray) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapInt64Array(t func(BoolArray) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapByteArray(t func(BoolArray) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapRuneArray(t func(BoolArray) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat32Array(t func(BoolArray) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapFloat64Array(t func(BoolArray) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f BoolArrayFuture) MapAnyArray(t func(BoolArray) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapBool(t func(StringArray) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapString(t func(StringArray) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt(t func(StringArray) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt64(t func(StringArray) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f StringArrayFuture) MapByte(t func(StringArray) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapRune(t func(StringArray) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat32(t func(StringArray) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat64(t func(StringArray) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f StringArrayFuture) MapAny(t func(StringArray) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapBoolOption(t func(StringArray) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapStringOption(t func(StringArray) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapIntOption(t func(StringArray) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt64Option(t func(StringArray) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapByteOption(t func(StringArray) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapRuneOption(t func(StringArray) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat32Option(t func(StringArray) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat64Option(t func(StringArray) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapAnyOption(t func(StringArray) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapBoolListOption(t func(StringArray) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapStringListOption(t func(StringArray) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapIntListOption(t func(StringArray) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt64ListOption(t func(StringArray) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapByteListOption(t func(StringArray) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapRuneListOption(t func(StringArray) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat32ListOption(t func(StringArray) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat64ListOption(t func(StringArray) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapAnyListOption(t func(StringArray) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapBoolArrayOption(t func(StringArray) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapStringArrayOption(t func(StringArray) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapIntArrayOption(t func(StringArray) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt64ArrayOption(t func(StringArray) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapByteArrayOption(t func(StringArray) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapRuneArrayOption(t func(StringArray) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat32ArrayOption(t func(StringArray) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat64ArrayOption(t func(StringArray) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapAnyArrayOption(t func(StringArray) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapBoolList(t func(StringArray) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapStringList(t func(StringArray) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapIntList(t func(StringArray) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt64List(t func(StringArray) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapByteList(t func(StringArray) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapRuneList(t func(StringArray) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat32List(t func(StringArray) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat64List(t func(StringArray) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapAnyList(t func(StringArray) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapBoolArray(t func(StringArray) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapStringArray(t func(StringArray) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapIntArray(t func(StringArray) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapInt64Array(t func(StringArray) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapByteArray(t func(StringArray) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapRuneArray(t func(StringArray) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat32Array(t func(StringArray) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapFloat64Array(t func(StringArray) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f StringArrayFuture) MapAnyArray(t func(StringArray) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapBool(t func(IntArray) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapString(t func(IntArray) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f BoolArrayFuture) MapBoolOption(t func(BoolArray) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapStringOption(t func(BoolArray) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapIntOption(t func(BoolArray) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapInt64Option(t func(BoolArray) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapByteOption(t func(BoolArray) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapRuneOption(t func(BoolArray) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat32Option(t func(BoolArray) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat64Option(t func(BoolArray) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapAnyOption(t func(BoolArray) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapBoolListOption(t func(BoolArray) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapStringListOption(t func(BoolArray) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapIntListOption(t func(BoolArray) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapInt64ListOption(t func(BoolArray) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapByteListOption(t func(BoolArray) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapRuneListOption(t func(BoolArray) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat32ListOption(t func(BoolArray) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat64ListOption(t func(BoolArray) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapAnyListOption(t func(BoolArray) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapBoolArrayOption(t func(BoolArray) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapStringArrayOption(t func(BoolArray) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapIntArrayOption(t func(BoolArray) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapInt64ArrayOption(t func(BoolArray) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapByteArrayOption(t func(BoolArray) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapRuneArrayOption(t func(BoolArray) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat32ArrayOption(t func(BoolArray) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat64ArrayOption(t func(BoolArray) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapAnyArrayOption(t func(BoolArray) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapBoolList(t func(BoolArray) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapStringList(t func(BoolArray) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapIntList(t func(BoolArray) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapInt64List(t func(BoolArray) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapByteList(t func(BoolArray) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapRuneList(t func(BoolArray) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat32List(t func(BoolArray) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat64List(t func(BoolArray) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapAnyList(t func(BoolArray) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapBoolArray(t func(BoolArray) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapStringArray(t func(BoolArray) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapIntArray(t func(BoolArray) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapInt64Array(t func(BoolArray) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapByteArray(t func(BoolArray) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapRuneArray(t func(BoolArray) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat32Array(t func(BoolArray) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapFloat64Array(t func(BoolArray) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f BoolArrayFuture) MapAnyArray(t func(BoolArray) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapBool(t func(StringArray) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapString(t func(StringArray) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt(t func(StringArray) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt64(t func(StringArray) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f StringArrayFuture) MapByte(t func(StringArray) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapRune(t func(StringArray) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat32(t func(StringArray) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat64(t func(StringArray) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f StringArrayFuture) MapAny(t func(StringArray) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapBoolOption(t func(StringArray) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapStringOption(t func(StringArray) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapIntOption(t func(StringArray) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt64Option(t func(StringArray) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapByteOption(t func(StringArray) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapRuneOption(t func(StringArray) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat32Option(t func(StringArray) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat64Option(t func(StringArray) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapAnyOption(t func(StringArray) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapBoolListOption(t func(StringArray) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapStringListOption(t func(StringArray) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapIntListOption(t func(StringArray) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt64ListOption(t func(StringArray) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapByteListOption(t func(StringArray) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapRuneListOption(t func(StringArray) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat32ListOption(t func(StringArray) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat64ListOption(t func(StringArray) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapAnyListOption(t func(StringArray) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapBoolArrayOption(t func(StringArray) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapStringArrayOption(t func(StringArray) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapIntArrayOption(t func(StringArray) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt64ArrayOption(t func(StringArray) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapByteArrayOption(t func(StringArray) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapRuneArrayOption(t func(StringArray) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat32ArrayOption(t func(StringArray) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat64ArrayOption(t func(StringArray) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapAnyArrayOption(t func(StringArray) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapBoolList(t func(StringArray) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapStringList(t func(StringArray) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapIntList(t func(StringArray) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt64List(t func(StringArray) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapByteList(t func(StringArray) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapRuneList(t func(StringArray) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat32List(t func(StringArray) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat64List(t func(StringArray) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapAnyList(t func(StringArray) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapBoolArray(t func(StringArray) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapStringArray(t func(StringArray) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapIntArray(t func(StringArray) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapInt64Array(t func(StringArray) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapByteArray(t func(StringArray) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapRuneArray(t func(StringArray) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat32Array(t func(StringArray) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapFloat64Array(t func(StringArray) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f StringArrayFuture) MapAnyArray(t func(StringArray) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapBool(t func(IntArray) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapString(t func(IntArray) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f IntArrayFuture) MapInt(t func(IntArray) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f IntArrayFuture) MapInt64(t func(IntArray) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f IntArrayFuture) MapByte(t func(IntArray) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapRune(t func(IntArray) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat32(t func(IntArray) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat64(t func(IntArray) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f IntArrayFuture) MapInt64(t func(IntArray) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f IntArrayFuture) MapByte(t func(IntArray) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapRune(t func(IntArray) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat32(t func(IntArray) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat64(t func(IntArray) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f IntArrayFuture) MapAny(t func(IntArray) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f IntArrayFuture) MapBoolOption(t func(IntArray) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapStringOption(t func(IntArray) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapIntOption(t func(IntArray) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapInt64Option(t func(IntArray) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapByteOption(t func(IntArray) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapRuneOption(t func(IntArray) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat32Option(t func(IntArray) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat64Option(t func(IntArray) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapAnyOption(t func(IntArray) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapBoolListOption(t func(IntArray) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapStringListOption(t func(IntArray) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapIntListOption(t func(IntArray) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapInt64ListOption(t func(IntArray) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapByteListOption(t func(IntArray) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapRuneListOption(t func(IntArray) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat32ListOption(t func(IntArray) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat64ListOption(t func(IntArray) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapAnyListOption(t func(IntArray) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapBoolArrayOption(t func(IntArray) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapStringArrayOption(t func(IntArray) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapIntArrayOption(t func(IntArray) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapInt64ArrayOption(t func(IntArray) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapByteArrayOption(t func(IntArray) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapRuneArrayOption(t func(IntArray) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat32ArrayOption(t func(IntArray) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat64ArrayOption(t func(IntArray) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapAnyArrayOption(t func(IntArray) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapBoolList(t func(IntArray) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapStringList(t func(IntArray) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapIntList(t func(IntArray) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapInt64List(t func(IntArray) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapByteList(t func(IntArray) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapRuneList(t func(IntArray) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat32List(t func(IntArray) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat64List(t func(IntArray) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapAnyList(t func(IntArray) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapBoolArray(t func(IntArray) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapStringArray(t func(IntArray) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapIntArray(t func(IntArray) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapInt64Array(t func(IntArray) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapByteArray(t func(IntArray) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapRuneArray(t func(IntArray) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat32Array(t func(IntArray) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapFloat64Array(t func(IntArray) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f IntArrayFuture) MapAnyArray(t func(IntArray) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapBool(t func(Int64Array) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapString(t func(Int64Array) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt(t func(Int64Array) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt64(t func(Int64Array) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapByte(t func(Int64Array) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapRune(t func(Int64Array) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat32(t func(Int64Array) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat64(t func(Int64Array) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapAny(t func(Int64Array) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapBoolOption(t func(Int64Array) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapStringOption(t func(Int64Array) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapIntOption(t func(Int64Array) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt64Option(t func(Int64Array) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapByteOption(t func(Int64Array) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapRuneOption(t func(Int64Array) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat32Option(t func(Int64Array) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat64Option(t func(Int64Array) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapAnyOption(t func(Int64Array) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapBoolListOption(t func(Int64Array) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapStringListOption(t func(Int64Array) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapIntListOption(t func(Int64Array) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt64ListOption(t func(Int64Array) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapByteListOption(t func(Int64Array) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapRuneListOption(t func(Int64Array) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat32ListOption(t func(Int64Array) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat64ListOption(t func(Int64Array) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapAnyListOption(t func(Int64Array) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapBoolArrayOption(t func(Int64Array) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapStringArrayOption(t func(Int64Array) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapIntArrayOption(t func(Int64Array) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt64ArrayOption(t func(Int64Array) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapByteArrayOption(t func(Int64Array) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapRuneArrayOption(t func(Int64Array) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat32ArrayOption(t func(Int64Array) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat64ArrayOption(t func(Int64Array) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapAnyArrayOption(t func(Int64Array) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapBoolList(t func(Int64Array) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapStringList(t func(Int64Array) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapIntList(t func(Int64Array) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt64List(t func(Int64Array) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapByteList(t func(Int64Array) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapRuneList(t func(Int64Array) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat32List(t func(Int64Array) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat64List(t func(Int64Array) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapAnyList(t func(Int64Array) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapBoolArray(t func(Int64Array) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapStringArray(t func(Int64Array) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapIntArray(t func(Int64Array) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapInt64Array(t func(Int64Array) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapByteArray(t func(Int64Array) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapRuneArray(t func(Int64Array) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat32Array(t func(Int64Array) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapFloat64Array(t func(Int64Array) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Int64ArrayFuture) MapAnyArray(t func(Int64Array) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapBool(t func(ByteArray) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapString(t func(ByteArray) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f IntArrayFuture) MapBoolOption(t func(IntArray) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapStringOption(t func(IntArray) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapIntOption(t func(IntArray) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapInt64Option(t func(IntArray) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapByteOption(t func(IntArray) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapRuneOption(t func(IntArray) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat32Option(t func(IntArray) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat64Option(t func(IntArray) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapAnyOption(t func(IntArray) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapBoolListOption(t func(IntArray) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapStringListOption(t func(IntArray) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapIntListOption(t func(IntArray) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapInt64ListOption(t func(IntArray) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapByteListOption(t func(IntArray) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapRuneListOption(t func(IntArray) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat32ListOption(t func(IntArray) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat64ListOption(t func(IntArray) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapAnyListOption(t func(IntArray) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapBoolArrayOption(t func(IntArray) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapStringArrayOption(t func(IntArray) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapIntArrayOption(t func(IntArray) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapInt64ArrayOption(t func(IntArray) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapByteArrayOption(t func(IntArray) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapRuneArrayOption(t func(IntArray) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat32ArrayOption(t func(IntArray) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat64ArrayOption(t func(IntArray) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapAnyArrayOption(t func(IntArray) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapBoolList(t func(IntArray) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapStringList(t func(IntArray) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapIntList(t func(IntArray) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapInt64List(t func(IntArray) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapByteList(t func(IntArray) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapRuneList(t func(IntArray) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat32List(t func(IntArray) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat64List(t func(IntArray) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapAnyList(t func(IntArray) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapBoolArray(t func(IntArray) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapStringArray(t func(IntArray) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapIntArray(t func(IntArray) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapInt64Array(t func(IntArray) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapByteArray(t func(IntArray) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapRuneArray(t func(IntArray) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat32Array(t func(IntArray) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapFloat64Array(t func(IntArray) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f IntArrayFuture) MapAnyArray(t func(IntArray) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapBool(t func(Int64Array) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapString(t func(Int64Array) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt(t func(Int64Array) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt64(t func(Int64Array) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapByte(t func(Int64Array) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapRune(t func(Int64Array) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat32(t func(Int64Array) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat64(t func(Int64Array) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapAny(t func(Int64Array) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapBoolOption(t func(Int64Array) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapStringOption(t func(Int64Array) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapIntOption(t func(Int64Array) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt64Option(t func(Int64Array) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapByteOption(t func(Int64Array) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapRuneOption(t func(Int64Array) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat32Option(t func(Int64Array) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat64Option(t func(Int64Array) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapAnyOption(t func(Int64Array) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapBoolListOption(t func(Int64Array) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapStringListOption(t func(Int64Array) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapIntListOption(t func(Int64Array) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt64ListOption(t func(Int64Array) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapByteListOption(t func(Int64Array) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapRuneListOption(t func(Int64Array) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat32ListOption(t func(Int64Array) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat64ListOption(t func(Int64Array) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapAnyListOption(t func(Int64Array) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapBoolArrayOption(t func(Int64Array) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapStringArrayOption(t func(Int64Array) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapIntArrayOption(t func(Int64Array) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt64ArrayOption(t func(Int64Array) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapByteArrayOption(t func(Int64Array) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapRuneArrayOption(t func(Int64Array) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat32ArrayOption(t func(Int64Array) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat64ArrayOption(t func(Int64Array) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapAnyArrayOption(t func(Int64Array) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapBoolList(t func(Int64Array) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapStringList(t func(Int64Array) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapIntList(t func(Int64Array) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt64List(t func(Int64Array) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapByteList(t func(Int64Array) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapRuneList(t func(Int64Array) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat32List(t func(Int64Array) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat64List(t func(Int64Array) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapAnyList(t func(Int64Array) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapBoolArray(t func(Int64Array) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapStringArray(t func(Int64Array) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapIntArray(t func(Int64Array) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapInt64Array(t func(Int64Array) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapByteArray(t func(Int64Array) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapRuneArray(t func(Int64Array) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat32Array(t func(Int64Array) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapFloat64Array(t func(Int64Array) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Int64ArrayFuture) MapAnyArray(t func(Int64Array) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapBool(t func(ByteArray) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapString(t func(ByteArray) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f ByteArrayFuture) MapInt(t func(ByteArray) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f ByteArrayFuture) MapInt64(t func(ByteArray) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapByte(t func(ByteArray) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapRune(t func(ByteArray) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat32(t func(ByteArray) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat64(t func(ByteArray) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f ByteArrayFuture) MapInt64(t func(ByteArray) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f ByteArrayFuture) MapByte(t func(ByteArray) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapRune(t func(ByteArray) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat32(t func(ByteArray) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat64(t func(ByteArray) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f ByteArrayFuture) MapAny(t func(ByteArray) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f ByteArrayFuture) MapBoolOption(t func(ByteArray) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapStringOption(t func(ByteArray) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapIntOption(t func(ByteArray) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapInt64Option(t func(ByteArray) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapByteOption(t func(ByteArray) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapRuneOption(t func(ByteArray) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat32Option(t func(ByteArray) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat64Option(t func(ByteArray) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapAnyOption(t func(ByteArray) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapBoolListOption(t func(ByteArray) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapStringListOption(t func(ByteArray) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapIntListOption(t func(ByteArray) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapInt64ListOption(t func(ByteArray) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapByteListOption(t func(ByteArray) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapRuneListOption(t func(ByteArray) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat32ListOption(t func(ByteArray) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat64ListOption(t func(ByteArray) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapAnyListOption(t func(ByteArray) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapBoolArrayOption(t func(ByteArray) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapStringArrayOption(t func(ByteArray) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapIntArrayOption(t func(ByteArray) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapInt64ArrayOption(t func(ByteArray) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapByteArrayOption(t func(ByteArray) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapRuneArrayOption(t func(ByteArray) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat32ArrayOption(t func(ByteArray) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat64ArrayOption(t func(ByteArray) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapAnyArrayOption(t func(ByteArray) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapBoolList(t func(ByteArray) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapStringList(t func(ByteArray) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapIntList(t func(ByteArray) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapInt64List(t func(ByteArray) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapByteList(t func(ByteArray) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapRuneList(t func(ByteArray) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat32List(t func(ByteArray) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat64List(t func(ByteArray) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapAnyList(t func(ByteArray) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapBoolArray(t func(ByteArray) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapStringArray(t func(ByteArray) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapIntArray(t func(ByteArray) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapInt64Array(t func(ByteArray) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapByteArray(t func(ByteArray) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapRuneArray(t func(ByteArray) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat32Array(t func(ByteArray) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapFloat64Array(t func(ByteArray) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f ByteArrayFuture) MapAnyArray(t func(ByteArray) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapBool(t func(RuneArray) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapString(t func(RuneArray) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f ByteArrayFuture) MapBoolOption(t func(ByteArray) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapStringOption(t func(ByteArray) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapIntOption(t func(ByteArray) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapInt64Option(t func(ByteArray) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapByteOption(t func(ByteArray) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapRuneOption(t func(ByteArray) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat32Option(t func(ByteArray) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat64Option(t func(ByteArray) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapAnyOption(t func(ByteArray) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapBoolListOption(t func(ByteArray) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapStringListOption(t func(ByteArray) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapIntListOption(t func(ByteArray) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapInt64ListOption(t func(ByteArray) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapByteListOption(t func(ByteArray) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapRuneListOption(t func(ByteArray) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat32ListOption(t func(ByteArray) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat64ListOption(t func(ByteArray) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapAnyListOption(t func(ByteArray) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapBoolArrayOption(t func(ByteArray) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapStringArrayOption(t func(ByteArray) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapIntArrayOption(t func(ByteArray) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapInt64ArrayOption(t func(ByteArray) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapByteArrayOption(t func(ByteArray) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapRuneArrayOption(t func(ByteArray) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat32ArrayOption(t func(ByteArray) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat64ArrayOption(t func(ByteArray) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapAnyArrayOption(t func(ByteArray) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapBoolList(t func(ByteArray) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapStringList(t func(ByteArray) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapIntList(t func(ByteArray) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapInt64List(t func(ByteArray) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapByteList(t func(ByteArray) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapRuneList(t func(ByteArray) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat32List(t func(ByteArray) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat64List(t func(ByteArray) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapAnyList(t func(ByteArray) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapBoolArray(t func(ByteArray) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapStringArray(t func(ByteArray) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapIntArray(t func(ByteArray) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapInt64Array(t func(ByteArray) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapByteArray(t func(ByteArray) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapRuneArray(t func(ByteArray) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat32Array(t func(ByteArray) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapFloat64Array(t func(ByteArray) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f ByteArrayFuture) MapAnyArray(t func(ByteArray) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapBool(t func(RuneArray) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapString(t func(RuneArray) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f RuneArrayFuture) MapInt(t func(RuneArray) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f RuneArrayFuture) MapInt64(t func(RuneArray) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapByte(t func(RuneArray) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapRune(t func(RuneArray) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat32(t func(RuneArray) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat64(t func(RuneArray) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f RuneArrayFuture) MapInt64(t func(RuneArray) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f RuneArrayFuture) MapByte(t func(RuneArray) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapRune(t func(RuneArray) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat32(t func(RuneArray) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat64(t func(RuneArray) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f RuneArrayFuture) MapAny(t func(RuneArray) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f RuneArrayFuture) MapBoolOption(t func(RuneArray) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapStringOption(t func(RuneArray) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapIntOption(t func(RuneArray) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapInt64Option(t func(RuneArray) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapByteOption(t func(RuneArray) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapRuneOption(t func(RuneArray) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat32Option(t func(RuneArray) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat64Option(t func(RuneArray) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapAnyOption(t func(RuneArray) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapBoolListOption(t func(RuneArray) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapStringListOption(t func(RuneArray) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapIntListOption(t func(RuneArray) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapInt64ListOption(t func(RuneArray) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapByteListOption(t func(RuneArray) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapRuneListOption(t func(RuneArray) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat32ListOption(t func(RuneArray) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat64ListOption(t func(RuneArray) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapAnyListOption(t func(RuneArray) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapBoolArrayOption(t func(RuneArray) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapStringArrayOption(t func(RuneArray) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapIntArrayOption(t func(RuneArray) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapInt64ArrayOption(t func(RuneArray) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapByteArrayOption(t func(RuneArray) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapRuneArrayOption(t func(RuneArray) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat32ArrayOption(t func(RuneArray) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat64ArrayOption(t func(RuneArray) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapAnyArrayOption(t func(RuneArray) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapBoolList(t func(RuneArray) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapStringList(t func(RuneArray) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapIntList(t func(RuneArray) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapInt64List(t func(RuneArray) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapByteList(t func(RuneArray) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapRuneList(t func(RuneArray) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat32List(t func(RuneArray) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat64List(t func(RuneArray) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapAnyList(t func(RuneArray) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapBoolArray(t func(RuneArray) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapStringArray(t func(RuneArray) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapIntArray(t func(RuneArray) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapInt64Array(t func(RuneArray) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapByteArray(t func(RuneArray) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapRuneArray(t func(RuneArray) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat32Array(t func(RuneArray) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapFloat64Array(t func(RuneArray) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f RuneArrayFuture) MapAnyArray(t func(RuneArray) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapBool(t func(Float32Array) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapString(t func(Float32Array) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt(t func(Float32Array) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt64(t func(Float32Array) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapByte(t func(Float32Array) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapRune(t func(Float32Array) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat32(t func(Float32Array) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat64(t func(Float32Array) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapAny(t func(Float32Array) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapBoolOption(t func(Float32Array) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapStringOption(t func(Float32Array) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapIntOption(t func(Float32Array) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt64Option(t func(Float32Array) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapByteOption(t func(Float32Array) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapRuneOption(t func(Float32Array) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat32Option(t func(Float32Array) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat64Option(t func(Float32Array) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapAnyOption(t func(Float32Array) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapBoolListOption(t func(Float32Array) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapStringListOption(t func(Float32Array) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapIntListOption(t func(Float32Array) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt64ListOption(t func(Float32Array) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapByteListOption(t func(Float32Array) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapRuneListOption(t func(Float32Array) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat32ListOption(t func(Float32Array) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat64ListOption(t func(Float32Array) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapAnyListOption(t func(Float32Array) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapBoolArrayOption(t func(Float32Array) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapStringArrayOption(t func(Float32Array) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapIntArrayOption(t func(Float32Array) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt64ArrayOption(t func(Float32Array) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapByteArrayOption(t func(Float32Array) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapRuneArrayOption(t func(Float32Array) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat32ArrayOption(t func(Float32Array) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat64ArrayOption(t func(Float32Array) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapAnyArrayOption(t func(Float32Array) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapBoolList(t func(Float32Array) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapStringList(t func(Float32Array) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapIntList(t func(Float32Array) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt64List(t func(Float32Array) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapByteList(t func(Float32Array) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapRuneList(t func(Float32Array) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat32List(t func(Float32Array) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat64List(t func(Float32Array) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapAnyList(t func(Float32Array) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapBoolArray(t func(Float32Array) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapStringArray(t func(Float32Array) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapIntArray(t func(Float32Array) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapInt64Array(t func(Float32Array) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapByteArray(t func(Float32Array) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapRuneArray(t func(Float32Array) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat32Array(t func(Float32Array) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapFloat64Array(t func(Float32Array) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float32ArrayFuture) MapAnyArray(t func(Float32Array) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapBool(t func(Float64Array) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapString(t func(Float64Array) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt(t func(Float64Array) Int) IntFuture {
-	return SuccessIntFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt64(t func(Float64Array) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapByte(t func(Float64Array) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapRune(t func(Float64Array) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat32(t func(Float64Array) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat64(t func(Float64Array) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapAny(t func(Float64Array) Any) AnyFuture {
-	return SuccessAnyFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapBoolOption(t func(Float64Array) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapStringOption(t func(Float64Array) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapIntOption(t func(Float64Array) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt64Option(t func(Float64Array) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapByteOption(t func(Float64Array) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapRuneOption(t func(Float64Array) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat32Option(t func(Float64Array) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat64Option(t func(Float64Array) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapAnyOption(t func(Float64Array) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapBoolListOption(t func(Float64Array) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapStringListOption(t func(Float64Array) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapIntListOption(t func(Float64Array) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt64ListOption(t func(Float64Array) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapByteListOption(t func(Float64Array) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapRuneListOption(t func(Float64Array) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat32ListOption(t func(Float64Array) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat64ListOption(t func(Float64Array) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapAnyListOption(t func(Float64Array) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapBoolArrayOption(t func(Float64Array) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapStringArrayOption(t func(Float64Array) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapIntArrayOption(t func(Float64Array) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt64ArrayOption(t func(Float64Array) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapByteArrayOption(t func(Float64Array) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapRuneArrayOption(t func(Float64Array) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat32ArrayOption(t func(Float64Array) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat64ArrayOption(t func(Float64Array) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapAnyArrayOption(t func(Float64Array) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapBoolList(t func(Float64Array) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapStringList(t func(Float64Array) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapIntList(t func(Float64Array) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt64List(t func(Float64Array) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapByteList(t func(Float64Array) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapRuneList(t func(Float64Array) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat32List(t func(Float64Array) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat64List(t func(Float64Array) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapAnyList(t func(Float64Array) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapBoolArray(t func(Float64Array) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapStringArray(t func(Float64Array) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapIntArray(t func(Float64Array) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapInt64Array(t func(Float64Array) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapByteArray(t func(Float64Array) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapRuneArray(t func(Float64Array) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat32Array(t func(Float64Array) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapFloat64Array(t func(Float64Array) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f Float64ArrayFuture) MapAnyArray(t func(Float64Array) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapBool(t func(AnyArray) Bool) BoolFuture {
-	return SuccessBoolFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapString(t func(AnyArray) String) StringFuture {
-	return SuccessStringFuture(t(<-f.ch))
-}
+func (f RuneArrayFuture) MapBoolOption(t func(RuneArray) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapStringOption(t func(RuneArray) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapIntOption(t func(RuneArray) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapInt64Option(t func(RuneArray) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapByteOption(t func(RuneArray) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapRuneOption(t func(RuneArray) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat32Option(t func(RuneArray) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat64Option(t func(RuneArray) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapAnyOption(t func(RuneArray) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapBoolListOption(t func(RuneArray) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapStringListOption(t func(RuneArray) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapIntListOption(t func(RuneArray) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapInt64ListOption(t func(RuneArray) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapByteListOption(t func(RuneArray) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapRuneListOption(t func(RuneArray) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat32ListOption(t func(RuneArray) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat64ListOption(t func(RuneArray) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapAnyListOption(t func(RuneArray) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapBoolArrayOption(t func(RuneArray) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapStringArrayOption(t func(RuneArray) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapIntArrayOption(t func(RuneArray) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapInt64ArrayOption(t func(RuneArray) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapByteArrayOption(t func(RuneArray) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapRuneArrayOption(t func(RuneArray) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat32ArrayOption(t func(RuneArray) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat64ArrayOption(t func(RuneArray) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapAnyArrayOption(t func(RuneArray) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapBoolList(t func(RuneArray) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapStringList(t func(RuneArray) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapIntList(t func(RuneArray) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapInt64List(t func(RuneArray) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapByteList(t func(RuneArray) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapRuneList(t func(RuneArray) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat32List(t func(RuneArray) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat64List(t func(RuneArray) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapAnyList(t func(RuneArray) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapBoolArray(t func(RuneArray) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapStringArray(t func(RuneArray) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapIntArray(t func(RuneArray) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapInt64Array(t func(RuneArray) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapByteArray(t func(RuneArray) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapRuneArray(t func(RuneArray) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat32Array(t func(RuneArray) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapFloat64Array(t func(RuneArray) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f RuneArrayFuture) MapAnyArray(t func(RuneArray) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapBool(t func(Float32Array) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapString(t func(Float32Array) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt(t func(Float32Array) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt64(t func(Float32Array) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapByte(t func(Float32Array) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapRune(t func(Float32Array) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat32(t func(Float32Array) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat64(t func(Float32Array) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapAny(t func(Float32Array) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapBoolOption(t func(Float32Array) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapStringOption(t func(Float32Array) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapIntOption(t func(Float32Array) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt64Option(t func(Float32Array) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapByteOption(t func(Float32Array) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapRuneOption(t func(Float32Array) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat32Option(t func(Float32Array) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat64Option(t func(Float32Array) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapAnyOption(t func(Float32Array) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapBoolListOption(t func(Float32Array) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapStringListOption(t func(Float32Array) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapIntListOption(t func(Float32Array) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt64ListOption(t func(Float32Array) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapByteListOption(t func(Float32Array) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapRuneListOption(t func(Float32Array) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat32ListOption(t func(Float32Array) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat64ListOption(t func(Float32Array) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapAnyListOption(t func(Float32Array) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapBoolArrayOption(t func(Float32Array) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapStringArrayOption(t func(Float32Array) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapIntArrayOption(t func(Float32Array) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt64ArrayOption(t func(Float32Array) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapByteArrayOption(t func(Float32Array) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapRuneArrayOption(t func(Float32Array) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat32ArrayOption(t func(Float32Array) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat64ArrayOption(t func(Float32Array) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapAnyArrayOption(t func(Float32Array) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapBoolList(t func(Float32Array) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapStringList(t func(Float32Array) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapIntList(t func(Float32Array) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt64List(t func(Float32Array) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapByteList(t func(Float32Array) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapRuneList(t func(Float32Array) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat32List(t func(Float32Array) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat64List(t func(Float32Array) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapAnyList(t func(Float32Array) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapBoolArray(t func(Float32Array) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapStringArray(t func(Float32Array) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapIntArray(t func(Float32Array) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapInt64Array(t func(Float32Array) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapByteArray(t func(Float32Array) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapRuneArray(t func(Float32Array) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat32Array(t func(Float32Array) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapFloat64Array(t func(Float32Array) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float32ArrayFuture) MapAnyArray(t func(Float32Array) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapBool(t func(Float64Array) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapString(t func(Float64Array) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt(t func(Float64Array) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt64(t func(Float64Array) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapByte(t func(Float64Array) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapRune(t func(Float64Array) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat32(t func(Float64Array) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat64(t func(Float64Array) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapAny(t func(Float64Array) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapBoolOption(t func(Float64Array) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapStringOption(t func(Float64Array) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapIntOption(t func(Float64Array) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt64Option(t func(Float64Array) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapByteOption(t func(Float64Array) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapRuneOption(t func(Float64Array) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat32Option(t func(Float64Array) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat64Option(t func(Float64Array) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapAnyOption(t func(Float64Array) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapBoolListOption(t func(Float64Array) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapStringListOption(t func(Float64Array) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapIntListOption(t func(Float64Array) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt64ListOption(t func(Float64Array) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapByteListOption(t func(Float64Array) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapRuneListOption(t func(Float64Array) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat32ListOption(t func(Float64Array) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat64ListOption(t func(Float64Array) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapAnyListOption(t func(Float64Array) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapBoolArrayOption(t func(Float64Array) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapStringArrayOption(t func(Float64Array) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapIntArrayOption(t func(Float64Array) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt64ArrayOption(t func(Float64Array) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapByteArrayOption(t func(Float64Array) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapRuneArrayOption(t func(Float64Array) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat32ArrayOption(t func(Float64Array) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat64ArrayOption(t func(Float64Array) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapAnyArrayOption(t func(Float64Array) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapBoolList(t func(Float64Array) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapStringList(t func(Float64Array) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapIntList(t func(Float64Array) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt64List(t func(Float64Array) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapByteList(t func(Float64Array) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapRuneList(t func(Float64Array) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat32List(t func(Float64Array) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat64List(t func(Float64Array) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapAnyList(t func(Float64Array) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapBoolArray(t func(Float64Array) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapStringArray(t func(Float64Array) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapIntArray(t func(Float64Array) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapInt64Array(t func(Float64Array) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapByteArray(t func(Float64Array) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapRuneArray(t func(Float64Array) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat32Array(t func(Float64Array) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapFloat64Array(t func(Float64Array) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f Float64ArrayFuture) MapAnyArray(t func(Float64Array) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapBool(t func(AnyArray) Bool) BoolFuture { return SuccessBoolFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapString(t func(AnyArray) String) StringFuture { return SuccessStringFuture(t(<-f.ch)) }
 func (f AnyArrayFuture) MapInt(t func(AnyArray) Int) IntFuture { return SuccessIntFuture(t(<-f.ch)) }
-func (f AnyArrayFuture) MapInt64(t func(AnyArray) Int64) Int64Future {
-	return SuccessInt64Future(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapByte(t func(AnyArray) Byte) ByteFuture {
-	return SuccessByteFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapRune(t func(AnyArray) Rune) RuneFuture {
-	return SuccessRuneFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat32(t func(AnyArray) Float32) Float32Future {
-	return SuccessFloat32Future(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat64(t func(AnyArray) Float64) Float64Future {
-	return SuccessFloat64Future(t(<-f.ch))
-}
+func (f AnyArrayFuture) MapInt64(t func(AnyArray) Int64) Int64Future { return SuccessInt64Future(t(<-f.ch)) }
+func (f AnyArrayFuture) MapByte(t func(AnyArray) Byte) ByteFuture { return SuccessByteFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapRune(t func(AnyArray) Rune) RuneFuture { return SuccessRuneFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat32(t func(AnyArray) Float32) Float32Future { return SuccessFloat32Future(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat64(t func(AnyArray) Float64) Float64Future { return SuccessFloat64Future(t(<-f.ch)) }
 func (f AnyArrayFuture) MapAny(t func(AnyArray) Any) AnyFuture { return SuccessAnyFuture(t(<-f.ch)) }
-func (f AnyArrayFuture) MapBoolOption(t func(AnyArray) BoolOption) BoolOptionFuture {
-	return SuccessBoolOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapStringOption(t func(AnyArray) StringOption) StringOptionFuture {
-	return SuccessStringOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapIntOption(t func(AnyArray) IntOption) IntOptionFuture {
-	return SuccessIntOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapInt64Option(t func(AnyArray) Int64Option) Int64OptionFuture {
-	return SuccessInt64OptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapByteOption(t func(AnyArray) ByteOption) ByteOptionFuture {
-	return SuccessByteOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapRuneOption(t func(AnyArray) RuneOption) RuneOptionFuture {
-	return SuccessRuneOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat32Option(t func(AnyArray) Float32Option) Float32OptionFuture {
-	return SuccessFloat32OptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat64Option(t func(AnyArray) Float64Option) Float64OptionFuture {
-	return SuccessFloat64OptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapAnyOption(t func(AnyArray) AnyOption) AnyOptionFuture {
-	return SuccessAnyOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapBoolListOption(t func(AnyArray) BoolListOption) BoolListOptionFuture {
-	return SuccessBoolListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapStringListOption(t func(AnyArray) StringListOption) StringListOptionFuture {
-	return SuccessStringListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapIntListOption(t func(AnyArray) IntListOption) IntListOptionFuture {
-	return SuccessIntListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapInt64ListOption(t func(AnyArray) Int64ListOption) Int64ListOptionFuture {
-	return SuccessInt64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapByteListOption(t func(AnyArray) ByteListOption) ByteListOptionFuture {
-	return SuccessByteListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapRuneListOption(t func(AnyArray) RuneListOption) RuneListOptionFuture {
-	return SuccessRuneListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat32ListOption(t func(AnyArray) Float32ListOption) Float32ListOptionFuture {
-	return SuccessFloat32ListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat64ListOption(t func(AnyArray) Float64ListOption) Float64ListOptionFuture {
-	return SuccessFloat64ListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapAnyListOption(t func(AnyArray) AnyListOption) AnyListOptionFuture {
-	return SuccessAnyListOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapBoolArrayOption(t func(AnyArray) BoolArrayOption) BoolArrayOptionFuture {
-	return SuccessBoolArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapStringArrayOption(t func(AnyArray) StringArrayOption) StringArrayOptionFuture {
-	return SuccessStringArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapIntArrayOption(t func(AnyArray) IntArrayOption) IntArrayOptionFuture {
-	return SuccessIntArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapInt64ArrayOption(t func(AnyArray) Int64ArrayOption) Int64ArrayOptionFuture {
-	return SuccessInt64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapByteArrayOption(t func(AnyArray) ByteArrayOption) ByteArrayOptionFuture {
-	return SuccessByteArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapRuneArrayOption(t func(AnyArray) RuneArrayOption) RuneArrayOptionFuture {
-	return SuccessRuneArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat32ArrayOption(t func(AnyArray) Float32ArrayOption) Float32ArrayOptionFuture {
-	return SuccessFloat32ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat64ArrayOption(t func(AnyArray) Float64ArrayOption) Float64ArrayOptionFuture {
-	return SuccessFloat64ArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapAnyArrayOption(t func(AnyArray) AnyArrayOption) AnyArrayOptionFuture {
-	return SuccessAnyArrayOptionFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapBoolList(t func(AnyArray) BoolList) BoolListFuture {
-	return SuccessBoolListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapStringList(t func(AnyArray) StringList) StringListFuture {
-	return SuccessStringListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapIntList(t func(AnyArray) IntList) IntListFuture {
-	return SuccessIntListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapInt64List(t func(AnyArray) Int64List) Int64ListFuture {
-	return SuccessInt64ListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapByteList(t func(AnyArray) ByteList) ByteListFuture {
-	return SuccessByteListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapRuneList(t func(AnyArray) RuneList) RuneListFuture {
-	return SuccessRuneListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat32List(t func(AnyArray) Float32List) Float32ListFuture {
-	return SuccessFloat32ListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat64List(t func(AnyArray) Float64List) Float64ListFuture {
-	return SuccessFloat64ListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapAnyList(t func(AnyArray) AnyList) AnyListFuture {
-	return SuccessAnyListFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapBoolArray(t func(AnyArray) BoolArray) BoolArrayFuture {
-	return SuccessBoolArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapStringArray(t func(AnyArray) StringArray) StringArrayFuture {
-	return SuccessStringArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapIntArray(t func(AnyArray) IntArray) IntArrayFuture {
-	return SuccessIntArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapInt64Array(t func(AnyArray) Int64Array) Int64ArrayFuture {
-	return SuccessInt64ArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapByteArray(t func(AnyArray) ByteArray) ByteArrayFuture {
-	return SuccessByteArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapRuneArray(t func(AnyArray) RuneArray) RuneArrayFuture {
-	return SuccessRuneArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat32Array(t func(AnyArray) Float32Array) Float32ArrayFuture {
-	return SuccessFloat32ArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapFloat64Array(t func(AnyArray) Float64Array) Float64ArrayFuture {
-	return SuccessFloat64ArrayFuture(t(<-f.ch))
-}
-func (f AnyArrayFuture) MapAnyArray(t func(AnyArray) AnyArray) AnyArrayFuture {
-	return SuccessAnyArrayFuture(t(<-f.ch))
-}
+func (f AnyArrayFuture) MapBoolOption(t func(AnyArray) BoolOption) BoolOptionFuture { return SuccessBoolOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapStringOption(t func(AnyArray) StringOption) StringOptionFuture { return SuccessStringOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapIntOption(t func(AnyArray) IntOption) IntOptionFuture { return SuccessIntOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapInt64Option(t func(AnyArray) Int64Option) Int64OptionFuture { return SuccessInt64OptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapByteOption(t func(AnyArray) ByteOption) ByteOptionFuture { return SuccessByteOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapRuneOption(t func(AnyArray) RuneOption) RuneOptionFuture { return SuccessRuneOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat32Option(t func(AnyArray) Float32Option) Float32OptionFuture { return SuccessFloat32OptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat64Option(t func(AnyArray) Float64Option) Float64OptionFuture { return SuccessFloat64OptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapAnyOption(t func(AnyArray) AnyOption) AnyOptionFuture { return SuccessAnyOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapBoolListOption(t func(AnyArray) BoolListOption) BoolListOptionFuture { return SuccessBoolListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapStringListOption(t func(AnyArray) StringListOption) StringListOptionFuture { return SuccessStringListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapIntListOption(t func(AnyArray) IntListOption) IntListOptionFuture { return SuccessIntListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapInt64ListOption(t func(AnyArray) Int64ListOption) Int64ListOptionFuture { return SuccessInt64ListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapByteListOption(t func(AnyArray) ByteListOption) ByteListOptionFuture { return SuccessByteListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapRuneListOption(t func(AnyArray) RuneListOption) RuneListOptionFuture { return SuccessRuneListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat32ListOption(t func(AnyArray) Float32ListOption) Float32ListOptionFuture { return SuccessFloat32ListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat64ListOption(t func(AnyArray) Float64ListOption) Float64ListOptionFuture { return SuccessFloat64ListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapAnyListOption(t func(AnyArray) AnyListOption) AnyListOptionFuture { return SuccessAnyListOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapBoolArrayOption(t func(AnyArray) BoolArrayOption) BoolArrayOptionFuture { return SuccessBoolArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapStringArrayOption(t func(AnyArray) StringArrayOption) StringArrayOptionFuture { return SuccessStringArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapIntArrayOption(t func(AnyArray) IntArrayOption) IntArrayOptionFuture { return SuccessIntArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapInt64ArrayOption(t func(AnyArray) Int64ArrayOption) Int64ArrayOptionFuture { return SuccessInt64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapByteArrayOption(t func(AnyArray) ByteArrayOption) ByteArrayOptionFuture { return SuccessByteArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapRuneArrayOption(t func(AnyArray) RuneArrayOption) RuneArrayOptionFuture { return SuccessRuneArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat32ArrayOption(t func(AnyArray) Float32ArrayOption) Float32ArrayOptionFuture { return SuccessFloat32ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat64ArrayOption(t func(AnyArray) Float64ArrayOption) Float64ArrayOptionFuture { return SuccessFloat64ArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapAnyArrayOption(t func(AnyArray) AnyArrayOption) AnyArrayOptionFuture { return SuccessAnyArrayOptionFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapBoolList(t func(AnyArray) BoolList) BoolListFuture { return SuccessBoolListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapStringList(t func(AnyArray) StringList) StringListFuture { return SuccessStringListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapIntList(t func(AnyArray) IntList) IntListFuture { return SuccessIntListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapInt64List(t func(AnyArray) Int64List) Int64ListFuture { return SuccessInt64ListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapByteList(t func(AnyArray) ByteList) ByteListFuture { return SuccessByteListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapRuneList(t func(AnyArray) RuneList) RuneListFuture { return SuccessRuneListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat32List(t func(AnyArray) Float32List) Float32ListFuture { return SuccessFloat32ListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat64List(t func(AnyArray) Float64List) Float64ListFuture { return SuccessFloat64ListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapAnyList(t func(AnyArray) AnyList) AnyListFuture { return SuccessAnyListFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapBoolArray(t func(AnyArray) BoolArray) BoolArrayFuture { return SuccessBoolArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapStringArray(t func(AnyArray) StringArray) StringArrayFuture { return SuccessStringArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapIntArray(t func(AnyArray) IntArray) IntArrayFuture { return SuccessIntArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapInt64Array(t func(AnyArray) Int64Array) Int64ArrayFuture { return SuccessInt64ArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapByteArray(t func(AnyArray) ByteArray) ByteArrayFuture { return SuccessByteArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapRuneArray(t func(AnyArray) RuneArray) RuneArrayFuture { return SuccessRuneArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat32Array(t func(AnyArray) Float32Array) Float32ArrayFuture { return SuccessFloat32ArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapFloat64Array(t func(AnyArray) Float64Array) Float64ArrayFuture { return SuccessFloat64ArrayFuture(t(<-f.ch)) }
+func (f AnyArrayFuture) MapAnyArray(t func(AnyArray) AnyArray) AnyArrayFuture { return SuccessAnyArrayFuture(t(<-f.ch)) }

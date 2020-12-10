@@ -3,33 +3,24 @@
 
 package fp
 
+
 func (m BoolOptionOption) Flatten() BoolOption {
-	return m.FlatMapBool(func(e BoolOption) BoolOption { return e })
-}
+  return m.FlatMapBool(func(e BoolOption) BoolOption { return e }) }
 func (m StringOptionOption) Flatten() StringOption {
-	return m.FlatMapString(func(e StringOption) StringOption { return e })
-}
+  return m.FlatMapString(func(e StringOption) StringOption { return e }) }
 func (m IntOptionOption) Flatten() IntOption {
-	return m.FlatMapInt(func(e IntOption) IntOption { return e })
-}
+  return m.FlatMapInt(func(e IntOption) IntOption { return e }) }
 func (m Int64OptionOption) Flatten() Int64Option {
-	return m.FlatMapInt64(func(e Int64Option) Int64Option { return e })
-}
+  return m.FlatMapInt64(func(e Int64Option) Int64Option { return e }) }
 func (m ByteOptionOption) Flatten() ByteOption {
-	return m.FlatMapByte(func(e ByteOption) ByteOption { return e })
-}
+  return m.FlatMapByte(func(e ByteOption) ByteOption { return e }) }
 func (m RuneOptionOption) Flatten() RuneOption {
-	return m.FlatMapRune(func(e RuneOption) RuneOption { return e })
-}
+  return m.FlatMapRune(func(e RuneOption) RuneOption { return e }) }
 func (m Float32OptionOption) Flatten() Float32Option {
-	return m.FlatMapFloat32(func(e Float32Option) Float32Option { return e })
-}
+  return m.FlatMapFloat32(func(e Float32Option) Float32Option { return e }) }
 func (m Float64OptionOption) Flatten() Float64Option {
-	return m.FlatMapFloat64(func(e Float64Option) Float64Option { return e })
-}
+  return m.FlatMapFloat64(func(e Float64Option) Float64Option { return e }) }
 func (m AnyOptionOption) Flatten() AnyOption {
-	return m.FlatMapAny(func(e AnyOption) AnyOption { return e })
-}
+  return m.FlatMapAny(func(e AnyOption) AnyOption { return e }) }
 func (m Tuple2OptionOption) Flatten() Tuple2Option {
-	return m.FlatMapTuple2(func(e Tuple2Option) Tuple2Option { return e })
-}
+  return m.FlatMapTuple2(func(e Tuple2Option) Tuple2Option { return e }) }

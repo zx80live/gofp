@@ -3,14 +3,15 @@
 
 package fp
 
-var EvenInt IntPredicate = func(t int) bool { return t%2 == 0 }
-var EvenInt64 Int64Predicate = func(t int64) bool { return t%2 == 0 }
-var EvenByte BytePredicate = func(t byte) bool { return t%2 == 0 }
-var EvenRune RunePredicate = func(t rune) bool { return t%2 == 0 }
-var OddInt IntPredicate = func(t int) bool { return t%2 != 0 }
-var OddInt64 Int64Predicate = func(t int64) bool { return t%2 != 0 }
-var OddByte BytePredicate = func(t byte) bool { return t%2 != 0 }
-var OddRune RunePredicate = func(t rune) bool { return t%2 != 0 }
+
+var EvenInt IntPredicate = func(t int) bool { return t % 2 == 0 }
+var EvenInt64 Int64Predicate = func(t int64) bool { return t % 2 == 0 }
+var EvenByte BytePredicate = func(t byte) bool { return t % 2 == 0 }
+var EvenRune RunePredicate = func(t rune) bool { return t % 2 == 0 }
+var OddInt IntPredicate = func(t int) bool { return t % 2 != 0 }
+var OddInt64 Int64Predicate = func(t int64) bool { return t % 2 != 0 }
+var OddByte BytePredicate = func(t byte) bool { return t % 2 != 0 }
+var OddRune RunePredicate = func(t rune) bool { return t % 2 != 0 }
 var NegInt IntPredicate = func(t int) bool { return t < 0 }
 var NegInt64 Int64Predicate = func(t int64) bool { return t < 0 }
 var NegByte BytePredicate = func(t byte) bool { return t < 0 }

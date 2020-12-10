@@ -4,9 +4,6 @@
 package fp
 
 import "fmt"
-
 func Require(e bool, msg string) {
-	if !e {
-		panic(fmt.Sprintf("Assertion error: %v", msg))
-	}
+  if !e { panic(fmt.Sprintf("Assertion error: %v", msg)) }
 }

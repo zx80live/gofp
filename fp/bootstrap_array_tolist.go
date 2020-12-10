@@ -3,143 +3,144 @@
 
 package fp
 
+
 func (m BoolArray) ToList() BoolList {
-	acc := NilBool
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilBool
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m StringArray) ToList() StringList {
-	acc := NilString
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilString
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m IntArray) ToList() IntList {
-	acc := NilInt
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilInt
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Int64Array) ToList() Int64List {
-	acc := NilInt64
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilInt64
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m ByteArray) ToList() ByteList {
-	acc := NilByte
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilByte
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m RuneArray) ToList() RuneList {
-	acc := NilRune
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilRune
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Float32Array) ToList() Float32List {
-	acc := NilFloat32
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilFloat32
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Float64Array) ToList() Float64List {
-	acc := NilFloat64
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilFloat64
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m AnyArray) ToList() AnyList {
-	acc := NilAny
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilAny
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Tuple2Array) ToList() Tuple2List {
-	acc := NilTuple2
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilTuple2
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m BoolArrayArray) ToList() BoolArrayList {
-	acc := NilBoolArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilBoolArray
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m StringArrayArray) ToList() StringArrayList {
-	acc := NilStringArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilStringArray
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m IntArrayArray) ToList() IntArrayList {
-	acc := NilIntArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilIntArray
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Int64ArrayArray) ToList() Int64ArrayList {
-	acc := NilInt64Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilInt64Array
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m ByteArrayArray) ToList() ByteArrayList {
-	acc := NilByteArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilByteArray
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m RuneArrayArray) ToList() RuneArrayList {
-	acc := NilRuneArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilRuneArray
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Float32ArrayArray) ToList() Float32ArrayList {
-	acc := NilFloat32Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilFloat32Array
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Float64ArrayArray) ToList() Float64ArrayList {
-	acc := NilFloat64Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilFloat64Array
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m AnyArrayArray) ToList() AnyArrayList {
-	acc := NilAnyArray
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilAnyArray
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }
 func (m Tuple2ArrayArray) ToList() Tuple2ArrayList {
-	acc := NilTuple2Array
-	for _, e := range m {
-		acc = acc.Cons(e)
-	}
-	return acc.Reverse()
+  acc := NilTuple2Array
+  for _, e := range m {
+    acc = acc.Cons(e)
+  }
+  return acc.Reverse()
 }

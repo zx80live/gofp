@@ -3,7 +3,8 @@
 
 package fp
 
+
 type Tuple2 struct {
-	E1 Any
-	E2 Any
+  E1 Any
+  E2 Any
 }

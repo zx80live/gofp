@@ -3,33 +3,24 @@
 
 package fp
 
+
 func (m BoolListList) Flatten() BoolList {
-	return m.FlatMapBool(func(e BoolList) BoolList { return e })
-}
+  return m.FlatMapBool(func(e BoolList) BoolList { return e }) }
 func (m StringListList) Flatten() StringList {
-	return m.FlatMapString(func(e StringList) StringList { return e })
-}
+  return m.FlatMapString(func(e StringList) StringList { return e }) }
 func (m IntListList) Flatten() IntList {
-	return m.FlatMapInt(func(e IntList) IntList { return e })
-}
+  return m.FlatMapInt(func(e IntList) IntList { return e }) }
 func (m Int64ListList) Flatten() Int64List {
-	return m.FlatMapInt64(func(e Int64List) Int64List { return e })
-}
+  return m.FlatMapInt64(func(e Int64List) Int64List { return e }) }
 func (m ByteListList) Flatten() ByteList {
-	return m.FlatMapByte(func(e ByteList) ByteList { return e })
-}
+  return m.FlatMapByte(func(e ByteList) ByteList { return e }) }
 func (m RuneListList) Flatten() RuneList {
-	return m.FlatMapRune(func(e RuneList) RuneList { return e })
-}
+  return m.FlatMapRune(func(e RuneList) RuneList { return e }) }
 func (m Float32ListList) Flatten() Float32List {
-	return m.FlatMapFloat32(func(e Float32List) Float32List { return e })
-}
+  return m.FlatMapFloat32(func(e Float32List) Float32List { return e }) }
 func (m Float64ListList) Flatten() Float64List {
-	return m.FlatMapFloat64(func(e Float64List) Float64List { return e })
-}
+  return m.FlatMapFloat64(func(e Float64List) Float64List { return e }) }
 func (m AnyListList) Flatten() AnyList {
-	return m.FlatMapAny(func(e AnyList) AnyList { return e })
-}
+  return m.FlatMapAny(func(e AnyList) AnyList { return e }) }
 func (m Tuple2ListList) Flatten() Tuple2List {
-	return m.FlatMapTuple2(func(e Tuple2List) Tuple2List { return e })
-}
+  return m.FlatMapTuple2(func(e Tuple2List) Tuple2List { return e }) }

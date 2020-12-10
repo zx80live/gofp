@@ -4,8 +4,7 @@
 package fp
 
 import "fmt"
-
 func (t Tuple2) ToString() String {
 
-	return String(fmt.Sprintf("Tuple(%v, %v)", AnyToString(t.E1), AnyToString(t.E2)))
+  return String(fmt.Sprintf("Tuple(%v, %v)", AnyToString(t.E1),AnyToString(t.E2)))
 }

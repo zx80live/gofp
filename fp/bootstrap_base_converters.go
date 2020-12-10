@@ -5,20 +5,9 @@ package fp
 
 import "fmt"
 import "strconv"
-
 func (s String) ToInt() Int {
-	i, err := strconv.Atoi(s.Underlined())
-	if err != nil {
-		panic(fmt.Sprintf("%v to Int parse error", s))
-	} else {
-		return Int(i)
-	}
-}
+  i, err := strconv.Atoi(s.Underlined())
+  if err != nil { panic(fmt.Sprintf("%v to Int parse error", s)) } else { return Int(i) } }
 func (s String) ToIntOption() IntOption {
-	i, err := strconv.Atoi(s.Underlined())
-	if err != nil {
-		return NoneInt
-	} else {
-		return IntOpt(i)
-	}
-}
+  i, err := strconv.Atoi(s.Underlined())
+  if err != nil { return NoneInt } else { return IntOpt(i) } }

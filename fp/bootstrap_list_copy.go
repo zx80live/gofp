@@ -3,363 +3,364 @@
 
 package fp
 
+
 func (l BoolList) Copy() BoolList {
-	acc := NilBool
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilBool
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l StringList) Copy() StringList {
-	acc := NilString
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilString
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l IntList) Copy() IntList {
-	acc := NilInt
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilInt
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Int64List) Copy() Int64List {
-	acc := NilInt64
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilInt64
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l ByteList) Copy() ByteList {
-	acc := NilByte
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilByte
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l RuneList) Copy() RuneList {
-	acc := NilRune
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilRune
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float32List) Copy() Float32List {
-	acc := NilFloat32
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat32
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float64List) Copy() Float64List {
-	acc := NilFloat64
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat64
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l AnyList) Copy() AnyList {
-	acc := NilAny
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilAny
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Tuple2List) Copy() Tuple2List {
-	acc := NilTuple2
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilTuple2
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l BoolArrayList) Copy() BoolArrayList {
-	acc := NilBoolArray
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilBoolArray
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l StringArrayList) Copy() StringArrayList {
-	acc := NilStringArray
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilStringArray
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l IntArrayList) Copy() IntArrayList {
-	acc := NilIntArray
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilIntArray
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Int64ArrayList) Copy() Int64ArrayList {
-	acc := NilInt64Array
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilInt64Array
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l ByteArrayList) Copy() ByteArrayList {
-	acc := NilByteArray
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilByteArray
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l RuneArrayList) Copy() RuneArrayList {
-	acc := NilRuneArray
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilRuneArray
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float32ArrayList) Copy() Float32ArrayList {
-	acc := NilFloat32Array
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat32Array
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float64ArrayList) Copy() Float64ArrayList {
-	acc := NilFloat64Array
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat64Array
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l AnyArrayList) Copy() AnyArrayList {
-	acc := NilAnyArray
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilAnyArray
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Tuple2ArrayList) Copy() Tuple2ArrayList {
-	acc := NilTuple2Array
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilTuple2Array
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l BoolOptionList) Copy() BoolOptionList {
-	acc := NilBoolOption
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilBoolOption
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l StringOptionList) Copy() StringOptionList {
-	acc := NilStringOption
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilStringOption
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l IntOptionList) Copy() IntOptionList {
-	acc := NilIntOption
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilIntOption
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Int64OptionList) Copy() Int64OptionList {
-	acc := NilInt64Option
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilInt64Option
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l ByteOptionList) Copy() ByteOptionList {
-	acc := NilByteOption
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilByteOption
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l RuneOptionList) Copy() RuneOptionList {
-	acc := NilRuneOption
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilRuneOption
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float32OptionList) Copy() Float32OptionList {
-	acc := NilFloat32Option
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat32Option
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float64OptionList) Copy() Float64OptionList {
-	acc := NilFloat64Option
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat64Option
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l AnyOptionList) Copy() AnyOptionList {
-	acc := NilAnyOption
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilAnyOption
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Tuple2OptionList) Copy() Tuple2OptionList {
-	acc := NilTuple2Option
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilTuple2Option
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l BoolListList) Copy() BoolListList {
-	acc := NilBoolList
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilBoolList
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l StringListList) Copy() StringListList {
-	acc := NilStringList
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilStringList
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l IntListList) Copy() IntListList {
-	acc := NilIntList
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilIntList
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Int64ListList) Copy() Int64ListList {
-	acc := NilInt64List
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilInt64List
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l ByteListList) Copy() ByteListList {
-	acc := NilByteList
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilByteList
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l RuneListList) Copy() RuneListList {
-	acc := NilRuneList
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilRuneList
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float32ListList) Copy() Float32ListList {
-	acc := NilFloat32List
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat32List
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Float64ListList) Copy() Float64ListList {
-	acc := NilFloat64List
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilFloat64List
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l AnyListList) Copy() AnyListList {
-	acc := NilAnyList
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilAnyList
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }
 func (l Tuple2ListList) Copy() Tuple2ListList {
-	acc := NilTuple2List
-	xs := l
-	for xs.NonEmpty() {
-		acc = acc.Cons(*xs.head)
-		xs = *xs.tail
-	}
-	return acc.Reverse()
+  acc := NilTuple2List
+  xs := l
+  for xs.NonEmpty() {
+    acc = acc.Cons(*xs.head)
+    xs = *xs.tail
+  }
+  return acc.Reverse()
 }

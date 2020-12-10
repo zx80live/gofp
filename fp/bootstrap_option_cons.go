@@ -3,43 +3,44 @@
 
 package fp
 
-func MkBoolOption(e bool) BoolOption                            { return BoolOption{&e} }
-func MkStringOption(e string) StringOption                      { return StringOption{&e} }
-func MkIntOption(e int) IntOption                               { return IntOption{&e} }
-func MkInt64Option(e int64) Int64Option                         { return Int64Option{&e} }
-func MkByteOption(e byte) ByteOption                            { return ByteOption{&e} }
-func MkRuneOption(e rune) RuneOption                            { return RuneOption{&e} }
-func MkFloat32Option(e float32) Float32Option                   { return Float32Option{&e} }
-func MkFloat64Option(e float64) Float64Option                   { return Float64Option{&e} }
-func MkAnyOption(e Any) AnyOption                               { return AnyOption{&e} }
-func MkTuple2Option(e Tuple2) Tuple2Option                      { return Tuple2Option{&e} }
-func MkBoolOptionOption(e BoolOption) BoolOptionOption          { return BoolOptionOption{&e} }
-func MkStringOptionOption(e StringOption) StringOptionOption    { return StringOptionOption{&e} }
-func MkIntOptionOption(e IntOption) IntOptionOption             { return IntOptionOption{&e} }
-func MkInt64OptionOption(e Int64Option) Int64OptionOption       { return Int64OptionOption{&e} }
-func MkByteOptionOption(e ByteOption) ByteOptionOption          { return ByteOptionOption{&e} }
-func MkRuneOptionOption(e RuneOption) RuneOptionOption          { return RuneOptionOption{&e} }
-func MkFloat32OptionOption(e Float32Option) Float32OptionOption { return Float32OptionOption{&e} }
-func MkFloat64OptionOption(e Float64Option) Float64OptionOption { return Float64OptionOption{&e} }
-func MkAnyOptionOption(e AnyOption) AnyOptionOption             { return AnyOptionOption{&e} }
-func MkTuple2OptionOption(e Tuple2Option) Tuple2OptionOption    { return Tuple2OptionOption{&e} }
-func MkBoolArrayOption(e []bool) BoolArrayOption                { return BoolArrayOption{&e} }
-func MkStringArrayOption(e []string) StringArrayOption          { return StringArrayOption{&e} }
-func MkIntArrayOption(e []int) IntArrayOption                   { return IntArrayOption{&e} }
-func MkInt64ArrayOption(e []int64) Int64ArrayOption             { return Int64ArrayOption{&e} }
-func MkByteArrayOption(e []byte) ByteArrayOption                { return ByteArrayOption{&e} }
-func MkRuneArrayOption(e []rune) RuneArrayOption                { return RuneArrayOption{&e} }
-func MkFloat32ArrayOption(e []float32) Float32ArrayOption       { return Float32ArrayOption{&e} }
-func MkFloat64ArrayOption(e []float64) Float64ArrayOption       { return Float64ArrayOption{&e} }
-func MkAnyArrayOption(e []Any) AnyArrayOption                   { return AnyArrayOption{&e} }
-func MkTuple2ArrayOption(e []Tuple2) Tuple2ArrayOption          { return Tuple2ArrayOption{&e} }
-func MkBoolListOption(e BoolList) BoolListOption                { return BoolListOption{&e} }
-func MkStringListOption(e StringList) StringListOption          { return StringListOption{&e} }
-func MkIntListOption(e IntList) IntListOption                   { return IntListOption{&e} }
-func MkInt64ListOption(e Int64List) Int64ListOption             { return Int64ListOption{&e} }
-func MkByteListOption(e ByteList) ByteListOption                { return ByteListOption{&e} }
-func MkRuneListOption(e RuneList) RuneListOption                { return RuneListOption{&e} }
-func MkFloat32ListOption(e Float32List) Float32ListOption       { return Float32ListOption{&e} }
-func MkFloat64ListOption(e Float64List) Float64ListOption       { return Float64ListOption{&e} }
-func MkAnyListOption(e AnyList) AnyListOption                   { return AnyListOption{&e} }
-func MkTuple2ListOption(e Tuple2List) Tuple2ListOption          { return Tuple2ListOption{&e} }
+
+func MkBoolOption(e bool) BoolOption { return BoolOption { &e } }
+func MkStringOption(e string) StringOption { return StringOption { &e } }
+func MkIntOption(e int) IntOption { return IntOption { &e } }
+func MkInt64Option(e int64) Int64Option { return Int64Option { &e } }
+func MkByteOption(e byte) ByteOption { return ByteOption { &e } }
+func MkRuneOption(e rune) RuneOption { return RuneOption { &e } }
+func MkFloat32Option(e float32) Float32Option { return Float32Option { &e } }
+func MkFloat64Option(e float64) Float64Option { return Float64Option { &e } }
+func MkAnyOption(e Any) AnyOption { return AnyOption { &e } }
+func MkTuple2Option(e Tuple2) Tuple2Option { return Tuple2Option { &e } }
+func MkBoolOptionOption(e BoolOption) BoolOptionOption { return BoolOptionOption { &e } }
+func MkStringOptionOption(e StringOption) StringOptionOption { return StringOptionOption { &e } }
+func MkIntOptionOption(e IntOption) IntOptionOption { return IntOptionOption { &e } }
+func MkInt64OptionOption(e Int64Option) Int64OptionOption { return Int64OptionOption { &e } }
+func MkByteOptionOption(e ByteOption) ByteOptionOption { return ByteOptionOption { &e } }
+func MkRuneOptionOption(e RuneOption) RuneOptionOption { return RuneOptionOption { &e } }
+func MkFloat32OptionOption(e Float32Option) Float32OptionOption { return Float32OptionOption { &e } }
+func MkFloat64OptionOption(e Float64Option) Float64OptionOption { return Float64OptionOption { &e } }
+func MkAnyOptionOption(e AnyOption) AnyOptionOption { return AnyOptionOption { &e } }
+func MkTuple2OptionOption(e Tuple2Option) Tuple2OptionOption { return Tuple2OptionOption { &e } }
+func MkBoolArrayOption(e []bool) BoolArrayOption { return BoolArrayOption { &e } }
+func MkStringArrayOption(e []string) StringArrayOption { return StringArrayOption { &e } }
+func MkIntArrayOption(e []int) IntArrayOption { return IntArrayOption { &e } }
+func MkInt64ArrayOption(e []int64) Int64ArrayOption { return Int64ArrayOption { &e } }
+func MkByteArrayOption(e []byte) ByteArrayOption { return ByteArrayOption { &e } }
+func MkRuneArrayOption(e []rune) RuneArrayOption { return RuneArrayOption { &e } }
+func MkFloat32ArrayOption(e []float32) Float32ArrayOption { return Float32ArrayOption { &e } }
+func MkFloat64ArrayOption(e []float64) Float64ArrayOption { return Float64ArrayOption { &e } }
+func MkAnyArrayOption(e []Any) AnyArrayOption { return AnyArrayOption { &e } }
+func MkTuple2ArrayOption(e []Tuple2) Tuple2ArrayOption { return Tuple2ArrayOption { &e } }
+func MkBoolListOption(e BoolList) BoolListOption { return BoolListOption { &e } }
+func MkStringListOption(e StringList) StringListOption { return StringListOption { &e } }
+func MkIntListOption(e IntList) IntListOption { return IntListOption { &e } }
+func MkInt64ListOption(e Int64List) Int64ListOption { return Int64ListOption { &e } }
+func MkByteListOption(e ByteList) ByteListOption { return ByteListOption { &e } }
+func MkRuneListOption(e RuneList) RuneListOption { return RuneListOption { &e } }
+func MkFloat32ListOption(e Float32List) Float32ListOption { return Float32ListOption { &e } }
+func MkFloat64ListOption(e Float64List) Float64ListOption { return Float64ListOption { &e } }
+func MkAnyListOption(e AnyList) AnyListOption { return AnyListOption { &e } }
+func MkTuple2ListOption(e Tuple2List) Tuple2ListOption { return Tuple2ListOption { &e } }

@@ -3,283 +3,284 @@
 
 package fp
 
+
 func (l BoolList) Drop(n int) BoolList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l StringList) Drop(n int) StringList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l IntList) Drop(n int) IntList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Int64List) Drop(n int) Int64List {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l ByteList) Drop(n int) ByteList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l RuneList) Drop(n int) RuneList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float32List) Drop(n int) Float32List {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float64List) Drop(n int) Float64List {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l AnyList) Drop(n int) AnyList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Tuple2List) Drop(n int) Tuple2List {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l BoolArrayList) Drop(n int) BoolArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l StringArrayList) Drop(n int) StringArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l IntArrayList) Drop(n int) IntArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Int64ArrayList) Drop(n int) Int64ArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l ByteArrayList) Drop(n int) ByteArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l RuneArrayList) Drop(n int) RuneArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float32ArrayList) Drop(n int) Float32ArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float64ArrayList) Drop(n int) Float64ArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l AnyArrayList) Drop(n int) AnyArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Tuple2ArrayList) Drop(n int) Tuple2ArrayList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l BoolOptionList) Drop(n int) BoolOptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l StringOptionList) Drop(n int) StringOptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l IntOptionList) Drop(n int) IntOptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Int64OptionList) Drop(n int) Int64OptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l ByteOptionList) Drop(n int) ByteOptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l RuneOptionList) Drop(n int) RuneOptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float32OptionList) Drop(n int) Float32OptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float64OptionList) Drop(n int) Float64OptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l AnyOptionList) Drop(n int) AnyOptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Tuple2OptionList) Drop(n int) Tuple2OptionList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l BoolListList) Drop(n int) BoolListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l StringListList) Drop(n int) StringListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l IntListList) Drop(n int) IntListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Int64ListList) Drop(n int) Int64ListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l ByteListList) Drop(n int) ByteListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l RuneListList) Drop(n int) RuneListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float32ListList) Drop(n int) Float32ListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Float64ListList) Drop(n int) Float64ListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l AnyListList) Drop(n int) AnyListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }
 func (l Tuple2ListList) Drop(n int) Tuple2ListList {
-	acc := l
-	for i := 0; acc.NonEmpty() && i < n; i++ {
-		acc = *acc.tail
-	}
-	return acc
+  acc := l
+  for i := 0; acc.NonEmpty() && i < n; i ++ {
+    acc = *acc.tail
+  }
+  return acc
 }

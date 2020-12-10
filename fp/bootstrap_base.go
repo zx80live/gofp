@@ -3,6 +3,7 @@
 
 package fp
 
+
 type Bool bool
 type String string
 type Int int

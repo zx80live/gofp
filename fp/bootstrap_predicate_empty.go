@@ -3,6 +3,7 @@
 
 package fp
 
+
 var EmptyBoolPredicate BoolPredicate = func(t bool) bool { return true }
 var EmptyStringPredicate StringPredicate = func(t string) bool { return true }
 var EmptyIntPredicate IntPredicate = func(t int) bool { return true }

@@ -4,7 +4,6 @@
 package fp
 
 import "regexp"
-
 func MatchRegexp(r *regexp.Regexp) StringPredicate {
 	return func(s string) bool {
 		return r.MatchString(s)

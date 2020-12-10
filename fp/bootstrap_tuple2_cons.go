@@ -3,4 +3,5 @@
 
 package fp
 
-func MkTuple2(e1, e2 Any) Tuple2 { return Tuple2{e1, e2} }
+
+func MkTuple2(e1, e2 Any) Tuple2 { return Tuple2 { e1, e2} }

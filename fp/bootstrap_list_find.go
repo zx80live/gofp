@@ -3,403 +3,284 @@
 
 package fp
 
+
 func (l BoolList) Find(p func(bool) bool) BoolOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkBoolOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneBool
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkBoolOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneBool}
 func (l StringList) Find(p func(string) bool) StringOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkStringOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneString
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkStringOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneString}
 func (l IntList) Find(p func(int) bool) IntOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkIntOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneInt
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkIntOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneInt}
 func (l Int64List) Find(p func(int64) bool) Int64Option {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkInt64Option(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneInt64
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkInt64Option(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneInt64}
 func (l ByteList) Find(p func(byte) bool) ByteOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkByteOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneByte
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkByteOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneByte}
 func (l RuneList) Find(p func(rune) bool) RuneOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkRuneOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneRune
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkRuneOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneRune}
 func (l Float32List) Find(p func(float32) bool) Float32Option {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat32Option(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat32
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat32Option(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat32}
 func (l Float64List) Find(p func(float64) bool) Float64Option {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat64Option(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat64
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat64Option(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat64}
 func (l AnyList) Find(p func(Any) bool) AnyOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkAnyOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneAny
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkAnyOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneAny}
 func (l Tuple2List) Find(p func(Tuple2) bool) Tuple2Option {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkTuple2Option(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneTuple2
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkTuple2Option(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneTuple2}
 func (l BoolArrayList) Find(p func([]bool) bool) BoolArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkBoolArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneBoolArray
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkBoolArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneBoolArray}
 func (l StringArrayList) Find(p func([]string) bool) StringArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkStringArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneStringArray
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkStringArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneStringArray}
 func (l IntArrayList) Find(p func([]int) bool) IntArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkIntArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneIntArray
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkIntArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneIntArray}
 func (l Int64ArrayList) Find(p func([]int64) bool) Int64ArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkInt64ArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneInt64Array
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkInt64ArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneInt64Array}
 func (l ByteArrayList) Find(p func([]byte) bool) ByteArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkByteArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneByteArray
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkByteArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneByteArray}
 func (l RuneArrayList) Find(p func([]rune) bool) RuneArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkRuneArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneRuneArray
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkRuneArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneRuneArray}
 func (l Float32ArrayList) Find(p func([]float32) bool) Float32ArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat32ArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat32Array
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat32ArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat32Array}
 func (l Float64ArrayList) Find(p func([]float64) bool) Float64ArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat64ArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat64Array
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat64ArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat64Array}
 func (l AnyArrayList) Find(p func([]Any) bool) AnyArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkAnyArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneAnyArray
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkAnyArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneAnyArray}
 func (l Tuple2ArrayList) Find(p func([]Tuple2) bool) Tuple2ArrayOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkTuple2ArrayOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneTuple2Array
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkTuple2ArrayOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneTuple2Array}
 func (l BoolOptionList) Find(p func(BoolOption) bool) BoolOptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkBoolOptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneBoolOption
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkBoolOptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneBoolOption}
 func (l StringOptionList) Find(p func(StringOption) bool) StringOptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkStringOptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneStringOption
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkStringOptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneStringOption}
 func (l IntOptionList) Find(p func(IntOption) bool) IntOptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkIntOptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneIntOption
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkIntOptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneIntOption}
 func (l Int64OptionList) Find(p func(Int64Option) bool) Int64OptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkInt64OptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneInt64Option
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkInt64OptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneInt64Option}
 func (l ByteOptionList) Find(p func(ByteOption) bool) ByteOptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkByteOptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneByteOption
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkByteOptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneByteOption}
 func (l RuneOptionList) Find(p func(RuneOption) bool) RuneOptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkRuneOptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneRuneOption
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkRuneOptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneRuneOption}
 func (l Float32OptionList) Find(p func(Float32Option) bool) Float32OptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat32OptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat32Option
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat32OptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat32Option}
 func (l Float64OptionList) Find(p func(Float64Option) bool) Float64OptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat64OptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat64Option
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat64OptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat64Option}
 func (l AnyOptionList) Find(p func(AnyOption) bool) AnyOptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkAnyOptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneAnyOption
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkAnyOptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneAnyOption}
 func (l Tuple2OptionList) Find(p func(Tuple2Option) bool) Tuple2OptionOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkTuple2OptionOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneTuple2Option
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkTuple2OptionOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneTuple2Option}
 func (l BoolListList) Find(p func(BoolList) bool) BoolListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkBoolListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneBoolList
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkBoolListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneBoolList}
 func (l StringListList) Find(p func(StringList) bool) StringListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkStringListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneStringList
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkStringListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneStringList}
 func (l IntListList) Find(p func(IntList) bool) IntListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkIntListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneIntList
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkIntListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneIntList}
 func (l Int64ListList) Find(p func(Int64List) bool) Int64ListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkInt64ListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneInt64List
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkInt64ListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneInt64List}
 func (l ByteListList) Find(p func(ByteList) bool) ByteListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkByteListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneByteList
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkByteListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneByteList}
 func (l RuneListList) Find(p func(RuneList) bool) RuneListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkRuneListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneRuneList
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkRuneListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneRuneList}
 func (l Float32ListList) Find(p func(Float32List) bool) Float32ListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat32ListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat32List
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat32ListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat32List}
 func (l Float64ListList) Find(p func(Float64List) bool) Float64ListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkFloat64ListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneFloat64List
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkFloat64ListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneFloat64List}
 func (l AnyListList) Find(p func(AnyList) bool) AnyListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkAnyListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneAnyList
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkAnyListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneAnyList}
 func (l Tuple2ListList) Find(p func(Tuple2List) bool) Tuple2ListOption {
-	xs := l
-	for xs.NonEmpty() {
-		if p(*xs.head) {
-			return MkTuple2ListOption(*xs.head)
-		}
-		xs = *xs.tail
-	}
-	return NoneTuple2List
-}
+  xs := l
+  for xs.NonEmpty() {
+    if p(*xs.head) { return MkTuple2ListOption(*xs.head) }
+    xs = *xs.tail
+  }
+  return NoneTuple2List}

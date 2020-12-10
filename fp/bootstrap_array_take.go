@@ -3,203 +3,144 @@
 
 package fp
 
+
 func (l BoolArray) Take(n int) BoolArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]bool, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]bool, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l StringArray) Take(n int) StringArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]string, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]string, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l IntArray) Take(n int) IntArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]int, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]int, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Int64Array) Take(n int) Int64Array {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]int64, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]int64, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l ByteArray) Take(n int) ByteArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]byte, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]byte, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l RuneArray) Take(n int) RuneArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]rune, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]rune, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Float32Array) Take(n int) Float32Array {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]float32, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]float32, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Float64Array) Take(n int) Float64Array {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]float64, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]float64, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l AnyArray) Take(n int) AnyArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]Any, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]Any, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Tuple2Array) Take(n int) Tuple2Array {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([]Tuple2, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([]Tuple2, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l BoolArrayArray) Take(n int) BoolArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]bool, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]bool, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l StringArrayArray) Take(n int) StringArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]string, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]string, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l IntArrayArray) Take(n int) IntArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]int, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]int, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Int64ArrayArray) Take(n int) Int64ArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]int64, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]int64, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l ByteArrayArray) Take(n int) ByteArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]byte, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]byte, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l RuneArrayArray) Take(n int) RuneArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]rune, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]rune, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Float32ArrayArray) Take(n int) Float32ArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]float32, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]float32, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Float64ArrayArray) Take(n int) Float64ArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]float64, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]float64, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l AnyArrayArray) Take(n int) AnyArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]Any, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]Any, n)
+  copy(acc, l[0: n])
+  return acc }
 func (l Tuple2ArrayArray) Take(n int) Tuple2ArrayArray {
-	size := len(l)
-	Require(n >= 0, "index should be >= 0")
-	if n >= size {
-		n = size
-	}
-	acc := make([][]Tuple2, n)
-	copy(acc, l[0:n])
-	return acc
-}
+  size := len(l)
+  Require(n >= 0, "index should be >= 0")
+  if n >= size { n = size }
+  acc := make([][]Tuple2, n)
+  copy(acc, l[0: n])
+  return acc }

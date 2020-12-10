@@ -4,224 +4,223 @@
 package fp
 
 import "fmt"
-
 func (a BoolArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, BoolToString(Bool(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, BoolToString(Bool(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a StringArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, StringToString(String(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, StringToString(String(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a IntArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, IntToString(Int(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, IntToString(Int(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Int64Array) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Int64ToString(Int64(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Int64ToString(Int64(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a ByteArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, ByteToString(Byte(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, ByteToString(Byte(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a RuneArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, RuneToString(Rune(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, RuneToString(Rune(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Float32Array) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float32ToString(Float32(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Float32ToString(Float32(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Float64Array) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float64ToString(Float64(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Float64ToString(Float64(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a AnyArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, AnyToString(Any(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, AnyToString(Any(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Tuple2Array) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Tuple2ToString(Tuple2(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Tuple2ToString(Tuple2(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a BoolArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, BoolArrayToString(BoolArray(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, BoolArrayToString(BoolArray(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a StringArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, StringArrayToString(StringArray(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, StringArrayToString(StringArray(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a IntArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, IntArrayToString(IntArray(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, IntArrayToString(IntArray(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Int64ArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Int64ArrayToString(Int64Array(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Int64ArrayToString(Int64Array(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a ByteArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, ByteArrayToString(ByteArray(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, ByteArrayToString(ByteArray(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a RuneArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, RuneArrayToString(RuneArray(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, RuneArrayToString(RuneArray(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Float32ArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float32ArrayToString(Float32Array(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Float32ArrayToString(Float32Array(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Float64ArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Float64ArrayToString(Float64Array(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Float64ArrayToString(Float64Array(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a AnyArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(AnyArray(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, AnyArrayToString(AnyArray(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }
 func (a Tuple2ArrayArray) MkString(start, sep, end string) String {
-	content := ""
-	for _, e := range a {
-		content = fmt.Sprintf("%v%v%v", content, Tuple2ArrayToString(Tuple2Array(e)), sep)
-	}
-	l := len(content)
-	if l > 0 {
-		content = content[:l-1]
-	}
-	return String(fmt.Sprintf("%v%v%v", start, content, end))
+	 content := ""
+	 for _, e := range a {
+	   content = fmt.Sprintf("%v%v%v", content, Tuple2ArrayToString(Tuple2Array(e)), sep)
+	 }
+	 l := len(content)
+	 if l > 0 {
+		 content = content[:l-1]
+	 }
+	 return String(fmt.Sprintf("%v%v%v", start, content, end))
 }

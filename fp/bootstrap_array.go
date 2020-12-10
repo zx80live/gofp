@@ -3,6 +3,7 @@
 
 package fp
 
+
 type BoolArray []bool
 type StringArray []string
 type IntArray []int

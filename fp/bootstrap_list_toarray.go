@@ -3,403 +3,44 @@
 
 package fp
 
-func (l BoolList) ToArray() []bool {
-	acc := make([]bool, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l StringList) ToArray() []string {
-	acc := make([]string, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l IntList) ToArray() []int {
-	acc := make([]int, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Int64List) ToArray() []int64 {
-	acc := make([]int64, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l ByteList) ToArray() []byte {
-	acc := make([]byte, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l RuneList) ToArray() []rune {
-	acc := make([]rune, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float32List) ToArray() []float32 {
-	acc := make([]float32, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float64List) ToArray() []float64 {
-	acc := make([]float64, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l AnyList) ToArray() []Any {
-	acc := make([]Any, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Tuple2List) ToArray() []Tuple2 {
-	acc := make([]Tuple2, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l BoolArrayList) ToArray() [][]bool {
-	acc := make([][]bool, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l StringArrayList) ToArray() [][]string {
-	acc := make([][]string, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l IntArrayList) ToArray() [][]int {
-	acc := make([][]int, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Int64ArrayList) ToArray() [][]int64 {
-	acc := make([][]int64, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l ByteArrayList) ToArray() [][]byte {
-	acc := make([][]byte, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l RuneArrayList) ToArray() [][]rune {
-	acc := make([][]rune, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float32ArrayList) ToArray() [][]float32 {
-	acc := make([][]float32, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float64ArrayList) ToArray() [][]float64 {
-	acc := make([][]float64, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l AnyArrayList) ToArray() [][]Any {
-	acc := make([][]Any, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Tuple2ArrayList) ToArray() [][]Tuple2 {
-	acc := make([][]Tuple2, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l BoolOptionList) ToArray() []BoolOption {
-	acc := make([]BoolOption, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l StringOptionList) ToArray() []StringOption {
-	acc := make([]StringOption, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l IntOptionList) ToArray() []IntOption {
-	acc := make([]IntOption, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Int64OptionList) ToArray() []Int64Option {
-	acc := make([]Int64Option, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l ByteOptionList) ToArray() []ByteOption {
-	acc := make([]ByteOption, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l RuneOptionList) ToArray() []RuneOption {
-	acc := make([]RuneOption, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float32OptionList) ToArray() []Float32Option {
-	acc := make([]Float32Option, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float64OptionList) ToArray() []Float64Option {
-	acc := make([]Float64Option, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l AnyOptionList) ToArray() []AnyOption {
-	acc := make([]AnyOption, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Tuple2OptionList) ToArray() []Tuple2Option {
-	acc := make([]Tuple2Option, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l BoolListList) ToArray() []BoolList {
-	acc := make([]BoolList, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l StringListList) ToArray() []StringList {
-	acc := make([]StringList, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l IntListList) ToArray() []IntList {
-	acc := make([]IntList, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Int64ListList) ToArray() []Int64List {
-	acc := make([]Int64List, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l ByteListList) ToArray() []ByteList {
-	acc := make([]ByteList, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l RuneListList) ToArray() []RuneList {
-	acc := make([]RuneList, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float32ListList) ToArray() []Float32List {
-	acc := make([]Float32List, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Float64ListList) ToArray() []Float64List {
-	acc := make([]Float64List, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l AnyListList) ToArray() []AnyList {
-	acc := make([]AnyList, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
-func (l Tuple2ListList) ToArray() []Tuple2List {
-	acc := make([]Tuple2List, l.Size())
-	xs := l
-	i := 0
-	for xs.NonEmpty() {
-		acc[i] = *xs.head
-		xs = *xs.tail
-	}
-	return acc
-}
+
+func (l BoolList) ToArray() []bool { acc := make([]bool, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l StringList) ToArray() []string { acc := make([]string, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l IntList) ToArray() []int { acc := make([]int, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Int64List) ToArray() []int64 { acc := make([]int64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l ByteList) ToArray() []byte { acc := make([]byte, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l RuneList) ToArray() []rune { acc := make([]rune, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float32List) ToArray() []float32 { acc := make([]float32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float64List) ToArray() []float64 { acc := make([]float64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l AnyList) ToArray() []Any { acc := make([]Any, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Tuple2List) ToArray() []Tuple2 { acc := make([]Tuple2, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l BoolArrayList) ToArray() [][]bool { acc := make([][]bool, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l StringArrayList) ToArray() [][]string { acc := make([][]string, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l IntArrayList) ToArray() [][]int { acc := make([][]int, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Int64ArrayList) ToArray() [][]int64 { acc := make([][]int64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l ByteArrayList) ToArray() [][]byte { acc := make([][]byte, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l RuneArrayList) ToArray() [][]rune { acc := make([][]rune, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float32ArrayList) ToArray() [][]float32 { acc := make([][]float32, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float64ArrayList) ToArray() [][]float64 { acc := make([][]float64, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l AnyArrayList) ToArray() [][]Any { acc := make([][]Any, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Tuple2ArrayList) ToArray() [][]Tuple2 { acc := make([][]Tuple2, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l BoolOptionList) ToArray() []BoolOption { acc := make([]BoolOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l StringOptionList) ToArray() []StringOption { acc := make([]StringOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l IntOptionList) ToArray() []IntOption { acc := make([]IntOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Int64OptionList) ToArray() []Int64Option { acc := make([]Int64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l ByteOptionList) ToArray() []ByteOption { acc := make([]ByteOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l RuneOptionList) ToArray() []RuneOption { acc := make([]RuneOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float32OptionList) ToArray() []Float32Option { acc := make([]Float32Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float64OptionList) ToArray() []Float64Option { acc := make([]Float64Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l AnyOptionList) ToArray() []AnyOption { acc := make([]AnyOption, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Tuple2OptionList) ToArray() []Tuple2Option { acc := make([]Tuple2Option, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l BoolListList) ToArray() []BoolList { acc := make([]BoolList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l StringListList) ToArray() []StringList { acc := make([]StringList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l IntListList) ToArray() []IntList { acc := make([]IntList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Int64ListList) ToArray() []Int64List { acc := make([]Int64List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l ByteListList) ToArray() []ByteList { acc := make([]ByteList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l RuneListList) ToArray() []RuneList { acc := make([]RuneList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float32ListList) ToArray() []Float32List { acc := make([]Float32List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Float64ListList) ToArray() []Float64List { acc := make([]Float64List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l AnyListList) ToArray() []AnyList { acc := make([]AnyList, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }
+func (l Tuple2ListList) ToArray() []Tuple2List { acc := make([]Tuple2List, l.Size()); xs := l; i := 0; for xs.NonEmpty() { acc[i] = *xs.head; xs = *xs.tail }; return acc }

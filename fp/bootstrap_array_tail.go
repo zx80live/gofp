@@ -3,163 +3,24 @@
 
 package fp
 
-func (m BoolArray) Tail() BoolArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []bool{}
-	}
-}
-func (m StringArray) Tail() StringArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []string{}
-	}
-}
-func (m IntArray) Tail() IntArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []int{}
-	}
-}
-func (m Int64Array) Tail() Int64Array {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []int64{}
-	}
-}
-func (m ByteArray) Tail() ByteArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []byte{}
-	}
-}
-func (m RuneArray) Tail() RuneArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []rune{}
-	}
-}
-func (m Float32Array) Tail() Float32Array {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []float32{}
-	}
-}
-func (m Float64Array) Tail() Float64Array {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []float64{}
-	}
-}
-func (m AnyArray) Tail() AnyArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []Any{}
-	}
-}
-func (m Tuple2Array) Tail() Tuple2Array {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return []Tuple2{}
-	}
-}
-func (m BoolArrayArray) Tail() BoolArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]bool{}
-	}
-}
-func (m StringArrayArray) Tail() StringArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]string{}
-	}
-}
-func (m IntArrayArray) Tail() IntArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]int{}
-	}
-}
-func (m Int64ArrayArray) Tail() Int64ArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]int64{}
-	}
-}
-func (m ByteArrayArray) Tail() ByteArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]byte{}
-	}
-}
-func (m RuneArrayArray) Tail() RuneArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]rune{}
-	}
-}
-func (m Float32ArrayArray) Tail() Float32ArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]float32{}
-	}
-}
-func (m Float64ArrayArray) Tail() Float64ArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]float64{}
-	}
-}
-func (m AnyArrayArray) Tail() AnyArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]Any{}
-	}
-}
-func (m Tuple2ArrayArray) Tail() Tuple2ArrayArray {
-	s := len(m)
-	if s > 0 {
-		return m[1 : s-1]
-	} else {
-		return [][]Tuple2{}
-	}
-}
+
+func (m BoolArray) Tail() BoolArray { s := len(m); if s > 0 { return m[1:s-1] } else {return []bool{} } }
+func (m StringArray) Tail() StringArray { s := len(m); if s > 0 { return m[1:s-1] } else {return []string{} } }
+func (m IntArray) Tail() IntArray { s := len(m); if s > 0 { return m[1:s-1] } else {return []int{} } }
+func (m Int64Array) Tail() Int64Array { s := len(m); if s > 0 { return m[1:s-1] } else {return []int64{} } }
+func (m ByteArray) Tail() ByteArray { s := len(m); if s > 0 { return m[1:s-1] } else {return []byte{} } }
+func (m RuneArray) Tail() RuneArray { s := len(m); if s > 0 { return m[1:s-1] } else {return []rune{} } }
+func (m Float32Array) Tail() Float32Array { s := len(m); if s > 0 { return m[1:s-1] } else {return []float32{} } }
+func (m Float64Array) Tail() Float64Array { s := len(m); if s > 0 { return m[1:s-1] } else {return []float64{} } }
+func (m AnyArray) Tail() AnyArray { s := len(m); if s > 0 { return m[1:s-1] } else {return []Any{} } }
+func (m Tuple2Array) Tail() Tuple2Array { s := len(m); if s > 0 { return m[1:s-1] } else {return []Tuple2{} } }
+func (m BoolArrayArray) Tail() BoolArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]bool{} } }
+func (m StringArrayArray) Tail() StringArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]string{} } }
+func (m IntArrayArray) Tail() IntArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]int{} } }
+func (m Int64ArrayArray) Tail() Int64ArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]int64{} } }
+func (m ByteArrayArray) Tail() ByteArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]byte{} } }
+func (m RuneArrayArray) Tail() RuneArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]rune{} } }
+func (m Float32ArrayArray) Tail() Float32ArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]float32{} } }
+func (m Float64ArrayArray) Tail() Float64ArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]float64{} } }
+func (m AnyArrayArray) Tail() AnyArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]Any{} } }
+func (m Tuple2ArrayArray) Tail() Tuple2ArrayArray { s := len(m); if s > 0 { return m[1:s-1] } else {return [][]Tuple2{} } }

@@ -3,2803 +3,1204 @@
 
 package fp
 
+
 func (m BoolOption) FlatMapBool(f func(bool) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m BoolOption) FlatMapString(f func(bool) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m BoolOption) FlatMapInt(f func(bool) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m BoolOption) FlatMapInt64(f func(bool) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m BoolOption) FlatMapByte(f func(bool) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m BoolOption) FlatMapRune(f func(bool) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m BoolOption) FlatMapFloat32(f func(bool) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m BoolOption) FlatMapFloat64(f func(bool) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m BoolOption) FlatMapAny(f func(bool) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m BoolOption) FlatMapTuple2(f func(bool) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m StringOption) FlatMapBool(f func(string) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m StringOption) FlatMapString(f func(string) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m StringOption) FlatMapInt(f func(string) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m StringOption) FlatMapInt64(f func(string) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m StringOption) FlatMapByte(f func(string) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m StringOption) FlatMapRune(f func(string) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m StringOption) FlatMapFloat32(f func(string) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m StringOption) FlatMapFloat64(f func(string) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m StringOption) FlatMapAny(f func(string) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m StringOption) FlatMapTuple2(f func(string) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m IntOption) FlatMapBool(f func(int) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m IntOption) FlatMapString(f func(int) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m IntOption) FlatMapInt(f func(int) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m IntOption) FlatMapInt64(f func(int) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m IntOption) FlatMapByte(f func(int) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m IntOption) FlatMapRune(f func(int) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m IntOption) FlatMapFloat32(f func(int) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m IntOption) FlatMapFloat64(f func(int) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m IntOption) FlatMapAny(f func(int) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m IntOption) FlatMapTuple2(f func(int) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Int64Option) FlatMapBool(f func(int64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Int64Option) FlatMapString(f func(int64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Int64Option) FlatMapInt(f func(int64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Int64Option) FlatMapInt64(f func(int64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Int64Option) FlatMapByte(f func(int64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Int64Option) FlatMapRune(f func(int64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Int64Option) FlatMapFloat32(f func(int64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Int64Option) FlatMapFloat64(f func(int64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Int64Option) FlatMapAny(f func(int64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Int64Option) FlatMapTuple2(f func(int64) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m ByteOption) FlatMapBool(f func(byte) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m ByteOption) FlatMapString(f func(byte) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m ByteOption) FlatMapInt(f func(byte) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m ByteOption) FlatMapInt64(f func(byte) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m ByteOption) FlatMapByte(f func(byte) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m ByteOption) FlatMapRune(f func(byte) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m ByteOption) FlatMapFloat32(f func(byte) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m ByteOption) FlatMapFloat64(f func(byte) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m ByteOption) FlatMapAny(f func(byte) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m ByteOption) FlatMapTuple2(f func(byte) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m RuneOption) FlatMapBool(f func(rune) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m RuneOption) FlatMapString(f func(rune) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m RuneOption) FlatMapInt(f func(rune) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m RuneOption) FlatMapInt64(f func(rune) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m RuneOption) FlatMapByte(f func(rune) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m RuneOption) FlatMapRune(f func(rune) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m RuneOption) FlatMapFloat32(f func(rune) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m RuneOption) FlatMapFloat64(f func(rune) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m RuneOption) FlatMapAny(f func(rune) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m RuneOption) FlatMapTuple2(f func(rune) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float32Option) FlatMapBool(f func(float32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float32Option) FlatMapString(f func(float32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float32Option) FlatMapInt(f func(float32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float32Option) FlatMapInt64(f func(float32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float32Option) FlatMapByte(f func(float32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float32Option) FlatMapRune(f func(float32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float32Option) FlatMapFloat32(f func(float32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float32Option) FlatMapFloat64(f func(float32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float32Option) FlatMapAny(f func(float32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float32Option) FlatMapTuple2(f func(float32) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float64Option) FlatMapBool(f func(float64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float64Option) FlatMapString(f func(float64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float64Option) FlatMapInt(f func(float64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float64Option) FlatMapInt64(f func(float64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float64Option) FlatMapByte(f func(float64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float64Option) FlatMapRune(f func(float64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float64Option) FlatMapFloat32(f func(float64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float64Option) FlatMapFloat64(f func(float64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float64Option) FlatMapAny(f func(float64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float64Option) FlatMapTuple2(f func(float64) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m AnyOption) FlatMapBool(f func(Any) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m AnyOption) FlatMapString(f func(Any) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m AnyOption) FlatMapInt(f func(Any) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m AnyOption) FlatMapInt64(f func(Any) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m AnyOption) FlatMapByte(f func(Any) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m AnyOption) FlatMapRune(f func(Any) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m AnyOption) FlatMapFloat32(f func(Any) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m AnyOption) FlatMapFloat64(f func(Any) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m AnyOption) FlatMapAny(f func(Any) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m AnyOption) FlatMapTuple2(f func(Any) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Tuple2Option) FlatMapBool(f func(Tuple2) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Tuple2Option) FlatMapString(f func(Tuple2) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Tuple2Option) FlatMapInt(f func(Tuple2) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Tuple2Option) FlatMapInt64(f func(Tuple2) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Tuple2Option) FlatMapByte(f func(Tuple2) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Tuple2Option) FlatMapRune(f func(Tuple2) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Tuple2Option) FlatMapFloat32(f func(Tuple2) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Tuple2Option) FlatMapFloat64(f func(Tuple2) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Tuple2Option) FlatMapAny(f func(Tuple2) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Tuple2Option) FlatMapTuple2(f func(Tuple2) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m BoolOptionOption) FlatMapBool(f func(BoolOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m BoolOptionOption) FlatMapString(f func(BoolOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m BoolOptionOption) FlatMapInt(f func(BoolOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m BoolOptionOption) FlatMapInt64(f func(BoolOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m BoolOptionOption) FlatMapByte(f func(BoolOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m BoolOptionOption) FlatMapRune(f func(BoolOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m BoolOptionOption) FlatMapFloat32(f func(BoolOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m BoolOptionOption) FlatMapFloat64(f func(BoolOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m BoolOptionOption) FlatMapAny(f func(BoolOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m BoolOptionOption) FlatMapTuple2(f func(BoolOption) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m StringOptionOption) FlatMapBool(f func(StringOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m StringOptionOption) FlatMapString(f func(StringOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m StringOptionOption) FlatMapInt(f func(StringOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m StringOptionOption) FlatMapInt64(f func(StringOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m StringOptionOption) FlatMapByte(f func(StringOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m StringOptionOption) FlatMapRune(f func(StringOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m StringOptionOption) FlatMapFloat32(f func(StringOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m StringOptionOption) FlatMapFloat64(f func(StringOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m StringOptionOption) FlatMapAny(f func(StringOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m StringOptionOption) FlatMapTuple2(f func(StringOption) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m IntOptionOption) FlatMapBool(f func(IntOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m IntOptionOption) FlatMapString(f func(IntOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m IntOptionOption) FlatMapInt(f func(IntOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m IntOptionOption) FlatMapInt64(f func(IntOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m IntOptionOption) FlatMapByte(f func(IntOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m IntOptionOption) FlatMapRune(f func(IntOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m IntOptionOption) FlatMapFloat32(f func(IntOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m IntOptionOption) FlatMapFloat64(f func(IntOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m IntOptionOption) FlatMapAny(f func(IntOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m IntOptionOption) FlatMapTuple2(f func(IntOption) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Int64OptionOption) FlatMapBool(f func(Int64Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Int64OptionOption) FlatMapString(f func(Int64Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Int64OptionOption) FlatMapInt(f func(Int64Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Int64OptionOption) FlatMapInt64(f func(Int64Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Int64OptionOption) FlatMapByte(f func(Int64Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Int64OptionOption) FlatMapRune(f func(Int64Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Int64OptionOption) FlatMapFloat32(f func(Int64Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Int64OptionOption) FlatMapFloat64(f func(Int64Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Int64OptionOption) FlatMapAny(f func(Int64Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Int64OptionOption) FlatMapTuple2(f func(Int64Option) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m ByteOptionOption) FlatMapBool(f func(ByteOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m ByteOptionOption) FlatMapString(f func(ByteOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m ByteOptionOption) FlatMapInt(f func(ByteOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m ByteOptionOption) FlatMapInt64(f func(ByteOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m ByteOptionOption) FlatMapByte(f func(ByteOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m ByteOptionOption) FlatMapRune(f func(ByteOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m ByteOptionOption) FlatMapFloat32(f func(ByteOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m ByteOptionOption) FlatMapFloat64(f func(ByteOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m ByteOptionOption) FlatMapAny(f func(ByteOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m ByteOptionOption) FlatMapTuple2(f func(ByteOption) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m RuneOptionOption) FlatMapBool(f func(RuneOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m RuneOptionOption) FlatMapString(f func(RuneOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m RuneOptionOption) FlatMapInt(f func(RuneOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m RuneOptionOption) FlatMapInt64(f func(RuneOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m RuneOptionOption) FlatMapByte(f func(RuneOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m RuneOptionOption) FlatMapRune(f func(RuneOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m RuneOptionOption) FlatMapFloat32(f func(RuneOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m RuneOptionOption) FlatMapFloat64(f func(RuneOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m RuneOptionOption) FlatMapAny(f func(RuneOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m RuneOptionOption) FlatMapTuple2(f func(RuneOption) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float32OptionOption) FlatMapBool(f func(Float32Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float32OptionOption) FlatMapString(f func(Float32Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float32OptionOption) FlatMapInt(f func(Float32Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float32OptionOption) FlatMapInt64(f func(Float32Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float32OptionOption) FlatMapByte(f func(Float32Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float32OptionOption) FlatMapRune(f func(Float32Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float32OptionOption) FlatMapFloat32(f func(Float32Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float32OptionOption) FlatMapFloat64(f func(Float32Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float32OptionOption) FlatMapAny(f func(Float32Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float32OptionOption) FlatMapTuple2(f func(Float32Option) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float64OptionOption) FlatMapBool(f func(Float64Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float64OptionOption) FlatMapString(f func(Float64Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float64OptionOption) FlatMapInt(f func(Float64Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float64OptionOption) FlatMapInt64(f func(Float64Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float64OptionOption) FlatMapByte(f func(Float64Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float64OptionOption) FlatMapRune(f func(Float64Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float64OptionOption) FlatMapFloat32(f func(Float64Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float64OptionOption) FlatMapFloat64(f func(Float64Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float64OptionOption) FlatMapAny(f func(Float64Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float64OptionOption) FlatMapTuple2(f func(Float64Option) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m AnyOptionOption) FlatMapBool(f func(AnyOption) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m AnyOptionOption) FlatMapString(f func(AnyOption) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m AnyOptionOption) FlatMapInt(f func(AnyOption) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m AnyOptionOption) FlatMapInt64(f func(AnyOption) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m AnyOptionOption) FlatMapByte(f func(AnyOption) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m AnyOptionOption) FlatMapRune(f func(AnyOption) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m AnyOptionOption) FlatMapFloat32(f func(AnyOption) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m AnyOptionOption) FlatMapFloat64(f func(AnyOption) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m AnyOptionOption) FlatMapAny(f func(AnyOption) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m AnyOptionOption) FlatMapTuple2(f func(AnyOption) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Tuple2OptionOption) FlatMapBool(f func(Tuple2Option) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Tuple2OptionOption) FlatMapString(f func(Tuple2Option) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Tuple2OptionOption) FlatMapInt(f func(Tuple2Option) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Tuple2OptionOption) FlatMapInt64(f func(Tuple2Option) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Tuple2OptionOption) FlatMapByte(f func(Tuple2Option) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Tuple2OptionOption) FlatMapRune(f func(Tuple2Option) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Tuple2OptionOption) FlatMapFloat32(f func(Tuple2Option) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Tuple2OptionOption) FlatMapFloat64(f func(Tuple2Option) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Tuple2OptionOption) FlatMapAny(f func(Tuple2Option) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Tuple2OptionOption) FlatMapTuple2(f func(Tuple2Option) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m BoolArrayOption) FlatMapBool(f func([]bool) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m BoolArrayOption) FlatMapString(f func([]bool) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m BoolArrayOption) FlatMapInt(f func([]bool) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m BoolArrayOption) FlatMapInt64(f func([]bool) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m BoolArrayOption) FlatMapByte(f func([]bool) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m BoolArrayOption) FlatMapRune(f func([]bool) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m BoolArrayOption) FlatMapFloat32(f func([]bool) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m BoolArrayOption) FlatMapFloat64(f func([]bool) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m BoolArrayOption) FlatMapAny(f func([]bool) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m BoolArrayOption) FlatMapTuple2(f func([]bool) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m StringArrayOption) FlatMapBool(f func([]string) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m StringArrayOption) FlatMapString(f func([]string) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m StringArrayOption) FlatMapInt(f func([]string) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m StringArrayOption) FlatMapInt64(f func([]string) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m StringArrayOption) FlatMapByte(f func([]string) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m StringArrayOption) FlatMapRune(f func([]string) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m StringArrayOption) FlatMapFloat32(f func([]string) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m StringArrayOption) FlatMapFloat64(f func([]string) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m StringArrayOption) FlatMapAny(f func([]string) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m StringArrayOption) FlatMapTuple2(f func([]string) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m IntArrayOption) FlatMapBool(f func([]int) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m IntArrayOption) FlatMapString(f func([]int) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m IntArrayOption) FlatMapInt(f func([]int) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m IntArrayOption) FlatMapInt64(f func([]int) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m IntArrayOption) FlatMapByte(f func([]int) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m IntArrayOption) FlatMapRune(f func([]int) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m IntArrayOption) FlatMapFloat32(f func([]int) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m IntArrayOption) FlatMapFloat64(f func([]int) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m IntArrayOption) FlatMapAny(f func([]int) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m IntArrayOption) FlatMapTuple2(f func([]int) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Int64ArrayOption) FlatMapBool(f func([]int64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Int64ArrayOption) FlatMapString(f func([]int64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Int64ArrayOption) FlatMapInt(f func([]int64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Int64ArrayOption) FlatMapInt64(f func([]int64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Int64ArrayOption) FlatMapByte(f func([]int64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Int64ArrayOption) FlatMapRune(f func([]int64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Int64ArrayOption) FlatMapFloat32(f func([]int64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Int64ArrayOption) FlatMapFloat64(f func([]int64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Int64ArrayOption) FlatMapAny(f func([]int64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Int64ArrayOption) FlatMapTuple2(f func([]int64) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m ByteArrayOption) FlatMapBool(f func([]byte) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m ByteArrayOption) FlatMapString(f func([]byte) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m ByteArrayOption) FlatMapInt(f func([]byte) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m ByteArrayOption) FlatMapInt64(f func([]byte) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m ByteArrayOption) FlatMapByte(f func([]byte) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m ByteArrayOption) FlatMapRune(f func([]byte) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m ByteArrayOption) FlatMapFloat32(f func([]byte) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m ByteArrayOption) FlatMapFloat64(f func([]byte) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m ByteArrayOption) FlatMapAny(f func([]byte) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m ByteArrayOption) FlatMapTuple2(f func([]byte) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m RuneArrayOption) FlatMapBool(f func([]rune) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m RuneArrayOption) FlatMapString(f func([]rune) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m RuneArrayOption) FlatMapInt(f func([]rune) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m RuneArrayOption) FlatMapInt64(f func([]rune) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m RuneArrayOption) FlatMapByte(f func([]rune) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m RuneArrayOption) FlatMapRune(f func([]rune) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m RuneArrayOption) FlatMapFloat32(f func([]rune) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m RuneArrayOption) FlatMapFloat64(f func([]rune) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m RuneArrayOption) FlatMapAny(f func([]rune) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m RuneArrayOption) FlatMapTuple2(f func([]rune) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float32ArrayOption) FlatMapBool(f func([]float32) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float32ArrayOption) FlatMapString(f func([]float32) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float32ArrayOption) FlatMapInt(f func([]float32) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float32ArrayOption) FlatMapInt64(f func([]float32) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float32ArrayOption) FlatMapByte(f func([]float32) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float32ArrayOption) FlatMapRune(f func([]float32) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float32ArrayOption) FlatMapFloat32(f func([]float32) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float32ArrayOption) FlatMapFloat64(f func([]float32) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float32ArrayOption) FlatMapAny(f func([]float32) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float32ArrayOption) FlatMapTuple2(f func([]float32) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float64ArrayOption) FlatMapBool(f func([]float64) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float64ArrayOption) FlatMapString(f func([]float64) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float64ArrayOption) FlatMapInt(f func([]float64) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float64ArrayOption) FlatMapInt64(f func([]float64) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float64ArrayOption) FlatMapByte(f func([]float64) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float64ArrayOption) FlatMapRune(f func([]float64) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float64ArrayOption) FlatMapFloat32(f func([]float64) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float64ArrayOption) FlatMapFloat64(f func([]float64) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float64ArrayOption) FlatMapAny(f func([]float64) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float64ArrayOption) FlatMapTuple2(f func([]float64) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m AnyArrayOption) FlatMapBool(f func([]Any) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m AnyArrayOption) FlatMapString(f func([]Any) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m AnyArrayOption) FlatMapInt(f func([]Any) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m AnyArrayOption) FlatMapInt64(f func([]Any) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m AnyArrayOption) FlatMapByte(f func([]Any) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m AnyArrayOption) FlatMapRune(f func([]Any) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m AnyArrayOption) FlatMapFloat32(f func([]Any) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m AnyArrayOption) FlatMapFloat64(f func([]Any) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m AnyArrayOption) FlatMapAny(f func([]Any) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m AnyArrayOption) FlatMapTuple2(f func([]Any) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Tuple2ArrayOption) FlatMapBool(f func([]Tuple2) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Tuple2ArrayOption) FlatMapString(f func([]Tuple2) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Tuple2ArrayOption) FlatMapInt(f func([]Tuple2) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Tuple2ArrayOption) FlatMapInt64(f func([]Tuple2) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Tuple2ArrayOption) FlatMapByte(f func([]Tuple2) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Tuple2ArrayOption) FlatMapRune(f func([]Tuple2) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Tuple2ArrayOption) FlatMapFloat32(f func([]Tuple2) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Tuple2ArrayOption) FlatMapFloat64(f func([]Tuple2) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Tuple2ArrayOption) FlatMapAny(f func([]Tuple2) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Tuple2ArrayOption) FlatMapTuple2(f func([]Tuple2) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m BoolListOption) FlatMapBool(f func(BoolList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m BoolListOption) FlatMapString(f func(BoolList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m BoolListOption) FlatMapInt(f func(BoolList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m BoolListOption) FlatMapInt64(f func(BoolList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m BoolListOption) FlatMapByte(f func(BoolList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m BoolListOption) FlatMapRune(f func(BoolList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m BoolListOption) FlatMapFloat32(f func(BoolList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m BoolListOption) FlatMapFloat64(f func(BoolList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m BoolListOption) FlatMapAny(f func(BoolList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m BoolListOption) FlatMapTuple2(f func(BoolList) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m StringListOption) FlatMapBool(f func(StringList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m StringListOption) FlatMapString(f func(StringList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m StringListOption) FlatMapInt(f func(StringList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m StringListOption) FlatMapInt64(f func(StringList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m StringListOption) FlatMapByte(f func(StringList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m StringListOption) FlatMapRune(f func(StringList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m StringListOption) FlatMapFloat32(f func(StringList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m StringListOption) FlatMapFloat64(f func(StringList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m StringListOption) FlatMapAny(f func(StringList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m StringListOption) FlatMapTuple2(f func(StringList) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m IntListOption) FlatMapBool(f func(IntList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m IntListOption) FlatMapString(f func(IntList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m IntListOption) FlatMapInt(f func(IntList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m IntListOption) FlatMapInt64(f func(IntList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m IntListOption) FlatMapByte(f func(IntList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m IntListOption) FlatMapRune(f func(IntList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m IntListOption) FlatMapFloat32(f func(IntList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m IntListOption) FlatMapFloat64(f func(IntList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m IntListOption) FlatMapAny(f func(IntList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m IntListOption) FlatMapTuple2(f func(IntList) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Int64ListOption) FlatMapBool(f func(Int64List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Int64ListOption) FlatMapString(f func(Int64List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Int64ListOption) FlatMapInt(f func(Int64List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Int64ListOption) FlatMapInt64(f func(Int64List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Int64ListOption) FlatMapByte(f func(Int64List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Int64ListOption) FlatMapRune(f func(Int64List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Int64ListOption) FlatMapFloat32(f func(Int64List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Int64ListOption) FlatMapFloat64(f func(Int64List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Int64ListOption) FlatMapAny(f func(Int64List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Int64ListOption) FlatMapTuple2(f func(Int64List) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m ByteListOption) FlatMapBool(f func(ByteList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m ByteListOption) FlatMapString(f func(ByteList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m ByteListOption) FlatMapInt(f func(ByteList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m ByteListOption) FlatMapInt64(f func(ByteList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m ByteListOption) FlatMapByte(f func(ByteList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m ByteListOption) FlatMapRune(f func(ByteList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m ByteListOption) FlatMapFloat32(f func(ByteList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m ByteListOption) FlatMapFloat64(f func(ByteList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m ByteListOption) FlatMapAny(f func(ByteList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m ByteListOption) FlatMapTuple2(f func(ByteList) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m RuneListOption) FlatMapBool(f func(RuneList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m RuneListOption) FlatMapString(f func(RuneList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m RuneListOption) FlatMapInt(f func(RuneList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m RuneListOption) FlatMapInt64(f func(RuneList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m RuneListOption) FlatMapByte(f func(RuneList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m RuneListOption) FlatMapRune(f func(RuneList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m RuneListOption) FlatMapFloat32(f func(RuneList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m RuneListOption) FlatMapFloat64(f func(RuneList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m RuneListOption) FlatMapAny(f func(RuneList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m RuneListOption) FlatMapTuple2(f func(RuneList) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float32ListOption) FlatMapBool(f func(Float32List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float32ListOption) FlatMapString(f func(Float32List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float32ListOption) FlatMapInt(f func(Float32List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float32ListOption) FlatMapInt64(f func(Float32List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float32ListOption) FlatMapByte(f func(Float32List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float32ListOption) FlatMapRune(f func(Float32List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float32ListOption) FlatMapFloat32(f func(Float32List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float32ListOption) FlatMapFloat64(f func(Float32List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float32ListOption) FlatMapAny(f func(Float32List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float32ListOption) FlatMapTuple2(f func(Float32List) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Float64ListOption) FlatMapBool(f func(Float64List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Float64ListOption) FlatMapString(f func(Float64List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Float64ListOption) FlatMapInt(f func(Float64List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Float64ListOption) FlatMapInt64(f func(Float64List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Float64ListOption) FlatMapByte(f func(Float64List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Float64ListOption) FlatMapRune(f func(Float64List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Float64ListOption) FlatMapFloat32(f func(Float64List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Float64ListOption) FlatMapFloat64(f func(Float64List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Float64ListOption) FlatMapAny(f func(Float64List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Float64ListOption) FlatMapTuple2(f func(Float64List) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m AnyListOption) FlatMapBool(f func(AnyList) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m AnyListOption) FlatMapString(f func(AnyList) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m AnyListOption) FlatMapInt(f func(AnyList) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m AnyListOption) FlatMapInt64(f func(AnyList) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m AnyListOption) FlatMapByte(f func(AnyList) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m AnyListOption) FlatMapRune(f func(AnyList) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m AnyListOption) FlatMapFloat32(f func(AnyList) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m AnyListOption) FlatMapFloat64(f func(AnyList) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m AnyListOption) FlatMapAny(f func(AnyList) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m AnyListOption) FlatMapTuple2(f func(AnyList) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }
 func (m Tuple2ListOption) FlatMapBool(f func(Tuple2List) BoolOption) BoolOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneBool
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneBool }
 }
 func (m Tuple2ListOption) FlatMapString(f func(Tuple2List) StringOption) StringOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneString
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneString }
 }
 func (m Tuple2ListOption) FlatMapInt(f func(Tuple2List) IntOption) IntOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt }
 }
 func (m Tuple2ListOption) FlatMapInt64(f func(Tuple2List) Int64Option) Int64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneInt64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneInt64 }
 }
 func (m Tuple2ListOption) FlatMapByte(f func(Tuple2List) ByteOption) ByteOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneByte
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneByte }
 }
 func (m Tuple2ListOption) FlatMapRune(f func(Tuple2List) RuneOption) RuneOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneRune
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneRune }
 }
 func (m Tuple2ListOption) FlatMapFloat32(f func(Tuple2List) Float32Option) Float32Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat32
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat32 }
 }
 func (m Tuple2ListOption) FlatMapFloat64(f func(Tuple2List) Float64Option) Float64Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneFloat64
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneFloat64 }
 }
 func (m Tuple2ListOption) FlatMapAny(f func(Tuple2List) AnyOption) AnyOption {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneAny
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneAny }
 }
 func (m Tuple2ListOption) FlatMapTuple2(f func(Tuple2List) Tuple2Option) Tuple2Option {
-	if m.IsDefined() {
-		return f(*m.value)
-	} else {
-		return NoneTuple2
-	}
+  if m.IsDefined() { return f(*m.value) } else { return NoneTuple2 }
 }

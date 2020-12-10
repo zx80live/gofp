@@ -4,12 +4,11 @@
 package fp
 
 import "regexp"
-
 func RegexGroups(r *regexp.Regexp) func(string) []string {
-	return func(s string) []string {
-		return (r.FindStringSubmatch(s))
-	}
+  return func(s string) []string {
+     return (r.FindStringSubmatch(s))
+  }
 }
 func StringRegexGroups(s string) func(string) []string {
-	return RegexGroups(regexp.MustCompile(s))
+  return RegexGroups(regexp.MustCompile(s))
 }

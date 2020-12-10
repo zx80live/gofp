@@ -3,163 +3,164 @@
 
 package fp
 
+
 type BoolList struct {
-	head *bool
-	tail *BoolList
+  head *bool
+  tail *BoolList
 }
 type StringList struct {
-	head *string
-	tail *StringList
+  head *string
+  tail *StringList
 }
 type IntList struct {
-	head *int
-	tail *IntList
+  head *int
+  tail *IntList
 }
 type Int64List struct {
-	head *int64
-	tail *Int64List
+  head *int64
+  tail *Int64List
 }
 type ByteList struct {
-	head *byte
-	tail *ByteList
+  head *byte
+  tail *ByteList
 }
 type RuneList struct {
-	head *rune
-	tail *RuneList
+  head *rune
+  tail *RuneList
 }
 type Float32List struct {
-	head *float32
-	tail *Float32List
+  head *float32
+  tail *Float32List
 }
 type Float64List struct {
-	head *float64
-	tail *Float64List
+  head *float64
+  tail *Float64List
 }
 type AnyList struct {
-	head *Any
-	tail *AnyList
+  head *Any
+  tail *AnyList
 }
 type Tuple2List struct {
-	head *Tuple2
-	tail *Tuple2List
+  head *Tuple2
+  tail *Tuple2List
 }
 type BoolArrayList struct {
-	head *[]bool
-	tail *BoolArrayList
+  head *[]bool
+  tail *BoolArrayList
 }
 type StringArrayList struct {
-	head *[]string
-	tail *StringArrayList
+  head *[]string
+  tail *StringArrayList
 }
 type IntArrayList struct {
-	head *[]int
-	tail *IntArrayList
+  head *[]int
+  tail *IntArrayList
 }
 type Int64ArrayList struct {
-	head *[]int64
-	tail *Int64ArrayList
+  head *[]int64
+  tail *Int64ArrayList
 }
 type ByteArrayList struct {
-	head *[]byte
-	tail *ByteArrayList
+  head *[]byte
+  tail *ByteArrayList
 }
 type RuneArrayList struct {
-	head *[]rune
-	tail *RuneArrayList
+  head *[]rune
+  tail *RuneArrayList
 }
 type Float32ArrayList struct {
-	head *[]float32
-	tail *Float32ArrayList
+  head *[]float32
+  tail *Float32ArrayList
 }
 type Float64ArrayList struct {
-	head *[]float64
-	tail *Float64ArrayList
+  head *[]float64
+  tail *Float64ArrayList
 }
 type AnyArrayList struct {
-	head *[]Any
-	tail *AnyArrayList
+  head *[]Any
+  tail *AnyArrayList
 }
 type Tuple2ArrayList struct {
-	head *[]Tuple2
-	tail *Tuple2ArrayList
+  head *[]Tuple2
+  tail *Tuple2ArrayList
 }
 type BoolOptionList struct {
-	head *BoolOption
-	tail *BoolOptionList
+  head *BoolOption
+  tail *BoolOptionList
 }
 type StringOptionList struct {
-	head *StringOption
-	tail *StringOptionList
+  head *StringOption
+  tail *StringOptionList
 }
 type IntOptionList struct {
-	head *IntOption
-	tail *IntOptionList
+  head *IntOption
+  tail *IntOptionList
 }
 type Int64OptionList struct {
-	head *Int64Option
-	tail *Int64OptionList
+  head *Int64Option
+  tail *Int64OptionList
 }
 type ByteOptionList struct {
-	head *ByteOption
-	tail *ByteOptionList
+  head *ByteOption
+  tail *ByteOptionList
 }
 type RuneOptionList struct {
-	head *RuneOption
-	tail *RuneOptionList
+  head *RuneOption
+  tail *RuneOptionList
 }
 type Float32OptionList struct {
-	head *Float32Option
-	tail *Float32OptionList
+  head *Float32Option
+  tail *Float32OptionList
 }
 type Float64OptionList struct {
-	head *Float64Option
-	tail *Float64OptionList
+  head *Float64Option
+  tail *Float64OptionList
 }
 type AnyOptionList struct {
-	head *AnyOption
-	tail *AnyOptionList
+  head *AnyOption
+  tail *AnyOptionList
 }
 type Tuple2OptionList struct {
-	head *Tuple2Option
-	tail *Tuple2OptionList
+  head *Tuple2Option
+  tail *Tuple2OptionList
 }
 type BoolListList struct {
-	head *BoolList
-	tail *BoolListList
+  head *BoolList
+  tail *BoolListList
 }
 type StringListList struct {
-	head *StringList
-	tail *StringListList
+  head *StringList
+  tail *StringListList
 }
 type IntListList struct {
-	head *IntList
-	tail *IntListList
+  head *IntList
+  tail *IntListList
 }
 type Int64ListList struct {
-	head *Int64List
-	tail *Int64ListList
+  head *Int64List
+  tail *Int64ListList
 }
 type ByteListList struct {
-	head *ByteList
-	tail *ByteListList
+  head *ByteList
+  tail *ByteListList
 }
 type RuneListList struct {
-	head *RuneList
-	tail *RuneListList
+  head *RuneList
+  tail *RuneListList
 }
 type Float32ListList struct {
-	head *Float32List
-	tail *Float32ListList
+  head *Float32List
+  tail *Float32ListList
 }
 type Float64ListList struct {
-	head *Float64List
-	tail *Float64ListList
+  head *Float64List
+  tail *Float64ListList
 }
 type AnyListList struct {
-	head *AnyList
-	tail *AnyListList
+  head *AnyList
+  tail *AnyListList
 }
 type Tuple2ListList struct {
-	head *Tuple2List
-	tail *Tuple2ListList
+  head *Tuple2List
+  tail *Tuple2ListList
 }

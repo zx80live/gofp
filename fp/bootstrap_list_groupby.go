@@ -3,6 +3,7 @@
 
 package fp
 
+
 func (l BoolList) GroupByBool(f func(bool) bool) map[bool]BoolList {
 	m := make(map[bool]BoolList)
 
@@ -19,8 +20,7 @@ func (l BoolList) GroupByBool(f func(bool) bool) map[bool]BoolList {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l StringList) GroupByString(f func(string) string) map[string]StringList {
 	m := make(map[string]StringList)
 
@@ -37,8 +37,7 @@ func (l StringList) GroupByString(f func(string) string) map[string]StringList {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l IntList) GroupByInt(f func(int) int) map[int]IntList {
 	m := make(map[int]IntList)
 
@@ -55,8 +54,7 @@ func (l IntList) GroupByInt(f func(int) int) map[int]IntList {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Int64List) GroupByInt64(f func(int64) int64) map[int64]Int64List {
 	m := make(map[int64]Int64List)
 
@@ -73,8 +71,7 @@ func (l Int64List) GroupByInt64(f func(int64) int64) map[int64]Int64List {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l ByteList) GroupByByte(f func(byte) byte) map[byte]ByteList {
 	m := make(map[byte]ByteList)
 
@@ -91,8 +88,7 @@ func (l ByteList) GroupByByte(f func(byte) byte) map[byte]ByteList {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l RuneList) GroupByRune(f func(rune) rune) map[rune]RuneList {
 	m := make(map[rune]RuneList)
 
@@ -109,8 +105,7 @@ func (l RuneList) GroupByRune(f func(rune) rune) map[rune]RuneList {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Float32List) GroupByFloat32(f func(float32) float32) map[float32]Float32List {
 	m := make(map[float32]Float32List)
 
@@ -127,8 +122,7 @@ func (l Float32List) GroupByFloat32(f func(float32) float32) map[float32]Float32
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Float64List) GroupByFloat64(f func(float64) float64) map[float64]Float64List {
 	m := make(map[float64]Float64List)
 
@@ -145,8 +139,7 @@ func (l Float64List) GroupByFloat64(f func(float64) float64) map[float64]Float64
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l AnyList) GroupByAny(f func(Any) Any) map[Any]AnyList {
 	m := make(map[Any]AnyList)
 
@@ -163,8 +156,7 @@ func (l AnyList) GroupByAny(f func(Any) Any) map[Any]AnyList {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Tuple2List) GroupByTuple2(f func(Tuple2) Tuple2) map[Tuple2]Tuple2List {
 	m := make(map[Tuple2]Tuple2List)
 
@@ -181,8 +173,7 @@ func (l Tuple2List) GroupByTuple2(f func(Tuple2) Tuple2) map[Tuple2]Tuple2List {
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l BoolOptionList) GroupByBoolOption(f func(BoolOption) BoolOption) map[BoolOption]BoolOptionList {
 	m := make(map[BoolOption]BoolOptionList)
 
@@ -199,8 +190,7 @@ func (l BoolOptionList) GroupByBoolOption(f func(BoolOption) BoolOption) map[Boo
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l StringOptionList) GroupByStringOption(f func(StringOption) StringOption) map[StringOption]StringOptionList {
 	m := make(map[StringOption]StringOptionList)
 
@@ -217,8 +207,7 @@ func (l StringOptionList) GroupByStringOption(f func(StringOption) StringOption)
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l IntOptionList) GroupByIntOption(f func(IntOption) IntOption) map[IntOption]IntOptionList {
 	m := make(map[IntOption]IntOptionList)
 
@@ -235,8 +224,7 @@ func (l IntOptionList) GroupByIntOption(f func(IntOption) IntOption) map[IntOpti
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Int64OptionList) GroupByInt64Option(f func(Int64Option) Int64Option) map[Int64Option]Int64OptionList {
 	m := make(map[Int64Option]Int64OptionList)
 
@@ -253,8 +241,7 @@ func (l Int64OptionList) GroupByInt64Option(f func(Int64Option) Int64Option) map
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l ByteOptionList) GroupByByteOption(f func(ByteOption) ByteOption) map[ByteOption]ByteOptionList {
 	m := make(map[ByteOption]ByteOptionList)
 
@@ -271,8 +258,7 @@ func (l ByteOptionList) GroupByByteOption(f func(ByteOption) ByteOption) map[Byt
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l RuneOptionList) GroupByRuneOption(f func(RuneOption) RuneOption) map[RuneOption]RuneOptionList {
 	m := make(map[RuneOption]RuneOptionList)
 
@@ -289,8 +275,7 @@ func (l RuneOptionList) GroupByRuneOption(f func(RuneOption) RuneOption) map[Run
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Float32OptionList) GroupByFloat32Option(f func(Float32Option) Float32Option) map[Float32Option]Float32OptionList {
 	m := make(map[Float32Option]Float32OptionList)
 
@@ -307,8 +292,7 @@ func (l Float32OptionList) GroupByFloat32Option(f func(Float32Option) Float32Opt
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Float64OptionList) GroupByFloat64Option(f func(Float64Option) Float64Option) map[Float64Option]Float64OptionList {
 	m := make(map[Float64Option]Float64OptionList)
 
@@ -325,8 +309,7 @@ func (l Float64OptionList) GroupByFloat64Option(f func(Float64Option) Float64Opt
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l AnyOptionList) GroupByAnyOption(f func(AnyOption) AnyOption) map[AnyOption]AnyOptionList {
 	m := make(map[AnyOption]AnyOptionList)
 
@@ -343,8 +326,7 @@ func (l AnyOptionList) GroupByAnyOption(f func(AnyOption) AnyOption) map[AnyOpti
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Tuple2OptionList) GroupByTuple2Option(f func(Tuple2Option) Tuple2Option) map[Tuple2Option]Tuple2OptionList {
 	m := make(map[Tuple2Option]Tuple2OptionList)
 
@@ -361,8 +343,7 @@ func (l Tuple2OptionList) GroupByTuple2Option(f func(Tuple2Option) Tuple2Option)
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l BoolListList) GroupByBoolList(f func(BoolList) BoolList) map[BoolList]BoolListList {
 	m := make(map[BoolList]BoolListList)
 
@@ -379,8 +360,7 @@ func (l BoolListList) GroupByBoolList(f func(BoolList) BoolList) map[BoolList]Bo
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l StringListList) GroupByStringList(f func(StringList) StringList) map[StringList]StringListList {
 	m := make(map[StringList]StringListList)
 
@@ -397,8 +377,7 @@ func (l StringListList) GroupByStringList(f func(StringList) StringList) map[Str
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l IntListList) GroupByIntList(f func(IntList) IntList) map[IntList]IntListList {
 	m := make(map[IntList]IntListList)
 
@@ -415,8 +394,7 @@ func (l IntListList) GroupByIntList(f func(IntList) IntList) map[IntList]IntList
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Int64ListList) GroupByInt64List(f func(Int64List) Int64List) map[Int64List]Int64ListList {
 	m := make(map[Int64List]Int64ListList)
 
@@ -433,8 +411,7 @@ func (l Int64ListList) GroupByInt64List(f func(Int64List) Int64List) map[Int64Li
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l ByteListList) GroupByByteList(f func(ByteList) ByteList) map[ByteList]ByteListList {
 	m := make(map[ByteList]ByteListList)
 
@@ -451,8 +428,7 @@ func (l ByteListList) GroupByByteList(f func(ByteList) ByteList) map[ByteList]By
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l RuneListList) GroupByRuneList(f func(RuneList) RuneList) map[RuneList]RuneListList {
 	m := make(map[RuneList]RuneListList)
 
@@ -469,8 +445,7 @@ func (l RuneListList) GroupByRuneList(f func(RuneList) RuneList) map[RuneList]Ru
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Float32ListList) GroupByFloat32List(f func(Float32List) Float32List) map[Float32List]Float32ListList {
 	m := make(map[Float32List]Float32ListList)
 
@@ -487,8 +462,7 @@ func (l Float32ListList) GroupByFloat32List(f func(Float32List) Float32List) map
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Float64ListList) GroupByFloat64List(f func(Float64List) Float64List) map[Float64List]Float64ListList {
 	m := make(map[Float64List]Float64ListList)
 
@@ -505,8 +479,7 @@ func (l Float64ListList) GroupByFloat64List(f func(Float64List) Float64List) map
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l AnyListList) GroupByAnyList(f func(AnyList) AnyList) map[AnyList]AnyListList {
 	m := make(map[AnyList]AnyListList)
 
@@ -523,8 +496,7 @@ func (l AnyListList) GroupByAnyList(f func(AnyList) AnyList) map[AnyList]AnyList
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
 func (l Tuple2ListList) GroupByTuple2List(f func(Tuple2List) Tuple2List) map[Tuple2List]Tuple2ListList {
 	m := make(map[Tuple2List]Tuple2ListList)
 
@@ -541,5 +513,4 @@ func (l Tuple2ListList) GroupByTuple2List(f func(Tuple2List) Tuple2List) map[Tup
 		m[key] = group
 	})
 
-	return m
-}
+	return m }
