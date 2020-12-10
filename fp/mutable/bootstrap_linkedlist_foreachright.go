@@ -215,70 +215,70 @@ func (n *Tuple2OptionLinkedList) ForeachRight(f func(Tuple2Option)) {
 		e = e.prev
 	}
 }
-func (n *BoolLinkedListLinkedList) ForeachRight(f func(BoolLinkedList)) {
+func (n *BoolListLinkedList) ForeachRight(f func(BoolList)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *StringLinkedListLinkedList) ForeachRight(f func(StringLinkedList)) {
+func (n *StringListLinkedList) ForeachRight(f func(StringList)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *IntLinkedListLinkedList) ForeachRight(f func(IntLinkedList)) {
+func (n *IntListLinkedList) ForeachRight(f func(IntList)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *Int64LinkedListLinkedList) ForeachRight(f func(Int64LinkedList)) {
+func (n *Int64ListLinkedList) ForeachRight(f func(Int64List)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *ByteLinkedListLinkedList) ForeachRight(f func(ByteLinkedList)) {
+func (n *ByteListLinkedList) ForeachRight(f func(ByteList)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *RuneLinkedListLinkedList) ForeachRight(f func(RuneLinkedList)) {
+func (n *RuneListLinkedList) ForeachRight(f func(RuneList)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *Float32LinkedListLinkedList) ForeachRight(f func(Float32LinkedList)) {
+func (n *Float32ListLinkedList) ForeachRight(f func(Float32List)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *Float64LinkedListLinkedList) ForeachRight(f func(Float64LinkedList)) {
+func (n *Float64ListLinkedList) ForeachRight(f func(Float64List)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *AnyLinkedListLinkedList) ForeachRight(f func(AnyLinkedList)) {
+func (n *AnyListLinkedList) ForeachRight(f func(AnyList)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)
 		e = e.prev
 	}
 }
-func (n *Tuple2LinkedListLinkedList) ForeachRight(f func(Tuple2LinkedList)) {
+func (n *Tuple2ListLinkedList) ForeachRight(f func(Tuple2List)) {
 	e := n.end
 	for e.value != nil {
 		f(*e.value)

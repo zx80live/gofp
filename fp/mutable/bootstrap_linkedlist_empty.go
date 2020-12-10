@@ -183,62 +183,62 @@ func NilLinkedTuple2Option() *Tuple2OptionLinkedList {
 	n.end = &n
 	return &n
 }
-func NilLinkedBoolLinkedList() *BoolLinkedListLinkedList {
-	n := BoolLinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedBoolList() *BoolListLinkedList {
+	n := BoolListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedStringLinkedList() *StringLinkedListLinkedList {
-	n := StringLinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedStringList() *StringListLinkedList {
+	n := StringListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedIntLinkedList() *IntLinkedListLinkedList {
-	n := IntLinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedIntList() *IntListLinkedList {
+	n := IntListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedInt64LinkedList() *Int64LinkedListLinkedList {
-	n := Int64LinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedInt64List() *Int64ListLinkedList {
+	n := Int64ListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedByteLinkedList() *ByteLinkedListLinkedList {
-	n := ByteLinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedByteList() *ByteListLinkedList {
+	n := ByteListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedRuneLinkedList() *RuneLinkedListLinkedList {
-	n := RuneLinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedRuneList() *RuneListLinkedList {
+	n := RuneListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedFloat32LinkedList() *Float32LinkedListLinkedList {
-	n := Float32LinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedFloat32List() *Float32ListLinkedList {
+	n := Float32ListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedFloat64LinkedList() *Float64LinkedListLinkedList {
-	n := Float64LinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedFloat64List() *Float64ListLinkedList {
+	n := Float64ListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedAnyLinkedList() *AnyLinkedListLinkedList {
-	n := AnyLinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedAnyList() *AnyListLinkedList {
+	n := AnyListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n
 }
-func NilLinkedTuple2LinkedList() *Tuple2LinkedListLinkedList {
-	n := Tuple2LinkedListLinkedList{nil, nil, nil, nil, nil}
+func NilLinkedTuple2List() *Tuple2ListLinkedList {
+	n := Tuple2ListLinkedList{nil, nil, nil, nil, nil}
 	n.head = &n // TODO clarify: how does gc utilize cyclic reference, if NOT then use condition in Add function instead
 	n.end = &n
 	return &n

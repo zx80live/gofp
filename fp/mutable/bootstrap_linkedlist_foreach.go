@@ -305,7 +305,7 @@ func (n *Tuple2OptionLinkedList) Foreach(f func(Tuple2Option)) {
 		f(*h.value)
 	}
 }
-func (n *BoolLinkedListLinkedList) Foreach(f func(BoolLinkedList)) {
+func (n *BoolListLinkedList) Foreach(f func(BoolList)) {
 	h := n.head
 	for {
 		h = h.next
@@ -315,7 +315,7 @@ func (n *BoolLinkedListLinkedList) Foreach(f func(BoolLinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *StringLinkedListLinkedList) Foreach(f func(StringLinkedList)) {
+func (n *StringListLinkedList) Foreach(f func(StringList)) {
 	h := n.head
 	for {
 		h = h.next
@@ -325,7 +325,7 @@ func (n *StringLinkedListLinkedList) Foreach(f func(StringLinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *IntLinkedListLinkedList) Foreach(f func(IntLinkedList)) {
+func (n *IntListLinkedList) Foreach(f func(IntList)) {
 	h := n.head
 	for {
 		h = h.next
@@ -335,7 +335,7 @@ func (n *IntLinkedListLinkedList) Foreach(f func(IntLinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *Int64LinkedListLinkedList) Foreach(f func(Int64LinkedList)) {
+func (n *Int64ListLinkedList) Foreach(f func(Int64List)) {
 	h := n.head
 	for {
 		h = h.next
@@ -345,7 +345,7 @@ func (n *Int64LinkedListLinkedList) Foreach(f func(Int64LinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *ByteLinkedListLinkedList) Foreach(f func(ByteLinkedList)) {
+func (n *ByteListLinkedList) Foreach(f func(ByteList)) {
 	h := n.head
 	for {
 		h = h.next
@@ -355,7 +355,7 @@ func (n *ByteLinkedListLinkedList) Foreach(f func(ByteLinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *RuneLinkedListLinkedList) Foreach(f func(RuneLinkedList)) {
+func (n *RuneListLinkedList) Foreach(f func(RuneList)) {
 	h := n.head
 	for {
 		h = h.next
@@ -365,7 +365,7 @@ func (n *RuneLinkedListLinkedList) Foreach(f func(RuneLinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *Float32LinkedListLinkedList) Foreach(f func(Float32LinkedList)) {
+func (n *Float32ListLinkedList) Foreach(f func(Float32List)) {
 	h := n.head
 	for {
 		h = h.next
@@ -375,7 +375,7 @@ func (n *Float32LinkedListLinkedList) Foreach(f func(Float32LinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *Float64LinkedListLinkedList) Foreach(f func(Float64LinkedList)) {
+func (n *Float64ListLinkedList) Foreach(f func(Float64List)) {
 	h := n.head
 	for {
 		h = h.next
@@ -385,7 +385,7 @@ func (n *Float64LinkedListLinkedList) Foreach(f func(Float64LinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *AnyLinkedListLinkedList) Foreach(f func(AnyLinkedList)) {
+func (n *AnyListLinkedList) Foreach(f func(AnyList)) {
 	h := n.head
 	for {
 		h = h.next
@@ -395,7 +395,7 @@ func (n *AnyLinkedListLinkedList) Foreach(f func(AnyLinkedList)) {
 		f(*h.value)
 	}
 }
-func (n *Tuple2LinkedListLinkedList) Foreach(f func(Tuple2LinkedList)) {
+func (n *Tuple2ListLinkedList) Foreach(f func(Tuple2List)) {
 	h := n.head
 	for {
 		h = h.next

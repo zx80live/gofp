@@ -185,62 +185,62 @@ func (l *Tuple2OptionLinkedList) Append(e Tuple2Option) *Tuple2OptionLinkedList 
 	l.next = &nn
 	return &nn
 }
-func (l *BoolLinkedListLinkedList) Append(e BoolLinkedList) *BoolLinkedListLinkedList {
-	nn := BoolLinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *BoolListLinkedList) Append(e BoolList) *BoolListLinkedList {
+	nn := BoolListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *StringLinkedListLinkedList) Append(e StringLinkedList) *StringLinkedListLinkedList {
-	nn := StringLinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *StringListLinkedList) Append(e StringList) *StringListLinkedList {
+	nn := StringListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *IntLinkedListLinkedList) Append(e IntLinkedList) *IntLinkedListLinkedList {
-	nn := IntLinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *IntListLinkedList) Append(e IntList) *IntListLinkedList {
+	nn := IntListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *Int64LinkedListLinkedList) Append(e Int64LinkedList) *Int64LinkedListLinkedList {
-	nn := Int64LinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *Int64ListLinkedList) Append(e Int64List) *Int64ListLinkedList {
+	nn := Int64ListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *ByteLinkedListLinkedList) Append(e ByteLinkedList) *ByteLinkedListLinkedList {
-	nn := ByteLinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *ByteListLinkedList) Append(e ByteList) *ByteListLinkedList {
+	nn := ByteListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *RuneLinkedListLinkedList) Append(e RuneLinkedList) *RuneLinkedListLinkedList {
-	nn := RuneLinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *RuneListLinkedList) Append(e RuneList) *RuneListLinkedList {
+	nn := RuneListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *Float32LinkedListLinkedList) Append(e Float32LinkedList) *Float32LinkedListLinkedList {
-	nn := Float32LinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *Float32ListLinkedList) Append(e Float32List) *Float32ListLinkedList {
+	nn := Float32ListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *Float64LinkedListLinkedList) Append(e Float64LinkedList) *Float64LinkedListLinkedList {
-	nn := Float64LinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *Float64ListLinkedList) Append(e Float64List) *Float64ListLinkedList {
+	nn := Float64ListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *AnyLinkedListLinkedList) Append(e AnyLinkedList) *AnyLinkedListLinkedList {
-	nn := AnyLinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *AnyListLinkedList) Append(e AnyList) *AnyListLinkedList {
+	nn := AnyListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn
 }
-func (l *Tuple2LinkedListLinkedList) Append(e Tuple2LinkedList) *Tuple2LinkedListLinkedList {
-	nn := Tuple2LinkedListLinkedList{&e, l.head, nil, l, nil}
+func (l *Tuple2ListLinkedList) Append(e Tuple2List) *Tuple2ListLinkedList {
+	nn := Tuple2ListLinkedList{&e, l.head, nil, l, nil}
 	nn.end = &nn
 	l.next = &nn
 	return &nn

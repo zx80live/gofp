@@ -215,70 +215,70 @@ func (l Tuple2OptionLinkedList) Head() Tuple2Option {
 		panic("can't get head from empty list")
 	}
 }
-func (l BoolLinkedListLinkedList) Head() BoolLinkedList {
+func (l BoolListLinkedList) Head() BoolList {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l StringLinkedListLinkedList) Head() StringLinkedList {
+func (l StringListLinkedList) Head() StringList {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l IntLinkedListLinkedList) Head() IntLinkedList {
+func (l IntListLinkedList) Head() IntList {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l Int64LinkedListLinkedList) Head() Int64LinkedList {
+func (l Int64ListLinkedList) Head() Int64List {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l ByteLinkedListLinkedList) Head() ByteLinkedList {
+func (l ByteListLinkedList) Head() ByteList {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l RuneLinkedListLinkedList) Head() RuneLinkedList {
+func (l RuneListLinkedList) Head() RuneList {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l Float32LinkedListLinkedList) Head() Float32LinkedList {
+func (l Float32ListLinkedList) Head() Float32List {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l Float64LinkedListLinkedList) Head() Float64LinkedList {
+func (l Float64ListLinkedList) Head() Float64List {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l AnyLinkedListLinkedList) Head() AnyLinkedList {
+func (l AnyListLinkedList) Head() AnyList {
 	if l.value != nil {
 		return *l.value
 	} else {
 		panic("can't get head from empty list")
 	}
 }
-func (l Tuple2LinkedListLinkedList) Head() Tuple2LinkedList {
+func (l Tuple2ListLinkedList) Head() Tuple2List {
 	if l.value != nil {
 		return *l.value
 	} else {

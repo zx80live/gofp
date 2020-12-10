@@ -215,73 +215,73 @@ type Tuple2OptionLinkedList struct {
 	prev  *Tuple2OptionLinkedList
 	next  *Tuple2OptionLinkedList
 }
-type BoolLinkedListLinkedList struct {
-	value *BoolLinkedList
-	head  *BoolLinkedListLinkedList
-	end   *BoolLinkedListLinkedList
-	prev  *BoolLinkedListLinkedList
-	next  *BoolLinkedListLinkedList
+type BoolListLinkedList struct {
+	value *BoolList
+	head  *BoolListLinkedList
+	end   *BoolListLinkedList
+	prev  *BoolListLinkedList
+	next  *BoolListLinkedList
 }
-type StringLinkedListLinkedList struct {
-	value *StringLinkedList
-	head  *StringLinkedListLinkedList
-	end   *StringLinkedListLinkedList
-	prev  *StringLinkedListLinkedList
-	next  *StringLinkedListLinkedList
+type StringListLinkedList struct {
+	value *StringList
+	head  *StringListLinkedList
+	end   *StringListLinkedList
+	prev  *StringListLinkedList
+	next  *StringListLinkedList
 }
-type IntLinkedListLinkedList struct {
-	value *IntLinkedList
-	head  *IntLinkedListLinkedList
-	end   *IntLinkedListLinkedList
-	prev  *IntLinkedListLinkedList
-	next  *IntLinkedListLinkedList
+type IntListLinkedList struct {
+	value *IntList
+	head  *IntListLinkedList
+	end   *IntListLinkedList
+	prev  *IntListLinkedList
+	next  *IntListLinkedList
 }
-type Int64LinkedListLinkedList struct {
-	value *Int64LinkedList
-	head  *Int64LinkedListLinkedList
-	end   *Int64LinkedListLinkedList
-	prev  *Int64LinkedListLinkedList
-	next  *Int64LinkedListLinkedList
+type Int64ListLinkedList struct {
+	value *Int64List
+	head  *Int64ListLinkedList
+	end   *Int64ListLinkedList
+	prev  *Int64ListLinkedList
+	next  *Int64ListLinkedList
 }
-type ByteLinkedListLinkedList struct {
-	value *ByteLinkedList
-	head  *ByteLinkedListLinkedList
-	end   *ByteLinkedListLinkedList
-	prev  *ByteLinkedListLinkedList
-	next  *ByteLinkedListLinkedList
+type ByteListLinkedList struct {
+	value *ByteList
+	head  *ByteListLinkedList
+	end   *ByteListLinkedList
+	prev  *ByteListLinkedList
+	next  *ByteListLinkedList
 }
-type RuneLinkedListLinkedList struct {
-	value *RuneLinkedList
-	head  *RuneLinkedListLinkedList
-	end   *RuneLinkedListLinkedList
-	prev  *RuneLinkedListLinkedList
-	next  *RuneLinkedListLinkedList
+type RuneListLinkedList struct {
+	value *RuneList
+	head  *RuneListLinkedList
+	end   *RuneListLinkedList
+	prev  *RuneListLinkedList
+	next  *RuneListLinkedList
 }
-type Float32LinkedListLinkedList struct {
-	value *Float32LinkedList
-	head  *Float32LinkedListLinkedList
-	end   *Float32LinkedListLinkedList
-	prev  *Float32LinkedListLinkedList
-	next  *Float32LinkedListLinkedList
+type Float32ListLinkedList struct {
+	value *Float32List
+	head  *Float32ListLinkedList
+	end   *Float32ListLinkedList
+	prev  *Float32ListLinkedList
+	next  *Float32ListLinkedList
 }
-type Float64LinkedListLinkedList struct {
-	value *Float64LinkedList
-	head  *Float64LinkedListLinkedList
-	end   *Float64LinkedListLinkedList
-	prev  *Float64LinkedListLinkedList
-	next  *Float64LinkedListLinkedList
+type Float64ListLinkedList struct {
+	value *Float64List
+	head  *Float64ListLinkedList
+	end   *Float64ListLinkedList
+	prev  *Float64ListLinkedList
+	next  *Float64ListLinkedList
 }
-type AnyLinkedListLinkedList struct {
-	value *AnyLinkedList
-	head  *AnyLinkedListLinkedList
-	end   *AnyLinkedListLinkedList
-	prev  *AnyLinkedListLinkedList
-	next  *AnyLinkedListLinkedList
+type AnyListLinkedList struct {
+	value *AnyList
+	head  *AnyListLinkedList
+	end   *AnyListLinkedList
+	prev  *AnyListLinkedList
+	next  *AnyListLinkedList
 }
-type Tuple2LinkedListLinkedList struct {
-	value *Tuple2LinkedList
-	head  *Tuple2LinkedListLinkedList
-	end   *Tuple2LinkedListLinkedList
-	prev  *Tuple2LinkedListLinkedList
-	next  *Tuple2LinkedListLinkedList
+type Tuple2ListLinkedList struct {
+	value *Tuple2List
+	head  *Tuple2ListLinkedList
+	end   *Tuple2ListLinkedList
+	prev  *Tuple2ListLinkedList
+	next  *Tuple2ListLinkedList
 }
