@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
-	. "github.com/zx80live/gofp/fp"
+	. "github.com/zx80live/gofp/fp/mutable"
 )
 
 func main() {
-	q := MkStringQueue("a", "b", "c").Enqueue("d").Enqueue("e").Enqueue("f")
-
-	fmt.Println(q.Take(3).ToString(), q.TakeRight(3).ToString(), q.TakeWhile(func(e string) bool { return e != "e" }).ToString())
+	l := NilIntLinkedList().Append(10) //.Append(20).Append(30).Append(40).Append(50)
+	it := l.Iterator()
+	for it.HasNext() {
+		fmt.Println(it.Next())
+	}
 }
