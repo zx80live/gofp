@@ -3,2504 +3,5003 @@
 
 package fp
 
-
 func (l BoolList) ZipAllBoolList(l2 BoolList, thisDefault Bool, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllStringList(l2 StringList, thisDefault Bool, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllIntList(l2 IntList, thisDefault Bool, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllInt64List(l2 Int64List, thisDefault Bool, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllByteList(l2 ByteList, thisDefault Bool, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllRuneList(l2 RuneList, thisDefault Bool, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllFloat32List(l2 Float32List, thisDefault Bool, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllFloat64List(l2 Float64List, thisDefault Bool, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllAnyList(l2 AnyList, thisDefault Bool, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllTuple2List(l2 Tuple2List, thisDefault Bool, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllBoolArray(l2 BoolArray, thisDefault Bool, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllStringArray(l2 StringArray, thisDefault Bool, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllIntArray(l2 IntArray, thisDefault Bool, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllInt64Array(l2 Int64Array, thisDefault Bool, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllByteArray(l2 ByteArray, thisDefault Bool, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllRuneArray(l2 RuneArray, thisDefault Bool, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllFloat32Array(l2 Float32Array, thisDefault Bool, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllFloat64Array(l2 Float64Array, thisDefault Bool, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllAnyArray(l2 AnyArray, thisDefault Bool, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Bool, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllBoolList(l2 BoolList, thisDefault String, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllStringList(l2 StringList, thisDefault String, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllIntList(l2 IntList, thisDefault String, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllInt64List(l2 Int64List, thisDefault String, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllByteList(l2 ByteList, thisDefault String, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllRuneList(l2 RuneList, thisDefault String, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllFloat32List(l2 Float32List, thisDefault String, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllFloat64List(l2 Float64List, thisDefault String, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllAnyList(l2 AnyList, thisDefault String, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllTuple2List(l2 Tuple2List, thisDefault String, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllBoolArray(l2 BoolArray, thisDefault String, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllStringArray(l2 StringArray, thisDefault String, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllIntArray(l2 IntArray, thisDefault String, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllInt64Array(l2 Int64Array, thisDefault String, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllByteArray(l2 ByteArray, thisDefault String, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllRuneArray(l2 RuneArray, thisDefault String, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllFloat32Array(l2 Float32Array, thisDefault String, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllFloat64Array(l2 Float64Array, thisDefault String, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllAnyArray(l2 AnyArray, thisDefault String, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAllTuple2Array(l2 Tuple2Array, thisDefault String, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllBoolList(l2 BoolList, thisDefault Int, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllStringList(l2 StringList, thisDefault Int, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllIntList(l2 IntList, thisDefault Int, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllInt64List(l2 Int64List, thisDefault Int, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllByteList(l2 ByteList, thisDefault Int, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllRuneList(l2 RuneList, thisDefault Int, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllFloat32List(l2 Float32List, thisDefault Int, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllFloat64List(l2 Float64List, thisDefault Int, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllAnyList(l2 AnyList, thisDefault Int, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllTuple2List(l2 Tuple2List, thisDefault Int, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllBoolArray(l2 BoolArray, thisDefault Int, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllStringArray(l2 StringArray, thisDefault Int, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllIntArray(l2 IntArray, thisDefault Int, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllInt64Array(l2 Int64Array, thisDefault Int, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllByteArray(l2 ByteArray, thisDefault Int, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllRuneArray(l2 RuneArray, thisDefault Int, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllFloat32Array(l2 Float32Array, thisDefault Int, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllFloat64Array(l2 Float64Array, thisDefault Int, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllAnyArray(l2 AnyArray, thisDefault Int, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Int, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllBoolList(l2 BoolList, thisDefault Int64, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllStringList(l2 StringList, thisDefault Int64, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllIntList(l2 IntList, thisDefault Int64, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllInt64List(l2 Int64List, thisDefault Int64, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllByteList(l2 ByteList, thisDefault Int64, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllRuneList(l2 RuneList, thisDefault Int64, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllFloat32List(l2 Float32List, thisDefault Int64, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllFloat64List(l2 Float64List, thisDefault Int64, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllAnyList(l2 AnyList, thisDefault Int64, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllTuple2List(l2 Tuple2List, thisDefault Int64, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllBoolArray(l2 BoolArray, thisDefault Int64, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllStringArray(l2 StringArray, thisDefault Int64, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllIntArray(l2 IntArray, thisDefault Int64, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllInt64Array(l2 Int64Array, thisDefault Int64, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllByteArray(l2 ByteArray, thisDefault Int64, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllRuneArray(l2 RuneArray, thisDefault Int64, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllFloat32Array(l2 Float32Array, thisDefault Int64, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllFloat64Array(l2 Float64Array, thisDefault Int64, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllAnyArray(l2 AnyArray, thisDefault Int64, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Int64, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllBoolList(l2 BoolList, thisDefault Byte, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllStringList(l2 StringList, thisDefault Byte, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllIntList(l2 IntList, thisDefault Byte, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllInt64List(l2 Int64List, thisDefault Byte, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllByteList(l2 ByteList, thisDefault Byte, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllRuneList(l2 RuneList, thisDefault Byte, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllFloat32List(l2 Float32List, thisDefault Byte, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllFloat64List(l2 Float64List, thisDefault Byte, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllAnyList(l2 AnyList, thisDefault Byte, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllTuple2List(l2 Tuple2List, thisDefault Byte, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllBoolArray(l2 BoolArray, thisDefault Byte, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllStringArray(l2 StringArray, thisDefault Byte, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllIntArray(l2 IntArray, thisDefault Byte, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllInt64Array(l2 Int64Array, thisDefault Byte, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllByteArray(l2 ByteArray, thisDefault Byte, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllRuneArray(l2 RuneArray, thisDefault Byte, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllFloat32Array(l2 Float32Array, thisDefault Byte, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllFloat64Array(l2 Float64Array, thisDefault Byte, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllAnyArray(l2 AnyArray, thisDefault Byte, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Byte, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllBoolList(l2 BoolList, thisDefault Rune, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllStringList(l2 StringList, thisDefault Rune, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllIntList(l2 IntList, thisDefault Rune, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllInt64List(l2 Int64List, thisDefault Rune, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllByteList(l2 ByteList, thisDefault Rune, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllRuneList(l2 RuneList, thisDefault Rune, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllFloat32List(l2 Float32List, thisDefault Rune, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllFloat64List(l2 Float64List, thisDefault Rune, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllAnyList(l2 AnyList, thisDefault Rune, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllTuple2List(l2 Tuple2List, thisDefault Rune, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllBoolArray(l2 BoolArray, thisDefault Rune, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllStringArray(l2 StringArray, thisDefault Rune, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllIntArray(l2 IntArray, thisDefault Rune, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllInt64Array(l2 Int64Array, thisDefault Rune, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllByteArray(l2 ByteArray, thisDefault Rune, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllRuneArray(l2 RuneArray, thisDefault Rune, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllFloat32Array(l2 Float32Array, thisDefault Rune, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllFloat64Array(l2 Float64Array, thisDefault Rune, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllAnyArray(l2 AnyArray, thisDefault Rune, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Rune, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllBoolList(l2 BoolList, thisDefault Float32, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllStringList(l2 StringList, thisDefault Float32, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllIntList(l2 IntList, thisDefault Float32, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllInt64List(l2 Int64List, thisDefault Float32, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllByteList(l2 ByteList, thisDefault Float32, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllRuneList(l2 RuneList, thisDefault Float32, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllFloat32List(l2 Float32List, thisDefault Float32, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllFloat64List(l2 Float64List, thisDefault Float32, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllAnyList(l2 AnyList, thisDefault Float32, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllTuple2List(l2 Tuple2List, thisDefault Float32, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllBoolArray(l2 BoolArray, thisDefault Float32, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllStringArray(l2 StringArray, thisDefault Float32, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllIntArray(l2 IntArray, thisDefault Float32, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllInt64Array(l2 Int64Array, thisDefault Float32, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllByteArray(l2 ByteArray, thisDefault Float32, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllRuneArray(l2 RuneArray, thisDefault Float32, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllFloat32Array(l2 Float32Array, thisDefault Float32, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllFloat64Array(l2 Float64Array, thisDefault Float32, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllAnyArray(l2 AnyArray, thisDefault Float32, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Float32, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllBoolList(l2 BoolList, thisDefault Float64, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllStringList(l2 StringList, thisDefault Float64, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllIntList(l2 IntList, thisDefault Float64, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllInt64List(l2 Int64List, thisDefault Float64, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllByteList(l2 ByteList, thisDefault Float64, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllRuneList(l2 RuneList, thisDefault Float64, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllFloat32List(l2 Float32List, thisDefault Float64, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllFloat64List(l2 Float64List, thisDefault Float64, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllAnyList(l2 AnyList, thisDefault Float64, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllTuple2List(l2 Tuple2List, thisDefault Float64, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllBoolArray(l2 BoolArray, thisDefault Float64, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllStringArray(l2 StringArray, thisDefault Float64, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllIntArray(l2 IntArray, thisDefault Float64, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllInt64Array(l2 Int64Array, thisDefault Float64, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllByteArray(l2 ByteArray, thisDefault Float64, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllRuneArray(l2 RuneArray, thisDefault Float64, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllFloat32Array(l2 Float32Array, thisDefault Float64, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllFloat64Array(l2 Float64Array, thisDefault Float64, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllAnyArray(l2 AnyArray, thisDefault Float64, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Float64, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllBoolList(l2 BoolList, thisDefault Any, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllStringList(l2 StringList, thisDefault Any, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllIntList(l2 IntList, thisDefault Any, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllInt64List(l2 Int64List, thisDefault Any, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllByteList(l2 ByteList, thisDefault Any, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllRuneList(l2 RuneList, thisDefault Any, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllFloat32List(l2 Float32List, thisDefault Any, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllFloat64List(l2 Float64List, thisDefault Any, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllAnyList(l2 AnyList, thisDefault Any, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllTuple2List(l2 Tuple2List, thisDefault Any, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllBoolArray(l2 BoolArray, thisDefault Any, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllStringArray(l2 StringArray, thisDefault Any, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllIntArray(l2 IntArray, thisDefault Any, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllInt64Array(l2 Int64Array, thisDefault Any, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllByteArray(l2 ByteArray, thisDefault Any, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllRuneArray(l2 RuneArray, thisDefault Any, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllFloat32Array(l2 Float32Array, thisDefault Any, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllFloat64Array(l2 Float64Array, thisDefault Any, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllAnyArray(l2 AnyArray, thisDefault Any, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Any, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllBoolList(l2 BoolList, thisDefault Tuple2, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllStringList(l2 StringList, thisDefault Tuple2, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllIntList(l2 IntList, thisDefault Tuple2, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllInt64List(l2 Int64List, thisDefault Tuple2, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllByteList(l2 ByteList, thisDefault Tuple2, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllRuneList(l2 RuneList, thisDefault Tuple2, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllFloat32List(l2 Float32List, thisDefault Tuple2, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllFloat64List(l2 Float64List, thisDefault Tuple2, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllAnyList(l2 AnyList, thisDefault Tuple2, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllTuple2List(l2 Tuple2List, thisDefault Tuple2, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	maxLen := int(Int(l.Size()).Max(Int(l2.Size())))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if xs2.NonEmpty() { e2 = *xs2.head; xs2 = *xs2.tail } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if xs2.NonEmpty() {
+			e2 = *xs2.head
+			xs2 = *xs2.tail
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllBoolArray(l2 BoolArray, thisDefault Tuple2, thatDefault Bool) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllStringArray(l2 StringArray, thisDefault Tuple2, thatDefault String) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllIntArray(l2 IntArray, thisDefault Tuple2, thatDefault Int) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllInt64Array(l2 Int64Array, thisDefault Tuple2, thatDefault Int64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllByteArray(l2 ByteArray, thisDefault Tuple2, thatDefault Byte) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllRuneArray(l2 RuneArray, thisDefault Tuple2, thatDefault Rune) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllFloat32Array(l2 Float32Array, thisDefault Tuple2, thatDefault Float32) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllFloat64Array(l2 Float64Array, thisDefault Tuple2, thatDefault Float64) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllAnyArray(l2 AnyArray, thisDefault Tuple2, thatDefault Any) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAllTuple2Array(l2 Tuple2Array, thisDefault Tuple2, thatDefault Tuple2) Tuple2List {
-  zipped := NilTuple2; xs1 := l
-  len1 := l.Size(); len2 := len(l2)
-  maxLen := int(Int(len1).Max(Int(len2)))
+	zipped := NilTuple2List
+	xs1 := l
+	len1 := l.Size()
+	len2 := len(l2)
+	maxLen := int(Int(len1).Max(Int(len2)))
 
-  var e1, e2 Any
-  for i := 0; i < maxLen; i++ {
-    if xs1.NonEmpty() { e1 = *xs1.head; xs1 = *xs1.tail } else { e1 = thisDefault }
-    if i < len2 { e2 = l2[i] } else { e2 = thatDefault }
+	var e1, e2 Any
+	for i := 0; i < maxLen; i++ {
+		if xs1.NonEmpty() {
+			e1 = *xs1.head
+			xs1 = *xs1.tail
+		} else {
+			e1 = thisDefault
+		}
+		if i < len2 {
+			e2 = l2[i]
+		} else {
+			e2 = thatDefault
+		}
 
-    zipped = zipped.Cons( Tuple2 { e1, e2 } )
-  }
-  return zipped.Reverse() }
+		zipped = zipped.Cons(Tuple2{e1, e2})
+	}
+	return zipped.Reverse()
+}

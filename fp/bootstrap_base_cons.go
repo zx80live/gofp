@@ -3,20 +3,27 @@
 
 package fp
 
-
 func (a Bool) Cons(b Bool) BoolList {
-  return NilBool.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilBoolList.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a String) Cons(b String) StringList {
-  return NilString.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilStringList.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a Int) Cons(b Int) IntList {
-  return NilInt.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilIntList.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a Int64) Cons(b Int64) Int64List {
-  return NilInt64.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilInt64List.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a Byte) Cons(b Byte) ByteList {
-  return NilByte.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilByteList.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a Rune) Cons(b Rune) RuneList {
-  return NilRune.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilRuneList.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a Float32) Cons(b Float32) Float32List {
-  return NilFloat32.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilFloat32List.Cons(a.Underlined()).Cons(b.Underlined())
+}
 func (a Float64) Cons(b Float64) Float64List {
-  return NilFloat64.Cons(a.Underlined()).Cons(b.Underlined()) }
+	return NilFloat64List.Cons(a.Underlined()).Cons(b.Underlined())
+}

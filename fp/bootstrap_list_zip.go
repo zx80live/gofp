@@ -3,1504 +3,2103 @@
 
 package fp
 
-
 func (l BoolList) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l BoolList) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l StringList) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l IntList) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Int64List) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l ByteList) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l RuneList) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float32List) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Float64List) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l AnyList) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipBoolList(l2 BoolList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipStringList(l2 StringList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipIntList(l2 IntList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipInt64List(l2 Int64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipByteList(l2 ByteList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipRuneList(l2 RuneList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipFloat32List(l2 Float32List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipFloat64List(l2 Float64List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAnyList(l2 AnyList) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipTuple2List(l2 Tuple2List) Tuple2List {
-  zipped := NilTuple2; xs1 := l; xs2 := l2
-  for xs1.NonEmpty() && xs2.NonEmpty() {
-    zipped = zipped.Cons(Tuple2 { *xs1.head, *xs2.head } )
-    xs1 = *xs1.tail
-    xs2 = *xs2.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs1 := l
+	xs2 := l2
+	for xs1.NonEmpty() && xs2.NonEmpty() {
+		zipped = zipped.Cons(Tuple2{*xs1.head, *xs2.head})
+		xs1 = *xs1.tail
+		xs2 = *xs2.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipBoolArray(l2 BoolArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipStringArray(l2 StringArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipIntArray(l2 IntArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipInt64Array(l2 Int64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipByteArray(l2 ByteArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipRuneArray(l2 RuneArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipFloat32Array(l2 Float32Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipFloat64Array(l2 Float64Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipAnyArray(l2 AnyArray) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}
 func (l Tuple2List) ZipTuple2Array(l2 Tuple2Array) Tuple2List {
-  zipped := NilTuple2; xs := l; len2 := len(l2)
-  for i := 0; xs.NonEmpty() && i < len2; i ++ {
-    zipped = zipped.Cons(Tuple2 { *xs.head, l2[i] } )
-    xs = *xs.tail
-  }
-  return zipped.Reverse() }
+	zipped := NilTuple2List
+	xs := l
+	len2 := len(l2)
+	for i := 0; xs.NonEmpty() && i < len2; i++ {
+		zipped = zipped.Cons(Tuple2{*xs.head, l2[i]})
+		xs = *xs.tail
+	}
+	return zipped.Reverse()
+}

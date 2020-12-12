@@ -3,363 +3,402 @@
 
 package fp
 
-
 func (l BoolList) Take(n int) BoolList {
-  acc := NilBool
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilBoolList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l StringList) Take(n int) StringList {
-  acc := NilString
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilStringList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l IntList) Take(n int) IntList {
-  acc := NilInt
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilIntList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Int64List) Take(n int) Int64List {
-  acc := NilInt64
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilInt64List
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l ByteList) Take(n int) ByteList {
-  acc := NilByte
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilByteList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l RuneList) Take(n int) RuneList {
-  acc := NilRune
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilRuneList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float32List) Take(n int) Float32List {
-  acc := NilFloat32
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat32List
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float64List) Take(n int) Float64List {
-  acc := NilFloat64
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat64List
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l AnyList) Take(n int) AnyList {
-  acc := NilAny
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilAnyList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Tuple2List) Take(n int) Tuple2List {
-  acc := NilTuple2
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilTuple2List
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l BoolArrayList) Take(n int) BoolArrayList {
-  acc := NilBoolArray
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilBoolArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l StringArrayList) Take(n int) StringArrayList {
-  acc := NilStringArray
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilStringArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l IntArrayList) Take(n int) IntArrayList {
-  acc := NilIntArray
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilIntArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Int64ArrayList) Take(n int) Int64ArrayList {
-  acc := NilInt64Array
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilInt64ArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l ByteArrayList) Take(n int) ByteArrayList {
-  acc := NilByteArray
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilByteArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l RuneArrayList) Take(n int) RuneArrayList {
-  acc := NilRuneArray
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilRuneArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float32ArrayList) Take(n int) Float32ArrayList {
-  acc := NilFloat32Array
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat32ArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float64ArrayList) Take(n int) Float64ArrayList {
-  acc := NilFloat64Array
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat64ArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l AnyArrayList) Take(n int) AnyArrayList {
-  acc := NilAnyArray
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilAnyArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Tuple2ArrayList) Take(n int) Tuple2ArrayList {
-  acc := NilTuple2Array
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilTuple2ArrayList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l BoolOptionList) Take(n int) BoolOptionList {
-  acc := NilBoolOption
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilBoolOptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l StringOptionList) Take(n int) StringOptionList {
-  acc := NilStringOption
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilStringOptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l IntOptionList) Take(n int) IntOptionList {
-  acc := NilIntOption
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilIntOptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Int64OptionList) Take(n int) Int64OptionList {
-  acc := NilInt64Option
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilInt64OptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l ByteOptionList) Take(n int) ByteOptionList {
-  acc := NilByteOption
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilByteOptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l RuneOptionList) Take(n int) RuneOptionList {
-  acc := NilRuneOption
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilRuneOptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float32OptionList) Take(n int) Float32OptionList {
-  acc := NilFloat32Option
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat32OptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float64OptionList) Take(n int) Float64OptionList {
-  acc := NilFloat64Option
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat64OptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l AnyOptionList) Take(n int) AnyOptionList {
-  acc := NilAnyOption
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilAnyOptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Tuple2OptionList) Take(n int) Tuple2OptionList {
-  acc := NilTuple2Option
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilTuple2OptionList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l BoolListList) Take(n int) BoolListList {
-  acc := NilBoolList
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilBoolListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l StringListList) Take(n int) StringListList {
-  acc := NilStringList
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilStringListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l IntListList) Take(n int) IntListList {
-  acc := NilIntList
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilIntListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Int64ListList) Take(n int) Int64ListList {
-  acc := NilInt64List
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilInt64ListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l ByteListList) Take(n int) ByteListList {
-  acc := NilByteList
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilByteListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l RuneListList) Take(n int) RuneListList {
-  acc := NilRuneList
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilRuneListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float32ListList) Take(n int) Float32ListList {
-  acc := NilFloat32List
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat32ListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Float64ListList) Take(n int) Float64ListList {
-  acc := NilFloat64List
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilFloat64ListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l AnyListList) Take(n int) AnyListList {
-  acc := NilAnyList
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilAnyListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}
 
 func (l Tuple2ListList) Take(n int) Tuple2ListList {
-  acc := NilTuple2List
-  xs := l
-  for i := 0;  xs.NonEmpty() && i < n; i ++ {
-    acc = acc.Cons(*xs.head)
-    xs = *xs.tail
-  }
-  return acc.Reverse()}
+	acc := NilTuple2ListList
+	xs := l
+	for i := 0; xs.NonEmpty() && i < n; i++ {
+		acc = acc.Cons(*xs.head)
+		xs = *xs.tail
+	}
+	return acc.Reverse()
+}

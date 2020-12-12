@@ -8,7 +8,7 @@ func (q BoolQueue) swap() BoolQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return BoolQueue{&NilBool, &out}
+		return BoolQueue{&NilBoolList, &out}
 	}
 }
 func (q StringQueue) swap() StringQueue {
@@ -16,7 +16,7 @@ func (q StringQueue) swap() StringQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return StringQueue{&NilString, &out}
+		return StringQueue{&NilStringList, &out}
 	}
 }
 func (q IntQueue) swap() IntQueue {
@@ -24,7 +24,7 @@ func (q IntQueue) swap() IntQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return IntQueue{&NilInt, &out}
+		return IntQueue{&NilIntList, &out}
 	}
 }
 func (q Int64Queue) swap() Int64Queue {
@@ -32,7 +32,7 @@ func (q Int64Queue) swap() Int64Queue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Int64Queue{&NilInt64, &out}
+		return Int64Queue{&NilInt64List, &out}
 	}
 }
 func (q ByteQueue) swap() ByteQueue {
@@ -40,7 +40,7 @@ func (q ByteQueue) swap() ByteQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return ByteQueue{&NilByte, &out}
+		return ByteQueue{&NilByteList, &out}
 	}
 }
 func (q RuneQueue) swap() RuneQueue {
@@ -48,7 +48,7 @@ func (q RuneQueue) swap() RuneQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return RuneQueue{&NilRune, &out}
+		return RuneQueue{&NilRuneList, &out}
 	}
 }
 func (q Float32Queue) swap() Float32Queue {
@@ -56,7 +56,7 @@ func (q Float32Queue) swap() Float32Queue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float32Queue{&NilFloat32, &out}
+		return Float32Queue{&NilFloat32List, &out}
 	}
 }
 func (q Float64Queue) swap() Float64Queue {
@@ -64,7 +64,7 @@ func (q Float64Queue) swap() Float64Queue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float64Queue{&NilFloat64, &out}
+		return Float64Queue{&NilFloat64List, &out}
 	}
 }
 func (q AnyQueue) swap() AnyQueue {
@@ -72,7 +72,7 @@ func (q AnyQueue) swap() AnyQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return AnyQueue{&NilAny, &out}
+		return AnyQueue{&NilAnyList, &out}
 	}
 }
 func (q Tuple2Queue) swap() Tuple2Queue {
@@ -80,7 +80,7 @@ func (q Tuple2Queue) swap() Tuple2Queue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Tuple2Queue{&NilTuple2, &out}
+		return Tuple2Queue{&NilTuple2List, &out}
 	}
 }
 func (q BoolArrayQueue) swap() BoolArrayQueue {
@@ -88,7 +88,7 @@ func (q BoolArrayQueue) swap() BoolArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return BoolArrayQueue{&NilBoolArray, &out}
+		return BoolArrayQueue{&NilBoolArrayList, &out}
 	}
 }
 func (q StringArrayQueue) swap() StringArrayQueue {
@@ -96,7 +96,7 @@ func (q StringArrayQueue) swap() StringArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return StringArrayQueue{&NilStringArray, &out}
+		return StringArrayQueue{&NilStringArrayList, &out}
 	}
 }
 func (q IntArrayQueue) swap() IntArrayQueue {
@@ -104,7 +104,7 @@ func (q IntArrayQueue) swap() IntArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return IntArrayQueue{&NilIntArray, &out}
+		return IntArrayQueue{&NilIntArrayList, &out}
 	}
 }
 func (q Int64ArrayQueue) swap() Int64ArrayQueue {
@@ -112,7 +112,7 @@ func (q Int64ArrayQueue) swap() Int64ArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Int64ArrayQueue{&NilInt64Array, &out}
+		return Int64ArrayQueue{&NilInt64ArrayList, &out}
 	}
 }
 func (q ByteArrayQueue) swap() ByteArrayQueue {
@@ -120,7 +120,7 @@ func (q ByteArrayQueue) swap() ByteArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return ByteArrayQueue{&NilByteArray, &out}
+		return ByteArrayQueue{&NilByteArrayList, &out}
 	}
 }
 func (q RuneArrayQueue) swap() RuneArrayQueue {
@@ -128,7 +128,7 @@ func (q RuneArrayQueue) swap() RuneArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return RuneArrayQueue{&NilRuneArray, &out}
+		return RuneArrayQueue{&NilRuneArrayList, &out}
 	}
 }
 func (q Float32ArrayQueue) swap() Float32ArrayQueue {
@@ -136,7 +136,7 @@ func (q Float32ArrayQueue) swap() Float32ArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float32ArrayQueue{&NilFloat32Array, &out}
+		return Float32ArrayQueue{&NilFloat32ArrayList, &out}
 	}
 }
 func (q Float64ArrayQueue) swap() Float64ArrayQueue {
@@ -144,7 +144,7 @@ func (q Float64ArrayQueue) swap() Float64ArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float64ArrayQueue{&NilFloat64Array, &out}
+		return Float64ArrayQueue{&NilFloat64ArrayList, &out}
 	}
 }
 func (q AnyArrayQueue) swap() AnyArrayQueue {
@@ -152,7 +152,7 @@ func (q AnyArrayQueue) swap() AnyArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return AnyArrayQueue{&NilAnyArray, &out}
+		return AnyArrayQueue{&NilAnyArrayList, &out}
 	}
 }
 func (q Tuple2ArrayQueue) swap() Tuple2ArrayQueue {
@@ -160,7 +160,7 @@ func (q Tuple2ArrayQueue) swap() Tuple2ArrayQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Tuple2ArrayQueue{&NilTuple2Array, &out}
+		return Tuple2ArrayQueue{&NilTuple2ArrayList, &out}
 	}
 }
 func (q BoolOptionQueue) swap() BoolOptionQueue {
@@ -168,7 +168,7 @@ func (q BoolOptionQueue) swap() BoolOptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return BoolOptionQueue{&NilBoolOption, &out}
+		return BoolOptionQueue{&NilBoolOptionList, &out}
 	}
 }
 func (q StringOptionQueue) swap() StringOptionQueue {
@@ -176,7 +176,7 @@ func (q StringOptionQueue) swap() StringOptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return StringOptionQueue{&NilStringOption, &out}
+		return StringOptionQueue{&NilStringOptionList, &out}
 	}
 }
 func (q IntOptionQueue) swap() IntOptionQueue {
@@ -184,7 +184,7 @@ func (q IntOptionQueue) swap() IntOptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return IntOptionQueue{&NilIntOption, &out}
+		return IntOptionQueue{&NilIntOptionList, &out}
 	}
 }
 func (q Int64OptionQueue) swap() Int64OptionQueue {
@@ -192,7 +192,7 @@ func (q Int64OptionQueue) swap() Int64OptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Int64OptionQueue{&NilInt64Option, &out}
+		return Int64OptionQueue{&NilInt64OptionList, &out}
 	}
 }
 func (q ByteOptionQueue) swap() ByteOptionQueue {
@@ -200,7 +200,7 @@ func (q ByteOptionQueue) swap() ByteOptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return ByteOptionQueue{&NilByteOption, &out}
+		return ByteOptionQueue{&NilByteOptionList, &out}
 	}
 }
 func (q RuneOptionQueue) swap() RuneOptionQueue {
@@ -208,7 +208,7 @@ func (q RuneOptionQueue) swap() RuneOptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return RuneOptionQueue{&NilRuneOption, &out}
+		return RuneOptionQueue{&NilRuneOptionList, &out}
 	}
 }
 func (q Float32OptionQueue) swap() Float32OptionQueue {
@@ -216,7 +216,7 @@ func (q Float32OptionQueue) swap() Float32OptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float32OptionQueue{&NilFloat32Option, &out}
+		return Float32OptionQueue{&NilFloat32OptionList, &out}
 	}
 }
 func (q Float64OptionQueue) swap() Float64OptionQueue {
@@ -224,7 +224,7 @@ func (q Float64OptionQueue) swap() Float64OptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float64OptionQueue{&NilFloat64Option, &out}
+		return Float64OptionQueue{&NilFloat64OptionList, &out}
 	}
 }
 func (q AnyOptionQueue) swap() AnyOptionQueue {
@@ -232,7 +232,7 @@ func (q AnyOptionQueue) swap() AnyOptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return AnyOptionQueue{&NilAnyOption, &out}
+		return AnyOptionQueue{&NilAnyOptionList, &out}
 	}
 }
 func (q Tuple2OptionQueue) swap() Tuple2OptionQueue {
@@ -240,7 +240,7 @@ func (q Tuple2OptionQueue) swap() Tuple2OptionQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Tuple2OptionQueue{&NilTuple2Option, &out}
+		return Tuple2OptionQueue{&NilTuple2OptionList, &out}
 	}
 }
 func (q BoolListQueue) swap() BoolListQueue {
@@ -248,7 +248,7 @@ func (q BoolListQueue) swap() BoolListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return BoolListQueue{&NilBoolList, &out}
+		return BoolListQueue{&NilBoolListList, &out}
 	}
 }
 func (q StringListQueue) swap() StringListQueue {
@@ -256,7 +256,7 @@ func (q StringListQueue) swap() StringListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return StringListQueue{&NilStringList, &out}
+		return StringListQueue{&NilStringListList, &out}
 	}
 }
 func (q IntListQueue) swap() IntListQueue {
@@ -264,7 +264,7 @@ func (q IntListQueue) swap() IntListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return IntListQueue{&NilIntList, &out}
+		return IntListQueue{&NilIntListList, &out}
 	}
 }
 func (q Int64ListQueue) swap() Int64ListQueue {
@@ -272,7 +272,7 @@ func (q Int64ListQueue) swap() Int64ListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Int64ListQueue{&NilInt64List, &out}
+		return Int64ListQueue{&NilInt64ListList, &out}
 	}
 }
 func (q ByteListQueue) swap() ByteListQueue {
@@ -280,7 +280,7 @@ func (q ByteListQueue) swap() ByteListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return ByteListQueue{&NilByteList, &out}
+		return ByteListQueue{&NilByteListList, &out}
 	}
 }
 func (q RuneListQueue) swap() RuneListQueue {
@@ -288,7 +288,7 @@ func (q RuneListQueue) swap() RuneListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return RuneListQueue{&NilRuneList, &out}
+		return RuneListQueue{&NilRuneListList, &out}
 	}
 }
 func (q Float32ListQueue) swap() Float32ListQueue {
@@ -296,7 +296,7 @@ func (q Float32ListQueue) swap() Float32ListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float32ListQueue{&NilFloat32List, &out}
+		return Float32ListQueue{&NilFloat32ListList, &out}
 	}
 }
 func (q Float64ListQueue) swap() Float64ListQueue {
@@ -304,7 +304,7 @@ func (q Float64ListQueue) swap() Float64ListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Float64ListQueue{&NilFloat64List, &out}
+		return Float64ListQueue{&NilFloat64ListList, &out}
 	}
 }
 func (q AnyListQueue) swap() AnyListQueue {
@@ -312,7 +312,7 @@ func (q AnyListQueue) swap() AnyListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return AnyListQueue{&NilAnyList, &out}
+		return AnyListQueue{&NilAnyListList, &out}
 	}
 }
 func (q Tuple2ListQueue) swap() Tuple2ListQueue {
@@ -320,6 +320,6 @@ func (q Tuple2ListQueue) swap() Tuple2ListQueue {
 		return q
 	} else {
 		out := (*q.in).Reverse()
-		return Tuple2ListQueue{&NilTuple2List, &out}
+		return Tuple2ListQueue{&NilTuple2ListList, &out}
 	}
 }
