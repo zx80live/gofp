@@ -4,6 +4,9 @@
 ## Introduction
 
 This library was inspired by Scala (collection API, functional paradigm and, concurrence API etc). 
+It allows to program in Go using functional style similar to Scala.
+It enables us to combine the efficiency of FP and performance of Golang.
+There is an opportunity to work with mutable/immutable collections, monads, futures, etc.
 
 ## Table of contents
 
