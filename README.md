@@ -146,7 +146,7 @@ func main() {
 	fmt.Println("Hello functional programming in GO!")
 	
 	l := MkIntList(1,2,3,4,5)
-	res1 := l.Filter(EvenInt)
+	res1 := l.Filter(EvenInt).MapInt(func(e int) int { return e * 10})
 	
 	fmt.Println(res1.ToString())
 }
@@ -159,7 +159,7 @@ go run test.go
 The result of above command should be:
 ```
 Hello functional programming in GO!
-List(2,4)
+List(20,40)
 ```
 
 4. Explore this library by the examples which are presented in that [documentation](#toc0). Good luck!
