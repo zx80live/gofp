@@ -144,11 +144,12 @@ import (
 
 func main() {
 	fmt.Println("Hello functional programming in GO!")
-	
-	l := MkIntList(1,2,3,4,5)
-	res1 := l.Filter(EvenInt).MapInt(func(e int) int { return e * 10})
-	
-	fmt.Println(res1.ToString())
+
+  l := MkIntList(1,2,3,4,5,-6,-7,-8,9)
+  res1 := l.Filter(EvenInt.And(PosInt)).
+            MapInt(func(e int) int { return e * 10})
+
+  fmt.Println(res1.ToString())
 }
 ```
 
