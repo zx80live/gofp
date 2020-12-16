@@ -4,27 +4,6 @@ import (
 	"fmt"
 )
 
-/*
-
- LazyList:
-
- LazyEntry: functions/element of work which will be executed and memoized
-
- [E0] :: ([E1] :: ...)
-
- => scanner.Scan()=1
- [scanner.Text()]
-      +--------------->
-
-  val l: LazyList[Int] = {
-
-    def loop(e: Int): LazyList[Int] = e #:: loop(e + 1)
-    loop(0)
-  }
-
-
-*/
-
 type LazyInt = func() int
 type LazyState = func() State
 
@@ -46,15 +25,6 @@ func (l LazyList) Cons(i LazyInt) LazyList {
 	return LazyList{&state}
 }
 
-func IntsFrom(n int) LazyList {
-	el := func() int { return n }
-	state := func() State {
-		rest := IntsFrom(n + 1)
-		return State{&el, &rest}
-	}
-	return LazyList{&state}
-}
-
 func (l LazyList) Map(f func(e int) int) LazyList {
 	newState := func() State {
 		state := (*l.state)()
@@ -71,19 +41,20 @@ func (l LazyList) IsEmpty() bool { return l.state == nil }
 func (l LazyList) Filter(p func(e int) bool) LazyList {
 	restRef := l
 
-	var elem int
-	var found bool = false
-	var rest = restRef
-
-	for !found && !rest.IsEmpty() {
-		restState := (*rest.state)()
-		elem = (*restState.head)()
-		found = p(elem)
-		rest = *restState.tail
-		restRef = rest
-	}
-
 	newState := func() State {
+
+		var elem int
+		var found = false
+		var rest = restRef
+
+		for !found && !rest.IsEmpty() {
+			restState := (*rest.state)()
+			elem = (*restState.head)()
+			found = p(elem)
+			rest = *restState.tail
+			restRef = rest
+		}
+
 		if found {
 			h := func() int { return elem }
 			t := rest.Filter(p)
@@ -96,22 +67,26 @@ func (l LazyList) Filter(p func(e int) bool) LazyList {
 	return LazyList{&newState}
 }
 
-func NilLazyList() LazyList {
-	s := func() State { return EmptyState }
-	return LazyList{&s}
+// Creates infinite list of numbers
+func IntsFrom(n int) LazyList {
+	el := func() int { return n }
+	state := func() State {
+		rest := IntsFrom(n + 1)
+		return State{&el, &rest}
+	}
+	return LazyList{&state}
 }
 
 func main() {
 	fmt.Println("Hello Lazy")
 
-	//xs := NilLazyList().Cons(func() int { return 1 }).Cons(func() int { return 2 })
 	xs := IntsFrom(1).
-		Map(func(e int) int { return e * -1 }).
+		Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e + 1 }).
-		Filter(func(e int) bool { return e%2 != 0 }).
-		Filter(func(e int) bool { return e > -10 })
+		Filter(func(e int) bool { return e%2 == 0 }).
+		Filter(func(e int) bool { return e > 10 })
 
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 10; i++ {
 		state := (*xs.state)()
 		fmt.Println((*state.head)())
 		xs = *state.tail
