@@ -20,8 +20,14 @@ func (n LazyInt) Value() int {
 }
 
 func (n LazyInt) Eval() LazyInt {
-	cached := n.eval()
-	return LazyInt{n.eval, &cached}
+	if n.cached != nil {
+		fmt.Println("int.cached", *n.cached)
+		return n
+	} else {
+		cached := n.eval()
+		fmt.Println("int.eval", cached)
+		return LazyInt{n.eval, &cached}
+	}
 }
 
 type LazyState = func() State
@@ -135,7 +141,7 @@ func main() {
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
 		Filter(func(e int) bool { return e%2 == 0 }).
-		Map(func(e int) int { return e + 1 }).
+		//Map(func(e int) int { return e + 1 }).
 		Filter(func(e int) bool { return e > 10 }).Take(5)
 
 	for i := 0; xs.NonEmpty(); i++ {
