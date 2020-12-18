@@ -140,10 +140,9 @@ func main() {
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
 		Filter(func(e int) bool { return e%2 != 0 }).
-		Map(func(e int) int { return -e })
-	//Filter(func(e int) bool { return e > 10 }).Take(100)
+		Filter(func(e int) bool { return e > 10 }).Take(5)
 
-	for i := 0; !xs.IsEmpty(); i++ {
+	for i := 0; xs.NonEmpty(); i++ {
 		state := (*xs.state)()
 		fmt.Println((*state.head).Value())
 		xs = *state.tail
