@@ -11,21 +11,21 @@ type LazyInt struct {
 
 func (n LazyInt) Value() int {
 	if n.cached != nil {
-		fmt.Println("cached", *n.cached)
+		fmt.Println(" int.cached", *n.cached)
 		return *n.cached
 	} else {
-		fmt.Println("eval", n.eval())
+		fmt.Println("*int.eval", n.eval())
 		return n.eval()
 	}
 }
 
 func (n LazyInt) Eval() LazyInt {
 	if n.cached != nil {
-		fmt.Println("int.cached", *n.cached)
+		fmt.Println(" int.cached", *n.cached)
 		return n
 	} else {
 		cached := n.eval()
-		fmt.Println("int.eval", cached)
+		fmt.Println("*int.eval", cached)
 		return LazyInt{n.eval, &cached}
 	}
 }
@@ -141,6 +141,8 @@ func main() {
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
 		Filter(func(e int) bool { return e%2 == 0 }).
+		Filter(func(e int) bool { return e > -100 }).
+		Filter(func(e int) bool { return e > 0 }).
 		//Map(func(e int) int { return e + 1 }).
 		Filter(func(e int) bool { return e > 10 }).Take(5)
 
