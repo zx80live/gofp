@@ -4,7 +4,26 @@ import (
 	"fmt"
 )
 
-type LazyInt = func() int
+type LazyInt struct {
+	value     func() int
+	evaluated *int
+}
+
+func (n LazyInt) Value() int {
+	if n.evaluated != nil {
+		//fmt.Println("evaluated", *n.evaluated)
+		return *n.evaluated
+	} else {
+		//fmt.Println("calculated", n.value())
+		return n.value()
+	}
+}
+
+func (n LazyInt) Evaluate() LazyInt {
+	evaluated := n.value()
+	return LazyInt{n.value, &evaluated}
+}
+
 type LazyState = func() State
 
 type State struct {
@@ -30,10 +49,14 @@ func (l LazyList) Cons(i LazyInt) LazyList {
 func (l LazyList) Map(f func(e int) int) LazyList {
 	newState := func() State {
 		state := (*l.state)()
-		h := func() int { return f((*state.head)()) }
+		h := *state.head
+		mappedValue := func() int {
+			return f(h.value())
+		}
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.Map(f)
 
-		return State{&h, &t}
+		return State{&mappedH, &t}
 	}
 	return LazyList{&newState}
 }
@@ -45,22 +68,22 @@ func (l LazyList) Filter(p func(e int) bool) LazyList {
 
 	newState := func() State {
 
-		var elem int
+		var elem LazyInt
 		var found = false
 		var rest = restRef
 
 		for !found && !rest.IsEmpty() {
 			restState := (*rest.state)()
-			elem = (*restState.head)()
-			found = p(elem)
+			elem = (*restState.head).Evaluate()
+			found = p(*elem.evaluated)
 			rest = *restState.tail
 			restRef = rest
 		}
 
 		if found {
-			h := func() int { return elem }
+			//h := func() int { return elem }
 			t := rest.Filter(p)
-			return State{&h, &t}
+			return State{&elem, &t}
 		} else {
 			return EmptyState
 		}
@@ -84,7 +107,7 @@ func (l LazyList) Take(n int) LazyList {
 
 // Creates infinite lazy list of numbers
 func InfiniteIntList(from int) LazyList {
-	el := func() int { return from }
+	el := LazyInt{func() int { return from }, nil}
 	state := func() State {
 		rest := InfiniteIntList(from + 1)
 		return State{&el, &rest}
@@ -98,9 +121,10 @@ func FiniteIntList(from, to int) LazyList {
 		return NilLazyList
 	}
 
-	el := func() int {
+	el := LazyInt{func() int {
 		return from
-	}
+	}, nil}
+
 	state := func() State {
 		rest := FiniteIntList(from+1, to)
 		return State{&el, &rest}
@@ -112,14 +136,18 @@ func main() {
 	fmt.Println("Hello Lazy")
 
 	xs := InfiniteIntList(1).
-		Map(func(e int) int { return e + 1 }).
-		Map(func(e int) int { return e - 1 }).
-		Filter(func(e int) bool { return e%2 == 0 }).
-		Filter(func(e int) bool { return e > 10 }).Take(100)
+		//Map(func(e int) int { return e + 1 }).
+		//Map(func(e int) int { return e - 1 }).
+		Filter(func(e int) bool { return e%2 != 0 })
+		//Filter(func(e int) bool { return e > 10 }).Take(100)
 
 	for i := 0; !xs.IsEmpty(); i++ {
 		state := (*xs.state)()
-		fmt.Println((*state.head)())
+		fmt.Println((*state.head).Value())
 		xs = *state.tail
+
+		if i == 100 {
+			break
+		}
 	}
 }
