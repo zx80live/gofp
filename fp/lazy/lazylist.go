@@ -32,12 +32,15 @@ type State struct {
 }
 
 var EmptyState State = State{nil, nil}
-var EmptyLazyState LazyState = func() State { return EmptyState }
-var NilLazyList LazyList = LazyList{&EmptyLazyState}
+var NilLazyList LazyList = LazyList{nil}
 
 type LazyList struct {
 	state *LazyState
 }
+
+func (l LazyList) IsEmpty() bool { return l == NilLazyList }
+
+func (l LazyList) NonEmpty() bool { return !l.IsEmpty() }
 
 func (l LazyList) Cons(i LazyInt) LazyList {
 	xs := LazyList{l.state}
@@ -61,8 +64,6 @@ func (l LazyList) Map(f func(e int) int) LazyList {
 	return LazyList{&newState}
 }
 
-func (l LazyList) IsEmpty() bool { return l == NilLazyList }
-
 func (l LazyList) Filter(p func(e int) bool) LazyList {
 	restRef := l
 
@@ -72,7 +73,7 @@ func (l LazyList) Filter(p func(e int) bool) LazyList {
 		var found = false
 		var rest = restRef
 
-		for !found && !rest.IsEmpty() {
+		for !found && rest.NonEmpty() {
 			restState := (*rest.state)()
 			elem = (*restState.head).Evaluate()
 			found = p(*elem.evaluated)
@@ -138,8 +139,9 @@ func main() {
 	xs := InfiniteIntList(1).
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
-		Filter(func(e int) bool { return e%2 != 0 })
-		//Filter(func(e int) bool { return e > 10 }).Take(100)
+		Filter(func(e int) bool { return e%2 != 0 }).
+		Map(func(e int) int { return -e })
+	//Filter(func(e int) bool { return e > 10 }).Take(100)
 
 	for i := 0; !xs.IsEmpty(); i++ {
 		state := (*xs.state)()
