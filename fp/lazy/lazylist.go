@@ -5,23 +5,23 @@ import (
 )
 
 type LazyInt struct {
-	value     func() int
-	evaluated *int
+	eval   func() int
+	cached *int
 }
 
 func (n LazyInt) Value() int {
-	if n.evaluated != nil {
-		//fmt.Println("evaluated", *n.evaluated)
-		return *n.evaluated
+	if n.cached != nil {
+		fmt.Println("cached", *n.cached)
+		return *n.cached
 	} else {
-		//fmt.Println("calculated", n.value())
-		return n.value()
+		fmt.Println("eval", n.eval())
+		return n.eval()
 	}
 }
 
-func (n LazyInt) Evaluate() LazyInt {
-	evaluated := n.value()
-	return LazyInt{n.value, &evaluated}
+func (n LazyInt) Eval() LazyInt {
+	cached := n.eval()
+	return LazyInt{n.eval, &cached}
 }
 
 type LazyState = func() State
@@ -54,7 +54,7 @@ func (l LazyList) Map(f func(e int) int) LazyList {
 		state := (*l.state)()
 		h := *state.head
 		mappedValue := func() int {
-			return f(h.value())
+			return f(h.eval())
 		}
 		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.Map(f)
@@ -66,20 +66,20 @@ func (l LazyList) Map(f func(e int) int) LazyList {
 
 func (l LazyList) Filter(p func(e int) bool) LazyList {
 	newState := func() State {
-		var elem LazyInt
+		var xs = l
+		var h LazyInt
 		var found = false
-		var rest = l
 
-		for !found && rest.NonEmpty() {
-			restState := (*rest.state)()
-			elem = (*restState.head).Evaluate()
-			found = p(*elem.evaluated)
-			rest = *restState.tail
+		for !found && xs.NonEmpty() {
+			s := (*xs.state)()
+			h = (*s.head).Eval()
+			found = p(*h.cached)
+			xs = *s.tail
 		}
 
 		if found {
-			t := rest.Filter(p)
-			return State{&elem, &t}
+			t := xs.Filter(p)
+			return State{&h, &t}
 		} else {
 			return EmptyState
 		}
@@ -135,6 +135,7 @@ func main() {
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
 		Filter(func(e int) bool { return e%2 == 0 }).
+		Map(func(e int) int { return e + 1 }).
 		Filter(func(e int) bool { return e > 10 }).Take(5)
 
 	for i := 0; xs.NonEmpty(); i++ {
