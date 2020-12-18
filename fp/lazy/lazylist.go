@@ -82,11 +82,27 @@ func (l LazyList) Take(n int) LazyList {
 	return LazyList{&newState}
 }
 
-// Creates infinite list of numbers
+// Creates infinite lazy list of numbers
 func InfiniteIntList(from int) LazyList {
 	el := func() int { return from }
 	state := func() State {
 		rest := InfiniteIntList(from + 1)
+		return State{&el, &rest}
+	}
+	return LazyList{&state}
+}
+
+// Creates finite lazy list of numbers
+func FiniteIntList(from, to int) LazyList {
+	if from == to {
+		return NilLazyList
+	}
+
+	el := func() int {
+		return from
+	}
+	state := func() State {
+		rest := FiniteIntList(from+1, to)
 		return State{&el, &rest}
 	}
 	return LazyList{&state}
