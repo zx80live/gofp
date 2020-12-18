@@ -82,7 +82,6 @@ func (l LazyList) Filter(p func(e int) bool) LazyList {
 		}
 
 		if found {
-			//h := func() int { return elem }
 			t := rest.Filter(p)
 			return State{&elem, &t}
 		} else {
