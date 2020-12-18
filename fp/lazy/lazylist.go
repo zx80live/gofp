@@ -65,20 +65,16 @@ func (l LazyList) Map(f func(e int) int) LazyList {
 }
 
 func (l LazyList) Filter(p func(e int) bool) LazyList {
-	restRef := l
-
 	newState := func() State {
-
 		var elem LazyInt
 		var found = false
-		var rest = restRef
+		var rest = l
 
 		for !found && rest.NonEmpty() {
 			restState := (*rest.state)()
 			elem = (*restState.head).Evaluate()
 			found = p(*elem.evaluated)
 			rest = *restState.tail
-			restRef = rest
 		}
 
 		if found {
@@ -138,7 +134,7 @@ func main() {
 	xs := InfiniteIntList(1).
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
-		Filter(func(e int) bool { return e%2 != 0 }).
+		Filter(func(e int) bool { return e%2 == 0 }).
 		Filter(func(e int) bool { return e > 10 }).Take(5)
 
 	for i := 0; xs.NonEmpty(); i++ {
