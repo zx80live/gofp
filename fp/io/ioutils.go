@@ -8,7 +8,7 @@ import (
 )
 
 func FileLinesList(path string) {
-	var file, err = os.Open("/path/to/file.txt")
+	var file, err = os.Open(path)
 	if err != nil {
 		log.Fatal(err)
 	}

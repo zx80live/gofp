@@ -86,3 +86,282 @@ func (n LazyAny) Value() Any {
 		return n.eval()
 	}
 }
+func (n LazyTuple2) Value() Tuple2 {
+	if n.cached != nil {
+		//fmt.Println(" Tuple2.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Tuple2.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyBoolArray) Value() []bool {
+	if n.cached != nil {
+		//fmt.Println(" BoolArray.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*BoolArray.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyStringArray) Value() []string {
+	if n.cached != nil {
+		//fmt.Println(" StringArray.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*StringArray.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyIntArray) Value() []int {
+	if n.cached != nil {
+		//fmt.Println(" IntArray.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*IntArray.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyInt64Array) Value() []int64 {
+	if n.cached != nil {
+		//fmt.Println(" Int64Array.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Int64Array.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyByteArray) Value() []byte {
+	if n.cached != nil {
+		//fmt.Println(" ByteArray.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*ByteArray.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyRuneArray) Value() []rune {
+	if n.cached != nil {
+		//fmt.Println(" RuneArray.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*RuneArray.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyFloat32Array) Value() []float32 {
+	if n.cached != nil {
+		//fmt.Println(" Float32Array.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Float32Array.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyFloat64Array) Value() []float64 {
+	if n.cached != nil {
+		//fmt.Println(" Float64Array.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Float64Array.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyAnyArray) Value() []Any {
+	if n.cached != nil {
+		//fmt.Println(" AnyArray.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*AnyArray.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyTuple2Array) Value() []Tuple2 {
+	if n.cached != nil {
+		//fmt.Println(" Tuple2Array.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Tuple2Array.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyBoolOption) Value() BoolOption {
+	if n.cached != nil {
+		//fmt.Println(" BoolOption.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*BoolOption.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyStringOption) Value() StringOption {
+	if n.cached != nil {
+		//fmt.Println(" StringOption.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*StringOption.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyIntOption) Value() IntOption {
+	if n.cached != nil {
+		//fmt.Println(" IntOption.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*IntOption.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyInt64Option) Value() Int64Option {
+	if n.cached != nil {
+		//fmt.Println(" Int64Option.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Int64Option.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyByteOption) Value() ByteOption {
+	if n.cached != nil {
+		//fmt.Println(" ByteOption.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*ByteOption.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyRuneOption) Value() RuneOption {
+	if n.cached != nil {
+		//fmt.Println(" RuneOption.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*RuneOption.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyFloat32Option) Value() Float32Option {
+	if n.cached != nil {
+		//fmt.Println(" Float32Option.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Float32Option.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyFloat64Option) Value() Float64Option {
+	if n.cached != nil {
+		//fmt.Println(" Float64Option.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Float64Option.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyAnyOption) Value() AnyOption {
+	if n.cached != nil {
+		//fmt.Println(" AnyOption.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*AnyOption.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyTuple2Option) Value() Tuple2Option {
+	if n.cached != nil {
+		//fmt.Println(" Tuple2Option.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Tuple2Option.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyBoolList) Value() BoolList {
+	if n.cached != nil {
+		//fmt.Println(" BoolList.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*BoolList.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyStringList) Value() StringList {
+	if n.cached != nil {
+		//fmt.Println(" StringList.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*StringList.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyIntList) Value() IntList {
+	if n.cached != nil {
+		//fmt.Println(" IntList.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*IntList.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyInt64List) Value() Int64List {
+	if n.cached != nil {
+		//fmt.Println(" Int64List.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Int64List.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyByteList) Value() ByteList {
+	if n.cached != nil {
+		//fmt.Println(" ByteList.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*ByteList.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyRuneList) Value() RuneList {
+	if n.cached != nil {
+		//fmt.Println(" RuneList.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*RuneList.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyFloat32List) Value() Float32List {
+	if n.cached != nil {
+		//fmt.Println(" Float32List.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Float32List.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyFloat64List) Value() Float64List {
+	if n.cached != nil {
+		//fmt.Println(" Float64List.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Float64List.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyAnyList) Value() AnyList {
+	if n.cached != nil {
+		//fmt.Println(" AnyList.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*AnyList.eval", n.eval())
+		return n.eval()
+	}
+}
+func (n LazyTuple2List) Value() Tuple2List {
+	if n.cached != nil {
+		//fmt.Println(" Tuple2List.cached", *n.cached)
+		return *n.cached
+	} else {
+		//fmt.Println("*Tuple2List.eval", n.eval())
+		return n.eval()
+	}
+}

@@ -68,3 +68,220 @@ func (n LazyAny) ToString() string {
 		return fmt.Sprintf("LazyAny(?)")
 	}
 }
+func (n LazyTuple2) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyTuple2(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyTuple2(?)")
+	}
+}
+func (n LazyBoolArray) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyBoolArray(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyBoolArray(?)")
+	}
+}
+func (n LazyStringArray) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyStringArray(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyStringArray(?)")
+	}
+}
+func (n LazyIntArray) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyIntArray(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyIntArray(?)")
+	}
+}
+func (n LazyInt64Array) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyInt64Array(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyInt64Array(?)")
+	}
+}
+func (n LazyByteArray) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyByteArray(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyByteArray(?)")
+	}
+}
+func (n LazyRuneArray) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyRuneArray(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyRuneArray(?)")
+	}
+}
+func (n LazyFloat32Array) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyFloat32Array(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyFloat32Array(?)")
+	}
+}
+func (n LazyFloat64Array) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyFloat64Array(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyFloat64Array(?)")
+	}
+}
+func (n LazyAnyArray) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyAnyArray(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyAnyArray(?)")
+	}
+}
+func (n LazyTuple2Array) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyTuple2Array(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyTuple2Array(?)")
+	}
+}
+func (n LazyBoolOption) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyBoolOption(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyBoolOption(?)")
+	}
+}
+func (n LazyStringOption) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyStringOption(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyStringOption(?)")
+	}
+}
+func (n LazyIntOption) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyIntOption(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyIntOption(?)")
+	}
+}
+func (n LazyInt64Option) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyInt64Option(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyInt64Option(?)")
+	}
+}
+func (n LazyByteOption) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyByteOption(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyByteOption(?)")
+	}
+}
+func (n LazyRuneOption) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyRuneOption(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyRuneOption(?)")
+	}
+}
+func (n LazyFloat32Option) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyFloat32Option(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyFloat32Option(?)")
+	}
+}
+func (n LazyFloat64Option) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyFloat64Option(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyFloat64Option(?)")
+	}
+}
+func (n LazyAnyOption) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyAnyOption(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyAnyOption(?)")
+	}
+}
+func (n LazyTuple2Option) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyTuple2Option(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyTuple2Option(?)")
+	}
+}
+func (n LazyBoolList) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyBoolList(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyBoolList(?)")
+	}
+}
+func (n LazyStringList) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyStringList(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyStringList(?)")
+	}
+}
+func (n LazyIntList) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyIntList(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyIntList(?)")
+	}
+}
+func (n LazyInt64List) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyInt64List(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyInt64List(?)")
+	}
+}
+func (n LazyByteList) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyByteList(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyByteList(?)")
+	}
+}
+func (n LazyRuneList) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyRuneList(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyRuneList(?)")
+	}
+}
+func (n LazyFloat32List) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyFloat32List(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyFloat32List(?)")
+	}
+}
+func (n LazyFloat64List) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyFloat64List(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyFloat64List(?)")
+	}
+}
+func (n LazyAnyList) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyAnyList(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyAnyList(?)")
+	}
+}
+func (n LazyTuple2List) ToString() string {
+	if n.cached != nil {
+		return fmt.Sprintf("LazyTuple2List(%v)", *n.cached)
+	} else {
+		return fmt.Sprintf("LazyTuple2List(?)")
+	}
+}

@@ -22,3 +22,65 @@ func MkLazyFloat32(f func() float32) LazyFloat32 { return LazyFloat32{f, nil} }
 func MkLazyFloat64(f func() float64) LazyFloat64 { return LazyFloat64{f, nil} }
 
 func MkLazyAny(f func() Any) LazyAny { return LazyAny{f, nil} }
+
+func MkLazyTuple2(f func() Tuple2) LazyTuple2 { return LazyTuple2{f, nil} }
+
+func MkLazyBoolArray(f func() []bool) LazyBoolArray { return LazyBoolArray{f, nil} }
+
+func MkLazyStringArray(f func() []string) LazyStringArray { return LazyStringArray{f, nil} }
+
+func MkLazyIntArray(f func() []int) LazyIntArray { return LazyIntArray{f, nil} }
+
+func MkLazyInt64Array(f func() []int64) LazyInt64Array { return LazyInt64Array{f, nil} }
+
+func MkLazyByteArray(f func() []byte) LazyByteArray { return LazyByteArray{f, nil} }
+
+func MkLazyRuneArray(f func() []rune) LazyRuneArray { return LazyRuneArray{f, nil} }
+
+func MkLazyFloat32Array(f func() []float32) LazyFloat32Array { return LazyFloat32Array{f, nil} }
+
+func MkLazyFloat64Array(f func() []float64) LazyFloat64Array { return LazyFloat64Array{f, nil} }
+
+func MkLazyAnyArray(f func() []Any) LazyAnyArray { return LazyAnyArray{f, nil} }
+
+func MkLazyTuple2Array(f func() []Tuple2) LazyTuple2Array { return LazyTuple2Array{f, nil} }
+
+func MkLazyBoolOption(f func() BoolOption) LazyBoolOption { return LazyBoolOption{f, nil} }
+
+func MkLazyStringOption(f func() StringOption) LazyStringOption { return LazyStringOption{f, nil} }
+
+func MkLazyIntOption(f func() IntOption) LazyIntOption { return LazyIntOption{f, nil} }
+
+func MkLazyInt64Option(f func() Int64Option) LazyInt64Option { return LazyInt64Option{f, nil} }
+
+func MkLazyByteOption(f func() ByteOption) LazyByteOption { return LazyByteOption{f, nil} }
+
+func MkLazyRuneOption(f func() RuneOption) LazyRuneOption { return LazyRuneOption{f, nil} }
+
+func MkLazyFloat32Option(f func() Float32Option) LazyFloat32Option { return LazyFloat32Option{f, nil} }
+
+func MkLazyFloat64Option(f func() Float64Option) LazyFloat64Option { return LazyFloat64Option{f, nil} }
+
+func MkLazyAnyOption(f func() AnyOption) LazyAnyOption { return LazyAnyOption{f, nil} }
+
+func MkLazyTuple2Option(f func() Tuple2Option) LazyTuple2Option { return LazyTuple2Option{f, nil} }
+
+func MkLazyBoolList(f func() BoolList) LazyBoolList { return LazyBoolList{f, nil} }
+
+func MkLazyStringList(f func() StringList) LazyStringList { return LazyStringList{f, nil} }
+
+func MkLazyIntList(f func() IntList) LazyIntList { return LazyIntList{f, nil} }
+
+func MkLazyInt64List(f func() Int64List) LazyInt64List { return LazyInt64List{f, nil} }
+
+func MkLazyByteList(f func() ByteList) LazyByteList { return LazyByteList{f, nil} }
+
+func MkLazyRuneList(f func() RuneList) LazyRuneList { return LazyRuneList{f, nil} }
+
+func MkLazyFloat32List(f func() Float32List) LazyFloat32List { return LazyFloat32List{f, nil} }
+
+func MkLazyFloat64List(f func() Float64List) LazyFloat64List { return LazyFloat64List{f, nil} }
+
+func MkLazyAnyList(f func() AnyList) LazyAnyList { return LazyAnyList{f, nil} }
+
+func MkLazyTuple2List(f func() Tuple2List) LazyTuple2List { return LazyTuple2List{f, nil} }

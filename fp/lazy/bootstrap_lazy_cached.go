@@ -22,3 +22,65 @@ func (n LazyFloat32) Cached() float32 { return *n.cached }
 func (n LazyFloat64) Cached() float64 { return *n.cached }
 
 func (n LazyAny) Cached() Any { return *n.cached }
+
+func (n LazyTuple2) Cached() Tuple2 { return *n.cached }
+
+func (n LazyBoolArray) Cached() []bool { return *n.cached }
+
+func (n LazyStringArray) Cached() []string { return *n.cached }
+
+func (n LazyIntArray) Cached() []int { return *n.cached }
+
+func (n LazyInt64Array) Cached() []int64 { return *n.cached }
+
+func (n LazyByteArray) Cached() []byte { return *n.cached }
+
+func (n LazyRuneArray) Cached() []rune { return *n.cached }
+
+func (n LazyFloat32Array) Cached() []float32 { return *n.cached }
+
+func (n LazyFloat64Array) Cached() []float64 { return *n.cached }
+
+func (n LazyAnyArray) Cached() []Any { return *n.cached }
+
+func (n LazyTuple2Array) Cached() []Tuple2 { return *n.cached }
+
+func (n LazyBoolOption) Cached() BoolOption { return *n.cached }
+
+func (n LazyStringOption) Cached() StringOption { return *n.cached }
+
+func (n LazyIntOption) Cached() IntOption { return *n.cached }
+
+func (n LazyInt64Option) Cached() Int64Option { return *n.cached }
+
+func (n LazyByteOption) Cached() ByteOption { return *n.cached }
+
+func (n LazyRuneOption) Cached() RuneOption { return *n.cached }
+
+func (n LazyFloat32Option) Cached() Float32Option { return *n.cached }
+
+func (n LazyFloat64Option) Cached() Float64Option { return *n.cached }
+
+func (n LazyAnyOption) Cached() AnyOption { return *n.cached }
+
+func (n LazyTuple2Option) Cached() Tuple2Option { return *n.cached }
+
+func (n LazyBoolList) Cached() BoolList { return *n.cached }
+
+func (n LazyStringList) Cached() StringList { return *n.cached }
+
+func (n LazyIntList) Cached() IntList { return *n.cached }
+
+func (n LazyInt64List) Cached() Int64List { return *n.cached }
+
+func (n LazyByteList) Cached() ByteList { return *n.cached }
+
+func (n LazyRuneList) Cached() RuneList { return *n.cached }
+
+func (n LazyFloat32List) Cached() Float32List { return *n.cached }
+
+func (n LazyFloat64List) Cached() Float64List { return *n.cached }
+
+func (n LazyAnyList) Cached() AnyList { return *n.cached }
+
+func (n LazyTuple2List) Cached() Tuple2List { return *n.cached }

@@ -41,3 +41,127 @@ type LazyAny struct {
 	eval   func() Any
 	cached *Any
 }
+type LazyTuple2 struct {
+	eval   func() Tuple2
+	cached *Tuple2
+}
+type LazyBoolArray struct {
+	eval   func() []bool
+	cached *[]bool
+}
+type LazyStringArray struct {
+	eval   func() []string
+	cached *[]string
+}
+type LazyIntArray struct {
+	eval   func() []int
+	cached *[]int
+}
+type LazyInt64Array struct {
+	eval   func() []int64
+	cached *[]int64
+}
+type LazyByteArray struct {
+	eval   func() []byte
+	cached *[]byte
+}
+type LazyRuneArray struct {
+	eval   func() []rune
+	cached *[]rune
+}
+type LazyFloat32Array struct {
+	eval   func() []float32
+	cached *[]float32
+}
+type LazyFloat64Array struct {
+	eval   func() []float64
+	cached *[]float64
+}
+type LazyAnyArray struct {
+	eval   func() []Any
+	cached *[]Any
+}
+type LazyTuple2Array struct {
+	eval   func() []Tuple2
+	cached *[]Tuple2
+}
+type LazyBoolOption struct {
+	eval   func() BoolOption
+	cached *BoolOption
+}
+type LazyStringOption struct {
+	eval   func() StringOption
+	cached *StringOption
+}
+type LazyIntOption struct {
+	eval   func() IntOption
+	cached *IntOption
+}
+type LazyInt64Option struct {
+	eval   func() Int64Option
+	cached *Int64Option
+}
+type LazyByteOption struct {
+	eval   func() ByteOption
+	cached *ByteOption
+}
+type LazyRuneOption struct {
+	eval   func() RuneOption
+	cached *RuneOption
+}
+type LazyFloat32Option struct {
+	eval   func() Float32Option
+	cached *Float32Option
+}
+type LazyFloat64Option struct {
+	eval   func() Float64Option
+	cached *Float64Option
+}
+type LazyAnyOption struct {
+	eval   func() AnyOption
+	cached *AnyOption
+}
+type LazyTuple2Option struct {
+	eval   func() Tuple2Option
+	cached *Tuple2Option
+}
+type LazyBoolList struct {
+	eval   func() BoolList
+	cached *BoolList
+}
+type LazyStringList struct {
+	eval   func() StringList
+	cached *StringList
+}
+type LazyIntList struct {
+	eval   func() IntList
+	cached *IntList
+}
+type LazyInt64List struct {
+	eval   func() Int64List
+	cached *Int64List
+}
+type LazyByteList struct {
+	eval   func() ByteList
+	cached *ByteList
+}
+type LazyRuneList struct {
+	eval   func() RuneList
+	cached *RuneList
+}
+type LazyFloat32List struct {
+	eval   func() Float32List
+	cached *Float32List
+}
+type LazyFloat64List struct {
+	eval   func() Float64List
+	cached *Float64List
+}
+type LazyAnyList struct {
+	eval   func() AnyList
+	cached *AnyList
+}
+type LazyTuple2List struct {
+	eval   func() Tuple2List
+	cached *Tuple2List
+}
