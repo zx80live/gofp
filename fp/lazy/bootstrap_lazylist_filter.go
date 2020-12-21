@@ -11,7 +11,7 @@ func (l BoolLazyList) Filter(p func(e bool) bool) BoolLazyList {
 		var h LazyBool
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilBoolLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -34,7 +34,7 @@ func (l StringLazyList) Filter(p func(e string) bool) StringLazyList {
 		var h LazyString
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilStringLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -57,7 +57,7 @@ func (l IntLazyList) Filter(p func(e int) bool) IntLazyList {
 		var h LazyInt
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilIntLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -80,7 +80,7 @@ func (l Int64LazyList) Filter(p func(e int64) bool) Int64LazyList {
 		var h LazyInt64
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilInt64LazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -103,7 +103,7 @@ func (l ByteLazyList) Filter(p func(e byte) bool) ByteLazyList {
 		var h LazyByte
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilByteLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -126,7 +126,7 @@ func (l RuneLazyList) Filter(p func(e rune) bool) RuneLazyList {
 		var h LazyRune
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilRuneLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -149,7 +149,7 @@ func (l Float32LazyList) Filter(p func(e float32) bool) Float32LazyList {
 		var h LazyFloat32
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat32LazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -172,7 +172,7 @@ func (l Float64LazyList) Filter(p func(e float64) bool) Float64LazyList {
 		var h LazyFloat64
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat64LazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -195,7 +195,7 @@ func (l AnyLazyList) Filter(p func(e Any) bool) AnyLazyList {
 		var h LazyAny
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilAnyLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -218,7 +218,7 @@ func (l Tuple2LazyList) Filter(p func(e Tuple2) bool) Tuple2LazyList {
 		var h LazyTuple2
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilTuple2LazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -241,7 +241,7 @@ func (l BoolArrayLazyList) Filter(p func(e []bool) bool) BoolArrayLazyList {
 		var h LazyBoolArray
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilBoolArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -264,7 +264,7 @@ func (l StringArrayLazyList) Filter(p func(e []string) bool) StringArrayLazyList
 		var h LazyStringArray
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilStringArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -287,7 +287,7 @@ func (l IntArrayLazyList) Filter(p func(e []int) bool) IntArrayLazyList {
 		var h LazyIntArray
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilIntArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -310,7 +310,7 @@ func (l Int64ArrayLazyList) Filter(p func(e []int64) bool) Int64ArrayLazyList {
 		var h LazyInt64Array
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilInt64ArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -333,7 +333,7 @@ func (l ByteArrayLazyList) Filter(p func(e []byte) bool) ByteArrayLazyList {
 		var h LazyByteArray
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilByteArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -356,7 +356,7 @@ func (l RuneArrayLazyList) Filter(p func(e []rune) bool) RuneArrayLazyList {
 		var h LazyRuneArray
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilRuneArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -379,7 +379,7 @@ func (l Float32ArrayLazyList) Filter(p func(e []float32) bool) Float32ArrayLazyL
 		var h LazyFloat32Array
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat32ArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -402,7 +402,7 @@ func (l Float64ArrayLazyList) Filter(p func(e []float64) bool) Float64ArrayLazyL
 		var h LazyFloat64Array
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat64ArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -425,7 +425,7 @@ func (l AnyArrayLazyList) Filter(p func(e []Any) bool) AnyArrayLazyList {
 		var h LazyAnyArray
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilAnyArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -448,7 +448,7 @@ func (l Tuple2ArrayLazyList) Filter(p func(e []Tuple2) bool) Tuple2ArrayLazyList
 		var h LazyTuple2Array
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilTuple2ArrayLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -471,7 +471,7 @@ func (l BoolOptionLazyList) Filter(p func(e BoolOption) bool) BoolOptionLazyList
 		var h LazyBoolOption
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilBoolOptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -494,7 +494,7 @@ func (l StringOptionLazyList) Filter(p func(e StringOption) bool) StringOptionLa
 		var h LazyStringOption
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilStringOptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -517,7 +517,7 @@ func (l IntOptionLazyList) Filter(p func(e IntOption) bool) IntOptionLazyList {
 		var h LazyIntOption
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilIntOptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -540,7 +540,7 @@ func (l Int64OptionLazyList) Filter(p func(e Int64Option) bool) Int64OptionLazyL
 		var h LazyInt64Option
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilInt64OptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -563,7 +563,7 @@ func (l ByteOptionLazyList) Filter(p func(e ByteOption) bool) ByteOptionLazyList
 		var h LazyByteOption
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilByteOptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -586,7 +586,7 @@ func (l RuneOptionLazyList) Filter(p func(e RuneOption) bool) RuneOptionLazyList
 		var h LazyRuneOption
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilRuneOptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -609,7 +609,7 @@ func (l Float32OptionLazyList) Filter(p func(e Float32Option) bool) Float32Optio
 		var h LazyFloat32Option
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat32OptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -632,7 +632,7 @@ func (l Float64OptionLazyList) Filter(p func(e Float64Option) bool) Float64Optio
 		var h LazyFloat64Option
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat64OptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -655,7 +655,7 @@ func (l AnyOptionLazyList) Filter(p func(e AnyOption) bool) AnyOptionLazyList {
 		var h LazyAnyOption
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilAnyOptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -678,7 +678,7 @@ func (l Tuple2OptionLazyList) Filter(p func(e Tuple2Option) bool) Tuple2OptionLa
 		var h LazyTuple2Option
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilTuple2OptionLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -701,7 +701,7 @@ func (l BoolListLazyList) Filter(p func(e BoolList) bool) BoolListLazyList {
 		var h LazyBoolList
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilBoolListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -724,7 +724,7 @@ func (l StringListLazyList) Filter(p func(e StringList) bool) StringListLazyList
 		var h LazyStringList
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilStringListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -747,7 +747,7 @@ func (l IntListLazyList) Filter(p func(e IntList) bool) IntListLazyList {
 		var h LazyIntList
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilIntListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -770,7 +770,7 @@ func (l Int64ListLazyList) Filter(p func(e Int64List) bool) Int64ListLazyList {
 		var h LazyInt64List
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilInt64ListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -793,7 +793,7 @@ func (l ByteListLazyList) Filter(p func(e ByteList) bool) ByteListLazyList {
 		var h LazyByteList
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilByteListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -816,7 +816,7 @@ func (l RuneListLazyList) Filter(p func(e RuneList) bool) RuneListLazyList {
 		var h LazyRuneList
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilRuneListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -839,7 +839,7 @@ func (l Float32ListLazyList) Filter(p func(e Float32List) bool) Float32ListLazyL
 		var h LazyFloat32List
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat32ListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -862,7 +862,7 @@ func (l Float64ListLazyList) Filter(p func(e Float64List) bool) Float64ListLazyL
 		var h LazyFloat64List
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilFloat64ListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -885,7 +885,7 @@ func (l AnyListLazyList) Filter(p func(e AnyList) bool) AnyListLazyList {
 		var h LazyAnyList
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilAnyListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
@@ -908,7 +908,7 @@ func (l Tuple2ListLazyList) Filter(p func(e Tuple2List) bool) Tuple2ListLazyList
 		var h LazyTuple2List
 		var found = false
 
-		for !found && xs.NonEmpty() {
+		for !found && xs != NilTuple2ListLazyList {
 			s := (*xs.state)()
 			h = (*s.head).Eval()
 			found = p(h.Value())
