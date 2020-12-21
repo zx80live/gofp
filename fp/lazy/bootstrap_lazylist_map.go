@@ -8,11 +8,11 @@ import . "github.com/zx80live/gofp/fp"
 func (l BoolLazyList) MapBool(f func(e bool) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -22,11 +22,11 @@ func (l BoolLazyList) MapBool(f func(e bool) bool) BoolLazyList {
 func (l BoolLazyList) MapString(f func(e bool) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -36,11 +36,11 @@ func (l BoolLazyList) MapString(f func(e bool) string) StringLazyList {
 func (l BoolLazyList) MapInt(f func(e bool) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -50,11 +50,11 @@ func (l BoolLazyList) MapInt(f func(e bool) int) IntLazyList {
 func (l BoolLazyList) MapInt64(f func(e bool) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -64,11 +64,11 @@ func (l BoolLazyList) MapInt64(f func(e bool) int64) Int64LazyList {
 func (l BoolLazyList) MapByte(f func(e bool) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -78,11 +78,11 @@ func (l BoolLazyList) MapByte(f func(e bool) byte) ByteLazyList {
 func (l BoolLazyList) MapRune(f func(e bool) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -92,11 +92,11 @@ func (l BoolLazyList) MapRune(f func(e bool) rune) RuneLazyList {
 func (l BoolLazyList) MapFloat32(f func(e bool) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -106,11 +106,11 @@ func (l BoolLazyList) MapFloat32(f func(e bool) float32) Float32LazyList {
 func (l BoolLazyList) MapFloat64(f func(e bool) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -120,11 +120,11 @@ func (l BoolLazyList) MapFloat64(f func(e bool) float64) Float64LazyList {
 func (l BoolLazyList) MapAny(f func(e bool) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -134,11 +134,11 @@ func (l BoolLazyList) MapAny(f func(e bool) Any) AnyLazyList {
 func (l BoolLazyList) MapTuple2(f func(e bool) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -148,11 +148,11 @@ func (l BoolLazyList) MapTuple2(f func(e bool) Tuple2) Tuple2LazyList {
 func (l BoolLazyList) MapBoolArray(f func(e bool) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -162,11 +162,11 @@ func (l BoolLazyList) MapBoolArray(f func(e bool) []bool) BoolArrayLazyList {
 func (l BoolLazyList) MapStringArray(f func(e bool) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -176,11 +176,11 @@ func (l BoolLazyList) MapStringArray(f func(e bool) []string) StringArrayLazyLis
 func (l BoolLazyList) MapIntArray(f func(e bool) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -190,11 +190,11 @@ func (l BoolLazyList) MapIntArray(f func(e bool) []int) IntArrayLazyList {
 func (l BoolLazyList) MapInt64Array(f func(e bool) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -204,11 +204,11 @@ func (l BoolLazyList) MapInt64Array(f func(e bool) []int64) Int64ArrayLazyList {
 func (l BoolLazyList) MapByteArray(f func(e bool) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -218,11 +218,11 @@ func (l BoolLazyList) MapByteArray(f func(e bool) []byte) ByteArrayLazyList {
 func (l BoolLazyList) MapRuneArray(f func(e bool) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -232,11 +232,11 @@ func (l BoolLazyList) MapRuneArray(f func(e bool) []rune) RuneArrayLazyList {
 func (l BoolLazyList) MapFloat32Array(f func(e bool) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -246,11 +246,11 @@ func (l BoolLazyList) MapFloat32Array(f func(e bool) []float32) Float32ArrayLazy
 func (l BoolLazyList) MapFloat64Array(f func(e bool) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -260,11 +260,11 @@ func (l BoolLazyList) MapFloat64Array(f func(e bool) []float64) Float64ArrayLazy
 func (l BoolLazyList) MapAnyArray(f func(e bool) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -274,11 +274,11 @@ func (l BoolLazyList) MapAnyArray(f func(e bool) []Any) AnyArrayLazyList {
 func (l BoolLazyList) MapTuple2Array(f func(e bool) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -288,11 +288,11 @@ func (l BoolLazyList) MapTuple2Array(f func(e bool) []Tuple2) Tuple2ArrayLazyLis
 func (l BoolLazyList) MapBoolOption(f func(e bool) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -302,11 +302,11 @@ func (l BoolLazyList) MapBoolOption(f func(e bool) BoolOption) BoolOptionLazyLis
 func (l BoolLazyList) MapStringOption(f func(e bool) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -316,11 +316,11 @@ func (l BoolLazyList) MapStringOption(f func(e bool) StringOption) StringOptionL
 func (l BoolLazyList) MapIntOption(f func(e bool) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -330,11 +330,11 @@ func (l BoolLazyList) MapIntOption(f func(e bool) IntOption) IntOptionLazyList {
 func (l BoolLazyList) MapInt64Option(f func(e bool) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -344,11 +344,11 @@ func (l BoolLazyList) MapInt64Option(f func(e bool) Int64Option) Int64OptionLazy
 func (l BoolLazyList) MapByteOption(f func(e bool) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -358,11 +358,11 @@ func (l BoolLazyList) MapByteOption(f func(e bool) ByteOption) ByteOptionLazyLis
 func (l BoolLazyList) MapRuneOption(f func(e bool) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -372,11 +372,11 @@ func (l BoolLazyList) MapRuneOption(f func(e bool) RuneOption) RuneOptionLazyLis
 func (l BoolLazyList) MapFloat32Option(f func(e bool) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -386,11 +386,11 @@ func (l BoolLazyList) MapFloat32Option(f func(e bool) Float32Option) Float32Opti
 func (l BoolLazyList) MapFloat64Option(f func(e bool) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -400,11 +400,11 @@ func (l BoolLazyList) MapFloat64Option(f func(e bool) Float64Option) Float64Opti
 func (l BoolLazyList) MapAnyOption(f func(e bool) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -414,11 +414,11 @@ func (l BoolLazyList) MapAnyOption(f func(e bool) AnyOption) AnyOptionLazyList {
 func (l BoolLazyList) MapTuple2Option(f func(e bool) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -428,11 +428,11 @@ func (l BoolLazyList) MapTuple2Option(f func(e bool) Tuple2Option) Tuple2OptionL
 func (l BoolLazyList) MapBoolList(f func(e bool) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -442,11 +442,11 @@ func (l BoolLazyList) MapBoolList(f func(e bool) BoolList) BoolListLazyList {
 func (l BoolLazyList) MapStringList(f func(e bool) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -456,11 +456,11 @@ func (l BoolLazyList) MapStringList(f func(e bool) StringList) StringListLazyLis
 func (l BoolLazyList) MapIntList(f func(e bool) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -470,11 +470,11 @@ func (l BoolLazyList) MapIntList(f func(e bool) IntList) IntListLazyList {
 func (l BoolLazyList) MapInt64List(f func(e bool) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -484,11 +484,11 @@ func (l BoolLazyList) MapInt64List(f func(e bool) Int64List) Int64ListLazyList {
 func (l BoolLazyList) MapByteList(f func(e bool) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -498,11 +498,11 @@ func (l BoolLazyList) MapByteList(f func(e bool) ByteList) ByteListLazyList {
 func (l BoolLazyList) MapRuneList(f func(e bool) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -512,11 +512,11 @@ func (l BoolLazyList) MapRuneList(f func(e bool) RuneList) RuneListLazyList {
 func (l BoolLazyList) MapFloat32List(f func(e bool) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -526,11 +526,11 @@ func (l BoolLazyList) MapFloat32List(f func(e bool) Float32List) Float32ListLazy
 func (l BoolLazyList) MapFloat64List(f func(e bool) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -540,11 +540,11 @@ func (l BoolLazyList) MapFloat64List(f func(e bool) Float64List) Float64ListLazy
 func (l BoolLazyList) MapAnyList(f func(e bool) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -554,11 +554,11 @@ func (l BoolLazyList) MapAnyList(f func(e bool) AnyList) AnyListLazyList {
 func (l BoolLazyList) MapTuple2List(f func(e bool) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -568,11 +568,11 @@ func (l BoolLazyList) MapTuple2List(f func(e bool) Tuple2List) Tuple2ListLazyLis
 func (l StringLazyList) MapBool(f func(e string) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -582,11 +582,11 @@ func (l StringLazyList) MapBool(f func(e string) bool) BoolLazyList {
 func (l StringLazyList) MapString(f func(e string) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -596,11 +596,11 @@ func (l StringLazyList) MapString(f func(e string) string) StringLazyList {
 func (l StringLazyList) MapInt(f func(e string) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -610,11 +610,11 @@ func (l StringLazyList) MapInt(f func(e string) int) IntLazyList {
 func (l StringLazyList) MapInt64(f func(e string) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -624,11 +624,11 @@ func (l StringLazyList) MapInt64(f func(e string) int64) Int64LazyList {
 func (l StringLazyList) MapByte(f func(e string) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -638,11 +638,11 @@ func (l StringLazyList) MapByte(f func(e string) byte) ByteLazyList {
 func (l StringLazyList) MapRune(f func(e string) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -652,11 +652,11 @@ func (l StringLazyList) MapRune(f func(e string) rune) RuneLazyList {
 func (l StringLazyList) MapFloat32(f func(e string) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -666,11 +666,11 @@ func (l StringLazyList) MapFloat32(f func(e string) float32) Float32LazyList {
 func (l StringLazyList) MapFloat64(f func(e string) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -680,11 +680,11 @@ func (l StringLazyList) MapFloat64(f func(e string) float64) Float64LazyList {
 func (l StringLazyList) MapAny(f func(e string) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -694,11 +694,11 @@ func (l StringLazyList) MapAny(f func(e string) Any) AnyLazyList {
 func (l StringLazyList) MapTuple2(f func(e string) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -708,11 +708,11 @@ func (l StringLazyList) MapTuple2(f func(e string) Tuple2) Tuple2LazyList {
 func (l StringLazyList) MapBoolArray(f func(e string) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -722,11 +722,11 @@ func (l StringLazyList) MapBoolArray(f func(e string) []bool) BoolArrayLazyList 
 func (l StringLazyList) MapStringArray(f func(e string) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -736,11 +736,11 @@ func (l StringLazyList) MapStringArray(f func(e string) []string) StringArrayLaz
 func (l StringLazyList) MapIntArray(f func(e string) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -750,11 +750,11 @@ func (l StringLazyList) MapIntArray(f func(e string) []int) IntArrayLazyList {
 func (l StringLazyList) MapInt64Array(f func(e string) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -764,11 +764,11 @@ func (l StringLazyList) MapInt64Array(f func(e string) []int64) Int64ArrayLazyLi
 func (l StringLazyList) MapByteArray(f func(e string) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -778,11 +778,11 @@ func (l StringLazyList) MapByteArray(f func(e string) []byte) ByteArrayLazyList 
 func (l StringLazyList) MapRuneArray(f func(e string) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -792,11 +792,11 @@ func (l StringLazyList) MapRuneArray(f func(e string) []rune) RuneArrayLazyList 
 func (l StringLazyList) MapFloat32Array(f func(e string) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -806,11 +806,11 @@ func (l StringLazyList) MapFloat32Array(f func(e string) []float32) Float32Array
 func (l StringLazyList) MapFloat64Array(f func(e string) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -820,11 +820,11 @@ func (l StringLazyList) MapFloat64Array(f func(e string) []float64) Float64Array
 func (l StringLazyList) MapAnyArray(f func(e string) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -834,11 +834,11 @@ func (l StringLazyList) MapAnyArray(f func(e string) []Any) AnyArrayLazyList {
 func (l StringLazyList) MapTuple2Array(f func(e string) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -848,11 +848,11 @@ func (l StringLazyList) MapTuple2Array(f func(e string) []Tuple2) Tuple2ArrayLaz
 func (l StringLazyList) MapBoolOption(f func(e string) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -862,11 +862,11 @@ func (l StringLazyList) MapBoolOption(f func(e string) BoolOption) BoolOptionLaz
 func (l StringLazyList) MapStringOption(f func(e string) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -876,11 +876,11 @@ func (l StringLazyList) MapStringOption(f func(e string) StringOption) StringOpt
 func (l StringLazyList) MapIntOption(f func(e string) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -890,11 +890,11 @@ func (l StringLazyList) MapIntOption(f func(e string) IntOption) IntOptionLazyLi
 func (l StringLazyList) MapInt64Option(f func(e string) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -904,11 +904,11 @@ func (l StringLazyList) MapInt64Option(f func(e string) Int64Option) Int64Option
 func (l StringLazyList) MapByteOption(f func(e string) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -918,11 +918,11 @@ func (l StringLazyList) MapByteOption(f func(e string) ByteOption) ByteOptionLaz
 func (l StringLazyList) MapRuneOption(f func(e string) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -932,11 +932,11 @@ func (l StringLazyList) MapRuneOption(f func(e string) RuneOption) RuneOptionLaz
 func (l StringLazyList) MapFloat32Option(f func(e string) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -946,11 +946,11 @@ func (l StringLazyList) MapFloat32Option(f func(e string) Float32Option) Float32
 func (l StringLazyList) MapFloat64Option(f func(e string) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -960,11 +960,11 @@ func (l StringLazyList) MapFloat64Option(f func(e string) Float64Option) Float64
 func (l StringLazyList) MapAnyOption(f func(e string) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -974,11 +974,11 @@ func (l StringLazyList) MapAnyOption(f func(e string) AnyOption) AnyOptionLazyLi
 func (l StringLazyList) MapTuple2Option(f func(e string) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -988,11 +988,11 @@ func (l StringLazyList) MapTuple2Option(f func(e string) Tuple2Option) Tuple2Opt
 func (l StringLazyList) MapBoolList(f func(e string) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -1002,11 +1002,11 @@ func (l StringLazyList) MapBoolList(f func(e string) BoolList) BoolListLazyList 
 func (l StringLazyList) MapStringList(f func(e string) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -1016,11 +1016,11 @@ func (l StringLazyList) MapStringList(f func(e string) StringList) StringListLaz
 func (l StringLazyList) MapIntList(f func(e string) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -1030,11 +1030,11 @@ func (l StringLazyList) MapIntList(f func(e string) IntList) IntListLazyList {
 func (l StringLazyList) MapInt64List(f func(e string) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -1044,11 +1044,11 @@ func (l StringLazyList) MapInt64List(f func(e string) Int64List) Int64ListLazyLi
 func (l StringLazyList) MapByteList(f func(e string) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -1058,11 +1058,11 @@ func (l StringLazyList) MapByteList(f func(e string) ByteList) ByteListLazyList 
 func (l StringLazyList) MapRuneList(f func(e string) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -1072,11 +1072,11 @@ func (l StringLazyList) MapRuneList(f func(e string) RuneList) RuneListLazyList 
 func (l StringLazyList) MapFloat32List(f func(e string) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -1086,11 +1086,11 @@ func (l StringLazyList) MapFloat32List(f func(e string) Float32List) Float32List
 func (l StringLazyList) MapFloat64List(f func(e string) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -1100,11 +1100,11 @@ func (l StringLazyList) MapFloat64List(f func(e string) Float64List) Float64List
 func (l StringLazyList) MapAnyList(f func(e string) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -1114,11 +1114,11 @@ func (l StringLazyList) MapAnyList(f func(e string) AnyList) AnyListLazyList {
 func (l StringLazyList) MapTuple2List(f func(e string) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -1128,11 +1128,11 @@ func (l StringLazyList) MapTuple2List(f func(e string) Tuple2List) Tuple2ListLaz
 func (l IntLazyList) MapBool(f func(e int) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -1142,11 +1142,11 @@ func (l IntLazyList) MapBool(f func(e int) bool) BoolLazyList {
 func (l IntLazyList) MapString(f func(e int) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -1156,11 +1156,11 @@ func (l IntLazyList) MapString(f func(e int) string) StringLazyList {
 func (l IntLazyList) MapInt(f func(e int) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -1170,11 +1170,11 @@ func (l IntLazyList) MapInt(f func(e int) int) IntLazyList {
 func (l IntLazyList) MapInt64(f func(e int) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -1184,11 +1184,11 @@ func (l IntLazyList) MapInt64(f func(e int) int64) Int64LazyList {
 func (l IntLazyList) MapByte(f func(e int) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -1198,11 +1198,11 @@ func (l IntLazyList) MapByte(f func(e int) byte) ByteLazyList {
 func (l IntLazyList) MapRune(f func(e int) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -1212,11 +1212,11 @@ func (l IntLazyList) MapRune(f func(e int) rune) RuneLazyList {
 func (l IntLazyList) MapFloat32(f func(e int) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -1226,11 +1226,11 @@ func (l IntLazyList) MapFloat32(f func(e int) float32) Float32LazyList {
 func (l IntLazyList) MapFloat64(f func(e int) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -1240,11 +1240,11 @@ func (l IntLazyList) MapFloat64(f func(e int) float64) Float64LazyList {
 func (l IntLazyList) MapAny(f func(e int) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -1254,11 +1254,11 @@ func (l IntLazyList) MapAny(f func(e int) Any) AnyLazyList {
 func (l IntLazyList) MapTuple2(f func(e int) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -1268,11 +1268,11 @@ func (l IntLazyList) MapTuple2(f func(e int) Tuple2) Tuple2LazyList {
 func (l IntLazyList) MapBoolArray(f func(e int) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -1282,11 +1282,11 @@ func (l IntLazyList) MapBoolArray(f func(e int) []bool) BoolArrayLazyList {
 func (l IntLazyList) MapStringArray(f func(e int) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -1296,11 +1296,11 @@ func (l IntLazyList) MapStringArray(f func(e int) []string) StringArrayLazyList 
 func (l IntLazyList) MapIntArray(f func(e int) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -1310,11 +1310,11 @@ func (l IntLazyList) MapIntArray(f func(e int) []int) IntArrayLazyList {
 func (l IntLazyList) MapInt64Array(f func(e int) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -1324,11 +1324,11 @@ func (l IntLazyList) MapInt64Array(f func(e int) []int64) Int64ArrayLazyList {
 func (l IntLazyList) MapByteArray(f func(e int) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -1338,11 +1338,11 @@ func (l IntLazyList) MapByteArray(f func(e int) []byte) ByteArrayLazyList {
 func (l IntLazyList) MapRuneArray(f func(e int) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -1352,11 +1352,11 @@ func (l IntLazyList) MapRuneArray(f func(e int) []rune) RuneArrayLazyList {
 func (l IntLazyList) MapFloat32Array(f func(e int) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -1366,11 +1366,11 @@ func (l IntLazyList) MapFloat32Array(f func(e int) []float32) Float32ArrayLazyLi
 func (l IntLazyList) MapFloat64Array(f func(e int) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -1380,11 +1380,11 @@ func (l IntLazyList) MapFloat64Array(f func(e int) []float64) Float64ArrayLazyLi
 func (l IntLazyList) MapAnyArray(f func(e int) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -1394,11 +1394,11 @@ func (l IntLazyList) MapAnyArray(f func(e int) []Any) AnyArrayLazyList {
 func (l IntLazyList) MapTuple2Array(f func(e int) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -1408,11 +1408,11 @@ func (l IntLazyList) MapTuple2Array(f func(e int) []Tuple2) Tuple2ArrayLazyList 
 func (l IntLazyList) MapBoolOption(f func(e int) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -1422,11 +1422,11 @@ func (l IntLazyList) MapBoolOption(f func(e int) BoolOption) BoolOptionLazyList 
 func (l IntLazyList) MapStringOption(f func(e int) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -1436,11 +1436,11 @@ func (l IntLazyList) MapStringOption(f func(e int) StringOption) StringOptionLaz
 func (l IntLazyList) MapIntOption(f func(e int) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -1450,11 +1450,11 @@ func (l IntLazyList) MapIntOption(f func(e int) IntOption) IntOptionLazyList {
 func (l IntLazyList) MapInt64Option(f func(e int) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -1464,11 +1464,11 @@ func (l IntLazyList) MapInt64Option(f func(e int) Int64Option) Int64OptionLazyLi
 func (l IntLazyList) MapByteOption(f func(e int) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -1478,11 +1478,11 @@ func (l IntLazyList) MapByteOption(f func(e int) ByteOption) ByteOptionLazyList 
 func (l IntLazyList) MapRuneOption(f func(e int) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -1492,11 +1492,11 @@ func (l IntLazyList) MapRuneOption(f func(e int) RuneOption) RuneOptionLazyList 
 func (l IntLazyList) MapFloat32Option(f func(e int) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -1506,11 +1506,11 @@ func (l IntLazyList) MapFloat32Option(f func(e int) Float32Option) Float32Option
 func (l IntLazyList) MapFloat64Option(f func(e int) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -1520,11 +1520,11 @@ func (l IntLazyList) MapFloat64Option(f func(e int) Float64Option) Float64Option
 func (l IntLazyList) MapAnyOption(f func(e int) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -1534,11 +1534,11 @@ func (l IntLazyList) MapAnyOption(f func(e int) AnyOption) AnyOptionLazyList {
 func (l IntLazyList) MapTuple2Option(f func(e int) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -1548,11 +1548,11 @@ func (l IntLazyList) MapTuple2Option(f func(e int) Tuple2Option) Tuple2OptionLaz
 func (l IntLazyList) MapBoolList(f func(e int) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -1562,11 +1562,11 @@ func (l IntLazyList) MapBoolList(f func(e int) BoolList) BoolListLazyList {
 func (l IntLazyList) MapStringList(f func(e int) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -1576,11 +1576,11 @@ func (l IntLazyList) MapStringList(f func(e int) StringList) StringListLazyList 
 func (l IntLazyList) MapIntList(f func(e int) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -1590,11 +1590,11 @@ func (l IntLazyList) MapIntList(f func(e int) IntList) IntListLazyList {
 func (l IntLazyList) MapInt64List(f func(e int) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -1604,11 +1604,11 @@ func (l IntLazyList) MapInt64List(f func(e int) Int64List) Int64ListLazyList {
 func (l IntLazyList) MapByteList(f func(e int) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -1618,11 +1618,11 @@ func (l IntLazyList) MapByteList(f func(e int) ByteList) ByteListLazyList {
 func (l IntLazyList) MapRuneList(f func(e int) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -1632,11 +1632,11 @@ func (l IntLazyList) MapRuneList(f func(e int) RuneList) RuneListLazyList {
 func (l IntLazyList) MapFloat32List(f func(e int) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -1646,11 +1646,11 @@ func (l IntLazyList) MapFloat32List(f func(e int) Float32List) Float32ListLazyLi
 func (l IntLazyList) MapFloat64List(f func(e int) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -1660,11 +1660,11 @@ func (l IntLazyList) MapFloat64List(f func(e int) Float64List) Float64ListLazyLi
 func (l IntLazyList) MapAnyList(f func(e int) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -1674,11 +1674,11 @@ func (l IntLazyList) MapAnyList(f func(e int) AnyList) AnyListLazyList {
 func (l IntLazyList) MapTuple2List(f func(e int) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -1688,11 +1688,11 @@ func (l IntLazyList) MapTuple2List(f func(e int) Tuple2List) Tuple2ListLazyList 
 func (l Int64LazyList) MapBool(f func(e int64) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -1702,11 +1702,11 @@ func (l Int64LazyList) MapBool(f func(e int64) bool) BoolLazyList {
 func (l Int64LazyList) MapString(f func(e int64) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -1716,11 +1716,11 @@ func (l Int64LazyList) MapString(f func(e int64) string) StringLazyList {
 func (l Int64LazyList) MapInt(f func(e int64) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -1730,11 +1730,11 @@ func (l Int64LazyList) MapInt(f func(e int64) int) IntLazyList {
 func (l Int64LazyList) MapInt64(f func(e int64) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -1744,11 +1744,11 @@ func (l Int64LazyList) MapInt64(f func(e int64) int64) Int64LazyList {
 func (l Int64LazyList) MapByte(f func(e int64) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -1758,11 +1758,11 @@ func (l Int64LazyList) MapByte(f func(e int64) byte) ByteLazyList {
 func (l Int64LazyList) MapRune(f func(e int64) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -1772,11 +1772,11 @@ func (l Int64LazyList) MapRune(f func(e int64) rune) RuneLazyList {
 func (l Int64LazyList) MapFloat32(f func(e int64) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -1786,11 +1786,11 @@ func (l Int64LazyList) MapFloat32(f func(e int64) float32) Float32LazyList {
 func (l Int64LazyList) MapFloat64(f func(e int64) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -1800,11 +1800,11 @@ func (l Int64LazyList) MapFloat64(f func(e int64) float64) Float64LazyList {
 func (l Int64LazyList) MapAny(f func(e int64) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -1814,11 +1814,11 @@ func (l Int64LazyList) MapAny(f func(e int64) Any) AnyLazyList {
 func (l Int64LazyList) MapTuple2(f func(e int64) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -1828,11 +1828,11 @@ func (l Int64LazyList) MapTuple2(f func(e int64) Tuple2) Tuple2LazyList {
 func (l Int64LazyList) MapBoolArray(f func(e int64) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -1842,11 +1842,11 @@ func (l Int64LazyList) MapBoolArray(f func(e int64) []bool) BoolArrayLazyList {
 func (l Int64LazyList) MapStringArray(f func(e int64) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -1856,11 +1856,11 @@ func (l Int64LazyList) MapStringArray(f func(e int64) []string) StringArrayLazyL
 func (l Int64LazyList) MapIntArray(f func(e int64) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -1870,11 +1870,11 @@ func (l Int64LazyList) MapIntArray(f func(e int64) []int) IntArrayLazyList {
 func (l Int64LazyList) MapInt64Array(f func(e int64) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -1884,11 +1884,11 @@ func (l Int64LazyList) MapInt64Array(f func(e int64) []int64) Int64ArrayLazyList
 func (l Int64LazyList) MapByteArray(f func(e int64) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -1898,11 +1898,11 @@ func (l Int64LazyList) MapByteArray(f func(e int64) []byte) ByteArrayLazyList {
 func (l Int64LazyList) MapRuneArray(f func(e int64) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -1912,11 +1912,11 @@ func (l Int64LazyList) MapRuneArray(f func(e int64) []rune) RuneArrayLazyList {
 func (l Int64LazyList) MapFloat32Array(f func(e int64) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -1926,11 +1926,11 @@ func (l Int64LazyList) MapFloat32Array(f func(e int64) []float32) Float32ArrayLa
 func (l Int64LazyList) MapFloat64Array(f func(e int64) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -1940,11 +1940,11 @@ func (l Int64LazyList) MapFloat64Array(f func(e int64) []float64) Float64ArrayLa
 func (l Int64LazyList) MapAnyArray(f func(e int64) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -1954,11 +1954,11 @@ func (l Int64LazyList) MapAnyArray(f func(e int64) []Any) AnyArrayLazyList {
 func (l Int64LazyList) MapTuple2Array(f func(e int64) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -1968,11 +1968,11 @@ func (l Int64LazyList) MapTuple2Array(f func(e int64) []Tuple2) Tuple2ArrayLazyL
 func (l Int64LazyList) MapBoolOption(f func(e int64) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -1982,11 +1982,11 @@ func (l Int64LazyList) MapBoolOption(f func(e int64) BoolOption) BoolOptionLazyL
 func (l Int64LazyList) MapStringOption(f func(e int64) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -1996,11 +1996,11 @@ func (l Int64LazyList) MapStringOption(f func(e int64) StringOption) StringOptio
 func (l Int64LazyList) MapIntOption(f func(e int64) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -2010,11 +2010,11 @@ func (l Int64LazyList) MapIntOption(f func(e int64) IntOption) IntOptionLazyList
 func (l Int64LazyList) MapInt64Option(f func(e int64) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -2024,11 +2024,11 @@ func (l Int64LazyList) MapInt64Option(f func(e int64) Int64Option) Int64OptionLa
 func (l Int64LazyList) MapByteOption(f func(e int64) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -2038,11 +2038,11 @@ func (l Int64LazyList) MapByteOption(f func(e int64) ByteOption) ByteOptionLazyL
 func (l Int64LazyList) MapRuneOption(f func(e int64) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -2052,11 +2052,11 @@ func (l Int64LazyList) MapRuneOption(f func(e int64) RuneOption) RuneOptionLazyL
 func (l Int64LazyList) MapFloat32Option(f func(e int64) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -2066,11 +2066,11 @@ func (l Int64LazyList) MapFloat32Option(f func(e int64) Float32Option) Float32Op
 func (l Int64LazyList) MapFloat64Option(f func(e int64) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -2080,11 +2080,11 @@ func (l Int64LazyList) MapFloat64Option(f func(e int64) Float64Option) Float64Op
 func (l Int64LazyList) MapAnyOption(f func(e int64) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -2094,11 +2094,11 @@ func (l Int64LazyList) MapAnyOption(f func(e int64) AnyOption) AnyOptionLazyList
 func (l Int64LazyList) MapTuple2Option(f func(e int64) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -2108,11 +2108,11 @@ func (l Int64LazyList) MapTuple2Option(f func(e int64) Tuple2Option) Tuple2Optio
 func (l Int64LazyList) MapBoolList(f func(e int64) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -2122,11 +2122,11 @@ func (l Int64LazyList) MapBoolList(f func(e int64) BoolList) BoolListLazyList {
 func (l Int64LazyList) MapStringList(f func(e int64) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -2136,11 +2136,11 @@ func (l Int64LazyList) MapStringList(f func(e int64) StringList) StringListLazyL
 func (l Int64LazyList) MapIntList(f func(e int64) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -2150,11 +2150,11 @@ func (l Int64LazyList) MapIntList(f func(e int64) IntList) IntListLazyList {
 func (l Int64LazyList) MapInt64List(f func(e int64) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -2164,11 +2164,11 @@ func (l Int64LazyList) MapInt64List(f func(e int64) Int64List) Int64ListLazyList
 func (l Int64LazyList) MapByteList(f func(e int64) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -2178,11 +2178,11 @@ func (l Int64LazyList) MapByteList(f func(e int64) ByteList) ByteListLazyList {
 func (l Int64LazyList) MapRuneList(f func(e int64) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -2192,11 +2192,11 @@ func (l Int64LazyList) MapRuneList(f func(e int64) RuneList) RuneListLazyList {
 func (l Int64LazyList) MapFloat32List(f func(e int64) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -2206,11 +2206,11 @@ func (l Int64LazyList) MapFloat32List(f func(e int64) Float32List) Float32ListLa
 func (l Int64LazyList) MapFloat64List(f func(e int64) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -2220,11 +2220,11 @@ func (l Int64LazyList) MapFloat64List(f func(e int64) Float64List) Float64ListLa
 func (l Int64LazyList) MapAnyList(f func(e int64) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -2234,11 +2234,11 @@ func (l Int64LazyList) MapAnyList(f func(e int64) AnyList) AnyListLazyList {
 func (l Int64LazyList) MapTuple2List(f func(e int64) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -2248,11 +2248,11 @@ func (l Int64LazyList) MapTuple2List(f func(e int64) Tuple2List) Tuple2ListLazyL
 func (l ByteLazyList) MapBool(f func(e byte) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -2262,11 +2262,11 @@ func (l ByteLazyList) MapBool(f func(e byte) bool) BoolLazyList {
 func (l ByteLazyList) MapString(f func(e byte) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -2276,11 +2276,11 @@ func (l ByteLazyList) MapString(f func(e byte) string) StringLazyList {
 func (l ByteLazyList) MapInt(f func(e byte) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -2290,11 +2290,11 @@ func (l ByteLazyList) MapInt(f func(e byte) int) IntLazyList {
 func (l ByteLazyList) MapInt64(f func(e byte) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -2304,11 +2304,11 @@ func (l ByteLazyList) MapInt64(f func(e byte) int64) Int64LazyList {
 func (l ByteLazyList) MapByte(f func(e byte) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -2318,11 +2318,11 @@ func (l ByteLazyList) MapByte(f func(e byte) byte) ByteLazyList {
 func (l ByteLazyList) MapRune(f func(e byte) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -2332,11 +2332,11 @@ func (l ByteLazyList) MapRune(f func(e byte) rune) RuneLazyList {
 func (l ByteLazyList) MapFloat32(f func(e byte) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -2346,11 +2346,11 @@ func (l ByteLazyList) MapFloat32(f func(e byte) float32) Float32LazyList {
 func (l ByteLazyList) MapFloat64(f func(e byte) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -2360,11 +2360,11 @@ func (l ByteLazyList) MapFloat64(f func(e byte) float64) Float64LazyList {
 func (l ByteLazyList) MapAny(f func(e byte) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -2374,11 +2374,11 @@ func (l ByteLazyList) MapAny(f func(e byte) Any) AnyLazyList {
 func (l ByteLazyList) MapTuple2(f func(e byte) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -2388,11 +2388,11 @@ func (l ByteLazyList) MapTuple2(f func(e byte) Tuple2) Tuple2LazyList {
 func (l ByteLazyList) MapBoolArray(f func(e byte) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -2402,11 +2402,11 @@ func (l ByteLazyList) MapBoolArray(f func(e byte) []bool) BoolArrayLazyList {
 func (l ByteLazyList) MapStringArray(f func(e byte) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -2416,11 +2416,11 @@ func (l ByteLazyList) MapStringArray(f func(e byte) []string) StringArrayLazyLis
 func (l ByteLazyList) MapIntArray(f func(e byte) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -2430,11 +2430,11 @@ func (l ByteLazyList) MapIntArray(f func(e byte) []int) IntArrayLazyList {
 func (l ByteLazyList) MapInt64Array(f func(e byte) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -2444,11 +2444,11 @@ func (l ByteLazyList) MapInt64Array(f func(e byte) []int64) Int64ArrayLazyList {
 func (l ByteLazyList) MapByteArray(f func(e byte) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -2458,11 +2458,11 @@ func (l ByteLazyList) MapByteArray(f func(e byte) []byte) ByteArrayLazyList {
 func (l ByteLazyList) MapRuneArray(f func(e byte) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -2472,11 +2472,11 @@ func (l ByteLazyList) MapRuneArray(f func(e byte) []rune) RuneArrayLazyList {
 func (l ByteLazyList) MapFloat32Array(f func(e byte) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -2486,11 +2486,11 @@ func (l ByteLazyList) MapFloat32Array(f func(e byte) []float32) Float32ArrayLazy
 func (l ByteLazyList) MapFloat64Array(f func(e byte) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -2500,11 +2500,11 @@ func (l ByteLazyList) MapFloat64Array(f func(e byte) []float64) Float64ArrayLazy
 func (l ByteLazyList) MapAnyArray(f func(e byte) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -2514,11 +2514,11 @@ func (l ByteLazyList) MapAnyArray(f func(e byte) []Any) AnyArrayLazyList {
 func (l ByteLazyList) MapTuple2Array(f func(e byte) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -2528,11 +2528,11 @@ func (l ByteLazyList) MapTuple2Array(f func(e byte) []Tuple2) Tuple2ArrayLazyLis
 func (l ByteLazyList) MapBoolOption(f func(e byte) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -2542,11 +2542,11 @@ func (l ByteLazyList) MapBoolOption(f func(e byte) BoolOption) BoolOptionLazyLis
 func (l ByteLazyList) MapStringOption(f func(e byte) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -2556,11 +2556,11 @@ func (l ByteLazyList) MapStringOption(f func(e byte) StringOption) StringOptionL
 func (l ByteLazyList) MapIntOption(f func(e byte) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -2570,11 +2570,11 @@ func (l ByteLazyList) MapIntOption(f func(e byte) IntOption) IntOptionLazyList {
 func (l ByteLazyList) MapInt64Option(f func(e byte) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -2584,11 +2584,11 @@ func (l ByteLazyList) MapInt64Option(f func(e byte) Int64Option) Int64OptionLazy
 func (l ByteLazyList) MapByteOption(f func(e byte) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -2598,11 +2598,11 @@ func (l ByteLazyList) MapByteOption(f func(e byte) ByteOption) ByteOptionLazyLis
 func (l ByteLazyList) MapRuneOption(f func(e byte) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -2612,11 +2612,11 @@ func (l ByteLazyList) MapRuneOption(f func(e byte) RuneOption) RuneOptionLazyLis
 func (l ByteLazyList) MapFloat32Option(f func(e byte) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -2626,11 +2626,11 @@ func (l ByteLazyList) MapFloat32Option(f func(e byte) Float32Option) Float32Opti
 func (l ByteLazyList) MapFloat64Option(f func(e byte) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -2640,11 +2640,11 @@ func (l ByteLazyList) MapFloat64Option(f func(e byte) Float64Option) Float64Opti
 func (l ByteLazyList) MapAnyOption(f func(e byte) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -2654,11 +2654,11 @@ func (l ByteLazyList) MapAnyOption(f func(e byte) AnyOption) AnyOptionLazyList {
 func (l ByteLazyList) MapTuple2Option(f func(e byte) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -2668,11 +2668,11 @@ func (l ByteLazyList) MapTuple2Option(f func(e byte) Tuple2Option) Tuple2OptionL
 func (l ByteLazyList) MapBoolList(f func(e byte) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -2682,11 +2682,11 @@ func (l ByteLazyList) MapBoolList(f func(e byte) BoolList) BoolListLazyList {
 func (l ByteLazyList) MapStringList(f func(e byte) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -2696,11 +2696,11 @@ func (l ByteLazyList) MapStringList(f func(e byte) StringList) StringListLazyLis
 func (l ByteLazyList) MapIntList(f func(e byte) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -2710,11 +2710,11 @@ func (l ByteLazyList) MapIntList(f func(e byte) IntList) IntListLazyList {
 func (l ByteLazyList) MapInt64List(f func(e byte) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -2724,11 +2724,11 @@ func (l ByteLazyList) MapInt64List(f func(e byte) Int64List) Int64ListLazyList {
 func (l ByteLazyList) MapByteList(f func(e byte) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -2738,11 +2738,11 @@ func (l ByteLazyList) MapByteList(f func(e byte) ByteList) ByteListLazyList {
 func (l ByteLazyList) MapRuneList(f func(e byte) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -2752,11 +2752,11 @@ func (l ByteLazyList) MapRuneList(f func(e byte) RuneList) RuneListLazyList {
 func (l ByteLazyList) MapFloat32List(f func(e byte) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -2766,11 +2766,11 @@ func (l ByteLazyList) MapFloat32List(f func(e byte) Float32List) Float32ListLazy
 func (l ByteLazyList) MapFloat64List(f func(e byte) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -2780,11 +2780,11 @@ func (l ByteLazyList) MapFloat64List(f func(e byte) Float64List) Float64ListLazy
 func (l ByteLazyList) MapAnyList(f func(e byte) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -2794,11 +2794,11 @@ func (l ByteLazyList) MapAnyList(f func(e byte) AnyList) AnyListLazyList {
 func (l ByteLazyList) MapTuple2List(f func(e byte) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -2808,11 +2808,11 @@ func (l ByteLazyList) MapTuple2List(f func(e byte) Tuple2List) Tuple2ListLazyLis
 func (l RuneLazyList) MapBool(f func(e rune) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -2822,11 +2822,11 @@ func (l RuneLazyList) MapBool(f func(e rune) bool) BoolLazyList {
 func (l RuneLazyList) MapString(f func(e rune) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -2836,11 +2836,11 @@ func (l RuneLazyList) MapString(f func(e rune) string) StringLazyList {
 func (l RuneLazyList) MapInt(f func(e rune) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -2850,11 +2850,11 @@ func (l RuneLazyList) MapInt(f func(e rune) int) IntLazyList {
 func (l RuneLazyList) MapInt64(f func(e rune) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -2864,11 +2864,11 @@ func (l RuneLazyList) MapInt64(f func(e rune) int64) Int64LazyList {
 func (l RuneLazyList) MapByte(f func(e rune) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -2878,11 +2878,11 @@ func (l RuneLazyList) MapByte(f func(e rune) byte) ByteLazyList {
 func (l RuneLazyList) MapRune(f func(e rune) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -2892,11 +2892,11 @@ func (l RuneLazyList) MapRune(f func(e rune) rune) RuneLazyList {
 func (l RuneLazyList) MapFloat32(f func(e rune) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -2906,11 +2906,11 @@ func (l RuneLazyList) MapFloat32(f func(e rune) float32) Float32LazyList {
 func (l RuneLazyList) MapFloat64(f func(e rune) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -2920,11 +2920,11 @@ func (l RuneLazyList) MapFloat64(f func(e rune) float64) Float64LazyList {
 func (l RuneLazyList) MapAny(f func(e rune) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -2934,11 +2934,11 @@ func (l RuneLazyList) MapAny(f func(e rune) Any) AnyLazyList {
 func (l RuneLazyList) MapTuple2(f func(e rune) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -2948,11 +2948,11 @@ func (l RuneLazyList) MapTuple2(f func(e rune) Tuple2) Tuple2LazyList {
 func (l RuneLazyList) MapBoolArray(f func(e rune) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -2962,11 +2962,11 @@ func (l RuneLazyList) MapBoolArray(f func(e rune) []bool) BoolArrayLazyList {
 func (l RuneLazyList) MapStringArray(f func(e rune) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -2976,11 +2976,11 @@ func (l RuneLazyList) MapStringArray(f func(e rune) []string) StringArrayLazyLis
 func (l RuneLazyList) MapIntArray(f func(e rune) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -2990,11 +2990,11 @@ func (l RuneLazyList) MapIntArray(f func(e rune) []int) IntArrayLazyList {
 func (l RuneLazyList) MapInt64Array(f func(e rune) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -3004,11 +3004,11 @@ func (l RuneLazyList) MapInt64Array(f func(e rune) []int64) Int64ArrayLazyList {
 func (l RuneLazyList) MapByteArray(f func(e rune) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -3018,11 +3018,11 @@ func (l RuneLazyList) MapByteArray(f func(e rune) []byte) ByteArrayLazyList {
 func (l RuneLazyList) MapRuneArray(f func(e rune) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -3032,11 +3032,11 @@ func (l RuneLazyList) MapRuneArray(f func(e rune) []rune) RuneArrayLazyList {
 func (l RuneLazyList) MapFloat32Array(f func(e rune) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -3046,11 +3046,11 @@ func (l RuneLazyList) MapFloat32Array(f func(e rune) []float32) Float32ArrayLazy
 func (l RuneLazyList) MapFloat64Array(f func(e rune) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -3060,11 +3060,11 @@ func (l RuneLazyList) MapFloat64Array(f func(e rune) []float64) Float64ArrayLazy
 func (l RuneLazyList) MapAnyArray(f func(e rune) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -3074,11 +3074,11 @@ func (l RuneLazyList) MapAnyArray(f func(e rune) []Any) AnyArrayLazyList {
 func (l RuneLazyList) MapTuple2Array(f func(e rune) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -3088,11 +3088,11 @@ func (l RuneLazyList) MapTuple2Array(f func(e rune) []Tuple2) Tuple2ArrayLazyLis
 func (l RuneLazyList) MapBoolOption(f func(e rune) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -3102,11 +3102,11 @@ func (l RuneLazyList) MapBoolOption(f func(e rune) BoolOption) BoolOptionLazyLis
 func (l RuneLazyList) MapStringOption(f func(e rune) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -3116,11 +3116,11 @@ func (l RuneLazyList) MapStringOption(f func(e rune) StringOption) StringOptionL
 func (l RuneLazyList) MapIntOption(f func(e rune) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -3130,11 +3130,11 @@ func (l RuneLazyList) MapIntOption(f func(e rune) IntOption) IntOptionLazyList {
 func (l RuneLazyList) MapInt64Option(f func(e rune) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -3144,11 +3144,11 @@ func (l RuneLazyList) MapInt64Option(f func(e rune) Int64Option) Int64OptionLazy
 func (l RuneLazyList) MapByteOption(f func(e rune) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -3158,11 +3158,11 @@ func (l RuneLazyList) MapByteOption(f func(e rune) ByteOption) ByteOptionLazyLis
 func (l RuneLazyList) MapRuneOption(f func(e rune) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -3172,11 +3172,11 @@ func (l RuneLazyList) MapRuneOption(f func(e rune) RuneOption) RuneOptionLazyLis
 func (l RuneLazyList) MapFloat32Option(f func(e rune) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -3186,11 +3186,11 @@ func (l RuneLazyList) MapFloat32Option(f func(e rune) Float32Option) Float32Opti
 func (l RuneLazyList) MapFloat64Option(f func(e rune) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -3200,11 +3200,11 @@ func (l RuneLazyList) MapFloat64Option(f func(e rune) Float64Option) Float64Opti
 func (l RuneLazyList) MapAnyOption(f func(e rune) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -3214,11 +3214,11 @@ func (l RuneLazyList) MapAnyOption(f func(e rune) AnyOption) AnyOptionLazyList {
 func (l RuneLazyList) MapTuple2Option(f func(e rune) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -3228,11 +3228,11 @@ func (l RuneLazyList) MapTuple2Option(f func(e rune) Tuple2Option) Tuple2OptionL
 func (l RuneLazyList) MapBoolList(f func(e rune) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -3242,11 +3242,11 @@ func (l RuneLazyList) MapBoolList(f func(e rune) BoolList) BoolListLazyList {
 func (l RuneLazyList) MapStringList(f func(e rune) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -3256,11 +3256,11 @@ func (l RuneLazyList) MapStringList(f func(e rune) StringList) StringListLazyLis
 func (l RuneLazyList) MapIntList(f func(e rune) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -3270,11 +3270,11 @@ func (l RuneLazyList) MapIntList(f func(e rune) IntList) IntListLazyList {
 func (l RuneLazyList) MapInt64List(f func(e rune) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -3284,11 +3284,11 @@ func (l RuneLazyList) MapInt64List(f func(e rune) Int64List) Int64ListLazyList {
 func (l RuneLazyList) MapByteList(f func(e rune) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -3298,11 +3298,11 @@ func (l RuneLazyList) MapByteList(f func(e rune) ByteList) ByteListLazyList {
 func (l RuneLazyList) MapRuneList(f func(e rune) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -3312,11 +3312,11 @@ func (l RuneLazyList) MapRuneList(f func(e rune) RuneList) RuneListLazyList {
 func (l RuneLazyList) MapFloat32List(f func(e rune) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -3326,11 +3326,11 @@ func (l RuneLazyList) MapFloat32List(f func(e rune) Float32List) Float32ListLazy
 func (l RuneLazyList) MapFloat64List(f func(e rune) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -3340,11 +3340,11 @@ func (l RuneLazyList) MapFloat64List(f func(e rune) Float64List) Float64ListLazy
 func (l RuneLazyList) MapAnyList(f func(e rune) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -3354,11 +3354,11 @@ func (l RuneLazyList) MapAnyList(f func(e rune) AnyList) AnyListLazyList {
 func (l RuneLazyList) MapTuple2List(f func(e rune) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -3368,11 +3368,11 @@ func (l RuneLazyList) MapTuple2List(f func(e rune) Tuple2List) Tuple2ListLazyLis
 func (l Float32LazyList) MapBool(f func(e float32) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -3382,11 +3382,11 @@ func (l Float32LazyList) MapBool(f func(e float32) bool) BoolLazyList {
 func (l Float32LazyList) MapString(f func(e float32) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -3396,11 +3396,11 @@ func (l Float32LazyList) MapString(f func(e float32) string) StringLazyList {
 func (l Float32LazyList) MapInt(f func(e float32) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -3410,11 +3410,11 @@ func (l Float32LazyList) MapInt(f func(e float32) int) IntLazyList {
 func (l Float32LazyList) MapInt64(f func(e float32) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -3424,11 +3424,11 @@ func (l Float32LazyList) MapInt64(f func(e float32) int64) Int64LazyList {
 func (l Float32LazyList) MapByte(f func(e float32) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -3438,11 +3438,11 @@ func (l Float32LazyList) MapByte(f func(e float32) byte) ByteLazyList {
 func (l Float32LazyList) MapRune(f func(e float32) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -3452,11 +3452,11 @@ func (l Float32LazyList) MapRune(f func(e float32) rune) RuneLazyList {
 func (l Float32LazyList) MapFloat32(f func(e float32) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -3466,11 +3466,11 @@ func (l Float32LazyList) MapFloat32(f func(e float32) float32) Float32LazyList {
 func (l Float32LazyList) MapFloat64(f func(e float32) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -3480,11 +3480,11 @@ func (l Float32LazyList) MapFloat64(f func(e float32) float64) Float64LazyList {
 func (l Float32LazyList) MapAny(f func(e float32) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -3494,11 +3494,11 @@ func (l Float32LazyList) MapAny(f func(e float32) Any) AnyLazyList {
 func (l Float32LazyList) MapTuple2(f func(e float32) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -3508,11 +3508,11 @@ func (l Float32LazyList) MapTuple2(f func(e float32) Tuple2) Tuple2LazyList {
 func (l Float32LazyList) MapBoolArray(f func(e float32) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -3522,11 +3522,11 @@ func (l Float32LazyList) MapBoolArray(f func(e float32) []bool) BoolArrayLazyLis
 func (l Float32LazyList) MapStringArray(f func(e float32) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -3536,11 +3536,11 @@ func (l Float32LazyList) MapStringArray(f func(e float32) []string) StringArrayL
 func (l Float32LazyList) MapIntArray(f func(e float32) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -3550,11 +3550,11 @@ func (l Float32LazyList) MapIntArray(f func(e float32) []int) IntArrayLazyList {
 func (l Float32LazyList) MapInt64Array(f func(e float32) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -3564,11 +3564,11 @@ func (l Float32LazyList) MapInt64Array(f func(e float32) []int64) Int64ArrayLazy
 func (l Float32LazyList) MapByteArray(f func(e float32) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -3578,11 +3578,11 @@ func (l Float32LazyList) MapByteArray(f func(e float32) []byte) ByteArrayLazyLis
 func (l Float32LazyList) MapRuneArray(f func(e float32) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -3592,11 +3592,11 @@ func (l Float32LazyList) MapRuneArray(f func(e float32) []rune) RuneArrayLazyLis
 func (l Float32LazyList) MapFloat32Array(f func(e float32) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -3606,11 +3606,11 @@ func (l Float32LazyList) MapFloat32Array(f func(e float32) []float32) Float32Arr
 func (l Float32LazyList) MapFloat64Array(f func(e float32) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -3620,11 +3620,11 @@ func (l Float32LazyList) MapFloat64Array(f func(e float32) []float64) Float64Arr
 func (l Float32LazyList) MapAnyArray(f func(e float32) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -3634,11 +3634,11 @@ func (l Float32LazyList) MapAnyArray(f func(e float32) []Any) AnyArrayLazyList {
 func (l Float32LazyList) MapTuple2Array(f func(e float32) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -3648,11 +3648,11 @@ func (l Float32LazyList) MapTuple2Array(f func(e float32) []Tuple2) Tuple2ArrayL
 func (l Float32LazyList) MapBoolOption(f func(e float32) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -3662,11 +3662,11 @@ func (l Float32LazyList) MapBoolOption(f func(e float32) BoolOption) BoolOptionL
 func (l Float32LazyList) MapStringOption(f func(e float32) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -3676,11 +3676,11 @@ func (l Float32LazyList) MapStringOption(f func(e float32) StringOption) StringO
 func (l Float32LazyList) MapIntOption(f func(e float32) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -3690,11 +3690,11 @@ func (l Float32LazyList) MapIntOption(f func(e float32) IntOption) IntOptionLazy
 func (l Float32LazyList) MapInt64Option(f func(e float32) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -3704,11 +3704,11 @@ func (l Float32LazyList) MapInt64Option(f func(e float32) Int64Option) Int64Opti
 func (l Float32LazyList) MapByteOption(f func(e float32) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -3718,11 +3718,11 @@ func (l Float32LazyList) MapByteOption(f func(e float32) ByteOption) ByteOptionL
 func (l Float32LazyList) MapRuneOption(f func(e float32) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -3732,11 +3732,11 @@ func (l Float32LazyList) MapRuneOption(f func(e float32) RuneOption) RuneOptionL
 func (l Float32LazyList) MapFloat32Option(f func(e float32) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -3746,11 +3746,11 @@ func (l Float32LazyList) MapFloat32Option(f func(e float32) Float32Option) Float
 func (l Float32LazyList) MapFloat64Option(f func(e float32) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -3760,11 +3760,11 @@ func (l Float32LazyList) MapFloat64Option(f func(e float32) Float64Option) Float
 func (l Float32LazyList) MapAnyOption(f func(e float32) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -3774,11 +3774,11 @@ func (l Float32LazyList) MapAnyOption(f func(e float32) AnyOption) AnyOptionLazy
 func (l Float32LazyList) MapTuple2Option(f func(e float32) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -3788,11 +3788,11 @@ func (l Float32LazyList) MapTuple2Option(f func(e float32) Tuple2Option) Tuple2O
 func (l Float32LazyList) MapBoolList(f func(e float32) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -3802,11 +3802,11 @@ func (l Float32LazyList) MapBoolList(f func(e float32) BoolList) BoolListLazyLis
 func (l Float32LazyList) MapStringList(f func(e float32) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -3816,11 +3816,11 @@ func (l Float32LazyList) MapStringList(f func(e float32) StringList) StringListL
 func (l Float32LazyList) MapIntList(f func(e float32) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -3830,11 +3830,11 @@ func (l Float32LazyList) MapIntList(f func(e float32) IntList) IntListLazyList {
 func (l Float32LazyList) MapInt64List(f func(e float32) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -3844,11 +3844,11 @@ func (l Float32LazyList) MapInt64List(f func(e float32) Int64List) Int64ListLazy
 func (l Float32LazyList) MapByteList(f func(e float32) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -3858,11 +3858,11 @@ func (l Float32LazyList) MapByteList(f func(e float32) ByteList) ByteListLazyLis
 func (l Float32LazyList) MapRuneList(f func(e float32) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -3872,11 +3872,11 @@ func (l Float32LazyList) MapRuneList(f func(e float32) RuneList) RuneListLazyLis
 func (l Float32LazyList) MapFloat32List(f func(e float32) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -3886,11 +3886,11 @@ func (l Float32LazyList) MapFloat32List(f func(e float32) Float32List) Float32Li
 func (l Float32LazyList) MapFloat64List(f func(e float32) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -3900,11 +3900,11 @@ func (l Float32LazyList) MapFloat64List(f func(e float32) Float64List) Float64Li
 func (l Float32LazyList) MapAnyList(f func(e float32) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -3914,11 +3914,11 @@ func (l Float32LazyList) MapAnyList(f func(e float32) AnyList) AnyListLazyList {
 func (l Float32LazyList) MapTuple2List(f func(e float32) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -3928,11 +3928,11 @@ func (l Float32LazyList) MapTuple2List(f func(e float32) Tuple2List) Tuple2ListL
 func (l Float64LazyList) MapBool(f func(e float64) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -3942,11 +3942,11 @@ func (l Float64LazyList) MapBool(f func(e float64) bool) BoolLazyList {
 func (l Float64LazyList) MapString(f func(e float64) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -3956,11 +3956,11 @@ func (l Float64LazyList) MapString(f func(e float64) string) StringLazyList {
 func (l Float64LazyList) MapInt(f func(e float64) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -3970,11 +3970,11 @@ func (l Float64LazyList) MapInt(f func(e float64) int) IntLazyList {
 func (l Float64LazyList) MapInt64(f func(e float64) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -3984,11 +3984,11 @@ func (l Float64LazyList) MapInt64(f func(e float64) int64) Int64LazyList {
 func (l Float64LazyList) MapByte(f func(e float64) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -3998,11 +3998,11 @@ func (l Float64LazyList) MapByte(f func(e float64) byte) ByteLazyList {
 func (l Float64LazyList) MapRune(f func(e float64) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -4012,11 +4012,11 @@ func (l Float64LazyList) MapRune(f func(e float64) rune) RuneLazyList {
 func (l Float64LazyList) MapFloat32(f func(e float64) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -4026,11 +4026,11 @@ func (l Float64LazyList) MapFloat32(f func(e float64) float32) Float32LazyList {
 func (l Float64LazyList) MapFloat64(f func(e float64) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -4040,11 +4040,11 @@ func (l Float64LazyList) MapFloat64(f func(e float64) float64) Float64LazyList {
 func (l Float64LazyList) MapAny(f func(e float64) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -4054,11 +4054,11 @@ func (l Float64LazyList) MapAny(f func(e float64) Any) AnyLazyList {
 func (l Float64LazyList) MapTuple2(f func(e float64) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -4068,11 +4068,11 @@ func (l Float64LazyList) MapTuple2(f func(e float64) Tuple2) Tuple2LazyList {
 func (l Float64LazyList) MapBoolArray(f func(e float64) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -4082,11 +4082,11 @@ func (l Float64LazyList) MapBoolArray(f func(e float64) []bool) BoolArrayLazyLis
 func (l Float64LazyList) MapStringArray(f func(e float64) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -4096,11 +4096,11 @@ func (l Float64LazyList) MapStringArray(f func(e float64) []string) StringArrayL
 func (l Float64LazyList) MapIntArray(f func(e float64) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -4110,11 +4110,11 @@ func (l Float64LazyList) MapIntArray(f func(e float64) []int) IntArrayLazyList {
 func (l Float64LazyList) MapInt64Array(f func(e float64) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -4124,11 +4124,11 @@ func (l Float64LazyList) MapInt64Array(f func(e float64) []int64) Int64ArrayLazy
 func (l Float64LazyList) MapByteArray(f func(e float64) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -4138,11 +4138,11 @@ func (l Float64LazyList) MapByteArray(f func(e float64) []byte) ByteArrayLazyLis
 func (l Float64LazyList) MapRuneArray(f func(e float64) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -4152,11 +4152,11 @@ func (l Float64LazyList) MapRuneArray(f func(e float64) []rune) RuneArrayLazyLis
 func (l Float64LazyList) MapFloat32Array(f func(e float64) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -4166,11 +4166,11 @@ func (l Float64LazyList) MapFloat32Array(f func(e float64) []float32) Float32Arr
 func (l Float64LazyList) MapFloat64Array(f func(e float64) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -4180,11 +4180,11 @@ func (l Float64LazyList) MapFloat64Array(f func(e float64) []float64) Float64Arr
 func (l Float64LazyList) MapAnyArray(f func(e float64) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -4194,11 +4194,11 @@ func (l Float64LazyList) MapAnyArray(f func(e float64) []Any) AnyArrayLazyList {
 func (l Float64LazyList) MapTuple2Array(f func(e float64) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -4208,11 +4208,11 @@ func (l Float64LazyList) MapTuple2Array(f func(e float64) []Tuple2) Tuple2ArrayL
 func (l Float64LazyList) MapBoolOption(f func(e float64) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -4222,11 +4222,11 @@ func (l Float64LazyList) MapBoolOption(f func(e float64) BoolOption) BoolOptionL
 func (l Float64LazyList) MapStringOption(f func(e float64) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -4236,11 +4236,11 @@ func (l Float64LazyList) MapStringOption(f func(e float64) StringOption) StringO
 func (l Float64LazyList) MapIntOption(f func(e float64) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -4250,11 +4250,11 @@ func (l Float64LazyList) MapIntOption(f func(e float64) IntOption) IntOptionLazy
 func (l Float64LazyList) MapInt64Option(f func(e float64) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -4264,11 +4264,11 @@ func (l Float64LazyList) MapInt64Option(f func(e float64) Int64Option) Int64Opti
 func (l Float64LazyList) MapByteOption(f func(e float64) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -4278,11 +4278,11 @@ func (l Float64LazyList) MapByteOption(f func(e float64) ByteOption) ByteOptionL
 func (l Float64LazyList) MapRuneOption(f func(e float64) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -4292,11 +4292,11 @@ func (l Float64LazyList) MapRuneOption(f func(e float64) RuneOption) RuneOptionL
 func (l Float64LazyList) MapFloat32Option(f func(e float64) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -4306,11 +4306,11 @@ func (l Float64LazyList) MapFloat32Option(f func(e float64) Float32Option) Float
 func (l Float64LazyList) MapFloat64Option(f func(e float64) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -4320,11 +4320,11 @@ func (l Float64LazyList) MapFloat64Option(f func(e float64) Float64Option) Float
 func (l Float64LazyList) MapAnyOption(f func(e float64) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -4334,11 +4334,11 @@ func (l Float64LazyList) MapAnyOption(f func(e float64) AnyOption) AnyOptionLazy
 func (l Float64LazyList) MapTuple2Option(f func(e float64) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -4348,11 +4348,11 @@ func (l Float64LazyList) MapTuple2Option(f func(e float64) Tuple2Option) Tuple2O
 func (l Float64LazyList) MapBoolList(f func(e float64) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -4362,11 +4362,11 @@ func (l Float64LazyList) MapBoolList(f func(e float64) BoolList) BoolListLazyLis
 func (l Float64LazyList) MapStringList(f func(e float64) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -4376,11 +4376,11 @@ func (l Float64LazyList) MapStringList(f func(e float64) StringList) StringListL
 func (l Float64LazyList) MapIntList(f func(e float64) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -4390,11 +4390,11 @@ func (l Float64LazyList) MapIntList(f func(e float64) IntList) IntListLazyList {
 func (l Float64LazyList) MapInt64List(f func(e float64) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -4404,11 +4404,11 @@ func (l Float64LazyList) MapInt64List(f func(e float64) Int64List) Int64ListLazy
 func (l Float64LazyList) MapByteList(f func(e float64) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -4418,11 +4418,11 @@ func (l Float64LazyList) MapByteList(f func(e float64) ByteList) ByteListLazyLis
 func (l Float64LazyList) MapRuneList(f func(e float64) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -4432,11 +4432,11 @@ func (l Float64LazyList) MapRuneList(f func(e float64) RuneList) RuneListLazyLis
 func (l Float64LazyList) MapFloat32List(f func(e float64) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -4446,11 +4446,11 @@ func (l Float64LazyList) MapFloat32List(f func(e float64) Float32List) Float32Li
 func (l Float64LazyList) MapFloat64List(f func(e float64) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -4460,11 +4460,11 @@ func (l Float64LazyList) MapFloat64List(f func(e float64) Float64List) Float64Li
 func (l Float64LazyList) MapAnyList(f func(e float64) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -4474,11 +4474,11 @@ func (l Float64LazyList) MapAnyList(f func(e float64) AnyList) AnyListLazyList {
 func (l Float64LazyList) MapTuple2List(f func(e float64) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -4488,11 +4488,11 @@ func (l Float64LazyList) MapTuple2List(f func(e float64) Tuple2List) Tuple2ListL
 func (l AnyLazyList) MapBool(f func(e Any) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -4502,11 +4502,11 @@ func (l AnyLazyList) MapBool(f func(e Any) bool) BoolLazyList {
 func (l AnyLazyList) MapString(f func(e Any) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -4516,11 +4516,11 @@ func (l AnyLazyList) MapString(f func(e Any) string) StringLazyList {
 func (l AnyLazyList) MapInt(f func(e Any) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -4530,11 +4530,11 @@ func (l AnyLazyList) MapInt(f func(e Any) int) IntLazyList {
 func (l AnyLazyList) MapInt64(f func(e Any) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -4544,11 +4544,11 @@ func (l AnyLazyList) MapInt64(f func(e Any) int64) Int64LazyList {
 func (l AnyLazyList) MapByte(f func(e Any) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -4558,11 +4558,11 @@ func (l AnyLazyList) MapByte(f func(e Any) byte) ByteLazyList {
 func (l AnyLazyList) MapRune(f func(e Any) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -4572,11 +4572,11 @@ func (l AnyLazyList) MapRune(f func(e Any) rune) RuneLazyList {
 func (l AnyLazyList) MapFloat32(f func(e Any) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -4586,11 +4586,11 @@ func (l AnyLazyList) MapFloat32(f func(e Any) float32) Float32LazyList {
 func (l AnyLazyList) MapFloat64(f func(e Any) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -4600,11 +4600,11 @@ func (l AnyLazyList) MapFloat64(f func(e Any) float64) Float64LazyList {
 func (l AnyLazyList) MapAny(f func(e Any) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -4614,11 +4614,11 @@ func (l AnyLazyList) MapAny(f func(e Any) Any) AnyLazyList {
 func (l AnyLazyList) MapTuple2(f func(e Any) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -4628,11 +4628,11 @@ func (l AnyLazyList) MapTuple2(f func(e Any) Tuple2) Tuple2LazyList {
 func (l AnyLazyList) MapBoolArray(f func(e Any) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -4642,11 +4642,11 @@ func (l AnyLazyList) MapBoolArray(f func(e Any) []bool) BoolArrayLazyList {
 func (l AnyLazyList) MapStringArray(f func(e Any) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -4656,11 +4656,11 @@ func (l AnyLazyList) MapStringArray(f func(e Any) []string) StringArrayLazyList 
 func (l AnyLazyList) MapIntArray(f func(e Any) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -4670,11 +4670,11 @@ func (l AnyLazyList) MapIntArray(f func(e Any) []int) IntArrayLazyList {
 func (l AnyLazyList) MapInt64Array(f func(e Any) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -4684,11 +4684,11 @@ func (l AnyLazyList) MapInt64Array(f func(e Any) []int64) Int64ArrayLazyList {
 func (l AnyLazyList) MapByteArray(f func(e Any) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -4698,11 +4698,11 @@ func (l AnyLazyList) MapByteArray(f func(e Any) []byte) ByteArrayLazyList {
 func (l AnyLazyList) MapRuneArray(f func(e Any) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -4712,11 +4712,11 @@ func (l AnyLazyList) MapRuneArray(f func(e Any) []rune) RuneArrayLazyList {
 func (l AnyLazyList) MapFloat32Array(f func(e Any) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -4726,11 +4726,11 @@ func (l AnyLazyList) MapFloat32Array(f func(e Any) []float32) Float32ArrayLazyLi
 func (l AnyLazyList) MapFloat64Array(f func(e Any) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -4740,11 +4740,11 @@ func (l AnyLazyList) MapFloat64Array(f func(e Any) []float64) Float64ArrayLazyLi
 func (l AnyLazyList) MapAnyArray(f func(e Any) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -4754,11 +4754,11 @@ func (l AnyLazyList) MapAnyArray(f func(e Any) []Any) AnyArrayLazyList {
 func (l AnyLazyList) MapTuple2Array(f func(e Any) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -4768,11 +4768,11 @@ func (l AnyLazyList) MapTuple2Array(f func(e Any) []Tuple2) Tuple2ArrayLazyList 
 func (l AnyLazyList) MapBoolOption(f func(e Any) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -4782,11 +4782,11 @@ func (l AnyLazyList) MapBoolOption(f func(e Any) BoolOption) BoolOptionLazyList 
 func (l AnyLazyList) MapStringOption(f func(e Any) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -4796,11 +4796,11 @@ func (l AnyLazyList) MapStringOption(f func(e Any) StringOption) StringOptionLaz
 func (l AnyLazyList) MapIntOption(f func(e Any) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -4810,11 +4810,11 @@ func (l AnyLazyList) MapIntOption(f func(e Any) IntOption) IntOptionLazyList {
 func (l AnyLazyList) MapInt64Option(f func(e Any) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -4824,11 +4824,11 @@ func (l AnyLazyList) MapInt64Option(f func(e Any) Int64Option) Int64OptionLazyLi
 func (l AnyLazyList) MapByteOption(f func(e Any) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -4838,11 +4838,11 @@ func (l AnyLazyList) MapByteOption(f func(e Any) ByteOption) ByteOptionLazyList 
 func (l AnyLazyList) MapRuneOption(f func(e Any) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -4852,11 +4852,11 @@ func (l AnyLazyList) MapRuneOption(f func(e Any) RuneOption) RuneOptionLazyList 
 func (l AnyLazyList) MapFloat32Option(f func(e Any) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -4866,11 +4866,11 @@ func (l AnyLazyList) MapFloat32Option(f func(e Any) Float32Option) Float32Option
 func (l AnyLazyList) MapFloat64Option(f func(e Any) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -4880,11 +4880,11 @@ func (l AnyLazyList) MapFloat64Option(f func(e Any) Float64Option) Float64Option
 func (l AnyLazyList) MapAnyOption(f func(e Any) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -4894,11 +4894,11 @@ func (l AnyLazyList) MapAnyOption(f func(e Any) AnyOption) AnyOptionLazyList {
 func (l AnyLazyList) MapTuple2Option(f func(e Any) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -4908,11 +4908,11 @@ func (l AnyLazyList) MapTuple2Option(f func(e Any) Tuple2Option) Tuple2OptionLaz
 func (l AnyLazyList) MapBoolList(f func(e Any) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -4922,11 +4922,11 @@ func (l AnyLazyList) MapBoolList(f func(e Any) BoolList) BoolListLazyList {
 func (l AnyLazyList) MapStringList(f func(e Any) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -4936,11 +4936,11 @@ func (l AnyLazyList) MapStringList(f func(e Any) StringList) StringListLazyList 
 func (l AnyLazyList) MapIntList(f func(e Any) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -4950,11 +4950,11 @@ func (l AnyLazyList) MapIntList(f func(e Any) IntList) IntListLazyList {
 func (l AnyLazyList) MapInt64List(f func(e Any) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -4964,11 +4964,11 @@ func (l AnyLazyList) MapInt64List(f func(e Any) Int64List) Int64ListLazyList {
 func (l AnyLazyList) MapByteList(f func(e Any) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -4978,11 +4978,11 @@ func (l AnyLazyList) MapByteList(f func(e Any) ByteList) ByteListLazyList {
 func (l AnyLazyList) MapRuneList(f func(e Any) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -4992,11 +4992,11 @@ func (l AnyLazyList) MapRuneList(f func(e Any) RuneList) RuneListLazyList {
 func (l AnyLazyList) MapFloat32List(f func(e Any) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -5006,11 +5006,11 @@ func (l AnyLazyList) MapFloat32List(f func(e Any) Float32List) Float32ListLazyLi
 func (l AnyLazyList) MapFloat64List(f func(e Any) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -5020,11 +5020,11 @@ func (l AnyLazyList) MapFloat64List(f func(e Any) Float64List) Float64ListLazyLi
 func (l AnyLazyList) MapAnyList(f func(e Any) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -5034,11 +5034,11 @@ func (l AnyLazyList) MapAnyList(f func(e Any) AnyList) AnyListLazyList {
 func (l AnyLazyList) MapTuple2List(f func(e Any) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -5048,11 +5048,11 @@ func (l AnyLazyList) MapTuple2List(f func(e Any) Tuple2List) Tuple2ListLazyList 
 func (l Tuple2LazyList) MapBool(f func(e Tuple2) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -5062,11 +5062,11 @@ func (l Tuple2LazyList) MapBool(f func(e Tuple2) bool) BoolLazyList {
 func (l Tuple2LazyList) MapString(f func(e Tuple2) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -5076,11 +5076,11 @@ func (l Tuple2LazyList) MapString(f func(e Tuple2) string) StringLazyList {
 func (l Tuple2LazyList) MapInt(f func(e Tuple2) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -5090,11 +5090,11 @@ func (l Tuple2LazyList) MapInt(f func(e Tuple2) int) IntLazyList {
 func (l Tuple2LazyList) MapInt64(f func(e Tuple2) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -5104,11 +5104,11 @@ func (l Tuple2LazyList) MapInt64(f func(e Tuple2) int64) Int64LazyList {
 func (l Tuple2LazyList) MapByte(f func(e Tuple2) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -5118,11 +5118,11 @@ func (l Tuple2LazyList) MapByte(f func(e Tuple2) byte) ByteLazyList {
 func (l Tuple2LazyList) MapRune(f func(e Tuple2) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -5132,11 +5132,11 @@ func (l Tuple2LazyList) MapRune(f func(e Tuple2) rune) RuneLazyList {
 func (l Tuple2LazyList) MapFloat32(f func(e Tuple2) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -5146,11 +5146,11 @@ func (l Tuple2LazyList) MapFloat32(f func(e Tuple2) float32) Float32LazyList {
 func (l Tuple2LazyList) MapFloat64(f func(e Tuple2) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -5160,11 +5160,11 @@ func (l Tuple2LazyList) MapFloat64(f func(e Tuple2) float64) Float64LazyList {
 func (l Tuple2LazyList) MapAny(f func(e Tuple2) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -5174,11 +5174,11 @@ func (l Tuple2LazyList) MapAny(f func(e Tuple2) Any) AnyLazyList {
 func (l Tuple2LazyList) MapTuple2(f func(e Tuple2) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -5188,11 +5188,11 @@ func (l Tuple2LazyList) MapTuple2(f func(e Tuple2) Tuple2) Tuple2LazyList {
 func (l Tuple2LazyList) MapBoolArray(f func(e Tuple2) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -5202,11 +5202,11 @@ func (l Tuple2LazyList) MapBoolArray(f func(e Tuple2) []bool) BoolArrayLazyList 
 func (l Tuple2LazyList) MapStringArray(f func(e Tuple2) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -5216,11 +5216,11 @@ func (l Tuple2LazyList) MapStringArray(f func(e Tuple2) []string) StringArrayLaz
 func (l Tuple2LazyList) MapIntArray(f func(e Tuple2) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -5230,11 +5230,11 @@ func (l Tuple2LazyList) MapIntArray(f func(e Tuple2) []int) IntArrayLazyList {
 func (l Tuple2LazyList) MapInt64Array(f func(e Tuple2) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -5244,11 +5244,11 @@ func (l Tuple2LazyList) MapInt64Array(f func(e Tuple2) []int64) Int64ArrayLazyLi
 func (l Tuple2LazyList) MapByteArray(f func(e Tuple2) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -5258,11 +5258,11 @@ func (l Tuple2LazyList) MapByteArray(f func(e Tuple2) []byte) ByteArrayLazyList 
 func (l Tuple2LazyList) MapRuneArray(f func(e Tuple2) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -5272,11 +5272,11 @@ func (l Tuple2LazyList) MapRuneArray(f func(e Tuple2) []rune) RuneArrayLazyList 
 func (l Tuple2LazyList) MapFloat32Array(f func(e Tuple2) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -5286,11 +5286,11 @@ func (l Tuple2LazyList) MapFloat32Array(f func(e Tuple2) []float32) Float32Array
 func (l Tuple2LazyList) MapFloat64Array(f func(e Tuple2) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -5300,11 +5300,11 @@ func (l Tuple2LazyList) MapFloat64Array(f func(e Tuple2) []float64) Float64Array
 func (l Tuple2LazyList) MapAnyArray(f func(e Tuple2) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -5314,11 +5314,11 @@ func (l Tuple2LazyList) MapAnyArray(f func(e Tuple2) []Any) AnyArrayLazyList {
 func (l Tuple2LazyList) MapTuple2Array(f func(e Tuple2) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -5328,11 +5328,11 @@ func (l Tuple2LazyList) MapTuple2Array(f func(e Tuple2) []Tuple2) Tuple2ArrayLaz
 func (l Tuple2LazyList) MapBoolOption(f func(e Tuple2) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -5342,11 +5342,11 @@ func (l Tuple2LazyList) MapBoolOption(f func(e Tuple2) BoolOption) BoolOptionLaz
 func (l Tuple2LazyList) MapStringOption(f func(e Tuple2) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -5356,11 +5356,11 @@ func (l Tuple2LazyList) MapStringOption(f func(e Tuple2) StringOption) StringOpt
 func (l Tuple2LazyList) MapIntOption(f func(e Tuple2) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -5370,11 +5370,11 @@ func (l Tuple2LazyList) MapIntOption(f func(e Tuple2) IntOption) IntOptionLazyLi
 func (l Tuple2LazyList) MapInt64Option(f func(e Tuple2) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -5384,11 +5384,11 @@ func (l Tuple2LazyList) MapInt64Option(f func(e Tuple2) Int64Option) Int64Option
 func (l Tuple2LazyList) MapByteOption(f func(e Tuple2) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -5398,11 +5398,11 @@ func (l Tuple2LazyList) MapByteOption(f func(e Tuple2) ByteOption) ByteOptionLaz
 func (l Tuple2LazyList) MapRuneOption(f func(e Tuple2) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -5412,11 +5412,11 @@ func (l Tuple2LazyList) MapRuneOption(f func(e Tuple2) RuneOption) RuneOptionLaz
 func (l Tuple2LazyList) MapFloat32Option(f func(e Tuple2) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -5426,11 +5426,11 @@ func (l Tuple2LazyList) MapFloat32Option(f func(e Tuple2) Float32Option) Float32
 func (l Tuple2LazyList) MapFloat64Option(f func(e Tuple2) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -5440,11 +5440,11 @@ func (l Tuple2LazyList) MapFloat64Option(f func(e Tuple2) Float64Option) Float64
 func (l Tuple2LazyList) MapAnyOption(f func(e Tuple2) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -5454,11 +5454,11 @@ func (l Tuple2LazyList) MapAnyOption(f func(e Tuple2) AnyOption) AnyOptionLazyLi
 func (l Tuple2LazyList) MapTuple2Option(f func(e Tuple2) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -5468,11 +5468,11 @@ func (l Tuple2LazyList) MapTuple2Option(f func(e Tuple2) Tuple2Option) Tuple2Opt
 func (l Tuple2LazyList) MapBoolList(f func(e Tuple2) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -5482,11 +5482,11 @@ func (l Tuple2LazyList) MapBoolList(f func(e Tuple2) BoolList) BoolListLazyList 
 func (l Tuple2LazyList) MapStringList(f func(e Tuple2) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -5496,11 +5496,11 @@ func (l Tuple2LazyList) MapStringList(f func(e Tuple2) StringList) StringListLaz
 func (l Tuple2LazyList) MapIntList(f func(e Tuple2) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -5510,11 +5510,11 @@ func (l Tuple2LazyList) MapIntList(f func(e Tuple2) IntList) IntListLazyList {
 func (l Tuple2LazyList) MapInt64List(f func(e Tuple2) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -5524,11 +5524,11 @@ func (l Tuple2LazyList) MapInt64List(f func(e Tuple2) Int64List) Int64ListLazyLi
 func (l Tuple2LazyList) MapByteList(f func(e Tuple2) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -5538,11 +5538,11 @@ func (l Tuple2LazyList) MapByteList(f func(e Tuple2) ByteList) ByteListLazyList 
 func (l Tuple2LazyList) MapRuneList(f func(e Tuple2) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -5552,11 +5552,11 @@ func (l Tuple2LazyList) MapRuneList(f func(e Tuple2) RuneList) RuneListLazyList 
 func (l Tuple2LazyList) MapFloat32List(f func(e Tuple2) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -5566,11 +5566,11 @@ func (l Tuple2LazyList) MapFloat32List(f func(e Tuple2) Float32List) Float32List
 func (l Tuple2LazyList) MapFloat64List(f func(e Tuple2) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -5580,11 +5580,11 @@ func (l Tuple2LazyList) MapFloat64List(f func(e Tuple2) Float64List) Float64List
 func (l Tuple2LazyList) MapAnyList(f func(e Tuple2) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -5594,11 +5594,11 @@ func (l Tuple2LazyList) MapAnyList(f func(e Tuple2) AnyList) AnyListLazyList {
 func (l Tuple2LazyList) MapTuple2List(f func(e Tuple2) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -5608,11 +5608,11 @@ func (l Tuple2LazyList) MapTuple2List(f func(e Tuple2) Tuple2List) Tuple2ListLaz
 func (l BoolArrayLazyList) MapBool(f func(e []bool) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -5622,11 +5622,11 @@ func (l BoolArrayLazyList) MapBool(f func(e []bool) bool) BoolLazyList {
 func (l BoolArrayLazyList) MapString(f func(e []bool) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -5636,11 +5636,11 @@ func (l BoolArrayLazyList) MapString(f func(e []bool) string) StringLazyList {
 func (l BoolArrayLazyList) MapInt(f func(e []bool) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -5650,11 +5650,11 @@ func (l BoolArrayLazyList) MapInt(f func(e []bool) int) IntLazyList {
 func (l BoolArrayLazyList) MapInt64(f func(e []bool) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -5664,11 +5664,11 @@ func (l BoolArrayLazyList) MapInt64(f func(e []bool) int64) Int64LazyList {
 func (l BoolArrayLazyList) MapByte(f func(e []bool) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -5678,11 +5678,11 @@ func (l BoolArrayLazyList) MapByte(f func(e []bool) byte) ByteLazyList {
 func (l BoolArrayLazyList) MapRune(f func(e []bool) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -5692,11 +5692,11 @@ func (l BoolArrayLazyList) MapRune(f func(e []bool) rune) RuneLazyList {
 func (l BoolArrayLazyList) MapFloat32(f func(e []bool) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -5706,11 +5706,11 @@ func (l BoolArrayLazyList) MapFloat32(f func(e []bool) float32) Float32LazyList 
 func (l BoolArrayLazyList) MapFloat64(f func(e []bool) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -5720,11 +5720,11 @@ func (l BoolArrayLazyList) MapFloat64(f func(e []bool) float64) Float64LazyList 
 func (l BoolArrayLazyList) MapAny(f func(e []bool) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -5734,11 +5734,11 @@ func (l BoolArrayLazyList) MapAny(f func(e []bool) Any) AnyLazyList {
 func (l BoolArrayLazyList) MapTuple2(f func(e []bool) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -5748,11 +5748,11 @@ func (l BoolArrayLazyList) MapTuple2(f func(e []bool) Tuple2) Tuple2LazyList {
 func (l BoolArrayLazyList) MapBoolArray(f func(e []bool) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -5762,11 +5762,11 @@ func (l BoolArrayLazyList) MapBoolArray(f func(e []bool) []bool) BoolArrayLazyLi
 func (l BoolArrayLazyList) MapStringArray(f func(e []bool) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -5776,11 +5776,11 @@ func (l BoolArrayLazyList) MapStringArray(f func(e []bool) []string) StringArray
 func (l BoolArrayLazyList) MapIntArray(f func(e []bool) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -5790,11 +5790,11 @@ func (l BoolArrayLazyList) MapIntArray(f func(e []bool) []int) IntArrayLazyList 
 func (l BoolArrayLazyList) MapInt64Array(f func(e []bool) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -5804,11 +5804,11 @@ func (l BoolArrayLazyList) MapInt64Array(f func(e []bool) []int64) Int64ArrayLaz
 func (l BoolArrayLazyList) MapByteArray(f func(e []bool) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -5818,11 +5818,11 @@ func (l BoolArrayLazyList) MapByteArray(f func(e []bool) []byte) ByteArrayLazyLi
 func (l BoolArrayLazyList) MapRuneArray(f func(e []bool) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -5832,11 +5832,11 @@ func (l BoolArrayLazyList) MapRuneArray(f func(e []bool) []rune) RuneArrayLazyLi
 func (l BoolArrayLazyList) MapFloat32Array(f func(e []bool) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -5846,11 +5846,11 @@ func (l BoolArrayLazyList) MapFloat32Array(f func(e []bool) []float32) Float32Ar
 func (l BoolArrayLazyList) MapFloat64Array(f func(e []bool) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -5860,11 +5860,11 @@ func (l BoolArrayLazyList) MapFloat64Array(f func(e []bool) []float64) Float64Ar
 func (l BoolArrayLazyList) MapAnyArray(f func(e []bool) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -5874,11 +5874,11 @@ func (l BoolArrayLazyList) MapAnyArray(f func(e []bool) []Any) AnyArrayLazyList 
 func (l BoolArrayLazyList) MapTuple2Array(f func(e []bool) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -5888,11 +5888,11 @@ func (l BoolArrayLazyList) MapTuple2Array(f func(e []bool) []Tuple2) Tuple2Array
 func (l BoolArrayLazyList) MapBoolOption(f func(e []bool) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -5902,11 +5902,11 @@ func (l BoolArrayLazyList) MapBoolOption(f func(e []bool) BoolOption) BoolOption
 func (l BoolArrayLazyList) MapStringOption(f func(e []bool) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -5916,11 +5916,11 @@ func (l BoolArrayLazyList) MapStringOption(f func(e []bool) StringOption) String
 func (l BoolArrayLazyList) MapIntOption(f func(e []bool) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -5930,11 +5930,11 @@ func (l BoolArrayLazyList) MapIntOption(f func(e []bool) IntOption) IntOptionLaz
 func (l BoolArrayLazyList) MapInt64Option(f func(e []bool) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -5944,11 +5944,11 @@ func (l BoolArrayLazyList) MapInt64Option(f func(e []bool) Int64Option) Int64Opt
 func (l BoolArrayLazyList) MapByteOption(f func(e []bool) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -5958,11 +5958,11 @@ func (l BoolArrayLazyList) MapByteOption(f func(e []bool) ByteOption) ByteOption
 func (l BoolArrayLazyList) MapRuneOption(f func(e []bool) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -5972,11 +5972,11 @@ func (l BoolArrayLazyList) MapRuneOption(f func(e []bool) RuneOption) RuneOption
 func (l BoolArrayLazyList) MapFloat32Option(f func(e []bool) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -5986,11 +5986,11 @@ func (l BoolArrayLazyList) MapFloat32Option(f func(e []bool) Float32Option) Floa
 func (l BoolArrayLazyList) MapFloat64Option(f func(e []bool) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -6000,11 +6000,11 @@ func (l BoolArrayLazyList) MapFloat64Option(f func(e []bool) Float64Option) Floa
 func (l BoolArrayLazyList) MapAnyOption(f func(e []bool) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -6014,11 +6014,11 @@ func (l BoolArrayLazyList) MapAnyOption(f func(e []bool) AnyOption) AnyOptionLaz
 func (l BoolArrayLazyList) MapTuple2Option(f func(e []bool) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -6028,11 +6028,11 @@ func (l BoolArrayLazyList) MapTuple2Option(f func(e []bool) Tuple2Option) Tuple2
 func (l BoolArrayLazyList) MapBoolList(f func(e []bool) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -6042,11 +6042,11 @@ func (l BoolArrayLazyList) MapBoolList(f func(e []bool) BoolList) BoolListLazyLi
 func (l BoolArrayLazyList) MapStringList(f func(e []bool) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -6056,11 +6056,11 @@ func (l BoolArrayLazyList) MapStringList(f func(e []bool) StringList) StringList
 func (l BoolArrayLazyList) MapIntList(f func(e []bool) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -6070,11 +6070,11 @@ func (l BoolArrayLazyList) MapIntList(f func(e []bool) IntList) IntListLazyList 
 func (l BoolArrayLazyList) MapInt64List(f func(e []bool) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -6084,11 +6084,11 @@ func (l BoolArrayLazyList) MapInt64List(f func(e []bool) Int64List) Int64ListLaz
 func (l BoolArrayLazyList) MapByteList(f func(e []bool) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -6098,11 +6098,11 @@ func (l BoolArrayLazyList) MapByteList(f func(e []bool) ByteList) ByteListLazyLi
 func (l BoolArrayLazyList) MapRuneList(f func(e []bool) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -6112,11 +6112,11 @@ func (l BoolArrayLazyList) MapRuneList(f func(e []bool) RuneList) RuneListLazyLi
 func (l BoolArrayLazyList) MapFloat32List(f func(e []bool) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -6126,11 +6126,11 @@ func (l BoolArrayLazyList) MapFloat32List(f func(e []bool) Float32List) Float32L
 func (l BoolArrayLazyList) MapFloat64List(f func(e []bool) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -6140,11 +6140,11 @@ func (l BoolArrayLazyList) MapFloat64List(f func(e []bool) Float64List) Float64L
 func (l BoolArrayLazyList) MapAnyList(f func(e []bool) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -6154,11 +6154,11 @@ func (l BoolArrayLazyList) MapAnyList(f func(e []bool) AnyList) AnyListLazyList 
 func (l BoolArrayLazyList) MapTuple2List(f func(e []bool) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -6168,11 +6168,11 @@ func (l BoolArrayLazyList) MapTuple2List(f func(e []bool) Tuple2List) Tuple2List
 func (l StringArrayLazyList) MapBool(f func(e []string) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -6182,11 +6182,11 @@ func (l StringArrayLazyList) MapBool(f func(e []string) bool) BoolLazyList {
 func (l StringArrayLazyList) MapString(f func(e []string) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -6196,11 +6196,11 @@ func (l StringArrayLazyList) MapString(f func(e []string) string) StringLazyList
 func (l StringArrayLazyList) MapInt(f func(e []string) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -6210,11 +6210,11 @@ func (l StringArrayLazyList) MapInt(f func(e []string) int) IntLazyList {
 func (l StringArrayLazyList) MapInt64(f func(e []string) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -6224,11 +6224,11 @@ func (l StringArrayLazyList) MapInt64(f func(e []string) int64) Int64LazyList {
 func (l StringArrayLazyList) MapByte(f func(e []string) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -6238,11 +6238,11 @@ func (l StringArrayLazyList) MapByte(f func(e []string) byte) ByteLazyList {
 func (l StringArrayLazyList) MapRune(f func(e []string) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -6252,11 +6252,11 @@ func (l StringArrayLazyList) MapRune(f func(e []string) rune) RuneLazyList {
 func (l StringArrayLazyList) MapFloat32(f func(e []string) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -6266,11 +6266,11 @@ func (l StringArrayLazyList) MapFloat32(f func(e []string) float32) Float32LazyL
 func (l StringArrayLazyList) MapFloat64(f func(e []string) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -6280,11 +6280,11 @@ func (l StringArrayLazyList) MapFloat64(f func(e []string) float64) Float64LazyL
 func (l StringArrayLazyList) MapAny(f func(e []string) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -6294,11 +6294,11 @@ func (l StringArrayLazyList) MapAny(f func(e []string) Any) AnyLazyList {
 func (l StringArrayLazyList) MapTuple2(f func(e []string) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -6308,11 +6308,11 @@ func (l StringArrayLazyList) MapTuple2(f func(e []string) Tuple2) Tuple2LazyList
 func (l StringArrayLazyList) MapBoolArray(f func(e []string) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -6322,11 +6322,11 @@ func (l StringArrayLazyList) MapBoolArray(f func(e []string) []bool) BoolArrayLa
 func (l StringArrayLazyList) MapStringArray(f func(e []string) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -6336,11 +6336,11 @@ func (l StringArrayLazyList) MapStringArray(f func(e []string) []string) StringA
 func (l StringArrayLazyList) MapIntArray(f func(e []string) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -6350,11 +6350,11 @@ func (l StringArrayLazyList) MapIntArray(f func(e []string) []int) IntArrayLazyL
 func (l StringArrayLazyList) MapInt64Array(f func(e []string) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -6364,11 +6364,11 @@ func (l StringArrayLazyList) MapInt64Array(f func(e []string) []int64) Int64Arra
 func (l StringArrayLazyList) MapByteArray(f func(e []string) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -6378,11 +6378,11 @@ func (l StringArrayLazyList) MapByteArray(f func(e []string) []byte) ByteArrayLa
 func (l StringArrayLazyList) MapRuneArray(f func(e []string) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -6392,11 +6392,11 @@ func (l StringArrayLazyList) MapRuneArray(f func(e []string) []rune) RuneArrayLa
 func (l StringArrayLazyList) MapFloat32Array(f func(e []string) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -6406,11 +6406,11 @@ func (l StringArrayLazyList) MapFloat32Array(f func(e []string) []float32) Float
 func (l StringArrayLazyList) MapFloat64Array(f func(e []string) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -6420,11 +6420,11 @@ func (l StringArrayLazyList) MapFloat64Array(f func(e []string) []float64) Float
 func (l StringArrayLazyList) MapAnyArray(f func(e []string) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -6434,11 +6434,11 @@ func (l StringArrayLazyList) MapAnyArray(f func(e []string) []Any) AnyArrayLazyL
 func (l StringArrayLazyList) MapTuple2Array(f func(e []string) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -6448,11 +6448,11 @@ func (l StringArrayLazyList) MapTuple2Array(f func(e []string) []Tuple2) Tuple2A
 func (l StringArrayLazyList) MapBoolOption(f func(e []string) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -6462,11 +6462,11 @@ func (l StringArrayLazyList) MapBoolOption(f func(e []string) BoolOption) BoolOp
 func (l StringArrayLazyList) MapStringOption(f func(e []string) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -6476,11 +6476,11 @@ func (l StringArrayLazyList) MapStringOption(f func(e []string) StringOption) St
 func (l StringArrayLazyList) MapIntOption(f func(e []string) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -6490,11 +6490,11 @@ func (l StringArrayLazyList) MapIntOption(f func(e []string) IntOption) IntOptio
 func (l StringArrayLazyList) MapInt64Option(f func(e []string) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -6504,11 +6504,11 @@ func (l StringArrayLazyList) MapInt64Option(f func(e []string) Int64Option) Int6
 func (l StringArrayLazyList) MapByteOption(f func(e []string) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -6518,11 +6518,11 @@ func (l StringArrayLazyList) MapByteOption(f func(e []string) ByteOption) ByteOp
 func (l StringArrayLazyList) MapRuneOption(f func(e []string) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -6532,11 +6532,11 @@ func (l StringArrayLazyList) MapRuneOption(f func(e []string) RuneOption) RuneOp
 func (l StringArrayLazyList) MapFloat32Option(f func(e []string) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -6546,11 +6546,11 @@ func (l StringArrayLazyList) MapFloat32Option(f func(e []string) Float32Option) 
 func (l StringArrayLazyList) MapFloat64Option(f func(e []string) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -6560,11 +6560,11 @@ func (l StringArrayLazyList) MapFloat64Option(f func(e []string) Float64Option) 
 func (l StringArrayLazyList) MapAnyOption(f func(e []string) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -6574,11 +6574,11 @@ func (l StringArrayLazyList) MapAnyOption(f func(e []string) AnyOption) AnyOptio
 func (l StringArrayLazyList) MapTuple2Option(f func(e []string) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -6588,11 +6588,11 @@ func (l StringArrayLazyList) MapTuple2Option(f func(e []string) Tuple2Option) Tu
 func (l StringArrayLazyList) MapBoolList(f func(e []string) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -6602,11 +6602,11 @@ func (l StringArrayLazyList) MapBoolList(f func(e []string) BoolList) BoolListLa
 func (l StringArrayLazyList) MapStringList(f func(e []string) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -6616,11 +6616,11 @@ func (l StringArrayLazyList) MapStringList(f func(e []string) StringList) String
 func (l StringArrayLazyList) MapIntList(f func(e []string) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -6630,11 +6630,11 @@ func (l StringArrayLazyList) MapIntList(f func(e []string) IntList) IntListLazyL
 func (l StringArrayLazyList) MapInt64List(f func(e []string) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -6644,11 +6644,11 @@ func (l StringArrayLazyList) MapInt64List(f func(e []string) Int64List) Int64Lis
 func (l StringArrayLazyList) MapByteList(f func(e []string) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -6658,11 +6658,11 @@ func (l StringArrayLazyList) MapByteList(f func(e []string) ByteList) ByteListLa
 func (l StringArrayLazyList) MapRuneList(f func(e []string) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -6672,11 +6672,11 @@ func (l StringArrayLazyList) MapRuneList(f func(e []string) RuneList) RuneListLa
 func (l StringArrayLazyList) MapFloat32List(f func(e []string) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -6686,11 +6686,11 @@ func (l StringArrayLazyList) MapFloat32List(f func(e []string) Float32List) Floa
 func (l StringArrayLazyList) MapFloat64List(f func(e []string) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -6700,11 +6700,11 @@ func (l StringArrayLazyList) MapFloat64List(f func(e []string) Float64List) Floa
 func (l StringArrayLazyList) MapAnyList(f func(e []string) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -6714,11 +6714,11 @@ func (l StringArrayLazyList) MapAnyList(f func(e []string) AnyList) AnyListLazyL
 func (l StringArrayLazyList) MapTuple2List(f func(e []string) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -6728,11 +6728,11 @@ func (l StringArrayLazyList) MapTuple2List(f func(e []string) Tuple2List) Tuple2
 func (l IntArrayLazyList) MapBool(f func(e []int) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -6742,11 +6742,11 @@ func (l IntArrayLazyList) MapBool(f func(e []int) bool) BoolLazyList {
 func (l IntArrayLazyList) MapString(f func(e []int) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -6756,11 +6756,11 @@ func (l IntArrayLazyList) MapString(f func(e []int) string) StringLazyList {
 func (l IntArrayLazyList) MapInt(f func(e []int) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -6770,11 +6770,11 @@ func (l IntArrayLazyList) MapInt(f func(e []int) int) IntLazyList {
 func (l IntArrayLazyList) MapInt64(f func(e []int) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -6784,11 +6784,11 @@ func (l IntArrayLazyList) MapInt64(f func(e []int) int64) Int64LazyList {
 func (l IntArrayLazyList) MapByte(f func(e []int) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -6798,11 +6798,11 @@ func (l IntArrayLazyList) MapByte(f func(e []int) byte) ByteLazyList {
 func (l IntArrayLazyList) MapRune(f func(e []int) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -6812,11 +6812,11 @@ func (l IntArrayLazyList) MapRune(f func(e []int) rune) RuneLazyList {
 func (l IntArrayLazyList) MapFloat32(f func(e []int) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -6826,11 +6826,11 @@ func (l IntArrayLazyList) MapFloat32(f func(e []int) float32) Float32LazyList {
 func (l IntArrayLazyList) MapFloat64(f func(e []int) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -6840,11 +6840,11 @@ func (l IntArrayLazyList) MapFloat64(f func(e []int) float64) Float64LazyList {
 func (l IntArrayLazyList) MapAny(f func(e []int) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -6854,11 +6854,11 @@ func (l IntArrayLazyList) MapAny(f func(e []int) Any) AnyLazyList {
 func (l IntArrayLazyList) MapTuple2(f func(e []int) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -6868,11 +6868,11 @@ func (l IntArrayLazyList) MapTuple2(f func(e []int) Tuple2) Tuple2LazyList {
 func (l IntArrayLazyList) MapBoolArray(f func(e []int) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -6882,11 +6882,11 @@ func (l IntArrayLazyList) MapBoolArray(f func(e []int) []bool) BoolArrayLazyList
 func (l IntArrayLazyList) MapStringArray(f func(e []int) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -6896,11 +6896,11 @@ func (l IntArrayLazyList) MapStringArray(f func(e []int) []string) StringArrayLa
 func (l IntArrayLazyList) MapIntArray(f func(e []int) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -6910,11 +6910,11 @@ func (l IntArrayLazyList) MapIntArray(f func(e []int) []int) IntArrayLazyList {
 func (l IntArrayLazyList) MapInt64Array(f func(e []int) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -6924,11 +6924,11 @@ func (l IntArrayLazyList) MapInt64Array(f func(e []int) []int64) Int64ArrayLazyL
 func (l IntArrayLazyList) MapByteArray(f func(e []int) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -6938,11 +6938,11 @@ func (l IntArrayLazyList) MapByteArray(f func(e []int) []byte) ByteArrayLazyList
 func (l IntArrayLazyList) MapRuneArray(f func(e []int) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -6952,11 +6952,11 @@ func (l IntArrayLazyList) MapRuneArray(f func(e []int) []rune) RuneArrayLazyList
 func (l IntArrayLazyList) MapFloat32Array(f func(e []int) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -6966,11 +6966,11 @@ func (l IntArrayLazyList) MapFloat32Array(f func(e []int) []float32) Float32Arra
 func (l IntArrayLazyList) MapFloat64Array(f func(e []int) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -6980,11 +6980,11 @@ func (l IntArrayLazyList) MapFloat64Array(f func(e []int) []float64) Float64Arra
 func (l IntArrayLazyList) MapAnyArray(f func(e []int) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -6994,11 +6994,11 @@ func (l IntArrayLazyList) MapAnyArray(f func(e []int) []Any) AnyArrayLazyList {
 func (l IntArrayLazyList) MapTuple2Array(f func(e []int) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -7008,11 +7008,11 @@ func (l IntArrayLazyList) MapTuple2Array(f func(e []int) []Tuple2) Tuple2ArrayLa
 func (l IntArrayLazyList) MapBoolOption(f func(e []int) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -7022,11 +7022,11 @@ func (l IntArrayLazyList) MapBoolOption(f func(e []int) BoolOption) BoolOptionLa
 func (l IntArrayLazyList) MapStringOption(f func(e []int) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -7036,11 +7036,11 @@ func (l IntArrayLazyList) MapStringOption(f func(e []int) StringOption) StringOp
 func (l IntArrayLazyList) MapIntOption(f func(e []int) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -7050,11 +7050,11 @@ func (l IntArrayLazyList) MapIntOption(f func(e []int) IntOption) IntOptionLazyL
 func (l IntArrayLazyList) MapInt64Option(f func(e []int) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -7064,11 +7064,11 @@ func (l IntArrayLazyList) MapInt64Option(f func(e []int) Int64Option) Int64Optio
 func (l IntArrayLazyList) MapByteOption(f func(e []int) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -7078,11 +7078,11 @@ func (l IntArrayLazyList) MapByteOption(f func(e []int) ByteOption) ByteOptionLa
 func (l IntArrayLazyList) MapRuneOption(f func(e []int) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -7092,11 +7092,11 @@ func (l IntArrayLazyList) MapRuneOption(f func(e []int) RuneOption) RuneOptionLa
 func (l IntArrayLazyList) MapFloat32Option(f func(e []int) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -7106,11 +7106,11 @@ func (l IntArrayLazyList) MapFloat32Option(f func(e []int) Float32Option) Float3
 func (l IntArrayLazyList) MapFloat64Option(f func(e []int) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -7120,11 +7120,11 @@ func (l IntArrayLazyList) MapFloat64Option(f func(e []int) Float64Option) Float6
 func (l IntArrayLazyList) MapAnyOption(f func(e []int) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -7134,11 +7134,11 @@ func (l IntArrayLazyList) MapAnyOption(f func(e []int) AnyOption) AnyOptionLazyL
 func (l IntArrayLazyList) MapTuple2Option(f func(e []int) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -7148,11 +7148,11 @@ func (l IntArrayLazyList) MapTuple2Option(f func(e []int) Tuple2Option) Tuple2Op
 func (l IntArrayLazyList) MapBoolList(f func(e []int) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -7162,11 +7162,11 @@ func (l IntArrayLazyList) MapBoolList(f func(e []int) BoolList) BoolListLazyList
 func (l IntArrayLazyList) MapStringList(f func(e []int) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -7176,11 +7176,11 @@ func (l IntArrayLazyList) MapStringList(f func(e []int) StringList) StringListLa
 func (l IntArrayLazyList) MapIntList(f func(e []int) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -7190,11 +7190,11 @@ func (l IntArrayLazyList) MapIntList(f func(e []int) IntList) IntListLazyList {
 func (l IntArrayLazyList) MapInt64List(f func(e []int) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -7204,11 +7204,11 @@ func (l IntArrayLazyList) MapInt64List(f func(e []int) Int64List) Int64ListLazyL
 func (l IntArrayLazyList) MapByteList(f func(e []int) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -7218,11 +7218,11 @@ func (l IntArrayLazyList) MapByteList(f func(e []int) ByteList) ByteListLazyList
 func (l IntArrayLazyList) MapRuneList(f func(e []int) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -7232,11 +7232,11 @@ func (l IntArrayLazyList) MapRuneList(f func(e []int) RuneList) RuneListLazyList
 func (l IntArrayLazyList) MapFloat32List(f func(e []int) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -7246,11 +7246,11 @@ func (l IntArrayLazyList) MapFloat32List(f func(e []int) Float32List) Float32Lis
 func (l IntArrayLazyList) MapFloat64List(f func(e []int) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -7260,11 +7260,11 @@ func (l IntArrayLazyList) MapFloat64List(f func(e []int) Float64List) Float64Lis
 func (l IntArrayLazyList) MapAnyList(f func(e []int) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -7274,11 +7274,11 @@ func (l IntArrayLazyList) MapAnyList(f func(e []int) AnyList) AnyListLazyList {
 func (l IntArrayLazyList) MapTuple2List(f func(e []int) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -7288,11 +7288,11 @@ func (l IntArrayLazyList) MapTuple2List(f func(e []int) Tuple2List) Tuple2ListLa
 func (l Int64ArrayLazyList) MapBool(f func(e []int64) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -7302,11 +7302,11 @@ func (l Int64ArrayLazyList) MapBool(f func(e []int64) bool) BoolLazyList {
 func (l Int64ArrayLazyList) MapString(f func(e []int64) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -7316,11 +7316,11 @@ func (l Int64ArrayLazyList) MapString(f func(e []int64) string) StringLazyList {
 func (l Int64ArrayLazyList) MapInt(f func(e []int64) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -7330,11 +7330,11 @@ func (l Int64ArrayLazyList) MapInt(f func(e []int64) int) IntLazyList {
 func (l Int64ArrayLazyList) MapInt64(f func(e []int64) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -7344,11 +7344,11 @@ func (l Int64ArrayLazyList) MapInt64(f func(e []int64) int64) Int64LazyList {
 func (l Int64ArrayLazyList) MapByte(f func(e []int64) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -7358,11 +7358,11 @@ func (l Int64ArrayLazyList) MapByte(f func(e []int64) byte) ByteLazyList {
 func (l Int64ArrayLazyList) MapRune(f func(e []int64) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -7372,11 +7372,11 @@ func (l Int64ArrayLazyList) MapRune(f func(e []int64) rune) RuneLazyList {
 func (l Int64ArrayLazyList) MapFloat32(f func(e []int64) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -7386,11 +7386,11 @@ func (l Int64ArrayLazyList) MapFloat32(f func(e []int64) float32) Float32LazyLis
 func (l Int64ArrayLazyList) MapFloat64(f func(e []int64) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -7400,11 +7400,11 @@ func (l Int64ArrayLazyList) MapFloat64(f func(e []int64) float64) Float64LazyLis
 func (l Int64ArrayLazyList) MapAny(f func(e []int64) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -7414,11 +7414,11 @@ func (l Int64ArrayLazyList) MapAny(f func(e []int64) Any) AnyLazyList {
 func (l Int64ArrayLazyList) MapTuple2(f func(e []int64) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -7428,11 +7428,11 @@ func (l Int64ArrayLazyList) MapTuple2(f func(e []int64) Tuple2) Tuple2LazyList {
 func (l Int64ArrayLazyList) MapBoolArray(f func(e []int64) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -7442,11 +7442,11 @@ func (l Int64ArrayLazyList) MapBoolArray(f func(e []int64) []bool) BoolArrayLazy
 func (l Int64ArrayLazyList) MapStringArray(f func(e []int64) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -7456,11 +7456,11 @@ func (l Int64ArrayLazyList) MapStringArray(f func(e []int64) []string) StringArr
 func (l Int64ArrayLazyList) MapIntArray(f func(e []int64) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -7470,11 +7470,11 @@ func (l Int64ArrayLazyList) MapIntArray(f func(e []int64) []int) IntArrayLazyLis
 func (l Int64ArrayLazyList) MapInt64Array(f func(e []int64) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -7484,11 +7484,11 @@ func (l Int64ArrayLazyList) MapInt64Array(f func(e []int64) []int64) Int64ArrayL
 func (l Int64ArrayLazyList) MapByteArray(f func(e []int64) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -7498,11 +7498,11 @@ func (l Int64ArrayLazyList) MapByteArray(f func(e []int64) []byte) ByteArrayLazy
 func (l Int64ArrayLazyList) MapRuneArray(f func(e []int64) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -7512,11 +7512,11 @@ func (l Int64ArrayLazyList) MapRuneArray(f func(e []int64) []rune) RuneArrayLazy
 func (l Int64ArrayLazyList) MapFloat32Array(f func(e []int64) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -7526,11 +7526,11 @@ func (l Int64ArrayLazyList) MapFloat32Array(f func(e []int64) []float32) Float32
 func (l Int64ArrayLazyList) MapFloat64Array(f func(e []int64) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -7540,11 +7540,11 @@ func (l Int64ArrayLazyList) MapFloat64Array(f func(e []int64) []float64) Float64
 func (l Int64ArrayLazyList) MapAnyArray(f func(e []int64) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -7554,11 +7554,11 @@ func (l Int64ArrayLazyList) MapAnyArray(f func(e []int64) []Any) AnyArrayLazyLis
 func (l Int64ArrayLazyList) MapTuple2Array(f func(e []int64) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -7568,11 +7568,11 @@ func (l Int64ArrayLazyList) MapTuple2Array(f func(e []int64) []Tuple2) Tuple2Arr
 func (l Int64ArrayLazyList) MapBoolOption(f func(e []int64) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -7582,11 +7582,11 @@ func (l Int64ArrayLazyList) MapBoolOption(f func(e []int64) BoolOption) BoolOpti
 func (l Int64ArrayLazyList) MapStringOption(f func(e []int64) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -7596,11 +7596,11 @@ func (l Int64ArrayLazyList) MapStringOption(f func(e []int64) StringOption) Stri
 func (l Int64ArrayLazyList) MapIntOption(f func(e []int64) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -7610,11 +7610,11 @@ func (l Int64ArrayLazyList) MapIntOption(f func(e []int64) IntOption) IntOptionL
 func (l Int64ArrayLazyList) MapInt64Option(f func(e []int64) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -7624,11 +7624,11 @@ func (l Int64ArrayLazyList) MapInt64Option(f func(e []int64) Int64Option) Int64O
 func (l Int64ArrayLazyList) MapByteOption(f func(e []int64) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -7638,11 +7638,11 @@ func (l Int64ArrayLazyList) MapByteOption(f func(e []int64) ByteOption) ByteOpti
 func (l Int64ArrayLazyList) MapRuneOption(f func(e []int64) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -7652,11 +7652,11 @@ func (l Int64ArrayLazyList) MapRuneOption(f func(e []int64) RuneOption) RuneOpti
 func (l Int64ArrayLazyList) MapFloat32Option(f func(e []int64) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -7666,11 +7666,11 @@ func (l Int64ArrayLazyList) MapFloat32Option(f func(e []int64) Float32Option) Fl
 func (l Int64ArrayLazyList) MapFloat64Option(f func(e []int64) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -7680,11 +7680,11 @@ func (l Int64ArrayLazyList) MapFloat64Option(f func(e []int64) Float64Option) Fl
 func (l Int64ArrayLazyList) MapAnyOption(f func(e []int64) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -7694,11 +7694,11 @@ func (l Int64ArrayLazyList) MapAnyOption(f func(e []int64) AnyOption) AnyOptionL
 func (l Int64ArrayLazyList) MapTuple2Option(f func(e []int64) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -7708,11 +7708,11 @@ func (l Int64ArrayLazyList) MapTuple2Option(f func(e []int64) Tuple2Option) Tupl
 func (l Int64ArrayLazyList) MapBoolList(f func(e []int64) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -7722,11 +7722,11 @@ func (l Int64ArrayLazyList) MapBoolList(f func(e []int64) BoolList) BoolListLazy
 func (l Int64ArrayLazyList) MapStringList(f func(e []int64) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -7736,11 +7736,11 @@ func (l Int64ArrayLazyList) MapStringList(f func(e []int64) StringList) StringLi
 func (l Int64ArrayLazyList) MapIntList(f func(e []int64) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -7750,11 +7750,11 @@ func (l Int64ArrayLazyList) MapIntList(f func(e []int64) IntList) IntListLazyLis
 func (l Int64ArrayLazyList) MapInt64List(f func(e []int64) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -7764,11 +7764,11 @@ func (l Int64ArrayLazyList) MapInt64List(f func(e []int64) Int64List) Int64ListL
 func (l Int64ArrayLazyList) MapByteList(f func(e []int64) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -7778,11 +7778,11 @@ func (l Int64ArrayLazyList) MapByteList(f func(e []int64) ByteList) ByteListLazy
 func (l Int64ArrayLazyList) MapRuneList(f func(e []int64) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -7792,11 +7792,11 @@ func (l Int64ArrayLazyList) MapRuneList(f func(e []int64) RuneList) RuneListLazy
 func (l Int64ArrayLazyList) MapFloat32List(f func(e []int64) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -7806,11 +7806,11 @@ func (l Int64ArrayLazyList) MapFloat32List(f func(e []int64) Float32List) Float3
 func (l Int64ArrayLazyList) MapFloat64List(f func(e []int64) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -7820,11 +7820,11 @@ func (l Int64ArrayLazyList) MapFloat64List(f func(e []int64) Float64List) Float6
 func (l Int64ArrayLazyList) MapAnyList(f func(e []int64) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -7834,11 +7834,11 @@ func (l Int64ArrayLazyList) MapAnyList(f func(e []int64) AnyList) AnyListLazyLis
 func (l Int64ArrayLazyList) MapTuple2List(f func(e []int64) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -7848,11 +7848,11 @@ func (l Int64ArrayLazyList) MapTuple2List(f func(e []int64) Tuple2List) Tuple2Li
 func (l ByteArrayLazyList) MapBool(f func(e []byte) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -7862,11 +7862,11 @@ func (l ByteArrayLazyList) MapBool(f func(e []byte) bool) BoolLazyList {
 func (l ByteArrayLazyList) MapString(f func(e []byte) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -7876,11 +7876,11 @@ func (l ByteArrayLazyList) MapString(f func(e []byte) string) StringLazyList {
 func (l ByteArrayLazyList) MapInt(f func(e []byte) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -7890,11 +7890,11 @@ func (l ByteArrayLazyList) MapInt(f func(e []byte) int) IntLazyList {
 func (l ByteArrayLazyList) MapInt64(f func(e []byte) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -7904,11 +7904,11 @@ func (l ByteArrayLazyList) MapInt64(f func(e []byte) int64) Int64LazyList {
 func (l ByteArrayLazyList) MapByte(f func(e []byte) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -7918,11 +7918,11 @@ func (l ByteArrayLazyList) MapByte(f func(e []byte) byte) ByteLazyList {
 func (l ByteArrayLazyList) MapRune(f func(e []byte) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -7932,11 +7932,11 @@ func (l ByteArrayLazyList) MapRune(f func(e []byte) rune) RuneLazyList {
 func (l ByteArrayLazyList) MapFloat32(f func(e []byte) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -7946,11 +7946,11 @@ func (l ByteArrayLazyList) MapFloat32(f func(e []byte) float32) Float32LazyList 
 func (l ByteArrayLazyList) MapFloat64(f func(e []byte) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -7960,11 +7960,11 @@ func (l ByteArrayLazyList) MapFloat64(f func(e []byte) float64) Float64LazyList 
 func (l ByteArrayLazyList) MapAny(f func(e []byte) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -7974,11 +7974,11 @@ func (l ByteArrayLazyList) MapAny(f func(e []byte) Any) AnyLazyList {
 func (l ByteArrayLazyList) MapTuple2(f func(e []byte) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -7988,11 +7988,11 @@ func (l ByteArrayLazyList) MapTuple2(f func(e []byte) Tuple2) Tuple2LazyList {
 func (l ByteArrayLazyList) MapBoolArray(f func(e []byte) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -8002,11 +8002,11 @@ func (l ByteArrayLazyList) MapBoolArray(f func(e []byte) []bool) BoolArrayLazyLi
 func (l ByteArrayLazyList) MapStringArray(f func(e []byte) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -8016,11 +8016,11 @@ func (l ByteArrayLazyList) MapStringArray(f func(e []byte) []string) StringArray
 func (l ByteArrayLazyList) MapIntArray(f func(e []byte) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -8030,11 +8030,11 @@ func (l ByteArrayLazyList) MapIntArray(f func(e []byte) []int) IntArrayLazyList 
 func (l ByteArrayLazyList) MapInt64Array(f func(e []byte) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -8044,11 +8044,11 @@ func (l ByteArrayLazyList) MapInt64Array(f func(e []byte) []int64) Int64ArrayLaz
 func (l ByteArrayLazyList) MapByteArray(f func(e []byte) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -8058,11 +8058,11 @@ func (l ByteArrayLazyList) MapByteArray(f func(e []byte) []byte) ByteArrayLazyLi
 func (l ByteArrayLazyList) MapRuneArray(f func(e []byte) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -8072,11 +8072,11 @@ func (l ByteArrayLazyList) MapRuneArray(f func(e []byte) []rune) RuneArrayLazyLi
 func (l ByteArrayLazyList) MapFloat32Array(f func(e []byte) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -8086,11 +8086,11 @@ func (l ByteArrayLazyList) MapFloat32Array(f func(e []byte) []float32) Float32Ar
 func (l ByteArrayLazyList) MapFloat64Array(f func(e []byte) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -8100,11 +8100,11 @@ func (l ByteArrayLazyList) MapFloat64Array(f func(e []byte) []float64) Float64Ar
 func (l ByteArrayLazyList) MapAnyArray(f func(e []byte) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -8114,11 +8114,11 @@ func (l ByteArrayLazyList) MapAnyArray(f func(e []byte) []Any) AnyArrayLazyList 
 func (l ByteArrayLazyList) MapTuple2Array(f func(e []byte) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -8128,11 +8128,11 @@ func (l ByteArrayLazyList) MapTuple2Array(f func(e []byte) []Tuple2) Tuple2Array
 func (l ByteArrayLazyList) MapBoolOption(f func(e []byte) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -8142,11 +8142,11 @@ func (l ByteArrayLazyList) MapBoolOption(f func(e []byte) BoolOption) BoolOption
 func (l ByteArrayLazyList) MapStringOption(f func(e []byte) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -8156,11 +8156,11 @@ func (l ByteArrayLazyList) MapStringOption(f func(e []byte) StringOption) String
 func (l ByteArrayLazyList) MapIntOption(f func(e []byte) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -8170,11 +8170,11 @@ func (l ByteArrayLazyList) MapIntOption(f func(e []byte) IntOption) IntOptionLaz
 func (l ByteArrayLazyList) MapInt64Option(f func(e []byte) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -8184,11 +8184,11 @@ func (l ByteArrayLazyList) MapInt64Option(f func(e []byte) Int64Option) Int64Opt
 func (l ByteArrayLazyList) MapByteOption(f func(e []byte) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -8198,11 +8198,11 @@ func (l ByteArrayLazyList) MapByteOption(f func(e []byte) ByteOption) ByteOption
 func (l ByteArrayLazyList) MapRuneOption(f func(e []byte) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -8212,11 +8212,11 @@ func (l ByteArrayLazyList) MapRuneOption(f func(e []byte) RuneOption) RuneOption
 func (l ByteArrayLazyList) MapFloat32Option(f func(e []byte) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -8226,11 +8226,11 @@ func (l ByteArrayLazyList) MapFloat32Option(f func(e []byte) Float32Option) Floa
 func (l ByteArrayLazyList) MapFloat64Option(f func(e []byte) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -8240,11 +8240,11 @@ func (l ByteArrayLazyList) MapFloat64Option(f func(e []byte) Float64Option) Floa
 func (l ByteArrayLazyList) MapAnyOption(f func(e []byte) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -8254,11 +8254,11 @@ func (l ByteArrayLazyList) MapAnyOption(f func(e []byte) AnyOption) AnyOptionLaz
 func (l ByteArrayLazyList) MapTuple2Option(f func(e []byte) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -8268,11 +8268,11 @@ func (l ByteArrayLazyList) MapTuple2Option(f func(e []byte) Tuple2Option) Tuple2
 func (l ByteArrayLazyList) MapBoolList(f func(e []byte) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -8282,11 +8282,11 @@ func (l ByteArrayLazyList) MapBoolList(f func(e []byte) BoolList) BoolListLazyLi
 func (l ByteArrayLazyList) MapStringList(f func(e []byte) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -8296,11 +8296,11 @@ func (l ByteArrayLazyList) MapStringList(f func(e []byte) StringList) StringList
 func (l ByteArrayLazyList) MapIntList(f func(e []byte) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -8310,11 +8310,11 @@ func (l ByteArrayLazyList) MapIntList(f func(e []byte) IntList) IntListLazyList 
 func (l ByteArrayLazyList) MapInt64List(f func(e []byte) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -8324,11 +8324,11 @@ func (l ByteArrayLazyList) MapInt64List(f func(e []byte) Int64List) Int64ListLaz
 func (l ByteArrayLazyList) MapByteList(f func(e []byte) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -8338,11 +8338,11 @@ func (l ByteArrayLazyList) MapByteList(f func(e []byte) ByteList) ByteListLazyLi
 func (l ByteArrayLazyList) MapRuneList(f func(e []byte) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -8352,11 +8352,11 @@ func (l ByteArrayLazyList) MapRuneList(f func(e []byte) RuneList) RuneListLazyLi
 func (l ByteArrayLazyList) MapFloat32List(f func(e []byte) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -8366,11 +8366,11 @@ func (l ByteArrayLazyList) MapFloat32List(f func(e []byte) Float32List) Float32L
 func (l ByteArrayLazyList) MapFloat64List(f func(e []byte) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -8380,11 +8380,11 @@ func (l ByteArrayLazyList) MapFloat64List(f func(e []byte) Float64List) Float64L
 func (l ByteArrayLazyList) MapAnyList(f func(e []byte) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -8394,11 +8394,11 @@ func (l ByteArrayLazyList) MapAnyList(f func(e []byte) AnyList) AnyListLazyList 
 func (l ByteArrayLazyList) MapTuple2List(f func(e []byte) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -8408,11 +8408,11 @@ func (l ByteArrayLazyList) MapTuple2List(f func(e []byte) Tuple2List) Tuple2List
 func (l RuneArrayLazyList) MapBool(f func(e []rune) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -8422,11 +8422,11 @@ func (l RuneArrayLazyList) MapBool(f func(e []rune) bool) BoolLazyList {
 func (l RuneArrayLazyList) MapString(f func(e []rune) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -8436,11 +8436,11 @@ func (l RuneArrayLazyList) MapString(f func(e []rune) string) StringLazyList {
 func (l RuneArrayLazyList) MapInt(f func(e []rune) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -8450,11 +8450,11 @@ func (l RuneArrayLazyList) MapInt(f func(e []rune) int) IntLazyList {
 func (l RuneArrayLazyList) MapInt64(f func(e []rune) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -8464,11 +8464,11 @@ func (l RuneArrayLazyList) MapInt64(f func(e []rune) int64) Int64LazyList {
 func (l RuneArrayLazyList) MapByte(f func(e []rune) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -8478,11 +8478,11 @@ func (l RuneArrayLazyList) MapByte(f func(e []rune) byte) ByteLazyList {
 func (l RuneArrayLazyList) MapRune(f func(e []rune) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -8492,11 +8492,11 @@ func (l RuneArrayLazyList) MapRune(f func(e []rune) rune) RuneLazyList {
 func (l RuneArrayLazyList) MapFloat32(f func(e []rune) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -8506,11 +8506,11 @@ func (l RuneArrayLazyList) MapFloat32(f func(e []rune) float32) Float32LazyList 
 func (l RuneArrayLazyList) MapFloat64(f func(e []rune) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -8520,11 +8520,11 @@ func (l RuneArrayLazyList) MapFloat64(f func(e []rune) float64) Float64LazyList 
 func (l RuneArrayLazyList) MapAny(f func(e []rune) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -8534,11 +8534,11 @@ func (l RuneArrayLazyList) MapAny(f func(e []rune) Any) AnyLazyList {
 func (l RuneArrayLazyList) MapTuple2(f func(e []rune) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -8548,11 +8548,11 @@ func (l RuneArrayLazyList) MapTuple2(f func(e []rune) Tuple2) Tuple2LazyList {
 func (l RuneArrayLazyList) MapBoolArray(f func(e []rune) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -8562,11 +8562,11 @@ func (l RuneArrayLazyList) MapBoolArray(f func(e []rune) []bool) BoolArrayLazyLi
 func (l RuneArrayLazyList) MapStringArray(f func(e []rune) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -8576,11 +8576,11 @@ func (l RuneArrayLazyList) MapStringArray(f func(e []rune) []string) StringArray
 func (l RuneArrayLazyList) MapIntArray(f func(e []rune) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -8590,11 +8590,11 @@ func (l RuneArrayLazyList) MapIntArray(f func(e []rune) []int) IntArrayLazyList 
 func (l RuneArrayLazyList) MapInt64Array(f func(e []rune) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -8604,11 +8604,11 @@ func (l RuneArrayLazyList) MapInt64Array(f func(e []rune) []int64) Int64ArrayLaz
 func (l RuneArrayLazyList) MapByteArray(f func(e []rune) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -8618,11 +8618,11 @@ func (l RuneArrayLazyList) MapByteArray(f func(e []rune) []byte) ByteArrayLazyLi
 func (l RuneArrayLazyList) MapRuneArray(f func(e []rune) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -8632,11 +8632,11 @@ func (l RuneArrayLazyList) MapRuneArray(f func(e []rune) []rune) RuneArrayLazyLi
 func (l RuneArrayLazyList) MapFloat32Array(f func(e []rune) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -8646,11 +8646,11 @@ func (l RuneArrayLazyList) MapFloat32Array(f func(e []rune) []float32) Float32Ar
 func (l RuneArrayLazyList) MapFloat64Array(f func(e []rune) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -8660,11 +8660,11 @@ func (l RuneArrayLazyList) MapFloat64Array(f func(e []rune) []float64) Float64Ar
 func (l RuneArrayLazyList) MapAnyArray(f func(e []rune) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -8674,11 +8674,11 @@ func (l RuneArrayLazyList) MapAnyArray(f func(e []rune) []Any) AnyArrayLazyList 
 func (l RuneArrayLazyList) MapTuple2Array(f func(e []rune) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -8688,11 +8688,11 @@ func (l RuneArrayLazyList) MapTuple2Array(f func(e []rune) []Tuple2) Tuple2Array
 func (l RuneArrayLazyList) MapBoolOption(f func(e []rune) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -8702,11 +8702,11 @@ func (l RuneArrayLazyList) MapBoolOption(f func(e []rune) BoolOption) BoolOption
 func (l RuneArrayLazyList) MapStringOption(f func(e []rune) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -8716,11 +8716,11 @@ func (l RuneArrayLazyList) MapStringOption(f func(e []rune) StringOption) String
 func (l RuneArrayLazyList) MapIntOption(f func(e []rune) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -8730,11 +8730,11 @@ func (l RuneArrayLazyList) MapIntOption(f func(e []rune) IntOption) IntOptionLaz
 func (l RuneArrayLazyList) MapInt64Option(f func(e []rune) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -8744,11 +8744,11 @@ func (l RuneArrayLazyList) MapInt64Option(f func(e []rune) Int64Option) Int64Opt
 func (l RuneArrayLazyList) MapByteOption(f func(e []rune) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -8758,11 +8758,11 @@ func (l RuneArrayLazyList) MapByteOption(f func(e []rune) ByteOption) ByteOption
 func (l RuneArrayLazyList) MapRuneOption(f func(e []rune) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -8772,11 +8772,11 @@ func (l RuneArrayLazyList) MapRuneOption(f func(e []rune) RuneOption) RuneOption
 func (l RuneArrayLazyList) MapFloat32Option(f func(e []rune) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -8786,11 +8786,11 @@ func (l RuneArrayLazyList) MapFloat32Option(f func(e []rune) Float32Option) Floa
 func (l RuneArrayLazyList) MapFloat64Option(f func(e []rune) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -8800,11 +8800,11 @@ func (l RuneArrayLazyList) MapFloat64Option(f func(e []rune) Float64Option) Floa
 func (l RuneArrayLazyList) MapAnyOption(f func(e []rune) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -8814,11 +8814,11 @@ func (l RuneArrayLazyList) MapAnyOption(f func(e []rune) AnyOption) AnyOptionLaz
 func (l RuneArrayLazyList) MapTuple2Option(f func(e []rune) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -8828,11 +8828,11 @@ func (l RuneArrayLazyList) MapTuple2Option(f func(e []rune) Tuple2Option) Tuple2
 func (l RuneArrayLazyList) MapBoolList(f func(e []rune) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -8842,11 +8842,11 @@ func (l RuneArrayLazyList) MapBoolList(f func(e []rune) BoolList) BoolListLazyLi
 func (l RuneArrayLazyList) MapStringList(f func(e []rune) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -8856,11 +8856,11 @@ func (l RuneArrayLazyList) MapStringList(f func(e []rune) StringList) StringList
 func (l RuneArrayLazyList) MapIntList(f func(e []rune) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -8870,11 +8870,11 @@ func (l RuneArrayLazyList) MapIntList(f func(e []rune) IntList) IntListLazyList 
 func (l RuneArrayLazyList) MapInt64List(f func(e []rune) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -8884,11 +8884,11 @@ func (l RuneArrayLazyList) MapInt64List(f func(e []rune) Int64List) Int64ListLaz
 func (l RuneArrayLazyList) MapByteList(f func(e []rune) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -8898,11 +8898,11 @@ func (l RuneArrayLazyList) MapByteList(f func(e []rune) ByteList) ByteListLazyLi
 func (l RuneArrayLazyList) MapRuneList(f func(e []rune) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -8912,11 +8912,11 @@ func (l RuneArrayLazyList) MapRuneList(f func(e []rune) RuneList) RuneListLazyLi
 func (l RuneArrayLazyList) MapFloat32List(f func(e []rune) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -8926,11 +8926,11 @@ func (l RuneArrayLazyList) MapFloat32List(f func(e []rune) Float32List) Float32L
 func (l RuneArrayLazyList) MapFloat64List(f func(e []rune) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -8940,11 +8940,11 @@ func (l RuneArrayLazyList) MapFloat64List(f func(e []rune) Float64List) Float64L
 func (l RuneArrayLazyList) MapAnyList(f func(e []rune) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -8954,11 +8954,11 @@ func (l RuneArrayLazyList) MapAnyList(f func(e []rune) AnyList) AnyListLazyList 
 func (l RuneArrayLazyList) MapTuple2List(f func(e []rune) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -8968,11 +8968,11 @@ func (l RuneArrayLazyList) MapTuple2List(f func(e []rune) Tuple2List) Tuple2List
 func (l Float32ArrayLazyList) MapBool(f func(e []float32) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -8982,11 +8982,11 @@ func (l Float32ArrayLazyList) MapBool(f func(e []float32) bool) BoolLazyList {
 func (l Float32ArrayLazyList) MapString(f func(e []float32) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -8996,11 +8996,11 @@ func (l Float32ArrayLazyList) MapString(f func(e []float32) string) StringLazyLi
 func (l Float32ArrayLazyList) MapInt(f func(e []float32) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -9010,11 +9010,11 @@ func (l Float32ArrayLazyList) MapInt(f func(e []float32) int) IntLazyList {
 func (l Float32ArrayLazyList) MapInt64(f func(e []float32) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -9024,11 +9024,11 @@ func (l Float32ArrayLazyList) MapInt64(f func(e []float32) int64) Int64LazyList 
 func (l Float32ArrayLazyList) MapByte(f func(e []float32) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -9038,11 +9038,11 @@ func (l Float32ArrayLazyList) MapByte(f func(e []float32) byte) ByteLazyList {
 func (l Float32ArrayLazyList) MapRune(f func(e []float32) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -9052,11 +9052,11 @@ func (l Float32ArrayLazyList) MapRune(f func(e []float32) rune) RuneLazyList {
 func (l Float32ArrayLazyList) MapFloat32(f func(e []float32) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -9066,11 +9066,11 @@ func (l Float32ArrayLazyList) MapFloat32(f func(e []float32) float32) Float32Laz
 func (l Float32ArrayLazyList) MapFloat64(f func(e []float32) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -9080,11 +9080,11 @@ func (l Float32ArrayLazyList) MapFloat64(f func(e []float32) float64) Float64Laz
 func (l Float32ArrayLazyList) MapAny(f func(e []float32) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -9094,11 +9094,11 @@ func (l Float32ArrayLazyList) MapAny(f func(e []float32) Any) AnyLazyList {
 func (l Float32ArrayLazyList) MapTuple2(f func(e []float32) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -9108,11 +9108,11 @@ func (l Float32ArrayLazyList) MapTuple2(f func(e []float32) Tuple2) Tuple2LazyLi
 func (l Float32ArrayLazyList) MapBoolArray(f func(e []float32) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -9122,11 +9122,11 @@ func (l Float32ArrayLazyList) MapBoolArray(f func(e []float32) []bool) BoolArray
 func (l Float32ArrayLazyList) MapStringArray(f func(e []float32) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -9136,11 +9136,11 @@ func (l Float32ArrayLazyList) MapStringArray(f func(e []float32) []string) Strin
 func (l Float32ArrayLazyList) MapIntArray(f func(e []float32) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -9150,11 +9150,11 @@ func (l Float32ArrayLazyList) MapIntArray(f func(e []float32) []int) IntArrayLaz
 func (l Float32ArrayLazyList) MapInt64Array(f func(e []float32) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -9164,11 +9164,11 @@ func (l Float32ArrayLazyList) MapInt64Array(f func(e []float32) []int64) Int64Ar
 func (l Float32ArrayLazyList) MapByteArray(f func(e []float32) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -9178,11 +9178,11 @@ func (l Float32ArrayLazyList) MapByteArray(f func(e []float32) []byte) ByteArray
 func (l Float32ArrayLazyList) MapRuneArray(f func(e []float32) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -9192,11 +9192,11 @@ func (l Float32ArrayLazyList) MapRuneArray(f func(e []float32) []rune) RuneArray
 func (l Float32ArrayLazyList) MapFloat32Array(f func(e []float32) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -9206,11 +9206,11 @@ func (l Float32ArrayLazyList) MapFloat32Array(f func(e []float32) []float32) Flo
 func (l Float32ArrayLazyList) MapFloat64Array(f func(e []float32) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -9220,11 +9220,11 @@ func (l Float32ArrayLazyList) MapFloat64Array(f func(e []float32) []float64) Flo
 func (l Float32ArrayLazyList) MapAnyArray(f func(e []float32) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -9234,11 +9234,11 @@ func (l Float32ArrayLazyList) MapAnyArray(f func(e []float32) []Any) AnyArrayLaz
 func (l Float32ArrayLazyList) MapTuple2Array(f func(e []float32) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -9248,11 +9248,11 @@ func (l Float32ArrayLazyList) MapTuple2Array(f func(e []float32) []Tuple2) Tuple
 func (l Float32ArrayLazyList) MapBoolOption(f func(e []float32) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -9262,11 +9262,11 @@ func (l Float32ArrayLazyList) MapBoolOption(f func(e []float32) BoolOption) Bool
 func (l Float32ArrayLazyList) MapStringOption(f func(e []float32) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -9276,11 +9276,11 @@ func (l Float32ArrayLazyList) MapStringOption(f func(e []float32) StringOption) 
 func (l Float32ArrayLazyList) MapIntOption(f func(e []float32) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -9290,11 +9290,11 @@ func (l Float32ArrayLazyList) MapIntOption(f func(e []float32) IntOption) IntOpt
 func (l Float32ArrayLazyList) MapInt64Option(f func(e []float32) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -9304,11 +9304,11 @@ func (l Float32ArrayLazyList) MapInt64Option(f func(e []float32) Int64Option) In
 func (l Float32ArrayLazyList) MapByteOption(f func(e []float32) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -9318,11 +9318,11 @@ func (l Float32ArrayLazyList) MapByteOption(f func(e []float32) ByteOption) Byte
 func (l Float32ArrayLazyList) MapRuneOption(f func(e []float32) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -9332,11 +9332,11 @@ func (l Float32ArrayLazyList) MapRuneOption(f func(e []float32) RuneOption) Rune
 func (l Float32ArrayLazyList) MapFloat32Option(f func(e []float32) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -9346,11 +9346,11 @@ func (l Float32ArrayLazyList) MapFloat32Option(f func(e []float32) Float32Option
 func (l Float32ArrayLazyList) MapFloat64Option(f func(e []float32) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -9360,11 +9360,11 @@ func (l Float32ArrayLazyList) MapFloat64Option(f func(e []float32) Float64Option
 func (l Float32ArrayLazyList) MapAnyOption(f func(e []float32) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -9374,11 +9374,11 @@ func (l Float32ArrayLazyList) MapAnyOption(f func(e []float32) AnyOption) AnyOpt
 func (l Float32ArrayLazyList) MapTuple2Option(f func(e []float32) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -9388,11 +9388,11 @@ func (l Float32ArrayLazyList) MapTuple2Option(f func(e []float32) Tuple2Option) 
 func (l Float32ArrayLazyList) MapBoolList(f func(e []float32) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -9402,11 +9402,11 @@ func (l Float32ArrayLazyList) MapBoolList(f func(e []float32) BoolList) BoolList
 func (l Float32ArrayLazyList) MapStringList(f func(e []float32) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -9416,11 +9416,11 @@ func (l Float32ArrayLazyList) MapStringList(f func(e []float32) StringList) Stri
 func (l Float32ArrayLazyList) MapIntList(f func(e []float32) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -9430,11 +9430,11 @@ func (l Float32ArrayLazyList) MapIntList(f func(e []float32) IntList) IntListLaz
 func (l Float32ArrayLazyList) MapInt64List(f func(e []float32) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -9444,11 +9444,11 @@ func (l Float32ArrayLazyList) MapInt64List(f func(e []float32) Int64List) Int64L
 func (l Float32ArrayLazyList) MapByteList(f func(e []float32) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -9458,11 +9458,11 @@ func (l Float32ArrayLazyList) MapByteList(f func(e []float32) ByteList) ByteList
 func (l Float32ArrayLazyList) MapRuneList(f func(e []float32) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -9472,11 +9472,11 @@ func (l Float32ArrayLazyList) MapRuneList(f func(e []float32) RuneList) RuneList
 func (l Float32ArrayLazyList) MapFloat32List(f func(e []float32) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -9486,11 +9486,11 @@ func (l Float32ArrayLazyList) MapFloat32List(f func(e []float32) Float32List) Fl
 func (l Float32ArrayLazyList) MapFloat64List(f func(e []float32) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -9500,11 +9500,11 @@ func (l Float32ArrayLazyList) MapFloat64List(f func(e []float32) Float64List) Fl
 func (l Float32ArrayLazyList) MapAnyList(f func(e []float32) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -9514,11 +9514,11 @@ func (l Float32ArrayLazyList) MapAnyList(f func(e []float32) AnyList) AnyListLaz
 func (l Float32ArrayLazyList) MapTuple2List(f func(e []float32) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -9528,11 +9528,11 @@ func (l Float32ArrayLazyList) MapTuple2List(f func(e []float32) Tuple2List) Tupl
 func (l Float64ArrayLazyList) MapBool(f func(e []float64) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -9542,11 +9542,11 @@ func (l Float64ArrayLazyList) MapBool(f func(e []float64) bool) BoolLazyList {
 func (l Float64ArrayLazyList) MapString(f func(e []float64) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -9556,11 +9556,11 @@ func (l Float64ArrayLazyList) MapString(f func(e []float64) string) StringLazyLi
 func (l Float64ArrayLazyList) MapInt(f func(e []float64) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -9570,11 +9570,11 @@ func (l Float64ArrayLazyList) MapInt(f func(e []float64) int) IntLazyList {
 func (l Float64ArrayLazyList) MapInt64(f func(e []float64) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -9584,11 +9584,11 @@ func (l Float64ArrayLazyList) MapInt64(f func(e []float64) int64) Int64LazyList 
 func (l Float64ArrayLazyList) MapByte(f func(e []float64) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -9598,11 +9598,11 @@ func (l Float64ArrayLazyList) MapByte(f func(e []float64) byte) ByteLazyList {
 func (l Float64ArrayLazyList) MapRune(f func(e []float64) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -9612,11 +9612,11 @@ func (l Float64ArrayLazyList) MapRune(f func(e []float64) rune) RuneLazyList {
 func (l Float64ArrayLazyList) MapFloat32(f func(e []float64) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -9626,11 +9626,11 @@ func (l Float64ArrayLazyList) MapFloat32(f func(e []float64) float32) Float32Laz
 func (l Float64ArrayLazyList) MapFloat64(f func(e []float64) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -9640,11 +9640,11 @@ func (l Float64ArrayLazyList) MapFloat64(f func(e []float64) float64) Float64Laz
 func (l Float64ArrayLazyList) MapAny(f func(e []float64) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -9654,11 +9654,11 @@ func (l Float64ArrayLazyList) MapAny(f func(e []float64) Any) AnyLazyList {
 func (l Float64ArrayLazyList) MapTuple2(f func(e []float64) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -9668,11 +9668,11 @@ func (l Float64ArrayLazyList) MapTuple2(f func(e []float64) Tuple2) Tuple2LazyLi
 func (l Float64ArrayLazyList) MapBoolArray(f func(e []float64) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -9682,11 +9682,11 @@ func (l Float64ArrayLazyList) MapBoolArray(f func(e []float64) []bool) BoolArray
 func (l Float64ArrayLazyList) MapStringArray(f func(e []float64) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -9696,11 +9696,11 @@ func (l Float64ArrayLazyList) MapStringArray(f func(e []float64) []string) Strin
 func (l Float64ArrayLazyList) MapIntArray(f func(e []float64) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -9710,11 +9710,11 @@ func (l Float64ArrayLazyList) MapIntArray(f func(e []float64) []int) IntArrayLaz
 func (l Float64ArrayLazyList) MapInt64Array(f func(e []float64) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -9724,11 +9724,11 @@ func (l Float64ArrayLazyList) MapInt64Array(f func(e []float64) []int64) Int64Ar
 func (l Float64ArrayLazyList) MapByteArray(f func(e []float64) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -9738,11 +9738,11 @@ func (l Float64ArrayLazyList) MapByteArray(f func(e []float64) []byte) ByteArray
 func (l Float64ArrayLazyList) MapRuneArray(f func(e []float64) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -9752,11 +9752,11 @@ func (l Float64ArrayLazyList) MapRuneArray(f func(e []float64) []rune) RuneArray
 func (l Float64ArrayLazyList) MapFloat32Array(f func(e []float64) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -9766,11 +9766,11 @@ func (l Float64ArrayLazyList) MapFloat32Array(f func(e []float64) []float32) Flo
 func (l Float64ArrayLazyList) MapFloat64Array(f func(e []float64) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -9780,11 +9780,11 @@ func (l Float64ArrayLazyList) MapFloat64Array(f func(e []float64) []float64) Flo
 func (l Float64ArrayLazyList) MapAnyArray(f func(e []float64) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -9794,11 +9794,11 @@ func (l Float64ArrayLazyList) MapAnyArray(f func(e []float64) []Any) AnyArrayLaz
 func (l Float64ArrayLazyList) MapTuple2Array(f func(e []float64) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -9808,11 +9808,11 @@ func (l Float64ArrayLazyList) MapTuple2Array(f func(e []float64) []Tuple2) Tuple
 func (l Float64ArrayLazyList) MapBoolOption(f func(e []float64) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -9822,11 +9822,11 @@ func (l Float64ArrayLazyList) MapBoolOption(f func(e []float64) BoolOption) Bool
 func (l Float64ArrayLazyList) MapStringOption(f func(e []float64) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -9836,11 +9836,11 @@ func (l Float64ArrayLazyList) MapStringOption(f func(e []float64) StringOption) 
 func (l Float64ArrayLazyList) MapIntOption(f func(e []float64) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -9850,11 +9850,11 @@ func (l Float64ArrayLazyList) MapIntOption(f func(e []float64) IntOption) IntOpt
 func (l Float64ArrayLazyList) MapInt64Option(f func(e []float64) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -9864,11 +9864,11 @@ func (l Float64ArrayLazyList) MapInt64Option(f func(e []float64) Int64Option) In
 func (l Float64ArrayLazyList) MapByteOption(f func(e []float64) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -9878,11 +9878,11 @@ func (l Float64ArrayLazyList) MapByteOption(f func(e []float64) ByteOption) Byte
 func (l Float64ArrayLazyList) MapRuneOption(f func(e []float64) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -9892,11 +9892,11 @@ func (l Float64ArrayLazyList) MapRuneOption(f func(e []float64) RuneOption) Rune
 func (l Float64ArrayLazyList) MapFloat32Option(f func(e []float64) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -9906,11 +9906,11 @@ func (l Float64ArrayLazyList) MapFloat32Option(f func(e []float64) Float32Option
 func (l Float64ArrayLazyList) MapFloat64Option(f func(e []float64) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -9920,11 +9920,11 @@ func (l Float64ArrayLazyList) MapFloat64Option(f func(e []float64) Float64Option
 func (l Float64ArrayLazyList) MapAnyOption(f func(e []float64) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -9934,11 +9934,11 @@ func (l Float64ArrayLazyList) MapAnyOption(f func(e []float64) AnyOption) AnyOpt
 func (l Float64ArrayLazyList) MapTuple2Option(f func(e []float64) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -9948,11 +9948,11 @@ func (l Float64ArrayLazyList) MapTuple2Option(f func(e []float64) Tuple2Option) 
 func (l Float64ArrayLazyList) MapBoolList(f func(e []float64) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -9962,11 +9962,11 @@ func (l Float64ArrayLazyList) MapBoolList(f func(e []float64) BoolList) BoolList
 func (l Float64ArrayLazyList) MapStringList(f func(e []float64) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -9976,11 +9976,11 @@ func (l Float64ArrayLazyList) MapStringList(f func(e []float64) StringList) Stri
 func (l Float64ArrayLazyList) MapIntList(f func(e []float64) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -9990,11 +9990,11 @@ func (l Float64ArrayLazyList) MapIntList(f func(e []float64) IntList) IntListLaz
 func (l Float64ArrayLazyList) MapInt64List(f func(e []float64) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -10004,11 +10004,11 @@ func (l Float64ArrayLazyList) MapInt64List(f func(e []float64) Int64List) Int64L
 func (l Float64ArrayLazyList) MapByteList(f func(e []float64) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -10018,11 +10018,11 @@ func (l Float64ArrayLazyList) MapByteList(f func(e []float64) ByteList) ByteList
 func (l Float64ArrayLazyList) MapRuneList(f func(e []float64) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -10032,11 +10032,11 @@ func (l Float64ArrayLazyList) MapRuneList(f func(e []float64) RuneList) RuneList
 func (l Float64ArrayLazyList) MapFloat32List(f func(e []float64) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -10046,11 +10046,11 @@ func (l Float64ArrayLazyList) MapFloat32List(f func(e []float64) Float32List) Fl
 func (l Float64ArrayLazyList) MapFloat64List(f func(e []float64) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -10060,11 +10060,11 @@ func (l Float64ArrayLazyList) MapFloat64List(f func(e []float64) Float64List) Fl
 func (l Float64ArrayLazyList) MapAnyList(f func(e []float64) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -10074,11 +10074,11 @@ func (l Float64ArrayLazyList) MapAnyList(f func(e []float64) AnyList) AnyListLaz
 func (l Float64ArrayLazyList) MapTuple2List(f func(e []float64) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -10088,11 +10088,11 @@ func (l Float64ArrayLazyList) MapTuple2List(f func(e []float64) Tuple2List) Tupl
 func (l AnyArrayLazyList) MapBool(f func(e []Any) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -10102,11 +10102,11 @@ func (l AnyArrayLazyList) MapBool(f func(e []Any) bool) BoolLazyList {
 func (l AnyArrayLazyList) MapString(f func(e []Any) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -10116,11 +10116,11 @@ func (l AnyArrayLazyList) MapString(f func(e []Any) string) StringLazyList {
 func (l AnyArrayLazyList) MapInt(f func(e []Any) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -10130,11 +10130,11 @@ func (l AnyArrayLazyList) MapInt(f func(e []Any) int) IntLazyList {
 func (l AnyArrayLazyList) MapInt64(f func(e []Any) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -10144,11 +10144,11 @@ func (l AnyArrayLazyList) MapInt64(f func(e []Any) int64) Int64LazyList {
 func (l AnyArrayLazyList) MapByte(f func(e []Any) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -10158,11 +10158,11 @@ func (l AnyArrayLazyList) MapByte(f func(e []Any) byte) ByteLazyList {
 func (l AnyArrayLazyList) MapRune(f func(e []Any) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -10172,11 +10172,11 @@ func (l AnyArrayLazyList) MapRune(f func(e []Any) rune) RuneLazyList {
 func (l AnyArrayLazyList) MapFloat32(f func(e []Any) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -10186,11 +10186,11 @@ func (l AnyArrayLazyList) MapFloat32(f func(e []Any) float32) Float32LazyList {
 func (l AnyArrayLazyList) MapFloat64(f func(e []Any) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -10200,11 +10200,11 @@ func (l AnyArrayLazyList) MapFloat64(f func(e []Any) float64) Float64LazyList {
 func (l AnyArrayLazyList) MapAny(f func(e []Any) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -10214,11 +10214,11 @@ func (l AnyArrayLazyList) MapAny(f func(e []Any) Any) AnyLazyList {
 func (l AnyArrayLazyList) MapTuple2(f func(e []Any) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -10228,11 +10228,11 @@ func (l AnyArrayLazyList) MapTuple2(f func(e []Any) Tuple2) Tuple2LazyList {
 func (l AnyArrayLazyList) MapBoolArray(f func(e []Any) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -10242,11 +10242,11 @@ func (l AnyArrayLazyList) MapBoolArray(f func(e []Any) []bool) BoolArrayLazyList
 func (l AnyArrayLazyList) MapStringArray(f func(e []Any) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -10256,11 +10256,11 @@ func (l AnyArrayLazyList) MapStringArray(f func(e []Any) []string) StringArrayLa
 func (l AnyArrayLazyList) MapIntArray(f func(e []Any) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -10270,11 +10270,11 @@ func (l AnyArrayLazyList) MapIntArray(f func(e []Any) []int) IntArrayLazyList {
 func (l AnyArrayLazyList) MapInt64Array(f func(e []Any) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -10284,11 +10284,11 @@ func (l AnyArrayLazyList) MapInt64Array(f func(e []Any) []int64) Int64ArrayLazyL
 func (l AnyArrayLazyList) MapByteArray(f func(e []Any) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -10298,11 +10298,11 @@ func (l AnyArrayLazyList) MapByteArray(f func(e []Any) []byte) ByteArrayLazyList
 func (l AnyArrayLazyList) MapRuneArray(f func(e []Any) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -10312,11 +10312,11 @@ func (l AnyArrayLazyList) MapRuneArray(f func(e []Any) []rune) RuneArrayLazyList
 func (l AnyArrayLazyList) MapFloat32Array(f func(e []Any) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -10326,11 +10326,11 @@ func (l AnyArrayLazyList) MapFloat32Array(f func(e []Any) []float32) Float32Arra
 func (l AnyArrayLazyList) MapFloat64Array(f func(e []Any) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -10340,11 +10340,11 @@ func (l AnyArrayLazyList) MapFloat64Array(f func(e []Any) []float64) Float64Arra
 func (l AnyArrayLazyList) MapAnyArray(f func(e []Any) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -10354,11 +10354,11 @@ func (l AnyArrayLazyList) MapAnyArray(f func(e []Any) []Any) AnyArrayLazyList {
 func (l AnyArrayLazyList) MapTuple2Array(f func(e []Any) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -10368,11 +10368,11 @@ func (l AnyArrayLazyList) MapTuple2Array(f func(e []Any) []Tuple2) Tuple2ArrayLa
 func (l AnyArrayLazyList) MapBoolOption(f func(e []Any) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -10382,11 +10382,11 @@ func (l AnyArrayLazyList) MapBoolOption(f func(e []Any) BoolOption) BoolOptionLa
 func (l AnyArrayLazyList) MapStringOption(f func(e []Any) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -10396,11 +10396,11 @@ func (l AnyArrayLazyList) MapStringOption(f func(e []Any) StringOption) StringOp
 func (l AnyArrayLazyList) MapIntOption(f func(e []Any) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -10410,11 +10410,11 @@ func (l AnyArrayLazyList) MapIntOption(f func(e []Any) IntOption) IntOptionLazyL
 func (l AnyArrayLazyList) MapInt64Option(f func(e []Any) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -10424,11 +10424,11 @@ func (l AnyArrayLazyList) MapInt64Option(f func(e []Any) Int64Option) Int64Optio
 func (l AnyArrayLazyList) MapByteOption(f func(e []Any) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -10438,11 +10438,11 @@ func (l AnyArrayLazyList) MapByteOption(f func(e []Any) ByteOption) ByteOptionLa
 func (l AnyArrayLazyList) MapRuneOption(f func(e []Any) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -10452,11 +10452,11 @@ func (l AnyArrayLazyList) MapRuneOption(f func(e []Any) RuneOption) RuneOptionLa
 func (l AnyArrayLazyList) MapFloat32Option(f func(e []Any) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -10466,11 +10466,11 @@ func (l AnyArrayLazyList) MapFloat32Option(f func(e []Any) Float32Option) Float3
 func (l AnyArrayLazyList) MapFloat64Option(f func(e []Any) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -10480,11 +10480,11 @@ func (l AnyArrayLazyList) MapFloat64Option(f func(e []Any) Float64Option) Float6
 func (l AnyArrayLazyList) MapAnyOption(f func(e []Any) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -10494,11 +10494,11 @@ func (l AnyArrayLazyList) MapAnyOption(f func(e []Any) AnyOption) AnyOptionLazyL
 func (l AnyArrayLazyList) MapTuple2Option(f func(e []Any) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -10508,11 +10508,11 @@ func (l AnyArrayLazyList) MapTuple2Option(f func(e []Any) Tuple2Option) Tuple2Op
 func (l AnyArrayLazyList) MapBoolList(f func(e []Any) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -10522,11 +10522,11 @@ func (l AnyArrayLazyList) MapBoolList(f func(e []Any) BoolList) BoolListLazyList
 func (l AnyArrayLazyList) MapStringList(f func(e []Any) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -10536,11 +10536,11 @@ func (l AnyArrayLazyList) MapStringList(f func(e []Any) StringList) StringListLa
 func (l AnyArrayLazyList) MapIntList(f func(e []Any) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -10550,11 +10550,11 @@ func (l AnyArrayLazyList) MapIntList(f func(e []Any) IntList) IntListLazyList {
 func (l AnyArrayLazyList) MapInt64List(f func(e []Any) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -10564,11 +10564,11 @@ func (l AnyArrayLazyList) MapInt64List(f func(e []Any) Int64List) Int64ListLazyL
 func (l AnyArrayLazyList) MapByteList(f func(e []Any) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -10578,11 +10578,11 @@ func (l AnyArrayLazyList) MapByteList(f func(e []Any) ByteList) ByteListLazyList
 func (l AnyArrayLazyList) MapRuneList(f func(e []Any) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -10592,11 +10592,11 @@ func (l AnyArrayLazyList) MapRuneList(f func(e []Any) RuneList) RuneListLazyList
 func (l AnyArrayLazyList) MapFloat32List(f func(e []Any) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -10606,11 +10606,11 @@ func (l AnyArrayLazyList) MapFloat32List(f func(e []Any) Float32List) Float32Lis
 func (l AnyArrayLazyList) MapFloat64List(f func(e []Any) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -10620,11 +10620,11 @@ func (l AnyArrayLazyList) MapFloat64List(f func(e []Any) Float64List) Float64Lis
 func (l AnyArrayLazyList) MapAnyList(f func(e []Any) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -10634,11 +10634,11 @@ func (l AnyArrayLazyList) MapAnyList(f func(e []Any) AnyList) AnyListLazyList {
 func (l AnyArrayLazyList) MapTuple2List(f func(e []Any) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -10648,11 +10648,11 @@ func (l AnyArrayLazyList) MapTuple2List(f func(e []Any) Tuple2List) Tuple2ListLa
 func (l Tuple2ArrayLazyList) MapBool(f func(e []Tuple2) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -10662,11 +10662,11 @@ func (l Tuple2ArrayLazyList) MapBool(f func(e []Tuple2) bool) BoolLazyList {
 func (l Tuple2ArrayLazyList) MapString(f func(e []Tuple2) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -10676,11 +10676,11 @@ func (l Tuple2ArrayLazyList) MapString(f func(e []Tuple2) string) StringLazyList
 func (l Tuple2ArrayLazyList) MapInt(f func(e []Tuple2) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -10690,11 +10690,11 @@ func (l Tuple2ArrayLazyList) MapInt(f func(e []Tuple2) int) IntLazyList {
 func (l Tuple2ArrayLazyList) MapInt64(f func(e []Tuple2) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -10704,11 +10704,11 @@ func (l Tuple2ArrayLazyList) MapInt64(f func(e []Tuple2) int64) Int64LazyList {
 func (l Tuple2ArrayLazyList) MapByte(f func(e []Tuple2) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -10718,11 +10718,11 @@ func (l Tuple2ArrayLazyList) MapByte(f func(e []Tuple2) byte) ByteLazyList {
 func (l Tuple2ArrayLazyList) MapRune(f func(e []Tuple2) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -10732,11 +10732,11 @@ func (l Tuple2ArrayLazyList) MapRune(f func(e []Tuple2) rune) RuneLazyList {
 func (l Tuple2ArrayLazyList) MapFloat32(f func(e []Tuple2) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -10746,11 +10746,11 @@ func (l Tuple2ArrayLazyList) MapFloat32(f func(e []Tuple2) float32) Float32LazyL
 func (l Tuple2ArrayLazyList) MapFloat64(f func(e []Tuple2) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -10760,11 +10760,11 @@ func (l Tuple2ArrayLazyList) MapFloat64(f func(e []Tuple2) float64) Float64LazyL
 func (l Tuple2ArrayLazyList) MapAny(f func(e []Tuple2) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -10774,11 +10774,11 @@ func (l Tuple2ArrayLazyList) MapAny(f func(e []Tuple2) Any) AnyLazyList {
 func (l Tuple2ArrayLazyList) MapTuple2(f func(e []Tuple2) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -10788,11 +10788,11 @@ func (l Tuple2ArrayLazyList) MapTuple2(f func(e []Tuple2) Tuple2) Tuple2LazyList
 func (l Tuple2ArrayLazyList) MapBoolArray(f func(e []Tuple2) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -10802,11 +10802,11 @@ func (l Tuple2ArrayLazyList) MapBoolArray(f func(e []Tuple2) []bool) BoolArrayLa
 func (l Tuple2ArrayLazyList) MapStringArray(f func(e []Tuple2) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -10816,11 +10816,11 @@ func (l Tuple2ArrayLazyList) MapStringArray(f func(e []Tuple2) []string) StringA
 func (l Tuple2ArrayLazyList) MapIntArray(f func(e []Tuple2) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -10830,11 +10830,11 @@ func (l Tuple2ArrayLazyList) MapIntArray(f func(e []Tuple2) []int) IntArrayLazyL
 func (l Tuple2ArrayLazyList) MapInt64Array(f func(e []Tuple2) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -10844,11 +10844,11 @@ func (l Tuple2ArrayLazyList) MapInt64Array(f func(e []Tuple2) []int64) Int64Arra
 func (l Tuple2ArrayLazyList) MapByteArray(f func(e []Tuple2) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -10858,11 +10858,11 @@ func (l Tuple2ArrayLazyList) MapByteArray(f func(e []Tuple2) []byte) ByteArrayLa
 func (l Tuple2ArrayLazyList) MapRuneArray(f func(e []Tuple2) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -10872,11 +10872,11 @@ func (l Tuple2ArrayLazyList) MapRuneArray(f func(e []Tuple2) []rune) RuneArrayLa
 func (l Tuple2ArrayLazyList) MapFloat32Array(f func(e []Tuple2) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -10886,11 +10886,11 @@ func (l Tuple2ArrayLazyList) MapFloat32Array(f func(e []Tuple2) []float32) Float
 func (l Tuple2ArrayLazyList) MapFloat64Array(f func(e []Tuple2) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -10900,11 +10900,11 @@ func (l Tuple2ArrayLazyList) MapFloat64Array(f func(e []Tuple2) []float64) Float
 func (l Tuple2ArrayLazyList) MapAnyArray(f func(e []Tuple2) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -10914,11 +10914,11 @@ func (l Tuple2ArrayLazyList) MapAnyArray(f func(e []Tuple2) []Any) AnyArrayLazyL
 func (l Tuple2ArrayLazyList) MapTuple2Array(f func(e []Tuple2) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -10928,11 +10928,11 @@ func (l Tuple2ArrayLazyList) MapTuple2Array(f func(e []Tuple2) []Tuple2) Tuple2A
 func (l Tuple2ArrayLazyList) MapBoolOption(f func(e []Tuple2) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -10942,11 +10942,11 @@ func (l Tuple2ArrayLazyList) MapBoolOption(f func(e []Tuple2) BoolOption) BoolOp
 func (l Tuple2ArrayLazyList) MapStringOption(f func(e []Tuple2) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -10956,11 +10956,11 @@ func (l Tuple2ArrayLazyList) MapStringOption(f func(e []Tuple2) StringOption) St
 func (l Tuple2ArrayLazyList) MapIntOption(f func(e []Tuple2) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -10970,11 +10970,11 @@ func (l Tuple2ArrayLazyList) MapIntOption(f func(e []Tuple2) IntOption) IntOptio
 func (l Tuple2ArrayLazyList) MapInt64Option(f func(e []Tuple2) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -10984,11 +10984,11 @@ func (l Tuple2ArrayLazyList) MapInt64Option(f func(e []Tuple2) Int64Option) Int6
 func (l Tuple2ArrayLazyList) MapByteOption(f func(e []Tuple2) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -10998,11 +10998,11 @@ func (l Tuple2ArrayLazyList) MapByteOption(f func(e []Tuple2) ByteOption) ByteOp
 func (l Tuple2ArrayLazyList) MapRuneOption(f func(e []Tuple2) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -11012,11 +11012,11 @@ func (l Tuple2ArrayLazyList) MapRuneOption(f func(e []Tuple2) RuneOption) RuneOp
 func (l Tuple2ArrayLazyList) MapFloat32Option(f func(e []Tuple2) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -11026,11 +11026,11 @@ func (l Tuple2ArrayLazyList) MapFloat32Option(f func(e []Tuple2) Float32Option) 
 func (l Tuple2ArrayLazyList) MapFloat64Option(f func(e []Tuple2) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -11040,11 +11040,11 @@ func (l Tuple2ArrayLazyList) MapFloat64Option(f func(e []Tuple2) Float64Option) 
 func (l Tuple2ArrayLazyList) MapAnyOption(f func(e []Tuple2) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -11054,11 +11054,11 @@ func (l Tuple2ArrayLazyList) MapAnyOption(f func(e []Tuple2) AnyOption) AnyOptio
 func (l Tuple2ArrayLazyList) MapTuple2Option(f func(e []Tuple2) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -11068,11 +11068,11 @@ func (l Tuple2ArrayLazyList) MapTuple2Option(f func(e []Tuple2) Tuple2Option) Tu
 func (l Tuple2ArrayLazyList) MapBoolList(f func(e []Tuple2) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -11082,11 +11082,11 @@ func (l Tuple2ArrayLazyList) MapBoolList(f func(e []Tuple2) BoolList) BoolListLa
 func (l Tuple2ArrayLazyList) MapStringList(f func(e []Tuple2) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -11096,11 +11096,11 @@ func (l Tuple2ArrayLazyList) MapStringList(f func(e []Tuple2) StringList) String
 func (l Tuple2ArrayLazyList) MapIntList(f func(e []Tuple2) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -11110,11 +11110,11 @@ func (l Tuple2ArrayLazyList) MapIntList(f func(e []Tuple2) IntList) IntListLazyL
 func (l Tuple2ArrayLazyList) MapInt64List(f func(e []Tuple2) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -11124,11 +11124,11 @@ func (l Tuple2ArrayLazyList) MapInt64List(f func(e []Tuple2) Int64List) Int64Lis
 func (l Tuple2ArrayLazyList) MapByteList(f func(e []Tuple2) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -11138,11 +11138,11 @@ func (l Tuple2ArrayLazyList) MapByteList(f func(e []Tuple2) ByteList) ByteListLa
 func (l Tuple2ArrayLazyList) MapRuneList(f func(e []Tuple2) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -11152,11 +11152,11 @@ func (l Tuple2ArrayLazyList) MapRuneList(f func(e []Tuple2) RuneList) RuneListLa
 func (l Tuple2ArrayLazyList) MapFloat32List(f func(e []Tuple2) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -11166,11 +11166,11 @@ func (l Tuple2ArrayLazyList) MapFloat32List(f func(e []Tuple2) Float32List) Floa
 func (l Tuple2ArrayLazyList) MapFloat64List(f func(e []Tuple2) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -11180,11 +11180,11 @@ func (l Tuple2ArrayLazyList) MapFloat64List(f func(e []Tuple2) Float64List) Floa
 func (l Tuple2ArrayLazyList) MapAnyList(f func(e []Tuple2) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -11194,11 +11194,11 @@ func (l Tuple2ArrayLazyList) MapAnyList(f func(e []Tuple2) AnyList) AnyListLazyL
 func (l Tuple2ArrayLazyList) MapTuple2List(f func(e []Tuple2) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -11208,11 +11208,11 @@ func (l Tuple2ArrayLazyList) MapTuple2List(f func(e []Tuple2) Tuple2List) Tuple2
 func (l BoolOptionLazyList) MapBool(f func(e BoolOption) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -11222,11 +11222,11 @@ func (l BoolOptionLazyList) MapBool(f func(e BoolOption) bool) BoolLazyList {
 func (l BoolOptionLazyList) MapString(f func(e BoolOption) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -11236,11 +11236,11 @@ func (l BoolOptionLazyList) MapString(f func(e BoolOption) string) StringLazyLis
 func (l BoolOptionLazyList) MapInt(f func(e BoolOption) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -11250,11 +11250,11 @@ func (l BoolOptionLazyList) MapInt(f func(e BoolOption) int) IntLazyList {
 func (l BoolOptionLazyList) MapInt64(f func(e BoolOption) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -11264,11 +11264,11 @@ func (l BoolOptionLazyList) MapInt64(f func(e BoolOption) int64) Int64LazyList {
 func (l BoolOptionLazyList) MapByte(f func(e BoolOption) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -11278,11 +11278,11 @@ func (l BoolOptionLazyList) MapByte(f func(e BoolOption) byte) ByteLazyList {
 func (l BoolOptionLazyList) MapRune(f func(e BoolOption) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -11292,11 +11292,11 @@ func (l BoolOptionLazyList) MapRune(f func(e BoolOption) rune) RuneLazyList {
 func (l BoolOptionLazyList) MapFloat32(f func(e BoolOption) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -11306,11 +11306,11 @@ func (l BoolOptionLazyList) MapFloat32(f func(e BoolOption) float32) Float32Lazy
 func (l BoolOptionLazyList) MapFloat64(f func(e BoolOption) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -11320,11 +11320,11 @@ func (l BoolOptionLazyList) MapFloat64(f func(e BoolOption) float64) Float64Lazy
 func (l BoolOptionLazyList) MapAny(f func(e BoolOption) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -11334,11 +11334,11 @@ func (l BoolOptionLazyList) MapAny(f func(e BoolOption) Any) AnyLazyList {
 func (l BoolOptionLazyList) MapTuple2(f func(e BoolOption) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -11348,11 +11348,11 @@ func (l BoolOptionLazyList) MapTuple2(f func(e BoolOption) Tuple2) Tuple2LazyLis
 func (l BoolOptionLazyList) MapBoolArray(f func(e BoolOption) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -11362,11 +11362,11 @@ func (l BoolOptionLazyList) MapBoolArray(f func(e BoolOption) []bool) BoolArrayL
 func (l BoolOptionLazyList) MapStringArray(f func(e BoolOption) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -11376,11 +11376,11 @@ func (l BoolOptionLazyList) MapStringArray(f func(e BoolOption) []string) String
 func (l BoolOptionLazyList) MapIntArray(f func(e BoolOption) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -11390,11 +11390,11 @@ func (l BoolOptionLazyList) MapIntArray(f func(e BoolOption) []int) IntArrayLazy
 func (l BoolOptionLazyList) MapInt64Array(f func(e BoolOption) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -11404,11 +11404,11 @@ func (l BoolOptionLazyList) MapInt64Array(f func(e BoolOption) []int64) Int64Arr
 func (l BoolOptionLazyList) MapByteArray(f func(e BoolOption) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -11418,11 +11418,11 @@ func (l BoolOptionLazyList) MapByteArray(f func(e BoolOption) []byte) ByteArrayL
 func (l BoolOptionLazyList) MapRuneArray(f func(e BoolOption) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -11432,11 +11432,11 @@ func (l BoolOptionLazyList) MapRuneArray(f func(e BoolOption) []rune) RuneArrayL
 func (l BoolOptionLazyList) MapFloat32Array(f func(e BoolOption) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -11446,11 +11446,11 @@ func (l BoolOptionLazyList) MapFloat32Array(f func(e BoolOption) []float32) Floa
 func (l BoolOptionLazyList) MapFloat64Array(f func(e BoolOption) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -11460,11 +11460,11 @@ func (l BoolOptionLazyList) MapFloat64Array(f func(e BoolOption) []float64) Floa
 func (l BoolOptionLazyList) MapAnyArray(f func(e BoolOption) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -11474,11 +11474,11 @@ func (l BoolOptionLazyList) MapAnyArray(f func(e BoolOption) []Any) AnyArrayLazy
 func (l BoolOptionLazyList) MapTuple2Array(f func(e BoolOption) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -11488,11 +11488,11 @@ func (l BoolOptionLazyList) MapTuple2Array(f func(e BoolOption) []Tuple2) Tuple2
 func (l BoolOptionLazyList) MapBoolOption(f func(e BoolOption) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -11502,11 +11502,11 @@ func (l BoolOptionLazyList) MapBoolOption(f func(e BoolOption) BoolOption) BoolO
 func (l BoolOptionLazyList) MapStringOption(f func(e BoolOption) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -11516,11 +11516,11 @@ func (l BoolOptionLazyList) MapStringOption(f func(e BoolOption) StringOption) S
 func (l BoolOptionLazyList) MapIntOption(f func(e BoolOption) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -11530,11 +11530,11 @@ func (l BoolOptionLazyList) MapIntOption(f func(e BoolOption) IntOption) IntOpti
 func (l BoolOptionLazyList) MapInt64Option(f func(e BoolOption) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -11544,11 +11544,11 @@ func (l BoolOptionLazyList) MapInt64Option(f func(e BoolOption) Int64Option) Int
 func (l BoolOptionLazyList) MapByteOption(f func(e BoolOption) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -11558,11 +11558,11 @@ func (l BoolOptionLazyList) MapByteOption(f func(e BoolOption) ByteOption) ByteO
 func (l BoolOptionLazyList) MapRuneOption(f func(e BoolOption) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -11572,11 +11572,11 @@ func (l BoolOptionLazyList) MapRuneOption(f func(e BoolOption) RuneOption) RuneO
 func (l BoolOptionLazyList) MapFloat32Option(f func(e BoolOption) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -11586,11 +11586,11 @@ func (l BoolOptionLazyList) MapFloat32Option(f func(e BoolOption) Float32Option)
 func (l BoolOptionLazyList) MapFloat64Option(f func(e BoolOption) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -11600,11 +11600,11 @@ func (l BoolOptionLazyList) MapFloat64Option(f func(e BoolOption) Float64Option)
 func (l BoolOptionLazyList) MapAnyOption(f func(e BoolOption) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -11614,11 +11614,11 @@ func (l BoolOptionLazyList) MapAnyOption(f func(e BoolOption) AnyOption) AnyOpti
 func (l BoolOptionLazyList) MapTuple2Option(f func(e BoolOption) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -11628,11 +11628,11 @@ func (l BoolOptionLazyList) MapTuple2Option(f func(e BoolOption) Tuple2Option) T
 func (l BoolOptionLazyList) MapBoolList(f func(e BoolOption) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -11642,11 +11642,11 @@ func (l BoolOptionLazyList) MapBoolList(f func(e BoolOption) BoolList) BoolListL
 func (l BoolOptionLazyList) MapStringList(f func(e BoolOption) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -11656,11 +11656,11 @@ func (l BoolOptionLazyList) MapStringList(f func(e BoolOption) StringList) Strin
 func (l BoolOptionLazyList) MapIntList(f func(e BoolOption) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -11670,11 +11670,11 @@ func (l BoolOptionLazyList) MapIntList(f func(e BoolOption) IntList) IntListLazy
 func (l BoolOptionLazyList) MapInt64List(f func(e BoolOption) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -11684,11 +11684,11 @@ func (l BoolOptionLazyList) MapInt64List(f func(e BoolOption) Int64List) Int64Li
 func (l BoolOptionLazyList) MapByteList(f func(e BoolOption) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -11698,11 +11698,11 @@ func (l BoolOptionLazyList) MapByteList(f func(e BoolOption) ByteList) ByteListL
 func (l BoolOptionLazyList) MapRuneList(f func(e BoolOption) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -11712,11 +11712,11 @@ func (l BoolOptionLazyList) MapRuneList(f func(e BoolOption) RuneList) RuneListL
 func (l BoolOptionLazyList) MapFloat32List(f func(e BoolOption) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -11726,11 +11726,11 @@ func (l BoolOptionLazyList) MapFloat32List(f func(e BoolOption) Float32List) Flo
 func (l BoolOptionLazyList) MapFloat64List(f func(e BoolOption) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -11740,11 +11740,11 @@ func (l BoolOptionLazyList) MapFloat64List(f func(e BoolOption) Float64List) Flo
 func (l BoolOptionLazyList) MapAnyList(f func(e BoolOption) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -11754,11 +11754,11 @@ func (l BoolOptionLazyList) MapAnyList(f func(e BoolOption) AnyList) AnyListLazy
 func (l BoolOptionLazyList) MapTuple2List(f func(e BoolOption) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -11768,11 +11768,11 @@ func (l BoolOptionLazyList) MapTuple2List(f func(e BoolOption) Tuple2List) Tuple
 func (l StringOptionLazyList) MapBool(f func(e StringOption) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -11782,11 +11782,11 @@ func (l StringOptionLazyList) MapBool(f func(e StringOption) bool) BoolLazyList 
 func (l StringOptionLazyList) MapString(f func(e StringOption) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -11796,11 +11796,11 @@ func (l StringOptionLazyList) MapString(f func(e StringOption) string) StringLaz
 func (l StringOptionLazyList) MapInt(f func(e StringOption) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -11810,11 +11810,11 @@ func (l StringOptionLazyList) MapInt(f func(e StringOption) int) IntLazyList {
 func (l StringOptionLazyList) MapInt64(f func(e StringOption) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -11824,11 +11824,11 @@ func (l StringOptionLazyList) MapInt64(f func(e StringOption) int64) Int64LazyLi
 func (l StringOptionLazyList) MapByte(f func(e StringOption) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -11838,11 +11838,11 @@ func (l StringOptionLazyList) MapByte(f func(e StringOption) byte) ByteLazyList 
 func (l StringOptionLazyList) MapRune(f func(e StringOption) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -11852,11 +11852,11 @@ func (l StringOptionLazyList) MapRune(f func(e StringOption) rune) RuneLazyList 
 func (l StringOptionLazyList) MapFloat32(f func(e StringOption) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -11866,11 +11866,11 @@ func (l StringOptionLazyList) MapFloat32(f func(e StringOption) float32) Float32
 func (l StringOptionLazyList) MapFloat64(f func(e StringOption) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -11880,11 +11880,11 @@ func (l StringOptionLazyList) MapFloat64(f func(e StringOption) float64) Float64
 func (l StringOptionLazyList) MapAny(f func(e StringOption) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -11894,11 +11894,11 @@ func (l StringOptionLazyList) MapAny(f func(e StringOption) Any) AnyLazyList {
 func (l StringOptionLazyList) MapTuple2(f func(e StringOption) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -11908,11 +11908,11 @@ func (l StringOptionLazyList) MapTuple2(f func(e StringOption) Tuple2) Tuple2Laz
 func (l StringOptionLazyList) MapBoolArray(f func(e StringOption) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -11922,11 +11922,11 @@ func (l StringOptionLazyList) MapBoolArray(f func(e StringOption) []bool) BoolAr
 func (l StringOptionLazyList) MapStringArray(f func(e StringOption) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -11936,11 +11936,11 @@ func (l StringOptionLazyList) MapStringArray(f func(e StringOption) []string) St
 func (l StringOptionLazyList) MapIntArray(f func(e StringOption) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -11950,11 +11950,11 @@ func (l StringOptionLazyList) MapIntArray(f func(e StringOption) []int) IntArray
 func (l StringOptionLazyList) MapInt64Array(f func(e StringOption) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -11964,11 +11964,11 @@ func (l StringOptionLazyList) MapInt64Array(f func(e StringOption) []int64) Int6
 func (l StringOptionLazyList) MapByteArray(f func(e StringOption) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -11978,11 +11978,11 @@ func (l StringOptionLazyList) MapByteArray(f func(e StringOption) []byte) ByteAr
 func (l StringOptionLazyList) MapRuneArray(f func(e StringOption) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -11992,11 +11992,11 @@ func (l StringOptionLazyList) MapRuneArray(f func(e StringOption) []rune) RuneAr
 func (l StringOptionLazyList) MapFloat32Array(f func(e StringOption) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -12006,11 +12006,11 @@ func (l StringOptionLazyList) MapFloat32Array(f func(e StringOption) []float32) 
 func (l StringOptionLazyList) MapFloat64Array(f func(e StringOption) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -12020,11 +12020,11 @@ func (l StringOptionLazyList) MapFloat64Array(f func(e StringOption) []float64) 
 func (l StringOptionLazyList) MapAnyArray(f func(e StringOption) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -12034,11 +12034,11 @@ func (l StringOptionLazyList) MapAnyArray(f func(e StringOption) []Any) AnyArray
 func (l StringOptionLazyList) MapTuple2Array(f func(e StringOption) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -12048,11 +12048,11 @@ func (l StringOptionLazyList) MapTuple2Array(f func(e StringOption) []Tuple2) Tu
 func (l StringOptionLazyList) MapBoolOption(f func(e StringOption) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -12062,11 +12062,11 @@ func (l StringOptionLazyList) MapBoolOption(f func(e StringOption) BoolOption) B
 func (l StringOptionLazyList) MapStringOption(f func(e StringOption) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -12076,11 +12076,11 @@ func (l StringOptionLazyList) MapStringOption(f func(e StringOption) StringOptio
 func (l StringOptionLazyList) MapIntOption(f func(e StringOption) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -12090,11 +12090,11 @@ func (l StringOptionLazyList) MapIntOption(f func(e StringOption) IntOption) Int
 func (l StringOptionLazyList) MapInt64Option(f func(e StringOption) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -12104,11 +12104,11 @@ func (l StringOptionLazyList) MapInt64Option(f func(e StringOption) Int64Option)
 func (l StringOptionLazyList) MapByteOption(f func(e StringOption) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -12118,11 +12118,11 @@ func (l StringOptionLazyList) MapByteOption(f func(e StringOption) ByteOption) B
 func (l StringOptionLazyList) MapRuneOption(f func(e StringOption) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -12132,11 +12132,11 @@ func (l StringOptionLazyList) MapRuneOption(f func(e StringOption) RuneOption) R
 func (l StringOptionLazyList) MapFloat32Option(f func(e StringOption) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -12146,11 +12146,11 @@ func (l StringOptionLazyList) MapFloat32Option(f func(e StringOption) Float32Opt
 func (l StringOptionLazyList) MapFloat64Option(f func(e StringOption) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -12160,11 +12160,11 @@ func (l StringOptionLazyList) MapFloat64Option(f func(e StringOption) Float64Opt
 func (l StringOptionLazyList) MapAnyOption(f func(e StringOption) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -12174,11 +12174,11 @@ func (l StringOptionLazyList) MapAnyOption(f func(e StringOption) AnyOption) Any
 func (l StringOptionLazyList) MapTuple2Option(f func(e StringOption) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -12188,11 +12188,11 @@ func (l StringOptionLazyList) MapTuple2Option(f func(e StringOption) Tuple2Optio
 func (l StringOptionLazyList) MapBoolList(f func(e StringOption) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -12202,11 +12202,11 @@ func (l StringOptionLazyList) MapBoolList(f func(e StringOption) BoolList) BoolL
 func (l StringOptionLazyList) MapStringList(f func(e StringOption) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -12216,11 +12216,11 @@ func (l StringOptionLazyList) MapStringList(f func(e StringOption) StringList) S
 func (l StringOptionLazyList) MapIntList(f func(e StringOption) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -12230,11 +12230,11 @@ func (l StringOptionLazyList) MapIntList(f func(e StringOption) IntList) IntList
 func (l StringOptionLazyList) MapInt64List(f func(e StringOption) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -12244,11 +12244,11 @@ func (l StringOptionLazyList) MapInt64List(f func(e StringOption) Int64List) Int
 func (l StringOptionLazyList) MapByteList(f func(e StringOption) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -12258,11 +12258,11 @@ func (l StringOptionLazyList) MapByteList(f func(e StringOption) ByteList) ByteL
 func (l StringOptionLazyList) MapRuneList(f func(e StringOption) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -12272,11 +12272,11 @@ func (l StringOptionLazyList) MapRuneList(f func(e StringOption) RuneList) RuneL
 func (l StringOptionLazyList) MapFloat32List(f func(e StringOption) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -12286,11 +12286,11 @@ func (l StringOptionLazyList) MapFloat32List(f func(e StringOption) Float32List)
 func (l StringOptionLazyList) MapFloat64List(f func(e StringOption) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -12300,11 +12300,11 @@ func (l StringOptionLazyList) MapFloat64List(f func(e StringOption) Float64List)
 func (l StringOptionLazyList) MapAnyList(f func(e StringOption) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -12314,11 +12314,11 @@ func (l StringOptionLazyList) MapAnyList(f func(e StringOption) AnyList) AnyList
 func (l StringOptionLazyList) MapTuple2List(f func(e StringOption) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -12328,11 +12328,11 @@ func (l StringOptionLazyList) MapTuple2List(f func(e StringOption) Tuple2List) T
 func (l IntOptionLazyList) MapBool(f func(e IntOption) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -12342,11 +12342,11 @@ func (l IntOptionLazyList) MapBool(f func(e IntOption) bool) BoolLazyList {
 func (l IntOptionLazyList) MapString(f func(e IntOption) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -12356,11 +12356,11 @@ func (l IntOptionLazyList) MapString(f func(e IntOption) string) StringLazyList 
 func (l IntOptionLazyList) MapInt(f func(e IntOption) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -12370,11 +12370,11 @@ func (l IntOptionLazyList) MapInt(f func(e IntOption) int) IntLazyList {
 func (l IntOptionLazyList) MapInt64(f func(e IntOption) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -12384,11 +12384,11 @@ func (l IntOptionLazyList) MapInt64(f func(e IntOption) int64) Int64LazyList {
 func (l IntOptionLazyList) MapByte(f func(e IntOption) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -12398,11 +12398,11 @@ func (l IntOptionLazyList) MapByte(f func(e IntOption) byte) ByteLazyList {
 func (l IntOptionLazyList) MapRune(f func(e IntOption) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -12412,11 +12412,11 @@ func (l IntOptionLazyList) MapRune(f func(e IntOption) rune) RuneLazyList {
 func (l IntOptionLazyList) MapFloat32(f func(e IntOption) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -12426,11 +12426,11 @@ func (l IntOptionLazyList) MapFloat32(f func(e IntOption) float32) Float32LazyLi
 func (l IntOptionLazyList) MapFloat64(f func(e IntOption) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -12440,11 +12440,11 @@ func (l IntOptionLazyList) MapFloat64(f func(e IntOption) float64) Float64LazyLi
 func (l IntOptionLazyList) MapAny(f func(e IntOption) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -12454,11 +12454,11 @@ func (l IntOptionLazyList) MapAny(f func(e IntOption) Any) AnyLazyList {
 func (l IntOptionLazyList) MapTuple2(f func(e IntOption) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -12468,11 +12468,11 @@ func (l IntOptionLazyList) MapTuple2(f func(e IntOption) Tuple2) Tuple2LazyList 
 func (l IntOptionLazyList) MapBoolArray(f func(e IntOption) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -12482,11 +12482,11 @@ func (l IntOptionLazyList) MapBoolArray(f func(e IntOption) []bool) BoolArrayLaz
 func (l IntOptionLazyList) MapStringArray(f func(e IntOption) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -12496,11 +12496,11 @@ func (l IntOptionLazyList) MapStringArray(f func(e IntOption) []string) StringAr
 func (l IntOptionLazyList) MapIntArray(f func(e IntOption) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -12510,11 +12510,11 @@ func (l IntOptionLazyList) MapIntArray(f func(e IntOption) []int) IntArrayLazyLi
 func (l IntOptionLazyList) MapInt64Array(f func(e IntOption) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -12524,11 +12524,11 @@ func (l IntOptionLazyList) MapInt64Array(f func(e IntOption) []int64) Int64Array
 func (l IntOptionLazyList) MapByteArray(f func(e IntOption) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -12538,11 +12538,11 @@ func (l IntOptionLazyList) MapByteArray(f func(e IntOption) []byte) ByteArrayLaz
 func (l IntOptionLazyList) MapRuneArray(f func(e IntOption) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -12552,11 +12552,11 @@ func (l IntOptionLazyList) MapRuneArray(f func(e IntOption) []rune) RuneArrayLaz
 func (l IntOptionLazyList) MapFloat32Array(f func(e IntOption) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -12566,11 +12566,11 @@ func (l IntOptionLazyList) MapFloat32Array(f func(e IntOption) []float32) Float3
 func (l IntOptionLazyList) MapFloat64Array(f func(e IntOption) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -12580,11 +12580,11 @@ func (l IntOptionLazyList) MapFloat64Array(f func(e IntOption) []float64) Float6
 func (l IntOptionLazyList) MapAnyArray(f func(e IntOption) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -12594,11 +12594,11 @@ func (l IntOptionLazyList) MapAnyArray(f func(e IntOption) []Any) AnyArrayLazyLi
 func (l IntOptionLazyList) MapTuple2Array(f func(e IntOption) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -12608,11 +12608,11 @@ func (l IntOptionLazyList) MapTuple2Array(f func(e IntOption) []Tuple2) Tuple2Ar
 func (l IntOptionLazyList) MapBoolOption(f func(e IntOption) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -12622,11 +12622,11 @@ func (l IntOptionLazyList) MapBoolOption(f func(e IntOption) BoolOption) BoolOpt
 func (l IntOptionLazyList) MapStringOption(f func(e IntOption) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -12636,11 +12636,11 @@ func (l IntOptionLazyList) MapStringOption(f func(e IntOption) StringOption) Str
 func (l IntOptionLazyList) MapIntOption(f func(e IntOption) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -12650,11 +12650,11 @@ func (l IntOptionLazyList) MapIntOption(f func(e IntOption) IntOption) IntOption
 func (l IntOptionLazyList) MapInt64Option(f func(e IntOption) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -12664,11 +12664,11 @@ func (l IntOptionLazyList) MapInt64Option(f func(e IntOption) Int64Option) Int64
 func (l IntOptionLazyList) MapByteOption(f func(e IntOption) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -12678,11 +12678,11 @@ func (l IntOptionLazyList) MapByteOption(f func(e IntOption) ByteOption) ByteOpt
 func (l IntOptionLazyList) MapRuneOption(f func(e IntOption) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -12692,11 +12692,11 @@ func (l IntOptionLazyList) MapRuneOption(f func(e IntOption) RuneOption) RuneOpt
 func (l IntOptionLazyList) MapFloat32Option(f func(e IntOption) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -12706,11 +12706,11 @@ func (l IntOptionLazyList) MapFloat32Option(f func(e IntOption) Float32Option) F
 func (l IntOptionLazyList) MapFloat64Option(f func(e IntOption) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -12720,11 +12720,11 @@ func (l IntOptionLazyList) MapFloat64Option(f func(e IntOption) Float64Option) F
 func (l IntOptionLazyList) MapAnyOption(f func(e IntOption) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -12734,11 +12734,11 @@ func (l IntOptionLazyList) MapAnyOption(f func(e IntOption) AnyOption) AnyOption
 func (l IntOptionLazyList) MapTuple2Option(f func(e IntOption) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -12748,11 +12748,11 @@ func (l IntOptionLazyList) MapTuple2Option(f func(e IntOption) Tuple2Option) Tup
 func (l IntOptionLazyList) MapBoolList(f func(e IntOption) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -12762,11 +12762,11 @@ func (l IntOptionLazyList) MapBoolList(f func(e IntOption) BoolList) BoolListLaz
 func (l IntOptionLazyList) MapStringList(f func(e IntOption) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -12776,11 +12776,11 @@ func (l IntOptionLazyList) MapStringList(f func(e IntOption) StringList) StringL
 func (l IntOptionLazyList) MapIntList(f func(e IntOption) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -12790,11 +12790,11 @@ func (l IntOptionLazyList) MapIntList(f func(e IntOption) IntList) IntListLazyLi
 func (l IntOptionLazyList) MapInt64List(f func(e IntOption) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -12804,11 +12804,11 @@ func (l IntOptionLazyList) MapInt64List(f func(e IntOption) Int64List) Int64List
 func (l IntOptionLazyList) MapByteList(f func(e IntOption) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -12818,11 +12818,11 @@ func (l IntOptionLazyList) MapByteList(f func(e IntOption) ByteList) ByteListLaz
 func (l IntOptionLazyList) MapRuneList(f func(e IntOption) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -12832,11 +12832,11 @@ func (l IntOptionLazyList) MapRuneList(f func(e IntOption) RuneList) RuneListLaz
 func (l IntOptionLazyList) MapFloat32List(f func(e IntOption) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -12846,11 +12846,11 @@ func (l IntOptionLazyList) MapFloat32List(f func(e IntOption) Float32List) Float
 func (l IntOptionLazyList) MapFloat64List(f func(e IntOption) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -12860,11 +12860,11 @@ func (l IntOptionLazyList) MapFloat64List(f func(e IntOption) Float64List) Float
 func (l IntOptionLazyList) MapAnyList(f func(e IntOption) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -12874,11 +12874,11 @@ func (l IntOptionLazyList) MapAnyList(f func(e IntOption) AnyList) AnyListLazyLi
 func (l IntOptionLazyList) MapTuple2List(f func(e IntOption) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -12888,11 +12888,11 @@ func (l IntOptionLazyList) MapTuple2List(f func(e IntOption) Tuple2List) Tuple2L
 func (l Int64OptionLazyList) MapBool(f func(e Int64Option) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -12902,11 +12902,11 @@ func (l Int64OptionLazyList) MapBool(f func(e Int64Option) bool) BoolLazyList {
 func (l Int64OptionLazyList) MapString(f func(e Int64Option) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -12916,11 +12916,11 @@ func (l Int64OptionLazyList) MapString(f func(e Int64Option) string) StringLazyL
 func (l Int64OptionLazyList) MapInt(f func(e Int64Option) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -12930,11 +12930,11 @@ func (l Int64OptionLazyList) MapInt(f func(e Int64Option) int) IntLazyList {
 func (l Int64OptionLazyList) MapInt64(f func(e Int64Option) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -12944,11 +12944,11 @@ func (l Int64OptionLazyList) MapInt64(f func(e Int64Option) int64) Int64LazyList
 func (l Int64OptionLazyList) MapByte(f func(e Int64Option) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -12958,11 +12958,11 @@ func (l Int64OptionLazyList) MapByte(f func(e Int64Option) byte) ByteLazyList {
 func (l Int64OptionLazyList) MapRune(f func(e Int64Option) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -12972,11 +12972,11 @@ func (l Int64OptionLazyList) MapRune(f func(e Int64Option) rune) RuneLazyList {
 func (l Int64OptionLazyList) MapFloat32(f func(e Int64Option) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -12986,11 +12986,11 @@ func (l Int64OptionLazyList) MapFloat32(f func(e Int64Option) float32) Float32La
 func (l Int64OptionLazyList) MapFloat64(f func(e Int64Option) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -13000,11 +13000,11 @@ func (l Int64OptionLazyList) MapFloat64(f func(e Int64Option) float64) Float64La
 func (l Int64OptionLazyList) MapAny(f func(e Int64Option) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -13014,11 +13014,11 @@ func (l Int64OptionLazyList) MapAny(f func(e Int64Option) Any) AnyLazyList {
 func (l Int64OptionLazyList) MapTuple2(f func(e Int64Option) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -13028,11 +13028,11 @@ func (l Int64OptionLazyList) MapTuple2(f func(e Int64Option) Tuple2) Tuple2LazyL
 func (l Int64OptionLazyList) MapBoolArray(f func(e Int64Option) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -13042,11 +13042,11 @@ func (l Int64OptionLazyList) MapBoolArray(f func(e Int64Option) []bool) BoolArra
 func (l Int64OptionLazyList) MapStringArray(f func(e Int64Option) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -13056,11 +13056,11 @@ func (l Int64OptionLazyList) MapStringArray(f func(e Int64Option) []string) Stri
 func (l Int64OptionLazyList) MapIntArray(f func(e Int64Option) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -13070,11 +13070,11 @@ func (l Int64OptionLazyList) MapIntArray(f func(e Int64Option) []int) IntArrayLa
 func (l Int64OptionLazyList) MapInt64Array(f func(e Int64Option) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -13084,11 +13084,11 @@ func (l Int64OptionLazyList) MapInt64Array(f func(e Int64Option) []int64) Int64A
 func (l Int64OptionLazyList) MapByteArray(f func(e Int64Option) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -13098,11 +13098,11 @@ func (l Int64OptionLazyList) MapByteArray(f func(e Int64Option) []byte) ByteArra
 func (l Int64OptionLazyList) MapRuneArray(f func(e Int64Option) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -13112,11 +13112,11 @@ func (l Int64OptionLazyList) MapRuneArray(f func(e Int64Option) []rune) RuneArra
 func (l Int64OptionLazyList) MapFloat32Array(f func(e Int64Option) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -13126,11 +13126,11 @@ func (l Int64OptionLazyList) MapFloat32Array(f func(e Int64Option) []float32) Fl
 func (l Int64OptionLazyList) MapFloat64Array(f func(e Int64Option) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -13140,11 +13140,11 @@ func (l Int64OptionLazyList) MapFloat64Array(f func(e Int64Option) []float64) Fl
 func (l Int64OptionLazyList) MapAnyArray(f func(e Int64Option) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -13154,11 +13154,11 @@ func (l Int64OptionLazyList) MapAnyArray(f func(e Int64Option) []Any) AnyArrayLa
 func (l Int64OptionLazyList) MapTuple2Array(f func(e Int64Option) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -13168,11 +13168,11 @@ func (l Int64OptionLazyList) MapTuple2Array(f func(e Int64Option) []Tuple2) Tupl
 func (l Int64OptionLazyList) MapBoolOption(f func(e Int64Option) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -13182,11 +13182,11 @@ func (l Int64OptionLazyList) MapBoolOption(f func(e Int64Option) BoolOption) Boo
 func (l Int64OptionLazyList) MapStringOption(f func(e Int64Option) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -13196,11 +13196,11 @@ func (l Int64OptionLazyList) MapStringOption(f func(e Int64Option) StringOption)
 func (l Int64OptionLazyList) MapIntOption(f func(e Int64Option) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -13210,11 +13210,11 @@ func (l Int64OptionLazyList) MapIntOption(f func(e Int64Option) IntOption) IntOp
 func (l Int64OptionLazyList) MapInt64Option(f func(e Int64Option) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -13224,11 +13224,11 @@ func (l Int64OptionLazyList) MapInt64Option(f func(e Int64Option) Int64Option) I
 func (l Int64OptionLazyList) MapByteOption(f func(e Int64Option) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -13238,11 +13238,11 @@ func (l Int64OptionLazyList) MapByteOption(f func(e Int64Option) ByteOption) Byt
 func (l Int64OptionLazyList) MapRuneOption(f func(e Int64Option) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -13252,11 +13252,11 @@ func (l Int64OptionLazyList) MapRuneOption(f func(e Int64Option) RuneOption) Run
 func (l Int64OptionLazyList) MapFloat32Option(f func(e Int64Option) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -13266,11 +13266,11 @@ func (l Int64OptionLazyList) MapFloat32Option(f func(e Int64Option) Float32Optio
 func (l Int64OptionLazyList) MapFloat64Option(f func(e Int64Option) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -13280,11 +13280,11 @@ func (l Int64OptionLazyList) MapFloat64Option(f func(e Int64Option) Float64Optio
 func (l Int64OptionLazyList) MapAnyOption(f func(e Int64Option) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -13294,11 +13294,11 @@ func (l Int64OptionLazyList) MapAnyOption(f func(e Int64Option) AnyOption) AnyOp
 func (l Int64OptionLazyList) MapTuple2Option(f func(e Int64Option) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -13308,11 +13308,11 @@ func (l Int64OptionLazyList) MapTuple2Option(f func(e Int64Option) Tuple2Option)
 func (l Int64OptionLazyList) MapBoolList(f func(e Int64Option) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -13322,11 +13322,11 @@ func (l Int64OptionLazyList) MapBoolList(f func(e Int64Option) BoolList) BoolLis
 func (l Int64OptionLazyList) MapStringList(f func(e Int64Option) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -13336,11 +13336,11 @@ func (l Int64OptionLazyList) MapStringList(f func(e Int64Option) StringList) Str
 func (l Int64OptionLazyList) MapIntList(f func(e Int64Option) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -13350,11 +13350,11 @@ func (l Int64OptionLazyList) MapIntList(f func(e Int64Option) IntList) IntListLa
 func (l Int64OptionLazyList) MapInt64List(f func(e Int64Option) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -13364,11 +13364,11 @@ func (l Int64OptionLazyList) MapInt64List(f func(e Int64Option) Int64List) Int64
 func (l Int64OptionLazyList) MapByteList(f func(e Int64Option) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -13378,11 +13378,11 @@ func (l Int64OptionLazyList) MapByteList(f func(e Int64Option) ByteList) ByteLis
 func (l Int64OptionLazyList) MapRuneList(f func(e Int64Option) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -13392,11 +13392,11 @@ func (l Int64OptionLazyList) MapRuneList(f func(e Int64Option) RuneList) RuneLis
 func (l Int64OptionLazyList) MapFloat32List(f func(e Int64Option) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -13406,11 +13406,11 @@ func (l Int64OptionLazyList) MapFloat32List(f func(e Int64Option) Float32List) F
 func (l Int64OptionLazyList) MapFloat64List(f func(e Int64Option) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -13420,11 +13420,11 @@ func (l Int64OptionLazyList) MapFloat64List(f func(e Int64Option) Float64List) F
 func (l Int64OptionLazyList) MapAnyList(f func(e Int64Option) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -13434,11 +13434,11 @@ func (l Int64OptionLazyList) MapAnyList(f func(e Int64Option) AnyList) AnyListLa
 func (l Int64OptionLazyList) MapTuple2List(f func(e Int64Option) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -13448,11 +13448,11 @@ func (l Int64OptionLazyList) MapTuple2List(f func(e Int64Option) Tuple2List) Tup
 func (l ByteOptionLazyList) MapBool(f func(e ByteOption) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -13462,11 +13462,11 @@ func (l ByteOptionLazyList) MapBool(f func(e ByteOption) bool) BoolLazyList {
 func (l ByteOptionLazyList) MapString(f func(e ByteOption) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -13476,11 +13476,11 @@ func (l ByteOptionLazyList) MapString(f func(e ByteOption) string) StringLazyLis
 func (l ByteOptionLazyList) MapInt(f func(e ByteOption) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -13490,11 +13490,11 @@ func (l ByteOptionLazyList) MapInt(f func(e ByteOption) int) IntLazyList {
 func (l ByteOptionLazyList) MapInt64(f func(e ByteOption) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -13504,11 +13504,11 @@ func (l ByteOptionLazyList) MapInt64(f func(e ByteOption) int64) Int64LazyList {
 func (l ByteOptionLazyList) MapByte(f func(e ByteOption) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -13518,11 +13518,11 @@ func (l ByteOptionLazyList) MapByte(f func(e ByteOption) byte) ByteLazyList {
 func (l ByteOptionLazyList) MapRune(f func(e ByteOption) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -13532,11 +13532,11 @@ func (l ByteOptionLazyList) MapRune(f func(e ByteOption) rune) RuneLazyList {
 func (l ByteOptionLazyList) MapFloat32(f func(e ByteOption) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -13546,11 +13546,11 @@ func (l ByteOptionLazyList) MapFloat32(f func(e ByteOption) float32) Float32Lazy
 func (l ByteOptionLazyList) MapFloat64(f func(e ByteOption) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -13560,11 +13560,11 @@ func (l ByteOptionLazyList) MapFloat64(f func(e ByteOption) float64) Float64Lazy
 func (l ByteOptionLazyList) MapAny(f func(e ByteOption) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -13574,11 +13574,11 @@ func (l ByteOptionLazyList) MapAny(f func(e ByteOption) Any) AnyLazyList {
 func (l ByteOptionLazyList) MapTuple2(f func(e ByteOption) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -13588,11 +13588,11 @@ func (l ByteOptionLazyList) MapTuple2(f func(e ByteOption) Tuple2) Tuple2LazyLis
 func (l ByteOptionLazyList) MapBoolArray(f func(e ByteOption) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -13602,11 +13602,11 @@ func (l ByteOptionLazyList) MapBoolArray(f func(e ByteOption) []bool) BoolArrayL
 func (l ByteOptionLazyList) MapStringArray(f func(e ByteOption) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -13616,11 +13616,11 @@ func (l ByteOptionLazyList) MapStringArray(f func(e ByteOption) []string) String
 func (l ByteOptionLazyList) MapIntArray(f func(e ByteOption) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -13630,11 +13630,11 @@ func (l ByteOptionLazyList) MapIntArray(f func(e ByteOption) []int) IntArrayLazy
 func (l ByteOptionLazyList) MapInt64Array(f func(e ByteOption) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -13644,11 +13644,11 @@ func (l ByteOptionLazyList) MapInt64Array(f func(e ByteOption) []int64) Int64Arr
 func (l ByteOptionLazyList) MapByteArray(f func(e ByteOption) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -13658,11 +13658,11 @@ func (l ByteOptionLazyList) MapByteArray(f func(e ByteOption) []byte) ByteArrayL
 func (l ByteOptionLazyList) MapRuneArray(f func(e ByteOption) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -13672,11 +13672,11 @@ func (l ByteOptionLazyList) MapRuneArray(f func(e ByteOption) []rune) RuneArrayL
 func (l ByteOptionLazyList) MapFloat32Array(f func(e ByteOption) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -13686,11 +13686,11 @@ func (l ByteOptionLazyList) MapFloat32Array(f func(e ByteOption) []float32) Floa
 func (l ByteOptionLazyList) MapFloat64Array(f func(e ByteOption) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -13700,11 +13700,11 @@ func (l ByteOptionLazyList) MapFloat64Array(f func(e ByteOption) []float64) Floa
 func (l ByteOptionLazyList) MapAnyArray(f func(e ByteOption) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -13714,11 +13714,11 @@ func (l ByteOptionLazyList) MapAnyArray(f func(e ByteOption) []Any) AnyArrayLazy
 func (l ByteOptionLazyList) MapTuple2Array(f func(e ByteOption) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -13728,11 +13728,11 @@ func (l ByteOptionLazyList) MapTuple2Array(f func(e ByteOption) []Tuple2) Tuple2
 func (l ByteOptionLazyList) MapBoolOption(f func(e ByteOption) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -13742,11 +13742,11 @@ func (l ByteOptionLazyList) MapBoolOption(f func(e ByteOption) BoolOption) BoolO
 func (l ByteOptionLazyList) MapStringOption(f func(e ByteOption) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -13756,11 +13756,11 @@ func (l ByteOptionLazyList) MapStringOption(f func(e ByteOption) StringOption) S
 func (l ByteOptionLazyList) MapIntOption(f func(e ByteOption) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -13770,11 +13770,11 @@ func (l ByteOptionLazyList) MapIntOption(f func(e ByteOption) IntOption) IntOpti
 func (l ByteOptionLazyList) MapInt64Option(f func(e ByteOption) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -13784,11 +13784,11 @@ func (l ByteOptionLazyList) MapInt64Option(f func(e ByteOption) Int64Option) Int
 func (l ByteOptionLazyList) MapByteOption(f func(e ByteOption) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -13798,11 +13798,11 @@ func (l ByteOptionLazyList) MapByteOption(f func(e ByteOption) ByteOption) ByteO
 func (l ByteOptionLazyList) MapRuneOption(f func(e ByteOption) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -13812,11 +13812,11 @@ func (l ByteOptionLazyList) MapRuneOption(f func(e ByteOption) RuneOption) RuneO
 func (l ByteOptionLazyList) MapFloat32Option(f func(e ByteOption) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -13826,11 +13826,11 @@ func (l ByteOptionLazyList) MapFloat32Option(f func(e ByteOption) Float32Option)
 func (l ByteOptionLazyList) MapFloat64Option(f func(e ByteOption) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -13840,11 +13840,11 @@ func (l ByteOptionLazyList) MapFloat64Option(f func(e ByteOption) Float64Option)
 func (l ByteOptionLazyList) MapAnyOption(f func(e ByteOption) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -13854,11 +13854,11 @@ func (l ByteOptionLazyList) MapAnyOption(f func(e ByteOption) AnyOption) AnyOpti
 func (l ByteOptionLazyList) MapTuple2Option(f func(e ByteOption) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -13868,11 +13868,11 @@ func (l ByteOptionLazyList) MapTuple2Option(f func(e ByteOption) Tuple2Option) T
 func (l ByteOptionLazyList) MapBoolList(f func(e ByteOption) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -13882,11 +13882,11 @@ func (l ByteOptionLazyList) MapBoolList(f func(e ByteOption) BoolList) BoolListL
 func (l ByteOptionLazyList) MapStringList(f func(e ByteOption) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -13896,11 +13896,11 @@ func (l ByteOptionLazyList) MapStringList(f func(e ByteOption) StringList) Strin
 func (l ByteOptionLazyList) MapIntList(f func(e ByteOption) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -13910,11 +13910,11 @@ func (l ByteOptionLazyList) MapIntList(f func(e ByteOption) IntList) IntListLazy
 func (l ByteOptionLazyList) MapInt64List(f func(e ByteOption) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -13924,11 +13924,11 @@ func (l ByteOptionLazyList) MapInt64List(f func(e ByteOption) Int64List) Int64Li
 func (l ByteOptionLazyList) MapByteList(f func(e ByteOption) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -13938,11 +13938,11 @@ func (l ByteOptionLazyList) MapByteList(f func(e ByteOption) ByteList) ByteListL
 func (l ByteOptionLazyList) MapRuneList(f func(e ByteOption) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -13952,11 +13952,11 @@ func (l ByteOptionLazyList) MapRuneList(f func(e ByteOption) RuneList) RuneListL
 func (l ByteOptionLazyList) MapFloat32List(f func(e ByteOption) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -13966,11 +13966,11 @@ func (l ByteOptionLazyList) MapFloat32List(f func(e ByteOption) Float32List) Flo
 func (l ByteOptionLazyList) MapFloat64List(f func(e ByteOption) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -13980,11 +13980,11 @@ func (l ByteOptionLazyList) MapFloat64List(f func(e ByteOption) Float64List) Flo
 func (l ByteOptionLazyList) MapAnyList(f func(e ByteOption) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -13994,11 +13994,11 @@ func (l ByteOptionLazyList) MapAnyList(f func(e ByteOption) AnyList) AnyListLazy
 func (l ByteOptionLazyList) MapTuple2List(f func(e ByteOption) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -14008,11 +14008,11 @@ func (l ByteOptionLazyList) MapTuple2List(f func(e ByteOption) Tuple2List) Tuple
 func (l RuneOptionLazyList) MapBool(f func(e RuneOption) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -14022,11 +14022,11 @@ func (l RuneOptionLazyList) MapBool(f func(e RuneOption) bool) BoolLazyList {
 func (l RuneOptionLazyList) MapString(f func(e RuneOption) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -14036,11 +14036,11 @@ func (l RuneOptionLazyList) MapString(f func(e RuneOption) string) StringLazyLis
 func (l RuneOptionLazyList) MapInt(f func(e RuneOption) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -14050,11 +14050,11 @@ func (l RuneOptionLazyList) MapInt(f func(e RuneOption) int) IntLazyList {
 func (l RuneOptionLazyList) MapInt64(f func(e RuneOption) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -14064,11 +14064,11 @@ func (l RuneOptionLazyList) MapInt64(f func(e RuneOption) int64) Int64LazyList {
 func (l RuneOptionLazyList) MapByte(f func(e RuneOption) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -14078,11 +14078,11 @@ func (l RuneOptionLazyList) MapByte(f func(e RuneOption) byte) ByteLazyList {
 func (l RuneOptionLazyList) MapRune(f func(e RuneOption) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -14092,11 +14092,11 @@ func (l RuneOptionLazyList) MapRune(f func(e RuneOption) rune) RuneLazyList {
 func (l RuneOptionLazyList) MapFloat32(f func(e RuneOption) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -14106,11 +14106,11 @@ func (l RuneOptionLazyList) MapFloat32(f func(e RuneOption) float32) Float32Lazy
 func (l RuneOptionLazyList) MapFloat64(f func(e RuneOption) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -14120,11 +14120,11 @@ func (l RuneOptionLazyList) MapFloat64(f func(e RuneOption) float64) Float64Lazy
 func (l RuneOptionLazyList) MapAny(f func(e RuneOption) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -14134,11 +14134,11 @@ func (l RuneOptionLazyList) MapAny(f func(e RuneOption) Any) AnyLazyList {
 func (l RuneOptionLazyList) MapTuple2(f func(e RuneOption) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -14148,11 +14148,11 @@ func (l RuneOptionLazyList) MapTuple2(f func(e RuneOption) Tuple2) Tuple2LazyLis
 func (l RuneOptionLazyList) MapBoolArray(f func(e RuneOption) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -14162,11 +14162,11 @@ func (l RuneOptionLazyList) MapBoolArray(f func(e RuneOption) []bool) BoolArrayL
 func (l RuneOptionLazyList) MapStringArray(f func(e RuneOption) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -14176,11 +14176,11 @@ func (l RuneOptionLazyList) MapStringArray(f func(e RuneOption) []string) String
 func (l RuneOptionLazyList) MapIntArray(f func(e RuneOption) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -14190,11 +14190,11 @@ func (l RuneOptionLazyList) MapIntArray(f func(e RuneOption) []int) IntArrayLazy
 func (l RuneOptionLazyList) MapInt64Array(f func(e RuneOption) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -14204,11 +14204,11 @@ func (l RuneOptionLazyList) MapInt64Array(f func(e RuneOption) []int64) Int64Arr
 func (l RuneOptionLazyList) MapByteArray(f func(e RuneOption) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -14218,11 +14218,11 @@ func (l RuneOptionLazyList) MapByteArray(f func(e RuneOption) []byte) ByteArrayL
 func (l RuneOptionLazyList) MapRuneArray(f func(e RuneOption) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -14232,11 +14232,11 @@ func (l RuneOptionLazyList) MapRuneArray(f func(e RuneOption) []rune) RuneArrayL
 func (l RuneOptionLazyList) MapFloat32Array(f func(e RuneOption) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -14246,11 +14246,11 @@ func (l RuneOptionLazyList) MapFloat32Array(f func(e RuneOption) []float32) Floa
 func (l RuneOptionLazyList) MapFloat64Array(f func(e RuneOption) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -14260,11 +14260,11 @@ func (l RuneOptionLazyList) MapFloat64Array(f func(e RuneOption) []float64) Floa
 func (l RuneOptionLazyList) MapAnyArray(f func(e RuneOption) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -14274,11 +14274,11 @@ func (l RuneOptionLazyList) MapAnyArray(f func(e RuneOption) []Any) AnyArrayLazy
 func (l RuneOptionLazyList) MapTuple2Array(f func(e RuneOption) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -14288,11 +14288,11 @@ func (l RuneOptionLazyList) MapTuple2Array(f func(e RuneOption) []Tuple2) Tuple2
 func (l RuneOptionLazyList) MapBoolOption(f func(e RuneOption) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -14302,11 +14302,11 @@ func (l RuneOptionLazyList) MapBoolOption(f func(e RuneOption) BoolOption) BoolO
 func (l RuneOptionLazyList) MapStringOption(f func(e RuneOption) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -14316,11 +14316,11 @@ func (l RuneOptionLazyList) MapStringOption(f func(e RuneOption) StringOption) S
 func (l RuneOptionLazyList) MapIntOption(f func(e RuneOption) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -14330,11 +14330,11 @@ func (l RuneOptionLazyList) MapIntOption(f func(e RuneOption) IntOption) IntOpti
 func (l RuneOptionLazyList) MapInt64Option(f func(e RuneOption) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -14344,11 +14344,11 @@ func (l RuneOptionLazyList) MapInt64Option(f func(e RuneOption) Int64Option) Int
 func (l RuneOptionLazyList) MapByteOption(f func(e RuneOption) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -14358,11 +14358,11 @@ func (l RuneOptionLazyList) MapByteOption(f func(e RuneOption) ByteOption) ByteO
 func (l RuneOptionLazyList) MapRuneOption(f func(e RuneOption) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -14372,11 +14372,11 @@ func (l RuneOptionLazyList) MapRuneOption(f func(e RuneOption) RuneOption) RuneO
 func (l RuneOptionLazyList) MapFloat32Option(f func(e RuneOption) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -14386,11 +14386,11 @@ func (l RuneOptionLazyList) MapFloat32Option(f func(e RuneOption) Float32Option)
 func (l RuneOptionLazyList) MapFloat64Option(f func(e RuneOption) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -14400,11 +14400,11 @@ func (l RuneOptionLazyList) MapFloat64Option(f func(e RuneOption) Float64Option)
 func (l RuneOptionLazyList) MapAnyOption(f func(e RuneOption) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -14414,11 +14414,11 @@ func (l RuneOptionLazyList) MapAnyOption(f func(e RuneOption) AnyOption) AnyOpti
 func (l RuneOptionLazyList) MapTuple2Option(f func(e RuneOption) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -14428,11 +14428,11 @@ func (l RuneOptionLazyList) MapTuple2Option(f func(e RuneOption) Tuple2Option) T
 func (l RuneOptionLazyList) MapBoolList(f func(e RuneOption) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -14442,11 +14442,11 @@ func (l RuneOptionLazyList) MapBoolList(f func(e RuneOption) BoolList) BoolListL
 func (l RuneOptionLazyList) MapStringList(f func(e RuneOption) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -14456,11 +14456,11 @@ func (l RuneOptionLazyList) MapStringList(f func(e RuneOption) StringList) Strin
 func (l RuneOptionLazyList) MapIntList(f func(e RuneOption) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -14470,11 +14470,11 @@ func (l RuneOptionLazyList) MapIntList(f func(e RuneOption) IntList) IntListLazy
 func (l RuneOptionLazyList) MapInt64List(f func(e RuneOption) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -14484,11 +14484,11 @@ func (l RuneOptionLazyList) MapInt64List(f func(e RuneOption) Int64List) Int64Li
 func (l RuneOptionLazyList) MapByteList(f func(e RuneOption) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -14498,11 +14498,11 @@ func (l RuneOptionLazyList) MapByteList(f func(e RuneOption) ByteList) ByteListL
 func (l RuneOptionLazyList) MapRuneList(f func(e RuneOption) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -14512,11 +14512,11 @@ func (l RuneOptionLazyList) MapRuneList(f func(e RuneOption) RuneList) RuneListL
 func (l RuneOptionLazyList) MapFloat32List(f func(e RuneOption) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -14526,11 +14526,11 @@ func (l RuneOptionLazyList) MapFloat32List(f func(e RuneOption) Float32List) Flo
 func (l RuneOptionLazyList) MapFloat64List(f func(e RuneOption) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -14540,11 +14540,11 @@ func (l RuneOptionLazyList) MapFloat64List(f func(e RuneOption) Float64List) Flo
 func (l RuneOptionLazyList) MapAnyList(f func(e RuneOption) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -14554,11 +14554,11 @@ func (l RuneOptionLazyList) MapAnyList(f func(e RuneOption) AnyList) AnyListLazy
 func (l RuneOptionLazyList) MapTuple2List(f func(e RuneOption) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -14568,11 +14568,11 @@ func (l RuneOptionLazyList) MapTuple2List(f func(e RuneOption) Tuple2List) Tuple
 func (l Float32OptionLazyList) MapBool(f func(e Float32Option) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -14582,11 +14582,11 @@ func (l Float32OptionLazyList) MapBool(f func(e Float32Option) bool) BoolLazyLis
 func (l Float32OptionLazyList) MapString(f func(e Float32Option) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -14596,11 +14596,11 @@ func (l Float32OptionLazyList) MapString(f func(e Float32Option) string) StringL
 func (l Float32OptionLazyList) MapInt(f func(e Float32Option) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -14610,11 +14610,11 @@ func (l Float32OptionLazyList) MapInt(f func(e Float32Option) int) IntLazyList {
 func (l Float32OptionLazyList) MapInt64(f func(e Float32Option) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -14624,11 +14624,11 @@ func (l Float32OptionLazyList) MapInt64(f func(e Float32Option) int64) Int64Lazy
 func (l Float32OptionLazyList) MapByte(f func(e Float32Option) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -14638,11 +14638,11 @@ func (l Float32OptionLazyList) MapByte(f func(e Float32Option) byte) ByteLazyLis
 func (l Float32OptionLazyList) MapRune(f func(e Float32Option) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -14652,11 +14652,11 @@ func (l Float32OptionLazyList) MapRune(f func(e Float32Option) rune) RuneLazyLis
 func (l Float32OptionLazyList) MapFloat32(f func(e Float32Option) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -14666,11 +14666,11 @@ func (l Float32OptionLazyList) MapFloat32(f func(e Float32Option) float32) Float
 func (l Float32OptionLazyList) MapFloat64(f func(e Float32Option) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -14680,11 +14680,11 @@ func (l Float32OptionLazyList) MapFloat64(f func(e Float32Option) float64) Float
 func (l Float32OptionLazyList) MapAny(f func(e Float32Option) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -14694,11 +14694,11 @@ func (l Float32OptionLazyList) MapAny(f func(e Float32Option) Any) AnyLazyList {
 func (l Float32OptionLazyList) MapTuple2(f func(e Float32Option) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -14708,11 +14708,11 @@ func (l Float32OptionLazyList) MapTuple2(f func(e Float32Option) Tuple2) Tuple2L
 func (l Float32OptionLazyList) MapBoolArray(f func(e Float32Option) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -14722,11 +14722,11 @@ func (l Float32OptionLazyList) MapBoolArray(f func(e Float32Option) []bool) Bool
 func (l Float32OptionLazyList) MapStringArray(f func(e Float32Option) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -14736,11 +14736,11 @@ func (l Float32OptionLazyList) MapStringArray(f func(e Float32Option) []string) 
 func (l Float32OptionLazyList) MapIntArray(f func(e Float32Option) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -14750,11 +14750,11 @@ func (l Float32OptionLazyList) MapIntArray(f func(e Float32Option) []int) IntArr
 func (l Float32OptionLazyList) MapInt64Array(f func(e Float32Option) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -14764,11 +14764,11 @@ func (l Float32OptionLazyList) MapInt64Array(f func(e Float32Option) []int64) In
 func (l Float32OptionLazyList) MapByteArray(f func(e Float32Option) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -14778,11 +14778,11 @@ func (l Float32OptionLazyList) MapByteArray(f func(e Float32Option) []byte) Byte
 func (l Float32OptionLazyList) MapRuneArray(f func(e Float32Option) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -14792,11 +14792,11 @@ func (l Float32OptionLazyList) MapRuneArray(f func(e Float32Option) []rune) Rune
 func (l Float32OptionLazyList) MapFloat32Array(f func(e Float32Option) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -14806,11 +14806,11 @@ func (l Float32OptionLazyList) MapFloat32Array(f func(e Float32Option) []float32
 func (l Float32OptionLazyList) MapFloat64Array(f func(e Float32Option) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -14820,11 +14820,11 @@ func (l Float32OptionLazyList) MapFloat64Array(f func(e Float32Option) []float64
 func (l Float32OptionLazyList) MapAnyArray(f func(e Float32Option) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -14834,11 +14834,11 @@ func (l Float32OptionLazyList) MapAnyArray(f func(e Float32Option) []Any) AnyArr
 func (l Float32OptionLazyList) MapTuple2Array(f func(e Float32Option) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -14848,11 +14848,11 @@ func (l Float32OptionLazyList) MapTuple2Array(f func(e Float32Option) []Tuple2) 
 func (l Float32OptionLazyList) MapBoolOption(f func(e Float32Option) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -14862,11 +14862,11 @@ func (l Float32OptionLazyList) MapBoolOption(f func(e Float32Option) BoolOption)
 func (l Float32OptionLazyList) MapStringOption(f func(e Float32Option) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -14876,11 +14876,11 @@ func (l Float32OptionLazyList) MapStringOption(f func(e Float32Option) StringOpt
 func (l Float32OptionLazyList) MapIntOption(f func(e Float32Option) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -14890,11 +14890,11 @@ func (l Float32OptionLazyList) MapIntOption(f func(e Float32Option) IntOption) I
 func (l Float32OptionLazyList) MapInt64Option(f func(e Float32Option) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -14904,11 +14904,11 @@ func (l Float32OptionLazyList) MapInt64Option(f func(e Float32Option) Int64Optio
 func (l Float32OptionLazyList) MapByteOption(f func(e Float32Option) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -14918,11 +14918,11 @@ func (l Float32OptionLazyList) MapByteOption(f func(e Float32Option) ByteOption)
 func (l Float32OptionLazyList) MapRuneOption(f func(e Float32Option) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -14932,11 +14932,11 @@ func (l Float32OptionLazyList) MapRuneOption(f func(e Float32Option) RuneOption)
 func (l Float32OptionLazyList) MapFloat32Option(f func(e Float32Option) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -14946,11 +14946,11 @@ func (l Float32OptionLazyList) MapFloat32Option(f func(e Float32Option) Float32O
 func (l Float32OptionLazyList) MapFloat64Option(f func(e Float32Option) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -14960,11 +14960,11 @@ func (l Float32OptionLazyList) MapFloat64Option(f func(e Float32Option) Float64O
 func (l Float32OptionLazyList) MapAnyOption(f func(e Float32Option) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -14974,11 +14974,11 @@ func (l Float32OptionLazyList) MapAnyOption(f func(e Float32Option) AnyOption) A
 func (l Float32OptionLazyList) MapTuple2Option(f func(e Float32Option) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -14988,11 +14988,11 @@ func (l Float32OptionLazyList) MapTuple2Option(f func(e Float32Option) Tuple2Opt
 func (l Float32OptionLazyList) MapBoolList(f func(e Float32Option) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -15002,11 +15002,11 @@ func (l Float32OptionLazyList) MapBoolList(f func(e Float32Option) BoolList) Boo
 func (l Float32OptionLazyList) MapStringList(f func(e Float32Option) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -15016,11 +15016,11 @@ func (l Float32OptionLazyList) MapStringList(f func(e Float32Option) StringList)
 func (l Float32OptionLazyList) MapIntList(f func(e Float32Option) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -15030,11 +15030,11 @@ func (l Float32OptionLazyList) MapIntList(f func(e Float32Option) IntList) IntLi
 func (l Float32OptionLazyList) MapInt64List(f func(e Float32Option) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -15044,11 +15044,11 @@ func (l Float32OptionLazyList) MapInt64List(f func(e Float32Option) Int64List) I
 func (l Float32OptionLazyList) MapByteList(f func(e Float32Option) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -15058,11 +15058,11 @@ func (l Float32OptionLazyList) MapByteList(f func(e Float32Option) ByteList) Byt
 func (l Float32OptionLazyList) MapRuneList(f func(e Float32Option) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -15072,11 +15072,11 @@ func (l Float32OptionLazyList) MapRuneList(f func(e Float32Option) RuneList) Run
 func (l Float32OptionLazyList) MapFloat32List(f func(e Float32Option) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -15086,11 +15086,11 @@ func (l Float32OptionLazyList) MapFloat32List(f func(e Float32Option) Float32Lis
 func (l Float32OptionLazyList) MapFloat64List(f func(e Float32Option) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -15100,11 +15100,11 @@ func (l Float32OptionLazyList) MapFloat64List(f func(e Float32Option) Float64Lis
 func (l Float32OptionLazyList) MapAnyList(f func(e Float32Option) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -15114,11 +15114,11 @@ func (l Float32OptionLazyList) MapAnyList(f func(e Float32Option) AnyList) AnyLi
 func (l Float32OptionLazyList) MapTuple2List(f func(e Float32Option) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -15128,11 +15128,11 @@ func (l Float32OptionLazyList) MapTuple2List(f func(e Float32Option) Tuple2List)
 func (l Float64OptionLazyList) MapBool(f func(e Float64Option) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -15142,11 +15142,11 @@ func (l Float64OptionLazyList) MapBool(f func(e Float64Option) bool) BoolLazyLis
 func (l Float64OptionLazyList) MapString(f func(e Float64Option) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -15156,11 +15156,11 @@ func (l Float64OptionLazyList) MapString(f func(e Float64Option) string) StringL
 func (l Float64OptionLazyList) MapInt(f func(e Float64Option) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -15170,11 +15170,11 @@ func (l Float64OptionLazyList) MapInt(f func(e Float64Option) int) IntLazyList {
 func (l Float64OptionLazyList) MapInt64(f func(e Float64Option) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -15184,11 +15184,11 @@ func (l Float64OptionLazyList) MapInt64(f func(e Float64Option) int64) Int64Lazy
 func (l Float64OptionLazyList) MapByte(f func(e Float64Option) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -15198,11 +15198,11 @@ func (l Float64OptionLazyList) MapByte(f func(e Float64Option) byte) ByteLazyLis
 func (l Float64OptionLazyList) MapRune(f func(e Float64Option) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -15212,11 +15212,11 @@ func (l Float64OptionLazyList) MapRune(f func(e Float64Option) rune) RuneLazyLis
 func (l Float64OptionLazyList) MapFloat32(f func(e Float64Option) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -15226,11 +15226,11 @@ func (l Float64OptionLazyList) MapFloat32(f func(e Float64Option) float32) Float
 func (l Float64OptionLazyList) MapFloat64(f func(e Float64Option) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -15240,11 +15240,11 @@ func (l Float64OptionLazyList) MapFloat64(f func(e Float64Option) float64) Float
 func (l Float64OptionLazyList) MapAny(f func(e Float64Option) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -15254,11 +15254,11 @@ func (l Float64OptionLazyList) MapAny(f func(e Float64Option) Any) AnyLazyList {
 func (l Float64OptionLazyList) MapTuple2(f func(e Float64Option) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -15268,11 +15268,11 @@ func (l Float64OptionLazyList) MapTuple2(f func(e Float64Option) Tuple2) Tuple2L
 func (l Float64OptionLazyList) MapBoolArray(f func(e Float64Option) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -15282,11 +15282,11 @@ func (l Float64OptionLazyList) MapBoolArray(f func(e Float64Option) []bool) Bool
 func (l Float64OptionLazyList) MapStringArray(f func(e Float64Option) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -15296,11 +15296,11 @@ func (l Float64OptionLazyList) MapStringArray(f func(e Float64Option) []string) 
 func (l Float64OptionLazyList) MapIntArray(f func(e Float64Option) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -15310,11 +15310,11 @@ func (l Float64OptionLazyList) MapIntArray(f func(e Float64Option) []int) IntArr
 func (l Float64OptionLazyList) MapInt64Array(f func(e Float64Option) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -15324,11 +15324,11 @@ func (l Float64OptionLazyList) MapInt64Array(f func(e Float64Option) []int64) In
 func (l Float64OptionLazyList) MapByteArray(f func(e Float64Option) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -15338,11 +15338,11 @@ func (l Float64OptionLazyList) MapByteArray(f func(e Float64Option) []byte) Byte
 func (l Float64OptionLazyList) MapRuneArray(f func(e Float64Option) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -15352,11 +15352,11 @@ func (l Float64OptionLazyList) MapRuneArray(f func(e Float64Option) []rune) Rune
 func (l Float64OptionLazyList) MapFloat32Array(f func(e Float64Option) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -15366,11 +15366,11 @@ func (l Float64OptionLazyList) MapFloat32Array(f func(e Float64Option) []float32
 func (l Float64OptionLazyList) MapFloat64Array(f func(e Float64Option) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -15380,11 +15380,11 @@ func (l Float64OptionLazyList) MapFloat64Array(f func(e Float64Option) []float64
 func (l Float64OptionLazyList) MapAnyArray(f func(e Float64Option) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -15394,11 +15394,11 @@ func (l Float64OptionLazyList) MapAnyArray(f func(e Float64Option) []Any) AnyArr
 func (l Float64OptionLazyList) MapTuple2Array(f func(e Float64Option) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -15408,11 +15408,11 @@ func (l Float64OptionLazyList) MapTuple2Array(f func(e Float64Option) []Tuple2) 
 func (l Float64OptionLazyList) MapBoolOption(f func(e Float64Option) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -15422,11 +15422,11 @@ func (l Float64OptionLazyList) MapBoolOption(f func(e Float64Option) BoolOption)
 func (l Float64OptionLazyList) MapStringOption(f func(e Float64Option) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -15436,11 +15436,11 @@ func (l Float64OptionLazyList) MapStringOption(f func(e Float64Option) StringOpt
 func (l Float64OptionLazyList) MapIntOption(f func(e Float64Option) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -15450,11 +15450,11 @@ func (l Float64OptionLazyList) MapIntOption(f func(e Float64Option) IntOption) I
 func (l Float64OptionLazyList) MapInt64Option(f func(e Float64Option) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -15464,11 +15464,11 @@ func (l Float64OptionLazyList) MapInt64Option(f func(e Float64Option) Int64Optio
 func (l Float64OptionLazyList) MapByteOption(f func(e Float64Option) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -15478,11 +15478,11 @@ func (l Float64OptionLazyList) MapByteOption(f func(e Float64Option) ByteOption)
 func (l Float64OptionLazyList) MapRuneOption(f func(e Float64Option) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -15492,11 +15492,11 @@ func (l Float64OptionLazyList) MapRuneOption(f func(e Float64Option) RuneOption)
 func (l Float64OptionLazyList) MapFloat32Option(f func(e Float64Option) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -15506,11 +15506,11 @@ func (l Float64OptionLazyList) MapFloat32Option(f func(e Float64Option) Float32O
 func (l Float64OptionLazyList) MapFloat64Option(f func(e Float64Option) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -15520,11 +15520,11 @@ func (l Float64OptionLazyList) MapFloat64Option(f func(e Float64Option) Float64O
 func (l Float64OptionLazyList) MapAnyOption(f func(e Float64Option) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -15534,11 +15534,11 @@ func (l Float64OptionLazyList) MapAnyOption(f func(e Float64Option) AnyOption) A
 func (l Float64OptionLazyList) MapTuple2Option(f func(e Float64Option) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -15548,11 +15548,11 @@ func (l Float64OptionLazyList) MapTuple2Option(f func(e Float64Option) Tuple2Opt
 func (l Float64OptionLazyList) MapBoolList(f func(e Float64Option) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -15562,11 +15562,11 @@ func (l Float64OptionLazyList) MapBoolList(f func(e Float64Option) BoolList) Boo
 func (l Float64OptionLazyList) MapStringList(f func(e Float64Option) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -15576,11 +15576,11 @@ func (l Float64OptionLazyList) MapStringList(f func(e Float64Option) StringList)
 func (l Float64OptionLazyList) MapIntList(f func(e Float64Option) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -15590,11 +15590,11 @@ func (l Float64OptionLazyList) MapIntList(f func(e Float64Option) IntList) IntLi
 func (l Float64OptionLazyList) MapInt64List(f func(e Float64Option) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -15604,11 +15604,11 @@ func (l Float64OptionLazyList) MapInt64List(f func(e Float64Option) Int64List) I
 func (l Float64OptionLazyList) MapByteList(f func(e Float64Option) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -15618,11 +15618,11 @@ func (l Float64OptionLazyList) MapByteList(f func(e Float64Option) ByteList) Byt
 func (l Float64OptionLazyList) MapRuneList(f func(e Float64Option) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -15632,11 +15632,11 @@ func (l Float64OptionLazyList) MapRuneList(f func(e Float64Option) RuneList) Run
 func (l Float64OptionLazyList) MapFloat32List(f func(e Float64Option) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -15646,11 +15646,11 @@ func (l Float64OptionLazyList) MapFloat32List(f func(e Float64Option) Float32Lis
 func (l Float64OptionLazyList) MapFloat64List(f func(e Float64Option) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -15660,11 +15660,11 @@ func (l Float64OptionLazyList) MapFloat64List(f func(e Float64Option) Float64Lis
 func (l Float64OptionLazyList) MapAnyList(f func(e Float64Option) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -15674,11 +15674,11 @@ func (l Float64OptionLazyList) MapAnyList(f func(e Float64Option) AnyList) AnyLi
 func (l Float64OptionLazyList) MapTuple2List(f func(e Float64Option) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -15688,11 +15688,11 @@ func (l Float64OptionLazyList) MapTuple2List(f func(e Float64Option) Tuple2List)
 func (l AnyOptionLazyList) MapBool(f func(e AnyOption) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -15702,11 +15702,11 @@ func (l AnyOptionLazyList) MapBool(f func(e AnyOption) bool) BoolLazyList {
 func (l AnyOptionLazyList) MapString(f func(e AnyOption) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -15716,11 +15716,11 @@ func (l AnyOptionLazyList) MapString(f func(e AnyOption) string) StringLazyList 
 func (l AnyOptionLazyList) MapInt(f func(e AnyOption) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -15730,11 +15730,11 @@ func (l AnyOptionLazyList) MapInt(f func(e AnyOption) int) IntLazyList {
 func (l AnyOptionLazyList) MapInt64(f func(e AnyOption) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -15744,11 +15744,11 @@ func (l AnyOptionLazyList) MapInt64(f func(e AnyOption) int64) Int64LazyList {
 func (l AnyOptionLazyList) MapByte(f func(e AnyOption) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -15758,11 +15758,11 @@ func (l AnyOptionLazyList) MapByte(f func(e AnyOption) byte) ByteLazyList {
 func (l AnyOptionLazyList) MapRune(f func(e AnyOption) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -15772,11 +15772,11 @@ func (l AnyOptionLazyList) MapRune(f func(e AnyOption) rune) RuneLazyList {
 func (l AnyOptionLazyList) MapFloat32(f func(e AnyOption) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -15786,11 +15786,11 @@ func (l AnyOptionLazyList) MapFloat32(f func(e AnyOption) float32) Float32LazyLi
 func (l AnyOptionLazyList) MapFloat64(f func(e AnyOption) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -15800,11 +15800,11 @@ func (l AnyOptionLazyList) MapFloat64(f func(e AnyOption) float64) Float64LazyLi
 func (l AnyOptionLazyList) MapAny(f func(e AnyOption) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -15814,11 +15814,11 @@ func (l AnyOptionLazyList) MapAny(f func(e AnyOption) Any) AnyLazyList {
 func (l AnyOptionLazyList) MapTuple2(f func(e AnyOption) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -15828,11 +15828,11 @@ func (l AnyOptionLazyList) MapTuple2(f func(e AnyOption) Tuple2) Tuple2LazyList 
 func (l AnyOptionLazyList) MapBoolArray(f func(e AnyOption) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -15842,11 +15842,11 @@ func (l AnyOptionLazyList) MapBoolArray(f func(e AnyOption) []bool) BoolArrayLaz
 func (l AnyOptionLazyList) MapStringArray(f func(e AnyOption) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -15856,11 +15856,11 @@ func (l AnyOptionLazyList) MapStringArray(f func(e AnyOption) []string) StringAr
 func (l AnyOptionLazyList) MapIntArray(f func(e AnyOption) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -15870,11 +15870,11 @@ func (l AnyOptionLazyList) MapIntArray(f func(e AnyOption) []int) IntArrayLazyLi
 func (l AnyOptionLazyList) MapInt64Array(f func(e AnyOption) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -15884,11 +15884,11 @@ func (l AnyOptionLazyList) MapInt64Array(f func(e AnyOption) []int64) Int64Array
 func (l AnyOptionLazyList) MapByteArray(f func(e AnyOption) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -15898,11 +15898,11 @@ func (l AnyOptionLazyList) MapByteArray(f func(e AnyOption) []byte) ByteArrayLaz
 func (l AnyOptionLazyList) MapRuneArray(f func(e AnyOption) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -15912,11 +15912,11 @@ func (l AnyOptionLazyList) MapRuneArray(f func(e AnyOption) []rune) RuneArrayLaz
 func (l AnyOptionLazyList) MapFloat32Array(f func(e AnyOption) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -15926,11 +15926,11 @@ func (l AnyOptionLazyList) MapFloat32Array(f func(e AnyOption) []float32) Float3
 func (l AnyOptionLazyList) MapFloat64Array(f func(e AnyOption) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -15940,11 +15940,11 @@ func (l AnyOptionLazyList) MapFloat64Array(f func(e AnyOption) []float64) Float6
 func (l AnyOptionLazyList) MapAnyArray(f func(e AnyOption) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -15954,11 +15954,11 @@ func (l AnyOptionLazyList) MapAnyArray(f func(e AnyOption) []Any) AnyArrayLazyLi
 func (l AnyOptionLazyList) MapTuple2Array(f func(e AnyOption) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -15968,11 +15968,11 @@ func (l AnyOptionLazyList) MapTuple2Array(f func(e AnyOption) []Tuple2) Tuple2Ar
 func (l AnyOptionLazyList) MapBoolOption(f func(e AnyOption) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -15982,11 +15982,11 @@ func (l AnyOptionLazyList) MapBoolOption(f func(e AnyOption) BoolOption) BoolOpt
 func (l AnyOptionLazyList) MapStringOption(f func(e AnyOption) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -15996,11 +15996,11 @@ func (l AnyOptionLazyList) MapStringOption(f func(e AnyOption) StringOption) Str
 func (l AnyOptionLazyList) MapIntOption(f func(e AnyOption) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -16010,11 +16010,11 @@ func (l AnyOptionLazyList) MapIntOption(f func(e AnyOption) IntOption) IntOption
 func (l AnyOptionLazyList) MapInt64Option(f func(e AnyOption) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -16024,11 +16024,11 @@ func (l AnyOptionLazyList) MapInt64Option(f func(e AnyOption) Int64Option) Int64
 func (l AnyOptionLazyList) MapByteOption(f func(e AnyOption) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -16038,11 +16038,11 @@ func (l AnyOptionLazyList) MapByteOption(f func(e AnyOption) ByteOption) ByteOpt
 func (l AnyOptionLazyList) MapRuneOption(f func(e AnyOption) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -16052,11 +16052,11 @@ func (l AnyOptionLazyList) MapRuneOption(f func(e AnyOption) RuneOption) RuneOpt
 func (l AnyOptionLazyList) MapFloat32Option(f func(e AnyOption) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -16066,11 +16066,11 @@ func (l AnyOptionLazyList) MapFloat32Option(f func(e AnyOption) Float32Option) F
 func (l AnyOptionLazyList) MapFloat64Option(f func(e AnyOption) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -16080,11 +16080,11 @@ func (l AnyOptionLazyList) MapFloat64Option(f func(e AnyOption) Float64Option) F
 func (l AnyOptionLazyList) MapAnyOption(f func(e AnyOption) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -16094,11 +16094,11 @@ func (l AnyOptionLazyList) MapAnyOption(f func(e AnyOption) AnyOption) AnyOption
 func (l AnyOptionLazyList) MapTuple2Option(f func(e AnyOption) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -16108,11 +16108,11 @@ func (l AnyOptionLazyList) MapTuple2Option(f func(e AnyOption) Tuple2Option) Tup
 func (l AnyOptionLazyList) MapBoolList(f func(e AnyOption) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -16122,11 +16122,11 @@ func (l AnyOptionLazyList) MapBoolList(f func(e AnyOption) BoolList) BoolListLaz
 func (l AnyOptionLazyList) MapStringList(f func(e AnyOption) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -16136,11 +16136,11 @@ func (l AnyOptionLazyList) MapStringList(f func(e AnyOption) StringList) StringL
 func (l AnyOptionLazyList) MapIntList(f func(e AnyOption) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -16150,11 +16150,11 @@ func (l AnyOptionLazyList) MapIntList(f func(e AnyOption) IntList) IntListLazyLi
 func (l AnyOptionLazyList) MapInt64List(f func(e AnyOption) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -16164,11 +16164,11 @@ func (l AnyOptionLazyList) MapInt64List(f func(e AnyOption) Int64List) Int64List
 func (l AnyOptionLazyList) MapByteList(f func(e AnyOption) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -16178,11 +16178,11 @@ func (l AnyOptionLazyList) MapByteList(f func(e AnyOption) ByteList) ByteListLaz
 func (l AnyOptionLazyList) MapRuneList(f func(e AnyOption) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -16192,11 +16192,11 @@ func (l AnyOptionLazyList) MapRuneList(f func(e AnyOption) RuneList) RuneListLaz
 func (l AnyOptionLazyList) MapFloat32List(f func(e AnyOption) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -16206,11 +16206,11 @@ func (l AnyOptionLazyList) MapFloat32List(f func(e AnyOption) Float32List) Float
 func (l AnyOptionLazyList) MapFloat64List(f func(e AnyOption) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -16220,11 +16220,11 @@ func (l AnyOptionLazyList) MapFloat64List(f func(e AnyOption) Float64List) Float
 func (l AnyOptionLazyList) MapAnyList(f func(e AnyOption) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -16234,11 +16234,11 @@ func (l AnyOptionLazyList) MapAnyList(f func(e AnyOption) AnyList) AnyListLazyLi
 func (l AnyOptionLazyList) MapTuple2List(f func(e AnyOption) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -16248,11 +16248,11 @@ func (l AnyOptionLazyList) MapTuple2List(f func(e AnyOption) Tuple2List) Tuple2L
 func (l Tuple2OptionLazyList) MapBool(f func(e Tuple2Option) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -16262,11 +16262,11 @@ func (l Tuple2OptionLazyList) MapBool(f func(e Tuple2Option) bool) BoolLazyList 
 func (l Tuple2OptionLazyList) MapString(f func(e Tuple2Option) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -16276,11 +16276,11 @@ func (l Tuple2OptionLazyList) MapString(f func(e Tuple2Option) string) StringLaz
 func (l Tuple2OptionLazyList) MapInt(f func(e Tuple2Option) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -16290,11 +16290,11 @@ func (l Tuple2OptionLazyList) MapInt(f func(e Tuple2Option) int) IntLazyList {
 func (l Tuple2OptionLazyList) MapInt64(f func(e Tuple2Option) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -16304,11 +16304,11 @@ func (l Tuple2OptionLazyList) MapInt64(f func(e Tuple2Option) int64) Int64LazyLi
 func (l Tuple2OptionLazyList) MapByte(f func(e Tuple2Option) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -16318,11 +16318,11 @@ func (l Tuple2OptionLazyList) MapByte(f func(e Tuple2Option) byte) ByteLazyList 
 func (l Tuple2OptionLazyList) MapRune(f func(e Tuple2Option) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -16332,11 +16332,11 @@ func (l Tuple2OptionLazyList) MapRune(f func(e Tuple2Option) rune) RuneLazyList 
 func (l Tuple2OptionLazyList) MapFloat32(f func(e Tuple2Option) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -16346,11 +16346,11 @@ func (l Tuple2OptionLazyList) MapFloat32(f func(e Tuple2Option) float32) Float32
 func (l Tuple2OptionLazyList) MapFloat64(f func(e Tuple2Option) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -16360,11 +16360,11 @@ func (l Tuple2OptionLazyList) MapFloat64(f func(e Tuple2Option) float64) Float64
 func (l Tuple2OptionLazyList) MapAny(f func(e Tuple2Option) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -16374,11 +16374,11 @@ func (l Tuple2OptionLazyList) MapAny(f func(e Tuple2Option) Any) AnyLazyList {
 func (l Tuple2OptionLazyList) MapTuple2(f func(e Tuple2Option) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -16388,11 +16388,11 @@ func (l Tuple2OptionLazyList) MapTuple2(f func(e Tuple2Option) Tuple2) Tuple2Laz
 func (l Tuple2OptionLazyList) MapBoolArray(f func(e Tuple2Option) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -16402,11 +16402,11 @@ func (l Tuple2OptionLazyList) MapBoolArray(f func(e Tuple2Option) []bool) BoolAr
 func (l Tuple2OptionLazyList) MapStringArray(f func(e Tuple2Option) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -16416,11 +16416,11 @@ func (l Tuple2OptionLazyList) MapStringArray(f func(e Tuple2Option) []string) St
 func (l Tuple2OptionLazyList) MapIntArray(f func(e Tuple2Option) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -16430,11 +16430,11 @@ func (l Tuple2OptionLazyList) MapIntArray(f func(e Tuple2Option) []int) IntArray
 func (l Tuple2OptionLazyList) MapInt64Array(f func(e Tuple2Option) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -16444,11 +16444,11 @@ func (l Tuple2OptionLazyList) MapInt64Array(f func(e Tuple2Option) []int64) Int6
 func (l Tuple2OptionLazyList) MapByteArray(f func(e Tuple2Option) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -16458,11 +16458,11 @@ func (l Tuple2OptionLazyList) MapByteArray(f func(e Tuple2Option) []byte) ByteAr
 func (l Tuple2OptionLazyList) MapRuneArray(f func(e Tuple2Option) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -16472,11 +16472,11 @@ func (l Tuple2OptionLazyList) MapRuneArray(f func(e Tuple2Option) []rune) RuneAr
 func (l Tuple2OptionLazyList) MapFloat32Array(f func(e Tuple2Option) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -16486,11 +16486,11 @@ func (l Tuple2OptionLazyList) MapFloat32Array(f func(e Tuple2Option) []float32) 
 func (l Tuple2OptionLazyList) MapFloat64Array(f func(e Tuple2Option) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -16500,11 +16500,11 @@ func (l Tuple2OptionLazyList) MapFloat64Array(f func(e Tuple2Option) []float64) 
 func (l Tuple2OptionLazyList) MapAnyArray(f func(e Tuple2Option) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -16514,11 +16514,11 @@ func (l Tuple2OptionLazyList) MapAnyArray(f func(e Tuple2Option) []Any) AnyArray
 func (l Tuple2OptionLazyList) MapTuple2Array(f func(e Tuple2Option) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -16528,11 +16528,11 @@ func (l Tuple2OptionLazyList) MapTuple2Array(f func(e Tuple2Option) []Tuple2) Tu
 func (l Tuple2OptionLazyList) MapBoolOption(f func(e Tuple2Option) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -16542,11 +16542,11 @@ func (l Tuple2OptionLazyList) MapBoolOption(f func(e Tuple2Option) BoolOption) B
 func (l Tuple2OptionLazyList) MapStringOption(f func(e Tuple2Option) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -16556,11 +16556,11 @@ func (l Tuple2OptionLazyList) MapStringOption(f func(e Tuple2Option) StringOptio
 func (l Tuple2OptionLazyList) MapIntOption(f func(e Tuple2Option) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -16570,11 +16570,11 @@ func (l Tuple2OptionLazyList) MapIntOption(f func(e Tuple2Option) IntOption) Int
 func (l Tuple2OptionLazyList) MapInt64Option(f func(e Tuple2Option) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -16584,11 +16584,11 @@ func (l Tuple2OptionLazyList) MapInt64Option(f func(e Tuple2Option) Int64Option)
 func (l Tuple2OptionLazyList) MapByteOption(f func(e Tuple2Option) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -16598,11 +16598,11 @@ func (l Tuple2OptionLazyList) MapByteOption(f func(e Tuple2Option) ByteOption) B
 func (l Tuple2OptionLazyList) MapRuneOption(f func(e Tuple2Option) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -16612,11 +16612,11 @@ func (l Tuple2OptionLazyList) MapRuneOption(f func(e Tuple2Option) RuneOption) R
 func (l Tuple2OptionLazyList) MapFloat32Option(f func(e Tuple2Option) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -16626,11 +16626,11 @@ func (l Tuple2OptionLazyList) MapFloat32Option(f func(e Tuple2Option) Float32Opt
 func (l Tuple2OptionLazyList) MapFloat64Option(f func(e Tuple2Option) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -16640,11 +16640,11 @@ func (l Tuple2OptionLazyList) MapFloat64Option(f func(e Tuple2Option) Float64Opt
 func (l Tuple2OptionLazyList) MapAnyOption(f func(e Tuple2Option) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -16654,11 +16654,11 @@ func (l Tuple2OptionLazyList) MapAnyOption(f func(e Tuple2Option) AnyOption) Any
 func (l Tuple2OptionLazyList) MapTuple2Option(f func(e Tuple2Option) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -16668,11 +16668,11 @@ func (l Tuple2OptionLazyList) MapTuple2Option(f func(e Tuple2Option) Tuple2Optio
 func (l Tuple2OptionLazyList) MapBoolList(f func(e Tuple2Option) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -16682,11 +16682,11 @@ func (l Tuple2OptionLazyList) MapBoolList(f func(e Tuple2Option) BoolList) BoolL
 func (l Tuple2OptionLazyList) MapStringList(f func(e Tuple2Option) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -16696,11 +16696,11 @@ func (l Tuple2OptionLazyList) MapStringList(f func(e Tuple2Option) StringList) S
 func (l Tuple2OptionLazyList) MapIntList(f func(e Tuple2Option) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -16710,11 +16710,11 @@ func (l Tuple2OptionLazyList) MapIntList(f func(e Tuple2Option) IntList) IntList
 func (l Tuple2OptionLazyList) MapInt64List(f func(e Tuple2Option) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -16724,11 +16724,11 @@ func (l Tuple2OptionLazyList) MapInt64List(f func(e Tuple2Option) Int64List) Int
 func (l Tuple2OptionLazyList) MapByteList(f func(e Tuple2Option) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -16738,11 +16738,11 @@ func (l Tuple2OptionLazyList) MapByteList(f func(e Tuple2Option) ByteList) ByteL
 func (l Tuple2OptionLazyList) MapRuneList(f func(e Tuple2Option) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -16752,11 +16752,11 @@ func (l Tuple2OptionLazyList) MapRuneList(f func(e Tuple2Option) RuneList) RuneL
 func (l Tuple2OptionLazyList) MapFloat32List(f func(e Tuple2Option) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -16766,11 +16766,11 @@ func (l Tuple2OptionLazyList) MapFloat32List(f func(e Tuple2Option) Float32List)
 func (l Tuple2OptionLazyList) MapFloat64List(f func(e Tuple2Option) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -16780,11 +16780,11 @@ func (l Tuple2OptionLazyList) MapFloat64List(f func(e Tuple2Option) Float64List)
 func (l Tuple2OptionLazyList) MapAnyList(f func(e Tuple2Option) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -16794,11 +16794,11 @@ func (l Tuple2OptionLazyList) MapAnyList(f func(e Tuple2Option) AnyList) AnyList
 func (l Tuple2OptionLazyList) MapTuple2List(f func(e Tuple2Option) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -16808,11 +16808,11 @@ func (l Tuple2OptionLazyList) MapTuple2List(f func(e Tuple2Option) Tuple2List) T
 func (l BoolListLazyList) MapBool(f func(e BoolList) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -16822,11 +16822,11 @@ func (l BoolListLazyList) MapBool(f func(e BoolList) bool) BoolLazyList {
 func (l BoolListLazyList) MapString(f func(e BoolList) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -16836,11 +16836,11 @@ func (l BoolListLazyList) MapString(f func(e BoolList) string) StringLazyList {
 func (l BoolListLazyList) MapInt(f func(e BoolList) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -16850,11 +16850,11 @@ func (l BoolListLazyList) MapInt(f func(e BoolList) int) IntLazyList {
 func (l BoolListLazyList) MapInt64(f func(e BoolList) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -16864,11 +16864,11 @@ func (l BoolListLazyList) MapInt64(f func(e BoolList) int64) Int64LazyList {
 func (l BoolListLazyList) MapByte(f func(e BoolList) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -16878,11 +16878,11 @@ func (l BoolListLazyList) MapByte(f func(e BoolList) byte) ByteLazyList {
 func (l BoolListLazyList) MapRune(f func(e BoolList) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -16892,11 +16892,11 @@ func (l BoolListLazyList) MapRune(f func(e BoolList) rune) RuneLazyList {
 func (l BoolListLazyList) MapFloat32(f func(e BoolList) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -16906,11 +16906,11 @@ func (l BoolListLazyList) MapFloat32(f func(e BoolList) float32) Float32LazyList
 func (l BoolListLazyList) MapFloat64(f func(e BoolList) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -16920,11 +16920,11 @@ func (l BoolListLazyList) MapFloat64(f func(e BoolList) float64) Float64LazyList
 func (l BoolListLazyList) MapAny(f func(e BoolList) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -16934,11 +16934,11 @@ func (l BoolListLazyList) MapAny(f func(e BoolList) Any) AnyLazyList {
 func (l BoolListLazyList) MapTuple2(f func(e BoolList) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -16948,11 +16948,11 @@ func (l BoolListLazyList) MapTuple2(f func(e BoolList) Tuple2) Tuple2LazyList {
 func (l BoolListLazyList) MapBoolArray(f func(e BoolList) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -16962,11 +16962,11 @@ func (l BoolListLazyList) MapBoolArray(f func(e BoolList) []bool) BoolArrayLazyL
 func (l BoolListLazyList) MapStringArray(f func(e BoolList) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -16976,11 +16976,11 @@ func (l BoolListLazyList) MapStringArray(f func(e BoolList) []string) StringArra
 func (l BoolListLazyList) MapIntArray(f func(e BoolList) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -16990,11 +16990,11 @@ func (l BoolListLazyList) MapIntArray(f func(e BoolList) []int) IntArrayLazyList
 func (l BoolListLazyList) MapInt64Array(f func(e BoolList) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -17004,11 +17004,11 @@ func (l BoolListLazyList) MapInt64Array(f func(e BoolList) []int64) Int64ArrayLa
 func (l BoolListLazyList) MapByteArray(f func(e BoolList) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -17018,11 +17018,11 @@ func (l BoolListLazyList) MapByteArray(f func(e BoolList) []byte) ByteArrayLazyL
 func (l BoolListLazyList) MapRuneArray(f func(e BoolList) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -17032,11 +17032,11 @@ func (l BoolListLazyList) MapRuneArray(f func(e BoolList) []rune) RuneArrayLazyL
 func (l BoolListLazyList) MapFloat32Array(f func(e BoolList) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -17046,11 +17046,11 @@ func (l BoolListLazyList) MapFloat32Array(f func(e BoolList) []float32) Float32A
 func (l BoolListLazyList) MapFloat64Array(f func(e BoolList) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -17060,11 +17060,11 @@ func (l BoolListLazyList) MapFloat64Array(f func(e BoolList) []float64) Float64A
 func (l BoolListLazyList) MapAnyArray(f func(e BoolList) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -17074,11 +17074,11 @@ func (l BoolListLazyList) MapAnyArray(f func(e BoolList) []Any) AnyArrayLazyList
 func (l BoolListLazyList) MapTuple2Array(f func(e BoolList) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -17088,11 +17088,11 @@ func (l BoolListLazyList) MapTuple2Array(f func(e BoolList) []Tuple2) Tuple2Arra
 func (l BoolListLazyList) MapBoolOption(f func(e BoolList) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -17102,11 +17102,11 @@ func (l BoolListLazyList) MapBoolOption(f func(e BoolList) BoolOption) BoolOptio
 func (l BoolListLazyList) MapStringOption(f func(e BoolList) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -17116,11 +17116,11 @@ func (l BoolListLazyList) MapStringOption(f func(e BoolList) StringOption) Strin
 func (l BoolListLazyList) MapIntOption(f func(e BoolList) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -17130,11 +17130,11 @@ func (l BoolListLazyList) MapIntOption(f func(e BoolList) IntOption) IntOptionLa
 func (l BoolListLazyList) MapInt64Option(f func(e BoolList) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -17144,11 +17144,11 @@ func (l BoolListLazyList) MapInt64Option(f func(e BoolList) Int64Option) Int64Op
 func (l BoolListLazyList) MapByteOption(f func(e BoolList) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -17158,11 +17158,11 @@ func (l BoolListLazyList) MapByteOption(f func(e BoolList) ByteOption) ByteOptio
 func (l BoolListLazyList) MapRuneOption(f func(e BoolList) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -17172,11 +17172,11 @@ func (l BoolListLazyList) MapRuneOption(f func(e BoolList) RuneOption) RuneOptio
 func (l BoolListLazyList) MapFloat32Option(f func(e BoolList) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -17186,11 +17186,11 @@ func (l BoolListLazyList) MapFloat32Option(f func(e BoolList) Float32Option) Flo
 func (l BoolListLazyList) MapFloat64Option(f func(e BoolList) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -17200,11 +17200,11 @@ func (l BoolListLazyList) MapFloat64Option(f func(e BoolList) Float64Option) Flo
 func (l BoolListLazyList) MapAnyOption(f func(e BoolList) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -17214,11 +17214,11 @@ func (l BoolListLazyList) MapAnyOption(f func(e BoolList) AnyOption) AnyOptionLa
 func (l BoolListLazyList) MapTuple2Option(f func(e BoolList) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -17228,11 +17228,11 @@ func (l BoolListLazyList) MapTuple2Option(f func(e BoolList) Tuple2Option) Tuple
 func (l BoolListLazyList) MapBoolList(f func(e BoolList) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -17242,11 +17242,11 @@ func (l BoolListLazyList) MapBoolList(f func(e BoolList) BoolList) BoolListLazyL
 func (l BoolListLazyList) MapStringList(f func(e BoolList) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -17256,11 +17256,11 @@ func (l BoolListLazyList) MapStringList(f func(e BoolList) StringList) StringLis
 func (l BoolListLazyList) MapIntList(f func(e BoolList) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -17270,11 +17270,11 @@ func (l BoolListLazyList) MapIntList(f func(e BoolList) IntList) IntListLazyList
 func (l BoolListLazyList) MapInt64List(f func(e BoolList) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -17284,11 +17284,11 @@ func (l BoolListLazyList) MapInt64List(f func(e BoolList) Int64List) Int64ListLa
 func (l BoolListLazyList) MapByteList(f func(e BoolList) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -17298,11 +17298,11 @@ func (l BoolListLazyList) MapByteList(f func(e BoolList) ByteList) ByteListLazyL
 func (l BoolListLazyList) MapRuneList(f func(e BoolList) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -17312,11 +17312,11 @@ func (l BoolListLazyList) MapRuneList(f func(e BoolList) RuneList) RuneListLazyL
 func (l BoolListLazyList) MapFloat32List(f func(e BoolList) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -17326,11 +17326,11 @@ func (l BoolListLazyList) MapFloat32List(f func(e BoolList) Float32List) Float32
 func (l BoolListLazyList) MapFloat64List(f func(e BoolList) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -17340,11 +17340,11 @@ func (l BoolListLazyList) MapFloat64List(f func(e BoolList) Float64List) Float64
 func (l BoolListLazyList) MapAnyList(f func(e BoolList) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -17354,11 +17354,11 @@ func (l BoolListLazyList) MapAnyList(f func(e BoolList) AnyList) AnyListLazyList
 func (l BoolListLazyList) MapTuple2List(f func(e BoolList) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -17368,11 +17368,11 @@ func (l BoolListLazyList) MapTuple2List(f func(e BoolList) Tuple2List) Tuple2Lis
 func (l StringListLazyList) MapBool(f func(e StringList) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -17382,11 +17382,11 @@ func (l StringListLazyList) MapBool(f func(e StringList) bool) BoolLazyList {
 func (l StringListLazyList) MapString(f func(e StringList) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -17396,11 +17396,11 @@ func (l StringListLazyList) MapString(f func(e StringList) string) StringLazyLis
 func (l StringListLazyList) MapInt(f func(e StringList) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -17410,11 +17410,11 @@ func (l StringListLazyList) MapInt(f func(e StringList) int) IntLazyList {
 func (l StringListLazyList) MapInt64(f func(e StringList) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -17424,11 +17424,11 @@ func (l StringListLazyList) MapInt64(f func(e StringList) int64) Int64LazyList {
 func (l StringListLazyList) MapByte(f func(e StringList) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -17438,11 +17438,11 @@ func (l StringListLazyList) MapByte(f func(e StringList) byte) ByteLazyList {
 func (l StringListLazyList) MapRune(f func(e StringList) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -17452,11 +17452,11 @@ func (l StringListLazyList) MapRune(f func(e StringList) rune) RuneLazyList {
 func (l StringListLazyList) MapFloat32(f func(e StringList) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -17466,11 +17466,11 @@ func (l StringListLazyList) MapFloat32(f func(e StringList) float32) Float32Lazy
 func (l StringListLazyList) MapFloat64(f func(e StringList) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -17480,11 +17480,11 @@ func (l StringListLazyList) MapFloat64(f func(e StringList) float64) Float64Lazy
 func (l StringListLazyList) MapAny(f func(e StringList) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -17494,11 +17494,11 @@ func (l StringListLazyList) MapAny(f func(e StringList) Any) AnyLazyList {
 func (l StringListLazyList) MapTuple2(f func(e StringList) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -17508,11 +17508,11 @@ func (l StringListLazyList) MapTuple2(f func(e StringList) Tuple2) Tuple2LazyLis
 func (l StringListLazyList) MapBoolArray(f func(e StringList) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -17522,11 +17522,11 @@ func (l StringListLazyList) MapBoolArray(f func(e StringList) []bool) BoolArrayL
 func (l StringListLazyList) MapStringArray(f func(e StringList) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -17536,11 +17536,11 @@ func (l StringListLazyList) MapStringArray(f func(e StringList) []string) String
 func (l StringListLazyList) MapIntArray(f func(e StringList) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -17550,11 +17550,11 @@ func (l StringListLazyList) MapIntArray(f func(e StringList) []int) IntArrayLazy
 func (l StringListLazyList) MapInt64Array(f func(e StringList) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -17564,11 +17564,11 @@ func (l StringListLazyList) MapInt64Array(f func(e StringList) []int64) Int64Arr
 func (l StringListLazyList) MapByteArray(f func(e StringList) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -17578,11 +17578,11 @@ func (l StringListLazyList) MapByteArray(f func(e StringList) []byte) ByteArrayL
 func (l StringListLazyList) MapRuneArray(f func(e StringList) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -17592,11 +17592,11 @@ func (l StringListLazyList) MapRuneArray(f func(e StringList) []rune) RuneArrayL
 func (l StringListLazyList) MapFloat32Array(f func(e StringList) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -17606,11 +17606,11 @@ func (l StringListLazyList) MapFloat32Array(f func(e StringList) []float32) Floa
 func (l StringListLazyList) MapFloat64Array(f func(e StringList) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -17620,11 +17620,11 @@ func (l StringListLazyList) MapFloat64Array(f func(e StringList) []float64) Floa
 func (l StringListLazyList) MapAnyArray(f func(e StringList) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -17634,11 +17634,11 @@ func (l StringListLazyList) MapAnyArray(f func(e StringList) []Any) AnyArrayLazy
 func (l StringListLazyList) MapTuple2Array(f func(e StringList) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -17648,11 +17648,11 @@ func (l StringListLazyList) MapTuple2Array(f func(e StringList) []Tuple2) Tuple2
 func (l StringListLazyList) MapBoolOption(f func(e StringList) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -17662,11 +17662,11 @@ func (l StringListLazyList) MapBoolOption(f func(e StringList) BoolOption) BoolO
 func (l StringListLazyList) MapStringOption(f func(e StringList) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -17676,11 +17676,11 @@ func (l StringListLazyList) MapStringOption(f func(e StringList) StringOption) S
 func (l StringListLazyList) MapIntOption(f func(e StringList) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -17690,11 +17690,11 @@ func (l StringListLazyList) MapIntOption(f func(e StringList) IntOption) IntOpti
 func (l StringListLazyList) MapInt64Option(f func(e StringList) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -17704,11 +17704,11 @@ func (l StringListLazyList) MapInt64Option(f func(e StringList) Int64Option) Int
 func (l StringListLazyList) MapByteOption(f func(e StringList) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -17718,11 +17718,11 @@ func (l StringListLazyList) MapByteOption(f func(e StringList) ByteOption) ByteO
 func (l StringListLazyList) MapRuneOption(f func(e StringList) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -17732,11 +17732,11 @@ func (l StringListLazyList) MapRuneOption(f func(e StringList) RuneOption) RuneO
 func (l StringListLazyList) MapFloat32Option(f func(e StringList) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -17746,11 +17746,11 @@ func (l StringListLazyList) MapFloat32Option(f func(e StringList) Float32Option)
 func (l StringListLazyList) MapFloat64Option(f func(e StringList) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -17760,11 +17760,11 @@ func (l StringListLazyList) MapFloat64Option(f func(e StringList) Float64Option)
 func (l StringListLazyList) MapAnyOption(f func(e StringList) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -17774,11 +17774,11 @@ func (l StringListLazyList) MapAnyOption(f func(e StringList) AnyOption) AnyOpti
 func (l StringListLazyList) MapTuple2Option(f func(e StringList) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -17788,11 +17788,11 @@ func (l StringListLazyList) MapTuple2Option(f func(e StringList) Tuple2Option) T
 func (l StringListLazyList) MapBoolList(f func(e StringList) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -17802,11 +17802,11 @@ func (l StringListLazyList) MapBoolList(f func(e StringList) BoolList) BoolListL
 func (l StringListLazyList) MapStringList(f func(e StringList) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -17816,11 +17816,11 @@ func (l StringListLazyList) MapStringList(f func(e StringList) StringList) Strin
 func (l StringListLazyList) MapIntList(f func(e StringList) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -17830,11 +17830,11 @@ func (l StringListLazyList) MapIntList(f func(e StringList) IntList) IntListLazy
 func (l StringListLazyList) MapInt64List(f func(e StringList) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -17844,11 +17844,11 @@ func (l StringListLazyList) MapInt64List(f func(e StringList) Int64List) Int64Li
 func (l StringListLazyList) MapByteList(f func(e StringList) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -17858,11 +17858,11 @@ func (l StringListLazyList) MapByteList(f func(e StringList) ByteList) ByteListL
 func (l StringListLazyList) MapRuneList(f func(e StringList) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -17872,11 +17872,11 @@ func (l StringListLazyList) MapRuneList(f func(e StringList) RuneList) RuneListL
 func (l StringListLazyList) MapFloat32List(f func(e StringList) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -17886,11 +17886,11 @@ func (l StringListLazyList) MapFloat32List(f func(e StringList) Float32List) Flo
 func (l StringListLazyList) MapFloat64List(f func(e StringList) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -17900,11 +17900,11 @@ func (l StringListLazyList) MapFloat64List(f func(e StringList) Float64List) Flo
 func (l StringListLazyList) MapAnyList(f func(e StringList) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -17914,11 +17914,11 @@ func (l StringListLazyList) MapAnyList(f func(e StringList) AnyList) AnyListLazy
 func (l StringListLazyList) MapTuple2List(f func(e StringList) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -17928,11 +17928,11 @@ func (l StringListLazyList) MapTuple2List(f func(e StringList) Tuple2List) Tuple
 func (l IntListLazyList) MapBool(f func(e IntList) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -17942,11 +17942,11 @@ func (l IntListLazyList) MapBool(f func(e IntList) bool) BoolLazyList {
 func (l IntListLazyList) MapString(f func(e IntList) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -17956,11 +17956,11 @@ func (l IntListLazyList) MapString(f func(e IntList) string) StringLazyList {
 func (l IntListLazyList) MapInt(f func(e IntList) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -17970,11 +17970,11 @@ func (l IntListLazyList) MapInt(f func(e IntList) int) IntLazyList {
 func (l IntListLazyList) MapInt64(f func(e IntList) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -17984,11 +17984,11 @@ func (l IntListLazyList) MapInt64(f func(e IntList) int64) Int64LazyList {
 func (l IntListLazyList) MapByte(f func(e IntList) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -17998,11 +17998,11 @@ func (l IntListLazyList) MapByte(f func(e IntList) byte) ByteLazyList {
 func (l IntListLazyList) MapRune(f func(e IntList) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -18012,11 +18012,11 @@ func (l IntListLazyList) MapRune(f func(e IntList) rune) RuneLazyList {
 func (l IntListLazyList) MapFloat32(f func(e IntList) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -18026,11 +18026,11 @@ func (l IntListLazyList) MapFloat32(f func(e IntList) float32) Float32LazyList {
 func (l IntListLazyList) MapFloat64(f func(e IntList) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -18040,11 +18040,11 @@ func (l IntListLazyList) MapFloat64(f func(e IntList) float64) Float64LazyList {
 func (l IntListLazyList) MapAny(f func(e IntList) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -18054,11 +18054,11 @@ func (l IntListLazyList) MapAny(f func(e IntList) Any) AnyLazyList {
 func (l IntListLazyList) MapTuple2(f func(e IntList) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -18068,11 +18068,11 @@ func (l IntListLazyList) MapTuple2(f func(e IntList) Tuple2) Tuple2LazyList {
 func (l IntListLazyList) MapBoolArray(f func(e IntList) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -18082,11 +18082,11 @@ func (l IntListLazyList) MapBoolArray(f func(e IntList) []bool) BoolArrayLazyLis
 func (l IntListLazyList) MapStringArray(f func(e IntList) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -18096,11 +18096,11 @@ func (l IntListLazyList) MapStringArray(f func(e IntList) []string) StringArrayL
 func (l IntListLazyList) MapIntArray(f func(e IntList) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -18110,11 +18110,11 @@ func (l IntListLazyList) MapIntArray(f func(e IntList) []int) IntArrayLazyList {
 func (l IntListLazyList) MapInt64Array(f func(e IntList) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -18124,11 +18124,11 @@ func (l IntListLazyList) MapInt64Array(f func(e IntList) []int64) Int64ArrayLazy
 func (l IntListLazyList) MapByteArray(f func(e IntList) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -18138,11 +18138,11 @@ func (l IntListLazyList) MapByteArray(f func(e IntList) []byte) ByteArrayLazyLis
 func (l IntListLazyList) MapRuneArray(f func(e IntList) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -18152,11 +18152,11 @@ func (l IntListLazyList) MapRuneArray(f func(e IntList) []rune) RuneArrayLazyLis
 func (l IntListLazyList) MapFloat32Array(f func(e IntList) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -18166,11 +18166,11 @@ func (l IntListLazyList) MapFloat32Array(f func(e IntList) []float32) Float32Arr
 func (l IntListLazyList) MapFloat64Array(f func(e IntList) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -18180,11 +18180,11 @@ func (l IntListLazyList) MapFloat64Array(f func(e IntList) []float64) Float64Arr
 func (l IntListLazyList) MapAnyArray(f func(e IntList) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -18194,11 +18194,11 @@ func (l IntListLazyList) MapAnyArray(f func(e IntList) []Any) AnyArrayLazyList {
 func (l IntListLazyList) MapTuple2Array(f func(e IntList) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -18208,11 +18208,11 @@ func (l IntListLazyList) MapTuple2Array(f func(e IntList) []Tuple2) Tuple2ArrayL
 func (l IntListLazyList) MapBoolOption(f func(e IntList) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -18222,11 +18222,11 @@ func (l IntListLazyList) MapBoolOption(f func(e IntList) BoolOption) BoolOptionL
 func (l IntListLazyList) MapStringOption(f func(e IntList) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -18236,11 +18236,11 @@ func (l IntListLazyList) MapStringOption(f func(e IntList) StringOption) StringO
 func (l IntListLazyList) MapIntOption(f func(e IntList) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -18250,11 +18250,11 @@ func (l IntListLazyList) MapIntOption(f func(e IntList) IntOption) IntOptionLazy
 func (l IntListLazyList) MapInt64Option(f func(e IntList) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -18264,11 +18264,11 @@ func (l IntListLazyList) MapInt64Option(f func(e IntList) Int64Option) Int64Opti
 func (l IntListLazyList) MapByteOption(f func(e IntList) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -18278,11 +18278,11 @@ func (l IntListLazyList) MapByteOption(f func(e IntList) ByteOption) ByteOptionL
 func (l IntListLazyList) MapRuneOption(f func(e IntList) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -18292,11 +18292,11 @@ func (l IntListLazyList) MapRuneOption(f func(e IntList) RuneOption) RuneOptionL
 func (l IntListLazyList) MapFloat32Option(f func(e IntList) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -18306,11 +18306,11 @@ func (l IntListLazyList) MapFloat32Option(f func(e IntList) Float32Option) Float
 func (l IntListLazyList) MapFloat64Option(f func(e IntList) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -18320,11 +18320,11 @@ func (l IntListLazyList) MapFloat64Option(f func(e IntList) Float64Option) Float
 func (l IntListLazyList) MapAnyOption(f func(e IntList) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -18334,11 +18334,11 @@ func (l IntListLazyList) MapAnyOption(f func(e IntList) AnyOption) AnyOptionLazy
 func (l IntListLazyList) MapTuple2Option(f func(e IntList) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -18348,11 +18348,11 @@ func (l IntListLazyList) MapTuple2Option(f func(e IntList) Tuple2Option) Tuple2O
 func (l IntListLazyList) MapBoolList(f func(e IntList) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -18362,11 +18362,11 @@ func (l IntListLazyList) MapBoolList(f func(e IntList) BoolList) BoolListLazyLis
 func (l IntListLazyList) MapStringList(f func(e IntList) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -18376,11 +18376,11 @@ func (l IntListLazyList) MapStringList(f func(e IntList) StringList) StringListL
 func (l IntListLazyList) MapIntList(f func(e IntList) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -18390,11 +18390,11 @@ func (l IntListLazyList) MapIntList(f func(e IntList) IntList) IntListLazyList {
 func (l IntListLazyList) MapInt64List(f func(e IntList) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -18404,11 +18404,11 @@ func (l IntListLazyList) MapInt64List(f func(e IntList) Int64List) Int64ListLazy
 func (l IntListLazyList) MapByteList(f func(e IntList) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -18418,11 +18418,11 @@ func (l IntListLazyList) MapByteList(f func(e IntList) ByteList) ByteListLazyLis
 func (l IntListLazyList) MapRuneList(f func(e IntList) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -18432,11 +18432,11 @@ func (l IntListLazyList) MapRuneList(f func(e IntList) RuneList) RuneListLazyLis
 func (l IntListLazyList) MapFloat32List(f func(e IntList) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -18446,11 +18446,11 @@ func (l IntListLazyList) MapFloat32List(f func(e IntList) Float32List) Float32Li
 func (l IntListLazyList) MapFloat64List(f func(e IntList) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -18460,11 +18460,11 @@ func (l IntListLazyList) MapFloat64List(f func(e IntList) Float64List) Float64Li
 func (l IntListLazyList) MapAnyList(f func(e IntList) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -18474,11 +18474,11 @@ func (l IntListLazyList) MapAnyList(f func(e IntList) AnyList) AnyListLazyList {
 func (l IntListLazyList) MapTuple2List(f func(e IntList) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -18488,11 +18488,11 @@ func (l IntListLazyList) MapTuple2List(f func(e IntList) Tuple2List) Tuple2ListL
 func (l Int64ListLazyList) MapBool(f func(e Int64List) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -18502,11 +18502,11 @@ func (l Int64ListLazyList) MapBool(f func(e Int64List) bool) BoolLazyList {
 func (l Int64ListLazyList) MapString(f func(e Int64List) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -18516,11 +18516,11 @@ func (l Int64ListLazyList) MapString(f func(e Int64List) string) StringLazyList 
 func (l Int64ListLazyList) MapInt(f func(e Int64List) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -18530,11 +18530,11 @@ func (l Int64ListLazyList) MapInt(f func(e Int64List) int) IntLazyList {
 func (l Int64ListLazyList) MapInt64(f func(e Int64List) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -18544,11 +18544,11 @@ func (l Int64ListLazyList) MapInt64(f func(e Int64List) int64) Int64LazyList {
 func (l Int64ListLazyList) MapByte(f func(e Int64List) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -18558,11 +18558,11 @@ func (l Int64ListLazyList) MapByte(f func(e Int64List) byte) ByteLazyList {
 func (l Int64ListLazyList) MapRune(f func(e Int64List) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -18572,11 +18572,11 @@ func (l Int64ListLazyList) MapRune(f func(e Int64List) rune) RuneLazyList {
 func (l Int64ListLazyList) MapFloat32(f func(e Int64List) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -18586,11 +18586,11 @@ func (l Int64ListLazyList) MapFloat32(f func(e Int64List) float32) Float32LazyLi
 func (l Int64ListLazyList) MapFloat64(f func(e Int64List) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -18600,11 +18600,11 @@ func (l Int64ListLazyList) MapFloat64(f func(e Int64List) float64) Float64LazyLi
 func (l Int64ListLazyList) MapAny(f func(e Int64List) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -18614,11 +18614,11 @@ func (l Int64ListLazyList) MapAny(f func(e Int64List) Any) AnyLazyList {
 func (l Int64ListLazyList) MapTuple2(f func(e Int64List) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -18628,11 +18628,11 @@ func (l Int64ListLazyList) MapTuple2(f func(e Int64List) Tuple2) Tuple2LazyList 
 func (l Int64ListLazyList) MapBoolArray(f func(e Int64List) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -18642,11 +18642,11 @@ func (l Int64ListLazyList) MapBoolArray(f func(e Int64List) []bool) BoolArrayLaz
 func (l Int64ListLazyList) MapStringArray(f func(e Int64List) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -18656,11 +18656,11 @@ func (l Int64ListLazyList) MapStringArray(f func(e Int64List) []string) StringAr
 func (l Int64ListLazyList) MapIntArray(f func(e Int64List) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -18670,11 +18670,11 @@ func (l Int64ListLazyList) MapIntArray(f func(e Int64List) []int) IntArrayLazyLi
 func (l Int64ListLazyList) MapInt64Array(f func(e Int64List) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -18684,11 +18684,11 @@ func (l Int64ListLazyList) MapInt64Array(f func(e Int64List) []int64) Int64Array
 func (l Int64ListLazyList) MapByteArray(f func(e Int64List) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -18698,11 +18698,11 @@ func (l Int64ListLazyList) MapByteArray(f func(e Int64List) []byte) ByteArrayLaz
 func (l Int64ListLazyList) MapRuneArray(f func(e Int64List) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -18712,11 +18712,11 @@ func (l Int64ListLazyList) MapRuneArray(f func(e Int64List) []rune) RuneArrayLaz
 func (l Int64ListLazyList) MapFloat32Array(f func(e Int64List) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -18726,11 +18726,11 @@ func (l Int64ListLazyList) MapFloat32Array(f func(e Int64List) []float32) Float3
 func (l Int64ListLazyList) MapFloat64Array(f func(e Int64List) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -18740,11 +18740,11 @@ func (l Int64ListLazyList) MapFloat64Array(f func(e Int64List) []float64) Float6
 func (l Int64ListLazyList) MapAnyArray(f func(e Int64List) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -18754,11 +18754,11 @@ func (l Int64ListLazyList) MapAnyArray(f func(e Int64List) []Any) AnyArrayLazyLi
 func (l Int64ListLazyList) MapTuple2Array(f func(e Int64List) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -18768,11 +18768,11 @@ func (l Int64ListLazyList) MapTuple2Array(f func(e Int64List) []Tuple2) Tuple2Ar
 func (l Int64ListLazyList) MapBoolOption(f func(e Int64List) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -18782,11 +18782,11 @@ func (l Int64ListLazyList) MapBoolOption(f func(e Int64List) BoolOption) BoolOpt
 func (l Int64ListLazyList) MapStringOption(f func(e Int64List) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -18796,11 +18796,11 @@ func (l Int64ListLazyList) MapStringOption(f func(e Int64List) StringOption) Str
 func (l Int64ListLazyList) MapIntOption(f func(e Int64List) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -18810,11 +18810,11 @@ func (l Int64ListLazyList) MapIntOption(f func(e Int64List) IntOption) IntOption
 func (l Int64ListLazyList) MapInt64Option(f func(e Int64List) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -18824,11 +18824,11 @@ func (l Int64ListLazyList) MapInt64Option(f func(e Int64List) Int64Option) Int64
 func (l Int64ListLazyList) MapByteOption(f func(e Int64List) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -18838,11 +18838,11 @@ func (l Int64ListLazyList) MapByteOption(f func(e Int64List) ByteOption) ByteOpt
 func (l Int64ListLazyList) MapRuneOption(f func(e Int64List) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -18852,11 +18852,11 @@ func (l Int64ListLazyList) MapRuneOption(f func(e Int64List) RuneOption) RuneOpt
 func (l Int64ListLazyList) MapFloat32Option(f func(e Int64List) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -18866,11 +18866,11 @@ func (l Int64ListLazyList) MapFloat32Option(f func(e Int64List) Float32Option) F
 func (l Int64ListLazyList) MapFloat64Option(f func(e Int64List) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -18880,11 +18880,11 @@ func (l Int64ListLazyList) MapFloat64Option(f func(e Int64List) Float64Option) F
 func (l Int64ListLazyList) MapAnyOption(f func(e Int64List) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -18894,11 +18894,11 @@ func (l Int64ListLazyList) MapAnyOption(f func(e Int64List) AnyOption) AnyOption
 func (l Int64ListLazyList) MapTuple2Option(f func(e Int64List) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -18908,11 +18908,11 @@ func (l Int64ListLazyList) MapTuple2Option(f func(e Int64List) Tuple2Option) Tup
 func (l Int64ListLazyList) MapBoolList(f func(e Int64List) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -18922,11 +18922,11 @@ func (l Int64ListLazyList) MapBoolList(f func(e Int64List) BoolList) BoolListLaz
 func (l Int64ListLazyList) MapStringList(f func(e Int64List) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -18936,11 +18936,11 @@ func (l Int64ListLazyList) MapStringList(f func(e Int64List) StringList) StringL
 func (l Int64ListLazyList) MapIntList(f func(e Int64List) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -18950,11 +18950,11 @@ func (l Int64ListLazyList) MapIntList(f func(e Int64List) IntList) IntListLazyLi
 func (l Int64ListLazyList) MapInt64List(f func(e Int64List) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -18964,11 +18964,11 @@ func (l Int64ListLazyList) MapInt64List(f func(e Int64List) Int64List) Int64List
 func (l Int64ListLazyList) MapByteList(f func(e Int64List) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -18978,11 +18978,11 @@ func (l Int64ListLazyList) MapByteList(f func(e Int64List) ByteList) ByteListLaz
 func (l Int64ListLazyList) MapRuneList(f func(e Int64List) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -18992,11 +18992,11 @@ func (l Int64ListLazyList) MapRuneList(f func(e Int64List) RuneList) RuneListLaz
 func (l Int64ListLazyList) MapFloat32List(f func(e Int64List) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -19006,11 +19006,11 @@ func (l Int64ListLazyList) MapFloat32List(f func(e Int64List) Float32List) Float
 func (l Int64ListLazyList) MapFloat64List(f func(e Int64List) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -19020,11 +19020,11 @@ func (l Int64ListLazyList) MapFloat64List(f func(e Int64List) Float64List) Float
 func (l Int64ListLazyList) MapAnyList(f func(e Int64List) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -19034,11 +19034,11 @@ func (l Int64ListLazyList) MapAnyList(f func(e Int64List) AnyList) AnyListLazyLi
 func (l Int64ListLazyList) MapTuple2List(f func(e Int64List) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -19048,11 +19048,11 @@ func (l Int64ListLazyList) MapTuple2List(f func(e Int64List) Tuple2List) Tuple2L
 func (l ByteListLazyList) MapBool(f func(e ByteList) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -19062,11 +19062,11 @@ func (l ByteListLazyList) MapBool(f func(e ByteList) bool) BoolLazyList {
 func (l ByteListLazyList) MapString(f func(e ByteList) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -19076,11 +19076,11 @@ func (l ByteListLazyList) MapString(f func(e ByteList) string) StringLazyList {
 func (l ByteListLazyList) MapInt(f func(e ByteList) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -19090,11 +19090,11 @@ func (l ByteListLazyList) MapInt(f func(e ByteList) int) IntLazyList {
 func (l ByteListLazyList) MapInt64(f func(e ByteList) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -19104,11 +19104,11 @@ func (l ByteListLazyList) MapInt64(f func(e ByteList) int64) Int64LazyList {
 func (l ByteListLazyList) MapByte(f func(e ByteList) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -19118,11 +19118,11 @@ func (l ByteListLazyList) MapByte(f func(e ByteList) byte) ByteLazyList {
 func (l ByteListLazyList) MapRune(f func(e ByteList) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -19132,11 +19132,11 @@ func (l ByteListLazyList) MapRune(f func(e ByteList) rune) RuneLazyList {
 func (l ByteListLazyList) MapFloat32(f func(e ByteList) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -19146,11 +19146,11 @@ func (l ByteListLazyList) MapFloat32(f func(e ByteList) float32) Float32LazyList
 func (l ByteListLazyList) MapFloat64(f func(e ByteList) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -19160,11 +19160,11 @@ func (l ByteListLazyList) MapFloat64(f func(e ByteList) float64) Float64LazyList
 func (l ByteListLazyList) MapAny(f func(e ByteList) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -19174,11 +19174,11 @@ func (l ByteListLazyList) MapAny(f func(e ByteList) Any) AnyLazyList {
 func (l ByteListLazyList) MapTuple2(f func(e ByteList) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -19188,11 +19188,11 @@ func (l ByteListLazyList) MapTuple2(f func(e ByteList) Tuple2) Tuple2LazyList {
 func (l ByteListLazyList) MapBoolArray(f func(e ByteList) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -19202,11 +19202,11 @@ func (l ByteListLazyList) MapBoolArray(f func(e ByteList) []bool) BoolArrayLazyL
 func (l ByteListLazyList) MapStringArray(f func(e ByteList) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -19216,11 +19216,11 @@ func (l ByteListLazyList) MapStringArray(f func(e ByteList) []string) StringArra
 func (l ByteListLazyList) MapIntArray(f func(e ByteList) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -19230,11 +19230,11 @@ func (l ByteListLazyList) MapIntArray(f func(e ByteList) []int) IntArrayLazyList
 func (l ByteListLazyList) MapInt64Array(f func(e ByteList) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -19244,11 +19244,11 @@ func (l ByteListLazyList) MapInt64Array(f func(e ByteList) []int64) Int64ArrayLa
 func (l ByteListLazyList) MapByteArray(f func(e ByteList) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -19258,11 +19258,11 @@ func (l ByteListLazyList) MapByteArray(f func(e ByteList) []byte) ByteArrayLazyL
 func (l ByteListLazyList) MapRuneArray(f func(e ByteList) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -19272,11 +19272,11 @@ func (l ByteListLazyList) MapRuneArray(f func(e ByteList) []rune) RuneArrayLazyL
 func (l ByteListLazyList) MapFloat32Array(f func(e ByteList) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -19286,11 +19286,11 @@ func (l ByteListLazyList) MapFloat32Array(f func(e ByteList) []float32) Float32A
 func (l ByteListLazyList) MapFloat64Array(f func(e ByteList) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -19300,11 +19300,11 @@ func (l ByteListLazyList) MapFloat64Array(f func(e ByteList) []float64) Float64A
 func (l ByteListLazyList) MapAnyArray(f func(e ByteList) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -19314,11 +19314,11 @@ func (l ByteListLazyList) MapAnyArray(f func(e ByteList) []Any) AnyArrayLazyList
 func (l ByteListLazyList) MapTuple2Array(f func(e ByteList) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -19328,11 +19328,11 @@ func (l ByteListLazyList) MapTuple2Array(f func(e ByteList) []Tuple2) Tuple2Arra
 func (l ByteListLazyList) MapBoolOption(f func(e ByteList) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -19342,11 +19342,11 @@ func (l ByteListLazyList) MapBoolOption(f func(e ByteList) BoolOption) BoolOptio
 func (l ByteListLazyList) MapStringOption(f func(e ByteList) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -19356,11 +19356,11 @@ func (l ByteListLazyList) MapStringOption(f func(e ByteList) StringOption) Strin
 func (l ByteListLazyList) MapIntOption(f func(e ByteList) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -19370,11 +19370,11 @@ func (l ByteListLazyList) MapIntOption(f func(e ByteList) IntOption) IntOptionLa
 func (l ByteListLazyList) MapInt64Option(f func(e ByteList) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -19384,11 +19384,11 @@ func (l ByteListLazyList) MapInt64Option(f func(e ByteList) Int64Option) Int64Op
 func (l ByteListLazyList) MapByteOption(f func(e ByteList) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -19398,11 +19398,11 @@ func (l ByteListLazyList) MapByteOption(f func(e ByteList) ByteOption) ByteOptio
 func (l ByteListLazyList) MapRuneOption(f func(e ByteList) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -19412,11 +19412,11 @@ func (l ByteListLazyList) MapRuneOption(f func(e ByteList) RuneOption) RuneOptio
 func (l ByteListLazyList) MapFloat32Option(f func(e ByteList) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -19426,11 +19426,11 @@ func (l ByteListLazyList) MapFloat32Option(f func(e ByteList) Float32Option) Flo
 func (l ByteListLazyList) MapFloat64Option(f func(e ByteList) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -19440,11 +19440,11 @@ func (l ByteListLazyList) MapFloat64Option(f func(e ByteList) Float64Option) Flo
 func (l ByteListLazyList) MapAnyOption(f func(e ByteList) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -19454,11 +19454,11 @@ func (l ByteListLazyList) MapAnyOption(f func(e ByteList) AnyOption) AnyOptionLa
 func (l ByteListLazyList) MapTuple2Option(f func(e ByteList) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -19468,11 +19468,11 @@ func (l ByteListLazyList) MapTuple2Option(f func(e ByteList) Tuple2Option) Tuple
 func (l ByteListLazyList) MapBoolList(f func(e ByteList) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -19482,11 +19482,11 @@ func (l ByteListLazyList) MapBoolList(f func(e ByteList) BoolList) BoolListLazyL
 func (l ByteListLazyList) MapStringList(f func(e ByteList) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -19496,11 +19496,11 @@ func (l ByteListLazyList) MapStringList(f func(e ByteList) StringList) StringLis
 func (l ByteListLazyList) MapIntList(f func(e ByteList) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -19510,11 +19510,11 @@ func (l ByteListLazyList) MapIntList(f func(e ByteList) IntList) IntListLazyList
 func (l ByteListLazyList) MapInt64List(f func(e ByteList) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -19524,11 +19524,11 @@ func (l ByteListLazyList) MapInt64List(f func(e ByteList) Int64List) Int64ListLa
 func (l ByteListLazyList) MapByteList(f func(e ByteList) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -19538,11 +19538,11 @@ func (l ByteListLazyList) MapByteList(f func(e ByteList) ByteList) ByteListLazyL
 func (l ByteListLazyList) MapRuneList(f func(e ByteList) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -19552,11 +19552,11 @@ func (l ByteListLazyList) MapRuneList(f func(e ByteList) RuneList) RuneListLazyL
 func (l ByteListLazyList) MapFloat32List(f func(e ByteList) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -19566,11 +19566,11 @@ func (l ByteListLazyList) MapFloat32List(f func(e ByteList) Float32List) Float32
 func (l ByteListLazyList) MapFloat64List(f func(e ByteList) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -19580,11 +19580,11 @@ func (l ByteListLazyList) MapFloat64List(f func(e ByteList) Float64List) Float64
 func (l ByteListLazyList) MapAnyList(f func(e ByteList) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -19594,11 +19594,11 @@ func (l ByteListLazyList) MapAnyList(f func(e ByteList) AnyList) AnyListLazyList
 func (l ByteListLazyList) MapTuple2List(f func(e ByteList) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -19608,11 +19608,11 @@ func (l ByteListLazyList) MapTuple2List(f func(e ByteList) Tuple2List) Tuple2Lis
 func (l RuneListLazyList) MapBool(f func(e RuneList) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -19622,11 +19622,11 @@ func (l RuneListLazyList) MapBool(f func(e RuneList) bool) BoolLazyList {
 func (l RuneListLazyList) MapString(f func(e RuneList) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -19636,11 +19636,11 @@ func (l RuneListLazyList) MapString(f func(e RuneList) string) StringLazyList {
 func (l RuneListLazyList) MapInt(f func(e RuneList) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -19650,11 +19650,11 @@ func (l RuneListLazyList) MapInt(f func(e RuneList) int) IntLazyList {
 func (l RuneListLazyList) MapInt64(f func(e RuneList) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -19664,11 +19664,11 @@ func (l RuneListLazyList) MapInt64(f func(e RuneList) int64) Int64LazyList {
 func (l RuneListLazyList) MapByte(f func(e RuneList) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -19678,11 +19678,11 @@ func (l RuneListLazyList) MapByte(f func(e RuneList) byte) ByteLazyList {
 func (l RuneListLazyList) MapRune(f func(e RuneList) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -19692,11 +19692,11 @@ func (l RuneListLazyList) MapRune(f func(e RuneList) rune) RuneLazyList {
 func (l RuneListLazyList) MapFloat32(f func(e RuneList) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -19706,11 +19706,11 @@ func (l RuneListLazyList) MapFloat32(f func(e RuneList) float32) Float32LazyList
 func (l RuneListLazyList) MapFloat64(f func(e RuneList) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -19720,11 +19720,11 @@ func (l RuneListLazyList) MapFloat64(f func(e RuneList) float64) Float64LazyList
 func (l RuneListLazyList) MapAny(f func(e RuneList) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -19734,11 +19734,11 @@ func (l RuneListLazyList) MapAny(f func(e RuneList) Any) AnyLazyList {
 func (l RuneListLazyList) MapTuple2(f func(e RuneList) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -19748,11 +19748,11 @@ func (l RuneListLazyList) MapTuple2(f func(e RuneList) Tuple2) Tuple2LazyList {
 func (l RuneListLazyList) MapBoolArray(f func(e RuneList) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -19762,11 +19762,11 @@ func (l RuneListLazyList) MapBoolArray(f func(e RuneList) []bool) BoolArrayLazyL
 func (l RuneListLazyList) MapStringArray(f func(e RuneList) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -19776,11 +19776,11 @@ func (l RuneListLazyList) MapStringArray(f func(e RuneList) []string) StringArra
 func (l RuneListLazyList) MapIntArray(f func(e RuneList) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -19790,11 +19790,11 @@ func (l RuneListLazyList) MapIntArray(f func(e RuneList) []int) IntArrayLazyList
 func (l RuneListLazyList) MapInt64Array(f func(e RuneList) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -19804,11 +19804,11 @@ func (l RuneListLazyList) MapInt64Array(f func(e RuneList) []int64) Int64ArrayLa
 func (l RuneListLazyList) MapByteArray(f func(e RuneList) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -19818,11 +19818,11 @@ func (l RuneListLazyList) MapByteArray(f func(e RuneList) []byte) ByteArrayLazyL
 func (l RuneListLazyList) MapRuneArray(f func(e RuneList) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -19832,11 +19832,11 @@ func (l RuneListLazyList) MapRuneArray(f func(e RuneList) []rune) RuneArrayLazyL
 func (l RuneListLazyList) MapFloat32Array(f func(e RuneList) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -19846,11 +19846,11 @@ func (l RuneListLazyList) MapFloat32Array(f func(e RuneList) []float32) Float32A
 func (l RuneListLazyList) MapFloat64Array(f func(e RuneList) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -19860,11 +19860,11 @@ func (l RuneListLazyList) MapFloat64Array(f func(e RuneList) []float64) Float64A
 func (l RuneListLazyList) MapAnyArray(f func(e RuneList) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -19874,11 +19874,11 @@ func (l RuneListLazyList) MapAnyArray(f func(e RuneList) []Any) AnyArrayLazyList
 func (l RuneListLazyList) MapTuple2Array(f func(e RuneList) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -19888,11 +19888,11 @@ func (l RuneListLazyList) MapTuple2Array(f func(e RuneList) []Tuple2) Tuple2Arra
 func (l RuneListLazyList) MapBoolOption(f func(e RuneList) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -19902,11 +19902,11 @@ func (l RuneListLazyList) MapBoolOption(f func(e RuneList) BoolOption) BoolOptio
 func (l RuneListLazyList) MapStringOption(f func(e RuneList) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -19916,11 +19916,11 @@ func (l RuneListLazyList) MapStringOption(f func(e RuneList) StringOption) Strin
 func (l RuneListLazyList) MapIntOption(f func(e RuneList) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -19930,11 +19930,11 @@ func (l RuneListLazyList) MapIntOption(f func(e RuneList) IntOption) IntOptionLa
 func (l RuneListLazyList) MapInt64Option(f func(e RuneList) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -19944,11 +19944,11 @@ func (l RuneListLazyList) MapInt64Option(f func(e RuneList) Int64Option) Int64Op
 func (l RuneListLazyList) MapByteOption(f func(e RuneList) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -19958,11 +19958,11 @@ func (l RuneListLazyList) MapByteOption(f func(e RuneList) ByteOption) ByteOptio
 func (l RuneListLazyList) MapRuneOption(f func(e RuneList) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -19972,11 +19972,11 @@ func (l RuneListLazyList) MapRuneOption(f func(e RuneList) RuneOption) RuneOptio
 func (l RuneListLazyList) MapFloat32Option(f func(e RuneList) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -19986,11 +19986,11 @@ func (l RuneListLazyList) MapFloat32Option(f func(e RuneList) Float32Option) Flo
 func (l RuneListLazyList) MapFloat64Option(f func(e RuneList) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -20000,11 +20000,11 @@ func (l RuneListLazyList) MapFloat64Option(f func(e RuneList) Float64Option) Flo
 func (l RuneListLazyList) MapAnyOption(f func(e RuneList) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -20014,11 +20014,11 @@ func (l RuneListLazyList) MapAnyOption(f func(e RuneList) AnyOption) AnyOptionLa
 func (l RuneListLazyList) MapTuple2Option(f func(e RuneList) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -20028,11 +20028,11 @@ func (l RuneListLazyList) MapTuple2Option(f func(e RuneList) Tuple2Option) Tuple
 func (l RuneListLazyList) MapBoolList(f func(e RuneList) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -20042,11 +20042,11 @@ func (l RuneListLazyList) MapBoolList(f func(e RuneList) BoolList) BoolListLazyL
 func (l RuneListLazyList) MapStringList(f func(e RuneList) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -20056,11 +20056,11 @@ func (l RuneListLazyList) MapStringList(f func(e RuneList) StringList) StringLis
 func (l RuneListLazyList) MapIntList(f func(e RuneList) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -20070,11 +20070,11 @@ func (l RuneListLazyList) MapIntList(f func(e RuneList) IntList) IntListLazyList
 func (l RuneListLazyList) MapInt64List(f func(e RuneList) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -20084,11 +20084,11 @@ func (l RuneListLazyList) MapInt64List(f func(e RuneList) Int64List) Int64ListLa
 func (l RuneListLazyList) MapByteList(f func(e RuneList) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -20098,11 +20098,11 @@ func (l RuneListLazyList) MapByteList(f func(e RuneList) ByteList) ByteListLazyL
 func (l RuneListLazyList) MapRuneList(f func(e RuneList) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -20112,11 +20112,11 @@ func (l RuneListLazyList) MapRuneList(f func(e RuneList) RuneList) RuneListLazyL
 func (l RuneListLazyList) MapFloat32List(f func(e RuneList) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -20126,11 +20126,11 @@ func (l RuneListLazyList) MapFloat32List(f func(e RuneList) Float32List) Float32
 func (l RuneListLazyList) MapFloat64List(f func(e RuneList) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -20140,11 +20140,11 @@ func (l RuneListLazyList) MapFloat64List(f func(e RuneList) Float64List) Float64
 func (l RuneListLazyList) MapAnyList(f func(e RuneList) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -20154,11 +20154,11 @@ func (l RuneListLazyList) MapAnyList(f func(e RuneList) AnyList) AnyListLazyList
 func (l RuneListLazyList) MapTuple2List(f func(e RuneList) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -20168,11 +20168,11 @@ func (l RuneListLazyList) MapTuple2List(f func(e RuneList) Tuple2List) Tuple2Lis
 func (l Float32ListLazyList) MapBool(f func(e Float32List) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -20182,11 +20182,11 @@ func (l Float32ListLazyList) MapBool(f func(e Float32List) bool) BoolLazyList {
 func (l Float32ListLazyList) MapString(f func(e Float32List) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -20196,11 +20196,11 @@ func (l Float32ListLazyList) MapString(f func(e Float32List) string) StringLazyL
 func (l Float32ListLazyList) MapInt(f func(e Float32List) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -20210,11 +20210,11 @@ func (l Float32ListLazyList) MapInt(f func(e Float32List) int) IntLazyList {
 func (l Float32ListLazyList) MapInt64(f func(e Float32List) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -20224,11 +20224,11 @@ func (l Float32ListLazyList) MapInt64(f func(e Float32List) int64) Int64LazyList
 func (l Float32ListLazyList) MapByte(f func(e Float32List) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -20238,11 +20238,11 @@ func (l Float32ListLazyList) MapByte(f func(e Float32List) byte) ByteLazyList {
 func (l Float32ListLazyList) MapRune(f func(e Float32List) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -20252,11 +20252,11 @@ func (l Float32ListLazyList) MapRune(f func(e Float32List) rune) RuneLazyList {
 func (l Float32ListLazyList) MapFloat32(f func(e Float32List) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -20266,11 +20266,11 @@ func (l Float32ListLazyList) MapFloat32(f func(e Float32List) float32) Float32La
 func (l Float32ListLazyList) MapFloat64(f func(e Float32List) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -20280,11 +20280,11 @@ func (l Float32ListLazyList) MapFloat64(f func(e Float32List) float64) Float64La
 func (l Float32ListLazyList) MapAny(f func(e Float32List) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -20294,11 +20294,11 @@ func (l Float32ListLazyList) MapAny(f func(e Float32List) Any) AnyLazyList {
 func (l Float32ListLazyList) MapTuple2(f func(e Float32List) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -20308,11 +20308,11 @@ func (l Float32ListLazyList) MapTuple2(f func(e Float32List) Tuple2) Tuple2LazyL
 func (l Float32ListLazyList) MapBoolArray(f func(e Float32List) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -20322,11 +20322,11 @@ func (l Float32ListLazyList) MapBoolArray(f func(e Float32List) []bool) BoolArra
 func (l Float32ListLazyList) MapStringArray(f func(e Float32List) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -20336,11 +20336,11 @@ func (l Float32ListLazyList) MapStringArray(f func(e Float32List) []string) Stri
 func (l Float32ListLazyList) MapIntArray(f func(e Float32List) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -20350,11 +20350,11 @@ func (l Float32ListLazyList) MapIntArray(f func(e Float32List) []int) IntArrayLa
 func (l Float32ListLazyList) MapInt64Array(f func(e Float32List) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -20364,11 +20364,11 @@ func (l Float32ListLazyList) MapInt64Array(f func(e Float32List) []int64) Int64A
 func (l Float32ListLazyList) MapByteArray(f func(e Float32List) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -20378,11 +20378,11 @@ func (l Float32ListLazyList) MapByteArray(f func(e Float32List) []byte) ByteArra
 func (l Float32ListLazyList) MapRuneArray(f func(e Float32List) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -20392,11 +20392,11 @@ func (l Float32ListLazyList) MapRuneArray(f func(e Float32List) []rune) RuneArra
 func (l Float32ListLazyList) MapFloat32Array(f func(e Float32List) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -20406,11 +20406,11 @@ func (l Float32ListLazyList) MapFloat32Array(f func(e Float32List) []float32) Fl
 func (l Float32ListLazyList) MapFloat64Array(f func(e Float32List) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -20420,11 +20420,11 @@ func (l Float32ListLazyList) MapFloat64Array(f func(e Float32List) []float64) Fl
 func (l Float32ListLazyList) MapAnyArray(f func(e Float32List) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -20434,11 +20434,11 @@ func (l Float32ListLazyList) MapAnyArray(f func(e Float32List) []Any) AnyArrayLa
 func (l Float32ListLazyList) MapTuple2Array(f func(e Float32List) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -20448,11 +20448,11 @@ func (l Float32ListLazyList) MapTuple2Array(f func(e Float32List) []Tuple2) Tupl
 func (l Float32ListLazyList) MapBoolOption(f func(e Float32List) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -20462,11 +20462,11 @@ func (l Float32ListLazyList) MapBoolOption(f func(e Float32List) BoolOption) Boo
 func (l Float32ListLazyList) MapStringOption(f func(e Float32List) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -20476,11 +20476,11 @@ func (l Float32ListLazyList) MapStringOption(f func(e Float32List) StringOption)
 func (l Float32ListLazyList) MapIntOption(f func(e Float32List) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -20490,11 +20490,11 @@ func (l Float32ListLazyList) MapIntOption(f func(e Float32List) IntOption) IntOp
 func (l Float32ListLazyList) MapInt64Option(f func(e Float32List) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -20504,11 +20504,11 @@ func (l Float32ListLazyList) MapInt64Option(f func(e Float32List) Int64Option) I
 func (l Float32ListLazyList) MapByteOption(f func(e Float32List) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -20518,11 +20518,11 @@ func (l Float32ListLazyList) MapByteOption(f func(e Float32List) ByteOption) Byt
 func (l Float32ListLazyList) MapRuneOption(f func(e Float32List) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -20532,11 +20532,11 @@ func (l Float32ListLazyList) MapRuneOption(f func(e Float32List) RuneOption) Run
 func (l Float32ListLazyList) MapFloat32Option(f func(e Float32List) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -20546,11 +20546,11 @@ func (l Float32ListLazyList) MapFloat32Option(f func(e Float32List) Float32Optio
 func (l Float32ListLazyList) MapFloat64Option(f func(e Float32List) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -20560,11 +20560,11 @@ func (l Float32ListLazyList) MapFloat64Option(f func(e Float32List) Float64Optio
 func (l Float32ListLazyList) MapAnyOption(f func(e Float32List) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -20574,11 +20574,11 @@ func (l Float32ListLazyList) MapAnyOption(f func(e Float32List) AnyOption) AnyOp
 func (l Float32ListLazyList) MapTuple2Option(f func(e Float32List) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -20588,11 +20588,11 @@ func (l Float32ListLazyList) MapTuple2Option(f func(e Float32List) Tuple2Option)
 func (l Float32ListLazyList) MapBoolList(f func(e Float32List) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -20602,11 +20602,11 @@ func (l Float32ListLazyList) MapBoolList(f func(e Float32List) BoolList) BoolLis
 func (l Float32ListLazyList) MapStringList(f func(e Float32List) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -20616,11 +20616,11 @@ func (l Float32ListLazyList) MapStringList(f func(e Float32List) StringList) Str
 func (l Float32ListLazyList) MapIntList(f func(e Float32List) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -20630,11 +20630,11 @@ func (l Float32ListLazyList) MapIntList(f func(e Float32List) IntList) IntListLa
 func (l Float32ListLazyList) MapInt64List(f func(e Float32List) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -20644,11 +20644,11 @@ func (l Float32ListLazyList) MapInt64List(f func(e Float32List) Int64List) Int64
 func (l Float32ListLazyList) MapByteList(f func(e Float32List) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -20658,11 +20658,11 @@ func (l Float32ListLazyList) MapByteList(f func(e Float32List) ByteList) ByteLis
 func (l Float32ListLazyList) MapRuneList(f func(e Float32List) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -20672,11 +20672,11 @@ func (l Float32ListLazyList) MapRuneList(f func(e Float32List) RuneList) RuneLis
 func (l Float32ListLazyList) MapFloat32List(f func(e Float32List) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -20686,11 +20686,11 @@ func (l Float32ListLazyList) MapFloat32List(f func(e Float32List) Float32List) F
 func (l Float32ListLazyList) MapFloat64List(f func(e Float32List) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -20700,11 +20700,11 @@ func (l Float32ListLazyList) MapFloat64List(f func(e Float32List) Float64List) F
 func (l Float32ListLazyList) MapAnyList(f func(e Float32List) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -20714,11 +20714,11 @@ func (l Float32ListLazyList) MapAnyList(f func(e Float32List) AnyList) AnyListLa
 func (l Float32ListLazyList) MapTuple2List(f func(e Float32List) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -20728,11 +20728,11 @@ func (l Float32ListLazyList) MapTuple2List(f func(e Float32List) Tuple2List) Tup
 func (l Float64ListLazyList) MapBool(f func(e Float64List) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -20742,11 +20742,11 @@ func (l Float64ListLazyList) MapBool(f func(e Float64List) bool) BoolLazyList {
 func (l Float64ListLazyList) MapString(f func(e Float64List) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -20756,11 +20756,11 @@ func (l Float64ListLazyList) MapString(f func(e Float64List) string) StringLazyL
 func (l Float64ListLazyList) MapInt(f func(e Float64List) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -20770,11 +20770,11 @@ func (l Float64ListLazyList) MapInt(f func(e Float64List) int) IntLazyList {
 func (l Float64ListLazyList) MapInt64(f func(e Float64List) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -20784,11 +20784,11 @@ func (l Float64ListLazyList) MapInt64(f func(e Float64List) int64) Int64LazyList
 func (l Float64ListLazyList) MapByte(f func(e Float64List) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -20798,11 +20798,11 @@ func (l Float64ListLazyList) MapByte(f func(e Float64List) byte) ByteLazyList {
 func (l Float64ListLazyList) MapRune(f func(e Float64List) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -20812,11 +20812,11 @@ func (l Float64ListLazyList) MapRune(f func(e Float64List) rune) RuneLazyList {
 func (l Float64ListLazyList) MapFloat32(f func(e Float64List) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -20826,11 +20826,11 @@ func (l Float64ListLazyList) MapFloat32(f func(e Float64List) float32) Float32La
 func (l Float64ListLazyList) MapFloat64(f func(e Float64List) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -20840,11 +20840,11 @@ func (l Float64ListLazyList) MapFloat64(f func(e Float64List) float64) Float64La
 func (l Float64ListLazyList) MapAny(f func(e Float64List) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -20854,11 +20854,11 @@ func (l Float64ListLazyList) MapAny(f func(e Float64List) Any) AnyLazyList {
 func (l Float64ListLazyList) MapTuple2(f func(e Float64List) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -20868,11 +20868,11 @@ func (l Float64ListLazyList) MapTuple2(f func(e Float64List) Tuple2) Tuple2LazyL
 func (l Float64ListLazyList) MapBoolArray(f func(e Float64List) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -20882,11 +20882,11 @@ func (l Float64ListLazyList) MapBoolArray(f func(e Float64List) []bool) BoolArra
 func (l Float64ListLazyList) MapStringArray(f func(e Float64List) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -20896,11 +20896,11 @@ func (l Float64ListLazyList) MapStringArray(f func(e Float64List) []string) Stri
 func (l Float64ListLazyList) MapIntArray(f func(e Float64List) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -20910,11 +20910,11 @@ func (l Float64ListLazyList) MapIntArray(f func(e Float64List) []int) IntArrayLa
 func (l Float64ListLazyList) MapInt64Array(f func(e Float64List) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -20924,11 +20924,11 @@ func (l Float64ListLazyList) MapInt64Array(f func(e Float64List) []int64) Int64A
 func (l Float64ListLazyList) MapByteArray(f func(e Float64List) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -20938,11 +20938,11 @@ func (l Float64ListLazyList) MapByteArray(f func(e Float64List) []byte) ByteArra
 func (l Float64ListLazyList) MapRuneArray(f func(e Float64List) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -20952,11 +20952,11 @@ func (l Float64ListLazyList) MapRuneArray(f func(e Float64List) []rune) RuneArra
 func (l Float64ListLazyList) MapFloat32Array(f func(e Float64List) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -20966,11 +20966,11 @@ func (l Float64ListLazyList) MapFloat32Array(f func(e Float64List) []float32) Fl
 func (l Float64ListLazyList) MapFloat64Array(f func(e Float64List) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -20980,11 +20980,11 @@ func (l Float64ListLazyList) MapFloat64Array(f func(e Float64List) []float64) Fl
 func (l Float64ListLazyList) MapAnyArray(f func(e Float64List) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -20994,11 +20994,11 @@ func (l Float64ListLazyList) MapAnyArray(f func(e Float64List) []Any) AnyArrayLa
 func (l Float64ListLazyList) MapTuple2Array(f func(e Float64List) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -21008,11 +21008,11 @@ func (l Float64ListLazyList) MapTuple2Array(f func(e Float64List) []Tuple2) Tupl
 func (l Float64ListLazyList) MapBoolOption(f func(e Float64List) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -21022,11 +21022,11 @@ func (l Float64ListLazyList) MapBoolOption(f func(e Float64List) BoolOption) Boo
 func (l Float64ListLazyList) MapStringOption(f func(e Float64List) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -21036,11 +21036,11 @@ func (l Float64ListLazyList) MapStringOption(f func(e Float64List) StringOption)
 func (l Float64ListLazyList) MapIntOption(f func(e Float64List) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -21050,11 +21050,11 @@ func (l Float64ListLazyList) MapIntOption(f func(e Float64List) IntOption) IntOp
 func (l Float64ListLazyList) MapInt64Option(f func(e Float64List) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -21064,11 +21064,11 @@ func (l Float64ListLazyList) MapInt64Option(f func(e Float64List) Int64Option) I
 func (l Float64ListLazyList) MapByteOption(f func(e Float64List) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -21078,11 +21078,11 @@ func (l Float64ListLazyList) MapByteOption(f func(e Float64List) ByteOption) Byt
 func (l Float64ListLazyList) MapRuneOption(f func(e Float64List) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -21092,11 +21092,11 @@ func (l Float64ListLazyList) MapRuneOption(f func(e Float64List) RuneOption) Run
 func (l Float64ListLazyList) MapFloat32Option(f func(e Float64List) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -21106,11 +21106,11 @@ func (l Float64ListLazyList) MapFloat32Option(f func(e Float64List) Float32Optio
 func (l Float64ListLazyList) MapFloat64Option(f func(e Float64List) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -21120,11 +21120,11 @@ func (l Float64ListLazyList) MapFloat64Option(f func(e Float64List) Float64Optio
 func (l Float64ListLazyList) MapAnyOption(f func(e Float64List) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -21134,11 +21134,11 @@ func (l Float64ListLazyList) MapAnyOption(f func(e Float64List) AnyOption) AnyOp
 func (l Float64ListLazyList) MapTuple2Option(f func(e Float64List) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -21148,11 +21148,11 @@ func (l Float64ListLazyList) MapTuple2Option(f func(e Float64List) Tuple2Option)
 func (l Float64ListLazyList) MapBoolList(f func(e Float64List) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -21162,11 +21162,11 @@ func (l Float64ListLazyList) MapBoolList(f func(e Float64List) BoolList) BoolLis
 func (l Float64ListLazyList) MapStringList(f func(e Float64List) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -21176,11 +21176,11 @@ func (l Float64ListLazyList) MapStringList(f func(e Float64List) StringList) Str
 func (l Float64ListLazyList) MapIntList(f func(e Float64List) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -21190,11 +21190,11 @@ func (l Float64ListLazyList) MapIntList(f func(e Float64List) IntList) IntListLa
 func (l Float64ListLazyList) MapInt64List(f func(e Float64List) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -21204,11 +21204,11 @@ func (l Float64ListLazyList) MapInt64List(f func(e Float64List) Int64List) Int64
 func (l Float64ListLazyList) MapByteList(f func(e Float64List) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -21218,11 +21218,11 @@ func (l Float64ListLazyList) MapByteList(f func(e Float64List) ByteList) ByteLis
 func (l Float64ListLazyList) MapRuneList(f func(e Float64List) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -21232,11 +21232,11 @@ func (l Float64ListLazyList) MapRuneList(f func(e Float64List) RuneList) RuneLis
 func (l Float64ListLazyList) MapFloat32List(f func(e Float64List) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -21246,11 +21246,11 @@ func (l Float64ListLazyList) MapFloat32List(f func(e Float64List) Float32List) F
 func (l Float64ListLazyList) MapFloat64List(f func(e Float64List) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -21260,11 +21260,11 @@ func (l Float64ListLazyList) MapFloat64List(f func(e Float64List) Float64List) F
 func (l Float64ListLazyList) MapAnyList(f func(e Float64List) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -21274,11 +21274,11 @@ func (l Float64ListLazyList) MapAnyList(f func(e Float64List) AnyList) AnyListLa
 func (l Float64ListLazyList) MapTuple2List(f func(e Float64List) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -21288,11 +21288,11 @@ func (l Float64ListLazyList) MapTuple2List(f func(e Float64List) Tuple2List) Tup
 func (l AnyListLazyList) MapBool(f func(e AnyList) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -21302,11 +21302,11 @@ func (l AnyListLazyList) MapBool(f func(e AnyList) bool) BoolLazyList {
 func (l AnyListLazyList) MapString(f func(e AnyList) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -21316,11 +21316,11 @@ func (l AnyListLazyList) MapString(f func(e AnyList) string) StringLazyList {
 func (l AnyListLazyList) MapInt(f func(e AnyList) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -21330,11 +21330,11 @@ func (l AnyListLazyList) MapInt(f func(e AnyList) int) IntLazyList {
 func (l AnyListLazyList) MapInt64(f func(e AnyList) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -21344,11 +21344,11 @@ func (l AnyListLazyList) MapInt64(f func(e AnyList) int64) Int64LazyList {
 func (l AnyListLazyList) MapByte(f func(e AnyList) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -21358,11 +21358,11 @@ func (l AnyListLazyList) MapByte(f func(e AnyList) byte) ByteLazyList {
 func (l AnyListLazyList) MapRune(f func(e AnyList) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -21372,11 +21372,11 @@ func (l AnyListLazyList) MapRune(f func(e AnyList) rune) RuneLazyList {
 func (l AnyListLazyList) MapFloat32(f func(e AnyList) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -21386,11 +21386,11 @@ func (l AnyListLazyList) MapFloat32(f func(e AnyList) float32) Float32LazyList {
 func (l AnyListLazyList) MapFloat64(f func(e AnyList) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -21400,11 +21400,11 @@ func (l AnyListLazyList) MapFloat64(f func(e AnyList) float64) Float64LazyList {
 func (l AnyListLazyList) MapAny(f func(e AnyList) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -21414,11 +21414,11 @@ func (l AnyListLazyList) MapAny(f func(e AnyList) Any) AnyLazyList {
 func (l AnyListLazyList) MapTuple2(f func(e AnyList) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -21428,11 +21428,11 @@ func (l AnyListLazyList) MapTuple2(f func(e AnyList) Tuple2) Tuple2LazyList {
 func (l AnyListLazyList) MapBoolArray(f func(e AnyList) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -21442,11 +21442,11 @@ func (l AnyListLazyList) MapBoolArray(f func(e AnyList) []bool) BoolArrayLazyLis
 func (l AnyListLazyList) MapStringArray(f func(e AnyList) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -21456,11 +21456,11 @@ func (l AnyListLazyList) MapStringArray(f func(e AnyList) []string) StringArrayL
 func (l AnyListLazyList) MapIntArray(f func(e AnyList) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -21470,11 +21470,11 @@ func (l AnyListLazyList) MapIntArray(f func(e AnyList) []int) IntArrayLazyList {
 func (l AnyListLazyList) MapInt64Array(f func(e AnyList) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -21484,11 +21484,11 @@ func (l AnyListLazyList) MapInt64Array(f func(e AnyList) []int64) Int64ArrayLazy
 func (l AnyListLazyList) MapByteArray(f func(e AnyList) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -21498,11 +21498,11 @@ func (l AnyListLazyList) MapByteArray(f func(e AnyList) []byte) ByteArrayLazyLis
 func (l AnyListLazyList) MapRuneArray(f func(e AnyList) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -21512,11 +21512,11 @@ func (l AnyListLazyList) MapRuneArray(f func(e AnyList) []rune) RuneArrayLazyLis
 func (l AnyListLazyList) MapFloat32Array(f func(e AnyList) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -21526,11 +21526,11 @@ func (l AnyListLazyList) MapFloat32Array(f func(e AnyList) []float32) Float32Arr
 func (l AnyListLazyList) MapFloat64Array(f func(e AnyList) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -21540,11 +21540,11 @@ func (l AnyListLazyList) MapFloat64Array(f func(e AnyList) []float64) Float64Arr
 func (l AnyListLazyList) MapAnyArray(f func(e AnyList) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -21554,11 +21554,11 @@ func (l AnyListLazyList) MapAnyArray(f func(e AnyList) []Any) AnyArrayLazyList {
 func (l AnyListLazyList) MapTuple2Array(f func(e AnyList) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -21568,11 +21568,11 @@ func (l AnyListLazyList) MapTuple2Array(f func(e AnyList) []Tuple2) Tuple2ArrayL
 func (l AnyListLazyList) MapBoolOption(f func(e AnyList) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -21582,11 +21582,11 @@ func (l AnyListLazyList) MapBoolOption(f func(e AnyList) BoolOption) BoolOptionL
 func (l AnyListLazyList) MapStringOption(f func(e AnyList) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -21596,11 +21596,11 @@ func (l AnyListLazyList) MapStringOption(f func(e AnyList) StringOption) StringO
 func (l AnyListLazyList) MapIntOption(f func(e AnyList) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -21610,11 +21610,11 @@ func (l AnyListLazyList) MapIntOption(f func(e AnyList) IntOption) IntOptionLazy
 func (l AnyListLazyList) MapInt64Option(f func(e AnyList) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -21624,11 +21624,11 @@ func (l AnyListLazyList) MapInt64Option(f func(e AnyList) Int64Option) Int64Opti
 func (l AnyListLazyList) MapByteOption(f func(e AnyList) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -21638,11 +21638,11 @@ func (l AnyListLazyList) MapByteOption(f func(e AnyList) ByteOption) ByteOptionL
 func (l AnyListLazyList) MapRuneOption(f func(e AnyList) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -21652,11 +21652,11 @@ func (l AnyListLazyList) MapRuneOption(f func(e AnyList) RuneOption) RuneOptionL
 func (l AnyListLazyList) MapFloat32Option(f func(e AnyList) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -21666,11 +21666,11 @@ func (l AnyListLazyList) MapFloat32Option(f func(e AnyList) Float32Option) Float
 func (l AnyListLazyList) MapFloat64Option(f func(e AnyList) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -21680,11 +21680,11 @@ func (l AnyListLazyList) MapFloat64Option(f func(e AnyList) Float64Option) Float
 func (l AnyListLazyList) MapAnyOption(f func(e AnyList) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -21694,11 +21694,11 @@ func (l AnyListLazyList) MapAnyOption(f func(e AnyList) AnyOption) AnyOptionLazy
 func (l AnyListLazyList) MapTuple2Option(f func(e AnyList) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -21708,11 +21708,11 @@ func (l AnyListLazyList) MapTuple2Option(f func(e AnyList) Tuple2Option) Tuple2O
 func (l AnyListLazyList) MapBoolList(f func(e AnyList) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -21722,11 +21722,11 @@ func (l AnyListLazyList) MapBoolList(f func(e AnyList) BoolList) BoolListLazyLis
 func (l AnyListLazyList) MapStringList(f func(e AnyList) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -21736,11 +21736,11 @@ func (l AnyListLazyList) MapStringList(f func(e AnyList) StringList) StringListL
 func (l AnyListLazyList) MapIntList(f func(e AnyList) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -21750,11 +21750,11 @@ func (l AnyListLazyList) MapIntList(f func(e AnyList) IntList) IntListLazyList {
 func (l AnyListLazyList) MapInt64List(f func(e AnyList) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -21764,11 +21764,11 @@ func (l AnyListLazyList) MapInt64List(f func(e AnyList) Int64List) Int64ListLazy
 func (l AnyListLazyList) MapByteList(f func(e AnyList) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -21778,11 +21778,11 @@ func (l AnyListLazyList) MapByteList(f func(e AnyList) ByteList) ByteListLazyLis
 func (l AnyListLazyList) MapRuneList(f func(e AnyList) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -21792,11 +21792,11 @@ func (l AnyListLazyList) MapRuneList(f func(e AnyList) RuneList) RuneListLazyLis
 func (l AnyListLazyList) MapFloat32List(f func(e AnyList) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -21806,11 +21806,11 @@ func (l AnyListLazyList) MapFloat32List(f func(e AnyList) Float32List) Float32Li
 func (l AnyListLazyList) MapFloat64List(f func(e AnyList) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -21820,11 +21820,11 @@ func (l AnyListLazyList) MapFloat64List(f func(e AnyList) Float64List) Float64Li
 func (l AnyListLazyList) MapAnyList(f func(e AnyList) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -21834,11 +21834,11 @@ func (l AnyListLazyList) MapAnyList(f func(e AnyList) AnyList) AnyListLazyList {
 func (l AnyListLazyList) MapTuple2List(f func(e AnyList) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
@@ -21848,11 +21848,11 @@ func (l AnyListLazyList) MapTuple2List(f func(e AnyList) Tuple2List) Tuple2ListL
 func (l Tuple2ListLazyList) MapBool(f func(e Tuple2List) bool) BoolLazyList {
 	newState := func() BoolState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBool(mappedValue)
+		mappedH := LazyBool{mappedValue, nil}
 		t := state.tail.MapBool(f)
 
 		return BoolState{&mappedH, &t}
@@ -21862,11 +21862,11 @@ func (l Tuple2ListLazyList) MapBool(f func(e Tuple2List) bool) BoolLazyList {
 func (l Tuple2ListLazyList) MapString(f func(e Tuple2List) string) StringLazyList {
 	newState := func() StringState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyString(mappedValue)
+		mappedH := LazyString{mappedValue, nil}
 		t := state.tail.MapString(f)
 
 		return StringState{&mappedH, &t}
@@ -21876,11 +21876,11 @@ func (l Tuple2ListLazyList) MapString(f func(e Tuple2List) string) StringLazyLis
 func (l Tuple2ListLazyList) MapInt(f func(e Tuple2List) int) IntLazyList {
 	newState := func() IntState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt(mappedValue)
+		mappedH := LazyInt{mappedValue, nil}
 		t := state.tail.MapInt(f)
 
 		return IntState{&mappedH, &t}
@@ -21890,11 +21890,11 @@ func (l Tuple2ListLazyList) MapInt(f func(e Tuple2List) int) IntLazyList {
 func (l Tuple2ListLazyList) MapInt64(f func(e Tuple2List) int64) Int64LazyList {
 	newState := func() Int64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64(mappedValue)
+		mappedH := LazyInt64{mappedValue, nil}
 		t := state.tail.MapInt64(f)
 
 		return Int64State{&mappedH, &t}
@@ -21904,11 +21904,11 @@ func (l Tuple2ListLazyList) MapInt64(f func(e Tuple2List) int64) Int64LazyList {
 func (l Tuple2ListLazyList) MapByte(f func(e Tuple2List) byte) ByteLazyList {
 	newState := func() ByteState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByte(mappedValue)
+		mappedH := LazyByte{mappedValue, nil}
 		t := state.tail.MapByte(f)
 
 		return ByteState{&mappedH, &t}
@@ -21918,11 +21918,11 @@ func (l Tuple2ListLazyList) MapByte(f func(e Tuple2List) byte) ByteLazyList {
 func (l Tuple2ListLazyList) MapRune(f func(e Tuple2List) rune) RuneLazyList {
 	newState := func() RuneState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRune(mappedValue)
+		mappedH := LazyRune{mappedValue, nil}
 		t := state.tail.MapRune(f)
 
 		return RuneState{&mappedH, &t}
@@ -21932,11 +21932,11 @@ func (l Tuple2ListLazyList) MapRune(f func(e Tuple2List) rune) RuneLazyList {
 func (l Tuple2ListLazyList) MapFloat32(f func(e Tuple2List) float32) Float32LazyList {
 	newState := func() Float32State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32(mappedValue)
+		mappedH := LazyFloat32{mappedValue, nil}
 		t := state.tail.MapFloat32(f)
 
 		return Float32State{&mappedH, &t}
@@ -21946,11 +21946,11 @@ func (l Tuple2ListLazyList) MapFloat32(f func(e Tuple2List) float32) Float32Lazy
 func (l Tuple2ListLazyList) MapFloat64(f func(e Tuple2List) float64) Float64LazyList {
 	newState := func() Float64State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64(mappedValue)
+		mappedH := LazyFloat64{mappedValue, nil}
 		t := state.tail.MapFloat64(f)
 
 		return Float64State{&mappedH, &t}
@@ -21960,11 +21960,11 @@ func (l Tuple2ListLazyList) MapFloat64(f func(e Tuple2List) float64) Float64Lazy
 func (l Tuple2ListLazyList) MapAny(f func(e Tuple2List) Any) AnyLazyList {
 	newState := func() AnyState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAny(mappedValue)
+		mappedH := LazyAny{mappedValue, nil}
 		t := state.tail.MapAny(f)
 
 		return AnyState{&mappedH, &t}
@@ -21974,11 +21974,11 @@ func (l Tuple2ListLazyList) MapAny(f func(e Tuple2List) Any) AnyLazyList {
 func (l Tuple2ListLazyList) MapTuple2(f func(e Tuple2List) Tuple2) Tuple2LazyList {
 	newState := func() Tuple2State {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2(mappedValue)
+		mappedH := LazyTuple2{mappedValue, nil}
 		t := state.tail.MapTuple2(f)
 
 		return Tuple2State{&mappedH, &t}
@@ -21988,11 +21988,11 @@ func (l Tuple2ListLazyList) MapTuple2(f func(e Tuple2List) Tuple2) Tuple2LazyLis
 func (l Tuple2ListLazyList) MapBoolArray(f func(e Tuple2List) []bool) BoolArrayLazyList {
 	newState := func() BoolArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []bool {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolArray(mappedValue)
+		mappedH := LazyBoolArray{mappedValue, nil}
 		t := state.tail.MapBoolArray(f)
 
 		return BoolArrayState{&mappedH, &t}
@@ -22002,11 +22002,11 @@ func (l Tuple2ListLazyList) MapBoolArray(f func(e Tuple2List) []bool) BoolArrayL
 func (l Tuple2ListLazyList) MapStringArray(f func(e Tuple2List) []string) StringArrayLazyList {
 	newState := func() StringArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []string {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringArray(mappedValue)
+		mappedH := LazyStringArray{mappedValue, nil}
 		t := state.tail.MapStringArray(f)
 
 		return StringArrayState{&mappedH, &t}
@@ -22016,11 +22016,11 @@ func (l Tuple2ListLazyList) MapStringArray(f func(e Tuple2List) []string) String
 func (l Tuple2ListLazyList) MapIntArray(f func(e Tuple2List) []int) IntArrayLazyList {
 	newState := func() IntArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntArray(mappedValue)
+		mappedH := LazyIntArray{mappedValue, nil}
 		t := state.tail.MapIntArray(f)
 
 		return IntArrayState{&mappedH, &t}
@@ -22030,11 +22030,11 @@ func (l Tuple2ListLazyList) MapIntArray(f func(e Tuple2List) []int) IntArrayLazy
 func (l Tuple2ListLazyList) MapInt64Array(f func(e Tuple2List) []int64) Int64ArrayLazyList {
 	newState := func() Int64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []int64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Array(mappedValue)
+		mappedH := LazyInt64Array{mappedValue, nil}
 		t := state.tail.MapInt64Array(f)
 
 		return Int64ArrayState{&mappedH, &t}
@@ -22044,11 +22044,11 @@ func (l Tuple2ListLazyList) MapInt64Array(f func(e Tuple2List) []int64) Int64Arr
 func (l Tuple2ListLazyList) MapByteArray(f func(e Tuple2List) []byte) ByteArrayLazyList {
 	newState := func() ByteArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []byte {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteArray(mappedValue)
+		mappedH := LazyByteArray{mappedValue, nil}
 		t := state.tail.MapByteArray(f)
 
 		return ByteArrayState{&mappedH, &t}
@@ -22058,11 +22058,11 @@ func (l Tuple2ListLazyList) MapByteArray(f func(e Tuple2List) []byte) ByteArrayL
 func (l Tuple2ListLazyList) MapRuneArray(f func(e Tuple2List) []rune) RuneArrayLazyList {
 	newState := func() RuneArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []rune {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneArray(mappedValue)
+		mappedH := LazyRuneArray{mappedValue, nil}
 		t := state.tail.MapRuneArray(f)
 
 		return RuneArrayState{&mappedH, &t}
@@ -22072,11 +22072,11 @@ func (l Tuple2ListLazyList) MapRuneArray(f func(e Tuple2List) []rune) RuneArrayL
 func (l Tuple2ListLazyList) MapFloat32Array(f func(e Tuple2List) []float32) Float32ArrayLazyList {
 	newState := func() Float32ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float32 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Array(mappedValue)
+		mappedH := LazyFloat32Array{mappedValue, nil}
 		t := state.tail.MapFloat32Array(f)
 
 		return Float32ArrayState{&mappedH, &t}
@@ -22086,11 +22086,11 @@ func (l Tuple2ListLazyList) MapFloat32Array(f func(e Tuple2List) []float32) Floa
 func (l Tuple2ListLazyList) MapFloat64Array(f func(e Tuple2List) []float64) Float64ArrayLazyList {
 	newState := func() Float64ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []float64 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Array(mappedValue)
+		mappedH := LazyFloat64Array{mappedValue, nil}
 		t := state.tail.MapFloat64Array(f)
 
 		return Float64ArrayState{&mappedH, &t}
@@ -22100,11 +22100,11 @@ func (l Tuple2ListLazyList) MapFloat64Array(f func(e Tuple2List) []float64) Floa
 func (l Tuple2ListLazyList) MapAnyArray(f func(e Tuple2List) []Any) AnyArrayLazyList {
 	newState := func() AnyArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Any {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyArray(mappedValue)
+		mappedH := LazyAnyArray{mappedValue, nil}
 		t := state.tail.MapAnyArray(f)
 
 		return AnyArrayState{&mappedH, &t}
@@ -22114,11 +22114,11 @@ func (l Tuple2ListLazyList) MapAnyArray(f func(e Tuple2List) []Any) AnyArrayLazy
 func (l Tuple2ListLazyList) MapTuple2Array(f func(e Tuple2List) []Tuple2) Tuple2ArrayLazyList {
 	newState := func() Tuple2ArrayState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() []Tuple2 {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Array(mappedValue)
+		mappedH := LazyTuple2Array{mappedValue, nil}
 		t := state.tail.MapTuple2Array(f)
 
 		return Tuple2ArrayState{&mappedH, &t}
@@ -22128,11 +22128,11 @@ func (l Tuple2ListLazyList) MapTuple2Array(f func(e Tuple2List) []Tuple2) Tuple2
 func (l Tuple2ListLazyList) MapBoolOption(f func(e Tuple2List) BoolOption) BoolOptionLazyList {
 	newState := func() BoolOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolOption(mappedValue)
+		mappedH := LazyBoolOption{mappedValue, nil}
 		t := state.tail.MapBoolOption(f)
 
 		return BoolOptionState{&mappedH, &t}
@@ -22142,11 +22142,11 @@ func (l Tuple2ListLazyList) MapBoolOption(f func(e Tuple2List) BoolOption) BoolO
 func (l Tuple2ListLazyList) MapStringOption(f func(e Tuple2List) StringOption) StringOptionLazyList {
 	newState := func() StringOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringOption(mappedValue)
+		mappedH := LazyStringOption{mappedValue, nil}
 		t := state.tail.MapStringOption(f)
 
 		return StringOptionState{&mappedH, &t}
@@ -22156,11 +22156,11 @@ func (l Tuple2ListLazyList) MapStringOption(f func(e Tuple2List) StringOption) S
 func (l Tuple2ListLazyList) MapIntOption(f func(e Tuple2List) IntOption) IntOptionLazyList {
 	newState := func() IntOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntOption(mappedValue)
+		mappedH := LazyIntOption{mappedValue, nil}
 		t := state.tail.MapIntOption(f)
 
 		return IntOptionState{&mappedH, &t}
@@ -22170,11 +22170,11 @@ func (l Tuple2ListLazyList) MapIntOption(f func(e Tuple2List) IntOption) IntOpti
 func (l Tuple2ListLazyList) MapInt64Option(f func(e Tuple2List) Int64Option) Int64OptionLazyList {
 	newState := func() Int64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64Option(mappedValue)
+		mappedH := LazyInt64Option{mappedValue, nil}
 		t := state.tail.MapInt64Option(f)
 
 		return Int64OptionState{&mappedH, &t}
@@ -22184,11 +22184,11 @@ func (l Tuple2ListLazyList) MapInt64Option(f func(e Tuple2List) Int64Option) Int
 func (l Tuple2ListLazyList) MapByteOption(f func(e Tuple2List) ByteOption) ByteOptionLazyList {
 	newState := func() ByteOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteOption(mappedValue)
+		mappedH := LazyByteOption{mappedValue, nil}
 		t := state.tail.MapByteOption(f)
 
 		return ByteOptionState{&mappedH, &t}
@@ -22198,11 +22198,11 @@ func (l Tuple2ListLazyList) MapByteOption(f func(e Tuple2List) ByteOption) ByteO
 func (l Tuple2ListLazyList) MapRuneOption(f func(e Tuple2List) RuneOption) RuneOptionLazyList {
 	newState := func() RuneOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneOption(mappedValue)
+		mappedH := LazyRuneOption{mappedValue, nil}
 		t := state.tail.MapRuneOption(f)
 
 		return RuneOptionState{&mappedH, &t}
@@ -22212,11 +22212,11 @@ func (l Tuple2ListLazyList) MapRuneOption(f func(e Tuple2List) RuneOption) RuneO
 func (l Tuple2ListLazyList) MapFloat32Option(f func(e Tuple2List) Float32Option) Float32OptionLazyList {
 	newState := func() Float32OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32Option(mappedValue)
+		mappedH := LazyFloat32Option{mappedValue, nil}
 		t := state.tail.MapFloat32Option(f)
 
 		return Float32OptionState{&mappedH, &t}
@@ -22226,11 +22226,11 @@ func (l Tuple2ListLazyList) MapFloat32Option(f func(e Tuple2List) Float32Option)
 func (l Tuple2ListLazyList) MapFloat64Option(f func(e Tuple2List) Float64Option) Float64OptionLazyList {
 	newState := func() Float64OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64Option(mappedValue)
+		mappedH := LazyFloat64Option{mappedValue, nil}
 		t := state.tail.MapFloat64Option(f)
 
 		return Float64OptionState{&mappedH, &t}
@@ -22240,11 +22240,11 @@ func (l Tuple2ListLazyList) MapFloat64Option(f func(e Tuple2List) Float64Option)
 func (l Tuple2ListLazyList) MapAnyOption(f func(e Tuple2List) AnyOption) AnyOptionLazyList {
 	newState := func() AnyOptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyOption {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyOption(mappedValue)
+		mappedH := LazyAnyOption{mappedValue, nil}
 		t := state.tail.MapAnyOption(f)
 
 		return AnyOptionState{&mappedH, &t}
@@ -22254,11 +22254,11 @@ func (l Tuple2ListLazyList) MapAnyOption(f func(e Tuple2List) AnyOption) AnyOpti
 func (l Tuple2ListLazyList) MapTuple2Option(f func(e Tuple2List) Tuple2Option) Tuple2OptionLazyList {
 	newState := func() Tuple2OptionState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2Option {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2Option(mappedValue)
+		mappedH := LazyTuple2Option{mappedValue, nil}
 		t := state.tail.MapTuple2Option(f)
 
 		return Tuple2OptionState{&mappedH, &t}
@@ -22268,11 +22268,11 @@ func (l Tuple2ListLazyList) MapTuple2Option(f func(e Tuple2List) Tuple2Option) T
 func (l Tuple2ListLazyList) MapBoolList(f func(e Tuple2List) BoolList) BoolListLazyList {
 	newState := func() BoolListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() BoolList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyBoolList(mappedValue)
+		mappedH := LazyBoolList{mappedValue, nil}
 		t := state.tail.MapBoolList(f)
 
 		return BoolListState{&mappedH, &t}
@@ -22282,11 +22282,11 @@ func (l Tuple2ListLazyList) MapBoolList(f func(e Tuple2List) BoolList) BoolListL
 func (l Tuple2ListLazyList) MapStringList(f func(e Tuple2List) StringList) StringListLazyList {
 	newState := func() StringListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() StringList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyStringList(mappedValue)
+		mappedH := LazyStringList{mappedValue, nil}
 		t := state.tail.MapStringList(f)
 
 		return StringListState{&mappedH, &t}
@@ -22296,11 +22296,11 @@ func (l Tuple2ListLazyList) MapStringList(f func(e Tuple2List) StringList) Strin
 func (l Tuple2ListLazyList) MapIntList(f func(e Tuple2List) IntList) IntListLazyList {
 	newState := func() IntListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() IntList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyIntList(mappedValue)
+		mappedH := LazyIntList{mappedValue, nil}
 		t := state.tail.MapIntList(f)
 
 		return IntListState{&mappedH, &t}
@@ -22310,11 +22310,11 @@ func (l Tuple2ListLazyList) MapIntList(f func(e Tuple2List) IntList) IntListLazy
 func (l Tuple2ListLazyList) MapInt64List(f func(e Tuple2List) Int64List) Int64ListLazyList {
 	newState := func() Int64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Int64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyInt64List(mappedValue)
+		mappedH := LazyInt64List{mappedValue, nil}
 		t := state.tail.MapInt64List(f)
 
 		return Int64ListState{&mappedH, &t}
@@ -22324,11 +22324,11 @@ func (l Tuple2ListLazyList) MapInt64List(f func(e Tuple2List) Int64List) Int64Li
 func (l Tuple2ListLazyList) MapByteList(f func(e Tuple2List) ByteList) ByteListLazyList {
 	newState := func() ByteListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() ByteList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyByteList(mappedValue)
+		mappedH := LazyByteList{mappedValue, nil}
 		t := state.tail.MapByteList(f)
 
 		return ByteListState{&mappedH, &t}
@@ -22338,11 +22338,11 @@ func (l Tuple2ListLazyList) MapByteList(f func(e Tuple2List) ByteList) ByteListL
 func (l Tuple2ListLazyList) MapRuneList(f func(e Tuple2List) RuneList) RuneListLazyList {
 	newState := func() RuneListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() RuneList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyRuneList(mappedValue)
+		mappedH := LazyRuneList{mappedValue, nil}
 		t := state.tail.MapRuneList(f)
 
 		return RuneListState{&mappedH, &t}
@@ -22352,11 +22352,11 @@ func (l Tuple2ListLazyList) MapRuneList(f func(e Tuple2List) RuneList) RuneListL
 func (l Tuple2ListLazyList) MapFloat32List(f func(e Tuple2List) Float32List) Float32ListLazyList {
 	newState := func() Float32ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float32List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat32List(mappedValue)
+		mappedH := LazyFloat32List{mappedValue, nil}
 		t := state.tail.MapFloat32List(f)
 
 		return Float32ListState{&mappedH, &t}
@@ -22366,11 +22366,11 @@ func (l Tuple2ListLazyList) MapFloat32List(f func(e Tuple2List) Float32List) Flo
 func (l Tuple2ListLazyList) MapFloat64List(f func(e Tuple2List) Float64List) Float64ListLazyList {
 	newState := func() Float64ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Float64List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyFloat64List(mappedValue)
+		mappedH := LazyFloat64List{mappedValue, nil}
 		t := state.tail.MapFloat64List(f)
 
 		return Float64ListState{&mappedH, &t}
@@ -22380,11 +22380,11 @@ func (l Tuple2ListLazyList) MapFloat64List(f func(e Tuple2List) Float64List) Flo
 func (l Tuple2ListLazyList) MapAnyList(f func(e Tuple2List) AnyList) AnyListLazyList {
 	newState := func() AnyListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() AnyList {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyAnyList(mappedValue)
+		mappedH := LazyAnyList{mappedValue, nil}
 		t := state.tail.MapAnyList(f)
 
 		return AnyListState{&mappedH, &t}
@@ -22394,11 +22394,11 @@ func (l Tuple2ListLazyList) MapAnyList(f func(e Tuple2List) AnyList) AnyListLazy
 func (l Tuple2ListLazyList) MapTuple2List(f func(e Tuple2List) Tuple2List) Tuple2ListLazyList {
 	newState := func() Tuple2ListState {
 		state := (*l.state)()
-		h := *state.head
 		mappedValue := func() Tuple2List {
-			return f(h.Value())
+			h := *state.head
+			return f(h.Eval().Cached())
 		}
-		mappedH := MkLazyTuple2List(mappedValue)
+		mappedH := LazyTuple2List{mappedValue, nil}
 		t := state.tail.MapTuple2List(f)
 
 		return Tuple2ListState{&mappedH, &t}
