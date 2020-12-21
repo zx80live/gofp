@@ -129,11 +129,12 @@ func main() {
 	xs := InfiniteIntList(1).
 		//Map(func(e int) int { return e + 1 }).
 		//Map(func(e int) int { return e - 1 }).
-		Filter(func(e int) bool { return e%2 == 0 }).
-		Filter(func(e int) bool { return e > -100 }).
-		Filter(func(e int) bool { return e > 0 }).
+		//Filter(func(e int) bool { return e%2 == 0 }).
+		//Filter(func(e int) bool { return e > -100 }).
+		//Filter(func(e int) bool { return e > 0 }).
 		//Map(func(e int) int { return e + 1 }).
-		Filter(func(e int) bool { return e > 10 }).TakeWhile(func(e int) bool { return e < 20 }) //.Take(5)
+		//Filter(func(e int) bool { return e > 10 }).
+		TakeWhile(func(e int) bool { return e < 20 }) //.Take(5)
 
 	for i := 0; xs.NonEmpty() && i < 100; i++ {
 		h, t := xs.Head()

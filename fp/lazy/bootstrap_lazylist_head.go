@@ -10,7 +10,7 @@ func (l BoolLazyList) Head() (bool, BoolLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l StringLazyList) Head() (string, StringLazyList) {
@@ -18,7 +18,7 @@ func (l StringLazyList) Head() (string, StringLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l IntLazyList) Head() (int, IntLazyList) {
@@ -26,7 +26,7 @@ func (l IntLazyList) Head() (int, IntLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Int64LazyList) Head() (int64, Int64LazyList) {
@@ -34,7 +34,7 @@ func (l Int64LazyList) Head() (int64, Int64LazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l ByteLazyList) Head() (byte, ByteLazyList) {
@@ -42,7 +42,7 @@ func (l ByteLazyList) Head() (byte, ByteLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l RuneLazyList) Head() (rune, RuneLazyList) {
@@ -50,7 +50,7 @@ func (l RuneLazyList) Head() (rune, RuneLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float32LazyList) Head() (float32, Float32LazyList) {
@@ -58,7 +58,7 @@ func (l Float32LazyList) Head() (float32, Float32LazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float64LazyList) Head() (float64, Float64LazyList) {
@@ -66,7 +66,7 @@ func (l Float64LazyList) Head() (float64, Float64LazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l AnyLazyList) Head() (Any, AnyLazyList) {
@@ -74,7 +74,7 @@ func (l AnyLazyList) Head() (Any, AnyLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Tuple2LazyList) Head() (Tuple2, Tuple2LazyList) {
@@ -82,7 +82,7 @@ func (l Tuple2LazyList) Head() (Tuple2, Tuple2LazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l BoolArrayLazyList) Head() ([]bool, BoolArrayLazyList) {
@@ -90,7 +90,7 @@ func (l BoolArrayLazyList) Head() ([]bool, BoolArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l StringArrayLazyList) Head() ([]string, StringArrayLazyList) {
@@ -98,7 +98,7 @@ func (l StringArrayLazyList) Head() ([]string, StringArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l IntArrayLazyList) Head() ([]int, IntArrayLazyList) {
@@ -106,7 +106,7 @@ func (l IntArrayLazyList) Head() ([]int, IntArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Int64ArrayLazyList) Head() ([]int64, Int64ArrayLazyList) {
@@ -114,7 +114,7 @@ func (l Int64ArrayLazyList) Head() ([]int64, Int64ArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l ByteArrayLazyList) Head() ([]byte, ByteArrayLazyList) {
@@ -122,7 +122,7 @@ func (l ByteArrayLazyList) Head() ([]byte, ByteArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l RuneArrayLazyList) Head() ([]rune, RuneArrayLazyList) {
@@ -130,7 +130,7 @@ func (l RuneArrayLazyList) Head() ([]rune, RuneArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float32ArrayLazyList) Head() ([]float32, Float32ArrayLazyList) {
@@ -138,7 +138,7 @@ func (l Float32ArrayLazyList) Head() ([]float32, Float32ArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float64ArrayLazyList) Head() ([]float64, Float64ArrayLazyList) {
@@ -146,7 +146,7 @@ func (l Float64ArrayLazyList) Head() ([]float64, Float64ArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l AnyArrayLazyList) Head() ([]Any, AnyArrayLazyList) {
@@ -154,7 +154,7 @@ func (l AnyArrayLazyList) Head() ([]Any, AnyArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Tuple2ArrayLazyList) Head() ([]Tuple2, Tuple2ArrayLazyList) {
@@ -162,7 +162,7 @@ func (l Tuple2ArrayLazyList) Head() ([]Tuple2, Tuple2ArrayLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l BoolOptionLazyList) Head() (BoolOption, BoolOptionLazyList) {
@@ -170,7 +170,7 @@ func (l BoolOptionLazyList) Head() (BoolOption, BoolOptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l StringOptionLazyList) Head() (StringOption, StringOptionLazyList) {
@@ -178,7 +178,7 @@ func (l StringOptionLazyList) Head() (StringOption, StringOptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l IntOptionLazyList) Head() (IntOption, IntOptionLazyList) {
@@ -186,7 +186,7 @@ func (l IntOptionLazyList) Head() (IntOption, IntOptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Int64OptionLazyList) Head() (Int64Option, Int64OptionLazyList) {
@@ -194,7 +194,7 @@ func (l Int64OptionLazyList) Head() (Int64Option, Int64OptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l ByteOptionLazyList) Head() (ByteOption, ByteOptionLazyList) {
@@ -202,7 +202,7 @@ func (l ByteOptionLazyList) Head() (ByteOption, ByteOptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l RuneOptionLazyList) Head() (RuneOption, RuneOptionLazyList) {
@@ -210,7 +210,7 @@ func (l RuneOptionLazyList) Head() (RuneOption, RuneOptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float32OptionLazyList) Head() (Float32Option, Float32OptionLazyList) {
@@ -218,7 +218,7 @@ func (l Float32OptionLazyList) Head() (Float32Option, Float32OptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float64OptionLazyList) Head() (Float64Option, Float64OptionLazyList) {
@@ -226,7 +226,7 @@ func (l Float64OptionLazyList) Head() (Float64Option, Float64OptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l AnyOptionLazyList) Head() (AnyOption, AnyOptionLazyList) {
@@ -234,7 +234,7 @@ func (l AnyOptionLazyList) Head() (AnyOption, AnyOptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Tuple2OptionLazyList) Head() (Tuple2Option, Tuple2OptionLazyList) {
@@ -242,7 +242,7 @@ func (l Tuple2OptionLazyList) Head() (Tuple2Option, Tuple2OptionLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l BoolListLazyList) Head() (BoolList, BoolListLazyList) {
@@ -250,7 +250,7 @@ func (l BoolListLazyList) Head() (BoolList, BoolListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l StringListLazyList) Head() (StringList, StringListLazyList) {
@@ -258,7 +258,7 @@ func (l StringListLazyList) Head() (StringList, StringListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l IntListLazyList) Head() (IntList, IntListLazyList) {
@@ -266,7 +266,7 @@ func (l IntListLazyList) Head() (IntList, IntListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Int64ListLazyList) Head() (Int64List, Int64ListLazyList) {
@@ -274,7 +274,7 @@ func (l Int64ListLazyList) Head() (Int64List, Int64ListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l ByteListLazyList) Head() (ByteList, ByteListLazyList) {
@@ -282,7 +282,7 @@ func (l ByteListLazyList) Head() (ByteList, ByteListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l RuneListLazyList) Head() (RuneList, RuneListLazyList) {
@@ -290,7 +290,7 @@ func (l RuneListLazyList) Head() (RuneList, RuneListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float32ListLazyList) Head() (Float32List, Float32ListLazyList) {
@@ -298,7 +298,7 @@ func (l Float32ListLazyList) Head() (Float32List, Float32ListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Float64ListLazyList) Head() (Float64List, Float64ListLazyList) {
@@ -306,7 +306,7 @@ func (l Float64ListLazyList) Head() (Float64List, Float64ListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l AnyListLazyList) Head() (AnyList, AnyListLazyList) {
@@ -314,7 +314,7 @@ func (l AnyListLazyList) Head() (AnyList, AnyListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
 func (l Tuple2ListLazyList) Head() (Tuple2List, Tuple2ListLazyList) {
@@ -322,6 +322,6 @@ func (l Tuple2ListLazyList) Head() (Tuple2List, Tuple2ListLazyList) {
 		panic("can't get head from empty list")
 	} else {
 		s := (*l.state)()
-		return s.head.Eval().Value(), *s.tail
+		return s.head.Eval().Cached(), *s.tail
 	}
 }
