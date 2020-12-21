@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/zx80live/gofp/fp"
 	. "github.com/zx80live/gofp/fp/lazy"
 )
 
@@ -28,6 +29,24 @@ func (l LazyList) Cons(i LazyInt) LazyList {
 	state := func() State { return State{&i, &xs} }
 
 	return LazyList{&state}
+}
+
+func (l LazyList) Head() (int, LazyList) {
+	if l.IsEmpty() {
+		panic("can't get head from empty list")
+	} else {
+		s := (*l.state)()
+		return s.head.Eval().Value(), *s.tail
+	}
+}
+
+func (l LazyList) HeadOption() (fp.IntOption, LazyList) {
+	if l.IsEmpty() {
+		return fp.NoneInt, NilLazyList
+	} else {
+		s := (*l.state)()
+		return fp.MkIntOption(s.head.Eval().Value()), *s.tail
+	}
 }
 
 func (l LazyList) Map(f func(e int) int) LazyList {
@@ -119,13 +138,10 @@ func main() {
 		//Map(func(e int) int { return e + 1 }).
 		Filter(func(e int) bool { return e > 10 }).Take(5)
 
-	for i := 0; xs.NonEmpty(); i++ {
-		state := (*xs.state)()
-		fmt.Println((*state.head).Value())
-		xs = *state.tail
+	for i := 0; xs.NonEmpty() && i < 100; i++ {
+		h, t := xs.Head()
 
-		if i == 100 {
-			break
-		}
+		fmt.Println(h)
+		xs = t
 	}
 }
