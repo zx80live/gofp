@@ -1,3 +1,7 @@
+##### 1.0.1 Changelog
+- `feature-23` String ops
+- README.md minor changes: update getting started section
+
 ##### 1.0.0 Changelog
 - Boxed types (rich types Int, String, etc)
 - Predicates, Transformers (and composition)

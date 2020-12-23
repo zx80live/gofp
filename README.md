@@ -111,8 +111,11 @@ There is an opportunity to work with mutable/immutable collections, futures whic
 
 ## Getting started
 
-Before using functional library import the following package in your project:
-
+Before using functional library add dependency in your `go.mod` file:
+```go
+require github.com/zx80live/gofp v1.0.1
+```
+and then import the following package in your project:
 ```go
 import . "github.com/zx80live/gofp/fp"
 ```
@@ -128,12 +131,26 @@ cd test-gofp
 
 # create your go-module
 go mod init example.com/username/test-gofp
-
-# create file in your preferred editor, for example
-vim test.go       
 ```
 
-2. Write the following code in the `$WORK_DIR/test-gofp/test.go` file:
+2. Add dependency in your `go.mod` file:
+```bash
+echo 'require github.com/zx80live/gofp v1.0.1' >> go.mod
+cat go.mod
+```
+The result of previous command should be:
+```go
+module example.com/pav/test-gofp
+
+go 1.15
+require github.com/zx80live/gofp v1.0.1
+```
+
+3. Create your first go-file in your preffered editor, for example:
+```bash
+vim test.go
+```
+4. Write the following code in the `$WORK_DIR/test-gofp/test.go` file:
 ```go
 package main
 
@@ -153,7 +170,7 @@ func main() {
 }
 ```
 
-3. Execute file:
+5. Execute file:
 ```bash
 go run test.go
 ```
