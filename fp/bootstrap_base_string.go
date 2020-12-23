@@ -4,6 +4,71 @@
 package fp
 
 import "fmt"
+import "regexp"
+import "strings"
+
 func (s String) ToArray() RuneArray { return RuneArray([]rune(s)) }
 
-func (s String) ToLetterArray() StringArray { return RuneArray([]rune(s)).MapString(func(r rune) string { return fmt.Sprintf("%c", r) } ) }
+func (s String) ToLetterArray() StringArray {
+	return RuneArray([]rune(s)).MapString(func(r rune) string { return fmt.Sprintf("%c", r) })
+}
+func (s String) StartsWith(str string) bool {
+	return strings.HasPrefix(string(s), str)
+}
+func (s String) EndsWith(str string) bool {
+	return strings.HasSuffix(string(s), str)
+}
+func (s String) Contains(str string) bool {
+	return strings.Contains(string(s), str)
+}
+func (s String) Split(sep string) StringArray {
+	return StringArray(strings.Split(string(s), sep))
+}
+func (s String) RegexGroups(regex string) StringArray {
+	return StringRegexGroups(regex)(string(s))
+}
+func (s String) RegexGroupsCompiled(r *regexp.Regexp) StringArray {
+	return RegexGroups(r)(string(s))
+}
+func (s String) Take(n int) String {
+	if n > len(s) {
+		return s
+	} else if n < 0 {
+		return ""
+	} else {
+		return s[0:n]
+	}
+}
+func (s String) TakeRight(n int) String {
+	l := len(s)
+	if n > l {
+		return s
+	} else if n < 0 {
+		return ""
+	} else {
+		return s[l-n : l]
+	}
+}
+func (s String) Drop(n int) String {
+	l := len(s)
+	if n > l {
+		return ""
+	} else if n < 0 {
+		return s
+	} else {
+		return s[n:l]
+	}
+}
+func (s String) DropRight(n int) String {
+	l := len(s)
+	if n > l {
+		return ""
+	} else if n < 0 {
+		return s
+	} else {
+		return s[0 : l-n]
+	}
+}
+func (s String) Trim(cutset string) string {
+	return strings.Trim(string(s), cutset)
+}
