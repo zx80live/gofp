@@ -250,7 +250,7 @@ l4 := String("one").Cons("two").Cons("three") // List("three", "two", "one")
 
 ```go
 // Copy references of elements to new list
-// O(2*n)
+// O(n)
 func (l IntList) Copy() IntList
 ```
 
@@ -393,7 +393,7 @@ res := l.
 
 fmt.Println(res.ToString())    // IntList(4, 8, 10)
 
-res2 := l.Filter(EvenInt).Filter(PosInt)                   // use library predicates O(2*n)
+res2 := l.Filter(EvenInt).Filter(PosInt)                   // use library predicates O(n)
 res3 := l.Filter(EvenInt.And(PosInt))                      // compose predicates     O(n)
 ```
 
